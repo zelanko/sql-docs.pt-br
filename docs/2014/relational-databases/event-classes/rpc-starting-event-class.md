@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,27 +14,27 @@ ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a162dc259e79c9704e30f251ce72c5f9c221601a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5f427d9430c38b129b7cef6fb2e1cf7ab19e9d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801088"
 ---
 # <a name="rpcstarting-event-class"></a>classe de evento RPC:Starting
   A classe de evento RPC:Starting indica que uma chamada de procedimento remoto foi iniciada.  
   
 ## <a name="rpcstarting-event-class-data-columns"></a>Colunas de dados da classe de evento do RPC:Starting  
   
-|Nome da coluna de dados|`Data type`|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|`Data type`|Descrição|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|`image`|Valor binário dependente da classe de evento capturada no rastreamento.|2|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|EventClass|`int`|Tipo de evento = 11.|27|não|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|não|  
+|EventClass|`int`|Tipo de evento = 11.|27|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
@@ -45,7 +44,7 @@ ms.locfileid: "48209166"
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
 |ObjectName|`nvarchar`|Nome do objeto que está sendo referenciado.|34|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|`nvarchar`|O nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando Login1 e executar uma instrução como Login2, SessionLoginName mostrará Login1 e LoginName mostrará Login2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  

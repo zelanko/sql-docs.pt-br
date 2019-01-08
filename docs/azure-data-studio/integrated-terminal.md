@@ -1,7 +1,8 @@
 ---
-title: Terminal integrado no estúdio de dados do Azure | Microsoft Docs
+title: Terminal integrado
+titleSuffix: Azure Data Studio
 description: Saiba mais sobre o terminal integrado no estúdio de dados do Azure.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355977"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030430"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
@@ -89,7 +90,7 @@ Você pode personalizar a fonte de terminal integrada e a altura da linha com as
 
 ## <a id="key-bindings"></a>Associações de teclas do Terminal
 
-O **modo de exibição: Terminal integrado de alternância** comando é associado a **Ctrl +'** para alternar rapidamente o painel de terminal integrado dentro e fora do modo de exibição.
+O **exibição: Ativar/desativar o Terminal integrado** comando é associado ao **Ctrl +'** para alternar rapidamente o painel de terminal integrado dentro e fora do modo de exibição.
 
 Abaixo estão os atalhos de teclado para navegar rapidamente no terminal integrado:
 
@@ -109,7 +110,7 @@ Outros comandos de terminal estão disponíveis e podem ser associados a seus at
 
 São eles:
 
-* `workbench.action.terminal.focus`: Se concentrar o terminal. Isso é como alternar mas concentra-se o terminal, em vez de ocultá-lo, se ele estiver visível.
+* `workbench.action.terminal.focus`: Concentre-se o terminal. Isso é como alternar mas concentra-se o terminal, em vez de ocultá-lo, se ele estiver visível.
 * `workbench.action.terminal.focusNext`: Concentra-se a próxima instância de terminal.
 * `workbench.action.terminal.focusPrevious`: Concentra-se a instância anterior de terminal.
 * `workbench.action.terminal.kill`: Remova a instância atual de terminal.
@@ -118,7 +119,7 @@ São eles:
 
 ### <a name="run-selected-text"></a>Executar o texto selecionado
 
-Usar o `runSelectedText` de comando, selecione o texto em um editor e execute o comando **Terminal: executar texto selecionado no Active Directory Terminal** via o **paleta de comandos** (**Ctrl + Shift + P**). O terminal tenta executar o texto selecionado:
+Para usar o `runSelectedText` de comando, selecione o texto em um editor e execute o comando **Terminal: Executar o texto selecionado no Active Directory Terminal** por meio de **paleta de comando** (**Ctrl + Shift + P**). O terminal tenta executar o texto selecionado:
 
 ![Executar o texto selecionado](media/integrated-terminal/terminal_run_selected.png)
 
@@ -130,7 +131,7 @@ As associações de teclas para copiar e colar sigam os padrões da plataforma:
 
 * Linux: **Ctrl + Shift + C** e **Ctrl + Shift + V**
 * Mac: **Cmd + C** e **Cmd + V**
-* Windows: **Ctrl + C** e **Ctrl + V**
+* Windows: **CTRL + C** e **Ctrl + V**
 
 ### <a name="find"></a>Localizar
 
@@ -145,7 +146,7 @@ Se você quiser **Ctrl + F** para ir para o shell em vez de iniciar o widget de 
 
 ### <a name="rename-terminal-sessions"></a>Renomear as sessões de terminal
 
-Sessões de Terminal integradas agora podem ser renomeadas usando o **Terminal: renomeie** (`workbench.action.terminal.rename`) comando. O novo nome é exibido na lista suspensa de seleção terminal.
+Sessões de Terminal integradas agora podem ser renomeadas usando o **Terminal: Renomeie** (`workbench.action.terminal.rename`) comando. O novo nome é exibido na lista suspensa de seleção terminal.
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Associações de teclas forçando a passagem de terminal
 

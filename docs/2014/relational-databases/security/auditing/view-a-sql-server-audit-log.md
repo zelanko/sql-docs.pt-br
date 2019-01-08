@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75de66ef1759cc9e20b98f1f38c9ffa6361d31a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519186"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Exibir um log auditoria do SQL Server
   Este tópico descreve como exibir um log de auditoria do SQL Server no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48229677"
   
 2.  Expanda a pasta **Auditorias** .  
   
-3.  Clique com o botão direito do mouse no log de auditoria que você deseja exibir e selecione **Exibir Logs de Auditoria**. Isso abrirá a caixa de diálogo *Visualizador de Arquivo de Log –***server_name*. Para obter mais informações, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Clique com o botão direito do mouse no log de auditoria que você deseja exibir e selecione **Exibir Logs de Auditoria**. Isso abre o **Visualizador do arquivo de Log-* * * nome_do_servidor* caixa de diálogo. Para obter mais informações, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Quando terminar, clique em **Fechar**.  
   

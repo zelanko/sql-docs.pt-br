@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server Managed Backup to Windows Azure: interoperabilidade e coexistência | Microsoft Docs'
+title: 'Backup gerenciado SQL Server para o Windows Azure: Interoperabilidade e coexistência | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509130"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Backup Gerenciado do SQL Server para o Windows Azure: Interoperabilidade e coexistência
-  Este tópico descreve a interoperabilidade e a coexistência do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] em vários recursos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos incluem: Grupos de Disponibilidade AlwaysOn, Espelhamento de Banco de Dados, Planos de Manutenção de Backup, Envio de Logs, Backups ad hoc, Desanexar Banco de Dados e Remover Banco de Dados.  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Backup gerenciado SQL Server para o Windows Azure: Interoperabilidade e coexistência
+  Este tópico descreve a interoperabilidade e a coexistência do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] em vários recursos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Entre esses recursos estão: Grupos de disponibilidade AlwaysOn, espelhamento de banco de dados, planos de manutenção de Backup, envio de logs, backups Ad hoc, desanexar banco de dados e Drop Database.  
   
 ### <a name="alwayson-availability-groups"></a>Grupos de Disponibilidade AlwaysOn  
- Grupos de Disponibilidade AlwaysOn configurados como uma solução única do Windows Azure com suporte para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Não há suporte para configurações Grupo de Disponibilidade AlwaysOn Híbrido ou somente no local. Para obter mais informações e outras considerações, consulte [Configurando o SQL Server Managed Backup to Windows Azure para grupos de disponibilidade](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Grupos de disponibilidade AlwaysOn configurados como uma solução somente no Azure com suporte para Windows [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Não há suporte para configurações Grupo de Disponibilidade AlwaysOn Híbrido ou somente no local. Para obter mais informações e outras considerações, consulte [Configurando o SQL Server Managed Backup to Windows Azure para grupos de disponibilidade](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Espelhamento de banco de dados  
  Há suporte para o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] somente no banco de dados principal. Se o banco de dados principal e o banco de dados espelho estiverem configurados para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], o banco de dados espelho será ignorado e não será incluído no backup. No entanto, se ocorrer um failover, o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] iniciará o processo de backup depois que o espelho concluir a troca de função e estiver online. Os backups serão armazenados em um novo contêiner nesse caso. Se o espelho não estiver configurado para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], no caso de um failover, nenhum backup será feito. É recomendável que você configure o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no banco de dados principal e no banco de dados espelho para que os backups continuem caso ocorra um failover.  
@@ -55,7 +55,7 @@ ms.locfileid: "48184236"
   
  **Backups baseados em Data Protection Manager (DPM):** Microsoft Data Protection Manager permite que você faça backups completos e incrementais. Os backups incrementais são os backups de log que executam um truncamento de log depois de criar um backup de T-log. Para configurar o DPM e o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para o mesmo banco de dados não tem suporte.  
   
- **Ferramentas de terceiros ou de Scripts:** qualquer ferramenta de terceiros ou scripts que executam backups de log, causando o truncamento de log é incompatível com [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]e não é suportado.  
+ **Ferramentas de terceiros ou Scripts:** Qualquer ferramenta de terceiros ou scripts que executam backups de log, causando o truncamento de log é incompatível com [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]e não é suportado.  
   
  Se você tiver [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] habilitada para uma instância de banco de dados, e você deseja fazer um backup ad hoc, você pode usar o [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) procedimento armazenado conforme descrito na anterior seção. Se você também tiver uma necessidade de agendar backup periodicamente fora do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], poderá usar Copiar Somente Backup.  Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   

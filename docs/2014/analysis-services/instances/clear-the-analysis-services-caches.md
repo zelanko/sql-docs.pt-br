@@ -11,12 +11,12 @@ ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067178"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350657"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Limpar os caches do Analysis Services
   O Analysis Services armazena dados em cache dados para melhorar o desempenho da consulta. Este tópico fornece recomendações para usar o comando XMLA ClearCache para limpar caches que foram criados em resposta a uma consulta MDX. Os efeitos da execução de ClearCache variam dependendo se você está usando um modelo tabular ou multidimensional.  
@@ -33,7 +33,7 @@ ms.locfileid: "48067178"
   
  Executar o comando ClearCache também limpa os caches no mecanismo analítico na memória xVelocity (VertiPaq). O mecanismo xVelocity mantém um pequeno conjunto de resultados em cache. Executar o comando ClearCache invalida esses caches no mecanismo xVelocity.  
   
- Por fim, executar o comando ClearCache também remove dados residuais deixados na memória quando um modelo tabular é reconfigurado para `DirectQuery` modo. Isso é particularmente importante quando o modelo contém dados confidenciais sujeitos a controles rígidos. Nesse caso, executar o comando ClearCache é uma ação de precaução que você pode executar para garantir que os dados confidenciais constem somente onde desejado. É necessário limpar o cache manualmente quando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é usado para implantar o modelo e alterar o modo de consulta. Em contrapartida, usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para especificar `DirectQuery` no modelo e em partições limpa automaticamente o cache ao alternar o modelo a ser usado nesse modo de consulta.  
+ Por fim, executar o comando ClearCache também remove dados residuais deixados na memória quando um modelo tabular é reconfigurado para o modo `DirectQuery`. Isso é particularmente importante quando o modelo contém dados confidenciais sujeitos a controles rígidos. Nesse caso, executar o comando ClearCache é uma ação de precaução que você pode executar para garantir que os dados confidenciais constem somente onde desejado. É necessário limpar o cache manualmente quando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é usado para implantar o modelo e alterar o modo de consulta. Em contrapartida, usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para especificar `DirectQuery` no modelo e em partições limpa automaticamente o cache ao alternar o modelo a ser usado nesse modo de consulta.  
   
  Em comparação com recomendações para limpar os caches de modelos multidimensionais durante os testes de desempenho, não há uma recomendação ampla para limpar os caches de modelos tabulares. Se você não for gerenciar a implantação de um modelo tabular que contém dados confidenciais, não haverá uma tarefa administrativa específica que exija a limpeza do cache.  
   
@@ -41,26 +41,26 @@ ms.locfileid: "48067178"
  Para limpar o cache, use o XMLA e o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode limpar o cache no nível de banco de dados, cubo, dimensão, tabela ou grupo de medidas. As etapas a seguir para limpar o cache no nível de banco de dados aplicam-se aos modelos multidimensionais e tabulares.  
   
 > [!NOTE]  
->  Testes de desempenho rigorosos podem exigir uma abordagem mais abrangente para limpar o cache. Para obter instruções sobre como liberar o Analysis Services e os caches do sistema de arquivos, consulte a seção sobre limpeza de caches no [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539).  
+>  Testes de desempenho rigorosos podem exigir uma abordagem mais abrangente para limpar o cache. Para obter instruções sobre como liberar o Analysis Services e os caches do sistema de arquivos, consulte a seção sobre limpeza de caches no [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?linkID=https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Nos modelos multidimensionais e tabulares, limpar alguns desses caches pode envolver duas etapas que consistem em invalidar o cache na execução do comando ClearCache e esvaziar o cache quando a próxima consulta é recebida. A redução no consumo de memória ficará evidente somente depois que o cache for esvaziado de fato.  
   
  É necessário fornecer um identificador de objeto à instrução `ClearCache` na consulta XMLA para limpar o cache. A primeira etapa deste tópico explica como obter um identificador de objeto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Etapa 1: obter o identificador de objeto  
+#### <a name="step-1-get-the-object-identifier"></a>Etapa 1: Obter o identificador de objeto  
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um objeto, selecione **Propriedades**e copie o valor da propriedade da ID no painel **Propriedades** . Essa abordagem funciona para banco de dados, cubo, dimensão ou tabela.  
   
 2.  Para obter a ID do grupo de medidas, clique com o botão direito do mouse no grupo de medidas e selecione **Script de Grupo de Medidas como**. Escolha **Criar** ou **Alterar**e envie a consulta para uma janela. A ID do grupo de medidas ficará visível na definição do objeto. Copie a ID da definição do objeto.  
   
-#### <a name="step-2-run-the-query"></a>Etapa 2: executar a consulta  
+#### <a name="step-2-run-the-query"></a>Etapa 2: Executar a consulta  
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um banco de dados, aponte para **Nova Consulta**e selecione **XMLA**.  
   
-2.  Copie o exemplo de código a seguir na janela de consulta XMLA. Alteração `DatabaseID` para a ID do banco de dados a conexão atual.  
+2.  Copie o exemplo de código a seguir na janela de consulta XMLA. Altere `DatabaseID` para a ID do banco de dados na conexão atual.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID> Adventure Works DW Multidimensional</DatabaseID>  
       </Object>  
@@ -71,7 +71,7 @@ ms.locfileid: "48067178"
      Opcionalmente, você pode especificar o caminho de um objeto filho, como um grupo de medidas, para limpar o cache apenas desse objeto.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional</DatabaseID>  
             <CubeID>Adventure Works</CubeID>  

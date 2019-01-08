@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - makChanToTab
@@ -13,12 +12,12 @@ ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bcf061866f6992e37ed5411a0c3b6ac0971f23e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2b2d4bb6d27c683cae84c22b2c914e13412c19d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068056"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804788"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>Fazer alterações às tabelas selecionadas para capturar alterações
   Nesta caixa de diálogo, você pode selecionar colunas específicas da tabela selecionada da qual capturar alterações. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  

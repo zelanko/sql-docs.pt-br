@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23abfb7b5de5f319a15d8d255705929cc4d7293d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220286"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787046"
 ---
 # <a name="about-change-tracking-sql-server"></a>Sobre o controle de alterações (SQL Server)
   O controle de alterações é uma solução leve que fornece um mecanismo de controle de alterações eficiente para aplicativos. Em geral, para permitir que os aplicativos consultassem as alterações nos dados de um banco de dados e acessassem as informações relacionadas às alterações, os desenvolvedores de aplicativos precisavam implementar mecanismos personalizados de controle de alterações. Criação desses mecanismos costumava envolver muito trabalho e com frequência usando uma combinação de gatilhos, `timestamp` colunas, novas tabelas para armazenar informações de controle e processos personalizados de limpeza.  

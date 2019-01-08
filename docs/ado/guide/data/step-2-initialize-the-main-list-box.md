@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206415"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Etapa 2: Inicializar a caixa de listagem principal
 Para declarar objetos globais de registro e o conjunto de registros, insira o código a seguir (geral) (declarações) para Form1:  
@@ -34,23 +34,23 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=https://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- Esse código instancia os objetos globais de registro e o conjunto de registros. O objeto de registro, `grec`, é aberta com uma URL especificada como o ActiveConnection. Se a URL existir, ele é aberto; Se ele ainda não existir, ele será criado. Observe que você deve substituir "https://servername/foldername/" com uma URL válida do seu ambiente.  
+ Esse código instancia os objetos globais de registro e o conjunto de registros. O objeto de registro, `grec`, é aberta com uma URL especificada como o ActiveConnection. Se a URL existir, ele é aberto; Se ele ainda não existir, ele será criado. Observe que você deve substituir "<https://servername/foldername/>" com uma URL válida do seu ambiente.  
   
  O objeto de conjunto de registros `grs`, é aberta nos filhos do registro, `grec`. Em seguida, `lstMain` é preenchida com os nomes de arquivo dos recursos publicados para a URL.  
   
 ## <a name="see-also"></a>Consulte também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Etapa 1: Configurar o projeto do Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [Etapa 3: Preencher a caixa de listagem de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Etapa 3: Preencha a caixa de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

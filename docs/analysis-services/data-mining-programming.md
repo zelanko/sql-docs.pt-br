@@ -1,5 +1,5 @@
 ---
-title: Programação de mineração de dados | Microsoft Docs
+title: Programação de mineração de dados do Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1be416528bc923e757afb9a8f3e556790941bf11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 27a964581782d5868e4089a1063dbbce0c689525
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019953"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072753"
 ---
 # <a name="data-mining-programming"></a>Programação de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,13 +23,13 @@ ms.locfileid: "34019953"
   
 -   **XMLA**  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a XML for Analysis (XMLA) como um protocolo para comunicação com aplicativos cliente. Comandos adicionais têm suporte do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que estende a especificação do XML for Analysis.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a XML for Analysis (XMLA) como protocolo para comunicação com aplicativos cliente. Comandos adicionais têm suporte do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que estende a especificação do XML for Analysis.  
   
      Como o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa XMLA para definição de dados, manipulação de dados e suporte a controle de dados, você pode criar estruturas de mineração e modelos de mineração usando as ferramentas visuais fornecidas pelo [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e, em seguida, estender os objetos de data mining criados usando os scripts de extensão DMX e de linguagem ASSL.  
   
      Você pode criar e pode modificar objetos de data mining completamente em scripts de XMLA e executar consultas de previsão em modelos programaticamente de seus próprios aplicativos.  
   
--   **Objetos de gerenciamento de análise (AMO)**  
+-   **Analysis Management Objects (AMO)**  
   
      O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também fornece uma estrutura completa que permite aos provedores de mineração de dados de terceiros integrar os seguintes objetos de mineração de dados no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -57,14 +57,14 @@ ms.locfileid: "34019953"
  [Desenvolvendo com ADOMD.NET](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  Apresenta objetos de programação do servidor e do cliente ADOMD.NET.  
   
- [Desenvolvendo com o Analysis Management Objects & #40; AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  Apresenta a biblioteca de programação AMO.  
   
- [Desenvolvendo com o Analysis Services Scripting Language & #40; ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Desenvolvendo com ASSL &#40;linguagem de script do Analysis Services&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Apresenta o XML for Analysis (XMLA) e suas extensões.  
   
 ## <a name="see-also"></a>Consulte também  
  [Documentação do desenvolvedor do Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
- [Extensões de mineração de dados & #40; DMX & #41; Referência](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Referência de DMX &#40;extensões DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

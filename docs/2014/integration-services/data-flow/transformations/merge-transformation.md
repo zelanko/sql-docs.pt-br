@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6125dbd164065afc0ee808bb77a4e2544606ef8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 322caa6b9be17e860afaa1e3526a3590df049820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226626"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790948"
 ---
 # <a name="merge-transformation"></a>Transformação Mesclar
   A Transformação Mesclagem combina dois conjuntos de dados classificados em um único conjunto de dados. As linhas de cada conjunto de dados estão inseridas na saída com base em valores de suas colunas-chave.  
@@ -63,7 +62,7 @@ ms.locfileid: "48226626"
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir propriedades, consulte os tópicos a seguir:  
@@ -73,8 +72,8 @@ ms.locfileid: "48226626"
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação junção de mesclagem](merge-join-transformation.md)   
- [Union All Transformation](union-all-transformation.md)   
+ [Transformação Junção de Mesclagem](merge-join-transformation.md)   
+ [Transformação Unir Tudo](union-all-transformation.md)   
  [Fluxo de Dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6b20fd2659fc68e6745c5ccef08aaac177207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51afb2516da54ce63d170619edd4c5429fd85144
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089936"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410943"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Solução de problemas de diagramas de mineração de dados do Visio (Suplementos de Mineração de Dados do SQL Server)
   Este tópico contém informações extras que você poderá usar ao solucionar problemas com diagramas de mineração de dados do Visio.  

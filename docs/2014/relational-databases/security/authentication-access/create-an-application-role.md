@@ -14,12 +14,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076256"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532444"
 ---
 # <a name="create-an-application-role"></a>Criar uma função de aplicativo
   Este tópico descreve como criar uma função de aplicativo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. As funções de aplicativo restringem o acesso do usuário a um banco de dados exceto quando feito por aplicativos específicos. As funções de aplicativo não têm nenhum usuário, assim a lista **Membros da Função** não é exibida quando é selecionada a **Função de aplicativo** .  
@@ -58,9 +58,9 @@ ms.locfileid: "48076256"
   
 4.  Clique com o botão direito do mouse na pasta **Funções de Aplicativo** e selecione **Nova Função de Aplicativo...**.  
   
-5.  Na caixa de diálogo **Função de Aplicativo – Nova** , na página **Geral**, digite o novo nome da nova função de aplicativo na caixa **Nome da função** .  
+5.  Na caixa de diálogo **Função de Aplicativo – Nova**, na **Página Geral**, digite o novo nome da nova função de aplicativo na caixa **Nome da função**.  
   
-6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema** .  
+6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema**.  
   
 7.  Na caixa **Senha** , digite uma senha para a nova função. Digite essa senha novamente na caixa **Confirmar Senha** .  
   
@@ -69,13 +69,13 @@ ms.locfileid: "48076256"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Função de Aplicativo – Nova** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Estendidas**.  
+ O **função de aplicativo - nova** caixa de diálogo também oferece opções em duas páginas adicionais: **Protegíveis** e **propriedades estendidas**.  
   
 -   A página **Protegíveis** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
   
 -   A página **Propriedades estendidas** permite adicionar propriedades personalizadas a usuários de banco de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-an-application-role"></a>Para criar uma função de aplicativo  
   

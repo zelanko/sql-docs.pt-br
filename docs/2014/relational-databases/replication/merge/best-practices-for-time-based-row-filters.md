@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
@@ -13,12 +12,12 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786138"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
   Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm a função `GETDATE()` para realizar isso. Considere a seguinte instrução de filtro de linha:  
@@ -50,13 +49,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>Recomendações para usar filtros de linha baseados em tempo  
  O método seguinte fornece uma abordagem robusta e direta para filtragem baseada em tempo:  
   
--   Adicionar uma coluna à tabela do tipo de dados `bit`. Esta coluna é usada para indicar se uma linha deveria ser replicada.  
+-   Adicione uma coluna à tabela de tipo de dados de `bit`. Esta coluna é usada para indicar se uma linha deveria ser replicada.  
   
 -   Use um filtro de linha que faz referência à nova coluna em lugar de uma coluna baseada no tempo.  
   
 -   Crie um trabalho do SQL Server Agent (ou um trabalho agendada por algum outro mecanismo) que atualiza a coluna antes do agendamento para a execução do Merge Agent.  
   
- Essa abordagem trata das falhas usando `GETDATE()` ou outro método baseado em tempo e evita o problema em determinar quando os filtros são avaliados por partições. Considere o seguinte exemplo para uma tabela **Eventos** :  
+ Essa abordagem trata das falhas ao usar `GETDATE()` ou outro método baseado em tempo e evita o problema em determinar quando os filtros são avaliados por partições. Considere o seguinte exemplo para uma tabela **Eventos** :  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

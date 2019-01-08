@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
@@ -19,12 +18,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a43cfd2b692bb897950be25e29aa7932d32f780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d5195e3c1d7e3b7164eba42ec142adb76a66fc1
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212456"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640117"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP
   Este tópico descreve como configurar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para escutar em diversas portas TCP no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Quando TCP/IP está habilitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../includes/ssde-md.md)] escutará conexões de entrada em um ponto de conexão que consiste em um endereço IP e número de porta TCP. Os procedimentos a seguir criam um ponto de extremidade de protocolo TDS, de forma que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escutará em uma porta TCP adicional.  

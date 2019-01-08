@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.options.f1
@@ -12,14 +12,14 @@ ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59e5ac1f951ce897b058d224701d1a6936bfa11f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772808"
 ---
-# <a name="alert-properties-new-alert-options-page"></a>Propriedades do alerta: novo alerta (página Opções)
+# <a name="alert-properties-new-alert-options-page"></a>Propriedades do alerta: Novo alerta (página Opções)
   Use essa página para exibir e modificar opções para os alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  

@@ -20,19 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672945"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209545"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Retorna uma linha que exibe informações de versão do sistema operacional.  
   
-|Nome da coluna |Tipo de dados |Description |  
+|Nome da coluna |Tipo de dados |Descrição |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |O tipo de sistema operacional: Windows ou Linux |
 |**host_distribution** |**nvarchar(256)** |Descrição do sistema operacional. |
@@ -49,7 +49,7 @@ Este modo de exibição é semelhante à [sys.dm_os_windows_info](../../relation
 ### <a name="permissions"></a>Permissões  
 O `SELECT` permissão na `sys.dm_os_host_info` é concedida para o `public` função por padrão. Se revogado, requer `VIEW SERVER STATE` permissão no servidor.   
  
->  [!CAUTION]
+> [!CAUTION]
 >  Começando com a versão [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] versão 17 requer `SELECT` permissão `sys.dm_os_host_info` para se conectar a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Se `SELECT` permissão é revogada de `public`, somente logons com `VIEW SERVER STATE` permissão pode se conectar com a versão mais recente do SSMS. (Outras ferramentas, tais como `sqlcmd.exe` podem se conectar sem `SELECT` permissão em `sys.dm_os_host_info`.)
 
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,27 +14,27 @@ ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00d392e5a72e05d55217f4a0cbae25bdb59df441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058316"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793428"
 ---
 # <a name="server-memory-change-event-class"></a>classe de evento Server Memory Change
   A classe de evento **Server Memory Change** ocorre quando o uso de memória do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aumenta ou diminui em 1 MB (megabyte) ou em 5 por cento da memória máxima de servidor, o que for maior.  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Colunas de dados da classe de evento Server Memory Change  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Sim|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Sim|  
 |----------------------|---------------|-----------------|---------------|---------|  
-|**EventClass**|**int**|Tipo de evento = 81.|27|não|  
-|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|não|  
+|**EventClass**|**int**|Tipo de evento = 81.|27|Não|  
+|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |**EventSubClass**|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Aumento de memória<br /><br /> 2 = Diminuição de memória|21|Sim|  
 |**IntegerData**|**int**|Novo tamanho da memória, em megabytes (MB).|25|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|O nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

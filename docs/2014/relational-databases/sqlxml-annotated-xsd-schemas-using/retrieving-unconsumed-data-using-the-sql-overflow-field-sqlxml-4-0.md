@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -19,12 +17,12 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d07153f80cc1b6dfdc8383e33a8668b63364ad8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0398092e4565b6b02e6b83e8c892ff91e6611f66
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119506"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793588"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperando dados não consumidos usando sql:overflow-field (SQLXML 4.0)
   Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Ao recuperar os dados de um banco de dados usando esquemas anotados, o atributo `sql:overflow-field` pode ser especificado para identificar a coluna da tabela na qual os dados de estouro estão armazenados. O `sql:overflow-field` atributo pode ser especificado em  **\<elemento >**.  
@@ -62,7 +60,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- Além disso, você deve criar um diretório virtual para o banco de dados tempdb e um nome virtual de modelo do tipo `template` chamado "template".  
+ Além disso, você deve criar um diretório virtual para o banco de dados do tempdb – e um nome virtual do modelo de `template` tipo chamado "template".  
   
  No exemplo a seguir, o esquema de mapeamento recupera os dados não consumidos que são armazenados na coluna AddressOverflow tabela Customers2:  
   

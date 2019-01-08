@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
@@ -14,12 +13,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129046"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798118"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], uma transação é registrada sempre que uma ação é tomada em um membro. Transações podem ser exibidas por todos os usuários e revertidas por administradores. As transações mostram a data, a hora e o usuário que tomou a ação, além de outros detalhes. Usuários podem adicionar uma anotação a uma transação, para indicar por que uma transação aconteceu.  
@@ -57,12 +56,12 @@ ms.locfileid: "48129046"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Reverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Os administradores de &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [Administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [As anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

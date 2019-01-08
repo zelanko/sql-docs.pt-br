@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
@@ -18,12 +17,12 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1ff9c4c0b9eec12d2e7ec0ac0d3325e9e0c91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa2f5528bb223081e7334a7fbd477368d1f7c447
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146456"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810608"
 ---
 # <a name="secure-the-publisher"></a>Proteger o Publicador
   Os seguintes agentes de replicação se conectam ao Publicador:  
@@ -61,13 +60,13 @@ ms.locfileid: "48146456"
  Para gerenciar o PAL, consulte [Gerenciar logons na Lista de Acesso à Publicação](manage-logins-in-the-publication-access-list.md).  
   
 ## <a name="snapshot-agent"></a>Snapshot Agent  
- Há um Agente de Instantâneo para cada publicação. Para obter mais informações, consulte [Create a Publication](../publish/create-a-publication.md).  
+ Há um Agente de Instantâneo para cada publicação. Para obter mais informações, consulte [Criar uma assinatura](../publish/create-a-publication.md).  
   
 ## <a name="ftp-snapshot-delivery"></a>Entrega de instantâneo por FTP  
  Se especificar que os instantâneos devem ser disponibilizados através de um compartilhamento FTP ao invés de um compartilhamento UNC, você deverá especificar um logon e uma senha quando for configurar o acesso ao FTP. Para obter mais informações, consulte [Deliver a Snapshot Through FTP](../publish/deliver-a-snapshot-through-ftp.md) (Entregar um instantâneo por meio de FTP).  
   
 ## <a name="log-reader-agent"></a>Agente de Leitor de Log  
- Há um Agente de Leitor de Log para cada banco de dados publicado para replicação transacional. Para obter mais informações, consulte [Create a Publication](../publish/create-a-publication.md).  
+ Há um Agente de Leitor de Log para cada banco de dados publicado para replicação transacional. Para obter mais informações, consulte [Criar uma assinatura](../publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Queue Reader Agent  
  Há um Agente de Leitor de Fila para todos os Publicadores e publicações (que permite assinaturas de atualização em fila) associado a um determinado Distribuidor. Para obter mais informações, consulte [Habilitar atualização de assinaturas para publicações transacionais](../publish/enable-updating-subscriptions-for-transactional-publications.md).  

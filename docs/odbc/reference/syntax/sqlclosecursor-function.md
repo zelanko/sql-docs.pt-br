@@ -20,16 +20,16 @@ ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7994e88d5b3e5649683651f7514c39ad791fc3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 912e4d109a9e769442c65d292ff190d79705eb21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746154"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201535"
 ---
 # <a name="sqlclosecursor-function"></a>Função SQLCloseCursor
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLCloseCursor** fecha um cursor que foi aberto em uma instrução e descartará resultados pendentes.  
@@ -39,7 +39,7 @@ ms.locfileid: "47746154"
 ```  
   
 SQLRETURN SQLCloseCursor(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -52,7 +52,7 @@ SQLRETURN SQLCloseCursor(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLCloseCursor** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* do SQL _HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLCloseCursor** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |24000|Estado de cursor inválido|Nenhum cursor foi aberto sobre o *StatementHandle*. (Isto é retornado somente por um ODBC 3. *x* driver.)|  

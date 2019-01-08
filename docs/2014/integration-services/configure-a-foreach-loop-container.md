@@ -14,12 +14,12 @@ ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d63a4f168c4a426c06bb00c634f89e328735332
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb1e3ca9e8576bf340560c45582c9b01bd453c14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529055"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Para configurar um contêiner Loop Foreach
   Este procedimento descreve como configurar um contêiner Loop Foreach, incluindo expressões de propriedade nos níveis de enumerador e contêiner.  

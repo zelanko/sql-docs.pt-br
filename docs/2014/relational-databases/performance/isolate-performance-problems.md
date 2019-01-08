@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - isolating performance problems [SQL Server]
@@ -19,12 +18,12 @@ ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86350dae3a41ffd994110491ab558367866f9bc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115006"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810698"
 ---
 # <a name="isolate-performance-problems"></a>Isolar problemas de desempenho
   Muitas vezes, é mais eficaz usar várias ferramentas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Microsoft Windows juntas para isolar problemas de desempenho de banco de dados do que usar uma ferramenta de cada vez. Por exemplo, o recurso gráfico Plano de Execução ajuda a reconhecer deadlocks rapidamente em uma única consulta. No entanto, você poderá reconhecer alguns outros problemas de desempenho mais facilmente se usar os recursos de monitoramento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows juntos.  
@@ -54,6 +53,6 @@ ms.locfileid: "48115006"
   
  [Identificar afunilamentos](identify-bottlenecks.md)  
   
- [Monitorar o uso de memória](../performance-monitor/monitor-memory-usage.md)  
+ [Monitorar o uso da memória](../performance-monitor/monitor-memory-usage.md)  
   
   

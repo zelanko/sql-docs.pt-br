@@ -14,12 +14,12 @@ ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1550c3fa2f9fa4ba8e0cb9dc6256bd5eb2535cd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225076"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812748"
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
   As tabelas a seguir listam os grupos de eventos DDL que podem ser usados para executar uma notificação de evento ou um gatilho DDL, bem como as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] abordadas por eles. Observe a natureza inclusiva dos grupos de eventos. Por exemplo, um gatilho ou notificação de evento DDL que especifique FOR DDL_TABLE_EVENTS (10018) cobre as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DROP TABLE. Um gatilho ou notificação de evento DDL que especifique FOR DDL_TABLE_VIEW_EVENTS (10017) cobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nos tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS e DDL_STATISTICS_EVENTS.  

@@ -1,5 +1,6 @@
 ---
-title: Introdução ao SQL Server no Ubuntu | Microsoft Docs
+title: Introdução ao SQL Server no Ubuntu
+titleSuffix: SQL Server
 description: Neste início rápido mostra como instalar o SQL Server 2017 ou o SQL Server 2019 no Ubuntu e, em seguida, criar e consultar um banco de dados com sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,15 +8,15 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677936"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160544"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Guia de início rápido: Instalar o SQL Server e criar um banco de dados no Ubuntu
 
@@ -183,7 +184,7 @@ Use as etapas a seguir para instalar o **mssql-tools** no Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Opcional**: adicione `/opt/mssql-tools/bin/` para seu **caminho** variável de ambiente em um shell bash.
+1. **Opcional**: Adicione `/opt/mssql-tools/bin/` para seu **caminho** variável de ambiente em um shell bash.
 
    Para tornar **sqlcmd/bcp** acessível do shell bash para sessões de logon, modificar sua **caminho** no **~/.bash_profile** arquivo com o seguinte comando:
 

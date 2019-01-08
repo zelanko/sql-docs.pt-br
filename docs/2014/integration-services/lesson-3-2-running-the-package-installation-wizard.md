@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 2: executar o Assistente de Instalação de Pacotes | Microsoft Docs'
+title: 'Etapa 2: Executar o Assistente de instalação de pacotes | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 661b411c87d5a1f570545d2e8d174c8900274bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053356"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351802"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Etapa 2: Executando o Assistente de Instalação de Pacotes
   Nesta tarefa, você executará o Assistente de Instalação de Pacotes para implantar os pacotes do projeto Tutorial de Implantação em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Somente pacotes podem ser instalados na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os arquivos que dão suporte incluídos no pacote de implantação serão implantados no sistema de arquivos.  
@@ -29,7 +28,7 @@ ms.locfileid: "48053356"
   
 1.  No computador de destino, localize o pacote de implantação.  
   
-     Se você tiver usado o valor padrão – bin\Deployment – como local para o utilitário de implantação, o pacote de implantação será a pasta de Implantação do projeto Tutorial de Implantação.  
+     Se você tiver usado o valor padrão – bin\Deployment – como a localização do utilitário de implantação, o pacote de implantação será a pasta de Implantação do projeto Tutorial de Implantação.  
   
 2.  Na pasta Implantação, clique duas vezes no arquivo de manifesto, Deployment Tutorial.SSISDeploymentManifest.  
   
@@ -82,11 +81,11 @@ ms.locfileid: "48053356"
   
      Como os valores das variáveis de ambiente no computador de destino diferem dos valores das variáveis de ambiente no computador de desenvolvimento, várias avisos são exibidos na página Validação de Pacote. Você deve esperar por quatro avisos:  
   
-    -   O arquivo de configuração: “C:\DeploymentTutorial\DataTransferConfig.dtsConfig” não é válido. Verifique o nome do arquivo de configuração.  
+    -   O arquivo de configuração: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" não é válido. Verifique o nome do arquivo de configuração.  
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
-    -   O arquivo de configuração: “C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig” não é válido. Verifique o nome do arquivo de configuração.  
+    -   O arquivo de configuração: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig não é válido. Verifique o nome do arquivo de configuração.  
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
@@ -102,10 +101,10 @@ ms.locfileid: "48053356"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 3: Testando os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviço Integration Services &#40;serviço SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Serviço Integration Services &#40;Serviço SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Gerenciar o serviço Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
@@ -15,12 +14,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798928"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
   Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento. As colunas esparsas e os conjuntos de colunas são definidos usando as instruções [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ou [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -44,7 +43,7 @@ ms.locfileid: "48107197"
   
 -   As exibições do catálogo para uma tabela que tenha colunas esparsas são as mesmas que para uma tabela típica. A exibição do catálogo sys.columns contém uma linha para cada coluna na tabela e inclui um conjunto de colunas, se houver um definido.  
   
--   Colunas esparsas são uma propriedade da camada de armazenamento, não a tabela lógica. Portanto, uma instrução SELECT…INTO não copia sobre a propriedade de coluna esparsa em uma nova tabela.  
+-   Colunas esparsas são uma propriedade da camada de armazenamento, não a tabela lógica. Portanto, uma instrução SELECT...INTO não copia sobre a propriedade de coluna esparsa em uma nova tabela.  
   
 -   A função COLUMNS_UPDATED retorna um valor `varbinary` para indicar todas as colunas atualizadas durante uma ação DML. Os bits retornados pela função COLUMNS_UPDATED são os seguintes:  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48107197"
   
  **Tipos de dados de comprimento fixo**  
   
-|Tipo de dados|Bytes não esparsos|Bytes esparsos|Porcentagem de NULL|  
+|Tipo de dados|Bytes não esparsos|Bytes esparsos|Percentual de NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |`bit`|0.125|5|98%|  
 |`tinyint`|1|5|86%|  
@@ -116,12 +115,12 @@ ms.locfileid: "48107197"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga na memória necessária para atualizações em colunas esparsas  
  Quando for criar tabelas com colunas esparsas, tenha em mente que uma sobrecarga adicional de 2 bytes é necessária para cada coluna esparsa não nula na tabela quando uma linha está sendo atualizada. Em resultado dessa necessidade de memória adicional, as atualizações podem falhar inesperadamente com o erro 576 quando o tamanho total da linha, incluindo essa sobrecarga de memória, excede 8019, e nenhuma coluna pode ser retirada da linha.  
   
- Considere o exemplo de uma tabela que tem 600 colunas esparsas do tipo bigint. Se houver 571 colunas não nulas, o tamanho total em disco será 571 * 12 = 6852 bytes. Depois de incluir a sobrecarga de linha adicional e o cabeçalho da coluna esparsa, isso aumenta para cerca de 6895 bytes. A página ainda tem cerca de 1124 bytes disponíveis em disco. Isso pode dar a impressão de que as colunas adicionais podem ser atualizadas com sucesso. No entanto, durante a atualização, há uma sobrecarga adicional na memória que é 2\*(o número de colunas esparsas não nulas). Neste exemplo, incluir a sobrecarga adicional – 2 \* 571 = 1142 bytes – aumenta o tamanho da linha no disco em torno de 8.037 bytes. Esse tamanho excede o tamanho máximo permitido de 8019 bytes. Como todas as colunas têm tipos de dados de comprimento fixo, elas não podem ser retiradas da linha. Portanto, a atualização falha com o erro 576.  
+ Considere o exemplo de uma tabela que tem 600 colunas esparsas do tipo bigint. Se houver 571 colunas não nulas, o tamanho total em disco será 571 * 12 = 6852 bytes. Depois de incluir a sobrecarga de linha adicional e o cabeçalho da coluna esparsa, isso aumenta para cerca de 6895 bytes. A página ainda tem cerca de 1124 bytes disponíveis em disco. Isso pode dar a impressão de que as colunas adicionais podem ser atualizadas com sucesso. No entanto, durante a atualização, há uma sobrecarga adicional na memória que é 2\*(o número de colunas esparsas não nulas). Neste exemplo, incluir a sobrecarga adicional – 2 \* 571 = 1142 bytes – aumenta o tamanho da linha no disco em torno de 8037 bytes. Esse tamanho excede o tamanho máximo permitido de 8019 bytes. Como todas as colunas têm tipos de dados de comprimento fixo, elas não podem ser retiradas da linha. Portanto, a atualização falha com o erro 576.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrições para o uso de colunas esparsas  
  As colunas esparsas podem ser de qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e podem se comportar como qualquer outra coluna com as seguintes restrições:  
   
--   Uma coluna esparsa deve permitir valor nulo e não deve ter as propriedades ROWGUIDCOL ou IDENTITY. Uma coluna esparsa não pode ser dos seguintes tipos de dados: `text`, `ntext`, `image`, `timestamp`, tipo de dados definido pelo usuário `geometry`, ou `geography`; ou ter o atributo FILESTREAM.  
+-   Uma coluna esparsa deve permitir valor nulo e não deve ter as propriedades ROWGUIDCOL ou IDENTITY. Uma coluna esparsa não pode ser nenhum destes tipos de dados: `text`, `ntext`, `image`, `timestamp`, tipo de dados definido pelo usuário, `geometry` ou `geography`; ou ter o atributo FILESTREAM.  
   
 -   Uma coluna esparsa não pode ter um valor padrão.  
   

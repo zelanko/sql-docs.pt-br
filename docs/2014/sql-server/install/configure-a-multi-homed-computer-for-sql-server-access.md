@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
@@ -15,12 +14,12 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4460b94a758a60abe27d8e9f3a90567ecbcbaa13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163506"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785618"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
   Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
@@ -58,7 +57,7 @@ ms.locfileid: "48163506"
   
 1.  No computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado, clique em **iniciar**, clique em **execute**, digite `cmd` e, em seguida, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-2.  Na janela do Prompt de comando, digite `ipconfig,` e, em seguida, pressione ENTER para listar os endereços IP disponíveis neste computador.  
+2.  Na janela do prompt de comando, digite `ipconfig,` e pressione ENTER para listar os endereços IP disponíveis neste computador.  
   
     > [!NOTE]  
     >  O comando **ipconfig** , às vezes, lista diversas conexões possíveis, incluindo conexões que são desconectadas. O comando **ipconfig** pode listar endereços IPv4 e IPv6.  
@@ -100,7 +99,7 @@ ms.locfileid: "48163506"
   
 8.  Na página **Protocolos e Portas** , selecione **TCP**.  
   
-9. Selecione **Portas locais especificadas**. Digite os números das portas separados por vírgulas e clique em **Avançar**. Neste exemplo, você configurará a porta padrão; Portanto, digite `1433`.  
+9. Selecione **Portas locais especificadas**. Digite os números das portas separados por vírgulas e clique em **Avançar**. Neste exemplo, você configurará a porta padrão, portanto, digite `1433`.  
   
 10. Na página **Ação** , examine as opções. Neste exemplo, você não está usando o firewall para forçar conexões seguras. Portanto, clique em **Permitir a conexão**e clique em **Avançar**.  
   

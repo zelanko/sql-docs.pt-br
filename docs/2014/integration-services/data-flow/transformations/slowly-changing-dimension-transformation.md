@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -18,12 +17,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056186"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352130"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
   A transformação Dimensão de Alteração Lenta coordena a atualização e a inserção de registros em tabelas de dimensão do data warehouse. Por exemplo, você pode usar essa transformação para configurar as saídas de transformação que inserem e atualizam registros na tabela DimProduct do banco de dados OLAP da [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] com dados da tabela Production.Products no banco de dados OLTP da AdventureWorks.  
@@ -47,7 +46,7 @@ ms.locfileid: "48056186"
   
 -   Alterar atributos de alteração substitui registros existentes. Esse tipo de alteração é equivalente a uma alteração do Tipo 1. A transformação Dimensão de Alteração Lenta dirige estas linhas a uma saída nomeada **Saída de Atualizações de Atributos de Alteração**.  
   
--   As alterações de atributos históricos criam registros novos em vez de atualizar registros existentes. A única alteração que é permitida em um registro existente é uma atualização de uma coluna que indica se o registro é atual ou expirado. Esse tipo de alteração é equivalente a uma alteração do Tipo 2. A transformação Dimensão de Alteração Lenta dirige estas linhas a duas saídas: **Saída de Inserções de Atributos Históricos** e **Nova Saída**.  
+-   As alterações de atributos históricos criam registros novos em vez de atualizar registros existentes. A única alteração que é permitida em um registro existente é uma atualização de uma coluna que indica se o registro é atual ou expirado. Esse tipo de alteração é equivalente a uma alteração do Tipo 2. A transformação dimensão de alteração lenta dirige estas linhas a duas saídas: **Saída de inserções de atributo histórico** e **nova saída**.  
   
 -   Alterações de atributo fixo indicam que o valor da coluna não deve ser alterado. A transformação Dimensão de Alteração Lenta detecta as alterações e pode direcionar as linhas com alterações a uma saída nomeada **Saída de Atributos Fixos**.  
   
@@ -65,11 +64,11 @@ ms.locfileid: "48056186"
   
  A tabela a seguir descreve as saídas de transformação e os requisitos de seus fluxos de dados subsequentes. Os requisitos descrevem o fluxo de dados que o Assistente de Dimensão da Alteração Lenta cria.  
   
-|Saída|Description|Requisitos de fluxo de dados|  
+|Saída|Descrição|Requisitos de fluxo de dados|  
 |------------|-----------------|----------------------------|  
 |**Saída de Atualizações de Atributos de Alteração**|O registro na tabela de pesquisa é atualizado. Esta saída é usada para linhas de atributos de alteração.|Uma transformação Comando OLE DB atualiza o registro usando uma instrução UPDATE.|  
 |**Saída de Atributos Fixos**|Os valores em linhas que não devem ser alterados não correspondem a valores na tabela de pesquisa. Esta saída é usada para linhas de atributos fixos.|Nenhum fluxo de dados padrão é criado. Se a transformação está configurada para continuar depois de encontrar alterações em colunas de atributo fixo, você deve criar um fluxo de dados que capture essas linhas.|  
-|**Saída de Inserções de Atributos Históricos**|A tabela de pesquisa contém pelo menos uma linha correspondente. A linha marcada como "atual" deve ser marcada agora como "expirada." Esta saída é usada para linhas de atributos históricos.|As transformações Colunas Derivadas criam colunas para a linha expirada e os indicadores de linha atuais. Uma transformação Comando OLE DB atualiza o registro que deve ser marcado agora como "expirado." A linha com os valores da nova coluna é direcionada para a Nova Saída, na qual a linha é inserida e marcada como "atual".|  
+|**Saída de Inserções de Atributos Históricos**|A tabela de pesquisa contém pelo menos uma linha correspondente. A linha marcada como "atual" deve ser marcada agora como "expirada". Esta saída é usada para linhas de atributos históricos.|As transformações Colunas Derivadas criam colunas para a linha expirada e os indicadores de linha atuais. Uma transformação Comando OLE DB atualiza o registro que deve ser marcado agora como "expirado." A linha com os valores da nova coluna é direcionada para a Nova Saída, na qual a linha é inserida e marcada como "atual".|  
 |**Saída de Atualizações de Membro Deduzido**|Linhas para membros de dimensão deduzidos são inseridas. Esta saída é usada para linhas de membro deduzido.|Uma transformação Comando OLE DB atualiza o registro usando uma instrução SQL UPDATE.|  
 |**Nova Saída**|A tabela de pesquisa não contém linhas correspondentes. A linha é adicionada à tabela de dimensão. Esta saída é usada para novas linhas e alterações em linhas de atributos históricos.|Uma transformação Coluna Derivada define o indicador da linha atual e um destino de OLE DB insere a linha.|  
 |**Saída Inalterada**|Os valores na tabela de pesquisa correspondem aos valores de linha. Esta saída é usada para linhas inalteradas.|Nenhum fluxo de dados padrão é criado porque a transformação Dimensão de Alteração Lenta não executa nenhum trabalho. Se você quiser capturar estas linhas, deverá criar um fluxo de dados para esta saída.|  
@@ -108,6 +107,6 @@ ms.locfileid: "48056186"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [Otimizando o Assistente de Dimensão Variável Lentamente](http://go.microsoft.com/fwlink/?LinkId=199481), em blogs.msdn.com.  
+-   Entrada de blog, [Otimizando o Assistente de Dimensão Variável Lentamente](https://go.microsoft.com/fwlink/?LinkId=199481), em blogs.msdn.com.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.publisher.f1
@@ -15,12 +14,12 @@ ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b3d6b8de35ff65d0ea715ecaa9940e3f75ee42f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5213c07fcdf84db3297ae5737d1d8726f4355257
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794438"
 ---
 # <a name="subscription-properties---publisher"></a>Propriedades da Assinatura - Publicador
   A caixa de diálogo **Propriedades da Assinatura** no Publicador permite exibir e definir propriedades para assinaturas push. Você também pode exibir algumas propriedades de assinaturas pull, mas a caixa de diálogo **Propriedades da Assinatura** no Assinante exibe propriedades adicionais e permite que elas sejam modificadas.  
@@ -50,7 +49,7 @@ ms.locfileid: "48081436"
   
 ## <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas sistema funções (ou ambas, se ambas as funções de referências de filtro) durante a sincronização para determinar a data em que um assinante deve receber: **Suser_sname ()** ou **HOST_NAME ()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -58,7 +57,7 @@ ms.locfileid: "48081436"
  Se você selecionou um tipo de assinatura de servidor no Assistente para Nova Assinatura, o Assinante receberá uma prioridade que será usada durante resolução de conflito.  
   
  **Resolver conflitos interativamente**  
- Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, confira [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, consulte [Resolução de conflito interativo](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   

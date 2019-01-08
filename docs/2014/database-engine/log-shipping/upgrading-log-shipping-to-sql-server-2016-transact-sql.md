@@ -12,15 +12,15 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61e58bef0e4face7aac45563350e4f1047de359d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518098"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Atualizar o envio de logs para o SQL Server 2014 (Transact-SQL)
-  É possível preservar as configurações de envio de logs ao atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve cenários alternativos e práticas recomendadas para atualizar uma configuração de envio de logs.  
+  É possível preservar as configurações de envio de logs ao atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve cenários alternativos e práticas recomendadas para atualizar uma configuração de envio de logs.  
   
 > [!NOTE]  
 >  [A compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) foi introduzida no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Uma configuração de envio de logs atualizada usa a opção de configuração no nível do servidor de **compactação de backup padrão** para controlar se a compactação será utilizada para os arquivos de backup de log de transações. O comportamento de compactação de backups de log pode ser especificado para cada configuração de envio de logs. Para obter mais informações, consulte [Configurar o envio de logs &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48204966"
  
   
 ###  <a name="UpgradeSecondary"></a> Atualizando a instância do servidor secundário  
- O processo de atualização envolve a atualização das instâncias do servidor secundário de uma [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou a configuração de envio de log mais alto para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de atualizar a instância do servidor primário. Sempre atualize primeiro a instância do servidor secundário. Se o servidor primário fosse atualizado antes de um servidor secundário, o envio de logs falharia porque um backup criado em uma versão mais recente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado em uma versão mais antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O processo de atualização envolve a atualização das instâncias do servidor secundário de uma configuração de envio de logs do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de atualizar a instância de servidor primário. Sempre atualize primeiro a instância do servidor secundário. Se o servidor primário fosse atualizado antes de um secundário, o envio de logs falharia porque um backup criado em uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado em uma versão mais antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O envio de logs continua ao longo do processo de atualização porque os servidores secundários atualizados continuam restaurando os backups de log do servidor primário do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior. O processo para atualizar as instâncias do servidor secundário depende em parte se a configuração de envio de logs possui vários servidores secundários. Para obter mais informações, consulte [Atualizando várias instâncias do servidor secundário](#MultipleSecondaries)posteriormente neste tópico.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48204966"
  Depois que o servidor secundário tiver sido atualizado, os trabalhos dos agentes de envio de logs serão retomados e retomarão a copiar e a restaurar os backups de log da instância do servidor primário, o servidor A. O tempo necessário para o servidor secundário atualizar o banco de dados secundário varia, dependendo do tempo necessário para atualizar o servidor secundário e da frequência dos backups no servidor primário.  
   
 > [!NOTE]  
->  Durante a atualização do servidor, banco de dados secundário não será atualizado para um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] banco de dados. Ele só será atualizado se estiver online.  
+>  Durante a atualização do servidor, o banco de dados secundário não será atualizado para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ele só será atualizado se estiver online.  
   
 > [!IMPORTANT]  
 >  A opção RESTORE WITH STANDBY não tem suporte para um banco de dados que requer atualização. Se um banco de dados secundário atualizado foi configurado usando RESTORE WITH STANDBY, os logs de transação já não poderão ser restaurados depois da atualização. Para retomar o envio de logs no banco de dados secundário, você precisará configurar o envio de logs novamente no servidor em espera. Para obter mais informações sobre a opção STANDBY, consulte [argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
@@ -68,21 +68,21 @@ ms.locfileid: "48204966"
 ###  <a name="UpgradePrimary"></a> Atualizando a instância do servidor primário  
  Ao planejar uma atualização, uma consideração importante é a quantidade de tempo que seu banco de dados ficará indisponível. O cenário de atualização mais simples indisponibiliza o banco de dados durante a atualização do servidor primário (cenário 1, abaixo).  
   
- Por meio de um processo de atualização mais complicado, você poderá maximizar sua disponibilidade de banco de dados efetuando failover do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior servidor primário para um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servidor secundário antes de atualizar o servidor primário original (cenário 2, abaixo). Há duas variantes do cenário de failover. Você pode alternar novamente para o servidor primário original e manter a configuração original de envio de logs. Alternativamente, você poderá remover a configuração original de envio de logs antes de atualizar o servidor primário original e posteriormente criar uma nova configuração usando o novo servidor primário. Esta seção descreve os dois cenários.  
+ Por meio de um processo de atualização mais complicado, você poderá maximizar a disponibilidade do seu banco de dados efetuando failover do servidor primário do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior para um servidor secundário do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de atualizar o servidor primário original (cenário 2, abaixo). Há duas variantes do cenário de failover. Você pode alternar novamente para o servidor primário original e manter a configuração original de envio de logs. Alternativamente, você poderá remover a configuração original de envio de logs antes de atualizar o servidor primário original e posteriormente criar uma nova configuração usando o novo servidor primário. Esta seção descreve os dois cenários.  
   
 > [!IMPORTANT]  
 >  Atualize a instância do servidor secundário antes de atualizar a instância de servidor primário. Para obter mais informações, consulte [Atualizando a instância do servidor secundário](#UpgradeSecondary)anteriormente neste tópico.  
   
   
-####  <a name="Scenario1"></a> Cenário 1: Instância de atualizar o servidor primário sem Failover  
+####  <a name="Scenario1"></a> Cenário 1: Atualizar a instância do servidor primário sem Failover  
  Este é o cenário mais simples, entretanto ele gera mais tempo de inatividade do que o cenário que usa failover. A instância do servidor primário é simplesmente atualizada e o banco de dados fica indisponível durante esta atualização.  
   
  Quando o servidor é atualizado, o banco de dados fica online automaticamente, o que faz com que ele seja atualizado. Depois que o banco de dados é atualizado, os trabalhos de envio de logs são retomados.  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>Cenário 2: Atualização da instância do servidor primário com failover  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>Cenário 2: Atualizar a instância do servidor primário com Failover  
  Este cenário maximiza a disponibilidade e minimiza tempo de inatividade. Ele utiliza um failover controlado para a instância do servidor secundário, o que mantém o banco de dados disponível enquanto a instância do servidor primário original é atualizada. O tempo de inatividade é limitado ao tempo relativamente curto do failover, em vez do tempo necessário para atualizar a instância do servidor primário.  
   
- A atualização da instância do servidor primário com failover envolve três procedimentos gerais: a execução de um failover controlado para o servidor secundário, a atualização da instância do servidor primário original para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e a configuração de envio de logs em uma instância do servidor primário do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esses procedimentos são descritos nesta seção.  
+ A atualização da instância do servidor primário com failover envolve três procedimentos gerais: a execução de um failover controlado para o servidor secundário, a atualização da instância do servidor primário original para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e a configuração de envio de logs em uma instância do servidor primário do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Esses procedimentos são descritos nesta seção.  
   
 > [!IMPORTANT]  
 >  Se você planeja ter a instância do servidor secundário como a nova instância do servidor primário, precisará remover a configuração de envio de logs. O envio de logs precisará ser reconfigurado do novo primário para o novo secundário, depois que a instância do servidor primário original tiver sido atualizada. Para obter mais informações, consulte [remover o envio de logs &#40;SQL Server&#41;](remove-log-shipping-sql-server.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "48204966"
   
     1.  Assegure-se de que todos os backups obtidos automaticamente pelo backup de envio de logs tenham sido aplicados. Para verificar quais trabalhos de backup foram aplicados, use o [sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql) procedimento armazenado do sistema no servidor monitor ou nos servidores primários e secundários. O mesmo arquivo deve ser listado na **colunas last_backup_file**, **last_copied_file**, e **last_restored_file** colunas. Se alguns dos arquivos de backup não foram copiados e restaurados, chame manualmente os trabalhos de cópia e restauração do agente para a configuração de envio de logs.  
   
-         Para obter informações sobre como iniciar um trabalho, consulte [iniciar um trabalho](../../ssms/agent/start-a-job.md).  
+         Para obter informações sobre como iniciar um trabalho, consulte [Start a Job](../../ssms/agent/start-a-job.md).  
   
     2.  Copie o arquivo de backup de log final que você criou na etapa 1 do compartilhamento de arquivo para o local que é usado pelo envio de logs no servidor secundário.  
   
@@ -131,12 +131,12 @@ ms.locfileid: "48204966"
     5.  Cuidado para que o log de transações do banco de dados secundário não seja preenchido enquanto o banco de dados estiver online. Para impedir que o log de transações seja preenchido, talvez seja necessário fazer seu backup. Nesse caso, recomendamos que você faça seu backup em um local compartilhado, um *compartilhamento de backup*, para tornar os backups disponíveis para restauração em outra instância do servidor.  
   
 #####  <a name="Procedure2 "></a> Procedimento 2: Atualize a instância de servidor primário Original para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Depois de atualizar a instância do servidor primário original para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados ainda estará offline e no formato.  
+ Depois de atualizar a instância do servidor primário original para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados ainda estará offline e no formato.  
   
 #####  <a name="Procedure3"></a> Procedimento 3: Configurar o envio de logs no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  O restante do processo de atualização dependerá de o envio de logs ainda estar configurado, como a seguir:  
   
--   Se você manteve a configuração de envio de logs do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, alterne novamente para a instância do servidor primário original. Para obter mais informações, consulte [Para alternar novamente para a instância do servidor primário original](#SwitchToOrigPrimary)posteriormente nessa seção.  
+-   Se você manteve a configuração de envio de logs do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ou posterior, alterne novamente para a instância do servidor primário original. Para obter mais informações, consulte [Para alternar novamente para a instância do servidor primário original](#SwitchToOrigPrimary)posteriormente nessa seção.  
   
 -   Se você tiver removido a configuração de envio de logs antes de efetuar o failover, crie uma nova configuração de envio de logs em que a instância do servidor secundário original seja a nova instância do servidor primário. Para obter mais informações, consulte [Para manter a instância do servidor secundário antiga como a nova instância do servidor primário](#KeepOldSecondaryAsNewPrimary)posteriormente nessa seção.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48204966"
     GO  
     ```  
   
-2.  Se alguns backups de log de transações forem feitos no banco de dados primário provisório, além do backup da parte final que você criou na etapa 1, restaure aqueles backups de log usando WITH NORECOVERY para o banco de dados offline no servidor primário original (servidor A). O banco de dados é atualizado para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Formatar quando o primeiro backup de log é restaurado.  
+2.  Se alguns backups de log de transações forem feitos no banco de dados primário provisório, além do backup da parte final que você criou na etapa 1, restaure aqueles backups de log usando WITH NORECOVERY para o banco de dados offline no servidor primário original (servidor A). O banco de dados será atualizado para o formato [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando o primeiro backup de log for restaurado.  
   
 3.  Restaure o backup do final do log, `Switchback_AW_20080315.trn`, no banco de dados primário original (no servidor A) usando o WITH RECOVERY para colocar o banco de dados online.  
   
@@ -169,12 +169,12 @@ ms.locfileid: "48204966"
   
 2.  Faça backup do log do novo banco de dados primário (no servidor B).  
   
-3.  Restaure os backups de log para a nova instância do servidor secundário (servidor A) usando WITH NORECOVERY. A primeira operação de restauração atualiza o banco de dados [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Restaure os backups de log para a nova instância do servidor secundário (servidor A) usando WITH NORECOVERY. A primeira operação de restauração atualizará o banco de dados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 4.  Configure o envio de logs com o servidor secundário anterior (servidor B) como a instância do servidor primário.  
   
     > [!IMPORTANT]  
-    >  Se você usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], especifique se o banco de dados secundário já está inicializado.  
+    >  Se você usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], especifique se o banco de dados secundário já está inicializado.  
   
      Para obter mais informações, consulte [Configurar o envio de logs &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48204966"
   
 6.  Atualize o servidor primário original (servidor A).  
   
-7.  No banco de dados para o qual você efetuou failover — o banco de dados primário provisório (no servidor B), faça manualmente backup do log de transações por meio do WITH NORECOVERY. Isso coloca o banco de dados offline.  
+7.  No banco de dados na qual foi manualmente de over-the provisório banco de dados primário (no servidor B), faça backup do log de transações usando WITH NORECOVERY. Isso coloca o banco de dados offline.  
   
 8.  Restaure todos os backups de log de transações que você criou no banco de dados primário provisório (no servidor B) para todos os outros bancos de dados secundários (no servidor C) com o WITH NORECOVERY. Isso permite que o envio de logs continue do banco de dados primário original depois de sua atualização, sem exigir uma restauração completa em cada banco de dados secundário.  
   

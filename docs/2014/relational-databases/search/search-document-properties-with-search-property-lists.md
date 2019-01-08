@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086836"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800368"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
   Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários `varbinary`, `varbinary(max)` (incluindo `FILESTREAM`) ou `image`. Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  
@@ -48,11 +48,11 @@ ms.locfileid: "48086836"
 ### <a name="indexing-of-registered-properties"></a>Indexação de propriedades registradas  
  Depois que um índice de texto completo é associado a uma lista de propriedades de pesquisa, o índice deve ser populado novamente para indexar termos de pesquisa específicos da propriedade. Durante a indexação de texto completo, o conteúdo de todas as propriedades é armazenado no índice de texto completo juntamente com outro conteúdo. No entanto, ao indexar um termo de pesquisa encontrado em uma propriedade registrada, o indexador de texto completo também armazenará a ID de propriedade interna correspondente com o termo. Em contrapartida, se uma propriedade não estiver registrada, ela será armazenada no índice de texto completo como se fosse parte do corpo do documento e terá um valor de zero para a ID de propriedade interna.  
   
- A ilustração a seguir mostra uma exibição lógica de como os termos de pesquisa aparecem em um índice de texto completo associado à lista de propriedades de pesquisa mostrada na ilustração anterior. Um documento de exemplo, Document 1, contém três propriedades - Title, Author e Keywords - bem como o corpo do documento. Para as propriedades Title e Keywords, que são especificadas na lista de propriedades de pesquisa, os termos de pesquisa são associados às suas IDs de propriedade interna correspondentes no índice de texto completo. Em contrapartida, o conteúdo da propriedade Author é indexado como se fosse parte do corpo do documento. Isso significa que registrar uma propriedade aumenta um pouco o tamanho do índice de texto completo, dependendo da quantidade de conteúdo armazenada na propriedade.  
+ A ilustração a seguir mostra uma exibição lógica de como os termos de pesquisa aparecem em um índice de texto completo associado à lista de propriedades de pesquisa mostrada na ilustração anterior. Um documento de exemplo, Document 1, contém três propriedades – Title, Author e Keywords –, bem como o corpo do documento. Para as propriedades Title e Keywords, que são especificadas na lista de propriedades de pesquisa, os termos de pesquisa são associados às suas IDs de propriedade interna correspondentes no índice de texto completo. Em contrapartida, o conteúdo da propriedade Author é indexado como se fosse parte do corpo do documento. Isso significa que registrar uma propriedade aumenta um pouco o tamanho do índice de texto completo, dependendo da quantidade de conteúdo armazenada na propriedade.  
   
  ![Índice de texto completo que usa uma lista de propriedades de pesquisa](../../database-engine/media/ifts-spl-and-fti.gif "Índice de texto completo que usa uma lista de propriedades de pesquisa")  
   
- Os termos de pesquisa na propriedade Title — "Favorite", "Biking" e "Trails" — são associados à ID de propriedade interna atribuída a Title para esse índice, 1. Os termos de pesquisa na propriedade Keywords — "biking" e "mountain" — são associados à ID de propriedade interna atribuída a Tags para esse índice, 2. Para os termos de pesquisa na propriedade Author — "Jane" e "Doe" — e termos de pesquisa no corpo do documento, a ID da propriedade interna é 0. Observe que o termo "biking" ocorre na propriedade Title, na propriedade Keywords (Tags) e no corpo do documento. Uma pesquisa de propriedade por "biking" na propriedade Title ou Keywords (Tags) retornaria esse documento nos resultados. Uma consulta genérica de texto completo por "biking" também retornaria esse documento, como se o índice não estivesse configurado para a pesquisa de propriedade. Uma pesquisa de propriedade por "biking" na propriedade Author não retornaria esse documento.  
+ Os termos de pesquisa na propriedade Title – "Favorite", "Biking" e "Trails" – são associados à ID de propriedade interna atribuída a Title para esse índice, 1. Os termos de pesquisa na propriedade Keywords – "biking" e "mountain" – são associados à ID de propriedade interna atribuída a Tags para esse índice, 2. Para os termos de pesquisa na propriedade Author – "Jane" e "Doe" – e termos de pesquisa no corpo do documento, a ID da propriedade interna é 0. Observe que o termo "biking" ocorre na propriedade Title, na propriedade Keywords (Tags) e no corpo do documento. Uma pesquisa de propriedade por "biking" na propriedade Title ou Keywords (Tags) retornaria esse documento nos resultados. Uma consulta genérica de texto completo por "biking" também retornaria esse documento, como se o índice não estivesse configurado para a pesquisa de propriedade. Uma pesquisa de propriedade por "biking" na propriedade Author não retornaria esse documento.  
   
  Uma consulta de texto completo com escopo de propriedade usa as IDs de propriedade interna para a lista de propriedades de pesquisa atual do índice de texto completo.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48086836"
 ##  <a name="impact"></a> Impacto de habilitar a pesquisa de propriedade  
  Configurar um índice de texto completo para oferecer suporte à pesquisa em uma ou mais propriedades aumenta um pouco o tamanho do índice, dependendo do número de propriedades que você especifica na sua lista de propriedades de pesquisa e do conteúdo de cada propriedade.  
   
- No teste de arquivos típicos do Microsoft Word<sup>®</sup>, Excel<sup>®</sup>e o PowerPoint<sup>®</sup> documentos, configuramos um propriedades comuns de pesquisa de índice ao índice de texto completo. Indexar essas propriedades aumentou o tamanho do índice de texto completo em, aproximadamente, 5%. Estimamos que esse aumento aproximado de tamanho será típico para a maioria dos arquivos de documentos. No entanto, o aumento de tamanho dependerá, basicamente, da quantidade de dados de propriedade de um determinado documento em relação à quantidade de dados geral.  
+ No teste de arquivos típicos do Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>e o PowerPoint<sup>??</sup> documentos, configuramos um propriedades comuns de pesquisa de índice ao índice de texto completo. Indexar essas propriedades aumentou o tamanho do índice de texto completo em, aproximadamente, 5%. Estimamos que esse aumento aproximado de tamanho será típico para a maioria dos arquivos de documentos. No entanto, o aumento de tamanho dependerá, basicamente, da quantidade de dados de propriedade de um determinado documento em relação à quantidade de dados geral.  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "48086836"
   
      O nome da propriedade pode ser qualquer um destes:  
   
-    -   O nome canônico do Windows da propriedade, tal como `System.Author` ou `System.Contact.HomeAddress`.  
+    -   O nome canônico da propriedade do Windows, como `System.Author` ou `System.Contact.HomeAddress`.  
   
     -   Um nome amigável fácil de ser lembrado pelos usuários. Algumas propriedades são associadas a um nome amigável familiar ao usuário, como "Autor" ou "Endereço residencial", mas você pode especificar o nome mais apropriado aos usuários.  
   

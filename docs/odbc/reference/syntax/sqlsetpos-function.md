@@ -20,16 +20,16 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99d7f84f2153f57cc9bc392c22d79739deaf6b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599614"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211985"
 ---
 # <a name="sqlsetpos-function"></a>Função SQLSetPos
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLSetPos** define a posição do cursor em um conjunto de linhas e permite que um aplicativo para atualizar dados no conjunto de linhas ou atualizar ou excluir dados no conjunto de resultados.  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  O valor SQL_ADD para o *operação* argumento foi preterido para ODBC 3 *. x*. ODBC 3. *x* drivers serão necessário dar suporte a SQL_ADD para compatibilidade com versões anteriores. Essa funcionalidade foi substituída por uma chamada para **SQLBulkOperations** com um *operação* de SQL_ADD. Quando um ODBC 3. *x* aplicativo funciona com um ODBC 2. *x* driver, o Gerenciador de Driver mapeia uma chamada para **SQLBulkOperations** com um *operação* de SQL_ADD para **SQLSetPos** com um  *Operação* de SQL_ADD.  
   
  Para obter mais informações, consulte "Comentários".  
@@ -80,7 +80,7 @@ SQLRETURN SQLSetPos(
   
  Para todos esses SQLSTATEs que podem retornar SQL_SUCCESS_WITH_INFO ou SQL_ERROR (exceto 01xxx SQLSTATEs), SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em um ou mais, mas nem todas as linhas de uma operação de várias linhas, e SQL_ERROR será retornado se ocorrer um erro em um operação de uma única linha.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01001|Conflito de operação do cursor|O *operação* argumento era SQL_DELETE ou SQL_UPDATE e nenhuma linha ou mais de uma linha foi excluída ou atualizada. (Para obter mais informações sobre atualizações de mais de uma linha, consulte a descrição do SQL_ATTR_SIMULATE_CURSOR *atributo* na **SQLSetStmtAttr**.) (A função retornará SQL_SUCCESS_WITH_INFO.)<br /><br /> O *operação* argumento era SQL_DELETE ou SQL_UPDATE, e a operação falhou devido a simultaneidade otimista. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
@@ -108,7 +108,7 @@ SQLRETURN SQLSetPos(
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando a função SQLSetPos foi chamada.<br /><br /> (DM) especificado *StatementHandle* não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute**, ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não desse último) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retornados de SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) o driver foi um ODBC 2. *x* driver, e **SQLSetPos** foi chamado para um *StatementHandle* depois **SQLFetch** foi chamado.|  
 |HY011|Atributo não pode ser definido agora|(DM) o driver foi um ODBC 2. *x* driver; o SQL_ATTR_ROW_STATUS_PTR atributo de instrução foi definido; em seguida, **SQLSetPos** foi chamado antes **SQLFetch**, **SQLFetchScroll**, ou **SQLExtendedFetch** foi chamado.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY090|Comprimento de buffer ou cadeia de caracteres inválido|O *operação* argumento era SQL_UPDATE, um valor de dados é um ponteiro nulo e o valor de comprimento de coluna não era 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> O *operação* argumento era SQL_UPDATE; um valor de dados não é um ponteiro nulo; o tipo de dados C foi SQL_C_BINARY ou SQL_C_CHAR; e o valor de comprimento de coluna era menor que 0 mas não iguais a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS ou SQL_NULL_DATA, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> O valor em um buffer de comprimento/indicador foi SQL_DATA_AT_EXEC; o tipo de SQL era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados de específico da fonte de dados long; e o tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** foi "Y".|  
+|HY090|Comprimento de buffer ou cadeia de caracteres inválido|O *operação* argumento era SQL_UPDATE, um valor de dados é um ponteiro nulo e o valor de comprimento de coluna não era 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> O *operação* argumento era SQL_UPDATE; um valor de dados não é um ponteiro nulo; o tipo de dados C foi SQL_C_BINARY ou SQL_C_CHAR; e o valor de comprimento de coluna era menor que 0 mas não iguais a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS ou SQL_NULL_DATA, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> O valor em um buffer de comprimento/indicador foi SQL_DATA_AT_EXEC; o tipo de SQL era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específicos da fonte de dados long; e o tipo de informação no SQL_NEED_LONG_DATA_LEN **SQLGetInfo** foi "Y".|  
 |HY092|Identificador de atributo inválido|(DM) o valor especificado para o *operação* argumento era inválido.<br /><br /> (DM) o valor especificado para o *LockType* argumento era inválido.<br /><br /> O *operação* argumento era SQL_UPDATE ou SQL_DELETE e o atributo de instrução SQL_ATTR_CONCURRENCY foi SQL_ATTR_CONCUR_READ_ONLY.|  
 |HY107|Valor de linha fora do intervalo|O valor especificado para o argumento *RowNumber* era maior que o número de linhas no conjunto de linhas.|  
 |HY109|Posição do cursor inválida|O cursor associado a *StatementHandle* foi definida como somente de avanço, portanto, o cursor não pode ser posicionado dentro do conjunto de linhas. Consulte a descrição para o atributo SQL_ATTR_CURSOR_TYPE na **SQLSetStmtAttr**.<br /><br /> O *operação* argumento era SQL_UPDATE, SQL_DELETE ou SQL_REFRESH e a linha identificada pela *RowNumber* argumento tivesse sido excluído ou não tinha sido buscado.<br /><br /> (DM) a *RowNumber* argumento era 0 e o *operação* argumento era SQL_POSITION.<br /><br /> **SQLSetPos** foi chamado após **SQLBulkOperations** foi chamado e antes **SQLFetchScroll** ou **SQLFetch** foi chamado.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLSetPos(
   
 ## <a name="comments"></a>Comentários  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Para obter informações sobre a instrução declara que **SQLSetPos** pode ser chamada e o que precisa fazer para compatibilidade com o ODBC 2 *. x* aplicativos, consulte [cursores em bloco, cursores roláveis, e Compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>Argumento RowNumber  
@@ -226,7 +226,7 @@ SQLRETURN SQLSetPos(
   
     -   Para colunas de dados em execução, o aplicativo coloca um valor definido pelo aplicativo, como o número da coluna, na  *\*TargetValuePtr* buffer. O valor pode ser usado posteriormente para identificar a coluna.  
   
-         O aplicativo coloca o resultado do SQL_LEN_DATA_AT_EXEC (*comprimento*) macro no **StrLen_or_IndPtr* buffer. Se o tipo de dados SQL da coluna for SQL_LONGVARBINARY, SQL_LONGVARCHAR ou um tipo de dados de específico da fonte de dados longos e o driver retorna "Y" para o tipo de informação SQL_NEED_LONG_DATA_LEN em **SQLGetInfo**, *comprimento*  é o número de bytes de dados a serem enviados para o parâmetro; caso contrário, ele deve ser um valor não negativo e será ignorado.  
+         O aplicativo coloca o resultado do SQL_LEN_DATA_AT_EXEC (*comprimento*) macro no **StrLen_or_IndPtr* buffer. Se o tipo de dados SQL da coluna for SQL_LONGVARBINARY, SQL_LONGVARCHAR ou um tipo de dados específicos da fonte de dados longos e o driver retorna "Y" para o tipo de informação SQL_NEED_LONG_DATA_LEN em **SQLGetInfo**, *comprimento*  é o número de bytes de dados a serem enviados para o parâmetro; caso contrário, ele deve ser um valor não negativo e será ignorado.  
   
 2.  Chamadas **SQLSetPos** com o *operação* argumento definido como SQL_UPDATE para atualizar a linha de dados.  
   
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Colunas de dados em execução são colunas em um conjunto de linhas para o qual os dados serão enviados com **SQLPutData** quando uma linha é atualizada com **SQLSetPos**. Eles são associados com **SQLBindCol**. O valor retornado por **SQLParamData** é o endereço da linha no **TargetValuePtr* buffer que está sendo processada.  
   
-4.  Chamadas **SQLPutData** uma ou mais vezes para enviar dados para a coluna. Mais de uma chamada é necessária se todos os valores de dados não podem ser retornados na  *\*TargetValuePtr* buffer especificado na **SQLPutData**; diversas chamadas para **SQLPutData** para a mesma coluna são permitidas somente quando o envio de dados de caractere C para uma coluna com um tipo específico da fonte de dados de caractere, binária ou dados ou ao enviar dados binários de C para uma coluna com um caractere, binária, ou tipo de dados específico da fonte de dados.  
+4.  Chamadas **SQLPutData** uma ou mais vezes para enviar dados para a coluna. Mais de uma chamada é necessária se todos os valores de dados não podem ser retornados na  *\*TargetValuePtr* buffer especificado na **SQLPutData**; diversas chamadas para **SQLPutData** para a mesma coluna são permitidas somente quando o envio de dados de caractere C para uma coluna com um tipo específico de fonte de dados character, binary ou dados ou ao enviar dados binários de C para uma coluna com um caractere, binária, ou tipo de dados específico de fonte de dados.  
   
 5.  Chamadas **SQLParamData** novamente para sinalizar que todos os dados foram enviados para a coluna.  
   

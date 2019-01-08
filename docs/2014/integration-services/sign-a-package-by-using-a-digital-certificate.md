@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350437"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Assinar um pacote por meio de um certificado digital
   Este tópico descreve como assinar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com um certificado digital. Você pode usar uma assinatura digital, junto com outras configurações, para evitar o carregamento e a execução de um pacote inválido.  
@@ -33,11 +33,11 @@ ms.locfileid: "48177466"
   
     -   Obtenha um certificado de uma autoridade de certificação comercial pública que emite certificados.  
   
-    -   Obtenha um certificado de um servidor de certificados, que permita que uma organização emita certificados internamente. É necessário adicionar o certificado raiz usado para assinar o certificado ao armazenamento **Autoridades de Certificação Raiz Confiáveis** . Para adicionar o certificado raiz, você pode usar o snap-in de Certificados para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). Para obter mais informações, consulte o tópico “[Serviços de certificado](http://go.microsoft.com/fwlink/?LinkId=100755)” na biblioteca do MSDN.  
+    -   Obtenha um certificado de um servidor de certificados, que permita que uma organização emita certificados internamente. É necessário adicionar o certificado raiz usado para assinar o certificado ao armazenamento **Autoridades de Certificação Raiz Confiáveis** . Para adicionar o certificado raiz, você pode usar o snap-in de Certificados para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). Para obter mais informações, consulte o tópico “[Serviços de certificado](https://go.microsoft.com/fwlink/?LinkId=100755)” na biblioteca do MSDN.  
   
-    -   Crie seu próprio certificado somente para teste. A Ferramenta de Criação de Certificado (Makecert.exe) gera certificados X.509 para teste. Para obter mais informações, consulte o tópico “[Ferramenta de Criação de Certificado (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)” na Biblioteca MSDN.  
+    -   Crie seu próprio certificado somente para teste. A Ferramenta de Criação de Certificado (Makecert.exe) gera certificados X.509 para teste. Para obter mais informações, consulte o tópico “[Ferramenta de Criação de Certificado (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)” na Biblioteca MSDN.  
   
-     Para obter mais informações sobre certificados, consulte a Ajuda online do snap-in de Certificados. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico “[Assinando e verificando o código com o Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)” na biblioteca do MSDN.  
+     Para obter mais informações sobre certificados, consulte a Ajuda online do snap-in de Certificados. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico “[Assinando e verificando o código com o Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)” na biblioteca do MSDN.  
   
 -   Verifique se o certificado foi habilitado para assinatura de código. Para saber se um certificado está habilitado para assinatura de código, revise as propriedades do certificado no snap-in de Certificados.  
   

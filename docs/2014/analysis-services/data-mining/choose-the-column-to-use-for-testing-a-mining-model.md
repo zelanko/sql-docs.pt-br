@@ -15,25 +15,25 @@ ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f8fcbac925be2910cba7110b96cc33b80a4092e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 340080271318073983b29abebeab85122993b489
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120826"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540248"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Escolha a coluna para usar para teste em um modelo de mineração
   Antes de poder medir a exatidão de um modelo de mineração, você deverá decidir qual resultado deseja avaliar. A maioria dos modelos de mineração de dados exige que você escolha pelo menos uma coluna para usar como o atributo previsível ao criar o modelo. Portanto, quando você testar a exatidão do modelo, geralmente terá que selecionar esse atributo para testar.  
   
  A lista a seguir descreve algumas considerações adicionais para escolher o atributo previsível para usar no teste:  
   
--   Alguns tipos de modelos de mineração de dados podem prever vários attributes — como redes neurais que podem explorar as relações entre muitos atributos.  
+-   Alguns tipos de modelos de mineração de dados podem prever vários atributos, como redes neurais, que podem explorar as relações entre muitos atributos.  
   
--   Outros tipos de modelos de mineração, como modelos de clustering, não necessariamente têm um atributo previsível. Os modelos de clustering não podem ser testados a menos que tenham um atributo previsível.  
+-   Outros tipos de mineração, modelos, como modelos de clustering-não necessariamente não tem um atributo previsível. Os modelos de clustering não podem ser testados a menos que tenham um atributo previsível.  
   
 -   Criar um gráfico de dispersão ou medir a exatidão de um modelo de regressão exige que você escolha um atributo previsível contínuo como o resultado. Nesse caso, você não pode especificar um valor de destino. Se você estiver criando algo diferente de um gráfico de dispersão, a coluna da estrutura de mineração subjacente também terá que ter um tipo de conteúdo **Discreto** ou **Discretizado**.  
   
--   Se você escolher um atributo discreto como o resultado previsível, também poderá especificar um valor de destino ou pode deixar em branco o campo **Valor de Previsão** . Se você incluir um **Valor de Previsão**, o gráfico medirá somente a efetividade do modelo ao prever o valor de destino. Se você não especificar um resultado de destino, o modelo será medido para sua exatidão em prever todos os resultados.  
+-   Se você escolher um atributo discreto como o resultado previsível, também poderá especificar um valor de destino ou pode deixar em branco o campo **Valor de Previsão** . Se você incluir um **valor de previsão**, o gráfico medirá somente a efetividade do modelo ao prever o valor de destino. Se você não especificar um resultado de destino, o modelo será medido para sua exatidão em prever todos os resultados.  
   
 -   Se você quiser incluir diversos modelos e compará-los em um único gráfico de precisão, todos os modelos deverão usar a mesma coluna previsível.  
   

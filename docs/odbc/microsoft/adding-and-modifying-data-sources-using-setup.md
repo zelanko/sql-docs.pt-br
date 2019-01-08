@@ -18,18 +18,18 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767754"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526855"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Adicionar e modificar fontes de dados usando a instalação
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- Uma fonte de dados identifica um caminho para os dados que podem incluir uma biblioteca de rede, servidor, banco de dados e outros atributos — nesse caso, a fonte de dados é o caminho para um banco de dados Oracle. Para se conectar a uma fonte de dados, o Gerenciador de Driver verifica o registro do Windows para obter informações de conexão específica.  
+ Uma fonte de dados identifica um caminho para os dados que podem incluir uma biblioteca de rede, servidor, banco de dados e outros atributos – nesse caso, a fonte de dados é o caminho para um banco de dados Oracle. Para se conectar a uma fonte de dados, o Gerenciador de Driver verifica o registro do Windows para obter informações de conexão específica.  
   
  A entrada do registro criada pelo administrador de fonte de dados ODBC é usada pelos drivers de Gerenciador de Driver ODBC e ODBC. Esta entrada contém informações sobre cada fonte de dados e seu driver associado. Antes de você pode se conectar a uma fonte de dados, suas informações de conexão devem ser adicionadas ao registro.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "47767754"
   
 1.  Clique em criar opções mais especificações sobre o Driver ODBC para a instalação do Oracle:  
   
-    -   **Tradução** — clique em Selecionar para escolher um conversor de dados carregado. O padrão é \<tradutor não >.  
+    -   **Tradução** -clique em Selecionar para escolher um conversor de dados carregado. O padrão é \<tradutor não >.  
   
-    -   **Desempenho** — comentários de incluir a caixa de seleção de funções de catálogo que especifica se o driver retorna colunas de comentários para o [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conjunto de resultados. O Driver ODBC para Oracle fornece acesso mais rápido quando esse valor não está definido.  
+    -   **Desempenho** -comentários de incluir a caixa de seleção de funções de catálogo que especifica se o driver retorna colunas de comentários para o [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conjunto de resultados. O Driver ODBC para Oracle fornece acesso mais rápido quando esse valor não está definido.  
   
          Os SINÔNIMOS incluem na caixa de seleção de colunas do SQL Especifica se o driver retorna informações de coluna. **Tamanho do buffer** Especifica o tamanho, em bytes, alocada para receber dados buscados. O driver otimiza a busca de forma que uma busca no servidor Oracle retorne linhas suficientes para preencher um buffer do tamanho especificado. Valores maiores tendem a aumentar o desempenho ao buscar muitos dados.  
   
-    -   **Personalização** — o impor ODBC DayOfWeek padrão de caixa de seleção Especifica se o conjunto de resultados estarão em conformidade com o formato de dia da semana especificado do ODBC (domingo = 1; Sábado = 7). Se essa caixa de seleção estiver desmarcada, o valor de Oracle específica de localidade é retornado.  
+    -   **Personalização** -caixa de seleção o impor ODBC DayOfWeek padrão Especifica se o conjunto de resultados estarão em conformidade com o formato de dia da semana especificado do ODBC (domingo = 1; Sábado = 7). Se essa caixa de seleção estiver desmarcada, o valor de Oracle específica de localidade é retornado.  
   
          O SQLDescribeCol **sempre retorna um valor de precisão** caixa de seleção Especifica se o driver deve retornar um valor diferente de zero para o *cbColDef* argumento de **SQLDescribeCol**. Esse atributo de cadeia de caracteres de conexão se aplica somente às colunas onde houver sem escala definidas para Oracle, por exemplo, calculado numéricas colunas e as colunas definidas como número sem uma escala ou precisão. Um **SQLDescribeCol** chamar retorna 130 para a precisão quando Oracle não fornece essas informações. Se essa caixa de seleção estiver desmarcada, o driver retornará 0 para esses tipos de colunas.  
   

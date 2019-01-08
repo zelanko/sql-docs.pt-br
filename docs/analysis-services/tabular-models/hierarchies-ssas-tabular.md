@@ -1,5 +1,5 @@
 ---
-title: Hierarquias | Microsoft Docs
+title: Hierarquias em modelos tabulares do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e6ce881fb0b423744316027faeec7210ae76f296
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4e16aa049dbebd6a5d3d9e7f996748cabb3c236
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043540"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072293"
 ---
 # <a name="hierarchies"></a>Hierarquias
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34043540"
   
  Por exemplo, em uma tabela de Data, você pode criar uma hierarquia de Calendário. O Ano civil é usado como o nível pai mais alto, com Mês, Semana e Dia incluídos como níveis filho (Ano civil->Mês->Semana->Dia). Esta hierarquia mostra uma relação lógica de Ano civil a Dia. Um usuário de cliente pode selecionar Ano Civil de uma Lista de campos para incluir todos os níveis em uma Tabela Dinâmica ou expandir a hierarquia e selecionar somente níveis específicos para serem incluídos na Tabela Dinâmica.  
   
- Como cada nível em uma hierarquia é uma representação de uma coluna em uma tabela, o nível pode ser renomeado. Embora não seja exclusivo para hierarquias (qualquer coluna pode ser renomeada em um modelo de tabela), a renomeação de níveis de hierarquia pode facilitar a localização e a inclusão de níveis em um relatório por usuários. Renomear um nível não renomeia a coluna que a referencia; simplesmente torna o nível mais identificável. Em nosso exemplo de hierarquia de Ano Civil, na tabela de Data em Exibição de Dados, as colunas: CalendarYear, CalendarMonth, CalendarWeek e CalendarDay foram renomeadas para Ano Civil, Mês, Semana e Dia para torná-las mais identificáveis. Renomear os níveis tem o benefício adicional de fornecer consistência em relatórios, já que os usuários não precisarão alterar nomes de coluna para torná-los mais legíveis em Tabelas Dinâmicas, gráficos, etc.  
+ Como cada nível em uma hierarquia é uma representação de uma coluna em uma tabela, o nível pode ser renomeado. Embora não seja exclusivo para hierarquias (qualquer coluna pode ser renomeada em um modelo de tabela), a renomeação de níveis de hierarquia pode facilitar a localização e a inclusão de níveis em um relatório por usuários. Renomear um nível não renomeia a coluna que a referencia; simplesmente torna o nível mais identificável. Em nosso exemplo de hierarquia ano civil, na tabela de data na exibição de dados, as colunas: CalendarYear, CalendarMonth, CalendarWeek e CalendarDay foram renomeadas para ano civil, mês, semana e dia para torná-los mais facilmente identificável. Renomear os níveis tem o benefício adicional de fornecer consistência em relatórios, já que os usuários não precisarão alterar nomes de coluna para torná-los mais legíveis em Tabelas Dinâmicas, gráficos, etc.  
   
  As hierarquias podem ser incluídas em perspectivas. As perspectivas definem subconjuntos visíveis de um modelo que fornece pontos de vista concentrados, específicos à empresa ou específicos ao aplicativo. Por exemplo, uma perspectiva pode fornecer aos usuários uma lista visível (hierarquia) de apenas os itens de dados necessários para os seus requisitos específicos de relatório. Para obter mais informações, consulte [perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
@@ -44,12 +44,12 @@ ms.locfileid: "34043540"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |[Criar e gerenciar hierarquias](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|Descreve como criar e gerenciar hierarquias usando o designer de modelo em Exibição de Diagrama.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Designer de modelo de tabela](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Designer de modelo tabular](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350230"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390812"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provedor Microsoft OLE DB para visão geral do Oracle
 > [!IMPORTANT]
@@ -48,7 +48,7 @@ MSDAORA
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|Description|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor OLE DB para Oracle.|
 |**Fonte de dados**|Especifica o nome de um servidor.|
@@ -63,7 +63,7 @@ MSDAORA
 
  Esses parâmetros são totalmente descritos na [referência do programador DB OLE](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). O [índice de propriedade dinâmica do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornece uma referência cruzada entre esses nomes de parâmetro e as propriedades de OLE DB correspondentes.
 
-|Parâmetro|Description|
+|Parâmetro|Descrição|
 |---------------|-----------------|
 |**Identificador de janela**|Indica o identificador de janela a ser usado para solicitar informações adicionais.|
 |**Identificador de Localidade**|Indica um número de 32 bits exclusivo (por exemplo, 1033) que especifica as preferências de idioma do usuário. Essas preferências indicam como datas e horas são formatadas, os itens são classificados em ordem alfabética, cadeias de caracteres são comparadas e assim por diante.|

@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176056"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321632"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Outros problemas de atualização do Mecanismo de Banco de Dados
   Os problemas de atualização a seguir não podem ser detectados pela versão atual do Supervisor de Atualização. Revise os problemas listados abaixo para avaliar o impacto deles em seus sistemas.  
@@ -64,7 +64,7 @@ ms.locfileid: "48176056"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>Target Table da cláusula OUTPUT INTO não pode ter gatilhos definidos  
- Não há suporte para a cláusula OUPUT INTO de uma tabela de destino quando a tabela possui gatilhos habilitados.  
+ SAÍDA em uma tabela de destino quando a tabela possui gatilhos habilitados não é suportado.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Erro de tempo de compilação para UDFs quando o destino de uma cláusula OUTPUT INTO é uma tabela  
  As UDFs (funções definidas pelo usuário) não podem ser usadas para executar ações que modificam o estado do banco de dados. Por exemplo, uma UDF não pode realizar ações DDL (CREATE/ALTER/DROP) ou DML (INSERT/UPDATE/DELETE) em nenhum objeto, exceto em variáveis de tabelas.  

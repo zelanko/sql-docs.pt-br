@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545417"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>Expressões de critérios de filtro  
  Você pode definir um filtro que restringe os casos que são usados no modelo de mineração. O filtro pode ser aplicado a colunas na tabela de casos, a linhas na tabela aninhada ou a ambas.  
   
- As expressões de critérios de filtro são predicados DMX simplificados, similares à cláusula WHERE. As expressões de filtro são restritas a fórmulas que usam operadores matemáticos básicos, escalares e nomes de coluna. A exceção é o operador EXISTS, avaliado como true se pelo menos uma linha for retornada para a subconsulta. Os predicados podem ser combinados usando os operadores lógicos comuns: AND, OR e NOT.  
+ As expressões de critérios de filtro são predicados DMX simplificados, similares à cláusula WHERE. As expressões de filtro são restritas a fórmulas que usam operadores matemáticos básicos, escalares e nomes de coluna. A exceção é o operador EXISTS, avaliado como true se pelo menos uma linha for retornada para a subconsulta. Predicados podem ser combinados usando os operadores lógicos comuns: AND, OR e não.  
   
  Para obter mais informações sobre os filtros usados com modelos de mineração, consulte [filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
@@ -143,7 +143,7 @@ USING <algorithm> [(<parameter list>)]
  A sintaxe da lista de parâmetros é a seguinte:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
 ## <a name="example-1-add-a-model-to-a-structure"></a>Exemplo 1: Adicionar um modelo a uma estrutura  

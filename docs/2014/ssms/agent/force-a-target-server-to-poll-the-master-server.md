@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - forcing master server polling
@@ -15,12 +15,12 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2373b75766acbc34547f062a2ffc76a3125ade5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172256"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764208"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forçar um servidor de destino a sondar o servidor mestre
   Este tópico descreve como obrigar um servidor de destino a sondar o servidor mestre. O servidor de destino deve estar registrado no servidor mestre.  
@@ -30,17 +30,17 @@ ms.locfileid: "48172256"
 > [!NOTE]  
 >  Se o servidor mestre não estiver acessível quando o servidor de destino tentar carregar o status do trabalho, este será colocado em spool até que o servidor mestre esteja novamente acessível.  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  
+-   **Antes de começar:**  [Limitações e restrições](#Restrictions), [segurança](#Security)  
   
--   **Para forçar um servidor de destino a sondar o servidor mestre, usando:**[SQL Server Management Studio  ](#SSMS)  
+-   **Para forçar um servidor de destino a sondar o servidor mestre, usando:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  O servidor de destino deve estar registrado no servidor mestre. Você deve executar as instruções fornecidas neste tópico do servidor mestre.  
   
 ###  <a name="Security"></a> Segurança  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) e [Escolher a conta de serviço do SQL Server Agent certa para ambientes multisservidor](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
+ Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) e [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
  **Para forçar um servidor de destino a sondar o servidor mestre**  

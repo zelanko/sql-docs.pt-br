@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
@@ -13,12 +12,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057456"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804427"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
   As publicações dos Editores Oracle são criadas da mesma forma que são criados os instantâneos e as publicações transacionais mas, antes de criar uma publicação de um Publicador Oracle, você deverá completar as etapas a seguir (etapas um, três e quatro que estão detalhadamente descritas neste tópico):  
@@ -75,7 +74,7 @@ ms.locfileid: "48057456"
   
  No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-|Informações|Description|  
+|Informações|Descrição|  
 |-----------------|-----------------|  
 |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
 |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
@@ -83,7 +82,7 @@ ms.locfileid: "48057456"
   
  Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-|Ação|Description|  
+|Ação|Descrição|  
 |------------|-----------------|  
 |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
 |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. Você também fornece esse alias quando identifica o banco de dados Oracle como um Publicador no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  
@@ -123,7 +122,7 @@ ms.locfileid: "48057456"
 > [!NOTE]  
 >  Um Publicador Oracle não pode ter o mesmo nome do Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou o mesmo nome de um dos Editores [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , usando o mesmo Distribuidor.  
   
- Quando você identifica o banco de dados Oracle como sendo um Publicador, é necessário escolher uma opção de edição Oracle: Completa ou Oracle Gateway. Depois que um Publicador é identificado, essa opção não pode ser alterada sem descartar e reconfigurar o Publicador. A opção Completa é projetada para fornecer instantâneos e publicações transacionais com o conjunto completo de recursos com suporte para publicações Oracle. A opção Gateway fornece otimizações de projeto específicas para aprimorar o desempenho de casos em que a replicação serve como um gateway entre sistemas.  
+ Ao identificar o banco de dados Oracle como um publicador, você deve escolher um opção de publicação do Oracle: Completa ou Oracle Gateway. Depois que um Publicador é identificado, essa opção não pode ser alterada sem descartar e reconfigurar o Publicador. A opção Completa é projetada para fornecer instantâneos e publicações transacionais com o conjunto completo de recursos com suporte para publicações Oracle. A opção Gateway fornece otimizações de projeto específicas para aprimorar o desempenho de casos em que a replicação serve como um gateway entre sistemas.  
   
  Após o Publicador Oracle ser identificado no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a replicação cria um servidor vinculado com o mesmo nome como o nome do serviço TNS do banco de dados Oracle. Esse servidor vinculado só pode ser usado por replicação. Se você precisar se conectar ao Publicador Oracle usando uma conexão de servidor vinculado, crie outro nome de serviço TNS e use esse nome ao chamar [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   

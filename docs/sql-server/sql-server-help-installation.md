@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514528"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202445"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Ajuda offline do SQL Server e Help Viewer
 
@@ -176,7 +176,7 @@ A Ajuda online sempre mostra o conteúdo mais atualizado.
 
 **Para exibir a Ajuda online do SQL Server no SSMS 17.x**
 
-- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) pode ser exibida em um navegador. 
+- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) pode ser exibida em um navegador. 
 
    ![Exibir Ajuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -207,7 +207,7 @@ Quando você pressiona F1 ou clica em **Ajuda** ou no ícone **?** em uma caixa 
 1. Aponte para **Definir Preferência da Ajuda** no menu Ajuda e escolha **Iniciar no Navegador** ou **Iniciar no Help Viewer**. 
 2. Pressione F1 ou clique em **Ajuda** ou **?** nas caixas de diálogo em que essas opções estiverem disponíveis para ver tópicos online contextuais no ambiente escolhido.
 
->  [!NOTE]
+> [!NOTE]
 >  A Ajuda F1 só funciona quando você está online. Não há nenhuma fonte offline para a Ajuda F1. 
 
 ## <a name="systems-without-internet-access"></a>Sistemas sem acesso à Internet

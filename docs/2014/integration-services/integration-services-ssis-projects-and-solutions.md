@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
@@ -17,12 +16,12 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3ea3adf8d22cb65127fca6e187bf4887051fff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fb862bc6a148289b6920d15d4b507043113818a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764448"
 ---
 # <a name="integration-services-ssis-projects"></a>Projetos do Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para o desenvolvimento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.locfileid: "48110206"
   
  A tabela a seguir descreve as pastas que aparecem em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-|Pasta|Description|  
+|Pasta|Descrição|  
 |------------|-----------------|  
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contém pacotes. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../2014/integration-services/integration-services-ssis-packages.md).|  
 |Diversos|Contém arquivos diferentes de arquivos de pacotes.|  

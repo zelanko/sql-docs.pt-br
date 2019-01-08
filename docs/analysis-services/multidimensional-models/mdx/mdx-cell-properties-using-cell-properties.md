@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145301"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418697"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propriedades de célula MDX – usando propriedades da célula
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,9 +42,9 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Propriedades de célula intrínsecas suportadas  
  A tabela a seguir lista as propriedades de célula intrínsecas suportadas que são usadas no valor `<property>` .  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
-|**ACTION_TYPE**|Um bitmask que indica quais tipos de ações existem na célula. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Observação: ações de detalhamento não são incluídas nas consultas que contêm um conjunto na cláusula where.|  
+|**ACTION_TYPE**|Um bitmask que indica quais tipos de ações existem na célula. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Observação: Ações de detalhamento não são incluídas nas consultas que contêm um conjunto na cláusula where.|  
 |**BACK_COLOR**|A cor da tela de fundo para exibir a propriedade **VALUE** ou **FORMATTED_VALUE**. Para obter mais informações, consulte [Conteúdo de FORE_COLOR e BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**CELL_ORDINAL**|O número ordinal da célula no conjunto de dados.|  
 |**FONT_FLAGS**|O bitmask que detalha os efeitos da fonte. O valor é o resultado de uma operação OR bit a bit de uma ou mais destas constantes:<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> Por exemplo, o valor 5 representa a combinação dos efeitos de fonte negrito (**MDFF_BOLD**) e sublinhado (**MDFF_UNDERLINE**).|  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002) A célula pode ser atualizada com uma instrução de atualização. Pode ocorrer um erro na atualização se uma célula folha for atualizada sem estar habilitada para gravação.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001) A célula não pode ser atualizada porque tem um membro calculado entre suas coordenadas; a célula foi recuperada com um conjunto da cláusula where. A célula pode ser atualizada mesmo que uma fórmula afete o valor da célula ou haja uma célula calculada ativada (em algum ponto do caminho de agregação). Nessa situação, o valor final da célula pode não ser o valor atualizado, pois o cálculo afetará o resultado.|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002) A célula não pode ser atualizada porque não é possível atualizar medidas que não são soma (contagem, mínimo, máximo, contagem distinta, semiaditiva).|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) A célula não pode ser atualizada porque ela não existe como está na intersecção de uma medida e um membro da dimensão não relacionado ao grupo de medidas da medida.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) a célula não pode ser atualizada porque ela não existe como ele está na intersecção de uma medida e um membro de dimensão não relacionado ao grupo de medidas da medida.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005) A célula não pode ser atualizada porque está protegida.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006) Reservada para uso futuro.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007) A célula não pode ser atualizada por motivos internos.|  

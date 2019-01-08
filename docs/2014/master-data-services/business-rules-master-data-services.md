@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
@@ -14,12 +13,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f32495e2e12ab56ac2adb8ad5686a669714b81dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814588"
 ---
 # <a name="business-rules-master-data-services"></a>Regras de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], uma regra de negócio é uma regra usada para garantir a qualidade e a exatidão de seus dados mestres. Você pode usar uma regra de negócio para atualizar dados automaticamente, enviar email ou iniciar um processo empresarial ou fluxo de trabalho.  
@@ -31,7 +30,7 @@ ms.locfileid: "48074308"
   
  Para usar regras de negócio, você deve primeiramente criar e publicar suas regras e depois aplicar as regras publicadas aos dados. As regras podem ser aplicadas a subconjuntos de dados ou a todos os dados de uma versão por meio da validação da versão. Uma versão não pode ser confirmada até que todos os atributos sejam submetidos com êxito à validação de regras de negócio.  
   
- Se um usuário tentar adicionar um valor de atributo que não é aprovado na validação das regras de negócio, esse valor ainda poderá ser salvo. Você pode revisar e corrigir problemas de validação, que são exibidos no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ Se um usuário tentar adicionar um valor de atributo que não é aprovado na validação da regra de negócios, esse valor ainda poderá ser salvo. Você pode revisar e corrigir problemas de validação, que são exibidos no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  Ao criar um pacote de implantação de modelo, se quiser incluir regras de negócio, você deverá incluir dados da versão no pacote.  
   
@@ -72,10 +71,10 @@ ms.locfileid: "48074308"
 |Criar e publicar uma nova regra de negócio.|[Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Adicionar várias condições a uma regra de negócio.|[Adicionar várias condições a uma regra de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Criar uma regra de negócio para exigir que os atributos tenham valores.|[Exigir valores de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|Criar uma regra de negócio para tomar uma ação com base nas alterações para atribuir valores.|[Iniciar ações com base em alterações de valor do atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Criar uma regra de negócio para tomar uma ação com base nas alterações para atribuir valores.|[Iniciar ações com base em alterações no valor do atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |Alterar o nome de uma regra de negócio existente.|[Alterar o nome de uma regra de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
 |Configure o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para enviar notificações quando as regras de negócio forem aplicadas.|[Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Aplicar regras de negócio a membros específicos.|[Validar membros específicos em relação a regras de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Aplicar regras de negócio a membros específicos.|[Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Excluir uma regra de negócio para que ela não seja usada.|[Excluir uma regra de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |Excluir uma regra de negócio existente.|[Excluir uma regra de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48074308"
   
 -   [Visão geral do Master Data Services](master-data-services-overview-mds.md)  
   
--   [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
 -   [Validação &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   

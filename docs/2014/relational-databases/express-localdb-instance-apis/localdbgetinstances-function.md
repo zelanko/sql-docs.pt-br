@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795028"
 ---
 # <a name="localdbgetinstances-function"></a>Função LocalDBGetInstances
   Retorna todas as instâncias de LocalDB do SQL Server Express com a versão especificada.  
@@ -42,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parâmetros  
  *pInstanceNames*  
- [Saída] Quando esta função for retornada, conterá os nomes das instâncias de LocalDB nomeadas e padrão na estação de trabalho do usuário.  
+ [Saída] Quando essa função retornar, contém os nomes dos nomeadas e instâncias de LocalDB na estação de trabalho do usuário padrão.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias de LocalDB localizadas na estação de trabalho do usuário.  
+ [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias de LocalDB encontrada na estação de trabalho do usuário.  
   
 ## <a name="returns"></a>Retorna  
  S_OK  

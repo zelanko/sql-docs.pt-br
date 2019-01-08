@@ -15,12 +15,12 @@ ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1bc91211f646129ca0686ae5d8bffe2371ba0a57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adf846eaa23b7be875605fd5d1cc93811fce9e3f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537327"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Alterações recentes no SQL Server Reporting Services do SQL Server 2014
   Este tópico descreve as alterações recentes no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode encontrar esses problemas durante a atualização ou em scripts ou relatórios personalizados. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48076116"
 -   [SQL Server 2008 R2 Reporting Services alterações significativas](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Alterações significativas de Reporting Services  
- Há nenhuma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alterações significativas no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Não há nenhuma alteração recente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Alterações significativas de Reporting Services  
   
@@ -43,14 +43,14 @@ ms.locfileid: "48076116"
   
  `http://<Server name>/ReportServer`  
   
- Agora é necessário incluir o site do SharePoint no caminho da URL. Por exemplo, se seu nome de site for '`videos`' e você tiver usado o prefixo '`sites`', a URL seria semelhante ao seguinte:  
+ Agora é necessário incluir o site do SharePoint no caminho da URL. Por exemplo, se o nome do site é '`videos`' e usado o '`sites`' prefixo, a URL seria semelhante ao seguinte:  
   
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>Alterações na instalação de linha de comando de modo do SharePoint  
  A configuração de entrada **/RSINSTALLMODE** funciona apenas com instalações de modo nativo e não funciona para instalações de modo do SharePoint. Por exemplo, a seguir não tem suporte no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE = "DefaultSharePointMode"**. Em vez desta configuração de entrada, use **/RSSHPINSTALLMODE = "DefaultSharePointMode**."  
   
- A instrução a seguir é um exemplo de um comando de instalação completo e do conjunto de parâmetros: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …. /RSSHPINSTALLMODE="DefaultSharePointMode"**  
+ A instrução a seguir está um exemplo de um conjunto de comando e parâmetro de concluir a instalação: **setup /ACTION = install /FEATURES = SQL, RS /InstanceName = InstanceName=denali_inst1... /RSSHPINSTALLMODE = "DefaultSharePointMode"**  
   
  Para obter mais informações sobre instalações de linha de comando, consulte [Prompt de comando instalação do Reporting Services SharePoint Mode e modo nativo](install-windows/install-reporting-services-at-the-command-prompt.md).  
   
@@ -59,17 +59,17 @@ ms.locfileid: "48076116"
   
  Essas alterações afetam a seguinte lista de componentes e fluxos de trabalho:  
   
--   Aplicativos personalizados que usam o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provedor WMI para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint.  
+-   Aplicativos personalizados que usam o provedor WMI [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo do SharePoint.  
   
--   O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager, rskeymgmt.exe e rsconfig.exe. Em vez de usar esses utilitários para configuração de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo do SharePoint, use a Administração Central do SharePoint e o PowerShell.  
+-   O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager, rskeymgmt.exe e rsconfig.exe. Em vez de usar esses utilitários para configuração de modo do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , use a Administração Central do SharePoint e o PowerShell.  
   
--   SQL Server Management Studio: Clientes não podem referenciar um servidor com sintaxe semelhante a <machine_name>/<instance_name>. A partir da versão [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], o método recomendado era usar uma URL do site do SharePoint. Por exemplo, **http://<SHAREPOINT_SERVER>/<sharePoint_site&gt**. Começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], uma URL do site do SharePoint é a única sintaxe com suporte.  
+-   SQL Server Management Studio:  Clientes não podem referenciar um servidor com sintaxe semelhante a <nome_do_computador>/<nome_da_instância>. A partir da versão [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , o método recomendado era usar uma URL do site do SharePoint. Por exemplo, **http://<SHAREPOINT_SERVER>/<sharePoint_site&gt**. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], uma URL do site do SharePoint é a única sintaxe com suporte.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>O Designer de Modelo de Relatório não está disponível no SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] não oferece suporte a projetos de modelo de relatório. O designer do Modelo de Relatório não está disponível no [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Você não pode criar novos projetos de modelo de relatório ou abrir projetos existentes no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e você não pode criar ou atualizar modelos de relatório. Para atualizar modelos de relatório, você pode usar [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou ferramentas anteriores. Você pode continuar a usar modelos de relatório como fontes de dados em relatórios criados em ferramentas do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], como o Construtor de Relatórios e o Designer de Relatórios. O designer de consulta que você pode usar para criar consultas para extrair dados de modelos de relatório continua disponível no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ O [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] não dá mais suporte a projetos de modelo de relatório. O designer do Modelo de Relatório não está disponível no [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Não é possível criar novos projetos de modelo de relatório nem abrir projetos existentes no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e não é possível criar nem atualizar modelos de relatório. Para atualizar modelos de relatório, você pode usar o [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou ferramentas anteriores. Você pode continuar a usar modelos de relatório como fontes de dados em relatórios criados em ferramentas do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , como o Construtor de Relatórios e o Designer de Relatórios. O designer de consulta que você usa para criar consultas para extrair dados de relatório de modelos de relatório continua disponível no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services alterações significativas  
- Esta seção descreve as alterações recentes no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ Esta seção descreve as alterações recentes do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  Como o SQL Server 2008 R2 é uma atualização de versão secundária do SQL Server 2008, recomendamos que você também revise o conteúdo na seção do SQL Server 2008.  

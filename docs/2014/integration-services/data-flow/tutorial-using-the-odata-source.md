@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154996"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805148"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Usando o OData Source [SSIS]
   Este tutorial orienta você pelo processo de extrair a coleção **Funcionários** do serviço **Northwind** OData de amostra (http://services.odata.org/V3/Northwind/Northwind.svc/) e, em seguida, carregue-o para um arquivo simples.  
@@ -43,7 +42,7 @@ ms.locfileid: "48154996"
   
 4.  Clique duas vezes no componente **OData Source** para iniciar a caixa de diálogo **Editor do OData Source** .  
   
-5.  Clique em **Novo…** para adicionar um novo Gerenciador de Conexões OData.  
+5.  Clique em **Novo...** para adicionar um novo Gerenciador de Conexões OData.  
   
 6.  Insira a URL do serviço OData para **Local do documento de serviço**. Essa pode ser a URL do documento do serviço ou para um feed ou a uma entidade específica. Para fins deste tutorial, digite [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   

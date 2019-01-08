@@ -18,12 +18,12 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24fb1fc483762798219e9d40ba3c096cc15acea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1832768a98dff17b0b59d9b3cf81f40f03ab34ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645644"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538146"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@job_id =** ] *job_id*  
  O número de identificação do trabalho ao qual adicionar a etapa. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  O nome do trabalho ao qual adicionar a etapa. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -72,13 +72,13 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@step_id =** ] *step_id*  
  O número de identificação de sequência para a etapa de trabalho. Etapa inicial de números de identificação no **1** e incrementados sem intervalos. Se uma etapa for inserida na sequência existente, os números da sequência serão ajustados automaticamente. Um valor for fornecido, se *step_id* não for especificado. *step_id*está **int**, com um padrão NULL.  
   
- [  **@step_name =** ] **'***step_name***'**  
+ [  **@step_name =** ] **'**_step_name_**'**  
  O nome da etapa. *step_name*está **sysname**, sem padrão.  
   
- [  **@subsystem =** ] **'***subsistema***'**  
+ [  **@subsystem =** ] **'**_subsistema_**'**  
  O subsistema usado pelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço de agente para executar *comando*. *subsistema* está **nvarchar(40)**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |'**ACTIVESCRIPTING**'|Script ativo<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Comando do sistema operacional ou programa executável|  
@@ -93,7 +93,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|Scripts PowerShell|  
 |'**TSQL**' (padrão)|Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
- [  **@command=** ] **'***comando***'**  
+ [  **@command=** ] **'**_comando_**'**  
  Os comandos a serem executados pelo **SQLServerAgent** serviço por meio de *subsistema*. *comando* está **nvarchar (max)**, com um padrão NULL. O SQL Server Agent fornece uma substituição de token que propicia a mesma flexibilidade que as variáveis ao escrever programas de software.  
   
 > [!IMPORTANT]  
@@ -104,11 +104,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Para obter mais informações sobre esses tokens e atualizar suas etapas de trabalho para usar a nova sintaxe de token, consulte [usar Tokens em etapas de trabalho](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Os tokens são: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(***propriedade***)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
+>  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., e **WMI (** _propriedade_**)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
 >   
 >  Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
   
- [  **@additional_parameters=** ] **'***parâmetros***'**  
+ [  **@additional_parameters=** ] **'**_parâmetros_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *parâmetros* está **ntext**, com um padrão NULL.  
   
  [  **@cmdexec_success_code =** ] *código*  
@@ -140,13 +140,13 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@on_fail_step_id=** ] *fail_step_id*  
  A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action*é **4**. *fail_step_id*está **int**, com um padrão de **0**.  
   
- [  **@server =**] **'***server***'**  
+ [  **@server =**] **'**_servidor_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor*está **nvarchar (30)**, com um padrão NULL.  
   
- [  **@database_name=** ] **'***banco de dados***'**  
+ [  **@database_name=** ] **'**_banco de dados_**'**  
  O nome do banco de dados no qual executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *banco de dados* está **sysname**, com um padrão de NULL, caso em que o **mestre** banco de dados é usado. Os nomes entre colchetes ([ ]) não são permitidos. Para uma etapa do ActiveX, o *banco de dados* é o nome da linguagem de script que usa a etapa.  
   
- [  **@database_user_name=** ] **'***usuário***'**  
+ [  **@database_user_name=** ] **'**_usuário_**'**  
  O nome da conta de usuário a ser usada ao executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *usuário* está **sysname**, com um padrão NULL. Quando *usuário* for NULL, a etapa é executada no contexto do usuário do proprietário do trabalho na *banco de dados*.  O SQL Server Agent só incluirá esse parâmetro se o proprietário do trabalho for um sysadmin de SQL Server. Assim, a determinada etapa de Transact-SQL será executada no contexto do determinado nome de usuário do SQL Server. Se o proprietário do trabalho não for um sysadmin do SQL Server, a etapa de Transact-SQL sempre será executada no contexto do logon que possua esse trabalho, e o @database_user_name parâmetro será ignorado.  
   
  [  **@retry_attempts=** ] *retry_attempts*  
@@ -158,13 +158,13 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@os_run_priority =** ] *run_priority*  
  Reservado.  
   
- [  **@output_file_name=** ] **'***file_name***'**  
+ [  **@output_file_name=** ] **'**_file_name_**'**  
  O nome do arquivo no qual a saída desta etapa é gravado. *file_name*está **nvarchar(200)**, com um padrão NULL. *file_name*pode incluir um ou mais dos tokens listado em *comando*. Esse parâmetro é válido somente com comandos executados [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsistemas.  
   
  [ **@flags=** ] *flags*  
  É uma opção que controla comportamento. *sinalizadores* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Substitui o arquivo de saída|  
 |**2**|Anexa a um arquivo de saída|  
@@ -177,7 +177,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@proxy_id** =] *proxy_id*  
  O número de identificação do que a etapa de trabalho é executado como proxy. *proxy_id* é do tipo **int**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e nenhuma *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'**_proxy_name_**'**  
  O nome do proxy com o qual a etapa de trabalho é executada. *proxy_name* é do tipo **sysname**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e nenhuma *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

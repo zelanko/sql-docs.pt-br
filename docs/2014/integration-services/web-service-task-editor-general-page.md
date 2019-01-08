@@ -15,12 +15,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538672"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor da Tarefa Serviço da Web (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Serviços da Web** para especificar um gerenciador de conexões HTTP, o local do arquivo WSDL (linguagem WSDL) usado pela tarefa, descrever a tarefa Serviços da Web e baixar o arquivo WSDL.  
@@ -34,7 +34,7 @@ ms.locfileid: "48090226"
 > [!IMPORTANT]  
 >  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões de HTTP](connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexões de HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Tópicos relacionados:**  [Gerenciador de Conexão HTTP](connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexão HTTP &#40;página de servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Digite o caminho totalmente qualificado de um arquivo WSDL que é local para o computador ou clique no botão Procurar **(…)** e localize esse arquivo.  
@@ -73,8 +73,8 @@ ms.locfileid: "48090226"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa serviço da Web &#40;página de entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor da tarefa serviço da Web &#40;página de saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor da Tarefa Serviço da Web &#40;Página Entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Editor da Tarefa Serviço da Web &#40;Página Saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

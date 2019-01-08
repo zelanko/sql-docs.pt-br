@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819234"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211215"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove dados do data warehouse de gerenciamento com base em uma política de retenção. Esse procedimento é executado diariamente pelo mdw_purge_data[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente no data warehouse de gerenciamento associado à instância especificada. Você pode usar esse procedimento armazenado para executar uma remoção sob demanda de dados do data warehouse de gerenciamento.  
+  Remove dados do data warehouse de gerenciamento com base em uma política de retenção. Este procedimento é executado diariamente pelo trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent mdw_purge_data em relação ao data warehouse de gerenciamento associado à instância especificada. Você pode usar esse procedimento armazenado para executar uma remoção sob demanda de dados do data warehouse de gerenciamento.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -85,7 +85,7 @@ EXECUTE core.sp_purge_data;
 GO  
 ```  
   
-### <a name="b-specifying-retention-and-duration-values"></a>B. Especificando valores de retenção e duração  
+### <a name="b-specifying-retention-and-duration-values"></a>b. Especificando valores de retenção e duração  
  O exemplo a seguir remove os dados com mais de sete dias do data warehouse de gerenciamento. Além disso, o @duration parâmetro for especificado, para que a operação seja executada mais do que 5 minutos.  
   
 ```  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - foreign keys [SMO]
@@ -14,19 +12,19 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 546fc65d29447119ad40593e016dc4db60f598d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789537"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Criando, alterando e removendo chaves estrangeiras
   No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), chaves estrangeiras são representadas pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
- Para criar uma chave estrangeira no SMO, você deve especificar a tabela na qual a chave estrangeira é definida no construtor do <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto. Na tabela, selecione pelo menos uma coluna como chave estrangeira. Para fazer isso, crie uma variável de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e especifique o nome da coluna que é a chave estrangeira. Em seguida, especifique a tabela e a coluna referenciadas. Use o <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> método para adicionar a coluna para o `Columns` propriedade de objeto.  
+ Para criar uma chave estrangeira no SMO, especifique a tabela na qual a chave estrangeira é definida no construtor do objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Na tabela, selecione pelo menos uma coluna como chave estrangeira. Para fazer isso, crie uma variável de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e especifique o nome da coluna que é a chave estrangeira. Em seguida, especifique a tabela e a coluna referenciadas. Use o método <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> para adicionar a coluna à propriedade de objeto `Columns`.  
   
- As colunas que representam a chave estrangeira são listadas na propriedade de objeto `Columns` do objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. A chave primária referenciada pela chave estrangeira é representada pela <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que está na tabela especificada na propriedade de <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> propriedade.  
+ As colunas que representam a chave estrangeira são listadas na propriedade de objeto `Columns` do objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. A chave primária referenciada pela chave estrangeira é representada pela propriedade <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que está na tabela especificada na propriedade <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -94,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Exemplo: colunas Chaves Estrangeiras, Chaves Primárias e Restrição Exclusiva  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Exemplo: Chaves estrangeiras, chaves primárias e colunas de restrição exclusiva  
  Este exemplo demonstra:  
   
 -   Como localizar uma chave estrangeira em um objeto existente.  

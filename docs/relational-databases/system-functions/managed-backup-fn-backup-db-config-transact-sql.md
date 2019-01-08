@@ -21,12 +21,12 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d731c5fbb7a90e69b7e1b1502411f57e80219892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687224"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409573"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47687224"
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql  
-managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
+managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
@@ -49,7 +49,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|Nome do banco de dados.|  
 |db_guid|UNIQUEIDENTIFIER|Identificador que identifica exclusivamente o banco de dados.|  
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_managed_backup_enabled|INT|Indica se o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado no momento para esse banco de dados. Um valor 1 indica que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado no momento e um valor 0 indica que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está desabilitado para este banco de dados.|  
 |storage_url|NVARCHAR(1024)|A URL da conta de armazenamento.|  
 |Encryption_algorithm|NCHAR(20)|Retorna o algoritmo de criptografia atual a ser usado na criptografia do backup.|  
-|Encryptor_type|NCHAR(15)|Retorna a configuração do criptografador: certificado ou chave assimétrica.|  
+|Encryptor_type|NCHAR(15)|Retorna a configuração do criptografador: Certificate ou Asymmetric Key.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|O nome do certificado ou da chave assimétrica.|  
   
 ## <a name="security"></a>Segurança  
@@ -69,7 +69,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
  Requer associação na **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões. O usuário não deve ser negado **VIEW ANY DEFINITION** permissões.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para ‘TestDB’.  
+ O exemplo a seguir retorna o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuração para 'TestDB'  
   
  Para cada snippet de código, selecione 'tsql' no campo do atributo de idioma.  
   

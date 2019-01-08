@@ -1,5 +1,5 @@
 ---
-title: 'Gerenciamento de domínio: lista de domínios | Microsoft Docs'
+title: 'Gerenciamento de domínio: Lista de domínios | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0dfc543659bdb8476d880bbe6021d0f3fd27bfd
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520354"
 ---
-# <a name="domain-management-domain-list"></a>Gerenciamento de domínio: lista de domínios
+# <a name="domain-management-domain-list"></a>Gerenciamento de domínio: Lista de domínios
   Este tópico descreve os controles na lista Domínios da página **Gerenciamento de Domínio** no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Use este painel para selecionar um domínio no qual poderá executar operações de gerenciamento. O mesmo painel é usado para todas as páginas tabuladas na página **Gerenciamento de Domínio** .  
   
 ## <a name="options"></a>Opções  

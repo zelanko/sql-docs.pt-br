@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8232a041d53a79a3921859514e99c67079603bda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02c8f5bb58243b3401f8c074bff7bee57fd8327b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823860"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gerenciador de Conexões de Limpeza DQS
   Um gerenciador de conexões de Limpeza DQS permite que um pacote se conecte a um servidor [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]. A transformação de Limpeza DQS usa o gerenciador de conexões de Limpeza DQS.  

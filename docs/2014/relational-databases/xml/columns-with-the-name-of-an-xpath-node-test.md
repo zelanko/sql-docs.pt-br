@@ -13,15 +13,15 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6d2ed88feef80027a7c52c89b3fe891d8f589c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096136"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783918"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Colunas com o nome de um teste de nó XPath
-  Se o nome da coluna for um dos testes de nó XPath, o conteúdo será mapeado conforme mostrado na tabela a seguir. Quando o nome de coluna é um teste de nó XPath, o conteúdo é mapeado para o nó correspondente. Se o tipo SQL da coluna for `xml`, um erro será retornado.  
+  Se o nome da coluna for um dos testes de nó XPath, o conteúdo será mapeado conforme mostrado na tabela a seguir. Quando o nome de coluna é um teste de nó XPath, o conteúdo é mapeado para o nó correspondente. Se o tipo SQL da coluna for `xml`, será retornado um erro.  
   
 |Nome da coluna|Comportamento|  
 |-----------------|--------------|  
@@ -57,7 +57,7 @@ WHERE  E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
  `<row EmpID="1">`  
   
@@ -71,7 +71,7 @@ FOR XML PATH;
   
  `<First>Ken</First>`  
   
- `<Last>Sánchez</Last>`  
+ `<Last>S??nchez</Last>`  
   
  `</EmpName>`  
   

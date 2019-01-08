@@ -16,12 +16,12 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0157d30495166aba0a001997d843dafb5ba916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180146"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529704"
 ---
 # <a name="database-engine-error-severities"></a>Severidade dos erros do Mecanismo de Banco de Dados
   Quando um erro é gerado pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], sua severidade indica o tipo de problema encontrado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48180146"
 ## <a name="levels-of-severity"></a>Níveis de severidade  
  A tabela a seguir lista e descreve os níveis de severidade dos erros gerados pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Nível de severidade|Description|  
+|Nível de severidade|Descrição|  
 |--------------------|-----------------|  
 |0-9|Mensagens informativas que retornam informações de status ou reportam erros que não sejam severos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não gera erros de sistema com severidades de 0 a 9.|  
 |10|Mensagens informativas que retornam informações de status ou reportam erros que não sejam severos. Por razões de compatibilidade, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte a severidade 10 em severidade 0 antes de retornar as informações de erro ao aplicativo de chamada.|  
@@ -56,17 +56,17 @@ ms.locfileid: "48180146"
   
  O RAISERROR pode ser usado para gerar mensagens de erro definidas pelo usuário com severidade de 1 a 25. O RAISERROR pode se referir a uma mensagem de erro definida pelo usuário armazenada na exibição do catálogo **sys.messages** ou criar uma mensagem dinamicamente. Quando a mensagem de erro definida pelo usuário em **sys.messages** é usada durante a geração de um erro, a severidade especificada pelo RAISERROR substitui a severidade especificada em **sys.messages**. Para obter mais informações, consulte [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql).  
   
-## <a name="error-severity-and-trycatch"></a>Severidade do erro e TRY...CATCH  
- Uma construção TRY...CATCH pega todos os erros de execução com severidade acima de 10 que não encerram a conexão do banco de dados.  
+## <a name="error-severity-and-trycatch"></a>Gravidade do erro e TRY...CATCH  
+ Um constructo TRY...CATCH pega todos os erros de execução com gravidade acima de 10 que não encerram a conexão de banco de dados.  
   
- Erros com severidade de 0 a 10 são mensagens informativas e não fazem a execução saltar do bloco CATCH de uma construção TRY...CATCH.  
+ Erros com gravidade de 0 a 10 são mensagens informativas e não fazem a execução pular do bloco CATCH de um constructo TRY...CATCH.  
   
  Erros que encerram a conexão do banco de dados, normalmente com severidade de 20 a 25, não são controlados pelo bloco CATCH porque a execução é anulada quando a conexão é encerrada.  
   
  Para obter mais informações, veja [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   
 ## <a name="retrieving-error-severity"></a>recuperando a severidade dos erros  
- A função do sistema ERROR_SEVERITY pode ser usada para recuperar a severidade do erro que fez o bloco CATCH de uma construção TRY...CATCH ser executado. ERROR_SEVERITY retorna NULL se chamado de fora do escopo de um bloco CATCH. Para obter mais informações, consulte [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
+ A função do sistema ERROR_SEVERITY pode ser usada para recuperar a gravidade do erro que fez o bloco CATCH de um constructo TRY...CATCH ser executado. ERROR_SEVERITY retorna NULL se chamado de fora do escopo de um bloco CATCH. Para obter mais informações, consulte [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
   
 ## <a name="see-also"></a>Consulte também  
  [Compreendendo os erros do Mecanismo de Banco de Dados](../native-client-ole-db-errors/errors.md)   

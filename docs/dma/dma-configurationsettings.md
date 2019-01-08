@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643814"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419247"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Definir as configurações para o Assistente de migração de dados
 
@@ -40,7 +40,7 @@ Certifique-se de salvar uma cópia do arquivo de configuração original antes d
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Número de bancos de dados para avaliar em paralelo
 
-Assistente de migração de dados avalia vários bancos de dados em paralelo. Durante a avaliação de Assistente de migração de dados extrai camada de dados dacpac (aplicativo) para compreender o esquema de banco de dados. Essa operação pode atingir o tempo limite se vários bancos de dados no mesmo servidor são avaliados em paralelo. 
+Assistente de migração de dados avalia vários bancos de dados em paralelo. Durante a avaliação de Assistente de migração de dados extrai camada de dados dacpac (aplicativo) para compreender o esquema de banco de dados. Essa operação pode atingir o tempo limite se vários bancos de dados no mesmo servidor são avaliados em paralelo. 
 
 Começando com o Assistente de migração de dados v2.0, você pode controlar isso definindo o parallelDatabases valor de configuração. Valor padrão é 8.
 
@@ -70,7 +70,7 @@ Começando com o Assistente de migração de dados v 2.0, se você tiver esse pr
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Durante a avaliação, o Assistente de migração de dados extrai camada de dado
 
 - commandTimeout
 
-   Esse parâmetro define a propriedade IDbCommand.CommandTimeout na *segundos*. (Padrão = 60)
+   Esse parâmetro define a propriedade IDbCommand.CommandTimeout na *segundos*. (Padrão = 60)
 
 - databaseLockTimeout
 
-   Esse parâmetro é equivalente a [bloqueio definido\_tempo limite de tempo limite\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) na *milissegundos*. (Padrão = 5000)
+   Esse parâmetro é equivalente a [bloqueio definido\_tempo limite de tempo limite\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) na *milissegundos*. (Padrão = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Esse parâmetro define o número de conexões de pool de conexão SQL para usar. (Padrão = 8)
+  Esse parâmetro define o número de conexões de pool de conexão SQL para usar. (Padrão = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -121,7 +121,7 @@ Começando com o Assistente de migração de dados v2.0, você pode controlar es
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ Você pode controlar a [tempo limite de conexão SQL](https://msdn.microsoft.com
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

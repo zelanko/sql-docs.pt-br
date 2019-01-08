@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,15 +18,15 @@ ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0f36e74462b8237a3661748d137f67d3bad13ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1b7e1e49f6291063996f7d7b7b966da6a716c16
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194276"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794198"
 ---
 # <a name="view-conflict-information-for-merge-publications-replication-transact-sql-programming"></a>Exibir informações sobre conflitos para publicações de mesclagem (Programação Transact-SQL de replicação)
-  Quando um conflito é resolvido em uma replicação de mesclagem, os dados da linha perdedora são gravados em uma tabela de conflitos. Os dados de conflito podem ser visualizados de forma programática, usando procedimentos armazenados de replicação. Para obter mais informações, consulte [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+  Quando um conflito é resolvido em uma replicação de mesclagem, os dados da linha perdedora são gravados em uma tabela de conflitos. Os dados de conflito podem ser visualizados de forma programática, usando procedimentos armazenados de replicação. Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="to-view-conflict-information-and-losing-row-data-for-all-types-of-conflicts"></a>Para visualizar informações sobre conflitos e dados de linhas perdedoras para todos os tipos de conflitos  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2aecd264eac2a6beada1009ae070f1858dd6822c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141026"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752878"
 ---
 # <a name="blocked-process-report-event-class"></a>classe de evento Blocked Process Report
   A classe de evento **Blocked Process Report** indica que uma tarefa foi bloqueada por um período mais longo que o especificado. Essa classe de evento não inclui tarefas de sistema ou tarefas que estejam esperando em recursos não detectáveis por deadlock.  
@@ -31,13 +30,13 @@ ms.locfileid: "48141026"
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Colunas de dados da classe de evento Blocked Process Report  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados no qual foi adquirido o bloqueio. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**Duration**|**bigint**|O intervalo de tempo (em milissegundos) que o processo ficou bloqueado.|13|Sim|  
 |**EndTime**|**datetime**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como **SQL:BatchStarting** ou **SP:Starting**.|15|Sim|  
-|**EventClass**|**int**|Tipo de evento = 137.|27|não|  
-|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
+|**EventClass**|**int**|Tipo de evento = 137.|27|Não|  
+|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |**IndexID**|**int**|ID do índice no objeto afetado pelo evento. Para determinar a ID do índice de um objeto, use a coluna **indid** da tabela do sistema **sysindexes** .|24|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginSid**|**image**|SID (identificador de segurança) do usuário que fez logon. Esse evento sempre é informado pelo thread do sistema. IsSystem = 1; SID = sa.|41|Sim|  

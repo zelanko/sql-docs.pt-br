@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f1a3a5403c4549205c226f25d6c925ef81d4b10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856514"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522754"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47856514"
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (interna) do consumidor de memória.|  
 |memory_consumer_type|**int**|O tipo de consumidor de memória:<br /><br /> 0=Agregação. (Agrega o uso de memória de dois ou mais consumidores. Ele não deve ser exibido.)<br /><br /> 2=VARHEAP (Rastreia o consumo de memória para um heap de comprimento variável.)<br /><br /> 3=HASH (Rastreia o consumo da memória para um índice.)<br /><br /> 5=Pool da página do BD (Rastreia o consumo de memória de um pool de página de banco de dados usado em operações de tempo de execução. Por exemplo, as variáveis de tabela e algumas verificações serializáveis. Há apenas um consumidor de memória deste tipo por banco de dados.)|  
-|memory_consumer_type_desc|**nvarchar(64)**|Tipo de consumidor de memória: VARHEAP, HASH ou PGPOOL.<br /><br /> 0 – (Não deve ser exibido.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do banco de dados. Usado para alocar dados do usuário para um banco de dados (linhas).<br />Heap do sistema de banco de dados. Usado para alocar dados do banco de dados que serão incluídos nos despejos de memória e não incluem dados de usuário.<br />Heap do índice de intervalo. Heap privado usado pelo índice de intervalo para alocar páginas do BW.<br /><br /> HASH: Nenhuma descrição desde que o object_id indica a tabela e o index_id, o índice de hash.<br /><br /> PGPOOL: Para o banco de dados há pool da página de apenas um pool de página do banco de dados de 64K.|  
+|memory_consumer_type_desc|**nvarchar(64)**|Tipo de consumidor de memória: VARHEAP, HASH ou PGPOOL.<br /><br /> 0 - (ele não deve ser exibido.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do banco de dados. Usado para alocar dados do usuário para um banco de dados (linhas).<br />Heap do sistema de banco de dados. Usado para alocar dados do banco de dados que serão incluídos nos despejos de memória e não incluem dados de usuário.<br />Heap do índice de intervalo. Heap privado usado pelo índice de intervalo para alocar páginas do BW.<br /><br /> HASH: Nenhuma descrição desde que o object_id indica a tabela e o index_id, o próprio índice de hash.<br /><br /> PGPOOL: Para o banco de dados, há apenas um pool de páginas de banco de dados de 64K.|  
 |object_id|**bigint**|A ID de objeto à qual a memória alocada está atribuída. Um valor negativo de objetos do sistema.|  
 |xtp_object_id|**bigint**|A ID de objeto para a tabela com otimização de memória.|  
 |index_id|**int**|A ID de índice do consumidor (se houver). NULL para tabelas base.|  

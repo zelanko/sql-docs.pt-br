@@ -1,5 +1,5 @@
 ---
-title: Programação do modelo de tabela para compatibilidade níveis 1050 até 1103 | Microsoft Docs
+title: Analysis Services tabular programação de modelo para os níveis de compatibilidade 1050 – 1103 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8db29de7da29b2d446ea74cf818814502dfc5bfd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: fe2ce43ffb5d2c5be0afb39931f231d2f0d24e14
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148331"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071763"
 ---
 # <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Níveis de compatibilidade 1050 até 1103 de programação do modelo de tabela
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

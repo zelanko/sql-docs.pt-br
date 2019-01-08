@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -18,12 +17,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65cebbe74b1be5cc0d625a70c8c5b87e8f515150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147157"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815288"
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  
@@ -38,7 +37,7 @@ ms.locfileid: "48147157"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configuração do gerenciador de conexões de arquivo simples  
  Quando você adiciona um Gerenciador de conexão de arquivo simples a um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de arquivo simples em tempo de execução, define as propriedades de conexão de arquivo simples e adiciona o Gerenciador de conexão de arquivo simples para o `Connections` coleção do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `FLATFILE`.  
+ A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `FLATFILE`.  
   
  Por padrão, o gerenciador de conexões de arquivos simples sempre verifica se há um delimitador de linha em dados sem aspas e inicia uma nova linha quando um delimitador de linha é localizado. Isso permite que o gerenciador de conexões analise corretamente arquivos com linhas que não têm campos de coluna.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48147157"
   
 -   Especifique um caractere de qualificador de texto. Cada coluna pode ser configurada para reconhecer um qualificador de texto.  
   
-     Agora há suporte para o uso de um caractere qualificador para inserir um caractere qualificador em uma cadeia de caracteres qualificada. A instância dupla de um qualificador de texto é interpretada como uma instância literal única daquela cadeia de caracteres. Por exemplo, se o qualificador de texto for uma aspa simples e os dados de entrada forem ‘abc’, ‘def’, ‘g’hi’, os dados de saída serão abc, def, g'hi.  
+     Agora há suporte para o uso de um caractere qualificador para inserir um caractere qualificador em uma cadeia de caracteres qualificada. A instância dupla de um qualificador de texto é interpretada como uma instância literal única daquela cadeia de caracteres. Por exemplo, se o qualificador de texto for uma aspa simples e os dados de entrada forem 'abc', 'def', 'g'hi', os dados de saída serão abc, def, g'hi.  
   
 -   Defina as propriedades, como o nome, o tipo de dados e a largura máxima em colunas individuais.  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48147157"
   
 -   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- Para obter informações sobre como configurar um Gerenciador de conexão programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Exemplo de consultas mais lentas de habilitar os cinco widget - Studio do Azure Data | Microsoft Docs'
+title: 'Tutorial: Habilitar o widget de exemplo de consultas mais lentas cinco'
+titleSuffix: Azure Data Studio
 description: Este tutorial demonstra como habilitar o widget de exemplo de consultas mais lentas cinco no painel de banco de dados.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356237"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030780"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Adicionar o *cinco consultas mais lentas* widget de exemplo para o painel de banco de dados
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Adicione a *cinco consultas mais lentas* widget de exemplo para o painel de banco de dados
 
 Este tutorial demonstra o processo de adição de uma [!INCLUDE[name-sos](../includes/name-sos-short.md)]do widgets internos de exemplo para o *painel de banco de dados* para exibir rapidamente os cinco consultas mais lentas de um banco de dados. Você também aprenderá a exibir os detalhes das consultas lentas e planos de consulta usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]de recursos. Durante este tutorial, você aprenderá como:
 

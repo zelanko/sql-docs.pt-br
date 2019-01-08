@@ -20,12 +20,12 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d02e60d22f2e3489c7cd7943f7f0ed2fa26fd89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf81d013ccf449288791b1875752d5b6067770a1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848874"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207595"
 ---
 # <a name="sqlremovetranslator-function"></a>Função SQLRemoveTranslator
 **Conformidade com**  
@@ -56,7 +56,7 @@ BOOL SQLRemoveTranslator(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLRemoveTranslator** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Não foi encontrado no registro do componente|O instalador não foi possível remover as informações de tradução, porque não existia no registro ou não pôde ser encontrado no registro.|  

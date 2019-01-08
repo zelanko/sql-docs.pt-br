@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
@@ -15,22 +14,22 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2be1625093dfd89e59cef4731e61411f2c7e4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b8541b0e590fe0fa6de9d577e69b7068fb2843d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158176"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206195"
 ---
 # <a name="variables-window"></a>Janela Variáveis
   Use a janela **Variáveis** para criar e modificar as variáveis definidas pelo usuário e para exibir as variáveis do sistema.  
   
- Por padrão, a janela **Variáveis** está localizada abaixo da área **Gerenciadores de Conexões** no Designer SSIS, no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Se não aparecer a janela **Variáveis** , clique em **Variáveis** no menu **SSIS** para exibir a janela.  
+ Por padrão, a janela **Variáveis** está localizada abaixo da área **Gerenciadores de Conexões** no Designer SSIS, no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Se não aparecer a janela **Variáveis**, clique em **Variáveis** no menu **SSIS** para exibir a janela.  
   
  Além disso, você pode exibir a janela **Variáveis** mapeando o comando View.Variables para uma combinação de teclas de sua escolha na página **Teclado** da caixa de diálogo **Opções** .  
   
-> [!NOTE]  
->  Os valores de `Name` e `Namespace` propriedades devem começar com uma letra de caractere alfabético, conforme definido pelo Unicode Standard 2.0 ou um sublinhado (_). Os caracteres subsequentes podem ser letras ou números conforme definido no padrão Unicode Standard 2.0 ou o sublinhado (\_).  
+> [!NOTE]
+>  Os valores das propriedades `Name` e `Namespace` devem começar com uma letra de caractere alfabético, conforme definido pelo Unicode Standard 2.0 ou um sublinhado (_). Os caracteres subsequentes podem ser letras ou números conforme definido no padrão Unicode Standard 2.0 ou o sublinhado (\_).  
   
 ## <a name="options"></a>Opções  
  **Adicionar Variável**  
@@ -39,7 +38,7 @@ ms.locfileid: "48158176"
  **Mover variável**  
  Clique em uma variável na lista e, em seguida, clique **Mover Variável** para alterar o escopo da variável. Na caixa de diálogo **Selecionar Novo Escopo** , selecione o pacote ou um contêiner, tarefa ou manipulador de eventos no pacote, para alterar o escopo variável.  
   
- Para obter mais informações sobre escopo variável, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Para obter mais informações sobre escopo variável, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).  
   
  **Excluir Variável**  
  Selecione uma variável na lista e clique em **Excluir Variável**.  
@@ -79,9 +78,9 @@ ms.locfileid: "48158176"
  Se você atribui uma expressão a uma variável, um marcador de ícone especial é exibido ao lado da variável. Esse marcador de ícone especial também é exibido ao lado de gerenciadores de conexões e tarefas que têm expressões definidas neles.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
- [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)   
- [Gerar arquivos de despejo para execução de pacote](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
+ [Gerando arquivos de despejo para execução de pacote](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

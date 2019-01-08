@@ -18,12 +18,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525565"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Procurando um modelo de árvores de decisão
   Quando você abre um modelo de classificação usando **navegue**, o modelo é exibido em um visualizador de árvore de decisão, semelhante do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de árvores de decisão no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador exibe os resultados da classificação como um gráfico que foi criado para realçar os critérios que diferenciam um grupo de dados do outro. Você também pode analisar subconjuntos individuais da árvore e recuperar os dados subjacentes.  
@@ -33,7 +33,7 @@ ms.locfileid: "48137046"
   
 -   [Árvore de Decisão](#BKMK_DecisionTree)  
   
--   [Rede de dependências](#BKMK_DNetwork)  
+-   [Rede de Dependências](#BKMK_DNetwork)  
   
  Para experimentar um modelo de árvores de decisão, você poderá usar os dados de exemplo na guia Dados de Treinamento (ou os Dados de Origem) da pasta de trabalho de dados de exemplo e criar um modelo de árvore de decisão usando Bike Buyer como o atributo previsível.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48137046"
   
          Total de casos: 402  
   
-         Probabilidade do comprador de bicicletas: 16%  
+         Probabilidade do comprador de bicicleta: 16%  
   
 7.  Altere o valor de **plano de fundo** de **Sim** para **não** e veja como o gráfico muda.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48137046"
   
 -   Se os dados puderem ser divididos em várias séries, um modelo diferente será criado para cada conjunto de dados que você quiser modelar.  
   
--   No modelo de dados de exemplo, há apenas um resultado previsível – Comprador de bicicleta – mas suponha que você tivesse informações sobre se o cliente comprou um plano de serviço e quisesse prever isso também. Nesse caso, você teria esses dados em uma coluna separada e incluiria dois atributos previsíveis no modelo.  
+-   No modelo de dados de exemplo, há apenas um resultado previsível – comprador de bicicleta – mas suponha que você tenha informações sobre se o cliente comprou um plano de serviço e quisesse prever isso também. Nesse caso, você teria esses dados em uma coluna separada e incluiria dois atributos previsíveis no modelo.  
   
      Clique o **histograma** opção, no canto superior esquerdo do painel de árvore de decisão para alterar o número máximo de estados que podem aparecer nos histogramas na árvore. Isso será útil se o atributo previsível tiver muitos estados. Os estados aparecem em um histograma na ordem de popularidade da esquerda para a direita.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48137046"
   
  [Voltar ao início](#bkmk_Top)  
   
-###  <a name="BKMK_DNetwork"></a> Rede de dependências  
+###  <a name="BKMK_DNetwork"></a> Rede de Dependências  
  O **rede de dependências** modo de exibição exibe as conexões entre os atributos de entrada e os atributos previsíveis no modelo.  
   
 1.  Clique e arraste o controle deslizante à esquerda do visualizador  
@@ -148,7 +148,7 @@ ms.locfileid: "48137046"
   
     -   **Detalhar modelo**. Essa opção obtém os casos que pertencem ao nó selecionado e salva-os em uma tabela no Excel. Você obtém de volta apenas as colunas de dados que foram realmente usadas para criar o modelo.  
   
-    -   **Detalhar colunas da estrutura**. Essa opção obtém os casos que pertencem ao nó selecionado e salva-os em uma tabela no Excel. Você obtém todas as informações que estavam disponíveis nos dados subjacentes quando a criou, até mesmo de uma coluna que não foi usada no modelo. Por exemplo, você pode ter excluído o endereço e o código postal do cliente porque esses campos não são úteis na análise, mas deixou-os na estrutura.  
+    -   **Detalhar colunas da estrutura**. Essa opção obtém os casos que pertencem ao nó selecionado e salva-os em uma tabela no Excel. Você obtém todas as informações que estavam disponíveis no subjacente quando você criou, até mesmo de uma coluna de dados não foi usados no modelo. Por exemplo, você pode ter excluído o endereço e o código postal do cliente porque esses campos não são úteis na análise, mas deixou-os na estrutura.  
   
      Retorne para o Excel para exibir seus dados. O visualizador Procurar executa uma consulta, salva os dados em uma tabela em uma nova planilha e rotula os resultados.  
   

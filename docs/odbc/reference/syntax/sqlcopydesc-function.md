@@ -20,16 +20,16 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e165ca48af3b634f1dcbe80c05c83f2c872d1b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642774"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202435"
 ---
 # <a name="sqlcopydesc-function"></a>Função SQLCopyDesc
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLCopyDesc** copia informações de descritor de identificador de um descritor para outro.  
@@ -39,8 +39,8 @@ ms.locfileid: "47642774"
 ```  
   
 SQLRETURN SQLCopyDesc(  
-     SQLHDESC     SourceDescHandle,  
-     SQLHDESC     TargetDescHandle);  
+     SQLHDESC     SourceDescHandle,  
+     SQLHDESC     TargetDescHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -60,7 +60,7 @@ SQLRETURN SQLCopyDesc(
   
  Porque **SQLCopyDesc** podem ser implementadas por meio da chamada **SQLGetDescField** e **SQLSetDescField**, **SQLCopyDesc** podem retornar SQLSTATEs retornados por **SQLGetDescField** ou **SQLSetDescField**.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  

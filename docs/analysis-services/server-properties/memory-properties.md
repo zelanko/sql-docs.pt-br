@@ -1,5 +1,5 @@
 ---
-title: Propriedades de memória | Microsoft Docs
+title: Propriedades de memória do Analysis Services | Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264876"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071993"
 ---
 # <a name="memory-properties"></a>Propriedades de memória
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -35,7 +35,7 @@ Lembre-se de que as definições de configuração são por instância. Se você
 
 A tabela a seguir descreve resumidamente as configurações de memória mais comumente usadas (com mais detalhes na seção de referência). Defina essas configurações somente se o Analysis Services estiver competindo por memória com outros aplicativos no mesmo servidor:
 
-Configuração | Description
+Configuração | Descrição
 --------|------------
 LowMemoryLimit | Para instâncias multidimensionais, um limite inferior em que o servidor começa primeiramente a liberar a memória alocada a objetos usados com pouca frequência.
 VertiPaqMemoryLimit | Para instâncias tabulares, um limite inferior em que o servidor começa primeiramente a liberar a memória alocada a objetos usados com pouca frequência.
@@ -66,7 +66,7 @@ Somente Azure Analysis Services. Uma propriedade avançada para controlar a quan
  **VertiPaqPagingPolicy**  
   Apenas para instâncias tabulares, especifica o comportamento de paginação, caso o servidor fique com pouca memória. Estes são os valores válidos:  
   
-Configuração  |Description  
+Configuração  |Descrição  
 ---------|---------
 **0**     |  (padrão para o Azure Analysis Services) Desabilita a paginação. Se a memória for insuficiente, o processamento falhará com um erro de memória insuficiente. Se você desabilitar a paginação, será preciso conceder privilégios do Windows à conta de serviço. Consulte [Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) para obter instruções. 
 **1**     |  (padrão para o SQL Server Analysis Services) Essa propriedade permite que a paginação no disco usando o arquivo de paginação do sistema operacional (Pagefile. sys).   
@@ -88,7 +88,7 @@ Quando definido como 1, o processamento apresenta menor probabilidade de falhar 
  **MemoryHeapType**  
   Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Os valores válidos no SQL Server 2016 SP1 e posterior do Analysis Services são os seguintes:
   
-  Configuração | Description
+  Configuração | Descrição
 --------|------------
 **-1** | (padrão) Automático. O mecanismo decidirá qual delas usar.
 **1** | HEAP do Analysis Services.
@@ -100,7 +100,7 @@ Quando definido como 1, o processamento apresenta menor probabilidade de falhar 
  **HeapTypeForObjects**  
   Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Estes são os valores válidos:
   
-   Configuração | Description
+   Configuração | Descrição
 --------|------------
 **-1** | (padrão) Automático. O mecanismo decidirá qual delas usar.
 **0** | Heap LFH do Windows.

@@ -14,12 +14,12 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c71098b580891ddb0c1975e429ede783856cf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182906"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519029"
 ---
 # <a name="create-a-credential"></a>Create a Credential
   Este tópico descreve como criar uma credencial no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "48182906"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Se não houver nenhuma credencial mapeada de logon para o provedor, a credencial mapeada para a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será usada.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "48182906"
   
 1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
   
-2.  Clique com o botão direito do mouse na pasta **Credenciais** e selecione **Nova Credencial…**.  
+2.  Clique com o botão direito do mouse na pasta **Credenciais** e selecione **Nova Credencial...**.  
   
 3.  Na caixa de diálogo **Nova Credencial** , na caixa **Nome da Credencial** , digite um nome para a credencial.  
   
 4.  Na caixa **Identidade** , digite o nome da conta usada para conexões de saída (ao deixar o contexto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Normalmente, esta será uma conta de usuário do Windows, mas a identidade pode ser uma conta de outro tipo.  
   
-     Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo** .  
+     Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo**.  
   
 5.  Nas caixas **Senha** e **Confirmar senha** , digite a senha da conta especificada na caixa **Identidade** . Se **Identidade** for uma conta de usuário do Windows, esta será a senha Windows. A **Senha** poderá ficar em branco se nenhuma senha for requerida.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48182906"
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 ###  <a name="Credential"></a> Para criar uma credencial  
   

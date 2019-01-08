@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], Managed Classes
@@ -17,12 +15,12 @@ ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 238d4871c8c738dbb7038b182800ea7eee645d65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42bde038458e817ad572e8b5049e13acb60a49af
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057116"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806008"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Executando um DiffGram usando as classes gerenciadas SQLXML
   Este exemplo mostra como executar um arquivo DiffGram na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework para aplicar a dados é atualizado para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelas usando Classes gerenciadas SQLXML (Microsoft.Data.SqlXml).  
@@ -153,7 +151,7 @@ class Test
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], permissions
@@ -14,20 +13,20 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 29269184b63f32c02d2386d0e75757b748c5bd2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1d5b43b83102f822b64fdd5e4ebdc416f1de593
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112709"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809613"
 ---
 # <a name="model-permissions-master-data-services"></a>Permissões de modelo (Master Data Services)
   As permissões de modelo se aplicam a todas as entidades, hierarquias derivadas, hierarquias explícitas e coleções existentes dentro do modelo. As permissões atribuídas ao modelo podem ser substituídas para qualquer objeto individual.  
   
 > [!NOTE]  
->  Se um usuário for administrador de modelo, o modelo será exibido em todas as áreas funcionais da interface do usuário. Caso contrário, o modelo será exibido apenas na área funcional **Gerenciador** . Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+>  Se um usuário for administrador de modelo, o modelo será exibido em todas as áreas funcionais da interface do usuário. Caso contrário, o modelo será exibido apenas na área funcional **Gerenciador** . Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
-|Permissão|Description|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|Na **Explorer**, o modelo é exibido, mas o usuário não é possível adicionar ou remover membros e não é possível atualizar valores de atributos, associações de hierarquia ou associações de coleção.|  
 |**Update (atualizar)**|Na **Explorer**, o modelo é exibido e o usuário pode adicionar e remover membros, pode atualizar valores de atributos, associações de hierarquia e associações de coleção.|  

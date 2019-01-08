@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4dc9070625ab85b80ebe7117adc9d010c291365
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d449e6245b779fd281fc9c8f047a9eb352d56846
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100646"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822760"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expressão SSIS)
   Retorna o número de tokens em uma cadeia de caracteres que contém tokens separados pelos delimitadores especificados.  
@@ -57,7 +56,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- No exemplo a seguir, a função TOKENCOUNT retorna 4 porque há quatro tokens (“a”, “little”, “white”, “dog”).  
+ No exemplo a seguir, a função TOKENCOUNT retorna 4 porque há quatro tokens ("a", "little", "white", "dog").  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -69,7 +68,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- No exemplo a seguir, a função TOKENCOUNT retorna 4. A cadeia de caracteres delimitadores neste exemplo contém cinco delimitadores. A cadeia de caracteres de entrada contém quatro tokens: “a”, “little”, “white”, “dog”.  
+ No exemplo a seguir, a função TOKENCOUNT retorna 4. A cadeia de caracteres delimitadores neste exemplo contém cinco delimitadores. A cadeia de caracteres de entrada contém quatro tokens: "a", "little", "white", "dog".  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  
@@ -82,6 +81,6 @@ TOKENCOUNT("        a little white dog", " ")
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;Expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

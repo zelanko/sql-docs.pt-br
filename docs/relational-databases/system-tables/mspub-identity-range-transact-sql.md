@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpub_identity_range_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e60a0754600292937e640175ce22be011e8fc655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a60ae0e3cd8fb4a07ac9a947a8e4a7ea692d9b26
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830654"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821840"
 ---
 # <a name="mspubidentityrange-transact-sql"></a>MSpub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSpub_identity_range** tabela oferece suporte ao gerenciamento de intervalo de identidade. Essa tabela é armazenada no banco de dados de assinatura e publicação.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|A ID da tabela que tem a coluna de identidade administrada pela replicação.|  
 |**range**|**bigint**|Controla o tamanho do intervalo dos valores de identidade consecutivos que seriam atribuídos à assinatura em um ajuste.|  

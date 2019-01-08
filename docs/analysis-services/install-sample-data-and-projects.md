@@ -1,5 +1,5 @@
 ---
-title: Instalar dados de exemplo e projetos | Microsoft Docs
+title: Instalar dados de exemplo do Analysis Services e projetos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057964"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072723"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Instalar dados de exemplo e projetos multidimensionais 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
@@ -28,11 +28,11 @@ As lições neste tutorial presumem que você tenha o seguinte software instalad
   
 -   SQL Server Analysis Services (SSAS) 
   
-    O Analysis Services está disponível apenas nestas edições: Evaluation, Enterprise, Business Intelligence, Standard. Não há suporte para modelos multidimensionais no Azure Analysis Services.
+    Analysis Services está disponível apenas nestas edições: Evaluation, Enterprise, Business Intelligence, Standard. Não há suporte para modelos multidimensionais no Azure Analysis Services.
   
     Por padrão, o Analysis Services 2016 e posterior é instalado como uma instância de tabela, você pode substituir escolhendo modo Multidimensional do servidor no servidor de página de configuração do Assistente de instalação.
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>Etapa 2: Baixar e instalar as ferramentas de gerenciamento e de desenvolvedor
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>Etapa 2: Baixe e instale as ferramentas para desenvolvimento e gerenciamento
 SQL Server Data Tools (SSDT) para o Visual Studio é baixado e instalado separadamente de outros recursos do SQL Server. Os designers e modelos de projeto usados para criar modelos de BI e relatórios estão incluídos no SSDT para Visual Studio 2015 ou como [pacotes do Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) para Visual Studio 2017.  
   
 [Baixar o SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542).   
@@ -45,10 +45,10 @@ Como opção, instale o Excel para procurar seus dados multidimensionais à medi
   
 Como alternativa, você pode procurar dados usando o designer de consulta MDX interno que é embutido no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. O criador de consultas retorna os mesmos dados, menos os que são apresentados como um conjunto de linhas simples.  
   
-## <a name="step-3-install-databases"></a>Etapa 3: Bancos de dados de instalação  
+## <a name="step-3-install-databases"></a>Etapa 3: Instalar bancos de dados  
 Um modelo multidimensional do Analysis Services usa dados transacionais que você importa de um RDBMS. Para os fins deste tutorial, você pode usar o seguinte banco de dados relacional como sua fonte de dados.  
   
--   **AdventureWorksDW2012 ou posterior** – isso é um data warehouse relacional que é executado em uma instância do mecanismo de banco de dados. Ele fornece os dados originais usados pelos bancos de dados do Analysis Services e projetos que você criar e implantar em todo o tutorial. O tutorial presume que você está usando AdventureWorksDW2012, no entanto, fazer o trabalho de versões posteriores.
+-   **AdventureWorksDW2012 ou posterior** -isso é um data warehouse relacional que é executado em uma instância do mecanismo de banco de dados. Ele fornece os dados originais usados pelos bancos de dados do Analysis Services e projetos que você criar e implantar em todo o tutorial. O tutorial presume que você está usando AdventureWorksDW2012, no entanto, fazer o trabalho de versões posteriores.
   
     Você pode usar esse banco de dados de exemplo com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versões posteriores. Em geral, você deve usar a versão do banco de dados de exemplo correspondente à versão do mecanismo de banco de dados.
   
@@ -80,7 +80,7 @@ As projetos de exemplo usam configurações de representação de fonte de dados
   
 6.  Marque a caixa de seleção ao lado de **AdventureWorksDW** banco de dados. A associação de função deve incluir automaticamente **db_datareader** e **public**. Clique em **OK** para aceitar os padrões.  
   
-## <a name="step-5-install-projects"></a>Etapa 5: Projetos de instalação  
+## <a name="step-5-install-projects"></a>Etapa 5: Instalar projetos  
 
 O tutorial inclui projetos de exemplo para que você possa comparar seus resultados em um projeto acabado ou iniciar uma lição que seja mais adiantada na sequência.  
   
@@ -88,7 +88,7 @@ O tutorial inclui projetos de exemplo para que você possa comparar seus resulta
   
     Os projetos de tutorial funcionam para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versões posteriores.  
   
-2.  Mova o arquivo .zip para uma pasta debaixo da unidade de raiz (por exemplo, C:\Tutorial). Esta etapa mitigará o erro "Caminho muito longo" que às vezes ocorre se você tentar descompactar os arquivos na pasta de Downloads.  
+2.  Mova o arquivo .zip para uma pasta debaixo da unidade de raiz (por exemplo, C:\Tutorial). Esta etapa mitigará o erro de "Caminho muito longo" que às vezes ocorre se você tentar descompactar os arquivos na pasta Downloads.  
   
 3.  Descompacte os projetos de exemplo: clique com o botão direito do mouse no arquivo e selecione **Extrair Tudo**. Depois de extrair os arquivos, você deve ter pastas lição 1, 2, 3, 5, 6, 7, 8, 9, 10 concluída e o início da lição 4. 
   

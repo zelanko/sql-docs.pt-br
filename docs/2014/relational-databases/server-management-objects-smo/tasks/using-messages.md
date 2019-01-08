@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,12 +14,12 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba6be1ebca7ee70b3c2bfc31e30a4636942c8d09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e67d8818fb20d339c4166f606d15e0f7dbceced
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113646"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800578"
 ---
 # <a name="using-messages"></a>Usando mensagens
   No SMO, mensagens do sistema são representadas pelo objeto <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> que pertence ao objeto `Server`. Como as mensagens do sistema não podem ser modificadas, as propriedades do objeto `SystemMessage` são somente leitura.  

@@ -1,7 +1,8 @@
 ---
-title: Criar trechos de código no estúdio de dados do Azure | Microsoft Docs
+title: Criar trechos de código reutilizáveis
+titleSuffix: Azure Data Studio
 description: Saiba como criar e usar trechos de código SQL no estúdio de dados do Azure
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bcf50d192b679b250ce6f4baac8f9e0179080ea
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384131"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030260"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Criar e usar trechos de código para criar rapidamente scripts Transact-SQL (T-SQL) [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -51,7 +52,7 @@ Trechos de código definido pelo usuário também podem ser criados.
 
 Você pode definir seus próprios trechos. Para abrir o arquivo de trecho de código SQL para edição:
 
-1. Abra o *paleta de comandos* (**Ctrl + Shift + P**) e o tipo *recorte*e selecione **preferências: Abra trechos de código do usuário**:
+1. Abra o *paleta de comandos* (**Ctrl + Shift + P**) e o tipo *recorte*e selecione **preferências: Abra os trechos de código do usuário**:
 
    ![Substitua o campo de modelo](media/code-snippets/user-snippets.png)
 

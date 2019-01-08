@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
@@ -13,12 +12,12 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079136"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770958"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   O destino ODBC carrega dados em massa em tabelas de bancos de dados com suporte ODBC. O destino ODBC usa um gerenciador de conexões ODBC para se conectar à fonte de dados.  
@@ -30,16 +29,16 @@ ms.locfileid: "48079136"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opções de carregamento  
  O destino ODBC pode usar um de dois módulos de carga de acesso. Defina o modo no [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../odbc-source-editor-connection-manager-page.md). Os dois modos são:  
   
--   **Lote**: nesse modo, o destino ODBC tenta usar o método de inserção mais eficiente com base nos recursos do provedor ODBC percebido. Para a maioria dos provedores ODBC modernos, isso significa preparar uma instrução INSERT com parâmetros e usar uma associação de parâmetro de matriz row-wise (em que o tamanho da matriz é controlado pela propriedade **BatchSize** ). Se você selecionar **Lote** e o provedor não oferecer suporte a esse método, o destino ODBC alternará automaticamente para modo **Linha a linha** .  
+-   **Lote**: Nesse modo, o destino ODBC tenta usar o método de inserção mais eficiente com base nos recursos do provedor ODBC percebido. Para a maioria dos provedores ODBC modernos, isso significa preparar uma instrução INSERT com parâmetros e usar uma associação de parâmetro de matriz row-wise (em que o tamanho da matriz é controlado pela propriedade **BatchSize** ). Se você selecionar **Lote** e o provedor não oferecer suporte a esse método, o destino ODBC alternará automaticamente para modo **Linha a linha** .  
   
--   **Linha a Linha**: nesse modo, o destino ODBC prepara uma instrução INSERT com parâmetros e usa **SQL Execute** para inserir linhas uma de cada vez.  
+-   **Linha por linha**: Nesse modo, o destino ODBC prepara uma instrução INSERT com parâmetros e usa **SQL Execute** para inserir linhas uma por vez.  
   
 ## <a name="error-handling"></a>Tratamento de erros  
  O destino ODBC tem uma saída de erro. A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código de Erro**: o número que corresponde ao erro atual. Consulte a documentação do seu banco de dados de origem para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
+-   **Código de erro**: O número que corresponde ao erro atual. Consulte a documentação do seu banco de dados de origem para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
   
--   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
+-   **Coluna de erro**: A coluna de origem que está causando o erro (para erros de conversão).  
   
 -   As colunas de dados de saída padrão.  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48079136"
   
  Para obter mais informações, consulte um dos tópicos a seguir.  
   
--   [Editor de destino ODBC &#40;página do Gerenciador de Conexão&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino ODBC &#40;página mapeamentos&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destino ODBC &#40;página de saída de erro&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Editor do Destino ODBC &#40;Página Saída de Erro&#41;](../odbc-destination-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** contém as propriedades que podem ser definidas programaticamente.  
   
@@ -76,11 +75,11 @@ ms.locfileid: "48079136"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Editor de destino ODBC &#40;página de saída de erro&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Editor do Destino ODBC &#40;Página Saída de Erro&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [Editor de destino ODBC &#40;página mapeamentos&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destino ODBC &#40;página do Gerenciador de Conexão&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [Carregar dados por meio do destino ODBC](odbc-destination.md)  
   

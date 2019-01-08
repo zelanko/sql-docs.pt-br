@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -20,12 +19,12 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 568773a255c6a1d264544ef540d88fa6afa0d277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d082c78aeaff76d314d90351851f745a3cddd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786698"
 ---
 # <a name="view-package-objects"></a>Exibir objetos do pacote
   No Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , a guia **Explorador de Pacotes** fornece uma exibição de explorer do pacote. A exibição reflete a hierarquia de contêiner da arquitetura [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O contêiner de pacote está no topo da hierarquia e você expande o pacote para exibir as conexões, executáveis, manipuladores de eventos, provedores de log, restrições de precedência e variáveis no pacote.  
@@ -48,8 +47,8 @@ ms.locfileid: "48163246"
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
  [Contêineres do Integration Services](control-flow/integration-services-containers.md)   
  [Restrições de precedência](control-flow/precedence-constraints.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
- [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](integration-services-ssis-event-handlers.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
+ [Manipuladores de eventos do Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)   
  [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
   
   

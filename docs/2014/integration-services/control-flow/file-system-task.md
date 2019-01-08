@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.f1
@@ -15,12 +14,12 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45b0323ffea075bc914de54b58e922eb6bcbb4b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd924464331b144040f33797d0333b1ddb5a4032
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226026"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790938"
 ---
 # <a name="file-system-task"></a>Tarefa Sistema de Arquivos
   A tarefa Sistema de Arquivos executa operações em arquivos e diretórios no sistema de arquivos. Por exemplo, ao usar a tarefa Sistema de Arquivos, um pacote pode criar, mover ou excluir diretórios e arquivos. Você também pode usar a tarefa Sistema de Arquivos para definir atributos em arquivos e diretórios. Por exemplo, a tarefa Sistema de Arquivos pode tornar os arquivos em ocultos ou somente leitura.  
@@ -32,7 +31,7 @@ ms.locfileid: "48226026"
 ## <a name="predefined-file-system-operations"></a>Operações do sistema de arquivos predefinidas  
  A tarefa Sistema de Arquivos inclui um conjunto predefinido de operações. A tabela a seguir descreve essas operações.  
   
-|Operação|Description|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Copiar diretório|Copia uma pasta de um local para outro.|  
 |Copiar arquivo|Copia um arquivo de um local para outro.|  
@@ -54,7 +53,7 @@ ms.locfileid: "48226026"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>Entradas de log personalizadas disponíveis na tarefa Sistema de Arquivos  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Sistema de Arquivos. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`FileSystemOperation`|Informa a operação executada pela tarefa. A entrada de log é gravada quando a operação de sistema de arquivos é iniciada e inclui informações sobre a origem e o destino.|  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48226026"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, consulte os tópicos a seguir:  
   
--   [Editor de tarefa do sistema de arquivos &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Sistema de Arquivos &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

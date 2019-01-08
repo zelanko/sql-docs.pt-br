@@ -1,6 +1,6 @@
 ---
 title: Monitorar uma visão geral de instância do Analysis Services | Microsoft Docs
-ms.date: 11/15/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,33 +9,34 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b506d0fe9382edc373e63696cfd6b5819e07076
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1ac0f94b7f12cdba6237b2694114580f56dc6597
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704074"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540464"
 ---
 # <a name="monitoring-overview"></a>Visão geral de monitoramento
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Se você estiver usando o Azure Analysis Services, consulte [monitorar métricas do servidor](https://docs.microsoft.com/azure/analysis-services/analysis-services-monitor) e [configurar o log de diagnóstico](https://docs.microsoft.com/azure/analysis-services/analysis-services-logging).
+Analysis Services tem várias ferramentas diferentes para ajudá-lo a monitorar e e ajustar o desempenho dos seus servidores. A escolha da ferramenta depende do tipo de monitoramento ou de ajuste a ser feito e dos eventos em particular a monitorar.
 
-  Você pode monitorar o desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Monitor de Desempenho, um aplicativo às vezes chamado de **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite criar e gerenciar rastreamentos e analisar e repetir resultados de rastreamento. O Monitor de Desempenho reporta em um status de servidor, como indexado por certos contadores, que são discutidos na próxima seção.  
+Para obter mais informações sobre como monitorar o SQL Server Analysis Services, consulte o [guia de operações do SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-> [!NOTE]  
->  Para obter mais informações sobre monitoramento, consulte o [Guia de operações do SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
-  
-## <a name="monitoring-topics"></a>Tópicos de monitoramento  
-  
- [SQL Server Profiler](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
-  
- [Eventos estendidos](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
-  
- [Usar exibições de gerenciamento dinâmico &#40;DMVs&#41;](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
-  
- [Contadores de desempenho ](../../analysis-services/instances/performance-counters-ssas.md)  
+## <a name="monitoring-tools"></a>Ferramentas de monitoramento  
 
- [Eventos de rastreamento](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
-  
-  
+|Ferramenta  |Descrição  |
+|---------|---------|
+|[SQL Server Profiler](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)      |   Rastreia eventos de processo do mecanismo. Ele também captura dados sobre esses eventos, permitindo que você monitore a atividade de servidor e banco de dados.      |
+| [Eventos estendidos](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)     |   Um sistema que usa pouquíssimos recursos do sistema de monitoramento, torna uma ferramenta ideal para diagnosticar problemas em servidores de produção e teste de desempenho e rastreamento de leve.       |
+| [Exibições de gerenciamento dinâmico &#40;DMVs&#41;](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)      |   Consultas que retornam informações sobre objetos de modelo, as operações do servidor e a integridade do servidor. A consulta, com base em SQL, é uma interface para conjuntos de linhas de esquema.      |
+| [Eventos de rastreamento](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)     |  Siga a atividade de uma instância capturando e analisando os eventos de rastreamento gerados pela instância. Os eventos de rastreamento são agrupados de forma que você possa localizar facilmente eventos de rastreamento relacionados.        |
+|   [Contadores de desempenho](../../analysis-services/instances/performance-counters-ssas.md)\*    |    Usando o Monitor de Desempenho, você pode monitorar o desempenho de uma instância do Microsoft SQL Server Analysis Services (SSAS) usando contadores de desempenho.     |
+|[Operações de log](../../analysis-services/instances/performance-counters-ssas.md)\*|Uma instância do SQL Server Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv exe-um para cada instância instalada. |
+
+\* Aplica-se ao SQL Server Analysis Services só.
+
+## <a name="see-also"></a>Confira também
+
+[Monitorar métricas do servidor do Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-monitor)   
+[Configurar o log de diagnóstico do Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-logging)

@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534742"
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os seguintes namespaces de quatro.  
@@ -26,7 +26,7 @@ O formato de persistência XML no ADO usa os seguintes namespaces de quatro.
 ## <a name="remarks"></a>Comentários  
  O formato de persistência XML no ADO usa os seguintes namespaces de quatro.  
   
-|Prefixo|Description|  
+|Prefixo|Descrição|  
 |------------|-----------------|  
 |s|Refere-se ao namespace "XML-Data", que contém os elementos e atributos que definem o esquema do conjunto de registros atual.|  
 |DT|Refere-se a especificação de definições de tipo de dados.|  
@@ -38,7 +38,7 @@ O formato de persistência XML no ADO usa os seguintes namespaces de quatro.
 > [!IMPORTANT]
 >  A ID para a marca de esquema deve ser "RowsetSchema", e o namespace usado para consultar o esquema do conjunto de linhas atual deve apontar para "#RowsetSchema".  
   
- Observe que o prefixo do namespace — a parte entre os dois-pontos e o sinal de igual — é arbitrário.  
+ Observe que o prefixo do namespace - a parte entre os dois-pontos e o sinal de igual - é arbitrário.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

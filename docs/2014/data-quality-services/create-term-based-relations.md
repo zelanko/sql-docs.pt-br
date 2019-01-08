@@ -12,15 +12,15 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eca92d02eac642f48e64c15217fd6b354790bb97
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 871c6acc823606a249f0886864a84300be7f9899
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396639"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
-  Este tópico descreve como criar relações baseadas em termos para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, você pode configurar uma relação baseada em termos que altere o termo “Inc.” para “Incorporated”. O termo “Inc.” será alterado toda vez que ocorrer no domínio. Instâncias de "Contoso, Inc." serão alteradas para "Contoso, Incorporated", e os dois valores serão considerados sinônimos exatos.  
+  Este tópico descreve como criar relações baseadas em termos para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, você pode configurar uma relação baseada em termos que altere o termo "Inc." para "Incorporated". O termo "Inc." será alterado toda vez que ocorrer no domínio. As instâncias de "Contoso, Inc." serão alteradas para "Contoso, Incorporated" e os dois valores serão considerados sinônimos exatos.  
   
  Para usar relações baseadas em termos, crie uma lista de pares Valor/Corrigir para, como "Inc." e "Incorporated" ou "Senior" e "Sr.". O uso de uma relação baseada em termos lhe permite alterar um termo ao longo do domínio, sem definir valores de domínio individuais manualmente como sinônimos. Você pode especificar que um valor seja corrigido, mesmo que a descoberta da base de dados de conhecimento não tenha descoberto esse valor antes. Se uma transformação de relação baseada em termos levar dois valores a serem idênticos, o DQS criará uma relação de sinônimo entre eles (em descoberta da base de dados de conhecimento), uma relação de correção entre eles (em correção de dados), ou uma correspondência exata (em correspondência).  
   
@@ -90,16 +90,16 @@ ms.locfileid: "51030313"
   
     6.  Localize um valor na tabela Relações inserindo um ou mais dígitos na caixa de texto **Localizar** . Correspondências para a cadeia de caracteres serão realçadas. Use as setas para cima e para baixo para se mover para instâncias diferentes da cadeia de caracteres na tabela.  
   
-    7.  **Verificador Ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **O verificador ortográfico**: Se o valor na **valor** ou **corrigir para** coluna tiver um sublinhado vermelho ondulado, o verificador ortográfico está sugerindo uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Relações Baseadas em Termos** para habilitá-lo nessa página.  
   
 6.  Clique em **Aplicar Alterações** para aplicar as relações baseadas em termos no domínio.  
   
-7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: após criar relações baseadas em termos  
+##  <a name="FollowUp"></a> Acompanhar: Depois de criar relações baseadas em termos  
  Depois de criar relações baseadas em termos, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

@@ -20,16 +20,16 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02bc4c6d30fc6f8fa9d77e3da5f10664fd5a2704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693890"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207545"
 ---
 # <a name="sqlstatistics-function"></a>Função SQLStatistics
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLStatistics** recupera uma lista de estatísticas sobre uma única tabela e os índices associados à tabela. O driver retorna as informações como um conjunto de resultados.  
@@ -94,7 +94,7 @@ SQLRETURN SQLStatistics(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLStatistics** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLStatistics** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
@@ -148,7 +148,7 @@ SQLRETURN SQLStatistics(
 |TIPO (ODBC 1.0)|7|Smallint não NULL|Tipo de informação que está sendo retornado:<br /><br /> SQL_TABLE_STAT indica uma estatística para a tabela (na coluna CARDINALIDADE ou páginas).<br /><br /> SQL_INDEX_BTREE indica um índice de árvore B.<br /><br /> SQL_INDEX_CLUSTERED indica um índice clusterizado.<br /><br /> SQL_INDEX_CONTENT indica um índice de conteúdo.<br /><br /> SQL_INDEX_HASHED indica um índice de hash.<br /><br /> SQL_INDEX_OTHER indica outro tipo de índice.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Número de sequência de coluna no índice (começando com 1); NULL será retornado se o tipo é SQL_TABLE_STAT.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nome da coluna. Se a coluna se baseia em uma expressão, como o SALÁRIO + benefícios, a expressão é retornada; Se a expressão não pode ser determinada, uma cadeia de caracteres vazia será retornada. NULL será retornado se o tipo é SQL_TABLE_STAT.|  
-|ASC_OR_DESC (ODBC 1.0)|10|char(1)|Sequência para a coluna de classificação: "A" para em ordem crescente; "D" para decrescente; NULL será retornado se a sequência de classificação de coluna não é compatível com a fonte de dados ou se o tipo é SQL_TABLE_STAT.|  
+|ASC_OR_DESC (ODBC 1.0)|10|char(1)|Sequência de classificação da coluna: "A" para em ordem crescente; "D" para decrescente; NULL será retornado se a sequência de classificação de coluna não é compatível com a fonte de dados ou se o tipo é SQL_TABLE_STAT.|  
 |CARDINALIDADE (ODBC 1.0)|11|Integer|Cardinalidade da tabela ou índice; número de linhas na tabela se o tipo é SQL_TABLE_STAT; número de valores exclusivos no índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados.|  
 |PÁGINAS DE (ODBC 1.0)|12|Integer|Número de páginas usadas para armazenar o índice ou tabela; número de páginas para a tabela se o tipo é SQL_TABLE_STAT; número de páginas para o índice se o tipo não é SQL_TABLE_STAT; NULL será retornado se o valor não está disponível da fonte de dados ou se não for aplicável à fonte de dados.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Se o índice for um índice filtrado, essa é a condição de filtro, como o SALÁRIO > 30000; Se a condição de filtro não pode ser determinada, isso é uma cadeia de caracteres vazia.<br /><br /> NULO se o índice não é um índice filtrado, ele não pode ser determinado se o índice é um índice filtrado ou o tipo é SQL_TABLE_STAT.|  

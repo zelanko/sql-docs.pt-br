@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdatatypemap
@@ -17,17 +16,17 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1eab8424e2ff5eb81e8d89a6ed897b7d19b5b72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837934"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210845"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna informações sobre os mapeamentos de tipo de dados definido entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DBMS) de sistemas de gerenciamento de banco de dados. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
+  Retorna informações sobre os mapeamentos de tipo de dados definido entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DBMS) de sistemas de gerenciamento de banco de dados. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@source_dbms**=] **'***source_dbms***'**  
  É o nome do DBMS no qual os tipos de dados são mapeados. *source_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|A origem é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|A origem é um banco de dados Oracle.|  
@@ -62,7 +61,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  O nome do DBMS de destino. *destination_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|O destino é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|O destino é um banco de dados Oracle.|  
@@ -80,7 +79,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**mapping_id**|Identifica um mapeamento de tipo de dados.|  
 |**source_dbms**|É o nome e número da versão do DBMS de origem.|  
@@ -93,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helpdatatypemap** define mapeamentos de tipo de dados de Publicadores não SQL Server e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.  
+ **sp_helpdatatypemap** define mapeamentos de tipo de dados de Publicadores não SQL Server e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.  
   
  Quando não há suporte para a combinação especificada de origem e o DBMS de destino, **sp_helpdatatypemap** retorna um conjunto de resultados vazio.  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergesubscriptions_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8e94cb9660d3b53ff3ed8db75dd500cde9067e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baea56d983ac1c2fff9016d1a385c8b4d918fb7a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806534"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802788"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada Assinante conhecido e é uma tabela local no Publicador. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |subscriber_server|**sysname**|A ID do servidor. Usada para mapear o campo srvid para um valor específico de servidor ao migrar uma cópia do banco de dados de assinatura para um servidor diferente.|  
 |db_name|**sysname**|O nome do banco de dados inscrito.|  

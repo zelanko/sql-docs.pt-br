@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_schemafilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02e384763a6415f1de27415bf63f3159bddc394e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756054"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206936"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [**@publisher** =] **'***publisher***'**  
- É o nome de não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, sem padrão.  
+ É o nome de não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, sem padrão.  
   
  [**@schema** =] **'***esquema***'**  
  É o nome do esquema. *esquema* está **sysname**, com um valor padrão de NULL.  
@@ -50,7 +49,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
  [**@operation** =] **'***operação***'**  
  É a ação a ser executada neste esquema. *operação* está **nvarchar(4)**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**add**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
 |**drop**|Descarta o esquema especificado na lista de esquemas não qualificados para publicação.|  
@@ -58,7 +57,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**SchemaName**|**sysname**|É o nome do esquema não qualificado para publicação.|  
   

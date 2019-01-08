@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a01af53372a8be1fce6ffa2e4ee8d4cddce8d057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98844917c047e2e52018e9ed8b050f708617ae2f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799098"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validando dados (Suplemento do MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], quando você publica dados, ocorrem dois tipos de validação:  
@@ -35,7 +34,7 @@ ms.locfileid: "48135336"
 ## <a name="validation-statuses"></a>Status da validação  
  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os status de validação a seguir são possíveis.  
   
-|Status|Description|  
+|Status|Descrição|  
 |------------|-----------------|  
 |Erro|Um ou mais valores na linha validação falharam na validação em relação a regras de negócio definidas por um administrador do MDS.|  
 |Não Validado|Os valores na linha ainda não foram validados em relação a regras de negócio.|  
@@ -44,7 +43,7 @@ ms.locfileid: "48135336"
 ## <a name="input-statuses"></a>Status de Entrada  
  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os status de entrada a seguir são possíveis  
   
-|Status|Description|  
+|Status|Descrição|  
 |------------|-----------------|  
 |Erro|Um ou mais valores na linha não atendem aos requisitos de sistema, como comprimento ou tipo de dados. O valor não é atualizado no repositório do MDS.|  
 |Nova Linha|Os valores na linha ainda não foram publicados no repositório do MDS.|  
@@ -55,7 +54,7 @@ ms.locfileid: "48135336"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Determine quais valores não transmitem as regras de negócio definidas.|[Aplicar regras de negócio &#40;suplemento do MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|Determine quais valores não transmitem as regras de negócio definidas.|[Aplicar regras de negócio &#40;Suplemento MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
 |Para ajudar a corrigir erros de validação, exiba todas as transações que ocorreram para um membro.|[Exibir todas as anotações ou transações de um membro &#40;Suplemento MDS para Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  

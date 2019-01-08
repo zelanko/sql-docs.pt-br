@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810638"
 ---
 # <a name="filter-published-data"></a>Filtrar dados publicados
   Filtrar artigos de tabela lhe permite criar partições de dados a serem publicados. Filtrando dados publicados, você pode:  
@@ -53,7 +52,7 @@ ms.locfileid: "48222618"
   
 -   Filtros de linha com parâmetros, que estão disponíveis apenas com replicação de mesclagem.  
   
-     Ao usar filtros com parâmetros é possível escolher um subconjunto de linhas a ser publicado. Ao contrário de filtros estáticos que enviam o mesmo subconjunto de linhas para cada Assinante, filtros de linhas com parâmetros usam um valor de dados fornecido pelo Assinante para que se envie aos Assinantes diferentes subconjuntos de linhas. Para saber mais, confira [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+     Ao usar filtros com parâmetros é possível escolher um subconjunto de linhas a ser publicado. Ao contrário de filtros estáticos que enviam o mesmo subconjunto de linhas para cada Assinante, filtros de linhas com parâmetros usam um valor de dados fornecido pelo Assinante para que se envie aos Assinantes diferentes subconjuntos de linhas. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Filtros de junção, que estão disponíveis apenas com replicação de mesclagem.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48222618"
     > [!NOTE]  
     >  Filtros de linha em publicações transacionais podem adicionar uma sobrecarga significativa por que a cláusula de filtragem de artigo é avaliada para cada linha de log gravada para uma tabela publicada a fim de determinar se a linha deve ser replicada. Filtros de linha em publicações transacionais devem ser evitados se cada nó de replicação puder dar suporte a toda a carga de dados, e o conjunto completo de dados for relativamente pequeno.  
   
--   Com replicação de mesclagem, use filtros de linha com parâmetro em vez de criar várias publicações com filtros de linha estáticos. Para saber mais, confira [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Com replicação de mesclagem, use filtros de linha com parâmetro em vez de criar várias publicações com filtros de linha estáticos. Para obter mais informações, consulte [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Para definir ou modificar um filtro de linha estático, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48222618"
   
 -   Replicação transacional lhe permite reproduzir uma exibição indexada como uma exibição ou como uma tabela. Se você reproduzir a exibição como uma tabela, você não poderá filtrar colunas da tabela.  
   
- Os filtros de linha não são criados para funcionar nos bancos de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe intencionalmente a execução de `sp_replcmds` (quais filtros serão executados em) ao proprietário do banco de dados (`dbo`). O `dbo` não tem privilégios de banco de dados. Com a adição de CDC (Change Data Capture) em [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a lógica de `sp_replcmds` preenche as tabelas de controle de alterações com informações que o usuário pode retornar e consultar. Por motivos de segurança [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe a execução dessa lógica, de modo que um mal-intencionado `dbo` não possa sequestrar esse caminho de execução. Por exemplo, um `dbo` mal-intencionado pode adicionar gatilhos a tabelas CDC que seriam executadas no contexto do usuário que chama `sp_replcmds`, nesse caso, o Log Reader Agent.  Se a conta que o agente está executando tiver um privilégio mais alto, o `dbo` mal-intencionado poderá escalonar os privilégios dele.  
+ Os filtros de linha não são criados para funcionar nos bancos de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe intencionalmente a execução de `sp_replcmds` (quais filtros serão executados em) ao proprietário do banco de dados (`dbo`). O `dbo` não tem privilégios de banco de dados. Com a adição de CDC (Change Data Capture) em [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a lógica de `sp_replcmds` preenche as tabelas de controle de alterações com informações que o usuário pode retornar e consultar. Por motivos de segurança [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe a execução dessa lógica, de modo que um mal-intencionado `dbo` não possa sequestrar esse caminho de execução. Por exemplo, um `dbo` mal-intencionado pode adicionar gatilhos a tabelas CDC que seriam executadas no contexto do usuário que chama `sp_replcmds`, nesse caso, o Log Reader Agent.  Se a conta que o agente está executando tiver um privilégio mais alto, o `dbo` mal-intencionado poderá escalonar os privilégios dele.  
   
 ## <a name="see-also"></a>Consulte também  
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)  

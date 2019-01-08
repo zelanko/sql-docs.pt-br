@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd3a20e2a6327c569002239064844bf7c9e57a28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167136"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806188"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Versões de idiomas locais no SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a todos os idiomas que têm suporte nos sistemas operacionais Windows.  
@@ -79,7 +78,7 @@ ms.locfileid: "48167136"
   
 3.  Na guia **Avançado** , para **Select a language to match the language version of the non-Unicode programs you want to use (Selecione um idioma correspondente à versão de idioma dos programas não Unicode que você deseja usar)**, selecione um valor da lista.  
   
-     Essa configuração permitirá que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolha o melhor agrupamento padrão para sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Essa configuração permitirá que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolha a melhor ordenação padrão para sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Clique em **Aplicar** para confirmar a alteração e em **OK** para fechar a janela.  
   

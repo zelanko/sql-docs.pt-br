@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72fc428e8749a5026c099d14ec012bb4cee6fa2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096816"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813618"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>classe de evento Data File Auto Shrink
   A classe de evento **Data File Auto Shrink** indica que o arquivo de dados pode ser reduzido. Esse evento não será acionado se o arquivo de dados for reduzido devido a uma instrução ALTER DATABASE explícita. Inclua a classe de evento **Data File Auto Shrink** nos rastreamentos que monitoram as alterações de tamanho do arquivo de dados.  
@@ -29,7 +28,7 @@ ms.locfileid: "48096816"
   
 ## <a name="data-file-auto-shrink-event-class-data-columns"></a>Colunas de dados da classe de evento Data File Auto Shrink  
   
-|Nome da coluna de dados|Tipo de Dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão para uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**Int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
@@ -37,8 +36,8 @@ ms.locfileid: "48096816"
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**Duration**|**bigint**|Tempo (em milissegundos) para a redução do arquivo.|13|Sim|  
 |**EndTime**|**datetime**|Hora de término da redução automática.|18|Sim|  
-|**EventClass**|**int**|Tipo de evento registrado = 94.|27|não|  
-|**EventSequence**|**int**|Sequência de classe de evento em lote.|51|não|  
+|**EventClass**|**int**|Tipo de evento registrado = 94.|27|Não|  
+|**EventSequence**|**int**|Sequência de classe de evento em lote.|51|Não|  
 |**Filename**|**nvarchar**|Nome lógico do arquivo que está sendo reduzido.|36|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Esta coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IntegerData**|**int**|Número de páginas de 8 KB em que foi reduzido o arquivo.|25|Sim|  
@@ -46,7 +45,7 @@ ms.locfileid: "48096816"
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na forma DOMAIN\Username).|11|Sim|  
 |**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

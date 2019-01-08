@@ -14,17 +14,17 @@ ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a9efee9d104c2f45eea728dc7b0ae30913e3ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066212"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544598"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Compatibilidade com versões anteriores da pesquisa de texto completo
   Os tópicos da seção de compatibilidade com versões anteriores descrevem alterações no comportamento de pesquisa de texto completo entre versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-|Consulte…|Para tópicos sobre...|  
+|Consultar…|Para tópicos sobre...|  
 |----------|-----------------------|  
 |[Recursos de pesquisa de texto completo preteridos no SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Recursos de pesquisa de texto completo substituídos nesta versão.|  
 |[Recursos de pesquisa de texto completo descontinuados no SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Recursos de pesquisa de texto completo descontinuados nesta versão.|  

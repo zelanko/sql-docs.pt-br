@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 910d3ba33b5c78ffe7b4fd3eba637c52f55d4ba2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793008"
 ---
 # <a name="cursors-event-category"></a>Categoria de evento Cursors
   A categoria de evento **Cursors** contém classes de evento usadas para monitorar o comportamento de cursores.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento CursorClose](cursorclose-event-class.md)|Descreve eventos de fechamento de cursor que ocorrem em cursores de interface de programação de aplicativo (API).|  
 |[Classe de evento CursorExecute](cursorexecute-event-class.md)|Descreve eventos de execução de cursor que ocorrem em cursores de API.|  

@@ -1,5 +1,5 @@
 ---
-title: Conceder acesso personalizado aos dados da célula (Analysis Services) | Microsoft Docs
+title: Conceder acesso personalizado a dados da célula (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025234"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539046"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Conceder acesso personalizado a dados de célula (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34025234"
   
  As permissões de célula aplicam-se a dados dentro da célula e não aos seus metadados. Observe como a célula ainda está visível nos resultados de uma consulta, exibindo um valor **#N/A** em vez do valor real da célula. O valor **#N/A** aparecerá na célula a menos que o aplicativo cliente converta o valor, ou outro valor seja especificado definindo a propriedade Secured Cell Value na cadeia de conexão.  
   
- Para ocultar a célula totalmente, limite os membros visíveis – dimensões, atributos de dimensão e membros do atributo de dimensão. Para obter mais informações, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
+ Para ocultar a célula totalmente, você deverá limitar os membros de dimensões, atributos de dimensão e membros de atributo de dimensão – que são visíveis. Para obter mais informações, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
   
  Como administrador, você pode especificar se os membros da função têm permissões de leitura, contingente de leitura ou de leitura/gravação nas células de um cubo. Colocar permissões em uma célula é o nível mais baixo de segurança permitido, por isso, antes de aplicar permissões neste nível, é importante considerar alguns fatos:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34025234"
 ## <a name="allow-access-to-specific-measures"></a>Permitir acesso a medidas específicas  
  Você pode usar a segurança da célula para escolher explicitamente quais medidas estão disponíveis. Depois de identificar especificamente quais membros são permitidos, todas as outras medidas se tornam indisponíveis. Talvez esse seja o cenário mais simples para implantar por meio de script MDX, como mostram as etapas a seguir.  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha um banco de dados, abra a pasta **Funções** e clique em uma função de banco de dados (ou crie uma nova função de banco de dados). A associação já deve estar especificada e a função deve ter acesso de **Leitura** ao cubo. Consulte [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) se precisar de ajuda com esta etapa.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha um banco de dados, abra a pasta **Funções** e clique em uma função de banco de dados (ou crie uma nova função de banco de dados). A associação já deve estar especificada e a função deve ter acesso de **Leitura** ao cubo. Consulte [Grant cube or model permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) se precisar de ajuda com esta etapa.  
   
 2.  Em **Dados da Célula**, marque a seleção do cubo para ter certeza de ter escolhido o correto e selecione **Habilitar permissões de leitura**.  
   
@@ -89,10 +89,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>Consulte também  
  [Construtor MDX&#40;Analysis Services – Dados Multidimensionais&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [O Script básico de MDX & #40; MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Conceder permissões de processo &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [Conceder permissões em uma dimensão &#40;do Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [Conceder acesso personalizado a dimensão de dados & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder permissões de modelo ou de cubo & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [O script básico de MDX &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Conceder permissões de processo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [Conceder permissões em uma dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

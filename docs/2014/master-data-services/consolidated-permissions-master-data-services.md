@@ -16,12 +16,12 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fbc636a4dcf67b6bdeaa17088405ffe079e50d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82e7d14acc5117da28b608e742ad34afa5b652a5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096956"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420327"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Permissões consolidadas (Serviços de Dados Mestre)
   Permissões consolidadas se aplicam aos valores de atributos para todos os membros consolidados de uma entidade.  
@@ -34,7 +34,7 @@ ms.locfileid: "48096956"
   
 -   As permissões atribuídas aos atributos **Name** e **Code** não são impostas.  
   
-|Permissão|Description|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|Os membros consolidados são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
 |**Update (atualizar)**|Os membros consolidados são exibidos e o usuário pode adicionar, remover ou alterá-los.|  
@@ -43,11 +43,11 @@ ms.locfileid: "48096956"
 ## <a name="attribute-permissions"></a>Permissões de atributo  
  As permissões de atributo se aplicam aos valores de atributo da entidade específica. Os usuários com permissões somente de atributo não podem adicionar ou remover membros.  
   
-|Permissão|Description|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|O atributo é exibido, mas o usuário não pode alterar valores de atributo.|  
 |**Update (atualizar)**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
-|**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
+|**Deny**|O atributo não é exibido.<br /><br /> Observação: Você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

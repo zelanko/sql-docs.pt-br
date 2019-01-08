@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28e4f41d6f11381fcb6fcdf82f708d185a293120
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174606"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792798"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opção de pré-processamento (ferramenta de administração Distributed Replay)
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração do Distributed Replay, `DReplay.exe`, é uma ferramenta de linha de comando que você pode usar para se comunicar com o distributed replay controller. Este tópico descreve a opção de linha de comando **preprocess** e a sintaxe correspondente.  
@@ -75,13 +75,13 @@ ms.locfileid: "48174606"
  Neste exemplo, o estágio de pré-processamento é iniciado com todas as configurações padrão. O valor `localhost` indica que o serviço do controlador está em execução no mesmo computador que a ferramenta de administração. O parâmetro *input_trace_file* especifica o local dos dados de rastreamento de entrada, `c:\mytrace.trc`. Como não há filtragem de arquivo de rastreamento envolvida, o parâmetro **-c** deve ser especificado.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  Neste exemplo, o estágio de pré-processamento é iniciado e um arquivo de configuração de pré-processamento modificado é especificado. Ao contrário do exemplo anterior, o parâmetro **-c** é usado para apontar para o arquivo de configuração modificado, caso tenha armazenado esse arquivo em um local diferente. Por exemplo:  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  No arquivo de configuração de pré-processamento modificado, é adicionada uma condição de filtro que filtra sessões de sistema durante reprodução distribuída. O filtro é adicionado modificando o elemento `<PreprocessModifiers>` no arquivo de configuração de pré-processamento, `DReplay.exe.preprocess.config`.  

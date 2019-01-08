@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - banner element
@@ -15,12 +14,12 @@ ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b461370b4bbab4cc7e28bcb1ed95d0a3e6d5553e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080736"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803358"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
   Identifica qual utilitário gerou o arquivo XML de saída **ssbdiagnose** .  
@@ -37,7 +36,7 @@ ms.locfileid: "48080736"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
 |`title`|Identifica qual utilitário gerou o arquivo de saída XML **ssbdiagnose** .|  
 |`product`|Identifica qual produto gerou o arquivo de saída XML **ssbdiagnose** .|  
@@ -45,7 +44,7 @@ ms.locfileid: "48080736"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

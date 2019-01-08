@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -18,22 +17,22 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea35467bd5b5209a2e625adc081774ef39492439
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5d4113fbb2add2cc4dcd0073d714daa86419820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119966"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801626"
 ---
 # <a name="file-connection-manager"></a>Gerenciador de conexões de arquivos
   Um gerenciador de conexões de Arquivo permite que um pacote faça referência a um arquivo ou pasta existente ou crie um arquivo ou pasta em tempo de execução. Por exemplo, você pode fazer referência a um arquivo do Excel. Alguns componentes em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam as informações nos arquivos para executar seu trabalho. Por exemplo, uma tarefa Executar SQL pode fazer referência a um arquivo que contém as instruções SQL que a tarefa executa. Outros componentes executam operações em arquivos. Por exemplo, a tarefa Sistema de Arquivos pode fazer referência a um arquivo para copiá-lo para um novo local.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>Tipos de uso do gerenciador de conexões de arquivos  
- O `FileUsageType` propriedade do Gerenciador de conexão de arquivos Especifica como a conexão de arquivo é usado. O gerenciador de conexões de arquivos pode criar tanto um arquivo quanto uma pasta e utilizar um arquivo ou uma pasta existente.  
+ A propriedade `FileUsageType` do gerenciador de conexões de arquivos especifica como a conexão de arquivos é utilizada. O gerenciador de conexões de arquivos pode criar tanto um arquivo quanto uma pasta e utilizar um arquivo ou uma pasta existente.  
   
  A tabela a seguir lista os valores de `FileUsageType`.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |`0`|O gerenciador de conexões de arquivos utiliza um arquivo existente.|  
 |`1`|O gerenciador de conexões de arquivos cria um arquivo.|  
@@ -44,9 +43,9 @@ ms.locfileid: "48119966"
  O gerenciador de conexões de arquivos pode fazer referência a apenas um arquivo ou a uma pasta. Para consultar vários arquivos ou pastas, utilize um gerenciador de conexões para vários arquivos em vez de um gerenciador de conexões de arquivos. Para obter mais informações, consulte [Multiple Files Connection Manager](multiple-files-connection-manager.md).  
   
 ## <a name="configuration-of-the-file-connection-manager"></a>Configuração do gerenciador de conexões de arquivo  
- Quando você adiciona um Gerenciador de conexão do arquivo a um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de arquivo em tempo de execução, define as propriedades de conexão de arquivo e adiciona a conexão de arquivo para o `Connections` coleção do pacote.  
+ Quando você adicionar um gerenciador de conexões de arquivos a um pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um gerenciador de conexões que determinará uma conexão de Arquivo no tempo de execução, definirá as propriedades da conexão de Arquivos e irá adicioná-la à coleção `Connections` do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `FILE`.  
+ A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `FILE`.  
   
  Você pode configurar um gerenciador de conexões de arquivos dos seguintes modos:  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48119966"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Editor do Gerenciador de Conexões de Arquivos](../file-connection-manager-editor.md).  
   
- Para obter informações sobre como configurar um Gerenciador de conexão programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

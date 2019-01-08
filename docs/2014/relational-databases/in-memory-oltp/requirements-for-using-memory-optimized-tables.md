@@ -10,19 +10,19 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 314f90a482091823efae4430dbdc2d62ad7b34f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073906"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352427"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
   Além de [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), estes são os requisitos para usar o OLTP na memória:  
   
 -   Enterprise, Developer ou Evaluation edition de 64 bits do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de memória suficiente para manter os dados em tabelas com otimização de memória e índices. Para considerar versões de linha, você deve fornecer uma quantidade de memória duas vezes maior que o tamanho esperado de tabelas e índices com otimização de memória. Mas a quantidade real de memória necessária dependerá da carga de trabalho. Você deve monitorar o uso de memória e fazer ajustes quando necessário. O tamanho dos dados nas tabelas com otimização de memória não deve exceder a porcentagem permitida do pool. Para descobrir o tamanho de uma tabela com otimização de memória, consulte [DM db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
+-   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de memória suficiente para manter os dados nas tabelas e índices com otimização de memória. Para considerar versões de linha, você deve fornecer uma quantidade de memória duas vezes maior que o tamanho esperado de tabelas e índices com otimização de memória. Mas a quantidade real de memória necessária dependerá da carga de trabalho. Você deve monitorar o uso de memória e fazer ajustes quando necessário. O tamanho dos dados nas tabelas com otimização de memória não deve exceder a porcentagem permitida do pool. Para descobrir o tamanho de uma tabela com otimização de memória, consulte [DM db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
   
      Se você tiver tabelas baseadas em disco no banco de dados, precisará fornecer memória suficiente para o pool de buffers e o processamento de consulta nessas tabelas.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "48073906"
   
 -   Um processador precisa oferecer suporte à instrução **cmpxchg16b** para usar o OLTP na memória. Todos os processadores de 64 bits modernos oferecem suporte a **cmpxchg16b**.  
   
-     Se você estiver usando um aplicativo de host VM e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibir um erro causado por um processador mais antigo, verifique se o aplicativo tem uma opção de configuração para permitir **cmpxchg16b**. Caso contrário, você pode usar Hyper-V, que oferece suporte a **cmpxchg16b** sem precisar modificar uma opção de configuração.  
+     Se você estiver usando um aplicativo host de VM e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibir um erro causado por um processador mais antigo, verifique se o aplicativo tem uma opção de configuração para permitir **cmpxchg16b**. Caso contrário, você pode usar Hyper-V, que oferece suporte a **cmpxchg16b** sem precisar modificar uma opção de configuração.  
   
--   Para instalar OLTP na memória, selecione **serviços de mecanismo de banco de dados** quando você instala [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+-   Para instalar OLTP na memória, selecione **Serviços de Mecanismo de Banco de Dados** ao instalar o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     Para instalar a geração de relatórios ([determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (para gerenciar o OLTP na memória por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Pesquisador de objetos), selecione **gerenciamento Ferramentas — básico** ou **ferramentas de gerenciamento — avançado** quando você instala [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     Para instalar a geração de relatórios ([determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (para gerenciar o OLTP na memória por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Pesquisador de objetos), selecione **gerenciamento Ferramentas de Basic** ou **avançado de ferramentas de gerenciamento** quando você instala [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Observações importantes sobre o uso do [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -46,14 +46,14 @@ ms.locfileid: "48073906"
   
 -   Os arquivos de ponto de verificação não devem ser excluídos manualmente. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa automaticamente a coleta de lixo em arquivos de ponto de verificação desnecessários. Para obter mais informações, consulte a discussão sobre mesclagem de arquivos delta e de dados no [durabilidade de tabelas com otimização de memória](durability-for-memory-optimized-tables.md).  
   
--   Nesta primeira versão do OLTP na memória (em [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), a única maneira de remover um grupo de arquivos com otimização de memória é descartar o banco de dados.  
+-   Na primeira versão do OLTP na memória (no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), a única maneira de remover um grupo de arquivos com otimização de memória é descartar o banco de dados.  
   
--   Se você tentar excluir um lote grande de linhas enquanto há uma inserção ou atualização de carga de trabalho simultânea afetando o intervalo de linhas que você está tentando excluir, a exclusão poderá falhar. A solução alternativa é interromper a inserção ou atualização da carga de trabalho antes de fazer a exclusão. Como alternativa, você pode configurar a transação em transações menores, que seriam menos prováveis de serem corrompidas por uma carga de trabalho simultânea. Como com todas as operações de gravação em tabelas com otimização de memória, use a lógica de repetição ([Guidelines for Retry Logic para transações em tabelas com otimização de memória](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
+-   Se você tentar excluir um lote grande de linhas enquanto há uma inserção ou atualização de carga de trabalho simultânea afetando o intervalo de linhas que você está tentando excluir, a exclusão poderá falhar. A solução alternativa é interromper a inserção ou atualização da carga de trabalho antes de fazer a exclusão. Como alternativa, você pode configurar a transação em transações menores, que seriam menos prováveis de serem corrompidas por uma carga de trabalho simultânea. Como ocorre com todas as operações de gravação em tabelas com otimização de memória, use a lógica de repetição ([Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
--   Se você criar um ou vários bancos de dados com tabelas com otimização de memória, deverá habilitar a inicialização imediata de arquivo (conceda à conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o direito de usuário SE_MANAGE_VOLUME_NAME) para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sem a inicialização imediata de arquivo, os arquivos de armazenamento com otimização de memória (arquivos delta e de dados) serão inicializados após a criação, que pode ter um impacto negativo no desempenho de sua carga de trabalho. Para obter mais informações sobre a inicialização imediata de arquivo, consulte [Inicialização de arquivo de banco de dados](../databases/database-instant-file-initialization.md). Para obter informações sobre como habilitar a inicialização imediata de arquivo, consulte [Como e por que habilitar a inicialização imediata de arquivo](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Se você criar um ou vários bancos de dados com tabelas com otimização de memória, deverá habilitar a inicialização imediata de arquivo (conceda à conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o direito de usuário SE_MANAGE_VOLUME_NAME) para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sem a inicialização imediata de arquivo, os arquivos de armazenamento com otimização de memória (arquivos delta e de dados) serão inicializados após a criação, que pode ter um impacto negativo no desempenho de sua carga de trabalho. Para obter mais informações sobre a inicialização imediata de arquivo, consulte [Inicialização de arquivo de banco de dados](../databases/database-instant-file-initialization.md). Para obter informações sobre como habilitar a inicialização imediata de arquivo, consulte [Como e por que habilitar a inicialização imediata de arquivo](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
- Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [ sqlfeedback@microsoft.com ](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
+ Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para melhorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
 ## <a name="see-also"></a>Consulte também  
  [OLTP in-memory &#40;Otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)  

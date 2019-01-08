@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e6bf10248bb3d8f280a24191634392df3b4ff5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805028"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor da tarefa Criação de Perfil de Dados (página Geral)
   Use a página **Geral** do **Editor da Tarefa Criação de Perfil de Dados** para configurar as seguintes opções:  
@@ -51,10 +50,10 @@ ms.locfileid: "48084817"
  **DestinationType**  
  Especifique se deseja salvar a saída do perfil de dados para um arquivo ou uma variável:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**FileConnection**|Salve o perfil produzido em um arquivo no local especificado em um gerenciador de conexões do Arquivo.<br /><br /> Observação: especifique qual gerenciador de conexões do Arquivo deve ser usado na opção **Destino** .|  
-|**Variável**|Salve a saída do perfil em uma variável de pacote.<br /><br /> Observação: especifique qual variável de pacote deve ser usada na opção **Destino** .|  
+|**FileConnection**|Salve o perfil produzido em um arquivo no local especificado em um gerenciador de conexões do Arquivo.<br /><br /> Observação: Especifique qual Gerenciador de conexão de arquivo para usar o **destino** opção.|  
+|**Variável**|Salve a saída do perfil em uma variável de pacote.<br /><br /> Observação: Especifique qual variável de pacote para usar o **destino** opção.|  
   
  **Destino**  
  Especifique qual gerenciador de conexões do Arquivo ou variável de pacote contém a saída do perfil de dados:  
@@ -71,7 +70,7 @@ ms.locfileid: "48084817"
   
 ## <a name="other-options"></a>Outras opções  
  **Perfil Rápido**  
- Exibe o **Formulário de Perfil Rápido de Tabela Única**. Este formulário simplifica a tarefa de criação de perfil de uma tabela ou exibição única usando configurações padrão. Para obter mais informações, consulte [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](single-table-quick-profile-form-data-profiling-task.md).  
+ Exibe o **Formulário de Perfil Rápido de Tabela Única**. Este formulário simplifica a tarefa de criação de perfil de uma tabela ou exibição única usando configurações padrão. Para obter mais informações, consulte [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md).  
   
  **Abrir o Visualizador de Perfil**  
  Abra o Visualizador de Perfil de Dados. O visualizador de Perfil de Dados autônomo exibe a saída de perfil de dados da tarefa Criação de Perfil de Dados. A saída do perfil de dados pode ser exibida após a execução da tarefa Criação de Perfil de Dados no pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e a computação de perfis de dados.  
@@ -80,7 +79,7 @@ ms.locfileid: "48084817"
 >  Você também pode abrir o Visualizador de Perfil de Dados executando o DataProfileViewer.exe na pasta, *\<unidade>*:\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formulário de perfil rápido de tabela única &#40;tarefa de criação de perfil&#41;](single-table-quick-profile-form-data-profiling-task.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)   
  [Editor da tarefa Criação de Perfil de Dados &#40;Página Solicitações de Perfil&#41;](data-profiling-task-editor-profile-requests-page.md)  
   
   

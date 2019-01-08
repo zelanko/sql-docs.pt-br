@@ -18,12 +18,12 @@ ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52d0aba10c3e01ddd5cbcc709235f4f483907fb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1303ca724ef6790ae7bcf218ab8ed0e5da4ed38
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712605"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509268"
 ---
 # <a name="time-date-and-interval-functions"></a>Funções de hora, data e intervalo
 A tabela a seguir lista as funções de data e hora que estão incluídas no conjunto de função escalar ODBC. Um aplicativo pode determinar quais funções de data e hora são suportadas por um driver chamando **SQLGetInfo** com um *tipo de informação* de SQL_TIMEDATE_FUNCTIONS.  
@@ -36,22 +36,22 @@ A tabela a seguir lista as funções de data e hora que estão incluídas no con
   
  A função CURRENT_DATE, CURRENT_TIME e CURRENT_TIMESTAMP timedate funções escalares foram adicionados no ODBC 3.0 para se alinhar com o SQL-92.  
   
-|Função|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |**(FUNÇÃO CURRENT_DATE)** (ODBC 3.0)|Retorna a data atual.|  
 |**CURRENT_TIME [(** *precisão de tempo* **)]** (ODBC 3.0)|Retorna a hora local atual. O *precisão de tempo* argumento determina a precisão de segundos do valor retornado.|  
 |**CURRENT_TIMESTAMP**<br /> **[(** *timestamp precisão* **)]** (ODBC 3.0)|Retorna a data local atual e a hora local como um valor de carimbo de hora. O *precisão de carimbo de hora* argumento determina a precisão de segundos do carimbo de hora retornada.|  
 |**(CURDATE)** (ODBC 1.0)|Retorna a data atual.|  
 |**(FUNÇÃO CURTIME)** (ODBC 1.0)|Retorna a hora local atual.|  
-|**Função DAYNAME (** *date_exp* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres que contém o nome específico da fonte de dados do dia (por exemplo, Sunday a Saturday ou Sun. a Sat. para uma fonte de dados que usa o inglês, ou Sonntag a samstag para uma fonte de dados que usa alemão) para a parte do dia *date_exp*.|  
+|**Função DAYNAME (** *date_exp* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres que contém o nome específico de fonte de dados do dia (por exemplo, Sunday a Saturday ou Sun. a Sat. para uma fonte de dados que usa o inglês, ou Sonntag a samstag para uma fonte de dados que usa alemão) para a parte do dia *date_exp*.|  
 |**Dia do mês (** *date_exp* **)** (ODBC 1.0)|Retorna o dia do mês com base no campo mês de *date_exp* como um valor inteiro no intervalo de 1 a 31.|  
 |**DAYOFWEEK (** *date_exp* **)** (ODBC 1.0)|Retorna o dia da semana com base no campo semana de *date_exp* como um valor inteiro no intervalo de 1 a 7, em que 1 representa domingo.|  
-|**DAYOFYEAR (** *date_exp* **)** (ODBC 1.0)|Retorna o dia do ano, com base em um campo ano na *date_exp* como um valor inteiro no intervalo de 1 a 366.|  
+|**DAYOFYEAR (** *date_exp* **)** (ODBC 1.0)|Retorna o dia do ano, com base em um campo ano na *date_exp* como um valor inteiro no intervalo de 1-366.|  
 |**EXTRAIR (** *extrair campo FROM* *origem extração* **)** (ODBC 3.0)|Retorna o *extrair campo* parte a *origem extração*. O *origem extração* argumento é uma expressão datetime ou intervalo. O *extrair campo* argumento pode ser uma das seguintes palavras-chave:<br /><br /> ANO MÊS DIA HORA SEGUNDO UM MINUTO<br /><br /> A precisão do valor retornado é definido pela implementação. A escala é 0, a menos que o segundo for especificado, caso em que a escala não é menor que a precisão de frações do *origem extração* campo.|  
 |**HORA (** *time_exp* **)** (ODBC 1.0)|Retorna a hora com base no campo de hora *time_exp* como um valor inteiro no intervalo de 0 a 23.|  
 |**MINUTO (** *time_exp* **)** (ODBC 1.0)|Retorna o minuto com base no campo minuto de *time_exp* como um valor inteiro no intervalo de 0 a 59.|  
 |**MÊS (** *date_exp* **)** (ODBC 1.0)|Retorna o mês com base no campo mês de *date_exp* como um valor inteiro no intervalo de 1 a 12.|  
-|**MONTHNAME (** *date_exp* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres que contém o nome específico da fonte de dados do mês (por exemplo, janeiro a dezembro ou janeiro a dezembro para uma fonte de dados que utiliza o inglês, ou Januar a Dezember para uma fonte de dados que usa alemão) para a parte do mês *date_exp*.|  
+|**MONTHNAME (** *date_exp* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres que contém o nome específico de fonte de dados do mês (por exemplo, janeiro a dezembro ou janeiro a dezembro para uma fonte de dados que utiliza o inglês, ou Januar a Dezember para uma fonte de dados que usa alemão) para a parte do mês *date_exp*.|  
 |**AGORA ()** (ODBC 1.0)|Retorna a data e hora como um valor de carimbo de hora atual.|  
 |**TRIMESTRE (** *date_exp* **)** (ODBC 1.0)|Retorna o trimestre *date_exp* como um valor inteiro no intervalo de 1 a 4, em que 1 representa 1 de janeiro a 31 de março.|  
 |**SEGUNDO (** *time_exp* **)** (ODBC 1.0)|Retorna o segundo com base em um campo na segunda *time_exp* como um valor inteiro no intervalo de 0 a 59.|

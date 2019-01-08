@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: a879e05e5c2df68058d9351b217382366ae80a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532353"
 ---
 # <a name="ado-security-design-features"></a>Recursos de Design de segurança do ADO
 As seções a seguir descrevem os recursos de design de segurança no ActiveX Data Objects (ADO) 2.8 e posterior. Essas alterações foram feitas no ADO 2.8 para melhorar a segurança. ADO 6.0, que está incluído no Windows DAC 6.0 no Windows Vista, é funcionalmente equivalente ao ADO 2.8, que foi incluído no MDAC 2.8 no Windows XP e Windows Server 2003. Este tópico fornece informações sobre como proteger melhor seus aplicativos no ADO 2.8 ou posterior.
@@ -66,7 +66,7 @@ Website, click OK, otherwise click Cancel.
 -   Se o site não aparecer na lista de zona de Sites confiáveis, o código será bloqueado e é negado acesso a arquivos locais.
 
     > [!NOTE]
-    >  No ADO 2.8 e posterior, o usuário não é alertado ou orientado a adicionar sites à lista de zona Sites confiáveis. Portanto, o gerenciamento da lista de Sites confiáveis é a responsabilidade de quem estiver implantando ou dar suporte a aplicativos com base no site da Web que exigem acesso ao sistema de arquivos local.
+    >  No ADO 2.8 e posterior, o usuário não é alertado ou orientado a adicionar sites à lista de zona Sites confiáveis. Portanto, o gerenciamento da lista de Sites confiáveis é a responsabilidade de quem estiver implantando ou dar suporte a aplicativos baseados no site da Web que exigem acesso ao sistema de arquivos local.
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>Acesso bloqueado para a propriedade ActiveCommand em objetos de conjunto de registros
  Quando em execução no Internet Explorer, o ADO 2.8 agora bloqueia o acesso a [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) propriedade para um ativo **conjunto de registros** do objeto e retornará um erro. O erro ocorre, independentemente se a página é proveniente de um site da Web registrado na lista de Sites confiáveis.

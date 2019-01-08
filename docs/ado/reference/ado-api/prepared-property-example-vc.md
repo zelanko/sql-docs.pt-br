@@ -15,15 +15,15 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532600"
 ---
 # <a name="prepared-property-example-vc"></a>Exemplo da propriedade Prepared (VC++)
-Este exemplo demonstra a [preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propriedade abrindo duas [comando](../../../ado/reference/ado-api/command-object-ado.md) objetos — um preparado e não preparado.  
+Este exemplo demonstra a [preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propriedade abrindo duas [comando](../../../ado/reference/ado-api/command-object-ado.md) objetos - um preparado e outro não preparado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -142,8 +142,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Resultados de desempenho:**  
-**Não preparado: segundos de 0.016**  
-**Preparado: segundos 0.016**   
+**Não é preparado:  0.016 segundos**  
+**Preparado:      0.016 segundos**   
 ## <a name="see-also"></a>Consulte também  
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Propriedade Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

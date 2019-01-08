@@ -1,20 +1,22 @@
 ---
-title: O que é um pool de computação de clusters de grandes dados SQL? | Microsoft Docs
-description: Este artigo descreve o pool de computação em um cluster de big data do SQL Server de 2019.
+title: Quais são os pools de computação?
+titleSuffix: SQL Server 2019 big data clusters
+description: Este artigo descreve o pool de computação em um cluster de big data do SQL Server 2019 (visualização).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: f1e725580c98585ee86b401c0e8c12ea143cdab1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221792"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207715"
 ---
-# <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>O que é um pool de computação de clusters de grandes dados SQL?
+# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Quais são os pools de computação em um cluster de big data do SQL Server 2019?
 
 Este artigo descreve a função do *pools de computação do SQL Server* em um cluster de big data de visualização de 2019 do SQL Server. Pools de computação fornecem recursos computacionais de escalabilidade horizontal para um cluster de big data. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de computação.
 
@@ -23,7 +25,7 @@ Este artigo descreve a função do *pools de computação do SQL Server* em um c
 Um pool de computação é feito de um ou mais pods em execução no Kubernetes de computação. A criação automatizada e o gerenciamento desses pods é coordenada pelo [instância mestre do SQL Server](concept-master-instance.md). Cada pod contém um conjunto de serviços de base e uma instância do mecanismo de banco de dados do SQL Server.
 
 > [!NOTE]
-> CTP 2.1 dá suporte apenas um pool de computação único por cluster.
+> CTP 2.2 dá suporte apenas um pool de computação único por cluster.
 
 ## <a name="scale-out-groups"></a>Grupos de expansão
 

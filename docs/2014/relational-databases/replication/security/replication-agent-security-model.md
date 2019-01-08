@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/07/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
@@ -21,26 +20,26 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b17b7cccec50c9dc8d1eccc5cb6e1caacee47e2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811988"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação
-  O modelo de segurança do agente de replicação proporciona um controle refinado nas contas sob as quais os agentes de replicação executam e fazem conexões: uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](manage-logins-and-passwords-in-replication.md).  
+  O modelo de segurança do agente de replicação permite controle refinado sobre as contas sob as quais os agentes de replicação executam e fazem conexões: Uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](manage-logins-and-passwords-in-replication.md).  
   
 > [!IMPORTANT]  
 >  Quando um membro da função fixa do servidor **sysadmin** configura a replicação, os agentes de replicação podem ser configurados para representar a conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Isso é realizado não especificando um logon nem uma senha para um agente de replicação, contudo, não recomendamos essa abordagem. Em vez disso, como a melhor prática de segurança, recomendamos especificar uma conta para cada agente que tenha as permissões mínimas descritas na seção "Permissões exigidas pelos agentes", mais adiante nesse tópico.  
   
  Os agentes de replicação, como todos os executáveis, são executados sob o contexto de uma conta do Windows. Os agentes fazem conexões de Segurança Integrada do Windows usando essa conta. A conta sob a qual o agente executa depende de como o agente é iniciado:  
   
--   Iniciando o agente de um trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, o padrão: quando um trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é usado para iniciar um agente de replicação, o agente executa sob o contexto de uma conta que é especificada quando a replicação é configurada. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e replicação, consulte a seção "Segurança do Agente sob SQL Server Agent", mais adiante nesse tópico. Para obter informações sobre as permissões necessárias para a conta na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é executado, consulte [Configurar o SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
+-   Iniciando o agente de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trabalho do agente, o padrão: Quando um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trabalho do agente é usado para iniciar um agente de replicação, o agente é executado sob o contexto de uma conta que você especificar ao configurar a replicação. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e replicação, consulte a seção "Segurança do Agente sob SQL Server Agent", mais adiante nesse tópico. Para obter informações sobre as permissões necessárias para a conta na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é executado, consulte [Configurar o SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
--   Iniciando o agente de uma linha de comando MS-DOS, diretamente ou através de um script: o agente executa sob o contexto da conta do usuário que estiver executando o agente na linha de comando.  
+-   Iniciando o agente de uma linha de comando do MS-DOS, diretamente ou através de um script: O agente é executado sob o contexto da conta do usuário que está executando o agente na linha de comando.  
   
--   Iniciando o agente de um aplicativo que usa o RMO (Replication Management Objects) ou um controle ActiveX: o agente executa sob o contexto do aplicativo que estiver chamando o RMO ou o controle ActiveX.  
+-   Iniciando o agente de um aplicativo que usa objetos RMO (Replication Management) ou um controle ActiveX: O agente é executado sob o contexto do aplicativo que está chamando o RMO ou o controle ActiveX.  
   
     > [!NOTE]  
     >  Os controles ActiveX são preteridos.  
@@ -60,7 +59,7 @@ ms.locfileid: "48135656"
 |Agente de Distribuição para uma assinatura push|A conta do Windows sob a qual o agente executa é usada quando fizer conexões ao Distribuidor. Essa conta deve:<br /><br /> - Ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de distribuição.<br /><br /> - Ser um membro da PAL.<br /><br /> - Ter permissões de leitura no compartilhamento de instantâneos.<br /><br /> - Ter permissões de leitura no diretório de instalação do provedor OLE DB para o Assinante, se a assinatura for um Assinante não SQL Server.<br /><br /> - Ao replicar dados LOB, o agente de distribuição deve ter permissões de gravação na pasta **C:\Arquivos de Programas\Microsoft SQL Server\XX\COM** de replicação, em que XX representa a ID da instância.<br /><br /> <br /><br /> A conta usada para conectar-se com o Assinante deverá ser, no mínimo, um membro da função de banco de dados fixa **db_owner** , no banco de dados de assinatura, ou ter permissões equivalentes, se a assinatura for um Assinante não SQL Server.<br /><br /> Observação: Ao usar `-subscriptionstreams >= 2` no agente de distribuição, você deve também conceder a `View Server State` permissão nos assinantes para detectar deadlocks.|  
 |Distribution Agent para uma assinatura pull|A conta do Windows sob a qual o agente executa é usada quando ele se conecta com o Assinante. Essa conta deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** , no banco de dados de assinatura. A conta usada para conectar-se ao Distribuidor deve:<br /><br /> - Ser um membro da PAL.<br /><br /> - Ter permissões de leitura no compartilhamento de instantâneos.<br /><br /> - Ao replicar dados LOB, o agente de distribuição deve ter permissões de gravação na pasta **C:\Arquivos de Programas\Microsoft SQL Server\XX\COM** de replicação, em que XX representa a ID da instância.<br /><br /> <br /><br /> Observação: Ao usar `-subscriptionstreams >= 2` no agente de distribuição, você deve também conceder a `View Server State` permissão nos assinantes para detectar deadlocks.|  
 |Merge Agent para uma assinatura push|A conta do Windows sob a qual o agente executa é usada quando ele se conecta ao Publicador e o Distribuidor. Essa conta deve:<br /><br /> - Ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de distribuição.<br /><br /> - Ser um membro da PAL.<br /><br /> - Ser um logon associado a um usuário no banco de dados de publicação.<br /><br /> - Ter permissões de leitura no compartilhamento de instantâneos.<br /><br /> <br /><br /> A conta usada para conectar-se ao Assinante deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** ,no banco de dados de assinatura.|  
-|Merge Agent para uma assinatura pull|A conta do Windows sob a qual o agente executa é usada quando ele se conecta com o Assinante. Essa conta deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** , no banco de dados de assinatura. A conta usada para conectar-se ao Publicador e o Distribuidor deve:<br /><br /> - Ser um membro da PAL.<br /><br /> - Ser um logon associado a um usuário no banco de dados de publicação.<br /><br /> - Ser um logon associado a um usuário no banco de dados de distribuição. O usuário pode ser o `Guest` usuário.<br /><br /> - Ter permissões de leitura no compartilhamento de instantâneos.|  
+|Merge Agent para uma assinatura pull|A conta do Windows sob a qual o agente executa é usada quando ele se conecta com o Assinante. Essa conta deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** , no banco de dados de assinatura. A conta usada para conectar-se ao Publicador e o Distribuidor deve:<br /><br /> - Ser um membro da PAL.<br /><br /> - Ser um logon associado a um usuário no banco de dados de publicação.<br /><br /> - Ser um logon associado a um usuário no banco de dados de distribuição. O usuário pode ser o usuário `Guest`.<br /><br /> - Ter permissões de leitura no compartilhamento de instantâneos.|  
 |Queue Reader Agent|A conta do Windows sob a qual o agente executa é usada quando fizer conexões ao Distribuidor. Essa conta deve ser no mínimo, um membro da função de banco de dados fixa **db_owner** , no banco de dados de distribuição.<br /><br /> A conta usada para conexão com o Publicador deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** , no banco de dados de publicação.<br /><br /> A conta usada para se conectar ao Assinante deve ser no mínimo um membro da função de banco de dados fixa **db_owner** , no banco de dados de assinatura.|  
   
 ## <a name="agent-security-under-sql-server-agent"></a>Segurança do agente sob o SQL Server Agent  

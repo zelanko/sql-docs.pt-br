@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergeextendedarticlesview
@@ -19,19 +18,19 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 052e758a8ca86ed70afd92b4b06b3ab75791081b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f41868f4ffa8a542475ef7c4be304d8636f87d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802138"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **sysmergeextendedarticlesview** expõe informações de artigo de exibição. Essa exibição é armazenada no banco de dados de publicação, no Publicador, e no banco de dados de assinatura, no Assinante.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo.|  
 |**type**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = Proc somente esquema.<br /><br /> **64** = somente esquema de exibição ou somente o esquema de exibição indexada.<br /><br /> **128** = somente esquema de função.<br /><br /> **160** = somente esquema sinônimo.|  
@@ -39,7 +38,7 @@ ms.locfileid: "47818219"
 |**sync_objid**|**int**|Identificador da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não uma exibição; use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
-|**Descrição**|**nvarchar(255)**|A descrição breve do artigo.|  
+|**description**|**nvarchar(255)**|A descrição breve do artigo.|  
 |**pre_creation_command**|**tinyint**|A ação padrão a ser tomada quando o artigo é criado no banco de dados de assinatura:<br /><br /> **0** = nenhum - se a tabela já existir no assinante, nenhuma ação será tomada.<br /><br /> **1** = descartar - descarta a tabela antes de recriá-lo.<br /><br /> **2** = excluir - emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.<br /><br /> **3** = truncar - o mesmo que 2, mas exclui páginas em vez de linhas. Porém, não exige uma cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|A ID da publicação à qual o artigo atual pertence.|  
 |**Apelido**|**int**|O mapeamento de apelido para identificação do artigo.|  

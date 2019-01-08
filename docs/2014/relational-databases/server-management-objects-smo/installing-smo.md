@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - installing SMO
@@ -16,12 +14,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31d0a0731c046f58d1a1d0689ad4c987989a0874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767864"
 ---
 # <a name="installing-smo"></a>Instalando o SMO
   Se desejar desenvolver um aplicativo que use o SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), você deve selecionar o SDK de Ferramentas de Cliente ao instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar o SDK de Ferramentas de Cliente sem instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instale os Objetos de Gerenciamento Compartilhado do pacote de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se desejar garantir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects seja instalado em um computador que executará seu aplicativo, você poderá usar o .msi dos Objetos de Gerenciamento Compartilhado do pacote de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

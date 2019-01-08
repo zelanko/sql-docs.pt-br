@@ -13,12 +13,12 @@ ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 173588769aa1697e23f0d34ca13916684d2fee59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4cc8ae36dbcc728062e2074d715673a39f95e1d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112706"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535044"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Executando o Assistente para Implantação do Analysis Services
   Ao usar o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar um projeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode executar o assistente das seguintes maneiras:  
@@ -28,7 +28,7 @@ ms.locfileid: "48112706"
 -   **No prompt de comando** quando executado no prompt de comando, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação gera um XML for Analysis (XMLA) script de implantação baseado nas opções que você pode usar para executar o assistente. O assistente pode executar qualquer uma destas ações: alertá-lo para entrada de usuário e modificar arquivos de entrada com base naquela entrada; executar uma implantação autônoma silenciosa, que usa os arquivos de entrada como são; ou criar um script de implantação que você pode usar depois.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Executando o Assistente para Implantação do Analysis Services interativamente  
- Quando executado interativamente, o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lê os valores dos arquivos de entrada e apresenta estas informações a você. Você pode modificar esses valores de entrada - como, destino de implantação, parâmetros de configuração, opções de implantação e senhas de cadeia de caracteres de conexão - ou deixá-los assim. Se você alterar quaisquer valores de entrada, o assistente usará essas mudanças ao gerar o script de implantação XMLA. Porém, o assistente não faz nenhuma alteração nos valores do arquivo de entrada.  
+ Quando executado interativamente, o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lê os valores dos arquivos de entrada e apresenta estas informações a você. Você pode modificar esses valores – como de entrada como destino de implantação, as definições de configuração, as opções de implantação e as senhas de cadeia de caracteres de conexão- ou deixá-los como está. Se você alterar quaisquer valores de entrada, o assistente usará essas mudanças ao gerar o script de implantação XMLA. Porém, o assistente não faz nenhuma alteração nos valores do arquivo de entrada.  
   
 > [!NOTE]  
 >  Se você quiser que o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifique os valores de entrada, execute o assistente no prompt de comando e defina o assistente para ser executado no modo de arquivo de resposta.  
@@ -39,7 +39,7 @@ ms.locfileid: "48112706"
   
 -   Clique em **Iniciar**, aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**e **Analysis Services**e clique em **Assistente para Implantação**.  
   
-     — ou —  
+     -ou-  
   
 -   No **projetos** pasta da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do projeto, clique duas vezes o  *\<nome do projeto >*. asdatabase.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48112706"
 2.  Digite **Microsoft.AnalysisServices.Deployment.exe** seguido pelas opções que correspondem ao modo no qual você deseja executar o assistente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre o Script de implantação do Analysis Services](understanding-the-analysis-services-deployment-script.md)   
- [Implantar soluções de modelo usando o Assistente de implantação](deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Compreendendo o script de implantação do Analysis Services](understanding-the-analysis-services-deployment-script.md)   
+ [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.tsxwiz.msx.f1
@@ -19,12 +19,12 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a9531e5395e22737365810906b793f0f38b06b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065946"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823660"
 ---
 # <a name="make-a-target-server"></a>Criar um servidor de destino
   Este tópico descreve como criar um servidor de destino no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou SQL Server Management Objects (SMO).  
@@ -63,7 +63,7 @@ ms.locfileid: "48065946"
      Para resolver este erro, certifique-se de que existe uma conta proxy no servidor de destino com o mesmo nome da conta proxy do servidor mestre sob a qual a etapa de trabalho é executada.  
   
 ####  <a name="Permissions"></a> Permissões  
- As permissões para executar esse procedimento usam como padrão os membros de `sysadmin` função de servidor fixa.  
+ As permissões para executar esse procedimento para membros da função de servidor fixa `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48065946"
      **Criar um novo logon, se necessário, e atribuir-lhe direitos ao MSX**  
      Cria um novo logon no servidor de destino se o logon especificado ainda não existir.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-make-a-target-server"></a>Para criar um servidor de destino  
   

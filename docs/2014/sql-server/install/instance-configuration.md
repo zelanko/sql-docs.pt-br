@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,17 +15,17 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791289"
 ---
 # <a name="instance-configuration"></a>Configuração da instância
   Use a página **Configuração de Instância** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar se uma instância padrão ou uma instância nomeada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser criada. Se uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é ainda não estiver instalada, uma instância padrão será criada, a menos que você especifique uma instância nomeada.  
   
- Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em um conjunto distinto de serviços que têm configurações específicas para agrupamentos e outras opções. A estrutura de diretórios, a estrutura do Registro e os nomes do serviço refletem o nome da instância e uma ID de instância específica criada durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em um conjunto distinto de serviços que têm configurações específicas para ordenações e outras opções. A estrutura de diretórios, a estrutura do Registro e os nomes do serviço refletem o nome da instância e uma ID de instância específica criada durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Uma instância é a instância padrão ou uma instância nomeada. O nome de instância padrão é MSSQLSERVER. Não é necessário que um cliente especifique o nome da instância para estabelecer uma conexão. Uma instância nomeada é determinada pelo usuário durante a Instalação. Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como uma instância nomeada sem instalar a instância padrão em primeiro lugar. Apenas uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independentemente da versão, pode ser a instância padrão em determinado momento.  
   
@@ -35,12 +34,12 @@ ms.locfileid: "48202306"
 ## <a name="multiple-instances"></a>Várias instâncias  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um único servidor ou processador, mas somente uma instância pode ser a padrão. Todas as demais devem ser instâncias nomeadas. Um computador pode executar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultaneamente e cada instância é executada independentemente das demais.  
   
- Para obter mais informações, consulte [Especificações de capacidade máxima para o SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Para obter mais informações, consulte [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Opções  
- Somente instâncias de cluster de failover — Especifique o nome de rede de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse nome identifica a instância do cluster de failover na rede.  
+ Somente instâncias de cluster de failover – especifique o nome da rede de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse nome identifica a instância do cluster de failover na rede.  
   
- Instância padrão ou nomeada — Considere as seguintes informações ao decidir se deve instalar uma instância padrão ou nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Instância padrão ou nomeada – considere as seguintes informações ao decidir se deve instalar uma instância padrão ou nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Se você planeja instalar uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor de banco de dados, ela deve ser uma instância padrão.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48202306"
   
 -   Nomes de instância não podem iniciar nem terminar com um sublinhado (_).  
   
--   Os nomes de instância não podem conter o termo "Padrão" ou outras palavras-chave reservadas. Se uma palavra-chave reservada for usada em um nome de instância, ocorrerá um erro de Instalação. Para obter mais informações, consulte [Palavras-chave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
+-   Os nomes de instância não podem conter o termo "Padrão" ou outras palavras-chave reservadas. Se uma palavra-chave reservada for usada em um nome de instância, ocorrerá um erro de Instalação. Para obter mais informações, veja [Palavras-chave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
   
 -   Se você especificar MSSQLServer para o nome de instância, uma instância padrão será criada.  
   

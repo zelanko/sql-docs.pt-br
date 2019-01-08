@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727114"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860089"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47727114"
 ## <a name="table-returned"></a>Tabela retornada  
  Os contadores retornados são por operador por thread. Os resultados são dinâmicos e não correspondem aos resultados das opções existentes, tal como SET STATISTICS XML ON, que só cria saída quando a consulta é concluída.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
@@ -58,7 +58,7 @@ ms.locfileid: "47727114"
 |last_row_time|**bigint**|Carimbo de data/hora quando a última linha foi aberta (em milissegundos).|  
 |close_time|**bigint**|Carimbo de data/hora quando fechado (em milissegundos).|  
 |elapsed_time_ms|**bigint**|Tempo total decorrido (em milissegundos) usado por operações do nó de destino até o momento.|  
-|cpu_time_ms|**bigint**|Tempo total de CPU (em milissegundos) usado por operações do nó de destino até o momento.|  
+|cpu_time_ms|**bigint**|Total de uso de tempo (em milissegundos) de CPU por operações do nó de destino até o momento.|  
 |database_id|**smallint**|ID do banco de dados que contém o objeto no qual as leituras e gravações estão sendo realizadas.|  
 |object_id|**int**|O identificador do objeto no qual as leituras e gravações estão sendo realizadas. Referências sys.objects.object_id.|  
 |index_id|**int**|O índice (se houver) no qual o conjunto de linhas é aberto.|  
@@ -73,7 +73,7 @@ ms.locfileid: "47727114"
 |segment_read_count|**int**|Número de read-aheads de segmento até o momento.|  
 |segment_skip_count|**int**|Número de segmentos ignorados até o momento.| 
 |actual_read_row_count|**bigint**|Número de linhas lidas por um operador antes da aplicação de predicado residual.| 
-|estimated_read_row_count|**bigint**|**Aplica-se a:** começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número estimado de linhas a serem lidos por um operador antes da aplicação de predicado residual.|  
+|estimated_read_row_count|**bigint**|**Aplica-se a:** Começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número estimado de linhas a serem lidos por um operador antes da aplicação de predicado residual.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Se o nó do plano de consulta não tiver nenhuma E/S, todos os contadores relacionados com E/S serão definidos como NULL.  
@@ -84,20 +84,30 @@ ms.locfileid: "47727114"
   
 -   Se houver uma varredura paralela, este DMV relata os contadores para cada um das threads paralelas que trabalham na varredura.
  
- Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, as estatísticas de execução de consulta padrão infraestrutura de criação de perfil existe lado a lado com estatísticas de execução de consulta leve infraestrutura de criação de perfil. A nova consulta execução estatísticas criação de perfil infra-estrutura reduz drasticamente a sobrecarga de desempenho de coleta de estatísticas de execução de consulta por operador, como o número real de linhas. Esse recurso pode ser habilitado usando global inicialização [7412 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou é ativado automaticamente quando o evento estendido query_thread_profile é usado.
+Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, as estatísticas de execução de consulta padrão infraestrutura de criação de perfil existe lado a lado com estatísticas de execução de consulta leve infraestrutura de criação de perfil. A nova consulta execução estatísticas criação de perfil infra-estrutura reduz drasticamente a sobrecarga de desempenho de coleta de estatísticas de execução de consulta por operador, como o número real de linhas. Esse recurso pode ser habilitado usando global inicialização [7412 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou é ativado automaticamente quando o evento estendido query_thread_profile é usado.
 
 >[!NOTE]
 > Não há suporte para CPU e tempo decorrido em que a infraestrutura de criação de perfil de estatísticas de execução de consulta leve para reduzir o impacto de desempenho.
 
- Defina o STATISTICS XML ON e SET STATISTICS PROFILE ON sempre usar as estatísticas de execução de consulta herdada infraestrutura de criação de perfil.
-  
+Defina o STATISTICS XML ON e SET STATISTICS PROFILE ON sempre usar as estatísticas de execução de consulta herdada infraestrutura de criação de perfil.
+
+Para habilitar a saída no DM exec_query_profiles faça o seguinte:
+
+No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e posterior, use SET STATISTICS PROFILE ON ou SET STATISTICS XML ON junto com a consulta sob investigação. Isso habilita a infraestrutura de criação de perfil e produz resultados no DMV para a sessão em que o comando SET foi executado. Se você estiver investigando uma consulta em execução de um aplicativo e não é possível habilitar as opções SET com ele, você pode criar um evento estendido usando o evento query_post_execution_showplan que ativará a infraestrutura de criação de perfil. 
+
+Na [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, você pode também ativar [sinalizador de rastreamento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) ou usar o evento estendido do query_thread_profile.
+
+>[!NOTE]
+> A consulta sob investigação deve iniciar depois que a infraestrutura de criação de perfil foi habilitada. Se a consulta já está em execução, iniciar uma sessão de evento estendido não produzirá resultados no DM exec_query_profiles.
+
+
 ## <a name="permissions"></a>Permissões  
 
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
    
 ## <a name="examples"></a>Exemplos  
- Etapa 1: Faça logon em uma sessão na qual você planeja executar a consulta você analisará com DM exec_query_profiles. Para configurar a consulta para criação de perfil usar SET STATISTICS PROFILE. Execute a consulta nessa mesma sessão.  
+ Etapa 1: Faça logon em uma sessão em que planeja executar a consulta que você analisará com sys.dm_exec_query_profiles. Para configurar a consulta para criação de perfil usar SET STATISTICS PROFILE. Execute a consulta nessa mesma sessão.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Etapa 2: Faça logon uma segunda sessão diferente da sessão em que sua consulta está em execução.  
+ Etapa 2: Faça logon em uma segunda sessão, diferente da sessão em que sua consulta está sendo executada.  
   
  A instrução a seguir resume os progressos realizado pela consulta atualmente em execução na sessão 54. Para fazer isso, ela calcula o número total de linhas de saída de todos as threads para cada nó e o compara com o número estimado de linhas de saída para esse nó.  
   

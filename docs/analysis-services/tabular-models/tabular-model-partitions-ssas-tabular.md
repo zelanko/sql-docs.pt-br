@@ -1,5 +1,5 @@
 ---
-title: Partições de modelo tabular | Microsoft Docs
+title: Partições de modelo de tabela do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146281"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072643"
 ---
 # <a name="tabular-model-partitions"></a>Partições de modelo tabular 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50146281"
 ##  <a name="bkmk_benefits"></a> Benefícios  
  O design de modelo eficaz utiliza partições para eliminar processamento desnecessário e carga de processador subsequente em servidores do Analysis Services, enquanto, ao mesmo tempo, faz certos dados que são processados e atualizados com bastante frequência refletirem os dados mais recentes de fontes de dados.  
   
- Por exemplo, um modelo de tabela pode ter uma tabela de Vendas que inclui dados de vendas durante o ano fiscal de 2011 atual e cada um dos anos fiscais anteriores. A tabela de Vendas do modelo tem as três seguintes partições:  
+ Por exemplo, um modelo de tabela pode ter uma tabela de Vendas que inclui dados de vendas durante o ano fiscal de 2011 atual e cada um dos anos fiscais anteriores. Tabela de vendas do modelo tem as três seguintes partições:  
   
 |Partition|Dados de|  
 |---------------|---------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "50146281"
   
  Não há nenhuma necessidade de processar dados na partição Sales2010-2001 a cada noite; no entanto, como os dados de vendas durante os dez anos fiscais anteriores ainda podem ser alterados ocasionalmente por causa de devoluções de produtos e outros ajustes, eles ainda devem ser processados regularmente, assim, os dados na partição Sales2010-2001 são processados mensalmente. Os dados na partição SalesOld nunca são alterados; portanto só são processados anualmente.  
   
- Ao entrar no ano fiscal de 2012, uma nova partição Sales2012 é adicionada à tabela de Vendas do modo. A partição Sales2011 pode então ser mesclada com a partição Sales2010-2001 e renomeada como Sales2011-2002. Os dados do ano fiscal 2001 são eliminados da nova partição Sales2011-2002 e movidos para a partição SalesOld. Todas as partições são então processadas para refletir as alterações.  
+ Ao inserir o ano fiscal de 2012, uma nova partição Sales2012 é adicionada à tabela de vendas do modo. A partição Sales2011 pode então ser mesclada com a partição Sales2010-2001 e renomeada como Sales2011-2002. Os dados do ano fiscal 2001 são eliminados da nova partição Sales2011-2002 e movidos para a partição SalesOld. Todas as partições são então processadas para refletir as alterações.  
   
- A maneira como você implementa uma estratégia de partição para os modelos tabulares de sua organização dependerá, em grande parte, de suas necessidades específicas de processamento de dados de modelo e dos recursos disponíveis.  
+ Como você pode implementar uma estratégia de partição para modelos de tabela da sua organização será ser amplamente dependente em suas necessidades de processamento de dados de modelo específico e os recursos disponíveis.  
   
 ##  <a name="bkmk_permissions"></a> Permissões  
  Para criar, gerenciar e processar partições no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você deverá ter as permissões do Analysis Services apropriadas definidas em uma função de segurança. Cada função de segurança tem uma das seguintes permissões:  
@@ -74,7 +74,7 @@ O Analysis Services inclui o processamento paralelo para tabelas com duas ou mai
 ##  <a name="bkmk_process_partitions"></a> Processar partições  
  As partições podem ser processadas (atualizadas) de forma independente de outras partições com a caixa de diálogo **Partições** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou usando um script. O processamento tem as seguintes opções:  
   
-|Modo|Description|  
+|Modo|Descrição|  
 |----------|-----------------|  
 |Processar Padrão|Detecta o estado de processamento de um objeto de partição e realiza o processamento necessário para passar os objetos de partição não processados ou parcialmente processados para um estado completamente processado. Os dados para tabelas vazias e partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas.|  
 |Processar Completo|Processa um objeto de partição e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto.|  
@@ -84,7 +84,7 @@ O Analysis Services inclui o processamento paralelo para tabelas com duas ou mai
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |[Criar e gerenciar partições de modelos de tabela](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Descreve como criar e gerenciar partições em um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |[Processar partições de modelo de tabela](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Descreve como processar partições em um modelo tabular implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  

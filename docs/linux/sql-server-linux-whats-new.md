@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659197"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160524"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>O que há de novo para o SQL Server no Linux
 
@@ -26,7 +26,7 @@ Este artigo descreve os principais recursos e serviços disponíveis para o SQL 
 Visualização de 2019 do SQL Server foi lançada. Este artigo não cobre versões de visualização do SQL Server de 2019. Para saber mais sobre visualização de 2019 do SQL Server, consulte [quais são as novidades na visualização de 2019 do SQL Server para Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
-> Além desses recursos neste artigo, as atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a versão de atualização cumulativa mais recente, consulte [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Para baixar os pacotes e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
+> Além desses recursos neste artigo, as atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a versão CU mais recente, consulte [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Para baixar os pacotes e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Mecanismo de Banco de Dados do SQL Server
 
@@ -34,7 +34,7 @@ Visualização de 2019 do SQL Server foi lançada. Este artigo não cobre versõ
 - Suporte para caminhos de Linux nativo.
 - Suporte a IPv6.
 - Suporte para arquivos de banco de dados em NFS.
-- Habilitada [transparente de segurança de camada](sql-server-linux-encrypted-connections.md) criptografia (TLS).
+- Habilitada [Transport Layer Security](sql-server-linux-encrypted-connections.md) criptografia (TLS).
 - Habilitada [autenticação do Active Directory](sql-server-linux-active-directory-authentication.md).
 - [Funcionalidade de grupos de disponibilidade](sql-server-linux-availability-group-overview.md) para alta disponibilidade.
 - [Pesquisa de texto completo](sql-server-linux-setup-full-text-search.md) dão suporte.

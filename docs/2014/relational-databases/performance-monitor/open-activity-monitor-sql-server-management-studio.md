@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
@@ -15,15 +15,15 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf893c3d46530a8d4457e3d7e434be792d5647ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755508"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir o Monitor de Atividade (SQL Server Management Studio)
-  Este tópico descreve como abrir o Monitor de atividade para obter informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processos e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Descreve também como definir o intervalo de atualização do Monitor de Atividade.  
+  Este tópico descreve como abrir o Monitor de Atividade para obter informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Descreve também como definir o intervalo de atualização do Monitor de Atividade.  
   
  **Neste tópico**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48171656"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Para abrir o Monitor de Atividade no SQL Server Management Studio  
   
-1.  Sobre o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] barra de ferramentas padrão, clique em **Monitor de atividade**.  
+1.  Na barra de ferramentas padrão do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , clique em **Monitor de Atividade**.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , selecione o nome do servidor e o modo de autenticação e clique em **Conectar**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48171656"
   
 3.  Na caixa **Na inicialização** , selecione **Abrir Pesquisador de Objetos e Monitor de Atividade**.  
   
-4.  Para ativar as alterações, feche e reabra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  Para ativar as alterações, feche e reabra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ###  <a name="Refresh"></a> Para definir o intervalo de atualização do Monitor de atividade  
   

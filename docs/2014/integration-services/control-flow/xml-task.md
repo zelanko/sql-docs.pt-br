@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
@@ -16,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa137e5be6f664ae40e7c195e88a99bf87e9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b696dd451c5b6f76419e4fb4cb501e2e62bba24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204186"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759318"
 ---
 # <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  
@@ -54,7 +53,7 @@ ms.locfileid: "48204186"
 ## <a name="predefined-xml-operations"></a>Operações XML predefinidas  
  A tarefa XML inclui um conjunto predefinido de operações para trabalhar com documentos XML. A tabela a seguir descreve essas operações.  
   
-|Operação|Description|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Diff|Compara dois documentos XML. Usando o documento XML de origem como documento base, a operação Diff o compara a um segundo documento XML, detecta as suas diferenças e as grava em um documento Diffgram XML. Essa operação inclui propriedades para personalizar a comparação.|  
 |Mesclagem|Mescla dois documentos XML. Usando o documento XML de origem como o documento base, a operação Merge adiciona o conteúdo de um segundo documento ao documento base. A operação pode especificar um local de mesclagem dentro do documento base.|  
@@ -68,10 +67,10 @@ ms.locfileid: "48204186"
   
  A operação Diff inclui um conjunto de opções que personalizam a comparação XML. A tabela a seguir descreve as opções.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**IgnoreComments**|Um valor que especifica se os nós de comentários devem ser comparados.|  
-|**IgnoreNamespaces**|Um valor que especifica se o URI (uniform resource identifier) no namespace de um elemento e seus nomes de atributo devem ser comparados. Se essa opção é definida como `true`, dois elementos que têm o mesmo nome local, mas um namespace diferente são considerados idênticos.|  
+|**IgnoreNamespaces**|Um valor que especifica se o URI (uniform resource identifier) no namespace de um elemento e seus nomes de atributo devem ser comparados. Se essa opção for definida como `true`, dois elementos que têm o mesmo nome local, mas um namespace diferente, serão considerados idênticos.|  
 |**IgnorePrefixes**|Um valor que especifica se devem ser comparados os prefixos de elemento e nomes de atributo. Se essa opção for definida como `true,`, dois elementos que têm o mesmo nome local, mas um URI de namespace e um prefixo diferentes, serão considerados idênticos.|  
 |**IgnoreXMLDeclaration**|Um valor que especifica se as declarações XML devem ser comparadas.|  
 |**IgnoreOrderOfChildElements**|Um valor que especifica se a ordem de elementos filho deve ser comparada. Se essa opção for definida como `true`, os elementos filho diferentes apenas em sua posição em uma lista de irmãos serão considerados idênticos.|  
@@ -94,7 +93,7 @@ ms.locfileid: "48204186"
 ### <a name="validation-operation"></a>Operação Validation  
  A operação Validation pode ser configurada para usar um esquema de definição DTD (Document Type Definition) ou XSD (XML Schema).  
   
- Habilitar `ValidationDetails` para obter a saída de erro detalhada. Para obter mais informações, consulte [Validate XML with the XML Task](xml-task.md).  
+ Habilite `ValidationDetails` para obter saída de erros detalhada. Para obter mais informações, consulte [Validate XML with the XML Task](xml-task.md).  
   
 ## <a name="xml-document-encoding"></a>Codificação de documentos XML  
  A tarefa XML oferece suporte a mesclagem apenas de documentos Unicode. Isso significa que a tarefa só pode ser aplicada à operação Merge em documentos que tenham a codificação Unicode. O uso de outras codificações fará a tarefa XML falhar.  
@@ -111,7 +110,7 @@ ms.locfileid: "48204186"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Mensagens de log personalizadas disponíveis na tarefa XML  
  A tabela a seguir descreve a entrada de log personalizada da tarefa XML. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`XMLOperation`|Fornece informações sobre a operação executada pela tarefa|  
   
@@ -120,9 +119,9 @@ ms.locfileid: "48204186"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da tarefa XML &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa XML &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validar XML com a Tarefa XML](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

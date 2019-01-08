@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,15 +12,15 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798688"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL (SQL Server Management Studio)
-  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , você pode explorar as funcionalidades de rastreamento do lado do servidor do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico. Há duas partes nesse processo:  
+  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você pode explorar as funcionalidades de rastreamento do lado do servidor do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico. Há duas partes nesse processo:  
   
 1.  Crie e exporte um rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48143436"
   
 6.  Na guia **Geral** , faça o seguinte:  
   
-    1.  Na caixa **Nome do rastreamento** , digite o nome a ser usado para o rastreamento. Neste exemplo, o nome do rastreamento é `SPgt80`.  
+    1.  Na caixa **Nome do rastreamento** , digite o nome a ser usado para o rastreamento. Para este exemplo, o nome do rastreamento é `SPgt80`.  
   
     2.  Em **Usar a lista do modelo**, selecione o modelo a ser usado para o rastreamento. Para este exemplo, clique em **TSQL_SPs**.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143436"
   
 3.  Role pelo script e faça as substituições a seguir, que são observadas no texto de comentários do script:  
   
-    -   Substitua **Nome do Conjunto de Coleta SQLTrace Aqui** pelo nome que você deseja usar para o conjunto de coleta. Neste exemplo, o nome do conjunto de coleta `SPROC_CollectionSet`.  
+    -   Substitua **Nome do Conjunto de Coleta SQLTrace Aqui** pelo nome que você deseja usar para o conjunto de coleta. Para este exemplo, o nome do conjunto de coleta é `SPROC_CollectionSet`.  
   
-    -   Substitua **Nome do Item de Coleta SQLTrace Aqui** pelo nome que você deseja usar para o item de coleta. Neste exemplo, o nome do item de coleção `SPROC_Collection_Item`.  
+    -   Substitua **Nome do Item de Coleta SQLTrace Aqui** pelo nome que você deseja usar para o item de coleta. Para este exemplo, o nome do item de coleta é `SPROC_Collection_Item`.  
   
 4.  Clique em **Executar** para executar a consulta e criar o conjunto de coleta.  
   

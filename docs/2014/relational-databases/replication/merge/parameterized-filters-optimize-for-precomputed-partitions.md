@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5b082e9849b7eca02cb3a51c5cac3fb25a877a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203486"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800166"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Otimizar o desempenho de filtro parametrizado com partições pré-computadas
   Partições pré-computadas são uma otimização de desempenho que pode ser usada com publicações de mesclagem filtradas. Partições pré-computadas também são um requisito para usar registros lógicos em publicações filtradas. Para obter mais informações sobre registros lógicos, consulte [Agrupar alterações em linhas relacionadas com registros lógicos](group-changes-to-related-rows-with-logical-records.md).  
@@ -52,17 +51,17 @@ ms.locfileid: "48203486"
   
 -   Não deveria haver nenhuma relação de filtro de junção circular na publicação.  
   
-### <a name="database-collation"></a>Agrupamento de banco de dados  
+### <a name="database-collation"></a>Ordenação de banco de dados  
   
--   Quando partições pré-computadas são usadas, o agrupamento do banco de dados é sempre usado ao fazer comparações, ao invés de agrupamento de tabela ou coluna. Considere o cenário a seguir.  
+-   Quando partições pré-computadas são usadas, a ordenação do banco de dados é sempre usada ao fazer comparações, ao invés de ordenação de tabela ou coluna. Considere o cenário a seguir.  
   
-    -   Um banco de dados com um agrupamento com diferenciação de maiúsculas e minúsculas contém uma tabela com um agrupamento de diferenciação de maiúsculas e minúsculas.  
+    -   Um banco de dados com uma ordenação com diferenciação de maiúsculas e minúsculas contém uma tabela com uma ordenação de diferenciação de maiúsculas e minúsculas.  
   
     -   A tabela contém uma coluna **ComputerName**, que é comparada ao nome do host do Assinante em um filtro com parâmetros.  
   
     -   A tabela contém uma linha com o valor "MYCOMPUTER" e uma linha com o valor "mycomputer" nesta coluna.  
   
-     Se o Assinante sincronizar com o nome de host “mycomputer”, o Assinante receberá apenas uma linha, porque a comparação é com diferenciação de maiúsculas e minúsculas (o agrupamento do banco de dados). Se partições de pré-computadas não forem usadas, o Assinante receberá ambas as linhas, porque a tabela tem um agrupamento sem diferenciação de maiúsculas e minúsculas.  
+     Se o Assinante sincronizar com o nome de host “mycomputer”, o Assinante receberá apenas uma linha, porque a comparação é com diferenciação de maiúsculas e minúsculas (a ordenação do banco de dados). Se partições de pré-computadas não forem usadas, o Assinante receberá ambas as linhas, porque a tabela tem uma ordenação sem diferenciação de maiúsculas e minúsculas.  
   
 ## <a name="performance-of-precomputed-partitions"></a>Desempenho de partições pré-computadas  
  Há um pequeno custo de desempenho com partições pré-computadas quando as alterações são carregadas do Assinante para o Publicador, mas o tempo de processamento em massa de mesclagem é gasto avaliando as partições e baixando as alterações do Publicador para o Assinante, portanto, o ganho da rede ainda pode ser significativo. O benefício de desempenho irá variar, dependendo do número de Assinantes, sincronizando simultaneamente e o número de atualizações por sincronização que move linhas de uma partição a outra.  

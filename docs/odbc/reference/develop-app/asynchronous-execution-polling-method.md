@@ -13,12 +13,12 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523440"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Execução assíncrona (Método de Sondagem)
 Antes do ODBC 3.8 e o SDK do Windows 7, operações assíncronas eram permitidas apenas em funções de instrução. Para obter mais informações, consulte o **execução de operações de instrução assincronamente**, mais adiante neste tópico.  
@@ -135,9 +135,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- Quando um aplicativo chama uma função para determinar se ele ainda está em execução assincronamente, ele deve usar o identificador de instrução original. Isso ocorre porque a execução assíncrona é rastreada em uma base por instrução. O aplicativo também deve fornecer valores válidos para os outros argumentos — os argumentos originais fará — para ignorar a verificação no Gerenciador de Driver de erro. No entanto, depois que o driver verifica o identificador de instrução e determina que a instrução está em execução assíncrona, ele ignora todos os outros argumentos.  
+ Quando um aplicativo chama uma função para determinar se ele ainda está em execução assincronamente, ele deve usar o identificador de instrução original. Isso ocorre porque a execução assíncrona é rastreada em uma base por instrução. O aplicativo também deve fornecer valores válidos para os outros argumentos - os argumentos originais serão fazer - para cancelar a verificação no Gerenciador de Driver de erro. No entanto, depois que o driver verifica o identificador de instrução e determina que a instrução está em execução assíncrona, ele ignora todos os outros argumentos.  
   
- Enquanto uma função está em execução assíncrona — ou seja, depois que ele tiver retornado SQL_STILL_EXECUTING e antes de ele retorna um código diferente — o aplicativo poderá cancelá-lo chamando **SQLCancel** ou **SQLCancelHandle** com o mesmo identificador de instrução. Isso não é garantido para cancelar a execução da função. Por exemplo, a função talvez já terminou. Além disso, o código retornado pelo **SQLCancel** ou **SQLCancelHandle** indica somente se a tentativa de cancelar a função foi bem-sucedida, não se ele realmente cancelados a função. Para determinar se a função foi cancelada, o aplicativo chama a função novamente. Se a função foi cancelada, ela retornará SQL_ERROR e SQLSTATE HY008 (operação cancelada). Se a função não tiver sido cancelada, ele retorna outro código, como SQL_SUCCESS, SQL_STILL_EXECUTING ou SQL_ERROR com SQLSTATE um diferente.  
+ Enquanto uma função está em execução assíncrona - ou seja, depois que ele tiver retornado SQL_STILL_EXECUTING e antes de retornar um código diferente – o aplicativo poderá cancelá-lo chamando **SQLCancel** ou **SQLCancelHandle** com o mesmo identificador de instrução. Isso não é garantido para cancelar a execução da função. Por exemplo, a função talvez já terminou. Além disso, o código retornado pelo **SQLCancel** ou **SQLCancelHandle** indica somente se a tentativa de cancelar a função foi bem-sucedida, não se ele realmente cancelados a função. Para determinar se a função foi cancelada, o aplicativo chama a função novamente. Se a função foi cancelada, ela retornará SQL_ERROR e SQLSTATE HY008 (operação cancelada). Se a função não tiver sido cancelada, ele retorna outro código, como SQL_SUCCESS, SQL_STILL_EXECUTING ou SQL_ERROR com SQLSTATE um diferente.  
   
  Para desabilitar a execução assíncrona de uma instrução específica quando o driver dá suporte ao processamento assíncrono de nível de instrução, o aplicativo chama **SQLSetStmtAttr** o SQL_ATTR_ASYNC_ENABLE de atributo e o configura para SQL _ ASYNC_ENABLE_OFF. Se o driver dá suporte ao processamento assíncrono de nível de conexão, o aplicativo chama **SQLSetConnectAttr** para definir SQL_ATTR_ASYNC_ENABLE como SQL_ASYNC_ENABLE_OFF, que desabilita a execução assíncrona de todas as instruções sobre o conexão.  
   
@@ -212,7 +212,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  O exemplo a seguir mostra como usar **SQLSetConnectAttr** para habilitar a execução assíncrona para funções relacionadas à conexão.  
   
 ### <a name="code"></a>Código  
@@ -266,7 +266,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  Este exemplo mostra operações de confirmação assíncrona. Operações de reversão também podem ser feitas dessa maneira.  
   
 ### <a name="code"></a>Código  

@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 3: modificar o gerenciador de conexões de arquivo simples | Microsoft Docs'
+title: 'Etapa 3: Modificando o Gerenciador de Conexão de arquivo simples | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e5f2aecb84754ee470a9cbafabdf06e38d38ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822100"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Etapa 3: Modificando o Gerenciador de Conexões de Arquivo Simples
   Nesta tarefa, você modificará o gerenciador de conexões de arquivo simples que você criou e configurou na Lição 1. Quando foi criado originalmente, o gerenciador de conexões de arquivo simples foi configurado para carregar estatisticamente um único arquivo. Para habilitar o gerenciador de conexões de Arquivo Simples a carregar arquivos de forma iterativa, você deve modificar a propriedade ConnectionString do gerenciador de conexões para aceitar a variável definida pelo usuário `User:varFileName`, que contém o caminho do arquivo a ser carregado em tempo de execução.  
@@ -31,7 +30,7 @@ ms.locfileid: "48102027"
   
 3.  No **Editor de expressões de propriedade** na caixa de **propriedade** coluna, digite ou selecione `ConnectionString`.  
   
-4.  Na coluna **Expressão** , clique no botão de reticências **(…)** para abrir a caixa de diálogo **Construtor de Expressões** .  
+4.  Na coluna **Expressão**, clique no botão de reticências **(…)** para abrir a caixa de diálogo **Construtor de Expressões**.  
   
 5.  Na caixa de diálogo **Construtor de Expressão** , expanda o nó **Variáveis** .  
   
@@ -42,6 +41,6 @@ ms.locfileid: "48102027"
 8.  Clique em **OK** novamente para fechar a caixa de diálogo **Editor de Expressões de Propriedades** .  
   
 ## <a name="next-lesson-task"></a>Próxima tarefa da lição  
- [Etapa 4: Testando o pacote de tutorial da Lição 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [Etapa 4: Testando o pacote de Tutorial da lição 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

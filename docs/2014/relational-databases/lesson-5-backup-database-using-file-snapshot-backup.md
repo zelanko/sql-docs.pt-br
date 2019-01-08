@@ -11,14 +11,14 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215126"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404264"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lição 6: Migrar um banco de dados de um computador de origem local para um computador de destino no Windows Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lição 6: Migrar um banco de dados de um computador de origem local para um computador de destino no Microsoft Azure
   Esta lição supõe que você já tem outro SQL Server, que pode residir em outro computador local ou em uma máquina virtual no Windows Azure. Para obter informações sobre como criar uma máquina virtual SQL Server no Windows Azure, consulte [Provisionando uma máquina de Virtual do SQL Server no Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Após o provisionamento de uma máquina virtual do SQL Server no Windows Azure, verifique se é possível conectar-se a uma instância do SQL Server nessa máquina virtual por meio do SQL Server Management Studio em outro computador.  
   
  Esta lição supõe também que você já concluiu as seguintes etapas:  
@@ -51,7 +51,7 @@ ms.locfileid: "48215126"
   
         2.  Na barra de ferramentas padrão, clique em **nova consulta**.  
   
-        3.  Copie e cole o exemplo a seguir na janela de consulta, e modifique conforme necessário. A instrução a seguir cria uma Credencial do SQL Server para armazenar o Certificado de Acesso Compartilhado do contêiner de armazenamento.  
+        3.  Copie e cole o exemplo a seguir na janela de consulta, e modifique conforme necessário. A instrução a seguir cria uma credencial do SQL Server para armazenar o certificado de acesso compartilhado do contêiner de armazenamento.  
   
             ```tsql  
   
@@ -147,6 +147,6 @@ ms.locfileid: "48215126"
   
  **Próxima lição:**  
   
- [Lição 7: Mover os arquivos de dados para o Armazenamento do Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lição 7: Mover os arquivos de dados para o armazenamento do Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

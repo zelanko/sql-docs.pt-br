@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052506"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533301"
 ---
 # <a name="technical-reference-database-engine"></a>Referência técnica (Mecanismo de Banco de Dados)
   Localize as ferramentas, linguagens e documentação de referência para programação de administração do [!INCLUDE[ssDE](../includes/ssde-md.md)] no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48052506"
   
  [Utilitário SqlLocalDB](../tools/sqllocaldb-utility.md)  
   
- [Mais…](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Mais...](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Cmdlets do PowerShell do mecanismo de banco de dados**  
  [cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  

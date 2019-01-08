@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -35,12 +34,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785988"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor (SQL Server)
   Este tópico é pertinente nas seguintes situações:  
@@ -109,7 +108,7 @@ ms.locfileid: "48198496"
  Para obter mais informações sobre esse recurso, veja [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../security/authentication-access/credentials-database-engine.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais. Para saber a identificação da credencial de uma conta proxy, use a tabela do sistema [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
+>  Contas proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais. Para saber a identificação da credencial de uma conta proxy, use a tabela do sistema [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
   
  [&#91;Início&#93;](#information_entities_and_objects)  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48198496"
   
  Para permitir a descriptografia automática da chave mestra do banco de dados em uma instância do servidor, uma cópia dessa chave é criptografada usando a chave mestra do serviço. Esta cópia criptografada é armazenada no banco de dados e no **mestre**. Normalmente, a cópia armazenada em **mestre** é silenciosamente atualizada sempre que a chave mestra é alterada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta primeiramente descriptografar a chave mestra do banco de dados com a chave de serviço mestra da instância. Se essa descriptografia falhar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o repositório de credenciais em busca das credenciais de chave mestra que têm o mesmo GUID de família do banco de dados cuja chave mestra é necessária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de banco de dados com cada credencial compatível até que a descriptografia obtenha êxito ou não haja mais credenciais. Uma chave mestra não criptografada pela chave mestra de serviço deve ser aberta usando a instrução OPEN MASTER KEY e uma senha.  
   
- Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute esta instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. Recomendamos que, em seguida, a descriptografia automática da chave mestra do banco de dados seja habilitada executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute a seguinte instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***senha***'**. É recomendável que você habilite a descriptografia automática da chave mestra do banco de dados, em seguida, executando a instrução a seguir: ALTER MASTER KEY ADD CRIPTOGRAFIA PELA CHAVE MESTRA DE SERVIÇO. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Para obter informações sobre como habilitar a descriptografia automática da chave mestra de um banco de dados espelho, veja [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48198496"
   
  [&#91;Início&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Notificações de eventos e o Windows Management Instrumentation (WMI) eventos (no nível de servidor)  
   
 ### <a name="server-level-event-notifications"></a>Notificações de eventos em nível de servidor  
  Notificações de eventos em nível de servidor são armazenadas no **msdb**. Portanto, se um aplicativo de banco de dados depender de uma notificação de eventos em nível de servidor, essa notificação de evento deve ser recriada na instância do servidor de destino. Para exibir as notificações de eventos em uma instância do servidor, use a exibição de catálogo [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) . Para obter mais informações, consulte [Event Notifications](../service-broker/event-notifications.md).  

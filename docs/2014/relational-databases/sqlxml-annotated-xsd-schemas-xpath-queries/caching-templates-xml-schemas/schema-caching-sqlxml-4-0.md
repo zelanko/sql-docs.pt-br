@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfa52002e68fe8fa29a46a39cf224845274c2141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a9b4eced3cb4e02e2053a90edd701bda3139358
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793628"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Cache de esquemas (SQLXML 4.0)
   Com uma instalação lado a lado do XML para Microsoft SQL Server 2000 Web versão 1, o Microsoft SQLXML 2.0 e o SQLXML 3.0, você pode controlar explicitamente a cache de esquemas em todas as versões usando as seguintes chaves do registro:  

@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532791"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51661175"
   
  Com base em sessão e solicitação de identificação, um usuário pode recuperar as solicitações distribuídas reais geradas para ser executada – por meio do sys.dm_exec_distributed_requests. Por exemplo, uma consulta que envolva SQL regular e as tabelas externas de SQL será ser decomposta em várias instruções/solicitações executadas em vários nós de computação. Para acompanhar as etapas distribuídas entre todos os nós de computação, apresentamos uma ID de execução 'global' que pode ser usada para acompanhar todas as operações em nós de computação associados com uma solicitação específica e o operador, respectivamente.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|A chave para este modo de exibição. Id numérico exclusivo associado com a solicitação.|Exclusivo entre todas as solicitações no sistema.|  
 |execution_id|**nvarchar(32**|Id numérico exclusivo associado à sessão em que essa consulta foi executada.||  

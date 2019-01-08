@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 25fb50dbd858007a29d2a10a94053884620ed68b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750584"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211535"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implantar um cluster Pacemaker para o SQL Server no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tutorial documenta as tarefas necessárias para implantar um cluster Linux Pacemaker para um [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sempre no grupo de disponibilidade (AG) ou instância de cluster de failover (FCI). Ao contrário do Windows Server firmemente acoplado /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pilha, a criação do cluster Pacemaker, bem como configuração de AG (grupo) de disponibilidade no Linux pode ser feita antes ou após a instalação do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. A integração e a configuração de recursos por uma parte de uma implantação do grupo de disponibilidade ou FCI Pacemaker é feito depois que o cluster é configurado.
+Este tutorial documenta as tarefas necessárias para implantar um cluster Linux Pacemaker para um [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sempre no grupo de disponibilidade (AG) ou instância de cluster de failover (FCI). Ao contrário do Windows Server firmemente acoplado / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pilha, a criação do cluster Pacemaker, bem como configuração de AG (grupo) de disponibilidade no Linux pode ser feita antes ou após a instalação do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. A integração e a configuração de recursos por uma parte de uma implantação do grupo de disponibilidade ou FCI Pacemaker é feito depois que o cluster é configurado.
 > [!IMPORTANT]
 > Um grupo de disponibilidade com um tipo de cluster nenhum faz *não* requer um cluster Pacemaker e não podem ser gerenciado por Pacemaker. 
 
@@ -126,7 +126,7 @@ Esta seção documenta como criar e configurar o cluster para cada distribuiçã
 1. Autorizar os nós
    
    ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
+   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
    em que *NodeX* é o nome do nó.

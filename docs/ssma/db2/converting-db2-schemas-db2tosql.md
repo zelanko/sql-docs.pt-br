@@ -10,12 +10,12 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ff31e00ecb56138239a1d6d87de276754e84a5e6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520674"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Converter esquemas do DB2 (DB2ToSQL)
 Depois de se conectar ao DB2, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados.  
@@ -34,19 +34,19 @@ A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!IN
 |Objetos do DB2|Objetos do SQL Server resultantes|  
 |-----------|----------------------------|  
 |Tipos de dados|**O SSMA mapeia cada tipo, exceto o seguinte listado abaixo:**<br /><br />CLOB: Algumas funções nativas para o trabalho com esse tipo não são suportados (por exemplo, CLOB_EMPTY())<br /><br />BLOB: Algumas funções nativas para o trabalho com esse tipo não são suportados (por exemplo, BLOB_EMPTY())<br /><br />DBLOB: Algumas funções nativas para o trabalho com esse tipo não são suportados (por exemplo, DBLOB_EMPTY())|  
-|Tipos definidos pelo usuário|**O SSMA mapeia a seguir definida pelo usuário:**<br /><br />Tipo distinto<br /><br />Tipo estruturado<br /><br />Tipos de dados SQL PL – Observação: não há suporte para o tipo de cursor fraco.|  
+|Tipos definidos pelo usuário|**O SSMA mapeia a seguir definida pelo usuário:**<br /><br />Tipo distinto<br /><br />Tipo estruturado<br /><br />Tipos de dados SQL PL - Observação: Não há suporte para o tipo de cursor fraco.|  
 |Registradores especiais|**O SSMA mapeia apenas registros listados abaixo:**<br /><br />CARIMBO DE HORA ATUAL<br /><br />DATA ATUAL<br /><br />HORA ATUAL<br /><br />FUSO HORÁRIO ATUAL<br /><br />USUÁRIO ATUAL<br /><br />SESSION_USER e usuário<br /><br />SYSTEM_USER<br /><br />CLIENT_APPLNAME ATUAL<br /><br />CLIENT_WRKSTNNAME ATUAL<br /><br />TEMPO LIMITE DE BLOQUEIO ATUAL<br /><br />ESQUEMA ATUAL<br /><br />SERVIDOR ATUAL<br /><br />ISOLAMENTO ATUAL<br /><br />Outros registra especiais não é mapeado para a semântica do SQL server.|  
 |CREATE TABLE|**O SSMA mapeia CREATE TABLE com as seguintes exceções:**<br /><br />Tabelas de clustering (MDC) multidimensional<br /><br />Tabelas de intervalo clusterizado (RCT)<br /><br />Tabelas particionadas<br /><br />Tabela desanexada<br /><br />Cláusula de captura de dados<br /><br />Opção IMPLICITLY oculto<br /><br />Opção VOLATILE|  
 |CREATE VIEW|O SSMA mapeia CREATE VIEW com 'Com LOCAL CHECK OPTION', mas outras opções não são mapeadas para a semântica do SQL server|  
 |CREATE INDEX|**O SSMA mapeia CREATE INDEX com as seguintes exceções:**<br /><br />Índice XML<br /><br />Opção BUSINESS_TIME sem SOBREPOSIÇÕES<br /><br />Cláusula PARTICIONADA<br /><br />ESPECIFICAÇÃO apenas de opção<br /><br />Opção usando EXTEND<br /><br />Opção MINPCTUSED<br /><br />Opção de divisão de página|  
 |Gatilhos|**O SSMA mapeia a semântica de gatilho a seguir:**<br /><br />APÓS / linha EACH GATILHOS<br /><br />Depois de /FOR dispara a cada instrução<br /><br />ANTES de / para EACH linha e, em vez de / para a linha EACH gatilhos|  
 |Sequências|São mapeados.|  
-|Instrução SELECT|**Selecione o SSMA mapas com as seguintes exceções:**<br /><br />Cláusula de dados-alteração de tabela de referência – parcialmente mapeado, mas tabelas FINAL faz sem suporte<br /><br />Cláusula de referência de tabela – parcialmente mapeados, mas somente--referência de tabela, a referência de tabela externa, analyze_table-expression, tabela derivada coleção, expressão xmltable não são mapeados para a semântica do SQL server<br /><br />Cláusula de especificação de período – não mapeada.<br /><br />Cláusula de manipulador continuar – não mapeada.<br /><br />Cláusula de correlação digitado – não mapeada.<br /><br />Cláusula de resolução simultânea da acesso – não mapeada.|  
+|Instrução SELECT|**Selecione o SSMA mapas com as seguintes exceções:**<br /><br />Cláusula de dados-alteração de tabela de referência - parcialmente mapeado, mas tabelas FINAL faz sem suporte<br /><br />Cláusula de referência de tabela - parcialmente mapeados, mas somente--referência de tabela, a referência de tabela externa, analyze_table-expression, tabela derivada coleção, expressão xmltable não são mapeados para a semântica do SQL server<br /><br />Cláusula de especificação de período – não mapeada.<br /><br />Cláusula de manipulador continuar – não mapeada.<br /><br />Cláusula de correlação digitado - não mapeada.<br /><br />Resolução de acesso simultâneo a cláusula - não mapeada.|  
 |Instrução de valores|É mapeado.|  
 |Instrução INSERT|É mapeado.|  
-|Instrução UPDATE|S**SMA mapas de atualização com as seguintes exceções:**<br /><br />Cláusula de referência de tabela – somente--referência de tabela não está mapeada para a semântica do SQL server<br /><br />Cláusula Períoda – não está mapeado.|  
-|Instrução MERGE|**O SSMA mapeia direta com as seguintes exceções:**<br /><br />Único versus várias ocorrências de cada cláusula – é mapeado para a semântica do SQL server para as ocorrências de cada cláusula limitadas<br /><br />Cláusula de sinal – não é mapeado para a semântica do SQL Server<br /><br />Misto atualizar e excluir cláusulas – não é mapeado para a semântica do SQL Server<br /><br />Cláusula de período – não é mapeado para a semântica do SQL Server|  
-|Instrução DELETE|**Excluir SSMA mapas com as seguintes exceções:**<br /><br />Cláusula de referência de tabela – somente--referência de tabela não está mapeada para a semântica do SQL server<br /><br />Cláusula Períoda – não é mapeado para a semântica do SQL Server|  
+|Instrução UPDATE|S**SMA mapas de atualização com as seguintes exceções:**<br /><br />Cláusula de referência de tabela-somente--referência de tabela não está mapeada para a semântica do SQL server<br /><br />Cláusula Períoda – não está mapeado.|  
+|Instrução MERGE|**O SSMA mapeia direta com as seguintes exceções:**<br /><br />Único versus várias ocorrências de cada cláusula – é mapeado para a semântica do SQL server para as ocorrências de cada cláusula limitadas<br /><br />Cláusula de sinal - não é mapeado para a semântica do SQL Server<br /><br />Misto atualizar e excluir cláusulas - não é mapeado para a semântica do SQL Server<br /><br />Cláusula de período – não é mapeado para a semântica do SQL Server|  
+|Instrução DELETE|**Excluir SSMA mapas com as seguintes exceções:**<br /><br />Cláusula de referência de tabela-somente--referência de tabela não está mapeada para a semântica do SQL server<br /><br />Cláusula Períoda – não é mapeado para a semântica do SQL Server|  
 |Nível de isolamento e o tipo de bloqueio|É mapeado.|  
 |Procedimentos (SQL)|São mapeados.|  
 |Procedimentos (externo)|Exigir atualização manual.|  
@@ -65,10 +65,10 @@ A tabela a seguir mostra quais objetos do DB2 são convertidos e resultante [!IN
 |Instrução RETURN|É mapeado.|  
 |Instrução de sinal|Não há suporte para condições. As mensagens podem ser opcionais.|  
 |Instrução WHILE|É mapeado.|  
-|OBTER o demonstrativo de diagnóstico|**O SSMA mapeia obter diagnóstico com as seguintes exceções:**<br /><br />ROW_COUNT – é mapeado.<br /><br />DB2_RETURN_STATUS – é mapeado.<br /><br />MESSAGE_TEXT – é mapeado.<br /><br />DB2_SQL_NESTING_LEVEL - não é mapeado para a semântica do SQL Server<br /><br />DB2_TOKEN_STRING - não é mapeado para a semântica do SQL Server|  
-|Cursores|**O SSMA mapeia CURSORES com as seguintes exceções:**<br /><br />Instrução de CURSOR ALLOCATE - não é mapeado para a semântica do SQL Server<br /><br />Instrução de LOCALIZADORES ASSOCIAR - não é mapeado para a semântica do SQL Server<br /><br />Instrução DECLARE CURSOR - cláusula Returnability não está mapeada para a semântica do SQL server<br /><br />Instrução FETCH – mapeamento parcial. Variáveis como destino têm suporte apenas. DESCRITOR de SQLDA não está mapeado para a semântica do SQL server|  
+|OBTER o demonstrativo de diagnóstico|**O SSMA mapeia obter diagnóstico com as seguintes exceções:**<br /><br />ROW_COUNT - é mapeado.<br /><br />DB2_RETURN_STATUS - é mapeado.<br /><br />MESSAGE_TEXT - é mapeado.<br /><br />DB2_SQL_NESTING_LEVEL - não é mapeado para a semântica do SQL Server<br /><br />DB2_TOKEN_STRING - não é mapeado para a semântica do SQL Server|  
+|Cursores|**O SSMA mapeia CURSORES com as seguintes exceções:**<br /><br />Instrução de CURSOR ALLOCATE - não é mapeado para a semântica do SQL Server<br /><br />Instrução de LOCALIZADORES ASSOCIAR - não é mapeado para a semântica do SQL Server<br /><br />Instrução DECLARE CURSOR - cláusula Returnability não está mapeada para a semântica do SQL server<br /><br />Instrução FETCH - mapeamento parcial. Variáveis como destino têm suporte apenas. DESCRITOR de SQLDA não está mapeado para a semântica do SQL server|  
 |Variáveis|São mapeados.|  
-|Exceções, manipuladores e condições|**O SSMA mapeia "tratamento de exceção" com as seguintes exceções:**<br /><br />Manipuladores de saída – são mapeados.<br /><br />Desfazer manipuladores – são mapeados.<br /><br />CONTINUAR manipuladores – não são mapeados.<br /><br />Condições - ele não é mapeado para a semântica do SQL server.|  
+|Exceções, manipuladores e condições|**O SSMA mapeia "tratamento de exceção" com as seguintes exceções:**<br /><br />Manipuladores de saída – são mapeados.<br /><br />Desfazer manipuladores – são mapeados.<br /><br />CONTINUAR manipuladores - não são mapeados.<br /><br />Condições - ele não é mapeado para a semântica do SQL server.|  
 |SQL dinâmico|Não mapeado.|  
 |Aliases|São mapeados.|  
 |Apelidos|Mapeamento parcial. Processamento manual é necessário para o objeto subjacente|  

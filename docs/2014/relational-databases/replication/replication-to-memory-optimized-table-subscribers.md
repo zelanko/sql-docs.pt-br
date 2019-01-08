@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128630"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800658"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
   As tabelas que atuam como assinantes de replicação transacional, com exceção da replicação transacional ponto a ponto, podem ser configuradas como tabelas com otimização de memória. Outras configurações de replicação não são compatíveis com tabelas com otimização de memória.  
@@ -64,7 +63,7 @@ ms.locfileid: "48128630"
   
 3.  Localize o **. SCH** para sua tabela de arquivo e abri-lo no Management Studio. Altere o esquema da tabela e atualize o procedimento armazenado conforme descrito abaixo.  
   
-     Avalie os índices definidos no arquivo IDX. Modifique `CREATE TABLE` para especificar os índices necessários, as restrições, a chave primária e a sintaxe com otimização de memória. Para tabelas com otimização de memória, as colunas de índice devem ser NOT NULL e as colunas de índice de tipos de caractere devem ser Unicode e usar o agrupamento BIN2. Veja o seguinte exemplo:  
+     Avalie os índices definidos no arquivo IDX. Modifique `CREATE TABLE` para especificar os índices necessários, as restrições, a chave primária e a sintaxe com otimização de memória. Para tabelas com otimização de memória, as colunas de índice devem ser NOT NULL e as colunas de índice de tipos de caractere devem ser Unicode e usar a ordenação BIN2. Veja o seguinte exemplo:  
   
     ```  
     SET ANSI_PADDING ON;  
@@ -242,7 +241,7 @@ ms.locfileid: "48128630"
     GO  
     ```  
   
-6.  Aplique o esquema ao banco de dados de um assinante e salve esse esquema para uso futuro.  
+6.  Aplicar o esquema de banco de dados do assinante e salve o esquema para uso futuro.  
   
 7.  Carregue os dados do publicador (origem) para o assinante. Os dados não devem ser alterados no publicador até que você adicione uma assinatura.  Você pode usar BCP conforme mostrado abaixo:  
   
@@ -302,7 +301,7 @@ GO
   
 -   Há restrições na atualização da chave primária das tabelas que estão sendo replicadas para uma tabela com otimização de memória em um assinante. Para obter mais informações, consulte [replicando alterações para uma chave primária](#PrimaryKey).  
   
--   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Ver [construções do Transact-SQL não suporte pelo OLTP na memória](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
+-   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Consulte [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
   
 ##  <a name="Schema"></a> Modificando um arquivo de esquema  
   

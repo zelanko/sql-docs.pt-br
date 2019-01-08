@@ -15,12 +15,12 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e52ab35b0f75f80a6117995a353b66c320a5294
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513486"
 ---
 # <a name="delete-views"></a>Excluir exibições
   Você pode excluir (remover) exibições no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -29,7 +29,7 @@ ms.locfileid: "48085578"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Quando você descarta uma exibição, a definição da exibição e outras informações sobre ela são excluídas do catálogo do sistema. Todas as permissões para a exibição também são excluídas.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48085578"
 3.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   
     > [!IMPORTANT]  
-    >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo *nome_da_exibição***Dependências*. Isso mostrará todos os objetos que dependem da exibição e todos os objetos dos quais a exibição depende.  
+    >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo _view_name_ **Dependências**. Isso mostrará todos os objetos que dependem da exibição e todos os objetos dos quais a exibição depende.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-delete-a-view-from-a-database"></a>Para excluir uma exibição de um banco de dados  
   

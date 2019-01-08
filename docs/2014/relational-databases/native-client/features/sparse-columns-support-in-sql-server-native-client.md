@@ -14,12 +14,12 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bb29c58c579675ffb84d8e4c26a4b4db8779f2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79151d13f5b90e7da8ea50d3472d05ed46423e2e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074676"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403521"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Suporte a colunas esparsas no SQL Server Native Client
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client suporta colunas esparsas. Para obter mais informações sobre colunas esparsas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [usar colunas esparsas](../../tables/use-sparse-columns.md) e [usar conjuntos de colunas](../../tables/use-column-sets.md).  

@@ -1,5 +1,5 @@
 ---
-title: Medidas | Microsoft Docs
+title: Medidas em modelos de tabela do Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045324"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072193"
 ---
 # <a name="measures"></a>medidas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +50,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Grand Total**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- As medidas são criadas em tempo de design usando a grade de medida no designer de modelo. Cada tabela tem uma grade de medida. Por padrão, a grade de medida é exibida abaixo de cada tabela no designer de modelos. Você também pode escolher não exibir a grade de medida para uma tabela específica. Para alternar a exibição da grade de medida, clique no menu **Tabela** e em **Mostrar Grade de Medida**.  
+ As medidas são criadas em tempo de design usando a grade de medida no designer de modelo. Cada tabela tem uma grade de medida. Por padrão, a grade de medida é exibida abaixo de cada tabela no designer de modelos. Você também pode escolher não exibir a grade de medida para uma tabela específica. Para alternar a exibição de uma grade de medida, clique o **tabela** menu e clique **Mostrar grade de medida**.  
   
  Na grade de medida, você pode criar medidas das seguintes maneiras:  
   
@@ -65,12 +65,12 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  É possível agrupar medidas de várias tabelas em uma tabela. Para tanto, crie uma tabela vazia e, depois, mova ou crie novas medidas nela. Lembre-se de que talvez seja necessário incluir nomes de tabelas em fórmulas DAX ao referenciar colunas em outras tabelas.  
   
- Se as perspectivas tiverem sido definidas para o modelo, as medidas não serão acrescentadas automaticamente a essas perspectivas. Você deve acrescentar medidas manualmente a uma perspectiva usando a caixa de diálogo Perspectivas. Para obter mais informações, consulte [perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
+ Se as perspectivas tiverem sido definidas para o modelo, as medidas não serão acrescentadas automaticamente a essas perspectivas. Você deve acrescentar medidas manualmente a uma perspectiva usando a caixa de diálogo Perspectivas. Para saber mais, consulte [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Propriedades das medidas  
  Cada medida tem propriedades que definem isto. As propriedades de medidas, junto com as propriedades de colunas associadas podem ser editadas na janela Propriedades. As medidas têm as seguintes propriedades:  
   
-|Propriedade|Configuração padrão|Description|  
+|Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
 |**Descrição**|Em branco|Descrição da medida. A descrição não aparecerá com a medida em um cliente de relatório.|  
 |**Formato**|Automaticamente determinado do tipo de dados da coluna referenciado na expressão de fórmula.|Formato da medida. Por exemplo, moeda ou percentual.|  
@@ -84,7 +84,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Criar e gerenciar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Descreve como criar e gerenciar medidas usando a grade de medida no designer de modelo.|  
   

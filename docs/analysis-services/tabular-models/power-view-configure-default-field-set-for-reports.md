@@ -1,5 +1,5 @@
 ---
-title: Configurar conjunto de campo padrão para relatórios do Power View | Microsoft Docs
+title: Configurar conjunto de campo padrão para relatórios do Power View no Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32d8d9c4acbc1c5eae47e90709c4ffdedd269f11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041850"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072053"
 ---
-# <a name="power-view---configure-default-field-set-for-reports"></a>Power View - Configure o conjunto de campo padrão para relatórios
+# <a name="power-view---configure-default-field-set-for-reports"></a>Power View – configurar conjunto de campo padrão para relatórios
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Um conjunto de campo padrão é uma lista predefinida de colunas e medidas que são adicionadas automaticamente a uma tela de relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quando a tabela é selecionada na lista de campos de relatório. Os autores de modelo de tabela podem criar um campo padrão definido para eliminar etapas redundantes para autores de relatório que usam o modelo para os seus relatórios. Por exemplo, se você souber que a maioria dos autores de relatório que trabalham com informações de contato de cliente sempre querem ver um nome de contato, um número de telefone principal, um endereço de email e um nome de empresa, poderá pré-selecionar essas colunas para que elas sempre sejam adicionadas à tela de relatório quando o autor clicar na tabela Contato do Cliente.  
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - dynamic_filters_TSQL
@@ -28,12 +27,12 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 498d9573ce7c70d4ec96ffe01d34d3756335cf0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 979b61238b6d4f8faa39c90e116434426321273f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718724"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811438"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|É se a publicação se qualifica para usar partições pré-computadas; em que **1** significa que as partições pré-calculadas podem ser usadas, e **0** significa que eles não podem ser usados.|  
 |**has_dynamic_filters**|**bit**|É se o filtro de pelo menos uma linha com parâmetros foi definido na publicação; em que **1** significa que existem um ou mais filtros de linha com parâmetros, e **0** significa que não existem filtros dinâmicos.|  

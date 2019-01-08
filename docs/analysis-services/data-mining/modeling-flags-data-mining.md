@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32a7241fcea41af44e3e336d02c857f51d133208
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f644f882d1a252f678d868d3492b4aed4e11006f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017413"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531905"
 ---
 # <a name="modeling-flags-data-mining"></a>Sinalizadores de modelagem (Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "34017413"
  Indica que os valores da coluna de atributo não devem jamais conter um valor nulo. Ocorrerá um erro se o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encontrar um valor nulo nessa coluna de atributo durante o processo de treinamento do modelo.  
   
  **MODEL_EXISTENCE_ONLY**  
- Indica que a coluna será tratada como tendo dois estados possíveis: **Ausente** e **Existente**. Se o valor for **NULL**, será tratado como Missing. O sinalizador MODEL_EXISTENCE_ONLY é aplicado ao atributo previsível e tem suporte pela maioria dos algoritmos.  
+ Indica que a coluna será tratada como tendo dois estados: **Faltando** e **existentes**. Se o valor for **NULL**, será tratado como Missing. O sinalizador MODEL_EXISTENCE_ONLY é aplicado ao atributo previsível e tem suporte pela maioria dos algoritmos.  
   
- De fato, definir o sinalizador MODEL_EXISTENCE_ONLY para **True** alterar a representação dos valores de modo que haja somente dois estados: **Ausente** e **Existente**. Todos os estados não ausentes são combinados em um único valor **Existente** .  
+ De fato, definir o sinalizador MODEL_EXISTENCE_ONLY para **verdadeira** alterar a representação dos valores de modo que haja somente dois estados: **Faltando** e **existentes**. Todos os estados não ausentes são combinados em um único valor **Existente** .  
   
  Um uso comum desse sinalizador de modelagem seria em atributos para os quais o estado **NULL** tem um significado implícito e o valor explícito do estado **NOT NULL** pode não ser tão importante quanto o fato de que a coluna possui algum valor. Por exemplo, uma coluna [DateContractSigned] pode ser **NULL** se nunca houve um contrato assinado e **NOT NULL** se o contrato foi assinado. Portanto, se o objetivo do modelo é prever se um contrato será assinado, você pode usar o sinalizador MODEL_EXISTENCE_ONLY para ignorar o valor da data exata dos casos **NOT NULL** e distinguir somente os casos em que um contrato seja **Ausente** ou **Existente**.  
   
@@ -57,7 +57,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Você pode adicionar ou alterar os sinalizadores de modelagem usado em um modelo usando o Designer de Mineração de Dados e editando as propriedades das colunas associadas. Essas alterações exigem que a estrutura ou modelo sejam reprocessados.  
   
- Você pode especificar os sinalizadores de modelagem em uma nova estrutura de mineração ou modelo de mineração usando DMX, ou usando AMO ou scripts XMLA. No entanto, não é possível alterar os sinalizadores de modelagem usados em um modelo e em uma estrutura de mineração existentes com o uso de DMX. Você deve criar um novo modelo de mineração usando a sintaxe `ALTER MINING STRUCTURE….ADD MINING MODEL`.  
+ Você pode especificar os sinalizadores de modelagem em uma nova estrutura de mineração ou modelo de mineração usando DMX, ou usando AMO ou scripts XMLA. No entanto, não é possível alterar os sinalizadores de modelagem usados em um modelo e em uma estrutura de mineração existentes com o uso de DMX. Você deve criar um novo modelo de mineração usando a sintaxe `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
 ##  <a name="bkmk_UseRegressors"></a> Usos do sinalizador de modelagem REGRESSOR  
  Ao definir o sinalizador de modelagem REGRESSOR em uma coluna, você está indicando ao algoritmo que essa coluna contém possíveis regressores. Os regressores reais usados no modelo são determinados pelo algoritmo. Um regressor potencial poderá ser descartado se não modelar o atributo previsível.  
@@ -87,18 +87,18 @@ WHERE MODEL_NAME = '<model name>'
   
  Você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo usará determinado regressor. Esse parâmetro pode ser usado com o algoritmo Árvores de Decisão e com o algoritmo Regressão Linear.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Use os links a seguir para saber mais sobre como usar sinalizadores de modelagem.  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
-|Editar sinalizadores de modelagem usando o Designer de Mineração de Dados|[Exibir ou alterar modelagem sinalizadores & #40; mineração de dados & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Especifique uma dica para o algoritmo recomendar regressores prováveis|[Especifique uma coluna para usar como Regressor em um modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Veja os sinalizadores de modelagem que têm suporte por algoritmos específicos (na seção Sinalizadores de Modelagem para cada tópico de referência de algoritmo).|[Algoritmos de mineração de dados & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Editar sinalizadores de modelagem usando o Designer de Mineração de Dados|[Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Especifique uma dica para o algoritmo recomendar regressores prováveis|[Especificar uma coluna para usar como regressor em um modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Veja os sinalizadores de modelagem que têm suporte por algoritmos específicos (na seção Sinalizadores de Modelagem para cada tópico de referência de algoritmo).|[Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Saiba mais sobre as colunas da estrutura de mineração e as propriedades que você pode definir nelas|[Colunas da estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Saiba sobre as colunas do modelo de mineração e sinalizadores de modelagem que podem ser aplicados no nível do modelo|[Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Consulte a sintaxe para trabalhar com sinalizadores de modelagem em instruções DMX|[Sinalizadores de modelagem &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Entender valores ausentes e como trabalhar com eles|[Valores ausentes & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Entender valores ausentes e como trabalhar com eles|[Valores ausentes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Saiba sobre como gerenciar modelos e estruturas e definir propriedades de uso|[Movendo objetos de mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

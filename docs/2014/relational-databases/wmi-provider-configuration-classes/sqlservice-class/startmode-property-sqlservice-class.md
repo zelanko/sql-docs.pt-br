@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StartMode Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbdf2e807f5f36cf8814be95cb98ec53bb813790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128428"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353096"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propriedade StartMode (classe SqlService)
   Obtém o modo de início do serviço.  
@@ -53,7 +51,7 @@ object
  Sistema  
  Valor = 1. Serviço iniciado pelo método `IoInitSystem`. Esta opção só é válida para serviços de driver.  
   
- Automático  
+ Automatic  
  Valor = 2. Serviço a ser iniciado automaticamente pelo gerenciador de controle de serviço durante a inicialização do sistema.  
   
  Manual  
@@ -65,6 +63,6 @@ object
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

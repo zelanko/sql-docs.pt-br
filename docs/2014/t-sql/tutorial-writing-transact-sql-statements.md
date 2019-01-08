@@ -1,10 +1,10 @@
 ---
-title: 'Tutorial: Escrevendo instruções Transact-SQL | Microsoft Docs'
+title: 'Tutorial: Gravando instruções Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,12 +14,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807578"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Gravando instruções Transact-SQL
   Bem-vindo ao tutorial Escrevendo Instruções [!INCLUDE[tsql](../includes/tsql-md.md)] . Esse tutorial foi planejado para usuários que desconhecem como escrever instruções SQL. Ele irá ajudar usuários iniciantes revisando algumas das instruções básicas sobre como criar tabelas e inserir dados. Este tutorial usa a [!INCLUDE[tsql](../includes/tsql-md.md)], a implementação [!INCLUDE[msCoName](../includes/msconame-md.md)] do SQL standard. Esse tutorial foi planejado como uma rápida introdução à linguagem [!INCLUDE[tsql](../includes/tsql-md.md)] , e não como substituição para uma classe [!INCLUDE[tsql](../includes/tsql-md.md)] . As instruções nesse tutorial são intencionalmente simples, e não tem a intenção de representar a complexidade encontrada em um banco de dados de produção típico.  
@@ -35,13 +35,13 @@ ms.locfileid: "48061458"
   
  Este tutorial divide-se em três lições:  
   
- [Lição 1: criando Objetos de Banco de Dados](lesson-1-creating-database-objects.md)  
+ [Lição 1: Criando objetos de banco de dados](lesson-1-creating-database-objects.md)  
  Nesta lição, você irá criar um banco de dados; criar uma tabela no banco de dados; inserir dados em uma tabela; atualizar e ler dados.  
   
- [Lição 2: configurando permissões em objetos de banco de dados](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Lição 2: Configurando permissões em objetos de banco de dados](lesson-2-configuring-permissions-on-database-objects.md)  
  Nesta lição, você criará um logon e um usuário. Você também criará uma exibição e um procedimento armazenado e, então, concederá a permissão de usuário ao procedimento armazenado.  
   
- [Lição 3: excluindo objetos de banco de dados](lesson-3-1-deleting-database-objects.md)  
+ [Lição 3: Excluindo objetos de banco de dados](lesson-3-1-deleting-database-objects.md)  
  Nesta lição, você removerá o acesso aos dados; excluirá dados de uma tabela; deletará a tabela e, por fim, excluirá o banco de dados.  
   
 ## <a name="requirements"></a>Requisitos  

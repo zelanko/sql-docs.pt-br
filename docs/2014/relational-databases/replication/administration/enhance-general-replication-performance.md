@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138178"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806248"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
   É possível melhorar o desempenho geral para todos os tipos de replicação no seu aplicativo e na rede, por meio das diretrizes descritas neste tópico.  
@@ -81,7 +80,7 @@ ms.locfileid: "48138178"
   
 -   Limite o uso de tipos de dados LOB (objetos grandes).  
   
-     Os LOBs requerem mais espaço de armazenamento e processamento que outros tipos de dados de coluna. Não inclua essas colunas em artigos a menos que seja necessário para seu aplicativo. Os tipos de dados `text`, `ntext`, e `image` são preteridos. Se incluir LOBs, recomendamos que você use os tipos de dados `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivamente.  
+     Os LOBs requerem mais espaço de armazenamento e processamento que outros tipos de dados de coluna. Não inclua essas colunas em artigos a menos que seja necessário para seu aplicativo. Os tipos de dados `text`, `ntext` e `image`são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivamente.  
   
      Para replicação transacional, considere usar o perfil do Distribution Agent chamado **Perfil de distribuição para fluxo contínuo do banco de dados OLE**. Para saber mais, confira [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48138178"
   
 -   Reduza os níveis detalhados de agentes de replicação, exceto durante o teste inicial, a monitoração e a depuração.  
   
-     Reduza os parâmetros **–HistoryVerboseLevel** e **–OutputVerboseLevel** dos Agentes de Distribuição ou dos Agentes de Mesclagem. Isso reduz o número de linhas novas inseridas para controlar o histórico de agente e saída. Em vez disso, as mensagens de histórico anteriores com o mesmo status são atualizadas para as novas informações de histórico. Aumente os níveis detalhados de teste, monitoração e depuração, de forma a obter o máximo possível de informações sobre a atividade do agente.  
+     Reduza os parâmetros **-HistoryVerboseLevel** e **-OutputVerboseLevel** dos Agentes de Distribuição ou dos Agentes de Mesclagem. Isso reduz o número de linhas novas inseridas para controlar o histórico de agente e saída. Em vez disso, as mensagens de histórico anteriores com o mesmo status são atualizadas para as novas informações de histórico. Aumente os níveis detalhados de teste, monitoração e depuração, de forma a obter o máximo possível de informações sobre a atividade do agente.  
   
--   Use o parâmetro **–MaxBCPThreads** do Agente de Instantâneo, Agente de Mesclagem e Agente de Distribuição (o número de threads especificado não deve exceder o número de processadores no computador). Esse parâmetro especifica o número de operações de cópia em massa que podem ser executadas em paralelo quando o instantâneo é criado e aplicado.  
+-   Use o parâmetro **-MaxBCPThreads** do Agente de Instantâneo, do Agente de Mesclagem e do Agente de Distribuição (o número de threads especificado não deve exceder o número de processadores no computador). Esse parâmetro especifica o número de operações de cópia em massa que podem ser executadas em paralelo quando o instantâneo é criado e aplicado.  
   
--   Use o parâmetro **–UseInprocLoader** do Agente de Distribuição e do Agente de Mesclagem (esse parâmetro não pode ser usado se as tabelas publicadas incluírem colunas XML). Esse parâmetro faz o agente usar o comando BULK INSERT quando o instantâneo for aplicado.  
+-   Use o parâmetro **-UseInprocLoader** do Agente de Distribuição e do Agente de Mesclagem (esse parâmetro não poderá ser usado se as tabelas publicadas incluírem colunas XML). Esse parâmetro faz o agente usar o comando BULK INSERT quando o instantâneo for aplicado.  
   
  Os parâmetros de agente podem ser especificados em perfis de agente e na linha de comando. Para obter mais informações, consulte:  
   

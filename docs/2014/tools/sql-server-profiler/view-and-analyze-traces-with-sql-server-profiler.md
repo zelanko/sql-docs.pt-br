@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -20,12 +19,12 @@ ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6739f427642151bec0fd193c26d40a16af51e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213426"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797018"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Exibir e analisar rastreamentos com o SQL Server Profiler
   Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir dados de evento capturados em um rastreamento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe dados com base em propriedades de rastreamento definidas. Um modo de analisar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiá-los para outro programa, como o Orientador de Otimização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização poderá usar um arquivo de rastreamento contendo um lote SQL e eventos de RPC (chamada de procedimento remoto) se a coluna de dados **Text** estiver incluída no rastreamento. Para certificar-se de que os eventos e colunas corretos são capturados para uso com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use o modelo Ajuste predefinido, que é fornecido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "48213426"
  Ao abrir um rastreamento por meio do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o arquivo de rastreamento não precisa ter a extensão de arquivo .trc, caso tenha sido criado pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou por procedimentos armazenados do sistema do Rastreamento do SQL.  
   
 > [!NOTE]  
->  O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ler arquivos .log do Rastreamento do SQL e arquivos de script SQL genéricos. Ao abrir um arquivo .log do Rastreamento do SQL cuja extensão de arquivo não seja .log, como trace.txt, especifique **SQLTrace_Log** como formato de arquivo.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ler arquivos .log do Rastreamento do SQL e arquivos de script SQL genéricos. Ao abrir um arquivo .log do Rastreamento do SQL cuja extensão de arquivo não seja .log, como trace.txt, especifique **SQLTrace_Log** como formato de arquivo.  
   
  Você pode configurar o formato de exibição de data e hora do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] como auxílio para a análise do rastreamento.  
   

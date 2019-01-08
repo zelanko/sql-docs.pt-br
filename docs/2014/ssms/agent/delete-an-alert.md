@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -18,12 +18,12 @@ ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3f7434c7af3a4e8465bbaab1d0134bd956892c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080146"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762878"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
   Este tópico descreve como excluir alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "48080146"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  A remoção de um alerta também remove qualquer notificação associada a ele.  
   
 ###  <a name="Security"></a> Segurança  
@@ -66,7 +66,7 @@ ms.locfileid: "48080146"
   
 5.  Na caixa de diálogo **Excluir Objeto** , confirme se o alerta correto está selecionado e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-delete-an-alert"></a>Para excluir um alerta  
   

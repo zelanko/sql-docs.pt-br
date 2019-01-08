@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], levels
@@ -15,12 +14,12 @@ ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11eed64a7acefb0202553c4e3e99d18333b47910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff61c601be83ac27c4febb7f31598bdb8fce037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810268"
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>Especificar o nível de rastreamento e resolução de conflitos para artigos de mesclagem
   Este tópico descreve como especificar o nível de rastreamento e resolução de conflitos para artigos de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "48228416"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Se você alterar o nível de controle depois de inicializadas as assinaturas, essas assinaturas deverão ser reinicializadas. Para obter mais informações sobre os efeitos das alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
@@ -56,11 +55,11 @@ ms.locfileid: "48228416"
   
 2.  Clique em **Propriedades de Artigos**e então clique em **Definir Propriedades do Artigo Realçado da Tabela** ou **Definir Propriedades de Todos os Artigos da Tabela**.  
   
-3.  Na guia **Propriedades** da caixa de diálogo **Propriedade do Artigo \<Artigo>**, selecione um dos seguintes valores para a propriedade **Nível de rastreamento**: **Rastreamento em nível de linha** ou **Rastreamento em nível de coluna**.  
+3.  Sobre o **propriedades** guia da **propriedades do artigo \<artigo >** caixa de diálogo, selecione um dos seguintes valores para o **nível de rastreamento** propriedade: **Rastreamento de nível de linha** ou **nível de coluna**.  
   
 4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, clique em **OK** para salvar e fechar a caixa de diálogo.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-specify-conflict-tracking-options-for-a-new-merge-article"></a>Para especificar as opções de controle de conflito para um novo artigo de mesclagem  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48228416"
      Especifique um valor de **1** para ambos **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecção e resolução de conflito de replicação de mesclagem avançada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Detectar e resolver conflitos de replicação de mesclagem](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  

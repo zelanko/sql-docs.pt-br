@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906396"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984097"
 ---
 # <a name="dynamic-management-views-dmvs"></a>DMVs (exibições de gerenciamento dinâmico) 
 
@@ -93,17 +93,17 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-Se não houver uma DMV disponível para um determinado conjunto de linhas, o servidor retornará o erro: `The <schemarowset> request type was not recognized by the server.` todos os outros erros indicam problemas com a sintaxe.  
+Se não houver uma DMV disponível para um determinado conjunto de linhas, o servidor retornará o erro: `The <schemarowset> request type was not recognized by the server.` Todos os outros erros indicam problemas com a sintaxe.  
 
 Conjuntos de linhas de esquema são descritos nos dois protocolos do SQL Server Analysis Services:   
 
-[[MS-SSAS-T]: protocolo Tabular do SQL Server Analysis Services](https://msdn.microsoft.com/library/mt719260) -descreve os conjuntos de linhas de esquema para modelos tabulares nos níveis de compatibilidade 1200 e superior.
+[[MS-SSAS-T]: Protocolo Tabular do SQL Server Analysis Services](https://msdn.microsoft.com/library/mt719260) -descreve os conjuntos de linhas de esquema para modelos tabulares nos níveis de compatibilidade 1200 e superior.
 
-[[MS-SSAS]: protocolo do SQL Server Analysis Services](https://msdn.microsoft.com/library/ee320606) -descreve os conjuntos de linhas de esquema para modelos multidimensionais e tabulares nos níveis de compatibilidade 1100 e 1103.
+[[MS-SSAS]: Protocolo do SQL Server Analysis Services](https://msdn.microsoft.com/library/ee320606) -descreve os conjuntos de linhas de esquema para modelos multidimensionais e tabulares nos níveis de compatibilidade 1100 e 1103.
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Conjuntos de linhas descritos em [MS-SSAS-T]: protocolo Tabular do SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Conjuntos de linhas descritos em [MS-SSAS-T]: Protocolo Tabular do SQL Server Analysis Services
 
-|Conjunto de linhas  |Description  |
+|Conjunto de linhas  |Descrição  |
 |---------|---------|
 |[TMSCHEMA_ANNOTATIONS](https://msdn.microsoft.com/library/mt704370)|Fornece informações sobre os objetos de anotação no modelo.|
 |[TMSCHEMA_ATTRIBUTE_HIERARCHIES](https://msdn.microsoft.com/library/mt704362)     |   Fornece informações sobre os objetos AttributeHierarchy para uma coluna.      |
@@ -134,9 +134,9 @@ Conjuntos de linhas de esquema são descritos nos dois protocolos do SQL Server 
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Fornece informações sobre objetos de tabela no modelo.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Fornece informações sobre os objetos de variação em cada coluna.|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Conjuntos de linhas descritos nos [MS-SSAS]: protocolo do SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Conjuntos de linhas descritos nos [MS-SSAS]: Protocolo do SQL Server Analysis Services
 
-|Conjunto de linhas|Description|  
+|Conjunto de linhas|Descrição|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS](https://msdn.microsoft.com/library/ee302115)|Descreve os catálogos que são acessíveis no servidor.|  
 |[DBSCHEMA_COLUMNS](https://msdn.microsoft.com/library/ee301789)|Retorna uma linha para cada medida, cada atributo de dimensão de cubo e cada coluna do conjunto de linhas de esquema, exposto como uma coluna.|  
@@ -172,7 +172,7 @@ Conjuntos de linhas de esquema são descritos nos dois protocolos do SQL Server 
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Retorna informações sobre segmentos de coluna usado para armazenar dados para tabelas na memória.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Contém informações sobre as colunas usadas para representar as colunas de uma tabela na memória.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Retorna estatísticas sobre tabelas na memória disponíveis para o servidor.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Contém linhas de esquema DISCOVER_TRACE_COLUMNS.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Contém linhas de esquema DISCOVER_TRACE_EVENT_CATEGORIES.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Contém o conjunto de linhas de esquema DISCOVER_TRACES.|  

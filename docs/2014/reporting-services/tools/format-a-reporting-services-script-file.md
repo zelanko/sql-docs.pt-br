@@ -14,12 +14,12 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7e6cf79410e521490a7a2deadd02f5d1181b51fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd33fa4ddfe9f90d7041cf5f6d5b0a47da757a59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063146"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350765"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatar um arquivo de script do Reporting Services
   Um script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um arquivo de código [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, escrito em um proxy criado em WSDL, que define a API SOAP do Reporting Services. Um arquivo de script é armazenado como arquivo de texto Unicode ou UTF-8 com extensão .rss.  
@@ -47,14 +47,14 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  As credenciais de usuário são administradas pelo ambiente de script e passadas pelos argumentos de prompt de comando pelo uso do RS.exe. Embora seja possível usar a variável *rs* para definir a autenticação do serviço Web, é recomendável que você utilize o ambiente de script. Não é necessário autenticar o serviço Web no próprio arquivo de script. Para obter mais informações sobre autenticação do ambiente de script, consulte [RS.exe utilitário &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
+>  As credenciais de usuário são administradas pelo ambiente de script e passadas pelos argumentos de prompt de comando pelo uso do RS.exe. Embora seja possível usar a variável *rs* para definir a autenticação do serviço Web, é recomendável que você utilize o ambiente de script. Não é necessário autenticar o serviço Web no próprio arquivo de script. Para obter mais informações sobre a autenticação do ambiente de script, consulte [Utilitário RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
- Não declare namespaces dentro do arquivo de script. O ambiente de geração de scripts disponibiliza diversos namespaces úteis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para você: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**e **System.IO**.  
+ Não declare namespaces dentro do arquivo de script. O ambiente de scripts torna diversos útil [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces disponíveis para você: **Web. Services**, **System.Web.Services.Protocols**, **System. XML**, e **System.IO**.  
   
- Para obter exemplos de script, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obter exemplos de script, consulte [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviço Web do Servidor de Relatório](../report-server-web-service/report-server-web-service.md)   
+ [serviço Web Servidor de Relatórios](../report-server-web-service/report-server-web-service.md)   
  [Referência técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [Utilitário RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   

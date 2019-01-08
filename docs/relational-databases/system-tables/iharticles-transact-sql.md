@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHarticles
@@ -19,12 +18,12 @@ ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ae16b2b0a7f38f9d70e77acf7dfb045d50b1042
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802608"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47738484"
   
 ## <a name="definition"></a>Definição  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|A coluna de identidade que fornece um número de ID exclusivo para o artigo.|  
 |**name**|**sysname**|O nome associado ao artigo, exclusivo dentro da publicação.|  
@@ -49,13 +48,13 @@ ms.locfileid: "47738484"
 |**status**|**tinyint**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **0** = sem propriedades adicionais.<br /><br /> **1** = ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções com parâmetros.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor 17 nessa coluna. Um valor 0 significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
 |**type**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo com base em log.|  
 |**upd_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar atualizações com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**schema_option**|**binary(8)**|O bitmap da opção schema generation para o artigo determinado, que pode ser o resultado OR lógico bit a bit de um ou mais desses valores:<br /><br /> **0x00** = desabilitar geração de script pelo Snapshot Agent e usar o CreationScript fornecido.<br /><br /> **0x01** = gerar a criação do objeto (CREATE TABLE, CREATE PROCEDURE e assim por diante).<br /><br /> **0x10** = gerar um índice clusterizado correspondente.<br /><br /> **0x40** = gerar os índices não clusterizados correspondentes.<br /><br /> **0x80** = incluir integridade referencial declarada nas chaves primárias.<br /><br /> **0x1000** = replica agrupamento em nível de coluna. Observação: Essa opção é definida por padrão para Publicadores Oracle para habilitar comparações diferenciam maiusculas de minúsculas.<br /><br /> **0x4000** = replicar chaves exclusivas definidas em um artigo de tabela.<br /><br /> **0x8000** = replicar uma chave primária e chaves exclusivas em uma tabela do artigo como restrições usando instruções ALTER TABLE.|  
+|**schema_option**|**binary(8)**|O bitmap da opção schema generation para o artigo determinado, que pode ser o resultado OR lógico bit a bit de um ou mais desses valores:<br /><br /> **0x00** = desabilitar geração de script pelo Snapshot Agent e usar o CreationScript fornecido.<br /><br /> **0x01** = gerar a criação do objeto (CREATE TABLE, CREATE PROCEDURE e assim por diante).<br /><br /> **0x10** = gerar um índice clusterizado correspondente.<br /><br /> **0x40** = gerar os índices não clusterizados correspondentes.<br /><br /> **0x80** = incluir integridade referencial declarada nas chaves primárias.<br /><br /> **0x1000** = replica agrupamento em nível de coluna. Observação: Essa opção é definida por padrão para Publicadores Oracle para habilitar comparações entre maiúsculas e minúsculas.<br /><br /> **0x4000** = replicar chaves exclusivas definidas em um artigo de tabela.<br /><br /> **0x8000** = replicar uma chave primária e chaves exclusivas em uma tabela do artigo como restrições usando instruções ALTER TABLE.|  
 |**dest_owner**|**sysname**|O proprietário da tabela no banco de dados de destino.|  
 |**dest_table**|**sysname**|O nome da tabela de destino.|  
 |**tablespace_name**|**nvarchar(255)**|Identifica o espaço de tabela usado pela tabela de log para o artigo.|  
 |**objid**|**int**|Esta coluna não é usada e só é incluída para tornar a [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) modo de exibição da **IHarticles** tabela compatível com o [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) exibição usada para SQL Server (de artigos [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Esta coluna não é usada e só é incluída para tornar a [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) modo de exibição da **IHarticles** tabela compatível com o [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) exibição usada para SQL Server (de artigos [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**Descrição**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
+|**description**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
 |**publisher_status**|**int**|É usado para indicar se o modo de exibição que define o artigo publicado foi definido chamando [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) foi chamado.<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) não foi chamado.|  
 |**article_view_owner**|**nvarchar(255)**|O proprietário do objeto de sincronização no Publicador usado pelo Log Reader Agent.|  
 |**article_view**|**nvarchar(255)**|O objeto de sincronização no Publicador usado pelo Log Reader Agent.|  

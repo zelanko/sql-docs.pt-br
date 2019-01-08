@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], external
@@ -15,12 +15,12 @@ ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ae5d3d75a5d7b7acdb5d480ded584a119b54ec5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099786"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771728"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Adicionar uma ferramenta externa ao menu Ferramentas (SQL Server Management Studio)
   Você pode iniciar qualquer aplicativo [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] por meio do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Aplicativos externos podem ser adicionados e executados do menu **Ferramentas** .  

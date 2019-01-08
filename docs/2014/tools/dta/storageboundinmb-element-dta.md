@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5e6cf3c0be2ec3ab8587bd086c99b32e718cd78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069442"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801848"
 ---
 # <a name="storageboundinmb-element-dta"></a>Elemento StorageBoundInMB (DTA)
   Especifica o espaço de máximo em megabytes que podem ser consumidos pela recomendação de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados (índice e conjunto de particionamento).  
@@ -37,7 +36,7 @@ ms.locfileid: "48069442"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`unsignedInt`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
@@ -59,11 +58,11 @@ ms.locfileid: "48069442"
   
  O tamanho de armazenamento padrão não inclui índices não clusterizados e exibições indexadas.  
   
- Se o valor especificado para o `StorageBoundInMB` elemento excede o espaço de disco atual, o orientador de otimização do mecanismo de banco de dados retorna um erro, mas continua o ajuste. Depois que o ajuste estiver completo, você pode acrescentar espaço de disco caso decida implementar a recomendação.  
+ Se o valor especificado para o elemento `StorageBoundInMB` exceder o espaço de disco atual, o Orientador de Otimização do Mecanismo de Banco de Dados retorna um erro, mas continua o ajuste. Depois que o ajuste estiver completo, você pode acrescentar espaço de disco caso decida implementar a recomendação.  
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O seguinte exemplo de código mostra como definir um limite de 1500 megabytes como o espaço de disco de máximo que uma recomendação de ajuste pode consumir:  
   
 ## <a name="code"></a>Código  

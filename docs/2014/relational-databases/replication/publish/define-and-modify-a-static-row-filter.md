@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying filters, static row
@@ -15,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 73c0e6d0ab47960aae61955cc4c432f2a883ae42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771548"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir e modificar um filtro de linha estático
   Este tópico descreve como definir e modificar um filtro de linhas estático no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "48184926"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Se você adicionar, modificar ou excluir um filtro de linhas estático após a inicialização de assinaturas na publicação, será preciso gerar um novo instantâneo e reinicializar todas as assinaturas depois de fazer a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48184926"
   
 1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, selecione um filtro no painel **Tabelas Filtradas** e clique em **Excluir**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Ao criar artigos de tabela, você pode definir uma cláusula WHERE para filtrar linhas para fora de um artigo. Você também pode alterar um filtro de linha depois que ele estiver definido. Os filtros de linhas estáticos podem ser criados e modificados programaticamente usando os procedimentos armazenados de replicação.  
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para definir um filtro de linhas estático para um instantâneo ou publicação transacional  
@@ -112,7 +111,7 @@ ms.locfileid: "48184926"
   
 2.  No Publicador no banco de dados de publicação, execute o [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Especifique o nome do artigo para **@article**, o nome da publicação para **@publication**, um nome para o filtro para **@filter_name**, e a cláusula de filtragem para **@filter_clause** (não incluindo `WHERE`).  
   
-3.  Se um filtro de coluna ainda precisa ser definido, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Caso contrário, execute [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Especifique o nome da publicação para **@publication**, o nome do artigo filtrado para **@article**, e a cláusula de filtragem especificada na etapa 2 para **@filter_clause**. Isto cria os objetos de sincronização para o artigo filtrado.  
+3.  Se um filtro de coluna ainda precisa ser definido, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Caso contrário, execute [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Especifique o nome da publicação para **@publication**, o nome do artigo filtrado para **@article**, e a cláusula de filtragem especificada na etapa 2 para **@filter_clause**. Isto cria os objetos de sincronização para o artigo filtrado.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para modificar um filtro de linhas estático para um instantâneo ou publicação transacional  
   
@@ -151,7 +150,7 @@ ms.locfileid: "48184926"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- Neste exemplo de replicação de mesclagem, os artigos são filtrados horizontalmente para retornar apenas linhas que pertencem ao vendedor especificado. Um filtro de junção também é usado. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+ Neste exemplo de replicação de mesclagem, os artigos são filtrados horizontalmente para retornar apenas linhas que pertencem ao vendedor especificado. Um filtro de junção também é usado. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   

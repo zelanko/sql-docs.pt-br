@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - ASP applications [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbd46fb0ae16b3332f787ce99fc1f653b4ee0e8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a68a6f66af2f74544f800d7c3786caf4a577d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165877"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806148"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Usando um diagrama de atualização em um aplicativo ASP de exemplo (SQLXML 4.0)
   Este aplicativo ASP (Active Server Pages) permite atualizar informações do cliente na tabela Person.Contact do banco de dados de exemplo AdventureWorks no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O aplicativo faz o seguinte:  

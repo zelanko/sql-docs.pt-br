@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b15ac5c21a8fb9b1efafd1124e2338b58d0324e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111387"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775758"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
   A classe de evento **Auto Stats** indica que ocorreu uma atualização automática de estatísticas de índice e coluna.  
   
 ## <a name="auto-stats-event-class-data-columns"></a>Colunas de dados da classe de evento Auto Stats  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -36,9 +35,9 @@ ms.locfileid: "48111387"
 |**Duration**|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |**EndTime**|**datetime**|Horário em que o evento foi encerrado.|15|Sim|  
 |**Erro**|**int**|Número de erro de um determinado evento. Geralmente é o número do erro armazenado na exibição de catálogo **sys.messages** .|31|Sim|  
-|**EventClass**|**int**|Tipo de evento = 58.|27|não|  
-|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|não|  
-|**EventSubClass**|**int**|Tipo de subclasse de eventos:<br /><br /> 1: estatísticas criadas/atualizadas de forma síncrona; **TextData** coluna indica as estatísticas e se elas foram criadas ou atualizadas.<br /><br /> 2: atualização de estatísticas assíncronas; trabalho enfileirado.<br /><br /> 3: atualização de estatísticas assíncronas; trabalho iniciando.<br /><br /> 4: atualização de estatísticas assíncronas; trabalho concluído.|21|Sim|  
+|**EventClass**|**int**|Tipo de evento = 58.|27|Não|  
+|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
+|**EventSubClass**|**int**|Tipo de subclasse de eventos:<br /><br /> 1: Estatísticas criadas/atualizadas de forma síncrona; **TextData** coluna indica as estatísticas e se elas foram criadas ou atualizadas.<br /><br /> 2: Atualização de estatísticas assíncronas; trabalho em fila.<br /><br /> 3: Atualização de estatísticas assíncronas; iniciando trabalho.<br /><br /> 4: Atualização de estatísticas assíncronas; trabalho concluído.|21|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IndexID**|**int**|ID da entrada de índice/estatísticas do objeto afetado pelo evento. Para determinar a ID de índice de um objeto, utilize a coluna **index_id** da exibição do catálogo **sys.indexes** .|24|Sim|  
@@ -51,12 +50,12 @@ ms.locfileid: "48111387"
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
 |**RequestID**|**int**|O ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |**Êxito**|**int**|0 = erro.<br /><br /> 1 = êxito.<br /><br /> 2 = ignorado devido a estrangulamento do servidor (MSDE).|23|Sim|  
-|**TextData**|**ntext**|O conteúdo dessa coluna depende se as estatísticas são atualizadas de forma síncrona (**EventSubClass** 1) ou assíncrona (**EventSubClass** 2, 3 ou 4):<br /><br /> 1: lista as estatísticas que foram atualizadas/criadas<br /><br /> 2, 3 ou 4: NULL; a coluna **IndexID** é populada com a ID de índice/estatísticas das estatísticas atualizadas.|1|Sim|  
+|**TextData**|**ntext**|O conteúdo dessa coluna depende se as estatísticas são atualizadas de forma síncrona (**EventSubClass** 1) ou assíncrona (**EventSubClass** 2, 3 ou 4):<br /><br /> 1: Lista as estatísticas que foram atualizadas/criadas<br /><br /> 2, 3 ou 4: NULL; **IndexID** coluna é populada com a ID de índice/estatísticas para as estatísticas atualizadas.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**Tipo**|**int**|Tipo de trabalho.|57|Sim|  
   

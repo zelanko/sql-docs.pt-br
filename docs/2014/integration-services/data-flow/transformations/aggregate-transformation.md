@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf39c69a6211e67d68a9206dad2687caad180
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205526"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750218"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
   A transformação Agregação aplica funções de agregação, como Average, a valores de coluna e copia os resultados na saída da transformação. Além de funções de agregação, a transformação fornece a cláusula GROUP BY que você pode utilizar para especificar grupos a serem agregados.  
@@ -31,12 +30,12 @@ ms.locfileid: "48205526"
 ## <a name="operations"></a>Operations  
  A transformação Agregação oferece suporte às seguintes operações.  
   
-|Operação|Description|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Agrupar por|Divide conjuntos de dados em grupos. As colunas contendo qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, veja [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
-|SUM|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, veja [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
-|Médio|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, veja [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
-|Count|Retorna o número de itens de um grupo. Para obter mais informações, veja [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
+|Sum|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, veja [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
+|Média|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, veja [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
+|Contagem|Retorna o número de itens de um grupo. Para obter mais informações, veja [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Distinção de Contagem|Retorna o número de valores não nulos exclusivos de um grupo.|  
 |Mínimo|Retorna o valor mínimo de um grupo. Para obter mais informações, veja [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). Ao contrário da função Transact-SQL MIN, essa operação pode ser usada apenas com tipos de dados de data, hora e numéricos.|  
 |Máximo|Retorna o valor máximo em um grupo. Para obter mais informações, veja [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). Ao contrário da função Transact-SQL MIN, essa operação pode ser usada apenas com tipos de dados de data, hora e numéricos.|  
@@ -101,7 +100,7 @@ ms.locfileid: "48205526"
   
  A transformação Agregação é assíncrona. Isto significa que ela não consome e publica dados linha por linha. Em vez de consumir o conjunto de linhas inteiro, ela executa seus agrupamentos e agregações e, depois, publica os resultados.  
   
- Essa transformação não transpassa nenhuma coluna, mas cria colunas novas no fluxo de dados para os dados que publica. Somente as colunas de entrada às quais se aplicam funções de agregação ou as que a transformação usa para agrupamento são copiadas para a saída da transformação. Por exemplo, uma entrada da transformação Agregação pode ter três colunas: **CountryRegion**, **City**e **Population**. A transformação faz o agrupamento pela coluna **CountryRegion** e aplica a função Sum à coluna **Population** . Por isso, a saída não inclui a coluna **City** .  
+ Essa transformação não transpassa nenhuma coluna, mas cria colunas novas no fluxo de dados para os dados que publica. Somente as colunas de entrada às quais se aplicam funções de agregação ou as que a transformação usa para agrupamento são copiadas para a saída da transformação. Por exemplo, uma entrada da transformação agregação pode ter três colunas: **CountryRegion**, **City**, e **população**. A transformação faz o agrupamento pela coluna **CountryRegion** e aplica a função Sum à coluna **Population** . Por isso, a saída não inclui a coluna **City** .  
   
  Você também pode adicionar várias saídas à transformação Agregação e direcionar cada agregação a uma saída diferente. Por exemplo, se a transformação Agregação aplicar as funções Sum e Average, cada agregação poderá ser direcionada para uma saída diferente.  
   
@@ -113,9 +112,9 @@ ms.locfileid: "48205526"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Agregação** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação de agregação &#40;guia de agregações&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor de Transformação Agregação &#40;guia Agregações&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Editor de transformação de agregação &#40;guia Avançado&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Agregação &#40;guia Avançado&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

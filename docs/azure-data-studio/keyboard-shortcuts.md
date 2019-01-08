@@ -1,7 +1,8 @@
 ---
-title: Criar e personalizar atalhos de teclado no Studio de dados do Azure | Microsoft Docs
-description: Saiba como criar e personalizar atalhos de teclado no estúdio de dados do Azure.
-ms.custom: tools|sos
+title: Criar e personalizar atalhos de teclado
+titleSuffix: Azure Data Studio
+description: Saiba como criar e personalizar atalhos de teclado no estúdio de dados do Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3452e2e19d237f8ba5135c723e9971c0932ba61c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356467"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030250"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -28,7 +29,7 @@ Porque [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua funcionalid
 
 Para exibir todos os atalhos de teclado definidas no momento:
 
-Abra o **atalhos de teclado** editor do **arquivo** menu: **arquivo** > **preferências**  >   **Atalhos de teclado** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **preferências** > **atalhos de teclado** no Mac).
+Abra o **atalhos de teclado** editor das **arquivo** menu: **Arquivo** > **preferências** > **atalhos de teclado** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Preferências** > **atalhos de teclado** no Mac).
 
 Além de exibir associações de teclas atuais, o **atalhos de teclado** editor lista os comandos disponíveis que não têm atalhos de teclado definidos. O **atalhos de teclado** editor permite que você facilmente alterar, remover, redefinir e definir novas associações de teclas.  
 
@@ -41,7 +42,7 @@ Para alterar a associação de teclas para um atalho de teclado existente:
    > [!TIP]
    > Pesquisar por chave, pelo comando, por fonte, etc. para retornar todos os atalhos de teclado relevantes.
 
-1. Clique com botão direito na entrada desejada e selecione **Keybinding de alteração**
+1. Clique com botão direito na entrada desejada e selecione **associação de chave de alteração**
 
    ![Editar o atalho de teclado](media/keyboard-shortcuts/change-keybinding.png)
 
@@ -53,7 +54,7 @@ Para alterar a associação de teclas para um atalho de teclado existente:
 
 Para criar novos atalhos de teclado:
 
-1. Clique com botão direito um comando que não tem qualquer associação de teclas e selecione **Keybinding adicionar**.
+1. Clique com botão direito um comando que não tem nenhuma chave de associação e selecione **associação de Adicionar chave**.
 
    ![Criar atalho de teclado](media/keyboard-shortcuts/add-keybinding.png)
 

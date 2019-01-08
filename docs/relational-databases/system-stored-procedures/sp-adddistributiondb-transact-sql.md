@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765798"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *banco de dados '*  
  É o nome do banco de dados de distribuição a ser criado. *banco de dados* está **sysname**, sem padrão. Se o banco de dados especificado já existir e não estiver marcado como banco de dados de distribuição, os objetos necessários para habilitar a distribuição serão instalados e o banco de dados será marcado como banco de dados de distribuição. Se o banco de dados especificado já estiver habilitado como um banco de dados de distribuição, um erro será retornado.  
   
- [  **@data_folder=**] **' * * * data_folder'*  
+ [  **@data_folder=**] **'**_data_folder'_  
  É o nome do diretório usado para armazenar o arquivo de dados do banco de dados de distribuição. *data_folder* está **nvarchar (255)**, com um padrão NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado, por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [  **@data_file=**] **'***data_file***'**  
+ [  **@data_file=**] **'**_data_file_**'**  
  É o nome do arquivo de banco de dados. *data_file* está **nvarchar (255)**, com um padrão de **banco de dados**. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
  [  **@data_file_size=**] *data_file_size*  
  É o tamanho de arquivo de dados inicial em megabytes (MB). *data_file_size eu*s **int**, com um padrão de 5 MB.  
   
- [  **@log_folder=**] **'***log_folder***'**  
+ [  **@log_folder=**] **'**_log_folder_**'**  
  É o nome do diretório para o arquivo de log de banco de dados. *log_folder* está **nvarchar (255)**, com um padrão NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado (por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
- [  **@log_file=**] **'***Arquivo_de_log***'**  
+ [  **@log_file=**] **'**_Arquivo_de_log_**'**  
  É o nome do arquivo de log. *Arquivo_de_log* está **nvarchar (255)**, com um padrão NULL. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -88,16 +87,16 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *security_mode*  
  É o modo de segurança a ser usado ao conectar-se a um Distribuidor. *security_mode* está **int**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação; **1** Especifica autenticação integrada do Windows.  
   
- [  **@login=**] **'***logon***'**  
+ [  **@login=**] **'**_logon_**'**  
  É o nome de logon usado ao conectar ao Distribuidor para criar o banco de dados de distribuição. Isso é necessário se *security_mode* é definido como **0**. *login* é **sysname**, com um padrão de NULL.  
   
- [  **@password=**] **'***senha***'**  
+ [  **@password=**] **'**_senha_**'**  
  É a senha usada ao conectar ao Distribuidor. Isso é necessário se *security_mode* é definido como **0**. *senha* está **sysname**, com um padrão NULL.  
   
  [  **@createmode=**] *createmode*  
  *createmode* está **int**, com um padrão de 1, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (padrão)|Criar banco de dados ou usar existente de banco de dados e, em seguida, aplique **Instdist** arquivo para criar objetos de replicação no banco de dados de distribuição.|  

@@ -16,12 +16,12 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812094"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206201"
 ---
 # <a name="interface-conformance-levels"></a>Níveis de conformidade de interface
 A finalidade de redistribuição é informar ao aplicativo de quais recursos estão disponíveis para ele no driver. Um esquema de redistribuição baseado em funções não suficientemente atingir esse objetivo. Em ODBC 3. *x*, drivers são classificados com base nos recursos que eles possuem. O recurso de suporte pode incluir suporte a função; Ele também pode incluir suporte a um campo de descritor, um atributo de instrução, um valor de "Y" para um tipo de informação retornado por **SQLGetInfo**e assim por diante.  
@@ -36,7 +36,7 @@ A finalidade de redistribuição é informar ao aplicativo de quais recursos est
   
  Há três níveis de conformidade de interface ODBC: Core, nível 1 e nível 2.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Esses níveis de conformidade têm requisitos diferentes de níveis de conformidade com a API ODBC o mesmo nome no ODBC 2 *. x*. Em particular, a todos os recursos implícito de ODBC 2 *. x* conformidade com a API nível 1 agora são parte do nível de conformidade de interface de núcleo. Como resultado, muitos drivers ODBC podem relatar a conformidade de interface de nível de núcleo.  
   
  Esta seção contém os tópicos a seguir.  

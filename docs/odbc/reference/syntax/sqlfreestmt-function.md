@@ -20,16 +20,16 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d48d9742f9b3fafe77f441226961218f47c6005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719704"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213435"
 ---
 # <a name="sqlfreestmt-function"></a>Função SQLFreeStmt
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLFreeStmt** interrompe o processamento associado a uma instrução específica, fechará quaisquer cursores abertos associados à instrução, descartes resultados pendentes ou, opcionalmente, libera todos os recursos associados com o identificador de instrução.  
@@ -50,13 +50,13 @@ SQLRETURN SQLFreeStmt(
  *Opção*  
  [Entrada] Uma das seguintes opções:  
   
- SQL _ fechar: Fecha o cursor associado *StatementHandle* (se estiver definido) e descarta todos os resultados pendentes. O aplicativo pode reabrir esse cursor posteriormente, executando uma **selecionar** instrução novamente com os valores de parâmetro iguais ou diferentes. Se nenhum cursor está aberto, essa opção não terá efeito para o aplicativo. **SQLCloseCursor** também pode ser chamado para fechar um cursor. Para obter mais informações, consulte [fechando o Cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ SQL _ FECHAR: Fecha o cursor associado *StatementHandle* (se estiver definido) e descarta todos os resultados pendentes. O aplicativo pode reabrir esse cursor posteriormente, executando uma **selecionar** instrução novamente com os valores de parâmetro iguais ou diferentes. Se nenhum cursor está aberto, essa opção não terá efeito para o aplicativo. **SQLCloseCursor** também pode ser chamado para fechar um cursor. Para obter mais informações, consulte [fechando o Cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- SQL_DROP: Essa opção é preterida. Uma chamada para **SQLFreeStmt** com um *opção* de SQL_DROP é mapeado no Gerenciador de Driver para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ SQL_DROP: Essa opção foi preterida. Uma chamada para **SQLFreeStmt** com um *opção* de SQL_DROP é mapeado no Gerenciador de Driver para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
- SQL_UNBIND: Define o campo SQL_DESC_COUNT da descartar a 0, liberando todos os buffers de coluna associados por **SQLBindCol** para o determinado *StatementHandle*. Isso não desassociar a coluna de indicador; Para fazer isso, o campo SQL_DESC_DATA_PTR de descartar o para a coluna de indicador é definido como NULL. Observe que, se essa operação é executada em um descritor alocado explicitamente que é compartilhado por mais de uma instrução, a operação afetará as associações de todas as instruções que compartilham o descritor. Para obter mais informações, consulte [visão geral de recuperando resultados (básico)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ SQL_UNBIND: Define o campo SQL_DESC_COUNT da descartar a 0, liberando todos os buffers de coluna associado pelo **SQLBindCol** para o determinado *StatementHandle*. Isso não desassociar a coluna de indicador; Para fazer isso, o campo SQL_DESC_DATA_PTR de descartar o para a coluna de indicador é definido como NULL. Observe que, se essa operação é executada em um descritor alocado explicitamente que é compartilhado por mais de uma instrução, a operação afetará as associações de todas as instruções que compartilham o descritor. Para obter mais informações, consulte [visão geral de recuperando resultados (básico)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
- SQL_RESET_PARAMS: Define o campo SQL_DESC_COUNT APD como 0, liberando todos os buffers de parâmetro definidos por **SQLBindParameter** para o determinado *StatementHandle*. Se essa operação é executada em um descritor alocado explicitamente que é compartilhado por mais de uma instrução, essa operação afetará as associações de todas as instruções que compartilham o descritor. Para obter mais informações, consulte [parâmetros de associação](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
+ SQL_RESET_PARAMS: Define o campo SQL_DESC_COUNT APD como 0, liberando todos os buffers de parâmetro definidos pelo **SQLBindParameter** para o determinado *StatementHandle*. Se essa operação é executada em um descritor alocado explicitamente que é compartilhado por mais de uma instrução, essa operação afetará as associações de todas as instruções que compartilham o descritor. Para obter mais informações, consulte [parâmetros de associação](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -64,7 +64,7 @@ SQLRETURN SQLFreeStmt(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLFreeStmt** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLFreeStmt** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  

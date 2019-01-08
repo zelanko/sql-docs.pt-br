@@ -15,15 +15,15 @@ ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f3828129c2a0ed4183bbefce8daf68cee1d95f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bff3de6a9b9ec57f1ea96d6db17b9b30c5a22996
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668294"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515317"
 ---
 # <a name="level-2-interface-conformance"></a>Conformidade de interface nível 2
-O nível de conformidade de interface de nível 2 inclui a funcionalidade de nível de conformidade – nível 1 interface além dos seguintes recursos:  
+O nível de conformidade de interface de nível 2 inclui a funcionalidade de nível de conformidade de interface de nível 1 além dos seguintes recursos:  
   
 |||  
 |-|-|  

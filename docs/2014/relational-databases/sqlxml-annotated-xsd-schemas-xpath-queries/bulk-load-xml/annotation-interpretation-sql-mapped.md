@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapped annotation
@@ -19,15 +17,15 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d6d22d2bd37d6f826878a5abd0bc235c3de83a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109096"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807268"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML Bulk Load processa as `sql:mapped` anotação no esquema XSD conforme o esperado — ou seja, se o esquema de mapeamento especifica `sql:mapped="false"` para qualquer elemento ou atributo, o XML Bulk Load não tentará armazenar os dados associados na coluna correspondente.  
+  XML Bulk Load processa as `sql:mapped` anotação no esquema XSD como esperado que é, se o esquema de mapeamento especifica `sql:mapped="false"` para qualquer elemento ou atributo, o XML Bulk Load não tentará armazenar os dados associados na coluna correspondente.  
   
  O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não estão descritos no esquema ou porque eles são anotados no esquema XSD com `sql:mapped="false"`). Todo os dados não mapeados entram na coluna de estouro, se essa coluna for especificada usando `sql:overflow-field`.  
   
