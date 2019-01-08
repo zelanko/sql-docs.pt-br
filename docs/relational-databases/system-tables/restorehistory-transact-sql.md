@@ -18,22 +18,22 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5b6861d1dcd4a9e516fbbf9d1ef22af7ea881d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698104"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617556"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada operação de restauração. Essa tabela é armazenada na **msdb** banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|Número de identificação exclusivo que identifica cada operação de restauração. Identidade, chave primária.|  
-|**restore_date**|**datetime**|Data e hora da conclusão da operação de restauração. Pode ser NULL.|  
+|**restore_date**|**datetime**|Data e hora de início da operação de restauração. Pode ser NULL.|  
 |**destination_database_name**|**nvarchar(128)**|Nome do banco de dados de destino para a operação de restauração. Pode ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nome do usuário que realizou a operação de restauração. Pode ser NULL.|  
 |**backup_set_id**|**int**|Número de identificação exclusivo que identifica o backup que está sendo restaurado. As referências **backupset (backup_set_id)**.|  

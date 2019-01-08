@@ -20,16 +20,16 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bd012fc4f3d1e55c27a585600bff7f85459d469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205185"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Função SQLInstallDriverManager
 **Conformidade com**  
- Apresentado de versão: ODBC 1.0: preteridos no Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e sistemas operacionais posteriores  
+ Versão introduzida: ODBC 1.0: Preterido no Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e sistemas operacionais posteriores  
   
  **Resumo**  
  **SQLInstallDriverManager** retorna o caminho do diretório de destino para a instalação dos componentes principais ODBC. O programa de chamada, na verdade, deve copiar arquivos do Gerenciador de Driver para o diretório de destino.  
@@ -60,7 +60,7 @@ BOOL SQLInstallDriverManager(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLInstallDriverManager** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O *lpszPath* argumento não era grande o suficiente para conter o caminho de saída. O buffer contém o caminho truncado.<br /><br /> O *cbPathMax* argumento era menor que MAX_PATH.|  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  Se uma versão mais antiga do Gerenciador de Driver já foi instalada pelo programa de instalação do aplicativo, os principais componentes devem ser desinstalados e reinstalados, para que a contagem de utilização de componente principal é válida. **SQLRemoveDriverManager** primeiro deve ser chamado para diminuir a contagem de uso do componente. **SQLInstallDriverManager** , em seguida, deve ser chamado para incrementar a contagem de uso do componente. O programa de instalação do aplicativo deve substituir os arquivos de componente principal antigo com os novos arquivos. As contagens de uso de arquivos permanecerão os mesmos e outros aplicativos que usavam os arquivos de componente de núcleo de versão mais antigos agora usará os arquivos da versão mais recentes.  
   
- Em uma nova instalação de componentes principais, drivers e conversores de ODBC, o programa de instalação do aplicativo deve chamar as funções a seguir na sequência: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (com um *frequentes* de ODBC_INSTALL_DRIVER) e então **SQLInstallTranslatorEx**. Em uma desinstalação dos componentes principais, drivers e conversores, o programa de instalação do aplicativo deve chamar as funções a seguir na sequência: **SQLRemoveTranslator**, **SQLRemoveDriver**e, em seguida, **SQLRemoveDriverManager**. Essas funções devem ser chamadas nessa sequência. Em uma atualização de todos os componentes, todas as funções de desinstalação devem ser chamadas na sequência e, em seguida, todas as funções de instalação devem ser chamadas na sequência.  
+ Em uma nova instalação de componentes principais, drivers e conversores de ODBC, o programa de instalação do aplicativo deve chamar as funções a seguir na sequência: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (com um *frequentes* de ODBC_INSTALL_DRIVER) e, em seguida,  **SQLInstallTranslatorEx**. Em uma desinstalação dos componentes principais, drivers e conversores, o programa de instalação do aplicativo deve chamar as funções a seguir na sequência: **SQLRemoveTranslator**, **SQLRemoveDriver**e então **SQLRemoveDriverManager**. Essas funções devem ser chamadas nessa sequência. Em uma atualização de todos os componentes, todas as funções de desinstalação devem ser chamadas na sequência e, em seguida, todas as funções de instalação devem ser chamadas na sequência.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   

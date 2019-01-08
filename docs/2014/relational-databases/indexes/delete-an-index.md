@@ -16,12 +16,12 @@ ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d04911b52239ff9accc5d69ff1e1ddd21e5d50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526448"
 ---
 # <a name="delete-an-index"></a>Excluir um índice
   Este tópico descreve como excluir (descartar) um índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48093446"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  Índices criados em decorrência de uma restrição PRIMARY KEY ou UNIQUE não podem ser excluídos com esse método. Em vez disso, a restrição deve ser excluída. Para remover a restrição e o índice correspondente, use [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) com a cláusula DROP CONSTRAINT em [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obter mais informações, consulte [Delete Primary Keys](../tables/delete-primary-keys.md).  
   
 ###  <a name="Security"></a> Segurança  
@@ -82,9 +82,9 @@ ms.locfileid: "48093446"
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
+8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-delete-an-index"></a>Para excluir um índice  
   

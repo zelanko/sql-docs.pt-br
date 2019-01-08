@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7920b14f006784569ead9bbbe40e96af9a6e2b91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07c9f020fa3da424fa4524fb634ac33b84c993d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784978"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos
   Use a caixa de diálogo do **Adicionar Gerenciador de Conexões de Arquivos** para definir uma conexão com um grupo de arquivos ou pastas.  
@@ -34,7 +33,7 @@ ms.locfileid: "48161716"
  **Tipo de uso**  
  Especifique os tipos de arquivos a serem usados para o gerenciador de conexões de vários arquivos.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Criar arquivos**|O gerenciador de conexões criará os arquivos.|  
 |**Arquivos existentes**|O gerenciador de conexões utilizará arquivos existentes.|  

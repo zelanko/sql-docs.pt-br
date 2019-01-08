@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7178e1fb1e405dd013387ef97a6a670a0a5c3474
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524919"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lição 3: Criar uma credencial do SQL Server
   Nesta lição, você criará uma credencial para armazenar as informações de segurança usadas para acessar a conta de armazenamento do Windows Azure.  
@@ -26,7 +26,7 @@ ms.locfileid: "48211576"
  Para obter informações gerais sobre credenciais, consulte [credenciais &#40;mecanismo de banco de dados&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  Os requisitos para a criação de uma credencial do SQL Server descritos abaixo são específicos para o [arquivos de dados do SQL Server no Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) recurso. Para obter informações sobre como criar credenciais para processos de backup no armazenamento do Azure, consulte [lição 2: criar uma credencial do SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  Os requisitos para a criação de uma credencial do SQL Server descritos abaixo são específicos para o [arquivos de dados do SQL Server no Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) recurso. Para obter informações sobre como criar credenciais para processos de backup no armazenamento do Azure, consulte [lição 2: Criar uma credencial do SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
  Para criar uma Credencial do SQL Server, execute estas etapas:  
   
@@ -36,14 +36,14 @@ ms.locfileid: "48211576"
   
 3.  Na barra de ferramentas Padrão, clique em Nova Consulta.  
   
-4.  Copie e cole o exemplo a seguir na janela de consulta, e modifique conforme necessário. A instrução a seguir criará uma Credencial do SQL Server para armazenar o Certificado de Acesso Compartilhado do contêiner de armazenamento.  
+4.  Copie e cole o exemplo a seguir na janela de consulta, e modifique conforme necessário. A instrução a seguir criará uma credencial do SQL Server para armazenar o certificado de acesso compartilhado do contêiner de armazenamento.  
   
     ```tsql  
   
     USE master  
-    CREATE CREDENTIAL credentialname – this name should match the container path and it must start with https.   
+    CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
        WITH IDENTITY='SHARED ACCESS SIGNATURE', -- this is a mandatory string and do not change it.   
-       SECRET = 'sharedaccesssignature' –- this is the shared access signature key that you obtained in Lesson 2.   
+       SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in Lesson 2.   
     GO  
   
     ```  
@@ -60,6 +60,6 @@ ms.locfileid: "48211576"
   
  **Próxima lição:**  
   
- [Lição 4: Criar um banco de dados no Armazenamento do Microsoft Azure](lesson-3-database-backup-to-url.md)  
+ [Lição 4: Criar um banco de dados no armazenamento do Windows Azure](lesson-3-database-backup-to-url.md)  
   
   

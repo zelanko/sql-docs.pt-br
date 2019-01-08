@@ -11,23 +11,23 @@ ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28366043f6681ab01cd3d1912d5180ae06914ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157646"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511669"
 ---
 # <a name="error-page-report-manager"></a>Página Erro (Gerenciador de Relatórios)
-  Use a página Erro para exibir detalhes sobre uma condição de erro. Erros com base em servidor ou em sessão são exibidos nesta página. Erros de validação relacionados a uma página específica controlam exibições embutidas próximas ao controle.  
+  Use a página Erro para exibir detalhes sobre uma condição de erro. Erros com base em sessão ou servidor são exibidos nesta página. Erros de validação relacionados a uma página específica controlam exibições embutidas próximas ao controle.  
   
--   Se você estiver navegando para um servidor de relatório local e vir erros semelhantes ao seguinte, consulte: [configurar um servidor de relatório do modo nativo para administração Local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+-   Se você estiver navegando para um servidor de relatório local e vir erros semelhantes ao seguinte, consulte: [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
      Usuário ' domínio\\[nome do usuário]' não tem as permissões necessárias. Verifique se as permissões suficientes foram concedidas e as restrições do UAC (Controle da conta de usuário) do Windows foram resolvidas.  
   
--   Se você vir mensagens de erro semelhantes à seguinte, consulte [configurar um servidor de relatório para administração remota](report-server/configure-a-report-server-for-remote-administration.md).  
+-   Se você vir mensagens de erro semelhantes às seguintes, consulte [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md).  
   
-     Não foi possível encontrar o computador. “O servidor RPC não está disponível. (Exceção de HRESULT: 0x800706BA)”.  
+     Não foi possível encontrar o computador. “O servidor RPC não está disponível. (Exceção de HRESULT: 0x800706BA) ".  
   
 -   É possível configurar propriedades do servidor de relatório em um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para retornar informações adicionais sobre as condições de erro que ocorrem em servidores remotos. Se uma mensagem de erro contiver o texto "Para obter mais informações sobre esse erro, navegue até o servidor de relatório na máquina do servidor local ou habilite erros remotos", consulte [habilitar erros remotos &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md).  
   

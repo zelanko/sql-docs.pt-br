@@ -13,12 +13,12 @@ ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1a3d143148b912379f81a65d73f9f8895f2d10e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 676b5a8d8d05c5cb26a30eaa1b1fe9426ac30ea7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510037"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formatos de dados para importar ou exportar em massa (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode aceitar dados em formato de dados de caractere ou formato de dados binário nativos. Use o formato de caractere ao mover dados entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e outro aplicativo (como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) ou outro servidor de banco de dados (como Oracle ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). O formato nativo só pode ser usado para transferir dados entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,12 +34,12 @@ ms.locfileid: "48140866"
   
 |Operação|Nativo|Unicode nativo|Caractere|Caractere unicode|  
 |---------------|------------|--------------------|---------------|-----------------------|  
-|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que não contém nenhum caractere estendido ou DBCS (conjunto de caracteres de dois bytes). A menos que um arquivo de formato seja usado, essas tabelas devem ser definidas identicamente.|Sim<sup>1</sup>|—|—|—|  
-|Para colunas `sql_variant`, recomenda-se usar o formato de dados nativos que, ao contrário dos formatos unicode e de caractere, preservam o metadados para cada valor `sql_variant`.|Sim|—|—|—|  
-|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém caracteres estendidos ou DBCS.|—|Sim|—|—|  
-|Importação de dados em massa de um arquivo de texto gerado por outro programa.|—|—|Sim|—|  
-|Exportação de dados em massa para um arquivo de texto que será usado em outro programa.|—|—|Sim|—|  
-|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém dados unicode e não contém nenhum caractere estendido ou DBCS.|—|—|—|Sim|  
+|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que não contém nenhum caractere estendido ou DBCS (conjunto de caracteres de dois bytes). A menos que um arquivo de formato seja usado, essas tabelas devem ser definidas identicamente.|Sim<sup>1</sup>|-|-|-|  
+|Para colunas `sql_variant`, recomenda-se usar o formato de dados nativos que, ao contrário dos formatos unicode e de caractere, preservam o metadados para cada valor `sql_variant`.|Sim|-|-|-|  
+|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém caracteres estendidos ou DBCS.|-|Sim|-|-|  
+|Importação de dados em massa de um arquivo de texto gerado por outro programa.|-|-|Sim|-|  
+|Exportação de dados em massa para um arquivo de texto que será usado em outro programa.|-|-|Sim|-|  
+|Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém dados unicode e não contém nenhum caractere estendido ou DBCS.|-|-|-|Sim|  
   
  <sup>1</sup> método mais rápido para a exportação em massa de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao usar **bcp**.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -16,12 +14,12 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec5dab60311e06f09e1d1d5b4a9d1258a32565
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121816"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787178"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship e a Regra de Ordenação de Chaves (SQLXML 4.0)
   Como o XML Bulk Load gera registro à medida que seus nós entram no escopo e envia esses registros para o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à medida que seus nós saem do escopo, os dados do registro devem estar presentes no escopo do nó.  
@@ -117,7 +115,7 @@ ms.locfileid: "48121816"
     set objBL=Nothing  
     ```  
   
-     O resultado é que o XML Bulk Load insere um valor NULL na coluna de chave estrangeira CustomerID da tabela CustOrder. Se você revisar os dados de exemplo do XML para que o  **\<CustomerID >** elemento filho seja exibido antes do  **\<ordem >** elemento filho, você obterá o resultado esperado: carregamento em massa de XML Insere o valor de chave estrangeiro especificado na coluna.  
+     O resultado é que o XML Bulk Load insere um valor NULL na coluna de chave estrangeira CustomerID da tabela CustOrder. Se você revisar os dados de exemplo do XML para que o  **\<CustomerID >** elemento filho seja exibido antes do  **\<Order >** elemento filho, você obterá o resultado esperado: O XML Bulk Load insere o valor de chave estrangeiro especificado na coluna.  
   
  Este é o esquema XDR equivalente:  
   

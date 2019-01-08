@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146542"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529231"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Criando previsões em um modelo de cluster de sequências (Tutorial de mineração de dados intermediário)
   Depois de entender o modelo de sequence clustering melhor ao navegar por ele no visualizador, você pode criar consultas de previsão usando o construtor de consultas de previsão sobre a **previsão do modelo de mineração** guia no Designer de mineração de dados. Para criar uma previsão, primeiro selecione o modelo de clustering de sequências e selecione os dados de entrada. Para entradas, use uma fonte de dados externa ou crie uma consulta singleton e forneça valores em uma caixa de diálogo.  
@@ -196,7 +196,7 @@ NATURAL PREDICTION JOIN
  Você concluiu o tutorial sobre modelos de clustering de sequências.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Se você tiver concluído todas as seções a [Tutorial intermediário de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), a próxima etapa será aprender a usar instruções de extensões DMX (Data Mining) para criar modelos e Gere previsões. Para obter mais informações, consulte [criando e consultando modelos de mineração de dados com DMX: tutoriais &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
+ Se você tiver concluído todas as seções a [Tutorial intermediário de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), a próxima etapa será aprender a usar instruções de extensões DMX (Data Mining) para criar modelos e Gere previsões. Para obter mais informações, consulte [criando e consultando modelos de mineração de dados com DMX: Tutoriais do &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
  Se você já conhece conceitos de programação, também poderá usar Objetos de Gerenciamento de Análise (AMO) para começar a trabalhar com objetos de mineração de dados programaticamente. Para obter mais informações, consulte [Classes de mineração de dados AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   

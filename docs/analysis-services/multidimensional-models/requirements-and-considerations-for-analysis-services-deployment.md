@@ -1,5 +1,5 @@
 ---
-title: Requisitos e considerações para Analysis Services implantação | Microsoft Docs
+title: Implantação de requisitos e considerações para o Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8fc21b64be49a74359dcde41e10be5524bc1d9ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 991fdab41b7e14e88e621927371d7cc2da3ed3c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530422"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos e considerações sobre a implantação do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisitos de memória e processador  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]precisa de mais recursos de memória e processador nos seguintes casos:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa de mais recursos de memória e processador nos seguintes casos:  
   
 -   Ao processar cubos grandes ou complexos. Esse processamento requer mais recursos de memória e processador do que cubos pequenos ou simples.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34026523"
  Os cubos que têm tabelas de fatos grandes requerem mais espaço em disco do que os cubos com tabelas de fatos pequenas. Do mesmo modo, embora em extensão menor, os cubos com dimensões muito grandes requerem mais espaço em disco do que os cubos com membros de dimensão menores. Geralmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requer aproximadamente 20% da quantidade de espaço necessário para os mesmos dados armazenados no banco de dados relacional subjacente.  
   
  Agregações  
- As agregações requerem um espaço adicional proporcional às agregações adicionadas: quanto mais agregações, mais espaço é necessário. Se a criação de agregações desnecessárias for evitada, o espaço em disco adicional necessário para as agregações normalmente não será maior do que cerca de 10% do tamanho dos dados armazenados no banco de dados relacional subjacente.  
+ As agregações requerem espaço adicional proporcional às agregações adicionadas: o mais agregações, há, será necessário mais espaço. Se a criação de agregações desnecessárias for evitada, o espaço em disco adicional necessário para as agregações normalmente não será maior do que cerca de 10% do tamanho dos dados armazenados no banco de dados relacional subjacente.  
   
  Mineração de dados  
  Por padrão, as estruturas de mineração armazenam em cache no disco o conjunto de dados com os quais foram instruídas. Para remover esses dados em cache do disco, use a opção de processamento **Processar Limpeza de Estrutura** no objeto de estrutura de mineração. Para obter mais informações, consulte [Requisitos e considerações sobre processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "34026523"
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Mantendo a disponibilidade caso ocorram falhas de hardware ou software  
  Falhas de hardware ou software podem ocorrer por várias razões. No entanto, manter a disponibilidade da instalação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não se trata apenas de solucionar o problema da origem dessas falhas, mas também de fornecer recursos alternativos que permitem ao usuário continuar usando o sistema em caso de falha. Servidores de clustering e de balanceamento de carga normalmente são usados para fornecer recursos alternativos necessários para manter a disponibilidade quando ocorrer falhas de hardware ou software.  
   
- Para manter a disponibilidade caso ocorra uma falha de hardware ou software, implante o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um cluster de failover. Em um cluster de failover, se o nó primário falhar por qualquer motivo ou se for necessário reinicializá-lo, o clustering do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows falha em um nó secundário. Após o failover, que ocorre rapidamente, quando executarem a consulta, os usuários estarão acessando a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no nó secundário. Para obter mais informações sobre clusters de failover, consulte [Tecnologias do Windows Server: clusters de failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx).  
+ Para manter a disponibilidade caso ocorra uma falha de hardware ou software, implante o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um cluster de failover. Em um cluster de failover, se o nó primário falhar por qualquer motivo ou se for necessário reinicializá-lo, o clustering do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows falha em um nó secundário. Após o failover, que ocorre rapidamente, quando executarem a consulta, os usuários estarão acessando a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no nó secundário. Para obter mais informações sobre clusters de failover, consulte [tecnologias do Windows Server:  Clusters de failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx).  
   
  Outra solução para problemas de disponibilidade é implantar o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em dois ou mais servidores de produção. Em seguida, é possível usar o recurso Balanceamento de Carga de Rede (NLB) dos servidores Windows para combinar os servidores de produção em um único cluster. Em um cluster NLB, se um servidor do cluster ficar indisponível devido a problemas de hardware ou software, o serviço NLB direciona as consultas de usuário para os servidores que ainda estão disponíveis.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34026523"
   
 -   Se um ou mais bancos de dados relacionais fornecem dados para um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , será possível mover esses bancos de dados para um computador separado. Antes de mover os bancos de dados, verifique a velocidade e a largura de banda da rede que existe entre o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e os bancos de dados subjacentes. Se a rede estiver lenta ou congestionada, mover os bancos de dados subjacentes para um computador separado poderá degradar o desempenho do processamento.  
   
--   Se o processamento afeta o desempenho da consulta, mas não é possível processar durante os momentos em que há uma menor carga de consulta, mova as tarefas de processamento para um servidor de preparo e, em seguida, execute uma sincronização online do servidor de produção e do servidor de preparo. Para obter mais informações, consulte [Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). Você também pode distribuir o processamento entre várias instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando partições remotas. O processamento de partições remotas usa os recursos de processador e memória no servidor remoto, em vez dos recursos do computador local. Para obter informações sobre o gerenciamento de partições remotas, consulte [Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
+-   Se o processamento afeta o desempenho da consulta, mas você não pode processar durante horários de menor carga de consulta, considere mover suas tarefas de processamento para um servidor de preparo e, em seguida, execute uma sincronização online do servidor de produção e o servidor de preparo. Para obter mais informações, consulte [Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). Você também pode distribuir o processamento entre várias instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando partições remotas. O processamento de partições remotas usa os recursos de processador e memória no servidor remoto, em vez dos recursos do computador local. Para obter informações sobre o gerenciamento de partições remotas, consulte [Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
   
 -   Se o desempenho da consulta é ruim, mas não é possível aumentar os recursos de processador e memória no servidor local, implante um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em dois ou mais servidores de produção. Em seguida, use o Balanceamento de Carga de Rede (NLB) para combinar os servidores em um único cluster. Em um cluster NLB, as consultas são distribuídas automaticamente entre todos os servidores do cluster NLB.  
   

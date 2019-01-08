@@ -1,5 +1,5 @@
 ---
-title: 'Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados) | Microsoft Docs'
+title: 'Quorum: Como uma testemunha afeta a disponibilidade de banco de dados (espelhamento de banco de dados) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067546"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525034"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Como uma testemunha afeta a disponibilidade de banco de dados (espelhamento de banco de dados)
   Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum* . Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
   
  Se uma determinada instância do servidor for desconectada da sessão de espelhamento, aquela instância perderá o quorum. Se nenhuma instância do servidor estiver conectada, a sessão perderá quorum e o banco de dados ficará indisponível. Há três tipos possíveis de quorum:  
@@ -73,7 +73,7 @@ ms.locfileid: "48067546"
   
     -   Todas as instâncias de servidor perdem quorum, mas subsequentemente o espelho e a testemunha são reconectados. O banco de dados não será servido neste caso.  
   
-     Raramente, a conexão de rede entre parceiros de failover é perdida enquanto ambos os parceiros permanecem conectados à testemunha. Nesse evento, há dois quoruns testemunha a parceiro individuais, sendo que a testemunha é o contato. A testemunha informa ao servidor espelho que o servidor principal ainda está conectado. Então, o failover automático não acontece. Ao contrário, o servidor espelho retém a função espelho e aguarda para reconectar-se ao servidor principal. Nesse momento, se a fila de restauração contiver os registros de log, o servidor espelho continuará a efetuar o roll forward do banco de dados espelho. Durante a reconexão, o servidor espelho sincronizará o banco de dados espelho novamente.  
+     Raramente, a conexão de rede entre parceiros de failover é perdida enquanto ambos os parceiros permanecem conectados à testemunha. Nesse evento, há dois quóruns individuais de testemunha a parceiro, sendo que a testemunha é o contato. A testemunha informa ao servidor espelho que o servidor principal ainda está conectado. Então, o failover automático não acontece. Ao contrário, o servidor espelho retém a função espelho e aguarda para reconectar-se ao servidor principal. Nesse momento, se a fila de restauração contiver os registros de log, o servidor espelho continuará a efetuar o roll forward do banco de dados espelho. Durante a reconexão, o servidor espelho sincronizará o banco de dados espelho novamente.  
   
 -   Um *quorum parceiro a parceiro* consiste nos dois parceiros.  
   

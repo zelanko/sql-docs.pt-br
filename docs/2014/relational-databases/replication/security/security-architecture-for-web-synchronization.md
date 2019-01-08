@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Web synchronization, security architecture
@@ -13,12 +12,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fecb188c4a793c2742e28d7b1c76193b901ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190556"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804378"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitetura de segurança para sincronização da Web
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilita o controle refinado na configuração de segurança para sincronização da Web. Esse tópico fornece uma lista abrangente de todos os componentes que podem ser incluídos na configuração da sincronização da Web e as informações sobre as conexões que são efetuadas entre os componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -38,7 +37,7 @@ ms.locfileid: "48190556"
 |Conta de serviço do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gerenciador de Configurações do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
 |Aplicativo autônomo|O Merge Agent executa sob o contexto do usuário do Windows que estiver executando o aplicativo.|  
   
-## <a name="b-connection-to-the-subscriber"></a>B. Conexão com o Assinante  
+## <a name="b-connection-to-the-subscriber"></a>b. Conexão com o Assinante  
  O Merge Agent conecta-se com Assinante usando a Autenticação do Windows ou a ou Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O usuário do Windows ou o logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que você especificar deve ser associado a um usuário de banco de dados que seja membro da função de banco de dados fixa **dbowner** , no banco de dados de assinatura.  
   
 > [!NOTE]  
@@ -94,7 +93,7 @@ ms.locfileid: "48190556"
   
 -   Estar na lista de acesso à publicação (PAL). Para obter mais informações, consulte [Secure the Publisher](secure-the-publisher.md) (Proteger o publicador).  
   
--   Estar associado a um usuário de banco de dados no banco de dados de distribuição. O usuário pode ser o `Guest` usuário.  
+-   Estar associado a um usuário de banco de dados no banco de dados de distribuição. O usuário pode ser o usuário `Guest`.  
   
  Geralmente, o compartilhamento de instantâneos está no Distribuidor. Para obter mais informações sobre os compartilhamentos de instantâneos, consulte a seção "H. Acesso ao compartilhamento de instantâneos", mais adiante nesse tópico.  
   

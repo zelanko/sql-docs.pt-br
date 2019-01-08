@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083810"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411273"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar a coleta de dados de uso para o PowerPivot para SharePoint
   A coleta de dados de uso é um recurso do SharePoint em nível de farm. O PowerPivot para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento PowerPivot que mostram como os dados e serviços PowerPivot são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento PowerPivot.  
   
- Para obter informações sobre o uso de dados no painel de gerenciamento PowerPivot, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Para obter informações sobre os dados de uso no Painel de Gerenciamento PowerPivot, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Neste tópico:**  
   
@@ -55,12 +55,12 @@ ms.locfileid: "48083810"
   
 4.  Na seção **Eventos para o log** , marque ou desmarque as caixas de seleção para habilitar ou desabilitar os seguintes eventos do Analysis Services:  
   
-    |Evento|Description|  
+    |Evento|Descrição|  
     |-----------|-----------------|  
     |**Conexões do PowerPivot**|O evento Conexão do PowerPivot é usado para monitorar conexões de servidor do PowerPivot que são feitas em nome de um usuário.|  
     |**Uso de dados de carregamento do PowerPivot**|O Uso de Dados de Carregamento do PowerPivot é usado para monitorar solicitações que carregam dados PowerPivot na memória do servidor. Um evento de carregamento é gerado para arquivos de dados PowerPivot carregados de um banco de dados de conteúdo ou do cache.|  
     |**Uso de dados de descarregamentos do PowerPivot**|O Uso de Dados de Descarregamento do PowerPivot é usado para monitorar solicitações de descarregamento de uma fonte de dados PowerPivot após um período de inatividade. O armazenamento em cache de uma fonte de dados PowerPivot no disco será relatado como um evento de descarregamento.|  
-    |**Uso de consultas do PowerPivot**|Uso de consulta do PowerPivot é usado para monitorar os tempos de processamento dos dados que são carregados em um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância.|  
+    |**Uso de consultas do PowerPivot**|O Uso de Consulta do PowerPivot é usado para monitorar os tempos de processamento dos dados carregados em uma instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|  
   
     > [!NOTE]  
     >  As operações de integridade do servidor e atualização de dados também geram dados de uso, mas não há evento associado com esses processos.  
@@ -87,9 +87,9 @@ ms.locfileid: "48083810"
 ##  <a name="jobs"></a> Configure os trabalhos de timer usados em coleta de dados de uso  
  Os dados de uso e integridade do servidor PowerPivot são movidos para locais diferentes no sistema de coleta de dados de uso por dois trabalhos de timer:  
   
--   O trabalho de timer “Importação de Dados de Uso do Microsoft SharePoint Foundation” move o uso do PowerPivot para o banco de dados de aplicativo de serviço PowerPivot.  
+-   O trabalho de timer "Importação de dados do Microsoft SharePoint Foundation uso" move o uso do PowerPivot para o banco de dados do aplicativo de serviço PowerPivot.  
   
--   O trabalho de timer “Processamento de Painel de Gerenciamento PowerPivot” move os dados para a pasta de trabalho PowerPivot que é a fonte de dados dos relatórios administrativos internos.  
+-   O trabalho de timer"processamento de painel de gerenciamento do PowerPivot" os dados à pasta de trabalho PowerPivot que é a fonte de dados para relatórios administrativos internos.  
   
  Se você precisar atualizar os relatórios administrativos que aparecem com maior frequência no Painel de Gerenciamento do PowerPivot, siga estas etapas.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48083810"
  Para obter mais informações sobre como os dados de uso são coletados e armazenados, consulte [coleta de dados de uso do PowerPivot](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Defina categorias de resposta de consulta rápida, média e lenta para fins de relatórios  
- O desempenho de processamento da consulta é medido em relação a categorias predefinidas que definem um ciclo da solicitação-resposta pelo tempo que leva para ser concluído. Categorias predefinidas incluem: Trivial, Rápido, Esperado, Demorado e Excedido. Toda solicitação para um servidor do PowerPivot corresponderá a uma das categorias com base no tempo para conclusão.  
+ O desempenho de processamento da consulta é medido em relação a categorias predefinidas que definem um ciclo da solicitação-resposta pelo tempo que leva para ser concluído. As categorias predefinidas incluem: Trivial, Rápido, Esperado, Demorado e Excedido. Toda solicitação para um servidor do PowerPivot corresponderá a uma das categorias com base no tempo para conclusão.  
   
  As informações de resposta da consulta são usadas em relatórios de atividades. Dentro dos relatórios, cada categoria é usada diferentemente para revelar melhor as tendências de desempenho do sistema PowerPivot. Por exemplo, são totalmente excluídas solicitações triviais pois isso remove ruídos nos dados e mostra tendências mais significativas que usam as categorias restantes. Em contraste, estatísticas de solicitação Demorado ou Excedido são proeminentes no relatório de forma que administradores ou proprietários de pasta de trabalho podem adotar uma ação corretiva imediatamente.  
   
@@ -180,14 +180,14 @@ ms.locfileid: "48083810"
   
  A tabela a seguir mostra os valores padrão da configuração da coleta de dados de uso.  
   
-|Configuração|Valor padrão|Tipo|Intervalo válido|  
+|Configuração|Valor Padrão|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
 |**Eventos de uso do Analysis Services** (Conexão, Carregamento, Descarregamento, Solicitações)|\<habilitado >|Booliano|Estes valores são habilitados ou desabilitados.|  
 |**Query Reporting interval**|300 (em segundos)|Integer|1 até qualquer inteiro positivo. O padrão é 5 minutos.|  
 |**Usage data history**|365 (em dias)|Integer|0 especifica ilimitado, mas você também pode definir um limite superior para expirar dados históricos e permitir sua exclusão automática. Valores válidos para um período de retenção limitado variam de 1 a 5000 (em dias).|  
 |Limite Superior de Resposta Trivial|500 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta trivial. Qualquer solicitação concluída entre 0 e 500 milissegundos é uma solicitação trivial e ignorada para fins de relatórios.|  
 |Limite superior de resposta rápida|1000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta rápida.|  
-|Limite superior de resposta esperada|3000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta esperada.|  
+|Limite Superior de Resposta Esperado|3000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta esperada.|  
 |Limite Superior de Respostas Demoradas|10000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta demorada. Qualquer solicitação que exceda esse limite superior entrará na categoria Excedida, que não tem limite superior.|  
   
 ## <a name="see-also"></a>Consulte também  

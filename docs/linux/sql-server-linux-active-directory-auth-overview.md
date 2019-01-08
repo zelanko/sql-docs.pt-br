@@ -1,5 +1,6 @@
 ---
-title: Autenticação do Active Directory para o SQL Server no Linux | Microsoft Docs
+title: Autenticação do Active Directory para o SQL Server no Linux
+titleSuffix: SQL Server
 description: Este artigo fornece uma visão geral da autenticação do Active Directory para o SQL Server no Linux.
 author: rothja
 ms.date: 02/23/2018
@@ -7,16 +8,16 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 94b3aa8b63b76d03ccd08acf312b3efcf8b45bca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610364"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160394"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticação do Active Directory para o SQL Server no Linux
 
@@ -39,7 +40,7 @@ Autenticação do AD tem as seguintes vantagens sobre [!INCLUDE[ssNoVersion](../
 
 Para usar autenticação do Active Directory, você deve ter um controlador de domínio do AD (Windows) em sua rede.
 
-Os detalhes de como configurar a autenticação do AD são fornecidos no tutorial [Tutorial: autenticação de usar o Active Directory com o SQL Server no Linux](sql-server-linux-active-directory-authentication.md). A lista a seguir fornece um resumo com um link para cada seção do tutorial:
+Os detalhes de como configurar a autenticação do AD são fornecidos no tutorial, [Tutorial: Usar autenticação do Active Directory com o SQL Server no Linux](sql-server-linux-active-directory-authentication.md). A lista a seguir fornece um resumo com um link para cada seção do tutorial:
 
 1. [Ingressar em um host do SQL Server em um domínio do Active Directory](sql-server-linux-active-directory-authentication.md#join).
 1. [Criar um usuário do AD para o SQL Server e definir o ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
@@ -53,4 +54,4 @@ Os detalhes de como configurar a autenticação do AD são fornecidos no tutoria
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre como implementar a autenticação do Active Directory para o SQL Server no Linux, consulte [Tutorial: autenticação de usar o Active Directory com o SQL Server no Linux](sql-server-linux-active-directory-authentication.md).
+Para obter mais informações sobre como implementar a autenticação do Active Directory para o SQL Server no Linux, consulte [Tutorial: Usar autenticação do Active Directory com o SQL Server no Linux](sql-server-linux-active-directory-authentication.md).

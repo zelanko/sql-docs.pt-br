@@ -13,12 +13,12 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f44eb85e80135f81d0e2ca1f37657818843a237
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710054"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540238"
 ---
 # <a name="select---sql-command"></a>SELECT – comando SQL
 Recupera dados de uma ou mais tabelas.  
@@ -35,7 +35,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -82,15 +82,15 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  As funções de campo a seguir estão disponíveis para uso com o item de seleção que é um campo ou uma expressão que envolva um campo:  
   
--   AVG (*Select_Item*) — calcula a média de uma coluna de dados numéricos.  
+-   AVG (*Select_Item*)-calcula a média de uma coluna de dados numéricos.  
   
--   CONTAGEM (*Select_Item*) — conta o número de selecionar itens em uma coluna. Count(*) conta o número de linhas na saída da consulta.  
+-   CONTAGEM (*Select_Item*)-conta o número de selecionar itens em uma coluna. Count(*) conta o número de linhas na saída da consulta.  
   
--   MIN (*Select_Item*) — determina o menor valor de *Select_Item* em uma coluna.  
+-   MIN (*Select_Item*) – determina o menor valor de *Select_Item* em uma coluna.  
   
--   MAX (*Select_Item*) — determina o maior valor de *Select_Item* em uma coluna.  
+-   MAX (*Select_Item*) – determina o maior valor de *Select_Item* em uma coluna.  
   
--   Soma (*Select_Item*) — totais de uma coluna de dados numéricos.  
+-   Soma (*Select_Item*)-totais de uma coluna de dados numéricos.  
   
  Você não pode aninhar funções de campo.  
   

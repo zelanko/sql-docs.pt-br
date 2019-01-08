@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepublications
@@ -19,24 +18,24 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a7ed15f4c971cdd7489084717f2a11ecd9a2e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790270"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748419"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada publicação de mesclagem definida no banco de dados. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|O nome do servidor padrão.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador padrão.|  
 |**name**|**sysname**|O nome da publicação.|  
-|**Descrição**|**nvarchar(255)**|Uma descrição breve da publicação.|  
+|**description**|**nvarchar(255)**|Uma descrição breve da publicação.|  
 |**retention**|**int**|O período de retenção para o conjunto de publicação inteira, onde a unidade é indicada pelo valor de **retention_period_unit** coluna.|  
 |**publication_type**|**tinyint**|Indica se a publicação é filtrada:<br /><br /> **0** = não filtrada.<br /><br /> **1** = filtrada.|  
 |**pubid**|**uniqueidentifier**|O número de identificação exclusivo desta publicação. Isso é gerado quando a publicação é adicionada.|  
@@ -82,7 +81,7 @@ ms.locfileid: "47790270"
 |**snapshot_jobid**|**binary(16)**|Identifica o trabalho de agente que gera o instantâneo quando o Assinante pode iniciar o processo de geração de instantâneo.|  
 |**allow_web_synchronization**|**bit**|Especifica se a publicação está habilitada para sincronização da Web, onde **1** significa que a sincronização da Web está habilitada para a publicação.|  
 |**web_synchronization_url**|**nvarchar(500)**|Especifica o valor padrão da URL da Internet usado para sincronização da Web.|  
-|**allow_partition_realignment**|**bit**|Indica se exclusões serão enviadas para o Assinante quando modificação da linha no Publicador causar a mudança de sua partição.<br /><br /> **0** = dados de uma antiga partição será deixada no assinante, onde as alterações feitas a esses dados no publicador não serão replicadas para esse assinante, mas as alterações feitas no assinante serão replicadas para o publicador.<br /><br /> **1** = exclusões no assinante para refletir os resultados de uma alteração de partição, removendo dados que não pertencem mais à partição do assinante.<br /><br /> Para obter mais informações, consulte [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Observação: Dados que permanecem no assinante quando esse valor é **0** devem ser tratados como se fosse somente leitura; no entanto, isso não é estritamente forçado pelo sistema de replicação.|  
+|**allow_partition_realignment**|**bit**|Indica se exclusões serão enviadas para o Assinante quando modificação da linha no Publicador causar a mudança de sua partição.<br /><br /> **0** = dados de uma antiga partição será deixada no assinante, onde as alterações feitas a esses dados no publicador não serão replicadas para esse assinante, mas as alterações feitas no assinante serão replicadas para o publicador.<br /><br /> **1** = exclusões no assinante para refletir os resultados de uma alteração de partição, removendo dados que não pertencem mais à partição do assinante.<br /><br /> Para obter mais informações, consulte [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Observação: Os dados permanecem no assinante quando esse valor é **0** devem ser tratados como se fosse somente leitura; no entanto, isso não é estritamente forçado pelo sistema de replicação.|  
 |**retention_period_unit**|**tinyint**|Define a unidade usada ao definir *retenção*, que pode ser um destes valores:<br /><br /> **0** = dia.<br /><br /> **1** = semana.<br /><br /> **2** = mês.<br /><br /> **3** = ano.|  
 |**decentralized_conflicts**|**int**|Indica se os registros de conflito são armazenados ao Assinante que causou o conflito:<br /><br /> **0** = conflito de registros não são armazenados no assinante.<br /><br /> **1** = registros de conflito são armazenados no assinante.|  
 |**generation_leveling_threshold**|**int**|Especifica o número de alterações contido em uma geração. Uma geração é uma coleção de alterações que é entregue a um Publicador ou Assinante.|  

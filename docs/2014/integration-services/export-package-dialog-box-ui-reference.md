@@ -15,12 +15,12 @@ ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90a098ce2c4ea006f33eb01034136bd92e7fe0b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91a7d5573a6d0488b48d7e4ddaf328664de7a2c8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116717"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523674"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Exportar Pacote
   Use a caixa de diálogo **Exportar Pacote**, disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para exportar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para um local diferente e, opcionalmente, modificar o nível de proteção do pacote.  
@@ -57,12 +57,12 @@ ms.locfileid: "48116717"
  Digite o caminho do pacote ou clique no botão Procurar **(…)** e localize a pasta na qual o pacote será armazenado.  
   
  **Nível de proteção**  
- Clique no botão Procurar **(…)** e atualize o nível de proteção na caixa de diálogo **Nível de Proteção do Pacote** . Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Clique no botão Procurar **(…)** e atualize o nível de proteção na caixa de diálogo **Nível de Proteção do Pacote**. Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Salvar cópia de pacote](../../2014/integration-services/save-copy-of-package.md)   
- [Referência de interface do usuário de caixa de diálogo de pacote de importação](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referência da interface do usuário da caixa de diálogo Importar Pacote](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Salvar pacotes](save-packages.md)   
- [Importar e exportar pacotes &#40;serviço SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Importar e exportar pacotes &#40;Serviço SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

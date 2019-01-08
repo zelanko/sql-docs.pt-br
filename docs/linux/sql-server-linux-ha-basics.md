@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665665"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533076"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -39,16 +39,16 @@ No Linux, muitos comandos precisam ser executados com privilégios elevados, ass
 2. O mais comum e segurança consciente maneira de executar as coisas é usar `sudo` antes de executar qualquer coisa. Muitos dos exemplos neste artigo usam `sudo`.
 
 Alguns comandos comuns, cada um deles tem vários parâmetros e opções que podem ser pesquisadas online:
--   `cd` – alterar o diretório
--   `chmod` – alterar as permissões de um arquivo ou diretório
--   `chown` – alterar a propriedade de um arquivo ou diretório
--   `ls` – Mostrar o conteúdo de um diretório
--   `mkdir` – Crie uma pasta (diretório) em uma unidade
--   `mv` – Mover um arquivo de um local para outro
--   `ps` – Mostrar todos os processos de trabalho
--   `rm` – Excluir um arquivo localmente em um servidor
--   `rmdir` – Excluir uma pasta (diretório)
--   `systemctl` – Iniciar, parar ou habilitar os serviços
+-   `cd` -Altere o diretório
+-   `chmod` -alterar as permissões de um arquivo ou diretório
+-   `chown` -alterar a propriedade de um arquivo ou diretório
+-   `ls` -Mostrar o conteúdo de um diretório
+-   `mkdir` -criar uma pasta (diretório) em uma unidade
+-   `mv` -Mover um arquivo de um local para outro
+-   `ps` -Mostrar todos os processos de trabalho
+-   `rm` -Excluir um arquivo localmente em um servidor
+-   `rmdir` -Excluir uma pasta (diretório)
+-   `systemctl` -Iniciar, parar ou habilitar os serviços
 -   Comandos do editor de texto. No Linux, há várias opções de editor de texto, como vi e emacs.
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tarefas comuns para as configurações de disponibilidade de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux
@@ -68,7 +68,7 @@ Ao usar `scp`, você deve fornecer as credenciais do servidor, se não for a ori
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-Copia o arquivo MyAGCert.cer para a pasta especificada no outro servidor. Observe que você deve ter permissões – e, possivelmente, a propriedade – do arquivo para copiá-lo, portanto, `chown` talvez precise ser empregado antes de copiar. Da mesma forma, no lado de recepção, o usuário correto precisa de acesso para manipular o arquivo. Por exemplo, para restaurar esse arquivo de certificado, o `mssql` usuário deve ser capaz de acessá-lo.
+Copia o arquivo MyAGCert.cer para a pasta especificada no outro servidor. Observe que você deve ter permissões – e, possivelmente, a propriedade - do arquivo para copiá-lo, portanto, `chown` talvez precise ser empregado antes de copiar. Da mesma forma, no lado de recepção, o usuário correto precisa de acesso para manipular o arquivo. Por exemplo, para restaurar esse arquivo de certificado, o `mssql` usuário deve ser capaz de acessá-lo.
 
 O Samba, que é a variante do Linux do protocolo SMB (protocolo SMB), também pode ser usado para criar compartilhamentos acessados por caminhos UNC, como `\\SERVERNAME\SHARE`. Para obter mais informações sobre como configurar o Samba, consulte as informações nos seguintes links para cada distribuição:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
@@ -84,15 +84,15 @@ Por fim, usar um compartilhamento de NFS (sistema) de arquivos de rede é uma op
 ### <a name="configure-the-firewall"></a>Configurar o firewall
 Semelhante ao Windows, distribuições do Linux tem um firewall interno. Se sua empresa está usando um firewall externo para os servidores, desabilitar os firewalls no Linux pode ser aceitável. No entanto, independentemente de onde o firewall estiver habilitado, portas precisam ser abertas. A tabela a seguir documenta as portas comuns necessárias para altamente disponível [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações no Linux.
 
-| Número da Porta | Tipo     | Description                                                                                                                 |
+| Número da Porta | Tipo     | Descrição                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | Samba (se usado) – mapeador de ponto de extremidade                                                                                          |
-| 137         | UDP      | Samba (se usado) – serviço de nomes NetBIOS                                                                                      |
-| 138         | UDP      | Samba (se usado) – datagrama NetBIOS                                                                                          |
-| 139         | TCP      | Samba (se usado) – sessão NetBIOS                                                                                           |
-| 445         | TCP      | Samba (se usado) – SMB sobre TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – porta; padrão Se desejar, pode alterar com `mssql-conf set network.tcpport <portnumber>`                       |
+| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 135         | TCP      | Samba (se usado) - mapeador de ponto de extremidade                                                                                          |
+| 137         | UDP      | Samba (se usado) - serviço de nomes NetBIOS                                                                                      |
+| 138         | UDP      | Samba (se usado) - datagrama NetBIOS                                                                                          |
+| 139         | TCP      | Samba (se usado) - sessão NetBIOS                                                                                           |
+| 445         | TCP      | Samba (se usado) - SMB sobre TCP                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -porta; padrão Se desejar, pode alterar com `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (se usado)                                                                                                               |
 | 2224        | TCP      | Pacemaker – usado por `pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – necessário se houver nós remotos do Pacemaker                                                                    |
@@ -103,10 +103,10 @@ Semelhante ao Windows, distribuições do Linux tem um firewall interno. Se sua 
 | 5405        | UDP      | Pacemaker – exigido pelo Corosync                                                                                            |
 | 21064       | TCP      | Pacemaker – exigido por recursos usando DLM                                                                                 |
 | Variável    | TCP      | Porta de ponto de extremidade do grupo de disponibilidade; o padrão é 5022                                                                                           |
-| Variável    | TCP      | A porta para NFS – `LOCKD_TCPPORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                              |
-| Variável    | UDP      | A porta para NFS – `LOCKD_UDPPORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                              |
-| Variável    | TCP/UDP  | A porta para NFS – `MOUNTD_PORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                                |
-| Variável    | TCP/UDP  | A porta para NFS – `STATD_PORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                                 |
+| Variável    | TCP      | A porta para NFS - `LOCKD_TCPPORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                              |
+| Variável    | UDP      | A porta para NFS - `LOCKD_UDPPORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                              |
+| Variável    | TCP/UDP  | A porta para NFS - `MOUNTD_PORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                                |
+| Variável    | TCP/UDP  | A porta para NFS - `STATD_PORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                                 |
 
 Para portas adicionais que podem ser usadas por Samba, consulte [uso da porta do Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
@@ -121,7 +121,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pacotes para disponibilidade
-Em um Windows baseado em [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instalação, alguns componentes são instalados, mesmo em uma instalação do mecanismo básico, enquanto outros não são. No Linux, apenas o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] mecanismo é instalado como parte do processo de instalação. Todo o resto é opcional. Para alta disponibilidade [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instâncias no Linux, dois pacotes devem ser instalados com [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente (*mssql-server-agent*) e o pacote de alta disponibilidade (HA) ( *MSSQL-server-ha*). Embora [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent é tecnicamente opcional, ele é [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]do Agendador de trabalhos e é exigido pelo envio de logs, portanto, é recomendável a instalação. Em instalações baseadas em Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente não é opcional.
+Em um Windows baseado em [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instalação, alguns componentes são instalados, mesmo em uma instalação do mecanismo básico, enquanto outros não são. No Linux, apenas o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] mecanismo é instalado como parte do processo de instalação. Todo o resto é opcional. Para alta disponibilidade [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instâncias no Linux, dois pacotes devem ser instalados com [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agente (*mssql-server-agent*) e o pacote de alta disponibilidade (HA) (*mssql-server-ha*). Embora [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent é tecnicamente opcional, ele é [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]do Agendador de trabalhos e é exigido pelo envio de logs, portanto, é recomendável a instalação. Em instalações baseadas em Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente não é opcional.
 
 >[!NOTE]
 >Para os iniciantes em [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente é [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]do Agendador de trabalho internas. É uma maneira comum de DBAs agendar a coisas como backups e outras [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] manutenção. Ao contrário de uma instalação baseada em Windows de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] onde [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente é um serviço completamente diferente, no Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente é executado no contexto do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] em si.
@@ -136,10 +136,10 @@ Anterior como observado, o único mecanismo de clustering atualmente com suporte
 ### <a name="ha-add-onextension-basics"></a>Noções básicas de add-on/extensão de alta disponibilidade
 Todas as distribuições com suporte no momento, envie um add-on/extensão de alta disponibilidade, que se baseia o Pacemaker cluster pilha. Essa pilha incorpora dois componentes principais: Pacemaker e do Corosync. Todos os componentes da pilha são:
 -   Pacemaker – o núcleo do clustering de componente, que faz coisas como coordenada entre as máquinas em cluster.
--   Corosync – uma estrutura e um conjunto de APIs que fornece coisas como o quorum, a capacidade de falha ao reiniciar processos e assim por diante.
--   libQB – fornece coisas como registro em log.
--   Agente de recursos – funcionalidade específica fornecida para que um aplicativo pode integrar com o Pacemaker.
--   De cerca de agente – Scripts/funcionalidade que ajuda a isolar nós e lidar com eles, se eles estão tendo problemas.
+-   Corosync - uma estrutura e um conjunto de APIs que fornece coisas como o quorum, a capacidade de falha ao reiniciar processos e assim por diante.
+-   libQB - fornece coisas como o registro em log.
+-   Agente de recursos - funcionalidade específica fornecida para que um aplicativo pode integrar com o Pacemaker.
+-   De cerca de agente - Scripts/funcionalidade que ajuda a isolar nós e lidar com eles, se eles estão tendo problemas.
     
 > [!NOTE]
 > A pilha do cluster é conhecida como Pacemaker no mundo Linux.
@@ -169,7 +169,7 @@ Um WSFC e um cluster Pacemaker tem o conceito de um recurso. Um recurso é uma f
 
 Pacemaker tem recursos standard e clone. Recursos de clonagem são aqueles que são executados simultaneamente em todos os nós. Um exemplo seria um endereço IP que é executado em vários nós para fins de balanceamento de carga. Qualquer recurso que é criado sobre as FCIs usa um recurso padrão, uma vez que apenas um nó pode hospedar uma FCI a qualquer momento.
 
-Quando um grupo de disponibilidade é criado, ele requer uma forma especializada de um recurso de clone chamado um recurso de vários estado. Embora um grupo de disponibilidade tiver apenas uma réplica primária, o grupo de disponibilidade em si está em execução em todos os nós que ele está configurado para funcionar em e potencialmente pode permitir que as coisas, como o acesso somente leitura. Como esse é um uso "ao vivo" do nó, os recursos têm o conceito de dois estados: mestre e subordinado. Para obter mais informações, consulte [recursos de vários estados: recursos que têm vários modos de](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
+Quando um grupo de disponibilidade é criado, ele requer uma forma especializada de um recurso de clone chamado um recurso de vários estado. Embora um grupo de disponibilidade tiver apenas uma réplica primária, o grupo de disponibilidade em si está em execução em todos os nós que ele está configurado para funcionar em e potencialmente pode permitir que as coisas, como o acesso somente leitura. Como esse é um uso "ao vivo" do nó, os recursos têm o conceito de dois estados: mestre e subordinado. Para obter mais informações, consulte [recursos de vários estados: Recursos que têm vários modos de](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>Grupos de recursos/conjuntos
 Semelhante às funções em um WSFC, um cluster Pacemaker tem o conceito de um grupo de recursos. Um grupo de recursos (chamado de um conjunto no SLES) é uma coleção de recursos que funcionam em conjunto e pode fazer failover de um nó para outro como uma única unidade. Grupos de recursos não podem conter recursos que são configurados como primário/secundário Portanto, não pode ser usados para grupos de disponibilidade. Embora um grupo de recursos pode ser usado para FCIs, não é geralmente uma configuração recomendada.
@@ -200,7 +200,7 @@ O `corosync.conf` arquivo contém a configuração do cluster. Ele está localiz
 #### <a name="cluster-log-location"></a>Local do log de cluster
 Locais de log para clusters do Pacemaker diferem dependendo da distribuição.
 -   RHEL e SLES- `/var/log/cluster/corosync.log`
--   Ubuntu – `/var/log/corosync/corosync.log`
+-   Ubuntu- `/var/log/corosync/corosync.log`
 
 Para alterar o local de registro em log padrão, modifique `corosync.conf`.
 
@@ -213,8 +213,8 @@ Usando máquinas virtuais para implantar com base em Linux [!INCLUDE[ssnoversion
 Quando se trata de grupos de disponibilidade e FCIs em virtualização, certifique-se de que a antiafinidade está definida para os nós de um determinado cluster Pacemaker. Quando configurado para alta disponibilidade em uma configuração de grupo de disponibilidade ou FCI, VMs que hospedam [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca deve estar em execução no mesmo host do hipervisor. Por exemplo, se uma FCI de dois nós for implantada, precisaria ser *pelo menos* três hosts de hipervisor, portanto, o que há em algum lugar para uma das VMs que hospedam um nó de ir em caso de falha do host, especialmente se o uso de recursos, como ao vivo A migração ou vMotion.
 
 Para obter informações mais específicas, consulte:
--   Documentação do Hyper-V – [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   White paper (escrito para implantações com base no Windows, mas a maioria dos conceitos ainda se aplicam) – [planejamento altamente disponível, o SQL Server implantações críticas com VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Documentação do Hyper-V - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   White paper (escrito para implantações com base no Windows, mas a maioria dos conceitos ainda se aplicam) - [planejamento altamente disponível, o SQL Server implantações críticas com VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL com um cluster Pacemaker com STONITH ainda não é suportado pelo Hyper-V. Até que tenha suporte, para obter mais informações e atualizações, consulte [políticas de suporte para os Clusters de alta disponibilidade RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).

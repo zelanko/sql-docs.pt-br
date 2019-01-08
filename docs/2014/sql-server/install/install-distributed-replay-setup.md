@@ -11,12 +11,12 @@ ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051387"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545377"
 ---
 # <a name="install-distributed-replay-setup"></a>Instalar o Distributed Replay (instalação)
   Instale os recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay com o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ao planejar onde instalar os recursos, considere o seguinte:  
@@ -136,6 +136,6 @@ ms.locfileid: "48051387"
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Requisitos do Distributed Replay](../../tools/sql-server-profiler/replay-requirements.md)   
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

@@ -12,18 +12,18 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543714"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamento de tipos de data e hora aprimorados com versões anteriores do SQL Server (ODBC)
   Este tópico descreve o comportamento esperado quando um aplicativo cliente que usa recursos aprimorados de data e hora se comunica com uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e quando um aplicativo cliente que usa o Microsoft Data Access Components, o Windows Data Access Components ou uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envia comandos para um servidor que oferece suporte a recursos aprimorados de data e hora.  
   
 ## <a name="down-level-client-behavior"></a>Comportamento do cliente de versão anterior  
- Os aplicativos cliente que foram compilados usando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] vêm os novos tipos de data/hora como colunas nvarchar. O conteúdo da coluna é representações literais, conforme descrito na seção "Formatos de dados: cadeias de caracteres e literais" de [suporte de tipo de dados para ODBC aprimoramentos de data e hora](data-type-support-for-odbc-date-and-time-improvements.md). O tamanho da coluna é o comprimento de literal máximo para a precisão de segundos fracionários especificada da coluna.  
+ Os aplicativos cliente que foram compilados usando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] vêm os novos tipos de data/hora como colunas nvarchar. O conteúdo da coluna é representações literais, conforme descrito em "formatos de dados: Seção cadeias de caracteres e literais"de [suporte de tipo de dados para ODBC aprimoramentos de data e hora](data-type-support-for-odbc-date-and-time-improvements.md). O tamanho da coluna é o comprimento de literal máximo para a precisão de segundos fracionários especificada da coluna.  
   
  As APIs de catálogo retornarão metadados consistentes com o código de tipo de dados de versão anterior retornado ao cliente (por exemplo, nvarchar) e a representação de versão anterior associada (por exemplo, o formato de literal apropriado). Entretanto, o nome do tipo de dados retornado será o nome de tipo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] real.  
   
@@ -87,8 +87,8 @@ ms.locfileid: "48184186"
 |TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

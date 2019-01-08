@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -15,12 +15,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671fb9fe3de95d4480f7f293668dd124d2cc3a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127916"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795938"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabalhar com colunas em consultas de agregação (Visual Database Tools)
   Quando você cria consultas de agregação, o [Designer de Consulta e Exibição](visual-database-tools.md) faz determinadas suposições para poder criar uma consulta válida. Por exemplo, se você estiver criando uma consulta de agregação e marcar uma coluna de dados para saída, o Designer de Consulta e Exibição fará com que a coluna automaticamente faça parte da cláusula GROUP BY para que você não tente exibir inadvertidamente o conteúdo de uma linha individual em um resumo.  
@@ -55,7 +55,7 @@ ms.locfileid: "48127916"
     WHERE price > 10  
     ```  
   
--   Se você criar um critério de pesquisa que envolve uma coluna que também é usada em uma cláusula GROUP BY ou função de agregação, o critério de pesquisa poderá ser exibido como uma cláusula WHERE ou uma cláusula HAVING – você pode decidir quando criar o critério. Por exemplo, a seguinte instrução cria um preço médio para os títulos de cada editor, depois exibe a média para as publicações nas quais o preço médio é maior que R$ 10,00:  
+-   Se você criar uma condição de pesquisa que envolva uma coluna também usada em uma cláusula GROUP BY ou em uma função de agregação, a condição de pesquisa poderá ser exibida como uma cláusula WHERE ou como uma cláusula HAVING; você decide quando você criar a condição. Por exemplo, a seguinte instrução cria um preço médio para os títulos de cada editor, depois exibe a média para as publicações nas quais o preço médio é maior que R$ 10,00:  
   
     ```  
     SELECT pub_id, AVG(price)  

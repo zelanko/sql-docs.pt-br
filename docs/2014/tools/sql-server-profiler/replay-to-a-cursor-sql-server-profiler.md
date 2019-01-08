@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - replaying cursors
@@ -15,19 +14,19 @@ ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e076ffe977423e8068759aca0a3624c03eb6e44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c4c4b9d2e2e07c53f850fe545d803fa411dbbc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211896"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795818"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Repetir até um cursor (SQL Server Profiler)
   Este tópico descreve como repetir arquivos ou tabelas de rastreamento e pausar quando um cursor for atingido, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Pausar rastreamentos mediante cursores dá suporte à depuração, pois é possível dividir a repetição de scripts de rastreamento longos em segmentos curtos que podem ser analisados incrementalmente.  
   
 ### <a name="to-replay-to-the-cursor"></a>Para repetir até o cursor  
   
-1.  Abra o arquivo ou tabela de rastreamento que deseja repetir. Para obter mais informações, consulte [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) ou [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Abra o arquivo ou tabela de rastreamento que deseja repetir. Para obter mais informações, consulte [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) ou do [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
      Certifique-se de que o arquivo ou tabela de rastreamento aberto contém as classes de evento necessárias para a repetição. Para obter mais informações, consulte [Replay Requirements](replay-requirements.md).  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48211896"
 6.  Repita a Etapa 5 até o término do rastreamento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Repetir até um ponto de interrupção &#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
+ [Reproduzir em um ponto de interrupção &#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
  [Repetir rastreamentos](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

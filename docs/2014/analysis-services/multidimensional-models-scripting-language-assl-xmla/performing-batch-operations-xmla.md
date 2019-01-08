@@ -21,12 +21,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44ffc8084af6917a8df84c5a204df96112441723
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542581"
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
   Você pode usar o [lote](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando XML for Analysis (XMLA) para executar vários comandos XMLA usando um único XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método. Você pode executar vários comandos contidos no comando `Batch` como uma única transação ou em transações individuais para cada comando, em série ou em paralelo. Você também pode especificar associações fora de linha e outras propriedades na `Batch` comando para processar vários [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  
@@ -35,12 +35,12 @@ ms.locfileid: "50148321"
  O comando `Batch` executa comandos de uma destas maneiras:  
   
  **Transacional.**  
- Se o `Transaction` atributo do `Batch` comando é definido como true, o `Batch` executará todos os comandos contidos pelo `Batch` comando em uma única transação — uma *transacional* em lotes.  
+ Se o `Transaction` atributo do `Batch` comando é definido como true, o `Batch` executará todos os comandos contidos pelo `Batch` comando em uma única transação, uma *transacional* em lotes.  
   
  Se algum comando falhar em um lote transacional, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reverterá qualquer comando de `Batch` comando executado antes do comando que falhou e o `Batch` comando terminará imediatamente. Qualquer comando de `Batch` que ainda não tiver sido executado não o será. Após o término do comando `Batch`, `Batch` informará qualquer erro ocorrido no comando que falhou.  
   
  **Não transacional**  
- Se o `Transaction` atributo é definido como false, o `Batch` comando executa cada comando contido pelo `Batch` comando em uma transação separada — uma *não transacionais* em lotes. Se qualquer comando falhar em um lote não transacional, `Batch` comando continuará a executar comandos após o que falhou. Depois que o comando `Batch` tenta executar todos os comandos que contidos por `Batch`, o comando `Batch` informará qualquer erro ocorrido.  
+ Se o `Transaction` atributo é definido como false, o `Batch` comando executa cada comando contido pelo `Batch` comando em um separado de uma transação *não transacionais* em lotes. Se qualquer comando falhar em um lote não transacional, `Batch` comando continuará a executar comandos após o que falhou. Depois que o comando `Batch` tenta executar todos os comandos que contidos por `Batch`, o comando `Batch` informará qualquer erro ocorrido.  
   
  Todos os resultados retornados por comandos contidos em um comando `Batch` são retornados na mesma ordem em que os comandos estão contidos em `Batch`. Os resultados retornados por um comando `Batch` variam caso `Batch` seja transacional ou não transacional.  
   

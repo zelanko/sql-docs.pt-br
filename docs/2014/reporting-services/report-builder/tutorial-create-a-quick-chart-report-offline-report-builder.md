@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar um relatório de gráfico rápido Offline (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526999"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
-  Neste tutorial, você criará um gráfico de pizza usando um assistente e o modificará um pouco, apenas para ter uma ideia do que é possível. É possível executar este tutorial de duas formas. Os dois métodos têm o mesmo resultado: um gráfico de pizza semelhante ao da seguinte ilustração:  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido Offline (construtor de relatórios)
+  Neste tutorial, você criará um gráfico de pizza usando um assistente e o modificará um pouco, apenas para ter uma ideia do que é possível. É possível executar este tutorial de duas formas. Os dois métodos têm o mesmo resultado: um gráfico de pizza como o mostrado na ilustração a seguir:  
   
  ![Exibir "Meu primeiro gráfico de pizza" em execução](../media/rs-my1stpierunview.gif "meu primeiro gráfico de pizza no modo de exibição de execução")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091366"
  [Criar o gráfico de pizza com dados XML](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>Usando uma consulta Transact-SQL que contenha dados para este tutorial  
- Você pode copiar uma consulta com dados incluídos neste tópico e colá-la no assistente. Você precisará do nome de uma instância de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e credenciais suficientes para acesso somente leitura a qualquer banco de dados. A consulta de conjuntos de dados nos tutoriais usa dados literais, mas deve ser processada por uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para retornar os metadados necessários a um conjunto de dados de relatório.  
+ Você pode copiar uma consulta com dados incluídos neste tópico e colá-la no assistente. Você precisará do nome de uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e de credenciais suficientes para ter acesso somente leitura a qualquer banco de dados. A consulta de conjuntos de dados nos tutoriais usa dados literais, mas deve ser processada por uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para retornar os metadados necessários a um conjunto de dados de relatório.  
   
  A vantagem de usar a consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] é que todos os outros tutoriais do Construtor de Relatórios usam o mesmo método; portanto, quando você executar os outros tutoriais, já saberá o que fazer.  
   
- O [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta requer outros pré-requisitos. Para saber mais, veja [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md).  
+ A consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] requer outros pré-requisitos. Para saber mais, veja [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md).  
   
  [Criar o gráfico de pizza com uma consulta Transact-SQL que contém dados](#CreatePieQueryData)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091366"
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Criando o gráfico de pizza com uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta  
+##  <a name="CreatePieQueryData"></a> Criando o gráfico de pizza com uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>Para criar o gráfico de pizza com uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] que contenha dados  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091366"
   
 3.  Tipo de `#PERCENT{P0}` para o **Rotular dados** opção.  
   
-     O `{P0}` fornece o percentual sem casas decimais. Se você digitar apenas `#PERCENT`, seus números terão duas casas decimais. `#PERCENT` é uma palavra-chave que executa um cálculo ou função para você. Há muitos outros.  
+     O `{P0}` fornece o percentual sem casas decimais. Se você digitar apenas `#PERCENT`, seus números terão duas casas decimais. `#PERCENT` é uma palavra-chave que executa um cálculo ou função para você; há muitos outras.  
   
  Para saber mais sobre como personalizar legendas e rótulos de gráfico, veja [Exibir valores de porcentagem em um gráfico de pizza e &#40;Construtor de Relatórios e SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091366"
 ##  <a name="WhatsNext"></a> O que vem a seguir?  
  Agora que você criou seu primeiro relatório no Construtor de Relatórios, está pronto tentar os outros tutoriais e começar a criar relatórios com seus próprios dados. Para executar o construtor de relatórios, você precisa de permissão para acessar suas fontes de dados, como bancos de dados, com um *cadeia de caracteres de conexão*, que, na verdade, o conecta à fonte de dados. O administrador do sistema terá essas informações e poderá configurá-las.  
   
- Para trabalhar nos outros tutoriais, você precisa do nome de uma instância de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e credenciais suficientes para acesso somente leitura a qualquer banco de dados. O administrador do sistema também pode definir isso para você.  
+ Para trabalhar nos outros tutoriais, você precisa do nome de uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e de credenciais suficientes para ter acesso somente leitura a qualquer banco de dados. O administrador do sistema também pode definir isso para você.  
   
  Finalmente, para salvar seus relatórios em um servidor de relatório ou site do SharePoint integrado a um servidor de relatório, você precisa da URL e de permissões. Você pode executar qualquer relatório que criar diretamente de seu computador, mas os relatórios têm mais funcionalidade quando executados no servidor de relatório ou site do SharePoint. Você precisa de permissões para executar seus relatórios ou de outras pessoas no servidor de relatório ou site do SharePoint em que eles foram publicados. Fale com o administrador do sistema para obter acesso.  
   

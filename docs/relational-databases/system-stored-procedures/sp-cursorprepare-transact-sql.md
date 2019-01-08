@@ -18,12 +18,12 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c32bc8d9b8cca81c560e12b82f58169b257ca1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535498"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *Opções*  
  Um parâmetro opcional que retorna uma descrição das colunas do conjunto de resultados de cursor. *as opções* exige o seguinte **int** valor de entrada.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opção de rolagem. *scrollopt* é um parâmetro opcional que requer um dos seguintes **int** valores de entrada.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Opção de controle de simultaneidade. *ccopt* é um parâmetro opcional que requer um dos seguintes **int** valores de entrada.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (anteriormente conhecido como LOCKCC)|  
@@ -110,11 +110,11 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>Comentários  
  O parâmetro de status RPC é um dos seguintes:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Êxito|  
 |0x0001|Failure|  
-|1FF6|Não foi possível retornar metadados.<br /><br /> Observação: A razão para isso é de que a instrução não produz um conjunto de resultados; Por exemplo, é uma instrução INSERT ou DDL.|  
+|1FF6|Não foi possível retornar metadados.<br /><br /> Observação: A razão para isso é que a instrução não gera um conjunto de resultados; por exemplo, é uma instrução INSERT ou DDL.|  
   
 ## <a name="examples"></a>Exemplos  
  Quando *stmt* é parametrizado e o *scrollopt* valor PARAMETERIZED_STMT for ON, o formato da cadeia de caracteres é da seguinte maneira:  

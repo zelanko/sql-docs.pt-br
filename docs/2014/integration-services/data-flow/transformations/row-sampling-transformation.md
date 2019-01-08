@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowsamplingtrans.f1
@@ -21,12 +20,12 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3979599737f436f7f2e34439af79f66d870adcff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49cd9482fb54a3d292842cd174904078e3b1ab1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805458"
 ---
 # <a name="row-sampling-transformation"></a>Transformação Amostragem de Linhas
   A transformação Amostragem de Linhas é usada para obter um subconjunto selecionado aleatoriamente de um conjunto de dados de entrada. Você pode especificar o tamanho exato da amostra de saída e especificar uma semente para o gerador de números aleatórios.  
@@ -54,7 +53,7 @@ ms.locfileid: "48052436"
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md)  

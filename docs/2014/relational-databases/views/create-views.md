@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541817"
 ---
 # <a name="create-views"></a>Criar exibições
   Você pode criar exibições no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Uma exibição pode ser usada para as finalidades a seguir:  
@@ -44,7 +44,7 @@ ms.locfileid: "48214996"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  A exibição só pode ser criada no banco de dados atual.  
   
  Uma exibição pode ter, no máximo, 1.024 partições.  
@@ -60,9 +60,9 @@ ms.locfileid: "48214996"
   
 1.  No **Pesquisador de Objetos**, expanda o banco de dados em que você deseja criar a nova exibição.  
   
-2.  Clique com o botão direito do mouse na pasta **Exibições** objeto e clique em **Nova Exibição…**.  
+2.  Clique com o botão direito do mouse na pasta **Exibições** objeto e clique em **Nova Exibição...**.  
   
-3.  Na caixa de diálogo **Adicionar Tabela** , selecione o elemento ou elementos que você deseja incluir em sua nova exibição de uma destas guias: Tabelas, Exibições, Funções e Sinônimos.  
+3.  No **adicionar tabela** caixa de diálogo, selecione o elemento ou elementos que você deseja incluir no novo modo de exibição de uma das seguintes guias: Tabelas, exibições, funções e sinônimos.  
   
 4.  Clique em **Adicionar**e em **Fechar**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48214996"
   
      Para obter mais informações sobre o designer de consultas e exibição, veja [Ferramentas de Designer de Consultas e Exibição&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-view"></a>Para criar uma exibição  
   

@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3b9b66ee257cb3d82acb18112ed46d837a3468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1640ff8c4daab2260253d1104f1f8099d306120a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798555"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512750"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Diretrizes e limitações de Carregamento em Massa de XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47798555"
   
 -   Um documento XML é verificado para que esteja bem formado, mas ele não é validado.  
   
-     O Carregamento em Massa de XML verifica o documento XML para determinar se ele está bem formado – ou seja, para garantir que o XML se conforme com os requisitos de sintaxe da recomendação feita pelo World Wide Web Consortium para o XML 1.0. Se o documento não estiver bem formado, o Carregamento em Massa de XML cancelará o processamento e retornará um erro. A única exceção é quando o documento é um fragmento (por exemplo, o documento não tem nenhum elemento raiz), caso em que o Carregamento em Massa de XML carregará o documento.  
+     Carregamento em massa de XML verifica o documento XML para determinar se é que bem formed é, para garantir que o XML está de acordo com os requisitos de sintaxe da recomendação de XML 1.0 do World Wide Web Consortium. Se o documento não estiver bem formado, o Carregamento em Massa de XML cancelará o processamento e retornará um erro. A única exceção é quando o documento é um fragmento (por exemplo, o documento não tem nenhum elemento raiz), caso em que o Carregamento em Massa de XML carregará o documento.  
   
      O Carregamento em Massa de XML não valida o documento com relação a qualquer esquema DTD ou de Dados XML definido ou referenciado no arquivo de dados XML. Além disso, o Carregamento em Massa de XML não valida o arquivo de dados XML com base no esquema de mapeamento fornecido.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47798555"
   
      São criadas as tabelas identificadas no esquema de mapeamento (o banco de dados precisa existir). Se já existir um ou mais das tabelas no banco de dados, a propriedade SGDropTables determina se essas tabelas preexistentes devem ser descartadas e recriadas.  
   
--   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true), são criadas as tabelas são identificadas no esquema de mapeamento. Mas SchemaGen não cria restrições (como as restrições PRIMARY KEY/FOREIGN KEY) nessas tabelas com uma exceção: se os nós XML que constituem a chave primária em uma relação são definidos como tendo um tipo XML de ID (ou seja, **tipo = "xsd: ID"** para XSD) e a propriedade SGUseID é definida como True para SchemaGen, não apenas as chaves primárias são criadas de nós de digitado a ID, mas relações de chave estrangeira/chave primária são criadas a partir de relações de esquema de mapeamento.  
+-   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true), são criadas as tabelas são identificadas no esquema de mapeamento. Mas SchemaGen não cria restrições (como as restrições PRIMARY KEY/FOREIGN KEY) nessas tabelas com uma exceção: Se os nós XML que constituem a chave primária em uma relação são definidos como tendo um tipo XML de ID (ou seja, **tipo = "xsd: ID"** para XSD) e a propriedade SGUseID é definida como True para SchemaGen, não apenas as chaves primárias criadas a partir de a ID digitados nós, mas relações de chave estrangeira/chave primária são criadas a partir de relações de esquema de mapeamento.  
   
 -   SchemaGen não usa facetas de esquema XSD e extensões para gerar o relacional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esquema.  
   

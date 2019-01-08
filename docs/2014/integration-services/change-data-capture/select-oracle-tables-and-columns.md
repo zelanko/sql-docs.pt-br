@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - selTabCol
@@ -13,12 +12,12 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c02f4a98ad0ee4d7b73fe20041a03b53b34b2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7f97d7d1671aada299b685981e81d62010df24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051367"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788338"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selecionar tabelas e colunas Oracle
   Use a página Selecione tabelas e colunas Oracle para selecionar as tabelas do banco de dados de origem Oracle onde as alterações são capturadas. Esta página tem os seguintes elementos:  
@@ -27,15 +26,15 @@ ms.locfileid: "48051367"
  **Lista de tabelas**  
  A lista de tabelas tem três colunas:  
   
--   **Nome da tabela Oracle**: o nome da tabela, incluindo esquema de tabela.  
+-   **Nome da tabela Oracle**: O nome da tabela, inclusive o esquema da tabela.  
   
--   **Instância de Captura**: é o nome da instância de captura usada para nomear objetos do Change Data Capture específicos. A instância de captura não pode ser NULL.  
+-   **Instância de captura**: O nome da instância de captura usada para nomear objetos de captura de dados de alteração específico da instância. A instância de captura não pode ser NULL.  
   
      Se não for especificado, o nome será derivado do nome do esquema de origem mais o nome da tabela de origem, no formato `<schema-name>_<table-name>`. O nome da instância de captura não pode exceder 100 caracteres e deve ser exclusivo no banco de dados.  
   
      Você pode clicar em qualquer célula nesta coluna para editar manualmente **capture_instance**.  
   
--   **Security Role**: o nome da função de banco de dados de associação usada para controlar o acesso aos dados de alteração.  
+-   **Função de segurança**: O nome do banco de dados usada para controlar o acesso aos dados de alteração de função de associação.  
   
      Você pode clicar em qualquer célula nesta coluna para editar manualmente **security_role**.  
   

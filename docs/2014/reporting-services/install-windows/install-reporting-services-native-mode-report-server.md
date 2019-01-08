@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851861"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527716"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar o servidor de relatórios de modo nativo do Reporting Services
   Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode ser instalado do assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou da linha de comando. No assistente de instalação, você pode selecionar para 1) instalar arquivos e configurar o servidor com as configurações padrão ou 1) somente instalar os arquivos e o servidor não é configurado pelo assistente de instalação. Esse tópico analisa a *Configuração padrão para o modo nativo* em que a Instalação instala e configura uma instância do servidor de relatório. Depois que a Instalação for concluída, o servidor de relatório estará em execução e pronto para uso. Um servidor de relatório no modo nativo é executado como um servidor de aplicativo autônomo. O modo nativo é o padrão de servidor.  
@@ -95,7 +95,7 @@ ms.locfileid: "48851861"
 ##  <a name="bkmk_defaultURLreservations"></a> Reservas de URL padrão  
  As reservas de URL são compostas de um prefixo, nome de host, porta e diretório virtual:  
   
-|Parte|Description|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usem o prefixo HTTPS.|  
 |Nome do host|O nome de host padrão é um curinga forte (+). Especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome de host é resolvido para o computador, incluindo http://\<computername > / reportserver, http://localhost/reportserver, ou http://\<IPAddress > / ReportServer.|  
@@ -121,7 +121,7 @@ ms.locfileid: "48851861"
   
     -   **Nativo do Reporting Services**.  
   
-    -   **Ferramentas de gerenciamento – Básico**. As ferramentas de gerenciamento não são necessárias, mas são recomendadas a menos que você tenha alguma outra instalação das ferramentas de gerenciamento. A opção de configuração padrão resultará em um servidor de relatório está funcionando, mas você talvez queira alterar as opções de configuração em uma data posterior. Algumas opções como 'Meus Relatórios' são gerenciadas pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **Ferramentas de gerenciamento - básico**. As ferramentas de gerenciamento não são necessárias, mas são recomendadas a menos que você tenha alguma outra instalação das ferramentas de gerenciamento. A opção de configuração padrão resultará em um servidor de relatório está funcionando, mas você talvez queira alterar as opções de configuração em uma data posterior. Algumas opções como 'Meus relatórios' são gerenciadas por meio de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![Seleção do modo nativo do SSRS na seleção de recursos](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "Seleção do modo nativo do SSRS na seleção de recursos")  
   

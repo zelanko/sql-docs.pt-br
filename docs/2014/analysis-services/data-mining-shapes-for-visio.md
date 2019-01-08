@@ -16,17 +16,17 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055222"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512629"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formas de mineração de dados para o Visio
   As Formas de Mineração de Dados para o Visio fornecem modelos personalizados para exibir modelos de mineração de dados. Usando esses modelos, é possível se conectar a um modelo que você criou, e criar apresentações interativas para ilustrar os resultados da mineração de dados.  
   
- Os modelos oferecem muitas vantagens em relação aos gráficos estáticos e às capturas de tela – eles interagem com os modelos de mineração de dados subjacente, que são armazenados em uma instância do Analysis Services, e permitem personalizar a forma como os padrões no modelo de mineração são exibidos. Você pode recolher e expandir um modelo de árvore, filtrar os nós de dados ou por atributos e exibir estatísticas de modelo como probabilidades e coeficientes.  
+ Os modelos oferecem muitas vantagens em relação aos gráficos estáticos e capturas de tela – eles interagem com os modelos de mineração de dados subjacente, que são armazenados em uma instância do Analysis Services, e permitem que você personalize a forma como os padrões no modelo de mineração são exibidos. Você pode recolher e expandir um modelo de árvore, filtrar os nós de dados ou por atributos e exibir estatísticas de modelo como probabilidades e coeficientes.  
   
  ![DM](media/dm-stencil.gif "DM")  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48055222"
   
 -   **Diagrama de rede de dependência:** Use este assistente para criar gráficos para árvores de decisão e redes neurais.  
   
--   **Diagrama de árvore de decisão:** Use este assistente para criar diagramas que mostram os pontos de decisão e as fórmulas associadas aos modelos de árvore de decisão. Esse diagrama também pode ser usado com modelos de regressão.  
+-   **Diagrama da árvore de decisão:** Use este assistente para criar diagramas que mostram os pontos de decisão e as fórmulas associadas aos modelos de árvore de decisão. Esse diagrama também pode ser usado com modelos de regressão.  
   
 -   **Diagrama de cluster:** Use este assistente para criar gráficos coloridos para seus modelos de segmentação. Você pode alternar entre exibições como distinção de atributo, perfis de cluster e dependências, e personalizar a aparência de clusters.  
   

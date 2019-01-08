@@ -13,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018311"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536922"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Atualizar para o SQL Server 2014 usando o Assistente de Instalação (instalação)
   O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recursos para a atualização de componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também pode instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lado a lado com uma versão anterior, ou migrar bancos de dados existentes e parâmetros de configuração de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicá-los a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -89,15 +89,15 @@ ms.locfileid: "51018311"
   
 12. Na página Configuração da Instância, especifique a ID da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **ID da Instância** — Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, forneça um valor para a caixa de texto **ID da Instância** .  
+     **ID da Instância** – Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, forneça um valor para a caixa de texto **ID da Instância** .  
   
      Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instâncias instaladas**  — A grade mostrará as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador onde a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Instâncias instaladas** – a grade mostrará as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 13. O fluxo de trabalho do restante deste tópico depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções.  
   
-14. Na página Configuração do Servidor — Contas de Serviço, as contas de serviço padrão são exibidas para os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos que estão sendo atualizados.  
+14. Na página Configuração do Servidor – contas de Serviço, as contas de serviço padrão são exibidas para os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos que estão sendo atualizados.  
   
      As informações de autenticação e de logon serão transferidas da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para que serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebam as permissões mínimas que têm para concluir suas tarefas. Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -122,11 +122,11 @@ ms.locfileid: "51018311"
 ## <a name="next-steps"></a>Próximas etapas  
  Depois de atualizar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], conclua as seguintes tarefas:  
   
--   **Registre os servidores** — A atualização remove as configurações do Registro da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar, você deve registrar os servidores novamente.  
+-   **Registre os servidores** – a atualização remove as configurações do Registro da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar, você deve registrar os servidores novamente.  
   
--   **Atualize as estatísticas** — Para ajudar a otimizar o desempenho de consultas, é recomendável atualizar as estatísticas em todos os bancos de dados após a atualização. Use o procedimento armazenado `sp_updatestats` para atualizar as estatísticas das tabelas definidas pelo usuário nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Atualize as estatísticas** – para ajudar a otimizar o desempenho de consultas, é recomendável atualizar as estatísticas em todos os bancos de dados após a atualização. Use o procedimento armazenado `sp_updatestats` para atualizar as estatísticas das tabelas definidas pelo usuário nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** – Para reduzir a área da superfície sujeita a ataque de um sistema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos chave. Para obter mais informações sobre a configuração da área de superfície, consulte o arquivo leiame desta versão.  
+-   **Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** – para reduzir a área da superfície sujeita a ataque de um sistema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos chave. Para obter mais informações sobre a configuração da área de superfície, consulte o arquivo leiame desta versão.  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizar para o SQL Server 2014](upgrade-sql-server.md)   

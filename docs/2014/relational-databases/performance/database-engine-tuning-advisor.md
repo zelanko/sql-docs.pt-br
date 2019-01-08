@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797478"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   O DTA (Orientador de Otimização do Mecanismo de Banco de Dados) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] analisa bancos de dados e faz recomendações que você pode usar para otimizar desempenho de consulta. Você pode usar o Orientador de Otimização do Mecanismo de Banco de Dados para selecionar e criar um conjunto ideal de índices, exibições indexadas e partições de tabela sem precisar de conhecimentos avançados sobre a estrutura do banco de dados ou dos recursos internos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Com o DTA, é possível executar as tarefas a seguir.  
@@ -73,7 +72,7 @@ ms.locfileid: "49991169"
  Arquivo de entrada XML  
  Um arquivo formatado pelo XML que o Orientador de Otimização do Mecanismo de Banco de Dados pode usar para ajustar cargas de trabalho. O arquivo de entrada XML dá suporte a opções de ajuste avançadas que não estão disponível na GUI nem no utilitário **dta** .  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  O Orientador de Otimização do Mecanismo de Banco de Dados tem as seguintes limitações e restrições:  
   
 -   Ele não pode adicionar ou remover índices exclusivos ou índices que impõem restrições PRIMARY KEY ou UNIQUE.  

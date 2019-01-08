@@ -23,25 +23,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae94de96cc36c4b53204d76049df6079a5690a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3488a7137e03d3ffdec71f068697c96a151a1301
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656458"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517524"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Captura informações sobre operações externas do PolyBase.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|Identificador exclusivo de consulta associado à consulta do PolyBase|Consulte a ID na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|Índice da etapa de consulta|Consulte step_index na [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |tipo de operação|**nvarchar(128)**|Descreve uma operação do Hadoop ou outra operação externa|'Operation Hadoop externo'|  
-|nome da operação|**nvarchar(4000)**|Indica como o status do trabalho em percentual (quanto a entrada consumida é)|0-1 – multiplicado pelo fator de 100 (concluída)|  
-|progresso de map_|**float**|Indica como o status de uma redução do trabalho em percentual, se houver|0-1 – multiplicado pelo fator de 100 (concluída)|  
+|nome da operação|**nvarchar(4000)**|Indica como o status do trabalho em percentual (quanto a entrada consumida é)|0-1 - multiplicado pelo fator de 100 (concluído)|  
+|progresso de map_|**float**|Indica como o status de uma redução do trabalho em percentual, se houver|0-1 - multiplicado pelo fator de 100 (concluído)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

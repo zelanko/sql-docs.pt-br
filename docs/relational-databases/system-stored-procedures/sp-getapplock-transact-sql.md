@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851881"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617576"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Depois que um bloqueio de aplicativo for adquirido, somente os primeiros 32 caracteres poderão ser recuperados em texto não criptografado, o restante será em modo hash.  
   
  [ @LockMode=] '*lock_mode*'  
- É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **Shared**, **atualização**, **IntentShared**, **IntentExclusive**, ou **exclusivo** .  
+ É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser um dos seguintes: **Compartilhado**, **Update**, **IntentShared**, **IntentExclusive**, ou **exclusivo**.  
   
  [ @LockOwner=] '*lock_owner*'  
  É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor estiver **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
@@ -92,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  Somente um membro do banco de dados principal especificado no parâmetro @DbPrincipal pode adquirir bloqueios de aplicativo que especificam o banco de dados principal. Membros das funções dbo e db_owner são implicitamente considerados membros de todas as outras funções.  
   
- Bloqueios podem ser explicitamente liberados com sp_releaseapplock. Quando um aplicativo chama sp_getapplock várias vezes para o mesmo recurso de bloqueio, sp_releaseapplock deve ser chamado o mesmo número de vezes para liberar o bloqueio.  
+ Bloqueios podem ser explicitamente liberados com sp_releaseapplock. Quando um aplicativo chama sp_getapplock várias vezes para o mesmo recurso de bloqueio, sp_releaseapplock deve ser chamado o mesmo número de vezes para liberar o bloqueio.  Quando um bloqueio é aberto com o `Transaction` proprietário de bloqueio, que o bloqueio é liberado quando a transação é confirmada ou revertida.
   
  Se sp_getapplock for chamado várias vezes para o mesmo recurso de bloqueio, mas o modo de bloqueio especificado em qualquer solicitação não for igual ao modo existente, o efeito no recurso será uma união dos dois modos de bloqueio. Na maioria dos casos, isto significa que o modo de bloqueio é promovido para o modo de bloqueio mais forte, o modo existente ou o modo solicitado recentemente. Esse modo de bloqueio mais forte é mantido até que bloqueio seja totalmente liberado, mesmo se chamadas de liberação de bloqueio ocorram antes daquele momento. Por exemplo, na seguinte sequência de chamadas, o recurso é mantido em modo `Exclusive` ao invés de modo `Shared`.  
   

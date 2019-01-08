@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529542"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
   Você pode implantar um DAC (aplicativo da camada de dados) de um pacote de DAC para uma instância existente do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando um assistente ou um script do PowerShell. O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), cria um banco de dados e o preenche com todos os objetos de banco de dados definidos no DAC.  
   
--   **Antes de começar:**  [Utilitário do SQL Server](#SQLUtility), [Opções e configurações do banco de dados](#DBOptSettings), [Limitações e restrições](#LimitationsRestrictions), [Pré-requisitos](#Prerequisites), [Segurança](#Security), [Permissões](#Permissions)  
+-   **Antes de começar:**  [Utilitário do SQL Server](#SQLUtility), [opções e configurações de banco de dados](#DBOptSettings), [limitações e restrições](#LimitationsRestrictions), [pré-requisitos](#Prerequisites), [segurança](#Security), [Permissões](#Permissions)  
   
--   **Para implantar um DAC, usando:**  [O Assistente para Implantar o Aplicativo da Camada de Dados](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Para implantar um DAC, usando:**  [A implantar o Data-tier Application Wizard](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> Antes de começar  
  O mesmo pacote de DAC pode ser implantado várias vezes em uma única instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , porém as implantações devem ser executadas uma de cada vez. O nome de instância do DAC especificado para cada implantação deve ser exclusivo dentro da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "48104926"
 ###  <a name="DBOptSettings"></a> Opções e configurações de banco de dados  
  Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE, exceto:  
   
--   O agrupamento de banco de dados e o nível de compatibilidade são definidos para os valores definidos no pacote de DAC. Um pacote DAC criado a partir de um projeto de banco de dados no SQL Server Developer Tools usa os valores definidos no projeto de banco de dados. Um pacote extraído de um banco de dados existente usa os valores do banco de dados original.  
+-   A ordenação de banco de dados e o nível de compatibilidade são definidos para os valores definidos no pacote de DAC. Um pacote DAC criado a partir de um projeto de banco de dados no SQL Server Developer Tools usa os valores definidos no projeto de banco de dados. Um pacote extraído de um banco de dados existente usa os valores do banco de dados original.  
   
 -   É possível ajustar algumas das configurações de banco de dados, como nome de banco de dados e caminhos de arquivo, na página **Atualizar Configuração** . Não é possível definir os caminhos de arquivo durante a implantação no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48104926"
  Um DAC pode ser implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] executando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Se você criar um DAC usando uma versão posterior, o DAC poderá conter objetos sem suporte do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Você não pode implantar esses DACs nas instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
- Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Esses pacotes podem conter código mal-intencionado que possivelmente executarão códigos Transact-SQL inesperados ou provocarão erros ao modificar o esquema. Antes de usar um pacote de uma origem desconhecida ou não confiável, desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário. Para obter mais informações sobre como executar essas verificações, consulte [Validar um pacote de DAC](validate-a-dac-package.md).  
+ Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Esses pacotes podem conter código mal-intencionado que possivelmente executarão códigos Transact-SQL inesperados ou provocarão erros ao modificar o esquema. Antes de usar um pacote de uma origem desconhecida ou não confiável, desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário. Para obter mais informações sobre como executar essas verificações, consulte [Validate a DAC Package](validate-a-dac-package.md).  
   
 ###  <a name="Security"></a> Segurança  
  Para melhorar a segurança, os logons de autenticação do SQL Server são armazenados em um pacote do DAC sem senha. Quando o pacote é implantado ou atualizado, o logon é criado como um logon desabilitado com uma senha gerada. Para habilitar os logons, faça logon usando um logon que tenha a permissão de ALTER ANY LOGIN e use ALTER LOGIN para habilitar o logon e atribuir uma nova senha que possa ser comunicada ao usuário. Isso não é necessário para logons de Autenticação do Windows porque suas senhas não são gerenciadas pelo SQL Server.  
@@ -68,7 +68,7 @@ ms.locfileid: "48104926"
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância na qual você deseja implantar o DAC.  
   
-2.  Clique com o botão direito do mouse no nó **Bancos de Dados** e selecione **Implantar Aplicativo da Camada de Dados…**  
+2.  Clique com o botão direito do mouse no nó **Bancos de Dados** e selecione **Implantar Aplicativo da Camada de Dados...**  
   
 3.  Conclua as etapas das caixas de diálogo do assistente:  
   
@@ -189,9 +189,9 @@ ms.locfileid: "48104926"
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância na qual o DAC é implantado.  
   
-2.  Abra um `ServerConnection` do objeto e conecte-se à mesma instância.  
+2.  Abra um objeto `ServerConnection` e conecte-se à mesma instância.  
   
-3.  Use `System.IO.File` para carregar o arquivo de pacote DAC.  
+3.  Use `System.IO.File` para carregar o arquivo de pacote de DAC.  
   
 4.  Use `add_DacActionStarted` e `add_DacActionFinished` para assinar os eventos de implantação do DAC.  
   
@@ -232,7 +232,7 @@ $fileStream.Close()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de Dados](data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](extract-a-dac-from-a-database.md)   
  [Identificadores de banco de dados](../databases/database-identifiers.md)  
   

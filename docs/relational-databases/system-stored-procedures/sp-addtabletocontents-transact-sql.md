@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addtabletocontents_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aa1013de0030a21152a38e11a3dcb0fe12a02bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638234"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810938"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_name=**] **'***table_name***'**  
+ [  **@table_name=**] **'**_table_name_**'**  
  É o nome da tabela. *table_name* está **sysname**, sem padrão.  
   
- [  **@owner_name=**] **'***owner_name***'**  
+ [  **@owner_name=**] **'**_owner_name_**'**  
  É o nome do proprietário da tabela. *owner_name* está **sysname**, com um padrão NULL.  
   
- [  **@filter_clause=** ] **'***filter_clause***'**  
+ [  **@filter_clause=** ] **'**_filter_clause_**'**  
  Especifica uma cláusula de filtro que controla quais linhas dos dados recém-carregados devem ser adicionadas às tabelas de controle de mesclagem. *filter_clause* está **nvarchar (4000)**, com um valor padrão de NULL. Se *filter_clause* é **nulo**, em massa de todas as linhas carregadas são adicionadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

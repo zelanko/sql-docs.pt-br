@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -15,12 +15,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029d59328bf13991cd98c4d5ed5fa186abbd4453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111556"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776418"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
   O objeto **SQLServer:Databases** no SQL Server fornece contadores para monitorar a taxa de transferência de operações de cópia em massa, backup e restauração, e atividades de log de transações. Ele monitora as transações e o log de transações para determinar quanta atividade de usuário está ocorrendo no banco de dados e o quanto o log de transações está ficando completo. A quantidade de atividade de usuário pode determinar o desempenho do banco de dados e pode afetar o tamanho de log, o bloqueio e a replicação. O monitoramento da atividade de log de baixo nível para medir a atividade de usuário e uso de recursos pode ajudá-lo a identificar gargalos no desempenho.  
@@ -29,7 +29,7 @@ ms.locfileid: "48111556"
   
  Esta tabela descreve os contadores **Databases** do SQL Server.  
   
-|Contadores de bancos de dados do SQL Server|Description|  
+|Contadores de bancos de dados do SQL Server|Descrição|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|Número de transações ativas do banco de dados.|  
 |**Backup/Restore Throughput/sec**|Taxa de transferência de leitura/gravação para operações de backup e restauração de um banco de dados por segundo. Por exemplo, você pode medir como o desempenho da operação de backup do banco de dados é alterado quando mais dispositivos de backup são usados em paralelo ou quando dispositivos mais rápidos são usados. A taxa de transferência de uma operação de backup ou restauração de banco de dados permite determinar o progresso e desempenho de suas operações de backup e restaurações.|  

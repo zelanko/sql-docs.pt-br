@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
@@ -12,12 +12,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815738"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas de parâmetros (Visual Database Tools)
   Em alguns casos, talvez você queira criar uma consulta que possa ser utilizada muitas vezes, mas com um valor diferente a cada vez. Por exemplo, pode ser que você execute com frequência uma consulta para localizar todos os `title_ids` escritos por um autor. Você pode executar a mesma consulta para cada solicitação, exceto se a ID ou o nome do autor forem diferentes.  
@@ -31,7 +31,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>Onde você pode utilizar parâmetros  
- Você pode utilizar parâmetros como espaços reservados para valores literais – tanto para valores de texto quanto numéricos. Geralmente, os parâmetros são utilizados como espaços reservados em critérios de pesquisa para linhas individuais ou para grupos (ou seja, nas cláusulas WHERE ou HAVING de uma instrução SQL).  
+ Você pode usar parâmetros como espaços reservados para valores literais – tanto para valores de texto quanto numéricos. Geralmente, os parâmetros são utilizados como espaços reservados em critérios de pesquisa para linhas individuais ou para grupos (ou seja, nas cláusulas WHERE ou HAVING de uma instrução SQL).  
   
  Você pode utilizar parâmetros como espaços reservados em expressões. Por exemplo, você pode querer calcular preços com desconto fornecendo um valor de desconto diferente a cada vez que executar uma consulta. Para fazer isso, você poderá especificar a seguinte expressão:  
   

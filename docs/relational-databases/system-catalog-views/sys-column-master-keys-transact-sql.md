@@ -26,25 +26,25 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518717"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada chave mestra de banco de dados adicionada usando o [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instrução. Cada linha representa uma chave mestra de coluna única (CMK).  
     
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome da CMK.|  
 |**column_master_key_id**|**int**|ID da chave mestra de coluna.|  
 |**create_date**|**datetime**|Data em que a chave mestra de coluna foi criada.|  
 |**modify_date**|**datetime**|Data em que a chave mestra de coluna foi modificado pela última vez.|  
-|**key_store_provider_name**|**sysname**|Nome do provedor para o repositório de chave mestra de coluna que contém a CMK. Os valores permitidos são:<br /><br /> MSSQL_CERTIFICATE_STORE – se o repositório de chave mestra de coluna for um certificado de Store.<br /><br /> Um valor definido pelo usuário, se o repositório de chave mestra de coluna for de um tipo personalizado.|  
+|**key_store_provider_name**|**sysname**|Nome do provedor para o repositório de chave mestra de coluna que contém a CMK. Os valores permitidos são:<br /><br /> MSSQL_CERTIFICATE_STORE - se o repositório de chave mestra de coluna for um certificado de Store.<br /><br /> Um valor definido pelo usuário, se o repositório de chave mestra de coluna for de um tipo personalizado.|  
 |**key_path**|**nvarchar(4000)**|Um caminho de store específicas de chave mestra de coluna da chave. O formato do caminho depende do tipo de repositório de chave mestra de coluna. Exemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para um repositório de chaves mestras de coluna personalizada, o desenvolvedor é responsável por definir um caminho de chave que é para o repositório de chave mestra de coluna personalizado.|  
 |**allow_enclave_computations**|**bit**|Indica se a chave mestra de coluna é enclave habilitado, (se chaves de criptografia de coluna, criptografadas com essa chave mestre, podem ser usadas para cálculos de enclaves seguras do lado do servidor). Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|Uma assinatura digital da **key_path** e **allow_enclave_computations**, produzido usando-se a chave mestra de coluna, referenciado pelo **key_path**.|

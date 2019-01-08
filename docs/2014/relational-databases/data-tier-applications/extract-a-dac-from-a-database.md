@@ -21,19 +21,19 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acf3974a9406e974f6d294584cb732c12b0718e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527190"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
   Use o **Assistente para Extrair um Aplicativo da Camada de Dados** ou um script do Windows PowerShell para extrair um pacote de DAC (aplicativo da camada de dados) de um banco de dados do SQL Server existente. O processo de extração cria um arquivo de pacote de DAC que contém definições dos objetos de banco de dados e os elementos em nível de instância relacionados. Por exemplo, um arquivo de pacote de DAC contém as tabelas do banco de dados, os procedimentos armazenados, as exibições e os usuários junto com os logons que mapeiam para os usuários de banco de dados.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
   
--   **Para extrair um DAC, usando:**[extrair a Data-tier Application Wizard](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
+-   **Para extrair um DAC, usando:**  [O Extract Data-tier Application Wizard](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  É possível extrair um DAC de bancos de dados que residam em instâncias do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 ou posterior. Se o processo de extração for executado em um banco de dados que foi implantado de um DAC, só serão extraídas as definições dos objetos no banco de dados. O processo não referencia o DAC registrado em `msdb` (**mestre** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). O processo de extração não registra a definição do DAC na instância atual do Mecanismo de Banco de Dados. Para obter mais informações sobre como registrar um DAC, consulte [Register a Database As a DAC](register-a-database-as-a-dac.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "43815632"
   
 2.  Expanda o nó **Bancos de Dados** .  
   
-3.  Clique com o botão direito do mouse no nó do banco de dados do qual o DAC é extraído, aponte para **Tarefas**e selecione **Extrair Aplicativo da Camada de Dados…**  
+3.  Clique com o botão direito do mouse no nó do banco de dados do qual o DAC é extraído, aponte para **Tarefas** e selecione **Extrair Aplicativo da Camada de Dados...**  
   
 4.  Conclua as etapas das caixas de diálogo do assistente:  
   
@@ -162,6 +162,6 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)  
+ [Aplicativos da camada de dados](data-tier-applications.md)  
   
   

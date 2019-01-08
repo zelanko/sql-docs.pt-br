@@ -21,12 +21,12 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f44195e0c365b46794fdd03ff296a1fa4040dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535744"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "47640474"
   
 -   Quando várias instâncias do SQL Server são hospedadas no mesmo nó do WSFC, a DLL de Recurso usa esta exibição de gerenciamento dinâmico para determinar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual se conectar.  
    
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|ID exclusivo do grupo de disponibilidade como um recurso no cluster WSFC.|  
-|**instance_name**|**nvarchar(256)**|Nome —*server*/*instância*— de uma instância de servidor que hospeda uma réplica para o grupo de disponibilidade.|  
+|**instance_name**|**nvarchar(256)**|Nome -*server*/*instância*-de uma instância de servidor que hospeda uma réplica para o grupo de disponibilidade.|  
 |**NODE_NAME**|**nvarchar(256)**|Nome do nó de cluster WSFC.|  
   
 ## <a name="permissions"></a>Permissões  

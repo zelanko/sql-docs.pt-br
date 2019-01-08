@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b07719a39cd8f82561bd92635dcba8e97ffee532
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8125a27eed225a137a5665d87c923271cb592859
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096036"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793128"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], os membros são os dados mestres físicos. Por exemplo, um membro pode ser uma Road-150 bike em uma entidade Product ou um cliente específico em uma entidade Customer.  
@@ -64,9 +63,9 @@ ms.locfileid: "48096036"
 |----------------------|-----------|  
 |Criar um novo membro folha.|[Criar um membro folha &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
 |Criar um novo membro consolidado.|[Criar um membro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|Excluir um membro ou uma coleção existente.|[Excluir um membro ou coleção &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|Reativar um membro ou coleção excluído.|[Reativar um membro ou coleção &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Atualizar os valores de atributos de um membro.|[Alterar o tipo de atributo &#40;suplemento do MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Excluir um membro ou uma coleção existente.|[Excluir um membro ou uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|Reativar um membro ou coleção excluído.|[Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|Atualizar os valores de atributos de um membro.|[Alterar o tipo de atributo &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 |Mover membros dentro de uma hierarquia.|[Mover membros dentro de uma hierarquia de &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  

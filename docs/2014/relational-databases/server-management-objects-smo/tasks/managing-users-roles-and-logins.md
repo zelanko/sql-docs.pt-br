@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - logins [SMO]
@@ -16,32 +14,32 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36119391ebd552e1b3553e94ba3fcf0634887560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bac188dcc6eb26c1bca77ec292a096f4eac2f35
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815192"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gerenciando usuários, funções e logons
-  No SMO, os logons são representados pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando o logon existir no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ele poderá ser adicionado a uma função de servidor. A função de servidor é representada pelo <xref:Microsoft.SqlServer.Management.Smo.ServerRole> objeto. A função de banco de dados é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> e a função de aplicativo é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
+  No SMO, os logons são representados pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando o logon existir no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ele poderá ser adicionado a uma função de servidor. A função de servidor é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ServerRole>. A função de banco de dados é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> e a função de aplicativo é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
   
- Privilégios associados ao nível de servidor são listados como propriedades do <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> objeto. Os privilégios em nível de servidor podem ser concedidos a, negados a ou revogados de contas de logon individuais.  
+ Privilégios associados ao nível de servidor são listados como propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>. Os privilégios em nível de servidor podem ser concedidos a, negados a ou revogados de contas de logon individuais.  
   
- Cada <xref:Microsoft.SqlServer.Management.Smo.Database> objeto tem um <xref:Microsoft.SqlServer.Management.Smo.UserCollection> objeto que especifica todos os usuários no banco de dados. Cada usuário é associado a um logon. Um logon pode ser associado a usuários em mais de um banco de dados. O <xref:Microsoft.SqlServer.Management.Smo.Login> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> método pode ser usado para listar todos os usuários em cada banco de dados que está associado ao logon. Alternativamente, a propriedade <xref:Microsoft.SqlServer.Management.Smo.User> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> especifica o logon que é associado ao usuário.  
+ Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Database> possui um objeto <xref:Microsoft.SqlServer.Management.Smo.UserCollection> que especifica todos os usuários do banco de dados. Cada usuário é associado a um logon. Um logon pode ser associado a usuários em mais de um banco de dados. O método <xref:Microsoft.SqlServer.Management.Smo.Login> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> pode ser usado para listar todos os usuários em cada banco de dados associado ao logon. Alternativamente, a propriedade <xref:Microsoft.SqlServer.Management.Smo.User> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> especifica o logon que é associado ao usuário.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bancos de dados também têm funções que especificam um conjunto de privilégios de nível de banco de dados que permitem que um usuário executar tarefas específicas. Diferente das funções de servidor, as funções de banco de dados não são fixas. Elas podem ser criadas, modificadas e removidas. Privilégios e usuários podem ser designados a uma função de banco de dados para administração em massa.  
+ Bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também têm funções que especificam um conjunto de privilégios em nível de banco de dados que permitem a um usuário executar tarefas específicas. Diferente das funções de servidor, as funções de banco de dados não são fixas. Elas podem ser criadas, modificadas e removidas. Privilégios e usuários podem ser designados a uma função de banco de dados para administração em massa.  
   
 ## <a name="example"></a>Exemplo  
  Para o exemplo de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-basic"></a>Enumerando logons e usuários associados no Visual Basic  
- Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e usuário do [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] banco de dados para verificar se há informações de mapeamento para enumerar.  
+ Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e um usuário no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para garantir a existência de informações de mapeamento a serem enumeradas.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBLogins1](SMO How to#SMO_VBLogins1)]  -->  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Enumerando logons e usuários associados no Visual C#  
- Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e usuário do [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] banco de dados para verificar se há informações de mapeamento para enumerar.  
+ Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e um usuário no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para garantir a existência de informações de mapeamento a serem enumeradas.  
   
 ```  
 {   
@@ -67,7 +65,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Enumerando logons e usuários associados no PowerShell  
- Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e usuário do [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] banco de dados para verificar se há informações de mapeamento para enumerar.  
+ Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e um usuário no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para garantir a existência de informações de mapeamento a serem enumeradas.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server.  

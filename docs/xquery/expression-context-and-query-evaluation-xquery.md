@@ -19,21 +19,21 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 872b14f2b9ced766086d98af74e5ea9d1129d6df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673515"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501932"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expressão e avaliação de consulta (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   O contexto de uma expressão é a informação usada para analisá-la e avaliá-la. A seguir há duas fases nas quais o XQuery é avaliado:  
   
--   **Contexto estático** – esta é a fase de compilação de consulta. Com base nas informações disponíveis, os erros às vezes ocorrem durante essa análise estática da consulta.  
+-   **Contexto estático** -esta é a fase de compilação de consulta. Com base nas informações disponíveis, os erros às vezes ocorrem durante essa análise estática da consulta.  
   
--   **Contexto dinâmico** – esta é a fase de execução de consulta. Mesmo se uma consulta não tiver erros estáticos, como erros durante a compilação da consulta, a consulta poderá retornar erros durante sua execução.  
+-   **Contexto dinâmico** -esta é a fase de execução de consulta. Mesmo se uma consulta não tiver erros estáticos, como erros durante a compilação da consulta, a consulta poderá retornar erros durante sua execução.  
   
 ## <a name="static-context"></a>Contexto estático  
  A inicialização de contexto estático refere-se ao processo de reunir todas as informações para análise estática da expressão. Como parte da inicialização do contexto estático, o seguinte é completado:  

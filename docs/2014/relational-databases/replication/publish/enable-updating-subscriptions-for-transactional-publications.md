@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2a0f5aa667378b6be308b8072c03a6722a988c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784888"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar atualização de assinaturas para publicações transacionais
   Este tópico descreve como habilitar as assinaturas de atualização para publicações transacionais no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -38,7 +37,7 @@ ms.locfileid: "48194696"
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Habilite as assinaturas de atualização para publicações transacionais na página **Tipo de Publicação** do Assistente para Nova Publicação. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](create-a-publication.md). Você não pode habilitar assinaturas de atualização após uma publicação ter sido criada.  
   
- Para usar assinaturas de atualização, você deve configurar também as opções no Assistente para Nova Assinatura. Para obter mais informações, consulte [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+ Para usar assinaturas de atualização, você deve configurar também as opções no Assistente para Nova Assinatura. Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 #### <a name="to-enable-updating-subscriptions"></a>Para habilitar assinaturas de atualização  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48194696"
     > [!NOTE]  
     >  O Agente de Leitor de Fila será configurado mesmo se você usar apenas a assinatura de atualização imediata.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Ao criar uma publicação transacional de forma programática usando procedimentos armazenados de replicação, é possível ativar tanto as assinaturas de atualização imediatas como em fila.  
   
 #### <a name="to-create-a-publication-that-supports-immediate-updating-subscriptions"></a>Para criar uma publicação que ofereça suporte a assinaturas de atualização imediatas  
@@ -68,7 +67,7 @@ ms.locfileid: "48194696"
   
 4.  Adicione artigos à publicação. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
-5.  No Assinante, crie uma assinatura de atualização para essa publicação. Para obter mais informações, consulte [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+5.  No Assinante, crie uma assinatura de atualização para essa publicação. Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>Para criar uma publicação que ofereça suporte a assinaturas de atualização em fila  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48194696"
   
     -   Se você não estiver seguro quanto à existência de um trabalho do Agente do Leitor de Log para um banco de dados publicado, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) no Publicador do banco de dados de publicação. Se o conjunto de resultados estiver vazio, será preciso criar um trabalho do Log Reader Agent.  
   
-    -   No publicador, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique as credenciais do Windows com as quais o agente é executado para **@job_name** e **@password**. Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**.  
+    -   No publicador, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique as credenciais do Windows sob as quais o agente será executado para **@job_name** e **@password**. Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**.  
   
 2.  Se necessário, crie um trabalho do Queue Reader Agent para o Distribuidor.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "48194696"
   
 5.  Adicione artigos à publicação. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
-6.  No Assinante, crie uma assinatura de atualização para essa publicação. Para obter mais informações, consulte [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+6.  No Assinante, crie uma assinatura de atualização para essa publicação. Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>Para alterar a política de conflito para uma publicação que permite assinatura de atualização em fila  
   

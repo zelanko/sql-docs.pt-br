@@ -14,12 +14,12 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541841"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Driver do Excel)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47802354"
   
  **SQLGetInfo** dá suporte ao tipo de informações SQL_FILE_USAGE. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
   
--   SQL_FILE_NOT_SUPPORTED — O driver não é um driver de camada única.  
+-   SQL_FILE_NOT_SUPPORTED - o driver não é um driver de camada única.  
   
--   SQL_FILE_TABLE — Um driver de camada única trata arquivos em uma fonte de dados como tabelas.  
+-   SQL_FILE_TABLE - um driver de camada única trata arquivos em uma fonte de dados como tabelas.  
   
--   SQL_FILE_QUALIFIER — Um driver de camada única trata arquivos em uma fonte de dados como um qualificador.  
+-   SQL_FILE_QUALIFIER - um driver de camada única trata arquivos em uma fonte de dados como um qualificador.  
   
  O driver ODBC retorna SQL_FILE_TABLE de gerenciabilidade do Microsoft Exceldriver porque cada arquivo é uma tabela.  
   

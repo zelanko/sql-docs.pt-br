@@ -14,12 +14,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b6da26bc764c8ac3c02b9f6a8972127f9248d56
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f195461d11b84860ab7fdf5539eca17946894ad3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032056"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507698"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores de um arquivo do Excel para um domínio
   Este tópico descreve como importar valores de um arquivo do Excel para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O uso de um arquivo do Excel para importar valores de domínio para o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que as pessoas que têm uma lista de valores de dados válidos em um arquivo do Excel ou um arquivo de texto importem esses valores para um domínio. De um arquivo do Excel, você pode importar valores de domínio para um ou vários domínios em uma base de dados de conhecimento. (Consulte [Importar domínios de um arquivo do Excel na descoberta de conhecimento](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obter mais informações sobre como importar domínios para uma base de dados de conhecimento.) Não há suporte para a exportação para um arquivo do Excel.  
@@ -62,7 +62,7 @@ ms.locfileid: "51032056"
   
 10. Clique em **OK**. Uma barra de progresso é exibida, com uma indicação de quantos valores foram importados com êxito, quantos valores não foram importados e o número total de valores. Clique no botão **Cancelar** para cancelar o processo.  
   
-11. Verifique se “Importação concluída” é exibido na caixa de diálogo **Importar Valores de Domínio** . Nesta caixa de diálogo, veja quais valores foram importados com êxito e quais não foram. Ela indica o nome e o caminho do arquivo, o status de conclusão da operação, quantos valores foram importados com êxito, quantos valores não foram importados e o número total de valores processados.  
+11. Verifique se "Importação concluída" é exibido na caixa de diálogo **Importar Valores de Domínio**. Nesta caixa de diálogo, veja quais valores foram importados com êxito e quais não foram. Ela indica o nome e o caminho do arquivo, o status de conclusão da operação, quantos valores foram importados com êxito, quantos valores não foram importados e o número total de valores processados.  
   
 12. Para os valores que não foram importados com êxito, clique em **Log** para exibir a caixa de diálogo **Importar Valores de Domínio – Valores com Falha** para saber por que a operação de importação falhou. A coluna **Valor com Falha** mostra os valores que não puderam ser importados de um arquivo do Excel para um domínio, e a coluna **Razão** explica por que a importação falhou. Clique em **Copiar para a área de transferência** para copiar a tabela **Valor com Falha** para a área de transferência, a partir da qual você poderá copiá-la para outro programa, como uma planilha do Excel ou um arquivo do Bloco de Notas. Clique em **OK** para fechar a caixa de diálogo **Valores com Falha** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51032056"
   
 14. Clique em **Concluir** para adicionar os valores à base de dados de conhecimento.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após importar valores de um arquivo do Excel para um domínio  
+##  <a name="FollowUp"></a> Acompanhar: Após importar valores de um arquivo do Excel para um domínio  
  Depois que você importar valores para um domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Importando sinônimos  
@@ -111,7 +111,7 @@ ms.locfileid: "51032056"
   
     -   O formato esperado é que a primeira coluna será os valores principais, enquanto a segunda coluna e acima serão sinônimos.  
   
-    -   Você pode importar vários sinônimos da mesma linha ou de linhas diferentes. Por exemplo, se você deseja importar “CNI” e “Cidade de Nova Iorque” como sinônimos para “Nova Iorque”, importe uma única linha com “Nova Iorque” na coluna 1, “CNI” na coluna 2, e “Cidade de Nova Iorque” na coluna 3; ou você pode importar uma linha com “Nova Iorque” na coluna 1 e “CNI” na coluna 2, e outra linha com “Nova Iorque” na coluna 1 e “Cidade de Nova Iorque” na coluna 2. Observe que, se o valor “Nova Iorque” já existir no domínio, somente os sinônimos serão adicionados, e o usuário não receberá um erro durante o processo de importação informando que o valor já existe. Se o primeiro valor ainda não existir, ele será adicionado ao domínio.  
+    -   Você pode importar vários sinônimos da mesma linha ou de linhas diferentes. Por exemplo, se você deseja importar "RJ" e "Cidade do Rio de Janeiro" como sinônimos para "Rio de Janeiro", importe uma única linha com "Rio de " na coluna 1, "RJ" na coluna 2 e "Cidade do Rio de Janeiro" na coluna 3 ou você pode importar uma linha com "Rio de Janeiro" na coluna 1 e "RJ" na coluna 2 e outra linha com "Rio de Janeiro" na coluna 1 e "Cidade do Rio de Janeiro" na coluna 2. Observe que, se o valor "Rio de Janeiro" já existir no domínio, somente os sinônimos serão adicionados e o usuário não receberá um erro durante o processo de importação informando que o valor já existe. Se o primeiro valor ainda não existir, ele será adicionado ao domínio.  
   
  As regras a seguir se aplicam ao arquivo do Excel que está sendo usado para a importação:  
   

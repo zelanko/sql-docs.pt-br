@@ -15,12 +15,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530632"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   Use a página **Processo** da caixa de diálogo **Editor da Tarefa Executar Processo** , para configurar as opções que executam o processo. As opções incluem o executável a ser utilizado, seu local, argumentos do prompt de comando e as variáveis que fornecem entrada e capturam a saída.  
@@ -43,7 +43,7 @@ ms.locfileid: "48100617"
  **StandardInputVariable**  
  Selecione a variável para fornecer a entrada ao processo ou clique em \<**Nova variável...**> para criar uma nova variável:  
   
- **Tópicos relacionados:**[Adicionar variável  ](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:**  [Adicionar Variável](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  Selecione uma variável para capturar a saída do processo ou clique em \<**Nova variável...**> para criar uma nova variável.  

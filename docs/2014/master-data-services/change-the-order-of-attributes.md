@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5a04d8e28889c0187eb3a79753d6627c42d732b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b29e1e971222d609b3f2364f92f262182b88f001
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782378"
 ---
 # <a name="change-the-order-of-attributes"></a>Alterar a ordem dos atributos
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar a ordem dos atributos.  
@@ -26,7 +25,7 @@ ms.locfileid: "48090876"
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>Para alterar a ordem de um atributo  
   

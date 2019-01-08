@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65af75296064cd33e1c057126754339499f8b93f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534039"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover um índice existente para um grupo de arquivos diferente
   Este tópico descreve como mover um índice existente do seu grupo de arquivos atual para um grupo de arquivos diferente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48070376"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Se uma tabela tiver um índice clusterizado, mover o índice clusterizado a um novo grupo de arquivos moverá a tabela àquele grupo de arquivos.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48070376"
   
 8.  Clique em **OK**.  
   
- As informações a seguir estão disponíveis na página **Armazenamento** da caixa de diálogo **Propriedades do Índice –** *index_name* :  
+ As informações a seguir estão disponíveis na página **Armazenamento** da caixa de diálogo **Propriedades do Índice –** *index_name*:  
   
  **Grupo de arquivos**  
  Armazena o índice no grupo de arquivos especificado. A lista exibe apenas grupos de arquivos padrão (linha). A seleção de lista padrão é o grupo de arquivos PRIMARY do banco de dados.  
@@ -141,7 +141,7 @@ ms.locfileid: "48070376"
 > [!NOTE]  
 >  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Para mover um índice existente para um grupo de arquivos diferente  
   

@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538164"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provedor Microsoft OLE DB para o serviço de diretório Microsoft Active Directory
 O provedor do Active Directory Service Interfaces (ADSI) permite que o ADO conectar-se aos serviços de diretório heterogêneos por meio de ADSI. Isso dá aos aplicativos de ADO acesso somente leitura para os serviços de diretório do Microsoft Windows NT 4.0 e o Microsoft Windows 2000, além de qualquer serviço de diretório compatível com LDAP e serviços de diretório da Novell. ADSI em si é baseado em um modelo de provedor, para que se houver um novo provedor fornecer acesso para outro diretório, o aplicativo ADO poderá acessá-lo diretamente. O provedor ADSI é de thread livre e Unicode habilitado.  
@@ -44,7 +44,7 @@ ADSDSOObject
   
  A cadeia de caracteres consiste as seguintes palavras-chave.  
   
-|Palavra-chave|Description|  
+|Palavra-chave|Descrição|  
 |-------------|-----------------|  
 |**Provedor**|Especifica o provedor OLE DB para o serviço do Active Directory.|  
 |**ID de usuário**|Especifica o nome de usuário. Se essa palavra-chave for omitido, o logon atual é usado.|  
@@ -60,12 +60,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*Root*|Indica o **ADsPath** objeto do qual iniciar a pesquisa (ou seja, a raiz da pesquisa).|  
 |*Filter*|Indica o filtro de pesquisa no formato RFC 1960.|  
 |*Atributos*|Indica uma lista delimitada por vírgulas de atributos a serem retornados.|  
-|*Escopo*|Opcional. Um **cadeia de caracteres** que especifica o escopo da pesquisa. Pode ser uma destas opções:<br /><br /> -Base – Pesquisa apenas o objeto base (raiz da pesquisa).<br />-OneLevel — Pesquise apenas um nível.<br />-Subárvore — Pesquise a subárvore inteira.|  
+|*Escopo*|Opcional. Um **cadeia de caracteres** que especifica o escopo da pesquisa. Pode ser uma destas opções:<br /><br /> -Base - pesquisa somente o objeto base (raiz da pesquisa).<br />-OneLevel - pesquisar apenas um nível.<br />-Subárvore - pesquisa a subárvore inteira.|  
   
  Por exemplo:  
   
@@ -117,13 +117,13 @@ objectClass='user' AND objectCategory='Person'"
   
 |Método|Está disponível?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|não|  
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|não|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|não|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|não|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Não|  
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Não|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Não|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Não|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sim|  
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|  
-|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|não|  
+|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Não|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|  
 |[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Sim|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|  
@@ -135,8 +135,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sim|  
 |[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Sim|  
 |[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|  
-|[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|não|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|não|  
+|[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Não|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Não|  
   
  Para obter mais informações sobre a ADSI e as especificações do provedor, consulte a documentação do Active Directory Service Interfaces ou visite a página da Web do ADSI.  
   

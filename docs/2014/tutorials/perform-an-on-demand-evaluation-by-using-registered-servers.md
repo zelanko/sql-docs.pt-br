@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514061"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realize uma avaliação sob demanda usando servidores registrados
   Você pode realizar uma avaliação sob demanda de políticas de práticas recomendadas em relação a uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando Servidores Registrados. Você pode usar grupos de servidores locais ou um servidor de gerenciamento central.  
@@ -25,7 +25,7 @@ ms.locfileid: "48182416"
 >  Você pode realizar uma avaliação sob demanda de políticas de práticas recomendadas em relação a membros de grupo de servidores que estão executando o [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou uma versão posterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No entanto, você pode receber um erro de exceção se houver algumas propriedades referidas por uma política que não tem suporte no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Para realizar essa tarefa, você deve configurar um ou mais registros de servidor em Servidores Registrados. Para obter mais informações, consulte os tópicos a seguir:  
+ Para realizar essa tarefa, você deve configurar um ou mais registros de servidor em Servidores Registrados. Para mais informações, consulte os seguintes tópicos:  
   
 -   [Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48182416"
 8.  Para exibir os resultados detalhados para uma política, clique na política na **resultados** tabela. O **detalhes de destino** tabela mostra os detalhes para cada instância.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Avalie as políticas de práticas recomendadas de forma agendada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lição 2: Avaliar as políticas de práticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorar e impor práticas recomendadas usando o gerenciamento baseado em políticas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

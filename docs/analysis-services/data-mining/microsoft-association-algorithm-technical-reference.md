@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545588"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50145901"
  É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você pode também alterar os parâmetros programaticamente usando o <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> coleção em AMO ou usando o [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) em XMLA. A tabela a seguir descreve cada parâmetro.  
   
 > [!NOTE]  
->  Não é possível alterar os parâmetros de um modelo existente usando uma instrução DMX; você deve especificar os parâmetros na instrução DMX CREATE MODEL ou ALTER STRUCTURE… ADD MODEL ao criar o modelo.  
+>  Você não pode alterar os parâmetros em um modelo existente usando uma instrução DMX; Você deve especificar os parâmetros na instrução DMX CREATE MODEL ou ALTER STRUCTURE... ADD MODEL ao criar o modelo.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Especifica o número de máximo de conjuntos de itens que será produzido. Se não for especificado um número, valor padrão será usado.  
@@ -133,7 +133,7 @@ ms.locfileid: "50145901"
  Aplica-se à coluna da estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como se tivesse dois estados possíveis: **Missing** e **Existing**. Nulo é um valor ausente.  
+ Significa que a coluna será tratada como se tivesse dois estados possíveis: **Faltando** e **existentes**. Nulo é um valor ausente.  
   
  Aplica-se à coluna do modelo de mineração.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -22,12 +22,12 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79add9bcf43604b52a28eae6ab477489d23d8370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbe4b5e5605964d027e496a56b4dbf0836baaae4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200426"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801768"
 ---
 # <a name="change-an-operator39s-availability"></a>Alterar a disponibilidade de um operador
   Este tópico descreve como alterar a agenda de um operador para receber notificações de alerta no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "48200426"
   
 6.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-change-an-operators-availability"></a>Para alterar a disponibilidade de um operador  
   
@@ -78,12 +78,12 @@ ms.locfileid: "48200426"
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
-    -- disables the 'François Ajenstat' operator  
+    -- disables the 'Fran??ois Ajenstat' operator  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 0;  
     GO  
     ```  

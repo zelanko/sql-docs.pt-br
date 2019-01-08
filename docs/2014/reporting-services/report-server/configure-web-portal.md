@@ -13,12 +13,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81be4bb3802888a8471308135775723c9ba0fd9e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184946"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419857"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurar o Gerenciador de Relatórios (modo nativo)
   O Gerenciador de Relatórios é um aplicativo de front-end da Web usado para exibir relatórios, gerenciar o conteúdo do servidor de relatórios e conceder a um usuário o acesso ao servidor de relatórios no modo nativo. O Gerenciador de Relatórios será instalado com o serviço Web Servidor de Relatório na mesma instância do servidor de relatório e, opcionalmente, configurado se você selecionar a opção **Instalar na configuração de modo nativo padrão** na Instalação. Também é possível configurar o Gerenciador de Relatórios como uma tarefa posterior à instalação. Este tópico fornece informações sobre os seguintes cenários de configuração do Gerenciador de Relatórios:  
@@ -81,7 +81,7 @@ ms.locfileid: "48184946"
   
 1.  Abra o arquivo **RSReportServer.config** em um editor de texto. Por padrão, ele está localizado em \Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer.  
   
-2.  Localizar `ReportServerURL`.  
+2.  Localize `ReportServerURL`.  
   
 3.  Substitua-o pela URL da instância do servidor de relatórios.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48184946"
   
     1.  Abra o RSReportServer.config em um editor de texto. Por padrão, ele está localizado em \Program Files\Microsoft \ msrs11 de SQL. \< *instancename*> \reporting.  
   
-    2.  Localizar `ReportServerURL`.  
+    2.  Localize `ReportServerURL`.  
   
     3.  Substitua pela URL da instância do servidor de relatórios remoto.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "48184946"
   
 8.  Desative os recursos de servidor que você não estiver usando:  
   
-    -   No computador do Gerenciador de relatórios, desative `WebServiceAndHTTPAccessEnabled` e `ScheduleEventsAndReportDeliveryEnabled`.  
+    -   No computador com o Gerenciador de Relatórios, desative `WebServiceAndHTTPAccessEnabled` e `ScheduleEventsAndReportDeliveryEnabled`.  
   
-    -   No computador do servidor de relatório, desative `ReportManagerEnabled`.  
+    -   No computador Servidor de Relatórios, desative `ReportManagerEnabled`.  
   
  Para obter mais informações sobre como desativar recursos, consulte a seção [Ativar e desativar recursos do Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
@@ -172,14 +172,14 @@ ms.locfileid: "48184946"
  Para obter mais informações sobre como modificar esse arquivo de configuração, veja [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para obter mais informações sobre como desabilitar recursos no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Ativar e desativar recursos do Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
- [Configurar uma URL &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Verificar uma instalação do Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
- [Personalizar folhas de estilo para o Visualizador de HTML e o Gerenciador de relatórios](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Ativar recursos do Reporting Services ou desativar](turn-reporting-services-features-on-or-off.md)   
- [Gerenciar um servidor de relatório do Reporting Services modo nativo](manage-a-reporting-services-native-mode-report-server.md)   
+ [Personalizar folhas de estilo para o Visualizador de HTML e o Gerenciador de Relatórios](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [Ativar e desativar recursos do Reporting Services](turn-reporting-services-features-on-or-off.md)   
+ [Gerenciar um servidor de relatório de modo nativo do Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
  [Arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md)   
- [Configurar um servidor de relatório do modo nativo para administração Local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
   

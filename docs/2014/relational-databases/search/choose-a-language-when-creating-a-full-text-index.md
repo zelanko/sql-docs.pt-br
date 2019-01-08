@@ -19,12 +19,12 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70afd9ea708a82e45ba10e90022224c6ffdc088a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514674"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
   Ao criar um índice de texto completo, você precisa especificar um idioma no nível de coluna para a coluna indexada. O [separador de palavras e os lematizadores](configure-and-manage-word-breakers-and-stemmers-for-search.md) do idioma especificado serão usados por consultas de texto completo na coluna. Há algumas coisas a considerar ao escolher o idioma da coluna ao criar um índice de texto completo. Essas considerações estão relacionadas a como seu texto é transformado em token e, depois, indexado pelo Mecanismo de Texto Completo.  
@@ -59,7 +59,7 @@ ms.locfileid: "48229490"
   
      Os separadores de palavras foram reformulados, e testes mostraram que os novos separadores de palavras proporcionam melhor qualidade semântica do que os anteriores. Isso aumenta a precisão da recuperação.  
   
--   Cobertura de uma lista extensa de idiomas, separadores de palavras são incluídos no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prontos e habilitado por padrão.  
+-   Cobertura de uma lista extensa de idiomas e separadores de palavras que estão são incluídos no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prontos para uso e habilitados por padrão.  
   
  Para obter uma lista de idiomas para os quais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um separador de palavras e lematizadores, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48229490"
  Ao criar um índice de texto completo, você precisa especificar um nome de idioma válido para cada coluna. Se um nome de idioma for válido, mas não for retornado pela exibição de catálogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) , a pesquisa de texto completo reverterá para o nome de idioma mais próximo disponível da mesma família de idiomas, se houver. Caso contrário, a pesquisa de texto completo reverterá para o separador de palavras Neutro. Esse comportamento de reversão poderá afetar a precisão da recuperação. Portanto, é altamente recomendável especificar um nome de idioma válido e disponível para cada coluna quando você criar um índice de texto completo.  
   
 > [!NOTE]  
->  O LCID é usado em todos os tipos de dados qualificados para indexação de texto completo (como `char` ou `nchar`). Se você tiver a ordem de classificação de um `char`, `varchar`, ou `text` coluna de tipo definida como um configuração de idioma diferente do idioma identificado pelo LCID, o LCID é usada de qualquer forma durante a indexação e consulta dessas colunas de texto completo.  
+>  O LCID é usado em todos os tipos de dados qualificados para indexação de texto completo (como `char` ou `nchar`). Se você tiver a ordem de classificação de um tipo de coluna e a ordem de um tipo de coluna `char`, `varchar` ou `text` definido com uma configuração de idioma diferente do idioma identificado pelo LCID, o LCID será usado de qualquer forma durante a indexação de texto completo e a consulta dessas colunas.  
   
 
   
@@ -96,7 +96,7 @@ ms.locfileid: "48229490"
   
 -   Para conteúdo em texto sem-formatação  
   
-     Quando o conteúdo é texto sem formatação, você pode convertê-lo para o `xml` tipo de dados e adicionar marcas de idioma que indicam o idioma correspondente para cada documento ou seção de documento. No entanto, para que isso funcione, você deve saber qual é o idioma antes de executar a indexação de texto completo.  
+     Quando o conteúdo é um texto sem-formatação, você pode convertê-lo para o tipo de dados `xml` e adicionar marcas de idioma que indiquem o idioma correspondente para cada documento ou seção de documento. No entanto, para que isso funcione, você deve saber qual é o idioma antes de executar a indexação de texto completo.  
   
 
   
@@ -106,9 +106,9 @@ ms.locfileid: "48229490"
 
   
 ##  <a name="type"></a> Efeito do tipo de coluna na pesquisa de texto completo  
- Outro aspecto a ser considerado na escolha do idioma está relacionada a como os dados são representados. Para os dados que não são armazenados em `varbinary(max)` coluna, nenhuma filtragem especial é executada. Em vez disso, o texto geralmente é passado pelo separador de palavras assim como é.  
+ Outro aspecto a ser considerado na escolha do idioma está relacionada a como os dados são representados. Para dados que não são armazenados na coluna `varbinary(max)`, nenhuma filtragem especial é executada. Em vez disso, o texto geralmente é passado pelo separador de palavras assim como é.  
   
- Além disso, os separadores de palavra foram criados principalmente para processar texto escrito. Então, se você tiver algum tipo de formatação em seu texto (como HTML), não será possível obter grande precisão linguística durante a indexação e procura. Nesse caso, você tem duas opções – o método preferencial é simplesmente armazenar dados na coluna `varbinary(max)`, e indicar seu tipo de documento para que possa ser filtrada. Se não houver essa opção, você poderá considerar a possibilidade de usar o separador de palavras neutro e, se possível, adicionar dados de marcação (como ‘br’ em HTML) à lista de palavras de ruído.  
+ Além disso, os separadores de palavra foram criados principalmente para processar texto escrito. Então, se você tiver algum tipo de formatação em seu texto (como HTML), não será possível obter grande precisão linguística durante a indexação e procura. Nesse caso, você tem duas opções – o preferencial método é simplesmente armazenar os dados de texto em `varbinary(max)` coluna e indicar seu tipo de documento para que possa ser filtrada. Se não houver essa opção, você poderá considerar a possibilidade de usar o separador de palavras neutro e, se possível, adicionar dados de marcação (como ‘br’ em HTML) à lista de palavras de ruído.  
   
 > [!NOTE]  
 >  A lematização com base no idioma não entra em jogo quando você especifica o idioma neutro.  

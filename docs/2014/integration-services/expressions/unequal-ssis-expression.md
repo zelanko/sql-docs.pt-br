@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unequal operator (!=)
@@ -14,12 +13,12 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92d3f38973671a29f5de28f2337afb33ede6f337
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7df4340e2dc54a2c30b1c5693efeda26ecc9b3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052986"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785518"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Diferente) (Expressão SSIS)
   Executa uma comparação para determinar se duas expressões com tipos de dados compatíveis não são iguais. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  
@@ -53,7 +52,7 @@ expression1 != expression2
     > [!NOTE]  
     >  Comparações de cadeia de caracteres diferenciam maiúsculas de minúsculas, acentuação, kana e largura.  
   
--   **Date, Time, ou Date/Time** Tanto *expression1* quanto *expression2* devem ser avaliadas como um dos seguintes tipos de dados: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
+-   **Data, hora ou data/hora** ambos *expression1* e *expression2* deve ser avaliada como um dos seguintes tipos de dados: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
   
     > [!NOTE]  
     >  O sistema não aceita comparações entre uma expressão que avalia um tipo de dados de hora e uma expressão que avalia um tipo de dados de data ou data/hora. O sistema gera um erro.  
@@ -82,7 +81,7 @@ expression1 != expression2
   
 -   **Binary** Tanto *expression1* quanto *expression2* devem ser avaliadas como um tipo de dados DT_BYTES.  
   
--   **BLOB** Tanto *expression1* quanto *expression2* devem ser avaliadas como o mesmo tipo de dados BLOB (Bloco de Objetos Binários Grandes): DT_TEXT, DT_NTEXT ou DT_IMAGE.  
+-   **BLOB** ambos *expression1* e *expression2* deve ser avaliada para o mesmo tipo de dados binário bloco BLOB (objeto grande): DT_TEXT, DT_NTEXT ou DT_IMAGE.  
   
  Para obter mais informações sobre tipos de dados, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
@@ -106,8 +105,8 @@ ListPrice != 500
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [= = &#40;Igual&#41; &#40;expressão do SSIS&#41;](equal-ssis-expression.md)   
- [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
+ [== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](equal-ssis-expression.md)   
+ [Precedência de operador e capacidade de associação](operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 18277b6db2a59c502c4aafbec98974385a4a053d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538577"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Criar um administrador de domínio APS
 Algumas operações exigem privilégios de administrador de domínio do Analytics Platform System. Isso explica como criar os administradores de domínio de dispositivo adicionais.  
@@ -30,7 +30,7 @@ Ter permissões suficientes para configurar todos os nós APS, o usuário que ex
   
 3.  No **Active Directory Users and Computers** programa, clique com botão direito **usuários**, aponte para **New**e, em seguida, clique em **usuário**.  
   
-4.  No **novo objeto – usuário** caixa de diálogo, a descrição do novo usuário completa e, em seguida, clique em **próxima**.  
+4.  No **novo objeto - usuário** caixa de diálogo, a descrição do novo usuário completa e, em seguida, clique em **próxima**.  
   
     Complete a caixa de diálogo de senha e, em seguida, clique em **próxima**.  
   

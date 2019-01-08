@@ -15,12 +15,12 @@ ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b150ecf09dcf2c96c05ac690a366c6d2711586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523641"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor da Tarefa Inserção em Massa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para especificar a origem e o destino da operação de inserção em massa e o formato a ser usado.  
@@ -31,7 +31,7 @@ ms.locfileid: "48226856"
  **Conexão**  
  Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar Gerenciador de Conexões OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](connection-manager/ole-db-connection-manager.md), [configurar Gerenciador de Conexão do OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **Tabela de Destino**  
  Digite o nome da tabela ou exibição de destino ou selecione uma tabela ou exibição na lista.  
@@ -39,7 +39,7 @@ ms.locfileid: "48226856"
  **Formato**  
  Selecione a fonte do formato para a inserção em massa. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Usar Arquivo**|Selecione um arquivo que contém a especificação de formato. Selecionar esta opção faz com que seja exibida a opção dinâmica **Arquivo de Formato**.|  
 |**Especificar**|Especifique o formato. Selecionar esta opção exibe as opções dinâmicas `RowDelimiter` e `ColumnDelimiter`.|  
@@ -51,7 +51,7 @@ ms.locfileid: "48226856"
   
  Se você acessa o arquivo de origem usando um gerenciador de conexões de Arquivo Simples, a tarefa de Inserção em Massa não usa o formato especificado no gerenciador de conexões de Arquivos Simples. Em vez disso, a tarefa de Inserção em massa usa o formato especificado em um arquivo de formato ou os valores das propriedades RowDelimiter e ColumnDelimiter da tarefa.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões de Arquivo](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md), [Editor do Gerenciador de Conexões de Arquivos Simples](connection-manager/flat-file-connection-manager.md), [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md), [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md), [Gerenciador de Conexão de arquivo simples](connection-manager/flat-file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivo simples &#40;página geral&#41; ](general-page-of-integration-services-designers-options.md), [Editor do Gerenciador de Conexão de arquivo simples &#40;página colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Editor do Gerenciador de Conexão de arquivo simples &#40;página Avançado&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **Atualizar Tabelas**  
  Atualize a lista de tabelas e exibições.  
@@ -71,9 +71,9 @@ ms.locfileid: "48226856"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa inserção em massa de &#40;página geral&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
- [Editor da tarefa inserção em massa de &#40;página de opções&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Página expressões](expressions/expressions-page.md)   
+ [Editor da Tarefa Inserção em Massa &#40;Página Geral&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [Editor da Tarefa Inserção em Massa &#40;Página Opções&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Página Expressões](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Fluxo de Controle](control-flow/control-flow.md)  
   

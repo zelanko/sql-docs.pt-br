@@ -1,5 +1,5 @@
 ---
-title: Agendar atualização de dados e fontes de dados - nenhuma autenticação do Windows | Microsoft Docs
+title: Agendar atualização de dados e fontes de dados – nenhuma autenticação do Windows | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4c7a5a66ff831c94129c2833d74d0eeeb65de30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027766"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408544"
 ---
-# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Agendar atualização de dados e fontes de dados - nenhuma autenticação do Windows
+# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Agendar atualização de dados e fontes de dados – nenhuma autenticação do Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Este tópico descreve um fluxo de trabalho de atualização de dados de agendamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pode usar fontes de dados que **NÃO** oferecem suporte à Autenticação do Windows. Por exemplo, fontes de dados Oracle ou IDM DB2. As ilustrações e as etapas neste tópico fazem referência a fontes de dados Oracle, mas o mesmo fluxo de trabalho aplica-se a outras fontes de dados.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34027766"
   
 -   **(2) OracleAuthentication:** uma ID de aplicativo de destino de repositório seguro definida com as credenciais do Oracle.  
   
--   **(3)** O aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é configurado para usar o aplicativo de destino “PowerPivotDataRefresh” da **Conta Autônoma de Atualização de Dados**.  
+-   **(3)**  As [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicativo de serviço é configurado para usar o aplicativo de destino "PowerPivotDataRefresh" para o **conta autônoma de atualização de dados**.  
   
 -   **(4)** A pasta de trabalho PowerPivot usa dados Oracle. As configurações de atualização da pasta de trabalho especificam a conexão da fonte de dados para usar o aplicativo de destino **(2)** para credenciais.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "34027766"
   
 4.  Na página **Criar Novo Aplicativo de Destino de Repositório Seguro** , configure os seguintes valores:  
   
-    -   **ID de Aplicativo de Destino:** PowerPivotDataRefresh.  
+    -   **ID do aplicativo de destino:** PowerPivotDataRefresh.  
   
-    -   **Nome para Exibição:** PowerPivotDataRefresh.  
+    -   **Nome de exibição:** PowerPivotDataRefresh.  
   
     -   **Email de Contato:** ?  
   
-    -   **Tipo de Aplicativo de Destino:** Grupo.  
+    -   **Tipo de aplicativo de destino:** Grupo.  
   
-    -   **URL da Página de Aplicativo de Destino:** Nenhuma.  
+    -   **URL de página de aplicativo de destino:** Nenhum.  
   
 5.  Clique em **Avançar**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34027766"
   
 9. Clique em **OK**.  
   
-10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **definir credenciais**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **Set Credentials**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Digite o nome de usuário do Windows e a senha do Windows, e clique em **OK**.  
   
@@ -84,19 +84,19 @@ ms.locfileid: "34027766"
   
 2.  Clique no nome do aplicativo de Serviço de Repositório Seguro.  
   
-3.  Sobre o **gerenciar** , clique em **novo**![as_powerpivot_refresh_sss_new_target_application](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
+3.  Sobre o **gerenciar** , clique em **New**![as_powerpivot_refresh_sss_new_target_application](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
   
 4.  Na página **Criar Novo Aplicativo de Destino de Repositório Seguro** , configure os seguintes valores:  
   
-    -   **ID do Aplicativo de Destino:** OracleAuthentication.  
+    -   **ID do aplicativo de destino:** OracleAuthentication.  
   
-    -   **Nome para Exibição:** OracleAuthentication.  
+    -   **Nome de exibição:** OracleAuthentication.  
   
     -   **Email de Contato:** ?  
   
-    -   **Tipo de Aplicativo de Destino:** Grupo.  
+    -   **Tipo de aplicativo de destino:** Grupo.  
   
-    -   **URL da Página de Aplicativo de Destino:** Nenhuma.  
+    -   **URL de página de aplicativo de destino:** Nenhum.  
   
 5.  Clique em **Avançar**.  
   
@@ -110,17 +110,17 @@ ms.locfileid: "34027766"
   
 9. Clique em **OK**.  
   
-10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **definir credenciais**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **Set Credentials**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Digite a ID do Usuário Oracle e a Senha Oracle, e clique em **OK**.  
   
- Para obter mais informações, consulte a seção "Para criar um aplicativo de destino para a autenticação do SQL Server" em [usar repositório seguro com autenticação do SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Para obter mais informações, consulte a seção "Para criar um aplicativo de destino para a autenticação do SQL Server" em [Store do uso seguro com autenticação do SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>Para configurar o aplicativo de serviço do Power Pivot  
   
 1.  Na Administração Central do SharePoint, clique em Gerenciar Aplicativos de Serviço.  
   
-2.  Clique no nome do Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ; por exemplo, “Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão”.  
+2.  Clique no nome do seu [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicativo de serviço, por exemplo "padrão [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicativo de serviço".  
   
 3.  Clique em **Definir configurações do aplicativo de serviço** na seção Ações.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "34027766"
   
 ## <a name="to-configure-the-workbook"></a>Para configurar a pasta de trabalho  
   
-1.  Navegue até a pasta de trabalho de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] galeria e clique em **gerenciar atualização de dados**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  Navegue até a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] galeria e clique em **gerenciar atualização de dados**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  Se a página **Histórico de Atualização de Dados** for exibida, clique em **Configurar Agendamento**.  
   
@@ -163,10 +163,10 @@ ms.locfileid: "34027766"
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>Para verificar a atualização de dados com a nova autenticação  
  Ao clicar em **OK**, você verá a página **Histórico de Atualização** . Em alguns minutos, você verá um novo item no histórico de atualização porque, na etapa anterior, selecionou **Também atualizar o mais rápido possível**. O valor padrão do  **Trabalho de Timer da Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** é um minuto. Se um novo item não aparecer no histórico de atualização, aguarde alguns minutos e atualize o navegador. Se, ainda assim, o novo item não aparecer, verifique o valor atual do trabalho de timer.  
   
-## <a name="more-information"></a>Mais informações  
+## <a name="more-information"></a>Mais Informações  
   
 -   [Configurar o Serviço de Repositório Seguro no SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   
--   Consulte a seção “Atualização de dados agendada” de [Atualização de dados do Power Pivot com o SharePoint 2013 e o SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   Consulte a seção "Atualização de dados agendada" de [atualização de dados do Power Pivot com SharePoint 2013 e SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

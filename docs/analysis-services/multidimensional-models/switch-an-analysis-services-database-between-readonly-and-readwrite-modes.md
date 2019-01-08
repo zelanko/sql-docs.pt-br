@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147911"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525884"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "50147911"
   
      Anote o local. Um local de armazenamento de banco de dados vazio indica que a pasta de banco de dados está localizada na pasta de dados do servidor.  
   
-2.  Clique com o botão direito do mouse no banco de dados e selecione **Desanexar...**  
+2.  O banco de dados com o botão direito e selecione **desanexar...**  
   
 3.  Atribua uma senha ao banco de dados a ser desanexado e clique em **OK** para executar o comando Desanexar.  
   
-4.  No Pesquisador de Objetos, clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**  
+4.  No Pesquisador de objetos, clique com botão direito do **bancos de dados** pasta e selecione **anexar...**  
   
-5.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, use o botão Procurar (**…**) para localizar a pasta do banco de dados.  
+5.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar (**...** ) para localizar a pasta do banco de dados.  
   
 6.  Selecione o modo leitura/gravação do banco de dados.  
   
@@ -93,7 +93,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      Anote o local. Um local de armazenamento de banco de dados vazio indica que a pasta de banco de dados está localizada na pasta de dados do servidor.  
   
-2.  Clique com o botão direito do mouse no banco de dados e selecione **Desanexar...**  
+2.  O banco de dados com o botão direito e selecione **desanexar...**  
   
 3.  Abra uma nova guia XMLA em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   

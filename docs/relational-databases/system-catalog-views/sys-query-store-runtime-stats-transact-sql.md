@@ -1,7 +1,7 @@
 ---
 title: query_store_runtime_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,25 +22,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710844"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712427"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contém informações sobre as informações de estatísticas de execução de tempo de execução da consulta.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|Identificador da linha que representa as estatísticas de execução de tempo de execução para o **plan_id**, **execution_type** e **runtime_stats_interval_id**. Ele é exclusivo somente para os intervalos de estatísticas de tempo de execução anterior. Para o intervalo ativo no momento pode haver várias linhas que representa as estatísticas de tempo de execução para o plano referenciado pelo **plan_id**, com o tipo de execução representado pelo **execution_type**. Normalmente, uma linha representa as estatísticas de tempo de execução que são liberadas no disco, enquanto outras (s) representam o estado na memória. Portanto, para obter o estado real para cada intervalo é necessário agregar as métricas, agrupando **plan_id**, **execution_type** e **runtime_stats_interval_id**. |  
 |**plan_id**|**bigint**|Chave estrangeira. Ingressa [query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chave estrangeira. Ingressa [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**execution_type**|**tinyint**|Determina o tipo de execução da consulta:<br /><br /> 0 – execução regular (concluída com êxito)<br /><br /> 3 – cliente iniciado anulou a execução<br /><br /> 4 - exceção anulou a execução|  
-|**execution_type_desc**|**nvarchar(128)**|Descrição textual do campo de tipo de execução:<br /><br /> 0 – regular<br /><br /> 3 – anulada<br /><br /> 4 - exceção|  
+|**execution_type**|**tinyint**|Determina o tipo de execução da consulta:<br /><br /> 0 - execução regular (concluída com êxito)<br /><br /> 3 - cliente iniciado anulou a execução<br /><br /> 4 - exceção anulou a execução|  
+|**execution_type_desc**|**nvarchar(128)**|Descrição textual do campo de tipo de execução:<br /><br /> 0 - regular<br /><br /> 3 - anulada<br /><br /> 4 - exceção|  
 |**first_execution_time**|**datetimeoffset**|Primeiro tempo de execução para o plano de consulta dentro do intervalo de agregação.|  
 |**last_execution_time**|**datetimeoffset**|Último tempo de execução para a consulta planejar dentro do intervalo de agregação.|  
 |**count_executions**|**bigint**|Contagem total de execuções do plano de consulta dentro do intervalo de agregação.|  

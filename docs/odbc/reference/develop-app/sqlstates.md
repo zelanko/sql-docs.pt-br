@@ -14,12 +14,12 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aa0875017c4b7a099af8da1c6f8eca105006aca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682944"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527727"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs fornecem informações detalhadas sobre a causa de um aviso ou erro. Os SQLSTATEs neste manual baseadas nesses encontrada na especificação de CLI IEF/ISO, embora esses SQLSTATEs que começam com mensagens Instantâneas são específicas para ODBC.  
@@ -28,7 +28,7 @@ SQLSTATEs fornecem informações detalhadas sobre a causa de um aviso ou erro. O
   
 -   **Incompletude** embora deste manual lista um grande número de erros e avisos e as possíveis causas para esses erros e avisos, ele não está completo e provavelmente nunca estará; implementações de driver simplesmente variam muito. Qualquer driver específico provavelmente não retornará todos os SQLSTATEs listados neste manual e podem retornar SQLSTATEs não listadas neste manual.  
   
--   **Complexidade** alguns mecanismos de banco de dados — mecanismos de banco de dados relacional particularmente — retornam literalmente milhares de erros e avisos. Os drivers para esses mecanismos são provavelmente não mapear todos esses erros e avisos a serem SQLSTATEs por causa do esforço envolvido, o inexactness dos mapeamentos, o tamanho grande de código resultante e o valor baixo do código resultante, que geralmente retorna programação erros que nunca devem ser encontrados em tempo de execução. Portanto, drivers devem ser mapeado como muitos erros e avisos que parece razoável e certifique-se de mapear esses erros e avisos no qual a lógica do aplicativo podem se basear, como o SQLSTATE 01004 (dados truncados).  
+-   **Complexidade** alguns mecanismos de banco de dados - mecanismos de banco de dados relacional particularmente - retornam literalmente milhares de erros e avisos. Os drivers para esses mecanismos são provavelmente não mapear todos esses erros e avisos a serem SQLSTATEs por causa do esforço envolvido, o inexactness dos mapeamentos, o tamanho grande de código resultante e o valor baixo do código resultante, que geralmente retorna programação erros que nunca devem ser encontrados em tempo de execução. Portanto, drivers devem ser mapeado como muitos erros e avisos que parece razoável e certifique-se de mapear esses erros e avisos no qual a lógica do aplicativo podem se basear, como o SQLSTATE 01004 (dados truncados).  
   
  Como SQLSTATEs não são retornados de forma confiável, a maioria dos aplicativos exibi-los apenas para o usuário, juntamente com sua mensagem de diagnóstico associado, geralmente é adaptado para o erro ou aviso que ocorreu e o código de erro nativo. Não há raramente qualquer perda de funcionalidade ao fazer isso, porque os aplicativos não podem basear lógica de programação na maioria dos SQLSTATEs mesmo assim. Por exemplo, suponha **SQLExecDirect** retornará SQLSTATE 42000 (sintaxe ou violação de acesso). Se a instrução SQL que causou este erro é embutido em código ou criada pelo aplicativo, isso é um erro de programação e o código precisa ser corrigido. Se a instrução SQL é inserida pelo usuário, esse é um erro de usuário e o aplicativo fez tudo o que é possível por meio de informando ao usuário do problema.  
   
@@ -48,4 +48,4 @@ SQLSTATEs fornecem informações detalhadas sobre a causa de um aviso ou erro. O
   
  SQLSTATE HYC00 (recurso opcional não implementado) é significativo principalmente porque é a única maneira na qual um aplicativo pode determinar se um driver dá suporte a um determinado atributo de instrução ou a conexão.  
   
- Para obter uma lista completa de SQLSTATEs e quais funções retornarão-los, consulte [apêndice a: códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obter uma explicação detalhada das condições sob as quais cada função pode retornar um SQLSTATE específico, consulte essa função.
+ Para obter uma lista completa de SQLSTATEs e quais funções retornarão-los, consulte [apêndice a: Códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obter uma explicação detalhada das condições sob as quais cada função pode retornar um SQLSTATE específico, consulte essa função.

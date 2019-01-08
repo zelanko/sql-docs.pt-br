@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48fd9be77e8b72ee25211bbf52a70f7989785f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514240"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construções com suporte nos procedimentos armazenados compilados de modo nativo
   Este tópico contém uma lista de recursos com suporte para procedimentos armazenados compilados nativamente ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -34,9 +34,9 @@ ms.locfileid: "48091236"
   
 -   [Limitações na classificação](#los)  
   
- Para obter informações sobre tipos de dados, suporte nativo para procedimentos armazenados compilados, consulte [suporte para tipos de dados](supported-data-types-for-in-memory-oltp.md).  
+ Para obter informações sobre os tipos de dados suportados em procedimentos armazenados compilados de modo nativo, consulte [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
- Para obter informações completas sobre construções sem suporte e para obter informações sobre como solucionar alguns dos recursos sem suporte em procedimentos armazenados compilados nativamente, consulte [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para mais informações sobre os recursos sem suporte, veja [Constructos do Transact-SQL sem suporte no OLTP in-memory](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Para obter informações completas sobre construções sem suporte e sobre como resolver problemas de alguns recursos sem suporte em procedimentos armazenados compilados nativamente, consulte [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para mais informações sobre os recursos sem suporte, veja [Constructos do Transact-SQL sem suporte no OLTP in-memory](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="pncsp"></a> Programação em procedimentos armazenados compilados nativamente  
  Há suporte para o seguinte:  
@@ -91,7 +91,7 @@ ms.locfileid: "48091236"
   
 -   Funções NULL: ISNULL  
   
--   Funções Uniqueidentifier: NEWID e NEWSEQUENTIALID  
+-   Funções uniqueidentifier: NEWID e NEWSEQUENTIALID  
   
 -   Funções de erro: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  
   
@@ -134,22 +134,22 @@ ms.locfileid: "48091236"
   
  <sup>1</sup> ORDER BY e TOP têm suporte em procedimentos armazenados compilados nativamente, com algumas restrições:  
   
--   Não há suporte para `DISTINCT` no `SELECT` ou `ORDER BY` cláusula.  
+-   Não há suporte para `DISTINCT` na cláusula `SELECT` ou `ORDER BY`.  
   
 -   Não há suporte para `WITH TIES` ou `PERCENT` na cláusula `TOP`.  
   
--   `TOP` combinado com `ORDER BY` não dá suporte a mais de 8.192 ao usar uma constante no `TOP` cláusula. Esse limite poderá ser diminuído caso a consulta contenha junções ou funções de agregação. (Por exemplo, com uma junção (duas tabelas), o limite é 4.096 linhas. Com duas junções (três tabelas), o limite é 2.730 linhas.)  
+-   `TOP` combinado com `ORDER BY` não dá suporte a mais de 8.192 ao usar uma constante na cláusula `TOP`. Esse limite poderá ser diminuído caso a consulta contenha junções ou funções de agregação. (Por exemplo, com uma junção (duas tabelas), o limite é 4.096 linhas. Com duas junções (três tabelas), o limite é 2.730 linhas.)  
   
      Você pode obter resultados maiores que 8.192 armazenando o número de linhas em uma variável:  
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  No entanto, uma constante na cláusula `TOP` resulta em um desempenho melhor comparado a usar uma variável.  
   
- Essas restrições não se aplicam ao interpretado [!INCLUDE[tsql](../../includes/tsql-md.md)] acesso às tabelas com otimização de memória.  
+ Essas restrições não se aplicam ao acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado em tabelas com otimização de memória.  
   
 ##  <a name="auditing"></a> Auditoria  
  A auditoria no nível de procedimento tem suporte em procedimentos armazenados compilados nativamente. Não há suporte para a auditoria no nível da instrução.  
@@ -172,7 +172,7 @@ ms.locfileid: "48091236"
 ##  <a name="los"></a> Limitações na classificação  
  Você pode classificar maior que 8.000 linhas em uma consulta que usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). No entanto, sem a [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) pode classificar até 8.000 linhas (menos linhas se houver junções).  
   
- Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, Nível 16, Estado 1, Procedimento *\<procedureName>*, Linha *\<lineNumber>* O operador TOP pode retornar no máximo 8192 linhas; *\<number>* foi solicitado.**  
+ Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, obterá a mensagem de erro: **Msg 41398, nível 16, estado 1, procedimento  *\<procedureName >*, linha  *\<lineNumber >* o operador TOP pode retornar no máximo 8192 linhas;  *\<número >* foi solicitado.**  
   
  Se você não tiver uma cláusula TOP, poderá classificar qualquer número de linhas com ORDER BY.  
   

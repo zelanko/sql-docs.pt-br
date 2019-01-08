@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c9cfd87578b2ffaaefb8b46b340f76f74b373ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794555"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534118"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapeando dados de parâmetro CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47794555"
 |**date**|**SqlDateTime**|**Data e hora, que permite valor nula\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**Data e hora, que permite valor nula\<DateTime >**|  
 |**datetime2**|None|**Data e hora, que permite valor nula\<DateTime >**|  
-|**DATETIMEOFFSET**|**Nenhuma**|**DateTimeOffset, que permite valor nulo\<DateTimeOffset >**|  
+|**DATETIMEOFFSET**|**Nenhum**|**DateTimeOffset, que permite valor nulo\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**float**|**SqlDouble**|**Double, que permite valor nulo\<Double >**|  
 |**geografia**|**SqlGeography**<br /><br /> **SqlGeography** é definido em Types, que é instalado com o SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack do](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
@@ -87,13 +87,13 @@ ms.locfileid: "47794555"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 \<Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
@@ -13,12 +12,12 @@ ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e331169f7477bfcb4a5ae926290664da50897b38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184956"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640658"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Habilitar a opção Bloquear Páginas na Memória (Windows)
   Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco.  
@@ -42,7 +41,7 @@ ms.locfileid: "48184956"
   
 5.  No painel, clique duas vezes em **Bloquear páginas na memória**.  
   
-6.  Na caixa de diálogo **Configuração de Segurança Local – Bloquear páginas na memória** , clique em **Adicionar Usuário ou Grupo**.  
+6.  Na caixa de diálogo **Configuração de Segurança Local – Bloquear páginas na memória**, clique em **Adicionar Usuário ou Grupo**.  
   
 7.  Na caixa de diálogo **Selecionar Usuários, Contas de Serviço ou Grupos** , adicione uma conta com privilégios para executar sqlservr.exe.  
   

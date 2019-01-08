@@ -14,12 +14,12 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613834"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537148"
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO – Sintaxe WFC)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
@@ -69,9 +69,9 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa o **valor** propriedade com o **getValue** método, que retorna um objeto de VARIANTE; e o **setValue** método, que usa uma VARIANTE como um argumento. Variantes são altamente eficientes em determinados idiomas, como o Microsoft Visual Basic.  
   
- Além de **valor** propriedade, ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **campo** objetos. A maioria desses métodos têm nomes no formato **obter * * * DataType* ou **definir * * * DataType*.  
+ Além de **valor** propriedade, ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **campo** objetos. A maioria desses métodos têm nomes no formato **Obtenha**_DataType_ ou **definir**_DataType_.  
   
- Há duas exceções notáveis: um dos **getObject** métodos retorna um objeto forçado em uma classe especificada. Não há nenhuma **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
+ Há duas exceções notáveis: Um dos **getObject** métodos retorna um objeto forçado em uma classe especificada. Não há nenhuma **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
   
 ```  
 public native boolean getBoolean();  

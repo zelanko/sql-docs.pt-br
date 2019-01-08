@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771768"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
   As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
@@ -45,21 +44,21 @@ ms.locfileid: "48077576"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] objeto|Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|  
 |---------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|Tamanho do lote<br /><br /> Observação: O tamanho do pacote de rede é o tamanho de pacotes tabular data stream (TDS) usados para comunicação entre aplicativos e relacionais [!INCLUDE[ssDE](../includes/ssde-md.md)]. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
+|Tamanho do lote<br /><br /> Observação: Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
 |Bytes por coluna de cadeia de caracteres curta|8,000|8,000|  
 |Bytes por GROUP BY, ORDER BY|8,060|8,060|  
 |Bytes por chave de índice<br /><br /> Observação: O número máximo de bytes em qualquer chave de índice não pode exceder 900 no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode definir uma chave usando colunas de comprimento variável cujos tamanhos máximos somem mais de 900, desde que nenhuma linha jamais seja inserida com mais de 900 bytes de dados nessas colunas. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar o tamanho máximo de chave de índice de 900 bytes.|900|900|  
 |Bytes por chave estrangeira|900|900|  
 |Bytes por chave primária|900|900|  
 |Bytes por linha<br /><br /> Observação:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte ao armazenamento de estouro de linha, o que permite que colunas de comprimento variável sejam enviadas por push para fora da linha. Somente uma raiz de 24 bytes é armazenada no registro principal para colunas de comprimento variável empurradas para fora da linha; por isso, o limite efetivo de linha é maior que nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte o tópico "Dados de estouro de linha que excedem 8 KB" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|8,060|8,060|  
-|Bytes por linha em tabelas com otimização de memória<br /><br /> Observação:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLTP na memória não oferece suporte ao armazenamento de estouro de linha. As colunas de comprimento variável não são retiradas da linha. Isso limita a largura máxima de colunas de comprimento variável que você pode especificar em uma tabela com otimização de memória para o tamanho máximo da linha. Para obter mais informações, consulte [Tamanho da tabela e da linha em tabelas com otimização de memória](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|Sem suporte|8,060|  
+|Bytes por linha em tabelas com otimização de memória<br /><br /> Observação:<br />        OLTP na memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte ao armazenamento de estouro de linha. As colunas de comprimento variável não são retiradas da linha. Isso limita a largura máxima de colunas de comprimento variável que você pode especificar em uma tabela com otimização de memória para o tamanho máximo da linha. Para obter mais informações, consulte [Tamanho da tabela e da linha em tabelas com otimização de memória](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|Sem suporte|8,060|  
 |Bytes em texto de fonte de um procedimento armazenado|Menor que o tamanho do lote ou 250 MB|Menor que o tamanho do lote ou 250 MB|  
 |Bytes por coluna `varchar(max)`, `varbinary(max)`, `xml`, `text` ou `image`|2^31-1|2^31-1|  
 |Caracteres por coluna `ntext` ou `nvarchar(max)`|2^30-1|2^30-1|  
 |Índices clusterizados por tabela|1|1|  
 |Colunas em GROUP BY, ORDER BY|Limitado somente pelo número de bytes|Limitado somente pelo número de bytes|  
 |Colunas ou expressões em uma instrução GROUP BY WITH CUBE ou WITH ROLLUP|10|10|  
-|Colunas por chave de índice<br /><br /> Observação: Se a tabela contiver um ou mais índices XML, a chave de clustering da tabela do usuário é limitada a 15 colunas porque a coluna XML é adicionada à chave de clustering do índice XML primário. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar a limitação de um máximo de 16 colunas de chave. Para obter mais informações, consulte [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
+|Colunas por chave de índice<br /><br /> Observação: Se a tabela contiver um ou mais índices XML, a chave de clustering da tabela do usuário será limitada a 15 colunas porque a coluna XML é adicionada à chave de clustering do índice XML primário. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar a limitação de um máximo de 16 colunas de chave. Para obter mais informações, consulte [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
 |Colunas por chave estrangeira|16|16|  
 |Colunas por chave primária|16|16|  
 |Colunas por tabela não larga|1,024|1,024|  
@@ -80,14 +79,14 @@ ms.locfileid: "48077576"
 |Comprimento de identificador (em caracteres)|128|128|  
 |Instâncias por computador|50 instâncias em um servidor autônomo para todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a 25 instâncias em um failover de cluster ao usar um disco de cluster compartilhado como a opção armazenada, instalação de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a 50 instâncias em um failover de cluster se você escolher SMB a compartilhamentos de arquivos como a opção de armazenamento para sua instalação de cluster Para obter mais informações, consulte [Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instâncias em um servidor autônomo.<br /><br /> 25 instâncias em um cluster de failover ao usar um disco de cluster compartilhado como a opção de armazenamento para sua instalação de cluster. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dará suporte a 50 instâncias de um cluster de failover se você escolher compartilhamentos de arquivos SMB como a opção de armazenamento para seu cluster de failover.|  
 |Índices por tabela com otimização de memória|Sem suporte|8|  
-|Comprimento de uma cadeia de caracteres que contém instruções SQL (tamanho do lote)<br /><br /> Observação: O tamanho do pacote de rede é o tamanho de pacotes tabular data stream (TDS) usados para comunicação entre aplicativos e relacionais [!INCLUDE[ssDE](../includes/ssde-md.md)]. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
+|Comprimento de uma cadeia de caracteres que contém instruções SQL (tamanho do lote)<br /><br /> Observação: Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
 |Bloqueios por conexão|Máximo de bloqueios por servidor|Máximo de bloqueios por servidor|  
 |Bloqueios por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Observação: Esse valor é para alocação de bloqueio estático. Os bloqueios dinâmicos são limitados somente por memória.|Até 2.147.483.647|Limitado somente por memória|  
-|Níveis aninhados de procedimento armazenado<br /><br /> Observação: Se um procedimento armazenado acessar mais de 64 ou mais de 2 bancos de dados em intercalação, você receberá um erro.|32|32|  
+|Níveis aninhados de procedimento armazenado<br /><br /> Observação: Se um procedimento armazenado acessar mais de 64 bancos de dados ou mais de 2 bancos de dados em intercalação, você receberá um erro.|32|32|  
 |Subconsultas aninhadas|32|32|  
 |Níveis aninhados de gatilho|32|32|  
 |Índices não clusterizados por tabela|999|999|  
-|Número de expressões distintas na cláusula GROUP BY quando qualquer um dos seguintes estiver presente: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
+|Número de expressões distintas na cláusula GROUP BY quando qualquer um dos seguintes estão presentes: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
 |Número de conjuntos de agrupamentos gerados por operadores na cláusula GROUP BY|4,096|4,096|  
 |Parâmetros por procedimento armazenado|2,100|2,100|  
 |Parâmetros por função definida pelo usuário|2,100|2,100|  

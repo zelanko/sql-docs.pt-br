@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -17,21 +16,21 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e3c468524f470a11ec73ace3c5feffaa2f52ead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049666"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800618"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Cache, atualização e desempenho do Replication Monitor
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor é projetado para monitorar um número grande de computadores em um sistema de produção de forma eficaz. As consultas que o Replication Monitor usa para executar cálculos e reunir dados são armazenadas em cache e atualizadas periodicamente. O armazenamento em cache reduz o número de consultas e cálculos necessários conforme diferentes páginas são exibidas no Replication Monitor, e permite que a monitoração seja bem-escalonada para usuários múltiplos.  
   
  A atualização do cache é controlada por um trabalho do Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o **Atualizador de monitoração de replicação para distribuição**. O trabalho é executado continuamente, mas a agenda para a atualização de cache é baseada na espera de certo tempo após a atualização anterior:  
   
--   Se houver alterações de histórico de agente desde que o cache foi criado por último, o tempo de espera será no mínimo de 4 segundos ou o tempo levado para criar o cache anterior.  
+-   Se houver alterações de histórico de agente desde que o cache foi criado pela última vez, o tempo de espera é o mínimo de: 4 segundos; ou a quantidade de tempo necessário para criar o cache anterior.  
   
--   Se não houver alterações de histórico de agente desde a última criação do cache (podem ter havido outras alterações), o tempo de espera será no máximo de 30 segundos ou o tempo levado para criar o cache anterior.  
+-   Se não houvesse nenhuma alteração de histórico do agente, pois o cache foi criado (pode ter havido outras alterações), o tempo de espera é o número máximo de: 30 segundos; ou a quantidade de tempo necessário para criar o cache anterior.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Atualizando a interface de usuário do Replication Monitor  
  A interface de usuário do Replication Monitor pode ser atualizada das formas a seguir:  

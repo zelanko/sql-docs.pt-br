@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - instances of SQL Server, monitoring performance
@@ -29,12 +28,12 @@ ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1acbc868471ebae0de110d8c346303e45cff50a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797388"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
   A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho.  
@@ -42,7 +41,7 @@ ms.locfileid: "48179756"
  A avaliação contínua do desempenho de banco de dados ajuda a minimizar tempos de resposta e a maximizar a taxa de transferência, permitindo alcançar desempenho ótimo. Tráfego de rede, E/S de disco e uso de CPU eficientes são fundamentais para um desempenho ótimo. É preciso analisar minuciosamente os requisitos de aplicativos, compreender a estrutura lógica e física dos dados, avaliar o uso de banco de dados e negociar compensações entre usos conflitantes, tais como a do processamento de transações online (OLTP) versus o apoio à decisão.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Benefícios de monitorar e ajustar bancos de dados para desempenho  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional Microsoft Windows fornecem utilitários que permitem que você visualizar a condição atual do banco de dados e rastrear o desempenho conforme as condições vão mudando. Há uma variedade de ferramentas e técnicas que podem ser usadas para monitorar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Compreender como monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ajudá-lo a:  
+ O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional Microsoft Windows fornecem utilitários que lhe permitem visualizar a condição atual do banco de dados e rastrear o desempenho conforme as condições mudam. Há uma variedade de ferramentas e técnicas que podem ser usadas para monitorar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Compreender como monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ajudá-lo a:  
   
 -   Determinar se o desempenho pode ser melhorado. Por exemplo, ao monitorar os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48179756"
 -   Solucionar eventuais problemas ou depurar componentes de aplicativos, como procedimentos armazenados.  
   
 ### <a name="monitoring-in-a-dynamic-environment"></a>Monitorando em um ambiente dinâmico  
- Monitorar é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece serviço em um ambiente dinâmico. Mudanças nas condições resultam em alterações no desempenho. Em suas avaliações, você poderá consultar alterações no desempenho à medida que o número de usuários aumenta, o acesso de usuário e os métodos de conexões mudam, o conteúdo do banco de dados cresce, os aplicativos cliente se modificam, os dados nos aplicativos se alteram, as consultas se tornam mais complexas e o tráfego de rede aumenta. Usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramentas para monitorar o desempenho, você pode associar algumas alterações no desempenho a mudanças de condições e consultas complexas. Os seguintes cenários constituem exemplos:  
+ Monitorar é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece serviço em um ambiente dinâmico. Mudanças nas condições resultam em alterações no desempenho. Em suas avaliações, você poderá consultar alterações no desempenho à medida que o número de usuários aumenta, o acesso de usuário e os métodos de conexões mudam, o conteúdo do banco de dados cresce, os aplicativos cliente se modificam, os dados nos aplicativos se alteram, as consultas se tornam mais complexas e o tráfego de rede aumenta. Usando as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para monitorar o desempenho, é possível associar algumas alterações no desempenho a mudanças de condições e consultas complexas. Os seguintes cenários constituem exemplos:  
   
 -   Monitorando os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas em que as consultas são executadas.  
   
@@ -67,8 +66,8 @@ ms.locfileid: "48179756"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|[Monitorar componentes do SQL Server](monitor-sql-server-components.md)|Fornece as etapas necessárias exigida para efetivamente monitorar qualquer componente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Ferramentas para monitoramento e ajuste de desempenho](performance-monitoring-and-tuning-tools.md)|Lista o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoramento e as ferramentas de ajuste.|  
+|[Monitorar componentes do SQL Server](monitor-sql-server-components.md)|Fornece as etapas necessárias exigida para monitorar com eficácia qualquer componente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Ferramentas para monitoramento e ajuste de desempenho](performance-monitoring-and-tuning-tools.md)|Lista as ferramentas de monitoramento e ajuste do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Estabelecer uma linha de base de desempenho](establish-a-performance-baseline.md)|Fornece informações sobre como estabelecer uma linha de base de desempenho.|  
 |[Isolar problemas de desempenho](isolate-performance-problems.md)|Descreve como isolar problemas de desempenho de banco de dados.|  
 |[Identificar afunilamentos](identify-bottlenecks.md)|Descreve como monitorar e acompanhar o desempenho de servidor para identificar gargalos.|  

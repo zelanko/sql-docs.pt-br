@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial: assinando procedimentos armazenados com um certificado | Microsoft Docs'
+title: 'Tutorial: Procedimentos armazenados com um certificado de assinatura | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0259beabfba9334b8d7f659e4b201c0c3b8c878c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794779"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Assinando procedimentos armazenados com um certificado
   Este tutorial ilustra como assinar procedimentos armazenados usando um certificado gerado pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

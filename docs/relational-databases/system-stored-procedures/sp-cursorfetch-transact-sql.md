@@ -18,12 +18,12 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43cf13284789fa599c3f2f7b8841d7fe54e3b2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538845"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_cursorfetch cursor
  *fetchType*  
  Especifica o buffer de cursor a ser buscado. *fetchType* é um parâmetro opcional que requer um dos seguintes valores de entrada de inteiro.  
   
-|Valor|Nome|Description|  
+|Valor|Nome|Descrição|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Busca o primeiro buffer de *nrows* linhas. Se *nrows* é igual a 0, o cursor é posicionado antes do conjunto de resultados e nenhuma linha será retornada.|  
 |0x0002|NEXT|Busca o próximo buffer de *nrows* linhas.|  
-|0x0004|PREV|Busca o buffer anterior de *nrows* linhas.<br /><br /> Observação: O uso de PREV para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
-|0x0008|LAST|Busca o último buffer de *nrows* linhas. Se *nrows* for igual a 0, o cursor é posicionado após o conjunto de resultados e nenhuma linha será retornada.<br /><br /> Observação: Uso de LAST para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
-|0x10|ABSOLUTE|Busca um buffer de *nrows* linhas começando com o *rownum* linha.<br /><br /> Observação: O uso de ABSOLUTE para um cursor DYNAMIC ou forward_only retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
-|0x20|RELATIVE|Busca o buffer de *nrows* linhas começando com a linha que é especificada como sendo o *rownum* valor de linhas da primeira linha no bloco atual. Nesse caso *rownum* pode ser um número negativo.<br /><br /> Observação: O uso de RELATIVE para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
+|0x0004|PREV|Busca o buffer anterior de *nrows* linhas.<br /><br /> Observação: O uso de PREV para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte à rolagem em uma única direção.|  
+|0x0008|LAST|Busca o último buffer de *nrows* linhas. Se *nrows* for igual a 0, o cursor é posicionado após o conjunto de resultados e nenhuma linha será retornada.<br /><br /> Observação: O uso de LAST para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte à rolagem em uma única direção.|  
+|0x10|ABSOLUTE|Busca um buffer de *nrows* linhas começando com o *rownum* linha.<br /><br /> Observação: O uso de ABSOLUTE para um cursor DYNAMIC ou FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte à rolagem em uma única direção.|  
+|0x20|RELATIVE|Busca o buffer de *nrows* linhas começando com a linha que é especificada como sendo o *rownum* valor de linhas da primeira linha no bloco atual. Nesse caso *rownum* pode ser um número negativo.<br /><br /> Observação: O uso de RELATIVE para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte à rolagem em uma única direção.|  
 |0x80|REFRESH|Torna a encher o buffer a partir de tabelas subjacentes.|  
 |0x100|INFO|Recupera informações sobre o cursor. Essas informações são retornadas usando o *rownum* e *nrows* parâmetros. Portanto, quando INFO é especificado, *rownum* e *nrows* se tornam parâmetros de saída.|  
 |0x200|PREV_NOADJUST|É usado como PREV. Porém, se a parte superior do conjunto de resultados for encontrada prematuramente, os resultados poderão variar.|  
@@ -80,7 +80,7 @@ sp_cursorfetch cursor
  Quando você especificar o valor de bit INFO, os valores que podem ser retornados são mostrados nas tabelas a seguir.  
   
 > [!NOTE]  
->  : Se nenhuma linha será retornada, o conteúdo do buffer permanece como estavam.  
+>  :   Se nenhuma linha será retornada, o conteúdo do buffer permanece como estavam.  
   
 |*\<rowNum >*|Definir como|  
 |------------------|------------|  
@@ -89,12 +89,12 @@ sp_cursorfetch cursor
 |Se posicionado após o conjunto de resultados|-1|  
 |Para cursores KEYSET e STATIC|O número de linha absoluto da posição atual no conjunto de resultados|  
 |Para cursores DYNAMIC|1|  
-|Para ABSOLUTE|-1 retorna a última linha de um conjunto.<br /><br /> -2 retorna da segunda à última linha de um conjunto, e assim por diante.<br /><br /> Observação: Se mais de uma linha é solicitada a ser buscada neste caso, as duas últimas linhas do conjunto de resultados serão retornadas.|  
+|Para ABSOLUTE|-1 retorna a última linha de um conjunto.<br /><br /> -2 retorna da segunda à última linha de um conjunto, e assim por diante.<br /><br /> Observação: Se mais de uma linha for solicitada a ser buscada neste caso, as duas últimas linhas do conjunto de resultados serão retornadas.|  
   
 |*\<nrows >*|Definir como|  
 |-----------------|------------|  
 |Se não abrir|0|  
-|Para cursores KEYSET e STATIC|Normalmente, o tamanho do conjunto de chaves atual.<br /><br /> **– m** se o cursor estiver em criação assíncrona com *m* linhas encontradas para este ponto.|  
+|Para cursores KEYSET e STATIC|Normalmente, o tamanho do conjunto de chaves atual.<br /><br /> **-m** se o cursor estiver em criação assíncrona com *m* linhas encontradas para este ponto.|  
 |Para cursores DYNAMIC|-1|  
   
 ## <a name="remarks"></a>Comentários  
@@ -134,16 +134,16 @@ sp_cursorfetch cursor
   
  O parâmetro de status RPC é definido como um dos valores mostrados na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Procedimento executado com êxito.|  
 |0x0001|Falha no procedimento.|  
 |0x0002|Uma busca em uma direção negativa fez com que a posição do cursor fosse definida no início do conjunto de resultados, quando a busca logicamente teria sido antes dos resultados.|  
 |0x10|Um cursor de avanço foi fechado automaticamente.|  
   
- As linhas são retornadas como um conjunto de resultados comum, ou seja, formato de coluna (0x2a), linhas (0xd1), seguidas de Done (0xfd). Tokens de metadados são enviados no mesmo formato que o especificado para sp_cursoropen, ou seja, 0x81, 0xa5 e 0xa4 para usuários do SQL Server 7.0, e assim por diante. Os indicadores de status de linha são enviados como colunas ocultas, semelhante ao modo BROWSE, ao final de cada linha com o nome de coluna rowstat e o tipo de dados INT4. Essa coluna rowstat tem um dos valores mostrados na tabela a seguir.  
+ As linhas são retornadas como um conjunto de resultados comum, ou seja, formato de coluna (0x2a), linhas (0xd1), seguidas de Done (0xfd). Tokens de metadados são enviados no mesmo formato que o especificado para sp_cursoropen, ou seja: 0x81, 0xa5 e 0xa4 para usuários do SQL Server 7.0 e assim por diante. Os indicadores de status de linha são enviados como colunas ocultas, semelhante ao modo BROWSE, ao final de cada linha com o nome de coluna rowstat e o tipo de dados INT4. Essa coluna rowstat tem um dos valores mostrados na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -173,7 +173,7 @@ row 6 contents
 > [!NOTE]  
 >  Esse é o caso exato em que o parâmetro de status RPC é definido como 2.  
   
-### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>B. Usando PREV_NOADJUST para retornar menos linhas que PREV  
+### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>b. Usando PREV_NOADJUST para retornar menos linhas que PREV  
  PREV_NOADJUST nunca inclui nenhuma das linhas na posição do cursor atual, ou após, no bloco de linhas que retorna. Em casos em que PREV retorna linhas após a posição atual, PREV_NOADJUST retorna menos linhas do que o solicitado no *nrows*. Dada a posição atual no exemplo A anterior, quando PREV é aplicado, sp_cursorfetch (h2, 4, 1, 5) busca as seguintes linhas:  
   
 ```  

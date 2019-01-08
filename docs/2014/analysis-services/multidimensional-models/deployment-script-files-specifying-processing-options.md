@@ -17,12 +17,12 @@ ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 450cc656d22d471225e013bfcd2664f6eb27dba9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f5b58434e16d5c3bc17f2d37430d60539ac5bfd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514784"
 ---
 # <a name="specifying-processing-options"></a>Especificando opções de processamento
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação do lê as opções de processamento das \< *nome do projeto*>. deploymentoptions arquivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria esse arquivo quando você cria o projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa as opções de processamento especificadas na **implantação** página do  *\<nome do projeto >* **páginas de propriedades** caixa de diálogo para criar o \< *nome do projeto*>. deploymentoptions arquivo.  
@@ -48,9 +48,9 @@ ms.locfileid: "48173188"
   
 -   **Implantação Transacional** Essa configuração controla se a implantação das alterações de metadados e dos comandos de processo ocorre em uma única transação ou em transações separadas.  
   
-    -   Se essa opção estiver `True` (padrão), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implanta todas as alterações de metadados e todos os comandos de processo em uma única transação.  
+    -   Se essa opção for `True` (padrão), o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implantará todas as alterações de metadados e todos os comandos de processo em uma única transação.  
   
-    -   Se essa opção estiver `False`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implante as alterações de metadados em uma única transação e implanta cada comando de processamento em sua própria transação.  
+    -   Se essa opção for `False`, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implantará as alterações de metadados em uma única transação e cada comando de processamento será implantado em sua própria transação.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Modificando as opções de processamento para implantação  
  No entanto, talvez você precise implantar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando as opções de processamento diferentes das armazenadas do projeto a \< *nome do projeto*>. deploymentoptions arquivo. Por exemplo, você pode processar por completo todos os objetos, processar usando a opção padrão ou não processá-los. Se os cubos ou dimensões forem habilitados para gravação, é possível especificar se uma tabela de write-back nova ou existente será usada.  
@@ -61,11 +61,11 @@ ms.locfileid: "48173188"
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de modo interativo. Na página **Opções de Processamento** , especifique as opções de processamento para o projeto que está sendo implantado.  
   
-     — ou —  
+     -ou-  
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para executar em modo de arquivo de resposta. Para obter mais informações sobre o modo de arquivo de resposta, consulte [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     — ou —  
+     -ou-  
   
 -   Modificar a \< *nome do projeto*> arquivo. deploymentoptions usando qualquer editor de texto.  
   

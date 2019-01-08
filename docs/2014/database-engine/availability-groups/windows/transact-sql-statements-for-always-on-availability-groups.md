@@ -13,19 +13,19 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0c766ed98bf5833790d2c0c1a35bfbff3c91e3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f635faa05d7d77a50d31491b1bab9b16875e728c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510920"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>Visão geral de instruções Transact-SQL para Grupos de Disponibilidade AlwaysOn (SQL Server)
   Este tópico apresenta as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] que oferecem suporte à implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e à criação e ao gerenciamento de grupos de disponibilidade, réplicas de disponibilidade e bancos de dados de disponibilidade.  
   
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](/sql/t-sql/statements/create-endpoint-transact-sql) cria um ponto de extremidade de espelhamento de banco de dados, caso não exista nenhum na instância de servidor. Cada instância de servidor na qual você pretende implantar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados requer um ponto de extremidade de espelhamento de banco de dados.  
+ [CREATE ENDPOINT... FOR DATABASE_MIRRORING](/sql/t-sql/statements/create-endpoint-transact-sql) cria um ponto de extremidade de espelhamento de banco de dados, caso não exista nenhum na instância de servidor. Cada instância de servidor na qual você pretende implantar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados requer um ponto de extremidade de espelhamento de banco de dados.  
   
  Execute essa instrução na instância de servidor em que você está criando o ponto de extremidade. É possível criar somente um ponto de extremidade de espelhamento de banco de dados em uma instância. Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48208856"
   
  Execute ALTER AVAILABILITY GROUP na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica primária atual.  
   
-##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
+##  <a name="AlterDb"></a> ALTER DATABASE... SET HADR...  
  As opções da cláusula [SET HADR](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) da instrução ALTER DATABASE permitem unir um banco de dados secundário ao grupo de disponibilidade do banco de dados primário correspondente, removem um banco de dados unido e suspendem a sincronização de dados em um banco de dados unido e retomam a sincronização de dados.  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  

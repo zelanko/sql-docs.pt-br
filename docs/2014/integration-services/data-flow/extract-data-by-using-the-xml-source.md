@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - extracting data [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92bc7c34c7581f41a1ad814923aa350df4da4cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1d68856ff161a46d9ee74d0ac7e252c532b136a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793828"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extrair dados por meio da origem XML
   Para adicionar e configurar uma origem XML, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  
@@ -63,7 +62,7 @@ ms.locfileid: "48222496"
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Código-fonte XML](xml-source.md)   
+ [Origem XML](xml-source.md)   
  [Transformações do Integration Services](transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](integration-services-paths.md)   
  [Tarefa de Fluxo de Dados](../control-flow/data-flow-task.md)  

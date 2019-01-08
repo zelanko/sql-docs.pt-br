@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Delete query
@@ -22,12 +22,12 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 543c70df2cda31251eb193f1acf04ab46ec8cddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065846"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792768"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipos de consulta permitidos (Visual Database Tools)
   Você pode criar os seguintes tipos de consultas nos painéis de Diagrama e Critérios (os painéis gráficos) do [Designer de Consulta e Exibição](visual-database-tools.md):  

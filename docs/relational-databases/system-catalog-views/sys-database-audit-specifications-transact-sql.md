@@ -20,25 +20,25 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604905"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522977"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |Nome|**sysname**|Nome da especificação de auditoria.|  
 |database_specification_id|**int**|ID da especificação do banco de dados.|  
 |create_date|**datetime**|Data de criação da especificação de auditoria.|  
 |modified_date|**datetime**|Data da última alteração feita na especificação de auditoria.|  
-|is_state_enabled|**bit**|Estado da especificação de auditoria:<br /><br /> 0 – DESABILITADA<br /><br /> 1 – HABILITADA|  
+|is_state_enabled|**bit**|Estado da especificação de auditoria:<br /><br /> 0 - DESABILITADO<br /><br /> 1 - HABILITADO|  
 |audit_GUID|**uniqueidentifer**|GUID da auditoria que contém essa especificação. É usada durante a enumeração das especificações de auditoria do banco de dados membro durante a anexação/inicialização do banco de dados.|  
   
 ## <a name="remarks"></a>Comentários  

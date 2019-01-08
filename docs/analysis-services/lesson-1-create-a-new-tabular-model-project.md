@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040854"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410764"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lição 1: Criar um novo projeto de modelo de tabela
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -50,7 +50,7 @@ Este tópico é a primeira lição em um tutorial de criação de modelo de tabe
       
     Se você não vir o SQL Server 2016 RTM (1200) na caixa de listagem de nível de compatibilidade, você não estiver usando a versão mais recente do SQL Server Data Tools. Para obter a versão mais recente, consulte [Instalar o SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
-    Se você estiver usando a versão mais recente do SSDT, você também pode escolher o SQL Server 2017 (1400). No entanto, a completa lição 13: implantar, você precisará de um servidor do SQL Server 2017 ou o Azure para implantar.
+    Se você estiver usando a versão mais recente do SSDT, você também pode escolher o SQL Server 2017 (1400). No entanto, a completa lição 13: Implantar, você precisará de um SQL Server 2017 ou o servidor do Azure para implantar.
       
     Selecionar um nível de compatibilidade anterior é recomendado somente se você pretende implantar seu modelo de tabela concluído em uma instância do Analysis Services diferente, executando uma versão anterior do SQL Server. Não há suporte para o espaço de trabalho integrado para níveis de compatibilidade anteriores. Para saber mais, consulte [Nível de compatibilidade](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   
@@ -69,7 +69,7 @@ Vamos examinar as propriedades do modelo. Clique em **Model.bim**. No **propried
 
 ![como-tabela-lição 1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
-Quando você cria um novo modelo, determinadas propriedades de modelo são definidas automaticamente acordo com as configurações de modelagem de dados que podem ser especificadas na **ferramentas** > **opções** caixa de diálogo. As propriedades de Backup de Dados, Retenção de Espaço de trabalho e Servidor de Espaço de Trabalho especificam como e onde o banco de dados de espaço de trabalho (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você poderá alterar essas configurações posteriormente se necessário, mas, por enquanto, deixe essas propriedades como estão.  
+Quando você cria um novo modelo, determinadas propriedades de modelo são definidas automaticamente acordo com as configurações de modelagem de dados que podem ser especificadas na **ferramentas** > **opções** caixa de diálogo. As propriedades de Backup de Dados, Retenção de Workspace e Servidor de Workspace especificam como e onde o banco de dados de workspace (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você poderá alterar essas configurações posteriormente se necessário, mas, por enquanto, deixe essas propriedades como estão.  
 
 Na **Gerenciador de soluções**, clique com botão direito **vendas pela Internet AW** (projeto) e, em seguida, clique em **propriedades**. O **páginas de propriedades de vendas de Internet do AW** caixa de diálogo é exibida. Esses são os avançados [propriedades do projeto](../analysis-services/tabular-models/project-properties-ssas-tabular.md). Você definirá posteriormente algumas dessas propriedades quando estiver pronto para implantar o modelo.  
   
@@ -87,7 +87,7 @@ Para saber mais sobre os diferentes tipos de projetos de modelo tabular, consult
   
 
 ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 2: adicionar dados](../analysis-services/lesson-2-add-data.md).
+Vá para a próxima lição: [Lição 2: Adicionar dados](../analysis-services/lesson-2-add-data.md).
 
   
   

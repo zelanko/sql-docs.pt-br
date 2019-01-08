@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022603"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537284"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Procurar dados e metadados no Cubo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022603"
   
  Antes de você procurar um cubo, deverá processá-lo e se reconectar a ele. Depois de processá-lo, abra a guia **Navegador** do Designer de Cubo. Clique no botão Reconectar na barra de ferramentas para atualizar a conexão.  
   
- A guia **Navegador** tem três painéis: o painel de Metadados, o painel de Filtro e o painel de Dados. Use o painel de Metadados para examinar a estrutura do cubo em formato de árvore. Use o painel de Filtro na parte superior da guia **Navegador** para definir o subcubo pelo qual você deseja navegar. Use o painel de Dados para exibir o conjunto de resultados e analisar as hierarquias da dimensão.  
+ O **navegador** guia tem três painéis - painel de metadados, o painel de filtro e o painel de dados. Use o painel de Metadados para examinar a estrutura do cubo em formato de árvore. Use o painel de Filtro na parte superior da guia **Navegador** para definir o subcubo pelo qual você deseja navegar. Use o painel de Dados para exibir o conjunto de resultados e analisar as hierarquias da dimensão.  
   
 ## <a name="setting-up-the-browser"></a>Configurando o navegador  
  Para preparar para procurar um cubo, você pode especificar uma perspectiva ou tradução que você queira usar. Você adiciona medidas e dimensões ao painel de Dados e especifica os filtros no painel de Filtros.  
@@ -39,7 +39,7 @@ ms.locfileid: "34022603"
 ## <a name="setting-up-the-data"></a>Configurando os dados  
   
 ##### <a name="adding-or-removing-measures"></a>Adicionando ou removendo medidas  
- Arraste as medidas pelas quais você deseja navegar do painel de Metadados até a área de detalhes do painel de Dados que é o painel vazio grande no lado inferior direito do espaço de trabalho. À medida que você arrasta medidas adicionais, elas são adicionadas como colunas. Uma linha vertical indica onde cada medida adicional será solta. Arrastar a pasta **Medidas** solta todas as medidas na área de detalhes.  
+ Arraste as medidas pelas quais você deseja navegar do painel de Metadados até a área de detalhes do painel de Dados que é o painel vazio grande no lado inferior direito do workspace. À medida que você arrasta medidas adicionais, elas são adicionadas como colunas. Uma linha vertical indica onde cada medida adicional será solta. Arrastar a pasta **Medidas** solta todas as medidas na área de detalhes.  
   
  Para remover uma medida da área de detalhes, arraste-a para fora do painel de Dados ou clique com o botão direito do mouse nela e clique em **Excluir** no menu de atalho.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "34022603"
   
      \- ou –  
   
--   No **dimensão** coluna o **filtro** painel, clique em  **\<selecionar dimensão >** e selecione uma dimensão na lista e clique em  **\<Selecionar hierarquia >** no **hierarquia** coluna e selecione uma hierarquia na lista.  
+-   No **dimensão** coluna das **filtro** painel, clique em  **\<selecionar dimensão >** e selecione uma dimensão na lista e clique em  **\<Selecionar hierarquia >** na **hierarquia** coluna e selecione uma hierarquia na lista.  
   
  Depois que você especificar a hierarquia, especifique o operador e a expressão de filtro. A tabela a seguir descreve os operadores e as expressões de filtro.  
   
-|Operador|Expressão de filtro|Description|  
+|Operador|Expressão de filtro|Descrição|  
 |--------------|-----------------------|-----------------|  
 |Equal|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
 |Diferente de|Um ou mais membros|Os valores não devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  

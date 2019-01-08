@@ -23,12 +23,12 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 761e0c000666fc413c060bf4f01ea24b307d3fbd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 413a9519cbfcb036c5e7242889c4eaf4ec89d413
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515390"
 ---
 # <a name="quantified-expressions-xquery"></a>Expressões quantificadas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51665395"
  O XQuery oferece suporte a expressões quantificadas da seguinte forma:  
   
 ```  
-( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
+( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
  Você pode usar essas expressões em uma consulta para aplicar explicitamente quantificação existencial ou universal a uma expressão em uma ou em várias sequências. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a expressão na cláusula `satisfies` deve resultar em um dos seguintes: uma sequência de nó, uma sequência vazia ou um valor Booliano. O valor Booliano efetivo do resultado dessa expressão será usado na quantificação. A quantificação existencial que usa **alguns** retornará True se pelo menos um dos valores associados pelo quantificador tiver um resultado na expressão de satisfação. A quantificação universal que usa **cada** deve ter True em todos os valores associados pelo quantificador.  

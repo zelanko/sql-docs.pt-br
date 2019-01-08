@@ -13,12 +13,12 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527448"
 ---
 # <a name="comments-on-hellodata"></a>Comentários sobre o HelloData
 O aplicativo HelloData percorre as operações básicas de um aplicativo típico do ADO: Introdução, o exame, edição e atualização de dados. Quando você inicia o aplicativo, clique no botão de primeira **obter dados**. Isso executará o **GetData** sub-rotina.  
@@ -74,4 +74,4 @@ O aplicativo HelloData percorre as operações básicas de um aplicativo típico
  Para obter informações detalhadas sobre como atualizar dados, incluindo o que fazer quando dados sobre as alterações de servidor ao seu **conjunto de registros** é desconectado, consulte [atualizando e persistência de dados](../../../ado/guide/data/updating-and-persisting-data.md).  
   
 ## <a name="formunload"></a>Form_Unload  
- O **Form_Unload** sub-rotina é importante por vários motivos. Em primeiro lugar, como esse é um aplicativo de exemplo, Form_Unload limpa as alterações que foram feitas no banco de dados antes de sair do aplicativo. Em segundo lugar, o código mostra como um comando pode ser executado diretamente de um aberto **Conexão** objeto usando o **Execute** método. Por fim, ele mostra um exemplo de como executar uma consulta não retornar ao linha (uma consulta UPDATE) na fonte de dados.
+ O **Form_Unload** sub-rotina é importante por vários motivos. Em primeiro lugar, como esse é um aplicativo de exemplo, Form_Unload limpa as alterações que foram feitas no banco de dados antes de sair do aplicativo. Em segundo lugar, o código mostra como um comando pode ser executado diretamente de um aberto **Conexão** objeto usando o **Execute** método. Por fim, ele mostra um exemplo de como executar uma consulta não retornam linhas (uma consulta de atualização) na fonte de dados.

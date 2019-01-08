@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - createSrv
@@ -13,12 +12,12 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2de12fd6ada3fc70511ebc49f85da30306e7cac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150396"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785458"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Criar e editar um Serviço Oracle CDC
   Você cria e edita um novo Serviço do Windows do Oracle CDC a partir do Console de Configuração do Serviço CDC.  
@@ -57,14 +56,14 @@ ms.locfileid: "48150396"
   
      Você pode usar uma conta do Windows local ou de domínio para a conta de serviço. Neste caso, você deve inserir a **Senha** para essa conta. Esta conta pode ser para o host local ou uma conta de domínio. Atualize a senha quando ela for alterada usando os Serviços Locais no Painel de Controle do Windows.  
   
- **Nome do servidor**: selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino para se conectar (por exemplo, **\\\\<nome_do_computador>\\<nome_da_instância>**). Por padrão, é exibida a instância de servidor usada na última conexão.  
+ **Nome do servidor**: Selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância para se conectar ao (por exemplo,  **\\ \\< nome_do_computador >\\< instance_name >**). Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
  Selecione uma destas opções:  
   
--   **Autenticação do Windows**: se você selecionar esta opção, o serviço Oracle CDC se conectará à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando a identidade da conta de serviço. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada em um computador diferente, a Autenticação do Windows deverá ser usada com contas de domínio.  
+-   **Autenticação do Windows**: Se você selecionar essa opção, o serviço Oracle CDC se conecta ao destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a identidade da conta de serviço da instância. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada em um computador diferente, a Autenticação do Windows deverá ser usada com contas de domínio.  
   
--   **Autenticação do SQL Server**: se você selecionar esta opção, deverá digitar o **Nome de usuário** e **Senha** para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que deseja usar. O serviço Oracle CDC usa estas credenciais ao conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
+-   **Autenticação do SQL Server**: Se você selecionar essa opção, você deve digitar o **nome de usuário** e **senha** para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon você deseja usar. O serviço Oracle CDC usa estas credenciais ao conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
   
  O logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Serviço Oracle CDC somente precisa ser um membro da função pública de servidor fixa, nenhum outro privilégio será necessário. Quando novas Instâncias Oracle CDC são adicionadas, esse logon ganhará acesso **db_owner** aos bancos de dados CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associados.  
   
@@ -75,13 +74,13 @@ ms.locfileid: "48150396"
  **Opções**  
  Clique na seta para exibir opções disponíveis a serem configuradas. Você pode escolher deixar estas opções com o valor padrão. As opções disponíveis são:  
   
--   **Tempo limite de conexão**: digite o tempo (em segundos) que o Serviço CDC para Oracle aguarda uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de exceder o tempo limite. O valor padrão é **15**.  
+-   **Tempo limite de Conexão**: Digite o tempo (em segundos) que o Serviço CDC para Oracle espera por uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de exceder o tempo limite. O valor padrão é **15**.  
   
--   **Tempo limite de execução**: digite o tempo (em segundos) que o Serviço Windows do Oracle CDC aguarda até que um comando seja executado antes de exceder o tempo limite. O valor padrão é **30**.  
+-   **Tempo limite de execução**: Digite o tempo (em segundos) que o Serviço do Windows do Oracle CDC espera que um comando seja executado antes de exceder o tempo limite. O valor padrão é **30**.  
   
--   **Criptografar Conexão**: selecione **Criptografar Conexão** para a comunicação entre o Serviço Oracle CDC e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando uma conexão criptografada.  
+-   **Criptografar Conexão**: Selecione **criptografar Conexão** para a comunicação entre o serviço Oracle CDC e o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância usando uma conexão criptografada.  
   
--   **Avançado**: digite as propriedades de conexão adicionais, se necessário.  
+-   **Avançado**: Digite as propriedades de conexão adicionais, se necessário.  
   
  **Senha mestra**  
  Insira uma senha a ser usada pelo Serviço do Windows do Oracle CDC para proteger as credenciais da mineração de logs do Oracle.  
@@ -89,6 +88,6 @@ ms.locfileid: "48150396"
  A mesma senha mestre também deve ser usada quando outras instâncias são configuradas do mesmo serviço em outros nós em um cluster em configuração de alta disponibilidade. Se você perder ou modificar a senha mestra, todas as senhas de mineração de logs armazenadas em bancos de dados de Instância Oracle CDC devem ser reinseridas usando o CDC Designer Console.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como criar e editar um serviço CDC](how-to-create-and-edit-a-cdc-service.md)  
+ [Como criar e editar um Serviço CDC](how-to-create-and-edit-a-cdc-service.md)  
   
   

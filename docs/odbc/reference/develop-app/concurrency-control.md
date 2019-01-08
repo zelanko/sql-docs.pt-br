@@ -14,19 +14,19 @@ ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44d31fc1f929ca60d34e49db135cefd1a8ae7ebc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831362"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528028"
 ---
 # <a name="concurrency-control"></a>Controle de simultaneidade
 *Simultaneidade* é a capacidade de duas transações para usar os mesmos dados ao mesmo tempo, e com transação maior isolamento normalmente vem a redução de simultaneidade. Isso ocorre porque o isolamento de transação geralmente é implementado pelo bloqueio de linhas, e que mais linhas são bloqueadas, menos transações podem ser concluídas sem serem bloqueadas pelo menos temporariamente por uma linha bloqueada. Embora a redução de simultaneidade é aceita normalmente como uma compensação para os níveis mais altos de isolamento de transação necessários para manter a integridade do banco de dados, ele pode se tornar um problema em aplicativos interativos com a atividade de leitura/gravação alta que usar cursores.  
   
  Por exemplo, suponha que um aplicativo executa a instrução SQL **selecionar \* pedidos de**. Ele chama **SQLFetchScroll** para rolar ao redor do resultado definido e permite que o usuário atualizar, excluir ou inserir pedidos. Depois que o usuário atualiza, exclui ou insere um pedido, o aplicativo confirma a transação.  
   
- Se o nível de isolamento for Repeatable Read, a transação pode — dependendo de como ele é implementado — bloquear cada linha retornada por **SQLFetchScroll**. Se o nível de isolamento é Serializable, a transação pode bloquear toda a tabela de pedidos. Em ambos os casos, a transação libera seus bloqueios somente quando ele é confirmado ou revertido. Portanto, se o usuário gasta muito tempo lendo pedidos e muito pouco tempo, atualizar, excluir ou inseri-los, a transação poderá facilmente bloquear um grande número de linhas, tornando-os disponíveis para outros usuários.  
+ Se o nível de isolamento for Repeatable Read, a transação poderá - dependendo de como ele é implementado - bloquear cada linha retornada por **SQLFetchScroll**. Se o nível de isolamento é Serializable, a transação pode bloquear toda a tabela de pedidos. Em ambos os casos, a transação libera seus bloqueios somente quando ele é confirmado ou revertido. Portanto, se o usuário gasta muito tempo lendo pedidos e muito pouco tempo, atualizar, excluir ou inseri-los, a transação poderá facilmente bloquear um grande número de linhas, tornando-os disponíveis para outros usuários.  
   
  Isso é um problema, mesmo se o cursor é somente leitura e o aplicativo permite que o usuário leia apenas os pedidos existentes. Nesse caso, o aplicativo confirma a transação e libera os bloqueios, quando ele chama **SQLCloseCursor** (no modo de confirmação automática) ou **SQLEndTran** (no modo de confirmação manual).  
   

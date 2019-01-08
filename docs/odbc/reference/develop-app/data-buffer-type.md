@@ -16,15 +16,15 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54054387a57d59470bae6d982b5ce700362f483
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528858"
 ---
 # <a name="data-buffer-type"></a>Tipo de buffer de dados
-O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única variável, isso ocorre quando o aplicativo aloca a variável. Com memória genérica — ou seja, memória apontada por um ponteiro de tipo void — isso ocorre quando o aplicativo converte a memória para um tipo específico. O driver detecta esse tipo de duas maneiras:  
+O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única variável, isso ocorre quando o aplicativo aloca a variável. Com memória genérica - ou seja, memória apontado por um ponteiro de tipo void – isso ocorre quando o aplicativo converte a memória para um tipo específico. O driver detecta esse tipo de duas maneiras:  
   
 -   **Argumento de tipo de buffer de dados.** Buffers usados para transferir dados do conjunto de resultados e os valores de parâmetro, como o buffer associado com *TargetValuePtr* na **SQLBindCol**, geralmente têm um argumento de tipo associado, como o  *TargetType* argumento na **SQLBindCol**. Esse argumento, o aplicativo passa o identificador de tipo de C que corresponde ao tipo de buffer. Por exemplo, na seguinte chamada para **SQLBindCol**, o valor de SQL_C_TYPE_DATE informa o driver a *data* buffer é um SQL_DATE_STRUCT:  
   

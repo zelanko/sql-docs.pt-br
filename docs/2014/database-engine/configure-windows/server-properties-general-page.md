@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.prodinfo.f1
@@ -15,12 +14,12 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34c5da2f841c1939aacf96ba663b3143675711f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064266"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639242"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Propriedades do servidor (página Geral) - SQL Server Management Studio
   Use essa página para exibir informações somente leitura sobre a instalação do seu [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,8 +54,8 @@ ms.locfileid: "48064266"
  **Diretório Raiz**  
  Exibe o caminho para o local da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , normalmente C:\Arquivos de Programas\Microsoft SQL Server\\.  
   
- **Agrupamento do Servidor**  
- Exibe o agrupamento que tem o suporte do servidor. Um agrupamento especifica a página de código e ordem de classificação específicas a serem usadas para dados Unicode e não Unicode.  
+ **Ordenação do Servidor**  
+ Exibe a ordenação que tem o suporte do servidor. Uma ordenação especifica a página de código e ordem de classificação específicas a serem usadas para dados Unicode e não Unicode.  
   
  **É clusterizado**  
  Exibirá **True** se a instância de servidor estiver configurada em um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou **False** se a instância de servidor não estiver clusterizada.  

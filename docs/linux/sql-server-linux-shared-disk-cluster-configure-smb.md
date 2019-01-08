@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661934"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532000"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar a instância de cluster de failover - SMB – SQL Server no Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661934"
 
 Este artigo explica como configurar o armazenamento SMB para uma instância de cluster de failover (FCI) no Linux. 
  
-No mundo não Windows, SMB é geralmente conhecido para como o Common Internet File System (CIFS) compartilhar e implementado por meio do Samba. No mundo do Windows, acessar um compartilhamento SMB é feito dessa forma: \\SERVERNAME\SHARENAME. Para instalações do SQL Server baseado em Linux, o compartilhamento SMB deve ser montado como uma pasta.
+No mundo não Windows, SMB é geralmente conhecido para como o Common Internet File System (CIFS) compartilhar e implementado por meio do Samba. No mundo do Windows, acessar um compartilhamento SMB é feito dessa forma: \\NOME. Para instalações do SQL Server baseado em Linux, o compartilhamento SMB deve ser montado como uma pasta.
 
 ## <a name="important-source-and-server-information"></a>Informações importantes de origem e de servidor
 
@@ -102,7 +102,7 @@ Aqui estão algumas dicas e notas de uso de SMB com êxito:
    *    Exclua os arquivos do diretório de dados do SQL Server existente. Você não receberá qualquer confirmação se for bem-sucedido.
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Verifique se que os arquivos foram excluídos. 

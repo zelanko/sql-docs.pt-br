@@ -14,12 +14,12 @@ ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 84194cf92cfd4c6270697aa1c3fd4f475df956ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714084"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409223"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Executar o console do SSMA (OracleToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA. O aplicativo de console usa determinados comandos do arquivo de script padrão como enumerado nesta seção.  
@@ -63,7 +63,7 @@ Atributo 'Substituir-if-exists' está **falsos** por padrão.
   
 **Comando**  
   
-Abrir projeto: abre um projeto existente.  
+Abrir projeto: Abre um projeto existente.  
   
 **Script**  
   
@@ -294,7 +294,7 @@ ou em
 ## <a name="migration-script-file-commands"></a>Comandos de arquivo de Script de migração  
 Os comandos de migração converter o esquema de banco de dados de destino para o esquema de origem e migra dados para o servidor de destino.  
   
-A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 **Comando**  
   
@@ -459,7 +459,7 @@ Migra os dados de origem para o destino.
 ```  
   
 ## <a name="manageability-script-file-commands"></a>Comandos de arquivo de Script de capacidade de gerenciamento  
-Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de banco de dados de destino com o banco de dados de origem. A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de banco de dados de destino com o banco de dados de origem. A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 **Comando**  
   
@@ -589,7 +589,7 @@ ou em
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Comandos de arquivo de Script de geração de script  
-Os comandos de geração de Script executam duas tarefas: eles ajudam a salvar o console de saída em um arquivo de script; e registrar a saída do T-SQL para o console ou um arquivo de acordo com o parâmetro que você especificar.  
+Os comandos de geração de Script executam tarefas duplas: Eles ajudam a salvar o console de saída em um arquivo de script; e registrar a saída do T-SQL para o console ou um arquivo de acordo com o parâmetro que você especificar.  
   
 **Comando**  
   

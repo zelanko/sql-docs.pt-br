@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122736"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544334"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Previsões de série temporal avançadas (Tutorial de mineração de dados intermediário)
   Você viu na exploração do modelo de previsão que embora as vendas na maioria das regiões siga um padrão similar, algumas regiões e alguns modelos, como o M200 na região do Pacífico, exibem tendências muito diferentes. Isso não é surpresa para você, já que sabe que as diferenças entre as regiões são comuns e podem ser causadas por muitos fatores, incluindo promoções de marketing, geração de relatórios imprecisos ou eventos geopolíticos.  
@@ -44,7 +44,7 @@ ms.locfileid: "48122736"
 ##  <a name="bkmk_newExtendData"></a> Criando os novos dados de vendas estendidos  
  Para atualizar seus dados de vendas, você precisará obter os números de vendas mais recentes. De interesse em particular são os dados da região do Pacífico, que iniciou uma promoção de vendas regional para chamar a atenção para as novas lojas e aumentar o reconhecimento de seus produtos.  
   
- Para este cenário, vamos supor que os dados foram importados de uma pasta de trabalho do Excel que contém apenas três meses de novos dados para duas regiões. Você criará uma tabela para obter os dados que usam um script Transact-SQL e depois definirá uma exibição de fonte de dados para usar na previsão.  
+ Para este cenário, vamos supor que os dados importados de uma planilha do Excel que contém apenas três meses de novos dados para duas regiões. Você vai criar uma tabela para os dados usando um script Transact-SQL e, em seguida, definir uma exibição da fonte de dados a ser usado para previsão.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Criar a tabela com os novos dados de vendas  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122736"
   
      **Fonte de dados**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Selecionar tabelas e exibições**: selecione a tabela que você acabou de criado, NewSalesData.  
+     **Selecionar tabelas e exibições**: Selecione a tabela que você acabou de criar NewSalesData.  
   
 3.  Clique em **Concluir**.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122736"
   
 2.  Na página de boas-vindas do assistente, clique em **Avançar**.  
   
-3.  Sobre o **Selecionar fonte de dados** , selecione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]e, em seguida, clique em **próximo**.  
+3.  Na página **Selecionar Fonte de Dados** , selecione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]e, em seguida, clique em **Avançar**.  
   
-4.  Na página **Selecionar Tabelas e Exibições**, não adicione tabelas, apenas clique em **Avançar**.  
+4.  Na página de **selecionar tabelas e exibições**, não adicione qualquer clique apenas em tabelas **próxima**.  
   
 5.  Na página de **Concluindo o assistente**, digite o nome `AllRegions`e, em seguida, clique em **concluir**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122736"
   
      **Fonte de dados**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Selecionar Tabelas e Exibições**: não selecione nenhuma tabela.  
+     **Selecionar tabelas e exibições**: Não selecione nenhuma tabela  
   
      **Nome**: `T1000 Pacific Region`  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48122736"
   
      **Nome**: `T1000 Pacific Region`  
   
-     **Descrição**: **filtro`vTimeSeries`por região e modelo**  
+     **Descrição**: **Filtro`vTimeSeries`por região e modelo**  
   
 5.  No painel de texto, digite a seguinte consulta e clique em OK:  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48122736"
   
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Referência técnica do algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Referência técnica do algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

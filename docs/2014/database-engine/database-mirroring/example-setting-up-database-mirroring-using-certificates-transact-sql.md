@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: configurar o espelhamento de banco de dados usando certificados (Transact-SQL) | Microsoft Docs'
+title: 'Exemplo: Configurando o banco de dados de espelhamento usando certificados (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5afcf2441de59e233abb3f1d211e0f14e517a43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512177"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
   Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
@@ -32,7 +32,7 @@ ms.locfileid: "48065696"
   
  A função principal inicial é assumida pelo HOST_A, e a função de espelho é assumida pelo HOST_B.  
   
- A configuração do espelhamento de banco de dados usando certificados envolve quatro estágios gerais, dos quais três — 1, 2 e 4 — são demonstrados por este exemplo. Esses estágios são os seguintes:  
+ A configuração do espelhamento de banco de dados usando certificados envolve quatro estágios gerais, dos quais três – 1, 2 e 4 – são demonstrados por este exemplo. Esses estágios são os seguintes:  
   
 1.  [Configurando conexões de saída](#ConfiguringOutboundConnections)  
   

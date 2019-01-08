@@ -23,12 +23,12 @@ ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14a547098cf72ac4b4f1c49044aba1bb2f024adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c2683bd383ebd3d0a9278cb008b6909dc80007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055526"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527124"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Especificando opções de implantação de função e de partição
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação do lê as opções de implantação de partição e de função do \< *nome do projeto*>. deploymentoptions arquivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria esse arquivo quando você cria o projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa as opções de implantação de partição e de função do atual projeto quando o \< *nome do projeto*>. deploymentoptions arquivo é criado. Para obter mais informações sobre parâmetros de configuração, consulte [Compreendendo os arquivos de entrada usados para criar o script de implantação](deployment-script-files-input-used-to-create-deployment-script.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48055526"
   
 -   As funções e os membros de função existentes no banco de dados de destino são retidos e nenhuma nova função será implantada.  
   
--   **Nota** Quando funções e membros existentes são retidos, as permissões associadas a essas funções são redefinidas como nenhuma. As permissões de segurança são contidas pelos objetos que protegem, não pelas funções de segurança com que estão associadas. Para obter mais informações sobre como trabalhar com esse comportamento usando o Assistente para Implantação do Analysis Service, consulte “Retenção de funções e membros” na Base de Dados de Conhecimento Microsoft.  
+-   **Nota** Quando funções e membros existentes são retidos, as permissões associadas a essas funções são redefinidas como nenhuma. As permissões de segurança são contidas pelos objetos que protegem, não pelas funções de segurança com que estão associadas. Para obter mais informações sobre como trabalhar com esse comportamento usando o Assistente de implantação do serviço de análise, consulte 'Reter funções e membros' na Base de dados de Conhecimento Microsoft.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modificando as opções de implantação de partição e de função  
  Talvez você precise implantar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do projeto usando opções de partição e de função diferentes das armazenadas na \< *nome do projeto*>. deploymentoptions arquivo. Por exemplo, você talvez queira manter as partições existentes, funções e membros da função, em vez de substituir todas as partições existentes, funções e membros, conforme indicado na \< *nome do projeto*>. deploymentoptions arquivo.  
@@ -62,11 +62,11 @@ ms.locfileid: "48055526"
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interativamente, e na página **Opções de implantação de partição e de função** , especifique as novas opções de implantação para as partições e funções.  
   
-     — ou —  
+     -ou-  
   
 -   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para ser executado em modo de arquivo de resposta. (Para obter mais informações sobre o modo de arquivo de resposta, consulte [Executando o Assistente de Implantação do Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
   
-     — ou —  
+     -ou-  
   
 -   Abra o \< *nome do projeto*>. deploymentoptions em qualquer editor de texto e manualmente alterar as opções.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
@@ -18,12 +18,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75677d897c714828e23205490d68fd2e691b9b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084906"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759508"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solução de problemas em um log de transação completa (SQL Server Erro 9002)
   Este tópico aborda as respostas possíveis a um log de transações completo e sugere como evitar isso no futuro. Quando o log de transações fica completo, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] emite um erro 9002. O log pode ficar completo quando o banco de dados estiver online ou em recuperação. Se o log ficar completo enquanto o banco de dados estiver online, o banco de dados permanecerá online, mas só poderá ser lido e não atualizado. Se o log ficar completo durante uma recuperação, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] marcará o banco de dados como RESOURCE PENDING. Em qualquer caso, é necessária a ação do usuário para liberar espaço no log.  
@@ -51,7 +51,7 @@ ms.locfileid: "48084906"
  Essas alternativas são discutidas nas seções seguintes. Escolha uma resposta que se ajuste melhor a sua situação.  
   
 ### <a name="backing-up-the-log"></a>Fazendo backup de log  
- No modelo de recuperação completa ou no modelo de recuperação bulk-logged, se não foi feito backup do log de transações recentemente, pode ser que o backup esteja impedindo o truncamento de log. Se nunca tiver sido feito backup do log, você deve criar dois backups de log a fim de permitir o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para truncar o log para o ponto do último backup. Truncar o log libera espaço para novos registros de log. Para impedir que o log fique completo novamente, faça backups de log frequentes.  
+ No modelo de recuperação completa ou no modelo de recuperação bulk-logged, se não foi feito backup do log de transações recentemente, pode ser que o backup esteja impedindo o truncamento de log. Se nunca foi feito backup do log, você deve criar dois backups de log para permitir que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] trunque o log no ponto do último backup. Truncar o log libera espaço para novos registros de log. Para impedir que o log fique completo novamente, faça backups de log frequentes.  
   
  **Para criar um backup de log de transações**  
   

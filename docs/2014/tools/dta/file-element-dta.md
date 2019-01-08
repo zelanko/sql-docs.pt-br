@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d74a576ea8d966d5c1a2c802eb42049c33a94b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5279500939d0499c8ef7bd247b92e052b522970b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097706"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787478"
 ---
 # <a name="file-element-dta"></a>Elemento de arquivo (DTA)
   Especifica o arquivo da carga de trabalho. A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. Os arquivos de carga de trabalho podem ser scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] (.sql) ou arquivos de rastreamento (.trc). Para obter mais informações, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "48097706"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Use o tipo de dados `string` para especificar o caminho de diretório para o arquivo de carga de trabalho. Por exemplo:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> O limite de comprimento é aplicado pelo servidor.|  
 |**Valor padrão**|Nenhum.|  
@@ -48,7 +47,7 @@ ms.locfileid: "48097706"
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md)|  
+|**Elemento pai**|[Elemento Workload &#40;DTA&#41;](workload-element-dta.md)|  
 |**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  

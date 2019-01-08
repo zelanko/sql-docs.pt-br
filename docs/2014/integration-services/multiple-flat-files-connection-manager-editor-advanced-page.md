@@ -15,12 +15,12 @@ ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dda5cb294536354ed4bcc5003983d36f61167007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e6aae7d4383440f148a8de1480cb8f1658e89c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542741"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (Página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para definir propriedades como o tipo de dados e os delimitadores de cada coluna nos arquivos de texto com os quais o gerenciador de conexões de arquivos simples se conecta.  
@@ -39,12 +39,12 @@ ms.locfileid: "48143326"
  **Configurar as propriedades de cada coluna**  
  Selecione uma coluna no painel esquerdo para exibir suas propriedades no painel direito. Consulte a tabela a seguir para obter uma descrição das propriedades dos tipos de dados. Algumas das propriedades listadas são configuráveis apenas para alguns formatos de arquivo simples.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Esta propriedade é somente leitura. Nos arquivos irregulares à direita, todas as colunas têm uma largura fixa, com exceção da última, que é encerrada pelo delimitador de linha.|  
-|**OutputColumnWidth**|Especifica um valor a ser armazenado como contagem de bytes; no caso de arquivos Unicode, isso será exibido como contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples.<br /><br /> Observação: no modelo de objeto, o nome desta propriedade é MaximumWidth.|  
+|**OutputColumnWidth**|Especifica um valor a ser armazenado como contagem de bytes; no caso de arquivos Unicode, isso será exibido como contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples.<br /><br /> Observação: No modelo de objeto, o nome desta propriedade é MaximumWidth.|  
 |**DataType**|Seleciona na lista de tipos de dados disponíveis. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indica se os dados de texto são qualificados usando um caractere de qualificador de texto. Os valores válidos são:<br /><br /> **True**: os dados de texto no arquivo simples são qualificados.<br /><br /> **False**: os dados de texto no arquivo simples não são qualificados.|  
+|**TextQualified**|Indica se os dados de texto são qualificados usando um caractere de qualificador de texto. Os valores válidos são:<br /><br /> **True**: Os dados de texto no arquivo simples são qualificados.<br /><br /> **False**: Os dados de texto no arquivo simples não são qualificados.|  
 |**Nome**|Forneça um nome de coluna. O padrão é uma lista numerada das colunas; entretanto, é possível escolher qualquer nome exclusivo e descritivo.|  
 |**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}** – as colunas são delimitadas por uma combinação de retorno de carro e de alimentação de linha<br /><br /> **{CR}** – as colunas são delimitadas por um retorno de carro<br /><br /> **{LF}** – as colunas são delimitadas por uma alimentação de linha<br /><br /> **Ponto e vírgula {;}** – as colunas são delimitadas por um ponto e vírgula<br /><br /> **Dois pontos {:}** – as colunas são delimitadas por dois pontos<br /><br /> **Vírgula {,}** – as colunas são delimitadas por uma vírgula<br /><br /> **Tabulação {t}** – as colunas são delimitadas por uma tabulação<br /><br /> **Barra vertical {&#124;}** – as colunas são delimitadas por uma barra vertical|  
@@ -54,7 +54,7 @@ ms.locfileid: "48143326"
  **Nova**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
 |**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  
@@ -68,8 +68,8 @@ ms.locfileid: "48143326"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

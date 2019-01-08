@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
@@ -15,19 +14,19 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 989049c5371d35d53282f5780dcfc9db13312c7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f53d6e82764e11ba56513053d88e23fda0baf92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188836"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790338"
 ---
 # <a name="ftp-connection-manager"></a>Gerenciador de conexões FTP
   Um gerenciador de conexões de FTP habilita um pacote a conectar-se a um servidor FTP. A tarefa FTP que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui usa esse gerenciador de conexões.  
   
  Quando você adiciona um gerenciador de conexões de FTP a um pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um gerenciador de conexões que pode ser resolvido como  uma conexão FTP em tempo de execução, define as propriedades do gerenciador de conexões e adiciona o gerenciador de conexões à coleção `Connections` do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `FTP`.  
+ A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `FTP`.  
   
  Você pode configurar um gerenciador de conexões de FTP adotando um dos procedimentos a seguir:  
   
@@ -56,10 +55,10 @@ ms.locfileid: "48188836"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, consulte [Editor do Gerenciador de Conexões FTP](../ftp-connection-manager-editor.md).  
   
- Para obter informações sobre como configurar um Gerenciador de conexão programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa FTP](../control-flow/ftp-task.md)   
- [Serviços de integração &#40;SSIS&#41; conexões](integration-services-ssis-connections.md)  
+ [Conexões do SSIS &#40;Integration Services&#41;](integration-services-ssis-connections.md)  
   
   

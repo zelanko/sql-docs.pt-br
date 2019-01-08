@@ -15,12 +15,12 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23eef4c33afbbfd287bb9be083cfe0990a6dd6a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512194"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementos usados em instruções SQL
 Os seguintes elementos são usados nas instruções SQL listadas anteriormente.  
@@ -52,9 +52,9 @@ Os seguintes elementos são usados nas instruções SQL listadas anteriormente.
   
  *parâmetro dinâmico* :: =?  
   
- *expressão* :: = termo &#124; expressão {+&#124;–} termo  
+ *expressão* :: = termo &#124; expressão {+&#124;-} termo  
   
- *Fator* :: = [*+*&#124;*–*]*primário*  
+ *Fator* :: = [*+*&#124;*-*]*primário*  
   
  *Inserir valor* :: =  
   

@@ -9,35 +9,35 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ec7afeddeeb4aae53f1368f55e2af5ec3ffcd0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985878"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512934"
 ---
-# <a name="lesson-11-create-roles"></a>Lição 11: Criar funções
+# <a name="lesson-11-create-roles"></a>Lição 11: Criar Funções
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Nesta lição, você criará funções. As funções fornecem objeto de banco de dados modelo e segurança de dados, limitando o acesso somente a esses usuários do Windows, que são os membros da função. Cada função é definida com uma permissão única: Nenhum, Leitura, Leitura e Processo, Processo, ou Administrador. As funções podem ser definidas durante a criação de modelo usando o Gerenciador de funções. Depois que um modelo foi implantado, você pode gerenciar funções usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Funções](../analysis-services/tabular-models/roles-ssas-tabular.md).  
+Nesta lição, você criará funções. As funções fornecem objeto de banco de dados modelo e segurança de dados, limitando o acesso somente a esses usuários do Windows, que são os membros da função. Cada função é definida com uma única permissão: Nenhum, leitura, leitura e processo, processo ou administrador. As funções podem ser definidas durante a criação de modelo usando o Gerenciador de funções. Depois que um modelo foi implantado, você pode gerenciar funções usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Funções](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  
 > A criação de funções não é necessária para concluir este tutorial. Por padrão, a conta à qual você está conectada no momento terá privilégios de Administrador no modelo. No entanto, para permitir que outros usuários na sua organização procurem o modelo usando um cliente de relatório, você deve criar pelo menos uma função com permissões de ler permissões e adicionar esses usuários como membros.  
   
 Você criará três funções:  
   
--   **Gerente de vendas** – essa função pode incluir usuários em sua organização para o qual você deseja ter permissão de leitura para todos os objetos de modelo e dados.  
+-   **Gerente de vendas** -essa função pode incluir usuários em sua organização para o qual você deseja ter permissão de leitura para todos os objetos de modelo e dados.  
   
--   **Analista de vendas dos EUA** – essa função pode incluir usuários em sua organização para o qual você deseja apenas ser capaz de procurar dados relacionados a vendas nos Estados Unidos. Para esta função, você usará uma fórmula DAX para definir um *Filtro de Linha*, que restringe os membros procurar somente dados dos Estados Unidos.  
+-   **Analista de vendas dos EUA** -essa função pode incluir usuários em sua organização para o qual você deseja apenas ser capaz de procurar dados relacionados a vendas nos Estados Unidos. Para esta função, você usará uma fórmula DAX para definir um *Filtro de Linha*, que restringe os membros procurar somente dados dos Estados Unidos.  
   
--   **Administrador** – essa função pode incluir usuários para o qual você deseja ter a permissão de administrador, que permite acesso ilimitado e permissões para executar tarefas administrativas no banco de dados modelo.  
+-   **Administrador** -essa função pode incluir usuários para o qual você deseja ter a permissão de administrador, que permite acesso ilimitado e permissões para executar tarefas administrativas no banco de dados modelo.  
   
-Como o usuário e as contas de grupo do Windows da sua organização são exclusivas, você pode adicionar contas da sua organização específica a membros. Porém, para este tutorial, você também pode deixar os membros em branco. Você ainda poderá testar o efeito de cada função posteriormente na Lição 12: Analisar no Excel.  
+Como o usuário e as contas de grupo do Windows da sua organização são exclusivas, você pode adicionar contas da sua organização específica a membros. Porém, para este tutorial, você também pode deixar os membros em branco. Você ainda poderá testar o efeito de cada função posteriormente na lição 12: Analise no Excel.  
   
 Tempo estimado para concluir esta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 10: criar partições](../analysis-services/lesson-10-create-partitions.md).  
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 10: Criar partições](../analysis-services/lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Criar Funções  
   
@@ -53,7 +53,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
 
     ![como tabular-lesson11-novo-função](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
-5.  Opcional: Clique a **membros** guia e, em seguida, clique em **Add**. Na caixa de diálogo **Selecionar Usuários ou Grupos** , insira os usuários ou grupos do Windows de sua organização a serem incluídos na função.  
+5.  Opcional: Clique o **membros** guia e, em seguida, clique em **Add**. Na caixa de diálogo **Selecionar Usuários ou Grupos** , insira os usuários ou grupos do Windows de sua organização a serem incluídos na função.  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>Para criar a função de usuário Analista de Vendas dos EUA  
   
@@ -69,7 +69,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
     =DimGeography[CountryRegionCode] = "US" 
     ```
     
-    Uma fórmula de Filtro de Linha deve resolver para um valor Booliano (TRUE/FALSE). Com esta fórmula, você está especificando que somente linhas com o valor Country Region Code de "US" estão visíveis ao usuário.  
+    Uma fórmula de Filtro de Linha deve resolver para um valor Booliano (TRUE/FALSE). Com esta fórmula, você está especificando que somente as linhas com o valor de código do país região "US" fique visível para o usuário.  
     ![como tabular-lesson11-função-filtro](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  Opcional: Clique na guia **Membros** e em **Adicionar**. Na caixa de diálogo **Selecionar Usuários ou Grupos** , insira os usuários ou grupos do Windows de sua organização a serem incluídos na função.  
@@ -86,7 +86,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
   
 ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 12: analisar no Excel](../analysis-services/lesson-12-analyze-in-excel.md).
+Vá para a próxima lição: [Lição 12: Analisar no Excel](../analysis-services/lesson-12-analyze-in-excel.md).
 
   
   

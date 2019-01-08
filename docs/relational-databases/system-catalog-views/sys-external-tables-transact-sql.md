@@ -12,19 +12,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702714"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516283"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Contém uma linha para cada tabela externa no banco de dados atual.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<herdado colunas >||Para obter uma lista de colunas que essa exibição herda valores, consulte [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
 |max_column_id_used|**int**|ID de máximo para a coluna já usada para essa tabela.||  
@@ -32,10 +32,10 @@ ms.locfileid: "47702714"
 |data_source_id|**int**|Identificação do objeto de fonte de dados externa.||  
 |file_format_id|**int**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, essa é a ID de objeto para o formato de arquivo externo.||  
 |local|**nvarchar(4000)**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, esse é o caminho dos dados externos no HDFS.||  
-|reject_type|**tinyint**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, essa é a maneira que linhas rejeitadas são contadas ao consultar dados externos.|VALOR – o número de linhas rejeitadas.<br /><br /> Porcentagem – a porcentagem de linhas rejeitadas.|  
+|reject_type|**tinyint**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, essa é a maneira que linhas rejeitadas são contadas ao consultar dados externos.|VALOR - o número de linhas rejeitadas.<br /><br /> Porcentagem – a porcentagem de linhas rejeitadas.|  
 |reject_value|**float**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP:<br /><br /> Para *reject_type =* valor, isso é o número de rejeições de linha para permitir que antes de fazer a consulta.<br /><br /> Para *reject_type* = porcentagem, esta é a porcentagem de rejeições de linha para permitir que antes de fazer a consulta.||  
 |reject_sample_value|**int**|Para *reject_type* = porcentagem, este é o número de linhas a serem carregadas, com ou sem êxito, antes de calcular a porcentagem de linhas rejeitadas.|NULO se reject_type = VALUE.|  
-|distribution_type|**int**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, essa é a distribuição de dados das linhas entre as tabelas base subjacentes.|0 – Sharded<br /><br /> 1 – replicados<br /><br /> 2 – Round robin|  
+|distribution_type|**int**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, essa é a distribuição de dados das linhas entre as tabelas base subjacentes.|0 - fragmentados<br /><br /> 1 - replicados<br /><br /> 2 - Round robin|  
 |distribution_desc|**nvarchar(120)**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, esse é o tipo de distribuição exibido como uma cadeia de caracteres.||  
 |sharding_column_id|**int**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER e uma distribuição fragmentada, essa é a ID de coluna da coluna que contém os valores de chave de fragmentação.||  
 |remote_schema_name|**sysname**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, este é o esquema no qual a tabela base está localizada nos bancos de dados remotos (se for diferente do esquema no qual a tabela externa é definida).||  

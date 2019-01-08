@@ -14,12 +14,12 @@ ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b01cc021875e836d8c6c244f7436e7f869f8be6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3847d2cdf4158167a6c05e957183464a846c90f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512729"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Habilitar o detalhamento para um modelo de mineração
   Se você habilitou o detalhamento para um modelo de mineração, quando você procurar o modelo, poderá recuperar informações detalhadas sobre os casos usados para criar o modelo. Para exibir essas informações, você deve ter as permissões necessárias e a estrutura já deve ter sido processada.  
@@ -28,7 +28,7 @@ ms.locfileid: "50147891"
   
 -   As permissões de detalhamento no modelo lhe permitem detalhar do modelo, mesmo que você não tenha permissões na estrutura.  
   
--   As permissões para detalhamento na estrutura fornecem a capacidade adicional de incluir colunas de estrutura em consultas de detalhamento do modelo, usando a função [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). Você também pode consultar os casos de teste e treinamento na estrutura usando a sintaxe SELECT… DE \<estrutura >. Sintaxe de casos.  
+-   As permissões para detalhamento na estrutura fornecem a capacidade adicional de incluir colunas de estrutura em consultas de detalhamento do modelo, usando a função [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). Você também pode consultar o treinamento e casos de teste na estrutura usando SELECT... DE \<estrutura >. Sintaxe de casos.  
   
  **Cache de casos de treinamento** O detalhamento funciona recuperando informações sobre os casos de treinamento na estrutura de mineração. Essas informações são armazenadas em cache quando a estrutura é processada. Assim, se você optar por limpar todos os dados em cache alterando a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> para `ClearAfterProcessing`, o detalhamento não funcionará.  
   

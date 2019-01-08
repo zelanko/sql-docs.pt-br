@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532181"
 ---
 # <a name="save-a-copy-of-a-package"></a>Salvar uma cópia de um pacote
   Este procedimento descreve como salvar uma cópia de um pacote no sistema de arquivos, no armazenamento do pacote ou no banco de dados **msdb** no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ao especificar um local para salvar a cópia do pacote, também é possível atualizar o nome do pacote.  
@@ -46,7 +46,7 @@ ms.locfileid: "48193406"
   
 5.  Se for salvar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], especifique o tipo de autenticação e, se estiver usando a Autenticação [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça um nome de usuário e senha.  
   
-6.  Para especificar o caminho do pacote, digite o caminho ou clique no botão Procurar **(…)** para especificar o local do pacote. O nome padrão do pacote é Pacote. Como opção, atualize o nome de pacote para um que atenda suas necessidades.  
+6.  Para especificar o caminho do pacote, digite o caminho ou clique no botão Procurar **(...)** para especificar a localização do pacote. O nome padrão do pacote é Pacote. Como opção, atualize o nome de pacote para um que atenda suas necessidades.  
   
      Se você selecionar **SQL Server** como a opção de **Caminho do Pacote** , o caminho do pacote consistirá de pastas lógicas no **msdb** e o nome do pacote. Por exemplo, se o pacote DownloadMonthlyData estiver associado à pasta Finance dentro da pasta MSDB (o nome padrão da pasta lógica raiz no **msdb**), o caminho do pacote chamado DownloadMonthlyData será MSDB/Finance/DownloadMonthlyData  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48193406"
   
 7.  Revise o nível de proteção do pacote.  
   
-8.  Como opção, clique no botão Procurar **(…)** ao lado da caixa **Nível de proteção** para alterar o nível de proteção.  
+8.  Como opção, clique no botão Procurar **(...)** ao lado da caixa **Nível de proteção** para alterar o nível de proteção.  
   
     -   Na caixa de diálogo **Nível de Proteção do Pacote** , selecione um nível de proteção diferente.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193406"
 9. Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; pacotes](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Configurar a integração com o serviço de serviços &#40;serviço SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

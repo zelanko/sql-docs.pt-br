@@ -17,12 +17,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a39a0dd5320245b99bae1256deedea52e201be47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542713"
 ---
 # <a name="index-disk-space-example"></a>Exemplo de espaço em disco de índice
   Sempre que um índice é criado, recriado, ou cancelado, o espaço em disco tanto para a velha (fonte) quanto para a nova (destino) estrutura é necessário em seus arquivos e grupos de arquivos apropriados. A estrutura antiga não é desalocada até que a transação de criação do índice seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação de operações. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -51,9 +51,9 @@ ms.locfileid: "48211016"
   
      Heap: 1 milhão * 200 bytes ~ 200 MB  
   
-     Índice não clusterizado A: 1 milhão * 50 bytes / 80% ~ 63 MB  
+     Índice não clusterizado a: 1 milhão * 50 bytes / 80% ~ 63 MB  
   
-     Índice não clusterizado B: 1 milhão * 80 bytes / 80% ~ 100 MB  
+     Índice não clusterizado b: 1 milhão * 80 bytes / 80% ~ 100 MB  
   
      Tamanho total de estruturas existentes: 363 MB  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48211016"
   
      Índice clusterizado: 1 milhão * 200 bytes / 80% ~ 250 MB  
   
-     Índice não clusterizado A: 1 milhão * (50 – 8 + 24) bytes / 80% ~ 83 MB  
+     Índice não clusterizado a: 1 milhão * (50 – 8 + 24) bytes / 80% ~ 83 MB  
   
-     Índice não clusterizado B: 1 milhão * (80 – 8 + 24) bytes / 80% ~ 120 MB  
+     Índice não clusterizado b: 1 milhão * (80 – 8 + 24) bytes / 80% ~ 120 MB  
   
      Tamanho total de novas estruturas: 453 MB  
   
@@ -109,17 +109,17 @@ ms.locfileid: "48211016"
   
 |Operação de índice|Os requisitos de espaço em disco para os locais das seguintes estruturas|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operação de índice offline com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1018 MB:<br /><br /> - Tabela e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
-|Operação de índice offline com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 816 MB:<br /><br /> -Tabela e índices existentes: 363 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
-|Operação de índice online com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1058 MB:<br /><br /> - Tabela e índices existentes: 363 MB\*<br /><br /> -**tempdb** (inclui índice de mapeamento): 242 MB *<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
-|Operação de índice online com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 856 MB:<br /><br /> -Tabela e índices existentes: 363 MB*<br /><br /> - Índice de mapeamento temporário: 40 MB\*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
+|Operação de índice offline com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1018 MB:<br /><br /> -Tabela e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB *<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
+|Operação de índice offline com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 816 MB:<br /><br /> -Tabela e índices existentes: 363 MB *<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
+|Operação de índice online com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1058 MB:<br /><br /> -Tabela e índices existentes: 363 MB\*<br /><br /> -**tempdb** (inclui índice de mapeamento): 242 MB *<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
+|Operação de índice online com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 856 MB:<br /><br /> -Tabela e índices existentes: 363 MB *<br /><br /> -Índice de mapeamento temporário: 40 MB\*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
   
  * Este espaço é desalocado depois que a operação de índice estiver confirmada.  
   
  Este exemplo não considera qualquer espaço em disco temporário adicional necessário em **tempdb** para registros de versão criados por atualização de usuário simultâneos e exclui operações.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Requisitos de espaço em disco para operações de DDL de índice](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
  [Espaço em disco de log de transações para operações de índice](transaction-log-disk-space-for-index-operations.md)  
   

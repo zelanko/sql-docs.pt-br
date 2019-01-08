@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5a46b68ac8e93a00c7730b32593331a28655c1c5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: c327dc55420cc89f5e76b6fae7822fad3a4e95f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743065"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524352"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 
 
-  Retorna o valor numérico especificado por uma linguagem MDX – cadeia de caracteres formatada.  
+  Retorna o valor numérico especificado por uma cadeia de caracteres formatada para MDX.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,10 +32,10 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  Uma expressão de cadeia de caracteres válida que resolve, direta ou indiretamente, uma célula única.  
   
-## <a name="remarks"></a>Remarks  
- O **StrToValue** função retorna o valor numérico especificado pela expressão MDX. O **StrToValue** função geralmente é usada com funções definidas pelo usuário para retornar uma expressão MDX de uma função externa para uma instrução MDX que pode ser resolvida para uma única célula.  
+## <a name="remarks"></a>Comentários  
+ O **StrToValue** função retorna o valor numérico especificado pela expressão MDX. O **StrToValue** função normalmente é usada com funções definidas pelo usuário para retornar uma expressão MDX de uma função externa para uma instrução MDX que pode ser resolvida para uma única célula.  
   
--   Quando o sinalizador CONSTRAINED for usado, a expressão MDX deverá conter somente um valor de escalar. O sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma linguagem MDX fornecida não for resolvida diretamente com um valor escalar; surge o seguinte erro: "As restrições impostas pelo sinalizador CONSTRAINED na função STRTOVALUE foram violadas."  
+-   Quando o sinalizador CONSTRAINED for usado, a expressão MDX deverá conter somente um valor de escalar. O sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma expressão MDX fornecida não for resolvida diretamente para um valor escalar, aparece o seguinte erro: "As restrições impostas pelo CONSTRAINED sinalizador na função STRTOVALUE foram violadas."  
   
 -   Quando o sinalizador CONSTRAINED não for usado, a linguagem MDX especificada pode ser tão complexa quanto se desejar, desde que resolva a uma linguagem MDX válida que retorne uma célula única.  
   
@@ -58,6 +58,6 @@ WHERE [Product].[Product Categories].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

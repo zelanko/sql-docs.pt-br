@@ -14,12 +14,12 @@ ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8e49b89d233880652f4b19879ff8e658bc4abe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b593c3bd8619f0fbba47357f312479c2cd14063b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527179"
 ---
 # <a name="driver-architecture"></a>Arquitetura do driver
 Arquitetura do driver se enquadra em duas categorias, dependendo de quais instruções SQL de processos de software:  
@@ -28,9 +28,9 @@ Arquitetura do driver se enquadra em duas categorias, dependendo de quais instru
   
 -   **Drivers baseados em DBMS** o driver acessa os dados físicos por meio de um mecanismo de banco de dados separado. Nesse caso, o driver processa somente as chamadas ODBC; ele passa instruções SQL para o mecanismo de banco de dados para processamento. Por exemplo, drivers do Oracle são drivers baseados em DBMS porque Oracle tem um mecanismo de banco de dados autônomo que usa o driver. Em que reside o mecanismo de banco de dados é irrelevante. Ele pode residir no mesmo computador que o driver ou um computador diferente na rede; ele ainda pode ser acessado por meio de um gateway.  
   
- Arquitetura do driver é geralmente interessante apenas para gravadores de driver; ou seja, a arquitetura do driver geralmente não faz diferença para o aplicativo. No entanto, a arquitetura pode afetar se um aplicativo pode usar o SQL específicas do DBMS. Por exemplo, o Microsoft Access fornece um mecanismo de banco de dados autônomo. Se um driver do Microsoft Access for baseado em DBMS — acessa os dados por meio desse mecanismo — o aplicativo pode passar instruções de SQL do Microsoft Access para o mecanismo para processamento.  
+ Arquitetura do driver é geralmente interessante apenas para gravadores de driver; ou seja, a arquitetura do driver geralmente não faz diferença para o aplicativo. No entanto, a arquitetura pode afetar se um aplicativo pode usar o SQL específicas do DBMS. Por exemplo, o Microsoft Access fornece um mecanismo de banco de dados autônomo. Se um driver do Microsoft Access for baseados em DBMS, acessa os dados por meio desse mecanismo – o aplicativo pode passar instruções de SQL do Microsoft Access para o mecanismo para processamento.  
   
- No entanto, se o driver estiver baseado em arquivo — ou seja, ele contém um mecanismo de proprietário que acessa o arquivo. mdb do Microsoft® Access diretamente — qualquer tentativa de passar instruções SQL específicas do Microsoft Access para o mecanismo é provavelmente resultará em erros de sintaxe. O motivo é que o mecanismo de proprietário é provavelmente, implementarão somente ODBC SQL.  
+ No entanto, se o driver for baseado em arquivo, ou seja, ele contém um mecanismo de proprietário que acessa o arquivo. mdb do Microsoft® Access diretamente - qualquer tentativa de passar instruções SQL específicas da Microsoft Access para o mecanismo é provavelmente resultará em erros de sintaxe. O motivo é que o mecanismo de proprietário é provavelmente, implementarão somente ODBC SQL.  
   
  Esta seção contém os tópicos a seguir.  
   

@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ce5bc22f1cf7dd8794aaa8d65e23d0324a204d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540015"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Funções definidas pelo usuário não são permitidas no system_function_schema
   O Supervisor de atualização detectou funções definidas pelo usuário que são propriedade do usuário não documentado **system_function_schema**. Você não pode criar uma função de sistema definida pelo usuário especificando esse usuário. O **system_function_schema** nome de usuário não existe e a ID de usuário que está associado com esse nome (UID = 4) é reservada para o **sys** esquema e restrita para uso interno apenas.  
@@ -27,7 +27,7 @@ ms.locfileid: "48172126"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O armazenamento de objeto de sistema mudou da seguinte maneira:  
   
 -   Objetos de sistema são armazenados em somente leitura **recurso** de banco de dados e direcionar atualizações de objeto do sistema não são permitidas.  

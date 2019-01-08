@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], what's new
@@ -14,12 +13,12 @@ ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fbde5c55b4ef069d72dba9e01711b06d7172590f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792128"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Alterações de quebra na replicação do SQL Server
   Este tópico descreve alterações de quebra na replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

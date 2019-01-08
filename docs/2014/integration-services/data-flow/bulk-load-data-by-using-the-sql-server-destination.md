@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server destination
@@ -17,12 +16,12 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e78121e3e55cb921da9e48618b67bc997dba28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24f0adb1564882697bf862407cda8dfaee44cd23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201276"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791018"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Carregar dados em massa por meio do destino do SQL Server
   Para adicionar e configurar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte de dados.  
@@ -55,7 +54,7 @@ ms.locfileid: "48201276"
     > [!NOTE]  
     >  O destino mapeia colunas do mesmo nome automaticamente.  
   
-9. Clique em **Avançado** e defina as opções de carregamento em massa: **Manter identidade**, **Manter nulos**, **Bloqueio de tabela**, **Verificar restrições**e **Gatilhos**.  
+9. Clique em **avançado** e defina as opções de carregamento em massa: **Manter identidade**, **manter nulos**, **bloqueio de tabela**, **restrições de verificação**, e **acionadores**.  
   
      Opcionalmente, especifique a primeira e a última linha de entrada a serem inseridas, o número máximo de erros que podem acontecer antes da operação de inserção ser interrompida e as colunas em que a inserção é classificada.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48201276"
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Destino do SQL Server](sql-server-destination.md)   
+ [SQL Server Destination](sql-server-destination.md)   
  [Transformações do Integration Services](transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](integration-services-paths.md)   
  [Tarefa de Fluxo de Dados](../control-flow/data-flow-task.md)  

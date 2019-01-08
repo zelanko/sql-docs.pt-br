@@ -16,17 +16,17 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515788"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importar e exportar pacotes (serviço SSIS)
     
 > [!IMPORTANT]  
->  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+>  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
  Os pacotes podem ser salvos na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no sistema de arquivos.  
   
@@ -38,16 +38,16 @@ ms.locfileid: "48178816"
   
 -   Pastas no repositório de pacotes SSIS. As duas pastas padrão são nomeadas Sistema de Arquivos e MSDB.  
   
--   O banco de dados msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   O banco de dados msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece a capacidade de importar e exportar pacotes e, ao fazer isso alterar o formato de armazenamento e o local dos pacotes. Usando os recursos de importação e exportação, você pode adicionar pacotes ao sistema de arquivos, ao repositório de pacotes ou ao banco de dados msdb e copiar pacotes de um formato de armazenamento para outro. Por exemplo, os pacotes salvos no msdb podem ser copiados para o sistema de arquivos e vice-versa.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite importar e exportar pacotes e, ao fazer isso, alterar o formato de armazenamento e o local de pacotes. Usando os recursos de importação e exportação, você pode adicionar pacotes ao sistema de arquivos, ao repositório de pacotes ou ao banco de dados msdb e copiar pacotes de um formato de armazenamento para outro. Por exemplo, os pacotes salvos no msdb podem ser copiados para o sistema de arquivos e vice-versa.  
   
  Você também pode copiar um pacote em um formato diferente por meio do utilitário do prompt de comando **dtutil** (dtutil.exe). Para obter mais informações, consulte [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="to-import-or-export-a-package"></a>Para importar ou exportar um pacote  
   
 > [!IMPORTANT]  
->  Este tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que faz parte do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para compatibilidade de versões anteriores com o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Para obter mais informações sobre o gerenciamento de pacotes no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Servidor do Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
+>  Este tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que faz parte do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para compatibilidade de versões anteriores com o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Para obter mais informações sobre o gerenciamento de pacotes no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Servidor do Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
  Você pode importar ou exportar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de ou para os seguintes locais:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48178816"
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Browse for more…>** e localize o servidor a ser usado.  
+    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48178816"
   
 6.  Clique com o botão direito do mouse na pasta e clique em **Importar Pacote**. Em seguida, proceda de uma das seguintes maneiras:  
   
-    -   Para importar de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], forneça um nome de usuário e uma senha.  
+    -   Para importar de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça um nome de usuário e uma senha.  
   
          Clique no botão Procurar **(...)**, selecione o pacote para importar e clique em **OK.**  
   
@@ -89,13 +89,13 @@ ms.locfileid: "48178816"
   
          Clique no botão Procurar **(...)**, selecione o pacote para importar e então clique em **Abrir.**  
   
-    -   Para importar usando o Repositório de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)], selecione a opção **Repositório de Pacotes SSIS** e especifique o servidor.  
+    -   Para importar usando o Repositório de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] , selecione a opção **Repositório de Pacotes SSIS** e especifique o servidor.  
   
          Clique no botão Procurar **(...)**, selecione o pacote para importar e clique em **OK.**  
   
 7.  Opcionalmente, atualize o nome de pacote.  
   
-8.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote** , escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
+8.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote**, escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
   
 9. Clique em **OK** para concluir a importação.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48178816"
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Browse for more…>** e localize o servidor a ser usado.  
+    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48178816"
   
 6.  Clique com o botão direito do mouse no pacote, clique em **Exportar**e depois execute uma das seguintes tarefas:  
   
-    -   Para exportar para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], forneça um nome de usuário e uma senha.  
+    -   Para exportar para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça um nome de usuário e uma senha.  
   
          Clique no botão Procurar **(...)** e expanda a pasta do **Pacotes SSIS** para localizar a pasta na qual deseja salvar o pacote. Opcionalmente, atualize o nome padrão do pacote e então clique em **OK**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48178816"
   
          Clique no botão Procurar **(...)** para localizar a pasta para a qual deseja exportar o pacote, digite o nome do arquivo do pacote e clique em **Salvar**.  
   
-    -   Para exportar para o repositório de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)], selecione a opção **Repositório de Pacotes SISS** e especifique o servidor.  
+    -   Para exportar para o repositório de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] , selecione a opção **Repositório de Pacotes SISS** e especifique o servidor.  
   
          Clique no botão Procurar **(...)**, expanda a pasta dos **Pacotes SSIS** e selecione a pasta na qual deseja salvar o pacote. Opcionalmente, digite um novo nome para o pacote na caixa de texto **Nome do Pacote** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -134,6 +134,6 @@ ms.locfileid: "48178816"
 8.  Clique em **OK** para completar a exportação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de pacotes &#40;serviço SSIS&#41;](service/package-management-ssis-service.md)  
+ [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](service/package-management-ssis-service.md)  
   
   

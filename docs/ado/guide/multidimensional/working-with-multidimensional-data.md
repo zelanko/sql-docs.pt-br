@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507254"
 ---
 # <a name="working-with-multidimensional-data"></a>Manipular dados multidimensionais
 Um *conjunto de células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, normalmente não mais do que quatro eixos e normalmente apenas dois ou três. Uma *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  
@@ -33,13 +33,13 @@ Um *conjunto de células* é o resultado de uma consulta em dados multidimension
   
 -   Vendedor  
   
--   Geografia (hierarquia natural) — continentes, países, Estados e assim por diante  
+-   Geografia (hierarquia natural) - continentes, países, Estados e assim por diante  
   
--   Trimestres — Dias de trimestres, meses,  
+-   Trimestres de trimestres, meses, dias  
   
 -   Years  
   
--   Medidas, Vendas, PercentChange, BudgetedSales  
+-   Medidas - BudgetedSales de vendas, PercentChange,  
   
 -   Products  
   
@@ -50,19 +50,19 @@ Um *conjunto de células* é o resultado de uma consulta em dados multidimension
   
  As características deste conjunto de células são da seguinte maneira:  
   
--   Dimensões de eixo: trimestres, vendedor, geografia  
+-   Dimensões de eixo: Trimestres, vendedor, geografia  
   
--   Dimensões de filtro: medidas, anos, os produtos  
+-   Dimensões de filtro: Produtos de medidas, anos,  
   
--   Dois eixos: coluna (x, ou eixo 0) e linha (y ou eixo 1)  
+-   Dois eixos: COLUNA (x, ou eixo 0) e linha (y ou eixo 1)  
   
 -   eixo x: dois aninhados dimensões, o vendedor e Geografia  
   
--   eixo y: dimensão trimestres  
+-   eixo y: Dimensão de trimestres  
   
- O eixo x tem duas dimensões aninhadas: vendedor e Geografia. De geografia, quatro membros são selecionados: Seattle, Boston, Sul dos EUA e Japão. Dois membros são selecionados de vendedor: Valentine e Nash. Isso resulta em um total de oito posições nesse eixo (8 = 4 * 2).  
+ O eixo x tem duas dimensões aninhadas: Vendedor e Geografia. De geografia, quatro membros são selecionados: Seattle, Boston, Sul dos EUA e Japão. Dois membros são selecionados de vendedor: Meu amor e Nash. Isso resulta em um total de oito posições nesse eixo (8 = 4 * 2).  
   
- Cada coordenada é representada como uma posição com dois membros — uma dimensão de vendedor e outro da dimensão Geografia:  
+ Cada coordenada é representada como uma posição com dois membros: um da dimensão de vendedor e outro da dimensão Geografia:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,7 +76,7 @@ Um *conjunto de células* é o resultado de uma consulta em dados multidimension
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Conjuntos de células, células, eixos e posições são todos representadas no ADO MD por objetos correspondentes: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md), e [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Conjuntos de células, células, eixos e posições são todos representadas no ADO MD por objetos correspondentes: [Conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md), e [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelo de objeto do ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

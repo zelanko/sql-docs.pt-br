@@ -16,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 046017ed9e7a9f99f2fde48426888045b4a02890
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78d3d96e1340bb3cd8e57a930129e2c70157e61b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512408"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funções em Nós – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Usando um namespace-uri() sem argumento em um predicado  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>b. Usando um namespace-uri() sem argumento em um predicado  
  A consulta a seguir está especifica em uma coluna digitada CatalogDescription xml. A expressão retorna todos os nós de elementos cujo namespace URI seja `https://www.adventure-works.com/schemas/OtherFeatures`. O namespace -**URI ()** for especificada sem um argumento de função e usa o nó de contexto.  
   
 ```  
@@ -96,7 +96,7 @@ WHERE ProductModelID=19
 <p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
 <p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
   <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
-…  
+...  
 ```  
   
  Você pode alterar o namespace URI na consulta anterior para `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Você receberá todas as crianças de nó do elemento <`ProductDescription`> cuja parte do namespace URI do QName expandido seja `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  

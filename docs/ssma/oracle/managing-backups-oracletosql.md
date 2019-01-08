@@ -13,12 +13,12 @@ ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: cd158f652f198c26ba0a1a489c113a36589fc495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700184"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520213"
 ---
 # <a name="managing-backups-oracletosql"></a>Gerenciar backups (OracleToSQL)
 Gerenciamento de Backup do Oracle permite backup e restauração de dados da tabela antes ou depois de executar um teste. Você também pode gerenciar o conteúdo de backup com a caixa de diálogo Gerenciar conteúdos de Backup.  

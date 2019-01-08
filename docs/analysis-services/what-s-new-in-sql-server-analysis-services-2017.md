@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516745"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>O que há de novo no SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]

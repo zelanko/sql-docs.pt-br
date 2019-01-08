@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099927"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419697"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento Power Pivot e dados de uso
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "50099927"
 ##  <a name="items"></a> Visão geral das seções do Painel  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] contém as Web parts e relatórios inseridos que fazem busca detalhada em categorias de informações específicas. A lista a seguir descreve cada parte do painel:  
   
-|Painel|Description|  
+|Painel|Descrição|  
 |---------------|-----------------|  
 |Infraestrutura - Integridade do Serviço|Mostra as tendências de uso de CPU, o consumo de memória e os tempos de resposta de consulta ao longo do tempo, para que você possa avaliar se os recursos do sistema estão se aproximando da capacidade máxima ou estão subutilizados.|  
 |Ações|Contém links para outras páginas da Administração Central, incluindo o aplicativo de serviço atual, uma lista dos aplicativos de serviço e o log de uso.|  
@@ -70,7 +70,7 @@ ms.locfileid: "50099927"
   
 -   [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Para capturar dados sobre o sistema de servidor do Power Pivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço Power Pivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** se você desativar o histórico de eventos ou de uso, os relatórios compostos serão incompletos ou incorretos.  
+ Para capturar dados sobre o sistema de servidor do Power Pivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço Power Pivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** Se você desativar o histórico de eventos ou de uso, os relatórios compostos serão incompletos ou incorretos.  
   
 ##  <a name="edit"></a> Editar o Painel do Power Pivot  
  Se você tiver experiência em desenvolvimento ou personalização de painéis, poderá editar o painel para incluir novas Web parts. Você também poderá editar as propriedades das Web parts incluídas no painel.  
@@ -113,7 +113,7 @@ ms.locfileid: "50099927"
   
     7.  Digite um nome para a conexão e clique em **Avançar**.  
   
-    8.  Em Especificar Consulta MDX, clique em **Design** para abrir o designer de consulta MDX e montar os dados com os quais deseja trabalhar **Se a mensagem de erro** “O nome da propriedade Modo de Edição não está formatado corretamente.” for exibida, verifique se você editou o arquivo .ODC.  
+    8.  Em especificar consulta MDX, clique em **Design** para abrir o designer de consulta MDX e montar os dados que você deseja trabalhar **se você vir a mensagem de erro** "o nome da propriedade modo de edição não é formatado corretamente.", verifique se você as edições do. Arquivo ODC.  
   
     9. Clique em **OK** e em **Concluir**.  
   

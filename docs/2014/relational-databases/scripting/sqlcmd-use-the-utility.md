@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86ddad2fe62bcd84c55cd97d3765dc898db8e39f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513336"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar o utilitário sqlcmd
   O utilitário `sqlcmd` é um utilitário de linha de comando para execução interativa ad hoc dos scripts e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], e para automatização das tarefas de script do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para usar o `sqlcmd` de forma interativa ou para criar arquivos de script para serem executados com o `sqlcmd`, os usuários devem entender o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O utilitário `sqlcmd` é normalmente usado das seguintes maneiras:  
@@ -110,9 +110,9 @@ ms.locfileid: "48108246"
   
  Quando o comando é executado sem arquivos ou consultas de entrada, o `sqlcmd` se conecta à instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, exibe uma nova linha com um `1>` seguido de um sublinhado intermitente, que é conhecido como o prompt do `sqlcmd`. O `1` significa que esta é a primeira linha de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], e o prompt do `sqlcmd` é o ponto no qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciará quando ela for digitada nele.  
   
- No prompt `sqlcmd`, você pode digitar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e comandos `sqlcmd`, como `GO` e `EXIT`. Cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é colocada em um buffer denominado cache de instrução. Essas instruções são enviadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depois de digitar o `GO` de comando e pressione ENTER. Para sair `sqlcmd`, digite `EXIT` ou `QUIT` no início de uma nova linha.  
+ No prompt `sqlcmd`, você pode digitar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e comandos `sqlcmd`, como `GO` e `EXIT`. Cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é colocada em um buffer denominado cache de instrução. Essas instruções são enviadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depois que você digita o comando `GO` e pressiona ENTER. Para sair `sqlcmd`, digite `EXIT` ou `QUIT` no início de uma nova linha.  
   
- Para limpar o cache de instrução, digite `:RESET`. Digitação `^C` faz com que `sqlcmd` para sair. O `^C` também pode ser usado para interromper a execução do cache de instrução depois que um comando `GO` é emitido.  
+ Para limpar o cache de instruções, digite `:RESET`. Digitação `^C` faz com que `sqlcmd` para sair. O `^C` também pode ser usado para interromper a execução do cache de instrução depois que um comando `GO` é emitido.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções que são inseridas em uma sessão interativa podem ser editadas digitando o **: ED** comando e o `sqlcmd` prompt. O editor será aberto e, após a edição da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] e de fechamento do editor, a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] revisada aparecerá na janela de comando. Insira `GO` para executar revisada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48108246"
   
  Isso significa que a pasta `C:\` é a pasta atual, e se você especificar um nome de arquivo, o Windows vai procurar o arquivo nessa pasta.  
   
- Tipo de `sqlcmd` para se conectar à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador local e o conteúdo do Prompt de comando janela será:  
+ Digite `sqlcmd` para se conectar à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador local, e o conteúdo da janela Prompt de Comando será:  
   
  `C:\>sqlcmd`  
   
@@ -251,7 +251,7 @@ ms.locfileid: "48108246"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. Usando o sqlcmd com uma conexão administrativa dedicada  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>b. Usando o sqlcmd com uma conexão administrativa dedicada  
  No exemplo a seguir, `sqlcmd` é usado para se conectar a um servidor que tem um problema de bloqueio utilizando a conexão de administrador dedicada (DAC).  
   
  `C:\>sqlcmd -S ServerName -A`  
@@ -511,21 +511,21 @@ ms.locfileid: "48108246"
  Conectar usando credenciais do Windows e comunicação criptografada:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Conectar usando credenciais do Windows e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -534,28 +534,28 @@ SQLCMD –E –N –C
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -T  
   
 ```  
   
  Conectar usando credenciais do Windows, comunicação criptografada e certificado do servidor confiável:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table renaming [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ea78b3891b3622d98711495814b0029272a5605
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b930defb70b64bd006026870389fc509b755c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098185"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789000"
 ---
 # <a name="rename-tables-database-engine"></a>Renomear tabelas (Mecanismo de Banco de Dados)
   Você pode renomear uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "48098185"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  Renomear uma tabela não renomeia automaticamente as referências a essa tabela. É necessário modificar manualmente todos os objetos que fazem referência à tabela renomeada. Por exemplo, se você renomear uma tabela e essa tabela for referenciada em um gatilho, será necessário modificar o gatilho para que ele reflita o novo nome da tabela. Use [sys.sql_expression_dependencies](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) para listar as dependências dessa tabela antes de renomeá-la.  
   
 ###  <a name="Security"></a> Segurança  
@@ -67,7 +66,7 @@ ms.locfileid: "48098185"
   
 5.  No menu **Arquivo**, escolha **Salvar***nome da tabela*.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>Para renomear uma tabela  
   

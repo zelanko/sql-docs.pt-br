@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662295"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509824"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretação de anotação – sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML Bulk Load processa as **sql: mapeado** anotação no esquema XSD conforme o esperado — ou seja, se o esquema de mapeamento especifica **sql: mapeado = "false"** para qualquer elemento ou atributo, o XML Bulk Load não faz tentativa de armazenar os dados associados na coluna correspondente.  
+  XML Bulk Load processa as **sql: mapeado** anotação no esquema XSD como esperado que é, se o esquema de mapeamento especifica **sql: mapeado = "false"** para qualquer elemento ou atributo, o XML Bulk Load não faz tentativa de armazenar os dados associados na coluna correspondente.  
   
  O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não são descritos no esquema ou porque eles são anotados no esquema XSD com **sql: mapeado = "false"**). Todos os dados não mapeados entra em coluna de estouro, se uma coluna desse tipo é especificada usando **SQL: overflow-campo**.  
   

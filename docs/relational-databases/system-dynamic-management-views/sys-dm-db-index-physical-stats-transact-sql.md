@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673985"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617867"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Identificação do banco de dados da tabela ou exibição.|  
 |object_id|**int**|Identificação de objeto da tabela ou exibição na qual o índice se encontra.|  
 |index_id|**int**|Identificação de um índice.<br /><br /> 0 = Heap.|  
 |partition_number|**int**|Número de partição de base 1 no objeto proprietário; uma tabela, exibição ou índice.<br /><br /> 1 = Índice ou heap não particionado.|  
-|index_type_desc|**nvarchar(60)**|Descrição do tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de mapeamento do COLUMNSTORE (interno)<br /><br /> ÍNDICE de DELETEBUFFER COLUMNSTORE (interno)<br /><br /> ÍNDICE de DELETEBITMAP COLUMNSTORE (interno)|  
+|index_type_desc|**nvarchar(60)**|Descrição do tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de mapeamento do COLUMNSTORE (interno)<br /><br /> ÍNDICE de DELETEBUFFER COLUMNSTORE (interno)<br /><br /> ÍNDICE de DELETEBITMAP COLUMNSTORE (interno)|  
 |hobt_id|**bigint**|Heap ou a ID de árvore B do índice ou partição.<br /><br /> Além de retornar o hobt_id de índices definidos pelo usuário, isso também retorna o hobt_id dos índices columnstore interno.|  
 |alloc_unit_type_desc|**nvarchar(60)**|Descrição do tipo de unidade de alocação:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Unidade de alocação LOB_DATA contém os dados que são armazenados em colunas do tipo **texto**, **ntext**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e **xml**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Unidade de alocação ROW_OVERFLOW_DATA contém os dados que são armazenados em colunas do tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)**, e **SQL _ variante** que foi colocada fora da linha.|  
 |index_depth|**tinyint**|Número de níveis de índice.<br /><br /> 1 = Heap ou unidade de alocação LOB_DATA ou ROW_OVERFLOW_DATA.|  
@@ -103,7 +103,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|Número médio de páginas em um fragmento no nível folha de uma unidade de alocação IN_ROW_DATA.<br /><br /> NULL para níveis não folha de um índice e unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> NULL para heaps quando *modo* = SAMPLED.|  
 |page_count|**bigint**|Número total de páginas de índice ou dados.<br /><br /> Para um índice, o número total de páginas de índice no nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o número total de páginas de dados na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o número total de páginas na unidade de alocação.|  
 |avg_page_space_used_in_percent|**float**|Porcentagem média de espaço de armazenamento de dados disponível usada em todas as páginas.<br /><br /> Para um índice, a média se aplica ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, a média de todas as páginas de dados na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW DATA, a média de todas as páginas na unidade de alocação.<br /><br /> NULL quando *modo* = LIMITED.|  
-|record_count|**bigint**|Número total de registros.<br /><br /> Para um índice, o número total de registros se aplica ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o número total de registros na unidade de alocação IN_ROW_DATA.<br /><br /> **Observação:** para um heap, o número de registros retornados por essa função pode não corresponder ao número de linhas que são retornados ao executar um SELECT COUNT (\*) contra o heap. Isso porque uma linha pode conter vários registros. Por exemplo, em algumas situações de atualização, uma única linha de heap pode ter um registro de encaminhamento e um registro encaminhado como resultado de uma operação de atualização. Da mesma forma, a maior parte das linhas de LOB grandes é dividida em vários registros no armazenamento LOB_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o número total de registros na unidade de alocação completa.<br /><br /> NULL quando *modo* = LIMITED.|  
+|record_count|**bigint**|Número total de registros.<br /><br /> Para um índice, o número total de registros se aplica ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o número total de registros na unidade de alocação IN_ROW_DATA.<br /><br /> **Observação:** Para um heap, o número de registros retornados por essa função pode não corresponder ao número de linhas que são retornados ao executar um SELECT COUNT (\*) contra o heap. Isso porque uma linha pode conter vários registros. Por exemplo, em algumas situações de atualização, uma única linha de heap pode ter um registro de encaminhamento e um registro encaminhado como resultado de uma operação de atualização. Da mesma forma, a maior parte das linhas de LOB grandes é dividida em vários registros no armazenamento LOB_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o número total de registros na unidade de alocação completa.<br /><br /> NULL quando *modo* = LIMITED.|  
 |ghost_record_count|**bigint**|Número de registros fantasmas prontos para remoção pela tarefa de limpeza fantasma na unidade de alocação.<br /><br /> 0 para níveis não folha de um índice na unidade de alocação de IN_ROW_DATA.<br /><br /> NULL quando *modo* = LIMITED.|  
 |version_ghost_record_count|**bigint**|Número de registros fantasmas retidos por uma transação de isolamento de instantâneo pendente em uma unidade de alocação.<br /><br /> 0 para níveis não folha de um índice na unidade de alocação de IN_ROW_DATA.<br /><br /> NULL quando *modo* = LIMITED.|  
 |min_record_size_in_bytes|**int**|Tamanho de registro mínimo em bytes.<br /><br /> Para um índice, o tamanho de registro mínimo aplica-se ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o tamanho de registro mínimo na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o tamanho de registro mínimo na unidade de alocação completa.<br /><br /> NULL quando *modo* = LIMITED.|  
@@ -113,7 +113,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|O número total de páginas compactadas.<br /><br /> Para heaps, as páginas alocadas recentemente não são compactadas com PAGE. Um heap é compactado com PAGE em duas condições especiais: quando os dados são importados em massa ou quando um heap é reconstruído. Operações DML típicas que causam alocações de página não terão compactação PAGE. Reconstrua um heap quando o valor compressed_page_count aumentar ultrapassando o limite desejado.<br /><br /> Para tabelas que têm um índice clusterizado, o valor compressed_page_count indica a eficiência da compactação PAGE.|  
 |hobt_id|BIGINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Somente índices columnstore, essa é a ID para um conjunto de linhas que rastreia dados de columnstore interno para uma partição. Os conjuntos de linhas são armazenadas como dados heaps ou binário árvores. Eles têm a mesma ID de índice que o índice de columnstore do pai. Para obter mais informações, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULO se|  
 |column_store_delete_buffer_state|TINYINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRENAGEM<br /><br /> 3 = LIBERANDO<br /><br /> 4 = DESATIVANDO<br /><br /> 5 = PRONTO|  
-|column_store_delete_buff_state_desc||**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NÃO é válido-o índice de pai não é um índice columnstore.<br /><br /> Abra – Excluidores e scanners de usá-lo.<br /><br /> DRENAGEM – Excluidores são drenagem mas scanners ainda usá-lo.<br /><br /> LIBERANDO – buffer é fechada e linhas no buffer de estão sendo gravadas no bitmap de exclusão.<br /><br /> DESATIVANDO – linhas no buffer de exclusão fechado ter sido escritos para o bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda estão usando. Novo scanners não precisam usar o buffer obsoletos porque o buffer aberto é suficiente.<br /><br /> PRONTO – esse buffer de exclusão está pronto para uso.|  
+|column_store_delete_buff_state_desc||**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NÃO é válido - o índice de pai não é um índice columnstore.<br /><br /> Abra - Excluidores e scanners de usá-lo.<br /><br /> DRENAGEM - Excluidores são drenagem mas scanners ainda usá-lo.<br /><br /> LIBERANDO - buffer é fechada e linhas no buffer de estão sendo gravadas no bitmap de exclusão.<br /><br /> DESATIVANDO - linhas no buffer de exclusão fechado ter sido escritos para o bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda estão usando. Novo scanners não precisam usar o buffer obsoletos porque o buffer aberto é suficiente.<br /><br /> PRONTO - esse buffer de exclusão está pronto para uso.|  
   
 ## <a name="remarks"></a>Comentários  
  A função de gerenciamento dinâmico sys.dm_db_index_physical_stats substitui a instrução DBCC SHOWCONTIG.  
@@ -219,7 +219,7 @@ GO
 ## <a name="evaluating-index-fragments"></a>Avaliando fragmentos de índice  
  Um fragmento é composto de páginas de folha fisicamente consecutivas no mesmo arquivo de uma unidade de alocação. Um índice tem pelo menos um fragmento. O máximo de fragmentos que um índice pode ter é igual ao número de páginas no nível folha do índice. Fragmentos maiores indicam que menos E/S de disco é necessária para ler o mesmo número de páginas. Por isso, quanto maior o valor avg_fragment_size_in_pages, melhor o desempenho de exame de intervalo. Os valores avg_fragment_size_in_pages e avg_fragmentation_in_percent são inversamente proporcionais entre si. Por isso, a reconstrução ou a reorganização de um índice deve reduzir a quantidade de fragmentação e aumentar o tamanho do fragmento.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Não retorna dados para índices columnstore clusterizados.  
   
 ## <a name="permissions"></a>Permissões  
@@ -265,7 +265,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>B. Retornando informações sobre um heap  
+### <a name="b-returning-information-about-a-heap"></a>b. Retornando informações sobre um heap  
  O exemplo a seguir retorna todas as estatísticas do heap `dbo.DatabaseLog` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Como a tabela contém dados LOB, uma linha é retornada para a unidade de alocação `LOB_DATA`, além da linha retornada para `IN_ROW_ALLOCATION_UNIT` que está armazenando as páginas de dados do heap. A execução dessa consulta requer, no mínimo, a permissão CONTROL na tabela `dbo.DatabaseLog`.  
   
 ```  

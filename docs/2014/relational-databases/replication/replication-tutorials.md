@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e72a4e076cad8b939e6f40d3332d4c80fa27887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d57e12535bad09c1ddf1f89e87cba17e364f19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784812"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de Replicação
   A replicação engloba tutoriais que são utilizados para ensinar a configurar e a executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

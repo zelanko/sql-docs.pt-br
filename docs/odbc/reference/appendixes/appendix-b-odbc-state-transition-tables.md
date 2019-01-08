@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice b: tabelas de transição de estado ODBC | Microsoft Docs'
+title: 'Apêndice b: Tabelas de transição de estado ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55fb40d6aa9b235837c761cf1362374d5c77d96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646214"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541058"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>Apêndice B: Tabelas de transição de estado ODBC
-As tabelas neste apêndice mostram como funções ODBC causam transições do ambiente, conexão, instrução e estados do descritor. O estado do ambiente, conexão, instrução ou descritor geralmente determina quando as funções que usam o tipo correspondente do identificador (ambiente, conexão, instrução ou descritor) podem ser chamadas. Os estados de ambiente, conexão, instrução e descritor se sobrepor aproximadamente conforme mostrado nas ilustrações a seguir. Por exemplo, a sobreposição exata da conexão declara C5 e C6 e estados de instrução que S1 por meio de S12 é dados dependente da fonte, desde que as transações começam em momentos diferentes em diferentes fontes de dados, e depende do estado de descritor D1i (implicitamente alocados descritor) sobre o estado da instrução ao qual o descritor está associado, enquanto o estado D1e (descritor alocado explicitamente) é independente do estado de qualquer instrução. Para obter uma descrição de cada estado, consulte [transições de ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transições de Conexão](../../../odbc/reference/appendixes/connection-transitions.md), [transições de instrução](../../../odbc/reference/appendixes/statement-transitions.md), e [transições de descritor ](../../../odbc/reference/appendixes/descriptor-transitions.md), mais adiante neste apêndice.  
+# <a name="appendix-b-odbc-state-transition-tables"></a>Apêndice b: Tabelas de transição de estado ODBC
+As tabelas neste apêndice mostram como funções ODBC causam transições do ambiente, conexão, instrução e estados do descritor. O estado do ambiente, conexão, instrução ou descritor geralmente determina quando as funções que usam o tipo correspondente do identificador (ambiente, conexão, instrução ou descritor) podem ser chamadas. Os estados de ambiente, conexão, instrução e descritor se sobrepor aproximadamente conforme mostrado nas ilustrações a seguir. Por exemplo, a sobreposição exata da conexão declara C5 e C6 e estados de instrução que S1 por meio de S12 é dependente da fonte, dados uma vez que as transações começam em momentos diferentes em diferentes fontes de dados, e depende do estado de descritor D1i (implicitamente alocados descritor) sobre o estado da instrução ao qual o descritor está associado, enquanto o estado D1e (descritor alocado explicitamente) é independente do estado de qualquer instrução. Para obter uma descrição de cada estado, consulte [transições de ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transições de Conexão](../../../odbc/reference/appendixes/connection-transitions.md), [transições de instrução](../../../odbc/reference/appendixes/statement-transitions.md), e [transições de descritor ](../../../odbc/reference/appendixes/descriptor-transitions.md), mais adiante neste apêndice.  
   
  Os estados de ambiente e conexão se sobrepõem da seguinte maneira:  
   
@@ -43,17 +43,18 @@ As tabelas neste apêndice mostram como funções ODBC causam transições do am
   
  Cada entrada em uma tabela de transição pode ser um dos seguintes valores:  
   
--   **--** – O estado permanece inalterado após a execução da função.  
+-   **--** -O estado permanece inalterado após a execução da função.  
   
 -   **E**  
-     ***n*** , **C*n * * *, **S*n * **, ou **1!d * n***  — o estado do ambiente, conexão, instrução ou descritor se move para o estado especificado.  
+
+     **_n_**  , **C_n_**, **S_n_**, ou **D_n_** -o estado do ambiente, conexão, instrução ou descritor se move para o estado especificado.  
+ 
+-   **(IH)**  -Um identificador inválido foi passado para a função. Se o identificador era um identificador nulo ou era um identificador válido do tipo errado - por exemplo, um identificador de conexão foi passado quando um identificador de instrução era necessário – a função retorne SQL_INVALID_HANDLE; Caso contrário, o comportamento é indefinido e provavelmente fatal. Esse erro é mostrado somente quando ele é o resultado só é possível chamar a função no estado especificado. Esse erro não altera o estado e sempre é detectado pelo Gerenciador de Driver, conforme indicado pelos parênteses.  
   
--   **(IH)**  — Um identificador inválido foi passado para a função. Se o identificador era um identificador nulo ou era um identificador válido do tipo errado — por exemplo, um identificador de conexão foi passado quando um identificador de instrução era necessário — a função retorne SQL_INVALID_HANDLE; Caso contrário, o comportamento é indefinido e provavelmente fatal. Esse erro é mostrado somente quando ele é o resultado só é possível chamar a função no estado especificado. Esse erro não altera o estado e sempre é detectado pelo Gerenciador de Driver, conforme indicado pelos parênteses.  
-  
--   **NS** — próximo estado. A transição de instrução é o mesmo como se a instrução não fui por meio dos Estados assíncronos. Por exemplo, suponha que uma instrução que cria um conjunto de resultados entra em estado S11 de estado S1 porque **SQLExecDirect** retornado SQL_STILL_EXECUTING. A notação de NS no estado S11 significa que as transições para a instrução são os mesmos para uma instrução no estado S1 que cria um conjunto de resultados. Se **SQLExecDirect** retornará um erro, a instrução permanece no estado S1; se for bem-sucedida, a instrução move para o estado S5; se precisar de dados, a instrução move para o estado S8; e se ele ainda está em execução, ele permanecerá no estado S11.  
-  
--   ***XXXXX*** ou **(*XXXXX*)** — um SQLSTATE que está relacionada à tabela de transição; SQLSTATEs detectadas pelo Gerenciador de Driver são colocados entre parênteses. A função retornado SQL_ERROR e o SQLSTATE especificado, mas não altera o estado. Por exemplo, se **SQLExecute** é chamado antes **SQLPrepare**, ele retornará SQLSTATE HY010 (erro de sequência de função).  
-  
+-   **NS** -próximo estado. A transição de instrução é o mesmo como se a instrução não fui por meio dos Estados assíncronos. Por exemplo, suponha que uma instrução que cria um conjunto de resultados entra em estado S11 de estado S1 porque **SQLExecDirect** retornado SQL_STILL_EXECUTING. A notação de NS no estado S11 significa que as transições para a instrução são os mesmos para uma instrução no estado S1 que cria um conjunto de resultados. Se **SQLExecDirect** retornará um erro, a instrução permanece no estado S1; se for bem-sucedida, a instrução move para o estado S5; se precisar de dados, a instrução move para o estado S8; e se ele ainda está em execução, ele permanecerá no estado S11.  
+
+-   **_XXXXX_**  ou **(*XXXXX*)** - uma SQLSTATE está relacionada à tabela de transição; SQLSTATEs detectadas pelo Gerenciador de Driver são colocados entre parênteses. A função retornado SQL_ERROR e o SQLSTATE especificado, mas não altera o estado. Por exemplo, se **SQLExecute** é chamado antes **SQLPrepare**, ele retornará SQLSTATE HY010 (erro de sequência de função).  
+
 > [!NOTE]  
 >  As tabelas não mostram erros não relacionados com as tabelas de transição que não alteram o estado. Por exemplo, quando **SQLAllocHandle** é chamado no estado do ambiente E1 e retornará SQLSTATE HY001 (erro de alocação de memória), o ambiente permanece no estado E1; isso não é mostrado na tabela de transição de ambiente para  **Falha de SQLAllocHandle**.  
   

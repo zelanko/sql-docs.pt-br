@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d7de38f27d23fe11d0953553a8737a9e2f4e2db3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743645"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532336"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -36,12 +36,12 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  Uma expressão numérica válida que especifica o percentual de tuplas a ser retornado.  
   
 > [!IMPORTANT]  
->  *Porcentagem* deve ser um valor positivo; valores negativos geram um erro.  
+>  *Percentual* precisa ser um valor positivo; valores negativos geram um erro.  
   
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **TopPercent** função calcula a soma da expressão numérica especificada avaliada no conjunto especificado, classificando o conjunto em ordem decrescente. A função retorna os elementos com os valores mais altos, cujo percentual cumulativo do valor total somado seja pelo menos o percentual especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o percentual especificado. Os elementos retornados são classificados do maior para menor.  
   
 > [!WARNING]  
@@ -90,7 +90,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ```  
   
 ## <a name="example"></a>Exemplo  
- A instrução a seguir ajudarão a entender o efeito dos valores negativos no *Numeric_Expression*. Primeiro, vamos criar algum contexto onde podemos apresentar o comportamento.  
+ A instrução a seguir o ajudará a entender o efeito dos valores negativos na *Numeric_Expression*. Primeiro, vamos criar algum contexto onde podemos apresentar o comportamento.  
   
  A consulta a seguir retorna uma tabela de Resellers 'Sales Amount', 'Total Product Cost' e 'Gross Profit', em ordem decrescente de lucro. Observe que somente há valores negativos para lucro; portanto, a menor perda aparecerá no início.  
   
@@ -106,10 +106,10 @@ FROM [Adventure Works]
 ||Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
-|46 azul, Touring-2000|$321,027.03|$333,021.50|($11,994.47)|  
-|62 azul, Touring-3000|$87,773.61|$100,133.52|($12,359.91)|  
-|…|…|…|…|  
-|46 amarelo, Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
+|46 de azul, Touring-2000|$321,027.03|$333,021.50|($11,994.47)|  
+|62 de azul, Touring-3000|$87,773.61|$100,133.52|($12,359.91)|  
+|...|...|...|...|  
+|46 de amarelo, Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
 |Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
   
  Agora, se pedissem a você para apresentar as principais bicicletas 100% por lucro, seria necessário escrever uma consulta como:  
@@ -121,13 +121,13 @@ FROM [Adventure Works]
   
 ```  
   
- Observe que a consulta solicita um percentual de 100%; o que significa que todas as linhas devem ser retornadas. No entanto, porque há valores negativos no *Numeric_Expression* , somente uma linha é retornada.  
+ Observe que a consulta solicita um percentual de 100%; o que significa que todas as linhas devem ser retornadas. No entanto, porque há valores negativos na *Numeric_Expression* , somente uma linha é retornada.  
   
 ||Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

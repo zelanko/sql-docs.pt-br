@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056076"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783938"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Alterar o tipo de atributo (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os administradores podem alterar o tipo de atributo quando o tipo de dados ou número de caracteres permitido está incorreto.  
@@ -31,7 +30,7 @@ ms.locfileid: "48056076"
   
 -   Você precisa ter permissão para acessar as áreas funcionais **Administração do Sistema** e **Gerenciador** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Deve haver um modelo, entidade e atributo existente.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48056076"
   
 -   Alterar o tipo de dados do atributo.  
   
--   Gerenciar uma cópia do atributo com o sufixo “_old” que não contém nenhum valor. Isso é chamado de um **preterido** atributo.  
+-   Gere uma cópia do atributo com o sufixo old"que não contém qualquer valor. Isso é chamado de um **preterido** atributo.  
   
  Porém, todas as dependências existentes no atributo original apontarão para o atributo substituído, e não para o alterado.  
   
@@ -75,6 +74,6 @@ ms.locfileid: "48056076"
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
- [Criar um modelo &#40;Suplemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [Criando um modelo &#40;Suplemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

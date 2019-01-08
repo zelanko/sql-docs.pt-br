@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fbe505b21a832a97ef492e8cf662ff616c43a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119092"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784388"
 ---
 # <a name="hash-warning-event-class"></a>Classe de evento Hash Warning
   A classe de evento Hash Warning pode ser usada para monitorar quando uma recursão de hash ou cessação de hashing (esgotamento de hash) ocorreu durante a operação de hashing.  
@@ -49,14 +48,14 @@ ms.locfileid: "48119092"
   
 ## <a name="hash-warning-event-class-data-columns"></a>Colunas de dados da classe de evento Hash Warning  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo em vez do nome exibido do programa.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|EventClass|`int`|Tipo de evento = 55.|27|não|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|não|  
+|EventClass|`int`|Tipo de evento = 55.|27|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 0=Recursion<br /><br /> 1=Bailout|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  

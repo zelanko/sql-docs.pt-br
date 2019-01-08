@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f12cc39f6d3c3b507734d1c7750491aba15ea20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e105db14e9b22b34439050ae6e08d5094f397b17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514584"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ HRESULT Abort(
  *eOperation*[in]  
  A operação a ser anulada. O valor desse argumento deveria ser o seguinte:  
   
- DBASYNCHOP_OPEN – a solicitação de cancelamento se aplica à abertura ou população assíncrona de um conjunto de linhas ou à inicialização assíncrona de um objeto de fonte de dados.  
+ DBASYNCHOP_OPEN – a solicitação de cancelamento se aplica para a abertura ou população assíncrona de um conjunto de linhas ou a inicialização assíncrona de um objeto de fonte de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  

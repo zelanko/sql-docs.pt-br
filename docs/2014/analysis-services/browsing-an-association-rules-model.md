@@ -16,12 +16,12 @@ ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210436"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537181"
 ---
 # <a name="browsing-an-association-rules-model"></a>Procurando um modelo de regras de associação
   Quando você abre um modelo de associação usando **navegue**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de regras de associação no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  O visualizador permite observar rapidamente quais itens foram correlacionados entre si e exibir as regras que você pode usar para previsão ou fazer recomendações.  
@@ -91,17 +91,17 @@ ms.locfileid: "48210436"
   
  *Probabilidade* representa a fração de casos no conjunto de dados que contém a combinação de itens de destino. Probabilidade é semelhante ao conceito estatístico de *confiança*e lhe dá uma indicação de como o resultado de uma regra deve ocorrer. Você pode alterar o valor de **probabilidade mínima** neste painel para filtrar as regras que são exibidas.  
   
- O valor para **probabilidade mínima** que você vê é inicialmente o valor de limite que foi usado pelo algoritmo ao criar o modelo. Depois que o modelo estiver completo, você não poderá diminuir esse valor, mas poderá aumentá-lo para mostrar apenas os itens com probabilidade mais alta.  
+ O valor para **probabilidade mínima** que você vê é inicialmente o valor de limite que foi usado pelo algoritmo ao criar o modelo. Depois que o modelo for concluído, você não poderá diminuir esse valor, mas você pode aumentá-lo para mostrar apenas os itens de probabilidade mais alta.  
   
  *Importância* foi projetada para medir a utilidade de uma regra. Uma regra que é muito comum pode ser tão óbvia e constante que tenha pouco valor informativo. Quanto maior a importância, mais valiosa será a regra para prever o resultado. No [análise da cesta de compras &#40;ferramentas de análise de tabela para Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) ferramenta, importância pode ser combinada com o preço de itens para determinar os pacotes que são potencialmente mais úteis em termos de vendas.  
   
 ##### <a name="explore-the-rules-list"></a>Explorar a lista de regras  
   
-1.  Tente clicar em títulos de coluna — **probabilidade**, **importância**, e **regra** — para ver como os dados são alterados.  
+1.  Experimente clicando na coluna títulos - **probabilidade**, **importância**, e **regra** – para ver como os dados são alterados.  
   
 2.  Use o **regra de filtro** opção para digitar valores e se concentrar em regras de destino.  
   
-     Por exemplo, se você quiser ver todas as regras que preveem quais clientes provavelmente comprarão luvas, digite “luvas” na caixa de texto e atualize o painel.  
+     Por exemplo, se você quiser ver todas as regras que preveem quais clientes provavelmente comprarão luvas, digite "luvas" na caixa de texto e atualize o painel.  
   
      A opção **Filtrar Conjunto de Itens** também exibe uma lista dos filtros que você usou anteriormente.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48210436"
   
 5.  Defina o valor para o **máximo de linhas** opção a 100 e, em seguida, clique em **copiar para Excel**.  
   
-     Observe que alterar esse valor não tem nenhum efeito na quantidade de dados no modelo; isso controla somente o número de linhas na lista de exibição. Essa opção pode ser útil ao trabalhar com modelos muito grandes.  
+     Observe que a alteração desse valor não tem nenhum efeito na quantidade de dados no modelo. ela simplesmente controla o número de linhas na lista de exibição. Essa opção pode ser útil ao trabalhar com modelos muito grandes.  
   
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
@@ -124,13 +124,13 @@ ms.locfileid: "48210436"
   
 1.  Clique o **encontrar** botão e usar o **localizar nó** caixa de diálogo para digitar um item de interesse.  
   
-     Por exemplo, digite “luvas” e maximize o gráfico na janela de forma que você possa facilmente ver os resultados.  
+     Por exemplo, digite "luvas" e maximize o gráfico na janela para que você possa ver facilmente os resultados.  
   
      O nó que contém o item será realçado, enquanto que as setas apontarão para o nó que representa uma regra que conecta os itens.  
   
-     A direção da seta indica a direção da regra. Por exemplo, se alguém que comprar luvas provavelmente também comprar um casaco, a seta iniciará a partir do nó da caixa “luva” e terminará no nó “casaco”.  
+     A direção da seta indica a direção da regra. Por exemplo, se alguém que comprar luvas provavelmente também comprar um casaco, na seta para iniciar a partir do nó "luva" e encerrar no nó "casaco".  
   
-     Para obter estatísticas adicionais sobre esta regra, você pode clicar na **regras** guia e procure uma regra com a descrição, "Luva – existente" -> "Casaco – eu existente.")  
+     Para obter estatísticas adicionais sobre esta regra, você pode clicar na **regras** guia e procure por uma regra com a descrição, "Luva - existente" -> "Casaco – existente.")  
   
 2.  Clique e arraste o controle deslizante à esquerda do visualizador.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48210436"
   
  Se você quiser definir parâmetros avançados ou alterar a probabilidade mínima e suporte, use o [Assistente de associação de &#40;cliente de mineração de dados para Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) assistente, ou criar seu próprio modelo usando o [Adicionar modelo à Estrutura &#40;Data Mining Add-ins para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opção de modelagem.  
   
--   **Conjuntos de itens:** ao criar o modelo, você também pode controlar o número de conjuntos de itens gerados atribuindo um valor ao parâmetro MINIMUM_PROBABILITY. Esse parâmetro está disponível na caixa de diálogo Parâmetros do algoritmo.  
+-   **Conjuntos de itens:** Ao criar o modelo, você também pode controlar o número de conjuntos de itens gerados atribuindo um valor ao parâmetro MINIMUM_PROBABILITY. Esse parâmetro está disponível na caixa de diálogo Parâmetros do algoritmo.  
   
--   **Regras:** o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo regras de associação usa valores de probabilidade para restringir o número de regras que são gerados. Você pode controlar o número de regras definindo os parâmetros `MINIMUM_PROBABILITY` ou `MINIMUM _IMPORTANCE`.  
+-   **Regras:** O algoritmo Regras de Associação da [!INCLUDE[msCoName](../includes/msconame-md.md)] usa valores de probabilidade para restringir o número de regras geradas. Você pode controlar o número de regras definindo os parâmetros `MINIMUM_PROBABILITY` ou `MINIMUM _IMPORTANCE`.  
   
  Para obter mais informações sobre como configurar parâmetros avançados, consulte [algoritmos de mineração de dados &#40;SQL Server Data Mining Add-ins&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

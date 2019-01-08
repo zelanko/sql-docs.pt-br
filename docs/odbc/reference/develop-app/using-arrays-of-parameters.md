@@ -14,12 +14,12 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7990c1c8524063c16b44464828900450d5241ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529327"
 ---
 # <a name="using-arrays-of-parameters"></a>Usar matrizes de parâmetros
 Usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar o número de conjuntos de parâmetros. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar o endereço de uma variável na qual o driver pode retornar o número de conjuntos de parâmetros processados, Erro incluindo define. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para apontar para uma matriz no qual retornar informações de status para cada linha de valores de parâmetro. O driver armazena esses endereços na estrutura, que ele mantém para a instrução.  
@@ -35,7 +35,7 @@ Usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um *atri
   
 -   Verifique para oferecer suporte a matrizes de parâmetros em tempo de execução. Um driver dá suporte a matrizes de parâmetros se é possível definir o atributo da instrução SQL_ATTR_PARAMSET_SIZE como um valor maior que 1. Aplicativos genéricos e aplicativos verticais geralmente Verifique para oferecer suporte a matrizes de parâmetros em tempo de execução.  
   
- A disponibilidade dos conjuntos de resultados em execução com parâmetros e contagens de linhas pode ser determinada chamando **SQLGetInfo** com as opções SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. Para **inserir**, **atualização**, e **excluir** instruções, a opção SQL_PARAM_ARRAY_ROW_COUNTS indica se contagens de linhas individuais (um para cada conjunto de parâmetros) disponível (SQL_PARC_BATCH) ou se as contagens de linhas são acumuladas em um (SQL_PARC_NO_BATCH). Para **selecionar** instruções, a opção de SQL_PARAM_ARRAY_SELECTS indica se um conjunto de resultados está disponível para cada conjunto de parâmetros (SQL_PAS_BATCH) ou se apenas um conjunto de resultados está disponível (SQL_PAS_NO_BATCH). Se o driver não permitir instruções gerando ao conjunto de resultados a ser executado com uma matriz de parâmetros, SQL_PARAM_ARRAY_SELECTS retorna SQL_PAS_NO_SELECT. Ele é específico da fonte de dados se matrizes de parâmetros podem ser usados com outros tipos de instruções, especialmente porque o uso de parâmetros nessas instruções seria específico da fonte de dados e não deve seguir a gramática SQL ODBC.  
+ A disponibilidade dos conjuntos de resultados em execução com parâmetros e contagens de linhas pode ser determinada chamando **SQLGetInfo** com as opções SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. Para **inserir**, **atualização**, e **excluir** instruções, a opção SQL_PARAM_ARRAY_ROW_COUNTS indica se contagens de linhas individuais (um para cada conjunto de parâmetros) disponível (SQL_PARC_BATCH) ou se as contagens de linhas são acumuladas em um (SQL_PARC_NO_BATCH). Para **selecionar** instruções, a opção de SQL_PARAM_ARRAY_SELECTS indica se um conjunto de resultados está disponível para cada conjunto de parâmetros (SQL_PAS_BATCH) ou se apenas um conjunto de resultados está disponível (SQL_PAS_NO_BATCH). Se o driver não permitir instruções de gerar o conjunto de resultados a serem executadas com uma matriz de parâmetros, SQL_PARAM_ARRAY_SELECTS retorna SQL_PAS_NO_SELECT. Ele é específico da fonte de dados se matrizes de parâmetros podem ser usados com outros tipos de instruções, especialmente porque o uso de parâmetros nessas instruções seria específico de fonte de dados e não deve seguir a gramática SQL ODBC.  
   
  A matriz apontada pelo atributo SQL_ATTR_PARAM_OPERATION_PTR instrução pode ser usada para ignorar as linhas de parâmetros. Se um elemento da matriz é definido como SQL_PARAM_IGNORE, o conjunto de parâmetros correspondente a esse elemento é excluído dos **SQLExecute** ou **SQLExecDirect** chamar. A matriz apontada pelo atributo SQL_ATTR_PARAM_OPERATION_PTR é alocada e preenchida pelo aplicativo e lido pelo driver. Se linhas buscadas são usadas como parâmetros de entrada, os valores da matriz de status de linha podem ser usados na matriz de parâmetros de operação.  
   

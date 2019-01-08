@@ -16,15 +16,15 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531578"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)
-  Este tópico descreve como criar uma função definida pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tópico descreve como criar uma função definida pelo usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48124896"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Funções definidas pelo usuário não podem ser usadas para executar ações que modificam o estado do banco de dados.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48124896"
   
 -   As funções definidas pelo usuário não podem retornar vários conjuntos de resultados. Use um procedimento armazenado se precisar retornar vários conjuntos de resultados.  
   
--   O tratamento de erros é restringido em uma função definida pelo usuário. Um UDF não dá suporte a TRY…CATCH, @ERROR ou RAISERROR.  
+-   O tratamento de erros é restringido em uma função definida pelo usuário. Um UDF não oferece suporte a TRY... CAPTURAR, @ERROR ou RAISERROR.  
   
 -   As funções definidas pelo usuário não podem chamar um procedimento armazenado, mas podem chamar um procedimento armazenado estendido.  
   

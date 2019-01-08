@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_identity_range_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 623914f556064f690c0883e41316c76e84c3c7e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27906e593020d45a9fb5e79be6ac53bc0e7fafcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791548"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSmerge_identity_range** tabela é usada para controlar os intervalos numéricos atribuídos a colunas de identidade para assinatura em publicações em que a replicação gerencia automaticamente essas atribuições de intervalo. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|O número de identificação exclusivo para uma determinada assinatura.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f8103e48da5c0059cfc977f862ebd8fc0839fb9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661055"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514312"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,12 +81,12 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Tabela retornada    
     
-|Nome da coluna|Tipo de dados|Description|    
+|Nome da coluna|Tipo de dados|Descrição|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID do banco de dados.|    
 |**object_id**|**int**|ID da tabela ou exibição.|    
 |**index_id**|**int**|ID do índice ou heap.<br /><br /> 0 = Heap|    
-|**hobt_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID do heap de dados ou conjunto de linhas de árvore B que rastreia dados internos para um índice columnstore.<br /><br /> NULL – isso não é um conjunto de linhas columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID do heap de dados ou conjunto de linhas de árvore B que rastreia dados internos para um índice columnstore.<br /><br /> NULO - isso não é um conjunto de linhas columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|Número de partição com base 1 no índice ou heap.|    
 |**leaf_insert_count**|**bigint**|Contagem cumulativa de inserções de nível folha.|    
 |**leaf_delete_count**|**bigint**|Contagem cumulativa de exclusões de nível folha. leaf_delete_count só é incrementado para registros excluídos não são marcados como fantasma pela primeira vez. Para registros excluídos são fantasma em primeiro lugar, **leaf_ghost_count** é incrementado em vez disso.|    
@@ -227,7 +227,7 @@ GO
     
 ```    
     
-### <a name="b-returning-information-for-all-tables-and-indexes"></a>B. Retornando informações para todas as tabelas e índices    
+### <a name="b-returning-information-for-all-tables-and-indexes"></a>b. Retornando informações para todas as tabelas e índices    
  O exemplo a seguir retorna informações para todos os índices e tabelas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A execução desta consulta requer a permissão VIEW SERVER STATE.    
     
 ```    

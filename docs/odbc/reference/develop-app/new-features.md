@@ -17,12 +17,12 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5d489a533caf4fe53521d440991b545483be76e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833964"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507423"
 ---
 # <a name="new-features"></a>Novos recursos
 A seguinte nova funcionalidade foi introduzida em ODBC 3. *x*. ODBC 3. *x* aplicativo trabalhar com um ODBC 2 *. x* driver não poderão usar essa funcionalidade. O ODBC 3. *x* Gerenciador de Driver não mapeia esses recursos quando estiver trabalhando com um ODBC 2 *. x* driver.  
@@ -81,7 +81,7 @@ A seguinte nova funcionalidade foi introduzida em ODBC 3. *x*. ODBC 3. *x* aplic
   
 -   Parâmetros nomeados.  
   
--   Nenhum do ODBC 3. *x*– específico **SQLGetInfo** opções. (Se for um ODBC 3. *x* aplicativo trabalhar com um ODBC 2. *x* driver chama os tipos de informações SQL_XXX_CURSOR_ATTRIBUTES1 que substituíram vários ODBC 2. *x* tipos de informação, algumas das informações podem ser confiáveis, mas alguns podem não ser confiáveis. Para obter mais informações, consulte [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Nenhum do ODBC 3. *x*-específico **SQLGetInfo** opções. (Se for um ODBC 3. *x* aplicativo trabalhar com um ODBC 2. *x* driver chama os tipos de informações SQL_XXX_CURSOR_ATTRIBUTES1 que substituíram vários ODBC 2. *x* tipos de informação, algumas das informações podem ser confiáveis, mas alguns podem não ser confiáveis. Para obter mais informações, consulte [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Deslocamentos de associação.  
   
@@ -103,7 +103,7 @@ A seguinte nova funcionalidade foi introduzida em ODBC 3. *x*. ODBC 3. *x* aplic
   
 -   Uso de **SQLDescribeCol** e **SQLColAttribute** na coluna 0.  
   
--   Uso de qualquer ODBC 3. *x*– atributos de coluna específica em uma chamada para **SQLColAttribute**.  
+-   Uso de qualquer ODBC 3. *x*-atributos de coluna específica em uma chamada para **SQLColAttribute**.  
   
 -   Uso de vários identificadores de ambiente.  
   

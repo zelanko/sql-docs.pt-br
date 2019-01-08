@@ -15,12 +15,12 @@ ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fff9948011cd81df80e71237d8381079e52bbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4de5cf0a8e932c30c0eea619b185aa37f0cf875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533334"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor da Tarefa FTP (página Transferência de Arquivos)
   Use a página **Transferência de Arquivos** da caixa de diálogo **Editor da Tarefa FTP** para configurar a operação FTP executada pela tarefa.  
@@ -31,7 +31,7 @@ ms.locfileid: "48087476"
  **IsRemotePathVariable**  
  Indique se o caminho remoto deve ser armazenado em uma variável. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Verdadeiro**|O caminho de destino é armazenado em uma variável. Ao selecionar esse valor, a opção dinâmica **RemoteVariable**será exibida.|  
 |**Falso**|O caminho de destino é especificado em um gerenciador de conexões de Arquivo. Ao selecionar esse valor, a opção dinâmica **RemotePath**será exibida.|  
@@ -42,7 +42,7 @@ ms.locfileid: "48087476"
  **IsLocalPathVariable**  
  Indique se o caminho local deve ser armazenado em uma variável. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Verdadeiro**|O caminho de destino é armazenado em uma variável. Ao selecionar esse valor, a opção dinâmica **LocalVariable**será exibida.|  
 |**Falso**|O caminho de destino é especificado em um gerenciador de conexões de Arquivo. Ao selecionar esse valor, a opção dinâmica **LocalPath**será exibida.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48087476"
  **Operação**  
  Selecione a operação FTP a executar. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Enviar arquivos**|Enviar arquivos. Ao selecionar esse valor, as opções dinâmicas **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**serão exibidas.|  
 |**Receber arquivos**|Receber arquivos. Ao selecionar esse valor, as opções dinâmicas **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**serão exibidas.|  
@@ -70,13 +70,13 @@ ms.locfileid: "48087476"
  **RemoteVariable**  
  Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável definida pelo usuário.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), Adicionar variável  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), Adicionar variável  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
  Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões de FTP](connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexão de FTP](connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexão de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>Opções dinâmicas de IsLocalPathVariable  
   
@@ -84,17 +84,17 @@ ms.locfileid: "48087476"
  **LocalVariable**  
  Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), Adicionar variável  
+ **Tópicos relacionados:** [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md), Adicionar variável  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
  Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões de Arquivos Simples](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexões de Arquivos Simples](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados**: [Gerenciador de Conexão de arquivo simples](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexão de arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa FTP &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa FTP &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e3048de737d923ba962a31d789fc390d1b038b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846604"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535303"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Valor Booliano que controla se a pesquisa de texto completo diferencia ou não diacríticos. *accent_sensitivity* está **bit**, com um dos seguintes valores:  
   
-|Valor|Diferencia acentos?|  
+|Valor|Distinção de acentos é...|  
 |-----------|----------------------------|  
 |0|Não diferencia<br /><br /> Palavras como "café" e "cafe" são tratadas da mesma forma.|  
 |1|Diferencia<br /><br /> Palavras como "café" e "cafe" são tratadas de forma diferente.|  
@@ -66,10 +66,10 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|palavra-chave|**varbinary(128)**|A representação hexadecimal de uma determinada palavra-chave retornada por um separador de palavras. Essa representação é usada para armazenar a palavra-chave no índice de texto completo. Esse valor não é legível, mas é útil para relacionadas a uma determinada palavra-chave para a saída retornada por outros modos de exibição de gerenciamento dinâmico que retornam o conteúdo de um índice de texto completo, como [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Observação:** OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
-|group_id|**int**|Contém um valor de inteiro que é útil para diferenciar o grupo lógico a partir do qual um determinado termo foi gerado. Por exemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produz os seguintes valores group_id em inglês:<br /><br /> 1: servidor<br />2: BANCO DE DADOS<br />3: BANCO DE DADOS|  
+|palavra-chave|**varbinary(128)**|A representação hexadecimal de uma determinada palavra-chave retornada por um separador de palavras. Essa representação é usada para armazenar a palavra-chave no índice de texto completo. Esse valor não é legível, mas é útil para relacionadas a uma determinada palavra-chave para a saída retornada por outros modos de exibição de gerenciamento dinâmico que retornam o conteúdo de um índice de texto completo, como [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Observação:** OxFF representa o caractere especial que indica o término de um arquivo ou conjunto de dados.|  
+|group_id|**int**|Contém um valor de inteiro que é útil para diferenciar o grupo lógico a partir do qual um determinado termo foi gerado. Por exemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produz os seguintes valores group_id em inglês:<br /><br /> 1: Servidor<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Contém um valor inteiro que é útil para diferenciar os casos em que formas alternativas de palavras compostas, como texto completo, são geradas pelo separador de palavras. Às vezes, devido à existência de palavras compostas ('multi-million'), formas alternativas são geradas pelo separador de palavras. Às vezes, essas formas alternativas (frases) precisam ser diferenciadas.<br /><br /> Por exemplo, '`multi-million`' produz os seguintes valores phrase_id em inglês:<br /><br /> 1 para `multi`<br />1 para `million`<br />2 para `multimillion`|  
 |ocorrência|**int**|Indica a ordem de cada termo no resultado da análise. Por exemplo, a ocorrência "`SQL Server query processor`" de frase poderia conter os seguintes valores de ocorrência para os termos da frase em inglês:<br /><br /> 1 para `SQL`<br />2 para `Server`<br />3 para `query`<br />4 para `processor`|  
 |special_term|**nvarchar(4000)**|Contém informações sobre as características do termo que está sendo emitido pelo separador de palavras, um destes:<br /><br /> Correspondência exata<br /><br /> Palavra de ruído<br /><br /> Fim de oração<br /><br /> Fim de parágrafo<br /><br /> Fim de capítulo|  
@@ -81,7 +81,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  **fts_parser** oferece suporte a sintaxe e os recursos de predicados de texto completo, como [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)e funções, tais como [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Usando o Unicode para analisar caracteres especiais  
- Quando você analisa uma cadeia de caracteres de consulta **fts_parser** usa o agrupamento do banco de dados ao qual você está conectado, a menos que você especifique a cadeia de caracteres de consulta como Unicode. No entanto, para uma cadeia de caracteres não Unicode que contém caracteres especiais, como ü ou ç, a saída pode ser inesperada, dependendo do agrupamento do banco de dados. Para processar uma cadeia de caracteres de consulta independentemente do agrupamento de banco de dados, Anteponha a cadeia de caracteres com `N`, ou seja, `N'` *query_string*`'`.  
+ Quando você analisa uma cadeia de caracteres de consulta **fts_parser** usa o agrupamento do banco de dados ao qual você está conectado, a menos que você especifique a cadeia de caracteres de consulta como Unicode. No entanto, para uma cadeia de caracteres não Unicode que contém caracteres especiais, como ü ou ç, a saída pode ser inesperada, dependendo da ordenação do banco de dados. Para processar uma cadeia de caracteres de consulta independentemente do agrupamento de banco de dados, Anteponha a cadeia de caracteres com `N`, ou seja, `N'` *query_string*`'`.  
   
  Para obter mais informações, consulte “C. Exibindo a saída de uma cadeia de caracteres que contém caracteres especiais", posteriormente neste tópico.  
   
@@ -140,7 +140,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>B. Exibindo a saída de um determinado separador de palavras no contexto de filtro da lista de palavras irrelevantes  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>b. Exibindo a saída de um determinado separador de palavras no contexto de filtro da lista de palavras irrelevantes  
  O exemplo a seguir retorna a saída a partir do uso do separador de palavras em inglês, cujo LCID é 1033, uma lista de palavras irrelevantes em inglês, cuja ID é 77, na cadeia de caracteres de consulta a seguir:  
   
  `"The Microsoft business analysis" OR "MS revenue"`  

@@ -11,12 +11,12 @@ ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119296"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518969"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Caixa de Diálogo Filtro de Conjunto de Dados ou Filtro de Modelo
   Esta caixa de diálogo o ajuda a construir os filtros que você pode aplicar a um conjunto de dados.  O conjunto de dados pode ser um conjunto externo usado para teste ou os dados do caso para um modelo de mineração. O nome da caixa de diálogo irá mudar dependendo se o filtro for para um conjunto de dados externo ou para um modelo de mineração.  
@@ -32,18 +32,18 @@ ms.locfileid: "48119296"
 > [!TIP]  
 >  Para testar a precisão em um subconjunto dos dados originais de treinamento, é possível adicionar a exibição de fonte de dados que foi utilizada para definir o conjunto de treinamento como dados externos de teste e então adicionar as condições na grade **Filtro de Conjunto de Dados**.  
   
- **Para obter mais informações:**  [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações, consulte:** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **Condições**  
  Exibe nomes de tabela, seguidos por nomes de coluna com condições.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**E/Ou**|Escolha um operador para unir múltiplas condições.|  
 |**Coluna de estrutura de mineração**|Clique para selecionar uma fonte de dados e em seguida clique em linhas sucessivas na grade para adicionar colunas da fonte de dados.<br /><br /> A primeira linha na grade especifica a exibição da fonte de dados. Após você selecionar uma exibição de fonte de dados, a **Coluna de Estrutura de Mineração** exibirá um ícone de tabela e o campo **Valor** vai mostrar as combinações de todos os critérios que você definiu para esta fonte de dados.<br /><br /> Após você ter selecionado uma fonte de dados, a caixa **Coluna de Estrutura de Mineração** apresentará um lista suspensa com as colunas individuais da fonte.|  
 |**Operador**|Selecione um operador da lista.|  
-|**Value**|Para tabelas, o campo **Valor** exibe a combinação de todos os filtros aplicados à fonte de dados. É possível também clicar no botão **(…)** do lado direito da caixa de texto, para abrir a caixa de diálogo **Filtro** e criar uma condição.|  
+|**Value**|Para tabelas, o campo **Valor** exibe a combinação de todos os filtros aplicados à fonte de dados. Você também pode clicar em build **(...)**  botão à direita da caixa de texto para abrir o **filtro** caixa de diálogo e criar uma condição.|  
   
  **Expression**  
  Exibe o conjunto de critérios que você criou usando a grade.  

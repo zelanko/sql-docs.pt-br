@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 602113da86b3d8ffdc79484b35dab59749844a01
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784568"
 ---
 # <a name="broker-event-category"></a>Categoria de evento Broker
   A categoria de evento **Broker** contém eventos gerais do Service Broker.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Broker:Activation](broker-activation-event-class.md)|Um evento gerado quando um monitor de fila inicia um procedimento armazenado de ativação.|  
 |[Classe de evento Broker:Connection](broker-connection-event-class.md)|Um evento gerado para informar o status de uma conexão de transporte gerenciada pelo Service Broker.|  

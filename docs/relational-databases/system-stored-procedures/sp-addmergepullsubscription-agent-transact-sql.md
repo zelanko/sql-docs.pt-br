@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ba75dc83e8fb4ce5a9ad31876b2b2592b22b7197
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681364"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791778"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +168,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_type =** ] *frequency_type*  
  É a frequência do agendamento do Agente de Mesclagem. *frequency_type* está **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -187,7 +186,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_interval =** ] *frequency_interval*  
  O dia ou dias em que o Agente de Mesclagem é executado. *frequency_interval* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Segunda-feira|  
@@ -204,7 +203,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  É a data do Agente de Mesclagem. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Segundo|  
@@ -219,7 +218,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday =** ] *frequency_subday*  
  É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -314,7 +313,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_security_mode =** ] *internet_security_mode*  
  É o método de autenticação usado pelo Agente de Mesclagem ao se conectar ao servidor da Web durante a sincronização da Web, usando HTTPS. *internet_security_mode* está **int** e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Autenticação Básica é usada.|  
 |**1** (padrão)|Autenticação Integrada do Windows é usada.|  

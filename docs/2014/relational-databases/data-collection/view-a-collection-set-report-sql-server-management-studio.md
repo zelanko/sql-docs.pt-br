@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.reporthistory.calendar.f1
@@ -15,12 +15,12 @@ ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eef644a11cdf99cc480303972b70925e3fd66d13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202666"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760208"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Exibir um relatório de conjuntos de coleta (SQL Server Management Studio)
   Depois de configurar o data warehouse de gerenciamento, você pode exibir um relatório do conjunto de coleta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os relatórios são fornecidos para os conjuntos de coleta de Dados do Sistema instalados durante a instalação. Os relatórios incluídos são:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -15,12 +14,12 @@ ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7fe14bf583c04165566ad99f278b82a34ca8e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6570eeacfe7da346cc0d41352888f5acc57baf2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810788"
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Repetir um script Transact-SQL (SQL Server Profiler)
   Ao testar possíveis soluções para um problema de desempenho, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para repetir scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e compare o desempenho antes e depois das alterações.  

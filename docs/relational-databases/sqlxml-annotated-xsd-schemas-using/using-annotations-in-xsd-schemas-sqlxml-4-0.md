@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80aa9ae1fd19f9f7ed0e90436604095f091ca781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a03e78298bc2bea8d0c6bf33484dbda28a2d5319
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618325"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511145"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Usando anotações em esquemas XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47618325"
   
  Se você não especificar as anotações, será utilizado o mapeamento padrão. Por padrão, um elemento XSD com um tipo complexo é mapeado para um nome de tabela (exibição) no banco de dados especificado, e um elemento ou atributo com um tipo simples é mapeado para a coluna com o mesmo nome que o elemento ou o atributo.  
   
- Essas anotações também podem ser usadas para especificar as relações hierárquicas em XML, representando assim as relações no banco de dados, pois um esquema XSD é simplesmente uma exibição XML de dados relacionais.  
+ Essas anotações também podem ser usadas para especificar as relações hierárquicas em XML, o que representa as relações no banco de dados, como um esquema XSD é simplesmente uma exibição XML de dados relacionais.  
   
  Esta seção fornece descrições das anotações que podem ser usadas com esquemas XSD e exemplos de sua utilização.  
   

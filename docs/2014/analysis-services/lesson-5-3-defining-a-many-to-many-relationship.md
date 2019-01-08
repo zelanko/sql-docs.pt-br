@@ -11,12 +11,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50997645272c5ec900a8a89a8da41a1da421ac5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c05e45f5641c2d325c5e7d05472e3881ee7c807
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531164"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definindo uma relação muitos para muitos
   Ao definir uma dimensão, cada fato normalmente se une a somente um membro de dimensão, apesar de um único membro de dimensão poder ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia de banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.  
@@ -26,7 +26,7 @@ ms.locfileid: "48105426"
  Com uma dimensão muitos para muitos, os valores são somados distintamente, o que significa que eles não se agregam mais de uma vez ao membro Todos.  
   
 > [!NOTE]  
->  Para oferecer suporte a uma relação da dimensão muitos para muitos, a relação de chave estrangeira-chave primária deve ser definida na exibição da fonte de dados entre todas as tabelas envolvidas. Caso contrário, não será possível selecionar o grupo de medidas intermediário correto ao estabelecer a relação na guia **Uso da Dimensão** do Designer de Cubo.  
+>  Para dar suporte a uma relação de dimensão muitos-para-muitos, uma relação de chave estrangeira de chave primária deve ser definida na exibição da fonte de dados entre todas as tabelas que estão envolvidos. Caso contrário, não será possível selecionar o grupo de medidas intermediário correto ao estabelecer a relação na guia **Uso da Dimensão** do Designer de Cubo.  
   
  Para obter mais informações, consulte [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)e [Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48105426"
   
 5.  Na caixa de diálogo **Adicionar/Remover Tabelas** , adicione as tabelas **DimSalesReason** e **FactInternetSalesReason** à lista **Objetos incluídos** e clique em **OK**.  
   
-     Observe que as relações de chave estrangeira-chave primária entre as tabelas envolvidas foram estabelecidas automaticamente porque aquelas relações são definidas no banco de dados relacional subjacente. Se essas relações não foram definidas em um banco de dados relacional subjacente, talvez seja necessário defini-las na exibição da fonte de dados.  
+     Observe que as relações de chave estrangeira de chave primárias entre as tabelas envolvidas foram estabelecidas automaticamente porque aquelas relações são definidas no banco de dados relacional subjacente. Se essas relações não foram definidas em um banco de dados relacional subjacente, talvez seja necessário defini-las na exibição da fonte de dados.  
   
 6.  No menu **Formatar** , aponte para **Layout Automático**e, em seguida, clique em **Diagrama**.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "48105426"
  [Definindo a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir uma relação muitos-para-muitos e propriedades da relação muitos-para-muitos](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

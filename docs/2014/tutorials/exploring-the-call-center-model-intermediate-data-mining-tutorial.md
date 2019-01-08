@@ -11,22 +11,22 @@ ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110026"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518897"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de call center (Tutorial de mineração de dados intermediário)
   Agora que você criou o modelo exploratório, poderá usá-lo para saber mais sobre os dados utilizando as ferramentas a seguir fornecidas no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   [Visualizador de rede Neural da Microsoft](#bkmk_NNviewer) **:** Este visualizador está disponível na **Visualizador do modelo de mineração** guia do Designer de mineração de dados e foi projetado para ajudá-lo a testar as interações nos dados.  
   
--   [Microsoft Visualizador de árvore de conteúdo genérica](#bkmk_genviewer) **:** Este visualizador padrão fornece detalhes aprofundados sobre os padrões e estatísticas descobertos pelo algoritmo durante a geração do modelo.  
+-   [Visualizador de árvore de conteúdo genérica da Microsoft](#bkmk_genviewer) **:** Este visualizador padrão fornece detalhes sobre os padrões e estatísticas identificadas pelo algoritmo durante a geração do modelo.  
   
 ##  <a name="bkmk_NNviewer"></a> Visualizador de rede Neural da Microsoft  
- O visualizador tem três painéis — **entrada**, **saída**, e **variáveis**.  
+ O visualizador tem três painéis - **entrada**, **saída**, e **variáveis**.  
   
  Usando o **saída** painel, você pode selecionar valores diferentes para o atributo previsível ou variável dependente. Se seu modelo contiver vários atributos previsíveis, você pode selecionar o atributo do **atributo de saída** lista.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48110026"
   
 2.  Para **valor**, selecione **AM**.  
   
-     O **variáveis** atualizações de painel para mostrar o impacto no modelo quando o turno é **AM**. Todas as outras seleções permanecem iguais — você ainda está comparando as classificações de serviço mais altas e mais baixas.  
+     O **variáveis** atualizações de painel para mostrar o impacto no modelo quando o turno é **AM**. Todas as outras seleções permanecem os mesmos, você ainda está comparando os níveis de serviço menor e maior.  
   
 3.  Para **valor**, selecione **PM1**.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48110026"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>Interpretando as estatísticas fornecidas no visualizador  
  Tempos de espera mais longos constituem um fator importante para uma taxa de abandono alta, indicando uma classificação de serviço mais fraca. Essa pode ser considerada uma conclusão óbvia; no entanto, o modelo de mineração fornece mais alguns dados estatísticos adicionais para ajudar a interpretar essas tendências.  
   
--   **Pontuação**: valor que indica a importância geral dessa variável para Discriminar entre os resultados. Quanto mais alta for a pontuação, maior o efeito da variável no resultado.  
+-   **Pontuação**: Valor que indica a importância geral dessa variável para Discriminar entre os resultados. Quanto mais alta for a pontuação, maior o efeito da variável no resultado.  
   
--   **Probabilidade do valor 1**: porcentagem que representa a probabilidade desse valor para esse resultado.  
+-   **Probabilidade do valor 1**: Porcentagem que representa a probabilidade desse valor para esse resultado.  
   
--   **Probabilidade do valor 2**: porcentagem que representa a probabilidade desse valor para esse resultado.  
+-   **Probabilidade do valor 2**: Porcentagem que representa a probabilidade desse valor para esse resultado.  
   
--   **Comparação de precisão para o valor 1** e **comparação de precisão para o valor 2**: pontuações que representam o impacto de usar essa variável em particular para prever os resultados do valor 1 e 2 do valor. Quanto mais alta for a pontuação, melhor será a variável para prever os resultados.  
+-   **Comparação de precisão para o valor 1** e **comparação de precisão para o valor 2**: Pontuações que representam o impacto de usar essa variável em particular para prever os resultados do valor 1 e 2 do valor. Quanto mais alta for a pontuação, melhor será a variável para prever os resultados.  
   
  A tabela a seguir contém alguns valores de exemplo para os influenciadores principais. Por exemplo, o **probabilidade do valor 1** é 60,6% e **probabilidade do valor 2** é 8,30%, que significa que, quando o tempo médio por emissão estava no intervalo de 44-70 minutos, 60,6% dos casos ocorreram no turno com o níveis de serviço mais altas (valor 1) e 8,30% dos casos ocorreram no turno com as piores classificações de serviço (valor 2).  
   
@@ -110,10 +110,10 @@ ms.locfileid: "48110026"
   
 |attribute|Valor|Favorece \< 0,07|Favorece >= 0,12|  
 |---------------|-----------|--------------------|----------------------|  
-|Tempo médio por emissão|89.087 120.000||Pontuação: 100<br /><br /> Probabilidade de valor1: 4,45%<br /><br /> Probabilidade de Value2: % 51.94<br /><br /> Comparação de precisão para Value1: 0.19<br /><br /> Comparação de precisão para Value2: 1,94|  
-|Tempo médio por emissão|44.000 70.597|Pontuação: 92,35<br /><br /> Probabilidade do Valor 1: 60,06 %<br /><br /> Probabilidade do Valor 2: 8,30 %<br /><br /> Comparação de Precisão para o Valor 1: 2,61<br /><br /> Comparação de Precisão para o Valor 2: 0,31||  
+|Tempo médio por emissão|89.087 120.000||Pontuação:  100<br /><br /> Probabilidade de valor1: % 4,45<br /><br /> Probabilidade de Value2: % 51.94<br /><br /> Comparação de precisão de valor1: 0.19<br /><br /> Comparação de precisão para Value2: 1,94|  
+|Tempo médio por emissão|44.000 70.597|Pontuação: 92,35<br /><br /> Probabilidade de valor1: 60,06%<br /><br /> Probabilidade de Value2: 8,30%<br /><br /> Comparação de precisão de valor1: 2,61<br /><br /> Comparação de precisão para Value2: 0,31||  
   
- [Voltar ao início](#bkmk_NNviewer)  
+ [Voltar ao Início](#bkmk_NNviewer)  
   
 ##  <a name="bkmk_genviewer"></a> Visualizador de árvore de conteúdo genérica da Microsoft  
  Este visualizador pode ser usado para exibir informações ainda mais detalhadas criadas pelo algoritmo durante o processamento do modelo. O **Visualizador de árvore de conteúdo MicrosoftGeneric** representa o modelo de mineração como uma série de nós, no qual cada nó representa conhecimento adquirido sobre os dados de treinamento. Esse visualizador pode ser usado com todos os modelos, mas o conteúdo dos nós é diferente de acordo com o tipo de modelo.  
@@ -146,13 +146,13 @@ WHERE NODE_NAME = '10000000000000000'
   
  Também é possível usar a hierarquia de nós e os detalhes na tabela NODE_DISTRIBUTION para desviar caminhos individuais na rede neural e exibir estatísticas da camada oculta. Para obter mais informações, consulte [exemplos de consulta de modelo de rede Neural](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md).  
   
- [Voltar ao início](#bkmk_NNviewer)  
+ [Voltar ao Início](#bkmk_NNviewer)  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Adicionando um modelo de regressão logística à estrutura do Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Mining Model Content para modelos de rede Neural &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de rede neural](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Alterar a diferenciação de uma coluna em um modelo de mineração](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  

@@ -14,12 +14,12 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 20c4cc7fe03d9c57ea45575b243a24da690ba88d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541886"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada (Transact-SQL)
   Esse tópico descreve as etapas para configuração de instâncias de servidor a fim de usar certificados para autenticar conexões de entrada para espelhamento de banco de dados. Antes de poder configurar conexões de entrada, devem ser configuradas conexões de saída em cada instância de servidor. Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -113,7 +113,7 @@ ms.locfileid: "48064466"
   
 5.  Conceda permissão CONNECT no logon para o ponto de extremidade de espelhamento remoto.  
   
-     Por exemplo, para conceder permissão em HOST_A para a instância de servidor remoto em HOST_B para conexão com seu logon local — ou seja, para conexão com `HOST_B_login`— use as seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
+     Por exemplo, para conceder permissão em HOST_A para a instância de servidor remoto em HOST_B para conexão com seu logon local – ou seja, para conexão com `HOST_B_login`– use as seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
     ```  
     USE master;  
@@ -131,7 +131,7 @@ ms.locfileid: "48064466"
  O exemplo a seguir demonstra como configurar HOST_B para conexões de entrada.  
   
 > [!NOTE]  
->  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um snippet de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
+>  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um snippet de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
   
 ```  
 USE master;  
@@ -157,7 +157,7 @@ GO
   
  Para obter informações sobre como criar um banco de dados espelho, incluindo um exemplo de Transact-SQL, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Para obter um exemplo do Transact-SQL de estabelecimento uma sessão de modo de alto desempenho, veja [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Para obter um exemplo de Transact-SQL de estabelecimento de uma sessão de modo de alto desempenho, consulte [exemplo: Configurando certificados usando o espelhamento de banco de dados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Ao copiar um certificado para outro sistema, use um método de cópia seguro. Seja extremamente cauteloso para manter todos os seus certificados em segurança.  

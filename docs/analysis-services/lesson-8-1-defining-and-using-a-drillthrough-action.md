@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507958"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lição 8-1-Definindo e usando uma ação de detalhamento
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lição 8-1: definindo e usando uma ação de detalhamento
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Os dados de fato de dimensionamento em uma dimensão de fatos sem filtrar corretamente os dados que a consulta retorna podem causar lentidão no desempenho da consulta. Para evitar esse problema, defina uma ação de detalhamento que restrinja o número total de linhas que serão retornadas. Esse processo melhorará significativamente o desempenho da consulta.  
@@ -55,7 +55,7 @@ Nas tarefas deste tópico, você definirá uma ação de detalhamento para retor
   
 8.  Na caixa **Máximo de Linhas** , digite **10**.  
   
-9. Na caixa **Legenda** , digite **Detalhamento até Detalhes do Pedido…**.  
+9. No **legenda** , digite **Drillthrough to Order Details...** .  
   
     Essas configurações limitam o número de linhas a serem retornadas e especificam a legenda que será exibida no menu do aplicativo cliente. A imagem a seguir mostra essas configurações na caixa **Propriedades Adicionais** .  
   

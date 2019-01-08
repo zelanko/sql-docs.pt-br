@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.ue.navigation.f1
@@ -12,12 +12,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d3bf10eac6a527bf0a659eaffef27744bd46144a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158896"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789908"
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
   Os tópicos a seguir documentam a funcionalidade do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as operações associadas.  

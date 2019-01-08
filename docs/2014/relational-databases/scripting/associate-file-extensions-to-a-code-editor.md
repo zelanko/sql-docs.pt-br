@@ -15,12 +15,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cc6cd025c2e9c55d731e82c37040df512350620
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed0338f921b3d143c5b7a42bc73ae22db4148c7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524148"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>Associar extensões de arquivo a um Editor de Códigos
   Associar extensões de arquivo a um editor de código específico permite a você abrir um arquivo com o editor de código [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apropriado quando você clicar duas vezes num arquivo em Windows Explorer. As extensões normalmente usadas pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], como .sql e .mdx, são associadas durante a instalação. As novas extensões de arquivos também devem estar associadas a [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no sistema de arquivos. Você pode usar este recurso para abrir arquivos criados com outros editores ou abrir arquivos que você renomeou, como backups de arquivos .sql que foram renomeados como .bak.  
@@ -39,7 +39,7 @@ ms.locfileid: "48077516"
   
 5.  Na caixa **Tipos de arquivo registrados** , clique na sua extensão e clique em **Alterar**.  
   
-6.  Na caixa de diálogo **Abrir Com** , clique em **SSMS – SQL Server Management Studio**e clique em **OK**.  
+6.  Na caixa de diálogo **Abrir Com**, clique em **SSMS – SQL Server Management Studio** e clique em **OK**.  
   
 7.  Clique em **Fechar** para fechar a caixa de diálogo **Opções de Pasta** e feche o Windows Explorer.  
   

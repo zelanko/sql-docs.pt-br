@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35ef352eda0d712098ce0453caccf4bc2422b4b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540918"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
   Este tópico descreve como criar um índice exclusivo em uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Não existe nenhuma diferença significativa entre criar uma restrição UNIQUE e criar um índice exclusivo que seja independente de uma restrição. A validação de dados ocorre da mesma maneira, e o otimizador de consultas não diferencia entre um índice exclusivo criado por uma restrição ou manualmente criado. No entanto, criar uma restrição UNIQUE na coluna torna claro o objetivo do índice. Para obter mais informações sobre restrições UNIQUE, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "48122616"
   
      Para criar uma exibição indexada, um índice clusterizado exclusivo é definido em uma ou mais colunas de exibição. A exibição é executada e o conjunto de resultados é armazenado no nível folha do índice da mesma forma que os dados de tabela são armazenados em um índice clusterizado. Para obter mais informações, veja [Criar exibições indexadas](../views/views.md).  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Um índice exclusivo, uma restrição UNIQUE ou uma restrição PRIMARY KEY não poderão ser criados, se existirem valores de chave duplicados nos dados.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48122616"
   
 7.  Na grade principal, em **(Geral)**, selecione **Tipo** e escolha **Índice** na lista.  
   
-8.  Selecione **Colunas**e clique no botão reticências **(…)**.  
+8.  Selecione **Colunas** e clique no botão reticências **(...)**.  
   
 9. Na caixa de diálogo **Colunas de Índice** , em **Nome da Coluna**, selecione as colunas que você deseja indexar. Você pode selecionar até 16 colunas. Para um desempenho ideal, selecione somente uma ou duas colunas por índice. Para cada coluna selecionada, indique se o índice organiza os valores dessa coluna em ordem crescente ou decrescente.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48122616"
   
 11. Na grade, em **(Geral)**, selecione **É Exclusivo** e escolha **Sim** na lista.  
   
-12. Opcional: na grade principal, em **Designer de Tabela**, selecione **Ignorar Chaves Duplicadas** e escolha **Sim** na lista. Faça isso se você desejar ignorar as tentativas de adição de dados que criariam uma chave duplicada no índice exclusivo.  
+12. Opcional: Na grade principal, sob **Designer de tabela**, selecione **ignorar chaves duplicadas** e, em seguida, escolha **Sim** na lista. Faça isso se você desejar ignorar as tentativas de adição de dados que criariam uma chave duplicada no índice exclusivo.  
   
 13. Clique em **Fechar**.  
   
@@ -134,13 +134,13 @@ ms.locfileid: "48122616"
   
 3.  Expanda a tabela na qual você deseja criar um índice exclusivo.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 6.  Marque a caixa de seleção **Exclusivo** .  
   
-7.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
+7.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
 8.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48122616"
   
 10. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Para criar um índice exclusivo em uma tabela  
   

@@ -15,12 +15,12 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545627"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor da Tarefa Fila de Mensagens (página Receber)
   Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48060836"
  **MessageType**  
  Selecione o tipo de mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Mensagem do arquivo de dados**|A mensagem é armazenada em um arquivo. Selecionar este valor faz com que seja exibida a opção dinâmica **DataFileMessage**.|  
 |**Mensagem de variável**|A mensagem é armazenada em uma variável. Selecionar este valor faz com que seja exibida a opção dinâmica **VariableMessage**.|  
@@ -51,7 +51,7 @@ ms.locfileid: "48060836"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Mensagem de arquivo de dados  
  **SaveFileAs**  
- Digite o caminho do arquivo a ser utilizado ou clique no botão de reticências **(…)** e localize o arquivo.  
+ Digite o caminho do arquivo a ser usado ou clique no botão de reticências **(...)** e, em seguida, localize o arquivo.  
   
  **Overwrite**  
  Indique se os dados em um arquivo existente devem ser substituídos quando o conteúdo de uma mensagem de arquivo de dados é salvo. O padrão é `False`.  
@@ -59,7 +59,7 @@ ms.locfileid: "48060836"
  **Filter**  
  Especifique se deve ser aplicado um filtro à mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Sem-filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
 |**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
@@ -71,16 +71,16 @@ ms.locfileid: "48060836"
  Esta opção é somente leitura. Pode ser em branco ou conter o GUID de um pacote quando a propriedade Filtrar tiver sido definida anteriormente.  
   
 #### <a name="filter--from-package"></a>Filtrar = Do pacote  
- **Identifier**  
- Se você optar por aplicar um filtro, digite o identificador exclusivo do pacote do qual podem ser recebidas mensagens ou clique no botão de reticências **(…)** e especifique o pacote.  
+ **Identificador**  
+ Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
- **Tópicos relacionados:** [Selecionar um pacote](control-flow/select-a-package.md)  
+ **Tópicos relacionados:** [Selecionar um Pacote](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Mensagem de variável  
  **Filter**  
  Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Sem-filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
 |**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
@@ -88,7 +88,7 @@ ms.locfileid: "48060836"
  **Variável**  
  Digite o nome da variável ou clique em \<**Nova variável...**> e configure uma variável nova.  
   
- **Tópicos relacionados:** [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Adicionar Variável](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Opções dinâmicas do filtro  
   
@@ -97,16 +97,16 @@ ms.locfileid: "48060836"
  Esta opção fica em branco.  
   
 #### <a name="filter--from-package"></a>Filtrar = Do pacote  
- **Identifier**  
- Se você optar por aplicar um filtro, digite o identificador exclusivo do pacote do qual podem ser recebidas mensagens ou clique no botão de reticências **(…)** e especifique o pacote.  
+ **Identificador**  
+ Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
- **Tópicos relacionados:** [Selecionar um pacote](control-flow/select-a-package.md)  
+ **Tópicos relacionados:** [Selecionar um Pacote](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Mensagem de cadeia de caracteres  
  **Comparar**  
  Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nenhum.**|As mensagens não são comparadas.|  
 |**Correspondência exata**|As mensagens devem corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
@@ -120,7 +120,7 @@ ms.locfileid: "48060836"
  **Comparar**  
  Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nenhum.**|As mensagens não são comparadas.|  
 |**Correspondência exata**|A mensagem deve corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
@@ -133,13 +133,13 @@ ms.locfileid: "48060836"
  **Variável**  
  Digite o nome da variável para manter a mensagem recebida ou clique em \<**Nova variável...**> e configure uma variável nova.  
   
- **Tópicos relacionados:** [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Adicionar Variável](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa fila de mensagens &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da tarefa fila de mensagens &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Página expressões](expressions/expressions-page.md)   
- [Tarefa Fila de Mensagens](control-flow/message-queue-task.md)  
+ [Editor da Tarefa Fila de Mensagens &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa Fila de Mensagens &#40;Página Enviar&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Página Expressões](expressions/expressions-page.md)   
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

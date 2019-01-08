@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing traces
@@ -16,12 +15,12 @@ ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d213e6b680bfe0d020a7c95b4e3924ef5679d7e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4961b68d46f8e4f1627c28c05ab2efb609d9f90d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077096"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785258"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>Pausar um rastreamento (SQL Server Profiler)
   Pausar um rastreamento impede que mais dados de eventos sejam capturados até que o rastreamento seja reiniciado.  

@@ -15,23 +15,23 @@ ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dfb1ecaff0836989893940303e8c8bbaf16078af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a26b9caa7b6ba54238ef5436cafb472e2d53010a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515017"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Criar arquivos de script (SybaseToSQL)
 A primeira etapa antes de iniciar o aplicativo de console do SSMA é criar o arquivo de script e se for necessário criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
   
 O arquivo de script pode ser dividido em três seções, sobre visualização..,:  
   
-1.  **config:** permite que o usuário definir os parâmetros de configuração para o aplicativo de console.  
+1.  **config:** Permite que o usuário definir os parâmetros de configuração para o aplicativo de console.  
   
-2.  **servidores:** permite que o usuário defina definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
+2.  **servidores:** Permite que o usuário defina definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
   
-3.  **comandos de script:** permite que o usuário executar comandos de fluxo de trabalho do SSMA.  
+3.  **comandos de script:** Permite que o usuário execute comandos de fluxo de trabalho do SSMA.  
   
 Cada seção é descrita em detalhes abaixo:  
   
@@ -42,13 +42,13 @@ Se qualquer um dos elementos são especificados no nó de configuração, elas s
   
 As opções configuráveis pelo usuário incluem:  
   
-1.  **Provedor de janela de saída:** se o atributo de suprimir as mensagens é definido como 'true', específicos do comando mensagens não são exibidas no console. A descrição de atributos é fornecida abaixo:  
+1.  **Provedor de janela de saída:** Se o atributo de suprimir as mensagens é definido como 'true', específicos do comando mensagens não são exibidas no console. A descrição de atributos é fornecida abaixo:  
   
-    -   destino: Especifica se a saída precisa obter impresso em um arquivo ou o stdout. Isso é false por padrão.  
+    -   Destino: Especifica se a saída deve obter impresso em um arquivo ou o stdout. Isso é false por padrão.  
   
     -   nome do arquivo: O caminho do arquivo (opcional).  
   
-    -   Suprimir-messages: suprime mensagens no console. Isso é 'false', por padrão.  
+    -   Suprimir-messages: Suprime as mensagens do console. Isso é 'false', por padrão.  
   
     **Exemplo:**  
   
@@ -70,7 +70,7 @@ As opções configuráveis pelo usuário incluem:
     *ou*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <output-window  
   
@@ -82,10 +82,10 @@ As opções configuráveis pelo usuário incluem:
   
        />  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-2.  **Provedor de Conexão de migração de dados:** Especifica que o servidor de origem/destino seja considerado para a migração de dados.  Código-fonte-use-last-used indica que o último servidor de origem usados é usado para a migração de dados. Da mesma forma destino-use-last-used indica que o último servidor de destino usado é usado para a migração de dados. O usuário também pode especificar o servidor (origem ou destino) usando o servidor de origem de atributos ou o servidor de destino.  
+2.  **Provedor de Conexão de migração de dados:** Isso especifica que o servidor de origem/destino seja considerado para a migração de dados.  Código-fonte-use-last-used indica que o último servidor de origem usados é usado para a migração de dados. Da mesma forma destino-use-last-used indica que o último servidor de destino usado é usado para a migração de dados. O usuário também pode especificar o servidor (origem ou destino) usando o servidor de origem de atributos ou o servidor de destino.  
   
     Apenas um ou outro atributo especificado pode ser usado ou seja:  
   
@@ -116,7 +116,7 @@ As opções configuráveis pelo usuário incluem:
     </migrate-data>  
     ```  
   
-3.  **Pop-up entrada do usuário:** Isso permite a manipulação de erros, quando os objetos são carregados do banco de dados. O usuário fornece os modos de entrada e, em caso de erro, o console continua conforme o usuário especifica.  
+3.  **Popup de entrada do usuário:** Isso permite o tratamento de erros, quando os objetos são carregados do banco de dados. O usuário fornece os modos de entrada e, em caso de erro, o console continua conforme o usuário especifica.  
   
     Os modos incluem:  
   
@@ -153,9 +153,9 @@ As opções configuráveis pelo usuário incluem:
   
     Os modos de reconexão são:  
   
-    -   reconectar-se ao último servidor---usado: se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
+    -   reconectar-se a última-usado-servidor: Se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
   
-    -   Gerar um erro: se a conexão não estiver ativo, um erro será gerado.  
+    -   Gerar-um-erro: Se a conexão não está ativa, um erro será gerado.  
   
     O modo padrão é **gerar um erro**.  
   
@@ -197,15 +197,15 @@ As opções configuráveis pelo usuário incluem:
     </migrate-data>  
     ```  
   
-5.  **Provedor de substituição de conversor:** Isso permite que o usuário lidar com objetos que já estão presentes no destino de metabase. As ações possíveis incluem:  
+5.  **Conversor de substituir o provedor:** Isso permite que o usuário lidar com objetos que já estão presentes no destino de metabase. As ações possíveis incluem:  
   
-    -   Erro: O console exibirá um erro e interrompe a execução.  
+    -   Erro: O console exibe um erro e interrompe a execução.  
   
-    -   Substituir: substitui valores existentes do objeto. Essa ação é executada por padrão.  
+    -   Substitua: Substitui os valores de objeto existentes. Essa ação é executada por padrão.  
   
-    -   Ignorar: O console irá ignorar os objetos que já existem no banco de dados  
+    -   Ignore: O console irá ignorar os objetos que já existem no banco de dados  
   
-    -   Peça ao usuário: solicita a entrada do usuário ('Sim' / 'não')  
+    -   Pergunte-usuário: Solicita que a entrada do usuário ('Sim' / 'não')  
   
     **Exemplo:**  
   
@@ -226,7 +226,7 @@ As opções configuráveis pelo usuário incluem:
     </convert-schema>  
     ```  
   
-6.  **Provedor de pré-requisitos com falha:** Isso permite que o usuário lidar com todos os pré-requisitos que são necessários para processar um comando. Por padrão, o modo estrito é 'false'. Se ele for definido como 'true', uma exceção será gerado para falha de atender aos pré-requisitos.  
+6.  **Falha na pré-requisitos provedor:** Isso permite que o usuário lidar com todos os pré-requisitos que são necessários para processar um comando. Por padrão, o modo estrito é 'false'. Se ele for definido como 'true', uma exceção será gerado para falha de atender aos pré-requisitos.  
   
     **Exemplo:**  
   
@@ -238,11 +238,11 @@ As opções configuráveis pelo usuário incluem:
     </output-providers>  
     ```  
   
-7.  **Operação de parada:** durante a operação intermediária, se o usuário deseja parar a operação, então **'Ctrl + C'** tecla de acesso pode ser usada. O SSMA para Sybase Console aguardará a conclusão da operação e finaliza a execução do console.  
+7.  **Pare operação:** Durante a operação intermediária, se o usuário deseja parar a operação, então **'Ctrl + C'** tecla de acesso pode ser usada. O SSMA para Sybase Console aguardará a conclusão da operação e finaliza a execução do console.  
   
     Se o usuário deseja parar a execução imediatamente, em seguida, **'Ctrl + C'** tecla de acesso pode ser pressionada novamente para término abrupto do aplicativo de Console do SSMA  
   
-8.  **Provedor de progresso:** informa o progresso de cada comando de console. Isso está desabilitado por padrão. Os atributos de relatório de progresso compreendem:  
+8.  **Provedor de progresso:** Informa o progresso de cada comando de console. Isso está desabilitado por padrão. Os atributos de relatório de progresso compreendem:  
   
     -   off  
   
@@ -272,7 +272,7 @@ As opções configuráveis pelo usuário incluem:
     *ou*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <progress-reporting  
   
@@ -282,22 +282,22 @@ As opções configuráveis pelo usuário incluem:
   
         report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off (optional)/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-9. **Detalhamento do agente de log:** conjuntos de nível de detalhes de log. Isso corresponde com a opção de todas as categorias na interface do usuário. Por padrão, o nível de detalhamento do log é "error".  
+9. **Detalhamento do agente de log:** Conjuntos de nível de detalhes de log. Isso corresponde com a opção de todas as categorias na interface do usuário. Por padrão, o nível de detalhamento do log é "error".  
   
     As opções de nível de agente de log incluem:  
   
-    -   Erro fatal: apenas-erro fatal mensagens são registradas.  
+    -   Erro-fatal: Somente as mensagens de erro fatal são registradas.  
   
-    -   Erro: apenas as mensagens de erro e fatal erro são registradas.  
+    -   Erro: Apenas as mensagens de erro e fatal erro são registradas.  
   
-    -   Aviso: todos os níveis, exceto as mensagens de depuração e as informações são registrados.  
+    -   Aviso: Todos os níveis, exceto as mensagens de depuração e as informações são registradas.  
   
-    -   INFO: todos os níveis, exceto as mensagens de depuração são registradas.  
+    -   INFO: Todos os níveis, exceto as mensagens de depuração são registrados.  
   
-    -   Depurar: todos os níveis de mensagens registradas.  
+    -   Depure: Todos os níveis de mensagens registradas.  
   
     > [!NOTE]  
     > Obrigatórias mensagens são registradas em qualquer nível.  
@@ -314,14 +314,14 @@ As opções configuráveis pelo usuário incluem:
     *ou*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <log-verbosity level="fatal-error/error/warning/info/debug"/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-10. **Senha criptografada de substituição:** se 'true', a senha de texto não criptografado especificado na seção de definição de servidor do arquivo de conexão do servidor ou no arquivo de script, substitui a senha criptografada armazenada no armazenamento protegido se existir. Se nenhuma senha for especificada em texto não criptografado, o usuário é solicitado a inserir a senha.  
+10. **Substitua a senha criptografada:** Se for 'true', a senha de texto não criptografado especificado na seção de definição de servidor do arquivo de conexão do servidor ou no arquivo de script, substitui a senha criptografada armazenada no armazenamento protegido se existe. Se nenhuma senha for especificada em texto não criptografado, o usuário é solicitado a inserir a senha.  
   
     Aqui surgem dois casos:  
   
@@ -341,7 +341,7 @@ As opções configuráveis pelo usuário incluem:
   
 A opção não configurável é:  
   
--   **Máximo de tentativas de reconexão:** quando uma conexão estabelecida atinge o tempo limite ou quebras devido à falha de rede, o servidor é necessário ser reconectado. As tentativas de reconexão são permitidas no máximo **5** novas tentativas depois disso, o console executa automaticamente a reconexão. O recurso de reconexão automática reduz o esforço em executar novamente o script.  
+-   **Máximo a tentativas de reconexão:** Quando uma conexão estabelecida expira ou é interrompida devido a falha de rede, o servidor é necessário ser reconectado. As tentativas de reconexão são permitidas no máximo **5** novas tentativas depois disso, o console executa automaticamente a reconexão. O recurso de reconexão automática reduz o esforço em executar novamente o script.  
   
 ## <a name="server-connection-parameters"></a>Parâmetros de Conexão do servidor  
 Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte a [criar os arquivos de Conexão de servidor &#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) para obter mais detalhes  
@@ -349,7 +349,7 @@ Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou 
 ## <a name="script-commands"></a>Comandos de script  
 O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console do SSMA processa a migração na ordem os comandos que aparecem no arquivo de script.  
   
-Por exemplo, uma migração de dados típicos de uma tabela específica em um banco de dados do Sybase segue a hierarquia de: banco de dados -&gt;esquema -&gt;tabela.  
+Por exemplo, uma migração de dados típicos de uma tabela específica em um banco de dados do Sybase segue a hierarquia de: Banco de dados -&gt;esquema -&gt;tabela.  
   
 Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console do SSMA é encerrado e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em uma [arquivos de valor da variável](creating-variable-value-files-sybasetosql.md) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
   

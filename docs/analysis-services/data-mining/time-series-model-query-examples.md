@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb280c856b6e7231c078bf830be4a10f9ecc4723
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018923"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526498"
 ---
 # <a name="time-series-model-query-examples"></a>Exemplos de consulta de um modelo de série temporal
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34018923"
 ## <a name="getting-information-about-a-time-series-model"></a>Obtendo informações sobre um modelo de série temporal  
  Uma consulta de conteúdo de modelo fornece informações básicas sobre o modelo, como parâmetros usados quando o modelo foi criado e a última vez que o modelo foi processado. O exemplo a seguir ilustra a sintaxe básica para consultar o conteúdo do modelo usando os conjuntos de linhas de esquema de mineração de dados.  
   
-###  <a name="bkmk_Query1"></a> Exemplo de consulta 1: Recuperando dicas de periodicidade do modelo  
+###  <a name="bkmk_Query1"></a> Consulta de exemplo 1: Recuperando dicas de periodicidade do modelo  
  Você pode recuperar as periodicidades encontradas em uma série de dados ao consultar o árvore ARIMA ou ARTXP. Entretanto, as periodicidades em um modelo completo podem não ser as mesmas especificadas como dicas ao criar o modelo. Para recuperar as dicas fornecidas como parâmetros ao criar o modelo, você pode consultar o conjunto de linhas de esquema do conteúdo do modelo de mineração usando a seguinte instrução DMX:  
   
 ```  
@@ -64,7 +64,7 @@ WHERE MODEL_NAME = '<model name>'
 >  Os resultados foram truncados aqui para legibilidade.  
   
   
-###  <a name="bkmk_Query2"></a> Exemplo de consulta 2: Recuperando a equação para um modelo ARIMA  
+###  <a name="bkmk_Query2"></a> Consulta de exemplo 2: Recuperando a equação para um modelo ARIMA  
  Você pode recuperar a equação para um modelo ARIMA consultando qualquer nó em uma árvore individual. Lembre-se de que cada árvore em um modelo ARIMA representa uma periodicidade diferente; se houver várias séries de dados, cada série terá seu próprio conjunto de árvores de periodicidade. Sendo assim, para recuperar a equação para uma série de dados específica, você deve primeiramente identificar a árvore.  
   
  Por exemplo, o prefixo TA indica que o nó faz parte de uma árvore ARIMA, enquanto que o prefixo TS é usado para árvores ARTXP. É possível localizar todas as árvores de raiz ARIMA consultando o conteúdo do modelo para nós com um NODE_TYPE de valor 27. Você também pode usar o valor ATTRIBUTE_NAME para localizar o nó raiz ARIMA para uma série de dados em particular. Este exemplo de consulta localiza os nós ARIMA que representam quantidades vendidas do modelo R250 na região Europa.  
@@ -88,17 +88,17 @@ WHERE NODE_NAME = 'TA00000007'
   
  Resultados do exemplo:  
   
-|Equação reduzida|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Equação reduzida|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- Para obter mais informações sobre como interpretar essas informações, consulte [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Para obter mais informações sobre como interpretar essas informações, consulte [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
-###  <a name="bkmk_Query3"></a> Exemplo de consulta 3: Recuperando a equação para um modelo ARTXP  
- No caso de um modelo ARTxp, informações diferentes são armazenadas a cada nível da árvore. Para obter mais informações sobre a estrutura de um modelo ARTxp e como interpretar as informações na equação, consulte [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+###  <a name="bkmk_Query3"></a> Consulta de exemplo 3: Recuperando a equação para um modelo ARTXP  
+ No caso de um modelo ARTxp, informações diferentes são armazenadas a cada nível da árvore. Para obter mais informações sobre a estrutura de um modelo ARTxp e como interpretar as informações na equação, consulte [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  A instrução DMX a seguir recupera informações como parte da árvore ARTxp para a série que representa a quantidade do modelo R250 vendida na região Europa.  
   
@@ -115,7 +115,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- Para obter mais informações sobre como interpretar essas informações, consulte [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Para obter mais informações sobre como interpretar essas informações, consulte [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>Criando previsões em um modelo de série temporal  
@@ -128,13 +128,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> Entendendo o comportamento de operações de substituir e estender  
  Ao adicionar novos dados a um modelo de série temporal, é possível especificar se deseja estender ou substituir os dados de treinamento:  
   
--   **Estender:** Quando você estende uma série de dados, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adiciona os novos dados no final dos dados de treinamento existentes. O número de casos de treinamento também aumenta.  
+-   **Estenda:** Quando você estende uma série de dados, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adiciona os novos dados no final dos dados de treinamento existentes. O número de casos de treinamento também aumenta.  
   
      Estender os casos de modelo é útil para atualizar o modelo continuamente com dados novos. Por exemplo, se desejar fazer o conjunto de treinamento crescer com o tempo, bastará estender o modelo.  
   
      Para estender os dados, crie uma **PREDICTION JOIN** em um modelo de série temporal, especifique a fonte dos novos dados e use o argumento **EXTEND_MODEL_CASES** .  
   
--   **Substituir:** Quando você substitui os dados na série de dados, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantém o modelo treinado, mas usa os novos valores de dados para substituir alguns ou todos os casos de treinamento existentes. Portanto, o tamanho dos dados de treinamento nunca muda, mas os casos em si estão continuamente sendo substituídos com dados mais novos. Se você fornecer dados novos suficientes, será possível substituir os dados de treinamento com uma série completamente nova.  
+-   **Substitua:** Quando você substitui os dados na série de dados, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantém o modelo treinado, mas usa os novos valores de dados para substituir alguns ou todos os casos de treinamento existentes. Portanto, o tamanho dos dados de treinamento nunca muda, mas os casos em si estão continuamente sendo substituídos com dados mais novos. Se você fornecer dados novos suficientes, será possível substituir os dados de treinamento com uma série completamente nova.  
   
      Substituir os casos de modelo é útil quando você desejar treinar um modelo em um conjunto de casos e, então, aplicar o modelo a uma série de dados diferente.  
   
@@ -177,7 +177,7 @@ AND NODE_TYPE = 15
   
  Quando você usa o argumento **REPLACE_MODEL_CASES** , o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adiciona continuamente novos casos ao fim do conjunto de casos e exclui o número correspondente do início do conjunto de casos. Se você adicionar mais dados novos do que havia no conjunto de treinamento original, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta os dados mais antigos. Se você fornecer valores novos suficientes, as previsões poderão ser fundadas em dados completamente novos.  
   
- Por exemplo, você treinou seu modelo em um conjunto de dados de caso que continha 1000 linhas. Então você adiciona 100 linhas de dados novos. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta as primeiras 100 linhas do conjunto de treinamento e adicionas as 100 linhas de dados novos no final do conjunto para um total de 1000 linhas. Se você adicionar 1100 linhas de dados novos, só as 1000 linhas mais recentes serão usadas.  
+ Por exemplo, você treinou seu modelo em um conjunto de dados de caso que continha 1000 linhas. Então você adiciona 100 linhas de dados novos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta as primeiras 100 linhas do conjunto de treinamento e adicionas as 100 linhas de dados novos no final do conjunto para um total de 1000 linhas. Se você adicionar 1100 linhas de dados novos, só as 1000 linhas mais recentes serão usadas.  
   
  Segue mais um exemplo. Para adicionar os valores de três meses de dados novos e fazer três previsões novas, você deveria executar as seguintes ações:  
   
@@ -205,11 +205,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |Função de previsão|Uso|  
-|[Latência & #40; DMX & #41;](../../dmx/lag-dmx.md)|Retorna várias frações de tempo entre a data do caso atual e a última data do conjunto de treinamento.<br /><br /> Um uso típico dessa função é para identificar casos recentes de treinamento, de forma que você possa recuperar dados detalhados sobre os casos.|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Retorna o identificador do nó para a coluna previsível especificada.<br /><br /> Um uso típico dessa função é para identificar o nó que gerou um valor previsto específico, de forma que você possa revisar os casos associados ao nó ou recuperar a equação e outros detalhes.|  
-|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Retorna o desvio padrão das previsões na coluna previsível especificada.<br /><br /> Essa função substitui o argumento INCLUDE_STATISTICS, para o qual não há suporte nos modelos da série temporal.|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Retorna a variação das previsões na coluna previsível especificada.<br /><br /> Essa função substitui o argumento INCLUDE_STATISTICS, para o qual não há suporte nos modelos da série temporal.|  
-|[PredictTimeSeries & #40; DMX & #41;](../../dmx/predicttimeseries-dmx.md)|Retorna valores de histórico previstos ou futuros para os dados da série temporal.<br /><br /> Você também pode consultar os modelos de série temporal usando a função de previsão geral [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
+|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|Retorna várias frações de tempo entre a data do caso atual e a última data do conjunto de treinamento.<br /><br /> Um uso típico dessa função é para identificar casos recentes de treinamento, de forma que você possa recuperar dados detalhados sobre os casos.|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Retorna o identificador do nó para a coluna previsível especificada.<br /><br /> Um uso típico dessa função é para identificar o nó que gerou um valor previsto específico, de forma que você possa revisar os casos associados ao nó ou recuperar a equação e outros detalhes.|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Retorna o desvio padrão das previsões na coluna previsível especificada.<br /><br /> Essa função substitui o argumento INCLUDE_STATISTICS, para o qual não há suporte nos modelos da série temporal.|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Retorna a variação das previsões na coluna previsível especificada.<br /><br /> Essa função substitui o argumento INCLUDE_STATISTICS, para o qual não há suporte nos modelos da série temporal.|  
+|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|Retorna valores de histórico previstos ou futuros para os dados da série temporal.<br /><br /> Você também pode consultar os modelos de série temporal usando a função de previsão geral [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
   
  Para obter uma lista das funções comuns a todos os algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)], consulte [Funções de previsão gerais &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para obter a sintaxe de funções específicas, consulte [Referência de função de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -217,7 +217,7 @@ AND NODE_TYPE = 15
 ## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Referência técnica do algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de série temporal & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Referência técnica do algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

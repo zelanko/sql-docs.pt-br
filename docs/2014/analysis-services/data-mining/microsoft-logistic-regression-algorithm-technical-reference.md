@@ -20,12 +20,12 @@ ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 856da25d126c93a370c7d028106df75124f5ec72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094276"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518049"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referência técnica do algoritmo Regressão Logística da Microsoft
   O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , no qual o parâmetro *HIDDEN_NODE_RATIO* é definido como 0. Essa configuração criará um modelo de rede neural que não contém uma camada oculta e, portanto, é equivalente à regressão logística.  
@@ -47,25 +47,25 @@ ms.locfileid: "48094276"
 ### <a name="scoring-inputs"></a>Entradas de pontuação  
  *Pontuação* no contexto de um modelo de rede neural ou de regressão logística significa o processo de converter os valores presentes nos dados em um conjunto de valores que usam a mesma escala e, portanto, podem ser comparados. Por exemplo, vamos supor que as entradas do intervalo de Renda vão de 0 a 100.000, enquanto as entradas de [Número de Filhos] vão de 0 a 5. Esse processo de conversão lhe permite *pontuação*, ou comparar a importância de cada entrada, independentemente da diferença nos valores.  
   
- Para cada estado que aparece no conjunto de treinamento, o modelo gera uma entrada. Para entradas discretas ou diferenciadas, uma entrada adicional será criada para representar o estado Ausente, se o estado ausente aparecer pelo menos uma vez no conjunto de treinamento. Para entradas contínuas, no máximo dois nós de entrada são criados: um para valores Ausentes, se presentes nos Dados de Treinamento e uma entrada para todos os valores existentes ou não nulos. Cada entrada é escalonada para um formato numérico usando o método de normalização de pontuação z, (x – μ) / StdDev.  
+ Para cada estado que aparece no conjunto de treinamento, o modelo gera uma entrada. Para entradas discretas ou diferenciadas, uma entrada adicional será criada para representar o estado Ausente, se o estado ausente aparecer pelo menos uma vez no conjunto de treinamento. Para entradas contínuas, no máximo dois nós de entrada são criados: um para valores Ausentes, se presentes nos Dados de Treinamento e uma entrada para todos os valores existentes ou não nulos. Cada entrada é escalonada para um formato numérico usando o método de normalização de pontuação z, (x - μ) / StdDev.  
   
  Durante a normalização da pontuação z, a média (µ) e o desvio padrão são obtidos sobre o conjunto de treinamento completo.  
   
  **Valores contínuos**  
   
- Valor está presente: (X – μ) / σ / / X é o valor real que está sendo codificado)  
+ Valor está presente:   (X-μ)/σ / / X é o valor real que está sendo codificado)  
   
  Valor está ausente: - μ/σ / / mu negativo dividido por sigma)  
   
  **Valores discretos**  
   
- Μ = p – (a probabilidade anterior de um estado)  
+ Μ = p - (a probabilidade anterior de um estado)  
   
  StdDev = sqrt(p(1-p))  
   
- Valor está presente: (1 – μ) / σ / / (um menos mu) dividido por sigma)  
+ Valor está presente:     (1-μ)/σ / / (um menos mu) dividido por sigma)  
   
- Valor está ausente: (– μ) / σ / / mu negativo dividido por sigma)  
+ Valor está ausente: (-μ) / σ / / mu negativo dividido por sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Entendendo coeficientes de regressão logística  
  Há vários métodos na literatura estatística para execução de regressão logística, mas uma parte importante de todos os métodos é avaliar a adequação do modelo. Várias estatísticas de adequação do ajuste foram propostas, dentre elas taxas de possibilidades e padrões de covariável. Uma análise de como medir a adequação de um modelo está além do escopo deste tópico; no entanto, você pode recuperar o valor dos coeficientes no modelo e usá-los para projetar suas próprias medidas de ajuste.  
@@ -83,9 +83,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Para cada valor de saída, essa consulta retorna os coeficientes e uma ID que aponta para o nó de entrada relacionado. Também retorna uma linha que contém o valor da saída e da interseção. Cada X de entrada tem seu próprio coeficiente (Ci), mas a tabela aninhada também contém um coeficiente (Co) “livre”, calculado de acordo com a seguinte fórmula:  
+ Para cada valor de saída, essa consulta retorna os coeficientes e uma ID que aponta para o nó de entrada relacionado. Também retorna uma linha que contém o valor da saída e da interseção. Cada X de entrada tem seu próprio coeficiente (Ci), mas a tabela aninhada também contém um "gratuito" coeficiente (Co), calculado de acordo com a seguinte fórmula:  
   
- F (X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
+ F (x) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
   
  Ativação: exp(F (X)) / (1 + exp(F (X)) )  
   
@@ -138,7 +138,7 @@ WHERE NODE_TYPE = 23
  Aplica-se às colunas de estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como tendo dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.  
+ Significa que a coluna será tratada como se tivesse dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.  
   
  Aplica-se à coluna de modelo de mineração.  
   
@@ -154,9 +154,9 @@ WHERE NODE_TYPE = 23
 |Atributo previsível|Contínuo, discreto, diferenciado|  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo Regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
- [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)   
- [Mining Model Content para modelos de regressão logística &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Exemplos de consulta do modelo de regressão linear](linear-regression-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo Rede Neural da Microsoft](microsoft-neural-network-algorithm.md)  
   
   

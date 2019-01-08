@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - delayed durability
@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818348"
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
   As confirmações de transações do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser totalmente duráveis, o padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou duráveis atrasadas (também conhecido como confirmação lenta).  
@@ -83,7 +83,7 @@ ms.locfileid: "48147156"
   
      Se uma transação completamente durável ou um sp_flush_log for confirmado com sucesso, todas as transações de durabilidade atrasada confirmadas anteriormente se tornarão duráveis.  
   
- O log pode ser liberado para o disco periodicamente. No entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece nenhuma garantia de durabilidade transações duráveis e sp_flush_log.  
+ O log pode ser liberado para o disco periodicamente. Contudo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece nenhuma garantia de durabilidade além das transações duráveis e sp_flush_log.  
   
 ## <a name="how-to-control-transaction-durability"></a>Como controlar a durabilidade da transação  
   
@@ -91,14 +91,14 @@ ms.locfileid: "48147156"
  Você, o DBA, pode controlar se os usuários podem usar a durabilidade da transação atrasada em um banco de dados com a instrução a seguir. Você deve definir a configuração de durabilidade atrasada com ALTER DATABASE.  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
  [padrão] Com essa configuração, todas as transações confirmadas no banco de dados são completamente duráveis, independentemente da configuração do nível de confirmação (DELAYED_DURABILITY=[ON | OFF]). Não há nenhuma necessidade de modificação e recompilação do procedimento armazenado. Isso permite garantir que a durabilidade atrasada nunca coloque os dados em risco.  
   
  `ALLOWED`  
- Com essa configuração, a durabilidade de cada transação é determinada no nível da transação – DELAYED_DURABILITY = { *OFF* | ON }. Consulte [Controle no nível do bloco atômico – procedimentos armazenados e compilados nativamente](control-transaction-durability.md#compiledproccontrol) e [Nível de controle COMMIT – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) para obter mais informações.  
+ Com essa configuração, a durabilidade de cada transação é determinada no nível da transação – DELAYED_DURABILITY = { *OFF* | ON }. Confira [Controle no nível do bloco atômico – procedimentos armazenados e compilados nativamente](control-transaction-durability.md#compiledproccontrol) e [Nível de controle COMMIT – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) para obter mais informações.  
   
  `FORCED`  
  Com essa configuração, cada transação que é confirmada no banco de dados é durável atrasada. Independentemente de a transação especificar completamente durável (DELAYED_DURABILITY = OFF) ou não fizer nenhuma especificação, a transação será durável atrasada. Essa configuração é útil quando a durabilidade da transação atrasada é útil para um banco de dados e você não quer alterar o código do aplicativo.  
@@ -119,14 +119,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Código de exemplo:**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
@@ -159,8 +159,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` Transações de nível de banco de dados.|A transação é completamente durável.|A transação é completamente durável.|A transação é durável atrasada.|  
 |`DELAYED_DURABILITY = ON` Transações de nível de banco de dados.|A transação é completamente durável.|A transação é durável atrasada.|A transação é durável atrasada.|  
-|`DELAYED_DURABILITY = OFF` Entre o banco de dados ou uma transação distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
-|`DELAYED_DURABILITY = ON` Entre o banco de dados ou uma transação distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
+|`DELAYED_DURABILITY = OFF` Transação entre banco de dados ou distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
+|`DELAYED_DURABILITY = ON` Transação entre banco de dados ou distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Como forçar uma liberação de log de transações  
  Há dois meios de forçar a liberação do log de transações para o disco.  

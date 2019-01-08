@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534086"
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
 Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, para um cenário em que a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode simplesmente restaurar ou anexar o banco de dados e procurar os dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
@@ -56,7 +56,7 @@ Para usar a TDE, execute estes procedimentos. As três primeiras etapas são fei
   
 O exemplo a seguir ilustra a criptografar o `AdventureWorksPDW2012` banco de dados usando um certificado chamado `MyServerCert`, criada no SQL Server PDW.  
   
-**Primeira: Habilitar a TDE no SQL Server PDW.** Esta ação só é necessária uma vez.  
+**Primeiro: Habilite a TDE no SQL Server PDW.** Esta ação só é necessária uma vez.  
   
 ```sql  
 USE master;  
@@ -75,7 +75,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**Segunda: Criar e fazer backup de um certificado no banco de dados mestre.** Esta ação só é necessário uma vez. Você pode ter um certificado separado para cada banco de dados (recomendado) ou você pode proteger vários bancos de dados com um certificado.  
+**Segundo: Criar e fazer backup de um certificado no banco de dados mestre.** Esta ação só é necessário uma vez. Você pode ter um certificado separado para cada banco de dados (recomendado) ou você pode proteger vários bancos de dados com um certificado.  
   
 ```sql  
 -- Create certificate in master  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**Última: Criar a DEK e use ALTER DATABASE para criptografar um banco de dados do usuário.** Essa ação é repetida para cada banco de dados protegido por TDE.  
+**Último: Criar a DEK e use ALTER DATABASE para criptografar um banco de dados do usuário.** Essa ação é repetida para cada banco de dados protegido por TDE.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -238,11 +238,11 @@ Se existir uma DMK no dispositivo em que o Upgrade ou substitua VM foi executada
   
 Exemplo de ação de atualização. Substitua `**********` com sua senha DMK.  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 Exemplo da ação para substituir uma máquina virtual.  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 Durante a atualização, se um usuário de banco de dados é criptografado e a senha da DMK não for fornecida, a ação de atualização falhará. Durante a substituição, se a senha correta não for fornecida quando existe uma DMK, a operação irá ignorar a etapa de recuperação DMK. Todas as outras etapas serão concluídas no final da operação de substituição VM, no entanto, a ação reportará a falha no final para indicar que são necessárias etapas adicionais. Nos logs de instalação (localizado em **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < carimbo de hora >**), o seguinte aviso será exibido próximo ao final.  
   

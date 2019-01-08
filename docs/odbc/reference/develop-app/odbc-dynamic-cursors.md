@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541869"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinâmicos ODBC
 Um cursor dinâmico é exatamente isso: dinâmico. Ele pode detectar as alterações feitas para a associação, pedido e valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que duas linhas de busca de um cursor dinâmico e o outro aplicativo, em seguida, atualiza uma dessas linhas e exclui a outra. Se o cursor dinâmico, em seguida, tenta buscar essas linhas novamente, ele não localizará a linha excluída, mas retornará os novos valores para a linha atualizada.  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- Essa instrução cria um segundo conjunto de resultados, o primeiro conjunto de linhas que é o próximo conjunto de linhas no conjunto de resultados original — neste caso, o conjunto de linhas na tabela Customers. O cursor retorna este conjunto de linhas para o aplicativo.  
+ Essa instrução cria um segundo conjunto de resultados, o primeiro conjunto de linhas que do qual é o próximo conjunto de linhas no conjunto de resultados original - nesse caso, o conjunto de linhas na tabela Customers. O cursor retorna este conjunto de linhas para o aplicativo.  
   
  É interessante observar que um cursor dinâmico implementado dessa maneira cria, na verdade, muitos conjuntos de resultados, que permite que ele detectar alterações ao conjunto de resultados original. O aplicativo nunca aprende da existência desses conjuntos de resultados auxiliar; ele simplesmente aparece como se o cursor é capaz de detectar alterações ao conjunto de resultados original.

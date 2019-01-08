@@ -12,18 +12,18 @@ ms.assetid: c9c5db1c-79f5-4e79-a36e-13f118daac46
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48a2c4418c7fe4d4cfb18fca96345e1cf2203d14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508176"
 ---
 # <a name="browse-for-servers-local-servers"></a>Procurar Servidores (Servidores Locais)
   Ao conectar-se com um componente do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sem saber o nome exato do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], na caixa **Nome do servidor** , clique em **Procurar mais**para abrir a caixa de diálogo **Procurar Servidores** .  
   
 ## <a name="options"></a>Opções  
  **Selecione o servidor a ser conectado**  
- Designe o servidor ao qual você deseja se conectar clicando na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exibida na árvore. Você pode mostrar ou ocultar partes do modo de exibição de árvore clicando nos nós marcados com um sinal de mais **+** ou de menos **–** .  
+ Designe o servidor ao qual você deseja se conectar clicando na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exibida na árvore. Você pode mostrar ou ocultar partes da exibição de árvore clicando em nós marcados com um **+** ou **-** símbolo.  
   
   

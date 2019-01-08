@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e9122ab6f783e6b845c1a961c133d66e58e933e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544280"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementares lição – configurar propriedades de relatório para relatórios do Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,17 +33,17 @@ Para concluir esta lição suplementar específica, você deverá ter o seguinte
 ## <a name="model-properties-that-affect-reporting"></a>Propriedades do modelo que afetam o relatório  
 Ao criar um modelo tabular, há determinadas propriedades que você pode definir em colunas individuais e tabelas para aprimorar a experiência de relatório do usuário final no Power View. Além disso, você pode criar dados de modelo adicionais para dar suporte à visualização de dados e outros recursos específicos para o cliente de relatório. Para o Modelo de Vendas pela Internet do Adventure Works de exemplo, aqui estão algumas das alterações que você fará:  
   
--   **Adicionar novos dados** – A adição de novos dados em uma coluna calculada usando uma fórmula DAX cria informações de data em um formato que é mais fácil de exibir em gráficos.  
+-   **Adicionar novos dados** -adicionando novos dados em uma coluna calculada usando uma fórmula DAX cria informações de data em um formato que é mais fácil de exibir em gráficos.  
   
 -   **Ocultar tabelas e colunas que não são úteis para o usuário final** – A propriedade **Hidden** controla se as tabelas e colunas de tabela são exibidas no cliente de relatório. Os itens que estão ocultos ainda fazem parte do modelo e permanecem disponíveis para consultas e cálculos.  
   
--   **Habilitar tabelas de um clique** – Por padrão, nenhuma ação ocorrerá se um usuário final clicar em uma tabela na lista de campos. Para alterar este comportamento de modo que um clique na tabela adicione a tabela ao relatório, você definirá o Conjunto de Campos Padrão em cada coluna que você deseja incluir na tabela. Esta propriedade é definida nas colunas da tabela que os usuários finais provavelmente desejarão usar.  
+-   **Habilite as tabelas em um único clique** -por padrão, nenhuma ação ocorrerá se um usuário final clicar em uma tabela na lista de campos. Para alterar este comportamento de modo que um clique na tabela adicione a tabela ao relatório, você definirá o Conjunto de Campos Padrão em cada coluna que você deseja incluir na tabela. Esta propriedade é definida nas colunas da tabela que os usuários finais provavelmente desejarão usar.  
   
 -   **Definir o agrupamento quando necessário** – A propriedade **Keep Unique Rows** determina se os valores na coluna devem ser agrupados por valores em um campo diferente, como um campo de identificador. Para colunas que contêm valores duplicados como Nome de Cliente (por exemplo, vários clientes com o nome de Bruno Dias), é importante agrupar (manter linhas exclusivas) no campo **Identificador de Linha** para fornecer aos usuários finais os resultados corretos.  
   
 -   **Definir tipos e formatos de dados** – Por padrão, o Power View aplica regras com base no tipo de dados de coluna para determinar se o campo pode ser usado como uma medida. Como cada visualização de dados no Power View também tem regras sobre em que local as medidas e as não medidas podem ser colocadas, é importante definir o tipo de dados no modelo ou substituir o padrão, para obter o comportamento desejado para o usuário final.  
   
--   **Definir a propriedade Sort by Column** – A propriedade **Sort By Column** especifica se os valores na coluna devem ser classificados por valores em um campo diferente. Por exemplo, na coluna Calendário do Mês que contém o nome do mês, classifique pela coluna Número do Mês.  
+-   **Definir a classificação por coluna** propriedade - a **classificar por coluna** propriedade especifica se os valores na coluna devem ser classificados por valores em um campo diferente. Por exemplo, na coluna Calendário do Mês que contém o nome do mês, classifique pela coluna Número do Mês.  
   
 ## <a name="hide-tables-from-client-tools"></a>Ocultar as tabelas das ferramentas de cliente  
 Como já existe uma coluna calculada Categoria do Produto e Subcategoria do Produto na tabela Produto, não é necessário ter as tabelas Categoria do Produto e Subcategoria do Produto visível para aplicativos cliente.  
@@ -129,7 +129,7 @@ Para obter informações detalhadas sobre as propriedades de comportamento da ta
 7.  Repita estas etapas para a tabela **Product** , selecionando a coluna **Product Id** como o Identificador de Linha e a coluna **Product Name** na caixa de listagem **Manter Linhas Exclusivas** . Em **Rótulo Padrão**, selecione **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Propriedades de relatório para colunas  
-Há várias propriedades básicas de coluna e propriedades específicas de relatório nas colunas que você pode definir para melhorar a experiência de relatório do modelo. Por exemplo, pode não ser necessário que os usuários vejam todas as colunas em todas as tabelas. Da mesma maneira que você ocultou as tabelas Product Category e Product Subcategory anteriormente, usando a propriedade Oculto de uma coluna, você pode ocultar colunas específicas de uma tabela que seriam mostradas de outra forma. Outras propriedades, como Formato de Dados e Classificar por Coluna, também podem afetar o modo como os dados da coluna podem aparecer nos relatórios. Você definirá algumas dessas propriedades em colunas específicas agora. Outras colunas não exigem nenhuma ação e não são mostradas abaixo.  
+Há várias propriedades básicas de coluna e propriedades específicas de relatório nas colunas que você pode definir para melhorar a experiência de relatório do modelo. Por exemplo, pode não ser necessário que os usuários vejam todas as colunas em todas as tabelas. Assim como você ocultou as tabelas Product Category e Product Subcategory anteriormente, usando a propriedade Hidden de uma coluna, você pode ocultar colunas específicas de uma tabela que seriam mostradas. Outras propriedades, como Formato de Dados e Classificar por Coluna, também podem afetar o modo como os dados da coluna podem aparecer nos relatórios. Você definirá algumas dessas propriedades em colunas específicas agora. Outras colunas não exigem nenhuma ação e não são mostradas abaixo.  
   
 Você somente definirá algumas propriedades de coluna diferentes aqui, mas há muitas outras. Para obter mais informações sobre propriedades de relatório de coluna, consulte [propriedades da coluna](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nos Manuais Online do SQL Server.  
   
@@ -143,7 +143,7 @@ Você somente definirá algumas propriedades de coluna diferentes aqui, mas há 
   
 4.  Repita estas etapas, definindo a coluna e as propriedades de relatório a seguir para cada tabela especificada. Deixe todas as outras propriedades em suas configurações padrão.  
   
-    Observação: para todas as colunas de data, verifique se o **Tipo de Dados** é **Date**.  
+    Observação: Para todas as colunas de data, certifique-se **tipo de dados** é **data**.  
   
     **Cliente**  
   
@@ -152,7 +152,7 @@ Você somente definirá algumas propriedades de coluna diferentes aqui, mas há 
     |Geography Id|Hidden|True|  
     |Birth Date|Formato de Dados|Data Abreviada|  
   
-    **Date**  
+    **Data**  
   
     > [!NOTE]  
     > Como a tabela Date foi selecionada como a tabela de datas do modelo usando a configuração Marcar como Tabela de Data, na Lição 7: Marcar como Tabela de Data, e a coluna Date na tabela Date como a coluna a ser usada como o identificador exclusivo, a propriedade Identificador de Linha para a coluna Date será automaticamente definida como True e não poderá ser alterada. Ao usar as funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de data. Neste modelo, você criou várias medidas usando funções de inteligência de tempo para calcular dados de vendas para vários períodos como trimestres anterior e atual, e também para usar em KPIs. Para obter mais informações sobre como especificar uma tabela de datas, consulte [especificar marcar como tabela de data para uso com inteligência de tempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nos Manuais Online do SQL Server.  

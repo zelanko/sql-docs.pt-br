@@ -16,12 +16,12 @@ ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f30b9bbc04e7008a6d5be33e364ef6de7e91edf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524198"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistente de Mineração de Dados (Analysis Services - Mineração de dados)
   O Assistente de Data Mining no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é iniciado toda vez que você adiciona uma nova estrutura de mineração a um projeto de mineração de dados. O assistente ajuda a escolher uma fonte de dados e configurar uma exibição da fonte de dados que define os dados a serem usados para análise e, em seguida, ajuda a criar um modelo inicial.  
@@ -55,7 +55,7 @@ ms.locfileid: "48223836"
 ###  <a name="BKMK_Relational"></a> Relacional versus Modelos de mineração OLAP  
  A próxima opção importante que você tem é se deseja usar uma fonte de dados relacional ou basear seu modelo em dados multidimensionais (OLAP).  
   
- O Assistente de Mineração de Dados é ramificado em dois caminhos nesse momento, dependendo se sua fonte de dados é relacional ou em um cubo. Todo o restante exceto o processo de seleção de dados é o mesmo — a escolha do algoritmo, a capacidade para adicionar um conjunto de dados de controle, etc — mas selecionar dados de cubo é um pouco mais complexo que usar dados relacionais. (Você também obterá algumas opções adicionais no final se criar um modelo baseado em um cubo.)  
+ O Assistente de Mineração de Dados é ramificado em dois caminhos nesse momento, dependendo se sua fonte de dados é relacional ou em um cubo. Todo o resto, exceto o processo de seleção de dados é a mesmo a escolha do algoritmo, a capacidade de adicionar um conjunto de dados de controle, dados do cubo selecionando etc., mas serão um pouco mais complexos do que o uso de dados relacionais. (Você também obterá algumas opções adicionais no final se criar um modelo baseado em um cubo.)  
   
  Consulte os tópicos a seguir para obter um passo a passo de cada opção com mais detalhes:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48223836"
 ### <a name="choosing-an-algorithm"></a>Escolhendo um algoritmo  
  Em seguida, você deve decidir sobre qual algoritmo deve ser usado ao processar seus dados. Esta decisão pode ser difícil de tomar. Cada algoritmo fornecido no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem recursos diferentes e gera resultados diferentes, de modo que você pode experimentar vários modelos diferentes antes de determinar qual é o mais apropriado para seus dados e seu problema comercial. Consulte o tópico a seguir para obter uma explicação das tarefas para as quais cada algoritmo é mais apropriado:  
   
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  Novamente, é possível criar vários modelos usando algoritmos diferentes ou modificar parâmetros para que os algoritmos criem modelos diferentes. Você não está bloqueado em sua escolha de algoritmo, e é prática recomendada criar vários modelos diferentes nos mesmos dados.  
   
@@ -83,13 +83,13 @@ ms.locfileid: "48223836"
 ### <a name="additional-features"></a>Recursos Adicionais  
  Para ajudá-lo a escolher os dados certos, e configurar as fontes de dados corretamente, o Assistente de Mineração de Dados fornece estes recursos adicionais:  
   
--   **Automático – detecção de tipos de dados**: o assistente examinará a exclusividade e a distribuição de valores de coluna, recomendará o melhor tipo de dados e sugerirá um tipo de uso para obter os dados. Você pode substituir estas sugestões selecionando valores de uma lista.  
+-   **Automático - detecção dos tipos de dados**: O assistente examinará a exclusividade e a distribuição de valores de coluna e, em seguida, recomendará o melhor tipo de dados e sugerirá um tipo de uso para os dados. Você pode substituir estas sugestões selecionando valores de uma lista.  
   
--   **Sugestões para variáveis**: você pode clicar em uma caixa de diálogo e iniciar um analisador que calcula as correlações nas colunas incluídas no modelo e determina se alguma coluna é uma previsão provável do atributo de resultado, considerando a configuração do modelo até então. Você pode substituir estas sugestões digitando valores diferentes.  
+-   **Sugestões para variáveis**: Você pode clicar em uma caixa de diálogo e iniciar um analisador que calcula as correlações nas colunas incluídas no modelo e determina se alguma coluna é uma previsão provável do atributo de resultado, considerando a configuração do modelo até então. Você pode substituir estas sugestões digitando valores diferentes.  
   
--   **Seleção de recursos**: a maioria dos algoritmos detectará automaticamente as colunas que são boas previsões e as usará preferencialmente. Nas colunas que contêm muitos valores, a *seleção de recursos* será aplicada para reduzir a cardinalidade dos dados e melhorar as chances de localizar um padrão significativo. Você pode afetar o comportamento da seleção de recursos usando parâmetros modelo.  
+-   **Seleção de recursos**: A maioria dos algoritmos detectará automaticamente as colunas que são boas previsões e as usará preferencialmente. Nas colunas que contêm muitos valores, a *seleção de recursos* será aplicada para reduzir a cardinalidade dos dados e melhorar as chances de localizar um padrão significativo. Você pode afetar o comportamento da seleção de recursos usando parâmetros modelo.  
   
--   **Divisão automática do cubo**: se seu modelo de mineração for baseado em uma fonte de dados OLAP, a capacidade de segmentar o modelo usando atributos de cubo será fornecida automaticamente. Isto é útil para criar modelos com base em subconjuntos de dados de cubo.  
+-   **Divisão automática do cubo**: Se seu modelo de mineração for baseado em uma fonte de dados OLAP, a capacidade de segmentar o modelo usando atributos de cubo é fornecida automaticamente. Isto é útil para criar modelos com base em subconjuntos de dados de cubo.  
   
 ### <a name="completing-the-wizard"></a>Concluindo o assistente  
  A última etapa no assistente é nomear a estrutura de mineração e o modelo de mineração associado. Dependendo do tipo de modelo que você criou, também poderá ter as opções importantes a seguir:  
@@ -105,15 +105,15 @@ ms.locfileid: "48223836"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Para saber mais sobre as decisões que você precisa tomar ao criar um modelo de mineração de dados, consulte os links a seguir:  
   
- [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)  
+ [Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md)  
   
- [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)  
+ [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)  
   
- [Seleção de recursos &#40;mineração de dados&#41;](feature-selection-data-mining.md)  
+ [Seleção de recursos &#40;Mineração de dados&#41;](feature-selection-data-mining.md)  
   
- [Valores ausentes &#40;Analysis Services - mineração de dados&#41;](missing-values-analysis-services-data-mining.md)  
+ [Valores ausentes &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md)  
   
  [Detalhamento em modelos de mineração](drillthrough-on-mining-models.md)  
   

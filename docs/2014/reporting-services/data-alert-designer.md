@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518009"
 ---
 # <a name="data-alert-designer"></a>Editar um Alerta de Dados no Designer de Alertas
   Você cria e edita definições de alerta de dados no Designer de Alertas de Dados. Uma definição de alerta é uma coleção de metadados, incluindo os dados de relatório nos quais você está interessado, as regras que os dados de relatório devem atender para criar instâncias de alerta de dados e enviar mensagens de alerta de dados, os destinatários da mensagem de alerta, e assim sucessivamente.  
@@ -76,9 +76,9 @@ ms.locfileid: "49120113"
 ### <a name="rules-and-clauses"></a>Regras e cláusulas  
  O escopo das alterações de dados e nas regras de alerta definem as alterações de dados que acionam o alerta. Escopo das alterações de dados:  
   
--   **Todos os dados têm**— pelo menos um valor atende às regras especificadas pela condição.  
+-   **Todos os dados têm**– pelo menos um valor atende às regras especificadas pela condição.  
   
--   **Nenhum dado tem**— valores que atendem às regras especificadas pela condição.  
+-   **Nenhum dado tem**– nenhum valor nos dados atende às regras especificadas pela condição.  
   
  Uma regra contém zero, uma ou várias cláusulas. Várias regras são combinadas pelo operador lógico AND. Uma regra poderá incluir várias cláusulas combinadas pelo operador OR se a coluna tiver o tipo de dados de cadeia de caracteres. O conteúdo a seguir mostra as regras básicas que usam somente uma cláusula, várias regras combinadas que usam o operador AND, várias regras com uma ou mais cláusulas OR.  
   
@@ -147,13 +147,13 @@ ms.locfileid: "49120113"
 ### <a name="schedule-settings"></a>Configurações da agenda  
  A agenda definida para o alerta de dados define o padrão de recorrência para enviar a mensagem de alerta de dados, e quando iniciar e parar de enviar as mensagens de alerta. Os padrões são: uma vez, por minuto, diariamente e semanalmente. Embora um alerta tenha apenas uma agenda, é possível criar padrões complexos de recorrência que atendam à maioria das necessidades de negócios com o uso desses intervalos. Os seguintes são exemplos de padrões de recorrência comuns para uso em agendas:  
   
--   **Diariamente a cada 10 dias** — envia alertas uma vez por dia, a cada 10 dias.  
+-   **Diariamente a cada 10 dias** – envia alertas uma vez por dia, a cada 10 dias.  
   
--   **Semanalmente a cada 2 semanas na segunda-feira** — envia alertas a cada duas semanas apenas nas segundas-feiras.  
+-   **Semanalmente a cada 2 semanas na segunda-feira** – envia alertas a cada duas semanas apenas nas segundas-feiras.  
   
--   **Por hora a cada 12 horas** — envia alertas a cada 12 horas.  
+-   **Por hora a cada 12 horas** – envia alertas a cada 12 horas.  
   
--   **Por minuto a cada 30 minutos** — envia alertas a cada 30 minutos.  
+-   **Por minuto a cada 30 minutos** – envia alertas a cada 30 minutos.  
   
  O padrão de recorrência especifica quando o alerta é enviado. Se as regras forem atendidas durante o intervalo especificado pelo padrão, o alerta só será enviado após o fim do intervalo.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "49120113"
  Para obter mais informações sobre como a mensagem de email é gerada, consulte [Alertas de dados do Reporting Services](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Criar uma definição de alerta de dados  
- Se você tiver recebido as permissões Exibir Itens e Criar Alertas do SharePoint, poderá criar uma definição de alerta de dados para qualquer relatório que você tenha permissão para exibir, contanto que o relatório use credenciais armazenadas ou nenhuma credencial. Você executa o relatório em uma biblioteca do SharePoint. Os dados disponíveis para uso no Designer de Alertas de Dados são provenientes do relatório. Se o relatório for parametrizado, você talvez precise executar o relatório usando os valores de parâmetros diferentes para garantir que os dados que você está interessado em aparece no relatório. Após abrir o relatório, clique na opção **Novo Alerta de Dados** no menu **Ações** , na barra de ferramentas de relatório, para abrir o Designer de Alertas de Dados. A imagem a seguir mostra como abrir o Designer de Alertas de Dados.  
+ Se você tiver recebido as permissões Exibir Itens e Criar Alertas do SharePoint, poderá criar uma definição de alerta de dados para qualquer relatório que você tenha permissão para exibir, contanto que o relatório use credenciais armazenadas ou nenhuma credencial. Você executa o relatório em uma biblioteca do SharePoint. Os dados disponíveis para uso no Designer de Alertas de Dados são provenientes do relatório. Se o relatório estiver parametrizado, poderá ser necessário executar o relatório com valores de parâmetros diferentes para garantir que os dados nos quais você está interessado apareçam no relatório. Após abrir o relatório, clique na opção **Novo Alerta de Dados** no menu **Ações** , na barra de ferramentas de relatório, para abrir o Designer de Alertas de Dados. A imagem a seguir mostra como abrir o Designer de Alertas de Dados.  
   
  ![Abrir o Designer de Alertas por meio da biblioteca do SharePoint](media/rs-openalertdesigneriw.gif "Abrir o Designer de Alertas por meio da biblioteca do SharePoint")  
   

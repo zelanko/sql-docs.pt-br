@@ -10,12 +10,12 @@ ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9f53d3878ec6f5eb9c0996d7162fed792bf4930
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9c0913ab07b006b845af081be0722da89f2ecd23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515808"
 ---
 # <a name="end-the-domain-management-activity"></a>Terminar a atividade Gerenciamento de Domínio
   Este tópico descreve como concluir, fechar ou cancelar a atividade de gerenciamento de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O gerenciamento de domínio não é executado por um assistente, portanto, os controles descritos abaixo podem ser usados de qualquer uma das páginas da atividade de gerenciamento de domínio.  
@@ -24,11 +24,11 @@ ms.locfileid: "51033363"
  **Concluir**  
  Clique para concluir o gerenciamento de domínio. Será exibido um pop-up que permite que você faça o seguinte:  
   
--   **Sim – Publique a base de dados de conhecimento e saia**: A base de conhecimento será publicada para uso do usuário atual ou de outros usuários. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à tela Abrir Base de Dados de Conhecimento.  
+-   **Sim – publique a base de dados de conhecimento e saia**: A base de Conhecimento será publicada para o usuário atual ou outras pessoas para usar. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à tela Abrir Base de Dados de Conhecimento.  
   
--   **Não – Salve o trabalho na base de dados de conhecimento e saia**: Seu trabalho será salvo, a base de conhecimento permanecerá bloqueada e o estado da base de conhecimento será definido como Em serviço. As atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page.  
+-   **Não – salve o trabalho na base de conhecimento e sair**: Seu trabalho será salvo, a base de Conhecimento permanecerá bloqueada e o estado da base de dados de Conhecimento será definido no trabalho. As atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page.  
   
--   **Cancelar – Mantenha-se na tela atual**: O pop-up será fechado e você será retornado para a tela Gerenciamento de Domínio.  
+-   **Cancelar – mantenha-se na tela atual**: O pop-up será fechado e você será retornado para a tela de gerenciamento de domínio.  
   
  **Cancelar**  
  Clique para encerrar a atividade de Gerenciamento de Domínio, o que resultará na perda do trabalho, e retorne à página inicial do DQS.  

@@ -14,12 +14,12 @@ ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17ea214c6e9dacb8517c42e7cb62141b92ef1ccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3586379cbd22dee4e288a032a9dd850355b2b674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126686"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543549"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (PowerPivot para SharePoint)
   Uma *biblioteca de feed de dados* é uma biblioteca do SharePoint com finalidade especial que permite registrar e compartilhar documentos do serviço de dados Atom (.atomsvc). Esses documentos fornecem feeds de dados XML a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outros aplicativos cliente que oferecem suporte ao formato de feed de dados Atom. Uma biblioteca de feeds de dados é diferente de outras bibliotecas do SharePoint porque oferece a capacidade de:  
@@ -28,7 +28,7 @@ ms.locfileid: "48126686"
   
 -   Compartilhar e gerenciar documentos do serviço de dados em um local central.  
   
--   Identificar visualmente documentos do serviço de dados por um ícone, para que você possa distinguir facilmente documentos do serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Identificar visualmente documentos do serviço de dados por um ícone, de forma que você possa distinguir facilmente documentos do serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Uma biblioteca de feeds de dados sempre contém arquivos de documento do serviço de dados (.atomsvc) e nunca o próprio feed de dados. Ao contrário de um feed de dados, que consiste em dados XML estáticos, o documento do serviço de dados especifica uma URL para um serviço ou aplicativo que gera um feed sob solicitação, fornecendo informações de conexão reutilizáveis para operações de importação repetíveis.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48126686"
   
 1.  Clique em **Ações do Site** no canto superior esquerdo da página.  
   
-2.  Clique em **Mais Opções**…  
+2.  Clique em **mais opções**...  
   
 3.  Em Bibliotecas, clique em **Biblioteca de Feeds de Dados**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48126686"
   
  As etapas a seguir devem ser repetidas para cada biblioteca na qual você deseja criar ou editar documentos de registro de feed de dados.  
   
-#### <a name="step-1-enable-content-type-management"></a>Etapa 1: Habilitar o gerenciamento do tipo de conteúdo  
+#### <a name="step-1-enable-content-type-management"></a>Etapa 1: Habilitar o gerenciamento de tipo de conteúdo  
   
 1.  Abra a biblioteca de documentos para a qual você deseja habilitar vários tipos de conteúdo.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48126686"
   
 7.  Clique em **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Etapa 2: Adicionar o tipo de conteúdo de documento de serviço de dados  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Etapa 2: Adicione o tipo de conteúdo do documento de serviço de dados  
   
 1.  Na seção Tipos de Conteúdo, clique em **Adicionar a partir de tipos de conteúdo de site existentes**. Se você não vir essa página, volte para o site, clique em **Biblioteca** em Ferramentas de Biblioteca e clique em **Definições da Biblioteca**.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
@@ -16,12 +15,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9eb39e06198881ac5c51a9fc78e623b010485a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785108"
 ---
 # <a name="delete-a-pull-subscription"></a>Excluir uma assinatura pull
   Este tópico descreve como excluir uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects).  
@@ -61,12 +60,12 @@ ms.locfileid: "48175306"
   
 4.  Na caixa de diálogo de confirmação, selecione se deseja se conectar ao Publicador para excluir as informações de assinatura. Se você desmarcar a caixa de seleção **Conectar-se ao Publicador** , será necessário se conectar ao Publicador posteriormente para excluir as informações.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  As assinaturas pull podem ser excluídas programaticamente, por meio de procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura pull em uma publicação de instantâneo ou transacional  
   
-1.  No Assinante no banco de dados de assinatura, execute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication**, **@publisher**e **@publisher_db**.  
+1.  No Assinante no banco de dados de assinatura, execute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication**, o **@publisher**, e **@publisher_db**.  
   
 2.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** e **@subscriber**. Especifique um valor de **all** para **@article**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
@@ -98,15 +97,15 @@ ms.locfileid: "48175306"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> e defina <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>e as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> . Use a conexão de Assinante da etapa 1 para definir a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-3.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade é `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
+3.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade for `false`, as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>.  
   
 5.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> usando a conexão com o Publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-6.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar `false`, as propriedades especificadas na etapa 5 estão incorretas ou a publicação não existe no servidor.  
+6.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se esse método retornar `false`, as propriedades especificadas na etapa 5 estão incorretas ou a publicação não existe no servidor.  
   
-7.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A> . Especifique o nome do Assinante e o banco de dados de assinatura para o *subscriber* e parâmetros *subscriberDB* .  
+7.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A>. Especifique o nome do Assinante e o banco de dados de assinatura para o *subscriber* e parâmetros *subscriberDB* .  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Para excluir uma assinatura pull em uma publicação de mesclagem.  
   
@@ -114,15 +113,15 @@ ms.locfileid: "48175306"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> e defina <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>e as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> . Use a conexão da etapa 1 para definir a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-3.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade é `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
+3.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade for `false`, as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>.  
   
 5.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> usando a conexão com o Publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-6.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar `false`, as propriedades especificadas na etapa 5 estão incorretas ou a publicação não existe no servidor.  
+6.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se esse método retornar `false`, as propriedades especificadas na etapa 5 estão incorretas ou a publicação não existe no servidor.  
   
-7.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A> . Especifique o nome do Assinante e o banco de dados de assinatura para o *subscriber* e parâmetros *subscriberDB* .  
+7.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A>. Especifique o nome do Assinante e o banco de dados de assinatura para o *subscriber* e parâmetros *subscriberDB* .  
   
 ###  <a name="PShellExample"></a> Exemplos (RMO)  
  Esse exemplo exclui uma assinatura pull a uma publicação transacional e remove o registro de assinatura no Publicador.  

@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145591"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391859"
 ---
 # <a name="impersonation-ssas-tabular"></a>Representação (SSAS tabular)
   Este tópico fornece a autores de modelos tabulares uma compreensão de como as credenciais de logon são usados pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (atualizar) dados.  
@@ -38,7 +38,7 @@ ms.locfileid: "50145591"
   
  As credenciais usadas para representação são diferentes das credenciais do usuário que está conectado no momento. As credenciais do usuário conectado são usadas para operações no cliente ao criar um modelo.  
   
- É importante compreender como as credenciais de representação são especificadas e protegidas e também a diferença entre contextos nos quais as credenciais do usuário conectado no momento e outras credenciais são usadas.  
+ É importante entender como as credenciais de representação são especificadas e protegidas, bem como a diferença entre contextos nos quais as credenciais do usuário conectado ambos os atual e quando outras credenciais são usadas.  
   
  **Compreendendo as credenciais do lado do servidor**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "50145591"
   
  De maneira semelhante, para modelos existentes que já foram criados, você pode usar a caixa de diálogo **Editar Propriedades da Tabela** para visualizar e filtrar dados importados em uma tabela. Para visualizar e filtrar recursos aqui, use a mesma funcionalidade do recurso **Visualizar e Filtrar** na página **Selecionar Tabelas e Exibições** do Assistente de Importação de Tabela.  
   
- O recurso **Visualizar e Filtrar** e as caixas de diálogo **Propriedades da Tabela** e **Gerenciador de Partições** são uma operação do *cliente* ; isto é, o que é feito durante essa operação é diferente de como a fonte de dados é conectada e os dados são buscados da fonte de dados; uma operação do servidor. As credenciais usadas para visualizar e filtrar dados são as credenciais do usuário que está conectado no momento. As operações do cliente sempre usam as credenciais do Windows do usuário atual para conectar-se à fonte de dados.  
+ O recurso **Visualizar e Filtrar** e as caixas de diálogo **Propriedades da Tabela** e **Gerenciador de Partições** são uma operação do *cliente* ; isto é, o que é feito durante essa operação é diferente de como a fonte de dados é conectada e os dados são buscados da fonte de dados; uma operação do servidor. As credenciais usadas para visualizar e filtrar dados são as credenciais do usuário que está conectado no momento. Operações do cliente sempre usam as credenciais do Windows do usuário atual para se conectar à fonte de dados.  
   
  Essa separação de credenciais usadas durante operações do servidor e do cliente pode levar a uma incompatibilidade no que o usuário vê ao usar o recurso **Visualizar e Filtrar** ou a caixa de diálogo **Propriedades da Tabela** (operações do cliente) e os dados que serão buscados durante uma importação ou processamento (uma operações do servidor). Se as credenciais do usuário conectado no momento e as credenciais de representação especificadas forem diferentes, os dados vistos no recurso **Visualizar e Filtrar** ou na caixa de diálogo **Propriedades da Tabela** e os dados buscados durante uma importação ou processamento poderão ser diferentes dependendo das credenciais requeridas pela fonte de dados.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50145591"
 ##  <a name="bkmk_imp_info_options"></a> Opções  
  Ao configurar a representação, ou ao editar propriedades para uma conexão à fonte de dados existente no Analysis Services, você pode especificar um das opções a seguir:  
   
-|Opção|ImpersonationMode<sup>1</sup>|Description|  
+|Opção|ImpersonationMode<sup>1</sup>|Descrição|  
 |------------|-----------------------------------|-----------------|  
 |**Nome de usuário específicos do Windows e senha** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
 |**Conta de Serviço**|ImpersonateServiceAccount|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
@@ -13,12 +12,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136006"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788429"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Adicionar e remover Publicadores do Replication Monitor
   O servidor no qual você inicia o Replication Monitor será adicionado automaticamente ao monitor se for um Publicador. Publicadores adicionais podem ser adicionados na caixa de diálogo **Adicionar Publicador** . Depois de adicionar um Publicador, será exibido em um grupo no painel esquerdo do monitor. O grupo **Meus Publicadores** é incluído por padrão, mas você pode criar novos grupos para gerenciar uma ou mais topologias de replicação. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](start-the-replication-monitor.md) (Iniciar o Replication Monitor).  

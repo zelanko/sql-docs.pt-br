@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
@@ -18,19 +17,19 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9c9bd0573a3a6fa8211324066e86446b85ec0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 575bf85a81557e7a0a974dd1fc2210e58f34bde0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790528"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gerenciador de conexões de vários arquivos simples
   Um gerenciador de conexões de Vários Arquivos Simples permite que um pacote acesse dados em vários arquivos simples. Por exemplo, uma fonte de Arquivo Simples pode usar um gerenciador de conexões de Vários Arquivos Simples quando a tarefa Fluxo de Dados está dentro de um contêiner de loop, como o contêiner Loop For. Em cada loop do contêiner, a fonte de Arquivo Simples carrega dados do nome de arquivo seguinte fornecido pelo gerenciador de conexões de Vários Arquivos Simples.  
   
  Quando você adiciona um Gerenciador de conexão de vários arquivos simples a um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de vários arquivos simples no tempo de execução, define as propriedades no Gerenciador de conexão de vários arquivos simples, e Adiciona o Gerenciador de conexão de vários arquivos simples para o `Connections` coleção do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `MULTIFLATFILE`.  
+ A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `MULTIFLATFILE`.  
   
  Você pode configurar o gerenciador de conexões de Vários Arquivos Simples da seguinte maneira:  
   
@@ -63,19 +62,19 @@ ms.locfileid: "48185656"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de colunas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- Para obter informações sobre como configurar um Gerenciador de conexão programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Fonte de arquivo simples](../data-flow/flat-file-source.md)   
+ [Origem de Arquivo Simples](../data-flow/flat-file-source.md)   
  [Destino de arquivo simples](../data-flow/flat-file-destination.md)   
- [Serviços de integração &#40;SSIS&#41; conexões](integration-services-ssis-connections.md)  
+ [Conexões do SSIS &#40;Integration Services&#41;](integration-services-ssis-connections.md)  
   
   

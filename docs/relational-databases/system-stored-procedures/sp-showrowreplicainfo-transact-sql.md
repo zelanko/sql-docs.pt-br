@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_showrowreplicainfo_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fdf29f59931c919b69b7c0662b2586d8df5ccc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 874777b0bcb2665d01e627dff936b0114ec447d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791144"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810138"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultado para informações de linha  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão de linha.|  
 |**DB_NAME**|**sysname**|Nome do banco de dados que fez essa entrada.|  
@@ -68,7 +67,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultado para informações de coluna  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão da coluna.|  
 |**DB_NAME**|**sysname**|Nome do banco de dados que fez essa entrada.|  

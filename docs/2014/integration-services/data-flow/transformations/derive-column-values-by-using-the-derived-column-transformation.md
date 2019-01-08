@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [Integration Services]
@@ -16,17 +15,17 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d0a6a918c2b4a41272b4c09b87d64b925fbf028
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460291"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785148"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de coluna por meio da transformação Coluna Derivada
   Para adicionar e configurar uma transformação Coluna Derivada, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
   
- A transformação de Coluna Derivada usa expressões para atualizar os valores de colunas existentes ou adicionar valores a novas colunas. Ao optar por adicionar valores a novas colunas, a caixa de diálogo **Editor de Transformação Coluna Derivada** avalia a expressão e define apropriadamente os metadados das colunas. Por exemplo, se uma expressão concatena duas colunas—cada uma com o tipo de dados DT_WSTR e um comprimento de 50—com um espaço entre os dois valores de coluna, a nova coluna terá o tipo de dados DT_WSTR e um comprimento de 101. É possível atualizar o tipo de dados de colunas novas. O único requisito é que o tipo de dados seja compatível com os dados inseridos. Por exemplo, a caixa de diálogo **Editor de Transformação Coluna Derivada** gera um erro de validação ao atribuir um valor de dados a uma coluna com um tipo de dados Integer. Dependendo do tipo de dados selecionado, é possível especificar o comprimento, a precisão, a escala e a página de código da coluna.  
+ A transformação de Coluna Derivada usa expressões para atualizar os valores de colunas existentes ou adicionar valores a novas colunas. Ao optar por adicionar valores a novas colunas, a caixa de diálogo **Editor de Transformação Coluna Derivada** avalia a expressão e define apropriadamente os metadados das colunas. Por exemplo, se uma expressão concatena duas colunas – cada uma com o tipo de dados DT_WSTR e um comprimento de 50 – com um espaço entre os dois valores de coluna, a nova coluna terá o tipo de dados DT_WSTR e um comprimento de 101. É possível atualizar o tipo de dados de colunas novas. O único requisito é que o tipo de dados seja compatível com os dados inseridos. Por exemplo, a caixa de diálogo **Editor de Transformação Coluna Derivada** gera um erro de validação ao atribuir um valor de dados a uma coluna com um tipo de dados Integer. Dependendo do tipo de dados selecionado, é possível especificar o comprimento, a precisão, a escala e a página de código da coluna.  
   
 ### <a name="to-derive-column-values"></a>Para derivar valores de coluna  
   

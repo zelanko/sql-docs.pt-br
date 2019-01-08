@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026153"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533810"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026153"
  Todas as opções estão disponíveis na caixa de diálogo, mas nem todas as opções são apropriadas para todos os cenários. Use as informações a seguir para determinar a melhor opção para seu cenário.  
   
  **Usar nome de usuário e senha específicos**  
- Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato:  *\<nome de domínio >***\\***\<usuário nome da conta >*.  
+ Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato: *\<Nome de domínio >***\\***\<nome da conta de usuário >*.  
   
  Escolha esta opção para usar uma identidade de usuário dedicada e com privilégios mínimos do Windows que você criou especificamente para finalidade de acesso a dados. Por exemplo, se você periodicamente criar uma conta de finalidade geral para recuperar dados usados em relatórios, poderá especificar essa conta aqui.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026153"
  Para instruções OPENQUERY do DMX, cubos locais e modelos de mineração, as credenciais do usuário atual são usadas mesmo se você escolher uma opção da conta de serviço. A opção da conta de serviço não tem suporte para associações fora de linha.  
   
 > [!NOTE]  
->  Poderão ocorrer erros durante o processamento de um modelo de mineração de dados em um cubo se a conta de serviço não tiver permissões de administrador na instância do Analysis Services. Para obter mais informações, consulte [Mining Structure: Issue while Processing when DataSource is OLAP Cube](http://go.microsoft.com/fwlink/?LinkId=251610)(Estrutura de mineração: problema durante o processamento quando DataSource é um cubo OLAP).  
+>  Poderão ocorrer erros durante o processamento de um modelo de mineração de dados em um cubo se a conta de serviço não tiver permissões de administrador na instância do Analysis Services. Para obter mais informações, consulte [estrutura de mineração: Problema durante o processamento quando DataSource é um cubo OLAP](http://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Usar as credenciais do usuário atual**  
  Selecione esta opção para fazer com que o objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use as credenciais de segurança do usuário atual para associações fora de linha, OPENQUERY DMX, cubos locais e modelos de mineração.  
@@ -90,13 +90,13 @@ ms.locfileid: "34026153"
   
  Para obter mais informações sobre as configurações padrão no nível do banco de dados, consulte [Definir propriedades do Banco de Dados Multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md).  
   
- **Bancos de dados – opção Padrão**  
+ **Bancos de dados – opção padrão**  
 
  Para bancos de dados multidimensionais, **Padrão** significa o uso da conta de serviço e do usuário atual para operações de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Definir propriedades da fonte de dados & #40; SSAS Multidimensional & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

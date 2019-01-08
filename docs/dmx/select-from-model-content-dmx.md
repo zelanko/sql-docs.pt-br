@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512250"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTEÚDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,15 +46,15 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *Expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
-## <a name="remarks"></a>Remarks  
- O **SELECT FROM**  *\<modelo > * * *. CONTEÚDO** instrução retorna o conteúdo é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar os valores na coluna NODE_RULE do modelo.  
+## <a name="remarks"></a>Comentários  
+ O **SELECT FROM**  _\<modelo >_**. CONTEÚDO** instrução retorna o conteúdo é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar os valores na coluna NODE_RULE do modelo.  
   
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
   
 > [!NOTE]  
 >  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do modelo de mineração conteúdo para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo para cada tipo de modelo do modelo de mineração, consulte [conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-|Coluna de conjunto de linhas DE CONTEÚDO|Description|  
+|Coluna de conjunto de linhas DE CONTEÚDO|Descrição|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Nome de um catálogo. NULL se o provedor não oferecer suporte a catálogos.|  
 |MODEL_SCHEMA|Nome de um esquema não qualificado. NULL se o provedor não oferecer suporte a esquemas.|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Resultados esperados:  
   
- Como o modelo é um modelo de árvores de decisão, os descendentes do nó pai do modelo incluem um único nó de estatísticas marginais, um nó que representa o atributo previsível e vários nós que contêm atributos e valores de entrada. Para obter mais informações, consulte [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Como o modelo é um modelo de árvores de decisão, os descendentes do nó pai do modelo incluem um único nó de estatísticas marginais, um nó que representa o atributo previsível e vários nós que contêm atributos e valores de entrada. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="using-the-flattened-keyword"></a>Usando a palavra-chave FLATTENED  
  O conteúdo de modelo de mineração frequentemente contém informações interessantes sobre o modelo nas colunas da tabela aninhada. A palavra-chave FLATTENED lhe permite recuperar os dados de uma coluna de tabela aninhada sem usar um fornecedor com suporte para conjuntos de linhas hierárquicos.  
@@ -137,7 +137,7 @@ WHERE NODE_TYPE = 26
   
  Resultados do exemplo:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Ausente|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  

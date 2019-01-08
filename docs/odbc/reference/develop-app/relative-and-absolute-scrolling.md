@@ -16,15 +16,15 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6b77f61c8eadd8ef58d9eb475aaeb3faf88c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661854"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510757"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Rolagem relativa e absoluta
-A maioria das opções de rolagem na **SQLFetchScroll** posicionar o cursor em relação à posição atual ou para uma posição absoluta. **SQLFetchScroll** dá suporte à busca o próximo, anterior, primeiros e últimos conjuntos de linhas, como bem como relativo de busca (buscar o conjunto de linhas *n* linhas desde o início do conjunto de linhas atual) e da busca absoluta (busca a partir do conjunto de linhas na linha *n*). Se *n* é negativo em uma busca absoluta, as linhas são contadas do final do conjunto de resultados. Assim, uma busca absoluta da linha -1 significa buscar o conjunto de linhas que começa com a última linha no conjunto de resultados.  
+A maioria das opções de rolagem na **SQLFetchScroll** posicionar o cursor em relação à posição atual ou para uma posição absoluta. **SQLFetchScroll** dá suporte à busca o próximo, anterior, primeiros e últimos conjuntos de linhas, como bem como relativo de busca (buscar o conjunto de linhas *n* linhas desde o início do conjunto de linhas atual) e da busca absoluta (busca a partir do conjunto de linhas na linha *n*). Se *n* é negativo em uma busca absoluta, as linhas são contadas do final do conjunto de resultados. Portanto, uma busca absoluta da linha -1 significa buscar o conjunto de linhas que começa com a última linha no conjunto de resultados.  
   
  Cursores dinâmicos detectam linhas inseridos e excluídos do conjunto de resultados, portanto, não há nenhuma maneira fácil para cursores dinâmicos recuperar a linha em um determinado número diferente de leitura desde o início do conjunto de resultados, que pode ser lenta. Além disso, busca absoluta não é muito útil para cursores dinâmicos como números de linha alteram como as linhas são inseridas e excluídas; Portanto, sucessivamente, buscar o mesmo número de linha pode gerar linhas diferentes.  
   

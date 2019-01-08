@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
@@ -17,12 +16,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d0446aaf5508ad0d2655245f441d4da81a6c79c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753378"
 ---
 # <a name="sequence-numbers"></a>Números de sequência
   Uma sequência é um objeto associado a um esquema definido pelo usuário que gera uma sequência de valores numéricos de acordo com a especificação com a qual a sequência foi criada. A sequência de valores numéricos é gerada em ordem crescente ou decrescente em um intervalo definido e pode seguir um ciclo (repetir-se) conforme solicitado. As sequências, ao contrário das colunas de identidade, não são associadas a tabelas. Um aplicativo se refere a um objeto de sequência para receber seu próximo valor. A relação entre sequências e tabelas é controlada pelo aplicativo. Os aplicativos de usuário podem referenciar um objeto de sequência e coordenar as chaves de valores em várias linhas e tabelas.  
@@ -127,7 +126,7 @@ GO
   
  `3        Brake   1`  
   
-### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. Chamando NEXT VALUE FOR antes de inserir uma linha  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>b. Chamando NEXT VALUE FOR antes de inserir uma linha  
  Usando a tabela `Orders` criada no exemplo A, o exemplo a seguir declara uma variável denominada `@nextID`e, em seguida, usa a função NEXT VALUE FOR para definir a variável como o próximo número de sequência disponível. O aplicativo deve fazer algum processamento do pedido, como fornecer ao cliente o número `OrderID` do seu pedido em potencial, e depois validar a ordem. Independentemente de quanto tempo este processamento possa levar, ou de quantas outras ordens sejam adicionadas durante o processo, o número original é preservado para ser usado por esta conexão. Por fim, a instrução `INSERT` adiciona o pedido à tabela `Orders` .  
   
 ```  

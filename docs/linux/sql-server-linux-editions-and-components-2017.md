@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533547"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos com suporte do SQL Server 2017 no Linux
 
@@ -58,7 +58,7 @@ Para obter uma lista dos recursos do SQL Server não está disponíveis no Linux
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edição|Definição|  
 |---------------------------------------|----------------|  
 |Enterprise|A oferta premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition fornece recursos de datacenter abrangentes de alta tecnologia com desempenho incrivelmente rápido habilitando altos níveis de serviço para cargas de trabalho de missão crítica.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition oferece o gerenciamento de dados básicos para departamentos e pequenas empresas executarem seus aplicativos e dá suporte a ferramentas de desenvolvimento comuns para o local e na nuvem — permitindo o gerenciamento de banco de dados eficiente com mínimos recursos de TI.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition oferece o gerenciamento de dados básicos para departamentos e pequenas empresas executarem seus aplicativos e dá suporte a ferramentas de desenvolvimento comuns no local e na nuvem – permitindo o gerenciamento de banco de dados eficiente com mínimos recursos de TI.|  
 |Web|A edição[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web é uma opção de baixo custo total de propriedade para hospedagem de sites e VAPs da Web que fornece recursos de escalabilidade, economia e capacidade de gerenciamento para propriedades da Web de pequeno a grande porte.|  
 |Desenvolvedor|A edição[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permite que os desenvolvedores criem qualquer tipo de aplicativo com base no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ele inclui todas as funcionalidades da edição Enterprise, mas é licenciado para ser usado como um sistema de teste e desenvolvimento, e não como um servidor de produção. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer é uma opção ideal para pessoas que criam e testam aplicativos.|  
 |Express edition|A edição Express é o banco de dados gratuito de nível de entrada, ideal para conhecer e criar aplicativos de área de trabalho e aplicativos controlados por dados de pequenos servidores. É a melhor escolha para fornecedores de software independente, desenvolvedores e interessados que criam aplicativos cliente. Se precisar de recursos mais avançados de banco de dados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express pode ser perfeitamente atualizado para versões mais sofisticadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
@@ -71,7 +71,7 @@ Você pode instalar apenas os componentes cliente do [!INCLUDE[ssNoVersion](../i
 
 SQL Server 2017 no Linux dá suporte ao mecanismo de banco de dados do SQL Server. A tabela a seguir descreve os recursos no mecanismo de banco de dados.   
   
-|Componentes de servidor|Description|  
+|Componentes de servidor|Descrição|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)], o serviço principal para armazenamento, processamento e segurança de dados, replicação, pesquisa de texto completo, ferramentas para gerenciar relacionais e dados XML e na integração da análise de banco de dados.|  
 
@@ -97,23 +97,23 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
   
 |Recurso|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Envio de logs|Sim|Sim|Sim|não|  
-|Compactação de backup|Sim|Sim|não|não| 
-|Instantâneo do banco de dados|Sim|não|não|não|
-|Instância de cluster de failover do AlwaysOn<sup>1</sup>|Sim|Sim|não|não| 
-|Grupos de disponibilidade Always On<sup>2</sup>|Sim|não|não|não|
-|Grupos de disponibilidade básicos <sup>3</sup>|não|Sim|não|não|
-|Configuração de grupos de disponibilidade de confirmação de réplica mínima|Sim|Sim|não|não|
-|Grupo de disponibilidade sem cluster|Sim|Sim|não|não|
-|Restauração de arquivo e página online|Sim|não|não|não|
-|Indexação online|Sim|não|não|não|
-|Recompilações de índice online retomáveis|Sim|não|não|não|
-|Alteração de esquema online|Sim|não|não|não|
-|Recuperação rápida|Sim|não|não|não|
-|Backups espelhados|Sim|não|não|não|
-|Adição de memória a quente e CPU|Sim|não|não|não|
-|Backup criptografado|Sim|Sim|não|não|
-|Backup híbrido para o Microsoft Azure (backup para URL)|Sim|Sim|não|não|
+|Envio de logs|Sim|Sim|Sim|Não|  
+|Compactação de backup|Sim|Sim|Não|Não| 
+|Instantâneo do banco de dados|Sim|Não|Não|Não|
+|Instância de cluster de failover do AlwaysOn<sup>1</sup>|Sim|Sim|Não|Não| 
+|Grupos de disponibilidade Always On<sup>2</sup>|Sim|Não|Não|Não|
+|Grupos de disponibilidade básicos <sup>3</sup>|Não|Sim|Não|Não|
+|Configuração de grupos de disponibilidade de confirmação de réplica mínima|Sim|Sim|Não|Não|
+|Grupo de disponibilidade sem cluster|Sim|Sim|Não|Não|
+|Restauração de arquivo e página online|Sim|Não|Não|Não|
+|Indexação online|Sim|Não|Não|Não|
+|Recompilações de índice online retomáveis|Sim|Não|Não|Não|
+|Alteração de esquema online|Sim|Não|Não|Não|
+|Recuperação rápida|Sim|Não|Não|Não|
+|Backups espelhados|Sim|Não|Não|Não|
+|Adição de memória a quente e CPU|Sim|Não|Não|Não|
+|Backup criptografado|Sim|Sim|Não|Não|
+|Backup híbrido para o Microsoft Azure (backup para URL)|Sim|Sim|Não|Não|
   
 <sup>1</sup> na Enterprise edition, o número de nós é o máximo do sistema operacional. Na Standard Edition, há suporte para dois nós. 
 
@@ -127,19 +127,19 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Sim|Sim|Sim|Sim|  
 |Binários de objeto grandes em índices columnstore clusterizados|Sim|Sim|Sim|Sim|  
-|Recompilação de índice columnstore não clusterizado online|Sim|não|não|não|
+|Recompilação de índice columnstore não clusterizado online|Sim|Não|Não|Não|
 |OLTP na memória <sup>1</sup>|Sim|Sim|Sim|Sim|
 |Memória principal persistente|Sim|Sim|Sim|Sim|
 |Particionamento de tabela e índice|Sim|Sim|Sim|Sim|  
 |Compactação de dados|Sim|Sim|Sim|Sim|
-|Administrador de Recursos|Sim|não|não|não|  
-|Paralelismo de tabela particionada|Sim|não|não|não|
-|Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|não|não|não|
-|Administração do recurso de E/S|Sim|não|não|não|  
+|Administrador de Recursos|Sim|Não|Não|Não|  
+|Paralelismo de tabela particionada|Sim|Não|Não|Não|
+|Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|Não|Não|Não|
+|Administração do recurso de E/S|Sim|Não|Não|Não|  
 |Durabilidade atrasada|Sim|Sim|Sim|Sim|
-|Ajuste Automático|Sim|não|não|não|
-|Junções Adaptáveis de Modo de Lote|Sim|não|não|não|
-|Comentários de Concessão de Memória do Modo de Lote|Sim|não|não|não|
+|Ajuste Automático|Sim|Não|Não|Não|
+|Junções Adaptáveis de Modo de Lote|Sim|Não|Não|Não|
+|Comentários de Concessão de Memória do Modo de Lote|Sim|Não|Não|Não|
 |Execução Intercalada para Funções com Valor de Tabela de Várias Instruções|Sim|Sim|Sim|Sim|
 |Aprimoramentos de inserção em massa|Sim|Sim|Sim|Sim|
 
@@ -155,10 +155,10 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Mascaramento de dados dinâmicos|Sim|Sim|Sim|Sim|   
 |Auditoria básica|Sim|Sim|Sim|Sim| 
 |Auditoria refinada|Sim|Sim|Sim|Sim| 
-|Criptografia transparente do banco de dados|Sim|não|não|não|   
+|Criptografia transparente do banco de dados|Sim|Não|Não|Não|   
 |Funções definidas pelo usuário|Sim|Sim|Sim|Sim| 
 |Bancos de dados independentes|Sim|Sim|Sim|Sim| 
-|Criptografia para backups|Sim|Sim|não|não|  
+|Criptografia para backups|Sim|Sim|Não|Não|  
 
 ##  <a name="RDBMSM"></a> Gerenciamento RDBMS  
   
@@ -167,17 +167,17 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Conexão dedicada de administrador|Sim|Sim|Sim|Sim, com o sinalizador de rastreamento|Sim, com o sinalizador de rastreamento|   
 |Suporte de scripts PowerShell|Sim|Sim|Sim|Sim| 
 |Suporte para operações de componente do aplicativo da camada de dados – extrair, implantar, atualizar, excluir|Sim|Sim|Sim|Sim| 
-|Automação de política (verificação de agenda e alterações)|Sim|Sim|Sim|não|não|   
-|Coletor de dados de desempenho|Sim|Sim|Sim|não|não| 
-|Relatórios de desempenho padrão|Sim|Sim|Sim|não|não| 
-|Guias de plano e planejar congelamento para guias de plano|Sim|Sim|Sim|não|não|   
+|Automação de política (verificação de agenda e alterações)|Sim|Sim|Sim|Não|Não|   
+|Coletor de dados de desempenho|Sim|Sim|Sim|Não|Não| 
+|Relatórios de desempenho padrão|Sim|Sim|Sim|Não|Não| 
+|Guias de plano e planejar congelamento para guias de plano|Sim|Sim|Sim|Não|Não|   
 |Direcione a consulta de exibições indexadas (usando a dica de NOEXPAND)|Sim|Sim|Sim|Sim| 
-|Manutenção automática de exibições indexadas|Sim|Sim|Sim|não|não| 
-|Exibições particionadas distribuídas|Sim|não|não|não| 
-|Operações indexadas paralelas|Sim|não|não|não|  
-|Uso automático da exibição indexada através do otimizador de consulta|Sim|não|não|não| 
-|Verificação de consistência paralela|Sim|não|não|não| 
-|Ponto de controle do Utilitário do SQL Server|Sim|não|não|não|    
+|Manutenção automática de exibições indexadas|Sim|Sim|Sim|Não|Não| 
+|Exibições particionadas distribuídas|Sim|Não|Não|Não| 
+|Operações indexadas paralelas|Sim|Não|Não|Não|  
+|Uso automático da exibição indexada através do otimizador de consulta|Sim|Não|Não|Não| 
+|Verificação de consistência paralela|Sim|Não|Não|Não| 
+|Ponto de controle do Utilitário do SQL Server|Sim|Não|Não|Não|    
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -191,10 +191,10 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Funcionalidades MERGE e UPSERT|Sim|Sim|Sim|Sim|   
 |Tipos de dados de Data e Hora|Sim|Sim|Sim|Sim|  
 |Suporte à internacionalização|Sim|Sim|Sim|Sim| 
-|Pesquisa semântica e de texto completo|Sim|Sim|Sim|Sim|não| 
-|Especificação de idioma em consulta|Sim|Sim|Sim|Sim|não|   
+|Pesquisa semântica e de texto completo|Sim|Sim|Sim|Sim|Não| 
+|Especificação de idioma em consulta|Sim|Sim|Sim|Sim|Não|   
 |Service Broker (mensagens)|Sim|Sim|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|   
-|pontos de extremidade Transact-SQL|Sim|Sim|Sim|não|não| 
+|pontos de extremidade Transact-SQL|Sim|Sim|Sim|Não|Não| 
 |Gráfico|Sim|Sim|Sim|Sim|  
 
 

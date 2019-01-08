@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,12 +14,12 @@ ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e423643374875063e348843d680b3219152af54a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acb2c3a5163bdb5e69d67b0f8c27d2c77d21a7be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789468"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Criando, alterando e removendo tabelas
   No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), as tabelas são representadas pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Table>. Na hierarquia de objetos do SMO, o objeto <xref:Microsoft.SqlServer.Management.Smo.Table> está abaixo do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  

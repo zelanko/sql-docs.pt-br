@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d105d9a9d446d1868fc6999953cbbfdc90c90715
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bd5ddc549be0750d2476673511bab4de9cdf411
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512758"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabalhar com diagramas em um Designer de exibição da fonte de dados (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34023613"
   
  Para criar um novo diagrama, clique com o botão direito do mouse em qualquer lugar do painel **Organizador de Diagramas** , clique em **Novo Diagrama**.  
   
- Quando você define inicialmente uma exibição da fonte de dados (DSV) em um projeto do Analysis Services, todas as tabelas e exibições adicionadas à exibição de fonte de dados são adicionadas para o \<todas as tabelas > diagrama. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, como adicionar tabelas, exibições e consultas nomeadas para o \<todas as tabelas > diagrama, o número absoluto de objetos nesse diagrama dificulta a visualização das relações, particularmente como várias tabelas de fatos são adicionadas ao diagrama e de dimensão tabelas se relacionam com várias tabelas de fatos.  
+ Quando você define inicialmente uma exibição da fonte de dados (DSV) em um projeto do Analysis Services, todas as tabelas e exibições adicionadas a exibição da fonte de dados são adicionadas para o \<todas as tabelas > diagrama. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, que você adicione tabelas, exibições e consultas nomeadas para o \<todas as tabelas > diagrama, o número absoluto de objetos nesse diagrama dificulta a visualizar relações especialmente no que são adicionadas ao diagrama de várias tabelas de fatos e dimensão tabelas estão relacionadas a várias tabelas de fatos.  
   
  Para reduzir a poluição visual quando você quer apenas exibir um subconjunto das tabelas da exibição da fonte de dados, é possível definir subdiagramas (chamados simplesmente de diagramas) formados por subconjuntos das tabelas, exibições e consultas nomeadas da exibição da fonte de dados. Você pode usar diagramas para agrupar itens da exibição da fonte de dados de acordo com as necessidades dos negócios ou da solução.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "34023613"
 ##  <a name="bkmk_edit"></a> Editar ou excluir um diagrama  
  Ao trabalhar com um diagrama, preste atenção aos comandos usados por adicionar e remover objetos. Por exemplo, excluir um objeto de um diagrama o excluirá da DSV. Se você apenas desejar excluí-lo do diagrama, use **Ocultar Tabela** em vez disso.  
   
- ![Captura de tela de espaço de trabalho de diagrama, menu de atalho](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "captura de tela de espaço de trabalho de diagrama, menu de atalho")  
+ ![Captura de tela do espaço de trabalho de diagrama, menu de atalho](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "captura de tela do espaço de trabalho de diagrama, menu de atalho")  
   
- Embora você possa ocultar objetos individualmente, trazê-los de volta usando o comando Mostrar Tabelas Relacionadas retorna todos os objetos relacionados ao diagrama. Para controlar quais objetos são retornados para o espaço de trabalho, arraste-os do painel de Tabelas em vez disso.  
+ Embora você possa ocultar objetos individualmente, trazê-los de volta usando o comando Mostrar Tabelas Relacionadas retorna todos os objetos relacionados ao diagrama. Para controlar quais objetos são retornados para o workspace, arraste-os do painel de Tabelas em vez disso.  
   
 ##  <a name="bkmk_findtables"></a> Localizar tabelas em um diagrama  
  Se o esquema for grande, poderá ser difícil rolar uma determinada tabela no painel **Diagrama** . No entanto, as ferramentas a seguir facilitam a localização de uma tabela em um diagrama.  
@@ -61,9 +61,9 @@ ms.locfileid: "34023613"
   
      Para centralizar a exibição em uma tabela que já está incluída no diagrama, selecione a tabela no painel **Tabelas** .  
   
--   Localizador de tabelas do painel **Diagrama** – o localizador de tabela é um ícone de 4 setas na intersecção das barras de rolagem vertical e horizontal no canto direito inferior do painel **Diagrama** . Ele abre uma representação em miniatura do diagrama atual no painel Diagrama. Você pode usar essa miniatura para alterar a exibição do painel Diagrama para qualquer local no diagrama.  
+-   Localizador de tabelas **diagrama** localizador de tabela: O painel é um ícone de 4 setas, localizado na interseção das barras de rolagem vertical e horizontal no canto inferior direito das **diagrama** painel. Ele abre uma representação em miniatura do diagrama atual no painel Diagrama. Você pode usar essa miniatura para alterar a exibição do painel Diagrama para qualquer local no diagrama.  
   
--   Use a caixa de diálogo **Localizar Tabela** – Clique com o botão direito do mouse em uma área livre do painel Diagrama e clique em **Localizar Tabela**. Ou clique no comando **Localizar Tabela** na barra de ferramentas ou no menu **Exibição da Fonte de Dados** .  
+-   Use o **localizar tabela** diálogo caixa-Right click em uma área livre no painel de diagrama e clique **localizar tabela**. Ou clique no comando **Localizar Tabela** na barra de ferramentas ou no menu **Exibição da Fonte de Dados** .  
   
      Você pode digitar cadeias de caracteres e caracteres curinga na caixa Filtro para exibir subconjuntos das tabelas no diagrama.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34023613"
  Para evitar esse problema, adicione todas as tabelas primeiro, antes de fazer algum ajuste final. Os objetos devem agora manter sua posição no diagrama quando você abri-lo novamente mais tarde.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Designer de exibição de fonte de dados & #40; Analysis Services - dados multidimensionais & #41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
+ [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

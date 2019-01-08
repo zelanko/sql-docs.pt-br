@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
@@ -20,12 +19,12 @@ ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80781d3b32ef33fa844c5df96f837aaa14ba06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796978"
 ---
 # <a name="save-traces-and-trace-templates"></a>Salvar rastreamentos e modelos de rastreamento
   É importante distinguir entre salvar arquivos de rastreamento e salvar modelos de rastreamento. Salvar um arquivo de rastreamento envolve salvar, em um local especificado, os dados de evento capturados. Salvar um modelo de rastreamento envolve salvar a definição do rastreamento, como as colunas de dados, as classes de evento ou os filtros especificados.  

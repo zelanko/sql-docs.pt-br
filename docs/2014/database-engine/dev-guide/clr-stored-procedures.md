@@ -23,12 +23,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0949b6fddf1755da48dd7922a4fbda50d4b2787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111953"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511504"
 ---
 # <a name="clr-stored-procedures"></a>Procedimentos armazenados CLR
   Os procedimentos armazenados são rotinas que não podem ser usadas em expressões escalares. Diferentemente das funções escalares, eles podem retornar resultados tabulares e mensagens para o cliente, invocar instruções DDL (linguagem de definição de dados) e DML (linguagem de manipulação de dados) e retornar parâmetros de saída. Para obter informações sobre as vantagens da integração CLR e escolhendo entre o código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "48111953"
  Os parâmetros passados para um procedimento armazenado CLR podem ser de qualquer um dos tipos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativos que tenham um equivalente em código gerenciado. Para que a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] crie o procedimento, esses tipos devem ser especificados com o equivalente do tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo mais apropriado. Para obter mais informações sobre conversões de tipo, consulte [Mapeando dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="table-valued-parameters"></a>Parâmetros com valor de tabela  
- Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre TVPs, consulte [usar parâmetros &#40;mecanismo de banco de dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre TVPs, consulte [usar parâmetros &#40;mecanismo de banco de dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>Retornando resultados de procedimentos armazenados CLR  
  As informações podem ser retornadas dos procedimentos armazenados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de várias maneiras. Isso inclui parâmetros de saída, resultados tabulares e mensagens.  
@@ -55,7 +55,7 @@ ms.locfileid: "48111953"
   
 ```  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
 ```  
   

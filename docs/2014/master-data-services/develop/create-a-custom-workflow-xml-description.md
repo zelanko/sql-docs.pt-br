@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8edbfcc8637b1c7246f4a06470eeafcd0d67724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cec0a0378acceef269b17c93cdc0e2f5e816e437
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789768"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descrição XML do fluxo de trabalho personalizado (Master Data Services)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], o método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo serviço de Integração de Fluxo de Trabalho MDS do SQL Server quando um fluxo de trabalho é iniciado. Este método recebe metadados e dados sobre o item que disparou a regra de negócio do fluxo de trabalho como um bloco de XML. Para obter o código de exemplo que implementa um manipulador de fluxo de trabalho, consulte [Exemplo de fluxo de trabalho personalizado&#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "48149596"
   
  A tabela a seguir descreve algumas das marcas contidas neste XML.  
   
-|Marca|Description|  
+|Marca|Descrição|  
 |---------|-----------------|  
 |\<Type>|O texto que você inseriu na caixa de texto **Tipo de fluxo de trabalho** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para identificar qual assembly de fluxo de trabalho personalizado deve ser carregado.|  
 |\<SendData>|Um valor booliano controlado pela caixa de seleção **Incluir dados de membro na mensagem** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Um valor de 1 significa que a seção \<MemberData> é enviada; caso contrário a seção \<MemberData> não é enviada.|  

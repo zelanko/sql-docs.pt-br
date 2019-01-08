@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78c4085a674bce6cca75394ee2c7f376c14d6a93
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f9a8e08fc230a24e3d00f2b13ec4ccb6c039dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535457"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelos de mineração (Analysis Services – Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "50146021"
   
  ![modelo contém metadados, padrões e associações](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "modelo contém metadados, padrões e associações")  
   
- Os metadados especificam o nome do modelo e o servidor em que ele está armazenado, bem como uma definição do modelo, incluindo as colunas da estrutura de mineração usadas na criação do modelo, as definições dos filtros que foram aplicados durante o processamento do modelo e o algoritmo usado para analisar os dados. Todas estas escolhas, as colunas de dados e seus tipos de dados, filtros e algoritmos, têm uma influência poderosa nos resultados da análise.  
+ Os metadados especificam o nome do modelo e o servidor em que ele está armazenado, bem como uma definição do modelo, incluindo as colunas da estrutura de mineração usadas na criação do modelo, as definições dos filtros que foram aplicados durante o processamento do modelo e o algoritmo usado para analisar os dados. Todas essas colunas de dados escolhas-o e seus tipos de dados, filtros e algoritmo de se ter uma influência poderosa nos resultados da análise.  
   
  Por exemplo, você pode usar os mesmos dados para criar vários modelos, usando talvez um algoritmo de agrupamento, algoritmo de árvore de decisão e algoritmo de Naïve Bayes. Cada tipo de modelo cria conjuntos diferentes de padrões, conjuntos de itens, regras ou fórmulas, que você pode usar para fazer previsões. Geralmente cada algoritmo analisa os dados de um modo diferente, de modo que o *conteúdo* do modelo resultante também seja organizado em estruturas diferentes. Em um tipo de modelo, os dados e os padrões podem ser agrupados em *clusters*; em outro tipo de modelo, os dados podem ser organizados em árvores, ramificações e as regras que as dividem e definem.  
   
- O modelo também é afetado pelos dados nos quais você treina: mesmo modelos treinados na mesma estrutura de mineração podem render resultados diferentes se você filtrar os dados de maneira diferente ou usar sementes diferentes durante a análise. Porém, os dados reais não são armazenados no model: somente são armazenadas estatísticas resumidas, com os dados reais que residem na estrutura de mineração. Se você criou filtros nos dados quando treinou o modelo, as definições de filtro também serão salvas com o objeto modelo.  
+ O modelo também é afetado pelos dados nos quais você treina: mesmo modelos treinados na mesma estrutura de mineração podem render resultados diferentes se você filtrar os dados de maneira diferente ou usar sementes diferentes durante a análise. No entanto, os dados reais não são armazenados no modelo somente as estatísticas de resumo são armazenadas, com os dados reais que residem na estrutura de mineração. Se você criou filtros nos dados quando treinou o modelo, as definições de filtro também serão salvas com o objeto modelo.  
   
  O modelo contém um conjunto de associações, que apontam para os dados armazenados em cache na estrutura de mineração. Se os dados tiverem sido armazenados em cache na estrutura e não forem limpos após o processamento, essas associações lhe permitirão detalhar dos resultados para os casos com suporte para os resultados. No entanto, os dados reais são armazenados no cache de estrutura, não no modelo.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "50146021"
   
 -   Selecione o algoritmo que é mais adequado à tarefa analítica.  
   
--   Escolha as colunas da estrutura para usar no modelo e especifique como eles devem ser usados: quais colunas contêm os resultados que você deseja prever, quais colunas são somente para entrada e, assim, sucessivamente.  
+-   Escolha as colunas da estrutura para usar no modelo e especifique como eles devem ser usados, o que coluna contém o resultado que você deseja prever, quais colunas são somente para entrada e assim por diante.  
   
 -   Se desejar, defina parâmetros para ajustar o processamento pelo algoritmo.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "50146021"
   
 -   É possível usar uma instrução DMX ALTER STRUCTURE ADD MODEL para adicionar um novo modelo de mineração a uma estrutura existente. Use esse método se quiser fazer experiências com modelos diferentes que se baseiam no mesmo conjunto de dados.  
   
- Também é possível criar modelos de mineração programaticamente, com o uso de AMO ou XML/A, ou outros clientes, como o Cliente de Mineração de Dados para Excel. Para obter mais informações, consulte os tópicos a seguir:  
+ Também é possível criar modelos de mineração programaticamente, com o uso de AMO ou XML/A, ou outros clientes, como o Cliente de Mineração de Dados para Excel. Para mais informações, consulte os seguintes tópicos:  
   
  [Arquitetura do modelo de mineração](#bkmk_mdlArch)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.agentsecurity.f1
@@ -13,12 +12,12 @@ ms.assetid: 03945aac-66f2-4370-b5d1-c1de694bc4c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4869463445132f36231bd9ac072a008903dfdaef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b8f38f877a6a46be70fcfafd2ca3c79fca415b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053636"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749018"
 ---
 # <a name="publication-properties-agent-security"></a>Propriedades de Publicação, Segurança do Agente
   A página **Segurança do Agente** da caixa de diálogo **Propriedades de Publicação** permite acessar as configurações das contas nas quais os seguintes agentes executam e fazem conexões com computadores em uma topologia de replicação:  

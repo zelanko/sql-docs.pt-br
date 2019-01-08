@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - FOR XML clause, formatting
@@ -15,12 +13,12 @@ ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2d9e23528a7732d3974902c24ca777fc2d19dae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 664149dd8aa1441e94dfdc4d11033e5d777a75fb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222196"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804568"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do servidor (SQLXML 4.0)
   Este tópico fornece informações sobre a formatação de documentos XML no lado do servidor a partir de conjuntos de linhas gerados por consultas executadas com relação a um banco de dados no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

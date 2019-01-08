@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c68c5f735c494776c9e798b3786c6dcda048f7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0d725f95fc8e9de0865ad895abd860d5f03687b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078606"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792998"
 ---
 # <a name="database-event-category"></a>Categoria de evento Database
   A categoria de evento **Database** contém classes de eventos para monitorar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Data File Auto Grow](data-file-auto-grow-event-class.md)|Indica que o arquivo de dados cresceu automaticamente. Este evento não será disparado se o arquivo de dados crescer explicitamente através de ALTER DATABASE.|  
 |[Classe de evento Data File Auto Shrink](data-file-auto-shrink-event-class.md)|Indica que o arquivo de dados foi reduzido.|  

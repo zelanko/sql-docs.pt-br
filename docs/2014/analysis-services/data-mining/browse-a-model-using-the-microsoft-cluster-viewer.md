@@ -23,12 +23,12 @@ ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530587"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Procurar um modelo usando o Visualizador de Cluster da Microsoft
   O Visualizador de Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração criados com o algoritmo de Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de segmentação para ser usado na exploração de dados para identificar anomalias nos dados e criar previsões. Para obter mais informações sobre esse algoritmo, consulte [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48087766"
 ###  <a name="BKMK_Diagram"></a> Diagrama de Cluster  
  A guia **Diagrama de Cluster** do Visualizador de Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] exibe todos os clusters existentes em um modelo de mineração. O sombreamento da linha que conecta um cluster a outro expressa o grau de semelhança entre os clusters. Um sombreamento claro ou a ausência dele indica que os clusters não são muito parecidos. Quanto mais escura a linha, maior a semelhança entre os links. É possível selecionar o número de linhas exibido no visualizador, ajustando-se o controle deslizante à direita dos clusters. Diminuindo o controle deslizante, somente os links mais fortes serão exibidos.  
   
- Por padrão, a sombra representa a população do cluster. Usando as opções **Variável****Sombreamento** e **Estado** , é possível selecionar qual par de atributo e estado o sombreamento representa. Quanto mais escuro o sombreamento, maior a distribuição de atributo para um estado específico. A distribuição diminui conforme o sombreamento clareia.  
+ Por padrão, a sombra representa a população do cluster. Usando o **Variávelsombreamento** e **estado** opções, você pode selecionar qual atributo e o par de estado o sombreamento representa. Quanto mais escuro o sombreamento, maior a distribuição de atributo para um estado específico. A distribuição diminui conforme o sombreamento clareia.  
   
  Para renomear um cluster, clique com o botão direito do mouse em seu nó e selecione **Renomear Cluster**. Para o servidor, o nome novo é persistente.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "48087766"
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
- [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining-model-viewers.md)  
   

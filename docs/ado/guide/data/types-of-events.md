@@ -17,15 +17,15 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b324857816df774486716978425d1332a695952a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 461b9ea2196fed61587b1a9e20cc21feced258da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708464"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535048"
 ---
 # <a name="types-of-events"></a>Tipos de eventos
-Há dois tipos básicos de eventos. "Será eventos," que é chamado antes do início de uma operação, geralmente incluem "Será" em seus nomes — por exemplo, **eventos WillChangeRecordset** ou **WillConnect**. Os eventos que são chamados após um evento foi concluído normalmente incluem "Concluído" em seus nomes — por exemplo, **RecordChangeComplete** ou **eventos ConnectComplete**. Existem exceções — como **InfoMessage** — mas eles ocorrem após a operação associada foi concluída.  
+Há dois tipos básicos de eventos. "Será eventos," que é chamado antes do início de uma operação, geralmente incluem "Será" em seus nomes - por exemplo, **eventos WillChangeRecordset** ou **WillConnect**. Eventos que são chamados após um evento foi concluído normalmente incluem "Concluído" em seus nomes - por exemplo, **RecordChangeComplete** ou **eventos ConnectComplete**. Existem exceções - como **InfoMessage** - mas eles ocorrem após a operação associada foi concluída.  
   
 ## <a name="will-events"></a>Será eventos  
  Manipuladores de eventos chamado antes do início da operação de oferece a você a oportunidade de examinar ou modificar os parâmetros da operação e, em seguida, cancelar a operação ou permitir que ela seja concluída. Essas rotinas de manipulador de eventos geralmente têm nomes no formato **serão*evento * * *.  
@@ -36,7 +36,7 @@ Há dois tipos básicos de eventos. "Será eventos," que é chamado antes do in�
  Será e eventos de conclusão normalmente são usados em pares.  
   
 ## <a name="other-events"></a>Outros eventos  
- Manipuladores de eventos — ou seja, os eventos cujos nomes não estão no formato **serão * evento*** ou ***evento * concluir** — são chamados somente depois que uma operação é concluída. Esses eventos são **Disconnect**, **EndOfRecordset**, e **InfoMessage**.  
+ Os manipuladores de eventos - ou seja, os eventos cujos nomes não estão no formato **serão * evento*** ou ***evento * concluir** -são chamados somente depois que uma operação é concluída. Esses eventos são **Disconnect**, **EndOfRecordset**, e **InfoMessage**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

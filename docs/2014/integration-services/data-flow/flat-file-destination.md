@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
@@ -18,12 +17,12 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9cc425ca170a8b6619bead023f76b163e698aab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4cb484f89d44ed31b4c82a9e1349dfab925dac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058786"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761748"
 ---
 # <a name="flat-file-destination"></a>Destino de arquivo simples
   O destino de Arquivo Simples grava dados em um arquivo de texto. O arquivo de texto pode ser em formato delimitado, de largura fixa, largura fixa com delimitador de linha ou com imperfeição à direita.  
@@ -45,9 +44,9 @@ ms.locfileid: "48058786"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples**, clique em um dos seguintes tópicos:  
   
--   [Editor de destino de arquivo simples &#40;página do Gerenciador de Conexão&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Editor de Destino de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de arquivo simples &#40;página mapeamentos&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Editor de Destino de Arquivo Simples &#40;Página Mapeamentos&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48058786"
  Para obter informações sobre como definir as propriedades do componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Fonte de arquivo simples](flat-file-source.md)   
+ [Fonte de Arquivo Simples](flat-file-source.md)   
  [Fluxo de Dados](data-flow.md)  
   
   

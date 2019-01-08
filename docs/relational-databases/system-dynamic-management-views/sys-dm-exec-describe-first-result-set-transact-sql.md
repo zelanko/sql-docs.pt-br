@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c57e90b9a7fbe4846698f04e3cde808eed64985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624734"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405174"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>Tabela retornada  
  Esses metadados comuns são retornados como um conjunto de resultados. Uma linha para cada coluna nos metadados de resultados descreve o tipo e a nulidade da coluna no formato mostrado na tabela a seguir. Se a primeira instrução não existir para todo caminho de controle, um conjunto de resultados com zero linhas será retornado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Especifica que a coluna é uma coluna extra adicionada para fins de informações de navegação e que ela não é exibida realmente no conjunto de resultados.|  
 |**column_ordinal**|**int**|Contém a posição ordinal da coluna no conjunto de resultados. Posição da primeira coluna será especificada como 1.|  
@@ -67,9 +67,9 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**system_type_id**|**int**|Contém o system_type_id do tipo de dados de coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contém o nome e argumentos (como comprimento, precisão, escala), especificados para o tipo de dados da coluna.<br /><br /> Se o tipo de dados é um tipo de alias definidos pelo usuário, o tipo de sistema subjacente será especificado aqui.<br /><br /> Se o tipo de dados for um tipo CLR definido pelo usuário, NULL será retornado nessa coluna.|  
 |**max_length**|**smallint**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido pelo **sp_tableoption 'text in row'**.|  
-|**Precisão**|**tinyint**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
+|**precisão**|**tinyint**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
 |**scale**|**tinyint**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
-|**collation_name**|**sysname**|Nome do agrupamento da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
+|**collation_name**|**sysname**|Nome da ordenação da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
 |**user_type_id**|**int**|Para tipos de CLR e alias, contém o user_type_id do tipo de dados da coluna como especificado em sys.types. Caso contrário, é NULL.|  
 |**user_type_database**|**sysname**|Para tipos de CLR e de alias, contém o nome do banco de dados no qual o tipo é definido. Caso contrário, é NULL.|  
 |**user_type_schema**|**sysname**|Para tipos de CLR e de alias, contém o nome do esquema no qual o tipo é definido. Caso contrário, é NULL.|  
@@ -107,7 +107,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
  A tabela a seguir lista os tipos de erros e suas descrições  
   
-|error_type|error_type|Description|  
+|error_type|error_type|Descrição|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Todos os erros que não são descritos de outra forma.|  
 |2|SYNTAX|Um erro de sintaxe ocorreu no lote.|  
@@ -116,7 +116,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |5|CLR_PROCEDURE|O resultado não pôde ser determinado devido a um procedimento armazenado de CLR que poderia retornar o primeiro resultado.|  
 |6|CLR_TRIGGER|O resultado não pôde ser determinado devido a um gatilho CLR que poderia retornar o primeiro resultado.|  
 |7|EXTENDED_PROCEDURE|O resultado não pôde ser determinado devido a um procedimento armazenado estendido que poderia retornar o primeiro resultado.|  
-|8|UNDECLARED_PARAMETER|O resultado não pôde ser determinado por que o tipo de dados de uma ou mais das colunas do conjunto de resultados depende de um parâmetro não declarado.|  
+|8|UNDECLARED_PARAMETER|O resultado não pôde ser determinado porque o tipo de dados de um ou mais das colunas do conjunto de resultados depende potencialmente de um parâmetro não declarado.|  
 |9|RECURSION|O resultado não pôde ser determinado porque o lote contém uma instrução recursiva.|  
 |10|TEMPORARY_TABLE|O resultado não pôde ser determinado porque o lote contém uma tabela temporária e não é compatível com **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|O resultado não pôde ser determinado porque o lote contém uma instrução que não é compatível com **sp_describe_first_result_set** (por exemplo, FETCH, REVERT, etc.).|  
@@ -139,7 +139,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 (N'SELECT object_id, name, type_desc FROM sys.indexes', null, 0) ;  
 ```  
   
-### <a name="b-returning-information-about-a-procedure"></a>B. Retornando informações sobre um procedimento  
+### <a name="b-returning-information-about-a-procedure"></a>b. Retornando informações sobre um procedimento  
  O exemplo a seguir cria um procedimento armazenado denominado pr_TestProc que retorna dois conjuntos de resultados. Em seguida, o exemplo demonstra que **DM exec_describe_first_result_set** retorna informações sobre o primeiro resultado definido no procedimento.  
   
 ```  

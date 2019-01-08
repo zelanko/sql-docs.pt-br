@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98c2d4b7c60ff3229e683d45a6b88ccebaa40c85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700774"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779748"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador do artigo.|  
 |**name**|**sysname**|Nome do artigo.|  
@@ -56,7 +55,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Nome do objeto de origem do qual adicionar o artigo.|  
 |**sync_object_owner**|**sysname**|Nome do proprietário da exibição que define o artigo publicado.|  
 |**sync_object**|**sysname**|Nome do objeto personalizado usado para estabelecer os dados iniciais para a partição.|  
-|**Descrição**|**nvarchar(255)**|Descrição do artigo.|  
+|**description**|**nvarchar(255)**|Descrição do artigo.|  
 |**status**|**tinyint**|Estado do artigo que pode ser um dos seguintes:<br /><br /> **1** = inativo<br /><br /> **2** = Active Directory<br /><br /> **5** = operação de DDL (linguagem) de definição de dados pendentes<br /><br /> **6** = operações DDL com um instantâneo recém-gerado<br /><br /> Observação: Quando um artigo é reiniciado, valores de **5** e **6** são alterados para **2**.|  
 |**creation_script**|**nvarchar(255)**|Caminho e nome de um script de esquema de artigo opcional usados para criar o artigo no banco de dados de assinatura.|  
 |**conflict_table**|**nvarchar(270)**|Nome da tabela que armazena os conflitos de entrada ou atualização.|  

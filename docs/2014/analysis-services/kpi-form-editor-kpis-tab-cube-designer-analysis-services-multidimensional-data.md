@@ -13,12 +13,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523471"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário KPI (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário KPI** na guia **KPIs** do Designer de Cubo para criar ou modificar o KPI (Indicador Chave de Desempenho) selecionado.  
@@ -61,10 +61,10 @@ ms.locfileid: "48166376"
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  
   
- É recomendável que essa expressão retorne um número decimal entre -1 e 1. Um número mais baixo representa uma situação negativa, enquanto um número mais alto representa uma situação positiva.  
+ É recomendável que essa expressão retorna um número decimal entre -1 e 1. Um número mais baixo representa uma situação negativa, enquanto um número mais alto representa uma situação positiva.  
   
 > [!NOTE]  
->  Valores abaixo de -1 e acima de 1 são possíveis, mas podem não ser interpretados corretamente por aplicativos cliente de terceiros.  
+>  Os valores abaixo de -1 e acima de 1 são possíveis, mas não podem ser interpretados corretamente por aplicativos cliente de terceiros.  
   
  **Tendência**  
  Expanda para exibir as opções **Gráfico de tendência** e **Expressão de tendência** .  
@@ -80,10 +80,10 @@ ms.locfileid: "48166376"
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  
   
- A base da expressão de tendência pode ser qualquer critério baseado em tempo que faça sentido em um determinado contexto comercial. É recomendável que essa expressão retorne um número decimal entre -1 e 1. Um número mais baixo representa uma tendência negativa ao longo do tempo, enquanto um número mais alto representa uma tendência positiva.  
+ A base da expressão de tendência pode ser qualquer critério baseado em tempo que faça sentido em um determinado contexto comercial. É recomendável que essa expressão retorna um número decimal entre -1 e 1. Um número mais baixo representa uma tendência negativa ao longo do tempo, enquanto um número mais alto representa uma tendência positiva.  
   
 > [!NOTE]  
->  Valores abaixo de -1 e acima de 1 são possíveis, mas podem não ser interpretados corretamente por aplicativos cliente de terceiros.  
+>  Os valores abaixo de -1 e acima de 1 são possíveis, mas não podem ser interpretados corretamente por aplicativos cliente de terceiros.  
   
  **Propriedades Adicionais**  
  Expanda para exibir as opções **Pasta de exibição**, **KPI Pai**, **Membro da hora atual**, **Peso**e **Descrição** .  

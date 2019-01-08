@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145146"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786358"
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
   Iniciando como o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem suporte para as assinaturas push do Oracle por meio do provedor Oracle OLE DB fornecido pela Oracle.  
@@ -32,7 +31,7 @@ ms.locfileid: "48145146"
   
 1.  Instale e configure o software de rede cliente Oracle e o provedor Oracle OLE DB no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para que o Distribuidor possa realizar as conexões ao Assinante Oracle. O software de rede cliente Oracle deve ter a versão mais recente disponível. A Oracle recomenda que os usuários instalem as mais recentes versões do software cliente. O software cliente é, portanto, muitas vezes uma versão mais recente do que o software do banco de dados. A maneira mais prática para instalar o software é usar o Instalador Universal Oracle no disco do Oracle Cliente. No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-    |Informações|Description|  
+    |Informações|Descrição|  
     |-----------------|-----------------|  
     |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
     |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
@@ -42,7 +41,7 @@ ms.locfileid: "48145146"
   
      Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-    |Ação|Description|  
+    |Ação|Descrição|  
     |------------|-----------------|  
     |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
     |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  
@@ -86,7 +85,7 @@ ms.locfileid: "48145146"
   
     -   Garantir que cadeias de caracteres vazias não estejam inseridas na tabela publicada como valores de colunas.  
   
-    -   Usar o parâmetro **–SkipErrors** para o Agente de Distribuição caso seja aceitável ser notificado das falhas no log do histórico do Agente de Distribuição e continuar com o processamento. Especifique o código de erro Oracle 1400 (**-SkipErrors1400**).  
+    -   Usar o parâmetro **-SkipErrors** para o Agente de Distribuição caso seja aceitável ser notificado das falhas no log do histórico do Agente de Distribuição e continuar com o processamento. Especifique o código de erro Oracle 1400 (**-SkipErrors1400**).  
   
     -   Modifique o script de criação de tabela gerado, removendo o atributo NOT NULL das colunas de caracteres que talvez tenham cadeias de caracteres vazias associadas e forneça o script modificado como um script de criação personalizado para o artigo usando o parâmetro @creation_script de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
@@ -128,7 +127,7 @@ ms.locfileid: "48145146"
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|N/A|  
+|`sql_variant`|N/D|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  

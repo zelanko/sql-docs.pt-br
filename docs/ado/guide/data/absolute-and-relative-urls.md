@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604876"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541929"
 ---
 # <a name="absolute-and-relative-urls"></a>URLs absolutas e relativas
 Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante *.*  
@@ -58,7 +58,7 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
  Contexto também pode ser definido abrindo uma **registro** ou **conjunto de registros** objeto que representa um diretório, porque esses objetos já tem um implicitamente ou explicitamente declarado **Conexão**  objeto que especifica o contexto.  
   
 ## <a name="scoped-operations"></a>Operações com escopo  
- O contexto também define o escopo — ou seja, o diretório e seus subdiretórios que podem participar em operações subsequentes. O **registro** objeto tem vários métodos com escopo definido que operam em um diretório e todos os seus subdiretórios. Esses métodos incluem [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), e [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ O contexto também define o escopo-ou seja, o diretório e seus subdiretórios que podem participar em operações subsequentes. O **registro** objeto tem vários métodos com escopo definido que operam em um diretório e todos os seus subdiretórios. Esses métodos incluem [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), e [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>URLs relativas como texto de comando  
  Você pode especificar um comando a ser executado na fonte de dados digitando uma cadeia de caracteres a *CommandText* parâmetro do **Conexão** do objeto [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método e o  *Código-fonte* parâmetro do **conjunto de registros** do objeto [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método.  

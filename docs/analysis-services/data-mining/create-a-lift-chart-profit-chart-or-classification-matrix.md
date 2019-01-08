@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57d8dac4999f5b788b1114e6e7aa4156b6cd6419
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015383"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519120"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Criar um gráfico de comparação de precisão, gráfico de lucro ou matriz de classificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "34015383"
   
     -   Selecione a opção, **Usar casos de teste da estrutura de mineração**, para usar o conjunto completo de casos de teste definido como parte do conjunto de dados de controle de estruturas de mineração.  
   
-    -   Selecione a opção **Especificar um conjunto de dados diferente**se você quiser usar dados externos.  O conjunto de dados deve estar disponível como uma exibição da fonte de dados.   Clique no botão procurar (**…**) para escolher as tabelas de dados a serem usadas para o gráfico de precisão. Para obter mais informações, consulte [Escolher e mapear dados de teste de modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
+    -   Selecione a opção **Especificar um conjunto de dados diferente**se você quiser usar dados externos.  O conjunto de dados deve estar disponível como uma exibição da fonte de dados.   Clique no botão Procurar (**...** ) botão para escolher as tabelas de dados a ser usado para o gráfico de precisão. Para obter mais informações, consulte [Escolher e mapear dados de teste de modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
   
          Se você estiver usando um conjunto de dados externo, poderá filtrar, se desejar, o conjunto de dados de entrada. Para obter mais informações, consulte [Aplicar filtros aos dados de teste de modelo](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34015383"
      A receita associada a cada venda bem sucedida.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de comparação de precisão & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [Matriz de classificação &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

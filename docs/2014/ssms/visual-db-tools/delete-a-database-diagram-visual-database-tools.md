@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], deleting
@@ -15,12 +15,12 @@ ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c807bb27b14c26ed93722f57aee9fc93760e798
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173431"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771158"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Excluir um diagrama de banco de dados (Visual Database Tools)
   Quando você não precisar mais de um diagrama de banco de dados, poderá excluí-lo.  

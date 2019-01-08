@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025853"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534708"
 ---
 # <a name="define-database-dimensions"></a>Definir as dimensões do banco de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Use o Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar a dimensão de um banco de dados existente em um projeto ou banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode usar o Designer de Dimensão para fazer o seguinte:  
+  Use o Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar a dimensão de um banco de dados existente em um projeto ou banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você pode usar o Designer de Dimensão para fazer o seguinte:  
   
 -   Configurar as propriedades do nível de dimensão.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "34025853"
   
  O Designer de Dimensão tem três guias diferentes que são descritas na tabela a seguir.  
   
-|Tab|Description|  
+|Tab|Descrição|  
 |---------|-----------------|  
-|**Estrutura da Dimensão**|Use essa guia para trabalhar com a estrutura de uma dimensão – para examinar ou criar o esquema de exibição da fonte de dados de uma dimensão, para trabalhar com atributos, e para organizar atributos em hierarquias definidas pelo usuário.|  
+|**Estrutura da Dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão para examinar ou criar o esquema de exibição de fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
 |**Relações de atributo**|Use essa guia para criar, modificar ou excluir as relações de atributo de uma dimensão.|  
 |**Traduções**|Use essa guia para adicionar e editar conversões de metadados de dimensão em linguagens diferentes.|  
 |**Navegador**|Use essa guia para examinar os membros de uma dimensão processada e para revisar as conversões de metadados de dimensão.|  
@@ -56,7 +56,7 @@ ms.locfileid: "34025853"
  [Definir relações de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  Descreve como definir e configurar uma relação de atributo.  
   
- [Use o Assistente de Business Intelligence para aprimorar dimensões](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [Usar o Assistente de Business Intelligence para aprimorar dimensões](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Descreve como usar o Business Intelligence Wizard para aprimorar uma dimensão.  
   
   

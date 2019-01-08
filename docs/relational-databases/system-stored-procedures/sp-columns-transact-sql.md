@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c768b2d64c38fdda66d6abeea0aef2010b4dfe35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514084"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ sp_columns [ @table_name = ] object
  Se o usuário atual possuir um objeto com o nome especificado, as colunas desse objeto serão retornadas. Se *proprietário* não for especificado e o usuário atual não possuir um objeto com especificado *objeto*, **sp_columns** procurará um objeto com especificado  *objeto* pertencente ao proprietário do banco de dados. Se existir, as colunas desse objeto serão retornadas.  
   
  [  **@table_qualifier* * * =**] *qualificador*  
- É o nome do qualificador do objeto. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para objetos (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ela representa o nome do servidor do ambiente de banco de dados do objeto.  
+ É o nome do qualificador do objeto. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para objetos (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ela representa o nome do servidor do ambiente de banco de dados do objeto.  
   
  [  **@column_name=**] *coluna*  
  É uma única coluna, usada quando apenas uma coluna de informações de catálogo é desejada. *coluna* está **nvarchar(384)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na **syscolumns** tabela. Há suporte para a correspondência do padrão curinga. Para interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão SQL-92 (os caracteres curinga % e _).  
@@ -69,7 +69,7 @@ sp_columns [ @table_name = ] object
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O **sp_columns** procedimento armazenado de catálogo é equivalente a **SQLColumns** no ODBC. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**, e **TABLE_NAME**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nome do qualificador do objeto. Esse campo pode ser NULL.|  
 |**TABLE_OWNER**|**sysname**|Nome do proprietário do objeto. Esse campo sempre retorna um valor.|  

@@ -27,12 +27,12 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c755b605b834d5c31a7017358fb6e714cfde7964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522890"
 ---
 # <a name="clr-triggers"></a>Gatilhos CLR
   Por causa da integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com CLR (Common Language Runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode usar qualquer linguagem do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para criar gatilhos CLR. Esta seção contém informações específicas para gatilhos implementados com a integração CLR. Para obter uma discussão completa sobre gatilhos, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -500,7 +500,7 @@ EXTERNAL NAME SQLCLRTest.CLRTriggers.EmailAudit
 ```  
 Msg 6549, Level 16, State 1, Procedure trig_InsertValidator, Line 0  
 A .NET Framework error occurred during execution of user defined routine or aggregate 'trig_InsertValidator':   
-System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting… User transaction, if any, will be rolled back.  
+System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting... User transaction, if any, will be rolled back.  
 ```  
   
  Essa exceção é esperada e o bloco try/catch é necessário para que a execução do código continue. Quando o código de gatilho termina a execução, outra exceção é gerada  

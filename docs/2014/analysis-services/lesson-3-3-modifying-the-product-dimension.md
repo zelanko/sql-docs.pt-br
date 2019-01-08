@@ -11,12 +11,12 @@ ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523326"
 ---
 # <a name="modifying-the-product-dimension"></a>Modificando a dimensão Produto
   Nas tarefas deste tópico, você usará um cálculo nomeado para fornecer nomes mais descritivos às linhas de produto, definir uma hierarquia na dimensão Produto e especificar o nome do membro (Todos) para a hierarquia. Você também agrupará atributos nas pastas de exibição.  
@@ -58,7 +58,7 @@ ms.locfileid: "48081536"
   
 2.  No painel **Atributos** da guia **Estrutura da Dimensão** , selecione **Linha de Produto**.  
   
-3.  Na janela Propriedades no lado direito da tela, clique no campo de propriedade **NameColumn** na parte inferior da janela e clique no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** . (Talvez seja necessário clicar na guia **Propriedades** à direita da tela para abrir a janela Propriedades.)  
+3.  Na janela Propriedades no lado direito da tela, clique o **NameColumn** propriedade de campo na parte inferior da janela e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo. (Talvez seja necessário clicar na guia **Propriedades** à direita da tela para abrir a janela Propriedades.)  
   
 4.  Selecione `ProductLineName` na parte inferior a **coluna de origem** e, em seguida, clique **Okey**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48081536"
   
 5.  No painel **Atributos** da guia **Estrutura da Dimensão** , selecione **Chave do Produto (Product Key)**.  
   
-6.  Na janela Propriedades, clique no campo de propriedade **NameColumn** e clique no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** .  
+6.  Na janela Propriedades, clique o **NameColumn** propriedade de campo e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo.  
   
 7.  Selecione **EnglishProductName** na lista **Coluna de origem** e clique em **OK**.  
   
@@ -180,11 +180,11 @@ ms.locfileid: "48081536"
      Observe que o nome da **todos os** membro é exibido como `All Products`. Isso ocorre porque você alterou o **AllMemberName** propriedade para a hierarquia para `All Products` anteriormente nesta lição. Além disso, os membros do nível **Linha de Produto** agora têm nomes amigáveis, em vez de abreviações de apenas uma letra.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Modificando a dimensão Data](lesson-3-4-modifying-the-date-dimension.md)  
+ [Modificando a dimensão de data](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Criar hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurar o &#40;todos os&#41; nível para hierarquias de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar o nível &#40;All&#41; para hierarquias de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

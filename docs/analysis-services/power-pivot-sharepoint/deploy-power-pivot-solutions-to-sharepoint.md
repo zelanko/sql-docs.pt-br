@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544275"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implantar soluções Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "38984758"
   
  Este tópico contém as seguintes seções:  
   
- [Pré-requisito: verificar se o aplicativo Web usa a autenticação de modo clássico](#bkmk_classic)  
+ [Pré-requisito: Verifique se que o aplicativo Web usa a autenticação de modo clássico](#bkmk_classic)  
   
- [Etapa 1: implantar a solução de farm](#bkmk_farm)  
+ [Etapa 1: Implantar a solução de Farm](#bkmk_farm)  
   
- [Etapa 2: implantar a solução de aplicativo Web do Power Pivot na Administração Central](#deployCA)  
+ [Etapa 2: Implantar a solução de aplicativo Web do Power Pivot na Administração Central](#deployCA)  
   
- [Etapa 3: implantar a solução de aplicativo Web do Power Pivot em outros aplicativos Web](#deployUI)  
+ [Etapa 3: Implantar a solução de aplicativo Web do Power Pivot em outros aplicativos da Web](#deployUI)  
   
  [Reimplantar ou cancelar a solução](#retract)  
   
  [Sobre as soluções Power Pivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Pré-requisito: verificar se o aplicativo Web usa a autenticação de modo clássico  
+##  <a name="bkmk_classic"></a> Pré-requisito: Verificar se o aplicativo Web usa a autenticação de modo clássico  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo utiliza o modo clássico, execute o seguinte cmdlet do PowerShell a partir de **Shell de gerenciamento do SharePoint 2010**, substituindo **http://\<nome do site de nível superior >** com o nome do seu site do SharePoint:  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  O valor retornado deve ser **false**. Se ele for **true**, você não poderá acessar dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] com este aplicativo Web.  
   
-##  <a name="bkmk_farm"></a> Etapa 1: implantar a solução de farm  
+##  <a name="bkmk_farm"></a> Etapa 1: Implantar a solução de Farm  
  Esta seção mostra como implantar soluções usando o PowerShell, mas você também pode usar a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para concluir esta tarefa. Para obter mais informações, consulte [Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Esta tarefa precisa ser executada somente uma vez, depois de você instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
@@ -57,7 +57,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Execute o cmdlet a seguir para adicionar a solução do farm.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      O cmdlet retorna o nome da solução, sua ID de solução e Deployed=False. Na próxima etapa, você implantará a solução.  
@@ -65,10 +65,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Execute o cmdlet seguinte para implantar a solução do farm:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Etapa 2: implantar a solução de aplicativo Web do Power Pivot na Administração Central  
+##  <a name="deployCA"></a> Etapa 2: Implantar a solução de aplicativo Web do Power Pivot na Administração Central  
  Depois de implantar a solução do farm, você deverá implantar a solução de aplicativo Web na Administração Central. Essa etapa adiciona o Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à Administração Central.  
   
 1.  Abra um Shell de Gerenciamento do SharePoint 2010 usando a opção **Executar como Administrador** .  
@@ -82,7 +82,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Execute o cmdlet a seguir para adicionar a solução do farm.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      O cmdlet retorna o nome da solução, sua ID de solução e Deployed=False. Na próxima etapa, você implantará a solução.  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Agora que a solução de aplicativo Web está implantada na Administração Central, você poderá usar a Administração Central para concluir todas as etapas de configuração restantes.  
   
-##  <a name="deployUI"></a> Etapa 3: implantar a solução de aplicativo Web do Power Pivot em outros aplicativos Web  
+##  <a name="deployUI"></a> Etapa 3: Implantar a solução de aplicativo Web do Power Pivot em outros aplicativos da Web  
  Na tarefa anterior, você implantou o Powerpivotwebapp.wsp na Administração Central. Nesta seção, você implanta o powerpivotwebapp.wsp em cada aplicativo Web existente que dá suporte a acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se você adicionar mais aplicativos Web posteriormente, repita esta etapa para esses aplicativos.  
   
 1.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar soluções de farm**.  
@@ -142,7 +142,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  A solução do aplicativo Web é implantada inicialmente na Administração Central, seguida por implantações subsequentes da solução em qualquer aplicativo Web adicional que dará suporte a solicitações para dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para implantar a solução de aplicativo Web da Administração Central, você deve usar a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou o cmdlet do PowerShell. Para todos os outros aplicativos Web, você pode implantar a solução de aplicativo Web manualmente usando a Administração Central ou PowerShell.  
   
-|Solução|Description|  
+|Solução|Descrição|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Adiciona o Microsoft.AnalysisServices.SharePoint.Integration.dll ao assembly global.<br /><br /> Adiciona o Microsoft.AnalysisServices.ChannelTransport.dll ao assembly global.<br /><br /> Instala recursos e arquivos de recurso e registra tipos de conteúdo.<br /><br /> Adiciona modelos de biblioteca para as bibliotecas de Feeds de Dados e da Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Adiciona páginas de aplicativos para configuração de aplicativos de serviço, Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , atualização de dados e Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Powerpivotwebapp.wsp|Adiciona arquivos de recursos Microsoft.AnalysisServices.SharePoint.Integration.dll à pasta de extensões no servidor Web front-end.<br /><br /> Adiciona serviço Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ao front-end da Web.<br /><br /> Adiciona geração de imagens em miniatura para a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  

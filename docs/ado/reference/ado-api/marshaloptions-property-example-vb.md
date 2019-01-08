@@ -15,15 +15,15 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aced271d33f28a565f3ebf9976a325d215e23acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aad4088e8a102ea3afbf2cd8e75e3fe605c268cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801204"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535164"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Exemplo da propriedade MarshalOptions (VB)
-Este exemplo usa o [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propriedade para especificar quais linhas são enviadas de volta para o servidor — todas as linhas ou apenas as linhas modificadas.  
+Este exemplo usa o [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propriedade para especificar quais linhas são enviadas de volta para o servidor - todas as linhas ou apenas as linhas modificadas.  
   
 ```  
 'BeginMarshalOptionsVB  

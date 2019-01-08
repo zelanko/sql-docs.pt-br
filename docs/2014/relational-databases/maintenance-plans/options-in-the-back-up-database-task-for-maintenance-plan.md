@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
@@ -16,12 +15,12 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111326"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774648"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Tarefa de Backup de Banco de Dados (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Fazer Backup de Banco de Dados** para adicionar uma tarefa de backup ao plano de manutenção. O backup do banco de dados é importante no caso de falha do sistema ou hardware (ou erros do usuário) que levem o banco de dados a ser danificado de alguma forma, exigindo assim que uma cópia de backup seja restaurada. Essa tarefa lhe permite executar arquivos completos, diferenciais, e grupos de arquivos e backups de log de transações.  
@@ -38,7 +37,7 @@ ms.locfileid: "48111326"
  Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita abaixo.  
   
  **Bancos de dados**  
- Especifique os bancos de dados afetados por essa tarefa. Quando selecionada, a lista suspensa fornece as seguintes opções: **Todos os bancos de dados**, **Todos os bancos de dados do sistema**, **Todos os bancos de dados de usuário**, **Esses bancos de dados específicos**.  
+ Especifique os bancos de dados afetados por essa tarefa. Quando selecionada, a lista suspensa fornece as seguintes opções: **Todos os bancos de dados**, **todos os bancos de dados do sistema**, **todos os bancos de dados de usuário**, **esses bancos de dados específicos**.  
   
  **Todos os bancos de dados**  
  Gere um plano de manutenção que execute tarefas de manutenção em todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

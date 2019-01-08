@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: de753f0aa019e6cee4eab30076205dc42d1a2c04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7d9df5f8cd96421f97ecbdd0401fc87d800ffab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065366"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784508"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Criar uma entidade (Suplemento do MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os administradores podem criar novas entidades para armazenar dados. Quando você cria uma entidade, deve carregar pelo menos uma amostragem dos dados que deseja armazenar.  
@@ -26,7 +25,7 @@ ms.locfileid: "48065366"
   
 -   Você precisa ter permissão para acessar as áreas funcionais **Administração do Sistema** e **Gerenciador** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Você deve ter um modelo existente no qual criar a entidade. Para obter mais informações, consulte [Criar um modelo &#40;Master Data Services&#41;](../create-a-model-master-data-services.md).  
   

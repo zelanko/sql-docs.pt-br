@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147951"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509468"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "50147951"
   
  As regras a seguir se aplicam às propriedades **Name** e **ID** .  
   
--   Os nomes não diferenciam maiúsculas de minúsculas. Não é possível ter um cubo chamado "vendas" e outro chamado "Vendas" no mesmo banco de dados.  
+-   Os nomes não diferenciam maiúsculas de minúsculas. Você não pode ter um cubo chamado "vendas" e outro chamado "Vendas" no mesmo banco de dados.  
   
 -   Não são permitidos espaços à esquerda ou à direita em um nome de objeto, embora você possa inserir espaços em um nome. Os espaços de abertura e fechamento são eliminados implicitamente. Isso se aplica a **Name** e **ID** de um objeto.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "50147951"
   
 |Modo de servidor e nível de compatibilidade de banco de dados|Caracteres reservados permitidos?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (todas as versões)|não|  
-|Tabela - 1050|não|  
-|Tabela - 1100|não|  
+|MOLAP (todas as versões)|Não|  
+|Tabela - 1050|Não|  
+|Tabela - 1100|Não|  
 |Tabela – 1130 e superior|Sim|  
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  

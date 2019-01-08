@@ -14,17 +14,17 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511308"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opções de Atualização da Pesquisa de Texto Completo
   Use a página Opções de Atualização da Pesquisa de Texto Completo do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para selecionar as opções a serem usadas para os bancos de dados que você está atualizando no momento.  
   
- No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , cada índice de texto completo reside em um catálogo de texto completo que pertence a um grupo de arquivos, tem um caminho físico e é tratado como um arquivo de banco de dados. Agora, um catálogo de texto completo é um conceito lógico — um objeto virtual — que se refere a um grupo de índices de texto completo. Por isso, um novo catálogo de texto completo não é tratado como um arquivo de banco de dados com um caminho físico. No entanto, durante a atualização de qualquer catálogo de texto completo que contém arquivos de dados, é criado um novo grupo de arquivos no mesmo disco. Isso mantém o antigo comportamento de E/S do disco após a atualização. Qualquer índice de texto completo desse catálogo será colocado no novo grupo de arquivos se existir o caminho raiz. Se o caminho do antigo catálogo de texto completo for inválido, a atualização manterá o índice de texto completo no mesmo grupo de arquivos que a tabela base ou, no caso de uma tabela particionada, no grupo de arquivos primário.  
+ No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , cada índice de texto completo reside em um catálogo de texto completo que pertence a um grupo de arquivos, tem um caminho físico e é tratado como um arquivo de banco de dados. Agora, um catálogo de texto completo é um objeto lógico de um conceito virtual-que se refere a um grupo de índices de texto completo. Por isso, um novo catálogo de texto completo não é tratado como um arquivo de banco de dados com um caminho físico. No entanto, durante a atualização de qualquer catálogo de texto completo que contém arquivos de dados, é criado um novo grupo de arquivos no mesmo disco. Isso mantém o antigo comportamento de E/S do disco após a atualização. Qualquer índice de texto completo desse catálogo será colocado no novo grupo de arquivos se existir o caminho raiz. Se o caminho do antigo catálogo de texto completo for inválido, a atualização manterá o índice de texto completo no mesmo grupo de arquivos que a tabela base ou, no caso de uma tabela particionada, no grupo de arquivos primário.  
   
 ## <a name="options"></a>Opções  
  Quando você atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], escolha uma das opções de atualização de texto completo a seguir.  

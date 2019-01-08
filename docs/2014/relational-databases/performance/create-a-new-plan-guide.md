@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a792063b76beebfba4d0d7179e5bc5ed394d3f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207746"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519869"
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
   Você pode criar um guia de plano no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Guias de plano influenciam a otimização de consulta, anexando a elas dicas de consulta ou um plano de consulta fixo. No guia de plano, especifica-se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que se deseja otimizar e uma cláusula OPTION que contenha as dicas de consulta que se deseja usar ou um plano de consulta específico que se queira usar para otimizar a consulta. Quando a consulta é executada, o otimizador de consultas faz a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] com o guia de plano, anexando a cláusula OPTION à consulta em tempo de execução ou usando o plano de consulta especificado.  
@@ -41,9 +41,9 @@ ms.locfileid: "48207746"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
--   Os argumentos para sp_create_plan_guide devem ser fornecidos na ordem em que aparecem. Quando você fornece valores para os parâmetros de `sp_create_plan_guide`, parâmetro de todos os nomes devem ser especificados explicitamente ou nenhum. Por exemplo, se `@name =` for especificado, `@stmt =`, `@type =`, entre outros, também deverão ser. Da mesma forma, se `@name =` for omitido e apenas o valor do parâmetro for fornecido, os nomes de parâmetro restantes também deverão ser omitidos e apenas seus valores fornecidos. Os nomes de argumento são usados apenas para fins descritivos, para ajudar compreender a sintaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o nome de parâmetro especificado corresponde ao nome do parâmetro na posição em que o nome é usado.  
+-   Os argumentos para sp_create_plan_guide devem ser fornecidos na ordem em que aparecem. Quando você aplica valores para os parâmetros de `sp_create_plan_guide`, todos os nomes de parâmetros devem ser especificados explicitamente ou nenhum deles deve ser especificado. Por exemplo, se `@name =` for especificado, `@stmt =`, `@type =`, entre outros, também deverão ser. Da mesma forma, se `@name =` for omitido e apenas o valor de parâmetro for fornecido, os nomes de parâmetro restantes deverão ser omitidos também e apenas os seus valores, fornecidos. Os nomes de argumento são usados apenas para fins descritivos, para ajudar compreender a sintaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o nome de parâmetro especificado corresponde ao nome do parâmetro na posição em que o nome é usado.  
   
 -   Você pode criar mais de um guia de plano OBJECT ou SQL para a mesma consulta e lote ou módulo. Porém, só um guia de plano pode ser ativado em um determinado momento.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48207746"
   
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja criar um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
-2.  Clique com o botão direito do mouse na pasta **Guias de Plano** e selecione **Novo Guia de Plano…**.  
+2.  Clique com botão direito do **guias de plano** pasta e selecione **novo guia de plano...** .  
   
 3.  Na caixa de diálogo **Novo Guia de Plano** , na caixa **Nome** , digite o nome do guia de plano.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48207746"
   
 11. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-plan-guide"></a>Para criar um guia de plano  
   

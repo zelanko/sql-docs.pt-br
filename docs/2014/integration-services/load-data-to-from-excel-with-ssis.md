@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991249"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778308"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -41,7 +41,7 @@ Este artigo contém três conjuntos de informações de que você precisa para u
 
 Antes de poder importar dados do Excel ou exportá-los para o Excel, talvez seja necessário baixar os componentes de conectividade para o Excel, se você ainda não os tiver instalado. Os componentes de conectividade do Excel não são instalados por padrão.
 
-Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [Redistribuível de 2016 do Mecanismo de Banco de Dados do Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
+Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [Redistribuível de 2016 do mecanismo de banco de dados Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
   
 A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
 
@@ -53,7 +53,7 @@ Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de e
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-Se você tiver problemas para instalar o redistribuível de 2016, instale o redistribuível do 2010, em vez disto aqui: [Redistribuível do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
+Se você tiver problemas para instalar o redistribuível de 2016, instale o redistribuível do 2010 aqui: [Banco de dados do Microsoft Access mecanismo 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
 
 ## <a name="specify-excel"></a> Especificar o Excel
 
@@ -165,11 +165,11 @@ O driver do Excel reconhece apenas um conjunto limitado de tipos de dados. Por e
 
 -   Moeda – moeda (DT_CY)
 
--   Booliano - booliano (DT_BOOL)
+-   Booliano – booliano (DT_BOOL)
 
 -   Data/hora – datetime (DT_DATE)
 
--   Cadeia – cadeia Unicode, 255 de comprimento (DT_WSTR)
+-   Cadeia de caracteres – cadeia Unicode, 255 de comprimento (DT_WSTR)
 
 -   Memorando – fluxo de texto Unicode (DT_NTEXT)
 

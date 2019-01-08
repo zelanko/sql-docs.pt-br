@@ -17,17 +17,17 @@ ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7827a42a58e11847cdf9c3a63f4a7424eb5cfc5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654951"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539898"
 ---
 # <a name="multiple-results"></a>Vários resultados
 Um *resultado* é algo retornado pela fonte de dados depois que uma instrução é executada. ODBC tem dois tipos de resultados: conjuntos de resultados e contagens de linhas. *Contagens de linhas* são o número de linhas afetadas por uma atualização, excluir ou inserir a instrução. Lotes, descrito em [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), pode gerar vários resultados.  
   
- A seguinte tabela lista os **SQLGetInfo** opções de um aplicativo usa para determinar se uma fonte de dados retorna vários resultados de todos os diferentes tipos de lote. Em particular, uma fonte de dados pode retornar uma contagem de linha única para todo o lote de instruções ou contagens de linhas individuais para cada instrução no lote. No caso de uma resultado conjunto – gerar instrução executada com uma matriz de parâmetros, a fonte de dados pode retornar um único conjunto de resultados para todos os conjuntos de parâmetros ou conjuntos de resultados individuais para cada conjunto de parâmetros.  
+ A seguinte tabela lista os **SQLGetInfo** opções de um aplicativo usa para determinar se uma fonte de dados retorna vários resultados de todos os diferentes tipos de lote. Em particular, uma fonte de dados pode retornar uma contagem de linha única para todo o lote de instruções ou contagens de linhas individuais para cada instrução no lote. No caso de uma resultado gerar o conjunto de instrução executada com uma matriz de parâmetros, a fonte de dados pode retornar um único conjunto de resultados para todos os conjuntos de parâmetros ou conjuntos de resultados individuais para cada conjunto de parâmetros.  
   
 |Tipo de lote|Contagens de linhas|Conjuntos de resultados|  
 |----------------|----------------|-----------------|  
@@ -35,7 +35,7 @@ Um *resultado* é algo retornado pela fonte de dados depois que uma instrução 
 |Procedimento|SQL_BATCH_ROW_COUNT [a]|– [b].|  
 |Matrizes de parâmetros|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
- [a] – geração de contagem de instruções em um lote podem ter suporte de linha, ainda que o retorno da contagem de linhas não tem suporte. A opção SQL_BATCH_SUPPORT **SQLGetInfo** indica se são permitidas instruções de geração de contagem de linhas em lotes; a opção SQL_BATCH_ROW_COUNTS indica se essas contagens de linhas são retornadas para o aplicativo.  
+ [a] linha gerando a contagem de instruções em um lote podem ter suporte, ainda que o retorno da contagem de linhas não tem suporte. A opção SQL_BATCH_SUPPORT **SQLGetInfo** indica se são permitidas instruções de geração de contagem de linhas em lotes; a opção SQL_BATCH_ROW_COUNTS indica se essas contagens de linhas são retornadas para o aplicativo.  
   
  [b] lotes explícitos e procedimentos sempre retornam vários conjuntos de resultados quando elas incluem várias instruções de geração de conjunto de resultados.  
   

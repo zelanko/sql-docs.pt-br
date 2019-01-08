@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813074"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501760"
 ---
 # <a name="what-is-a-lock"></a>O que é um bloqueio?
 O bloqueio é o processo pelo qual um DBMS restringe o acesso a uma linha em um ambiente multiusuário. Quando uma linha ou coluna está bloqueada exclusivamente, outros usuários não têm permissão para acessar os dados bloqueados até que o bloqueio seja liberado. Isso garante que dois usuários não é possível atualizar simultaneamente a mesma coluna em uma linha.  
   
- Bloqueios podem ser muito caros de uma perspectiva de recurso e devem ser usados somente quando necessário para preservar a integridade dos dados. Em um banco de dados em que centenas ou milhares de usuários podem estar tentando acessar um registro de cada segundo — como um banco de dados conectado à Internet — bloqueio desnecessário rapidamente pode resultar em desempenho mais lento em seu aplicativo.  
+ Bloqueios podem ser muito caros de uma perspectiva de recurso e devem ser usados somente quando necessário para preservar a integridade dos dados. Em um banco de dados em que centenas ou milhares de usuários podem estar tentando acessar um registro a cada segundo - como um banco de dados conectado à Internet, o bloqueio desnecessário pode rapidamente resultar em desempenho mais lento em seu aplicativo.  
   
  Você pode controlar como a fonte de dados e a biblioteca de cursor de ADO gerenciar a simultaneidade, escolhendo a opção apropriada de bloqueio.  
   

@@ -15,12 +15,12 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531592"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar dados de formato de caractere e nativo de versões anteriores do SQL Server
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você pode usar o **bcp** para importar dados de formato de caractere e nativo do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usando a opção **-V** . A opção **-V** faz com que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] use tipos de dados da versão anterior especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o formato de arquivo de dados é igual ao formato da versão anterior.  
@@ -51,8 +51,8 @@ ms.locfileid: "48169576"
   
  <sup>1</sup> UDT indica um tipo definido pelo usuário.  
   
-## <a name="exporting-using-v-80"></a>Exportar usando – V 80  
- Quando você exporta dados em massa usando o **– V80** alternar, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, e dados UDT no modo nativo são armazenados com um prefixo de 4 bytes, como `text`, `image`e `ntext`dados, em vez de um prefixo de 8 bytes, que é o padrão para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
+## <a name="exporting-using--v-80"></a>Exportar usando – V 80  
+ Quando você exporta dados em massa usando o **-V80** alternar, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, e dados UDT no modo nativo são armazenados com um prefixo de 4 bytes, como `text`, `image`e `ntext`dados, em vez de um prefixo de 8 bytes, que é o padrão para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
 ## <a name="copying-date-values"></a>Copiando valores de dados  
  O**bcp** usa a API de cópia em massa do ODBC. Portanto, para importar valores de data para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **bcp** usa o formato de data do ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
@@ -60,7 +60,7 @@ ms.locfileid: "48169576"
  O **bcp** comando exporta arquivos de formato de caractere usando o formato de padrão ODBC para `datetime` e `smalldatetime` valores. Por exemplo, uma coluna `datetime` que contém a data `12 Aug 1998` é copiada em massa em um arquivo de dados como a cadeia de caracteres `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Ao importar dados para um `smalldatetime` campo usando **bcp**, certifique-se de que o valor por segundo é 00.000; caso contrário, a operação falhará. O `smalldatetime` tipo de dados só mantém valores do minuto mais próximo. BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) não falharão nesta instância, mas truncarão o valor de segundos.  
+>  Ao importar dados para um `smalldatetime` campo usando **bcp**, certifique-se de que o valor por segundo é 00.000; caso contrário, a operação falhará. O tipo de dados `smalldatetime` só mantém valores do minuto mais próximo. BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) não falharão nesta instância, mas truncarão o valor de segundos.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para usar formatos de dados para importação ou exportação em massa**  
