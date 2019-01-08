@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], merge replication
@@ -16,12 +15,12 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e0d1d3214d9502d3c4a8db91cd16617dd9472a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220886"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757469"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estratégias para fazer backup e restaurar a replicação de mesclagem
   Para replicação de mesclagem, faça backup dos seguintes bancos de dados regularmente:  
@@ -55,14 +54,14 @@ ms.locfileid: "48220886"
   
 -   Se a publicação não for filtrada, você deverá conseguir atualizar o banco de dados de publicação com uma sincronização com o Assinante mais atualizado.  
   
--   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura receba os dados de clientes somente de uma região: norte, leste, sul e oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados.  
+-   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura recebe os dados do cliente somente para uma única região: Centro-Norte, Leste, Sul e Oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados.  
   
 > [!IMPORTANT]  
 >  Sincronizar um banco de dados de publicação com um banco de dados de assinatura pode resultar em tabelas publicadas restauradas a um point-in-time, que é mais recente que o point-in-time de outras tabelas não publicadas, que foram restaurados a partir do backup.  
   
  Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], então a assinatura não poderá ser anônima; deverá ser uma assinatura de cliente ou de servidor (chamadas de assinaturas locais e assinaturas globais nas versões anteriores).  
   
- Para sincronizar uma assinatura, consulte [Sincronizar uma assinatura push](../synchronize-a-push-subscription.md) e [Sincronizar uma assinatura pull](../synchronize-a-pull-subscription.md).  
+ Para sincronizar uma assinatura, consulte [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Reinicializando todas as assinaturas  
  Reinicializar todas as assinatura assegura que todos os Assinantes estarão em um estado consistente com o banco de dados de publicação restaurado. Essa abordagem deverá ser usada se desejar retornar uma topologia inteira ao estado anterior, representado por um determinado backup de banco de dados de publicação. Por exemplo, é possível reinicializar todas as assinaturas, se estiver restaurando um banco de dados de publicação a partir de um point-in-time especifico, como um mecanismo de recuperação para uma operação em lote executada erroneamente.  
@@ -93,7 +92,7 @@ ms.locfileid: "48220886"
  Quando um banco de dados assina os dados de um Publicador e, por sua vez, publica os mesmos dados em outros bancos de dados de assinatura, isso é chamado de banco de dados de republicação. Ao restaurar um banco de dados de republicação, siga as diretrizes descritas em "Fazendo backup e restaurando um banco de dados de publicação" e "Fazendo backup e restaurando um banco de dados de assinatura" neste tópico.  
   
 ## <a name="see-also"></a>Consulte também  
- [Backup e Restauração de bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md)  
   
   
