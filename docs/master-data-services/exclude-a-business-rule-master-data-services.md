@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
@@ -14,12 +13,12 @@ ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 183a639613faf9801882d278978622de9b40e701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7f93c1aeb0cfd4de81f95d728d0bc075e9de751
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795924"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749328"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Apagar uma regra de negócio (Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "47795924"
   
 ## <a name="see-also"></a>Consulte Também  
  [Excluir uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
- [Criar e publicar uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
