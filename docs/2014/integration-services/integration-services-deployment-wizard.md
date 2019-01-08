@@ -13,12 +13,12 @@ ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086288"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535909"
 ---
 # <a name="integration-services-deployment-wizard"></a>Assistente de Implantação do Integration Services
   O Assistente de Implantação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] implanta projetos no catálogo SSISDB em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o modelo de implantação de projeto.  
@@ -27,13 +27,13 @@ ms.locfileid: "48086288"
   
  O assistente prossegue nas quatro etapas a seguir. Clique em **próxima** para mover para a próxima etapa, ou **Previous** para retornar à etapa anterior.  
   
-1.  **Selecionar fonte** – selecione o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto que você deseja implantar.  
+1.  **Selecionar fonte** - selecione o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto que você deseja implantar.  
   
-2.  **Selecionar destino** – selecionar o destino do projeto.  
+2.  **Selecionar destino** -selecionar o destino do projeto.  
   
-3.  **Revisão** – exibe suas seleções.  
+3.  **Revisão** -exibe suas seleções.  
   
-4.  **Implantar/resultados** – implanta o projeto e exibe os resultados.  
+4.  **Implantar/resultados** - implanta o projeto e exibe os resultados.  
   
 ## <a name="select-source"></a>Selecionar Fonte  
  Para implantar um arquivo de implantação de projeto que você criou, selecione **arquivo de projeto de implantação** e insira o caminho para o arquivo. ispac ou clique em **procurar** encontrá-lo no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pasta do projeto. Para implantar um projeto residente no catálogo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selecione **Catálogo do Integration Services**e insira o nome do servidor e o caminho para o projeto no catálogo.  
@@ -54,7 +54,7 @@ ms.locfileid: "48086288"
  Clique em **Fechar** para sair do assistente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantar projetos no servidor do Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Implantar projetos no Servidor do Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Implantação de projetos e pacotes](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

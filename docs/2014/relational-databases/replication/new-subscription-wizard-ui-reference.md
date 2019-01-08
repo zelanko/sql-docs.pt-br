@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - New Subscription Wizard
@@ -13,12 +12,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6915fe649656b62093ddd953ed07d9cb9d3567c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945dfd47f82f0c11dcb104d283cf61346f27903d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222366"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814684"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistente para Nova Assinatura (referência de interface do usuário)
   Esta seção fornece informações sobre as páginas seguintes do Assistente para Nova Assinatura:  

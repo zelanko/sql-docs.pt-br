@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133368"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365050"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode reinicializar pacotes que falharam a partir do ponto de falha, em vez de executar novamente todo o pacote. Se um pacote estiver configurado para usar pontos de verificação, serão gravadas informações sobre a execução do pacote em um arquivo de ponto de verificação. Quando o pacote com falha é executado novamente, o arquivo do ponto de verificação é usado para reiniciar o pacote a partir do ponto de falha. Se o pacote for executado com êxito, o arquivo de ponto de verificação é excluído e recriado na próxima vez que o pacote for executado.  
@@ -33,7 +32,7 @@ ms.locfileid: "48133368"
   
 -   Evite repetir a agregação de valores. Por exemplo, um pacote que computa muitas agregações, como médias e somas, usando uma tarefa de Fluxo de Dados separada para realizar cada agregação, pode ser reiniciado após computar uma falha de agregação e somente essa agregação será computada novamente.  
   
- Se um pacote for configurado para usar pontos de verificação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capturará o ponto de reinicialização no arquivo de ponto de verificação. O tipo de contêiner que falha e a implementação de recursos como transações afetam o ponto de reinicialização registrado no arquivo de ponto de verificação. Os valores atuais das variáveis também são capturados no arquivo de ponto de verificação. No entanto, os valores das variáveis que têm o `Object` tipo de dados não são salvos em arquivos de ponto de verificação.  
+ Se um pacote for configurado para usar pontos de verificação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capturará o ponto de reinicialização no arquivo de ponto de verificação. O tipo de contêiner que falha e a implementação de recursos como transações afetam o ponto de reinicialização registrado no arquivo de ponto de verificação. Os valores atuais das variáveis também são capturados no arquivo de ponto de verificação. No entanto, os valores de variáveis que têm o tipo de dados `Object` não são salvos em arquivos de ponto de verificação.  
   
 ## <a name="defining-restart-points"></a>Definindo os pontos de reinicialização  
  O contêiner host da tarefa que encapsula uma única tarefa é a menor unidade atômica de trabalho que pode ser reiniciada. O contêiner Loop Foreach e um contêiner transacionado também são tratados como unidades atômicas de trabalho.  
@@ -43,7 +42,7 @@ ms.locfileid: "48133368"
 > [!NOTE]  
 >  O uso de pontos de verificação e transações no mesmo pacote pode gerar resultados inesperados. Por exemplo, quando um pacote falha e é reiniciado em um ponto de verificação, o pacote pode repetir uma transação que já tenha sido confirmada com êxito.  
   
- Os dados do ponto de verificação não são salvos para os contêineres Loop For e Loop Foreach. Quando um pacote é reinicializado, os contêineres Loop For e Loop Foreach e seus contêineres filho são executados novamente. Se um contêiner filho no loop executar com êxito, ele não será registrado no arquivo de ponto de verificação, ao invés disso ele será executado novamente. Para obter mais informações e uma solução alternativa, consulte [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Os dados do ponto de verificação não são salvos para os contêineres Loop For e Loop Foreach. Quando um pacote é reinicializado, os contêineres Loop For e Loop Foreach e seus contêineres filho são executados novamente. Se um contêiner filho no loop executar com êxito, ele não será registrado no arquivo de ponto de verificação, ao invés disso ele será executado novamente. Para obter mais informações e uma solução alternativa, consulte [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  Se o pacote for reiniciado as configurações do pacote não serão recarregadas, ao invés disso o pacote usará as informações de configuração gravadas no arquivo de ponto de verificação. Isto assegura que o pacote usará as mesmas configurações existentes no momento que falhou quando for executado novamente.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48133368"
   
  A seguinte tabela lista as propriedades de pacote definidas para implementar pontos de verificação.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |CheckpointFileName|Especifica o nome do arquivo de ponto de verificação.|  
 |CheckpointUsage|Especifica se pontos de verificação são usados.|  
@@ -67,7 +66,7 @@ ms.locfileid: "48133368"
 ### <a name="checkpoint-usage"></a>Uso do ponto de verificação  
  A propriedade CheckpointUsage pode ser definida com os seguintes valores:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |`Never`|Especifica que o arquivo de ponto de verificação não é usado e o pacote executa a partir do início do fluxo de trabalho do pacote.|  
 |`Always`|Especifica que o arquivo de ponto de verificação sempre é usado e que o pacote reinicia a partir do ponto da falha de execução anterior. Se o arquivo de ponto de verificação não for localizado, o pacote falhará.|  
@@ -85,9 +84,9 @@ ms.locfileid: "48133368"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Artigo técnico, [Reinicialização automática de pacotes de SSIS depois de Failover ou Falha](http://go.microsoft.com/fwlink/?LinkId=200407), em social.technet.microsoft.com (a página pode estar em inglês)  
+-   Artigo técnico, [Reinicialização automática de pacotes de SSIS depois de Failover ou Falha](https://go.microsoft.com/fwlink/?LinkId=200407), em social.technet.microsoft.com (a página pode estar em inglês)  
   
--   ARtigo de suporte, [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), em support.microsoft.com.  
+-   ARtigo de suporte, [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](https://go.microsoft.com/fwlink/?LinkId=241633), em support.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

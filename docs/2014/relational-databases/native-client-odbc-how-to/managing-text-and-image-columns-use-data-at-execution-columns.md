@@ -12,12 +12,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c63ff8eada8123e3bb7dfab5f8761f66ba2d2ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227126"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374088"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>Usar colunas de dados em execução (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48227126"
   
     -   Para o quarto parâmetro, coloque um identificador de coluna definido por programa.  
   
-2.  Chame [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) returns SQL_NEED_DATA, que indica que as colunas de dados em execuções estão prontas para o processamento.  
+2.  Chame [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) returns SQL_NEED_DATA, que indica que as colunas de dados em execuções estão prontas para o processamento.  
   
 3.  Para cada coluna de dados em execução:  
   
-    -   Chame [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) para obter o ponteiro de matriz da coluna. SQL_NEED_DATA será retornado se houver outra coluna de dados em execução.  
+    -   Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obter o ponteiro de matriz da coluna. SQL_NEED_DATA será retornado se houver outra coluna de dados em execução.  
   
     -   Chame [SQLPutData](../native-client-odbc-api/sqlputdata.md) uma ou mais vezes para enviar os dados da coluna, até que o comprimento seja enviado.  
   
-4.  Chame [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) para indicar que todos os dados da coluna de dados em execução final foram enviados. SQL_NEED_DATA não será retornado.  
+4.  Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para indicar que todos os dados da coluna de dados em execução final foram enviados. SQL_NEED_DATA não será retornado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como ler dados de caracteres variáveis de SQL_LONG usando o SQLGetData. Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   

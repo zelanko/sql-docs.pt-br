@@ -1,6 +1,6 @@
 ---
-title: Monitorar serviços do SQL Server Machine Learning usando exibições de gerenciamento dinâmico (DMVs) | Microsoft Docs
-description: Use exibições de gerenciamento dinâmico (DMVs) para monitorar serviços do SQL Server Machine Learning.
+title: Monitorar a execução do script R e Python usando exibições de gerenciamento dinâmico (DMVs) - aprendizagem de máquina do SQL Server
+description: Use exibições de gerenciamento dinâmico (DMVs) para monitorar a execução de script externo de R e Python no SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aa05c78f8bac4af5187b815126e0ec9e4b6fff4e
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743449"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645545"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar serviços do SQL Server Machine Learning usando exibições de gerenciamento dinâmico (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Para obter mais informações sobre DMVs, consulte [exibições de gerenciamento
 
 As seguintes exibições de gerenciamento dinâmico podem ser usadas ao monitorar cargas de trabalho de aprendizado de máquina no SQL Server. Para consultar as DMVs, você precisa `VIEW SERVER STATE` permissão na instância.
 
-| Exibição de gerenciamento dinâmico | Tipo | Description |
+| Exibição de gerenciamento dinâmico | Tipo | Descrição |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execução | Retorna uma linha para cada conta de trabalho ativa que executa um script externo. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execução | Retorna uma linha para cada tipo de solicitação de script externo. |
@@ -58,7 +58,7 @@ Exiba as opções de configuração e a configuração de instalação do servi�
 
 Execute a consulta abaixo para obter essa saída. Para obter mais informações sobre as exibições e funções usadas, consulte [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), e [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -78,7 +78,7 @@ WHERE name = 'external scripts enabled';
 
 A consulta retorna as colunas a seguir:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | IsMLServicesInstalled | Retornará 1 se os serviços de Machine Learning do SQL Server está instalado para a instância. Caso contrário, retornará 0. |
 | ExternalScriptsEnabled | Retornará 1 se os scripts externos é habilitado para a instância. Caso contrário, retornará 0. |
@@ -93,7 +93,7 @@ Exiba sessões ativas em execução de scripts externos.
 
 Execute a consulta abaixo para obter essa saída. Para obter mais informações sobre os modos de exibição de gerenciamento dinâmico usados, consulte [. DM exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [DM external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), e [DM exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -106,7 +106,7 @@ ON s.session_id = r.session_id;
 
 A consulta retorna as colunas a seguir:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | session_id | Identifica a sessão associada a cada conexão primária ativa. |
 | blocking_session_id | ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas). |
@@ -133,7 +133,7 @@ Exiba as estatísticas de execução para o tempo de execução externo para R e
 
 Execute a consulta abaixo para obter essa saída. Para obter mais informações sobre o modo de exibição de gerenciamento dinâmico usado, consulte [DM external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). A consulta retorna apenas as funções que foram executadas mais de uma vez.
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -142,7 +142,7 @@ ORDER BY language, counter_name;
 
 A consulta retorna as colunas a seguir:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | language | Nome da linguagem de script externo registrada. |
 | counter_name | Nome de uma função de script externo registrada. |
@@ -156,7 +156,7 @@ Exiba os contadores de desempenho relacionados à execução de scripts externos
 
 Execute a consulta abaixo para obter essa saída. Para obter mais informações sobre o modo de exibição de gerenciamento dinâmico usado, consulte [DM os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -164,7 +164,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **DM os_performance_counters** gera os seguintes contadores de desempenho para scripts externos:
 
-| Contador | Description |
+| Contador | Descrição |
 |---------|-------------|
 | Total de Execuções | Número de processos externos iniciados por chamadas locais ou remotas. |
 | Execuções paralelas | Número de vezes que um script incluiu a _@parallel_ especificação e que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] foi capaz de gerar e usar um plano de consulta paralela. |
@@ -182,7 +182,7 @@ Exibir informações sobre a memória usada pelo sistema operacional, do SQL Ser
 
 Execute a consulta abaixo para obter essa saída. Para obter mais informações sobre os modos de exibição de gerenciamento dinâmico usados, consulte [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) e [DM os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -192,7 +192,7 @@ FROM sys.dm_os_sys_info;
 
 A consulta retorna as colunas a seguir:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | physical_memory_kb | A quantidade total de memória física no computador. |
 | committed_kb | A memória confirmada em KB (quilobytes) no Gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. |
@@ -200,13 +200,13 @@ A consulta retorna as colunas a seguir:
 
 ## <a name="memory-configuration"></a>Configuração de memória
 
-Exibir informações sobre a configuração máxima de memória em percentual do SQL Server e pools de recursos externos. Se SQL Server está em execução com o valor padrão de `max server memory (MB)`, ele é considerado como 100% da memória do sistema operacional.
+Exibir informações sobre a configuração máxima de memória em percentual do SQL Server e pools de recursos externos. Se o SQL Server está em execução com o valor padrão de `max server memory (MB)`, ele é considerado como 100% da memória do sistema operacional.
 
 ![Saída da consulta de configuração de memória](media/dmv-memory-configuration.png "de saída da consulta de configuração de memória")
 
 Execute a consulta abaixo para obter essa saída. Para obter mais informações sobre as exibições usadas, consulte [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) e [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -221,7 +221,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as colunas a seguir:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | nome | Nome do pool de recursos externos ou do SQL Server. |
 | max_memory_percent | A memória máxima que pode usar o SQL Server ou o pool de recursos externos. |
@@ -234,7 +234,7 @@ Na [administrador de recursos do SQL Server](../../relational-databases/resource
 
 Execute a consulta abaixo para obter essa saída. Para obter mais informações sobre os modos de exibição de gerenciamento dinâmico usados, consulte [DM resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) e [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -246,7 +246,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as colunas a seguir:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | pool_name | Nome do pool de recursos. Pools de recursos do SQL Server são prefixados com `SQL Server` e pools de recursos externos são prefixados com `External Pool`.
 | total_cpu_usage_hours | O uso de CPU cumulativo em milissegundos, desde que as estatísticas do administrador de recursos foram redefinidas. |
@@ -265,7 +265,7 @@ Exiba os pacotes de R instalados em serviços do SQL Server Machine Learning.
 
 Execute a consulta abaixo para obter essa saída. A consulta usar um script de R para determinar os pacotes R instalados com o SQL Server.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -275,7 +275,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 As colunas retornadas são:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | Pacote | Nome do pacote instalado. |
 | Versão | Versão do pacote. |
@@ -291,7 +291,7 @@ Exiba os pacotes do Python instalados no SQL Server Machine Learning Services.
 
 Execute a consulta abaixo para obter essa saída. A consulta a usar um script de Python para determinar os pacotes do Python instalados com o SQL Server.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip
@@ -301,11 +301,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 As colunas retornadas são:
 
-| coluna | Description |
+| coluna | Descrição |
 |--------|-------------|
 | Pacote | Nome do pacote instalado. |
 | Versão | Versão do pacote. |
-| Local | Diretório onde você pode encontrar o pacote. |
+| Local padrão | Diretório onde você pode encontrar o pacote. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

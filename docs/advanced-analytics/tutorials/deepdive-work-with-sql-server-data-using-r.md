@@ -1,91 +1,94 @@
 ---
-title: Trabalhar com dados do SQL Server usando o R (R e SQL aprofundamento) | Microsoft Docs
+title: Criar um banco de dados e as permissões para RevoScaleR tutoriais - aprendizagem de máquina do SQL Server
+description: Tutorial passo a passo sobre como criar um banco de dados do SQL Server para obter tutoriais de R...
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 15032b604d7ea28ad03acb837f997dac3afa84b8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375669"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645263"
 ---
-# <a name="lesson-1-create-a-database-and-permissions"></a>Lição 1: Criar um banco de dados e permissões
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Criar um banco de dados e permissões (tutorial do SQL Server e o RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar [funções RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Esta lição é parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar [funções RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta lição, você configura o ambiente e adiciona os dados que necessários para treinar seus modelos e executar alguns resumos rápidos dos dados. Como parte do processo, você deve concluir estas tarefas:
-  
-- Criar um novo banco de dados para armazenar os dados de treinamento e pontuação dos dois modelos do R.
-  
-- Criar uma conta (um usuário do Windows ou logon do SQL) que será usada na comunicação entre a estação de trabalho e o computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-  
-- Criar fontes de dados no R para trabalhar com dados do e objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-  
-- Usar a fonte de dados do R para carregar dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
-- Usar o R para obter uma lista de variáveis e modificar os metadados da tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-  
-- Criar um contexto de computação para permitir a execução remota de código do R.
-  
-- (Opcional) Habilite o rastreamento no contexto de computação remota.
-  
-## <a name="create-the-database-and-user"></a>Criar o banco de dados e o usuário
+Lição um é sobre como configurar um banco de dados do SQL Server e as permissões necessárias para concluir este tutorial. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou outro editor de consultas para concluir as seguintes tarefas:
 
-Para este passo a passo, crie um novo banco de dados em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e adicionar um logon SQL com permissões para gravar e ler dados e executar scripts do R.
+> [!div class="checklist"]
+> * Criar um novo banco de dados para armazenar os dados de treinamento e pontuação dois modelos de R
+> * Criar um logon de usuário de banco de dados com permissões para criar e usar objetos de banco de dados
+  
+## <a name="create-the-database"></a>Criar o banco de dados
 
-> [!NOTE]
-> Se você só estiver lendo dados, a conta que executa os scripts R que requer permissões SELECT (**db_datareader** função) no banco de dados especificado. No entanto, neste tutorial, você deve ter privilégios de administrador DDL para preparar o banco de dados e para criar tabelas para salvar os resultados da pontuação.
-> 
-> Além disso, se você não for o proprietário do banco de dados, você precisa da permissão EXECUTE ANY EXTERNAL SCRIPT, para executar scripts R.
+Este tutorial requer um banco de dados para armazenar dados e código. Se você não for um administrador, peça ao seu DBA para criar o banco de dados e faça logon para você. Você precisará de permissões para gravar e ler dados e executar scripts do R.
 
-1. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione a instância em que o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] está habilitado, clique com o botão direito do mouse em **Bancos de dados**e selecione **Novo banco de dados**.
+1. No SQL Server Management Studio, conecte-se a uma instância de banco de dados habilitado para R.
+
+2. Clique com botão direito **bancos de dados**e selecione **novo banco de dados**.
   
-2. Digite um nome para o novo banco de dados. Você pode usar qualquer nome desejado. Basta se lembrar de editar todos os scripts do [!INCLUDE[tsql](../../includes/tsql-md.md)] e R neste passo a passo de forma adequada.
+2. Digite um nome para o novo banco de dados: RevoDeepDive.
   
-    > [!TIP]
-    > Para exibir o nome do banco de dados atualizado, clique com o botão direito do mouse em **Bancos de dados** e selecione **Atualizar** .
+
+## <a name="create-a-login"></a>Criar um logon
   
-3. Clique em **Nova Consulta**e altere o contexto do banco de dados mestre.
+1. Clique em **Nova Consulta**e altere o contexto do banco de dados mestre.
   
-4. Na janela **Nova consulta** , execute os comandos a seguir para criar as contas de usuário e atribuí-las ao banco de dados usado neste tutorial. Lembre-se de alterar o nome do banco de dados, se necessário.
+2. Na janela **Nova consulta** , execute os comandos a seguir para criar as contas de usuário e atribuí-las ao banco de dados usado neste tutorial. Lembre-se de alterar o nome do banco de dados, se necessário.
+
+3. Para verificar se o logon, selecione o novo banco de dados, expanda **segurança**e expanda **usuários**.
   
-**Usuário do Windows**
+**usuário Windows**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
-CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
+CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[RevoDeepDive]
 
  --Add the new user to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 **Logon do SQL**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [DeepDive]
+USE RevoDeepDive
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. Para confirmar que o usuário foi criado, selecione o novo banco de dados, expanda **Segurança**e expanda **Usuários**.
+## <a name="assign-permissions"></a>Atribuir permissões
 
-## <a name="troubleshooting"></a>Solução de problemas
+Este tutorial demonstra o script R e operações de DDL, incluindo a criação e exclusão de tabelas e procedimentos armazenados e executar o script de R em um processo externo no SQL Server. Nesta etapa, atribua permissões para permitir que essas tarefas.
+
+Este exemplo pressupõe um logon do SQL (DDUser01), mas se você tiver criado um logon do Windows, use-a.
+
+```sql
+USE RevoDeepDive
+GO
+
+EXEC sp_addrolemember 'db_owner', 'DDUser01'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
+GO
+```
+
+## <a name="troubleshoot-connections"></a>Solucionar problemas de conexões
 
 Esta seção lista alguns problemas comuns que podem ocorrer durante a configuração do banco de dados.
 
@@ -95,7 +98,7 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
   
     Se você não quiser instalar as ferramentas de gerenciamento de banco de dados adicionais, será possível criar um teste de conexão com a instância do SQL Server usando o [Administrador de Fonte de Dados ODBC](https://msdn.microsoft.com/library/ms714024.aspx) no Painel de Controle. Se o banco de dados estiver configurado corretamente e você inserir o nome de usuário correto e a senha, você deverá conseguir ver o banco de dados que acabou de criar e selecioná-lo como o banco de dados padrão.
   
-    Se você não conseguir se conectar ao banco de dados, verifique se as conexões remotas estão habilitadas para o servidor e se o protocolo Pipes Nomeados foi habilitado. Dicas de solução de problemas adicionais são fornecidas neste artigo: [solucionar problemas de conexão com o mecanismo de banco de dados do SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Motivos comuns para falhas de conexão incluem remoto conexões não estão habilitadas para o servidor e o protocolo de Pipes nomeados não está habilitado. Você pode encontrar mais dicas de solução de problemas neste artigo: [Solucionar problemas de conexão para o mecanismo de banco de dados do SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **O nome de minha tabela tem datareader como prefixo. Por quê?**
   
@@ -111,17 +114,11 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
   
 - **Não tenho privilégios DDL. Ainda posso executar o tutorial**?
   
-    Sim. No entanto, você precisará pedir que alguém pré-carregue os dados nas tabelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ignorar as seções que solicitam a criação de novas tabelas. As funções que exigem privilégios DDL são destacadas no tutorial sempre que possível.
+    Sim, mas você deve pedir que alguém pré-carregue os dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas e vá em frente para a próxima lição. As funções que exigem privilégios DDL são destacadas no tutorial sempre que possível.
 
     Além disso, solicite ao administrador para conceder permissão, EXECUTE ANY EXTERNAL SCRIPT. Ela é necessária para execução do script R, se for remoto, ou usando `sp_execute_external_script`.
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-steps"></a>Próximas etapas
 
-[Criar objetos de dados do SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-## <a name="overview"></a>Visão geral
-
-[Aprofundamento da ciência de dados: Usando os pacotes RevoScaleR](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
-
-
+> [!div class="nextstepaction"]
+> [Criar objetos de dados do SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

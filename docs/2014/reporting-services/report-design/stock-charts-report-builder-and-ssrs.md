@@ -11,19 +11,19 @@ ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c559c9bf22cc5aff2ce75ba255055c18af649976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e7b05abcff2b5f7eae6fabb936447dd37ee6306
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096736"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377398"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Gráficos de ações (Construtor de Relatórios e SSRS)
   Um gráfico de estoque é especificamente projetado para dados financeiros ou científicos que usam até quatro valores por ponto de dados. Esses valores se alinham com os valores alto, baixo, aberto e fechado usados para plotar dados de estoque financeiro. Esse tipo de gráfico exibe valores de abertura e fechamento usando marcadores, que geralmente são linhas ou triângulos. No exemplo a seguir, os valores de abertura são mostrados pelos marcados à esquerda e os valores de fechamento são mostrados pelos marcadores à direita.  
   
  ![Gráfico de ações](../media/rs-stockchart.gif "Gráfico de ações")  
   
- Um exemplo de um gráfico de ações está disponível como um relatório de exemplo do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Report Builder. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Um exemplo de um gráfico de ações está disponível como um relatório de exemplo do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Report Builder. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,9 +41,9 @@ ms.locfileid: "48096736"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece muitas fórmulas calculadas para uso com gráficos de estoque, inclusive Indicador de Preços, Índice de Força Relativa, MACD e outros.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos de intervalos &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Caixa de diálogo de propriedades do eixo, opções de eixo &#40;relatórios e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [Caixa de diálogo Propriedades do Eixo, Opções do Eixo &#40;Construtor de Relatórios e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

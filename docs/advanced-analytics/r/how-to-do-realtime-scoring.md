@@ -1,5 +1,5 @@
 ---
-title: Como gerar previsões e previsões usando modelos de aprendizado de máquina no SQL Server | Microsoft Docs
+title: Gerar previsões e previsões usando modelos de aprendizado de máquina - serviços de aprendizado de máquina do SQL Server
 description: Use rxPredict ou sp_rxPredict para pontuação em tempo real ou PREVER o T-SQL para nativo de pontuação para previsões e previsões no R e Pythin no aprendizado de máquina do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712464"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432499"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Como gerar previsões e previsões usando modelos de aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ O modelo deve ser criado usando uma função com suporte e serializado para um f
 
 O significado das extensões CLR e do C++ é proximidade com o mecanismo de banco de dados em si. A linguagem nativa do mecanismo de banco de dados é C++, o que significa que as extensões escritas em C++ para executar com menos dependências. Em contraste, as extensões do CLR dependem do .NET Core. 
 
-Como você pode esperar, suporte de plataforma é afetado por esses ambientes de tempo de execução. Extensões do mecanismo de banco de dados nativo executado em qualquer lugar em que o banco de dados relacional é suportado: Windows, Linux, Azure. Extensões CLR com o requisito do .NET Core está atualmente Windows apenas.
+Como você pode esperar, suporte de plataforma é afetado por esses ambientes de tempo de execução. Extensões do mecanismo de banco de dados nativo execute em qualquer lugar em que o banco de dados relacional há suporte para: Windows, Linux, Azure. Extensões CLR com o requisito do .NET Core está atualmente Windows apenas.
 
 ## <a name="scoring-overview"></a>Visão geral de pontuação
 
@@ -99,7 +99,7 @@ Serializando um modelo para um formato binário é útil, mas não é necessári
 Se você estiver usando o [servidor autônomo](r-server-standalone.md) ou um [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), você tem outras opções além de procedimentos armazenados e funções de T-SQL para gerar previsões rapidamente. O servidor autônomo e o Machine Learning Server suportam o conceito de um *serviço web* para implantação de código. Você pode agrupar um R ou Python modelo previamente treinado como um serviço web, chamado em tempo de execução para avaliar as novas entradas de dados. Para obter mais informações, consulte estes tópicos:
 
 + [Quais são os serviços web no Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [O que é operacionalização?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [O que é operacionalização?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Implantar um modelo de Python como um serviço web com o azureml-modelo-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publicar um modelo em tempo real ou um bloco de código do R como um novo serviço web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [pacote mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

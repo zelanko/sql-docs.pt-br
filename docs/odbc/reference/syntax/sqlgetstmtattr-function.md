@@ -20,16 +20,16 @@ ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2df20e27949b82a9f2e827984f0c2fb77a3814b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d85f9fcf788dc5ccbba4b2675cbd7caa34dd242c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731984"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209047"
 ---
 # <a name="sqlgetstmtattr-function"></a>Função SQLGetStmtAttr
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetStmtAttr** retorna a configuração atual de um atributo de instrução.  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLGetStmtAttr** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* do SQL _HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetStmtAttr** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Os dados retornados  *\*ValuePtr* foi truncado para ser *BufferLength* menos o comprimento de um caractere nulo de terminação. O comprimento do valor completo da cadeia de caracteres é retornado no **StringLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510019"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória
   Em vários cenários, você deve especificar o nível de isolamento da transação. O isolamento da transação para tabelas com otimização de memória difere das tabelas baseadas em disco.  
@@ -56,7 +56,7 @@ ms.locfileid: "48050024"
   
  A garantia fornecida pelo nível de isolamento SNAPSHOT (o nível inferior de isolamento com suporte para tabelas com otimização de memória) inclui as garantias de READ COMMITTED. Cada instrução da transação lê a mesma versão consistente do banco de dados. Não somente todas as linhas são lidas pela transação confirmada no banco de dados, como também todas as operações de leitura veem o conjunto de alterações feito pelo mesmo conjunto de transações.  
   
- **Diretriz**: se apenas a garantia de isolamento READ COMMITTED for necessária, use o isolamento SNAPSHOT com procedimentos armazenados compilados nativamente e para acessar tabelas com otimização de memória por meio de interpretado [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Diretriz**: Se apenas a garantia de isolamento READ COMMITTED for necessária, use o isolamento SNAPSHOT com procedimentos armazenados compilados nativamente e para acessar tabelas com otimização de memória por meio de interpretado [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Para transações de confirmação automática, o nível de isolamento READ COMMITTED é mapeado implicitamente para SNAPSHOT nas tabelas com otimização de memória. Portanto, se a configuração de sessão TRANSACTION ISOLATION LEVEL for definida como READ COMMITTED, não será necessário especificar o nível de isolamento através de uma dica de tabela ao acessar tabelas com otimização de memória.  
   
@@ -80,7 +80,7 @@ BEGIN TRAN
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   
@@ -91,13 +91,13 @@ COMMIT
   
      Alguns aplicativos podem assumir que os leitores sempre esperarão a confirmação dos gravadores, especialmente se houver alguma sincronização entre as duas transações na camada de aplicativos.  
   
-     **Diretriz:** aplicativos não podem confiar no comportamento de bloqueio. Se um aplicativo precisar de sincronização entre transações simultâneas, tal lógica pode ser implementada na camada de aplicativo ou na camada de banco de dados, por meio [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Diretriz:** Aplicativos não podem confiar no comportamento de bloqueio. Se um aplicativo precisar de sincronização entre transações simultâneas, tal lógica pode ser implementada na camada de aplicativo ou na camada de banco de dados, por meio [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   Em transações que usam o isolamento READ COMMITTED, cada instrução considera a versão mais recente das linhas no banco de dados. Portanto, as instruções subsequentes veem as alterações no estado do banco de dados.  
   
      A sondagem de uma tabela através de um loop WHILE até uma nova linha ser encontrada é um exemplo de um padrão de aplicativo que usa essa suposição. Com cada iteração do loop, a consulta considerará as atualizações mais recentes no banco de dados.  
   
-     **Diretriz:** se um aplicativo precisar sondar uma tabela com otimização de memória para obter as linhas mais recentes gravadas na tabela, mova o loop de sondagem fora do escopo da transação.  
+     **Diretriz:** Se um aplicativo precisar sondar uma tabela com otimização de memória para obter as linhas mais recentes gravadas na tabela, mova o loop de sondagem fora do escopo da transação.  
   
      Este é um padrão de aplicativo de exemplo que usa essa suposição. Sondando uma tabela através de um loop WHILE até que uma nova linha seja encontrada. Em cada iteração de loop, a consulta acessará as atualizações mais recentes no banco de dados.  
   

@@ -11,18 +11,18 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b93171cad6896b32086604b54bce30c3fe396fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72e3d99672b17fcf6d7cafa3825d04f8989ecdea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144316"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373058"
 ---
 # <a name="add-transact-sql-snippets"></a>Adicionar snippets de Transact-SQL
   Você pode adicionar seus próprios snippets de código Transact-SQL ao conjunto de snippets predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Criando um arquivo de snippet Transact-SQL  
- A primeira parte da criação de um snippet de código do [!INCLUDE[tsql](../../includes/tsql-md.md)] é criar um arquivo XML com o texto do seu snippet de código. O arquivo deve ter uma extensão .snippet e atender as requisitos do [Esquema de trechos de código](http://go.microsoft.com/fwlink/?LinkId=207504). Defina a linguagem do snippet como SQL.  
+ A primeira parte da criação de um snippet de código do [!INCLUDE[tsql](../../includes/tsql-md.md)] é criar um arquivo XML com o texto do seu snippet de código. O arquivo deve ter uma extensão .snippet e atender as requisitos do [Esquema de trechos de código](https://go.microsoft.com/fwlink/?LinkId=207504). Defina a linguagem do snippet como SQL.  
   
  Você pode usar os snippets predefinidos fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como exemplos. Para encontrar os snippets predefinidos, abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**. Selecione **SQL** na caixa de listagem **Linguagem** ; o caminho para os snippets do [!INCLUDE[tsql](../../includes/tsql-md.md)] será exibido na caixa **Local** .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48144316"
   
 #### <a name="adding-a-snippet-folder"></a>Adicionando uma pasta de snippets  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48144316"
   
 #### <a name="importing-a-snippet"></a>Importando um snippet  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48144316"
 4.  Navegue até a pasta que contém seu trecho, clique no arquivo .snippet e clique em **Abrir** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma `TRY-CATCH` trecho com surround e o importa para [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ O exemplo a seguir cria um snippet surround-with `TRY-CATCH` e o importa para o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Cole o código a seguir no bloco de notas e salve como um arquivo chamado TryCatch.snippet.  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  

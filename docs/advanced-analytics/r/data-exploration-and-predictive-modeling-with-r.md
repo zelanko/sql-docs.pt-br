@@ -1,5 +1,5 @@
 ---
-title: Exploração de dados e modelagem preditiva com R no SQL Server Machine Learning | Microsoft Docs
+title: Exploração de dados e modelagem preditiva com R - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984708"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432339"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploração de dados e modelagem preditiva com R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,15 +62,15 @@ Além das bibliotecas de R proprietárias incluídas com o Microsoft Machine Lea
   
      Para obter mais informações sobre esses pacotes e como usá-los, consulte [What ' s RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) e [Introdução ao RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** contém uma coleção de algoritmos de aprendizado de máquina altamente otimizada e transformações de dados da equipe de ciência de dados da Microsoft. Muitos dos algoritmos também são usados no Azure Machine Learning. Para obter mais informações, consulte [usando o pacote MicrosoftML](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** contém uma coleção de algoritmos de aprendizado de máquina altamente otimizada e transformações de dados da equipe de ciência de dados da Microsoft. Muitos dos algoritmos também são usados no Azure Machine Learning. Para obter mais informações, consulte [MicrosoftML no SQL Server](ref-r-microsoftml.md).
 
 ### <a name="r-development-tools"></a>Ferramentas de Desenvolvimento R
 
 Ao desenvolver sua solução de R, certifique-se de baixar o Microsoft R Client. Este download gratuito inclui as bibliotecas necessárias para dar suporte a contextos de computação remota e alorithms escalonável:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** uma distribuição do tempo de execução R e um conjunto de pacotes, como a biblioteca de kernel de matemática da Intel, que melhora o desempenho de operações R padrão.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Uma distribuição de execução R e um conjunto de pacotes, como biblioteca Intel math kernel, que melhora o desempenho de operações R padrão.  
   
-+ **RevoScaleR:** um pacote de R que lhe permite enviar computações por push a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Ele também inclui um conjunto de funções R comuns que foram reprojetadas para fornecer melhor desempenho e escalabilidade. Você pode identificar essas funções aprimoradas pelo prefixo **rx** . Ele também inclui provedores de dados aprimorados para uma variedade de fontes; essas funções são prefixadas com **Rx**.
++ **RevoScaleR:** Um pacote R que lhe permite enviar computações a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Ele também inclui um conjunto de funções R comuns que foram reprojetadas para fornecer melhor desempenho e escalabilidade. Você pode identificar essas funções aprimoradas pelo prefixo **rx** . Ele também inclui provedores de dados aprimorados para uma variedade de fontes; essas funções são prefixadas com **Rx**.
 
 Você pode usar qualquer editor de código baseado em Windows que dá suporte a R, tais como [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] ou RStudio. O download do [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] também inclui ferramentas de linha de comando comuns para R, como RGui.exe.
 
@@ -103,4 +103,4 @@ Normalmente, o processo de implantação começa com a limpeza do seu script par
 
 [Comparação de funções Base R e ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[Funções ScaleR para trabalhar com o SQL Server](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[Biblioteca RevoScaleR no SQL Server](ref-r-revoscaler.md)

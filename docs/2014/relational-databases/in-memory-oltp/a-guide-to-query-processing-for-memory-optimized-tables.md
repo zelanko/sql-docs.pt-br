@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c0372c07edc32be23034a4c221e2480bd2047be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374818"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
   O OLTP na memória incorpora as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este artigo fornece uma visão geral do processamento de consulta para tabelas com otimização de memória e procedimentos armazenados compilados nativamente.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Para construir os planos de consulta mostrados neste artigo, as duas tabelas foram populadas com dados de exemplo do banco de dados de exemplo Northwind, que você pode baixar em [Bancos de dados de exemplo Northwind e pubs do SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654).  
+ Para construir os planos de consulta mostrados neste artigo, as duas tabelas foram populadas com dados de exemplo do banco de dados de exemplo Northwind, que você pode baixar em [Bancos de dados de exemplo Northwind e pubs do SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
   
  Considere a consulta a seguir, que une as tabelas Customer e Order e retorna a ID da ordem e as informações de cliente associadas:  
   
@@ -79,7 +79,7 @@ Plano de consulta para a junção de tabelas com base em disco.
   
 -   Os dados da tabela Order são recuperados usando o índice não clusterizado na coluna CustomerID. Esse índice contém a coluna CustomerID, que é usada para a junção, e a coluna de chave primária OrderID, que é retornada ao usuário. O retorno de colunas adicionais da tabela Order exigiria pesquisas no índice clusterizado da tabela Order.  
   
--   O operador lógico `Inner Join` é implementado pelo operador físico `Merge Join`. Os outros tipos de junção física são `Nested Loops` e `Hash Join`. O `Merge Join` operador tira proveito do fato de que ambos os índices são classificados na coluna de junção CustomerID.  
+-   O operador lógico `Inner Join` é implementado pelo operador físico `Merge Join`. Os outros tipos de junção física são `Nested Loops` e `Hash Join`. O operador `Merge Join` aproveita o fato de que ambos os índices são classificados na coluna de junção CustomerID.  
   
  Considere uma ligeira variação nessa consulta, que retorna todas as linhas da tabela Order, não apenas OrderID:  
   
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Plano de consulta para uma junção hash de tabelas baseadas em disco.](../../database-engine/media/hekaton-query-plan-2.gif "Plano de consulta para uma junção hash de tabelas baseadas em disco.")  
 Plano de consulta para uma junção hash de tabelas com base em disco.  
   
- Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O `Hash Match` operador físico agora é usado para o `Inner Join`. O índice clusterizado em Order não é classificado em CustomerID e, portanto, um `Merge Join` exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador `Hash Match` (75%) comparado com o custo do operador `Merge Join` no exemplo anterior (46%). O otimizador consideraria o `Hash Match` operador também no exemplo anterior, mas concluiu que o `Merge Join` operador forneceu melhor desempenho.  
+ Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O operador físico `Hash Match` agora é usado para `Inner Join`. O índice clusterizado em Order não é classificado em CustomerID e, portanto, `Merge Join` exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador `Hash Match` (75%) comparado com o custo do operador `Merge Join` no exemplo anterior (46%). O otimizador consideraria o operador `Hash Match` também no exemplo anterior, mas concluiu que o operador `Merge Join` forneceu melhor desempenho.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
  O diagrama a seguir descreve o fluxo de processamento de consulta no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para consultas ad hoc:  
@@ -205,7 +205,7 @@ Compilação original dos procedimentos armazenados.
   
  O processo é descrito como:  
   
-1.  O usuário emite uma `CREATE PROCEDURE` instrução para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  O usuário emite uma instrução `CREATE PROCEDURE` no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 2.  O analisador e o algebrista criam o fluxo de processamento para o procedimento, bem como as árvores de consulta para as consultas [!INCLUDE[tsql](../../../includes/tsql-md.md)] no procedimento armazenado.  
   
@@ -226,7 +226,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
 2.  O analisador extrai os parâmetros de nome e procedimento armazenado.  
   
-     Se a instrução tiver sido preparada, por exemplo, usando `sp_prep_exec`, o analisador não precisará extrair os parâmetros em tempo de execução e o nome do procedimento.  
+     Se a instrução tiver sido preparada, por exemplo, usando `sp_prep_exec`, o analisador não precisará extrair os parâmetros e o nome do procedimento no momento da execução.  
   
 3.  O tempo de execução do OLTP na memória localiza o ponto de entrada da DLL do procedimento armazenado.  
   
@@ -236,7 +236,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
  Os procedimentos armazenados [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado são compilados na primeira execução, em oposição aos procedimentos armazenados compilados nativamente, que são compilados no momento da criação. Quando os procedimentos armazenados interpretados são compilados na invocação, os valores dos parâmetros fornecidos para essa invocação são usados pelo otimizador durante a geração do plano de execução. Esse uso de parâmetros durante a compilação é chamado de detecção de parâmetro.  
   
- A detecção de parâmetro não é usada para compilar os procedimentos armazenados compilados nativamente. Todos os parâmetros para o procedimento armazenado são considerados como tendo valores UNKNOWN. Como são procedimentos armazenados interpretados, procedimentos armazenados compilados nativamente também suporte a `OPTIMIZE FOR` dica. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
+ A detecção de parâmetro não é usada para compilar os procedimentos armazenados compilados nativamente. Todos os parâmetros para o procedimento armazenado são considerados como tendo valores UNKNOWN. Como são procedimentos armazenados interpretados, os procedimentos armazenados compilados nativos também dão suporte à dica de `OPTIMIZE FOR`. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recuperando um plano de execução de consulta para procedimentos armazenados compilados de forma nativa  
  O plano de execução de consulta para um procedimento armazenado compilado nativamente pode ser recuperado usando o **Plano de Execução Estimado** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou usando a opção SHOWPLAN_XML no [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por exemplo:  
@@ -260,7 +260,7 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|Delete (excluir)|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|Esse operador é usado para funções intrínsecas e conversões de tipo. Nem todas as funções e conversões de tipos têm suporte em procedimentos armazenados compilados nativamente.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Nested Loops Join|Nested Loops é o único operador de junção com suporte em procedimentos armazenados compilados nativamente. Todos os planos que contêm junções usarão o operador Nested loops, mesmo se o plano para a mesma consulta executada como [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado contiver uma junção de mesclagem ou hash.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|Observe que o operador Hash Match não tem suporte para agregação. Desse modo, todas as agregações em procedimentos armazenados compilados nativamente usam o operador Stream Aggregate, mesmo se o plano para a mesma consulta no [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado usar o operador Hash Match.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>Junções e estatísticas de coluna  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantém estatísticas sobre valores nas colunas de chave do índice para ajudar a fazer uma estimativa do custo de determinadas operações, como buscas de índice e verificação de índice. (O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também cria estatísticas em colunas de chave não indexadas se você criá-las explicitamente ou se o otimizador de consulta criá-los em resposta a uma consulta com um predicado.) A principal métrica na estimativa de custo é o número de linhas processadas por um único operador. Observe que para tabelas baseadas em disco, o número de páginas acessadas por um operador específico é significativo na estimativa de custo. No entanto, como a contagem de páginas não é importante para tabelas com otimização de memória (sempre será zero), este documento se concentra na contagem de linhas. A estimativa é iniciada com os operadores de verificação e busca de índice no plano e depois é estendida para incluir os outros operadores, como o de junção. O número estimado de linhas a serem processadas por um operador de junção é baseado na estimativa dos operadores subjacentes de índice, busca e verificação. Para obter acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória, você pode observar o plano de execução real ver a diferença entre as contagens de linhas estimadas e reais dos operadores no plano.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantém estatísticas sobre valores nas colunas de chave do índice para ajudar a fazer uma estimativa do custo de determinadas operações, como buscas de índice e verificação de índice. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também cria estatísticas em colunas de chave não indexadas se você criá-las explicitamente ou se o otimizador de consulta criá-los em resposta a uma consulta com um predicado.) A principal métrica na estimativa de custo é o número de linhas processadas por um único operador. Observe que para tabelas baseadas em disco, o número de páginas acessadas por um operador específico é significativo na estimativa de custo. No entanto, como a contagem de páginas não é importante para tabelas com otimização de memória (sempre será zero), este documento se concentra na contagem de linhas. A estimativa é iniciada com os operadores de verificação e busca de índice no plano e depois é estendida para incluir os outros operadores, como o de junção. O número estimado de linhas a serem processadas por um operador de junção é baseado na estimativa dos operadores subjacentes de índice, busca e verificação. Para obter acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória, você pode observar o plano de execução real ver a diferença entre as contagens de linhas estimadas e reais dos operadores no plano.  
   
  Para o exemplo na figura 1:  
   
@@ -300,7 +300,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   A verificação de índice completo em IX_CustomerID foi substituída por uma busca de índice. Isso resultou na verificação de 5 linhas, em vez das 830 linhas exigidas para a verificação de índice completo.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Estatísticas e cardinalidade para tabelas com otimização de memória  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantém estatísticas em nível de coluna para tabelas com otimização de memória. Além disso, ele mantém a contagem real de linhas da tabela. No entanto, em contraposição às tabelas baseadas em disco, as estatísticas de tabelas com otimização de memória não são atualizadas automaticamente. Portanto, as estatísticas precisam ser atualizadas manualmente depois que alterações significativas são feitas nas tabelas. Para obter mais informações, consulte [Estatísticas para tabelas com otimização de memória](memory-optimized-tables.md).  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantém as estatísticas no nível de coluna para tabelas com otimização de memória. Além disso, ele mantém a contagem real de linhas da tabela. No entanto, em contraposição às tabelas baseadas em disco, as estatísticas de tabelas com otimização de memória não são atualizadas automaticamente. Portanto, as estatísticas precisam ser atualizadas manualmente depois que alterações significativas são feitas nas tabelas. Para obter mais informações, consulte [Estatísticas para tabelas com otimização de memória](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas com otimização de memória](memory-optimized-tables.md)  

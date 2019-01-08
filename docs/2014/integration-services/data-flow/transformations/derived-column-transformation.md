@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba255f88c0938fab80c12e3f520ba418b996f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5575991201f48c48fee1b27ad95b6d07de6251ba
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204046"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373888"
 ---
 # <a name="derived-column-transformation"></a>Transformação Coluna Derivada
   A transformação Coluna Derivada cria novos valores de coluna aplicando expressões às colunas de entrada de transformação. Uma expressão pode conter qualquer combinação de variáveis, funções, operadores e colunas da entrada de transformação. O resultado pode ser adicionado como uma coluna nova ou adicionado a uma coluna existente como um valor de substituição. A transformação Coluna Derivada pode definir várias colunas derivadas, e qualquer variável ou coluna de entrada pode aparecer em várias expressões.  
@@ -76,8 +75,8 @@ ms.locfileid: "48204046"
 -   [Derivar valores de coluna por meio da transformação Coluna Derivada](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+ Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
- Resposta da curadoria, [How to Split Column Data using SSIS](http://go.microsoft.com/fwlink/?LinkId=321995)(Como dividir dados de coluna usando SSIS), em curatedviews.cloudapp.net.  
+ Resposta da curadoria, [How to Split Column Data using SSIS](https://go.microsoft.com/fwlink/?LinkId=321995)(Como dividir dados de coluna usando SSIS), em curatedviews.cloudapp.net.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
@@ -18,18 +17,18 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 156fa271582673d93cf2f76e92e447ea63b846c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200822"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366318"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  
   
 > [!IMPORTANT]  
->  O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte [Proteção Estendida para Autenticação](http://support.microsoft.com/kb/968389).  
+>  O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte [Proteção Estendida para Autenticação](https://support.microsoft.com/kb/968389).  
   
 ## <a name="description-of-extended-protection"></a>Descrição da Proteção Estendida  
  A**Proteção Estendida** usa a associação de serviço e de canal para ajudar a evitar ataques de retransmissão de autenticação. Em um ataque de retransmissão de autenticação, um cliente que pode executar autenticação NTLM (por exemplo, Windows Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, um aplicativo .NET SqlClient, etc.), se conecta a um invasor (por exemplo, um servidor de arquivos CIFS mal-intencionado). O invasor usa as credenciais do cliente para se passar pelo cliente e se autenticar em um serviço (por exemplo, uma instância do serviço [!INCLUDE[ssDE](../../includes/ssde-md.md)] ).  
@@ -49,14 +48,14 @@ ms.locfileid: "48200822"
  A associação de canal estabelece um canal seguro (Schannel) entre um cliente e uma instância do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O serviço verifica a autenticidade do cliente comparando o CBT (token da associação de canal) do cliente específico a esse canal com seu próprio CBT. A associação de canal lida com ataques de atração e falsificação. No entanto, ela incorre em um custo de tempo real maior, porque requer a criptografia TLS de todo o tráfego da sessão. A Associação de Canal ocorre quando um aplicativo cliente usa criptografia para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independentemente de a criptografia ser imposta pelo cliente ou pelo servidor.  
   
 > [!WARNING]  
->  Os provedores de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte ao TLS 1.0 e SSL 3.0. Se você impor um protocolo diferente (como TLS 1.1 ou TLS 1.2) fazendo alterações na camada de sistema operacional SChannel, suas conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 e SSL 3.0. Se você impor um protocolo diferente (como TLS 1.1 ou TLS 1.2) fazendo alterações na camada de sistema operacional SChannel, suas conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar.  
   
 ### <a name="operating-system-support"></a>Suporte do sistema operacional  
  Os seguintes links fornecem mais informações sobre o modo como o Windows dá suporte à **Proteção Estendida**:  
   
--   [Autenticação Integrada do Windows com Proteção Estendida](http://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Autenticação Integrada do Windows com Proteção Estendida](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Proteção Estendida para Autenticação](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Proteção Estendida para Autenticação](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
 ## <a name="settings"></a>Configurações  
  Há três configurações de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que afetam a associação de serviço e de canal. As configurações podem ser definidas com o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou da WMI e podem ser exibidas usando-se a faceta **Configurações de Protocolo de Servidor** do Gerenciamento Baseado em Diretivas.  
@@ -80,7 +79,7 @@ ms.locfileid: "48200822"
      A variável **SPNs NTLM Aceitos** é necessária quando um servidor é conhecido por mais de um SPN. Quando um cliente tentar se conectar ao servidor usando um SPN válido que o servidor não conhece, a associação de serviço falhará. Para evitar esse problema, os usuários poderão especificar vários SPNs que representam o servidor usando **SPNs NTLM Aceitos**. A opção**SPNs NTLM Aceitos** corresponde a uma série de SPNs separados por ponto-e-vírgulas. Por exemplo, para permitir os SPNs **MSSQLSvc/ HostName1.Contoso.com** e **MSSQLSvc/ HostName2.Contoso.com**, digite **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** na caixa **SPNs NTLM Aceitos** . Essa variável tem um tamanho máximo de 2.048 caracteres. A opção**SPNs NTLM Aceitos** está localizada em **Protocolos para Propriedades MSSQLSERVER (Guia Avançado)** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Habilitando a Proteção Estendida para o mecanismo de banco de dados  
- Para usar a **Proteção Estendida**, o servidor e o cliente devem ter um sistema operacional com suporte para **Proteção Estendida**e a **Proteção Estendida** deve estar habilitada no sistema operacional. Para obter mais informações sobre como habilitar a **Proteção Estendida** para o sistema operacional, consulte [Proteção Estendida para Autenticação](http://support.microsoft.com/kb/968389).  
+ Para usar a **Proteção Estendida**, o servidor e o cliente devem ter um sistema operacional com suporte para **Proteção Estendida**e a **Proteção Estendida** deve estar habilitada no sistema operacional. Para obter mais informações sobre como habilitar a **Proteção Estendida** para o sistema operacional, consulte [Proteção Estendida para Autenticação](https://support.microsoft.com/kb/968389).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida** para algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será disponibilizada em atualizações futuras. Depois de habilitar a **Proteção Estendida** no computador servidor, siga estas etapas para habilitar a **Proteção Estendida**:  
   
@@ -99,12 +98,12 @@ ms.locfileid: "48200822"
 ## <a name="configuring-other-sql-server-components"></a>Configurando outros componentes do SQL Server  
  Para obter mais informações sobre como configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Proteção estendida para autenticação com o Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
- Ao usar o IIS para acessar dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando uma conexão HTTP ou HTTPS, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode aproveitar a Proteção Estendida fornecida pelo IIS. Para obter mais informações sobre como configurar o IIS para usar a Proteção Estendida, consulte [Configure Extended Protection in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(em inglês).  
+ Ao usar o IIS para acessar dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando uma conexão HTTP ou HTTPS, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode aproveitar a Proteção Estendida fornecida pelo IIS. Para obter mais informações sobre como configurar o IIS para usar a Proteção Estendida, consulte [Configure Extended Protection in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105)(em inglês).  
   
 ## <a name="see-also"></a>Consulte também  
  [Configuração de rede do servidor](server-network-configuration.md)   
- [Configuração de rede do cliente](client-network-configuration.md)   
- [Visão geral sobre a Proteção Estendida para Autenticação](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Autenticação Integrada do Windows com Proteção Estendida](http://go.microsoft.com/fwlink/?LinkId=179922)  
+ [Configuração de rede de cliente](client-network-configuration.md)   
+ [Visão geral sobre a Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Autenticação Integrada do Windows com Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

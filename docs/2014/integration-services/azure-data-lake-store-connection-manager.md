@@ -14,15 +14,15 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20dfcedbf0a8a69c1a129e85e4d5f76f0bc7768a
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a462b44137c59f92a4bb9dc38a13318d71a32043
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460438"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531031"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gerenciador de conexões do Azure Data Lake Store
-  O **Gerenciador de conexões de Azure Data Lake Store** permite que um pacote SSIS se conecte a um serviço do Azure Data Lake Store por meio de dois tipos de autenticação: identidade de usuário do Azure AD e a identidade de serviço do Azure AD.  
+  O **Gerenciador de conexão do Azure Data Lake Store** permite que um pacote do SSIS para se conectar a um serviço do Azure Data Lake Store por meio de dois tipos de autenticação: Identidade de usuário do Azure AD e a identidade de serviço do Azure AD.  
 
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Configurar o Gerenciador de conexões do Azure Data Lake Store 
   
@@ -38,8 +38,8 @@ ms.locfileid: "49460438"
     
         2. Clique no botão **Testar Conexão** para testar a conexão. Se você e o administrador de locatários não deixaram SSIS acessar os dados do Azure Data Lake Store antes, você precisará clicar no botão **Aceitar** para SSIS acessar os dados do Azure Data Lake Store na caixa de diálogo. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-        >   [!NOTE] 
-        >   Para a opção de autenticação por Identidade do Usuário do Azure AD, a autenticação multifator e a conta da Microsoft não têm suporte.
+        > [!NOTE] 
+        > Para a opção de autenticação por Identidade do Usuário do Azure AD, a autenticação multifator e a conta da Microsoft não têm suporte.
     
     2.  Se você selecionou a opção de autenticação por **identidade de serviço do Azure AD** , faça o seguinte:
         1. Crie um aplicativo AAD e uma entidade de serviço que pode acessar os recursos do Azure Data Lake.

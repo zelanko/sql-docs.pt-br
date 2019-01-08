@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676345"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589476"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contém estatísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] banco de dados **conectividade** eventos, fornecendo uma visão geral de falhas e êxitos de conexão de banco de dados. Para obter mais informações sobre eventos de conectividade, consulte tipos de evento em [sys. event_log &#40;banco de dados SQL&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Estatística|Tipo|Description|  
+|Estatística|Tipo|Descrição|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados.|  
 |**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -42,8 +42,8 @@ ms.locfileid: "51676345"
 |**success_count**|**int**|Número de conexões bem-sucedidas.|  
 |**total_failure_count**|**int**|Número total de conexões com falha. Essa é a soma das **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e não inclui eventos de deadlock.|  
 |**connection_failure_count**|**int**|Número de falhas de logon.|  
-|**terminated_connection_count**|**int**|***Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexões encerradas.|  
-|**throttled_connection_count**|**int**|***Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexões aceleradas.|  
+|**terminated_connection_count**|**int**|**_Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexões encerradas.|  
+|**throttled_connection_count**|**int**|**_Aplicável somente para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexões aceleradas.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676345"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time e end_time do intervalo  
- Um evento é incluído em um intervalo de agregação quando ocorre o evento *na* ou *depois de * * * start_time** e *antes de * * * end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
+ Um evento é incluído em um intervalo de agregação quando ocorre o evento *na* ou _depois_**start_time** e _antes_  **end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
   
 ```  
   

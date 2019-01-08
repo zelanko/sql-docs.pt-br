@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028c3a2fe26d448373fcb9c4a00d2916a1bb34e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726754"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537940"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Dados espaciais - DM db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = restrições<br /><br /> 7 = índices e heaps|  
 |**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN para restrições<br /><br /> INDEX para índices e heaps|  
@@ -107,18 +107,18 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geography:: BufferWithTolerance**  
   
--   **Geography:: Parse**  
+-   **Geography:: Analisar**  
   
 -   **Geography:: reduzir**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamento dos objetos desabilitados  
  **Índices**  
   
- Se o índice clusterizado está desabilitado ou se um índice não agrupado for forçado, o seguinte erro será gerado: "o processador de consultas não consegue produzir um plano porque o índice ' %. \*ls' na tabela ou exibição ' %. \*ls' está desabilitado. " Para habilitar novamente esses objetos, reconstrua os índices após a atualização chamando **ALTER INDEX ON... RECOMPILAR**.  
+ Se o índice clusterizado estiver desabilitado ou se um índice não agrupado for forçado, será gerado o erro a seguir: "O processador de consultas não consegue produzir um plano porque o índice ' %. \*ls' na tabela ou exibição ' %. \*ls' está desabilitado. " Para habilitar novamente esses objetos, reconstrua os índices após a atualização chamando **ALTER INDEX ON... REBUILD**.  
   
  **Heaps**  
   
- Se uma tabela com um heap desabilitado for usada, o erro a seguir será lançado. Para habilitar novamente esses objetos, reconstrua após a atualização chamando **ALTER INDEX ON todos... RECOMPILAR**.  
+ Se uma tabela com um heap desabilitado for usada, o erro a seguir será lançado. Para habilitar novamente esses objetos, reconstrua após a atualização chamando **ALTER INDEX ON todos... REBUILD**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -135,7 +135,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Restrições de verificação e as chaves estrangeiras**  
   
- Restrições de verificação desabilitadas e chave estrangeiras não lançam um erro. Porém, as restrições não são impostas quando linhas são modificadas. Para habilitar novamente esses objetos, as restrições de verificação depois de atualizar chamando **ALTER TABLE... RESTRIÇÃO de verificação**.  
+ Restrições de verificação desabilitadas e chave estrangeiras não lançam um erro. Porém, as restrições não são impostas quando linhas são modificadas. Para habilitar novamente esses objetos, as restrições de verificação depois de atualizar chamando **ALTER TABLE... RESTRIÇÃO DE VERIFICAÇÃO**.  
   
  **Colunas computadas persistentes**  
   

@@ -20,12 +20,12 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166156"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376118"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatando números e datas (Construtor de Relatórios e SSRS)
   Você pode formatar números e datas em regiões de dados selecionando um formato na página **Número** da caixa de diálogo **Propriedades** da região de dados correspondentes.  
@@ -47,21 +47,21 @@ ms.locfileid: "48166156"
   
 -   Por padrão, números são formatados para refletir as configurações culturais no computador cliente. Use cadeias de caracteres de formatação para especificar como os números são exibidos de forma que a formatação seja consistente, independentemente do local onde a pessoa que está exibindo o relatório está localizada.  
   
--   Os formatos fornecidos na página **Número** são um subconjunto das cadeias de caracteres de formatação numérica padrão do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para formatar um número ou data usando um formato personalizado que não seja mostrado na caixa de diálogo, você pode usar qualquer cadeia de caracteres de formatação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números e datas. Para obter mais informações sobre cadeias de caracteres de formato personalizadas, consulte o tópico [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) no MSDN.  
+-   Os formatos fornecidos na página **Número** são um subconjunto das cadeias de caracteres de formatação numérica padrão do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para formatar um número ou data usando um formato personalizado que não seja mostrado na caixa de diálogo, você pode usar qualquer cadeia de caracteres de formatação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números e datas. Para obter mais informações sobre cadeias de caracteres de formato personalizadas, consulte o tópico [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) no MSDN.  
   
 -   Se uma cadeia de caracteres de formato personalizada foi especificada, ela terá uma prioridade mais alta sobre as configurações padrão que são específicas à cultura. Por exemplo, suponha que você defina uma cadeia de caracteres de formato personalizada de "#, ###" mostrar o número 1234 como 1,234. Isso pode ter significados diferentes para usuários dos Estados Unidos e para usuários da Europa. Antes de especificar um formato personalizado, considere como o formato escolhido afetará os usuários de diferentes culturas que venham a exibir o relatório.  
   
 -   Se você especificar uma cadeia de caracteres de formato inválida, o texto formatado será interpretado como uma cadeia de caracteres literal que substituirá a formatação.  
   
--   Se estiver formatando uma mistura de números e caracteres na mesma caixa de texto, considere a possibilidade de usar um espaço reservado para formatar o número separadamente do restante do texto. Para obter mais informações, consulte [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md). Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format na caixa de texto, a cadeia de caracteres de formato será ignorada. Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format no gráfico ou no medidor, a cadeia de caracteres de formato especificada será interpretada como uma cadeia de caracteres e a formatação não será aplicada.  
+-   Se estiver formatando uma mistura de números e caracteres na mesma caixa de texto, considere a possibilidade de usar um espaço reservado para formatar o número separadamente do restante do texto. Para obter mais informações, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md). Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format na caixa de texto, a cadeia de caracteres de formato será ignorada. Se uma cadeia de caracteres de formato inválida for especificada para a propriedade Format no gráfico ou no medidor, a cadeia de caracteres de formato especificada será interpretada como uma cadeia de caracteres e a formatação não será aplicada.  
   
 -   Se você selecionar **Moeda** em **Categoria** e marcar a opção **Mostrar valores em**, poderá selecionar **Milhares**, **Milhões**ou **Bilhões** para exibir números usando formatos financeiros. Por exemplo, se o valor do campo for 1.789.905.394 e você selecionar **Bilhões** e especificar 2 casas decimais, o valor exibido no relatório será 1,78.  
   
-## <a name="see-also"></a>Consulte também  
- [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formatando linhas, cores e imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formatando escalas em um medidor &#40;relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

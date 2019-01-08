@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 489c9e0b34ac0653e30e563a847e873b0f9b488d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a81993eff54c38ae0249e5e1dfbdc92f623d08e3
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613784"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979533"
 ---
 # <a name="implementing-full-text-search"></a>Implementando a pesquisa de texto completo
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47613784"
  Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Criando um serviço de pesquisa de texto completo no Visual Basic  
- Este exemplo de código cria um catálogo de pesquisa de texto completo para a tabela `ProductCategory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Ele cria um índice de pesquisa de texto completo na coluna Nome da tabela `ProductCategory` . O índice de pesquisa de texto completo exige que haja um índice exclusivo já definido na coluna.  
+ Este exemplo de código cria um catálogo de pesquisa de texto completo para a tabela `ProductCategory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Ele cria um índice de pesquisa de texto completo na coluna Nome da tabela `ProductCategory` . O índice de pesquisa de texto completo exige que haja um índice exclusivo já definido na coluna.  
   
 ```  
 ' compile with:   
@@ -73,7 +73,7 @@ Public Class A
       Dim fti As FullTextIndex = Nothing  
       fti = New FullTextIndex(tb)  
   
-      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       Dim ftic As FullTextIndexColumn = Nothing  
       ftic = New FullTextIndexColumn(fti, "Name")  
   
@@ -94,7 +94,7 @@ End Class
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-visual-c"></a>Criando um serviço de pesquisa de texto completo no Visual C#  
- Este exemplo de código cria um catálogo de pesquisa de texto completo para a tabela `ProductCategory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Ele cria um índice de pesquisa de texto completo na coluna Nome da tabela `ProductCategory` . O índice de pesquisa de texto completo exige que haja um índice exclusivo já definido na coluna.  
+ Este exemplo de código cria um catálogo de pesquisa de texto completo para a tabela `ProductCategory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Ele cria um índice de pesquisa de texto completo na coluna Nome da tabela `ProductCategory` . O índice de pesquisa de texto completo exige que haja um índice exclusivo já definido na coluna.  
   
 ```  
 // compile with:   
@@ -133,7 +133,7 @@ public class A {
       FullTextIndex fti = default(FullTextIndex);  
       fti = new FullTextIndex(tb);  
   
-      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       FullTextIndexColumn ftic = default(FullTextIndexColumn);  
       ftic = new FullTextIndexColumn(fti, "Name");  
   
@@ -154,7 +154,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-powershell"></a>Criando um serviço de pesquisa de texto completo no PowerShell  
- Este exemplo de código cria um catálogo de pesquisa de texto completo para a tabela `ProductCategory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Ele cria um índice de pesquisa de texto completo na coluna Nome da tabela `ProductCategory` . O índice de pesquisa de texto completo exige que haja um índice exclusivo já definido na coluna.  
+ Este exemplo de código cria um catálogo de pesquisa de texto completo para a tabela `ProductCategory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Ele cria um índice de pesquisa de texto completo na coluna Nome da tabela `ProductCategory` . O índice de pesquisa de texto completo exige que haja um índice exclusivo já definido na coluna.  
   
 ```  
 # Example of implementing a full text search on the default instance.  

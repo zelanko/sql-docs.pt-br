@@ -13,15 +13,15 @@ ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 122bd2276705e2485afb296adb66accdaf1ccaaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: caf0cb1f3d22c41fdc551988556a49f12ee22f36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375248"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>Tarefa 5: Definindo relações baseadas em termos
-  Nesta tarefa, você define algumas relações baseadas em termos para obter valores para o **Supplier Name** domínio. Uma relação baseada em termo permite que você faça uma correção para um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, **Inc** pode ser corrigido para **Incorporated**. O DQS usa essas relações nos processos de descoberta de conhecimento, limpeza ou correspondência. Ver [criar relações baseadas em termos](http://msdn.microsoft.com/library/hh510404.aspx) para obter mais detalhes.  
+  Nesta tarefa, você define algumas relações baseadas em termos para obter valores para o **Supplier Name** domínio. Uma relação baseada em termo permite que você faça uma correção para um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, **Inc** pode ser corrigido para **Incorporated**. O DQS usa essas relações nos processos de descoberta de conhecimento, limpeza ou correspondência. Ver [criar relações baseadas em termos](https://msdn.microsoft.com/library/hh510404.aspx) para obter mais detalhes.  
   
 1.  Selecione **Supplier Name** na **lista de domínios**.  
   

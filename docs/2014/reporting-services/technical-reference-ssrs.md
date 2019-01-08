@@ -17,12 +17,12 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a1098d5b12a491cc5f2976c76575ce0e91d11e51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f4904cf11ac1cb84acf9b6c0362d453d7b0fc0b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065646"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371138"
 ---
 # <a name="technical-reference-ssrs"></a>Referência técnica (SSRS)
   Localize as ferramentas e a documentação de referência do PowerShell para usar ou administrar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -54,7 +54,7 @@ ms.locfileid: "48065646"
  [Referência da biblioteca do provedor WMI do Reporting Services &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Artigos do wiki do TechNet sobre a solução de problemas do Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [Artigos do wiki do TechNet sobre o modo do SharePoint do Reporting Services solução de problemas](http://go.microsoft.com/fwlink/?LinkID=209158)  
+ [Artigos do wiki do TechNet sobre a solução de problemas do Reporting Services](https://go.microsoft.com/fwlink/?LinkID=209153)   
+ [Artigos do wiki do TechNet sobre a solução de problemas do modo do SharePoint do Reporting Services](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
@@ -15,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176066"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372748"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
   Os procedimentos neste tópico compõem a segunda etapa para configurar a sincronização da Web para replicação de mesclagem. Esta etapa é executada depois que você habilita uma publicação para sincronização da Web. Para obter uma visão geral do processo de configuração, consulte [Configurar Sincronização da Web](configure-web-synchronization.md). Depois de concluir os procedimentos neste tópico, continue na terceira etapa, configurando uma assinatura para usar a sincronização da Web. A terceira etapa é descrita nos seguintes tópicos:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Como configurar uma assinatura para usar a sincronização da Web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Como: Configurar uma assinatura para usar sincronização da Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Como configurar uma Assinatura para usar a sincronização da Web (Programação Transact-SQL de replicação)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Como: Configurar uma assinatura para usar sincronização da Web (programação Transact-SQL de replicação)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Como configurar uma assinatura para usar sincronização da Web (programação RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Como: Configurar uma assinatura para usar sincronização da Web (programação RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  A sincronização da Web usa um computador que esteja executando o IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar assinaturas pull para publicações de mesclagem. As versões 5.0, 6.0 e 7.0 do IIS são compatíveis. O Assistente para Configurar a Sincronização da Web não tem suporte no IIS versão 7.0.  
   
 > [!IMPORTANT]  
->  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros. Esses erros incluem o seguinte: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
+>  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros. Entre elas estão as seguintes: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
   
 > [!CAUTION]  
 >  Não use WebSync e locais de pasta de instantâneo alternativos ao mesmo tempo.  
@@ -83,7 +82,7 @@ ms.locfileid: "48176066"
   
 4.  Clique em **OK**.  
   
- Se não puder obter um certificado de servidor de uma CA, você poderá especificar um certificado a ser testado. Para configurar o IIS 6.0 para teste, instale um certificado usando o utilitário SelfSSL. Este utilitário está disponível no IIS 6.0 Resource Kit. Você pode baixar as ferramentas no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Para o IIS 5.0, vá para [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Se não puder obter um certificado de servidor de uma CA, você poderá especificar um certificado a ser testado. Para configurar o IIS 6.0 para teste, instale um certificado usando o utilitário SelfSSL. Este utilitário está disponível no IIS 6.0 Resource Kit. Você pode baixar as ferramentas no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Para o IIS 5.0, vá para [Ajuda e Suporte da Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Um certificado deve ser associado a um site da Web antes que esse site possa usar o SSL. O SelfSSL associa o certificado automaticamente com o site da Web padrão. Se já tiver um certificado ou se instalar depois um certificado de uma CA, você deve associar explicitamente esse certificado ao site da Web que é usado para a sincronização da Web. Certifique-se de haver somente um certificado associado ao site da Web utilizado para sincronizar as assinaturas. Se houver vários certificados, o Assinante usará o primeiro site da Web disponível.  
@@ -218,7 +217,7 @@ ms.locfileid: "48176066"
   
 #### <a name="to-configure-iis-authentication"></a>Para configurar a autenticação de IIS  
   
--   Quando os Assinantes se conectarem ao IIS, o IIS deve autenticar os Assinantes antes que eles possam acessar recursos e processos. IIS oferece três tipos de autenticação: Anônima, Básica e Integrada. A autenticação pode ser aplicada para o site da Web inteiro ou para o diretório virtual que você criou.  
+-   Quando os Assinantes se conectarem ao IIS, o IIS deve autenticar os Assinantes antes que eles possam acessar recursos e processos. O IIS oferece três tipos de autenticação: Anônima, básica e integrada. A autenticação pode ser aplicada para o site da Web inteiro ou para o diretório virtual que você criou.  
   
      É recomendável usar a Autenticação Básica com SSL. A SSL é necessária, independentemente do tipo de autenticação usado. Para obter mais informações sobre como configurar a autenticação, consulte a documentação de IIS.  
   

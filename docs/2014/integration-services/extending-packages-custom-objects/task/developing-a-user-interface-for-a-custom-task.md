@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,19 +21,19 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3665e22ca7e9fb4a04f3cfd46cb5f5af5025ab41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4de6b302a9ce490eaf203c3882ca20436857c858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197558"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371995"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Desenvolvendo uma interface do usuário para uma tarefa personalizada
   O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite que desenvolvedores de tarefas personalizadas criem facilmente uma interface de usuário personalizada para uma tarefa que pode ser integrada e exibida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. A interface de usuário pode fornecer informações úteis para o usuário no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)], e orientar usuários na configuração correta das propriedades e definições da tarefa personalizada.  
   
  O desenvolvimento de uma interface de usuário personalizada para uma tarefa envolve o uso de duas classes importantes. A tabela a seguir descreve essas classes.  
   
-|Classe|Description|  
+|Classe|Descrição|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Um atributo que identifica uma tarefa gerenciada e fornece informações em tempo de design através de suas propriedades para controlar como o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] exibe e interage com o objeto.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Uma interface usada pela tarefa para associar a tarefa com sua interface de usuário personalizada.|  
@@ -51,7 +49,7 @@ ms.locfileid: "48197558"
   
  A tabela a seguir descreve as propriedades do atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Exibe o nome da tarefa na caixa de ferramentas Fluxo de Controle.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|A descrição da tarefa (herdada do <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Essa propriedade é mostrada em Dicas de Ferramenta.|  
@@ -199,7 +197,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma tarefa personalizada](creating-a-custom-task.md)   

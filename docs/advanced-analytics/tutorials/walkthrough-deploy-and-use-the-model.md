@@ -1,43 +1,55 @@
 ---
-title: Implantar o modelo de R e usá-lo em SQL (passo a passo) | Microsoft Docs
+title: Implantar um modelo do R para previsões no SQL Server - aprendizagem de máquina do SQL Server
+description: Tutorial que mostra como implantar um modelo de R no SQL Server para análise no banco de dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7b14b70fc5ba8ac39535d9dd6dedbfa1bd309aa4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085348"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645179"
 ---
-# <a name="deploy-the-r-model-and-use-it-in-sql"></a>Implantar o modelo de R e usá-lo no SQL
+# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implantar o modelo de R e usá-lo no SQL Server (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Nesta lição, você usa os modelos do R em um ambiente de produção, chamando um modelo treinado de um procedimento armazenado. Em seguida, você pode chamar o procedimento armazenado no R ou em qualquer linguagem de programação de aplicativo que dá suporte a [!INCLUDE[tsql](../../includes/tsql-md.md)] (como c#, Java, Python, etc.), para usar o modelo para fazer previsões sobre novas observações.
+Nesta lição, saiba como implantar modelos R em um ambiente de produção, chamando um modelo treinado de um procedimento armazenado. Você pode chamar o procedimento armazenado no R ou em qualquer linguagem de programação de aplicativo que dá suporte a [!INCLUDE[tsql](../../includes/tsql-md.md)] (como C#, Java, Python e assim por diante) e usar o modelo para fazer previsões sobre novas observações.
 
-Este exemplo demonstra as duas formas mais comuns para usar um modelo de pontuação:
+Este artigo demonstra as duas formas mais comuns para usar um modelo de pontuação:
 
-- **Modo de pontuação em lote** é usado quando você precisa criar várias previsões com muita rapidez, passando um SQL de consulta ou tabela como entrada. Uma tabela de resultados é retornada, que você pode inserir diretamente em uma tabela ou gravar em um arquivo.
-
-- **Modo de pontuação individual** é usado quando você precisa criar uma previsão de cada vez. Você passa um conjunto de valores individuais para o procedimento armazenado. Os valores correspondem aos recursos no modelo, que usa o modelo para criar uma previsão, ou geram outro resultado como um valor de probabilidade. Em seguida, você pode retornar esse valor para o aplicativo ou usuário.
+> [!div class="checklist"]
+> * **Modo de pontuação em lote** gera várias previsões
+> * **Modo de pontuação individual** gera previsões uma por vez
 
 ## <a name="batch-scoring"></a>Pontuação do lote
 
-Um procedimento armazenado para pontuação do lote foi criado quando você inicialmente executou o script do PowerShell. Esse procedimento armazenado *PredictTipBatchMode*, faz o seguinte:
+Criar um procedimento armazenado, *PredictTipBatchMode*, que gera várias previsões, passando uma consulta SQL ou tabela como entrada. Uma tabela de resultados é retornada, que você pode inserir diretamente em uma tabela ou gravar em um arquivo.
 
 - Obtém um conjunto de dados de entrada como uma consulta SQL
 - Chama o modelo de regressão logística treinado salvo na lição anterior
 - Prevê a probabilidade de que o driver obtém qualquer dica diferente de zero
 
-1. Reserve um minuto para examinar o script para o procedimento armazenado, *PredictTipBatchMode*. Ele ilustra vários aspectos de como um modelo pode ser colocado em operação usando [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+1. No Management Studio, abra uma nova janela de consulta e execute o seguinte script T-SQL para criar o procedimento armazenado de PredictTipBatchMode.
   
-    ```tsql
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode]
-    @input nvarchar(max)
+    ```sql
+    USE [NYCTaxi_Sample]
+    GO
+
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+
+    IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PredictTipBatchMode')
+    DROP PROCEDURE v
+    GO
+
+    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @input nvarchar(max)
     AS
     BEGIN
       DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model  FROM nyc_taxi_models);
@@ -63,13 +75,13 @@ Um procedimento armazenado para pontuação do lote foi criado quando você inic
 
     + Os dados usados como entradas para a pontuação é definida como uma consulta SQL e armazenado como uma cadeia de caracteres na variável SQL  _\@entrada_. Como os dados são recuperados do banco de dados, ele é armazenado em um quadro de dados chamado *InputDataSet*, que é apenas o nome padrão para dados de entrada para o [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimento; você pode definir outro nome de variável, se necessário, usando o parâmetro   *_\@input_data_1_name_*.
 
-    + Para gerar as pontuações, o procedimento armazenado chama a função `rxPredict` da biblioteca **RevoScaleR** .
+    + Para gerar as pontuações, o procedimento armazenado chama a função de rxPredict do **RevoScaleR** biblioteca.
 
     + O valor de retorno *pontuação*, é a probabilidade, dado o modelo, o driver obtém uma dica. Opcionalmente, você poderia facilmente aplicar algum tipo de filtro para os valores retornados para categorizar os valores de retorno de "dica" e de grupos de "sem gorjeta".  Por exemplo, uma probabilidade de menos de 0,5 significa que uma dica é improvável.
   
-2.  Para chamar o procedimento armazenado no modo de lote, você deve definir a consulta necessária como entrada para o procedimento armazenado. Aqui está a consulta SQL; Você pode executá-lo no SSMS para verificar se ele funciona.
+2.  Para chamar o procedimento armazenado no modo de lote, você deve definir a consulta necessária como entrada para o procedimento armazenado. Abaixo está a consulta SQL, que pode ser executada no SSMS para verificar se ele funciona.
 
-    ```SQL
+    ```sql
     SELECT TOP 10
       a.passenger_count AS passenger_count,
       a.trip_time_in_secs AS trip_time_in_secs,
@@ -101,19 +113,33 @@ Um procedimento armazenado para pontuação do lote foi criado quando você inic
     sqlQuery (conn, q);
     ```
 
-    Se você receber um erro de ODBC, verifique a sintaxe de consulta, e se você tem o número correto de aspas. 
+    Se você receber um erro ODBC, verificar erros de sintaxe e se você tem o número correto de aspas. 
     
     Se você receber um erro de permissões, verifique se que o logon tem a capacidade de executar o procedimento armazenado.
 
 ## <a name="single-row-scoring"></a>Pontuação de linha única
 
+Modo de pontuação individual gera previsões uma por vez, passando um conjunto de valores individuais para o procedimento armazenado como entrada. Os valores correspondem aos recursos no modelo, que usa o modelo para criar uma previsão, ou geram outro resultado como um valor de probabilidade. Em seguida, você pode retornar esse valor para o aplicativo ou usuário.
+
 Ao chamar o modelo de previsão em uma base linha por linha, você passa um conjunto de valores que representam os recursos para cada caso individual. O procedimento armazenado, em seguida, retorna uma única previsão ou a probabilidade. 
 
 O procedimento armazenado *PredictTipSingleMode* demonstra essa abordagem. Ele usa como vários parâmetros que representam valores de recurso (por exemplo, passageiro contagem e distância da corrida) de entrada, pontua esses recursos usando o modelo do R armazenado e, em seguida, gera a probabilidade de dica.
 
-1. Se o procedimento armazenado *PredictTipSingleMode* não foi criado pelo script do PowerShell inicial, você pode executar a seguinte instrução Transact-SQL para criá-lo agora.
+1. Execute a seguinte instrução Transact-SQL para criar o procedimento armazenado.
 
-    ```tsql
+    ```sql
+    USE [NYCTaxi_Sample]
+    GO
+
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+
+    IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PredictTipSingleMode')
+    DROP PROCEDURE v
+    GO
+
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
     @trip_distance float = 0,
     @trip_time_in_secs int = 0,
@@ -167,7 +193,7 @@ O procedimento armazenado *PredictTipSingleMode* demonstra essa abordagem. Ele u
 
 2. No SQL Server Management Studio, você pode usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedimento (ou **EXECUTE**) para chamar o procedimento armazenado e, em seguida, passe a ele as entradas necessárias. Por exemplo, tente executar essa instrução no Management Studio:
 
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
@@ -189,32 +215,18 @@ O procedimento armazenado *PredictTipSingleMode* demonstra essa abordagem. Ele u
     ```
 
     >[!TIP]
-    > Ferramentas do R para Visual Studio (RTVS) fornece uma excelente integração com o SQL Server e R. Consulte este artigo para obter mais exemplos de como usar RODBC com uma conexão do SQL Server: [trabalhando com o SQL Server e R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
-
-## <a name="summary"></a>Resumo
-
-Agora que você aprendeu a trabalhar com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados e persistir modelos treinados do R para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele deve ser relativamente fácil para você criar novos modelos com base no conjunto de dados. Por exemplo, você pode tentar criar esses modelos adicionais:
-
-- Um modelo de regressão que prevê o valor da gorjeta
-
-- Um modelo de classificação multiclasse que prevê se a dica é pequeno, médio ou grande
-
-Também é recomendável que você conheça alguns desses exemplos adicionais e recursos:
-
-+ [Cenários de ciência de dados e modelos da solução](data-science-scenarios-and-solution-templates.md)
-
-+ [Análise avançada no banco de dados](sqldev-in-database-r-for-sql-developers.md)
-
-+ [Microsoft R - mergulhando na análise de dados](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
-
-+ [Recursos adicionais](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
-
-## <a name="previous-lesson"></a>Lição anterior
-
-[Criar um modelo do R e salvá-lo no SQL Server](walkthrough-build-and-save-the-model.md)
+    > Ferramentas do R para Visual Studio (RTVS) fornece uma excelente integração com o SQL Server e R. Consulte este artigo para obter mais exemplos de como usar RODBC com uma conexão do SQL Server: [Trabalhar com R e SQL Server](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Tutoriais do SQL Server R](sql-server-r-tutorials.md)
+Agora que você aprendeu a trabalhar com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados e persistir modelos treinados do R para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele deve ser relativamente fácil para você criar novos modelos com base no conjunto de dados. Por exemplo, você pode tentar criar esses modelos adicionais:
 
-[Como criar um procedimento armazenado usando sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
++ Um modelo de regressão que prevê o valor da gorjeta
++ Um modelo de classificação multiclasse que prevê se a dica é pequeno, médio ou grande
+
+Você também poderá explorar esses exemplos adicionais e recursos:
+
++ [Cenários de ciência de dados e modelos da solução](data-science-scenarios-and-solution-templates.md)
++ [Análise avançada no banco de dados](sqldev-in-database-r-for-sql-developers.md)
++ [Microsoft R - mergulhando na análise de dados](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
++ [Recursos adicionais](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)

@@ -23,12 +23,12 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4bf1f7abd985c7ef3544a722351a2d049f6ea83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145661"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370898"
 ---
 # <a name="processing-objects-xmla"></a>Processando objetos (XMLA)
   Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o processamento é a etapa ou série de etapas que transformam dados em informações para análise de negócios. O processamento será diferente dependendo do tipo de objeto, mas sempre fará parte da transformação de dados em informações.  
@@ -114,13 +114,13 @@ ms.locfileid: "50145661"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  O exemplo a seguir processa totalmente o banco de dados [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de exemplo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>Código  
   
 ```  
-<Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
   </Object>  
@@ -129,13 +129,13 @@ ms.locfileid: "50145661"
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  O exemplo a seguir processa incrementalmente a **Internet_Sales_2004** partição o **vendas pela Internet** grupo de medidas da **Adventure Works DW** cubo no [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] amostra [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados. O `Process` comando está adicionando agregações para ordem datas mais tarde do que 31 de dezembro de 2006 à partição usando uma associação de consulta fora de linha na `Bindings` propriedade do `Process` comando para recuperar as linhas da tabela de fatos dos quais gerar agregações para adicionar à partição.  
   
 ### <a name="code"></a>Código  
   
 ```  
-<Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process ProcessAffectedObjects="true" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     <CubeID>Adventure Works DW</CubeID>  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229846"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353803"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
@@ -120,29 +119,29 @@ ms.locfileid: "48229846"
 ## <a name="related-tasks"></a>Related Tasks  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente. Para obter mais detalhes, consulte os tópicos a seguir.  
   
--   [Implementar uma pesquisa no modo Sem cache ou Cache parcial](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
 -   [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementar uma transformação Pesquisa em modo de cache cheio por meio do Gerenciador de conexões OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Vídeo, [Como implementar a transformação Pesquisa no modo de Cache Cheio](http://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
+-   Vídeo, [como: Implementar uma transformação pesquisa em modo Cache cheio](https://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
   
--   Entrada de blog, [Práticas recomendadas para usar os modos de cache de transformação de pesquisa](http://go.microsoft.com/fwlink/?LinkId=146623), em blogs.msdn.com  
+-   Entrada de blog, [Práticas recomendadas para usar os modos de cache de transformação de pesquisa](https://go.microsoft.com/fwlink/?LinkId=146623), em blogs.msdn.com  
   
--   Entrada de blog, [Padrão de pesquisa: não diferencia maiúsculas e minúsculas](http://go.microsoft.com/fwlink/?LinkId=157782), em blogs.msdn.com  
+-   Entrada de blog, [padrão de pesquisa: Diferencia maiusculas de minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), em blogs.msdn.com  
   
--   Exemplo [Transformação de Pesquisa](http://go.microsoft.com/fwlink/?LinkId=267528), em msftisprodsamples.codeplex.com.  
+-   Exemplo [Transformação de Pesquisa](https://go.microsoft.com/fwlink/?LinkId=267528), em msftisprodsamples.codeplex.com.  
   
-     Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação pesquisa difusa](fuzzy-lookup-transformation.md)   
- [Transformação Pesquisa de Termos](term-lookup-transformation.md)   
+ [Transformação Pesquisa Difusa](fuzzy-lookup-transformation.md)   
+ [Transformação Pesquisa de Termo](term-lookup-transformation.md)   
  [Fluxo de Dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   

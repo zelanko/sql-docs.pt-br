@@ -1,5 +1,5 @@
 ---
-title: Desempenho do SQL Server R Services - resultados e recursos | Microsoft Docs
+title: Desempenho do SQL Server R Services – resultados e recursos – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697494"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645465"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Desempenho para R Services: recursos e os resultados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,11 +26,11 @@ Dois estudos de caso tinha metas diferentes:
 
 Este tópico lista os resultados detalhados do primeiro estudo de caso. Para o segundo estudo de caso, um resumo descreve as descobertas geral. No final deste tópico são links para todos os recursos usados pelos autores originais e dados de exemplo e scripts.
 
-## <a name="performance-case-study-airline-dataset"></a>Estudo de caso de desempenho: conjunto de dados de companhia aérea
+## <a name="performance-case-study-airline-dataset"></a>Estudo de caso de desempenho: Conjunto de dados de companhia aérea
 
 Este estudo de caso pela equipe de desenvolvimento do SQL Server R Services testado os efeitos de várias otimizações. Foi criado um modelo único rxLogit e pontuação realizadas no conjunto de dados de companhia aérea. As otimizações foram aplicadas durante o treinamento e pontuação processos para avaliar os impactos individuais.
 
-- GitHub: [dados e scripts de exemplo](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) para estudar em otimizações do SQL Server
+- GitHub: [Dados e scripts de exemplo](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) para estudar em otimizações do SQL Server
 
 ### <a name="test-methods"></a>Métodos de teste
 
@@ -39,7 +39,7 @@ Este estudo de caso pela equipe de desenvolvimento do SQL Server R Services test
 3. Várias modificações foram aplicadas às cópias da tabela, para testar os recursos do SQL Server, como compactação de página, a compactação de linha, indexação, armazenamento de dados Colunar, etc.
 4. O desempenho foi medido antes e após cada otimização foi aplicada.
 
-| Nome da tabela| Description|
+| Nome da tabela| Descrição|
 |------|------|
 | *airline* | Dados convertidos do arquivo xdf original usando `rxDataStep`|                          |
 | *airlineWithIntCol*   | *DayOfWeek* convertido em um número inteiro em vez de uma cadeia de caracteres. Também adiciona uma coluna *rowNum*.|
@@ -62,7 +62,7 @@ Por exemplo, os resultados a seguir estão as horas de um único teste. Os inter
 
 **Intervalos de amostra**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ Esta seção compara antes e depois os resultados para cada um dos testes.
 
 O primeiro teste em comparação com o uso de compactação e uma tabela Colunar para reduzir o tamanho dos dados.
 
-| Nome da tabela            | Linhas     | Reservado   | data       | index_size | Não usado  | % de economia (reservado) |
+| Nome da tabela            | Linhas     | Reservado   | Dados       | index_size | Não usado  | % de economia (reservado) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -273,7 +273,7 @@ Os resultados do teste mostram a hora de salvar o modelo e o tempo necessário p
 
 Carregar um modelo de treinamento de uma tabela é claramente uma maneira mais rápida de realizar a previsão. É recomendável que você evite criar o modelo e executar tudo no mesmo script de pontuação.
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>Estudo de caso: otimização para a tarefa de correspondência de retomada
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Estudo de caso: Otimização para a tarefa de correspondência de retomada
 
 O modelo de correspondência de retomada foi desenvolvido pelo cientista de dados do Microsoft Ke Huang para testar o desempenho do código R no SQL Server e, ao fazer então dados ajuda os cientistas criar escalonáveis, soluções de nível empresarial.
 
@@ -347,11 +347,11 @@ Para treinamento de modelos grandes ou de pontuação em lotes grandes, a sobrec
 
 A seguir estão links para informações, ferramentas e scripts usados no desenvolvimento desses testes.
 
-+ Teste os scripts e links para os dados de desempenho: [scripts para estudar em otimizações do SQL Server e dados de exemplo](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ Teste os scripts e links para os dados de desempenho: [Dados de exemplo e scripts para estudo de otimizações do SQL Server](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ Artigo que descreve a solução de correspondência de retomar: [dica de otimização e truques para SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ Artigo que descreve a solução de retomada de correspondência: [Dica de otimização e truques para SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Scripts usados na otimização de SQL para a solução de correspondência de retomar: [repositório do GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Scripts usados na otimização de SQL para a solução de retomada de correspondência: [Repositório do GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>Saiba mais sobre o gerenciamento do Windows server
 
@@ -365,7 +365,7 @@ A seguir estão links para informações, ferramentas e scripts usados no desenv
 
 ### <a name="learn-about-sql-server-optimizations"></a>Saiba mais sobre as otimizações do SQL Server
 
-+ [Reorganizar e recompilar índices](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [Introdução às tabelas com otimização de memória](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 

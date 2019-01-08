@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906486"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363708"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Atualizar uma instância de cluster de failover do SQL Server (instalação)
   Você pode atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um cluster de failover do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] com o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou com um prompt de comando.  
@@ -46,11 +45,11 @@ ms.locfileid: "48906486"
   
 -   Para garantir que o componente Visual Studio seja instalado corretamente, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que você instale uma atualização. A Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifica a presença dessa atualização e requer o download e a instalação da atualização antes de continuar com a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para evitar a interrupção durante a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você pode baixar e instalar a atualização antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , conforme descrito abaixo (ou instalar todas as atualizações para o .NET 3.5 SP1 disponíveis no Windows Update):  
   
-     Se você instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] em um computador com o sistema operacional Windows Server 2008 SP2, você pode obter a atualização necessária [aqui](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     Se você instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] em um computador com o sistema operacional Windows Server 2008 SP2, você pode obter a atualização necessária [aqui](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      Se você instalar o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] em um computador com o [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 ou [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1, essa atualização será incluída.  
   
--   O .NET Framework 3.5 SP1 não é mais instalado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas pode ser necessário durante a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Para obter mais informações, veja [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Notas de versão](http://go.microsoft.com/fwlink/?LinkId=296445).  
+-   O .NET Framework 3.5 SP1 não é mais instalado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas pode ser necessário durante a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Para obter mais informações, veja [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Notas de versão](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
 -   Em instalações locais, você deve executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48906486"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Atualizando para um cluster de failover de várias sub-redes do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Há dois possíveis cenários para atualizações:  
   
-1.  O cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está atualmente configurado em uma única sub-rede: você deve atualizar primeiro o cluster existente para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando a instalação e seguindo o processo de atualização. Concluída a atualização do cluster de failover existente, adicione um nó que esteja em uma sub-rede diferente usando a funcionalidade AddNode. Confirme a alteração da dependência do recurso de endereço IP para OR na página de configuração de rede de cluster. Agora você tem um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover está atualmente configurado em uma única sub-rede: você deve atualizar primeiro o cluster existente para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando a instalação e seguindo o processo de atualização. Concluída a atualização do cluster de failover existente, adicione um nó que esteja em uma sub-rede diferente usando a funcionalidade AddNode. Confirme a alteração da dependência do recurso de endereço IP para OR na página de configuração de rede de cluster. Agora você tem um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 2.  O cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está atualmente configurado em várias sub-redes que usam a tecnologia V-LAN expansível: você deve atualizar primeiro o cluster existente para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Como a tecnologia V-LAN expansível configura uma única sub-rede, a configuração de rede deve ser alterada para várias sub-redes. Altere a dependência do recurso de endereço IP com a ferramenta de administração de Cluster de Failover do Windows e altere a dependência de IP para OR.  
   

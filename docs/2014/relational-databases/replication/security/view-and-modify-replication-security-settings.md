@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
@@ -17,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ffe50320214f9d2d21c28612d5ac3ffb348dda6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163756"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375628"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Exibir e modificar configurações de segurança de replicação
   Este tópico descreve como exibir e modificar configurações de segurança de replicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou RMO (Replication Management Objects). Por exemplo, você pode querer alterar a conexão do Agente de Leitor de Log com o Publicador de uma autenticação do SQL Server para uma autenticação integrada do Windows ou alterar as credenciais usadas para executar um trabalho do agente quando a senha do Windows foi alterada. Para obter informações sobre as permissões exigidas por cada agente, consulte [Modelo de segurança do agente de replicação](replication-agent-security-model.md).  
@@ -43,11 +42,11 @@ ms.locfileid: "48163756"
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
--   **Follow Up:**  [After you modify replication security settings](#FollowUp)  
+-   **Acompanhamento:**  [Depois de modificar as configurações de segurança de replicação](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Os procedimentos armazenados usados dependem do tipo de agente e do tipo de conexão de servidor.  
   
@@ -143,9 +142,9 @@ ms.locfileid: "48163756"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Publicador, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Distribution Agent executa e faz conexões com o Distribuidor, clique na linha **Conta de processo de agente** e, depois, clique no botão (**…**) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
+    -   Para alterar a conta na qual o Agente de Distribuição executa e faz conexões com o Distribuidor, clique na linha **Conta de processo de agente** e, depois, clique no botão (**...**) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
   
-    -   Para alterar o contexto no qual o Distribution Agent conecta-se ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão (**…**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Distribuição conecta-se ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão (**...**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
          Se você usar assinaturas de atualização enfileirada, o Queue Reader Agent também usará o contexto especificado aqui para conexões com o Assinante.  
   
@@ -155,11 +154,11 @@ ms.locfileid: "48163756"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Distribution Agent executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão (**…**) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
+    -   Para alterar a conta na qual o Agente de Distribuição executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão (**...**) de propriedades na linha. Especifique uma conta e uma senha na caixa de diálogo **Segurança do Agente de Distribuição** .  
   
          Se você usar assinaturas de atualização enfileirada, o Queue Reader Agent também usará o contexto especificado aqui para conexões com o Assinante.  
   
-    -   Para alterar o contexto no qual o Distribution Agent se conecta ao Distribuidor, clique na linha **Conexão do Distribuidor** e, depois, clique no botão (**…**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Distribuição se conecta ao Distribuidor, clique na linha **Conexão do Distribuidor** e, depois, clique no botão (**...**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48163756"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Publicador, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Merge Agent executa e faz conexões com o Publicador e o Distribuidor, clique na linha **Conta de processo de agente** e, em seguida, clique no botão (**…**) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
+    -   Para alterar a conta na qual o Agente de Mesclagem executa e faz conexões com o Publicador e o Distribuidor, clique na linha **Conta de processo de agente** e, em seguida, clique no botão (**...**) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
   
-    -   Para alterar o contexto no qual o Merge Agent se conecta ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão (**…**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Mesclagem se conecta ao Assinante, clique na linha **Conexão do Assinante** e, depois, clique no botão (**...**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -177,15 +176,15 @@ ms.locfileid: "48163756"
   
 1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, é possível fazer as seguintes alterações:  
   
-    -   Para alterar a conta na qual o Merge Agent executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão (**…**) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
+    -   Para alterar a conta na qual o Agente de Mesclagem executa e faz conexões com o Assinante, clique na linha **Conta de processo de agente** e, depois, clique no botão (**...**) de propriedades na linha. Especifique a conta e a senha na caixa de diálogo **Segurança do Agente de Mesclagem** .  
   
-    -   Para alterar o contexto no qual o Merge Agent é conectado ao Publicador e ao Distribuidor, clique na linha **Conexão do Publicador** e, em seguida, clique no botão (**…**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
+    -   Para alterar o contexto no qual o Agente de Mesclagem é conectado ao Publicador e ao Distribuidor, clique na linha **Conexão do Publicador** e, em seguida, clique no botão (**...**) de propriedades na linha. Especifique o contexto na caixa de diálogo **Inserir Informações de Conexão** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Para alterar a conta sob a qual o Queue Reader Agent é executado  
   
-1.  Na página **Geral** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique no botão de propriedades (**…**) próximo ao banco de dados de distribuição.  
+1.  Na página **Geral** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique no botão de propriedades (**...**) próximo ao banco de dados de distribuição.  
   
 2.  Na caixa de diálogo **Propriedades do Banco de Dados de Distribuição – \<Banco de Dados>**, clique no botão **Configurações de Segurança** próximo à caixa de texto **Conta de processo de agente**.  
   
@@ -217,7 +216,7 @@ ms.locfileid: "48163756"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para alterar as configurações de segurança para uma assinatura pull de atualização imediata  
   
-1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, clique na linha **Conexão do Publicador** e depois clique no botão de propriedades (**…**) na linha.  
+1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, clique na linha **Conexão do Publicador** e depois clique no botão de propriedades (**...**) na linha.  
   
 2.  Na caixa de diálogo **Inserir Informações de Conexão** , selecione uma das seguintes opções:  
   
@@ -242,7 +241,7 @@ ms.locfileid: "48163756"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 > [!IMPORTANT]  
 >  Em todos os procedimentos a seguir, quando possível, solicite aos usuários que digitem as credenciais de segurança em tempo de execução. Se armazenar credenciais em um arquivo de script, proteja o arquivo para evitar acesso não autorizado.  
@@ -416,7 +415,7 @@ ms.locfileid: "48163756"
 ##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 > [!IMPORTANT]  
->  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
+>  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>Para alterar todas as instâncias de uma senha armazenada em um servidor de replicação  
   
@@ -433,7 +432,7 @@ ms.locfileid: "48163756"
     -   *password* - o novo valor de senha.  
   
         > [!IMPORTANT]  
-        >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
+        >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
   
         > [!NOTE]  
         >  Só um membro da `sysadmin` função de servidor fixa pode chamar este método.  
@@ -448,7 +447,7 @@ ms.locfileid: "48163756"
   
 3.  Defina o <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, e as propriedades <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> para a assinatura, e defina a conexão da Etapa 1 para a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
   
 5.  Defina uma ou mais das seguintes propriedades de segurança na instância de <xref:Microsoft.SqlServer.Replication.TransSubscription>:  
   
@@ -461,7 +460,7 @@ ms.locfileid: "48163756"
         > [!NOTE]  
         >  A conexão de agente para o Distribuidor sempre é feita usando as credenciais de Windows especificadas por <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Essa conta é também usada para fazer conexões remotas que usam a Autenticação do Windows.  
   
-6.  (Opcional) Se você tiver especificado um valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar as alterações no servidor. Se você tiver especificado um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações são enviadas para o servidor imediatamente.  
+6.  (Opcional) Se você especificar um valor de `true`  para  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar as alterações no servidor. (Opcional) Se você especificar um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações serão enviadas imediatamente ao servidor.  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>Para alterar as configurações de segurança para o Distribution Agent de uma assinatura pull para uma publicação transacional  
   
@@ -471,7 +470,7 @@ ms.locfileid: "48163756"
   
 3.  Defina o <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, e as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para a assinatura, e defina a conexão da Etapa 1 para a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
   
 5.  Defina uma ou mais das seguintes propriedades de segurança na instância de <xref:Microsoft.SqlServer.Replication.TransPullSubscription>:  
   
@@ -484,7 +483,7 @@ ms.locfileid: "48163756"
         > [!NOTE]  
         >  A conexão de agente para o Assinante sempre é feita usando as credenciais de Windows especificadas por <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Essa conta é também usada para fazer conexões remotas que usam a Autenticação do Windows.  
   
-6.  (Opcional) Se você tiver especificado um valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar as alterações no servidor. Se você tiver especificado um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações são enviadas para o servidor imediatamente.  
+6.  (Opcional) Se você especificar um valor de `true`  para  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar as alterações no servidor. (Opcional) Se você especificar um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações serão enviadas imediatamente ao servidor.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>Para alterar as configurações de segurança para o Merge Agent para uma assinatura pull para uma publicação de mesclagem  
   
@@ -494,7 +493,7 @@ ms.locfileid: "48163756"
   
 3.  Defina o <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, e as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para a assinatura, e defina a conexão da Etapa 1 para a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
   
 5.  Defina uma ou mais das seguintes propriedades de segurança na instância de <xref:Microsoft.SqlServer.Replication.MergePullSubscription>:  
   
@@ -504,14 +503,14 @@ ms.locfileid: "48163756"
   
     -   Para especificar a autenticação do SQL Server como o tipo de autenticação que o agente usa ao se conectar ao distribuidor, defina as <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo do <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> propriedade `false`e especifique as credenciais de logon do distribuidor para o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
-    -   Para especificar a autenticação integrada do Windows como o tipo de autenticação que o agente usa ao se conectar ao publicador, defina as <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo do <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> propriedade `true`.  
+    -   Para especificar a Autenticação Integrada do Windows como o tipo de autenticação que o agente usa ao se conectar ao Publicador, defina o campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> da propriedade <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> como `true`.  
   
     -   Para especificar a autenticação do SQL Server como o tipo de autenticação que o agente usa ao se conectar ao publicador, defina as <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo do <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> propriedade `false`e especifique as credenciais de logon do publicador para o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
         > [!NOTE]  
         >  A conexão de agente para o Assinante sempre é feita usando as credenciais de Windows especificadas por <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Essa conta é também usada para fazer conexões remotas que usam a Autenticação do Windows.  
   
-6.  (Opcional) Se você tiver especificado um valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar as alterações no servidor. Se você tiver especificado um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações são enviadas para o servidor imediatamente.  
+6.  (Opcional) Se você especificar um valor de `true`  para  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar as alterações no servidor. (Opcional) Se você especificar um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações serão enviadas imediatamente ao servidor.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>Para alterar as configurações de segurança para o Merge Agent para uma assinatura push para uma publicação de mesclagem  
   
@@ -521,7 +520,7 @@ ms.locfileid: "48163756"
   
 3.  Defina o <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, e as propriedades <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> para a assinatura, e defina a conexão da Etapa 1 para a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de assinatura na etapa 3 foram definidas incorretamente ou a assinatura não existe.  
   
 5.  Defina uma ou mais das seguintes propriedades de segurança na instância de <xref:Microsoft.SqlServer.Replication.MergeSubscription>:  
   
@@ -531,14 +530,14 @@ ms.locfileid: "48163756"
   
     -   Para especificar a autenticação do SQL Server como o tipo de autenticação que o agente usa ao se conectar ao assinante, defina as <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo do <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> propriedade `false`e especifique as credenciais de logon do assinante para o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
-    -   Para especificar a autenticação integrada do Windows como o tipo de autenticação que o agente usa ao se conectar ao publicador, defina as <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo do <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> propriedade `true`.  
+    -   Para especificar a Autenticação Integrada do Windows como o tipo de autenticação que o agente usa ao se conectar ao Publicador, defina o campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> da propriedade <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> como `true`.  
   
     -   Para especificar a autenticação do SQL Server como o tipo de autenticação que o agente usa ao se conectar ao publicador, defina as <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo do <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> propriedade `false`e especifique as credenciais de logon do publicador para o <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>e <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
         > [!NOTE]  
         >  A conexão de agente para o Distribuidor sempre é feita usando as credenciais de Windows especificadas por <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Essa conta é também usada para fazer conexões remotas que usam a Autenticação do Windows.  
   
-6.  (Opcional) Se você tiver especificado um valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar as alterações no servidor. Se você tiver especificado um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações são enviadas para o servidor imediatamente.  
+6.  (Opcional) Se você especificar um valor de `true`  para  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar as alterações no servidor. (Opcional) Se você especificar um valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (padrão), as alterações serão enviadas imediatamente ao servidor.  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>Para alterar a informação de logon usada por um Assinante de atualização imediata ao se conectar ao publicador transacional  
   
@@ -546,7 +545,7 @@ ms.locfileid: "48163756"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> para o banco de dados de assinatura. Especifique <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> e o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da Etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, significa que as propriedades de banco de dados na etapa 2 foram definidas incorretamente ou o banco de dados de assinatura não existe.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de banco de dados na etapa 2 foram definidas incorretamente ou o banco de dados não existe.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> , passando os parâmetros seguintes:  
   
@@ -567,7 +566,7 @@ ms.locfileid: "48163756"
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de modificar configurações de segurança de replicação  
+##  <a name="FollowUp"></a> Acompanhar: Depois de modificar as configurações de segurança de replicação  
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="see-also"></a>Consulte também  

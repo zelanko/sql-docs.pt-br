@@ -12,12 +12,12 @@ ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f064e36a5412612e73f3c6d60f0461a02d417f92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 913be11caa9a76ee012571e5ee4b275826668330
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138396"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370118"
 ---
 # <a name="mssqlserver33081"></a>MSSQLSERVER_33081
     
@@ -41,7 +41,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## <a name="user-action"></a>Ação do usuário  
- Para investigar o problema, pesquise o código de erro do Windows no MSDN (http://msdn.microsoft.com/)). Resolva o erro ou contate o [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS para obter mais informações. Se for necessário contatar o CSS, colete as informações a seguir para nossa equipe de suporte.  
+ Para investigar o problema, pesquise o código de erro do Windows no MSDN (https://msdn.microsoft.com/)). Resolva o erro ou contate o [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS para obter mais informações. Se for necessário contatar o CSS, colete as informações a seguir para nossa equipe de suporte.  
   
 -   O log de erros que mostra a erro de falha no carregamento do provedor criptográfico.  
   

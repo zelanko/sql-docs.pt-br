@@ -11,23 +11,23 @@ ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f49b472422e520ac6adba75a5f5c66bee1646638
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 050bf73a1669ad7f0232a081e1cc3d888d5a4f14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212146"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366578"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>Instalar o ADO.NET Data Services para dar suporte a exportações do feed de dados das listas do SharePoint
   O ADO.NET Data Services é obrigatório para uma exportação do feed de dados das listas do SharePoint. Como o SharePoint 2010 não inclui esse componente no programa SharePoint Prerequisite Installer, você deve instalá-lo manualmente.  
   
- Sem esse pré-requisito, você obterá o erro a seguir ao tentar usar uma lista do SharePoint exportada como um feed de dados: "por razões de segurança, o DTD é proibido neste documento XML. Para habilitar o processamento do DTD, defina a propriedade ProhibitDtd em XmlReaderSettings como falsa e passe as configurações para o método XmlReader.Create."  
+ Sem esse pré-requisito, você obterá o seguinte erro ao tentar usar uma lista do SharePoint que foi exportada como um feed de dados: "Por motivos de segurança DTD é proibido neste documento XML. Para habilitar o processamento do DTD, defina a propriedade ProhibitDtd em XmlReaderSettings como falsa e passe as configurações para o método XmlReader.Create."  
   
  Use as instruções a seguir para instalar o ADO.NET Data Services em cada SharePoint Server para o qual você deseja permitir a exportação de listas como feeds de dados.  
   
 ### <a name="download-and-install-adonet-data-services"></a>Baixar e instalar o ADO.NET Data Services  
   
-1.  Vá para a documentação de requisitos de hardware e software para o SharePoint 2010 [requisitos de Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Vá para a documentação de requisitos de hardware e software para o SharePoint 2010 [requisitos de Hardware e Software (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
 2.  Na **acesso ao software aplicável**, localize o link para o ADO.NET Data Services 3.5 que corresponde ao sistema operacional que você está usando (Windows Server 2008 SP2 ou Windows Server 2008 R2).  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtros para modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Filtros para modelos de mineração (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016753"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410663"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,14 +54,14 @@ ms.locfileid: "34016753"
 ### <a name="creating-filters-on-nested-tables"></a>Criando filtros em tabelas aninhadas  
  Se a exibição da fonte de dados contiver tabelas aninhadas, você poderá usar a segunda caixa de diálogo de filtro para criar condições nas linhas das tabelas aninhadas.  
   
- Por exemplo, se a tabela de casos estiver relacionada a clientes e a tabela aninhada mostrar os produtos que um cliente comprou, você poderá criar um filtro para os clientes que compraram determinados itens usando a seguinte sintaxe no filtro de tabela aninhada: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ Por exemplo, se a tabela de casos estiver relacionada a clientes e a tabela aninhada mostrar os produtos que um cliente comprou, você poderá criar um filtro para os clientes que compraram determinados itens usando a seguinte sintaxe no filtro de tabela aninhada: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- Você também pode filtrar a existência de determinado valor na tabela aninhada, usando as palavras-chave **EXISTS** ou **NOT EXISTS** e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` retornará **true** se a tabela aninhada contiver, pelo menos, uma linha que inclua o valor `Water Bottle`.  
+ Você também pode filtrar a existência de determinado valor na tabela aninhada, usando as palavras-chave **EXISTS** ou **NOT EXISTS** e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. `EXISTS SELECT(<subquery>)` retornará **true** se a tabela aninhada contiver, pelo menos, uma linha que inclua o valor `Water Bottle`.  
   
- Você pode combinar condições na tabela de casos com as condições da tabela aninhada. Por exemplo, a sintaxe a seguir inclui uma condição na tabela de casos (`Age > 30` ), uma subconsulta na tabela aninhada (`EXISTS (SELECT * FROM Products)`) e várias condições na tabela aninhada (`WHERE ProductName=’Milk’  AND Quantity>2`) ).  
+ Você pode combinar condições na tabela de casos com as condições da tabela aninhada. Por exemplo, a sintaxe a seguir inclui uma condição na tabela de casos (`Age > 30` ), uma subconsulta na tabela aninhada (`EXISTS (SELECT * FROM Products)`) e várias condições na tabela aninhada (`WHERE ProductName='Milk'  AND Quantity>2`) ).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  Quando você terminar de criar o filtro, o texto do filtro será avaliado pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], convertido para uma expressão DMX e, em seguida, salvo com o modelo.  
@@ -93,7 +93,7 @@ ms.locfileid: "34016753"
 ### <a name="how-can-i-save-a-filter"></a>Como posso salvar um filtro?  
  A expressão de filtro é salva como um script armazenado com o modelo de mineração associado ou tabela aninhada. Se você excluir o texto de filtro, ele só poderá ser restaurado manualmente, recriando a expressão de filtro. Portanto, se você criar expressões de filtro complexas, deve criar uma cópia de backup do texto de filtro.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Por que não vejo efeitos do filtro?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Por que não consigo ver todos os efeitos do filtro?  
  Sempre que você alterar ou adicionar uma expressão de filtro, deverá reprocessar a estrutura e o modelo antes de poder criar os efeitos do filtro.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Por que vejo atributos filtrados em resultados de consulta de previsão?  
@@ -116,6 +116,6 @@ ms.locfileid: "34016753"
   
 ## <a name="see-also"></a>Consulte também  
  [Sintaxe de filtro de modelo e exemplos &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

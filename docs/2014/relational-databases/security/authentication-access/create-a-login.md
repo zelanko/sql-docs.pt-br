@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190486"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374758"
 ---
 # <a name="create-a-login"></a>Crie um logon
   Este tópico descreve como criar um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um logon é a identidade da pessoa ou do processo que está se conectando a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48190486"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [etapas a serem executadas após criar um logon](#FollowUp)  
+-   **Acompanhamento:**  [Etapas a serem executadas após criar um logon](#FollowUp)  
   
 ##  <a name="Background"></a> Plano de fundo  
  Um logon é uma entidade de segurança ou uma entidade que pode ser autenticada por um sistema seguro. Usuários precisam de um logon para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você pode criar um logon com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows) ou pode criar um logon que não esteja baseado em uma entidade de segurança do Windows (como um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
@@ -54,7 +54,7 @@ ms.locfileid: "48190486"
 > [!NOTE]  
 >  Para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve usar a autenticação de modo misto. Para obter mais informações, veja [Escolher um modo de autenticação](../choose-an-authentication-mode.md).  
   
- Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. As permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, o `CREATE ENDPOINT` permissão) podem ser concedidas a um logon.  
+ Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. Permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, a permissão `CREATE ENDPOINT`) podem ser concedidas a um logon.  
   
 ##  <a name="Security"></a> Segurança  
   
@@ -67,19 +67,19 @@ ms.locfileid: "48190486"
   
 1.  No Pesquisador de Objetos, expanda a pasta da instância de servidor no qual deseja criar o novo logon.  
   
-2.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e selecione **Logon...**.  
+2.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Logon...**.  
   
-3.  Na caixa de diálogo **Logon – Novo** , na página **Geral** , insira o nome de um usuário na caixa **Nome de logon** . Como alternativa, clique em **Pesquisar…** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo** .  
+3.  Na caixa de diálogo **Logon – Novo**, na página **Geral**, insira o nome de um usuário na caixa **Nome de logon**. Como alternativa, clique em **Pesquisar...** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo**.  
   
      Se você clicar em **Pesquisar...**:  
   
-    1.  Sob **Selecione este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecionar qualquer opção a seguir ou todas: **Entidades de segurança internas**, **Grupos**e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
+    1.  Sob **Selecione este tipo de objeto**, clique em **tipos de objeto...**  para abrir o **tipos de objeto** caixa de diálogo caixa e selecione todos ou qualquer um dos seguintes: **Entidades de segurança internas**, **grupos**, e **usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
   
-    2.  Sob **Deste local**, clique em **Locais...** para abrir a caixa de diálogo **Locais** e selecionar um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
+    2.  Em **Desta localização**, clique em **Localizações...** para abrir a caixa de diálogo **Localizações** e selecione um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
-    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)**, insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)**, insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Clique em **Avançado...** para mais opções de pesquisa avançadas. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Clique em **Avançado...** para mais opções de pesquisa avançada. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Clique em **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48190486"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Logon – Novo** também oferece opções de quadro páginas adicionais: **Funções de Servidor**, **Mapeamento de Usuário**, **Protegíveis**e **Status**.  
+ O **logon - novo** caixa de diálogo também oferece opções em quatro páginas adicionais: **Funções de servidor**, **mapeamento de usuário**, **protegíveis**, e **Status**.  
   
 ### <a name="server-roles"></a>Funções de Servidor  
  A página **Funções de Servidor** lista todas as funções possíveis que podem ser atribuídas ao novo logon. As seguintes opções estão disponíveis:  
@@ -176,16 +176,16 @@ ms.locfileid: "48190486"
   
 1.  Clique em **Pesquisar**.  
   
-2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...**, **Todos os objetos dos tipos...** ou **O servidor***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  No **adicionar objetos** caixa de diálogo, selecione uma das seguintes opções: **Objetos específicos...** , **Todos os objetos dos tipos...** , ou **servidor * * * nome_do_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Selecionando **o servidor * * * nome_do_servidor* preenche automaticamente a grade superior com todos os objetos protegíveis de servidores.  
   
-3.  Se você selecionar **Objetos específicos…**:  
+3.  Se você selecionar **Objetos específicos...**:  
   
-    1.  Na caixa de diálogo **Selecionar Objetos** , em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto…**.  
+    1.  Na caixa de diálogo **Selecionar Objetos**, em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto...**.  
   
-    2.  Na caixa de diálogo **Selecionar Tipos de Objeto** , selecione qualquer um destes tipos de objeto ou todos: **Pontos de Extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade**e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  No **selecionar tipos de objeto** caixa de diálogo, selecione um ou todos os tipos de objetos a seguir: **Pontos de extremidade**, **logons**, **servidores**, **grupos de disponibilidade**, e **funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  Em **Inserir os nomes de objeto a serem selecionados (exemplos)**, clique em **Procurar...**.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "48190486"
   
     5.  Na caixa de diálogo **Selecionar Objetos** , clique em **OK**.  
   
-4.  Se você selecionar **Todos os objetos dos tipos...**, na caixa de diálogo **Selecionar Tipos de Objeto** , selecione qualquer um destes tipos de objeto ou todos: **Pontos de Extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade**e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se você selecionar **todos os objetos dos tipos...** , no **selecionar tipos de objeto** caixa de diálogo, selecione um ou todos os tipos de objetos a seguir: **Pontos de extremidade**, **logons**, **servidores**, **grupos de disponibilidade**, e **funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nome**  
  O nome de cada entidade ou protegível que é adicionado à grade.  
@@ -239,7 +239,7 @@ ms.locfileid: "48190486"
  **SQL Server Authentication**  
  A caixa de seleção **O logon está bloqueado** só estará disponível se o logon selecionado se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiver bloqueado. Esta configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>Para criar um logon usando a Autenticação do Windows  
   
@@ -278,7 +278,7 @@ ms.locfileid: "48190486"
   
  Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Acompanhamento: etapas a serem executadas após criar um logon  
+##  <a name="FollowUp"></a> Acompanhar: etapas a serem executadas após criar um logon  
  Após ser criado, o logon pode se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas não necessariamente tem permissão suficiente para executar qualquer trabalho útil. A lista a seguir fornece links a ações de logon comuns.  
   
 -   Para associar o logon a uma função, veja [Unir uma função](join-a-role.md).  

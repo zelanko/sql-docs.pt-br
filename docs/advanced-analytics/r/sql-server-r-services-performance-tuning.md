@@ -1,5 +1,5 @@
 ---
-title: Ajuste de desempenho do SQL Server R Services | Microsoft Docs
+title: Desempenho do SQL Server R Services ajuste - serviços de aprendizado de máquina do SQL Server
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8f70f4f2436d30ad4a4c5083f7a6ad5a06777af
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217551"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432289"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ajuste de desempenho para R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ O objetivo desta série é fornecer orientações sobre os tipos de técnicas qu
 + O terceiro artigo aborda as otimizações no código R e recursos para operacionalização.
 + O quarto artigo descreve os métodos de teste em detalhes e as descobertas de relatórios e conclusões.
 
-**Aplica-se a:** SQL Server 2016 R Services, SQL Server 2017 serviços de Machine Learning
+**Aplica-se a:** SQL Server 2016 R Services, serviços de aprendizado de máquina do SQL Server 2017
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>Metas de desempenho e cenários de destino
 
@@ -83,11 +83,11 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, na
 
 ## <a name="articles-in-this-series"></a>Artigos desta série
 
-+ [Ajuste de desempenho para R no SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
++ [Ajuste de desempenho para R no SQL Server - hardware](../r/sql-server-configuration-r-services.md)
 
-    Fornece orientação para configurar o hardware que [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] é instalado em e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. É particularmente útil para **os administradores de banco de dados**.
+    Fornece orientação para configurar o hardware que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] é instalado em e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. É particularmente útil para **os administradores de banco de dados**.
 
-+ [Ajuste de desempenho para R no SQL Server - código e dados de otimização](..\r\r-and-data-optimization-r-services.md)
++ [Ajuste de desempenho para R no SQL Server - código e dados de otimização](../r/r-and-data-optimization-r-services.md)
 
     Fornece dicas específicas sobre como otimizar o script externo para evitar problemas conhecidos. É mais útil **cientistas de dados**.
 
@@ -95,6 +95,6 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, na
     > Embora muitas das informações nesta seção se aplica a R em geral, algumas informações são específicas para funções analíticas RevoScaleR. Diretrizes de desempenho detalhados não estão disponível para **revoscalepy** e outras bibliotecas de Python com suporte.
     >
 
-+ [Ajuste de desempenho para R no SQL Server - métodos e os resultados](..\r\performance-case-study-r-services.md)
++ [Ajuste de desempenho para R no SQL Server - métodos e os resultados](../r/performance-case-study-r-services.md)
 
     Resume os dados que foram usado dois estudos de caso, como o desempenho foi testado e como as otimizações afetado resultados.

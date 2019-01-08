@@ -13,15 +13,15 @@ ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18ab1fb6986941355a89cb8075897de07fc9ff3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d804e3d2b7f851f8142f0e9c95158cb56ea521ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175826"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371698"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Tarefa 7: Criando uma regra de domínio composto
-  Nesta tarefa, você criará um domínio composto, **Address Validation**, que inclui **Address Line**, **Cidade**, **estado**e  **ZIP** domínios. Um domínio composto permite definir uma regra entre domínios que envolve vários domínios em uma regra. Há outras vantagens para um domínio composto, como analisar um valor de campo em vários domínios.  Por exemplo, um valor para um campo Nome Completo pode ser analisado em domínios separados de Nome, Nome do Meio e Sobrenome. Neste tutorial, você define apenas uma regra entre domínios. Ver [Gerenciando um domínio composto](http://msdn.microsoft.com/library/hh510399.aspx) para obter mais detalhes.  
+# <a name="task-7-creating-a-composite-domain"></a>Tarefa 7: Criando um domínio composto
+  Nesta tarefa, você criará um domínio composto, **Address Validation**, que inclui **Address Line**, **Cidade**, **estado**e  **ZIP** domínios. Um domínio composto permite definir uma regra entre domínios que envolve vários domínios em uma regra. Há outras vantagens para um domínio composto, como analisar um valor de campo em vários domínios.  Por exemplo, um valor para um campo Nome Completo pode ser analisado em domínios separados de Nome, Nome do Meio e Sobrenome. Neste tutorial, você define apenas uma regra entre domínios. Ver [Gerenciando um domínio composto](https://msdn.microsoft.com/library/hh510399.aspx) para obter mais detalhes.  
   
 1.  No painel esquerdo, clique em **criar um domínio composto** na barra de ferramentas.  
   

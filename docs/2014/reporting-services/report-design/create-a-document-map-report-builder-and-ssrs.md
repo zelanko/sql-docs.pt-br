@@ -11,17 +11,17 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc01da68aeaa393631aca6146a41e6eb88ecb14e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376628"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
   O mapa do documento fornece um conjunto de links de navegação aos itens de relatório em um relatório renderizado. Ao exibir um relatório que inclui um mapa do documento, um painel lateral separado é exibido ao lado do relatório. Um usuário pode clicar nos links do mapa do documento para ir para a página de relatório que exibe esse item. Seções e grupos de relatórios são organizados em uma hierarquia de links. Clicar nos itens do mapa do documento atualiza o relatório e exibe a área do relatório que corresponde ao item no mapa do documento.  
   
- Para adicionar links ao mapa do documento, você deve definir o `DocumentMapLabel` propriedade do item de relatório para o texto que você cria ou como uma expressão que avalia o texto que você deseja exibir no mapa do documento. Você também pode adicionar valores exclusivos ao grupo de tabelas ou matrizes para o mapa do documento. Por exemplo, para um grupo com base em cores, cada cor exclusiva tem um link que o direciona para a página do relatório que exibe a instância de grupo daquela cor.  
+ Para adicionar links ao mapa do documento, defina a propriedade `DocumentMapLabel` do item de relatório para o texto que você criar ou para uma expressão que seja avaliada como o texto que você deseja exibir no mapa do documento. Você também pode adicionar valores exclusivos ao grupo de tabelas ou matrizes para o mapa do documento. Por exemplo, para um grupo com base em cores, cada cor exclusiva tem um link que o direciona para a página do relatório que exibe a instância de grupo daquela cor.  
   
  Também é possível criar uma URL para um relatório que substitui a exibição do mapa do documento, portanto, você poderá executar o relatório sem exibir o mapa do documento e clicar no botão **Mostrar/Ocultar Mapa do Documento** na barra de ferramentas do visualizador de relatórios para alternar a exibição.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48073466"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Mapas do documento e extensões de renderização  
- O mapa do documento é planejado para uso na extensão de renderização HTML, por exemplo, na Visualização e no Visualizador de Relatórios. Outras extensões de renderização têm maneiras diferentes de articular um mapa do documento:  
+ O mapa do documento é planejado para uso na extensão de renderização HTML, por exemplo, na Versão prévia e no Visualizador de Relatórios. Outras extensões de renderização têm maneiras diferentes de articular um mapa do documento:  
   
 -   O PDF renderiza o mapa do documento como painel de Indicações.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48073466"
 4.  Cole a URL no Gerenciador de Relatórios e pressione ENTER. O relatório será executado e o mapa do documento será ocultado.  
   
 > [!NOTE]  
->  Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
->  Para obter mais informações, consulte “Acesso à URL” na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+>  Para obter mais informações, consulte “Acesso à URL” na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
  
   

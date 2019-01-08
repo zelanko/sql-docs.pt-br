@@ -14,12 +14,12 @@ ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: feb5cd9df428ec09441ae1ebe0ff1cb051660754
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203986"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365988"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   Todos os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornam um valor. **SQLProcedures** reporta SQL_PT_FUNCTION para o conjunto de resultados PROCEDURE_TYPE.  
@@ -31,7 +31,7 @@ ms.locfileid: "48203986"
  **SQLProcedures** retorna informações sobre qualquer procedimento cujos nomes correspondam *ProcName* e pode ser executado pelo usuário atual ou para o qual o usuário atual tem permissão VIEW DEFINITION.  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLProcedures](http://go.microsoft.com/fwlink/?LinkId=59364)   
+ [Função SQLProcedures](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

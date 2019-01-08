@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510754"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
   Quando você especifica uma fonte de dados externa a ser usada para testar um modelo, pode opcionalmente aplicar um filtro para restringir os dados de entrada. Por exemplo, talvez queira testar o modelo especificamente para previsões sobre clientes com determinada faixa de renda.  
@@ -47,7 +47,7 @@ ms.locfileid: "48114420"
   
  Para determinar se um modelo contém um filtro predefinido que possa afetar os resultados, você pode procurar a propriedade **Filter** no painel **Propriedade** ou consultar o modelo usando os conjuntos de linhas do esquema de mineração de dados. Por exemplo, esta consulta retorna o texto de filtro para o modelo especificado:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Se desejar remover o filtro de um modelo de mineração existente ou alterar as condições do filtro, reprocesse o modelo de mineração.  
@@ -62,7 +62,7 @@ ms.locfileid: "48114420"
   
 3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(…)** para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
+4.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
   
 5.  Escolha a tabela de caso e adicione uma tabela aninhada, caso necessário. Mapeie colunas no modelo para colunas no conjunto de dados externo, caso necessário. Feche a caixa de diálogo **Especificar Mapeamento de Coluna** para salvar a definição de tabela de origem.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114420"
   
 9. Clique na caixa de texto **E/Ou** e selecione um operador lógico para definir como combinar várias condições.  
   
-10. Se desejar, clique no botão Procurar **(…)** à direita da caixa de texto **Valor** para abrir a caixa de diálogo **Filtrar** e defina as condições na tabela aninhada ou nas colunas da tabela de casos individuais.  
+10. Opcionalmente, clique no botão Procurar **(...)**  à direita do **valor** caixa de texto para abrir o **filtro** caixa de diálogo caixa e defina as condições na tabela aninhada ou nas colunas da tabela de casos individual.  
   
 11. Verifique se as condições de filtro atendidas estão corretas exibindo o texto no painel **Expressão** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48114420"
   
 ## <a name="see-also"></a>Consulte também  
  [Escolher e mapear dados de testes modelo](choose-and-map-model-testing-data.md)   
- [Usando dados tabela aninhada como entrada para um gráfico de precisão](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Usando dados de uma tabela aninhada como entrada para um gráfico de precisão](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Escolher um tipo de gráfico de precisão e definir opções de gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

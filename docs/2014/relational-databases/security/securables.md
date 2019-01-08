@@ -18,17 +18,17 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170176"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532471"
 ---
 # <a name="securables"></a>Protegíveis
   Protegíveis são os recursos cujo acesso é regulado pelo sistema de autorização do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por exemplo, uma tabela é um protegível. Alguns protegíveis podem ser contidos dentro de outros, criando hierarquias aninhadas chamadas "escopos" que podem ser protegidos. Os escopos protegíveis são **servidor**, **banco de dados**e **esquema**.  
   
-## <a name="securable-scope-server"></a>Escopo protegível: servidor  
+## <a name="securable-scope-server"></a>Escopo protegível: Servidor  
  O escopo protegível **servidor** contém os seguintes protegíveis:  
   
 -   grupo de disponibilidade  
@@ -74,7 +74,7 @@ ms.locfileid: "48170176"
   
 -   Chave simétrica  
   
--   Usuário  
+-   User  
   
 ## <a name="securable-scope-schema"></a>Escopo protegível: esquema  
  O escopo protegível **esquema** contém os seguintes protegíveis:  
@@ -83,7 +83,7 @@ ms.locfileid: "48170176"
   
 -   Coleção de esquemas XML  
   
--   Objeto – A classe de objeto tem os seguintes membros:  
+-   Objeto – a classe de objeto tem os seguintes membros:  
   
     -   Agregado  
   

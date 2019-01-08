@@ -14,19 +14,19 @@ ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d68c1a5a1b45ce5a3923ae1b4b346ae786ea9a4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857254"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539780"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Dados retornados pelas funções de catálogo
 Cada função de catálogo retorna dados como um conjunto de resultados. Esse conjunto de resultados não é diferente de qualquer outro conjunto de resultados. Geralmente, é gerado por um modelo predefinido, parametrizadas **selecionar** instrução que é armazenado em um procedimento na fonte de dados ou embutido no driver. Para obter informações sobre como recuperar dados de um conjunto de resultados, consulte [foi um resultado definido criado?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  
   
  Conjunto de resultados para cada função de catálogo é descrito na entrada de referência para a função. Além das colunas listadas, o conjunto de resultados pode conter colunas específicas do driver depois da última coluna predefinida. Essas colunas (se houver) são descritas na documentação do driver.  
   
- Os aplicativos devem associar colunas específicas do driver em relação ao final do conjunto de resultados. Ou seja, eles devem calcular o número de uma coluna específica do driver como o número da última coluna — recuperados com **SQLNumResultCols** — menos o número de colunas que ocorrem após a coluna necessária. Isso economiza ter que alterar o aplicativo quando novas colunas são adicionadas ao resultado definido em futuras versões do ODBC ou o driver. Para este esquema trabalhar, drivers devem adicionar novas colunas específicas do driver antes de colunas antigas de específicos de driver para que os números da coluna não são alterados em relação ao final do conjunto de resultados.  
+ Os aplicativos devem associar colunas específicas do driver em relação ao final do conjunto de resultados. Ou seja, eles devem calcular o número de uma coluna específica do driver como o número da última coluna - recuperado com **SQLNumResultCols** – menos o número de colunas que ocorrem após a coluna necessária. Isso economiza ter que alterar o aplicativo quando novas colunas são adicionadas ao resultado definido em futuras versões do ODBC ou o driver. Para este esquema trabalhar, drivers devem adicionar novas colunas específicas do driver antes de colunas antigas de específicos de driver para que os números da coluna não são alterados em relação ao final do conjunto de resultados.  
   
  Identificadores que são retornados no conjunto de resultados não estão entre aspas, mesmo se eles contiverem caracteres especiais. Por exemplo, suponha que o identificador de caractere de aspas (que é específico do driver e retornado por meio **SQLGetInfo**) é uma marca de aspas duplas (") e a tabela de contas a pagar contém uma coluna chamada Customer Name. Na linha retornada por **SQLColumns** desta coluna, o valor da coluna do TABLE_NAME é contas a pagar, não "contas a pagar", e o valor da coluna COLUMN_NAME é o nome do cliente, não "nome do cliente". Para recuperar os nomes dos clientes na tabela de contas a pagar, o aplicativo poderia citar esses nomes:  
   

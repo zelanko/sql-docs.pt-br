@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
@@ -13,12 +12,12 @@ ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d17e43e665e53abe3cb82b0bcbe43310b957d9c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26f744831fb551a896430f86716d96f08a4ca164
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794948"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Alterar o nome de uma hierarquia derivada (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de uma hierarquia derivada.  
@@ -28,7 +27,7 @@ ms.locfileid: "48070596"
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-a-derived-hierarchy-name"></a>Para alterar o nome de uma hierarquia derivada  
   

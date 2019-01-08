@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [SQL Server], Database Engine
@@ -16,17 +15,17 @@ ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 464990c8bd81574e7fae50aa3edda4bb40722689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078876"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639454"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server
   Os tópicos da seção de compatibilidade com versões anteriores descrevem alterações no comportamento entre versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)|Recursos preteridos do [!INCLUDE[ssDE](../includes/ssde-md.md)] nesta versão.|  
 |[Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)|Recursos descontinuados do [!INCLUDE[ssDE](../includes/ssde-md.md)] nesta versão.|  

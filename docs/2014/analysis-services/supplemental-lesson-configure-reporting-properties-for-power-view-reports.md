@@ -11,19 +11,19 @@ ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169226"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363458"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar propriedades de relatório para relatórios do Power View
   Nesta lição suplementar, você definirá as propriedades de relatório para o projeto Modelo de Vendas pela Internet do Adventure Works. As propriedades de relatório facilitam para os usuários finais o trabalho de selecionar e exibir dados de modelo no Power View. Você também definirá as propriedades para ocultarem determinadas colunas e tabelas, e criará novos dados para usar em gráficos.  
   
  Depois de concluir esta lição e reimplantar o modelo em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integrada com o SharePoint e o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], você poderá criar uma fonte de dados, especificar as informações de conexão de dados, iniciar o Power View e criar relatórios em relação ao modelo.  
   
- Esta lição não descreve como criar e usar relatórios do Power View. Esta lição pretende fornecer aos autores do modelo tabular uma introdução para essas propriedades e configurações que afetam como os dados de modelo serão exibidos no Power View. Para saber mais sobre como criar relatórios do Power View, consulte [Tutorial: Criar um relatório de exemplo no Power View](http://go.microsoft.com/fwlink/?LinkId=221204).  
+ Esta lição não descreve como criar e usar relatórios do Power View. Esta lição pretende fornecer aos autores do modelo tabular uma introdução para essas propriedades e configurações que afetam como os dados de modelo serão exibidos no Power View. Para saber mais sobre a criação de relatórios do Power View, consulte [Tutorial: Criar um relatório de exemplo no Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
  Tempo estimado para concluir esta lição: **30 minutos**  
   
@@ -41,17 +41,17 @@ ms.locfileid: "48169226"
 ## <a name="model-properties-that-affect-reporting"></a>Propriedades do modelo que afetam o relatório  
  Ao criar um modelo tabular, há determinadas propriedades que você pode definir em colunas individuais e tabelas para aprimorar a experiência de relatório do usuário final no Power View. Além disso, você pode criar dados de modelo adicionais para dar suporte à visualização de dados e outros recursos específicos para o cliente de relatório. Para o Modelo de Vendas pela Internet do Adventure Works de exemplo, aqui estão algumas das alterações que você fará:  
   
--   **Adicionar novos dados** – A adição de novos dados em uma coluna calculada usando uma fórmula DAX cria informações de data em um formato que é mais fácil de exibir em gráficos.  
+-   **Adicionar novos dados** -adicionando novos dados em uma coluna calculada usando uma fórmula DAX cria informações de data em um formato que é mais fácil de exibir em gráficos.  
   
 -   **Ocultar tabelas e colunas que não são úteis para o usuário final** – A propriedade **Hidden** controla se as tabelas e colunas de tabela são exibidas no cliente de relatório. Os itens que estão ocultos ainda fazem parte do modelo e permanecem disponíveis para consultas e cálculos.  
   
--   **Habilitar tabelas de um clique** – Por padrão, nenhuma ação ocorrerá se um usuário final clicar em uma tabela na lista de campos. Para alterar este comportamento de modo que um clique na tabela adicione a tabela ao relatório, você definirá o Conjunto de Campos Padrão em cada coluna que você deseja incluir na tabela. Esta propriedade é definida nas colunas da tabela que os usuários finais provavelmente desejarão usar.  
+-   **Habilite as tabelas em um único clique** -por padrão, nenhuma ação ocorrerá se um usuário final clicar em uma tabela na lista de campos. Para alterar este comportamento de modo que um clique na tabela adicione a tabela ao relatório, você definirá o Conjunto de Campos Padrão em cada coluna que você deseja incluir na tabela. Esta propriedade é definida nas colunas da tabela que os usuários finais provavelmente desejarão usar.  
   
 -   **Definir o agrupamento quando necessário** – A propriedade **Keep Unique Rows** determina se os valores na coluna devem ser agrupados por valores em um campo diferente, como um campo de identificador. Para colunas que contêm valores duplicados como Nome de Cliente (por exemplo, vários clientes com o nome de Bruno Dias), é importante agrupar (manter linhas exclusivas) no campo **Identificador de Linha** para fornecer aos usuários finais os resultados corretos.  
   
 -   **Definir tipos e formatos de dados** – Por padrão, o Power View aplica regras com base no tipo de dados de coluna para determinar se o campo pode ser usado como uma medida. Como cada visualização de dados no Power View também tem regras sobre em que local as medidas e as não medidas podem ser colocadas, é importante definir o tipo de dados no modelo ou substituir o padrão, para obter o comportamento desejado para o usuário final.  
   
--   **Definir a propriedade Sort by Column** – A propriedade **Sort By Column** especifica se os valores na coluna devem ser classificados por valores em um campo diferente. Por exemplo, na coluna Calendário do Mês que contém o nome do mês, classifique pela coluna Número do Mês.  
+-   **Definir a classificação por coluna** propriedade - a **classificar por coluna** propriedade especifica se os valores na coluna devem ser classificados por valores em um campo diferente. Por exemplo, na coluna Calendário do Mês que contém o nome do mês, classifique pela coluna Número do Mês.  
   
 ## <a name="hide-tables-from-client-tools"></a>Ocultar as tabelas das ferramentas de cliente  
  Como já existe uma coluna calculada Categoria do Produto e Subcategoria do Produto na tabela Produto, não é necessário ter as tabelas Categoria do Produto e Subcategoria do Produto visível para aplicativos cliente.  
@@ -137,7 +137,7 @@ ms.locfileid: "48169226"
 7.  Repita estas etapas para a tabela **Product** , selecionando a coluna **Product Id** como o Identificador de Linha e a coluna **Product Name** na caixa de listagem **Manter Linhas Exclusivas** . Em **Rótulo Padrão**, selecione **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Propriedades de relatório para colunas  
- Há várias propriedades básicas de coluna e propriedades específicas de relatório nas colunas que você pode definir para melhorar a experiência de relatório do modelo. Por exemplo, pode não ser necessário que os usuários vejam todas as colunas em todas as tabelas. Da mesma maneira que você ocultou as tabelas Product Category e Product Subcategory anteriormente, usando a propriedade Oculto de uma coluna, você pode ocultar colunas específicas de uma tabela que seriam mostradas de outra forma. Outras propriedades, como Formato de Dados e Classificar por Coluna, também podem afetar o modo como os dados da coluna podem aparecer nos relatórios. Você definirá algumas dessas propriedades em colunas específicas agora. Outras colunas não exigem nenhuma ação e não são mostradas abaixo.  
+ Há várias propriedades básicas de coluna e propriedades específicas de relatório nas colunas que você pode definir para melhorar a experiência de relatório do modelo. Por exemplo, pode não ser necessário que os usuários vejam todas as colunas em todas as tabelas. Assim como você ocultou as tabelas Product Category e Product Subcategory anteriormente, usando a propriedade Hidden de uma coluna, você pode ocultar colunas específicas de uma tabela que seriam mostradas. Outras propriedades, como Formato de Dados e Classificar por Coluna, também podem afetar o modo como os dados da coluna podem aparecer nos relatórios. Você definirá algumas dessas propriedades em colunas específicas agora. Outras colunas não exigem nenhuma ação e não são mostradas abaixo.  
   
  Você somente definirá algumas propriedades de coluna diferentes aqui, mas há muitas outras. Para obter mais informações detalhadas sobre as propriedades de relatórios de colunas, consulte [Propriedades de coluna &#40;SSAS Tabular&#41;](tabular-models/properties-ssas-tabular.md) nos Manuais Online do SQL Server.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48169226"
     |Geography Id|Hidden|True|  
     |Birth Date|Formato de Dados|Data Abreviada|  
   
-     **Date**  
+     **Data**  
   
     > [!NOTE]  
     >  Como a tabela Date foi selecionada como a tabela de datas do modelo usando a configuração Marcar como Tabela de Data, na Lição 7: Marcar como Tabela de Data, e a coluna Date na tabela Date como a coluna a ser usada como o identificador exclusivo, a propriedade Identificador de Linha para a coluna Date será automaticamente definida como True e não poderá ser alterada. Ao usar as funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de data. Neste modelo, você criou várias medidas usando funções de inteligência de tempo para calcular dados de vendas para vários períodos como trimestres anterior e atual, e também para usar em KPIs. Para obter mais informações sobre como especificar uma tabela de data, consulte [Especificar Marcar como Tabela de Data para uso com a inteligência de dados temporais &#40;SSAS Tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nos Manuais Online do SQL Server.  
@@ -196,7 +196,7 @@ ms.locfileid: "48169226"
     |Product End Date|Formato de Dados|Data Abreviada|  
     |Large Photo|Hidden|True|  
   
-     **Internet Sales**  
+     **Vendas pela Internet**  
   
     |coluna|Propriedade|Valor|  
     |------------|--------------|-----------|  
@@ -211,7 +211,7 @@ ms.locfileid: "48169226"
     |Ship Date|Tipo de Dados|Data Abreviada|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Reimplantar o modelo de tabela de vendas pela Internet da Adventure Works  
- Como você alterou o modelo, deverá reimplantá-lo. Basicamente, você repetirá as tarefas realizadas na [Lição 14: Implantar](lesson-13-deploy.md).  
+ Como você alterou o modelo, deverá reimplantá-lo. Você essencialmente repetirá as tarefas executadas em [lição 14: Implantar](lesson-13-deploy.md).  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Para reimplantar o modelo de tabela de vendas pela Internet da Adventure Works.  
   
@@ -222,6 +222,6 @@ ms.locfileid: "48169226"
 ## <a name="next-steps"></a>Próximas etapas  
  Agora você pode usar o Power View para visualizar dados do modelo. Verifique se as contas do Analysis Services e do Reporting Services no site do SharePoint têm permissões de leitura para a instância do Analysis Services onde você implantou seu modelo.  
   
- Para criar uma fonte de dados de relatório do Reporting Services que aponta para seu modelo, consulte [Tipo de conexão de modelo de tabela (SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
+ Para criar uma fonte de dados de relatório do Reporting Services que aponta para seu modelo, consulte [Tipo de conexão de modelo de tabela (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
   
   

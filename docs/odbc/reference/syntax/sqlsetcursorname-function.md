@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662124"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588970"
 ---
 # <a name="sqlsetcursorname-function"></a>Função SQLSetCursorName
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLSetCursorName** associa um nome de cursor com uma instrução ativa. Se um aplicativo chamar **SQLSetCursorName**, o driver vai gerar nomes de cursor, conforme necessário para processamento de uma instrução SQL.  
@@ -60,7 +60,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLSetCursorName** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLSetCursorName** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|O nome do cursor excedeu o limite máximo, portanto, apenas o número máximo permitido de caracteres foi usado.|  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|Driver não oferece suporte a essa função|O driver em (DM) associado a *StatementHandle* não suporta a função.|  
   
 ## <a name="comments"></a>Comentários  
- Nomes de cursor são usados apenas na atualização posicionadas e instruções delete (por exemplo, **atualize** *nome da tabela* ... **WHERE CURRENT OF** *nome de cursor*). Para obter mais informações, consulte [posicionado instruções Update e excluir](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se o aplicativo não chama **SQLSetCursorName** para definir um nome de cursor na execução de uma instrução de consulta, o driver gerará um nome que começa com as letras SQL_CUR e não excede 18 caracteres de comprimento.  
+ Nomes de cursor são usados apenas na atualização posicionadas e instruções delete (por exemplo, **atualize** _nome da tabela_ ... **WHERE CURRENT OF** _nome de cursor_). Para obter mais informações, consulte [posicionado instruções Update e excluir](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se o aplicativo não chama **SQLSetCursorName** para definir um nome de cursor na execução de uma instrução de consulta, o driver gerará um nome que começa com as letras SQL_CUR e não excede 18 caracteres de comprimento.  
   
  Todos os nomes de cursor dentro a conexão devem ser exclusivos. O comprimento máximo de um nome de cursor é definido pelo driver. Para interoperabilidade máxima, recomenda-se que os aplicativos limitam os nomes de cursor para não mais de 18 caracteres. Em ODBC 3 *. x*, se um nome de cursor é um identificador entre aspas, ele será tratado de maneira diferencia maiusculas de minúsculas e pode conter caracteres que a sintaxe do SQL não permitiria ou trataria especialmente, como espaços em branco ou palavras-chave reservadas. Se um nome de cursor deve ser tratado de maneira diferencia maiusculas de minúsculas, ele deverá ser passado como um identificador entre aspas.  
   

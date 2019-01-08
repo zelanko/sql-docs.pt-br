@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157386"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364228"
 ---
 # <a name="set-partition-writeback"></a>Definir o write-back de partições
   Se você habilitar um grupo de medidas para gravação, os usuários finais poderão alterar dados de cubo enquanto procuram por ele. As alterações são salvas em uma tabela separada chamada tabela de write-back e não nos dados de cubo ou na fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
   
  Os dados de write-back podem ser procurados ou excluídos. Também é possível converter os dados de write-back em uma partição. Em uma partição habilitada para gravação, é possível usar funções de cubo para conceder acesso de leitura/gravação a usuários e grupos de usuários e para limitar o acesso a células ou grupos de células específicos da partição.  
   
- Para ver uma breve introdução em vídeo sobre write-back, consulte [Write-back do Excel 2010 para Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). Na série de postagens no blog [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)(Criando um aplicativo de write-back com o Analysis Services), você encontra uma apresentação mais detalhada deste recurso.  
+ Para ver uma breve introdução em vídeo sobre write-back, consulte [Write-back do Excel 2010 para Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394951). Na série de postagens no blog [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)(Criando um aplicativo de write-back com o Analysis Services), você encontra uma apresentação mais detalhada deste recurso.  
   
 > [!NOTE]  
 >  Há suporte para write-back apenas em bancos de dados relacionais e data marts do SQL Server e somente para modelos multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -62,7 +62,7 @@ ms.locfileid: "48157386"
   
 ## <a name="see-also"></a>Consulte também  
  [Partições habilitadas para gravação](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Habilitando o Write-back em um cubo OLAP no nível de célula no Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Habilitando e protegendo a entrada de dados com write-back do Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Habilitando o write-back em um cubo OLAP no nível da célula no Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Habilitando e protegendo a entrada de dados com o write-back do Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

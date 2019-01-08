@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -20,12 +20,12 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88dfe4836cc84b7792639817a01c026f6d3f3283
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018101"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363475"
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
   Use a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações detalhadas sobre como atualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo do SharePoint, consulte [atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obter mais informações sobre como atualizar um servidor existente do SQL da instância, consulte [atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51018101"
 ## <a name="known-upgrade-issues"></a>Problemas de atualização conhecidos  
  Antes de atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], revise o seguinte:  
   
--   [Notas de Versão do SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [Notas de Versão do SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   Para saber quais [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recursos e funcionalidades foram descontinuados, preteridos ou alterados ver [compatibilidade com versões anteriores do Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md).  
   

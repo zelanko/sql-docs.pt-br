@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d80795317ae9a1d486df2894ab68ee22dfdfc7c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170726"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532128"
 ---
 # <a name="create-a-server-role"></a>Criar uma função de servidor
   Este tópico descreve como criar uma nova função de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48170726"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  As funções de servidor não podem receber permissão nos protegíveis do banco de dados. Para criar funções de banco de dados, veja [CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql).  
   
 ###  <a name="Security"></a> Segurança  
@@ -69,13 +69,13 @@ ms.locfileid: "48170726"
   
 3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...**.  
   
-4.  Na caixa de diálogo **Nova Função de Servidor –***server_role_name*, na página **Geral**, insira um nome para a nova função de servidor na caixa **Nome da função de servidor**.  
+4.  No **nova função de servidor-* * * server_role_name* caixa de diálogo a **gerais** , insira um nome para a nova função de servidor no **nome da função de servidor** caixa.  
   
-5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor** .  
+5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor**.  
   
 6.  Em **Protegíveis**, selecione um ou mais protegíveis do nível do servidor. Quando um protegível é selecionado, essa função de servidor pode receber ou ter as permissões negadas naquele protegível.  
   
-7.  Na caixa **Permissões: Explícitas** , marque a caixa de seleção para conceder, conceder com concessão ou negar permissão a esta função de servidor para os protegíveis selecionados. Se uma permissão não puder ser concedida ou negada a todos os protegíveis selecionados, a permissão será representada como uma seleção parcial.  
+7.  No **permissões: Explícito** , marque a caixa de seleção para conceder, conceder com concessão ou negar permissão a esta função de servidor para os protegíveis selecionados. Se uma permissão não puder ser concedida ou negada a todos os protegíveis selecionados, a permissão será representada como uma seleção parcial.  
   
 8.  Na página **Membros** , use o botão **Adicionar** para adicionar logons que representam indivíduos ou grupos à nova função de servidor.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48170726"
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-new-server-role"></a>Para criar uma nova função de servidor  
   

@@ -14,17 +14,17 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089416"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375638"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão específicos de driver. Alguns dos atributos estão disponíveis para `SQLGetConnectAttr`, e a função é usada para informar as configurações atuais. Os valores informados em relação a esses atributos não são garantidos até depois que uma conexão seja estabelecida ou o atributo foi definido usando [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão específicos de driver. Alguns dos atributos estão disponíveis para `SQLGetConnectAttr`, e a função é usada para informar as configurações atuais. Os valores informados em relação a esses atributos não são garantidos até que uma conexão seja estabelecida ou o atributo seja definido usando [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
- Este tópico lista os atributos somente leitura. Para obter informações sobre as outras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atributos de conexão específicos do driver ODBC do Native Client, consulte [SQLSetConnectAttr](sqlsetconnectattr.md).  
+ Este tópico lista os atributos somente leitura. Para obter informações sobre os outros atributos de conexão específicos de driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  O atributo SQL_COPT_SS_CONNECTION_DEAD informa o estado de uma conexão com um servidor. O driver consulta a rede quanto ao estado atual da conexão.  
@@ -32,7 +32,7 @@ ms.locfileid: "48089416"
 > [!NOTE]  
 >  O atributo de conexão ODBC padrão SQL_ATTR_CONNECTION_DEAD retorna o estado mais recente da conexão. Esse talvez não seja o estado da conexão atual.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|A conexão com o servidor foi perdida.|  
 |SQL_CD_FALSE|A conexão está aberta e disponível ao processamento de instrução.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48089416"
   
  Para obter mais informações, consulte [acessando informações de diagnóstico no Log de eventos estendidos](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_ERROR|Falha na conexão.|  
 |SQL_SUCCESS|A conexão foi bem-sucedida. A ID de conexão de cliente será localizada no buffer de saída.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48089416"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  O atributo SQL_COPT_SS_PERF_DATA retorna um ponteiro para uma estrutura SQLPERF que contém as estatísticas de desempenho do driver atuais. `SQLGetConnectAttr` retornará NULL se o log de desempenho não está habilitado. As estatísticas na estrutura SQLPERF não são atualizadas dinamicamente pelo driver. Chamar `SQLGetConnectAttr` cada vez que as estatísticas de desempenho precisarem ser atualizadas.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |NULL|O registro em log de desempenho não está habilitado.|  
 |Qualquer outro valor|Um ponteiro para uma estrutura SQLPERF.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48089416"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  O atributo SQL_COPT_SS_USER_DATA recupera o ponteiro dos dados de usuário. Os dados de usuário são armazenados na memória do cliente e registrados por conexão. Caso o ponteiro de dados do usuário não seja definido, SQL_UD_NOTSET, um ponteiro NULL, é retornado.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Nenhum ponteiro de dados do usuário é definido.|  
 |Qualquer outro valor|Um ponteiro para os dados do usuário.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48089416"
  Para obter mais informações sobre SPNs, consulte [nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLGetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [Função SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Detalhes de implementação de API do ODBC](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   

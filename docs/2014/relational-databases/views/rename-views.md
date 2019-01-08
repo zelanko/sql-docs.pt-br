@@ -13,12 +13,12 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fa559d0aaf1f805f7885b931bcce7f78b012701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063826"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393700"
 ---
 # <a name="rename-views"></a>Renomear exibições
   Você pode renomear uma exibição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48063826"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **Acompanhamento:**  [Depois de renomear uma exibição](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -62,14 +62,14 @@ ms.locfileid: "48063826"
   
 3.  Digite o novo nome da exibição.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para renomear uma exibição**  
   
  Embora seja possível usar **sp_rename** para alterar o nome da exibição, recomendamos que você exclua a exibição existente e a crie novamente com o novo nome.  
   
  Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) e [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de renomear uma exibição  
+##  <a name="FollowUp"></a> Acompanhar: Depois de renomear um modo de exibição  
  Verifique se todos os objetos, scripts e aplicativos que fazem referência ao nome antigo da exibição agora usam o novo nome.  
   
   

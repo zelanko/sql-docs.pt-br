@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5fa9fa472541b764a046e418f99b15028b81b56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089206"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368868"
 ---
 # <a name="string-utility-functions-sample"></a>Exemplo Funções de utilitário de cadeia de caracteres
   O exemplo Utilitários de Cadeia de Caracteres contém uma função de streaming com valor de tabela gravada em Visual C# e Visual Basic, que divide uma cadeia de caracteres separada por vírgula em uma tabela com uma coluna. Ele também contém uma função de agregação que converte uma coluna de cadeia de caracteres em uma cadeia de caracteres separada por vírgula.  Além disso, estão implementadas uma função escalar e uma função com valor de tabela, que fornece a funcionalidade de substituição de expressão regular e pesquisa de expressão regular.  
@@ -27,9 +27,9 @@ ms.locfileid: "48089206"
 ## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](http://go.microsoft.com/fwlink/?linkid=62796)Developer  
+-   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   

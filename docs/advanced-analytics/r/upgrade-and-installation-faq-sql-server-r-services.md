@@ -1,5 +1,5 @@
 ---
-title: Perguntas frequentes sobre atualização e instalação para o SQL Server Machine Learning | Microsoft Docs
+title: Atualização e instalação perguntas frequentes (FAQ) - serviços do SQL Server Machine Learning
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712298"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432849"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Perguntas frequentes sobre atualização e instalação para o aprendizado de máquina do SQL Server ou Microsoft R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ Este tópico fornece respostas para perguntas comuns sobre a instalação dos re
 + Alguns problemas ocorrem apenas com as atualizações de versões de pré-lançamento. Portanto, é recomendável que você identificar sua versão e edição primeiro antes de ler estas notas. Para obter informações de versão, execute `@@VERSION` em uma consulta do SQL Server Management Studio.
 + Atualize para a versão mais recente ou a versão de serviço assim que possível para resolver quaisquer problemas que foram corrigidos em versões recentes.
 
-**Aplica-se a:** SQL Server 2016 R Services, SQL Server 2017 serviços de Machine Learning (no banco de dados)
+**Aplica-se a:** SQL Server 2016 R Services, serviços de Machine Learning do SQL Server 2017 (no banco de dados)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Requisitos e restrições em versões anteriores do SQL Server 2016 
 

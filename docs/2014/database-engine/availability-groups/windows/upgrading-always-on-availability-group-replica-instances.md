@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155956"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357071"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Fazer upgrade e atualização dos servidores de grupo de disponibilidade com tempo de inatividade e perda de dados mínimos
   Ao atualizar ou fazer upgrade de instâncias de servidor do SQL Server 2012 para um service pack ou uma versão mais recente, você pode reduzir o tempo de inatividade de um grupo de disponibilidade para apenas um único failover manual executando uma atualização ou um upgrade sequencial. Para fazer upgrade de versões do SQL Server, essa ação é conhecida como upgrade sem interrupção; para atualizar a versão atual do SQL Server com hotfixes ou service packs, essa ação é conhecida como atualização sem interrupção.  
   
- Este tópico limita a discussão somente a upgrades/atualizações do SQL Server. Para sistema operacional-upgrades/atualizações executados em instâncias do SQL Server altamente disponível, consulte [entre clusters migração de grupos de disponibilidade AlwaysOn para atualizações do sistema operacional](http://msdn.microsoft.com/library/jj873730.aspx)  
+ Este tópico limita a discussão somente a upgrades/atualizações do SQL Server. Para sistema operacional-upgrades/atualizações executados em instâncias do SQL Server altamente disponível, consulte [entre clusters migração de grupos de disponibilidade AlwaysOn para atualizações do sistema operacional](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Práticas recomendadas de upgrade/atualização sem interrupção de grupos de disponibilidade AlwaysOn  
  As práticas recomendadas a seguir devem ser observadas durante os upgrades/atualizações de servidor para minimizar o tempo de inatividade e a perda de dados dos grupos de disponibilidade:  

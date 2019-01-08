@@ -11,14 +11,14 @@ ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34c279f44df33bddf12b3fd9ec3e128514d1f50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065976"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374488"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lição 2: Gerar classes do esquema RDL usando a ferramenta xsd 
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lição 2: Gerar Classes de esquema RDL usando a ferramenta xsd
   Depois que você criar seu projeto do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], a próxima etapa será recuperar uma cópia local do esquema de definição de relatório e executar a Ferramenta de Definição de Esquema XML (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Para gerar as classes RDL  
@@ -26,7 +26,7 @@ ms.locfileid: "48065976"
 1.  Abra uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] do Internet Explorer (ou navegador da Web equivalente) e navegue até a URL a seguir:  
   
     ```  
-    http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
+    https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
 2.  Depois que o esquema RDL tiver sido aberto no navegador, navegue até a **arquivo** menu e selecione **Salvar como**.  
@@ -53,7 +53,7 @@ ms.locfileid: "48065976"
     >  Depois de adicionar o arquivo Reportdefinition XSD ao projeto, você observará na **Gerenciador de soluções** que o arquivo ReportDefinition.cs (. vb) não está lá. Para exibir o arquivo, clique no botão expandir/recolher ao lado do arquivo ReportDefinition.xsd.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você escreverá código para carregar uma definição de relatório de um servidor de relatório usando as classes geradas com base no esquema RDL. Ver [lição 3: carregar uma definição de relatório do servidor de relatório](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ Na próxima lição, você escreverá código para carregar uma definição de relatório de um servidor de relatório usando as classes geradas com base no esquema RDL. Consulte [lição 3: Carregar uma definição de relatório do servidor de relatório](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

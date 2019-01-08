@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 183719983a6ea95ab545888d009d5226fe24b7dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511516"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modo DirectQuery (SSAS tabular)
   O Analysis Services permite recuperar dados e criar relatórios de um modelo de tabela, recuperando dados e agregações diretamente de um sistema de banco de dados relacional, usando o *modo DirectQuery*. Este tópico apresenta as diferenças entre modelos de tabela padrão que só residem na memória e modelos de tabela que podem consultar uma fonte de dados relacional, e também explica como você pode criar e implantar um modelo para usar no modo DirectQuery.  
@@ -65,13 +65,13 @@ ms.locfileid: "48106496"
 -   Se o modelo contiver fórmulas complexas que possam exigir várias consultas, o Analysis Services poderá executar a otimização para garantir que o plano de consulta da consulta executado no banco de dados back-end seja o mais eficiente possível.  
   
 ##  <a name="bkmk_Design"></a> Criando modelos para uso com o modo DirectQuery  
- Modelos de tabela são criados usando o designer de modelo do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O designer cria todos os modelos na memória, o que significa que, quando você está criando modelos, se seus dados são muito grandes para ajuste na memória, você deve importar somente um subconjunto de dados para o cache usado pelo banco de dados de espaço de trabalho.  
+ Modelos de tabela são criados usando o designer de modelo do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O designer cria todos os modelos na memória, o que significa que, quando você está criando modelos, se seus dados são muito grandes para ajuste na memória, você deve importar somente um subconjunto de dados para o cache usado pelo banco de dados de workspace.  
   
  Quando você estiver pronto para alternar para o modo DirectQuery, pode alterar uma propriedade que habilita o modo DirectQuery. Para obter mais informações, consulte [habilitar o modo de Design de DirectQuery &#40;SSAS de tabela&#41;](enable-directquery-mode-in-ssdt.md).  
   
- Quando você fizer isso, o designer de modelo configurará automaticamente o banco de dados de espaço de trabalho para execução em um modo híbrido que permite continuar trabalhando com os dados armazenados em cache. O designer de modelo também o notificará sobre qualquer recurso em seu modelo que seja incompatível com o modo DirectQuery. A seguinte lista resume os requisitos principais a serem considerados:  
+ Quando você fizer isso, o designer de modelo configurará automaticamente o banco de dados de workspace para execução em um modo híbrido que permite continuar trabalhando com os dados armazenados em cache. O designer de modelo também o notificará sobre qualquer recurso em seu modelo que seja incompatível com o modo DirectQuery. A seguinte lista resume os requisitos principais a serem considerados:  
   
--   **Fontes de dados:** Os modelos do DirectQuery só podem usar dados de uma única fonte de dados do SQL Server. Quando o modo DirectQuery for ativado para um modelo, você não poderá usar outros tipos de dados no designer de modelo, inclusive tabelas adicionadas por operações de copiar-colar. Todas as outras opções de importação são desabilitadas. Qualquer tabela incluída em uma consulta deve fazer parte da fonte de dados do SQL Server. Ver [fontes de dados para modelos DirectQuery](directquery-mode-ssas-tabular.md#bkmk_datasources)para obter mais informações.  
+-   **Fontes de dados:** Os modelos do DirectQuery só podem usar dados de uma única fonte de dados do SQL Server. Quando o modo DirectQuery for ativado para um modelo, você não poderá usar outros tipos de dados no designer de modelo, inclusive tabelas adicionadas por operações de copiar-colar. Todas as outras opções de importação são desabilitadas. Qualquer tabela incluída em uma consulta deve fazer parte da fonte de dados do SQL Server. Consulte [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)para obter mais informações.  
   
 -   **Suporte para colunas calculadas:** As colunas calculadas não têm suporte para modelos DirectQuery. Porém, você pode criar medidas e KPIs que operam em conjuntos de dados. Consulte a seção sobre [validação](#bkmk_Validation) para obter mais informações.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48106496"
 -   Após a implantação do modelo, você pode alterar o método de conexão preferencial. Por exemplo, você pode usar um modo híbrido para testes e alternar o modelo para **apenas DirectQuery** somente depois de testar bem relatórios ou consultas que usam o modelo. Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).  
   
 ###  <a name="bkmk_DataSources"></a> Fontes de dados para modelos DirectQuery  
- Assim que você alterar o ambiente de design para habilitar o modo DirectQuery, as fontes de dados para o banco de dados de espaço de trabalho serão validadas para garantir que elas provenham de uma única fonte de dados do SQL Server. Dados de outras fonte, inclusive dados copiados e colados, não são permitidos em modelos DirectQuery.  
+ Assim que você alterar o ambiente de design para habilitar o modo DirectQuery, as fontes de dados para o banco de dados de workspace serão validadas para garantir que elas provenham de uma única fonte de dados do SQL Server. Dados de outras fonte, inclusive dados copiados e colados, não são permitidos em modelos DirectQuery.  
   
  Se você pretende usar o modelo no modo DirectQuery, verifique se todos os dados necessários para relatórios estão armazenados no banco de dados do SQL Server especificado. Se os dados necessários para modelagem não estiverem disponíveis nesta origem, considere o uso do Integration Services ou de outras ferramentas de armazenagem de dados para importar os dados para um banco de dados do SQL Server que serve como a fonte de dados DirectQuery.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48106496"
 > [!WARNING]  
 >  Como o modo DirectQuery não oferece suporte ao uso de colunas calculadas, se houver colunas nas quais você deseja combinar ou executar outras operações, planeje previamente e crie a definição de coluna como parte de sua consulta de importação de dados ou script.  
   
- Para exibir e resolver erros de validação, abra o **lista de erros** em [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Erros críticos que impedem o uso do modo DirectQuery são exibidos na guia **Erros** . Você deve corrigir estes erros antes de alterar a modo DirectQuery. Os erros de validação com maior dificuldade de solução costumam estar relacionados a fórmulas sem suporte no modo DirectQuery. Consulte a seção, [Compatibilidade de Fórmula](#bkmk_FormulaCompat), para obter uma visão geral de erros relacionados a fórmulas e colunas calculadas.  
+ Para exibir e resolver erros de validação, abra a **Lista de Erros** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Erros críticos que impedem o uso do modo DirectQuery são exibidos na guia **Erros** . Você deve corrigir estes erros antes de alterar a modo DirectQuery. Os erros de validação com maior dificuldade de solução costumam estar relacionados a fórmulas sem suporte no modo DirectQuery. Consulte a seção, [Compatibilidade de Fórmula](#bkmk_FormulaCompat), para obter uma visão geral de erros relacionados a fórmulas e colunas calculadas.  
   
  A seguinte lista descreve outras considerações ao criar um modelo para acesso do DirectQuery:  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48106496"
 -   Algumas fórmulas no modelo podem ser validadas quando você alterna o modelo para o modo DirectQuery, mas retornam resultados diferentes quando executadas no cache versus armazenamento de dados relacionais. Isso ocorre porque cálculos em relação ao uso de cache usam a semântica do mecanismo analítico na memória xVelocity (VertiPaq), que contém muitos recursos que visam emular o comportamento do Excel, enquanto consultas a dados armazenados no repositório de dados relacional necessariamente usam a semântica do SQL Server. Para obter uma lista das funções DAX que podem retornar resultados diferentes quando o modelo é implantado em tempo real, consulte [compatibilidade de fórmulas no modo DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md).  
   
 ###  <a name="bkmk_Connecting"></a> Conectar-se a modelos DirectQuery  
- Clientes que usam MDX como a linguagem de consulta não podem se conectar a modelos que usam o modo DirectQuery. Por exemplo, se você tentar criar uma consulta MDX em um modelo DirectQuery, obterá um erro indicando que o cubo não pode ser localizado, ou não foi processado. Você pode criar consultas em modelos DirectQuery usando o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], fórmulas DAX ou consultas XMLA. Para obter mais informações sobre como você pode executar consultas ad hoc em modelos tabulares, consulte [Tabular Model Data Access](tabular-model-data-access.md).  
+ Clientes que usam MDX como a linguagem de consulta não podem se conectar a modelos que usam o modo DirectQuery. Por exemplo, se você tentar criar uma consulta MDX em um modelo DirectQuery, obterá um erro indicando que o cubo não pode ser localizado, ou não foi processado. Você pode criar consultas em modelos DirectQuery usando o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], fórmulas DAX ou consultas XMLA. Para obter mais informações sobre como você pode executar consultas ad hoc em modelos de tabela, consulte [Tabular Model Data Access](tabular-model-data-access.md).  
   
  Se você estiver usando um modelo híbrido, poderá especificar se os usuários conectam-se ao cache ou usam dados do DirectQuery especificando a propriedade de cadeia de conexão, DirectQueryMode.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "48106496"
   
 -   Considere se os usuários têm o nível necessário de acesso aos dados no repositório de dados relacional.  
   
--   Usuários que exibem o mesmo modelo ou relatório podem ver dados diferentes, dependendo do contexto de segurança do usuário.  
+-   Os usuários que exibirem o mesmo modelo ou relatório podem ver dados diferentes, dependendo do contexto de segurança do usuário.  
   
--   Se o cache de modelo foi preservado, o cache será protegido usando o modelo de segurança (funções) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O cache pode conter dados que o designer de modelo tem o privilégio de visualizar, mas não o usuário. Designers de modelo ou relatório devem limpar o cache ou proteger esses dados controlando o acesso por meio de funções.  
+-   Se o cache de modelo foi preservado, o cache será protegido usando o modelo de segurança (funções) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O cache pode conter dados que o designer de modelo tem o privilégio de visualizar, mas não o usuário. Designers de modelo ou relatório devem limpar o cache ou proteger esses dados controlando o acesso por meio de funções.  
   
 -   Um modelo que responde consultas do cache não pode representar o usuário atual ao conectar-se à fonte de dados. Se você desejar representar o usuário atual ao conectar-se à fonte de dados, deverá usar o modo DirectQuery.  
   
@@ -154,12 +154,12 @@ ms.locfileid: "48106496"
  Para obter informações sobre como definir essas propriedades, consulte [cenários de implantação do DirectQuery &#40;SSAS de tabela&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
 ##  <a name="bkmk_PropertyList"></a> Propriedades DirectQuery  
- A tabela a seguir lista as propriedades que você pode definir no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para habilitar o DirectQuery e controlar a origem de dados usada em consultas no modelo.  
+ A tabela a seguir lista as propriedades que você pode definir no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para habilitar o DirectQuery e controlar a origem de dados usada em consultas no modelo.  
   
-|Nome da propriedade|Description|  
+|Nome da propriedade|Descrição|  
 |-------------------|-----------------|  
 |**Propriedade DirectQueryMode**|Esta propriedade habilita o uso do modo DirectQuery no designer de modelo. Você deve definir esta propriedade como `On` para alterar qualquer outra propriedade DirectQuery.<br /><br /> Para obter mais informações, consulte [habilitar o modo de Design de DirectQuery &#40;SSAS de tabela&#41;](enable-directquery-mode-in-ssdt.md).|  
-|**Propriedade QueryMode**|Esta propriedade especifica o método de consulta padrão para um modelo DirectQuery. Você define esta propriedade no designer de modelo quando implanta o modelo, mas pode substituí-la posteriormente. A propriedade tem estes valores:<br /><br /> **DirectQuery** – Essa configuração especifica que todas as consultas ao modelo devem usar somente a fonte de dados relacional.<br /><br /> **DirectQuery com na memória** – Essa configuração especifica, por padrão, que as consultas devem ser respondidas usando a origem relacional, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> **Na Memória** – Esta configuração especifica que as consultas devem ser respondidas usando somente o cache.<br /><br /> **Na Memória com DirectQuery** – Esta configuração especifica, por padrão. que as consultas devem ser respondidas usando o cache, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> <br /><br /> Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
+|**Propriedade QueryMode**|Esta propriedade especifica o método de consulta padrão para um modelo DirectQuery. Você define esta propriedade no designer de modelo quando implanta o modelo, mas pode substituí-la posteriormente. A propriedade tem estes valores:<br /><br /> **DirectQuery** -essa configuração especifica que todas as consultas ao modelo devem usar somente a fonte de dados relacionais.<br /><br /> **DirectQuery com na memória** – Essa configuração especifica, por padrão, que as consultas devem ser respondidas usando a origem relacional, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> **Na Memória** – Esta configuração especifica que as consultas devem ser respondidas usando somente o cache.<br /><br /> **Na Memória com DirectQuery** – Esta configuração especifica, por padrão. que as consultas devem ser respondidas usando o cache, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> <br /><br /> Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
 |**Propriedade DirectQueryMode**|Depois que o modelo for implantado, você poderá alterar a fonte de dados de consulta preferencial para um modelo DirectQuery, alterando esta propriedade no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]<br /><br /> Como a propriedade anterior, esta propriedade especifica a fonte de dados padrão para o modelo e tem estes valores:<br /><br /> **InMemory**: As consultas só podem usar o cache.<br /><br /> **DirectQuerywithInMemory**: As consultas usam a fonte de dados relacional por padrão, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> **InMemorywithDirectQuery**: As consultas usam o cache por padrão, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> (**DirectQuery**: As consultas só usam a fonte de dados relacional.<br /><br /> <br /><br /> Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
 |**Propriedade Impersonation Settings**|Esta propriedade define as credenciais usadas na conexão à fonte de dados do SQL Server no momento de consulta. Você pode definir esta propriedade no designer de modelo e alterar o valor posteriormente, depois da implantação do modelo.<br /><br /> Observe que estas credenciais são usadas apenas para responder consultas no repositório de dados relacional; elas não são iguais às credenciais usadas para processar o cache de um modelo híbrido.<br /><br /> A representação não pode ser usada quando o modelo é usado apenas na memória. A configuração `ImpersonateCurrentUser` é inválida, a menos que o modelo esteja usando o modo DirectQuery.|  
   
@@ -167,10 +167,10 @@ ms.locfileid: "48106496"
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas e tópicos relacionados  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Partições e modo DirectQuery &#40;Tabular do SSAS&#41;](define-partitions-in-directquery-models-ssas-tabular.md)|Descreve como as partições são usadas em modelos configurados para o modo DirectQuery.|  
-|[Compatibilidade de fórmula do DAX no modo DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Descreve restrições e requisitos de compatibilidade nas fórmulas que você pode usar em modelos configuradas para o modo DirectQuery.|  
+|[Compatibilidade de fórmulas DAX no modo DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Descreve restrições e requisitos de compatibilidade nas fórmulas que você pode usar em modelos configuradas para o modo DirectQuery.|  
 |[Habilitar o modo de Design do DirectQuery &#40;Tabular do SSAS&#41;](enable-directquery-mode-in-ssdt.md)|Descreve como você pode alterar o ambiente de tempo de design de modo que dê suporte ao uso do modo DirectQuery|  
 |[Alterar a partição DirectQuery &#40;Tabular do SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md)|Descreve como alterar a partição do DirectQuery.|  
 |[Definir ou alterar o método de conexão preferencial para DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md)|Descreve como definir ou alterar o método de conexão para modelos configurados para DirectQuery.|  
@@ -179,8 +179,8 @@ ms.locfileid: "48106496"
 |[Limpar os caches do Analysis Services](../instances/clear-the-analysis-services-caches.md)|Limpe o cache do modelo de tabela|  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40;Tabular do SSAS&#41;](partitions-ssas-tabular.md)   
- [Projetos de modelo tabular &#40;Tabular do SSAS&#41;](tabular-model-projects-ssas-tabular.md)   
- [Analisar no Excel &#40;Tabular do SSAS&#41;](analyze-in-excel-ssas-tabular.md)  
+ [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)   
+ [Projetos de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-projects-ssas-tabular.md)   
+ [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md)  
   
   

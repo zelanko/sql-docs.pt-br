@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - posttracerttoken
@@ -19,12 +18,12 @@ ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb03feff3c695e3711bc51702ebbe2f4f9141ee7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41053bee3449ae44f843c24069c11a288131950b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704674"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589345"
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +42,14 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicação***'**  
+ [ **@publication**=] **'**_publicação_**'**  
  É o nome da publicação para qual a latência está sendo medida. *publicação* está **sysname**, sem padrão.  
   
- [  **@tracer_token_id=** ] *tracer_token_id * * * saída**  
+ [  **@tracer_token_id=** ] _tracer_token_id_**saída**  
  É a ID do token de rastreamento inserido. *tracer_token_id* está **int** com um padrão de NULL e é um parâmetro de saída. Esse valor pode ser usado para executar [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) ou [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) sem primeiro executar [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
- [  **@publisher=** ] **'***publisher***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão de NULL e não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+ [  **@publisher=** ] **'**_publisher_**'**  
+ Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão de NULL e não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

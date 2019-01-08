@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87a5abc4377007558787595a2d2368ca5e5c5bb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375358"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar o resolvedor de conflitos personalizado para um artigo de mesclagem
   Este tópico descreve como implementar um resolvedor de conflitos personalizado para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um [resolvedor personalizado com base em COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "48149466"
   
      [Resolvedor baseado em COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Você pode gravar seu próprio resolvedor de conflito personalizado como um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] em cada Publicador. Durante a sincronização, esse procedimento armazenado será invocado quando forem encontrados conflitos em um artigo para o qual o resolvedor foi registrado, e a informação na linha em conflito é passada pelo Merge Agent para os parâmetros requeridos do procedimento. Resolvedores de conflito personalizados com base em procedimento armazenado sempre são criados no Publicador.  
   
 > [!NOTE]  
@@ -45,7 +44,7 @@ ms.locfileid: "48149466"
   
 1.  No Publicador em cada publicação ou banco de dados **msdb** , crie um novo procedimento armazenado de sistema que implementa os seguintes parâmetros requeridos:  
   
-    |Parâmetro|Tipo de dados|Description|  
+    |Parâmetro|Tipo de dados|Descrição|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|`sysname`|Nome do proprietário da tabela para a qual um conflito está estando resolvido. Esse é o proprietário para a tabela no banco de dados de publicação.|  
     |**@tablename**|`sysname`|Nome da tabela para a qual um conflito está estando resolvido.|  
@@ -71,7 +70,7 @@ ms.locfileid: "48149466"
 2.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication**, **@article**, um valor de **resolver_info** para **@property**, e o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para **@value**.  
   
 ##  <a name="COM"></a> Usando um resolvedor personalizado com base em COM  
- O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface, permitindo que você grave lógicas empresariais complexas para manipular eventos e resolva conflitos que ocorram durante o processo de sincronização da replicação de mesclagem. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md). Você também pode gravar sua própria lógica corporativa personalizada com base em código nativo para resolver conflitos. Essa lógica é criada como um componente COM e compilada em bibliotecas de vínculo dinâmico (DLL), usando produtos como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. O resolvedor de conflitos personalizado com base em COM deve implementar a interface **ICustomResolver** , que é projetada especificamente para resolução de conflitos.  
+ O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface, permitindo que você grave lógicas empresariais complexas para manipular eventos e resolva conflitos que ocorram durante o processo de sincronização da replicação de mesclagem. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md). Você também pode gravar sua própria lógica corporativa personalizada com base em código nativo para resolver conflitos. Essa lógica é criada como um componente COM e compilada em bibliotecas de vínculo dinâmico (DLL), usando produtos como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Um resolvedor de conflitos personalizado com base em COM precisa implementar a interface **ICustomResolver**, que é projetada especificamente para resolução de conflitos.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Para criar e registrar um resolvedor de conflitos personalizado com base em COM  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48149466"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Exibindo um resolvedor personalizado de exemplo  
   
-1.  Um exemplo está disponível nos arquivos de exemplo do SQL Server 2000. Baixe o **sql2000samples.cab** de [Exemplos atualizados do SQL Server 2000 Service Pack 3](http://www.microsoft.com/download/details.aspx?id=8560). Serão baixados 8 arquivos somando 6,9 MB.  
+1.  Um exemplo está disponível nos arquivos de exemplo do SQL Server 2000. Baixe o **sql2000samples.cab** de [Exemplos atualizados do SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). Serão baixados 8 arquivos somando 6,9 MB.  
   
 2.  Extraia os arquivos do arquivo .cab compactado que foi baixado.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "48149466"
 6.  Na pasta **subspres** , localize todas as ocorrências de **#include sqlres.h** em todos os arquivos de origem e substitua-os por **#import "replrec.dll" no_namespace, raw_interfaces_only**  
   
 ## <a name="see-also"></a>Consulte também  
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecção e resolução de conflito de replicação de mesclagem avançada](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   

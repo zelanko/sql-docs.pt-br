@@ -11,12 +11,12 @@ ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366590"
 ---
 # <a name="plan-for-map-report-support"></a>Planejar para suporte ao relatório de mapa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] dá suporte a relatórios de mapa que usam fontes de dados espaciais. Os dados espaciais podem vir de bancos de dados do SQL Server, de arquivos de formas ESRI ou da Galeria de Mapas instalada com o Reporting Services ou o Construtor de Relatórios. Um mapa também pode exibir um plano de fundo de peças de mapas do Bing. Um autor de relatório pode criar um relatório que especifica dados espaciais ou peças de mapa do Bing como dinâmicos e recuperados em tempo de execução ou como estáticos e inseridos na definição de relatório.  
@@ -27,7 +27,7 @@ ms.locfileid: "48105876"
  Em cada relatório, os autores de relatório podem especificar se usar uma conexão de Protocolo SSL para recuperar peças do servidor de peças de mapa. Para fazer isso, no painel Propriedades para a camada de peça, eles devem definir a propriedade de booliana UseSecureConnection para `true`.  
   
 > [!NOTE]  
->  Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkId=151372).  
+>  Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 ## <a name="report-design-recommendations"></a>Recomendações de design de relatórios  
  O bom design para relatórios de mapa requer que o autor do relatório avalie as desvantagens entre dados espaciais estáticos e dinâmicos e encontre o equilíbrio ideal para os usuários do relatório. Elementos de mapa inseridos podem aumentar significativamente o tamanho da definição do relatório, mas reduzem o tempo necessário para exibir o mapa no relatório. Elementos de mapa dinâmico reduzem o tamanho da definição do relatório, mas aumentam o tempo necessário para processar e exibir o mapa. O autor do relatório deve localizar o equilíbrio certo entre estes problemas.  

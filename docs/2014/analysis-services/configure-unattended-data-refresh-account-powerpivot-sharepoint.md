@@ -11,12 +11,12 @@ ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5160b7dc6c6c4082551144ef459a989e414d83b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130116"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366588"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurar a conta autônoma de atualização de dados PowerPivot (PowerPivot para SharePoint)
   A conta autônoma de atualização de dados PowerPivot é uma conta designada para executar trabalhos de atualização de dados PowerPivot em um farm do SharePoint. Ao configurá-la, você habilita o **Use a atualização de dados configurada pelo administrador de conta** opção em uma página de agendamento de atualização de dados (veja abaixo). Autores de pasta de trabalho que agendarem a atualização de dados poderão escolher essa opção se quiserem usar a conta autônoma de atualização de dados PowerPivot para executar um trabalho de atualização de dados. Para obter mais informações sobre como exibir as opções de credenciais em uma agenda de atualização de dados, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "48130116"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
- Dependendo de quais opções que você selecionou ao configurar o servidor, a conta autônoma de atualização de dados já poderá ter sido criada. Em uma configuração padrão, a identidade da conta autônoma de atualização de dados é inicialmente definida como a conta de farm. Você pode melhorar a segurança de sua implantação alterando a conta para ser executada como um usuário diferente. Siga estas instruções para alterar a conta: [atualizar as credenciais usadas por um PowerPivot existente conta de atualização de dados autônoma](#bkmk_editUA).  
+ Dependendo de quais opções que você selecionou ao configurar o servidor, a conta autônoma de atualização de dados já poderá ter sido criada. Em uma configuração padrão, a identidade da conta autônoma de atualização de dados é inicialmente definida como a conta de farm. Você pode melhorar a segurança de sua implantação alterando a conta para ser executada como um usuário diferente. Siga estas instruções para alterar a conta: [Atualizar as credenciais usadas por um PowerPivot existente conta de atualização de dados autônoma](#bkmk_editUA).  
   
  Para ver todos os outros cenários de instalação, configure a conta manualmente usando as instruções a seguir.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48130116"
   
  [Etapa 4: Conceder permissões para acessar fontes de dados externas usadas na atualização de dados de leitura](#bkmk_dbread)  
   
- [Etapa 5: Verificar a disponibilidade da conta em dados de páginas de configuração de atualização](#bkmk_verify)  
+ [Etapa 5: Verificar a disponibilidade da conta em páginas de configuração de atualização de dados](#bkmk_verify)  
   
  [Usando a atualização de dados autônoma do PowerPivot da conta](#bkmk_use)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48130116"
   
  Você deve decidir com antecedência qual conta de usuário do domínio Windows usar como a conta autônoma de atualização de dados PowerPivot. Essa deve ser uma conta especificamente criada para essa finalidade, para que você possa monitorar como ela é usada.  
   
- Você deve conhecer a identidade do aplicativo do Serviço do Sistema PowerPivot. Você dará essa conta de serviço **controle total** conta de atualização de permissões sobre os dados autônomas quando você cria o aplicativo de destino para ele na etapa 1. Essas permissões permitem que o Serviço do Sistema PowerPivot recupere as credenciais da conta de atualização de dados autônoma durante a atualização de dados. Para obter as informações de conta de serviço necessário, abra o **configurar contas de serviço** página na Administração Central e selecione o pool de aplicativos de serviço usado pelo aplicativo de serviço PowerPivot. Por padrão, esse é o **Pool de aplicativos de serviço – sistema de serviços Web do SharePoint**.  
+ Você deve conhecer a identidade do aplicativo do Serviço do Sistema PowerPivot. Você dará essa conta de serviço **controle total** conta de atualização de permissões sobre os dados autônomas quando você cria o aplicativo de destino para ele na etapa 1. Essas permissões permitem que o Serviço do Sistema PowerPivot recupere as credenciais da conta de atualização de dados autônoma durante a atualização de dados. Para obter as informações de conta de serviço necessário, abra o **configurar contas de serviço** página na Administração Central e selecione o pool de aplicativos de serviço usado pelo aplicativo de serviço PowerPivot. Por padrão, esse é o **Pool de aplicativos de serviço - sistema de serviços Web do SharePoint**.  
   
 ## <a name="configure-the-unattended-powerpivot-data-refresh-account"></a>Configurar a conta autônoma de atualização de dados PowerPivot  
  Você pode configurar somente uma conta autônoma de atualização de dados PowerPivot para cada aplicativo de serviço PowerPivot. As informações de conta são armazenadas no Serviço de Repositório Seguro em um aplicativo de destino que esteja definido como uma conta de usuário do domínio Windows predefinida. Quando o aplicativo de destino é criado, você pode especificá-lo como a conta de atualização de dados PowerPivot nas páginas de configuração de um aplicativo de serviço PowerPivot.  
@@ -145,9 +145,9 @@ ms.locfileid: "48130116"
   
  Por isso, você deve conceder à conta autônoma de atualização de dados PowerPivot permissões somente leitura em todas as fontes de dados externas que são usadas em qualquer operação de atualização de dados executada na conta autônoma.  
   
- Se você for administrador das fontes de dados usadas em sua organização, poderá criar um logon e atribuir as permissões necessárias. Caso contrário, você deverá entrar em contato com os proprietários dos dados e fornecer as informações da conta. Especifique a conta de usuário do domínio Windows que mapeia para a conta de atualização de dados autônoma do PowerPivot. Essa é a conta que você especificou na “(Etapa 1): Criar um aplicativo de destino e definir as credenciais” neste tópico.  
+ Se você for administrador das fontes de dados usadas em sua organização, poderá criar um logon e atribuir as permissões necessárias. Caso contrário, você deverá entrar em contato com os proprietários dos dados e fornecer as informações da conta. Especifique a conta de usuário do domínio Windows que mapeia para a conta de atualização de dados autônoma do PowerPivot. Essa é a conta que você especificou no "(Step 1): Criar um aplicativo de destino e definir as credenciais"neste tópico.  
   
-###  <a name="bkmk_verify"></a> Etapa 5: Verificar a disponibilidade da conta em dados de páginas de configuração de atualização  
+###  <a name="bkmk_verify"></a> Etapa 5: Verificar a disponibilidade da conta em páginas de configuração de atualização de dados  
   
 1.  Abra uma página de configuração de atualização de dados para uma pasta de trabalho publicada que contém dados do PowerPivot. Para obter instruções sobre como abrir a página, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48130116"
   
  Se ocorrer um erro, você poderá clicar **configurar agendamento** na atualização de dados a página de histórico para tentar outras credenciais. Talvez você também precise inspecionar as informações de conexão de fonte de dados na pasta de trabalho original para exibir a cadeia de conexão que é usada durante a atualização de dados. A cadeia de conexão oferecerá informações sobre o local do servidor e o banco de dados que pode ser usado para solucionar o problema.  
   
- Para obter mais informações sobre como solucionar problemas, consulte [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/p/?LinkID=223279) no Wiki do TechNet.  
+ Para obter mais informações sobre como solucionar problemas, consulte [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/p/?LinkID=223279) no Wiki do TechNet.  
   
 ##  <a name="bkmk_use"></a> Usando a atualização de dados autônoma do PowerPivot da conta  
  Entre as três opções de credenciais na página de agendamento de atualização de dados PowerPivot, apenas a primeira corresponde à conta autônoma de atualização de dados. Selecione essa opção ao configurar a agenda de atualização de dados.  
@@ -187,7 +187,7 @@ ms.locfileid: "48130116"
   
 8.  Clique em **OK**.  
   
- Se estiver alterando não apenas a senha, mas também o nome de usuário da conta, é bem provável que precise executar etapas de configuração adicionais, como conceder permissões de leitura a fontes de dados externas e permissões SharePoint para atualizar a pasta de trabalho PowerPivot. Para obter instruções, vá para esta etapa na configuração de conta de atualização de dados autônoma do PowerPivot: [etapa 3: conceder permissões de colaboração para a conta](#bkmk_grant)e, em seguida, continue com as etapas restantes, concluindo com verificação de que o conta está configurada corretamente.  
+ Se estiver alterando não apenas a senha, mas também o nome de usuário da conta, é bem provável que precise executar etapas de configuração adicionais, como conceder permissões de leitura a fontes de dados externas e permissões SharePoint para atualizar a pasta de trabalho PowerPivot. Para obter instruções, vá para esta etapa na configuração de conta de atualização de dados autônoma do PowerPivot: [Etapa 3: Conceder permissões de colaboração para a conta](#bkmk_grant)e, em seguida, continue com as etapas restantes, concluindo com a verificação de que a conta está configurada corretamente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualização de dados do PowerPivot com SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   

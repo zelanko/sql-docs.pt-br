@@ -11,12 +11,12 @@ ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61c81668f2bac2f25b75a6b58efb9e1b97da4144
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e8418bf91dff36a512db57c45f1d19ad18fde02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119646"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369008"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Tutorial de mineração de dados intermediário (Analysis Services – Mineração de dados)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Fornece um ambiente integrado para criar e trabalhar com modelos de mineração de dados. Você pode se associar com facilidade a fontes de dados, criar e testar vários modelos com os mesmos dados e implantar modelos a serem usados na análise de previsão.  
@@ -34,13 +34,13 @@ ms.locfileid: "48119646"
 ## <a name="lesson-scenarios"></a>Cenários das lições  
  Depois do seu sucesso com a campanha de mala direta, será preciso aplicar o seu conhecimento de mineração de dados no desenvolvimento de vários novos modelos a serem usados no planejamento comercial. As seguintes tarefas estão incluídas:  
   
--   **Previsão:** , você criará um *série temporal* modelo para prever as vendas de produtos em diferentes regiões em todo o mundo. Você desenvolverá modelos individuais para cada região e aprenda a usar *previsão cruzada*.  
+-   **Previsão:** Você aprenderá a criar uma *série temporal* modelo para prever as vendas de produtos em diferentes regiões em todo o mundo. Você desenvolverá modelos individuais para cada região e aprenda a usar *previsão cruzada*.  
   
--   **Análise da cesta:** , você criará um *modelo de associação*, para analisar agrupamentos de produtos comprados durante visitas ao [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] site de comércio eletrônico. Com base nesse modelo de cesta de compras, você pode recomendar produtos aos clientes.  
+-   **Análise da cesta:** Você aprenderá a criar uma *modelo de associação*, para analisar agrupamentos de produtos comprados durante visitas ao [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] site de comércio eletrônico. Com base nesse modelo de cesta de compras, você pode recomendar produtos aos clientes.  
   
--   **Análise de sequência:** você cria um *modelo de clustering de sequência*, para analisar a ordem na qual os clientes compram produtos. Com base nesse modelo, é possível planejar alterações no design do site ou novas ofertas de produtos.  
+-   **Análise de sequência:** Você cria um *modelo de clustering de sequência*, para analisar a ordem na qual os clientes compram produtos. Com base nesse modelo, é possível planejar alterações no design do site ou novas ofertas de produtos.  
   
--   **Análise fatorial:** você usa um *rede neural* modelo para explorar as possíveis causas de baixa qualidade do serviço de dados do call center. Com base nos aprofundamentos do modelo preliminar, você criará um *modelo de regressão logística* para prever estratégias para melhorar a experiência do cliente.  
+-   **Análise de fatores:** Você usa um *rede neural* modelo para explorar as possíveis causas de baixa qualidade do serviço de dados do call center. Com base nos aprofundamentos do modelo preliminar, você criará um *modelo de regressão logística* para prever estratégias para melhorar a experiência do cliente.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Este tutorial ensina como criar e trabalhar com vários tipos de algoritmos de mineração de dados. Ele se divide nas lições a seguir:  
@@ -59,7 +59,7 @@ ms.locfileid: "48119646"
  [Lição 4: Criando um cenário de Clustering de sequências &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  Nesta lição, você criará um modelo de mineração que poderá ser usado como parte de um cenário de clustering de sequências. Você também aprenderá a explorar modelos de mineração criados com o algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering.  
   
- [Lição 5: Criando a rede Neural e modelos de regressão logística &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lição 5: Criação de rede Neural e modelos de regressão logística &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  Nesta lição, você criará vários modelos de mineração relacionados, usando os algoritmos Rede Neural da Microsoft e Regressão Logística da Microsoft. Você também aprenderá a trabalhar com exibições da fontes de dados e explorar dados subjacentes aos modelos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -71,10 +71,10 @@ ms.locfileid: "48119646"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o banco de dados do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar o banco de dados oficiais [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite o [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) página e selecione a versão apropriada do banco de dados de exemplo.  
+ Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar o banco de dados oficiais [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite o [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) página e selecione a versão apropriada do banco de dados de exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Tutorial de DMX do Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
   

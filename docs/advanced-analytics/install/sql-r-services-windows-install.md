@@ -1,6 +1,6 @@
 ---
-title: Instalar o SQL Server 2016 R Services (no banco de dados) | Microsoft Docs
-description: R no SQL Server está disponível quando você instala o SQL Server 2016 R Services no Windows.
+title: Instalação do SQL Server 2016 R Services (no banco de dados) – SQL Server Machine Learning
+description: Adicione suporte a idiomas para um mecanismo de banco de dados no SQL Server 2016 R Services do Windows de programação R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878119"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645315"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalar o SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ No SQL Server 2017, a integração do R é oferecida em [serviços de Machine Le
   + Você usa uma biblioteca diferente e executável diferente e obter resultados diferentes, do que quando você estiver executando no SQL Server.
   + Scripts de R e Python em execução em bibliotecas externas não podem ser gerenciados pelo SQL Server, levando à contenção de recursos.
   
-Se você tiver usado todas as versões anteriores do ambiente de desenvolvimento do Revolution Analytics ou os pacotes RevoScaleR ou se você instalou todas as versões de pré-lançamento do SQL Server 2016, você deve desinstalá-los. Não há suporte para que executam versões mais antigas e mais recentes do RevoScaleR e outros pacotes de proprietários. Para obter ajuda sobre como remover versões anteriores, consulte [atualização e perguntas frequentes sobre a instalação do SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+Se você tiver usado todas as versões anteriores do ambiente de desenvolvimento do Revolution Analytics ou os pacotes RevoScaleR ou se você instalou todas as versões de pré-lançamento do SQL Server 2016, você deve desinstalá-los. Não há suporte para que executam versões mais antigas e mais recentes do RevoScaleR e outros pacotes de proprietários. Para obter ajuda com a remoção de versões anteriores, consulte [atualização e perguntas frequentes sobre a instalação do SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
 > [!IMPORTANT]
 > Após a conclusão da instalação, certifique-se de concluir as etapas adicionais de pós-configuração descritas neste artigo. Essas etapas incluem a habilitação do SQL Server usar scripts externos e adicionando as contas necessárias para o SQL Server executar trabalhos do R em seu nome. Alterações de configuração geralmente requerem uma reinicialização da instância ou uma reinicialização do serviço Launchpad.
@@ -89,29 +89,42 @@ Para instalações locais, você deve executar a Instalação como um administra
 
     Anote o local da pasta no caminho `..\Setup Bootstrap\Log` onde os arquivos de configuração são armazenados. Quando a instalação for concluída, você pode examinar os componentes instalados no arquivo de resumo.
 
-7. Após a instalação for concluída, se você for instruído a reiniciar o computador, faça isso agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações, consulte [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+7. Após a instalação for concluída, se você for instruído a reiniciar o computador, faça isso agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+
+## <a name="set-environment-variables"></a>Configurar variáveis de ambiente
+
+Para R integração de recursos somente, você deve definir a **MKL_CBWR** variável de ambiente [garantir uma saída consistente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) cálculos da Intel MKL Math Kernel Library ().
+
+1. No painel de controle, clique em **sistema e segurança** > **sistema** > **configurações avançadas do sistema**  >   **Variáveis de ambiente**.
+
+2. Crie uma nova variável de sistema ou usuário. 
+
+  + Nome de variável de conjunto para `MKL_CBWR`
+  + Defina o valor da variável como `AUTO`
+
+Esta etapa requer uma reinicialização do servidor. Se você está prestes a habilitar a execução do script, você pode adiar a reinicialização até que todo o trabalho de configuração é feita.
 
 <a name="bkmk_enableFeature"></a>
 
 ##  <a name="enable-script-execution"></a>Habilitar a execução do script
 
-1. Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+1. Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Você pode baixar e instalar a versão apropriada nesta página: [baixar o SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Você pode baixar e instalar a versão apropriada nesta página: [Baixe o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > Você também pode experimentar a versão de visualização da [Studio do Azure Data](../../azure-data-studio/what-is.md), que oferece suporte a tarefas administrativas e consultas no SQL Server.
   
 2. Conecte-se à instância onde você instalou os serviços de Machine Learning, clique em **nova consulta** para abrir uma janela de consulta e execute o seguinte comando:
 
-   ```SQL
+   ```sql
    sp_configure
    ```
     O valor da propriedade `external scripts enabled`, deve ser **0** neste momento. Isso ocorre porque o recurso é desativado por padrão. O recurso deve ser habilitado explicitamente por um administrador antes de executar scripts R ou Python.
      
 3. Para habilitar o recurso de script externo, execute a seguinte instrução:
   
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -132,7 +145,7 @@ Use as etapas a seguir para verificar se todos os componentes usados para inicia
 
 1. No SQL Server Management Studio, abra uma nova janela de consulta e execute o seguinte comando:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -144,7 +157,7 @@ Use as etapas a seguir para verificar se todos os componentes usados para inicia
 
     Abra uma nova **consulta** janela no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], e, em seguida, executar um script como o seguinte:
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -170,9 +183,9 @@ Em dispositivos conectados à internet, as atualizações cumulativas são geral
 
 Em servidores desconectados, são necessárias etapas adicionais. Para obter mais informações, consulte [instalar em computadores sem acesso à internet > Aplicar atualizações cumulativas](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Começar com uma instância de linha de base já instalada: versão inicial do SQL Server 2016, SQL Server 2016 SP 1 ou SQL Server 2016 SP 2.
+1. Comece com uma instância de linha de base já instalada: Versão inicial do SQL Server 2016, SQL Server 2016 SP 1 ou SQL Server 2016 SP 2.
 
-2. Vá para a lista de atualização cumulativa: [atualiza do SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+2. Vá para a lista de atualização cumulativa: [Atualizações do SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 3. Selecione a atualização cumulativa mais recente. Um executável é baixado e extraído automaticamente.
 
@@ -203,7 +216,7 @@ Banco de dados, talvez você precise as atualizações de configuração a segui
 * [Adicionar SQLRUserGroup como um usuário de banco de dados](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> Nem todas as alterações listadas são necessárias e nenhum pode ser necessária. Os requisitos dependem de seu esquema de segurança, onde você instalou o SQL Server e como você espera que os usuários para se conectar ao banco de dados e executar scripts externos. Dicas de solução de problemas adicionais podem ser encontradas aqui: [perguntas frequentes sobre atualização e instalação](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Nem todas as alterações listadas são necessárias e nenhum pode ser necessária. Os requisitos dependem de seu esquema de segurança, onde você instalou o SQL Server e como você espera que os usuários para se conectar ao banco de dados e executar scripts externos. Dicas de solução de problemas adicionais podem ser encontradas aqui: [Perguntas frequentes sobre atualização e instalação](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ## <a name="suggested-optimizations"></a>Otimizações sugeridas
 
@@ -242,6 +255,6 @@ O processo para instalar e gerenciar pacotes de R é diferente no SQL Server 201
 Os desenvolvedores do R podem começar com alguns exemplos simples e aprender os fundamentos de como o R funciona com o SQL Server. Para a próxima etapa, consulte os links a seguir:
 
 + [Tutorial: Executar R no T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Análise de no banco de dados para os desenvolvedores do R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Análise no banco de dados para os desenvolvedores do R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Para exibir exemplos de aprendizado de máquina com base em cenários do mundo real, consulte [tutoriais de aprendizado de máquina](../tutorials/machine-learning-services-tutorials.md).

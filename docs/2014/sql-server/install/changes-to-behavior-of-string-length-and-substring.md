@@ -11,20 +11,20 @@ ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d5fad3b875e781f7682f7e381dbcd4b2db1b3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d793720638ee4a98d99e6a915457d8657a1c325
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369078"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>Alterações no comportamento de string-length e substring
   O [função string-length &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) e [função substring &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) funções podem retornar resultados diferentes quando usadas com bancos de dados XML que contêm caracteres substitutos.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Quando um banco de dados é definido para ser compatível com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o comportamento do [função string-length &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) e [função substring &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) alterações de funções ao lidar com caracteres suplementares do Unicode. Cada caractere suplementar Unicode definido para ter um ponto de código maior que U+FFFF, é contado como um caractere por essas funções, em vez de dois, como era contado em versões anteriores.  
   
- Para obter mais informações sobre caracteres substitutos, consulte [Surrogates and Supplementary Characters](http://go.microsoft.com/fwlink/?LinkId=178317)(em inglês).  
+ Para obter mais informações sobre caracteres substitutos, consulte [Surrogates and Supplementary Characters](https://go.microsoft.com/fwlink/?LinkId=178317)(em inglês).  
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

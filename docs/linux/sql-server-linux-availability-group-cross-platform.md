@@ -11,12 +11,12 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ab0b1bc65009a7439c9de8b8728a483413d09a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676564"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947570"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar SQL Server sempre no grupo de disponibilidade no Windows e Linux (plataformas)
 
@@ -58,7 +58,7 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
 
    Para obter instruções, consulte [alterar modo de autenticação de servidor](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
 
-1. Instale o SQL Server 2017 no Linux. Para obter instruções, consulte [instalar o SQL Sever](sql-server-linux-setup.md). Habilitar `hadr` via mssql-conf.
+1. Instale o SQL Server 2017 no Linux. Para obter instruções, consulte [instalar o SQL Server](sql-server-linux-setup.md). Habilitar `hadr` via mssql-conf.
 
    Para habilitar `hadr` via mssql-conf em um prompt de shell, emita o seguinte comando:
 

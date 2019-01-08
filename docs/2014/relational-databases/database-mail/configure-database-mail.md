@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217616"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371178"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
   Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
@@ -55,7 +54,7 @@ ms.locfileid: "48217616"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Use a opção **DatabaseMail XPs** para habilitar o Database Mail neste servidor. Para obter mais informações, confira o tópico de referência [Opção Database Mail XPs de configuração de servidor](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  A habilitação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker em qualquer banco de dados exige um bloqueio de banco de dados. Se o Service Broker tiver sido desabilitado no **msdb**, para habilitar o Database Mail primeiro interrompa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que o Service Broker possa obter o bloqueio necessário.  
   
 ###  <a name="Security"></a> Segurança  
@@ -79,11 +78,11 @@ ms.locfileid: "48217616"
 ###  <a name="Welcome"></a> Página de boas-vindas  
  Esta página descreve as etapas de configuração do Database Mail.  
   
- **Não mostrar esta página novamente** – Marque essa opção para não exibir a página de boas-vindas no futuro novamente.  
+ **Não mostrar esta página novamente** – marque essa opção para não exibir novamente esta página de boas-vindas.  
   
  **Avançar** – Segue para a página **Selecionar uma tarefa de configuração** .  
   
- **Cancelar** – Encerra o assistente sem configurar o Database Mail  
+ **Cancelar** – termina o assistente sem configurar o Database Mail  
   
  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48217616"
  Use a página **Selecionar Tarefa de Configuração** para indicar qual tarefa você concluirá sempre que usar o assistente. Se você mudar de ideia antes de concluir o assistente, use o botão **Voltar** para voltar para essa página e selecionar outra tarefa.  
   
 > [!NOTE]  
->  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
+>  Se o Database Mail não tiver sido habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
   
  **Instalar Database Mail executando as seguintes tarefas**  
  Execute todas as tarefas exigidas para instalar o Database Mail pela primeira vez. Essa opção inclui todas as outras três opções.  
@@ -415,7 +414,7 @@ ms.locfileid: "48217616"
  A **mailitem_id** da mensagem de teste de email.  
   
  **Solucionar problemas**  
- Clique para abrir os Manuais Online no tópico [Solucionando problemas do Database Mail](http://msdn.microsoft.com/library/ms188663.aspx).  
+ Clique para abrir os Manuais Online no tópico [Solucionando problemas do Database Mail](https://msdn.microsoft.com/library/ms188663.aspx).  
   
 
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
@@ -13,12 +13,12 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a5ef0580e2c13f191a233f5eb42029e4749f949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777518"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objeto Buffer Manager
   O objeto **Gerenciador de Buffer** fornece contadores para monitorar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa:  
@@ -40,7 +40,7 @@ ms.locfileid: "48115926"
 ## <a name="buffer-manager-performance-objects"></a>Objetos de desempenho do Gerenciador de Buffer  
  Esta tabela descreve os objetos de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gerenciador de Buffer** .  
   
-|SQL Server, contadores do Gerenciador de Buffer|Description|  
+|SQL Server, contadores do Gerenciador de Buffer|Descrição|  
 |----------------------------------------|-----------------|  
 |**Taxa de acertos do cache do buffer**|Indica a porcentagem de páginas localizadas no cache do buffer sem ter que ler do disco. A taxa é o número total de acertos do cache, dividido pelo número total de pesquisas no cache no acesso dos últimos milhares de páginas. Após um tempo longo, a taxa varia muito pouco. Como ler do cache é muito menos dispendioso que ler do disco, convém que esta taxa seja alta. Geralmente, é possível aumentar a taxa de acertos do cache do buffer aumentando a quantidade de memória disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando o recurso de extensão do pool de buffers.|  
 |**Páginas de ponto de verificação/s**|Indica o número de páginas liberadas no disco, por segundo, por ponto de verificação ou outra operação que requeira a liberação de todas as páginas sujas.|  

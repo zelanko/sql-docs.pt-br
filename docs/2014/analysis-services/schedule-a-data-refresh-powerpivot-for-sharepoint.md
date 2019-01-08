@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178456"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363838"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Agendar uma atualização de dados (PowerPivot para SharePoint)
   Você pode agendar a atualização de dados para obter atualizações automáticas para dados PowerPivot dentro de uma pasta de trabalho do Excel publicada em um site do SharePoint.  
@@ -47,7 +47,7 @@ ms.locfileid: "48178456"
   
  A fonte de dados não pode ser um documento do Office ou um banco de dados do Access. O Office não dá suporte ao uso dos componentes de conectividade de dados Office em um ambiente de servidor. Se sua pasta de trabalho contiver dados dessas fontes, remova-as da lista de fontes de dados em sua agenda de atualização de dados.  
   
- A pasta de trabalho deve ser uma versão do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Se você usar pastas de trabalho que foram criadas na versão anterior do PowerPivot para Excel, a atualização de dados de agenda não funcionará a menos que você atualize o banco de dados da versão mais recente.  
+ A pasta de trabalho deve ser uma versão do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . Se você usar pastas de trabalho que foram criadas na versão anterior do PowerPivot para Excel, a atualização de dados de agenda não funcionará a menos que você atualize o banco de dados da versão mais recente.  
   
  O check in da pasta de trabalho deve ser feito quando a operação de atualização for concluída. Um bloqueio na pasta de trabalho é colocado no arquivo ao final da atualização de dados, quando o arquivo é salvo, em vez de quando a atualização é iniciada.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48178456"
   
  Se você encontrar uma mensagem de status inesperada (por exemplo, falha ou cancelamento de uma operação de atualização), poderá investigar o problema verificando permissões e a disponibilidade do servidor.  
   
- Revise a página de solução de problemas de atualização de dados PowerPivot no WIKI do TechNet para obter ajuda sobre o assunto. Para obter mais informações, consulte [Solucionando problemas de atualização de dados PowerPivot](http://go.microsoft.com/fwlink/?LinkId=251594).  
+ Revise a página de solução de problemas de atualização de dados PowerPivot no WIKI do TechNet para obter ajuda sobre o assunto. Para obter mais informações, consulte [Solucionando problemas de atualização de dados PowerPivot](https://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
 >  Os administradores do SharePoint podem ajudá-lo a solucionar problemas de atualização de dados exibindo os relatórios de atualização de dados consolidados no Painel de Gerenciamento do PowerPivot na Administração Central. Para obter mais informações, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  

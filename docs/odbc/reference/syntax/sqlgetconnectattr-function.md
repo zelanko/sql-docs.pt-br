@@ -20,21 +20,21 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d9006d2b1792e66c1f37faa94c9c4b3f9304f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204435"
 ---
 # <a name="sqlgetconnectattr-function"></a>Função SQLGetConnectAttr
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetConnectAttr** retorna a configuração atual de um atributo de conexão.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 3 *. x* aplicativo está funcionando com um ODBC 2 *. x* driver, consulte [funções de mapeamento de substituição para trás Compatibilidade de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetConnectAttr(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLGetConnectAttr** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida da estrutura de dados de diagnóstico chamando **SQLGetDiagRec** com um *HandleType* SQL_HANDLE_DBC e uma *tratar* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetConnectAttr** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver . O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Os dados retornados \* *ValuePtr* foi truncado para ser *BufferLength* menos o comprimento de um caractere nulo de terminação. O comprimento do valor completo da cadeia de caracteres é retornado no **StringLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

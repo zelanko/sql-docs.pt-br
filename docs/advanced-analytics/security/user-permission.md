@@ -1,6 +1,6 @@
 ---
-title: Conceder aos usuários permissão para serviços do SQL Server Machine Learning | Microsoft Docs
-description: Como fornecer aos usuários permissão para serviços do SQL Server Machine Learning.
+title: Conceda permissões de banco de dados para execução do script R e Python - serviços do SQL Server Machine Learning
+description: Como conceder permissões de usuário de banco de dados para execução de scripts de R e Python em serviços do SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419061"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644835"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Conceder aos usuários permissão para serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Se você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] po
 
 A maioria dos usuários, no entanto, não tem permissões elevadas desse tipo. Por exemplo, os usuários em uma organização que usam logons do SQL Server para acessar o banco de dados geralmente não tem permissões com privilégios elevados. Portanto, para cada usuário que está usando R ou Python, você deve conceder aos usuários dos serviços de aprendizado de máquina a permissão para executar scripts externos em cada banco de dados em que o idioma será usado. Aqui está como:
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -49,7 +49,7 @@ Para cada conta de usuário do Windows ou logon do SQL que está executando scri
 
 Por exemplo, a seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução fornece o logon do SQL *MySQLLogin* os direitos para executar consultas do T-SQL no *ML_Samples* banco de dados. Para executar essa instrução, o logon SQL já deve existir no contexto de segurança do servidor.
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

@@ -13,15 +13,15 @@ ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca7b73e08941d42ceccd1ff3dab04a686b120d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e802ac33c7aa9b97267a725b20eb0d2f00dbb1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201396"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410353"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Criar uma coluna calculada (SSAS tabular)
-  Colunas calculadas permitem adicionar novos dados a seu modelo. Em vez de colar ou importar valores para a coluna, você cria uma fórmula DAX que define os valores do nível de linha da coluna. Os valores em cada linha de uma coluna calculada são calculados e preenchidos quando você cria uma fórmula válida e, em seguida, clica em ENTER. A coluna calculada pode ser então adicionada a um relatório ou aplicativo de análise da mesma maneira que qualquer outra coluna de dados. Este tópico descreve como criar uma nova coluna calculada usando a barra de fórmulas DAX no designer modelo.  
+  Colunas calculadas permitem adicionar novos dados a seu modelo. Em vez de colar ou importar valores na coluna, você deve criar uma fórmula DAX que define os valores de nível de linha da coluna. Os valores em cada linha de uma coluna calculada são calculados e preenchidos quando você cria uma fórmula válida e, em seguida, clica em ENTER. A coluna calculada pode ser então adicionada a um relatório ou aplicativo de análise da mesma maneira que qualquer outra coluna de dados. Este tópico descreve como criar uma nova coluna calculada usando a barra de fórmulas DAX no designer modelo.  
   
 #### <a name="to-create-a-new-calculated-column"></a>Para criar uma nova coluna calculada  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48201396"
 >  É possível usar a opção AutoCompletar Fórmula DAX no meio de uma fórmula existente com funções aninhadas. O texto pouco antes do ponto de inserção é usado para exibir valores na lista suspensa, e todo o texto depois do ponto de inserção permanece inalterado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Colunas calculadas &#40;Tabular do SSAS&#41;](ssas-calculated-columns.md)   
- [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)  
+ [Colunas calculadas &#40;SSAS de Tabela&#41;](ssas-calculated-columns.md)   
+ [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)  
   
   

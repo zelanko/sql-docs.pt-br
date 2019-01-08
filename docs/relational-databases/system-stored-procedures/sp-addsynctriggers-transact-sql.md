@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799714"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588281"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sub_table=**] **'***sub_table***'**  
+ [  **@sub_table=**] **'**_sub_table_**'**  
  É o nome da tabela do Assinante. *sub_table* está **sysname**, sem padrão.  
   
- [  **@sub_table_owner=**] **'***sub_table_owner***'**  
+ [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
  Corresponde ao nome do proprietário da tabela do Assinante. *sub_table_owner* está **sysname**, sem padrão.  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  É o nome do servidor do Publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão. Se NULL, será usado o banco de dados atual.  
   
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
- [  **@ins_proc=**] **'***ins_proc***'**  
+ [  **@ins_proc=**] **'**_ins_proc_**'**  
  É o nome do procedimento armazenado que oferece suporte às inserções de transação síncrona no Publicador. *ins_proc* está **sysname**, sem padrão.  
   
- [  **@upd_proc=**] **'***upd_proc***'**  
+ [  **@upd_proc=**] **'**_upd_proc_**'**  
  É o nome do procedimento armazenado que oferece suporte às atualizações de transação síncrona no Publicador. *ins_proc* está **sysname**, sem padrão.  
   
- [  **@del_proc=**] **'***del_proc***'**  
+ [  **@del_proc=**] **'**_del_proc_**'**  
  É o nome do procedimento armazenado que oferece suporte às exclusões de transação síncrona no Publicador. *ins_proc* está **sysname**, sem padrão.  
   
- [  **@cftproc =** ] **'***cftproc***'**  
+ [  **@cftproc =** ] **'**_cftproc_**'**  
  É o nome do procedimento gerado automaticamente usado por publicações que permitem a atualização enfileirada. *cftproc* está **sysname**, sem padrão. Para publicações que permitem atualização imediata, este valor é o NULL. Este parâmetro se aplica a publicações que permitem atualização feita fila (Atualização Feita fila e Atualização Imediata com Atualização Feita fila como Failover).  
   
- [  **@proc_owner =** ] **'***proc_owner***'**  
+ [  **@proc_owner =** ] **'**_proc_owner_**'**  
  Especifica a conta de usuário no Publicador na qual todos os procedimentos armazenados gerados automaticamente para a publicação de atualização (enfileirada e/ou imediata) foram criados. *proc_owner* está **sysname** sem nenhum padrão.  
   
- [  **@identity_col=**] **'***identity_col***'**  
+ [  **@identity_col=**] **'**_identity_col_**'**  
  É o nome da coluna de identidade no Publicador. *identity_col* está **sysname**, com um padrão NULL.  
   
- [  **@ts_col=**] **'***timestamp_col***'**  
+ [  **@ts_col=**] **'**_timestamp_col_**'**  
  É o nome da **carimbo de hora** coluna no publicador. *timestamp_col* está **sysname**, com um padrão NULL.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause*está **nvarchar (4000)**, com um padrão NULL.  
   
- [  **@primary_key_bitmap =**] **'***primary_key_bitmap***'**  
+ [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
  É um mapa de bits das colunas de chave primária na tabela. *primary_key_bitmap* está **varbinary(4000)**, sem padrão.  
   
  [  **@identity_support =** ] *identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *independent_agent*  
  Indica se há um único Distribution Agent (um agente independente) para esta publicação ou um Distribution Agent por par de banco de dados de publicação e banco de dados de assinatura (um agente compartilhado). Esse valor reflete o valor da propriedade ndependent_agent da publicação definida no Publicador. *independent_agent* é um pouco com um padrão de **0**. Se **0**, o agente é um agente compartilhado. Se **1**, o agente é um agente independente.  
   
- [  **@distributor =** ] **'***distribuidor***'**  
+ [  **@distributor =** ] **'**_distribuidor_**'**  
  É o nome do distribuidor. *distribuidor* está **sysname**, sem padrão.  
   
  [ **@pubversion**=] *pubversion*  

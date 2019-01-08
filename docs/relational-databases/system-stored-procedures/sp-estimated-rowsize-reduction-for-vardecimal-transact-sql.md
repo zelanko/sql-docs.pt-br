@@ -22,12 +22,12 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee1d51d304e43e2c6e50bd8621035486dd778133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7f088d85a5a56a6440266bd9851cbd90c9c0f9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799514"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590450"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table=** ] **'***tabela***'**  
+ [  **@table=** ] **'**_tabela_**'**  
  É o nome de três partes da tabela para a qual o formato de armazenamento deve ser alterado. *tabela* está **nvarchar(776)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -56,7 +56,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O conjunto de resultados a seguir é retornado para fornecer informações de tamanho do banco de dados estimado e atual.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**avg_rowlen_fixed_format**|**decimal (12, 2)**|Representa o comprimento da linha em formato de armazenamento decimal fixo.|  
 |**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Representa o tamanho médio da linha quando o formato de armazenamento vardecimal é usado.|  

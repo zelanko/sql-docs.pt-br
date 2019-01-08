@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,19 +12,19 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116997"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360879"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Escolher um destino (Assistente de Importação e Exportação do SQL Server)
   Use o **escolher um destino** página para especificar o destino dos dados que você deseja copiar.  
   
- Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente, bem como as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente, bem como as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- A finalidade de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ O objetivo do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Opções estáticas  
  **Destino**  
@@ -47,10 +46,10 @@ ms.locfileid: "48116997"
  Especifique se o pacote deve usar a Autenticação do Microsoft Windows para fazer login no banco de dados. A Autenticação do Windows é recomendada para obter melhor segurança.  
   
  **Usar Autenticação do SQL Server**  
- Especifique se o pacote deve usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação para fazer logon no banco de dados. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
+ Especifique se o pacote deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para fazer login no banco de dados. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
  **Nome de usuário**  
- Especifique um nome de usuário para a conexão de banco de dados quando você estiver usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+ Especifique um nome de usuário para estabelecer conexão com o banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Senha**  
  Forneça uma senha para estabelecer conexão de banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -83,7 +82,7 @@ ms.locfileid: "48116997"
  **Formato**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por um delimitador, especificado na **colunas** página.|  
 |Largura fixa|As colunas têm uma largura fixa.|  
@@ -110,7 +109,7 @@ ms.locfileid: "48116997"
  Selecione a versão do Excel que será usada pela pasta de trabalho de destino.  
   
 > [!NOTE]  
->  Quando você exportar dados para um [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] destino, o assistente usa o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente de destino do Excel. Para obter informações sobre algumas considerações de uso e problemas conhecidos, consulte [destino do Excel](../data-flow/excel-destination.md).  
+>  Ao exportar dados a um destino do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], o assistente utilizará o componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel Destination. Para obter informações sobre algumas considerações de uso e problemas conhecidos, consulte [destino do Excel](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Destino = Microsoft Access  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48116997"
  Forneça a senha do usuário para estabelecer conexão quando o arquivo de informações do grupo de trabalho estiver associado ao banco de dados. No entanto, se o banco de dados estiver protegido com uma única senha para todos os usuários, você deve fornecer esse valor na **propriedades de vínculo de dados** caixa de diálogo que é acessada a partir de **avançado** botão.  
   
  **Avançado**  
- Especifique as opções avançadas, como a senha do banco de dados ou um arquivo de informações do grupo de trabalho não padrão, usando a caixa de diálogo **Propriedades de Vínculo de Dados**. Para obter mais informações sobre as propriedades do provedor OLE DB, pesquise na seção acesso a dados das [biblioteca MSDN](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Especifique as opções avançadas, como a senha do banco de dados ou um arquivo de informações do grupo de trabalho não padrão, usando a caixa de diálogo **Propriedades de Vínculo de Dados**. Para obter mais informações sobre as propriedades do provedor OLE DB, pesquise na seção acesso a dados das [biblioteca MSDN](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

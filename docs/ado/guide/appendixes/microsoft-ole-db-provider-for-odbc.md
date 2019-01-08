@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350640"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535549"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provedor Microsoft OLE DB para visão geral do ODBC
 Para um programador do ADO ou RDS, um mundo ideal seria um no qual todos os dados fonte expõe uma interface OLE DB, para que o ADO pode chamar diretamente na fonte de dados. Embora cada vez mais fornecedores de banco de dados estiver implementando interfaces OLE DB, algumas fontes de dados não são ainda expostos dessa maneira. No entanto, a maioria dos sistemas DBMS em uso atualmente podem ser acessados por meio de ODBC.
@@ -50,7 +50,7 @@ MSDASQL
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|Description|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor OLE DB para ODBC.|
 |**DSN**|Especifica o nome da fonte de dados.|
@@ -93,7 +93,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Propriedades de Conexão específicas do provedor
  O provedor OLE DB para ODBC adiciona várias propriedades para o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção da **Conexão** objeto. A tabela a seguir lista essas propriedades com o nome de propriedade do OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|Description|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Procedimentos acessíveis (KAGPROP_ACCESSIBLEPROCEDURES)|Indica se o usuário tem acesso a procedimentos armazenados.|
 |Tabelas acessíveis (KAGPROP_ACCESSIBLETABLES)|Indica se o usuário tem permissão para executar instruções SELECT nas tabelas de banco de dados.|
@@ -107,20 +107,20 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Máximo de colunas em Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Indica o número máximo de colunas que podem ser listadas na cláusula ORDER BY de uma instrução SELECT.|
 |Máximo de colunas em Select (KAGPROP_MAXCOLUMNSINSELECT)|Indica o número máximo de colunas que podem ser listados na parte SELECT de uma instrução SELECT.|
 |Máximo de colunas na tabela (KAGPROP_MAXCOLUMNSINTABLE)|Indica o número máximo de colunas permitido em uma tabela.|
-|Funções numéricas (KAGPROP_NUMERICFUNCTIONS)|Indica quais funções numéricas são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: escalar funções](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
+|Funções numéricas (KAGPROP_NUMERICFUNCTIONS)|Indica quais funções numéricas são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
 |Recursos de junção externa (KAGPROP_OJCAPABILITY)|Indica os tipos de junções externas suportadas pelo provedor.|
 |Junções externas (KAGPROP_OUTERJOINS)|Indica se o provedor dá suporte a junções externas.|
 |Caracteres especiais (KAGPROP_SPECIALCHARACTERS)|Indica quais caracteres têm significado especial para o driver ODBC.|
 |Procedimentos armazenados (KAGPROP_PROCEDURES)|Indica se os procedimentos armazenados estão disponíveis para uso com esse driver ODBC.|
-|Funções de cadeia de caracteres (KAGPROP_STRINGFUNCTIONS)|Indica quais funções de cadeia de caracteres são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: escalar funções](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
-|Funções do sistema (KAGPROP_SYSTEMFUNCTIONS)|Indica quais funções de sistema são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: escalar funções](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
-|Funções de data/hora (KAGPROP_TIMEDATEFUNCTIONS)|Indica quais funções de data e hora são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: escalar funções](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
+|Funções de cadeia de caracteres (KAGPROP_STRINGFUNCTIONS)|Indica quais funções de cadeia de caracteres são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
+|Funções do sistema (KAGPROP_SYSTEMFUNCTIONS)|Indica quais funções de sistema são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
+|Funções de data/hora (KAGPROP_TIMEDATEFUNCTIONS)|Indica quais funções de data e hora são suportadas pelo driver ODBC. Para obter uma lista de nomes de função e os valores associados usados nessa máscara de bits, consulte [apêndice e: Funções escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), na documentação do ODBC.|
 |Suporte à gramática SQL (KAGPROP_ODBCSQLCONFORMANCE)|Indica a gramática SQL compatíveis com o driver ODBC.|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros específicos do provedor e propriedades de comando
  O provedor OLE DB para ODBC adiciona várias propriedades para o **propriedades** coleção da **conjunto de registros** e **comando** objetos. A tabela a seguir lista essas propriedades com o nome de propriedade do OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|Description|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Consulta com base em atualizações/exclusões/inserções (KAGPROP_QUERYBASEDUPDATES)|Indica se as atualizações, exclusões e inserções podem ser executadas por meio de consultas SQL.|
 |Tipo de simultaneidade ODBC (KAGPROP_CONCURRENCY)|Indica o método usado para reduzir possíveis problemas causados por dois usuários tentam acessar os mesmos dados da fonte de dados simultaneamente.|
@@ -137,7 +137,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  O ODBC fornece uma sintaxe específica para chamar procedimentos armazenados. Para o [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade de uma **comando** objeto, o *CommandText* argumento para o **Execute** método em um [ Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto, ou o *fonte* argumento para o **abra** método em uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, passa uma cadeia de caracteres com esta sintaxe:
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  Cada **?** faz referência a um objeto na [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. A primeira **?** as referências **parâmetros**(0), a próxima **?** as referências **parâmetros**(1), e assim por diante.
@@ -173,7 +173,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilidade do ADO padrão **Recordset** propriedades:
 
-|Propriedade|ForwardOnly|Dinâmicos|Keyset|Estático|
+|Propriedade|ForwardOnly|Dinâmico|Keyset|Estático|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
@@ -199,25 +199,25 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilidade do ADO padrão **Recordset** métodos:
 
-|Método|ForwardOnly|Dinâmicos|Keyset|Estático|
+|Método|ForwardOnly|Dinâmico|Keyset|Estático|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sim|Sim|Sim|Sim|
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sim|Sim|Sim|Sim|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sim|Sim|Sim|Sim|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|não|não|Sim|Sim|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Não|Não|Sim|Sim|
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|Sim|Sim|Sim|
 |[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|Sim|Sim|Sim|
 |[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Sim|Sim|Sim|Sim|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|não|Sim|Sim|Sim|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Sim|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|não|Sim|Sim|Sim|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Sim|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sim|Sim|Sim|Sim|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sim|Sim|Sim|Sim|
-|[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|não|não|Sim|Sim|
+|[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Não|Não|Sim|Sim|
 |[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Sim|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sim|Sim|Sim|Sim|
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
  O Microsoft OLE DB Provider for ODBC insere várias propriedades dinâmicas para o **propriedades** coleção da não abertos [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e [Comando](../../../ado/reference/ado-api/command-object-ado.md) objetos.
 
- As tabelas a seguir são um cross-index dos nomes de ADO e OLE DB para cada propriedade dinâmica. O referência do programador DB OLE se refere a um nome de propriedade ADO usando o termo, "Description". Você pode encontrar mais informações sobre essas propriedades na referência do OLE DB do programador. Pesquise o nome de propriedade do OLE DB no índice ou veja [apêndice c: OLE DB Properties](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ As tabelas a seguir são um cross-index dos nomes de ADO e OLE DB para cada propriedade dinâmica. O referência do programador DB OLE se refere a um nome de propriedade ADO usando o termo, "Description". Você pode encontrar mais informações sobre essas propriedades na referência do OLE DB do programador. Pesquise o nome da propriedade do OLE DB no índice ou consulte [apêndice c: Propriedades OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Propriedades dinâmicas da Conexão
  As propriedades a seguir são adicionadas para o **Conexão** do objeto **propriedades** coleção.
@@ -256,7 +256,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Níveis de isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Retenção de isolamento|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificador de Localidade|DBPROP_INIT_LCID|
-|Local|DBPROP_INIT_LOCATION|
+|Local padrão|DBPROP_INIT_LOCATION|
 |Tamanho máximo de índice|DBPROP_MAXINDEXSIZE|
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|
 |Tamanho máximo de linha inclui BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|

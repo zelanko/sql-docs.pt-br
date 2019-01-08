@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying filter information
@@ -17,12 +16,12 @@ ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 912722edf3bbd8f1022e9fe0adfcd2bc7237ba6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802148"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>Exibir informações de filtro (SQL Server Profiler)
   Este tópico descreve como exibir filtros em colunas de dados de classes de evento, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

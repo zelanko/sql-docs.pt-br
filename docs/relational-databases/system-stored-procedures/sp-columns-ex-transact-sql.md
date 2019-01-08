@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7224a4e301565dc1bc6f6968da3477792b8cfc22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781484"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588400"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  É o nome do servidor vinculado para o qual as informações de coluna devem ser retornadas. *table_server* está **sysname**, sem padrão.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  É o nome da tabela para a qual as informações de coluna devem ser retornadas. *table_name* está **sysname**, com um padrão NULL.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  É o nome do esquema da tabela para o qual as informações de coluna devem ser retornadas. *table_schema* está **sysname**, com um padrão NULL.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  É o nome do catálogo da tabela para o qual as informações de coluna devem ser retornadas. *table_catalog* está **sysname**, com um padrão NULL.  
   
- [  **@column_name =** ] **'***coluna***'**  
+ [  **@column_name =** ] **'**_coluna_**'**  
  É o nome da coluna do banco de dados para a qual fornecer informações. *coluna* está **sysname**, com um padrão NULL.  
   
- [  **@ODBCVer =** ] **'***ODBCVer***'**  
+ [  **@ODBCVer =** ] **'**_ODBCVer_**'**  
  É a versão do ODBC está sendo usada. *ODBCVer* está **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para obter informações sobre as diferenças de comportamento entre as versões 2 e 3, consulte a especificação de SQLColumns ODBC.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -68,9 +68,9 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome do qualificador da tabela ou exibição. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nome do qualificador da tabela ou exibição. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário da tabela ou exibição. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela ou exibição. Esse campo sempre retorna um valor.|  
 |**COLUMN_NAME**|**sysname**|Nome da coluna para cada coluna do **TABLE_NAME** retornado. Esse campo sempre retorna um valor.|  

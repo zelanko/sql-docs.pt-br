@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086486"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815568"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitorar o desempenho com o Replication Monitor
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor permite monitorar o desempenho da replicação transacional e replicação de mesclagem das seguintes formas:  
@@ -89,7 +88,7 @@ ms.locfileid: "48086486"
  Para obter mais informações sobre como exibir informações de assinatura, consulte [Exibir informações e executar tarefas para uma assinatura &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Determinar a latência com os tokens de rastreamento  
- A replicação transacional permite medir a latência em um sistema inserindo um token (uma pequena quantidade de dados) no log de transações do banco de dados de publicação e registrando o tempo necessário para chegar até o Distribuidor e os Assinantes. O token permitirá também a identificação de dados que não chegam até o Distribuidor ou Assinante. Para obter mais informações, consulte [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
+ A replicação transacional permite medir a latência em um sistema inserindo um token (uma pequena quantidade de dados) no log de transações do banco de dados de publicação e registrando o tempo necessário para chegar até o Distribuidor e os Assinantes. O token permitirá também a identificação de dados que não chegam até o Distribuidor ou Assinante. Para obter mais informações, consulte [Medir a latência e validar as conexões para a replicação transacional](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Exibir o desempenho de sincronização detalhado para replicação de mesclagem  
  Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas para cada artigo processado durante a sincronização, incluindo o tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para mais informações sobre como exibir estatísticas detalhadas, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  

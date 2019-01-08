@@ -16,12 +16,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80b89f52469b2d05bf7f428e4f4b67788b73969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 529d83451c897359152520aecbece856ef7e6ded
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538199"
 ---
 # <a name="create-filtered-indexes"></a>Criar índices filtrados
   Este tópico descreve como criar um índice filtrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice filtrado é um índice não clusterizado otimizado, criado especialmente para consultas que fazem seleções a partir de um subconjunto bem definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta, bem como reduzir os custos de manutenção e de armazenamento do índice em comparação com os índices de tabela completa.  
@@ -64,7 +64,7 @@ ms.locfileid: "48146166"
   
 -   Quando a tabela contém linhas de dados heterogêneos, é possível criar um índice filtrado para uma ou mais categorias de dados. Isso pode melhorar o desempenho das consultas nessas linhas de dados limitando o foco de uma consulta a uma área específica da tabela. Novamente, o índice resultante será menor e sua manutenção será menos dispendiosa em comparação com um índice não clusterizado de tabela completa.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Não é possível criar um índice filtrado em uma exibição. No entanto, o otimizador de consulta pode se beneficiar do índice filtrado definido em uma tabela referenciada em uma exibição. O otimizador de consulta considera um índice filtrado para uma consulta que seleciona uma exibição se os resultados da consulta estiverem corretos.  
   
@@ -105,21 +105,21 @@ ms.locfileid: "48146166"
   
 3.  Clique no sinal de adição ao lado da tabela na qual você deseja criar um índice filtrado.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-6.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
+6.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
 7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 8.  Clique em **OK**.  
   
-9. Na página **Filtro** , em **Expressão de Filtro**, digite a expressão SQL que você usará para criar o índice filtrado.  
+9. Na página **Filtro**, em **Expressão de Filtro**, digite a expressão SQL que você usará para criar o índice filtrado.  
   
 10. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Para criar um índice filtrado  
   

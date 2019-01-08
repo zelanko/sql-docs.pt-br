@@ -1,11 +1,10 @@
 ---
 title: Recursos no SQL Server 2014 do mecanismo de alterações significativas ao banco de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 11/27/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
@@ -14,15 +13,15 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227086"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375268"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações em recursos do Mecanismo de Banco de Dados que causam interrupção no SQL Server 2014
-  Este tópico descreve as últimas alterações no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+  Este tópico descreve as alterações recentes na [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 ##  <a name="SQL14"></a> Últimas alterações do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Nenhum novo problema.  
@@ -31,7 +30,7 @@ ms.locfileid: "48227086"
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |Selecionando a partir de colunas ou tabelas denominadas NEXT|As sequências usam a função NEXT VALUE FOR do padrão ANSI. Se uma tabela ou uma coluna for nomeada NEXT e a tabela ou coluna é um alias como valor, e se o padrão ANSI AS for omitida, a instrução resultante poderá causar um erro. Para obter uma solução alternativa, inclua a palavra-chave AS do padrão ANSI. Por exemplo, `SELECT NEXT VALUE FROM Table` deveria ser reescrito como `SELECT NEXT AS VALUE FROM Table` e `SELECT Col1 FROM NEXT VALUE` deveria ser reescrito como `SELECT Col1 FROM NEXT AS VALUE`.|  
 |operador PIVOT|O operador PIVOT não é permitido em uma consulta CTE (expressão de tabela comum) recursiva quando o nível de compatibilidade do banco de dados é definido como 110. Escreva a consulta novamente ou altere o nível de compatibilidade para 100 ou menos. O uso de PIVOT e uma consulta CTE recursiva produz resultados incorretos quando há mais de uma única linha por agrupamento.|  
@@ -44,14 +43,14 @@ ms.locfileid: "48227086"
 |Navegando em metadados|Consultar uma exibição usando FOR BROWSE ou SET NO_BROWSETABLE ON agora retorna os metadados da exibição, não os metadados do objeto subjacente. Esse comportamento agora corresponde a outros métodos de navegação em metadados.|  
 |SOUNDEX|No nível de compatibilidade de banco de dados 110, a função SOUNDEX implementa novas regras que podem fazer com que os valores computados pela função sejam diferentes dos valores computados sob os níveis de compatibilidade anteriores. Após a atualização para o nível de compatibilidade 110, talvez seja necessário recriar os índices, os heaps ou as restrições CHECK que usam a função SOUNDEX. Para obter mais informações, consulte [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
  para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
-|Mensagem de contagem de linhas para instruções DML com falha|No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssDE](../includes/ssde-md.md)] enviará consistentemente o token TDS DONE com RowCount: 0 aos clientes quando uma instrução DML falhar. Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], um valor incorreto de -1 é enviado ao cliente quando a instrução DML que falha está contida em um bloco TRY-CATCH é parametrizada automaticamente pelo [!INCLUDE[ssDE](../includes/ssde-md.md)] ou o bloco TRY-CATCH não está no mesmo nível da instrução que falhou. Por exemplo, se um bloco TRY-CATCH chamar um procedimento armazenado e uma instrução DML no procedimento falhar, o cliente receberá incorretamente um valor -1.<br /><br /> Os aplicativos que confiarem nesse comportamento incorreto falharão.|  
-|SERVERPROPERTY (‘Edition’)|Edição instalada do produto da instância do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Use o valor dessa propriedade para determinar os recursos e os limites, como o número máximo de CPUs que têm suporte do produto instalado.<br /><br /> Com base na edição instalada do Enterprise, pode retornar ‘Enterprise Edition’ ou ‘Enterprise Edition: licenciamento baseado em núcleo’. As edições Enterprise são diferenciadas com base na capacidade de computação máxima por uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre limites de capacidade de computação na [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
+|Mensagem de contagem de linhas para instruções DML com falha|Em [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssDE](../includes/ssde-md.md)] enviará consistentemente o token TDS DONE com RowCount: 0 para clientes quando uma instrução DML falhar. Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], um valor incorreto de -1 é enviado ao cliente quando a instrução DML que falha está contida em um bloco TRY-CATCH é parametrizada automaticamente pelo [!INCLUDE[ssDE](../includes/ssde-md.md)] ou o bloco TRY-CATCH não está no mesmo nível da instrução que falhou. Por exemplo, se um bloco TRY-CATCH chamar um procedimento armazenado e uma instrução DML no procedimento falhar, o cliente receberá incorretamente um valor -1.<br /><br /> Os aplicativos que confiarem nesse comportamento incorreto falharão.|  
+|SERVERPROPERTY ('edição')|Edição instalada do produto da instância do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Use o valor dessa propriedade para determinar os recursos e os limites, como o número máximo de CPUs que têm suporte do produto instalado.<br /><br /> Com base na edição instalada do Enterprise, isso poderá retornar 'Enterprise Edition' ou ' Enterprise Edition: Licenciamento baseado em núcleo '. As edições Enterprise são diferenciadas com base na capacidade de computação máxima por uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre limites de capacidade de computação na [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|O `CREATE LOGIN WITH PASSWORD = '` *senha* `' HASHED` opção não pode ser usada com os hashes criados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 ou anterior.|  
 |Operações CAST e CONVERT para `datetimeoffset`|Os únicos estilos que têm suporte ao serem convertidos de tipos de data e hora para `datetimeoffset` são 0 ou 1. Todos os outros estilos de conversão retornam erro 9809. Por exemplo, o seguinte código retorna um erro 9809.<br /><br /> `SELECT CONVERT(date, CAST('7070-11-25 16:25:01.00986 -02:07' as datetimeoffset(5)), 107);`|  
   
 ### <a name="dynamic-management-views"></a>Exibições de gerenciamento dinâmico  
   
-|Exibição|Description|  
+|Exibição|Descrição|  
 |----------|-----------------|  
 |sys.dm_exec_requests|As alterações de coluna de comando de `nvarchar(16)` para `nvarchar(32)`.|  
 |sys.dm_os_memory_cache_counters|As seguintes colunas foram renomeadas:<br /><br /> single_pages_kb agora é: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           Agora é: pages_in_use_kb|  
@@ -64,16 +63,16 @@ ms.locfileid: "48227086"
   
 ### <a name="catalog-views"></a>Exibições do catálogo  
   
-|Exibição|Description|  
+|Exibição|Descrição|  
 |----------|-----------------|  
 |sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|Uma nova coluna, is_system, foi adicionada a sys.data_spaces e sys.partition_functions. (sys.partition_schemes e sys.filegroups herdam as colunas de sys.data_spaces.)<br /><br /> Um valor de 1 nessa coluna indica que o objeto foi usado para fragmentos de índice de texto completo.<br /><br /> Em sys.partition_functions, sys.partition_schemes e sys.filegroups, a nova coluna não é a última coluna. Revise as consultas existentes que confiam na ordem das colunas retornadas dessas exibições de catálogo.|  
   
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>Tipos de dados de SQL CLR (geometria, geografia e hierarchyid)  
  O assembly **Types**, que contém os tipos de dados espaciais e o tipo hierarchyid, foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando as condições a seguir forem verdadeiras.  
   
--   Quando você move um aplicativo personalizado de um computador no qual [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] tiver sido instalado em um computador no qual apenas [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] é instalado, o aplicativo falhará porque a versão referenciada 10.0 do **SqlTypes** assembly não está presente. Talvez você receba esta mensagem de erro: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   Quando você move um aplicativo personalizado de um computador no qual [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] tiver sido instalado em um computador no qual apenas [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] é instalado, o aplicativo falhará porque a versão referenciada 10.0 do **SqlTypes** assembly não está presente. Você verá esta mensagem de erro: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   Quando você faz referência a **SqlTypes** assembly versão 11.0 e a versão 10.0 também estiver instalada, você poderá ver esta mensagem de erro: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   Quando você faz referência a **SqlTypes** assembly versão 11.0 e a versão 10.0 também estiver instalada, você poderá ver esta mensagem de erro: `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
 -   Quando você faz referência a **SqlTypes** assembly versão 11.0 de um aplicativo personalizado que tem como alvo o .NET 3.5, 4 ou 4.5, o aplicativo falhará porque o SqlClient por design carrega a versão 10.0 do assembly. Essa falha ocorre quando o aplicativo chama um dos seguintes métodos:  
   
@@ -197,43 +196,43 @@ ms.locfileid: "48227086"
 ##  <a name="KJKatmai"></a> Alterações recentes no SQL Server 2008/SQL Server 2008 R2  
  Esta seção contém as últimas alterações introduzidas no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nenhuma alteração foi introduzida no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
-### <a name="collations"></a>Agrupamentos  
+### <a name="collations"></a>Ordenações  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
-|Novos agrupamentos|O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] introduz novos agrupamentos totalmente alinhados aos agrupamentos fornecidos pelo Windows Server 2008. Esses 80 novos agrupamentos melhoraram a exatidão linguística e foram indicados por referências à versão *_100. Se você escolher um agrupamento novo para o servidor ou para o banco de dados, lembre-se de que o agrupamento pode não ser reconhecido pelos clientes com drivers de clientes mais antigos. Agrupamentos não reconhecidos podem fazer com que o aplicativo retorne erros e apresente falhas. Considere as seguintes soluções:<br /><br /> Atualize o sistema operacional do cliente para que os agrupamentos de sistemas subjacentes sejam atualizados.<br /><br /> Se houver um software cliente do banco de dados instalado no cliente, considere a possibilidade de aplicar uma atualização de serviço ao software cliente do banco de dados.<br /><br /> Escolha um agrupamento existente, mapeado para uma página de código no cliente.|  
+|Novas ordenações|O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] introduz novas ordenações totalmente alinhadas às ordenações fornecidas pelo Windows Server 2008. Essas 80 novas ordenações melhoraram a exatidão linguística e foram indicadas por referências à versão *_100. Se você escolher uma ordenação nova para o servidor ou para o banco de dados, lembre-se de que a ordenação pode não ser reconhecida pelos clientes com drivers de clientes mais antigos. Ordenações não reconhecidas podem fazer com que o aplicativo retorne erros e apresente falhas. Considere as seguintes soluções:<br /><br /> Atualize o sistema operacional do cliente para que as ordenações de sistemas subjacentes sejam atualizadas.<br /><br /> Se houver um software cliente do banco de dados instalado no cliente, considere a possibilidade de aplicar uma atualização de serviço ao software cliente do banco de dados.<br /><br /> Escolha uma ordenação existente, mapeada para uma página de código no cliente.|  
   
 ### <a name="common-language-runtime-clr"></a>CLR (Common Language Runtime)  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |Assemblies CLR|Quando um banco de dados é atualizado para [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], o assembly do `Microsoft.SqlServer.Types` para dar suporte a novos tipos de dados é instalado automaticamente. As regras do Supervisor de Atualização detectam qualquer tipo de usuário ou assemblies de usuário com nomes conflitantes. O Supervisor de Atualização aconselhará renomear qualquer assembly em conflito, bem como qualquer tipo em conflito, ou usar nomes de duas partes no código para fazer referência a esse tipo de usuário preexistente.<br /><br /> Se uma atualização de banco de dados detectar um assembly de usuário com um nome conflitante, ele o renomeará automaticamente e o colocará no banco de dados em modo de suspeição.<br /><br /> Se um tipo de usuário com nome conflitante existir durante a atualização, nenhuma etapa especial será efetuada. Depois da atualização, existirão ambos os tipos de usuário, antigo e novo. O tipo de usuário só estará disponível através de nomes de duas partes.|  
-|Assemblies CLR|O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] instala o .NET Framework 3.5 SP1, que atualiza bibliotecas no GAC (cache de assembly global). Se você tiver bibliotecas sem-suporte registradas em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o aplicativo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá parar de funcionar após a atualização para o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Isso ocorre porque o serviço de reparo ou a atualização de bibliotecas no GAC não atualiza os assemblies dentro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se um assembly existir tanto em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como no GAC, as duas cópias do assembly deverão ser exatamente iguais. Caso isso não aconteça, ocorrerá um erro quando o assembly for usado pela integração CLR do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [suporte para bibliotecas do .NET Framework](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).<br /><br /> Depois de atualizar o banco de dados, mantenha ou atualize a cópia do assembly dentro dos bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com a instrução ALTER ASSEMBLY. Para obter mais informações, consulte [artigo 949080 da Base de dados de Conhecimento](http://go.microsoft.com/fwlink/?LinkId=154563).<br /><br /> Para detectar se você está usando uma biblioteca do .NET Framework sem-suporte no aplicativo, execute a seguinte consulta no banco de dados.<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
+|Assemblies CLR|O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] instala o .NET Framework 3.5 SP1, que atualiza bibliotecas no GAC (cache de assembly global). Se você tiver bibliotecas sem-suporte registradas em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o aplicativo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá parar de funcionar após a atualização para o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Isso ocorre porque o serviço de reparo ou a atualização de bibliotecas no GAC não atualiza os assemblies dentro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se um assembly existir tanto em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como no GAC, as duas cópias do assembly deverão ser exatamente iguais. Caso isso não aconteça, ocorrerá um erro quando o assembly for usado pela integração CLR do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [suporte para bibliotecas do .NET Framework](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).<br /><br /> Depois de atualizar o banco de dados, mantenha ou atualize a cópia do assembly dentro dos bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com a instrução ALTER ASSEMBLY. Para obter mais informações, consulte [artigo 949080 da Base de dados de Conhecimento](https://go.microsoft.com/fwlink/?LinkId=154563).<br /><br /> Para detectar se você está usando uma biblioteca do .NET Framework sem-suporte no aplicativo, execute a seguinte consulta no banco de dados.<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
 |Rotinas CLR|O uso da representação dentro de funções CLR definidas pelo usuário, de agregações definidas pelo usuário ou de UDTs (tipos definidos pelo usuário) pode causar o erro 6522 no aplicativo após a atualização para o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Os cenários a seguir são executados com êxito no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], mas falham no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. São apresentadas resoluções para cada cenário.<br /><br /> Uma função CLR definida pelo usuário, uma agregação definida pelo usuário ou um método UDT que utiliza representação tem um parâmetro do tipo `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text`, `image`, ou um UDT grande e não tiver o  **DataAccessKind. Read** atributo no método. Para resolver esse problema, adicione a **DataAccessKind. Read** de atributo no método, recompile o assembly e reimplante a rotina e o assembly.<br /><br /> Uma função CLR com valor de tabela que tem um **Init** método que executa representação. Para resolver este problema, adicione a **DataAccessKind. Read** de atributo no método, recompile o assembly e reimplante a rotina e o assembly.<br /><br /> Uma função CLR com valor de tabela que tem um **FillRow** método que executa representação. Para resolver esse problema, remova a representação do **FillRow** método. Acesse recursos externos usando o **FillRow** método. Em vez disso, acessar recursos externos do **Init** método.|  
   
 ### <a name="dynamic-management-views"></a>Exibições de gerenciamento dinâmico  
   
-|Exibição|Description|  
+|Exibição|Descrição|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|Foram removidas as colunas cpu_ticks_in_ms e sqlserver_start_time_cpu_ticks.|  
 |sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|A coluna resource_semaphore_id não é uma ID exclusiva no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Essa alteração pode afetar a execução de consulta de solução de problemas. Para obter mais informações, consulte [DM exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
   
 ### <a name="errors-and-events"></a>Erros e eventos  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |Erros de logon|No [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], o erro 18452 é retornado quando um logon do SQL é usado para conexão a um servidor configurado para usar somente a Autenticação do Windows. No [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], o erro 18456 é retornado.|  
   
-### <a name="showplan"></a>Plano de Execução  
+### <a name="showplan"></a>Showplan  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |Esquema XML do plano de execução|Uma nova **SeekPredicateNew** elemento é adicionado ao esquema Showplan XML e a sequência de xsd delimitador (**SqlPredicatesType**) é convertido em um  **\<xsd: choice >** item. Em vez de um ou mais **SeekPredicate** elementos, um ou mais **SeekPredicateNew** elementos podem aparecer agora no Showplan XML. Os dois elementos são mutuamente exclusivos. **SeekPredicate** é mantido no esquema XML Showplan para versões anteriores compatibilidade; no entanto, planos de consulta criados no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] pode conter o **SeekPredicateNew** elemento. Aplicativos que esperam recuperar somente os **SeekPredicate** filho do nó ShowPlanXML/BatchSequence/lote/instruções/StmtSimple/QueryPlan/RelOp/IndexScan/SeekPredicates poderá falhar se o  **SeekPredicate** o elemento não existe. Reescreva o aplicativo para esperar o a **SeekPredicate** ou **SeekPredicateNew** elemento neste nó. Para obter mais informações, consulte .|  
 |Esquema XML do plano de execução|Uma nova **IndexKind** atributo é adicionado para o **ObjectType** tipo complexo no esquema de Showplan XML. Haverá falha nos aplicativos que validam estritamente os planos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em relação ao esquema do [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)].|  
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |Evento DDL ALTER_AUTHORIZATION_DATABASE|Na [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], quando o evento DDL ALTER_AUTHORIZATION_DATABASE é acionado, o valor 'object' é retornado na **ObjectType** elemento do xml EVENTDATA para esse evento quando o tipo de entidade do protegível na definição de dados operação DDL (linguagem) é um objeto. No [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], o tipo real (por exemplo, 'table' ou 'function') é retornado.|  
 |CONVERT|Se um estilo inválido for passado para a função CONVERT, será retornado um erro quando o tipo de conversão for de binário em caractere ou de caractere em binário. Em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o estilo inválido era definido como o estilo padrão para conversões de binário em caractere e de caractere em binário.|  
@@ -249,27 +248,28 @@ ms.locfileid: "48227086"
   
 ### <a name="xquery"></a>XQuery  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
-|Suporte à data/hora|Na [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], os tipos de dados `xs:time`, `xs:date`, e `xs:dateTime` não têm suporte de fuso horário. Os dados de fuso horário são mapeados para o fuso horário de UTC. O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] fornece comportamento de conformidade padrão, o que resulta nas seguintes alterações:<br /><br /> Os valores sem fuso horário são validados.<br /><br /> O fuso horário fornecido ou a ausência de um fuso horário é preservada.<br /><br /> A representação de armazenamento interna é modificada.<br /><br /> A resolução de valores armazenados é aumentada.<br /><br /> Anos negativos não são permitidos.<br /><br /> <br /><br /> Observação: Modificar aplicativos e as expressões XQuery para levar em conta os novos valores de tipo.|  
+|Suporte à data/hora|Na [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], os tipos de dados `xs:time`, `xs:date`, e `xs:dateTime` não têm suporte de fuso horário. Os dados de fuso horário são mapeados para o fuso horário de UTC. O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] fornece comportamento de conformidade padrão, o que resulta nas seguintes alterações:<br /><br /> Os valores sem fuso horário são validados.<br /><br /> O fuso horário fornecido ou a ausência de um fuso horário é preservada.<br /><br /> A representação de armazenamento interna é modificada.<br /><br /> A resolução de valores armazenados é aumentada.<br /><br /> Anos negativos não são permitidos.<br /><br /> <br /><br /> Observação: Modifique os aplicativos e as expressões XQuery para considerar os novos valores de tipo.|  
 |Expressões XQuery e Xpath|No [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], as etapas em uma expressão XQuery ou XPath que começam com dois-pontos (': ') são permitidos. Por exemplo, a instrução a seguir contém um teste de nome (`CTR02)` dentro da expressão de caminho que começa com um dois pontos.<br /><br /> `SELECT FileContext.query('for n$ in //CTR return <C>{data )(n$/:CTR02)} </C>) AS Files FROM dbo.MyTable;`<br /><br /> No [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] esse uso não é permitido porque não está de acordo com os padrões XML. O erro 9341 é retornado. Remova o dois-pontos à esquerda ou especifique um prefixo para o teste de nome, por exemplo, (n$/CTR02) ou (n$/p1:CTR02).|  
   
 ### <a name="connecting"></a>Connecting  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |Estabelecendo conexão a partir do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client usando SSL|Na conexão com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, os aplicativos que usam "SERVER=shortname; FORCE ENCRYPTION=true" com certificado cujos Assuntos especificam FQDNs (nomes de domínios totalmente qualificados) antes se conectavam devido à validação reduzida. O SQL Server 2008 R2 aprimora a segurança impondo assuntos de FQDN para certificados. Os aplicativos que dependem de validação reduzida devem executar uma das seguintes ações:<br /><br /> Use o FQDN na cadeia de caracteres de conexão.<br /><br /> -Esta opção não exigirá recompilação do aplicativo se a palavra-chave do servidor da cadeia de caracteres de conexão for configurada fora do aplicativo.<br /><br /> -Esta opção não funciona para aplicativos que têm as cadeias de caracteres de conexão embutidas no código.<br /><br /> -Esta opção não funciona para aplicativos que usam o espelhamento de banco de dados desde o servidor espelhado responde com um nome simples.|  
 ||Adicione um alias para o nome curto mapear para o FQDN.<br /><br /> -Esta opção funciona mesmo para aplicativos que têm as cadeias de caracteres de conexão embutidas no código.<br /><br /> -Esta opção não funciona para aplicativos que usam o espelhamento de banco de dados, pois os provedores não procuram aliases para nomes de parceiro de failover recebidos.|  
 ||Tenha um certificado emitido para nome curto.<br /><br /> -Esta opção funciona para todos os aplicativos.|  
-  
-##  <a name="Yukon"></a> Alterações recentes no SQL Server 2005  
- Para obter uma lista das últimas alterações introduzidas no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], consulte [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
-  
+
+## <a name="Yukon"></a> Alterações recentes no SQL Server 2005  
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>Consulte também  
  [Recursos do mecanismo de banco de dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
  [Alterações no comportamento de recursos do mecanismo de banco de dados no SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
  [Funcionalidade do mecanismo de banco de dados descontinuada no SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](sql-server-database-engine-backward-compatibility.md)   
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
-  
+ [Alterações de quebra feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  
   

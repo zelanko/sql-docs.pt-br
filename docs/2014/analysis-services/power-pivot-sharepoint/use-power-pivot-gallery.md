@@ -11,12 +11,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113586"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416927"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar a Galeria PowerPivot
   A Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma biblioteca de documentos do SharePoint, com finalidade especial, que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
@@ -50,14 +50,14 @@ ms.locfileid: "48113586"
 >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
 > Para exibir o conteúdo da biblioteca no Microsoft Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
 > Para alterar a exibição padrão, clique na guia **Biblioteca** e depois clique em Modificar exibição. Clique em "Fazer desta a exibição padrão" e, em seguida, clique em OK para salvar a exibição padrão.  
->  Para obter mais informações sobre ao que o Microsoft Edge dá suporte, consulte o blog do Windows, [Uma ruptura com o passado, parte 2: adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Para obter mais informações sobre quais Edge dá suporte, consulte o blog do Windows, [uma ruptura com o passado, parte 2: Adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Para obter uma lista completa dos pré-requisitos, consulte [criar e personalizar a Galeria PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
 ##  <a name="icons"></a> Ícones na Galeria do PowerPivot  
  Os ícones fornecem um indicativo visual quanto à disponibilidade do conteúdo e ao status.  
   
-|Ícone|Description|  
+|Ícone|Descrição|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|O ícone de ampulheta é exibido quando uma imagem em miniatura de cada página no documento está sendo gerada. Atualize a página para exibir a atualização da imagem.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|O ícone de página é exibido quando uma pasta de trabalho ou um relatório tem mais páginas do que as que podem ser exibidas na Galeria PowerPivot. Para exibir todas as páginas, você deve usar um aplicativo cliente.|  
@@ -70,13 +70,13 @@ ms.locfileid: "48113586"
   
 1.  Salve o arquivo.  
   
-2.  1.  **Excel 2010:** no menu Arquivo, clique em **Salvar e Enviar**.  
+2.  1.  **Excel 2010:** No menu Arquivo, clique em **salvar e enviar**.  
   
     2.  Clique em **Salvar no SharePoint**.  
   
     3.  Clique em **Opções de Publicação** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
-    1.  **Excel 2013:**  no menu Arquivo do Excel, clique em **Salvar**  
+    1.  **Excel 2013:**  No menu Arquivo, clique em **salvar**.  
   
     2.  Clique em **Opções de Exibição do Navegador** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48113586"
 |![GMNI_btn_NewDocReportGallery](../media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|Clique na parte de seta para baixo do botão Novo Relatório para iniciar o Construtor de Relatórios ou o Excel 2010. A Galeria do PowerPivot deve usar uma das exibições pré-criadas (Teatro, Galeria ou Carrossel) para o botão Novo Relatório estar disponível.|  
   
 #### <a name="create-report-builder-report"></a>Criar relatórios no Construtor de Relatórios  
- A criação de um novo relatório baseado em uma pasta de trabalho PowerPivot existente na biblioteca exige a configuração do Reporting Services para integração do SharePoint para os mesmos sites que contêm a Galeria PowerPivot. Quando você selecionar a opção Criar Relatório do Construtor de Relatórios, o Construtor de Relatórios será baixado do servidor de relatórios e instalado na estação de trabalho local em primeiro uso. Um arquivo de relatório de espaço reservado é criado para o novo relatório e salvo na Galeria do PowerPivot. As informações de conexão para a pasta de trabalho PowerPivot são criadas para você como uma nova fonte de dados no relatório. Como uma próxima etapa, você pode criar conjuntos de dados e layout de relatório no espaço de trabalho do projeto. À medida que você usar o Construtor de Relatórios para montar seu relatório, você poderá salvar suas alterações e o resultado final no documento de relatório na galeria. Para evitar desconexões de dados posteriormente, certifique-se de manter juntos os arquivos de relatório e pasta de trabalho na mesma biblioteca.  
+ A criação de um novo relatório baseado em uma pasta de trabalho PowerPivot existente na biblioteca exige a configuração do Reporting Services para integração do SharePoint para os mesmos sites que contêm a Galeria PowerPivot. Quando você selecionar a opção Criar Relatório do Construtor de Relatórios, o Construtor de Relatórios será baixado do servidor de relatórios e instalado na estação de trabalho local em primeiro uso. Um arquivo de relatório de espaço reservado é criado para o novo relatório e salvo na Galeria do PowerPivot. As informações de conexão para a pasta de trabalho PowerPivot são criadas para você como uma nova fonte de dados no relatório. Como uma próxima etapa, você pode criar conjuntos de dados e layout de relatório no workspace de design. À medida que você usar o Construtor de Relatórios para montar seu relatório, você poderá salvar suas alterações e o resultado final no documento de relatório na galeria. Para evitar desconexões de dados posteriormente, certifique-se de manter juntos os arquivos de relatório e pasta de trabalho na mesma biblioteca.  
   
 #### <a name="open-new-excel-workbook"></a>Abrir Nova Pasta de Trabalho do Excel  
  Para criar uma nova pasta de trabalho do Excel a partir de uma pasta de trabalho existente, você já deve ter o Excel e o [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] no computador local. A escolha de Abrir Nova Pasta de Trabalho do Excel abre um arquivo de pasta de trabalho em branco (.xlsx) e carrega dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em segundo plano, como uma fonte de dados conectada. Somente os dados da janela do PowerPivot na pasta de trabalho original são usados na nova pasta de trabalho. Tabelas Dinâmicas ou Gráficos Dinâmicos são excluídos da pasta de trabalho original. A nova pasta de trabalho vincula a dados na pasta de trabalho original. Os dados não são copiados na própria pasta de trabalho nova.  
@@ -155,9 +155,9 @@ ms.locfileid: "48113586"
 ### <a name="document-type-is-not-supported"></a>Não há suporte ao tipo de documento  
  O tipo de conteúdo **Documento de Galeria PowerPivot** não tem suporte. Se você habilitar o tipo de conteúdo **Documento de Galeria PowerPivot** para uma biblioteca de documentos e tentar criar um novo documento desse tipo, verá uma mensagem de erro semelhante a uma destas:  
   
--   O ‘Novo Documento’ exige um aplicativo e um navegador da Web compatíveis com o Microsoft SharePoint Foundation. Para adicionar um documento nessa biblioteca de documentos, clique no botão 'Carregar Documento'.  
+-   'Novo documento' exige um navegador de aplicativo e da web compatível com o Microsoft Sharepoint Foundation. Para adicionar um documento à biblioteca de documentos, clique no botão 'Carregar documento'.  
   
--   "O endereço na Internet 'http://[nome do servidor]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' não é válido."“O Microsoft Excel não consegue acessar o arquivo 'http://[nome do servidor]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Há várias razões possíveis:  
+-   "O endereço de Internet ' nome http://[server] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx ' não é válido." " O Microsoft Excel não pode acessar o arquivo ' nome http://[server] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx '. Há várias razões possíveis:  
   
  O tipo de conteúdo do **Documento de Galeria PowerPivot** não é adicionado automaticamente nas bibliotecas de documentos. Você não encontrará esse problema, a menos que habilite manualmente o tipo de conteúdo sem suporte.  
   

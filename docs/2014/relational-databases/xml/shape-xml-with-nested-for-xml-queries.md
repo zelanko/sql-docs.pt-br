@@ -14,12 +14,12 @@ ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 917e6a4b5e354b95207e9293879bdb9fb1effb28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49978eaceed27e2cfd363cc6a4654d581a91e4c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155026"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372686"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Formar XML com consultas FOR XML aninhadas
   O exemplo a seguir consulta a tabela `Production.Product` para recuperar os valores de `ListPrice` e `StandardCost` de um produto específico. Para tornar a consulta interessante, os dois preços são retornados em um elemento <`Price`> e cada elemento <`Price`> tem um atributo `PriceType`.  
@@ -28,8 +28,8 @@ ms.locfileid: "48155026"
  Esta é a forma esperada do XML:  
   
 ```  
-<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.Product" type="xsd:anyType" />  
 </xsd:schema>  
 <Production.Product xmlns="urn:schemas-microsoft-com:sql:SqlRowSet2" ProductID="520">  
@@ -86,9 +86,9 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- O exemplo anterior usa o `query()` método da `xml` dados de tipo para consultar o XML retornado pela consulta FOR XML interna e construir o resultado esperado.  
+ O exemplo anterior usa o método `query()` do tipo de dados `xml` para consultar o XML retornado pela consulta FOR XML interna e construir o resultado esperado.  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <Production.Product ProductID="520">  

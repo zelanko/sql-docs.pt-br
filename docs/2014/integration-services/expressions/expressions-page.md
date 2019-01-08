@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionspage.f1
@@ -15,12 +14,12 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb12bb684753a5d965054e361f8b0b23ebf7802d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01cabd46c51ed09af8d5de3a173e218dedbd5ac1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150466"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773238"
 ---
 # <a name="expressions-page"></a>Página Expressões
   Use a página **Expressões** para editar as expressões de propriedade e para acessar as caixas de diálogo **Editor de Expressões de Propriedades** e **Construtor de Expressões de Propriedade** .  
@@ -30,14 +29,14 @@ ms.locfileid: "48150466"
  Para saber mais sobre expressões de gravação e como usar expressões de propriedade, consulte [Integration Services &#40;SSIS&#41; Expressions](integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](use-property-expressions-in-packages.md).  
   
 ## <a name="options"></a>Opções  
- **Expressões (…)**  
+ **Expressões (...)**  
  Clique nas reticências para abrir a caixa de diálogo **Editor de Expressões de Propriedade** . Para obter mais informações, consulte [Editor de expressões de propriedade](property-expressions-editor.md).  
   
  **\<nome da propriedade>**  
  Clique nas reticências para abrir a caixa de diálogo **Construtor de Expressões** . Para obter mais informações, consulte [Expression Builder](expression-builder.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; variáveis](../integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md)   
  [Variáveis do Sistema](../system-variables.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](integration-services-ssis-expressions.md)  
   

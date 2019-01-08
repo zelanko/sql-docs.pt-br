@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796505"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590590"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@queue_type** = ] **'***queue_type***'**  
+ [ **@queue_type** =] **'**_queue_type_**'**  
  Argumento opcional exclui emails do tipo especificado como o *queue_type*. *QUEUE_TYPE* está **nvarchar(6)** sem nenhum padrão. As entradas válidas são **mail** e **status**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -48,7 +48,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|O tipo de fila. Os valores possíveis são **mail** e **status**.|  
 |**Comprimento**|**int**|O número de itens de email na fila especificada.|  

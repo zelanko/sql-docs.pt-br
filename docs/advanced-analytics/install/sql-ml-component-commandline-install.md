@@ -1,5 +1,6 @@
 ---
-title: Instalação de componentes de R e Python de aprendizado de máquina do SQL Server do prompt de comando | Microsoft Docs
+title: Instalação de componentes de R e Python – Machine Learning do SQL Server do prompt de comando
+description: Execute a instalação de linha de comando do SQL Server para adicionar a linguagem R e a integração do Python para uma instância do mecanismo de banco de dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/21/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77b68c6206e069a29821549998714a671239ca56
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434866"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645508"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instalar componentes da linha de comando do R e Python de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,13 +46,13 @@ O argumento de recursos é necessário, como são contratos de termo de licença
 
 Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao modo silencioso completo usando o parâmetro /Q ou o modo Silencioso Simples usando o parâmetro /QS. A opção /QS mostra apenas o andamento, não aceita nenhuma entrada e não exibe nenhuma mensagem de erro, se encontrado. O parâmetro /QS só tem suporte quando /Action=install é especificado.
 
-| Argumentos | Description |
+| Argumentos | Descrição |
 |-----------|-------------|
-| / RECURSOS = AdvancedAnalytics | Instala a versão no banco de dados: SQL Server 2017 Machine Learning Services (no banco de dados) ou SQL Server 2016 R Services (no banco de dados).  |
+| / RECURSOS = AdvancedAnalytics | Instala a versão no banco de dados: Serviços de Machine Learning do SQL Server 2017 (no banco de dados) ou SQL Server 2016 R Services (no banco de dados).  |
 | /FEATURES = SQL_INST_MR | Aplica-se ao SQL Server 2017 apenas. Combinar isso com AdvancedAnalytics. Instala o recurso (no banco de dados) R, incluindo Microsoft R Open e pacotes de R proprietários. O recurso do SQL Server 2016 R Services é R somente, portanto, não há nenhum parâmetro para essa versão.|
 | /FEATURES = SQL_INST_MPY | Aplica-se ao SQL Server 2017 apenas. Combinar isso com AdvancedAnalytics. Instala o recurso de Python (no banco de dados), incluindo Anaconda e os pacotes do Python proprietários. |
 | /FEATURES = SQL_SHARED_MR | Instala o recurso do R para a versão autônoma: SQL Server 2017 Machine Learning Server (autônomo) ou SQL Server 2016 R Server (autônomo). Um servidor autônomo é um "recurso compartilhado" não associado a uma instância do mecanismo de banco de dados.|
-| /FEATURES = SQL_SHARED_MPY | Aplica-se ao SQL Server 2017 apenas. Instala o recurso de Python para a versão autônoma: Machine Learning Server (autônomo) do SQL Server 2017. Um servidor autônomo é um "recurso compartilhado" não associado a uma instância do mecanismo de banco de dados.|
+| /FEATURES = SQL_SHARED_MPY | Aplica-se ao SQL Server 2017 apenas. Instala o recurso de Python para a versão autônoma: SQL Server 2017 Machine Learning Server (autônomo). Um servidor autônomo é um "recurso compartilhado" não associado a uma instância do mecanismo de banco de dados.|
 | /IACCEPTROPENLICENSETERMS  | Indica que você aceitou os termos de licença para usar os componentes de R de software livre. |
 | /IACCEPTPYTHONLICENSETERMS | Indica que você aceitou os termos de licença para usar os componentes do Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica que você aceitou os termos de licença para usar o SQL Server.|
@@ -72,7 +73,7 @@ Para exibir informações sobre o andamento sem a interativa na tela prompts, us
 
 Para uma instalação simultânea da instância do mecanismo de banco de dados, forneça o nome da instância e um logon de administrador (Windows). Inclua recursos para instalação de núcleo e componentes de linguagem, bem como a aceitação dos termos de licenciamento de todos os.
 
-```  
+```cmd
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -80,7 +81,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,
 
 Esse mesmo comando, mas com um logon do SQL Server em um mecanismo de banco de dados usando autenticação mista.
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<sql-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -88,7 +89,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 Este exemplo é Python, mostrando que você pode adicionar um idioma, omitindo um recurso.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTPYTHONLICENSETERMS
@@ -98,7 +99,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 
 Esse comando é idêntico ao SQL Server 2017, mas sem os elementos do Python, que não estão disponível na instalação do SQL Server 2016.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS 
@@ -122,7 +123,7 @@ Para o SQL Server 2016, use este artigo em vez disso [instalar o SQL Server 2016
 
 Ao adicionar a análise avançada no banco de dados a uma instância de mecanismo de banco de dados existente, forneça o nome de instância. Por exemplo, se você instalou anteriormente um mecanismo de banco de dados do SQL Server 2017 e Python, você pode usar esse comando para adicionar o R.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
@@ -133,7 +134,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 Uma instalação silenciosa suprime a verificação de locais de arquivo. cab. Por esse motivo, você deve especificar o local em que os arquivos. cab devem ser descompactada. Você pode o diretório temporário para isso.
  
-```  
+```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
@@ -146,21 +147,21 @@ Um servidor autônomo é um "recurso compartilhado" não associado a uma instân
 
 SQL Server 2017 dá suporte ao Python e R em um servidor autônomo:
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 SQL Server 2016 é somente para R:
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
 /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 Quando a instalação for concluída, você deve ter um servidor, pacotes da Microsoft, as distribuições de software livre de R e Python, ferramentas, exemplos e scripts que fazem parte da distribuição. 
 
-Abra uma janela de console do R, \R_SERVER\bin\x64 go \Program files\Microsoft SQL Server\140 (ou 130) e clique duas vezes **RGui.exe**. Você é novo no R? Experimente esse tutorial: [comandos de R básicos e funções de RevoScaleR: 25 exemplos comuns](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
+Abra uma janela de console do R, \R_SERVER\bin\x64 go \Program files\Microsoft SQL Server\140 (ou 130) e clique duas vezes **RGui.exe**. Você é novo no R? Experimente esse tutorial: [Comandos básicos de R e funções de RevoScaleR: exemplos comuns de 25](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Para abrir um comando do Python, vá para \Program Server\140\PYTHON_SERVER\bin\x64 SQL e clique duas vezes em **python.exe**.
 
@@ -179,11 +180,11 @@ Para verificar o status da instalação da instância e corrigir problemas comun
 Os desenvolvedores do R podem começar com alguns exemplos simples e aprender os fundamentos de como o R funciona com o SQL Server. Para a próxima etapa, consulte os links a seguir:
 
 + [Tutorial: Executar R no T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Análise de no banco de dados para os desenvolvedores do R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Análise no banco de dados para os desenvolvedores do R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Os desenvolvedores de Python podem aprender como usar o Python com o SQL Server seguindo estes tutoriais:
 
-+ [Tutorial: Executar o Python no T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: Análise de no banco de dados para desenvolvedores do Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutorial: Execute o Python no T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutorial: Análise no banco de dados para desenvolvedores do Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Para exibir exemplos de aprendizado de máquina com base em cenários do mundo real, consulte [tutoriais de aprendizado de máquina](../tutorials/machine-learning-services-tutorials.md).

@@ -11,12 +11,12 @@ ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c4fe81ed240f210157e450b6c54fe370e22bcb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094126"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397756"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introdução à mineração de dados (Suplementos de Mineração de Dados para Excel)
   A mineração de dados é o processo de descoberta de padrões significativos nos dados. A mineração de dados é um complemento natural ao processo de explorar e entender seus dados por meio de BI tradicional. Os algoritmos da máquina podem processar grandes quantidades de dados e descobrir padrões e tendências que, de outra forma, ficariam ocultos.  
@@ -52,19 +52,19 @@ ms.locfileid: "48094126"
 ## <a name="define-your-goal"></a>Defina sua meta  
  Antes de começar, considere a pergunta que você realmente quer responder. A exploração é esclarecedora por si só, mas se você quiser aplicar suas descobertas a novos dados, deverá mencionar claramente o que espera que o modelo produza e como medirá se o modelo realiza essas metas.  
   
- Por exemplo, em vez de uma meta de “localizar novos clientes”, esclareça seu objetivo como algo mais completo, como “identificar os dados demográficos dos clientes que provavelmente comprarão nosso produto com uma probabilidade de pelo menos 65%”.  
+ Por exemplo, em vez de uma meta de "localizar novos clientes", esclareça seu objetivo como algo mais concreto, como "identificar os dados demográficos dos clientes que provavelmente comprarão nosso produto, com uma probabilidade de pelo menos 65%".  
   
 -   O conjunto de dados deve conter pelo menos um atributo de "resultado" que você pode usar para treinamento e previsão. Se não houver tal atributo, é possível rotular manualmente alguns dados de treinamento ou usar outras colunas para criar um proxy para o resultado.  
   
-     Por exemplo, se você quiser prever “os melhores clientes potenciais”, deverá aplicar algumas regras de negócio antes de rotular clientes existentes, de modo que a mineração de dados possa aprender com os exemplos que você fornece.  
+     Por exemplo, se você quiser prever "os melhores clientes potenciais", você deve aplicar algumas regras de negócio antes de rotular clientes existentes, para que a mineração de dados possa aprender com os exemplos que você fornece.  
   
 -   Se você estiver trabalhando com um valor que é alterado com o passar do tempo e quiser prever tendências do futuro, pense sobre a granularidade dos resultados necessários. Você deseja previsões para um mês, um dia ou anualmente? Os dados precisam ser analisados usando as mesmas unidades que você deseja prever.  
   
-     Com padrões cíclicos, se você não tiver bons resultados com dados diários, tente frações de tempo diferentes ou tente usar dias da semana, meses ou mesmo feriados.  
+     Com padrões cíclicos, se você não tiver bons resultados com dados diários, tente frações de tempo diferente ou tente usar dias da semana, meses ou mesmo feriados.  
   
 -   Antes de iniciar um assistente para localizar novas correlações em seus dados, dê mais uma olhada em seus dados e considere o que tipo de relações existentes que podem estar presentes no conjunto de dados. Há variáveis de confusão? Há duplicatas ou proxies?  
   
--   Quais são as métricas pelas quais o sucesso do modelo será avaliado? Como você saberá que o modelo é "bom o bastante”? “  
+-   Quais são as métricas pelas quais o sucesso do modelo será avaliado? Como você saberá que o modelo é "bom o bastante"?  
   
 -   Deseja fazer previsões com base no modelo de mineração de dados ou apenas procurar padrões e associações interessantes?  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48094126"
   
  Dedique um tempo à exibição da distribuição de valores e identifique possíveis problemas, como valores ausentes ou espaços reservados.  
   
- Se você estiver planejando executar a mineração de dados em um conjunto de dados que era tão grande ou complexo que você não podia analisá-lo com outros métodos, considere a amostragem ou a redução de dados.  
+ Se você estiver planejando executar a mineração de dados em um conjunto de dados que era tão grande ou complexo que não foi possível analisá-lo com outros métodos, considere a amostragem ou redução de dados.  
   
 -   Como os dados são distribuídos?  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48094126"
  [Explorando e limpando dados](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Validar o modelo  
- Ao executar cada assistente ou ferramenta, o algoritmo analisa o conteúdo dos dados e determina se um padrão estatisticamente válido existe. Se o algoritmo não puder localizar padrão válidos, você receberá uma mensagem de erro. Porém, mesmo que um modelo tenha sido criado com êxito, você desejará testar o modelo para ver se ele valida suas suposições. Você pode usar ferramentas como o [gráfico de precisão &#40;SQL Server Data Mining Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) ou [validação cruzada &#40;SQL Server Data Mining Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) para gerar estatísticas medidas de qualidade do modelo.  
+ Ao executar cada assistente ou ferramenta, o algoritmo analisa o conteúdo dos dados e determina se um padrão estatisticamente válido existe. Se o algoritmo não é possível localizar padrão válidos, você obterá uma mensagem de erro. No entanto, mesmo se um modelo foi criado com êxito, você desejará testar o modelo para ver se ele valida suas suposições. Você pode usar ferramentas como o [gráfico de precisão &#40;SQL Server Data Mining Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) ou [validação cruzada &#40;SQL Server Data Mining Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) para gerar estatísticas medidas de qualidade do modelo.  
   
  Ao avaliar os resultados do seu primeiro modelo, faça perguntas como estas:  
   

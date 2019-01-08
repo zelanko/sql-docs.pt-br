@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 6: Adicionando e configurando a transformação Pesquisa | Microsoft Docs'
+title: 'Etapa 6: Adicionando e configurando a transformação pesquisa | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756c6ce9c57b314ddd9f9e821df7c391af5fa84a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206776"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805788"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionando e configurando a transformação Pesquisa
   Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
@@ -135,6 +134,6 @@ ms.locfileid: "48206776"
  [Etapa 7: Adicionando e configurando o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

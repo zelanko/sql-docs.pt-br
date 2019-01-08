@@ -20,16 +20,16 @@ ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ed580bd89dc7bf4c1f0af520f43f6ca8d616a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733724"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590700"
 ---
 # <a name="sqlexecdirect-function"></a>Função SQLExecDirect
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLExecDirect** executa uma instrução preparável, usando os valores atuais das variáveis de marcador de parâmetro, se há quaisquer parâmetros na instrução. **SQLExecDirect** é a maneira mais rápida para enviar uma instrução SQL para execução de uma vez.  
@@ -60,7 +60,7 @@ SQLRETURN SQLExecDirect(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLExecDirect** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* sql_handle_stmt e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLExecDirect** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01001|Conflito de operação do cursor|\**StatementText* contidos um posicionadas instrução update ou delete, e nenhuma linha ou mais de uma linha foram atualizadas ou excluídas. (Para obter mais informações sobre atualizações de mais de uma linha, consulte a descrição do SQL_ATTR_SIMULATE_CURSOR *atributo* na **SQLSetStmtAttr**.)<br /><br /> (A função retornará SQL_SUCCESS_WITH_INFO.)|  
@@ -86,7 +86,7 @@ SQLRETURN SQLExecDirect(
 |22015|Estouro no campo de intervalo|*\*StatementText* continha um parâmetro numérico ou de intervalo exato que, quando convertido em um intervalo de tipo de dados SQL, causou uma perda de dígitos significativos.<br /><br /> *\*StatementText* continha um parâmetro de intervalo com mais de um campo que, quando convertido em um tipo de dados numéricos em uma coluna, não teve nenhuma representação no tipo de dados numérico.<br /><br /> *\*StatementText* continha dados de parâmetro que foi atribuídos a um intervalo de tipo SQL, e não havia nenhuma representação do valor do tipo C no intervalo de tipo SQL.<br /><br /> Atribuindo um parâmetro de entrada/saída ou de saída que era um numérico exato ou o intervalo de tipo SQL para um tipo de intervalo C causado uma perda de dígitos significativos.<br /><br /> Quando um parâmetro de entrada/saída ou de saída foi atribuído a uma estrutura de intervalo de C, não havia nenhuma representação dos dados na estrutura de dados de intervalo.|  
 |22018|Valor de caractere inválido para especificação de conversão|*\*StatementText* continha um tipo de C que era um valor numérico exato ou aproximado, uma data e hora ou um tipo de dados de intervalo; o tipo SQL da coluna era um tipo de dados de caractere; e o valor na coluna não era um literal válido do tipo C associado.<br /><br /> Quando um parâmetro de entrada/saída ou de saída foi retornado, o tipo SQL era um valor numérico exato ou aproximado, uma data e hora ou um tipo de dados de intervalo; o tipo C foi SQL_C_CHAR; e o valor na coluna não era um literal válido do tipo SQL associado.|  
 |22019|Caractere de escape inválido|\**StatementText* continha uma instrução SQL que continha uma **, como** predicado com um **ESCAPE** no **onde** cláusula e o comprimento do escape a seguir caractere **ESCAPE** não era igual a 1.|  
-|22025|Sequência de escape inválida|\**StatementText* continha uma instrução SQL que continha "**, como** *valor de padrão* **ESCAPE** *caractere de escape* "no **onde** cláusula e o caractere que segue o caractere de escape no valor padrão não era um dos"%"ou"_".|  
+|22025|Sequência de escape inválida|\**StatementText* continha uma instrução SQL que continha "**, como** _valor de padrão_ **ESCAPE** _caractere de escape_ "no **onde** cláusula e o caractere que segue o caractere de escape no valor padrão não era um dos"%"ou"_".|  
 |23000|Violação de restrição de integridade|**StatementText* continha uma instrução SQL que continha um parâmetro ou literal. O valor do parâmetro era nulo para uma coluna definida como NOT NULL na coluna da tabela associada, um valor duplicado foi fornecido para uma coluna restringida para conter apenas valores exclusivos ou alguma outra restrição de integridade foi violada.|  
 |24000|Estado de cursor inválido|Um cursor é posicionado sobre o *StatementHandle* pela **SQLFetch** ou **SQLFetchScroll**. Esse erro é retornado pelo Gerenciador de Driver, se **SQLFetch** ou **SQLFetchScroll** não retornou SQL_NO_DATA e é retornado pelo driver se **SQLFetch** ou **SQLFetchScroll** tem retornar SQL_NO_DATA.<br /><br /> Um cursor foi aberto, mas não está posicionado sobre o *StatementHandle*.<br /><br /> **StatementText* contidos um posicionadas instrução update ou delete, e o cursor é posicionado antes do início do conjunto de resultados ou após o final do conjunto de resultados.|  
 |34000|Nome de cursor inválido|**StatementText* contidos um posicionadas instrução update ou delete, e o cursor referenciado pela instrução sendo executada não foi aberto.|  
@@ -108,7 +108,7 @@ SQLRETURN SQLExecDirect(
 |HY009|Uso inválido de ponteiro nulo|(DM) **StatementText* é um ponteiro nulo.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando o **SQLExecDirect** função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** foi chamado para o *StatementHandle* e retornado SQL_PARAM_DATA_ DISPONÍVEL. Essa função foi chamada antes de dados foram recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) uma função de execução assíncrona (não desse último) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retornados de SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todos os parâmetros de dados em execução ou colunas.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o argumento *TextLength* era menor que ou igual a 0, mas não é igual a SQL_NTS.<br /><br /> Um valor de parâmetro definido com **SQLBindParameter**, era um ponteiro nulo, e o valor de parâmetro de comprimento não era 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_PARAM, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Um valor de parâmetro definido com **SQLBindParameter**, não era um ponteiro nulo; o tipo de dados C foi SQL_C_BINARY ou SQL_C_CHAR; e o valor de comprimento do parâmetro foi menor que 0 mas não era SQL_NTS, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_ PARAM, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Um valor de comprimento do parâmetro associado ao **SQLBindParameter** foi definido como SQL_DATA_AT_EXEC; o tipo de SQL foi SQL_LONGVARCHAR, SQL_LONGVARBINARY, ou um tipo de dados de específico da fonte de dados long; e as informações de SQL_NEED_LONG_DATA_LEN Digite **SQLGetInfo** foi "Y".|  
+|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) o argumento *TextLength* era menor que ou igual a 0, mas não é igual a SQL_NTS.<br /><br /> Um valor de parâmetro definido com **SQLBindParameter**, era um ponteiro nulo, e o valor de parâmetro de comprimento não era 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_PARAM, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Um valor de parâmetro definido com **SQLBindParameter**, não era um ponteiro nulo; o tipo de dados C foi SQL_C_BINARY ou SQL_C_CHAR; e o valor de comprimento do parâmetro foi menor que 0 mas não era SQL_NTS, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_ PARAM, ou menor ou igual a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Um valor de comprimento do parâmetro associado ao **SQLBindParameter** foi definido como SQL_DATA_AT_EXEC; o tipo de SQL foi SQL_LONGVARCHAR, SQL_LONGVARBINARY, ou um tipo de dados específicos da fonte de dados long; e as informações de SQL_NEED_LONG_DATA_LEN Digite **SQLGetInfo** foi "Y".|  
 |HY105|Tipo de parâmetro inválido|O valor especificado para o argumento *InputOutputType* na **SQLBindParameter** era SQL_PARAM_OUTPUT, e o parâmetro foi um parâmetro de entrada.|  
 |HY109|Posição do cursor inválida|\**StatementText* independente um posicionadas instrução update ou delete, e o cursor é posicionado (pelo **SQLSetPos** ou **SQLFetchScroll**) em uma linha que tinha sido excluída ou não pôde ser buscada.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -139,7 +139,7 @@ SQLRETURN SQLExecDirect(
  Se os indicadores são ativados e uma consulta é executada que não é possível oferecer suporte a indicadores, o driver deve tentar forçar o ambiente para um que dá suporte a indicadores alterando um valor de atributo e retornando SQLSTATE 01S02 (valor de opção alterado). Se o atributo não pode ser alterado, o driver deve retornar SQLSTATE HY024 (valor de atributo inválido).  
   
 > [!NOTE]  
->  Ao usar o pooling de conexão, um aplicativo não deve executar instruções SQL que alteram o banco de dados ou o contexto do banco de dados, como o **uso** *banco de dados* instrução no SQL Server, que é alterado o catálogo usado por uma fonte de dados.  
+>  Ao usar o pooling de conexão, um aplicativo não deve executar instruções SQL que alteram o banco de dados ou o contexto do banco de dados, como o **uso** _banco de dados_ instrução no SQL Server, que é alterado o catálogo usado por uma fonte de dados.  
   
 ## <a name="code-example"></a>Exemplo de código  
  Ver [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), e [programa ODBC de exemplo](../../../odbc/reference/sample-odbc-program.md).  

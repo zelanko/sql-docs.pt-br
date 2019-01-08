@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.executejob.f1
@@ -15,12 +14,12 @@ ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c358eb7b20c1a806494a32fb3a0f6de4fdfc1e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155426"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775828"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Tarefa Executar Trabalho do SQL Server Agent (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Executar Trabalho do SQL Server Agent** para executar trabalhos do Microsoft SQL Server Agent dentro de um plano de manutenção. Essa opção não estará disponível se você não tiver nenhum trabalho do SQL Server Agent na conexão selecionada.  

@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2aa4413bd9f226bd0bbdf5b676da0da866fde32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705854"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591740"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_job_type_**'**  
  Tipo de trabalho a ser modificado. *job_type* está **nvarchar (20)** com um padrão de 'capture'. As entradas válidas são 'capture' e 'cleanup'.  
   
- [ **@maxtrans** ] **= * * * max_trans*  
+ [ **@maxtrans** ] **=** _max_trans_  
  O número máximo de transações a processar em cada ciclo de exame. *max_trans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. Se especificado, o valor deve ser um inteiro positivo.  
   
  *max_trans* é válido somente para trabalhos de captura.  
   
- [ **@maxscans** ] **= * * * max_scans*  
+ [ **@maxscans** ] **=** _max_scans_  
  O número máximo de ciclos de exame a executar para extrair todas as linhas do log. *max_scans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
  *max_scan* é válido somente para trabalhos de captura.  
   
- [ **@continuous** ] **= * * * contínua*  
+ [ **@continuous** ] **=** _contínua_  
  Indica se o trabalho de captura deve ser executado continuamente (1) ou apenas uma vez (0). *contínua* está **bit** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
  Quando *contínua* = 1, o [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) trabalho examina o log e processa até (*max_trans* \* *max_scans*) transações. Ele, em seguida, aguardará o número de segundos especificado no *polling_interval* antes de iniciar a próxima verificação de log.  
@@ -74,17 +74,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *contínua* é válido somente para trabalhos de captura.  
   
- [ **@pollinginterval** ] **= * * * polling_interval*  
+ [ **@pollinginterval** ] **=** _polling_interval_  
  Número de segundos entre ciclos de exame de log. *polling_interval* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
  *polling_interval* é válido somente para captura de trabalhos quando *contínua* é definido como 1.  
   
- [ **@retention** ] **= * * * retenção*  
+ [ **@retention** ] **=** _retenção_  
  O número de minutos que as linhas de alteração devem ser retidas em tabelas de alteração. *retenção* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
   
  *retenção* é válido somente para trabalhos de limpeza.  
   
- [  **@threshold=** ] **'***excluir limite***'**  
+ [  **@threshold=** ] **'**_excluir limite_**'**  
  O número máximo de entradas de exclusão que podem ser excluídas por meio de uma única instrução na limpeza. *excluir o limite* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. *Excluir limite* é válido somente para trabalhos de limpeza.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -118,7 +118,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>B. Alterando um trabalho de limpeza  
+### <a name="b-changing-a-cleanup-job"></a>b. Alterando um trabalho de limpeza  
  O exemplo a seguir atualiza um trabalho de limpeza no banco de dados `AdventureWorks2012`. Todos os parâmetros válidos para esse tipo de trabalho, exceto **@threshold**, são especificados. O valor de **@threshold** não é modificado.  
   
 ```  

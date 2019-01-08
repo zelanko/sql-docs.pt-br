@@ -13,15 +13,15 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8c23c3216bc7bdff86a9e508de87c2086f6f6b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ab343a4c6f70d97aa5e770b8ca21dd4d835f05c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162766"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375928"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
-  Antes de usar o Gerenciador de Relatórios ou o serviço Web Servidor de Relatório, você deve configurar pelo menos uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo “somente arquivos” (ou seja, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo. Caso você tenha um servidor de relatório configurado para usar o modo Integrado do SharePoint e atualize a URL do Serviço Web Servidor de Relatórios usando a ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], também deverá atualizar a URL na Administração Central do SharePoint.  
+  Antes de usar o Gerenciador de Relatórios ou o serviço Web Servidor de Relatório, você deve configurar pelo menos uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo "somente arquivos" (isto é, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo. Caso você tenha um servidor de relatório configurado para usar o modo Integrado do SharePoint e atualize a URL do Serviço Web Servidor de Relatórios usando a ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , também deverá atualizar a URL na Administração Central do SharePoint.  
   
  Use a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar as URLs. Todas as partes da URL são definidas nessa ferramenta. Diferente das versões anteriores, os sites do IIS (Serviços de Informações da Internet) não fornecem mais acesso a aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e nas versões posteriores.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "48162766"
   
 -   Se o IIS 6.0 ou 7.0 estiver instalado no mesmo computador, verifique os nomes dos diretórios virtuais em qualquer site que use a porta 80. Se você vir quaisquer diretórios virtuais que usem os nomes padrão de diretório virtual do Reporting Services (isto é, "Reports" e "ReportServer"), escolha nomes de diretório virtual diferentes para as URLs do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você configurar.  
   
--   Você deve usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar a URL. Não use um utilitário de sistema. Nunca modifique reservas de URL no `URLReservations` seção do arquivo rsreportserver. config diretamente. O uso da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é necessário para atualizar a reserva de URL subjacente que é armazenada internamente e sincronizar as configurações de URL armazenadas no arquivo RSReportServer.config.  
+-   Você deve usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar a URL. Não use um utilitário de sistema. Nunca modifique reservas de URL diretamente na seção `URLReservations` do arquivo RSReportServer.config. O uso da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é necessário para atualizar a reserva de URL subjacente que é armazenada internamente e sincronizar as configurações de URL armazenadas no arquivo RSReportServer.config.  
   
 -   Escolha uma hora que tenha baixa atividade de relatório. Toda vez que a reserva de URL for alterada, você pode esperar que os domínios de aplicativo do serviço Web Servidor de Relatório e do Gerenciador de Relatórios sejam reciclados.  
   
--   Para uma visão geral da construção de URL e o uso na [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [configurar as URLs do servidor de relatório &#40;Configuration Manager do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Para obter uma visão geral da construção de URL e do uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Para configurar uma URL para serviço Web Servidor de Relatório  
   
@@ -76,15 +76,15 @@ ms.locfileid: "48162766"
   
          Se você tiver várias placas ou se a sua rede der suporte a endereços IPv4 e IPv6, você verá vários endereços IP. Se você selecionar apenas um endereço IP, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório. Normalmente, se você selecionar esse valor, é porque está configurando várias reservas de URL que também especificam endereços IP explícitos ou nomes de host (por exemplo, uma para uma placa de adaptador de rede usada para conexões à intranet e uma segunda usada para conexões à extranet).  
   
-5.  Especifique a porta. A porta 80 é o padrão para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e Windows Server 2008 porque ela pode ser compartilhada com outros aplicativos. Para usar um número de porta personalizado, lembre-se de que sempre deverá especificá-lo na URL usada para acessar o servidor de relatório. Você pode usar as seguintes técnicas para localizar uma porta disponível:  
+5.  Especifique a porta. A porta 80 é a padrão para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e no Windows Server 2008 porque ela pode ser compartilhada com outros aplicativos. Para usar um número de porta personalizado, lembre-se de que sempre deverá especificá-lo na URL usada para acessar o servidor de relatório. Você pode usar as seguintes técnicas para localizar uma porta disponível:  
   
     -   Em um prompt de comando, digite o seguinte comando para retornar uma lista de portas TCP que estão sendo usadas:  
   
-         `netstat –a –n -p tcp`  
+         `netstat -a -n -p tcp`  
   
-    -   Examine o artigo de Suporte da Microsoft, [Informações sobre atribuições de porta TCP/IP](http://support.microsoft.com/kb/174904), para ler sobre atribuições de porta TCP e as diferenças entre Portas Bem Conhecidas (0 a 1023), Portas Registradas (1024 a 49151) e Portas Dinâmicas ou Privadas (49152 a 65535).  
+    -   Examine o artigo de Suporte da Microsoft, [Informações sobre atribuições de porta TCP/IP](https://support.microsoft.com/kb/174904), para ler sobre atribuições de porta TCP e as diferenças entre Portas Bem Conhecidas (0 a 1023), Portas Registradas (1024 a 49151) e Portas Dinâmicas ou Privadas (49152 a 65535).  
   
-    -   Se você estiver usando o Firewall do Windows, deverá abrir a porta. Para obter instruções, consulte [configurar um Firewall para acesso ao servidor de relatório](../report-server/configure-a-firewall-for-report-server-access.md).  
+    -   Se você estiver usando o Firewall do Windows, deverá abrir a porta. Para obter instruções, consulte [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  Se ainda não o fez, verifique se o IIS (se ele estiver instalado) não tem um diretório virtual com o mesmo nome que você planeja usar.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "48162766"
 -   https://www.adventure-works.com:8080/reports  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

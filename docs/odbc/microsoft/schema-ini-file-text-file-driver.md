@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169216"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590857"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini File (Driver de Arquivo de texto)
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado por meio de um arquivo de informações de esquema. O arquivo de informações de esquema é sempre chamado Schema. ini e sempre é mantido no mesmo diretório que a fonte de dados de texto. O arquivo de informações de esquema fornece o IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema sempre é necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema quando sua tabela de texto contém a data e hora, moeda, ou dados Decimal ou a qualquer momento que você quiser mais controle sobre a manipulação dos dados na tabela.  
@@ -95,9 +95,9 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A tabela a seguir descreve cada parte do **Col * * * n* entrada.  
+ A tabela a seguir descreve cada parte dos **Col**_n_ entrada.  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*ColumnName*|O nome da coluna de texto. Se o nome da coluna contiver espaços inseridos, você deverá colocá-lo entre aspas duplas.|  
 |*type*|Tipos de dados são da seguinte maneira:<br /><br /> **Tipos de dados Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> CURRENCY<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (mesmo que o texto)<br /><br /> Float (mesmo que Double)<br /><br /> Inteiro (mesmo que Short)<br /><br /> LongChar (mesmo que o memorando)<br /><br /> Data *formato de data*|  
@@ -105,7 +105,7 @@ n=ColumnNametype [#]
 |*#*|O valor de inteiro que determina a largura da coluna (necessário se **largura** for especificado).|  
   
 ## <a name="selecting-a-character-set"></a>Selecionar um conjunto de caracteres  
- Você pode selecionar entre dois conjuntos de caracteres: ANSI e OEM. O **CharacterSet** no Schema. ini substituirá a configuração no registro do Windows, o arquivo por arquivo. O exemplo a seguir mostra a entrada de Schema. ini que define o conjunto de caracteres para ANSI:  
+ Você pode selecionar dois conjuntos de caracteres: ANSI e OEM. O **CharacterSet** no Schema. ini substituirá a configuração no registro do Windows, o arquivo por arquivo. O exemplo a seguir mostra a entrada de Schema. ini que define o conjunto de caracteres para ANSI:  
   
 ```  
 CharacterSet=ANSI  
@@ -114,16 +114,16 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>Especificar formatos de tipo de dados e conversões  
  O arquivo Schema ini contém várias opções que você pode usar para especificar como os dados são convertidos ou exibidos. A tabela a seguir lista cada uma dessas opções.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**DateTimeFormat**|Pode ser definido como uma cadeia de caracteres de formato que indica as datas e horas. Você deve especificar essa entrada se todos os campos de data/hora em que a importação/exportação são tratados com o mesmo formato. Todos os formatos do Microsoft Jet, exceto A.M. e horas. há suporte. Se não houver nenhuma cadeia de caracteres de formato, as opções de imagem e a hora de data abreviada do painel de controle do Windows são usadas.|  
 |**DecimalSymbol**|Pode ser definido como qualquer caractere único que é usado para separar o inteiro da parte fracionária de um número.|  
 |**NumberDigits**|Indica o número de dígitos decimais da parte fracionária de um número.|  
-|**NumberLeadingZeros**|Especifica se um valor decimal menor que 1 e mais de – 1 deve conter os zeros à esquerda; Esse valor pode ser qualquer um dos False (sem zeros à esquerda) ou True.|  
+|**NumberLeadingZeros**|Especifica se um valor decimal menor que 1 e mais de -1 deve conter os zeros à esquerda; Esse valor pode ser qualquer um dos False (sem zeros à esquerda) ou True.|  
 |**CurrencySymbol**|Indica o símbolo de moeda que pode ser usado para valores de moeda no arquivo de texto. Exemplos incluem o sinal de cifrão ($) e o Dm.|  
 |**CurrencyPosFormat**|Pode ser definido para qualquer um dos seguintes valores:<br /><br /> -Prefixo do símbolo da moeda sem separação ($1)<br />-Sufixo do símbolo da moeda sem separação (1$)<br />-Prefixo do símbolo da moeda com uma separação de caractere (US $ 1)<br />-Sufixo do símbolo da moeda com uma separação de caractere (1 $)|  
 |**CurrencyDigits**|Especifica o número de dígitos usados para a parte fracionária de um valor de moeda.|  
-|**CurrencyNegFormat**|Pode ser um dos seguintes valores:<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Este exemplo mostra o símbolo de dólar, mas você deve substituí-lo com os devidos **CurrencySymbol** valor no programa.|  
+|**CurrencyNegFormat**|Pode ser um dos seguintes valores:<br /><br /> -   ($1)<br />--US $1<br />-1 $<br />-US $1 -<br />-   (1$)<br />--1$<br />-1-$<br />-US $- 1<br />--1 $<br />--US $ 1<br />-US $- 1<br />-US $ 1 -<br />-$ -1<br />-1-$<br />-   ($ 1)<br />-   (1 $)<br /><br /> Este exemplo mostra o símbolo de dólar, mas você deve substituí-lo com os devidos **CurrencySymbol** valor no programa.|  
 |**CurrencyThousandSymbol**|Indica o símbolo de caractere único que pode ser usado para separar os valores de moeda no arquivo de texto por milhares.|  
 |**CurrencyDecimalSymbol**|Pode ser definido como qualquer caractere único que é usado para separar toda a parte fracionária de um valor de moeda.|  
   

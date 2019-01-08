@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185446"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374568"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
   As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,17 +68,17 @@ ms.locfileid: "48185446"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou Falso)  
+-   Clusterizado: (Verdadeiro ou falso)  
   
 -   Diretório de Backup:  
   
--   Agrupamento:  
+-   Ordenação:  
   
--   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
+-   Diferencia maiusculas de minúsculas: (Verdadeiro ou falso)  
   
 -   Idioma:  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
+-   Última hora relatada: Essa coluna mostra o UCP data e hora locais usando o tipo de dados de data e hora. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização da CPU do computador e da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -96,7 +96,7 @@ ms.locfileid: "48185446"
 -   1 Ano, exibido em intervalos de 1 mês.  
   
  Guia Utilização de Armazenamento  
- A guia Utilização de Armazenamento tem uma exibição de árvore que exibe detalhes da utilização do armazenamento. Observe que os dados de tempo mostram a data e hora locais do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
+ A guia Utilização de Armazenamento tem uma exibição de árvore que exibe detalhes da utilização do armazenamento. Observe que os dados de tempo mostram a data e hora locais do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
  A exibição pode ser agrupada por banco de dados ou por volume. Para usar a exibição de árvore do banco de dados, selecione o botão de opção **Banco de dados** na seleção **Agrupar arquivos por:** . Para exibir o status da utilização do armazenamento de arquivos individuais do banco de dados, clique no sinal de adição ao lado do nome de um banco de dados na exibição de árvore. Os arquivos de banco de dados listados incluem todos os bancos de dados do sistema e de usuários que pertencem à instância gerenciada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] selecionados na exibição de lista.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "48185446"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou Falso)  
+-   Clusterizado: (Verdadeiro ou falso)  
   
 -   Diretório de Backup:  
   
--   Agrupamento:  
+-   Ordenação:  
   
--   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
+-   Diferencia maiusculas de minúsculas: (Verdadeiro ou falso)  
   
 -   Idioma:  
   

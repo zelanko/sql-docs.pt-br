@@ -13,12 +13,12 @@ ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91aa24a11c7d4587500ab7154f582bb47b8f8c4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f767bf80d2271b88eca526be3a47a2033f56d5bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193224"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360858"
 ---
 # <a name="ssis-package-essentials"></a>Informações essenciais sobre pacotes SSIS
   Um pacote é o objeto que implementa a funcionalidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para extrair, transformar e carregar dados. Crie um pacote usando o Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Você também pode criar um pacote executando o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou o Assistente para Conexões de Projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, [criar pacotes no SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) no Designer SSIS e [Assistente de importação de projeto](../../2014/integration-services/import-project-wizard.md).  
@@ -49,10 +49,10 @@ ms.locfileid: "48193224"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
-1.  Vídeo, [Criando um pacote básico (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023), no site MSDN.Microsoft.com  
+1.  Vídeo, [Criando um pacote básico (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023), no site MSDN.Microsoft.com  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; pacotes](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Restrições de precedência](control-flow/precedence-constraints.md)  
   
   

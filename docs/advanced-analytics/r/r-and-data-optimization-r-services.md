@@ -1,5 +1,5 @@
 ---
-title: Desempenho do SQL Server R Services - otimização de dados | Microsoft Docs
+title: Ajuste de desempenho para otimização de dados - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699504"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432399"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Desempenho de serviços de R – otimização de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Ao trabalhar com grandes conjuntos de dados, você sempre deve usar o contexto d
 
 ## <a name="factors"></a>Fatores
 
-A linguagem R tem o conceito de *fatores*, que são uma variável especial para dados categóricos. Os cientistas de dados geralmente usam variáveis de fator em suas fórmulas, porque o tratamento de variáveis categóricas como fatores garante que os dados é processado corretamente por funções de machine learning. Para obter mais informações, consulte [R para Dummies: variáveis de fator](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+A linguagem R tem o conceito de *fatores*, que são uma variável especial para dados categóricos. Os cientistas de dados geralmente usam variáveis de fator em suas fórmulas, porque o tratamento de variáveis categóricas como fatores garante que os dados é processado corretamente por funções de machine learning. Para obter mais informações, consulte [R para Dummies: Variáveis de fator](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Por design, variáveis de fator podem ser convertidas de cadeias de caracteres para inteiros e de volta novamente para processamento ou armazenamento. O R `data.frame` função manipula todas as cadeias de caracteres como variáveis de fator, a menos que o argumento *stringsAsFactors* é definido como **False**. Isso significa é que cadeias de caracteres são automaticamente convertido em um inteiro para o processamento e, em seguida, mapeado para a cadeia de caracteres original.
 
@@ -149,13 +149,13 @@ Muitos algoritmos RevoScaleR dão suporte a parâmetros para controlar como o mo
 
 Para obter orientação adicional sobre a otimização do RevoScaleR, consulte estes artigos:
 
-+ Artigo de suporte: [opções para rxDForest e rxDTree de ajuste de desempenho](https://support.microsoft.com/kb/3104235)
++ Artigo de suporte: [Opções para rxDForest e rxDTree de ajuste de desempenho](https://support.microsoft.com/kb/3104235)
 
-+ Os métodos para controlar o modelo se ajustar em um modelo de árvore aumentada: [estimando modelos usando Estocástico Impulsionamento de gradiente](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Métodos para controlar se ajustar em um modelo de árvore aumentada do modelo: [Estimando modelos usando o aumento de gradiente Estocástico](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Visão geral de como o RevoScaleR move e processa dados: [escrever algoritmos de agrupamento personalizados em ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Visão geral de como o RevoScaleR move e processa os dados: [Algoritmos de agrupamento personalizados de gravação em ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Modelo de programação para RevoScaleR: [gerenciar threads em RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Modelo de programação do RevoScaleR: [Gerenciamento de threads no RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
 + Referência de função para [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
@@ -173,9 +173,9 @@ Também recomendamos que você examinar o novo **MicrosoftML** pacote, que forne
 
 Se seu cenário envolve previsões rápidas usando um modelo armazenado ou a integração do aprendizado de máquina em um aplicativo, você pode usar o [operacionalização](https://docs.microsoft.com/r-server/what-is-operationalization) recursos do Microsoft R Server (anteriormente conhecido como DeployR).
 
-+ Como uma **cientista de dados**, use o [pacote mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) compartilhar código R com outros computadores e integrar a análise de R em aplicativos web, área de trabalho, móveis e dashboard: [como publicar e gerenciar serviços web de R no R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Como uma **cientista de dados**, use o [pacote mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) compartilhar código R com outros computadores e integrar a análise de R em aplicativos web, área de trabalho, móveis e painel: [Como publicar e gerenciar os serviços da web de R no R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Como uma **administrator**, saiba como gerenciar pacotes, monitorar nós na web e nós de computação e controlar a segurança em trabalhos do R: [como interagir com e consumir serviços web em R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Como uma **administrador**, saiba como gerenciar pacotes, monitorar nós na web e nós de computação e controlar a segurança em trabalhos do R: [Como interagir com e consumir serviços web em R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Artigos desta série
 

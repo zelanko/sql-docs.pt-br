@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowcounttrans.f1
@@ -19,12 +18,12 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a5dffaac9a849ca5a73adf2228a0c8ab5e932c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53f14b78dcf3c8f0ee986b8ef0fde14b58254f07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784968"
 ---
 # <a name="row-count-transformation"></a>Transformação Contagem de Linhas
   A transformação Contagem de Linhas conta as linhas quando passam por um fluxo de dados e armazena a contagem final em uma variável.  
@@ -42,13 +41,13 @@ ms.locfileid: "48217336"
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter informações sobre como definir as propriedades desse componente, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; variáveis](../../integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services-ssis-variables.md)   
  [Fluxo de Dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   

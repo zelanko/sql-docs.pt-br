@@ -11,12 +11,12 @@ ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149416"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365069"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurar credenciais armazenadas para a atualização de dados PowerPivot (PowerPivot para SharePoint)
   Os trabalhos de atualização de dados PowerPivot podem ser executados em qualquer conta de usuário do Windows, desde que você crie um aplicativo de destino no Serviço de Repositório Seguro para armazenar as credenciais que deseja usar. Da mesma forma, se você desejar fornecer um logon de banco de dados que varie do um usado para importar os dados originalmente no PowerPivot para Excel, poderá mapear essas credenciais para um aplicativo de destino do Serviço de Repositório Seguro e, depois, especificar esse aplicativo de destino em uma agenda de atualização de dados.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149416"
   
  [Configurar uma conta predefinida para acessar fontes de dados externas ou de terceiros](#config3rd)  
   
- Se você tiver problemas ao configurar ou usando a atualização de dados, consulte o [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkID=223279) página no wiki do TechNet para obter possíveis soluções.  
+ Se você tiver problemas ao configurar ou usando a atualização de dados, consulte o [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/?LinkID=223279) página no wiki do TechNet para obter possíveis soluções.  
   
 ##  <a name="configAny"></a> Configurar qualquer conta do Windows para atualização de dados  
  Quando um usuário do SharePoint define uma agenda de atualização de dados, ele deve especificar a identidade do usuário com a qual a atualização de dados é executada. Entre as opções estão a seleção da conta autônoma de atualização de dados PowerPivot, a inserção de sua conta de usuário de domínio Windows ou a inserção de alguma outra conta de usuário do Windows que seja válida para fins de atualização de dados. As etapas desta seção destinam-se à última opção: especificar alguma outra conta do Windows.  
@@ -55,7 +55,7 @@ ms.locfileid: "48149416"
   
 -   Verifique se a atualização de dados funciona ao especificar este aplicativo de destino em uma agenda de atualização de dados.  
   
-### <a name="step-1-create-a-target-application"></a>Etapa 1: criar um aplicativo de destino  
+### <a name="step-1-create-a-target-application"></a>Etapa 1: Criar um aplicativo de destino  
   
 1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48149416"
   
  Por isso, conceda permissões somente leitura à conta em todas as fontes de dados externas usadas durante a atualização de dados.  
   
- Se você for administrador das fontes de dados usadas em sua organização, poderá criar um logon e atribuir as permissões necessárias. Caso contrário, você deverá entrar em contato com os proprietários dos dados e fornecer as informações da conta. Especifique a conta de usuário do domínio Windows que é mapeada para o aplicativo de destino. Essa é a conta que você especificou na “Etapa 1: Criar um aplicativo de destino” neste tópico.  
+ Se você for administrador das fontes de dados usadas em sua organização, poderá criar um logon e atribuir as permissões necessárias. Caso contrário, você deverá entrar em contato com os proprietários dos dados e fornecer as informações da conta. Especifique a conta de usuário do domínio Windows que é mapeada para o aplicativo de destino. Essa é a conta que você especificou na "etapa 1: Criar um aplicativo de destino"neste tópico.  
   
-###  <a name="bkmk_verify"></a> Etapa 4: Verificar a disponibilidade da conta em dados de páginas de configuração de atualização  
+###  <a name="bkmk_verify"></a> Etapa 4: Verificar a disponibilidade da conta em páginas de configuração de atualização de dados  
   
 1.  Abra uma página de configuração de atualização de dados para uma pasta de trabalho publicada que contém dados do PowerPivot. Para obter instruções sobre como abrir a página, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "48149416"
   
  Se ocorrer um erro, você poderá clicar **configurar agendamento** na atualização de dados a página de histórico para tentar outras credenciais. Talvez você também precise inspecionar as informações de conexão de fonte de dados na pasta de trabalho original para exibir a cadeia de conexão que é usada durante a atualização de dados. A cadeia de conexão oferecerá informações sobre o local do servidor e o banco de dados que pode ser usado para solucionar o problema.  
   
- Para obter mais informações sobre como solucionar problemas, consulte [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/p/?LinkID=223279) no Wiki do TechNet.  
+ Para obter mais informações sobre como solucionar problemas, consulte [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/p/?LinkID=223279) no Wiki do TechNet.  
   
 ##  <a name="config3rd"></a> Configurar uma conta predefinida para acessar fontes de dados externas ou de terceiros  
  Servidores de banco de dados costumam conter os próprios métodos de autenticação. Se você tiver uma pasta de trabalho do PowerPivot que exige credenciais de banco de dados para acessar uma fonte de dados externa durante a atualização de dados, poderá criar uma ID de aplicativo de destino para as credenciais e, depois, especificar o aplicativo de destino na seção Fontes de dados da página de atualização de dados programada.  

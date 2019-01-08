@@ -11,12 +11,12 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fce2675b361b3b6d4d8ffc46afdabb0b6d128cc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321c0f95d92536d816b365362cd119a292ac1004
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180856"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370598"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Função RunningValue (Construtor de Relatórios e SSRS)
   Retorna uma agregação contínua de todos os valores numéricos não nulos especificados pela expressão, avaliados para o escopo fornecido.  
@@ -36,20 +36,20 @@ RunningValue(expression, function, scope)
  A expressão na qual executar a agregação, por exemplo, `[Quantity]`.  
   
  *função*  
- (`Enum`) O nome da função de agregação a ser aplicado à expressão, por exemplo, `Sum`. Essa função não pode ser `RunningValue`, `RowNumber`, ou `Aggregate`.  
+ (`Enum`) O nome da função de agregação a ser aplicado à expressão, por exemplo, `Sum`. Essa função não pode ser `RunningValue`, `RowNumber` ou `Aggregate`.  
   
  *escopo*  
- (`String`) Uma constante de cadeia de caracteres que é o nome de um conjunto de dados, região de dados ou grupo ou nulo (`Nothing` no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica o contexto no qual avaliar a agregação. `Nothing` Especifica o contexto mais externo, geralmente o conjunto de dados do relatório.  
+ (`String`) Uma constante de cadeia de caracteres que é o nome de um conjunto de dados, região de dados ou grupo ou nulo (`Nothing` no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica o contexto no qual avaliar a agregação. `Nothing` especifica o contexto mais externo, geralmente o conjunto de dados do relatório.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  Determinado pela função de agregação especificada no parâmetro *function* .  
   
 ## <a name="remarks"></a>Comentários  
- O valor para `RunningValue` redefinido como 0 para cada nova instância do escopo. Se um grupo for especificado, o valor em uso será redefinido quando a expressão de grupo for alterada. Se uma região de dados for especificada, o valor em uso será redefinido para cada nova instância da região de dados. Se um conjunto de dados for especificado, o valor em uso não será redefinido em todo o conjunto de dados.  
+ O valor de `RunningValue` é redefinido como 0 para cada nova instância do escopo. Se um grupo for especificado, o valor em uso será redefinido quando a expressão de grupo for alterada. Se uma região de dados for especificada, o valor em uso será redefinido para cada nova instância da região de dados. Se um conjunto de dados for especificado, o valor em uso não será redefinido em todo o conjunto de dados.  
   
  `RunningValue` não pode ser usado em um filtro ou expressão de classificação.  
   
- O conjunto de dados para o qual o valor em execução é calculado deve ter o mesmo tipo de dados. Para converter dados que têm vários tipos de dados numéricos para o mesmo tipo de dados, use funções de conversão, como `CInt`, `CDbl` ou `CDec`. Para obter mais informações, consulte [Funções de conversão de tipo](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ O conjunto de dados para o qual o valor em execução é calculado deve ter o mesmo tipo de dados. Para converter dados que têm vários tipos de dados numéricos no mesmo tipo de dados, use funções de conversão, como `CInt`, `CDbl` ou `CDec`. Para obter mais informações, consulte [Funções de conversão de tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  O*Scope* não pode ser uma expressão.  
   
@@ -89,9 +89,9 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -11,17 +11,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148856"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353926"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
-  Você pode instalar o construtor de relatórios no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pacote de recursos a [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) ou em um local como pasta pública para o qual o ReportBuilder3_x86.msi, o pacote do instalador do Windows para o construtor de relatórios, tem foi baixado.  
+  Você pode instalar o construtor de relatórios no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pacote de recursos a [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) ou em um local como pasta pública para o qual o ReportBuilder3_x86.msi, o pacote do instalador do Windows para o construtor de relatórios, tem foi baixado.  
   
- Também é possível executar uma instalação de linha de comando do Construtor de Relatórios e fornecer argumentos para personalizar a instalação. Além dos parâmetros intrínsecos ao MSI padrão, você pode usar os parâmetros personalizados fornecidos pelo Construtor de Relatórios: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR especifica a pasta de instalação raiz para o Construtor de Relatórios. REPORTSERVERURL especifica o servidor de relatório padrão que o Construtor de Relatórios usa para salvar relatórios no servidor.  
+ Também é possível executar uma instalação de linha de comando do Construtor de Relatórios e fornecer argumentos para personalizar a instalação. Além de parâmetros intrínsecos ao MSI padrão, você pode usar os parâmetros personalizados fornecidos pelo construtor de relatórios: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR especifica a pasta de instalação raiz para o Construtor de Relatórios. REPORTSERVERURL especifica o servidor de relatório padrão que o Construtor de Relatórios usa para salvar relatórios no servidor.  
   
  Se você quiser uma instalação completamente silenciosa, sem nenhuma interação com a interface do usuário, especifique a opção **/quiet** . Por padrão, o sinalizador de opção silenciosa suprime erros de instalação. Portanto, é recomendável incluir a opção **/l** que especifica o registro, quando você usar a opção silenciosa.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48148856"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>Para instalar o Construtor de Relatórios no site de download  
   
-1.  Vá para [construtor de relatórios do Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) e localize a seção construtor de relatórios da página da Web.  
+1.  Vá para [construtor de relatórios do Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) e localize a seção construtor de relatórios da página da Web.  
   
 2.  Clique em **X86 pacote**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48148856"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>Para instalar o Construtor de Relatórios na linha de comando  
   
-1.  Vá para [construtor de relatórios do Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) e localize a seção construtor de relatórios.  
+1.  Vá para [construtor de relatórios do Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) e localize a seção construtor de relatórios.  
   
 2.  Clique em **X86 pacote**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48148856"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     As duas opções específicas para instalar o Construtor de Relatórios são: RBINSTALLDIR e REPORTSERVERURL. Não é necessário incluir esses argumentos na linha de comando. O comando de linha de base é o seguinte:  
+     As duas opções específicas para instalar o construtor de relatórios são: RBINSTALLDIR e REPORTSERVERURL. Não é necessário incluir esses argumentos na linha de comando. O comando de linha de base é o seguinte:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

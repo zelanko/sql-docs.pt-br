@@ -19,27 +19,27 @@ ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 11e1d28357b1a16b7b683bf2296e97e3a207887b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5f68c5e5671e31b166e82970e59c265334ed3188
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660036"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588900"
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada coluna restrita como chave no banco de dados atual. Esta exibição de esquema de informações retorna informações sobre os objetos para os quais o usuário atual tem permissões.  
   
- Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA. * * * view_name*.  
+ Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificador da restrição.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> <strong>\*\* Importante \* \*</strong>  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**nvarchar(** 128 **)**|Nome da restrição.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> <strong>\*\* Importante \* \*</strong>  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nome da tabela.|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nome da coluna.|  
 |**ORDINAL_POSITION**|**int**|Posição ordinal na coluna.|  

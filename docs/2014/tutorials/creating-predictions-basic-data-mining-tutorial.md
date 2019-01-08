@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206526"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515457"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Criando previsões (Tutorial de mineração de dados básico)
   Depois de testar a precisão dos modelos de mineração e decidir que está satisfeito com os resultados, você pode, em seguida, gerar previsões usando o construtor de consultas de previsão sobre a **previsão do modelo de mineração** guia na mineração de dados Designer.  
@@ -157,7 +157,7 @@ ms.locfileid: "48206526"
   
         2.  Digite um nome para a tabela que conterá os resultados da consulta.  
   
-        3.  Use a opção **adicione à DSV**, para criar a tabela e adicioná-lo para uma exibição da fonte de dados existente. Isto será útil se você quiser manter todas as tabelas relacionadas para um modelo, por exemplo, dados de treinamento, dados de origem de previsão e resultados de consulta, na mesma exibição da fonte de dados.  
+        3.  Use a opção **adicione à DSV**, para criar a tabela e adicioná-lo para uma exibição da fonte de dados existente. Isso é útil se você quiser manter todas as tabelas relacionadas para um modelo, como dados de treinamento, dados de origem de previsão e consulta os resultados-na mesma exibição da fonte de dados.  
   
         4.  Use a opção **substituir se existir**, para atualizar uma tabela existente com os resultados mais recentes.  
   

@@ -17,17 +17,17 @@ ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d97b570ca00251e7beaf39b104d254bf3363e8ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba1efc734b49f62b1f7b3b3876a8ea0db2732da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373348"
 ---
 # <a name="implementing-a-security-extension"></a>Implementando uma extensão de segurança
   A Autenticação do Windows do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] é o principal sistema para proteger os relatórios no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Em determinados casos, entretanto, você pode precisar estender o sistema de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para acomodar a segurança personalizada em sua empresa. Você pode fazer isso usando a plataforma de desenvolvimento fornecida pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API. Esta seção apresentará uma visão geral de extensões de segurança no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- Para obter detalhes completos sobre como implementar, implantar e remover uma extensão de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obter detalhes completos sobre como implementar, implantar e remover uma extensão de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral das extensões de segurança](security-extensions-overview.md)  

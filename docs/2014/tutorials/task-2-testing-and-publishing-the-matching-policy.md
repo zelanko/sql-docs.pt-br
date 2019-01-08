@@ -13,12 +13,12 @@ ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e6f8fbd3ffbfcee4db212a22d4aef223450e41c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17723cfd2c1c694f21130e985b6bd65736f90236
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174456"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373928"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarefa 2: Testando e publicando a política de correspondência
   Nesta tarefa, você pode testar e publicar os **remover fornecedores duplicados** política de correspondência.  
@@ -27,11 +27,11 @@ ms.locfileid: "48174456"
   
 2.  Revise todos os registros correspondentes e sua pontuação na caixa de listagem. Um registro que tenha um **verde** ícone associado a ele é uma duplicata de registro dinâmico que o precede. Aqui estão os pares de exemplos:  
   
-    1.  O registro com **ID do registro: 1000005** é uma correspondência do registro com **Id do registro: 1000004** com **Score: 100%** porque ambos os registros têm os mesmos valores para **SupplierID (pré-requisito)**, **Supplier Name**, e **ContactEmailAddress colunas**. O DQS escolherá aleatoriamente um registro como registro dinâmico de um cluster.  
+    1.  O registro com **ID do Registro: 1000005** é uma correspondência do registro com **Id de registro: 1000004** com **pontuação: 100%** porque ambos os registros têm os mesmos valores para **SupplierID (pré-requisito)**, **Supplier Name**, e **ContactEmailAddress colunas**. O DQS escolherá aleatoriamente um registro como registro dinâmico de um cluster.  
   
-    2.  O registro **1000023** é uma correspondência do registro **1000022** com a pontuação correspondente: 93% porque os dois registros têm os mesmos valores para **SupplierID (pré-requisito)** e  **Nome do fornecedor** colunas, mas valores diferentes para o **ContactEmailAddress** coluna.  
+    2.  O registro **1000023** é uma correspondência do registro **1000022** com a pontuação de correspondência: 93% porque os dois registros têm os mesmos valores para **SupplierID (pré-requisito)** e **Supplier Name** colunas, mas valores diferentes para o **ContactEmailAddress** coluna.  
   
-    3.  Role até a parte inferior da lista para ver dois registros com as IDs: **1000051** e **1000052**. Registro **1000052** é considerada uma correspondência com a pontuação de correspondência **91%** porque os dois registros têm os mesmos valores para o **SupplierID** e  **ContactEmailAddress** colunas, mas valores diferentes para o **Supplier Name** coluna.  
+    3.  Role a tela até a parte inferior da lista para ver dois registros com as IDs: **1000051** e **1000052**. Registro **1000052** é considerada uma correspondência com a pontuação de correspondência **91%** porque os dois registros têm os mesmos valores para o **SupplierID** e  **ContactEmailAddress** colunas, mas valores diferentes para o **Supplier Name** coluna.  
   
      ![Definição de política – resultados da política](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "definição de política – resultados da política")  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48174456"
   
 4.  Clique em **feche** para fechar o **detalhes da pontuação de correspondência** caixa de diálogo.  
   
-5.  Clique em **resultados de correspondência** guia na parte inferior da página. Essa guia fornece detalhes como o número de registros correspondentes, o número de registros não correspondentes, o número de clusters com registros correspondentes, o tamanho médio do cluster, o tamanho mínimo do cluster e o tamanho máximo do cluster. Ver [criar uma política de conciliação](http://msdn.microsoft.com/library/hh270290.aspx) para obter mais detalhes. Não é possível exportar resultados dessa atividade. Você está apenas definindo uma política de correspondência usando os dados de exemplo para testar as regras e a política com base nesses dados.  
+5.  Clique em **resultados de correspondência** guia na parte inferior da página. Essa guia fornece detalhes como o número de registros correspondentes, o número de registros não correspondentes, o número de clusters com registros correspondentes, o tamanho médio do cluster, o tamanho mínimo do cluster e o tamanho máximo do cluster. Ver [criar uma política de conciliação](https://msdn.microsoft.com/library/hh270290.aspx) para obter mais detalhes. Não é possível exportar resultados dessa atividade. Você está apenas definindo uma política de correspondência usando os dados de exemplo para testar as regras e a política com base nesses dados.  
   
      ![Guia de resultados de correspondência](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "guia resultados de correspondência")  
   

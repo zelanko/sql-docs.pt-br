@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -17,12 +16,12 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c307d7c31b3599a358346812279d79c37705b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89fdb4d112d37a61b377bbac768d94012a703664
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074156"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362742"
 ---
 # <a name="integration-services-user-interface"></a>Interface do usuário do Integration Services
   Além das superfícies de design nas guias do Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , a interface do usuário fornece acesso às seguintes janelas e caixas de diálogo para adicionar recursos a pacotes e configurar as propriedades de objetos do pacote:  
@@ -56,11 +55,11 @@ ms.locfileid: "48074156"
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   

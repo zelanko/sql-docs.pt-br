@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199402"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376678"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
   Use as duas opções de memória de servidor, **memória mínima do servidor** e **memória máxima do servidor**, para reconfigurar a quantidade de memória (em megabytes) que é gerenciada pelo Gerenciador de Memória do SQL Server para um processo do SQL Server usado por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "48199402"
  A configuração padrão de **memória mínima do servidor** é 0 e a configuração padrão de **memória máxima do servidor** é 2147483647 MB. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode alterar seus requisitos de memória dinamicamente com base nos recursos do sistema disponíveis.  
   
 > [!NOTE]  
->  Configurar a **memória máxima do servidor** com o valor mínimo pode reduzir drasticamente o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e até mesmo impedir sua inicialização. Se você não puder iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após alterar essa opção, inicie-o usando a opção de inicialização **–f** e redefina **memória máxima do servidor** para seu valor anterior. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](database-engine-service-startup-options.md).  
+>  Configurar a **memória máxima do servidor** com o valor mínimo pode reduzir drasticamente o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e até mesmo impedir sua inicialização. Se você não puder iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após alterar essa opção, inicie-o usando a opção de inicialização **-f** e redefina **memória máxima do servidor** para seu valor anterior. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](database-engine-service-startup-options.md).  
   
  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando memória dinamicamente, ele consulta o sistema periodicamente para determinar a quantidade de memória livre. Manter essa memória livre impede a paginação do SO (sistema operacional). Se menos memória estiver livre, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liberará memória para o SO. Se houver mais memória livre, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá alocar mais memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adiciona memória apenas quando sua carga de trabalho exige mais. Um servidor em repouso não aumenta o tamanho de seu espaço de endereço virtual.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48199402"
 ## <a name="lock-pages-in-memory"></a>Bloquear páginas na memória  
  Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco. O bloqueio de páginas na memória pode manter a resposta do servidor quando ocorre paginação de memória no disco. O SQL Server **bloquear páginas na memória** opção é definida como ON em instâncias de 32 bits e 64 bits do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition e superior quando a conta com privilégios para executar sqlservr.exe recebeu o Windows "bloqueado páginas em Usuário "LPIM (memória) à direita. Em versões anteriores do SQL Server, a definição da opção Bloquear Páginas para uma instância de 32 bits do SQL Server requer que a conta com privilégios para executar o sqlservr.exe tenha o direito de usuário LPIM e a opção de configuração 'awe_enabled' seja definida como ON.  
   
- Para desabilitar a opção **Bloquear Páginas na Memória** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remova o direito de usuário “Páginas Bloqueadas em Memória” para a conta de inicialização do SQL Server.  
+ Para desabilitar o **bloquear páginas na memória** opção obter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remova o usuário "Páginas bloqueadas em memória" à direita para a conta de inicialização do SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Para desabilitar Bloquear Páginas na Memória  
  **Para desabilitar as opção Bloquear páginas na memória:**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199402"
 |-|-------------|-------------|  
 |Memória convencional|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 GB com **3 gb** inicializa o parâmetro *<br /><br /> 4 GB no WOW64\*\*|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB na arquitetura x64|  
   
- ***/3gb** é um parâmetro de inicialização do sistema operacional. Para obter mais informações, visite a [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** é um parâmetro de inicialização do sistema operacional. Para obter mais informações, visite a [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows on Windows 64) é um modo no qual 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado em um sistema operacional de 64 bits. Para obter mais informações, visite a [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * * WOW64 (Windows on Windows 64) é um modo no qual 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado em um sistema operacional de 64 bits. Para obter mais informações, visite a [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Exemplos  
   

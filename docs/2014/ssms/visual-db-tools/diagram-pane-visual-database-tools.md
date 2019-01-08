@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Diagram pane
@@ -15,12 +15,12 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8b79e058ddc189042b05c0ffc151d583417e961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117866"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819368"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Painel de Diagrama (Visual Database Tools)
   O painel Diagrama apresenta uma exibição gráfica das tabelas ou objetos com valor de tabela selecionados na conexão de dados. Mostra também todas as relações de junção entre eles.  
@@ -63,7 +63,7 @@ ms.locfileid: "48117866"
   
  A tabela a seguir lista as caixas de seleção e os símbolos usados no retângulo para cada tabela ou objeto com valor de tabela.  
   
-|Caixa de seleção ou símbolo|Description|  
+|Caixa de seleção ou símbolo|Descrição|  
 |-------------------------|-----------------|  
 |![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbi7.gif "Ícone das Ferramentas de Banco de Dados Visual")<br /><br /> ![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbi8.gif "Ícone das Ferramentas de Banco de Dados Visual")<br /><br /> ![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbi9.gif "Ícone das Ferramentas de Banco de Dados Visual")<br /><br /> ![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbia.gif "Ícone das Ferramentas de Banco de Dados Visual")|Especifica se uma coluna de dados é exibida no conjunto de resultados da consulta (consulta  Select) ou se é usada em uma consulta Update, Insert From, Make Table ou Insert Into. Selecione a coluna a ser adicionada aos resultados. Se **(Todas as Colunas)** for selecionado, todas as colunas de dados serão exibidas na saída.<br /><br /> O ícone usado com a caixa de seleção é alterado de acordo com o tipo de consulta que você está criando. Ao criar uma consulta Excluir, não podem ser selecionadas colunas individuais.|  
 |![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbib.gif "Ícone das Ferramentas de Banco de Dados Visual")<br /><br /> ![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbic.gif "Ícone das Ferramentas de Banco de Dados Visual")|Indica que a coluna de dados está sendo usada para ordenar os resultados da consulta (faz parte de uma cláusula ORDER BY). O ícone é exibido como A-Z se a ordem de classificação for crescente ou Z-A se ordem de classificação for decrescente.|  
@@ -79,7 +79,7 @@ ms.locfileid: "48117866"
   
  A forma do ícone no meio da linha de junção indica como são unidas as tabelas ou objetos com estrutura de tabela. Se a cláusula de junção usar um operador diferente de igual (=), o operador será exibido no ícone da linha de junção. A tabela a seguir lista os ícones que podem ser exibidos em uma linha de junção.  
   
-|Ícone de linha de junção|Description|  
+|Ícone de linha de junção|Descrição|  
 |--------------------|-----------------|  
 |![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbih.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção interna (criada usando o sinal de igual).|  
 |![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbii.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção interna baseada no operador "maior que". (O operador exibido no ícone da linha de junção reflete o operador usado na junção.)|  
@@ -89,7 +89,7 @@ ms.locfileid: "48117866"
   
  Os ícones nas extremidades da linha de junção indicam o tipo de junção. A tabela a seguir lista os tipos de junções e os ícones que podem ser exibidos nas extremidades da linha de junção.  
   
-|Ícone nas extremidades da linha de junção|Description|  
+|Ícone nas extremidades da linha de junção|Descrição|  
 |-------------------------------|-----------------|  
 |![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbim.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção uma para uma|  
 |![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbin.gif "Ícone das Ferramentas de Banco de Dados Visual")|Junção uma para muitas|  

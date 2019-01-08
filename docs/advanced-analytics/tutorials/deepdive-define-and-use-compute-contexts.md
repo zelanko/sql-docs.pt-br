@@ -1,51 +1,59 @@
 ---
-title: Definir e usar contextos de computação (SQL e R aprofundamento) | Microsoft Docs
+title: Definir e usar contextos de computação de RevoScaleR - aprendizagem de máquina do SQL Server
+description: Tutorial passo a passo sobre como definir um contexto de computação usando a linguagem R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6a76e07cb2ecd03a59112f6c39e3fa2f7895e0a2
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: c0ae593264abad52873cfc152da721b6c0867109
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975635"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645076"
 ---
-# <a name="define-and-use-compute-contexts-sql-and-r-deep-dive"></a>Definir e usar contextos de computação (SQL e R aprofundamento)
+# <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>Definir e usar contextos de computação (tutorial do SQL Server e o RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte do tutorial de aprofundamento de ciência de dados, sobre como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Esta lição é parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar [funções RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Esta lição apresenta a [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) função, que permite definir um contexto de computação para o SQL Server e, em seguida, executar cálculos complexos no servidor, em vez de seu computador local. 
+Na lição anterior, você usou **RevoScaleR** funções para inspecionar objetos de dados. Esta lição apresenta a [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) função, que permite que você defina um contexto de computação para um SQL Server remoto. Com um contexto de computação remota, você pode alternar a execução de R de uma sessão local a uma sessão remota no servidor. 
 
-RevoScaleR dá suporte a vários contextos de computação, para que você pode executar código R no Hadoop, Spark ou no banco de dados. Para o SQL Server, defina o servidor e a função manipula as tarefas de criação de objetos de conexão e passando entre o computador local e o contexto de execução remota de banco de dados.
+> [!div class="checklist"]
+> * Saiba o que contexto de computação de elementos de um SQL Server remoto
+> * Habilitar o rastreamento em um objeto de contexto de computação
 
-A função que cria o SQL Server de computação contexto usa as seguintes informações:
-
-- Cadeia de caracteres de Conexão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância
-- Especificação de como a saída deve ser tratada
-- Argumentos opcionais que habilitar o rastreamento ou especificar o nível de rastreamento
-- Especificação opcional de um diretório de dados compartilhados
+**RevoScaleR** dá suporte a vários contextos de computação: Hadoop, Spark no HDFS e SQL Server no banco de dados. Para o SQL Server, o **RxInSqlServer** função é usada para conexões de servidor e objetos de transmissão entre o computador local e o contexto de execução remota.
 
 ## <a name="create-and-set-a-compute-context"></a>Criar e definir um contexto de computação
 
-1. Especifique a cadeia de conexão para a instância em que os cálculos são executados.  Novamente, você pode usar a cadeia de caracteres de conexão que você criou anteriormente. Se você quiser mover os cálculos para um servidor diferente ou use um logon diferente para executar algumas tarefas, você pode criar uma cadeia de caracteres de conexão diferente.
+O **RxInSqlServer** função que cria o contexto de computação do SQL Server usa as seguintes informações:
+
++ Cadeia de caracteres de Conexão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância
++ Especificação de como a saída deve ser tratada
++ Especificação opcional de um diretório de dados compartilhados
++ Argumentos opcionais que habilitar o rastreamento ou especificar o nível de rastreamento
+
+Esta seção orienta você por meio de cada parte.
+
+1. Especifique a cadeia de conexão para a instância em que os cálculos são executados. Novamente, você pode usar a cadeia de caracteres de conexão que você criou anteriormente.
 
     **Usando um logon do SQL**
 
-      ```R
-      sqlConnString <- "Driver=SQL Server;Server=<SQL Server instance name>; Database=<database name>;Uid=<SQL user name>;Pwd=<password>"
+    ```R
+    sqlConnString <- "Driver=SQL Server;Server=<SQL Server instance name>; Database=<database name>;Uid=<SQL user nme>;Pwd=<password>"
       ```
 
     **Usando a autenticação do Windows**
 
-      ```R
-      sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=DeepDive;Trusted_Connection=True"
-      ```
-2. Especifique como deseja que a saída seja tratada. No código a seguir, você está indicando que a sessão do R na estação de trabalho deve sempre aguardar os resultados de trabalho do R, mas não retornar a saída do console das computações remotas.
+    ```R
+    sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=RevoDeepDive;Trusted_Connection=True"
+    ```
+    
+2. Especifique como deseja que a saída seja tratada. O script a seguir instrui a sessão local do R para aguardar os resultados do trabalho de R no servidor antes de processar a próxima operação. Ele também suprime a saída das computações remotas apareça na sessão local.
   
     ```R
     sqlWait <- TRUE
@@ -58,21 +66,19 @@ A função que cria o SQL Server de computação contexto usa as seguintes infor
   
     -   **FALSE**. Trabalhos são configurados como desbloqueados e retornarão imediatamente, permitindo que você continue a execução de outro código de R. No entanto, mesmo no modo desbloqueado, a conexão do cliente com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser mantida durante a execução do trabalho.
 
-3. Opcionalmente, você pode especificar o local de um diretório local para uso compartilhado por sessão do R local e remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador e suas contas.
+3. Opcionalmente, especifique o local de um diretório local para uso compartilhado por sessão do R local e remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador e suas contas.
 
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
     ```
     
-4. Se você quiser criar manualmente um diretório específico para o compartilhamento, você pode adicionar uma linha semelhante à seguinte:
+   Se você quiser criar manualmente um diretório específico para o compartilhamento, você pode adicionar uma linha semelhante à seguinte:
 
-    ```
+    ```R
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-    Para determinar qual pasta está sendo usada atualmente para o compartilhamento, execute `rxGetComputeContext()`, que retorna detalhes sobre o atual contexto de computação. Para obter mais informações, consulte [ScaleR reference (Referência do ScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/).
-
-4. Depois de preparar todas as variáveis, fornece-as como argumentos para o **RxInSqlServer** construtor para criar a *objeto de contexto de computação*.
+4. Passar argumentos para o **RxInSqlServer** construtor para criar a *objeto de contexto de computação*.
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -89,7 +95,28 @@ A função que cria o SQL Server de computação contexto usa as seguintes infor
     
     A definição de um contexto de computação não afeta nenhuma outra computação R que você pode fazer na estação de trabalho e não altera a fonte dos dados. Por exemplo, você poderia definir um arquivo de texto local como a fonte de dados, mas alterar o contexto de computação para o SQL Server e executar todas as leituras e resumos nos dados no computador do SQL Server.
 
-## <a name="enable-tracing-on-the-compute-context"></a>Habilitar o rastreamento no contexto de computação
+5. Ative o contexto de computação remota.
+
+    ```R
+    rxSetComputeContext(sqlCompute)
+    ```
+
+6. Retornam informações sobre o contexto de computação, incluindo suas propriedades.
+
+    ```R
+    rxGetComputeContext()
+    ```
+
+7. Redefina o contexto de computação de volta para o computador local, especificando a palavra-chave "local" (a próxima lição demonstra como usar o contexto de computação remota).
+
+    ```R
+    rxSetComputeContext("local")
+    ```
+
+> [!Tip]
+> Para obter uma lista de outras palavras-chave com suporte nesta função, digite `help("rxSetComputeContext")` em uma linha de comando do R.
+
+## <a name="enable-tracing"></a>Habilitar o rastreamento
 
 Às vezes, as operações funcionam em seu contexto local mas enfrentam problemas quando estão em execução em um contexto de computação remota. Se você quiser analisar problemas ou monitorar o desempenho, você pode habilitar o rastreamento no contexto de computação, para dar suporte à solução de problemas de tempo de execução.
 
@@ -105,26 +132,17 @@ A função que cria o SQL Server de computação contexto usa as seguintes infor
         traceLevel = 7)
     ```
   
-    Nesse exemplo, a propriedade *traceLevel* foi definida como 7, o que significa "mostrar todas as informações de rastreamento".
+   Nesse exemplo, a propriedade *traceLevel* foi definida como 7, o que significa "mostrar todas as informações de rastreamento".
 
-2. Para alterar o contexto de computação, use a função [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) e especifique o contexto pelo nome.
+2. Use o [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) função para especificar o contexto de computação de rastreamento habilitado por nome.
 
     ```R
-    rxSetComputeContext( sqlComputeTrace)
+    rxSetComputeContext(sqlComputeTrace)
     ```
 
-    > [!NOTE]
-    > 
-    > Para este tutorial, use o contexto de computação que não tenha o rastreamento habilitado. 
-    > 
-    > No entanto, se você decidir usar o rastreamento, lembre-se de que sua experiência pode ser afetada por conectividade de rede. Além disso, lembre que porque o desempenho para a opção de rastreamento habilitado não foi testado para todas as operações.
+## <a name="next-steps"></a>Próximas etapas
 
-Na próxima etapa, que você aprenderá a usar contextos de computação do, executar código R no servidor ou localmente.
+Saiba como alternar contextos de computação para executar código R no servidor ou localmente.
 
-## <a name="next-step"></a>Próxima etapa
-
-[Criar e executar scripts do R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-
-## <a name="previous-step"></a>Etapa anterior
-
-[Consultar e modificar os dados do SQL Server](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
+> [!div class="nextstepaction"]
+> [Contextos de computação de estatísticas de resumo de computação no local e remoto](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

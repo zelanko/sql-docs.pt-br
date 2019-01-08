@@ -15,26 +15,26 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220896"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590610"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Caixa de diálogo Expressão (Construtor de Relatórios)
-  Use o **expressão** caixa de diálogo para gravar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] propriedades de itens de expressões de relatório. É possível usar expressões para definir muitas propriedades, incluindo cor, fonte e bordas. Em tempo de execução, o processador de relatório avalia as expressões e substitui o resultado do valor da propriedade.  
+  Use a caixa de diálogo **Expressão** para escrever expressões do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para propriedades de itens de relatório. É possível usar expressões para definir muitas propriedades, incluindo cor, fonte e bordas. Em tempo de execução, o processador de relatório avalia as expressões e substitui o resultado do valor da propriedade.  
   
  A caixa de diálogo **Expressão** inclui uma janela de código, uma árvore de categoria, itens de categoria, um painel de descrição e um painel de exemplo. A caixa de diálogo **Expressão** é sensível ao contexto. Os itens e descrições de categoria são alterados em resposta à categoria da expressão com a qual você está trabalhando. Para obter mais informações, consulte [exemplos de expressões &#40;construtor de relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md), [expressões &#40;construtor de relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>Construções de expressões  
  As expressões começam com um sinal de igual (=) e podem incluir constantes, literais, operadores e referências a campos internos, coleções internas, funções internas, funções da biblioteca em tempo de execução do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], classes do common language runtime do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funções personalizadas. A lista a seguir descreve as categorias e os valores que podem ser adicionados a uma expressão.  
   
- **Definir expressão para:***\<PropertyName >*   
+ **Definir expressão para:**  _\<PropertyName >_  
  O nome da propriedade para a qual você está definindo uma expressão. Também é possível definir essa propriedade por nome, no painel Propriedades.  
   
  **Constantes**  
- Fornece uma lista de valores predefinidos válidos para essa propriedade para propriedades baseadas em constantes. Por exemplo, uma propriedade baseada em cor mostra nomes de cores válidos. Para uma propriedade que é um tipo de dados booleano, os valores são `True` e `False`.  
+ Fornece uma lista de valores predefinidos válidos para essa propriedade para propriedades baseadas em constantes. Por exemplo, uma propriedade baseada em cor mostra nomes de cores válidos. Para uma propriedade do tipo de dados booliano, os valores são `True` e `False`.  
   
  Nem todos os itens que oferecem suporte às expressões podem ser definidos como uma constante. Se uma propriedade não puder ser definida como valor de constante, o painel de descrição fornecerá essas informações.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "48220896"
  **Parâmetros**  
  Fornece uma lista de parâmetros de relatório.  
   
- **Campos (**  *\<conjunto de dados selecionado >* **)**  
+ **Campos (**  _\<conjunto de dados selecionado >_ **)**  
  Exibe a lista de campos para o conjunto de dados selecionado na categoria Conjuntos de dados. Clique duas vezes em um campo para copiá-lo na caixa **Expressão** .  
   
  **Conjuntos de dados**  
  Fornece uma lista de conjuntos de dados disponíveis e mostra os campos que são membros do conjunto de dados.  
   
- **Variables**  
+ **Variáveis**  
  Exibe uma lista de variáveis de relatório. Para obter mais informações, consulte [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  **Operadores**  
@@ -83,12 +83,12 @@ ms.locfileid: "48220896"
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Formatando números e datas &#40;relatórios e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Referências de coleção de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Referências de coleção de campos do conjunto de dados &#40;relatórios e SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [Referência de funções de agregação &#40;relatórios e SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Selecione a caixa de diálogo de cor &#40;relatórios e SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   

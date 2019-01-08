@@ -26,15 +26,15 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810272"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376178"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
-  Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de importação compila um novo DAC em dois estágios.  
@@ -43,17 +43,17 @@ ms.locfileid: "43810272"
   
 2.  A importação em massa copia os dados do arquivo de exportação.  
   
- Há um aplicativo de exemplo nos Laboratórios [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que podem ser usados para testar a exportação e importação de DACs e bancos de dados. Para obter instruções sobre como baixar e usar o exemplo, consulte [Importação e exportação para banco de dados SQL do Windows Azure](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ Há um aplicativo de exemplo nos Laboratórios [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que podem ser usados para testar a exportação e importação de DACs e bancos de dados. Para obter instruções sobre como baixar e usar o exemplo, consulte [Importação e exportação para banco de dados SQL do Windows Azure](https://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ## <a name="sql-server-utility"></a>Utilitário do SQL Server  
  Se você importar um DAC para uma instância gerenciada do Mecanismo de Banco de Dados, o DAC importado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle do utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
   
 ## <a name="database-options-and-settings"></a>Opções e configurações de banco de dados  
- Por padrão, o banco de dados criado durante a importação terá todas as configurações padrão da instrução CREATE DATABASE; a única diferença é que o agrupamento de banco de dados e o nível de compatibilidade são definidos como os valores estabelecidos no arquivo de exportação do DAC. Um arquivo de exportação do DAC usa os valores do banco de dados original.  
+ Por padrão, o banco de dados criado durante a importação terá todas as configurações padrão da instrução CREATE DATABASE; a única diferença é que a ordenação de banco de dados e o nível de compatibilidade são definidos como os valores estabelecidos no arquivo de exportação do DAC. Um arquivo de exportação do DAC usa os valores do banco de dados original.  
   
  Algumas opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de importação. Propriedades físicas, como número de grupos de arquivos ou números e tamanhos de arquivos, não podem ser alteradas como parte do processo de importação. Após a importação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados. Para obter mais informações, consulte [Databases](../databases/databases.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Um DAC pode ser importado para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executa o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Se você exportar um DAC de uma versão superior, o DAC poderá conter objetos sem suporte do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Você não pode implantar esses DACs nas instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -91,18 +91,18 @@ ms.locfileid: "43810272"
   
  **Opções**  
   
--   **Não exibir esta página novamente.** – Clique nesta caixa de seleção para não exibir mais a página Introdução no futuro.  
+-   **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
   
--   **Avançar** – Continua na página **Configurações de Importação** .  
+-   **Avançar** – continua na página **Configurações de Importação**.  
   
 -   **Cancelar** – cancela a operação e fecha o assistente.  
   
 ###  <a name="Import_settings"></a> Página Configurações de Importação  
  Use essa página para especificar a localização do arquivo .bacpac a ser importado.  
   
--   **Importar de disco local** – Clique em **Procurar…** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
+-   **Importar do disco local** – clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
--   **Importar do Windows Azure** – Importa um arquivo BACPAC de um contêiner do Windows Azure. Você deve se conectar a um contêiner do Windows Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. O arquivo temporário será criado no local especificado e permanecerá lá após a conclusão da operação.  
+-   **Importar do Windows Azure** -importa um arquivo BACPAC de um contêiner do Windows Azure. Você deve se conectar a um contêiner do Windows Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. O arquivo temporário será criado no local especificado e permanecerá lá após a conclusão da operação.  
   
      Ao procurar o Windows Azure, você poderá alternar entre contêineres dentro de uma única conta. Você deve especificar um único arquivo .bacpac para continuar a operação de importação. Observe que você pode classificar colunas por **Nome**, **Tamanho**ou **Data da Modificação**.  
   
@@ -113,21 +113,21 @@ ms.locfileid: "43810272"
   
  **Para uma instância local do SQL Server:**  
   
--   **Nome do novo banco de dados** – Forneça um nome para o banco de dados importado.  
+-   **Nome do novo banco de dados** – forneça um nome para o banco de dados importado.  
   
--   **Caminho do arquivo de dados** – Forneça um diretório local para arquivos de dados. Clique em **Procurar…** para navegar no computador local ou especifique o caminho no espaço fornecido.  
+-   **Caminho do arquivo de dados** – forneça um diretório local para arquivos de dados. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido.  
   
--   **Caminho do arquivo de log** – Forneça um diretório local para arquivos de log. Clique em **Procurar…** para navegar no computador local ou especifique o caminho no espaço fornecido.  
+-   **Caminho do arquivo de log** – forneça um diretório local para arquivos de log. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido.  
   
  Para continuar, clique em **Avançar**.  
   
  **Para um banco de dados SQL:**  
   
--   **Nome do novo banco de dados** – Forneça um nome para o banco de dados importado.  
+-   **Nome do novo banco de dados** – forneça um nome para o banco de dados importado.  
   
--   **Edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** – Especifique o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business ou o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obter mais informações sobre edições do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte este site do [Banco de dados SQL](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -especificar [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obter mais informações sobre edições do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte este site do [Banco de dados SQL](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Tamanho máximo do banco de dados (GB)** – Use o menu suspenso para especificar o tamanho máximo do banco de dados.  
+-   **Tamanho máximo do banco de dados (GB)** -Use o menu suspenso para especificar o tamanho máximo do banco de dados.  
   
  Para continuar, clique em **Avançar**.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "43810272"
  Clique em **Fechar** para fechar o assistente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de Dados](data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](export-a-data-tier-application.md)  
   
   

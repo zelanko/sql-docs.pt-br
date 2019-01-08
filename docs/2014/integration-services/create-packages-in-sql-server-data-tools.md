@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, creating
@@ -16,12 +15,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 24f73925210f51cfa942bc6b8228b5371aea33aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2748cf548a6a5c60ceab764afb27fff111f3ea1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192886"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372358"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Copiar pacotes nas Ferramentas de Dados do SQL Server
   Os pacotes criados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] por meio do [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer são salvos no sistema de arquivos. Para salvar um pacote no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes, salve uma cópia do pacote. Para obter mais informações, consulte [Salvar uma cópia de um pacote](../../2014/integration-services/save-a-copy-of-a-package.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "48192886"
   
      Se pacotes existentes incluírem a funcionalidade que deseja reutilizar, você pode criar o fluxo de controle e fluxos de dados no novo pacote mais rapidamente copiando e colando os objetos de outros pacotes. Para obter mais informações sobre como usar o copiar e colar em projetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , consulte [Reutilizar objetos de pacote](reuse-of-package-objects.md).  
   
-     Se você criar um novo pacote copiando e colando um pacote existente, ou usando um pacote personalizado como modelo, o nome e GUID do pacote existente também serão copiados. Você deve atualizar o nome e GUID do novo pacote, para ajudar a diferenciá-lo do pacote originalmente copiado. Por exemplo, caso pacotes tenham o mesmo GUID, é mais difícil identificar o pacote ao quais os dados de log pertencem. Você pode gerar o GUID na `ID` propriedade e atualizar o valor da `Name` propriedade usando a janela Propriedades no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Definir as propriedades do pacote](set-package-properties.md) e [Utilitário dtutil](dtutil-utility.md).  
+     Se você criar um novo pacote copiando e colando um pacote existente, ou usando um pacote personalizado como modelo, o nome e GUID do pacote existente também serão copiados. Você deve atualizar o nome e GUID do novo pacote, para ajudar a diferenciá-lo do pacote originalmente copiado. Por exemplo, caso pacotes tenham o mesmo GUID, é mais difícil identificar o pacote ao quais os dados de log pertencem. Você pode gerar o GUID na propriedade `ID` e atualizar o valor da propriedade `Name` usando a janela Propriedades no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Definir as propriedades do pacote](set-package-properties.md) e [Utilitário dtutil](dtutil-utility.md).  
   
 -   Use um pacote personalizado que você designou como um modelo.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48192886"
   
  Os procedimentos a seguir descrevem como criar ou excluir um pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- Para obter um vídeo que demonstre como criar um pacote básico usando o modelo de pacote padrão, consulte [Criando um pacote básico (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023).  
+ Para obter um vídeo que demonstre como criar um pacote básico usando o modelo de pacote padrão, consulte [Criando um pacote básico (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023).  
   
 ### <a name="to-create-a-package-in-sql-server-data-tools-using-the-package-template"></a>Para criar um pacote nas Ferramentas de Dados do SQL Server usando o modelo de pacote  
   

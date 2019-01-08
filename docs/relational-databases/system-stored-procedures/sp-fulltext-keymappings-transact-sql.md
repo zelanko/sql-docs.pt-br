@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e9f8894376712472c13479a32503954ad2694d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506318"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -60,7 +60,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|É a coluna do identificador de documento (DocId) interno que corresponde ao valor da chave.|  
 |Chave|*|É o valor da chave de texto completo da tabela especificada.<br /><br /> Se nenhuma chave de texto completo existir na tabela de mapeamento, um conjunto de linhas vazio será retornado.|  
@@ -73,7 +73,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="remarks"></a>Comentários  
  A tabela a seguir descreve o efeito de usar um, dois ou três parâmetros.  
   
-|Esta lista de parâmetros...|Tem este resultado...|  
+|Essa lista de parâmetros...|Tem este resultado...|  
 |--------------------------|----------------------|  
 |*table_id*|Quando invocado apenas com o *table_id* parâmetro, sp_fulltext_keymappings retorna todos os valores de chave de texto completo (Key) da tabela base especificada, juntamente com o DocId que corresponde a cada chave. Isso inclui as chaves que estão com exclusão pendente.<br /><br /> Essa função é útil para solucionar vários problemas. É especialmente útil para ver o conteúdo do índice de texto completo quando a chave de texto completo selecionada não é do tipo de dados de números inteiros. Isso envolve a junção de resultados de sp_fulltext_keymappings com os resultados de **DM fts_index_keywords_by_document**. Para obter mais informações, consulte [DM fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Em geral, no entanto, recomendamos que, se possível, você execute sp_fulltext_keymappings com os parâmetros que especificam uma chave de texto completo específica ou DocId. Isso é muito mais eficiente do que retornar um mapa de chaves inteiro, especialmente para uma tabela muito grande para a qual o custo de desempenho de retornar um mapa de chaves inteiro pode ser substancial.|  
 |*table_id*, *docid*|Se apenas a *table_id* e *docid* forem especificados, *docid* deve ser não NULL e especificar um DocId válido na tabela especificada. Essa função é útil para isolar a chave de texto completo personalizada a partir da tabela base que corresponde ao DocId de um índice de texto completo específico.|  
@@ -117,7 +117,7 @@ GO
 |`3`|`3`|`3`|  
 |`4`|`4`|`4`|  
   
-### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. Obtendo o valor de DocId para um valor de Chave específico  
+### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>b. Obtendo o valor de DocId para um valor de Chave específico  
  O exemplo a seguir usa uma instrução DECLARE para criar uma variável local, `@table_id`, e para atribuir a ID da tabela `ProductReview` como seu valor. O exemplo executa **sp_fulltext_keymappings** especificando `@table_id` para o *table_id* parâmetro, NULL para o *docid* parâmetro e 4 para o *chave* parâmetro.  
   
 > [!NOTE]  

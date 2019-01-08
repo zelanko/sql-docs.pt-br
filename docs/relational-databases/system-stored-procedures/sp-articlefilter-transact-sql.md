@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98bafb6441b29bef41f7a2fffefac38a8ce9048a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0869cfb6914766e2ab43e138831e2992aa6977b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633414"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209195"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
+ [  **@article=**] **'**_artigo_**'**  
  É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [  **@filter_name=**] **'***filter_name***'**  
+ [  **@filter_name=**] **'**_filter_name_**'**  
  É o nome do procedimento armazenado de filtro a ser criado a partir de *filter_name*. *filter_name* está **nvarchar(386)**, com um padrão NULL. Você deve especificar um nome exclusivo para o filtro de artigo.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause* está **ntext**, com um padrão NULL.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
@@ -71,8 +70,8 @@ sp_articlefilter [ @publication = ] 'publication'
   
  **1** Especifica que as alterações no artigo faz com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+ [  **@publisher=** ] **'**_publisher_**'**  
+ Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

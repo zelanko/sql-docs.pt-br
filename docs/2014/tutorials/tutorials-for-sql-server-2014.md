@@ -18,12 +18,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b3a2a4fb654603e783a50e46b212f746226132ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368058"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Tutoriais para SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] incorpora várias tecnologias e recursos novos.  
@@ -32,9 +32,9 @@ ms.locfileid: "48194466"
   
  Se você estiver usando um servidor do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , terá os provedores de dados do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instalados. Para que os tutoriais funcionem, você precisará dos bancos de dados de exemplo do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que funcionam com esses provedores ou dos provedores de dados do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] que funcionam com a versão [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] dos bancos de dados de exemplo.  
   
--   Para baixar os exemplos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] a serem usados com os tutoriais, vá para [Exemplos para SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) no CodePlex.  
+-   Para baixar os exemplos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] a serem usados com os tutoriais, vá para [Exemplos para SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) no CodePlex.  
   
--   Para baixar uma pasta de trabalho [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e relatórios [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usar com tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vá para [Arquivos de Imagem para Modelo de Exemplo HelloWorldPicnic no PowerPivot e no Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
+-   Para baixar uma pasta de trabalho [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e relatórios [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usar com tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vá para [Arquivos de Imagem para Modelo de Exemplo HelloWorldPicnic no PowerPivot e no Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] é um recurso do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
@@ -43,12 +43,12 @@ ms.locfileid: "48194466"
   
 -   Para baixar versões do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] de bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , vá para [AdventureWorks para SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) no CodePlex.  
   
--   Para ver uma lista dos tutoriais do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vá para [Tutoriais](http://msdn.microsoft.com/library/ms167593.aspx) na biblioteca do MSDN.  
+-   Para ver uma lista dos tutoriais do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vá para [Tutoriais](https://msdn.microsoft.com/library/ms167593.aspx) na biblioteca do MSDN.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Os tutoriais estão disponíveis para essas tecnologias do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
-|Tecnologia|Description|  
+|Tecnologia|Descrição|  
 |----------------|-----------------|  
 |[Tutoriais do Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Saiba como desenvolver e implantar modelos de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Saiba também como usar ferramentas como o PowerPivot para analisar os dados nos modelos.|  
 |[Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprender a criar relatórios e assinaturas básicos.|  

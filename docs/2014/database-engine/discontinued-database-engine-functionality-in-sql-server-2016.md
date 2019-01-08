@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -34,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135286"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357020"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -75,8 +74,8 @@ ms.locfileid: "48135286"
 |Opções Set|`SET DISABLE_DEF_CNST_CHK`|Nenhum.|  
 |Tabelas do sistema|sys.database_principal_aliases|Use funções em vez de aliases.|  
 |Transact-SQL|`RAISERROR` no formato `RAISERROR integer 'string'` foi descontinuado.|Reescreva a instrução usando atual **RAISERROR(...)**  sintaxe.|  
-|sintaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Use `ROLLUP`|  
-|sintaxe Transact-SQL|Uso de **\* =** e **=\***|Use a sintaxe de junção ANSI. Para obter mais informações, consulte [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|sintaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Use `ROLLUP`.|  
+|sintaxe Transact-SQL|Uso de **\* =** e **=\***|Use a sintaxe de junção ANSI. Para obter mais informações, consulte [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Substituído pelo evento database_file_size_change, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Alterações de XEvent adicionais**  

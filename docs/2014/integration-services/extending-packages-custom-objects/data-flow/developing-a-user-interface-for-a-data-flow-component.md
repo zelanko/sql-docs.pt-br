@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,12 +22,12 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca7b7f212c483dcb9437799fa9204979764efce8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7b40c30e870e7f2a945643dbaadb88e1880ad5b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362048"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desenvolvendo uma interface do usuário para um componente de fluxo de dados
   Os desenvolvedores de componentes podem fornecer uma interface de usuário personalizada para um componente, que é exibida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando o componente é editado. A implementação de uma interface de usuário personalizada fornece a você uma notificação quando o componente é adicionado a ou excluído de uma tarefa de fluxo de dados, e quando é solicitada ajuda para o componente.  
@@ -91,7 +89,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Usando os serviços do Designer SSIS  
  O parâmetro `IServiceProvider` do método <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fornece acesso aos seguintes serviços do Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|Serviço|Description|  
+|Serviço|Descrição|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Usado para determinar se o componente foi gerado como parte de uma operação copiar/colar ou recortar/colar.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Usado acessar conexões existentes ou criar novas conexões no pacote.|  
@@ -283,7 +281,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um componente de fluxo de dados personalizado](creating-a-custom-data-flow-component.md)  

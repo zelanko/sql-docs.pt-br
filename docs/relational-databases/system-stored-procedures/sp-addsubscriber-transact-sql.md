@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscriber
@@ -17,12 +16,12 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec23f8c6fd28ba20522c6a2962d8af0c9f809a9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad13c4904270d3162dac8791b7724533e8da6656
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211745"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@type=**] *tipo*  
  É o tipo de assinante. *tipo de* está **tinyint**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante|  
 |**1**|Servidor de fontes de dados ODBC|  
@@ -111,7 +110,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  É a frequência de agendamento do agente de replicação. *frequency_type* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -134,7 +133,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  É a data do agente de replicação. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|First|  
 |**2**|Segundo|  
@@ -154,7 +153,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -207,7 +206,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Esse parâmetro foi preterido e é fornecido para compatibilidade com versões anteriores, somente configuração *encrypted_password* a qualquer valor, mas **0** resultará em erro.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
+ Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado durante a publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

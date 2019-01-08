@@ -1,5 +1,5 @@
 ---
-title: Arquitetura de extensibilidade no SQL Server Machine Learning Services | Microsoft Docs
+title: Arquitetura de extensibilidade para a linguagem R e o script de Python - aprendizagem de máquina do SQL Server
 description: Suporte para código externo para o mecanismo de banco de dados do SQL Server, com a arquitetura dual para executar o script de R e Python em dados relacionais.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4e48d51e45cdc9f1cd56f22228d95370b8f75711
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419214"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432739"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitetura de extensibilidade em serviços do SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

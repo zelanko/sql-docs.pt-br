@@ -1,20 +1,22 @@
 ---
-title: Monitorar clusters de grandes dados do SQL Server (versão prévia) com o portal de administração de cluster | Microsoft Docs
+title: Portal de administração de cluster
+titleSuffix: SQL Server 2019 big data clusters
 description: Saiba como usar o portal de administração de cluster para monitorar clusters do SQL Server 2019 big data (visualização).
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215532"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>Introdução ao portal de administração de cluster
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Como usar o portal de administração de cluster para monitorar um cluster de big data do SQL Server
 
 Se você quiser monitorar ou solucionar problemas do seu cluster de big data de 2019 do SQL Server (versão prévia), use o portal de administração de cluster.
 
@@ -29,10 +31,10 @@ O portal de administração de cluster permite que você:
 
 Siga as [guia de início rápido para implantar o cluster de big data](quickstart-big-data-cluster-deploy.md) até chegar à **portal de administração de cluster** seção. Depois que o cluster de big data em execução com mssqlctl, siga estas instruções:
 
-Quando o pod de controlador estiver em execução, você pode usar o portal de administração de cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `service-proxy-lb` (por exemplo: **https://\<endereço ip\>: 30777**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
+Quando o pod de controlador estiver em execução, você pode usar o portal de administração de cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `service-proxy-lb` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
 
 > [!NOTE]
-> Para CTP 2.1, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
+> Para CTP 2.2, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
 
 ## <a name="overview"></a>Visão geral
 

@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0213e831f6613acc0ce5cc0a802240c2e3979fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcde4fd9439862dd88bdb1ff8c9eb40ff85ce0d4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772334"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590420"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@ProcName =** ] **'***procedimento***'**  
+ [  **@ProcName =** ] **'**_procedimento_**'**  
  É o nome do procedimento para o qual definir uma opção. *procedimento* está **nvarchar(776)**, sem padrão.  
   
- [  **@OptionName =** ] **'***opção***'**  
+ [  **@OptionName =** ] **'**_opção_**'**  
  É o nome da opção a ser definida. O único valor para *opção* é **inicialização**.  
   
- [  **@OptionValue =** ] **'***valor***'**  
+ [  **@OptionValue =** ] **'**_valor_**'**  
  Se deseja definir a opção on (**true** ou **na**) ou desativado (**false** ou **off**). *valor* está **varchar(12)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

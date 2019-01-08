@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 159dd55d8573af5b23dcb71c3393539fa8a0ac37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160126"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367728"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
   Este tópico descreve como reorganizar ou recompilar índice fragmentado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantém os índices automaticamente sempre que são realizadas operações de entrada, atualização ou exclusão nos dados subjacentes. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados. Índices com fragmentação pesada podem degradar o desempenho da consulta e causar lentidão de resposta do aplicativo.  
@@ -71,7 +71,7 @@ ms.locfileid: "48160126"
   
  O conjunto de resultados retornado pela função **sys.dm_db_index_physical_stats** inclui as colunas a seguir.  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Porcentagem de fragmentação lógica (páginas fora de ordem no índice).|  
 |**fragment_count**|Número de fragmentos (páginas folha fisicamente consecutivas) do índice.|  
@@ -91,7 +91,7 @@ ms.locfileid: "48160126"
 > [!NOTE]  
 >  Em geral, a fragmentação em índices pequenos não é frequentemente controlável. As páginas de índices pequenos são armazenadas em extensões mistas. As extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação do índice.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Índices com mais de 128 extensões são recriados em duas fases separadas: lógica e física. Na fase lógica, as unidades de alocação existentes usadas pelo índice são marcadas para desalocação, as linhas de dados são copiadas, ordenadas e, depois, movidas para novas unidades de alocação criadas para armazenar o índice recriado. Na fase física, as unidades de alocação previamente marcadas para desalocação são fisicamente canceladas em transações curtas que ocorrem em segundo plano e que não exigem muitos bloqueios.  
   
@@ -311,6 +311,6 @@ ms.locfileid: "48160126"
  Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## <a name="see-also"></a>Consulte também  
- [Práticas recomendadas de desfragmentação de índice do Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
+ [Práticas recomendadas de desfragmentação de índice do Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

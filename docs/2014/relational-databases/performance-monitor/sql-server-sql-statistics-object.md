@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
@@ -13,12 +13,12 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6991ed3113f577a767229010e1b9a3af09e86e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803178"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
   O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  
@@ -33,7 +33,7 @@ ms.locfileid: "48187246"
   
  Esses são os contadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics**.  
   
-|Contadores do SQL Server SQL Statistics|Description|  
+|Contadores do SQL Server SQL Statistics|Descrição|  
 |----------------------------------------|-----------------|  
 |**Tentativas de Param. Autom./s**|Número de tentativas de parametrização automática por segundo. O total deve ser a soma das parametrizações automáticas que falharam, seguras e inseguras. A parametrização automática ocorre quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta parametrizar uma solicitação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] substituindo alguns literais por parâmetros de modo a permitir a reutilização do plano de execução resultante armazenado em cache em várias solicitações que parecem semelhantes. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões mais novas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse contador não inclui parametrizações forçadas.|  
 |**Solicitações em Lote/s**|Número de lotes de comando [!INCLUDE[tsql](../../../includes/tsql-md.md)] recebidos por segundo. Essa estatística é afetada por todas as restrições (tais como E/S, número de usuários, tamanho do cache, complexidade das solicitações etc.). Altas solicitações em lote significam uma boa taxa de transferência.|  

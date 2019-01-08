@@ -16,12 +16,12 @@ ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de221897b89a7afb1989cf8a74ab3eafbf58238c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afa72384d94b4a3c7c351d59110bd4ae692b8be9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080726"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367588"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementando uma classe Connection para uma extensão de processamento de dados
   O objeto **Connection** representa uma conexão de banco de dados ou recurso semelhante e é o ponto de partida para usuários de uma extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Ele representa as conexões com servidores de banco de dados, embora qualquer entidade com comportamento semelhante possa ser exposta como uma **Connection**.  
@@ -48,7 +48,7 @@ ms.locfileid: "48080726"
 > [!NOTE]  
 >  A implementação de <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> exige, implicitamente, que você implemente os membros das interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> e <xref:Microsoft.ReportingServices.Interfaces.IExtension>.  
 >   
->  Para obter uma implementação de exemplo da classe **Connection**, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+>  Para obter uma implementação de exemplo da classe **Connection**, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões do Reporting Services](../reporting-services-extensions.md)   

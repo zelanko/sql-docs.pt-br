@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544553"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover um Banco de Dados do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148422"
   
 1.  Localize o banco de dados a ser movido no painel esquerdo ou direito do SSMS.  
   
-2.  Clique com o botão direito do mouse no banco de dados e selecione **Desanexar...**  
+2.  Clique com botão direito no banco de dados e selecione **desanexar...**  
   
 3.  Atribua uma senha ao banco de dados a ser desanexado e clique em **OK** para executar o comando detach.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148422"
   
 5.  Localize a pasta **Bancos de Dados** no painel esquerdo ou direito do SSMS.  
   
-6.  Clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**  
+6.  Clique com botão direito no **bancos de dados** pasta e selecione **anexar...**  
   
-7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, use o botão Procurar (**…**) para localizar a pasta do banco de dados.  
+7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar (**...** ) para localizar a pasta do banco de dados.  
   
 8.  Selecione o modo **ReadWrite** do banco de dados.  
   

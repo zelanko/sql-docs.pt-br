@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364098"
 ---
 # <a name="tabular-model-data-access"></a>Acesso a dados de modelo de tabela
   Os bancos de dados modelo de tabela no Analysis Services podem ser acessados pela maioria dos mesmos clientes, interfaces e idiomas que você usa para recuperar dados ou metadados de um modelo multidimensional. Para obter mais informações, consulte [Acesso a dados de modelo multidimensional &#40;Analysis Services – dados multidimensionais 41](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -24,10 +24,10 @@ ms.locfileid: "50148401"
  Este tópico descreve os clientes, as linguagens de consulta e as interfaces programáticas que trabalham com modelos de tabela.  
   
 ## <a name="clients"></a>Clientes  
- Os aplicativos cliente da Microsoft a seguir oferecem suporte a conexões nativas com bancos de dados modelo de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Os aplicativos cliente da Microsoft a seguir oferecem suporte a conexões nativas com bancos de dados modelo de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ### <a name="excel"></a>Excel  
- Você pode se conectar a bancos de dados modelo de tabela do Excel, usando a visualização de dados e recursos de análise no Excel para trabalhar com seus dados. Para acessar os dados, você define uma conexão de dados do Analysis Services, especifica um servidor que é executado em modo de servidor de tabela e escolhe o banco de dados a ser usado. Para obter mais informações, consulte [Conectar ou importar dados do SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Você pode se conectar a bancos de dados modelo de tabela do Excel, usando a visualização de dados e recursos de análise no Excel para trabalhar com seus dados. Para acessar os dados, você define uma conexão de dados do Analysis Services, especifica um servidor que é executado em modo de servidor de tabela e escolhe o banco de dados a ser usado. Para obter mais informações, consulte [Conectar ou importar dados do SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
  O Excel também é o aplicativo indicado para procurar modelos de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A ferramenta inclui uma opção **Analisar no Excel** que inicia uma nova instância do Excel, cria uma pasta de trabalho do Excel e abre uma conexão de dados da pasta de trabalho para o banco de dados de workspace do modelo. Ao procurar dados modelo de tabela no Excel, lembre-se de que o Excel emite consultas no modelo usando o cliente Tabela Dinâmica do Excel. Consequentemente, as operações dentro da pasta de trabalho do Excel resultam em consultas MDX que são enviadas ao banco de dados de workspace, não consultas DAX. Se você estiver usando o SQL Profiler ou outra ferramenta de monitoramento para monitorar consultas, poderá encontrar o MDX e não o DAX no rastreamento do profiler. Para obter mais informações sobre o recurso Análise no Excel, consulte [Análise no Excel  40Tabela do SSAS 41](analyze-in-excel-ssas-tabular.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50148401"
  As consultas que são enviadas pelo cliente do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ao modelo são emitidas como instruções DAX, que você pode monitorar definindo um rastreamento no modelo.  O cliente também emite uma solicitação ao servidor para a definição de esquema inicial, que é apresentada de acordo com o CSDL (linguagem de definição de esquema conceitual). Para obter mais informações, consulte [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar instâncias que hospedam modelos de tabela e para consultar os metadados e os dados neles. Você pode processar modelos ou os objetos em um modelo, pode criar e gerenciar partições, e definir a segurança que pode ser usada para gerenciar o acesso a dados. Para obter mais informações, consulte os tópicos a seguir:  
+ Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar instâncias que hospedam modelos de tabela e para consultar os metadados e os dados neles. Você pode processar modelos ou os objetos em um modelo, pode criar e gerenciar partições, e definir a segurança que pode ser usada para gerenciar o acesso a dados. Para mais informações, consulte os seguintes tópicos:  
   
 -   [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

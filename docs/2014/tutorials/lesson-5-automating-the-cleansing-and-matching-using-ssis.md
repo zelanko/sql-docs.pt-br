@@ -13,15 +13,15 @@ ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b1747b4ee9ac77ee265d3aff7c9589d87520a82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7406f0f39afb0323ff6564b4b0ea427515f0f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375808"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lição 5: Automatizando a limpeza e a correspondência usando o SSIS
-  Na lição 1, você criou a base de dados de Conhecimento de fornecedores e usou para limpar dados na lição 2 e correspondência de dados na lição 3 usando a ferramenta **cliente DQS**. Em um cenário do mundo real, talvez você precise extrair dados de uma fonte que não oferece suporte a DQS ou você deseja automatizar a limpeza e o processo de correspondência sem precisar usar o **cliente DQS** ferramenta. SQL Server Integration Services (SSIS) tem componentes que você pode usar para integrar dados de várias fontes heterogêneas e uma **[transformação de limpeza DQS](http://msdn.microsoft.com/library/ee677619.aspx)** componente para invocar a limpeza funcionalidade exposta pelo DQS. Atualmente, o DQS não expõe a funcionalidade de correspondência para uso do SSIS, mas você pode usar o **[transformação agrupamento difuso](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** para identificar duplicatas nos dados.  
+  Na lição 1, você criou a base de dados de Conhecimento de fornecedores e usou para limpar dados na lição 2 e correspondência de dados na lição 3 usando a ferramenta **cliente DQS**. Em um cenário do mundo real, talvez você precise extrair dados de uma fonte que não oferece suporte a DQS ou você deseja automatizar a limpeza e o processo de correspondência sem precisar usar o **cliente DQS** ferramenta. SQL Server Integration Services (SSIS) tem componentes que você pode usar para integrar dados de várias fontes heterogêneas e uma **[transformação de limpeza DQS](https://msdn.microsoft.com/library/ee677619.aspx)** componente para invocar a limpeza funcionalidade exposta pelo DQS. Atualmente, o DQS não expõe a funcionalidade de correspondência para uso do SSIS, mas você pode usar o **[transformação agrupamento difuso](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** para identificar duplicatas nos dados.  
   
  Você pode carregar dados no MDS usando o **recurso preparação baseada em entidade**. Quando você cria uma entidade no MDS, os procedimentos armazenados e as tabelas de preparo correspondentes são criados automaticamente. Por exemplo, quando criou a entidade fornecedor, o **supplier_leaf** tabela e o **udp_supplier_leaf** procedimento armazenado foram criadas automaticamente. Use os procedimentos e as tabelas de preparo para criar, atualizar e excluir membros de entidade. Nesta lição, você criará novos membros de entidade para a Entidade Fornecedor. Para carregar dados no servidor MDS, o pacote SSIS primeiro carrega os dados na tabela de preparação stg.supplier_Leaf e, em seguida, dispara o procedimento armazenado stg.udp_Supplier_Leaf associado. Ver [importando dados](../master-data-services/overview-importing-data-from-tables-master-data-services.md) para obter mais detalhes.  
   

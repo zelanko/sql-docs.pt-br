@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091866"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354008"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos
   Este tópico explica as dimensões muitos-para-muitos no Analysis Services, incluindo quando usá-las e como criá-las.  
@@ -122,7 +122,7 @@ ms.locfileid: "48091866"
   
 11. Nomeie o cubo e clique em **Concluir**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Etapa 3: Definir a relação muitos-para-muitos  
+#### <a name="step-3-define-many-to-many-relationship"></a>Etapa 3: Definir muitos-para-muitos relação  
   
 1.  No designer de cubo, clique na guia Uso da Dimensão. Observe que já há uma relação de muitos para muitos entre **Dim Sales Reason** e **Fact Internet Sales**. Lembre-se de que o ícone a seguir indica uma relação muitos-para-muitos.  
   
@@ -175,20 +175,20 @@ ms.locfileid: "48091866"
   
 3.  Sempre lembre-se de implantar e reconectar depois de alterar um modelo. No Excel, use o botão Atualizar na faixa de opções Analisar da Tabela Dinâmica.  
   
-4.  Evite usar grupos de medidas vinculados em vários relacionamentos muitos para muitos, especialmente quando esses relacionamentos estiverem em cubos diferentes. Fazer isso poderá resultar em agregações ambíguas. Para obter mais informações, consulte [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantidades incorretas de medidas vinculadas em cubos com relacionamentos muitos para muitos).  
+4.  Evite usar grupos de medidas vinculados em vários relacionamentos muitos para muitos, especialmente quando esses relacionamentos estiverem em cubos diferentes. Fazer isso poderá resultar em agregações ambíguas. Para obter mais informações, consulte [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantidades incorretas de medidas vinculadas em cubos com relacionamentos muitos para muitos).  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  Use os links a seguir para obter informações adicionais que ajudam a dominar os conceitos.  
   
- [Como posso definir uma dimensão muitos-para-muitos no Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Como posso definir uma dimensão muitos-para-muitos no Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [A revolução muitos-para-muitos 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [A revolução muitos-para-muitos 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Tutorial: Exemplo de dimensão muitos-para-muitos para o SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Tutorial: Exemplo de dimensão muitos-para-muitos para SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Consulte também  
  [Relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Instalar dados de exemplo e projetos para o Tutorial de modelagem Multidimensional do Analysis Services](../install-sample-data-and-projects.md)   
+ [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](../install-sample-data-and-projects.md)   
  [Implantar projetos do Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspectivas em modelos multidimensionais](perspectives-in-multidimensional-models.md)  
   

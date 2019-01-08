@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriberinfo
@@ -17,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2836ff3e649d48db12ad6ed0b644a6ba73eedf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763274"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589800"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subscriber =** ] **'***assinante***'**  
+ [  **@subscriber =** ] **'**_assinante_**'**  
  É o nome do Assinante. *assinante* está **sysname**, com um padrão de **%**, que retorna todas as informações.  
   
- [  **@publisher =** ] **'***publisher***'**  
+ [  **@publisher =** ] **'**_publisher_**'**  
  É o nome do Publicador. *Publisher* está **sysname**e assume como padrão o nome do servidor atual.  
   
 > [!NOTE]  
@@ -51,7 +50,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome do Publicador.|  
 |**Assinante**|**sysname**|Nome do Assinante.|  
@@ -73,7 +72,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_date**|**int**|Data do último agendamento do Distribution Agent, formatada como YYYYMMDD.|  
 |**retryattempt**|**int**|Sem suporte.|  
 |**retrydelay**|**int**|Sem suporte.|  
-|**Descrição**|**nvarchar(255)**|Descrição de texto do Assinante.|  
+|**description**|**nvarchar(255)**|Descrição de texto do Assinante.|  
 |**security_mode**|**int**|Modo de segurança implementado:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows|  
 |**frequency_type2**|**int**|Frequência de execução do Merge Agent:<br /><br /> **1** = uma vez<br /><br /> **2** = sob demanda<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = relativo ao mês<br /><br /> **64** = iniciar automaticamente<br /><br /> **128** = recorrente|  
 |**frequency_interval2**|**int**|Valor aplicado à frequência definida *frequency_type*.|  

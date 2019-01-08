@@ -1,5 +1,6 @@
 ---
-title: Sincronização de pacotes de R para o SQL Server | Microsoft Docs
+title: Sincronização de pacotes de R do sistema de arquivos - serviços do SQL Server Machine Learning
+description: Atualize bibliotecas do R no SQL Server com as versões mais recentes instaladas no sistema de arquivos.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,54 +8,54 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5aa19e54917a421567c5ede2013e019de609d8b6
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5b7141e1fe6256c7a7e21056d82f2d8fc4ad4faf
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585220"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431813"
 ---
-# <a name="r-package-synchronization-for-sql-server"></a>Sincronização de pacotes de R para o SQL Server
+# <a name="r-package-synchronization-for-sql-server"></a>Sincronização de pacotes de R para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A versão do RevoScaleR incluído no SQL Server 2017 inclui a capacidade de sincronizar coleções de pacotes de R entre o sistema de arquivos e a instância e banco de dados onde os pacotes são usados.
 
-Esse recurso foi fornecido para tornar mais fácil de fazer backup de coleções de pacote de R associados a bancos de dados do SQL Server. Usando esse recurso, um administrador pode restaurar não apenas o banco de dados, mas todos os pacotes R que foram usados por cientistas de dados trabalhando nesse banco de dados.
+Esse recurso foi fornecido para tornar mais fácil fazer backup de coleções de pacote de R associados a bancos de dados do SQL Server. Usando esse recurso, um administrador pode restaurar não apenas o banco de dados, mas todos os pacotes R que foram usados por cientistas de dados trabalhando nesse banco de dados.
 
-Este artigo descreve o recurso de sincronização do pacote e como usar o [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) função para executar as seguintes tarefas:
+Este artigo descreve o recurso de sincronização de pacotes e como usar o [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) função para executar as seguintes tarefas:
 
 + Sincronizar uma lista de pacotes para um banco de dados inteiro do SQL Server
 
-+ Sincronizar os pacotes usados por um usuário individual, ou um grupo de usuários
++ Sincronizar pacotes usados por um usuário individual, ou um grupo de usuários
 
-+ Se um usuário for movido para um SQL Server diferente, você pode fazer um backup de banco de dados de trabalho do usuário e restaurá-lo para o novo servidor, e os pacotes para o usuário serão instalados no sistema de arquivos no novo servidor, conforme exigido por R.
++ Se um usuário move para um SQL Server diferente, você pode fazer um backup de banco de dados de trabalho do usuário e restaurá-lo para o novo servidor, e os pacotes para o usuário serão instalados no sistema de arquivos no novo servidor, conforme exigido pelo R.
 
-Por exemplo, você pode usar a sincronização de pacote nestes cenários:
+Por exemplo, você pode usar a sincronização de pacotes nestes cenários:
 
-+ O DBA restaurou a uma instância do SQL Server para uma nova máquina e solicita que os usuários se conectem de seus clientes de R e executar `rxSyncPackages` para atualizar e restaurar seus pacotes.
++ O DBA tiver restaurado uma instância do SQL Server para um novo computador e solicitam que os usuários para conectar-se dos seus clientes de R e executar `rxSyncPackages` para atualizar e restaurar seus pacotes.
 
-+ Você acha que um pacote R no sistema de arquivos está corrompido, você executar `rxSyncPackages` no SQL Server.
++ Você acha que um pacote de R no sistema de arquivos está corrompido, portanto você executar `rxSyncPackages` no SQL Server.
 
 ## <a name="requirements"></a>Requisitos
 
-Antes de você pode usar a sincronização do pacote, você deve ter a versão apropriada do Microsoft R ou do servidor de aprendizado de máquina. Esse recurso é fornecido no Microsoft R version 9.1.0 ou posterior. 
+Antes de você pode usar a sincronização de pacote, você deve ter a versão apropriada do Microsoft R ou Machine Learning Server. Esse recurso é fornecido no Microsoft R version 9.1.0 ou posterior. 
 
-Você também deve habilitar o [recurso de pacote de gerenciamento](r-package-how-to-enable-or-disable.md) no servidor.
+Você também deve habilitar o [recurso de gerenciamento de pacotes](r-package-how-to-enable-or-disable.md) no servidor.
 
-### <a name="determine-whether-your-server-supports-package-management"></a>Determinar se o servidor oferecer suporte a gerenciamento de pacotes
+### <a name="determine-whether-your-server-supports-package-management"></a>Determinar se o servidor dá suporte a gerenciamento de pacotes
 
-Este recurso está disponível no SQL Server de 2017 CTP 2 ou posterior.
+Esse recurso está disponível no SQL Server 2017 CTP 2 ou posterior.
 
-Você pode adicionar esse recurso a uma instância do SQL Server 2016, atualizando a instância para usar a versão mais recente do Microsoft R. Para obter mais informações, consulte [SqlBindR.exe usado para atualizar o SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Você pode adicionar esse recurso a uma instância do SQL Server 2016, atualizando a instância para usar a versão mais recente do Microsoft R. Para obter mais informações, consulte [SqlBindR.exe Use para atualizar o SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### <a name="enable-the-package-management-feature"></a>Habilitar o recurso de gerenciamento de pacote
 
-Para usar a sincronização de pacote requer que o novo recurso de gerenciamento de pacote ser habilitado na instância do SQL Server e em bancos de dados individuais. Para obter mais informações, consulte [habilitar ou desabilitar o pacote de gerenciamento para SQL Server](r-package-how-to-enable-or-disable.md).
+Para usar a sincronização do pacote requer que o novo recurso de gerenciamento de pacote ser habilitada na instância do SQL Server e nos bancos de dados individuais. Para obter mais informações, consulte [habilitar ou desabilitar o pacote de gerenciamento para SQL Server](r-package-how-to-enable-or-disable.md).
 
 1. O administrador do servidor permite que o recurso para a instância do SQL Server.
-2. Para cada banco de dados, o administrador concede a usuários individuais a capacidade de instalar ou compartilhar pacotes R, usando as funções de banco de dados.
+2. Para cada banco de dados, o administrador concede a usuários individuais a capacidade de instalar ou compartilhar pacotes de R, usando funções de banco de dados.
 
-Quando isso for feito, você pode usar funções de RevoScaleR, como [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) para instalar os pacotes em um banco de dados.  Informações sobre usuários e os pacotes que podem ser usadas são armazenadas na instância do SQL Server. 
+Quando isso for feito, você pode usar funções de RevoScaleR, tais como [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) para instalar os pacotes em um banco de dados.  Informações sobre usuários e os pacotes que eles podem usar são armazenadas na instância do SQL Server. 
 
 Sempre que você adicionar um novo pacote usando as funções de gerenciamento de pacote, ambos os registros no SQL Server e o sistema de arquivos são atualizados. Essas informações podem ser usadas para restaurar as informações de pacote para o banco de dados inteiro.
 
@@ -62,37 +63,37 @@ Sempre que você adicionar um novo pacote usando as funções de gerenciamento d
 
 + A pessoa que executa a função de sincronização do pacote deve ser um objeto na instância do SQL Server e banco de dados que tem os pacotes de segurança.
 
-+ O chamador da função deve ser um membro de uma dessas funções de gerenciamento de pacote: **compartilhado rpkgs** ou **rpkgs particular**.
++ O chamador da função deve ser um membro de uma dessas funções de gerenciamento de pacote: **rpkgs-shared** ou **rpkgs-private**.
 
-+ Para sincronizar os pacotes marcados como **compartilhado**, a pessoa que está executando a função deve estar associado a **compartilhado rpkgs** função e os pacotes que estão sendo movidos devem ter sido instalado para compartilhado biblioteca de escopo.
++ Sincronizar pacotes marcados como **compartilhada**, a pessoa que está executando a função deve estar associado a **rpkgs-shared** função e os pacotes que estão sendo movidos devem ter sido instalado para um compartilhamento biblioteca de escopo.
 
-+ Para sincronizar os pacotes marcados como **privada**, seja o proprietário do pacote ou o administrador deve executar a função e os pacotes devem ser privados.
++ Sincronizar pacotes marcados como **privada**, seja o proprietário do pacote ou o administrador deve executar a função e os pacotes devem ser privados.
 
-+ Para sincronizar os pacotes em nome de outros usuários, o proprietário deve b membro o **db_owner** função de banco de dados.
++ Para sincronizar os pacotes em nome de outros usuários, o proprietário deve b um membro do **db_owner** função de banco de dados.
 
 ## <a name="how-package-synchronization-works"></a>Como funciona a sincronização do pacote
 
 Para usar a sincronização do pacote, chame [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), que é uma nova função no [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). 
 
-Cada chamada para `rxSyncPackages`, você deve especificar uma instância do SQL Server e banco de dados. Em seguida, listar os pacotes para sincronizar ou especifique o escopo do pacote.
+Para cada chamada para `rxSyncPackages`, você deve especificar uma instância do SQL Server e o banco de dados. Em seguida, listar os pacotes para sincronizar ou especificar o escopo do pacote.
 
 1. Criar o contexto de computação do SQL Server usando o `RxInSqlServer` função. Se você não especificar um contexto de computação, o contexto de computação atual será usado.
 
 2. Forneça o nome de um banco de dados na instância no contexto de computação especificado. Pacotes são sincronizados por banco de dados.
 
-3. Especifique os pacotes para sincronizar usando o argumento de escopo.
+3. Especifica os pacotes para sincronizar usando o argumento de escopo.
 
-    Se você usar **privada** escopo, apenas pacotes que pertencem ao proprietário especificado são sincronizados. Se você especificar **compartilhado** escopo, todos os pacotes não particular no banco de dados são sincronizados. 
+    Se você usar **privada** escopo, apenas pacotes que pertencem ao proprietário especificado são sincronizados. Se você especificar **compartilhado** escopo, todos os pacotes não privado no banco de dados são sincronizados. 
     
-    Se você executar a função sem especificar um **privada** ou **compartilhado** escopo, todos os pacotes são sincronizados.
+    Se você executar a função sem especificar **privados** ou **compartilhado** escopo, todos os pacotes são sincronizados.
 
-4. Se o comando for bem-sucedida, os pacotes existentes no sistema de arquivos são adicionados ao banco de dados, com o escopo especificado e o proprietário.
+4. Se o comando for bem-sucedido, os pacotes existentes no sistema de arquivos são adicionados ao banco de dados, com o escopo especificado e o proprietário.
 
     Se o sistema de arquivos está corrompido, os pacotes são restaurados com base na lista mantida no banco de dados.
 
-    Se o recurso de gerenciamento de pacote não está disponível no banco de dados de destino, é gerado um erro: "o recurso de gerenciamento de pacote não está habilitado no SQL Server ou versão é muito antiga"
+    Se o recurso de gerenciamento de pacote não está disponível no banco de dados de destino, um erro será gerado: "O recurso de gerenciamento de pacotes é não habilitado no SQL Server ou versão é muito antigo"
 
-### <a name="example-1-synchronize-all-package-by-database"></a>Exemplo 1. Sincronizar todos os pacotes por banco de dados
+### <a name="example-1-synchronize-all-package-by-database"></a>Exemplo 1. Sincronizar todos os pacotes pelo banco de dados
 
 Este exemplo obtém todos os novos pacotes do sistema de arquivos local e instala os pacotes no banco de dados [TestDB]. Como nenhum proprietário é específico, a lista inclui todos os pacotes que foram instalados para escopos privados e compartilhados.
 

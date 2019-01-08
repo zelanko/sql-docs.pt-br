@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f3345e2b27a14285f3b9a3bfffd1ec95549ef124
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662845"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201815"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_config_basic
  @credential_name  
  O nome da credencial de SQL usado para realizar a autenticação na conta de armazenamento do Windows Azure. @credentail_name está **SYSNAME**. Quando especificado, o backup é armazenado em um blob de página. Se esse parâmetro for NULL, o backup será armazenado como um blob de blocos. Backup para o blob de página foi preterido, portanto, é preferível usar a nova funcionalidade de backup de blob do bloco. Quando usado para alterar a configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], esse parâmetro é opcional. Se não for especificado, os valores de configuração existentes são mantidos.  
   
-> [!WARNING]  
+> [!WARNING]
 >  O **@credential_name** parâmetro não é suportado no momento. Somente backup para blob de blocos é suportado, que requer esse parâmetro como NULL.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  

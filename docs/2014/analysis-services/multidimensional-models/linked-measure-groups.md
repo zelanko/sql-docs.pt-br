@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368448"
 ---
 # <a name="linked-measure-groups"></a>Grupos de medidas vinculados
   Um grupo de medidas vinculado se baseia em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou em um banco de dados diferente do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  
@@ -47,7 +47,7 @@ ms.locfileid: "48140343"
   
 -   Não há suporte a write-back nos grupos de medidas vinculados.  
   
--   Os grupos de medidas vinculados não podem ser usados em vários relacionamentos muitos para muitos, especialmente quando esses relacionamentos estiverem em cubos diferentes. Fazer isso poderá resultar em agregações ambíguas. Para obter mais informações, consulte [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantidades incorretas de medidas vinculadas em cubos com relacionamentos muitos para muitos).  
+-   Os grupos de medidas vinculados não podem ser usados em vários relacionamentos muitos para muitos, especialmente quando esses relacionamentos estiverem em cubos diferentes. Fazer isso poderá resultar em agregações ambíguas. Para obter mais informações, consulte [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantidades incorretas de medidas vinculadas em cubos com relacionamentos muitos para muitos).  
   
  As medidas contidas em um grupo de medidas vinculado podem ser diretamente organizadas apenas junto com dimensões vinculados recuperadas do mesmo banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No entanto, você pode usar membros calculados para relacionar informações de grupos de medidas vinculados a outras dimensões não vinculadas no cubo. Você também pode usar uma relação indireta, como um referência ou relação muitos para muitos, para relacionar dimensões não vinculadas a um grupo de medidas vinculado.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48140343"
 ## <a name="secure-a-linked-measure"></a>Proteger uma medida vinculada  
  Depois que o vínculo tiver sido definido, o acesso às medidas em um grupo de medidas vinculado será gerenciado da mesma maneira que o acesso aos outros grupos de medidas. Um objeto vinculado aparece ao lado de suas contrapartes não vinculadas no Designer de Função. Para obter mais informações sobre como gerenciar a segurança de um grupo de medidas, consulte [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Para definir ou usar um grupo de medidas vinculado, os Windows conta de serviço para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância deve pertencer a um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] função de banco de dados que tenha `ReadDefinition` e `Read` direitos na origem de acesso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da instância para o fonte de cubo e grupo de medidas ou deve pertencer à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] função de administradores para a fonte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância.  
+ Para definir ou usar um grupo de medidas vinculado, a conta de serviço do Windows para a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve pertencer a uma função de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tenha direitos de acesso de `ReadDefinition` e `Read` para a instância de origem do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o cubo de origem e grupo de medidas ou deve pertencer à função [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da instância de origem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir dimensões vinculadas](define-linked-dimensions.md)  

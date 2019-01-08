@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, delete policy conditions
@@ -12,12 +12,12 @@ ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 37d5034cc35970c11926c9cfa37bfee8c48b78a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c5ae10727f14d84c74d7f57d312908734d14a4e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112847"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788258"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>Excluir uma condição de Gerenciamento baseado em Políticas
   Este tópico descreve como excluir uma condição de Gerenciamento Baseado em Políticas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -10,12 +10,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c58a8a9b8f476c55ebce54e8284051fe89d882a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064286"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519539"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Usar o PowerShell para fazer backup de vários bancos de dados no serviço de armazenamento de Blob do Windows Azure
   Este tópico fornece scripts de exemplo que podem ser usados para automatizar backups no serviço do armazenamento do Blob do Windows Azure usando os cmdlets do PowerShell.  
@@ -49,16 +49,16 @@ ms.locfileid: "48064286"
   
  Estas são as considerações sobre os exemplos de script:  
   
-1.  **Navegando nos caminhos do SQL Server PowerShell:** o Windows PowerShell implementa cmdlets para navegar no caminho que representa a hierarquia de objetos com suporte em um provedor do PowerShell. Ao navegar até um nó do caminho, você pode usar outros cmdlets para executar operações básicas no objeto atual.  
+1.  **Navegando nos caminhos do SQL Server PowerShell:** Windows PowerShell implementa cmdlets para navegar no caminho que representa a hierarquia de objetos com suporte por um provedor do PowerShell. Ao navegar até um nó do caminho, você pode usar outros cmdlets para executar operações básicas no objeto atual.  
   
-2.  Cmdlet `Get-ChildItem`: as informações retornadas pelo `Get-ChildItem` dependem do local em um caminho do SQL Server PowerShell. Por exemplo, se o local estiver no nível do computador, esse cmdlet retornará todas as instâncias do mecanismo de banco de dados do SQL Server instaladas no computador. Como outro exemplo, se o local estiver no nível do objeto, como os bancos de dados, este cmdlet retornará uma lista de objetos de banco de dados.  Por padrão o `Get-ChildItem` cmdlet não retorna objetos do sistema.  Usando o parâmetro –Force, você poderá ver os objetos do sistema.  
+2.  `Get-ChildItem` cmdlet: As informações retornadas pelo `Get-ChildItem` depende do local em um caminho do SQL Server PowerShell. Por exemplo, se o local estiver no nível do computador, esse cmdlet retornará todas as instâncias do mecanismo de banco de dados do SQL Server instaladas no computador. Como outro exemplo, se o local estiver no nível do objeto, como os bancos de dados, este cmdlet retornará uma lista de objetos de banco de dados.  Por padrão, o cmdlet `Get-ChildItem` não retorna nenhum objeto do sistema.  Usando o parâmetro -Force, você poderá ver os objetos do sistema.  
   
      Para obter mais informações, consulte [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
 3.  Embora cada exemplo de código possa ser testado independentemente com a alteração dos valores de variáveis, a criação de uma conta de armazenamento do Windows Azure e de uma Credencial SQL são pré-requisitos e, portanto, necessária a todas as operações de backup e restauração no serviço de armazenamento de Blob do Windows Azure.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Criar uma Credencial SQL em todas as instâncias do SQL Server  
- Há dois scripts de exemplo, e ambos criam uma Credencial SQL “mybackupToURL” em todas as instâncias do SQL Server em um computador. O primeiro exemplo é simples, e cria as credenciais e não intercepta exceções.  Por exemplo, se já houvesse uma credencial existente com o mesmo nome em uma das instâncias do computador, o script apresentaria falha. O segundo exemplo intercepta erros e permite que o script continue.  
+ Há dois scripts de exemplo e ambos criam uma Credencial SQL “mybackupToURL” em todas as instâncias do SQL Server em um computador. O primeiro exemplo é simples, e cria as credenciais e não intercepta exceções.  Por exemplo, se já houvesse uma credencial existente com o mesmo nome em uma das instâncias do computador, o script apresentaria falha. O segundo exemplo intercepta erros e permite que o script continue.  
   
 ```  
   

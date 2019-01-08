@@ -1,5 +1,5 @@
 ---
-title: Referência técnica do algoritmo msc | Microsoft Docs
+title: Microsoft Sequence Clustering Algorithm Technical Reference | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016463"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418377"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "34016463"
  O padrão é 64.  
   
  MAXIMUM_STATES  
- Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de estados de um atributo não sequencial for maior que o número máximo de estados, o algoritmo usará os estados mais populares do atributo e tratará os estados restantes como **Ausentes**.  
+ Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de estados de um atributo não sequencial for maior que o número máximo de estados, o algoritmo usa os estados mais populares do atributo e tratará os estados restantes como **ausente**.  
   
  O padrão é 100.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34016463"
  Aplica-se à coluna da estrutura de mineração.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que a coluna será tratada como se tivesse dois estados possíveis: **Missing** e **Existing**. Um valor nulo é tratado como **Missing** .  
+ Significa que a coluna será tratada como se tivesse dois estados possíveis: **Faltando** e **existentes**. Um valor nulo é tratado como **Missing** .  
   
  Aplica-se à coluna do modelo de mineração.  
   
@@ -123,22 +123,22 @@ ms.locfileid: "34016463"
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Coluna|Tipos de conteúdo|  
+|coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Contínuo, cíclico, discreto, diferenciado, chave, Key Sequence, tabela e ordenado|  
 |Atributo previsível|Contínuo, cíclico, discreto, diferenciado, tabela e ordenado|  
   
 ## <a name="remarks"></a>Comentários  
   
--   Use a função [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que suporte a previsão de sequência, consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use a função [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte a previsão de sequência, consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC não dá suporte ao uso de PMML para criar modelos de mineração.  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte ao detalhamento, ao uso de modelos de mineração OLAP e ao uso de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Exemplos de consulta de modelo de Clustering de sequência](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de Clustering de sequência & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516676"
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
 Cria um vazio, desconectado [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Um **Variant** matriz de atributos que definem cada coluna na **Recordset** criado. Cada definição de coluna contém uma matriz de quatro atributos necessários e um atributo opcional.  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
 |Nome|Nome do cabeçalho da coluna.|  
 |Tipo|Inteiro do tipo de dados.|  
@@ -62,7 +62,7 @@ object.CreateRecordset(ColumnInfos)
   
  A seguinte tabela lista os [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valores com suporte a **CreateRecordset** método. O número listado é o número de referência usado para definir os campos.  
   
- Cada um dos tipos de dados é de comprimento fixo ou comprimento variável. Tipos de comprimento fixo devem ser definidos com um tamanho de – 1, porque o tamanho é predeterminado e uma definição de tamanho ainda é necessária. Tipos de dados de comprimento variável que um tamanho de 1 a 32767.  
+ Cada um dos tipos de dados é de comprimento fixo ou comprimento variável. Tipos de comprimento fixo devem ser definidos com um tamanho de -1, porque o tamanho é predeterminado e uma definição de tamanho ainda é necessária. Tipos de dados de comprimento variável que um tamanho de 1 a 32767.  
   
  Para alguns dos tipos de dados da variável, o tipo pode ser forçado para o tipo indicado na coluna de substituição. Você não verá as substituições até após o **Recordset** é criado e preenchido. Em seguida, você pode verificar o tipo de dados, se necessário.  
   

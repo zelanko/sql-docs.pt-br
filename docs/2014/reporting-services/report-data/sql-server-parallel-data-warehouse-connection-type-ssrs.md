@@ -11,39 +11,39 @@ ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a65bd852ade2375a36a9a9b1e11a7009684a3621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 671f574f81bdceb35c1ee235f8ae545b5ae60296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226676"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372828"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] é um dispositivo de depósito de dados escalonável que fornece desempenho e escalabilidade por meio do processamento paralelo maciço. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] usa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] bancos de dados do armazenamento de dados e processamento distribuído.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] é um aplicativo de data warehouse escalonável que fornece desempenho e escalabilidade por meio de um processamento paralelo em massa. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] usa os bancos de dados do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para processamento distribuído e armazenamento de dados.  
   
- O aplicativo particiona grandes tabelas de bancos de dados em vários nós físicos, com cada nó executando sua própria instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Ao se conectar ao [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] para recuperar dados de relatório, um relatório se conecta ao nó de controle, que gerencia o processamento de consulta no aplicativo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Depois que a conexão é feita, não há nenhuma diferença entre trabalhar com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que é e não está contido em um [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] ambiente.  
+ O aplicativo particiona grandes tabelas de bancos de dados em vários nós físicos, com cada nó executando sua própria instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Ao se conectar ao [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] para recuperar dados de relatório, um relatório se conecta ao nó de controle, que gerencia o processamento de consulta no aplicativo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Depois que a conexão é estabelecida, não há nenhuma diferença entre trabalhar com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que esteja dentro e com uma que esteja fora de um ambiente do [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] .  
   
- Para incluir dados de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] em seu relatório, você deve ter um conjunto de dados com base em uma fonte de dados de relatório do tipo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Esse tipo de fonte de dados interna se baseia a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensão de dados do Parallel Data Warehouse. Use esse tipo de fonte de dados para se conectar a e recuperar dados do [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
+ Para incluir dados do [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Use esse tipo de fonte de dados para se conectar a e recuperar dados do [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
   
  Essa extensão de dados oferece suporte a parâmetros de vários valores, a agregações de servidor e a credenciais gerenciadas separadamente da cadeia de conexão.  
   
- Para obter mais informações, consulte o site [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ Para obter mais informações, consulte o site [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;construtor de relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadeia de Conexão  
- Ao se conectar ao [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], você está conectando a um objeto de banco de dados dentro de um aplicativo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Especifique o objeto de banco de dados a ser usado no designer de consulta. Se não especificar um banco de dados na cadeia de conexão, você se conectará ao banco de dados padrão atribuído pelo administrador. Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo de cadeia de caracteres de conexão a seguir especifica o banco de dados de exemplo, **CustomerSales**, no [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] dispositivo:  
+ Ao se conectar ao [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], você está conectando a um objeto de banco de dados dentro de um aplicativo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Especifique o objeto de banco de dados a ser usado no designer de consulta. Se não especificar um banco de dados na cadeia de conexão, você se conectará ao banco de dados padrão atribuído pelo administrador. Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo da cadeia de conexão a seguir especifica o banco de dados de exemplo, **CustomerSales**, no aplicativo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] :  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
 ```  
   
- Além disso, você usa a caixa de diálogo **Propriedades das Fontes de Dados** para fornecer credenciais, como nome de usuário e senha. As opções `User Id` e `Password` são acrescentadas automaticamente à cadeia de conexão; você não precisa digitá-las como parte da cadeia de conexão. A interface do usuário também fornece opções para especificar o endereço IP do nó no controle de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] dispositivo e o número da porta. Por padrão, a porta é a 17000. A porta é configurável por um administrador, e a cadeia de conexão talvez use um número de porta diferente.  
+ Além disso, você usa a caixa de diálogo **Propriedades das Fontes de Dados** para fornecer credenciais, como nome de usuário e senha. As opções `User Id` e `Password` são acrescentadas automaticamente à cadeia de conexão; você não precisa digitá-las como parte da cadeia de conexão. A interface de usuário também fornece opções para especificar o endereço IP do nó de controle no aplicativo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] e o número da porta. Por padrão, a porta é a 17000. A porta é configurável por um administrador, e a cadeia de conexão talvez use um número de porta diferente.  
   
  Para obter mais informações sobre exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Credenciais  
- O [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fornece sua própria tecnologia de segurança para implementar e armazenar nomes de usuários e senhas. Não é possível usar a Autenticação do Windows. Se você tentar se conectar ao [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] usando a Autenticação do Windows, ocorrerá um erro.  
+ [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fornece sua própria tecnologia de segurança para implementar e armazenar nomes de usuários e senhas. Não é possível usar a Autenticação do Windows. Se você tentar se conectar ao [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] usando a Autenticação do Windows, ocorrerá um erro.  
   
  As credenciais devem ser suficientes para acessar o banco de dados. Dependendo da consulta, você talvez precise de outras permissões, como permissões suficientes para acessar tabelas e exibições. O proprietário da fonte de dados externa deve configurar credenciais que sejam suficientes para fornecer acesso somente leitura aos objetos de banco de dados de que você precisa.  
   
@@ -51,7 +51,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Usar um nome de usuário e senha armazenados. Para negociar o salto duplo que ocorre quando o banco de dados que contém os dados de relatório é diferente do servidor de relatório, selecione as opções para usar as credenciais como credenciais do Windows. Também é possível optar por representar o usuário autenticado depois de se conectar à fonte de dados.  
   
--   Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
+-   Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
   
  Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
   
@@ -64,7 +64,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Crie uma consulta interativamente. Use o designer de consulta relacional que mostra uma exibição hierárquica de tabelas, exibições e outros itens de banco de dados, organizado por esquema de banco de dados. Selecione colunas de tabelas ou exibições. Limite o número de linhas de dados a serem recuperadas especificando critérios de filtragem, agrupamentos e agregações. Personalize o filtro quando o relatório for executado definindo a opção de parâmetro.  
   
--   Digite ou cole uma consulta. Use o designer de consulta baseado em texto para inserir [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] texto diretamente, para colar o texto de consulta de outra origem, para inserir consultas complexas que não podem ser criadas usando o designer de consulta relacional, ou para inserir expressões com base em consulta.  
+-   Digite ou cole uma consulta. Use o designer de consulta baseado em texto para inserir o texto do [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] diretamente, colar texto de consulta de outra fonte, inserir consultas complexas que não podem ser criadas com o designer de consultas relacionais ou inserir expressões baseadas em consulta.  
   
 -   Importa uma consulta existente de um arquivo ou relatório. Use o botão **Importar** consulta em qualquer designer de consulta para navegar até um arquivo .sql ou .rdl e importar uma consulta.  
   
@@ -74,18 +74,18 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [Texto](#QueryText)  
   
- Você usa o [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] com [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] e [!INCLUDE[tsql](../../../includes/tsql-md.md)] com o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Os dois dialetos da linguagem SQL são bem semelhantes. As consultas escritas para o tipo de conexão da fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] normalmente podem ser usadas para o tipo de conexão da fonte de dados do [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)].  
+ Você usa o [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] com [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] e [!INCLUDE[tsql](../../../includes/tsql-md.md)] com o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Os dois dialetos da linguagem SQL são bem semelhantes. As consultas escritas para o tipo de conexão da fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] normalmente podem ser usadas para o tipo de conexão da fonte de dados do [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] .  
   
- Uma consulta que recupera dados de relatório de um banco de dados grande, inclusive um data warehouse como [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] pode gerar um conjunto de resultados com um número muito grande de linhas, a menos que você agregue e resuma dados para reduzir o número de linhas retornados pela consulta. É possível escrever consultas que incluam agregações e agrupamentos usando o designer de consultas gráficas ou baseado em texto.  
+ Uma consulta que recupera dados de relatório de um banco de dados grande, inclusive um data warehouse como [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]pode gerar um conjunto de resultados com um número muito grande de linhas, a menos que você agregue e resuma dados para reduzir o número de linhas retornados pela consulta. É possível escrever consultas que incluam agregações e agrupamentos usando o designer de consultas gráficas ou baseado em texto.  
   
- [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] suporte a cláusula, palavra-chave e agregações que o designer de consulta fornece para resumir dados.  
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] dá suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta para resumir dados.  
   
- O designer de consultas gráficas usado pelo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fornece suporte interno ao agrupamento e às agregações para ajudar a escrever consultas que recuperam apenas dados de resumo. O [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] são recursos de linguagem: o GROUP BY cláusula, palavra-chave DISTINCT e agregações, como SUM e COUNT. O designer de consulta com base em texto fornece suporte completo para o [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] linguagem, incluindo agrupamentos e agregações.  
+ O designer de consultas gráficas usado pelo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fornece suporte interno ao agrupamento e às agregações para ajudar a escrever consultas que recuperam apenas dados de resumo. Os recursos de linguagem do [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] são: a cláusula GROUP BY, a palavra-chave DISTINCT e agregações, como SUM e COUNT. O designer de consultas baseado em texto dá suporte completo para a linguagem do [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] , incluindo agrupamentos e agregações.  
   
- Para obter mais informações sobre o [!INCLUDE[tsql](../../../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)nos [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=141687) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+ Para obter mais informações sobre o [!INCLUDE[tsql](../../../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)nos [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=141687) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Usando o tipo de consulta Text  
- No designer de consulta baseado em texto, você digita os comandos do [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] para definir os dados em um conjunto de dados. As consultas que você usa para recuperar dados do [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] são as mesmas usadas para recuperar dados de instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que não estão em execução dentro de um [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] aplicativo. Por exemplo, a seguinte [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] consulta seleciona os nomes de todos os funcionários que são assistentes de marketing:  
+ No designer de consulta baseado em texto, você digita os comandos do [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] para definir os dados em um conjunto de dados. As consultas que você usa para recuperar dados do [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] são as mesmas usadas para recuperar dados de instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que não estejam em execução dentro de um aplicativo do [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Por exemplo, a seguinte consulta [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] seleciona os nomes de todos os funcionários que são assistentes de marketing:  
   
 ```  
 SELECT  
@@ -121,14 +121,14 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- Por padrão, cada parâmetro de relatório tem o tipo de dados Texto e um conjunto de dados criado automaticamente para fornecer uma lista suspensa dos valores disponíveis. Depois que os parâmetros de relatório forem criados, talvez seja necessário alterar os valores padrão. Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Por padrão, cada parâmetro de relatório tem o tipo de dados Texto e um conjunto de dados criado automaticamente para fornecer uma lista suspensa dos valores disponíveis. Depois que os parâmetros de relatório forem criados, talvez seja necessário alterar os valores padrão. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ##  <a name="Remarks"></a> Comentários  
   
 ###### <a name="platform-and-version-information"></a>Informações sobre plataforma e versão  
- Para obter mais informações sobre o suporte de plataforma e à versão, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Para obter mais informações sobre o suporte de plataforma e à versão, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -158,7 +158,7 @@ WHERE EmployeeID = (@EmpID)
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  

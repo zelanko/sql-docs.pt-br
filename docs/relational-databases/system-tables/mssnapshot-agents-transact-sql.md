@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsnapshot_agents
@@ -19,19 +18,19 @@ ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0890b30946f2a2033d43712e62fc031fa8451c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3449893576870b9ff4f02da044a5b86d09cab286
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836394"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808628"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSsnapshot_agents** tabela contém uma linha para cada agente de instantâneo associados ao distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|A ID do Snapshot Agent.|  
 |**name**|**nvarchar(100)**|O nome do Snapshot Agent.|  

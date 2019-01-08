@@ -1,6 +1,6 @@
 ---
-title: Instalar os componentes do R e Python sem acesso à internet de aprendizado de máquina do SQL Server | Microsoft Docs
-description: Offline ou desconectada Machine Learning R e Python instalação na instância do SQL Server isolada.
+title: Instalar a linguagem R e componentes do Python sem acesso à internet - aprendizagem de máquina do SQL Server
+description: Offline ou desconectada Machine Learning R e Python instalação na instância isolada do SQL Server atrás de um firewall de rede.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150537"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596987"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar o R e Python de aprendizado em computadores sem acesso à internet de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>Instalação offline do SQL Server 2016
 
-A análise no banco de dados do SQL Server 2016 é somente para R, com apenas dois CAB arquivos para os pacotes de produto e a distribuição da Microsoft do R de código-fonte aberto, respectivamente. Comece com a instalação de qualquer uma dessas versões: RTM, SP 1, SP 2. Depois que uma instalação básica estiver em vigor, as atualizações cumulativas podem ser aplicadas como uma próxima etapa.
+A análise no banco de dados do SQL Server 2016 é somente para R, com apenas dois CAB arquivos para os pacotes de produto e a distribuição da Microsoft do R de código-fonte aberto, respectivamente. Comece instalando qualquer uma dessas versões: RTM, SP 1, SP 2. Depois que uma instalação básica estiver em vigor, as atualizações cumulativas podem ser aplicadas como uma próxima etapa.
 
 Em um computador com uma conexão de internet, baixe os arquivos CAB usados pela instalação para instalar a análise no banco de dados no SQL Server 2016. 
 
@@ -121,9 +121,22 @@ Quando você executa a instalação do SQL Server em um computador desconectado 
 
 6. Execute a instalação. Aceite os termos de licenciamento e, na página de seleção de recursos, analise os recursos para os quais as atualizações cumulativas são aplicadas. Você deve ver todos os recursos instalados para a instância atual, incluindo recursos de aprendizado de máquina.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Selecione os recursos na árvore de recursos](media/cumulative-update-feature-selection.png "lista de recursos")
 
 5. Prossiga com o assistente, aceitando os termos de licenciamento para distribuições do R e Python. Durante a instalação, você precisará escolher o local da pasta que contém os arquivos CAB atualizados.
+
+## <a name="set-environment-variables"></a>Configurar variáveis de ambiente
+
+Para R integração de recursos somente, você deve definir a **MKL_CBWR** variável de ambiente [garantir uma saída consistente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) cálculos da Intel MKL Math Kernel Library ().
+
+1. No painel de controle, clique em **sistema e segurança** > **sistema** > **configurações avançadas do sistema**  >   **Variáveis de ambiente**.
+
+2. Crie uma nova variável de sistema ou usuário. 
+
+  + Nome de variável de conjunto para `MKL_CBWR`
+  + Defina o valor da variável como `AUTO`
+
+Esta etapa requer uma reinicialização do servidor. Se você está prestes a habilitar a execução do script, você pode adiar a reinicialização até que todo o trabalho de configuração é feita.
 
 ## <a name="post-install-configuration"></a>Configuração de pós-instalação
 

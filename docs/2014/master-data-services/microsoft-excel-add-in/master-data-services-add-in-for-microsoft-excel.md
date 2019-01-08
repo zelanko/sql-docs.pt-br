@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198366"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371118"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
   Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], listas mestres dos dados de referência podem ser distribuídas para qualquer pessoa da sua organização que usa o Excel. A segurança determina quais usuários dos dados podem ver e atualizar.  
@@ -28,12 +27,12 @@ ms.locfileid: "48198366"
  No [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você pode usar o DQS (Data Quality Services) para combinar os dados antes de carregá-los no MDS. Isso ajuda a evitar dados duplicados no MDS.  
   
 > [!IMPORTANT]  
->  Você pode continuar usando o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 versão do mestre de dados serviços de suplemento para Excel depois de atualizar o Master Data Services e Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. No entanto, qualquer versão anterior do suplemento Master Data Services para Excel não funcionará depois de atualizar para o SQL Server 2014 CTP2. Você pode baixar o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a versão SP1 do mestre dados serviços de suplemento para Excel a partir do [aqui](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  Você pode continuar a usar a versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 do suplemento Master Data Services para Excel depois de atualizar o Master Data Services e o Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. No entanto, qualquer versão anterior do suplemento Master Data Services para Excel não funcionará depois de atualizar para o SQL Server 2014 CTP2. Você pode baixar a versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 do suplemento Master Data Services para Excel [aqui](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Termos  
  No suplemento, você poderá encontrar os termos a seguir.  
   
--   O *MDS repository* é onde são armazenados todos os dados mestre. É um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é configurado para armazenar dados do MDS. Para trabalhar com dados do repositório, você carrega os dados no Excel; ao terminar o trabalho, você publica as alterações no repositório novamente. Os administradores podem adicionar novas entidades e atributos ao repositório.  
+-   O *MDS repository* é onde são armazenados todos os dados mestre. É um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é configurado para armazenar dados do MDS. Para trabalhar com os dados do repositório, você carrega os dados no Excel, ao terminar o trabalho, você publica as alterações no repositório novamente. Os administradores podem adicionar novas entidades e atributos ao repositório.  
   
 -   *Dados gerenciados no MDS* são dados armazenados no repositório do MDS e que são carregados no Excel, em que os dados são exibidos como linhas realçadas. Você pode adicionar dados que não sejam gerenciados no MDS à sua planilha, e eles não serão afetados quando você atualizar os dados gerenciados no MDS.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48198366"
   
 -   [Publicação de dados &#40;suplemento do MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
--   [Criar um modelo &#40;Suplemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+-   [Criando um modelo &#40;Suplemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
 -   [Segurança &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

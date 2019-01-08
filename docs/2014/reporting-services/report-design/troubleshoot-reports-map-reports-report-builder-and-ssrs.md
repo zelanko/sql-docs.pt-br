@@ -1,5 +1,5 @@
 ---
-title: 'Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS) | Microsoft Docs'
+title: 'Solucionar problemas de relatórios: Mapear relatórios (construtor de relatórios e SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375338"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (Construtor de Relatórios e SSRS)
   Os problemas com mapas em um relatório podem ocorrer quando você adiciona um mapa ou camada do mapa ao relatório, quando você personaliza um mapa existente ou camada do mapa em seu relatório, quando visualiza um mapa em um relatório ou quando publica um relatório com um mapa. Use este tópico para ajudar a solucionar esses problemas.  
   
 > [!NOTE]  
@@ -173,7 +173,7 @@ ms.locfileid: "48197406"
 -   Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>O que é o valor NaN na escala de cores?  
- `NaN` significa não é um número. Os valores de escalas de cores devem ser numéricos. Verifique as configurações de distribuição e o valor de texto da legenda das regras associadas à escala de cores. Se você criou intervalos de distribuição personalizados, verifique se especificou o limite inferior no primeiro intervalo e o limite superior no último intervalo.  
+ `NaN` significa Não é um Número. Os valores de escalas de cores devem ser numéricos. Verifique as configurações de distribuição e o valor de texto da legenda das regras associadas à escala de cores. Se você criou intervalos de distribuição personalizados, verifique se especificou o limite inferior no primeiro intervalo e o limite superior no último intervalo.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Minha escala de cores não aparece quando eu executo o relatório.  
  A escala de cores exibe informações ao usuário quando uma camada do mapa especifica regras de cores para polígonos, linhas ou pontos para a camada inteira ou para elementos do mapa inseridos. Se nenhum elemento do mapa especificar uma regra de cor, ou se as regras de cores especificarem com o uso de uma legenda, em vez do mapa de cores, o mapa de cores não aparecerá no relatório renderizado.  
@@ -194,7 +194,7 @@ ms.locfileid: "48197406"
   
 -   A projeção do mapa deve ser **Mercator**.  
   
--   Para a visualização local, você deve ter acesso à Internet. Para um relatório executado a partir do servidor de relatório, o servidor de relatório deve ser configurado para dar suporte ao plano de fundo da peça. Para obter mais informações, consulte "Planejando o suporte ao mapa" na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+-   Para a visualização local, você deve ter acesso à Internet. Para um relatório executado a partir do servidor de relatório, o servidor de relatório deve ser configurado para dar suporte ao plano de fundo da peça. Para obter mais informações, consulte "Planejando o suporte ao mapa" na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
  Para obter mais informações sobre como adicionar uma camada de bloco, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

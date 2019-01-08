@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 862d07d3a27549f8bb0b45a807d1a04c7b13e364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8ecfff92b5865ebe9bf255f4bcc1b02150cffb31
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659625"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588371"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada coluna retornada pelas funções com valor de tabela que podem ser acessadas pelo usuário atual no banco de dados atual.  
   
- Para recuperar informações dessa exibição, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA. * * * view_name*.  
+ Para recuperar informações dessa exibição, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Catálogo ou nome de banco de dados da função com valor de tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a função com valor de tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a função com valor de tabela.<br /><br /> <strong>\*\* Importante \* \*</strong>  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nome da função com valor de tabela.|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nome da coluna.|  
 |**ORDINAL_POSITION**|**int**|Número de identificação da coluna.|  
@@ -57,7 +57,7 @@ ms.locfileid: "51659625"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Sempre retorna NULL.|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|Retorna o nome exclusivo para a ordem de classificação, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, retorna NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Se a coluna for do tipo de dados de alias, essa coluna será o nome do banco de dados no qual foi criado o tipo de dados definido pelo usuário. Caso contrário, retorna NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Se a coluna for do tipo definido pelo usuário, essa coluna será o nome do esquema que contém o tipo de dados definido pelo usuário. Caso contrário, retorna NULL.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Se a coluna for do tipo definido pelo usuário, essa coluna será o nome do esquema que contém o tipo de dados definido pelo usuário. Caso contrário, retorna NULL.<br /><br /> <strong>\*\* Importante \* \*</strong>  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**NOME_DO_DOMÍNIO**|**nvarchar(** 128 **)**|Se a coluna for do tipo de dados definido pelo usuário, essa coluna será o nome do tipo de dados definido pelo usuário. Caso contrário, retorna NULL.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -11,12 +11,12 @@ ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e7984c2bfa0ca9c654d5f6a3e9bc75a66bc34c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7396b5c5bf46abcbc60ac9e3a984fb2d7a7a2ee5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189806"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374498"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lição 2: Definindo e implantando um cubo
   Depois de definir uma exibição da fonte de dados em seu projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você estará pronto para definir um cubo inicial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -24,7 +24,7 @@ ms.locfileid: "48189806"
  Você pode definir um cubo e suas dimensões em uma etapa usando o Assistente para Cubos. Como alternativa, você pode definir uma ou mais dimensões e depois usar o Assistente para Cubos para definir um cubo que use aquelas dimensões. Se você estiver criando uma solução complexa, normalmente começará definindo as dimensões. Para obter mais informações, consulte [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
+>  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
   
  Esta lição contém as seguintes tarefas:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48189806"
  [Modelagem multidimensional &#40;Tutorial da Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Configurar propriedades de projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Criar projetos do Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Implantar projetos do Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

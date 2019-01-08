@@ -1,5 +1,5 @@
 ---
-title: Tutorial sobre como criar, treinar e pontuar modelos de partição em R (SQL Server Machine Learning Services) | Microsoft Docs
+title: Tutorial sobre como criar, treinar e pontuar modelos baseados em partição em R – serviços do SQL Server Machine Learning
 description: Saiba como modelar, treinar e usar dados particionados que são criados dinamicamente ao usar os recursos de modelagem baseadas na partição do aprendizado de máquina do SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462002"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596457"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar a partição com base em modelos em R no SQL Server
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar modelos com base em partição em R no SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 No SQL Server de 2019, modelagem de partição é a capacidade de criar e treinar modelos em dados particionados. Para dados estratificados que segmenta naturalmente em um esquema de classificação fornecida - como regiões geográficas, data e hora, idade ou sexo - você pode executar o script sobre o conjunto de dados inteiro, com a capacidade de modelar, treinar e pontuar em partições permanecem intactas ao longo de todas essas operações. 

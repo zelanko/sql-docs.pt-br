@@ -12,12 +12,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115646"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375378"
 ---
 # <a name="array-parameter-sample"></a>Exemplo de parâmetro de matriz
   Às vezes, é útil para criar, atualizar ou excluir um conjunto de linhas em um banco de dados. Há várias abordagens que você pode usar para alcançar essa meta. Um delas é passar uma matriz de informações de um cliente para um procedimento armazenado de integração CLR (Common Language Runtime) no servidor usando um tipo de dados de integração CLR definido pelo usuário. A natureza desses tipos de dados definidos pelo usuário limita o tamanho dos dados fornecidos ao servidor a 8000 bytes. Portanto, essa abordagem não é satisfatória para dados grandes ou complexos. Se os dados que estão sendo manipulados forem pequenos e simples, essa abordagem poderá ser muito mais eficiente do que chamar um procedimento armazenado para cada linha. Ao passar uma matriz, a ordem dos dados é preservada para os aplicativos onde a ordem é significativa. Este exemplo contém o seguinte:  
@@ -31,9 +31,9 @@ ms.locfileid: "48115646"
 ## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](http://go.microsoft.com/fwlink/?linkid=62796)Developer  
+-   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48115646"
   
 5.  Em c:\MySample, crie `Program.vb` (para o exemplo do Visual Basic) ou `Program.cs` (para o exemplo do C#) e copie o código de exemplo adequado do Visual Basic ou do C# (a seguir) no arquivo.  
   
-6.  Localize a linha apropriada no programa de arquivo (perto da linha 24) e substitua `XXX` com o nome da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  Localize a linha apropriada no Programa de arquivo (perto da linha 24) e substitua `XXX` pelo nome da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

@@ -11,24 +11,24 @@ ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b86ef40b0a796c1d340a1d7ccadcc68fcdbed74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b44064191e56dc16e212fb79794918b3023e3dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151936"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370588"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar um intervalo do eixo (Construtor de Relatórios e SSRS)
   O intervalo do eixo define o número de rótulos e as marcas de escala associadas em um eixo. No eixo de valor, os intervalos do eixo fornecem uma medida consistente dos pontos de dados no gráfico. No entanto, no eixo de categoria, esta funcionalidade pode fazer com que as categorias sejam exibidas sem os rótulos do eixo. Você pode especificar o número de intervalos que deseja na propriedade Intervalo do eixo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula o número de intervalos no tempo de execução, com base nos dados do conjunto de resultados. Para obter mais informações sobre como os intervalos de eixo são calculados, consulte [Formatação de rótulos de eixo de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
- Este tópico não é aplicável para valores de data ou hora no eixo de categoria. Por padrão, `DateTime` valores são exibidos como dias. Para especificar um intervalo de data ou hora diferente, como um intervalo de mês ou hora, você deve formatar os rótulos dos eixos e definir o eixo para exibir instâncias de tipos `DateTime` em vez de tipos `String`. Além disso, você deve definir a propriedade Intervalo. Para obter mais informações, consulte [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md).  
+ Este tópico não é aplicável para valores de data ou hora no eixo de categoria. Por padrão, os valores de `DateTime` são exibidos como dias. Para especificar um intervalo de data ou hora diferente, como um intervalo de mês ou hora, você deve formatar os rótulos dos eixos e definir o eixo para exibir instâncias de tipos `DateTime` em vez de tipos `String`. Além disso, você deve definir a propriedade Intervalo. Para obter mais informações, consulte [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md).  
   
  Este tópico não se aplica a gráficos de pizza, rosca, funil ou pirâmide que não possuem eixos.  
   
 > [!NOTE]  
 >  O eixo de categoria geralmente é o eixo horizontal ou o eixo x. No entanto, para os gráficos de barras, o eixo de categoria é o vertical ou eixo y.  
   
- Um exemplo de um gráfico que especifica intervalos de eixos diferentes está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Um exemplo de um gráfico que especifica intervalos de eixos diferentes está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,7 +54,7 @@ ms.locfileid: "48151936"
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Formatando pontos de dados em um gráfico &#40;relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Caixa de diálogo Propriedades do Eixo, Opções de Eixo &#40;Construtor de Relatórios e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Especificar uma escala logarítmica &#40;Construtor de Relatórios e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

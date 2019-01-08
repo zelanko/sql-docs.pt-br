@@ -17,12 +17,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 100bac6834825af1e22658279d26be02c30f3f39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149896"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349260"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Instalar o Analysis Services em modo multidimensional e de mineração de dados
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. Nesta versão, suporte para bancos de dados OLAP e modelos de mineração de dados está disponível quando você instala [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na *modo Multidimensional*. O modo multidimensional é um dos três modos do servidor em que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa. Esse é o modo padrão. Se você instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando valores padrão, obterá uma instância que executa bancos de dados multidimensionais e modelos de mineração de dados.  
@@ -67,13 +67,13 @@ ms.locfileid: "48149896"
   
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
- [Suplementos de mineração de dados do SQL Server](http://go.microsoft.com/fwlink/?LinkId=197091)  
+ [Suplementos de mineração de dados do SQL Server](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
- Por padrão, os bancos de dados de exemplo, o código de exemplo e os suplementos de aplicativos cliente não são instalados como parte da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar bancos de dados e código de exemplo, veja o [site CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843).  
+ Por padrão, os bancos de dados de exemplo, o código de exemplo e os suplementos de aplicativos cliente não são instalados como parte da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar bancos de dados e código de exemplo, veja o [site CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos com suporte nas edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
- [Idiomas e agrupamentos &#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
+ [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

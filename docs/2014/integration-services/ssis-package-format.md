@@ -11,19 +11,19 @@ ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43c0662c9084c654b4138a8443f1e2e98eaec376
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3df60e0708ae86cf1aa5bde48e8a734140c38789
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200016"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366418"
 ---
 # <a name="ssis-package-format"></a>Formato do pacote SSIS
-  Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], alterações significativas foram feitas no formato do pacote (arquivo .dtsx) para facilitar a leitura do formato e a comparação dos pacotes. Você também pode mesclar com mais confiança pacotes que não contêm alterações conflitantes ou alterações armazenadas no formato binário.  
+  Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], alterações significativas foram feitas no formato do pacote (arquivo .dtsx) para facilitar a leitura do formato e a comparação dos pacotes. Você também pode mesclar com mais confiança pacotes que não contêm alterações conflitantes ou alterações armazenadas em formato binário.  
   
- Para exibir o formato de arquivo de pacote DTSX atual, consulte [\[MS-DTSX\]: Especificação de formato de arquivo XML do pacote de serviços de transformação de dados](http://go.microsoft.com/fwlink/?LinkId=233251).  
+ Para exibir o formato de arquivo de pacote DTSX atual, consulte [ \[MS-DTSX\]: Especificação de formato de arquivo XML do pacote Data Transformation Services](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
- A lista a seguir detalha as alterações no formato de arquivo: Para exibir exemplos de códigos dessas alterações, consulte [Alterações do formato de pacote no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=233255).  
+ A lista a seguir detalha as alterações no formato de arquivo: Para exibir exemplos de códigos dessas alterações, consulte [Alterações do formato de pacote no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   
 -   Convenções de formatação foram aplicadas para facilitar a leitura e o entendimento do arquivo .dtsx.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "48200016"
   
 -   A maioria dos objetos em um pacote que pode ser referenciada por outros objetos agora tem um atributo `refId` definido no XML do pacote. Em vez de manter as IDs de linhagem, a `refID` é mantida agora. IDs de linhagem ainda são usadas no tempo de execução e geradas novamente quando o pacote é carregado.  
   
-     O `refId` valor é uma cadeia de caracteres exclusiva que é legível e compreensível, em comparação com GUIDs ou valores inteiros. A cadeia de caracteres é semelhante aos valores de caminho usados para configurações de pacote nas versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+     O valor `refId` é uma cadeia de caracteres exclusiva legível e compreensível, em comparação com GUIDs ou valores inteiros. A cadeia de caracteres é semelhante aos valores de caminho usados para configurações de pacote nas versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Se você estiver mesclando alterações entre duas versões de um pacote, o `refId` pode ser usado em operações de localizar/substituir para assegurar que todas as referências a esse objeto tenham sido atualizadas corretamente.  
+     Se você estiver mesclando alterações entre duas versões de um pacote, o `refId` poderá ser usado em operações de localizar/substituir para assegurar que todas as referências a esse objeto tenham sido atualizadas corretamente.  
   
 -   As informações de layout estão contidas em uma seção CData.  
   

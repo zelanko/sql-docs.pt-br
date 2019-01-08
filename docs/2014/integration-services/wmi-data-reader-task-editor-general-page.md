@@ -15,17 +15,17 @@ ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca1a77392b2cdc6297d0eb96d502726264ee40c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93ec64471a02190419c262954137856c66833876
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102786"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370145"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Editor da Tarefa Leitor de Dados do WMI (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Leitor de Dados WMI** para nomear e descrever a tarefa Leitor de Dados WMI.  
   
- Para obter informações sobre essa tarefa, consulte [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
+ Para obter informações sobre essa tarefa, consulte [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
   
 ## <a name="options"></a>Opções  
  **Nome**  
@@ -39,8 +39,8 @@ ms.locfileid: "48102786"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa leitor de dados WMI &#40;página de opções do WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
- [Página expressões](expressions/expressions-page.md)   
+ [Editor da Tarefa Leitor de Dados do WMI &#40;Página Opções do WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
+ [Página Expressões](expressions/expressions-page.md)   
  [Tarefa Detector de Eventos do WMI](control-flow/wmi-event-watcher-task.md)  
   
   

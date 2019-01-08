@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145891"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367748"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
   A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -47,7 +47,7 @@ ms.locfileid: "50145891"
 ### <a name="xmla-listener"></a>Ouvinte XMLA  
  O componente ouvinte XMLA processa todas as comunicações de XMLA entre o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e seus clientes. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` definição de configuração no arquivo msmdsrv. ini pode ser usada para especificar uma porta na qual um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta da instância. Um valor 0 nesse arquivo indica que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ouve na porta padrão. A menos que especificado de outro modo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa as seguintes portas TCP padrão:  
   
-|Porta|Description|  
+|Porta|Descrição|  
 |----------|-----------------|  
 |2383|Instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |2382|Redirecionador para outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -89,7 +89,7 @@ ms.locfileid: "50145891"
  Também é possível definir propriedades que permitem ajustar o servidor e controlar a segurança para uso de cliente. Para obter mais informações, consulte [Propriedades do Recurso](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o suporte para algoritmos de plug-in pelas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obter mais informações sobre o suporte para algoritmos de plug-in pelas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acesso programático a objetos de mineração de dados  
  Você pode usar os seguintes modelos de objeto para criar uma conexão com um banco de dados do Analysis Services e trabalhar com objetos de mineração de dados:  

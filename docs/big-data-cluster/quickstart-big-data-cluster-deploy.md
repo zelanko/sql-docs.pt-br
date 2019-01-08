@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: c760bd4c149a63de0335c6d6651036bba56533a0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246755"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531151"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guia de início rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -56,7 +56,6 @@ Antes de continuar, observe as seguintes diretrizes importantes:
 - No [janela de comando](https://docs.microsoft.com/visualstudio/ide/reference/command-window), aspas são incluídas nas variáveis de ambiente. Se você usar aspas para encapsular uma senha, as aspas são incluídas na senha.
 - No bash, aspas não são incluídas na variável. Nossos exemplos usam aspas duplas `"`.
 - Você pode definir a senha de variáveis de ambiente para que você quiser, mas certifique-se de que eles são suficientemente complexos e não usam o `!`, `&`, ou `'` caracteres.
-- Na versão CTP 2.2, não altere as portas padrão.
 - O `sa` conta é um administrador do sistema na instância do SQL Server Master que é criada durante a instalação. Depois de criar o contêiner do SQL Server, a variável de ambiente `MSSQL_SA_PASSWORD` especificada é detectável executando `echo $MSSQL_SA_PASSWORD` no contêiner. Para fins de segurança, altere sua `sa` senha, de acordo com práticas recomendadas documentadas [aqui](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Inicialize as variáveis de ambiente a seguir.  Eles são necessários para implantar um cluster de big data:

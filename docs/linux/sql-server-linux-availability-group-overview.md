@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723184"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206615"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sempre em grupos de disponibilidade no Linux
 
@@ -51,15 +51,15 @@ Tipo de cluster é armazenado na [!INCLUDE[ssnoversion-md](../includes/ssnoversi
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>obrigatório\_sincronizadas\_secundários\_para\_confirmação
 
-Novo no [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] é uma configuração que é usada por grupos de disponibilidade chamados `required_synchronized_secondaries_to_commit`. Isso informa o grupo de disponibilidade, o número de réplicas secundárias que devem estar em sincronia com o primário. Isso permite que os itens como failover automático (somente quando integrado ao Pacemaker com um tipo de cluster externo) e controla o comportamento de coisas como a disponibilidade da réplica primária se o número correto de réplicas secundárias estiver online ou offline. Para saber mais sobre como isso funciona, consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). O `required_synchronized_secondaries_to_commit` valor é definido por padrão e mantido pelo Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Você pode substituir esse valor manualmente.
+Novo no [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] é uma configuração que é usada por grupos de disponibilidade chamados `required_synchronized_secondaries_to_commit`. Isso informa o grupo de disponibilidade, o número de réplicas secundárias que devem estar em sincronia com o primário. Isso permite que os itens como failover automático (somente quando integrado ao Pacemaker com um tipo de cluster externo) e controla o comportamento de coisas como a disponibilidade da réplica primária se o número correto de réplicas secundárias estiver online ou offline. Para saber mais sobre como isso funciona, consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). O `required_synchronized_secondaries_to_commit` valor é definido por padrão e mantido pelo Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Você pode substituir esse valor manualmente.
 
 A combinação de `required_synchronized_secondaries_to_commit` e o novo número de sequência (que é armazenado no `sys.availability_groups`) informa ao Pacemaker e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] que, por exemplo, o failover automático pode acontecer. Nesse caso, uma réplica secundária teria o mesmo número de sequência que o primário, que significa que é atualizado com as últimas informações de configuração.
 
 Há três valores que podem ser definidas para `required_synchronized_secondaries_to_commit`: 0, 1 ou 2. Eles controlam o comportamento do que acontece quando uma réplica se tornar indisponível. Os números correspondem ao número de réplicas secundárias que devem ser sincronizados com o primário. O comportamento é o seguinte no Linux:
 
--   0 – nenhum failover automático é possível, pois nenhuma réplica secundária é necessária a serem sincronizados. O banco de dados primário está disponível em todos os momentos.
--   1 – uma réplica secundária deve ser em um estado sincronizado com o primário; failover automático será possível. O banco de dados primário não está disponível até que uma réplica síncrona secundária está disponível.
--   2 – ambas as réplicas secundárias em uma configuração de AG três ou mais nós devem ser sincronizadas com o primário; failover automático será possível.
+-   0 - nenhum failover automático é possível, pois nenhuma réplica secundária é necessária a serem sincronizados. O banco de dados primário está disponível em todos os momentos.
+-   1 - uma réplica secundária deve ser em um estado sincronizado com o primário; failover automático será possível. O banco de dados primário não está disponível até que uma réplica síncrona secundária está disponível.
+-   2 - ambas as réplicas secundárias em uma configuração de AG três ou mais nós devem ser sincronizadas com o primário; failover automático será possível.
 
 `required_synchronized_secondaries_to_commit` Controla não apenas o comportamento de failover com réplicas síncronas, mas a perda de dados. Com um valor de 1 ou 2, uma réplica secundária sempre é necessária para a sincronização, portanto, sempre haverá redundância de dados. Isso significa que nenhuma perda de dados.
 
@@ -87,7 +87,7 @@ Failover automático de um grupo de disponibilidade é possível quando as segui
 -   A réplica primária e secundária são definidos como a movimentação de dados síncrona.
 -   O secundário tem um estado de sincronizados (não Sincronizando), o que significa que os dois estão no mesmo ponto de dados.
 -   O tipo de cluster é definido como externo. Failover automático não é possível com um tipo de cluster nenhum.
--   O `sequence_number` da réplica secundária se torne o primário tem o maior número de sequência – em outras palavras, a réplica secundária `sequence_number` corresponde da réplica primária original.
+-   O `sequence_number` da réplica secundária se torne o primário tem o maior número de sequência - em outras palavras, a réplica secundária `sequence_number` corresponde da réplica primária original.
 
 Se essas condições forem atendidas e o servidor que hospeda a réplica primária falhar, o grupo de disponibilidade terão sua propriedade alterada para uma réplica síncrona. O comportamento de réplicas síncronas (do qual pode haver três total: uma primária e duas réplicas secundárias) pode ser ainda mais controlado por `required_synchronized_secondaries_to_commit`. Isso funciona com grupos de disponibilidade no Windows e Linux, mas é configurado de forma completamente diferente. No Linux, o valor é configurado automaticamente pelo cluster no próprio recurso de grupo de disponibilidade.
 
@@ -147,11 +147,11 @@ Um grupo de disponibilidade com um tipo de cluster nenhum pode ter suas réplica
 
 ![Híbrido None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Um grupo de disponibilidade distribuído também pode cruzar os limites do sistema operacional. Os grupos de disponibilidade subjacentes são vinculados pelas regras para como eles são configurados, tal como configurado com externo que está sendo somente para Linux, mas o grupo de disponibilidade que ele está associado a poderia ser configurado usando um WSFC. Considere o seguinte exemplo:
+Um grupo de disponibilidade distribuído também pode cruzar os limites do sistema operacional. Os grupos de disponibilidade subjacentes são vinculados pelas regras para como eles são configurados, tal como configurado com externo que está sendo somente para Linux, mas o grupo de disponibilidade que ele está associado a poderia ser configurado usando um WSFC. Considere o exemplo a seguir:
 
 ![Híbrido Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

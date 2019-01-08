@@ -17,12 +17,12 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084656"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372498"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
   Relatórios grandes apresentam certos desafios de processamento e requerem certas configurações para que sejam executados corretamente. Relatórios grandes não devem ser executados sob demanda, salvo se estiverem configurados para oferecer suporte à paginação.  
@@ -34,12 +34,12 @@ ms.locfileid: "48084656"
   
  Para relatórios que contêm dados voláteis, o tamanho do relatório pode variar radicalmente de uma execução de relatório para outra. Nesse caso, você deve monitorar a fonte de dados para determinar como a volatilidade dos dados afeta o seu relatório e se é necessário seguir as etapas descritas neste tópico.  
   
- Para obter mais informações sobre como diagnosticar erros de tempo limite e de falta de memória, consulte o artigo [Como diagnosticar problemas ao executar relatórios no servidor de relatório](http://go.microsoft.com/fwlink/?LinkId=85634) em blogs.msdn.com.  
+ Para obter mais informações sobre como diagnosticar erros de tempo limite e de falta de memória, consulte o artigo [Como diagnosticar problemas ao executar relatórios no servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=85634) em blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Recomendações de configuração  
  As recomendações para execução e renderização de relatório e o acesso a ele incluem os seguintes itens:  
   
--   Projete o relatório para oferecer suporte à paginação. O servidor de relatório envia uma página do relatório por vez. Se o relatório incluir paginação, será possível controlar a quantidade de dados que será transmitida ao navegador. Para obter mais informações, consulte [pré-carregar o Cache &#40;Gerenciador de relatórios&#41;](preload-the-cache-report-manager.md).  
+-   Projete o relatório para oferecer suporte à paginação. O servidor de relatório envia uma página do relatório por vez. Se o relatório incluir paginação, será possível controlar a quantidade de dados que será transmitida ao navegador. Para obter mais informações, consulte [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](preload-the-cache-report-manager.md).  
   
 -   Configure o relatório para ser executado como um instantâneo de relatório agendado para evitar que seja executado sob demanda. Não defina um valor de tempo limite para a execução de relatório. Execute o relatório em horários de pouca atividade.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "48084656"
  Se você quiser usar entrega de relatório por email, configure a assinatura para incluir um link. Evite enviar o relatório como anexo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assinaturas e entrega de &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](preload-the-cache-report-manager.md)  
   
   

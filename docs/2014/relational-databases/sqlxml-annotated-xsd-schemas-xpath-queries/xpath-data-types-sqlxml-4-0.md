@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -29,12 +27,12 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796408"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de dados XPath (SQLXML 4.0)
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e Esquema XML (XSD) têm tipos de dados bem diferentes. Por exemplo, o XPath não tem tipos de dados de data ou inteiros, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o XSD têm muitos. O XSD usa precisão de nanossegundos para valores de tempo, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa precisão de no máximo 1/300 segundo. Consequentemente, o mapeamento de um tipo de dados para outro nem sempre é possível. Para obter mais informações sobre o mapeamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para os tipos de dados XSD, consulte [coerções de tipo de dados e a anotação SQL: DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -65,7 +63,7 @@ ms.locfileid: "48054746"
 |Nenhum é um conjunto de nós.|Converta ambos os operandos em `number` e compare.|Converta ambos os operandos em um tipo comum e compare. Converta em `boolean` se qualquer um dos dois for `boolean` e em `number` se qualquer um dos dois for `number`; caso contrário, converta em `string`.|  
   
 > [!NOTE]  
->  Como os operadores relacionais de XPath sempre convertem seus operandos em `number`, comparações de `string` não são possíveis. Para incluir comparações de data, o SQL Server 2000 oferece essa variação da especificação do XPath: quando um operador relacional compara uma `string` com uma `string`, um conjunto de nós com uma `string` ou um conjunto de nós de valor de cadeia de caracteres com um conjunto de nós de valor de cadeia de caracteres, é executada uma comparação de `string` (e não uma comparação de `number`).  
+>  Como os operadores relacionais de XPath sempre convertem seus operandos em `number`, comparações de `string` não são possíveis. Para incluir comparações de data, o SQL Server 2000 oferece essa variação para a especificação do XPath: Quando um operador relacional compara uma `string` para um `string`, um conjunto de nós para um `string`, ou com valor de cadeia de caracteres de conjunto de nós para um com valor de cadeia de caracteres de conjunto de nós, um `string` comparação (não um `number` comparação) é executada.  
   
 ## <a name="node-set-conversions"></a>Conversões de conjuntos de nós  
  As conversões de conjuntos de nós nem sempre são intuitivas. Um conjunto de nós é convertido em `string` obtendo o valor da cadeia de caracteres somente do primeiro nó do conjunto. Um conjunto de nós é convertido em `number` convertendo-o em `string` e convertendo `string` em `number`. Um conjunto de nós é convertido em `boolean` testando sua existência.  
@@ -89,7 +87,7 @@ ms.locfileid: "48054746"
   
 |Tipo de dados XDR|Equivalente<br /><br /> tipos de dados XPath|Conversão do SQL Server usada|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
+|Nonebin.base64bin.hex|N/D|NoneEmployeeID|  
 |booleano|booleano|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|cadeia de caracteres|CONVERT(nvarchar(4000), EmployeeID, 126)|  
@@ -149,7 +147,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  O prefixo "E -" é adicionado à cadeia de caracteres, e o resultado é comparado com `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Executar várias conversões de tipo de dados em uma consulta do XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>b. Executar várias conversões de tipo de dados em uma consulta do XPath  
  Considere esta consulta do XPath especificada com base em um esquema XSD anotado: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Essa consulta XPath retorna todos os  **\<OrderDetail >** elementos que satisfazem o predicado `@UnitPrice * @OrderQty > 98`. Se o **UnitPrice** é anotado com um `fixed14.4` de tipo de dados no esquema anotado, esse predicado é equivalente à expressão SQL:  

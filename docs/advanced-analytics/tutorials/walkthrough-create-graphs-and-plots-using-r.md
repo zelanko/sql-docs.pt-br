@@ -1,27 +1,38 @@
 ---
-title: Criar gráficos e gráficos usando SQL e R (passo a passo) | Microsoft Docs
+title: Criar gráficos e plotagens usando o SQL e R - funções SQL Server Machine Learning
+description: Tutorial que mostra como criar gráficos e plotagens usando funções da linguagem R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d19625ed56370a1619300c21e3822c0c3eeef484
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585468"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597077"
 ---
-# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e gráficos usando SQL e R (passo a passo)
+# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e plotagens usando o SQL e R (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Nesta parte do passo a passo, você aprenderá técnicas para gerar gráficos e mapas usando R com dados do SQL Server. Criar um histograma simple, para praticar um pouco e, em seguida, desenvolver um gráfico de mapa mais complexo.
+Nesta parte do passo a passo, você aprenderá técnicas para gerar gráficos e mapas usando o R com dados do SQL Server. Criar um histograma simple e, em seguida, desenvolver uma plotagem de mapa mais complexa.
 
-### <a name="create-a-histogram"></a>Criar um histograma
+## <a name="prerequisites"></a>Prerequisites
 
-1. Gere a primeira plotagem, usando a função [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) .  A função rxHistogram fornece funcionalidade semelhante em pacotes de software livre R, mas pode ser executado em um contexto de execução remota.
+Essa etapa pressupõe que uma sessão de R em andamento, com base nas etapas anteriores neste passo a passo. Ele usa as conexão cadeias de caracteres e dados de origem objetos criados nessas etapas. As ferramentas e os pacotes a seguir são usados para executar o script.
+
++ Rgui.exe para executar comandos de R
++ Management Studio para executar o T-SQL
++ googMap
++ pacote de ggmap
++ pacote de mapproj
+
+## <a name="create-a-histogram"></a>Criar um histograma
+
+1. Gere a primeira plotagem, usando a função [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) .  A função rxHistogram fornece funcionalidade semelhante àquela em pacotes de R de código-fonte aberto, mas pode ser executados em um contexto de execução remota.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -36,16 +47,16 @@ Nesta parte do passo a passo, você aprenderá técnicas para gerar gráficos e 
     ![usando rxHistogram para plotar valores de tarifa](media/rsql-e2e-rxhistogramresult.png "usando rxHistogram para plotar valores de tarifa")
 
     > [!NOTE]
-    > O gráfico ser diferente?
+    > O gráfico parece diferente?
     >  
-    > Isso ocorre porque _inDataSource_ usa somente as primeiras 1000 linhas. A ordenação de linhas usando TOP é não determinística na ausência de uma cláusula ORDER BY, portanto é esperado que os dados e o gráfico resultante podem variar.
+    > Isso ocorre porque _inDataSource_ usa apenas as primeiras 1000 linhas. A ordenação das linhas usando TOP é não determinística na ausência de uma cláusula ORDER BY, portanto, é esperado que os dados e o gráfico resultante podem variar.
     > Essa imagem em particular foi gerada usando aproximadamente 10.000 linhas de dados. Recomendados que você teste com diferentes números de linhas para obter gráficos diferentes e observe quanto tempo leva para que os resultados sejam retornados em seu ambiente.
 
-### <a name="create-a-map-plot"></a>Criar um gráfico de mapa
+## <a name="create-a-map-plot"></a>Criar um gráfico de mapa
 
-Normalmente, os servidores de banco de dados bloqueiam acesso à Internet. Isso pode ser inconveniente ao usar pacotes de R que precisam baixar mapas ou outras imagens para gerar gráficos. No entanto, há uma solução alternativa que podem ser úteis ao desenvolver seus próprios aplicativos. Basicamente, gere a representação de mapa no cliente e sobreposição no mapa de pontos que são armazenados como atributos na tabela do SQL Server.
+Normalmente, os servidores de banco de dados bloqueiam acesso à Internet. Isso pode ser inconveniente ao usar pacotes de R que precisam baixar mapas ou outras imagens para gerar gráficos. No entanto, há uma solução alternativa que podem ser úteis ao desenvolver seus próprios aplicativos. Basicamente, você gera a representação de mapa no cliente e sobrepor no mapa os pontos que são armazenados como atributos na tabela do SQL Server.
 
-1. Defina a função que cria o objeto de plotagem de R. A função personalizada *mapPlot* cria um gráfico de dispersão que usa os locais de recebimento táxi e plota o número de percursos iniciado a partir de cada local. Ela usa os pacotes **ggplot2** e  **ggmap** , que já devem estar instalados e carregados.
+1. Defina a função que cria o objeto de plotagem do R. A função personalizada *mapPlot* cria um gráfico de dispersão que usa os locais embarque de passageiros no táxi e plota o número de corridas que foram iniciadas em cada local. Ele usa o **ggplot2** e **ggmap** pacotes, que já devem estar [instalado e carregado](walkthrough-data-science-end-to-end-walkthrough.md#add-packages).
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -59,11 +70,11 @@ Normalmente, os servidores de banco de dados bloqueiam acesso à Internet. Isso 
     }
     ```
 
-    + O *mapPlot* função leva dois argumentos: um objeto de dados existente, que você definiu anteriormente usando RxSqlServerData e a representação de mapa passado do cliente.
-    + Em que a linha que começa com o *ds* variável rxImport é usada para carregar dados de memória da fonte de dados criado anteriormente, *inDataSource*. (Essa fonte de dados contém apenas 1000 linhas; se você quiser criar um mapa com mais pontos de dados, você pode substituir uma fonte de dados diferente).
-    + Sempre que você usar **código-fonte aberto** funções de R, dados devem ser carregadas em quadros de dados na memória local. No entanto, ao chamar o [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) função, você pode executar na memória do contexto de computação remota.
+    + O *mapPlot* função leva dois argumentos: um objeto de dados existente, o que você definiu anteriormente usando o RxSqlServerData e a representação de mapa passada do cliente.
+    + Em que a linha que começa com o *ds* variável, rxImport é usado para carregar dados de memória da fonte de dados criada anteriormente, *inDataSource*. (Essa fonte de dados contém apenas 1000 linhas; se você quiser criar um mapa com mais pontos de dados, você pode substituir uma fonte de dados diferente).
+    + Sempre que você usa funções de R de código-fonte aberto, os dados devem ser carregados em quadros de dados na memória local. No entanto, ao chamar o [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) função, você pode executar na memória do contexto de computação remota.
 
-2. Alterar o contexto de computação local e carregar as bibliotecas necessárias para criar os mapas.
+2. Alterar o contexto de computação para o local e carregar as bibliotecas necessárias para criar os mapas.
 
     ```R
     rxSetComputeContext("local")
@@ -77,7 +88,7 @@ Normalmente, os servidores de banco de dados bloqueiam acesso à Internet. Isso 
 
     + A linha que começa com `googmap` gera um mapa com as coordenadas especificadas no centro.
 
-3. Alterne para o contexto de computação do SQL Server e processar os resultados, encapsulando a função de plotagem em [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) conforme mostrado aqui. A função rxExec faz parte do **RevoScaleR** pacote e oferece suporte à execução de funções de R arbitrárias em um contexto de computação remota.
+3. Alterne para o contexto de computação do SQL Server e renderizar os resultados, encapsulando a função de plotagem em [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) conforme mostrado aqui. A função rxExec faz parte de **RevoScaleR** pacote e dá suporte à execução de funções do R arbitrárias no contexto de computação remota.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -85,21 +96,18 @@ Normalmente, os servidores de banco de dados bloqueiam acesso à Internet. Isso 
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + Os dados do mapa em `googMap` é passado como um argumento para a função executada remotamente *mapPlot*. Porque os mapas que foram gerados em seu ambiente local, deve ser passados para a função para criar o gráfico no contexto do SQL Server.
+    + Os dados do mapa `googMap` é passado como um argumento para a função executada remotamente *mapPlot*. Porque os mapas foram gerados no seu ambiente local, deve ser passados para a função para criar a plotagem no contexto do SQL Server.
 
     + Quando a linha que começa com `plot` é executado, os dados renderizados é serializada de volta para o ambiente local do R para que você pode exibi-lo no seu cliente de R.
 
     > [!NOTE]
-    > Se você estiver usando o SQL Server em uma máquina virtual do Azure, você poderá receber um erro neste momento. Isso ocorre porque uma regra de firewall padrão no Azure bloqueia o acesso à rede pelo código R. Para obter detalhes sobre como corrigir esse erro, consulte [instalando o R Services em uma VM do Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > Se você estiver usando o SQL Server em uma máquina virtual do Azure, você poderá receber um erro neste momento. Um erro ocorre quando a regra de firewall padrão no Azure bloqueia o acesso à rede pelo código R. Para obter detalhes sobre como corrigir esse erro, consulte [instalando o Machine Learning (R) serviços em uma VM do Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 
-4. A imagem a seguir mostra a plotagem de saída. Os locais em que os táxis apanham os clientes são adicionados ao mapa como pontos vermelhos. A imagem pode ser diferente, dependendo de quantos locais são na fonte de dados que você usou.
+4. A imagem a seguir mostra a plotagem de saída. Os locais em que os táxis apanham os clientes são adicionados ao mapa como pontos vermelhos. Sua imagem pode parecer diferente, dependendo de quantos locais estão na fonte de dados que você usou.
 
     ![plotagem de viagens de táxi usando uma função do R personalizada](media/rsql-e2e-mapplot.png "plotagem de viagens de táxi usando uma função do R personalizada")
 
-## <a name="next-lesson"></a>Próxima lição
+## <a name="next-steps"></a>Próximas etapas
 
-[Criar recursos de dados usando R e SQL](walkthrough-create-data-features.md)
-
-## <a name="previous-lesson"></a>Lição anterior
-
-[Resumir dados usando R](walkthrough-view-and-summarize-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Criar recursos de dados usando R e SQL](walkthrough-create-data-features.md)

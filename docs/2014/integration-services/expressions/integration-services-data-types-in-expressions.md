@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
@@ -14,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80110c29ec1c576684c4ccd67bc0c3408e6250b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194867"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363338"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
   O avaliador de expressão usa tipos de dados [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Quando dados são inseridos pela primeira vez em um fluxo de dados em um pacote [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , o mecanismo de fluxo de dados converte todos os dados de coluna para um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , e os dados da coluna que uma expressão usa já têm um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . As expressões usadas nas transformações Divisão Condicional e Coluna Derivada podem fazer referência a colunas porque elas fazem parte de um fluxo de dados que inclui dados de coluna.  
@@ -33,7 +32,7 @@ ms.locfileid: "48194867"
  Além disso, expressões podem incluir literais de cadeia de caracteres, Boolianos e numéricos. Para obter mais informações sobre como converter literais numéricos para tipos de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte [Literais &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
   
 ## <a name="implicit-data-conversion"></a>Conversão implícita de dados  
- Uma conversão implícita de um tipo de dados ocorre quando o avaliador de expressão converte automaticamente os dados de um tipo de dados para outro. Por exemplo, se um `smallint` é comparado com um `int`, o `smallint` é convertido implicitamente em `int` antes da comparação é executada.  
+ Uma conversão implícita de um tipo de dados ocorre quando o avaliador de expressão converte automaticamente os dados de um tipo de dados para outro. Por exemplo, se `smallint` é comparado com `int`, `smallint` é convertido implicitamente em `int` antes da execução da comparação.  
   
  O avaliador de expressão não pode executar conversão de dados implícita quando os argumentos e operandos tiverem tipos de dados incompatíveis. Além disso, o avaliador de expressão não pode converter nenhum valor implicitamente para um Booliano. Em vez disso, os argumentos e operandos devem ser convertidos explicitamente usando o operador cast. Para obter mais informações, consulte [Cast &#40;Expressão do SSIS&#41;](cast-ssis-expression.md).  
   
@@ -48,23 +47,23 @@ ms.locfileid: "48194867"
 > [!NOTE]  
 >  Valores Boolianos são valores lógicos, não números. Embora os valores Boolianos possam ser exibidos como números em alguns ambientes, eles não são armazenados como números, e várias linguagens de programação representam valores Boolianos como valores numéricos de modos diferentes, como faz os métodos do .NET Framework.  
 >   
->  Por exemplo, as funções de conversão disponíveis no Visual Basic convertem `True` para -1; no entanto, o método `System.Convert.ToInt32` no .NET Framework converte `True` para +1. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] linguagem de expressão converte `True` como -1.  
+>  Por exemplo, as funções de conversão disponíveis no Visual Basic convertem `True` para -1; no entanto, o método `System.Convert.ToInt32` no .NET Framework converte `True` para +1. A Linguagem de expressão do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] converte `True` para -1.  
 >   
 >  Para evitar erros ou resultados inesperados, você não deve gravar códigos que contem com valores numéricos específicos para `True` e `False`. Onde for possível, você deve restringir o uso de variáveis boolianas aos valores lógicos para os quais elas são projetados.  
   
- Para obter mais informações, consulte os tópicos a seguir:  
+ Para mais informações, consulte os seguintes tópicos:  
   
--   [= = &#40;Igual&#41; &#40;expressão do SSIS&#41;](equal-ssis-expression.md)  
+-   [== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](equal-ssis-expression.md)  
   
 -   [\!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;Maior que&#41; &#40;expressão do SSIS&#41;](greater-than-ssis-expression.md)  
+-   [&#62; &#40;Maior que&#41; &#40;Expressão SSIS&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;Menor que&#41; &#40;expressão do SSIS&#41;](less-than-ssis-expression.md)  
+-   [&#60; &#40;Menor que&#41; &#40;Expressão SSIS&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Maior que ou igual a&#41; &#40;expressão do SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Maior que ou igual a&#41; &#40;Expressão SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Menor que ou igual a&#41; &#40;expressão do SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;Menor que ou igual a&#41; &#40;Expressão SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  Uma função que usa um único argumento retorna um resultado com o mesmo tipo de dados que o argumento, com as seguintes exceções:  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48194867"
   
 -   Argumentos passados para as funções matemáticas devem ser avaliados como um tipo de dados numérico. Dependendo da função ou operação, um tipo de dados numérico específico pode ser exigido. Por exemplo, a função HEX requer um inteiro assinado ou não assinado.  
   
--   Argumentos passados para funções da cadeia de caracteres devem ser avaliados como a um tipo de dados de caractere: DT_STR ou DT_WSTR. Por exemplo, UPPER ("flor"). Algumas funções da cadeia de caracteres, como SUBSTRING, requerer argumentos inteiros adicionais para a posição inicial e o comprimento da cadeia de caracteres.  
+-   Argumentos passados para funções de cadeia de caracteres devem ser avaliada como um tipo de dados de caractere: DT_STR ou DT_WSTR. Por exemplo, UPPER ("flor"). Algumas funções da cadeia de caracteres, como SUBSTRING, requerer argumentos inteiros adicionais para a posição inicial e o comprimento da cadeia de caracteres.  
   
 -   Argumentos passados para as funções de data e hora devem ser avaliados como uma data válida. Por exemplo, DAY(GETDATE()). Algumas funções, como DATEADD, exigem um argumento inteiro adicional para o número de dias que a função adiciona a uma data.  
   
@@ -106,8 +105,8 @@ ms.locfileid: "48194867"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), em pragmaticworks.com  
+-   Artigo técnico, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), em pragmaticworks.com  
   
--   Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+-   Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
   

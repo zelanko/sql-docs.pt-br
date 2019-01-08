@@ -12,12 +12,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 222cb3cd5511d4c663e86ba847090cc35d84e2cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360088"
 ---
 # <a name="use-cursors-odbc"></a>Usar cursores (ODBC)
     
@@ -33,11 +33,11 @@ ms.locfileid: "48143077"
   
 2.  Chame [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) para definir o tamanho do conjunto de linhas usando o atributo SQL_ATTR_ROW_ARRAY_SIZE.  
   
-3.  Outra opção será chamar [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) para definir um nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF.  
+3.  Outra opção será chamar [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) para definir um nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF.  
   
 4.  Execute a instrução SQL.  
   
-5.  Outra opção será chamar [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) para definir o nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF e um nome de cursor não foi fornecido com [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) na Etapa 3.  
+5.  Outra opção será chamar [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) para definir o nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF e um nome de cursor não foi fornecido com [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) na Etapa 3.  
   
 6.  Chame [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) para obter o número de colunas (C) no conjunto de linhas.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48143077"
   
     -   Se SQL_NO_DATA for retornado, nenhum outro conjunto de resultados estará disponível.  
   
-    -   Se SQL_SUCCESS_WITH_INFO ou SQL_ERROR for retornado, chame [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) para determinar se a saída de uma instrução PRINT ou RAISERROR estará disponível.  
+    -   Se SQL_SUCCESS_WITH_INFO ou SQL_ERROR for retornado, chame [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para determinar se a saída de uma instrução PRINT ou RAISERROR estará disponível.  
   
      Se parâmetros de instrução associados forem usados para parâmetros de saída ou o valor retornado de um procedimento armazenado, use os dados disponíveis agora nos buffers de parâmetro associados.  
   
-     Quando são usados parâmetros associados, cada chamada para [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) ou [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) terá executado a instrução SQL por S vezes, em que S é o número de elementos na matriz de parâmetros associados. Isso significa que haverá S conjuntos de resultados a ser processados, onde cada conjunto consiste em todos os conjuntos de resultados, parâmetros de saída e códigos de retorno normalmente retornados por uma única execução da instrução SQL.  
+     Quando são usados parâmetros associados, cada chamada para [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) terá executado a instrução SQL por S vezes, em que S é o número de elementos na matriz de parâmetros associados. Isso significa que haverá S conjuntos de resultados a ser processados, onde cada conjunto consiste em todos os conjuntos de resultados, parâmetros de saída e códigos de retorno normalmente retornados por uma única execução da instrução SQL.  
   
      Observe que, quando um conjunto de resultados contém linhas computadas, cada linha computada é disponibilizada como um conjunto de resultados separado. Esses conjuntos de resultados computados são intercalados nas linhas normais e dividem as linhas normais em vários conjuntos de resultados.  
   

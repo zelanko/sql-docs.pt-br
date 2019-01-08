@@ -1,21 +1,22 @@
 ---
-title: Configurar o Cluster do RHEL para o grupo de disponibilidade do SQL Server | Microsoft Docs
-description: ''
+title: Configurar o Cluster do RHEL para o grupo de disponibilidade do SQL Server
+titleSuffix: SQL Server
+description: Saiba mais sobre clusters de grupo de disponibilidade ao executar o Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670815"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160585"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar o Cluster do RHEL para o grupo de disponibilidade do SQL Server
 
@@ -112,7 +113,7 @@ Para obter informações sobre STONITH e isolamento, consulte os seguintes artig
 
 * [Clusters do pacemaker do zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [Isolamento e STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Complemento de alta disponibilidade do Red Hat com o Pacemaker: de isolamento](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Complemento de alta disponibilidade do Red Hat com o Pacemaker: Isolamento](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Como o nível do nó de configuração de isolamento depende muito do seu ambiente, desabilite-o para este tutorial (ele pode ser configurado mais tarde). O script a seguir desabilita o isolamento de nível de nó:
 

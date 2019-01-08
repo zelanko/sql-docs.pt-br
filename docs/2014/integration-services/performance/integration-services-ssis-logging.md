@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -25,17 +24,17 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050176"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369759"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
   
- Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Enable Logging for Package Execution on the SSIS Server](../enable-logging-for-package-execution-on-the-ssis-server.md).  
+ Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Habilitar o log para a execução do pacote no servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
   
  Você também pode incluir o log ao executar um pacote por meio do utilitário de prompt de comando **dtexec** . Para obter mais informações sobre os argumentos do prompt de comando que oferecem suporte para registros, consulte [dtexec Utility](../packages/dtexec-utility.md).  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48050176"
   
  A tabela a seguir lista o ProgID e o ClassID dos provedores de log incluídos pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , e o local dos logs nos quais os provedores de log gravam.  
   
-|Provedor de log|ProgID|ClassID|Local|  
+|Provedor de log|ProgID|ClassID|Local padrão|  
 |------------------|------------|-------------|--------------|  
 |Arquivo de texto|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|O gerenciador de conexões de arquivos usado pelo provedor de log especifica o caminho do arquivo de texto.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|O gerenciador de conexões de arquivos que o provedor de registro usa especifica o caminho usado pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -91,19 +90,19 @@ ms.locfileid: "48050176"
 #### <a name="log-schema"></a>Esquema de log  
  A tabela a seguir descreve os elementos no esquema de log.  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |Computer|O nome do computador no qual o evento de log ocorreu.|  
 |Operador|A identidade do usuário que iniciou o pacote.|  
 |SourceName|O nome do contêiner ou tarefa no qual o evento de log ocorreu.|  
 |SourceID|O identificador exclusivo do pacote; o contêiner Loop For, Loop Foreach ou Sequência ou a tarefa na qual o evento de log ocorreu.|  
-|ExecutionID|O GUID da instância de execução do pacote.<br /><br /> Observação: a execução de um pacote simples pode criar entradas de log com valores diferentes para o elemento ExecutionID. Por exemplo, quando você executa um pacote no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a fase de validação talvez crie entradas de log com um elemento ExecutionID que corresponde ao [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. No entanto, a fase de execução talvez crie entradas de log com um elemento ExecutionID correspondente a dtshost.exe. Para obter outro exemplo, quando você executa um pacote que contém tarefas Executar Pacote, cada uma dessas tarefas executa um pacote filho. Esses pacotes filho podem criar entradas de log com um elemento ExecutionID diferente do das entradas de log criadas pelo pacote pai.|  
+|ExecutionID|O GUID da instância de execução do pacote.<br /><br /> Observação: A execução de um pacote simples pode criar entradas de log com valores diferentes para o elemento ExecutionID. Por exemplo, quando você executa um pacote no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a fase de validação talvez crie entradas de log com um elemento ExecutionID que corresponde ao [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. No entanto, a fase de execução talvez crie entradas de log com um elemento ExecutionID correspondente a dtshost.exe. Para obter outro exemplo, quando você executa um pacote que contém tarefas Executar Pacote, cada uma dessas tarefas executa um pacote filho. Esses pacotes filho podem criar entradas de log com um elemento ExecutionID diferente do das entradas de log criadas pelo pacote pai.|  
 |MessageText|Uma mensagem associada à entrada de log.|  
 |DataBytes|Uma matriz de bytes específica para a entrada de log. O significado deste campo varia de acordo com a entrada de log.|  
   
  A tabela a seguir descreve três elementos adicionais no esquema de log que não estão disponíveis na guia **Detalhes** da caixa de diálogo **Configurar Logs de SSIS** .  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |StartTime|A hora em que o contêiner ou tarefa começa a ser executado.|  
 |EndTime|A hora em que a execução do contêiner ou tarefa para.|  
@@ -114,7 +113,7 @@ ms.locfileid: "48050176"
   
  A tabela a seguir descreve os eventos predefinidos que podem ser habilitados a gravar entradas de log quando eventos de tempo de execução ocorrem. Essas entradas de log se aplicam a executáveis, ao pacote e às tarefas e contêineres que o pacote inclui. O nome da entrada de log é igual ao nome do evento de tempo de execução que foi gerado e fez com que a entrada de log fosse gravada.  
   
-|Eventos|Description|  
+|Eventos|Descrição|  
 |------------|-----------------|  
 |**OnError**|Grava uma entrada de log quando ocorre um erro.|  
 |**OnExecStatusChanged**|Grava uma entrada no log quando uma tarefa (não um contêiner) é suspenso ou retomado durante a depuração.|  
@@ -148,7 +147,7 @@ ms.locfileid: "48050176"
   
 1.  Habilite o pacote e suas tarefas para registrar. O registro pode ocorrer no nível de pacote, contêiner e tarefa. Você pode especificar logs diferentes para pacotes, contêineres e tarefas.  
   
-2.  Selecione um provedor de log e adicione um log ao pacote. Os logs podem ser criados apenas no nível de pacote, e uma tarefa ou contêiner deve usar um dos logs criados para esse pacote. Cada log é associado a um dos seguintes provedores de log: arquivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Log de Eventos do Windows ou arquivo XML. Para obter mais informações, consulte [Habilitar o log de pacote no SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Selecione um provedor de log e adicione um log ao pacote. Os logs podem ser criados apenas no nível de pacote, e uma tarefa ou contêiner deve usar um dos logs criados para esse pacote. Cada log está associado um dos seguintes provedores de log: Arquivo de texto [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Log de eventos do Windows ou o arquivo XML. Para obter mais informações, consulte [Habilitar o log de pacote no SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Selecione os eventos e as informações de esquema de log sobre cada evento que você deseja capturar no log. Para obter mais informações, consulte [Configurar o log usando um arquivo de configuração salvo](../configure-logging-by-using-a-saved-configuration-file.md).  
   
@@ -167,7 +166,7 @@ ms.locfileid: "48050176"
 #### <a name="use-the-pipelinecomponenttime-event"></a>Usar o evento PipelineComponentTime  
  Talvez a entrada de log personalizada mais útil seja o evento PipelineComponentTime. Essa entrada de log reporta o número de milissegundos que cada componente do fluxo de dados leva em cada uma das cinco principais etapas de processamento. A tabela a seguir descreve essas etapas de processamento. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os desenvolvedores reconhecerão essas etapas como os principais métodos de um <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Etapa|Description|  
+|Etapa|Descrição|  
 |----------|-----------------|  
 |Validar|O componente verifica se há valores de propriedade válidos e os parâmetros de configuração.|  
 |PreExecute|O componente executa processamento único antes de começar a processar linhas de dados.|  
@@ -199,7 +198,7 @@ ms.locfileid: "48050176"
   
 -   A transformação Coluna Derivada denominada "Calculate LineItemTotalCost" gastou 356 ms. executando os cálculos em linhas de entrada.  
   
--   A transformação Agregação denominada "Quantidade de Soma e LineItemTotalCost" gastou no total 220 ms — 141 em PrimeOutput e 79 em ProcessInput — executando cálculos e passando os dados para a próxima transformação.  
+-   A transformação Agregação denominada "Quantidade de Soma e LineItemTotalCost" gastou no total 220 ms – 141 em PrimeOutput e 79 em ProcessInput – executando cálculos e passando os dados para a próxima transformação.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  A lista a seguir contém links para tópicos que mostram como executar tarefas relacionadas ao recurso de log.  
@@ -208,12 +207,12 @@ ms.locfileid: "48050176"
   
 -   [Habilitar o log de pacote no SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md)  
   
--   [Habilitar o log para a execução do pacote no servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
+-   [Enable Logging for Package Execution on the SSIS Server](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
 -   [Exibir entradas de log na janela Eventos de Log](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Ferramenta DTLoggedExec para log completo e detalhado (Projeto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Ferramenta DTLoggedExec para log completo e detalhado (Projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir entradas de log na janela Eventos de Log](../view-log-entries-in-the-log-events-window.md)  

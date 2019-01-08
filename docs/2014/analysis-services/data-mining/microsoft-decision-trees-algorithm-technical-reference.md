@@ -21,12 +21,12 @@ ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74dd3b1548eae75da210259d81c711348da713f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190576"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365398"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referência técnica do algoritmo Árvores de Decisão da Microsoft
   O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um híbrido que incorpora métodos diferentes para a criação de uma árvore e dá suporte a várias tarefas analíticas, incluindo regressão, classificação e associação. O algoritmo Árvores de Decisão da Microsoft é dá suporte à modelagem de atributos discretos e contínuos.  
@@ -34,7 +34,7 @@ ms.locfileid: "48190576"
  Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo para tarefas diferentes e fornece links para informações adicionais sobre como consultar modelos de árvore de decisão.  
   
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>Implementação do algoritmo Árvores de Decisão  
- O algoritmo Árvores de Decisão da Microsoft aplica a abordagem Bayesiana para aprender os modelos de interação causal obtendo distribuições posteriores aproximadas dos modelos. Para obter uma explicação detalhada dessa abordagem, consulte o documento no site do Microsoft Research, por [Estrutura e aprendizado de parâmetro](http://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409).  
+ O algoritmo Árvores de Decisão da Microsoft aplica a abordagem Bayesiana para aprender os modelos de interação causal obtendo distribuições posteriores aproximadas dos modelos. Para obter uma explicação detalhada dessa abordagem, consulte o documento no site do Microsoft Research, por [Estrutura e aprendizado de parâmetro](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409).  
   
  A metodologia para avaliar o valor das informações *a priori* necessárias para o aprendizado se baseia na suposição da *equivalência de probabilidade*. Essa pressuposição afirma que os dados não devem ajudar a discriminar estruturas de rede que de outra forma representam as mesmas asserções de independência condicional. Pressupõe-se que cada caso tenha uma única rede Bayesiana a priori e uma única medida de confiança para essa rede.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "48190576"
   
  Quando o atributo previsível é um tipo de dados numérico contínuo, a seleção de recursos é aplicada às saídas também, para reduzir o número possível de resultados e criar o modelo mais rapidamente. Você pode alterar o limite de seleção de recursos e, portanto, aumentar ou diminuir o número de valores possíveis configurando o parâmetro MAXIMUM_OUTPUT_ATTRIBUTES.  
   
- Para obter uma explicação mais detalhada sobre como o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] funciona com colunas previsíveis distintas, consulte [Aprendendo sobre redes Bayesianas: A combinação de dados de conhecimento e estatísticos](http://go.microsoft.com/fwlink/?LinkId=45963). Para obter mais informações sobre como o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] funciona com uma coluna previsível contínua, consulte o apêndice de [Modelos de árvore de regressão automática para análise de série temporal](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ Para obter uma explicação mais detalhada sobre como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo árvores de decisão funciona com colunas previsíveis distintas, consulte [Learning Bayesian Networks: A combinação de dados de conhecimento e estatísticos](https://go.microsoft.com/fwlink/?LinkId=45963). Para obter mais informações sobre como o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] funciona com uma coluna previsível contínua, consulte o apêndice de [Modelos de árvore de regressão automática para análise de série temporal](https://go.microsoft.com/fwlink/?LinkId=45966).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Métodos de pontuação e seleção de recursos  
- O algoritmo Árvores de Decisão da Microsoft oferece três fórmulas para ganho de informações de pontuação: entropia de Shannon, rede Bayesiana com K2 a priori e rede Bayesiana com uma distribuição Dirichlet uniforme a priori. Todos os três métodos são bem-estabelecidos no campo de mineração de dados. É recomendável fazer experiências com parâmetros e métodos de pontuação diferentes para determinar aqueles que fornecem os melhores resultados. Para obter mais informações sobre esses métodos de pontuação, consulte [Feature Selection](../../sql-server/install/feature-selection.md).  
+ O algoritmo Árvores de Decisão da Microsoft oferece três fórmulas para pontuar o ganho de informação: entropia de Shannon, rede bayesiana com antecedente K2 e rede bayesiana com uma distribuição Dirichlet uniforme de antecedentes. Todos os três métodos são bem-estabelecidos no campo de mineração de dados. É recomendável fazer experiências com parâmetros e métodos de pontuação diferentes para determinar aqueles que fornecem os melhores resultados. Para obter mais informações sobre esses métodos de pontuação, consulte [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Todos os algoritmos de mineração de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usam seleção de recursos automaticamente para melhorar a análise e reduzir a carga de processamento. O método usado para seleção de recursos depende do algoritmo utilizado para criar o modelo. Os parâmetros de algoritmo que controlam seleção de recursos para um modelo de árvores de decisão são MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48190576"
 -   Restrinja o número de valores discretos de qualquer atributo para 10 ou menos. Você pode tentar agrupar valores de modos diferentes em modelos diferentes.  
   
     > [!NOTE]  
-    >  É possível usar as ferramentas de exploração de dados disponíveis no  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] para visualizar a distribuição de valores nos dados e agrupar os valores apropriadamente antes de iniciar a mineração de dados. Para obter mais informações, consulte [Tarefa e Visualizador de Criação de Perfil de Dados](../../integration-services/control-flow/data-profiling-task-and-viewer.md). Também é possível usar os [Suplementos de Mineração de Dados para Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)para explorar, agrupar e rotular novamente os dados no Microsoft Excel.  
+    >  É possível usar as ferramentas de exploração de dados disponíveis no  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] para visualizar a distribuição de valores nos dados e agrupar os valores apropriadamente antes de iniciar a mineração de dados. Para obter mais informações, consulte [Tarefa e Visualizador de Criação de Perfil de Dados](../../integration-services/control-flow/data-profiling-task-and-viewer.md). Também é possível usar os [Suplementos de Mineração de Dados para Excel 2007](https://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)para explorar, agrupar e rotular novamente os dados no Microsoft Excel.  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>Personalizando o algoritmo Árvores de Decisão  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] tem suporte para parâmetros que afetam o desempenho e a precisão do modelo de mineração resultante. Também é possível definir sinalizadores de modelagem nas colunas do modelo de mineração ou da estrutura de mineração para controlar a maneira como os dados são processados.  
   
 > [!NOTE]  
->  O algoritmo Árvores de Decisão da Microsoft está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, alguns parâmetros avançados para personalizar o comportamento do algoritmo Árvores de Decisão da Microsoft estão disponíveis para uso apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  O algoritmo Árvores de Decisão da Microsoft está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, alguns parâmetros avançados para personalizar o comportamento do algoritmo Árvores de Decisão da Microsoft estão disponíveis para uso apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir descreve os parâmetros que você pode usar com o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -165,18 +165,18 @@ ms.locfileid: "48190576"
   
 |ID|Nome|  
 |--------|----------|  
-|1|**Binary:** Indica que, independentemente do número real de valores do atributo, a árvore deverá ser dividida em duas ramificações.|  
-|2|**Complete:** Indica que a árvore pode criar tantas divisões quanto há valores de atributo.|  
-|3|**Both:** Especifica que o Analysis Services pode determinar se uma divisão binária ou completa deve ser usada para produzir os melhores resultados.|  
+|1|**Binário:** Indica que, independentemente do número real de valores para o atributo, a árvore deve ser dividida em duas ramificações.|  
+|2|**Conclua:** Indica que a árvore pode criar tantas divisões quanto há valores de atributo.|  
+|3|**Ambos:** Especifica que o Analysis Services pode determinar se uma divisão binária ou completa deve ser usada para produzir os melhores resultados.|  
   
  O padrão é 3.  
   
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|Description|  
+|Sinalizador de modelagem|Descrição|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Significa que a coluna será tratada como tendo dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.<br /><br /> Aplica-se às colunas de modelo de mineração.|  
+|MODEL_EXISTENCE_ONLY|Significa que a coluna será tratada como se tivesse dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.<br /><br /> Aplica-se às colunas de modelo de mineração.|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|  
   
 ### <a name="regressors-in-decision-tree-models"></a>Regressores em modelos de árvore de decisão  
@@ -203,8 +203,8 @@ ms.locfileid: "48190576"
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
  [Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)   
- [Mining Model Content para modelos de árvore de decisão &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

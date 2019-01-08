@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100946"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359538"
 ---
 # <a name="comparing-string-data"></a>comparando dados de cadeia de caracteres
   Comparações de cadeia de caracteres são uma parte importante de muitas das transformações realizadas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e as comparações de cadeia de caracteres também são usadas na avaliação de expressões em variáveis e expressões de propriedade. Por exemplo, a transformação de Classificação compara valores em um conjunto de dados para classificar dados em ordem crescente ou decrescente.  
@@ -52,7 +51,7 @@ ms.locfileid: "48100946"
   
  Os dados de cadeias de caracteres que têm o tipo DT_STR são convertidos em Unicode por meio do uso da página de código da coluna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a páginas de código no nível de coluna, e cada coluna pode ser convertida por meio de uma página de código diferente.  
   
- Na maioria dos casos, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode identificar a página de código correta da origem de dados. Por exemplo, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é possível definir um agrupamento nos níveis do banco de dados e da coluna. A página de código é derivada de um agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que pode ser um agrupamento do Windows ou do SQL.  
+ Na maioria dos casos, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode identificar a página de código correta da origem de dados. Por exemplo, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é possível definir uma ordenação nos níveis do banco de dados e da coluna. A página de código é derivada de uma ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que pode ser uma ordenação do Windows ou do SQL.  
   
  Se o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornecer uma página de código inesperada ou se o pacote acessar uma origem de dados usando um provedor que não fornece informações suficientes para determinar a página de código correta, você poderá especificar uma página de código padrão na origem OLE DB e no destino OLE DB. As páginas de código padrão são usadas em vez das páginas de código fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -64,11 +63,11 @@ ms.locfileid: "48100946"
  Também é possível especificar uma localidade para o gerenciamento de conexões de Arquivo Simples e um gerenciador de conexões de Vários Arquivos Simples.  
   
 ## <a name="setting-comparison-options"></a>Definindo opções de comparação  
- A localidade fornece as regras básicas para comparar dados de cadeia de caracteres. Por exemplo, a localidade especifica a posição de classificação de cada letra no alfabeto. No entanto, essas regras podem não ser suficientes para as comparações que algumas transformações realizam e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a um conjunto de opções de comparação avançadas que vão além das regras de comparação de uma localidade. Estas opções de comparação são definidas no nível da coluna. Por exemplo, um das opções de comparação permite que você ignore caracteres de não espaçamento. O efeito dessa opção é ignorar diacríticos como o acento, que torna "a" e "á" idênticos para fins de comparação.  
+ A localidade fornece as regras básicas para comparar dados de cadeia de caracteres. Por exemplo, a localidade especifica a posição de classificação de cada letra no alfabeto. No entanto, essas regras podem não ser suficientes para as comparações que algumas transformações realizam e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a um conjunto de opções de comparação avançadas que vão além das regras de comparação de uma localidade. Estas opções de comparação são definidas no nível da coluna. Por exemplo, um das opções de comparação permite que você ignore caracteres de não espaçamento. O efeito dessa opção é ignorar diacríticos como o acento, o que torna "a" e "å" idênticos para fins de comparação.  
   
  A seguinte tabela descreve as opções de comparação e um estilo de classificação.  
   
-|Opção de comparação|Description|  
+|Opção de comparação|Descrição|  
 |-----------------------|-----------------|  
 |Ignora maiúsculas e minúsculas|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |Ignora o tipo kana|Especifica se a comparação distingue os dois tipos de caracteres de kana japoneses: hiragana e katakana. Se esta opção for definida, a comparação de cadeia de caracteres ignorará o tipo de kana usado.|  

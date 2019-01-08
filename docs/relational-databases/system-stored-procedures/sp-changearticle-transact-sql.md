@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705984"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208152"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,16 +58,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Valores|Description|  
+|Propriedade|Valores|Descrição|  
 |--------------|------------|-----------------|  
 |**creation_script**||Caminho e nome de um script de esquema de artigo usados para criar tabelas de destino. O padrão é NULO.|  
 |**del_cmd**||Instrução DELETE a ser executada; caso contrário, será construída do log.|  
-|**Descrição**||Nova entrada descritiva para o artigo.|  
+|**description**||Nova entrada descritiva para o artigo.|  
 |**dest_object**||Fornecido para compatibilidade com versões anteriores. Use **dest_table**.|  
 |**dest_table**||Nova tabela de destino.|  
 |**destination_owner**||Nome do proprietário do objeto de destino.|  
 |**filtro**||Novo procedimento armazenado a ser usado para filtrar a tabela (filtragem horizontal). O padrão é NULO. Não pode ser alterado para publicações em replicação ponto a ponto.|  
-|**fire_triggers_on_snapshot**|**true**|Gatilhos de usuário replicados são executados quando o instantâneo inicial é aplicado.<br /><br /> Observação: para gatilhos a serem replicados, o valor de máscara de bits da *schema_option* deve incluir o valor **0x100**.|  
+|**fire_triggers_on_snapshot**|**true**|Gatilhos de usuário replicados são executados quando o instantâneo inicial é aplicado.<br /><br /> Observação: Para gatilhos a serem replicados, o valor de máscara de bits da *schema_option* deve incluir o valor **0x100**.|  
 ||**false**|Gatilhos de usuário replicados não são executados quando o instantâneo inicial é aplicado.|  
 |**identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
 |**ins_cmd**||Instrução INSERT a ser executada; caso contrário, será construída do log.|  
@@ -76,7 +75,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**None**|Não usa um comando.|  
 ||**drop**|Descarta a tabela de destino.|  
 ||**delete**|Exclui a tabela de destino.|  
-||**Truncar**|Trunca a tabela de destino.|  
+||**truncate**|Trunca a tabela de destino.|  
 |**pub_identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
 |**schema_option**||Especifica o bitmap da opção de geração de esquema para o artigo determinado. *schema_option* está **binary (8)**. Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.|  
 ||**0x00**|Desabilita execução de script pelo Agente de Instantâneo.|  
@@ -92,7 +91,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x200**|Replica restrições FOREIGN KEY. Se a tabela referenciada não fizer parte de uma publicação, todas as restrições FOREIGN KEY em uma tabela publicada não serão replicadas.|  
 ||**0x400**|Replica restrições CHECK.|  
 ||**0x800**|Replica padrões.|  
-||**0x1000**|Replica agrupamento em nível de coluna.|  
+||**0x1000**|Replica ordenação em nível de coluna.|  
 ||**0x2000**|Replica propriedades estendidas associadas com o objeto de origem do artigo publicado.|  
 ||**0x4000**|Replica chaves exclusivas definidas em um artigo de tabela.|  
 ||**0x8000**|Reproduz chave primária e chaves exclusivas em um artigo de tabela como restrições usando instruções ALTER TABLE.<br /><br /> Observação: Essa opção foi preterida. Use **0x80** e **0x4000** em vez disso.|  
@@ -166,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Consulte a seção Comentários para as propriedades que, quando alteradas, requerem que todas as assinaturas existentes sejam reiniciadas.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
+ Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao alterar as propriedades do artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -236,8 +235,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**somente esquema de função**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, e **0x80000000**|  
 |**somente o esquema de exibição indexada**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**,  **0x2000000**, **0x8000000**, **0x40000000**, e **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**,  **0x2000000**, **0x8000000**, **0x40000000**, e **0x80000000**|  
   
-> [!NOTE]  
->  Para publicações de atualização na fila, o *schema_option* valor de **0x80** deve ser habilitado. Com suporte *schema_option* os valores para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicações são: **0x01**, **0x02**, **0x10**,  **0x40**, **0x80**, **0x1000** e **0x4000**.  
+> [!NOTE]
+>  Para publicações de atualização na fila, o *schema_option* valor de **0x80** deve ser habilitado. Com suporte *schema_option* os valores para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicações são: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** e  **0x4000**.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

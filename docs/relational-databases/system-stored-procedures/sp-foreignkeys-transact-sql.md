@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605174"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589935"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,34 +46,34 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  É o nome do servidor vinculado para o qual as informações de tabela devem ser retornadas. *table_server* está **sysname**, sem padrão.  
   
- [  **@pktab_name =** ] **'***pktab_name***'**  
+ [  **@pktab_name =** ] **'**_pktab_name_**'**  
  É o nome da tabela com uma chave primária. *pktab_name* está **sysname**, com um padrão NULL.  
   
- [  **@pktab_schema =** ] **'***pktab_schema***'**  
+ [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
  É o nome do esquema com uma chave primária. *pktab_schema*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do proprietário.  
   
- [  **@pktab_catalog =** ] **'***pktab_catalog***'**  
+ [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
  É o nome do catálogo com uma chave primária. *pktab_catalog*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do banco de dados.  
   
- [  **@fktab_name =** ] **'***fktab_name***'**  
+ [  **@fktab_name =** ] **'**_fktab_name_**'**  
  É o nome do proprietário da tabela com uma chave estrangeira. *fktab_name*está **sysname**, com um padrão NULL.  
   
- [  **@fktab_schema =** ] **'***fktab_schema***'**  
+ [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
  É o nome do esquema com uma chave estrangeira. *fktab_schema*está **sysname**, com um padrão NULL.  
   
- [  **@fktab_catalog =** ] **'***fktab_catalog***'**  
+ [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
  É o nome do catálogo com uma chave estrangeira. *fktab_catalog*está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*catálogo ***.*** esquema ***.*** tabela*), que é representado no conjunto de resultados.  
+ Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (_catálogo_**.** _esquema_**.** _tabela_), que é representado no conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|Catálogo para a tabela na qual a chave primária reside.|  
 |**PKTABLE_SCHEM**|**sysname**|Esquema para a tabela na qual a chave primária reside.|  

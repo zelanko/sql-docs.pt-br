@@ -20,26 +20,26 @@ ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78a083b519c7d29d9e2421f7f8a91ee540ace271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c46d9051fb1760791c16c9274a1803c58c1e90
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814414"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785877"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre uma sessão de eventos estendida ativa. Esta sessão é uma coleção de eventos, ações e destinos.  
     
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary(8)**|O endereço da memória da sessão. endereço é exclusivo em todo o sistema local. Não permite valor nulo.|  
 |nome|**nvarchar(256)**|O nome da sessão. nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
 |pending_buffers|**int**|O número de buffers cheios que são processamento pendente. Não permite valor nulo.|  
-|total_regular_buffers|**int**|O número total de buffers normais associados à sessão. Não permite valor nulo.<br /><br /> Observação: Os buffers normais são usados na maioria das vezes. Esses buffers não têm tamanho suficiente para manter muitos eventos. Normalmente, há três ou mais buffers por sessão. O número de buffers normais é determinado automaticamente pelo servidor, baseado no particionamento de memória definido por meio da opção MEMORY_PARTITION_MODE. O tamanho dos buffers normais é igual ao valor da opção MAX_MEMORY (padrão de 4 MB), dividido pelo número de buffers. Para obter mais informações sobre o MEMORY_PARTITION_MODE e MAX_MEMORY opções, consulte [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|O número total de buffers normais associados à sessão. Não permite valor nulo.<br /><br /> Observação: Os buffers normais são usados a maior parte do tempo. Esses buffers não têm tamanho suficiente para manter muitos eventos. Normalmente, há três ou mais buffers por sessão. O número de buffers normais é determinado automaticamente pelo servidor, baseado no particionamento de memória definido por meio da opção MEMORY_PARTITION_MODE. O tamanho dos buffers normais é igual ao valor da opção MAX_MEMORY (padrão de 4 MB), dividido pelo número de buffers. Para obter mais informações sobre o MEMORY_PARTITION_MODE e MAX_MEMORY opções, consulte [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|O tamanho do buffer normal, em bytes. Não permite valor nulo.|  
-|total_large_buffers|**int**|O número total de buffers grandes. Não permite valor nulo.<br /><br /> Observação: Os buffers grandes são usados quando um evento é maior do que um buffer normal. Eles são definidos à parte explicitamente para esse fim. Buffers grandes são alocados quando a sessão de evento é iniciada e são dimensionados de acordo com a opção MAX_EVENT_SIZE. Para obter mais informações sobre a opção MAX_EVENT_SIZE, consulte [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_large_buffers|**int**|O número total de buffers grandes. Não permite valor nulo.<br /><br /> Observação: Buffers grandes são usados quando um evento é maior do que um buffer normal. Eles são definidos à parte explicitamente para esse fim. Buffers grandes são alocados quando a sessão de evento é iniciada e são dimensionados de acordo com a opção MAX_EVENT_SIZE. Para obter mais informações sobre a opção MAX_EVENT_SIZE, consulte [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|O tamanho do buffer grande, em bytes. Não permite valor nulo.|  
 |total_buffer_size|**bigint**|O tamanho total do buffer de memória usado para armazenar eventos da sessão, em bytes. Não permite valor nulo.|  
 |buffer_policy_flags|**int**|Um bitmap que indica como os buffers de evento de sessão se comportam quando todos os buffers estão cheios e um evento novo é acionado. Não permite valor nulo.|  
@@ -54,14 +54,6 @@ ms.locfileid: "47814414"
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
-  
-## <a name="change-history"></a>Histórico de alterações  
-  
-|Conteúdo atualizado|  
-|---------------------|  
-|Corrigido o tipo de dados para o nome e as colunas blocked_event_fire_time.|  
-|Removidas as colunas buffer_size e total_buffers.|  
-|Adicionadas as colunas de colunas total_regular_buffers, regular_buffer_size, total_large_buffers, large_buffer_size e total_buffer_size.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

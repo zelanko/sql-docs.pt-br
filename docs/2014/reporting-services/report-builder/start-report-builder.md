@@ -16,24 +16,24 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375318"
 ---
 # <a name="start-report-builder-report-builder"></a>Iniciar o Construtor de Relatórios (Construtor de Relatórios)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] inclui autônomo e [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versões do construtor de relatórios. A versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] pode ser usada com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no modo nativo ou no modo integrado do SharePoint.  
   
 > [!NOTE]  
->  Não é possível instalar o Construtor de Relatórios em computadores baseados no Itanium 64. Isso se aplica ao [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] e às versões autônomas do construtor de relatórios.  
+>  Não é possível instalar o Construtor de Relatórios em computadores baseados no Itanium 64. Isso se aplica ao [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] e às versões autônomas do Construtor de Relatórios.  
   
  Se a versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] do Construtor de Relatórios que estiver aberta for uma versão anterior, contate o administrador que pode atualizar o Gerenciador de Relatórios e o site do SharePoint para que usem a versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do Construtor de Relatórios.  
   
- Você também pode usar a versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] do Construtor de Relatórios para criar relatórios em uma pasta de trabalho do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] que foi publicada no SharePoint. Para obter mais informações sobre como usar o construtor de relatórios com [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consulte [criar um relatório do Reporting Services com dados PowerPivot](http://go.microsoft.com/fwlink/?LinkId=185238) em technet.microsoft.com.  
+ Você também pode usar a versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] do Construtor de Relatórios para criar relatórios em uma pasta de trabalho do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] que foi publicada no SharePoint. Para obter mais informações sobre como usar o construtor de relatórios com [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consulte [criar um relatório do Reporting Services com dados PowerPivot](https://go.microsoft.com/fwlink/?LinkId=185238) em technet.microsoft.com.  
   
- Para iniciar o construtor de relatórios autônomo na **iniciar** menu em seu computador local, você ou um administrador deve instalar o construtor de relatórios diretamente no seu computador antes da ferramenta está disponível para uso. A versão autônoma não é instalada quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; é necessário baixá-la e instalá-la separadamente. Para baixar o construtor de relatórios, consulte [construtor de relatórios do Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ Para iniciar o construtor de relatórios autônomo na **iniciar** menu em seu computador local, você ou um administrador deve instalar o construtor de relatórios diretamente no seu computador antes da ferramenta está disponível para uso. A versão autônoma não é instalada quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; é necessário baixá-la e instalá-la separadamente. Para baixar o construtor de relatórios, consulte [construtor de relatórios do Microsoft® SQL Server® 2012](https://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Para iniciar o Construtor de Relatórios ClickOnce a partir do Gerenciador de Relatórios  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48192488"
   
      O Construtor de Relatórios é aberto e você pode criar ou abrir um relatório no servidor de relatório.  
   
-     **Observação** se o **novo documento** menu não lista as **construtor de relatórios**, **modelo do construtor de relatórios**, e **defontededadosdorelatório** opções, seus tipos de conteúdo precisarão ser adicionados à biblioteca do SharePoint. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=154888) em MSDN.microsoft.com.  
+     **Observação** se o **novo documento** menu não lista as **construtor de relatórios**, **modelo do construtor de relatórios**, e **defontededadosdorelatório** opções, seus tipos de conteúdo precisarão ser adicionados à biblioteca do SharePoint. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=154888) em MSDN.microsoft.com.  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>Para iniciar o Construtor de Relatórios autônomo no menu Iniciar  
   

@@ -16,19 +16,19 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148046"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366568"
 ---
 # <a name="custom-messages-for-logging"></a>Mensagens personalizadas para log
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Fornece um rico conjunto de eventos personalizados para gravação de entradas de log para pacotes e diversas tarefas. Você pode usar essas entradas para salvar informações detalhadas sobre progresso de execução, resultados e problemas registrando eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. Por exemplo, você pode registrar quando uma inserção em massa é iniciada ou finalizada para identificar problemas de desempenho na execução do pacote.  
+  O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um rico conjunto de eventos personalizados para gravação de entradas de log para pacotes e diversas tarefas. Você pode usar essas entradas para salvar informações detalhadas sobre progresso de execução, resultados e problemas registrando eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. Por exemplo, você pode registrar quando uma inserção em massa é iniciada ou finalizada para identificar problemas de desempenho na execução do pacote.  
   
  As entradas de log personalizadas são um conjunto de entradas diferente do conjunto de eventos de log padrão, disponível para pacotes e todos os contêineres e tarefas. As entradas de log personalizadas são elaboradas para capturar informações úteis sobre uma tarefa específica em um pacote. Por exemplo, uma das entradas de log personalizadas da tarefa Executar SQL registra a instrução SQL executada pela tarefa no log.  
   
- Todas as entradas de log incluem informações de data e hora, inclusive as entradas de log que são gravadas automaticamente quando um pacote é iniciado ou finalizado. Diversos tipos de eventos de log gravam várias entradas no log. Isso acontece normalmente quando o evento tem fases diferentes. Por exemplo, o `ExecuteSQLExecutingQuery` eventos de log grava três entradas: uma entrada depois que a tarefa adquire uma conexão ao banco de dados, outra depois que a tarefa começa a preparar a instrução SQL e uma após a execução da instrução SQL é concluída.  
+ Todas as entradas de log incluem informações de data e hora, inclusive as entradas de log que são gravadas automaticamente quando um pacote é iniciado ou finalizado. Diversos tipos de eventos de log gravam várias entradas no log. Isso acontece normalmente quando o evento tem fases diferentes. Por exemplo, o evento de log `ExecuteSQLExecutingQuery` grava três entradas: uma entrada depois que a tarefa adquire uma conexão com o banco de dados, outra depois que a tarefa começa a preparar a instrução SQL e uma depois que a execução da instrução SQL foi concluída.  
   
  Os objetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a seguir têm entradas de log personalizadas:  
   
@@ -79,16 +79,16 @@ ms.locfileid: "48148046"
 ###  <a name="Package"></a> Pacote  
  A tabela a seguir relaciona as entradas de log personalizadas para pacotes.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
-|`PackageStart`|Indica que o pacote começou a ser executado.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
-|`PackageEnd`|Indica que o pacote foi concluído.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
-|`Diagnostic`|Fornece informações sobre a configuração do sistema que afeta a execução de pacotes como os executáveis numéricos que podem ser executados simultaneamente.<br /><br /> O `Diagnostic` entrada de log também inclui entradas para chamadas para provedores de dados externos anteriores e posteriores. Para obter mais informações, consulte [Solução de problemas de conectividade de pacotes de ferramentas](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
+|`PackageStart`|Indica que o pacote começou a ser executado.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|`PackageEnd`|Indica que o pacote foi concluído.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|`Diagnostic`|Fornece informações sobre a configuração do sistema que afeta a execução de pacotes como os executáveis numéricos que podem ser executados simultaneamente.<br /><br /> A entrada de log `Diagnostic` também inclui entradas anteriores e posteriores a chamadas para provedores de dados externos. Para obter mais informações, consulte [Solução de problemas de conectividade de pacotes de ferramentas](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Tarefa Inserção em Massa  
  A seguinte tabela relaciona as entradas de log personalizadas para a tarefa inserção em massa .  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`DTSBulkInsertTaskBegin`|Indica que a inserção em massa iniciou.|  
 |`DTSBulkInsertTaskEnd`|Indica que a inserção em massa foi concluída.|  
@@ -97,12 +97,12 @@ ms.locfileid: "48148046"
 ###  <a name="DataFlow"></a> Tarefa de Fluxo de Dados  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa de Fluxo de Dados.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica que a tarefa de Fluxo de Dados alterou o tamanho do buffer. A entrada de log descreve os motivos da mudança de tamanho e relaciona o novo tamanho do buffer temporário.|  
-|`OnPipelinePostEndOfRowset`|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
-|`OnPipelinePostPrimeOutput`|Indica que o componente completou sua última chamada para o `PrimeOutput` método. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas. Se o componente for uma fonte, isto significará que o componente tem linhas de processamento concluídas.|  
-|`OnPipelinePreEndOfRowset`|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|`OnPipelinePostEndOfRowset`|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do método `ProcessInput`. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|`OnPipelinePostPrimeOutput`|Indica que o componente completou sua última chamada para o método `PrimeOutput`. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas. Se o componente for uma fonte, isto significará que o componente tem linhas de processamento concluídas.|  
+|`OnPipelinePreEndOfRowset`|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, definido pela última chamada do método `ProcessInput`. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
 |`OnPipelinePrePrimeOutput`|Indica que o componente está prestes a receber sua chamada a partir do método `PrimeOutput`. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas.|  
 |`OnPipelineRowsSent`|Informa o número de linhas fornecido a uma entrada de componente por uma chamada para o método `ProcessInput`. A entrada de log inclui o nome do componente.|  
 |`PipelineBufferLeak`|Fornece informações sobre qualquer componente que manteve buffers ativos depois que o gerenciador de buffers for desativado. Isso significa que os recursos de buffers não foram liberados e pode haver vazamentos de memória. A entrada de log fornece o nome do componente e a ID do buffer.|  
@@ -113,17 +113,17 @@ ms.locfileid: "48148046"
 ###  <a name="ExecuteDTS200"></a> Tarefa Executar DTS 2000  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar DTS 2000.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indica que a tarefa começou a ser executada em um pacote DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indica que a tarefa foi concluída.<br /><br /> Observação: o pacote DTS 2000 pode continuar a ser executado após a conclusão da tarefa.|  
+|`ExecuteDTS80PackageTaskEnd`|Indica que a tarefa foi concluída.<br /><br /> Observação: O pacote DTS 2000 pode continuar sendo executado após a conclusão da tarefa.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Fornece informações descritivas sobre a tarefa.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Informa o resultado de execução do pacote DTS 2000 executado pela tarefa.|  
   
 ###  <a name="ExecuteProcess"></a> Tarefa Executar Processo  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar Processo.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|Fornece informações sobre o processo do executável que a tarefa está configurada para executar.<br /><br /> São gravadas duas entradas de log. Uma contém informações sobre o nome e o local do executável que a tarefa executa e o outro registra a saída do executável.|  
 |`ExecuteProcessVariableRouting`|Fornece informações sobre quais variáveis são encaminhadas para a entrada e as saídas do executável. As entradas de log são gravadas em stdin (a entrada), stdout (a saída) e stderr (a saída do erro).|  
@@ -131,21 +131,21 @@ ms.locfileid: "48148046"
 ###  <a name="ExecuteSQL"></a> Tarefa Executar SQL  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Executar SQL.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
   
 ###  <a name="FileSystem"></a> Tarefa Sistema de Arquivos  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Sistema de Arquivos.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`FileSystemOperation`|Informa a operação executada pela tarefa. A entrada de log é gravada quando a operação de sistema de arquivos é iniciada e inclui informações sobre a origem e o destino.|  
   
 ###  <a name="FTP"></a> Tarefa FTP  
  A tabela a seguir relaciona as entradas de log personalizadas da tarefa FTP.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|Indica que a tarefa iniciou uma conexão com o servidor FTP.|  
 |`FTPOperation`|Informa o início e o tipo de operação de FTP que a tarefa executa.|  
@@ -153,7 +153,7 @@ ms.locfileid: "48148046"
 ###  <a name="MessageQueue"></a> Tarefa Fila de Mensagens  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|Indica que a tarefa finalizou a abertura da fila de mensagens.|  
 |`MSMQBeforeOpen`|Indica que a tarefa começou a abrir a fila de mensagens.|  
@@ -167,14 +167,14 @@ ms.locfileid: "48148046"
 ###  <a name="Script"></a> Tarefa Script  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Script.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Informa os resultados da implementação do registro em log no script. Uma entrada de log é gravada para cada chamada para o `Log` método da `Dts` objeto. A entrada é gravada quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Informa os resultados da implementação do registro em log no script. Uma entrada de log é gravada para cada chamada ao método `Log` do objeto `Dts`. A entrada é gravada quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Tarefa Enviar Email  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Enviar Email.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|Indica que a tarefa começou a enviar uma mensagem de email.|  
 |`SendMailTaskEnd`|Indica que a tarefa terminou de enviar uma mensagem de email.|  
@@ -183,7 +183,7 @@ ms.locfileid: "48148046"
 ###  <a name="TransferDatabase"></a> Tarefa Transferir Banco de Dados  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Banco de Dados.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`SourceDB`|Especifica o banco de dados que a tarefa copiou.|  
 |`SourceSQLServer`|Especifica o computador a partir do qual o banco de dados foi copiado.|  
@@ -191,7 +191,7 @@ ms.locfileid: "48148046"
 ###  <a name="TransferErrorMessages"></a> Tarefa Transferir Mensagens de Erro  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Mensagens de Erro.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|Indica que a tarefa terminou de transferir mensagens de erro.|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|Indica que a tarefa começou a transferir as mensagens de erro.|  
@@ -199,7 +199,7 @@ ms.locfileid: "48148046"
 ###  <a name="TransferJobs"></a> Tarefa Transferir Trabalhos  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Trabalhos.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`TransferJobsTaskFinishedTransferringObjects`|Indica que a tarefa terminou a transferência dos trabalhos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.|  
 |`TransferJobsTaskStartTransferringObjects`|Indica que a tarefa começou a transferência dos trabalhos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.|  
@@ -207,7 +207,7 @@ ms.locfileid: "48148046"
 ###  <a name="TransferLogins"></a> Tarefa Transferir Logons  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Logons.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`TransferLoginsTaskFinishedTransferringObjects`|Indica que a tarefa terminou a transferência dos logons.|  
 |`TransferLoginsTaskStartTransferringObjects`|Indica que a tarefa começou a transferência dos logons.|  
@@ -215,23 +215,23 @@ ms.locfileid: "48148046"
 ###  <a name="TransferMasterStoredProcedures"></a> Tarefa Transferir Procedimentos Armazenados Mestres  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Transferir Procedimentos Armazenados Mestres.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`TransferStoredProceduresTaskFinishedTransferringObjects`|Indica que a tarefa terminou de transferir procedimentos armazenados definidos pelo usuário armazenados no banco de dados **mestre** .|  
 |`TransferStoredProceduresTaskStartTransferringObjects`|Indica que a tarefa começou a transferir procedimentos armazenados definidos pelo usuário armazenados no banco de dados **mestre** .|  
   
 ###  <a name="TransferSQLServerObjects"></a> Tarefa Transferir Objetos do SQL Server  
- A tabela a seguir relaciona as entradas de log personalizadas da tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ A tabela a seguir relaciona as entradas de log personalizadas da tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
-|`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indica que a tarefa terminou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|`TransferSqlServerObjectsTaskStartTransferringObjects`|Indica que a tarefa começou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indica que a tarefa terminou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|`TransferSqlServerObjectsTaskStartTransferringObjects`|Indica que a tarefa começou a transferência dos objetos de banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
   
 ###  <a name="WebServices"></a> Tarefa Serviços Web  
  A tabela a seguir relaciona as entradas de log personalizadas que podem ser habilitadas para a tarefa Serviços Web.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`WSTaskBegin`|A tarefa começou a acessar um serviço Web.|  
 |`WSTaskEnd`|A tarefa completou um método de serviço Web.|  
@@ -240,7 +240,7 @@ ms.locfileid: "48148046"
 ###  <a name="WMIDataReader"></a> Tarefa Leitor de Dados do WMI  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Leitor de Dados do WMI.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|Indica que a tarefa começou a ser ler os dados do WMI.|  
 |`WMIDataReaderOperation`|Informa a consulta WQL executada pela tarefa.|  
@@ -248,7 +248,7 @@ ms.locfileid: "48148046"
 ###  <a name="WMIEventWatcher"></a> Tarefa Detector de Eventos do WMI  
  A tabela a seguir relaciona as entradas de registro personalizadas da tarefa Detector de Eventos do WMI.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|Mostra que o evento ocorrido era o que a tarefa estava monitorando.|  
 |`WMIEventWatcherTimedout`|Indica que o tempo limite da tarefa foi esgotado.|  
@@ -257,14 +257,14 @@ ms.locfileid: "48148046"
 ###  <a name="XML"></a> XML Task  
  A tabela a seguir descreve a entrada de log personalizada da tarefa XML.  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`XMLOperation`|Fornece informações sobre a operação executada pela tarefa|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=150580)(Registrando eventos personalizados para tarefas do Integration Services), em dougbert.com.  
+ Entrada de blog [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580) (Registrando eventos personalizados para tarefas do Integration Services), em dougbert.com.  
   
 ## <a name="see-also"></a>Consulte também  
- [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
+ [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

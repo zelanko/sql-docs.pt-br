@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,27 +15,27 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf72cd4c22003fef09805789b7ac9b70fbc42227
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190866"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980172"
 ---
 # <a name="lockescalation-event-class"></a>Classe de evento Lock:Escalation
   A classe de evento **Lock:Escalation** indica que um bloqueio mais refinado foi convertido em um bloqueio mais rústico; por exemplo, um bloqueio de linha que é convertido em um bloqueio de objeto. A classe de evento do escalonamento é ID de evento 60.  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Colunas de dados da classe de evento Lock:Escalation  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |**DatabaseID**|`int`|ID do banco de dados no qual foi adquirido o bloqueio. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|`nvarchar`|Nome do banco de dados no qual o escalonamento ocorreu.|35|Sim|  
-|**EventClass**|`int`|Tipo de evento = 60.|27|não|  
+|**EventClass**|`int`|Tipo de evento = 60.|27|Não|  
 |**EventSubClass**|`int`|Causa do escalonamento de bloqueio:<br /><br /> **0 - LOCK_THRESHOLD** indica que a instrução excedeu o limite de bloqueio.<br /><br /> **1 - MEMORY_THRESHOLD** indica que a instrução excedeu o limite de memória.|21|Sim|  
-|**EventSequence**|`int`|Sequência de um determinado evento na solicitação.|51|não|  
+|**EventSequence**|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |**GroupID**|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IntegerData**|`int`|Número de bloqueios do HOBT. O número de bloqueios para o HOBT no momento do escalonamento de bloqueios.|25|Sim|  
@@ -53,7 +52,7 @@ ms.locfileid: "48190866"
 |**Deslocamento**|`int`|Deslocamento inicial de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Sim|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Sim|  
 |**RequestID**|`int`|ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|`datetime`|Hora de início do evento, se disponível.|14|Sim|  
@@ -75,7 +74,7 @@ EXEC sp_trace_setevent @TraceID, 60, 22, 1; -- 22 = ObjectID
 EXEC sp_trace_setevent @TraceID, 60, 25, 1; -- 25 = IntegerData  
 EXEC sp_trace_setevent @TraceID, 60, 55, 1; -- 25 = IntegerData2  
 EXEC sp_trace_setevent @TraceID, 60, 57, 1; -- 57 = Type  
--- Set any filter  byusing sp_trace_setfilter.  
+-- Set any filter  by using sp_trace_setfilter.  
 -- Start the trace.  
 EXEC sp_trace_setstatus @TraceID, 1;  
 GO  

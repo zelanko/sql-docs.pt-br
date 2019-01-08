@@ -14,12 +14,12 @@ ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e2637e9588404926d8d0e73016765cd54c56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107526"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376088"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   Ao pedir identificadores de linha (*IdentifierType* SQL_BEST_ROWID), **SQLSpecialColumns** retorna um conjunto de resultados vazio (nenhuma linha de dados) para qualquer escopo solicitado que não seja SQL_SCOPE_CURROW. O conjunto de resultados gerado indica que as colunas são válidas somente dentro desse escopo.  
@@ -29,7 +29,7 @@ ms.locfileid: "48107526"
  É possível executar**SQLSpecialColumns** em um cursor estático. Uma tentativa de executar **SQLSpecialColumns** em um cursor atualizável (controlado por conjunto de chaves ou dinâmico) retorna SQL_SUCCESS_WITH_INFO, indicando que indica o tipo de cursor foi alterado.  
   
 ## <a name="sqlspecialcolumns-support-for-enhanced-date-and-time-features"></a>Suporte de SQLSpecialColumns a recursos aprimorados de data e hora  
- Para obter informações sobre os valores retornados para as colunas DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH e DECIMAL_DIGTS para tipos de data/hora, consulte [metadados de catálogo](../native-client-odbc-date-time/metadata-catalog.md).  
+ Para obter informações sobre os valores de retorno para as colunas DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH e DECIMAL_DIGTS para tipos de data/hora, consulte [Catalog Metadata](../native-client-odbc-date-time/metadata-catalog.md).  
   
  Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48107526"
  **SQLSpecialColumns** dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLSpecialColumns](http://go.microsoft.com/fwlink/?LinkId=59371)   
+ [Função SQLSpecialColumns](https://go.microsoft.com/fwlink/?LinkId=59371)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

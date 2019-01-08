@@ -15,15 +15,15 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20bf707508b8ae5cc8ad7a491d45d151eb806f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229826"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376798"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de classes de itens de relatório personalizados
-  Os itens de relatórios personalizados usam classes do namespace `Microsoft.ReportDesigner`. As classes usadas para implementar um item de relatório personalizado podem ser agrupadas em duas categorias principais: classes exclusivas destinadas a dar suporte à infraestrutura do item de relatório personalizado, e classes de wrapper gerenciado que encapsula a funcionalidade de elementos relevantes em linguagem RDL. Para obter um exemplo de código sobre como usar essas classes, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Os itens de relatórios personalizados usam classes do namespace `Microsoft.ReportDesigner`. As classes usadas para implementar um item de relatório personalizado podem ser agrupadas em duas categorias principais: classes exclusivas destinadas a dar suporte à infraestrutura do item de relatório personalizado, e classes de wrapper gerenciado que encapsula a funcionalidade de elementos relevantes em linguagem RDL. Para obter um exemplo de código sobre como usar essas classes, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Classes de infraestrutura de itens de relatórios personalizados  
  As classes a seguir são usadas para implementar um item de relatório personalizado.  

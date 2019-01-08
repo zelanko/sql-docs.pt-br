@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 654278ee171666564771a3e620c903e598039a74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521354"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Selecionando o Método de Criação  
- No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . . Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
+ No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . para obter informações sobre a ferramenta de configuração e recursos adicionais. Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
   
- Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
+ Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
   
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página será exibida somente se já houver dimensões compartilhadas sem uma fonte de dados no projeto ou banco de dados. Ela não lista dimensões que têm uma fonte de dados.  
@@ -39,7 +39,7 @@ ms.locfileid: "34025888"
   
  As grades **Selecionar medidas do modelo** e **Adicionar novas medidas** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|Coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Nome da Medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade **Name** no objeto de medida.|  
 |**Grupo de Medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a propriedade **Name** no objeto de grupo de medidas.|  
@@ -55,7 +55,7 @@ ms.locfileid: "34025888"
   
  As grades **Selecionar dimensões do modelo** e **Adicionar novas dimensões** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|Coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Tipo**|Exibe o tipo de dimensão para uma dimensão de modelo. Clique nesta célula para alterar o tipo de dimensão para uma dimensão. Essa coluna define a propriedade **Type** para o objeto de dimensão.|  
 |**Nome**|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a propriedade **Name** para o objeto de dimensão.|  
@@ -79,10 +79,10 @@ ms.locfileid: "34025888"
 ## <a name="specifying-additional-calendars"></a>Especificando calendários adicionais  
  Na página **Especificar Calendários Adicionais** do assistente, selecione os calendários nos quais as hierarquias na dimensão se baseiam. Você pode escolher um dos seguintes calendários.  
   
-|Calendário|Description|  
+|Calendário|Descrição|  
 |--------------|-----------------|  
 |Calendário fiscal|Um calendário fiscal de doze meses. Se você selecionar esse calendário, especifique o dia e o mês iniciais para o ano fiscal usado pela empresa.|  
-|Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar esse calendário, especifique o dia e o mês iniciais e o padrão trimestral de 4–4–5, 4–5–4 ou 5–4–4 semanas, sendo que cada dígito representa o número de semanas do mês.|  
+|Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar esse calendário, especifique o dia e mês iniciais e o padrão de três meses de 4-4-5, 4-5 – 4 ou 5 – 4 – 4 semanas, sendo que cada dígito representa o número de semanas do mês.|  
 |Calendário de produção|Um calendário que usa 13 períodos de quatro semanas, dividido em três trimestres de quatro períodos e um trimestre de cinco períodos. Se você selecionar esse calendário, especifique a semana (entre 1 e 4) e o mês iniciais para o ano de produção e o trimestre com períodos extras.|  
 |Calendário ISO 8601|O calendário padrão de representação de datas e hora da Organização Internacional de Padronização (ISO) (8601). Esse calendário possui um número integrante de semanas de 7 dias. Para evitar dividir uma semana, este calendário inicia um ano novo até vários dias antes ou depois de 1 de janeiro.|  
   

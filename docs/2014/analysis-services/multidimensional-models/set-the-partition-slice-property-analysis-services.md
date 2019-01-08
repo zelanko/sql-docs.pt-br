@@ -14,12 +14,12 @@ ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7049cce942cb593df74255a1459e07a6fa894c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c94ac9865540016020bf1853bc318881defdaea7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090506"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374058"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Definir a propriedade Fatia de Partição (Analysis Services)
   Uma fatia de dados é um recurso de otimização importante que ajuda a direcionar consultas aos dados das partições apropriadas. Definir explicitamente a propriedade Fatia pode melhorar o desempenho da consulta, substituindo as fatias padrão geradas para partições MOLAP e HOLAP. Além disso, a propriedade Fatia fornece uma verificação de validação adicional ao processar a partição.  
@@ -37,16 +37,16 @@ ms.locfileid: "48090506"
   
  A fatia de dados de uma partição deve refletir, com a maior integridade possível, os dados da partição. Por exemplo, se uma partição estiver limitada aos dados de 2012, a fatia de dados da partição deve especificar o membro 2012 da dimensão Tempo. Nem sempre é possível especificar uma fatia de dados que reflita o conteúdo exato de uma partição. Por exemplo, se uma partição contiver dados apenas para Janeiro e Fevereiro, mas os níveis da dimensão Tempo forem Ano, Trimestre e Mês, o Assistente para Partições não pode selecionar os membros Janeiro e Fevereiro ao mesmo tempo. Nesses casos, selecione o pai dos membros que refletem o conteúdo da partição. Nesse exemplo, selecione Trimestre 1.  
   
- Para obter uma explicação sobre os benefícios da fatia de dados, consulte [Definir a fatia na partição de cubo SSAS](http://go.microsoft.com/fwlink/?LinkId=317783).  
+ Para obter uma explicação sobre os benefícios da fatia de dados, consulte [Definir a fatia na partição de cubo SSAS](https://go.microsoft.com/fwlink/?LinkId=317783).  
   
 > [!NOTE]  
 >  Observe que não há suporte para as funções MDX dinâmicas (como [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) ou [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) na propriedade Slice das partições. Você deve definir a fatia usando tuplas explícitas ou referências de membro.  
 >   
 >  Por exemplo, em vez de usar o [: &#40;intervalo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) para definir um intervalo de função, você precisaria enumerar cada membro por anos específicos.  
 >   
->  Se você precisa definir uma fatia complexa, recomendamos definir as tuplas na fatia usando um script XMLA Alter. Em seguida, você pode usar a ferramenta de linha de comando ascmd ou o SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) tarefa para executar o script e criar o conjunto especificado de membros imediatamente antes de processar a partição.  
+>  Se você precisa definir uma fatia complexa, recomendamos definir as tuplas na fatia usando um script XMLA Alter. Em seguida, você pode usar a ferramenta de linha de comando ascmd ou a tarefa [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) do SSIS para executar o script e criar o conjunto especificado de membros imediatamente antes de você processar a partição.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar uma partição Local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

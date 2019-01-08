@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criando relatórios principais (construtor de relatórios) e detalhamento | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512551"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios)
   Este tutorial ensina como criar dois tipos de relatório: um relatório detalhado e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. A ilustração a seguir mostra os relatórios que você criará.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- A ilustração a seguir mostra como o valor do campo, Games and Toys, no relatório principal é exibido no título do relatório detalhado. Os dados no detalhamento pertencem à categoria de produto Games and Toys.  
+ A ilustração a seguir mostra como o valor do campo, Games and Toys, no relatório principal é exibido no título do relatório de detalhamento. Os dados no detalhamento pertencem à categoria de produto Games and Toys.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48093816"
 10. Clique em **Tipo de credenciais**.  
   
     > [!NOTE]  
-    >  Dependendo de como as permissões estão configuradas na fonte de dados, poderá ser necessário alterar as opções de autenticação padrão. Para obter mais informações, consulte [Security &#40;Report Builder&#41;](report-builder/security-report-builder.md).  
+    >  Dependendo de como as permissões estão configuradas na fonte de dados, poderá ser necessário alterar as opções de autenticação padrão. Para obter mais informações, consulte [Segurança &#40;Construtor de Relatórios&#41;](report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48093816"
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta** , no painel Metadados, clique no botão **(…)**.  
+1.  Na página **Criar uma consulta**, no painel Metadados, clique no botão **(…)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48093816"
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online**, em **Revendedor**e em **OK**.  
   
-     A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
+     A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** (abaixo de **Nome do Canal**).  
   
@@ -443,7 +443,7 @@ ms.locfileid: "48093816"
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta** , no painel Metadados, na seção de cubo, clique nas reticências **(…)**.  
+1.  Na página **Criar uma consulta**, no painel Metadados, na seção de cubo, clique nas reticências **(…)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -462,7 +462,7 @@ ms.locfileid: "48093816"
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online** , em **Revendedor**e em **OK**.  
   
-     A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
+     A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** , abaixo de **Nome do Canal**.  
   
@@ -562,7 +562,7 @@ ms.locfileid: "48093816"
   
 1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
-     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Quando você executar o relatório, cada linha será exibida da seguinte maneira: a primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados da categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
+     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Ao executar o relatório, cada linha será exibida da seguinte forma: A primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados de categorias de produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
   
 2.  Clique em **Avançar**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "48093816"
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de Categorias de Produtos de 2009: Categoria Online e Revendedor:**.  
+2.  Tipo **vendas de categoria de produtos de 2009: Online e revendedor categoria:**.  
   
 3.  Selecione o texto que você digitou.  
   

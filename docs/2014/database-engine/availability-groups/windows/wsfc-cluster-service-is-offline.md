@@ -14,12 +14,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd89cf306116a0554366984f864c6f0f6020a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfab5de4cd3d171d4d8b7515e65b0a9cd117ac16
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126006"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377458"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>O serviço de cluster WSFC está offline
     
@@ -32,13 +32,13 @@ ms.locfileid: "48126006"
 |**Categoria**|**Crítico**|  
 |**Faceta**|Instância do SQL Server|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Esta política verifica o estado do WSFC (Cluster de failover de Windows Server). O estado da política é não íntegro e um alerta é gerado quando o cluster WSFC está offline ou no estado de quorum forçado. Todos os grupos de disponibilidade dentro deste cluster estão offline ou uma ação de recuperação de desastres é necessária.  
   
  O estado da política é íntegro quando o estado do cluster está no quorum normal.  
   
 > [!NOTE]  
->  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [O serviço de cluster WSFC está offline](http://go.microsoft.com/fwlink/p/?LinkId=220849) no Wiki do TechNet.  
+>  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [O serviço de cluster WSFC está offline](https://go.microsoft.com/fwlink/p/?LinkId=220849) no Wiki do TechNet.  
   
 ## <a name="possible-causes"></a>Causas possíveis  
  A causa desse problema pode ser um problema de serviço de cluster ou a perda do quorum no cluster.  

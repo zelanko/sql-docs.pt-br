@@ -1,5 +1,5 @@
 ---
-title: Padrão de bibliotecas de pacotes de R e Python no SQL Server R e SQL Server Machine Learning | Microsoft Docs
+title: Bibliotecas de pacote de R e Python - serviços de Machine Learning do SQL Server padrão
 description: Pacotes de R e Python instalados pelo SQL Server R Services, Microsoft R Server, serviços do Machine Learning (no banco de dados) e Machine Learning Server (autônomo)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f5c51e9b93aca5d52858417667865633a0c4151
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
-ms.translationtype: HT
+ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118304"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432324"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Pacotes de R padrão e Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ Este artigo lista os pacotes de R e Python instalados com o SQL Server e onde en
 
 Pacotes R são instalados com [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) e [serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) quando você seleciona o recurso do R durante a instalação. 
 
-Packages         | 2016 | 2017 | Description |
+Packages         | 2016 | 2017 | Descrição |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Usado para contextos de computação remota, streaming, a execução paralela de funções de rx para importação de dados e transformação, modelagem, visualização e análise. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Usado para a inclusão de script R em procedimentos armazenados. |
@@ -37,7 +37,7 @@ MicrosoftML e olapR estão disponíveis por padrão nos serviços de aprendizado
 
 Pacotes de Python estão disponíveis apenas no SQL Server 2017 quando você instala [serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) e selecione o recurso de Python.
 
-| Packages         | 2017    |  Description |
+| Packages         | 2017    |  Descrição |
 | -----------------|-------------|------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | Usado para contextos de computação remota, streaming, a execução paralela de funções de rx para importação de dados e transformação, modelagem, visualização e análise. |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Adiciona os algoritmos de aprendizado de máquina em Python. |

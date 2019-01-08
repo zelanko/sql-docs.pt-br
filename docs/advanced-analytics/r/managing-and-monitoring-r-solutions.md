@@ -1,5 +1,5 @@
 ---
-title: Gerenciar e integrar cargas de trabalho de aprendizado de máquina no SQL Server | Microsoft Docs
+title: Gerenciar e integrar cargas de trabalho de aprendizado de máquina - serviços de aprendizado de máquina do SQL Server
 description: Como um DBA do SQL Server, examine as tarefas administrativas para a implantação de um subsistema de R e Python em uma instância do mecanismo de banco de dados de aprendizado de máquina.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 63739faaa9cf254e754c9020502ee6b589435c1d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743201"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431823"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gerenciar e integrar cargas de trabalho de aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

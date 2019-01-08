@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -21,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377618"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
   Um pacote é uma coleção organizada de conexões, elementos de fluxo de controle, elementos de fluxo de dados, manipuladores de eventos, variáveis, parâmetros e configurações que você agrupa usando as ferramentas de design gráfico fornecidas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou cria programaticamente.  Você salva o pacote concluído no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no armazenamento de pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] ou no sistema de arquivos, ou pode implantar o projeto ssISnoversion para o servidor do [!INCLUDE[ssIS](../includes/ssis-md.md)] . O pacote é a unidade de trabalho que é recuperada, executada e salva.  
@@ -51,9 +50,9 @@ ms.locfileid: "48058876"
 ## <a name="package-templates"></a>Modelos de pacote  
  Os pacotes costumam ser usados como modelos a partir dos quais se criam pacotes que compartilham funcionalidade básica. Crie o pacote básico e copie-o ou especifique que o pacote é um modelo. Por exemplo, um pacote que baixa e copia arquivos e extrai os dados pode incluir as tarefas de FTP e Sistema de Arquivos em um Loop Foreach que enumera arquivos em uma pasta. Ele também pode incluir gerenciadores de conexões de Arquivo Simples para acessar os dados e fontes de Arquivos Simples a fim de extrair os dados. O destino dos dados varia e é adicionado a cada novo pacote depois de ser copiado do pacote básico. Você também pode criar pacotes e usá-los como modelos para novos pacotes adicionados a um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
- Quando um pacote é criado pela primeira vez, seja programaticamente ou usando o Designer SSIS, um GUID é adicionado à sua `ID` propriedade e um nome para seu `Name` propriedade. Se você criar um novo pacote copiando um pacote existente ou usando um modelo de pacote, o nome e o GUID do pacote também serão copiados. Isso pode ser um problema se você usa log, porque o GUID e o nome do pacote são gravados em logs para identificar o pacote ao qual pertencem as informações registradas. Portanto, você deve atualizar o nome e o GUID dos novos pacotes para ajudar a diferenciá-los do pacote a partir do qual foram copiados e entre si nos dados de log.  
+ Quando um pacote é inicialmente criado, seja programaticamente ou usando o Designer SSIS, um GUID é adicionado à sua propriedade `ID` e um nome à sua propriedade `Name`. Se você criar um novo pacote copiando um pacote existente ou usando um modelo de pacote, o nome e o GUID do pacote também serão copiados. Isso pode ser um problema se você usa log, porque o GUID e o nome do pacote são gravados em logs para identificar o pacote ao qual pertencem as informações registradas. Portanto, você deve atualizar o nome e o GUID dos novos pacotes para ajudar a diferenciá-los do pacote a partir do qual foram copiados e entre si nos dados de log.  
   
- Para alterar o GUID do pacote, você gerar um GUID na `ID` propriedade na janela Propriedades no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para alterar o nome do pacote, você pode atualizar o valor da `Name` propriedade na janela Propriedades. Você também pode usar o prompt de comando **dtutil** ou atualizar o GUID e o nome de forma programática. Para obter mais informações, consulte [Definir as propriedades do pacote](set-package-properties.md) e [Utilitário dtutil](dtutil-utility.md).  
+ Para alterar o GUID do pacote, gere novamente um GUID na propriedade `ID` na janela Propriedades do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para alterar o nome do pacote, você pode atualizar o valor da propriedade `Name` na janela Propriedades. Você também pode usar o prompt de comando **dtutil** ou atualizar o GUID e o nome de forma programática. Para obter mais informações, consulte [Definir as propriedades do pacote](set-package-properties.md) e [Utilitário dtutil](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Objetos que estendem a funcionalidade do pacote  
  Os pacotes podem incluir objetos adicionais que oferecem recursos avançados ou estendem a funcionalidade existente, como manipuladores de eventos, configurações, log e variáveis.  
@@ -72,7 +71,7 @@ ms.locfileid: "48058876"
 ### <a name="variables"></a>Variáveis  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a variáveis de sistema e a variáveis definidas pelo usuário. As variáveis de sistema oferecem informações úteis sobre objetos de pacote em tempo de execução e as variáveis definidas pelo usuário suportam cenários personalizados em pacotes. Os dois tipos de variáveis podem ser usados em expressões, scripts e configurações.  
   
- As variáveis no nível do pacote incluem variáveis de sistema predefinidas disponíveis para um pacote e variáveis definidas pelo usuário com o escopo do pacote. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ As variáveis no nível do pacote incluem variáveis de sistema predefinidas disponíveis para um pacote e variáveis definidas pelo usuário com o escopo do pacote. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).  
   
 ### <a name="parameters"></a>Parâmetros  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permitem atribuir valores às propriedades nos pacotes em tempo de execução do pacote. Você pode criar *parâmetros de projeto* em nível de projeto e *parâmetros de pacote* em nível de pacote. Os parâmetros do projeto são usados para fornecer uma entrada externa que o projeto recebe para um ou mais pacotes no projeto. Os parâmetros do pacote permitem modificar a execução do pacote sem a necessidade de editar e reimplantar o pacote. Para obter mais informações, consulte [Parâmetros do Integration Services &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "48058876"
  O objeto do pacote pode ser configurado para dar suporte a recursos como reiniciar o pacote nos pontos de verificação, assinar o pacote com um certificado digital, definir o nível de proteção do pacote e assegurar a integridade de dados usando transações.  
   
 ### <a name="restarting-packages"></a>Reiniciando pacotes  
- O pacote inclui propriedades de pontos de verificação que você pode usar para reiniciar o pacote quando uma ou mais tarefas falham. Por exemplo, se um pacote tiver duas tarefas de Fluxo de Dados que atualizam duas tabelas diferentes e a segunda tarefa falhar, o pacote poderá ser executado novamente sem repetir a primeira tarefa de Fluxo de Dados. Reiniciar um pacote pode economizar tempo no caso de pacotes de longa execução. Reiniciar significa que você pode iniciar o pacote a partir da tarefa com falha em vez de ter que executar novamente o pacote inteiro. Para saber mais, confira [Reiniciar pacotes por meio de pontos de verificação](packages/restart-packages-by-using-checkpoints.md).  
+ O pacote inclui propriedades de pontos de verificação que você pode usar para reiniciar o pacote quando uma ou mais tarefas falham. Por exemplo, se um pacote tiver duas tarefas de Fluxo de Dados que atualizam duas tabelas diferentes e a segunda tarefa falhar, o pacote poderá ser executado novamente sem repetir a primeira tarefa de Fluxo de Dados. Reiniciar um pacote pode economizar tempo no caso de pacotes de longa execução. Reiniciar significa que você pode iniciar o pacote a partir da tarefa com falha em vez de ter que executar novamente o pacote inteiro. Para saber mais, confira [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="securing-packages"></a>Protegendo pacotes  
  Um pacote pode ser assinado com uma assinatura digital e criptografado usando uma senha ou uma chave de usuário. Uma assinatura digital autentica a fonte do pacote. No entanto, você também deve configurar o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para verificar a assinatura digital quando o pacote for carregado. Para obter mais informações, consulte [Identificar a origem de pacotes com assinaturas digitais](security/identify-the-source-of-packages-with-digital-signatures.md) e [Controle de acesso de dados confidenciais em pacotes](security/access-control-for-sensitive-data-in-packages.md).  
@@ -92,10 +91,10 @@ ms.locfileid: "48058876"
 ## <a name="custom-log-entries-available-on-the-package"></a>Entradas de log personalizadas disponíveis no pacote  
  A tabela a seguir relaciona as entradas de log personalizadas para pacotes. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../2014/integration-services/custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
-|`PackageStart`|Indica que o pacote começou a ser executado.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
-|`PackageEnd`|Indica que o pacote foi concluído.<br /><br /> Observação: esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|`PackageStart`|Indica que o pacote começou a ser executado.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
+|`PackageEnd`|Indica que o pacote foi concluído.<br /><br /> Observação: Esta entrada de log é gravada no log automaticamente. Não é possível excluí-la.|  
 |`Diagnostic`|Fornece informações sobre a configuração do sistema que afeta a execução de pacotes como os executáveis numéricos que podem ser executados simultaneamente.|  
   
 ## <a name="configuration-of-packages"></a>Configuração de pacotes  
@@ -116,8 +115,8 @@ ms.locfileid: "48058876"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Implementando o SQL Server Integration Services com o Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementando o SQL Server Integration Services com o Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [Como: configurar o pacote do SQL Server Integration Services para Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
+-   [Como: Configurar o pacote do SQL Server Integration Services para Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

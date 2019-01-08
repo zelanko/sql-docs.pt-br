@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194136"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377488"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
-  O coletor de desempenho da transação no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ajuda você a avaliar se o OLTP na Memória melhorará o desempenho de seu aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
+  O coletor de desempenho de transação em [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ajuda você a avaliar se o OLTP na memória melhorará o desempenho do seu aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
   
  Este tópico descreverá como:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194136"
   
 -   Gerar relatórios de análise de desempenho de transação para identificar tabelas críticas de desempenho e procedimentos armazenados.  
   
- Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre as metodologias de migração, confira [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
   
  O coletor de desempenho da transação e os relatórios de análise de desempenho da transação o ajudam a realizar as seguintes tarefas:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48194136"
     > [!IMPORTANT]  
     >  O desempenho de um sistema de banco de dados depende de vários fatores e nem todos podem ser observados e medidos pelo coletor de desempenho da transação. Portanto, o relatório de análise de desempenho da transação não garante que os ganhos de desempenho reais corresponderão a essas previsões, caso elas sejam feitas.  
   
- O coletor de desempenho de transação e a capacidade de gerar um relatório de análise de desempenho da transação são instalados quando você seleciona **as ferramentas de gerenciamento – básicas** ou **ferramentas de gerenciamento — avançado** Quando você instala [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ O coletor de desempenho de transação e a capacidade de gerar um relatório de análise de desempenho da transação são instalados quando você seleciona **ferramentas de gerenciamento-Basic** ou **ferramentas de gerenciamento-avançadas** Quando você instala [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
  O fluxo de trabalho recomendado é ilustrado no fluxograma a seguir. Os nós amarelos representam os procedimentos opcionais:  
@@ -123,7 +123,7 @@ ms.locfileid: "48194136"
   
  Um coletor de dados pode ser configurado em um SQL Server 2012 ou versão posterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- É necessário um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estabelecido com a credencial correta para que o coletor de dados carregue os dados em um banco de dados do Data Warehouse de Gerenciamento em uma instância que seja diferente de onde as transações serão analisadas. Para habilitar um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, primeiramente é preciso estabelecer uma credencial com um logon habilitado para domínio. O logon habilitado para domínio deve ser um membro do grupo `mdw_admin` do banco de dados do Data Warehouse de Gerenciamento. Ver [como: criar uma credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obter informações sobre como criar uma credencial.  
+ É necessário um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estabelecido com a credencial correta para que o coletor de dados carregue os dados em um banco de dados do Data Warehouse de Gerenciamento em uma instância que seja diferente de onde as transações serão analisadas. Para habilitar um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, primeiramente é preciso estabelecer uma credencial com um logon habilitado para domínio. O logon habilitado para domínio deve ser um membro do grupo `mdw_admin` do banco de dados do Data Warehouse de Gerenciamento. Consulte [como: Criar uma credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obter informações sobre como criar uma credencial.  
   
  Para configurar a coleta de dados para carregar um banco de dados do Data Warehouse de Gerenciamento em outra instância,  
   
@@ -186,13 +186,13 @@ ms.locfileid: "48194136"
   
 -   Seção de Estatísticas de Contenção  
   
-     Esta seção inclui uma tabela que mostra a contenção na tabela do banco de dados. Para obter mais informações sobre banco de dados de travas e bloqueios, consulte [arquitetura de bloqueio](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). As colunas são apresentadas assim:  
+     Esta seção inclui uma tabela que mostra a contenção na tabela do banco de dados. Para obter mais informações sobre banco de dados de travas e bloqueios, consulte [arquitetura de bloqueio](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). As colunas são apresentadas assim:  
   
     -   Porcentagem do total de esperas. O percentual de esperas de travas e bloqueios nessa tabela de banco de dados em comparação com a atividade do banco de dados. Quanto mais alto for esse percentual, mais intensa será a utilização da tabela em comparação com outras tabelas no banco de dados.  
   
-    -   Estatísticas de Trava. Essas colunas registram o número de esperas de travas para consultas que envolvem essa tabela. Para obter informações sobre travas, consulte [travamento](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Quanto mais alto for esse número, mais contenção de trava haverá na tabela.  
+    -   Estatísticas de Trava. Essas colunas registram o número de esperas de travas para consultas que envolvem essa tabela. Para obter informações sobre travas, consulte [travamento](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Quanto mais alto for esse número, mais contenção de trava haverá na tabela.  
   
-    -   Estatísticas de Bloqueio. Esse grupo de colunas registra o número de aquisições de bloqueio de página e esperas para consultas para essa tabela. Para obter mais informações sobre bloqueios, consulte [Noções básicas sobre bloqueio no SQL Server](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Quanto mais esperas, maior a contenção de bloqueio na tabela.  
+    -   Estatísticas de Bloqueio. Esse grupo de colunas registra o número de aquisições de bloqueio de página e esperas para consultas para essa tabela. Para obter mais informações sobre bloqueios, consulte [Noções básicas sobre bloqueio no SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Quanto mais esperas, maior a contenção de bloqueio na tabela.  
   
 -   Seção Dificuldades de Migração  
   

@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 466954dd9909b860957bce6a292346bec4f4af9c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f5004224d3c590830ed44a13a4926f097ebef4b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657356"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589980"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  LANGUAGE *language_term*  
  É o idioma cujos recursos serão usados para quebra de palavras, lematização e dicionário de sinônimos e remoção de palavras irrelevantes (stop words) como parte da consulta. Esse parâmetro é opcional e pode ser especificado como uma cadeia de caracteres, um inteiro ou um valor hexadecimal que corresponda ao LCID (identificador de localidade) de um idioma. Se *language_term* for especificado, o idioma que ele representa será aplicado a todos os elementos do critério de pesquisa. Se nenhum valor for especificado, o idioma de texto completo da coluna será usado.  
   
- Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificar *LANGUAGE**language_term* pode aumentar a probabilidade de uma boa correspondência.  
+ Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificar *language_term LANGUAGE* pode aumentar a probabilidade de uma boa correspondência.  
   
  Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna **alias** no modo de exibição de compatibilidade [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
   
@@ -125,8 +125,8 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Blue');
 SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');  
 ```  
   
-### <a name="b-using-freetext-in-an-inner-join"></a>B. Usando FREETEXT em uma INNER JOIN  
- O exemplo a seguir retorna o nome e a descrição da categoria de todas as categorias relacionadas a `sweet`, `candy`, `bread`, `dry` ou `meat`.  
+### <a name="b-using-freetext-in-an-inner-join"></a>b. Usando FREETEXT em uma INNER JOIN  
+ O exemplo a seguir retorna a descrição e a classificação de produtos com uma descrição que coincide com o significado de `high level of performance`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -162,7 +162,7 @@ ORDER BY RANK DESC;
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  A LINGUAGEM *language_term* parâmet*r* não é necessária para usar o *top_n_by_rank* parâmetro *.*  
   
 ## <a name="see-also"></a>Consulte também  

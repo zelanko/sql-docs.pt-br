@@ -13,12 +13,12 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f144e5e4f70fdef954dd91452df6bc9275409b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073506"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364078"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usar um arquivo de formato para importação em massa de dados (SQL Server)
   Este tópico ilustra o uso de um arquivo de formato operações de importação em massa. O arquivo de formato mapeia os campos do arquivo de dados para as colunas da tabela.  Você pode usar um arquivo de formato não XML ou XML para importar dados em massa ao usar um comando **bcp** ou uma instrução BULK INSERT ou INSERT... SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,12 +36,12 @@ ms.locfileid: "48073506"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
-|**bcp** … **Em**|**-f** *format_file*|  
+|**BCP** ... **em**|**-f** *format_file*|  
   
  Para obter mais informações, consulte [Utilitário bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Para importar ou exportar em massa dados SQLXML, use um dos seguinte tipos de dados em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código cliente ou na página de código indicada pelo agrupamento), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode) e SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
+>  Para exportar ou importar dados SQLXML em massa, use um dos tipos de dados a seguir em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código do cliente ou na página de código implicada pelo agrupamento), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode), SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos nesta seção ilustram como usar arquivos de formato para importar dados em massa usando o comando **bcp** e as instruções BULK INSERT e INSERT... SELECT * FROM OPENROWSET(BULK...). Antes de poder executar um dos exemplos de importação em massa, você precisa criar uma amostra de tabela, arquivo de dados e arquivo de formato.  
@@ -100,7 +100,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

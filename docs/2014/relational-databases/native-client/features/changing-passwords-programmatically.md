@@ -21,33 +21,33 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229916"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370488"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
   Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporta Native Client manipulando a expiração de senha programaticamente, por meio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client e por meio de alterações a **Logon do SQL Server** caixas de diálogo.  
   
 > [!NOTE]  
->  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../security/strong-passwords.md).  
+>  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Códigos de erro de logon do SQL Server  
  Quando não é possível estabelecer uma conexão devido a problemas de autenticação, um dos seguintes códigos de erro do SQL Server estará disponível para o aplicativo, de forma a auxiliar no diagnóstico e na recuperação.  
   
 |Código de erro do SQL Server|Mensagem de erro|  
 |---------------------------|-------------------|  
-|15113|Falha no logon do usuário '%.*ls'. Motivo: falha na validação da senha. A conta está bloqueada.|  
-|18463|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não pode ser usada neste momento.|  
-|18464|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito curta.|  
-|18465|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito longa.|  
-|18466|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
-|18467|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
-|18468|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. Ocorreu um erro inesperado durante a validação da senha.|  
-|18487|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta expirou.|  
-|18488|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta deve ser alterada.|  
+|15113|Falha no logon do usuário ' %. *. motivo ls': Falha na validação de senha. A conta está bloqueada.|  
+|18463|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não pode ser usada neste momento.|  
+|18464|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito curta.|  
+|18465|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito longa.|  
+|18466|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
+|18467|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
+|18468|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. Ocorreu um erro inesperado durante a validação da senha.|  
+|18487|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta expirou.|  
+|18488|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta deve ser alterada.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte à expiração de senha mesmo uma interface do usuário e programaticamente.  

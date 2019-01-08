@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um minigráfico ao relatório (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091475"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376668"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
   Neste tutorial, você cria um relatório de tabela básico com base em dados de vendas de exemplo e, em seguida, adiciona um minigráfico a uma célula da tabela.  
   
- Uma versão aprimorada do relatório criado por você neste tutorial está disponível como um relatório de exemplo do Construtor de Relatórios da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios](http://go.microsoft.com/fwlink/?LinkId=184851). A ilustração a seguir mostra o relatório de exemplo semelhante ao que você criará.  
+ Uma versão aprimorada do relatório criado por você neste tutorial está disponível como um relatório de exemplo do Construtor de Relatórios da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=184851). A ilustração a seguir mostra o relatório de exemplo semelhante ao que você criará.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- O vídeo [como: criar um minigráfico em uma tabela (vídeo do construtor de relatórios)](http://technet.microsoft.com/bi/ff871942.aspx) ilustra como criar um relatório semelhante com Minigráficos.  
+ O vídeo [como: Criar um minigráfico em uma tabela (vídeo do construtor de relatórios)](https://technet.microsoft.com/bi/ff871942.aspx) ilustra como criar um relatório semelhante com Minigráficos.  
   
 ##  <a name="BackToTop"></a> O que você aprenderá  
  Neste tutorial, você aprenderá a:  
@@ -183,7 +183,7 @@ ms.locfileid: "48091475"
   
 14. A tabela é adicionada à superfície de design. A tabela tem três colunas e três linhas.  
   
-     Pesquisar o painel Agrupamento. Se você não conseguir ver o painel Agrupamento, no menu **Exibir** , clique em **Agrupamento**. O painel Grupos de Linhas mostra um grupo de linhas: **Product**. O painel Grupos de Colunas mostra um grupo de colunas: **SalesDate**. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+     Pesquisar o painel Agrupamento. Se você não conseguir ver o painel Agrupamento, no menu **Exibir** , clique em **Agrupamento**. O painel Grupos de Linhas mostra um grupo de linhas: **Produto**. O painel Grupos de Colunas mostra um grupo de colunas: **SalesDate**. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 15. Clique em **Executar** para visualizar o relatório.  
   
@@ -213,12 +213,12 @@ ms.locfileid: "48091475"
   
      Observe que há minigráficos em cada linha da tabela, mas eles não estão corretos. As barras nos gráficos não se alinham. Como só há quatro barras na segunda linha de dados, as barras são mais largas do que as barras na primeira linha, que tem seis. Não é possível comparar valores para cada produto por dia. Elas precisam se alinhar.  
   
-     Também observe que, para cada linha, a maior barra na linha é da altura da linha. Isso também pode estar equivocado, porque os maiores valores de cada linha não são iguais: o maior valor de Budget Movie-Maker é R$ 10.400, mas o maior valor de Slim Digital é R$ 26.576 — mais de duas vezes maior. Além disso, as barras maiores nessas duas linhas têm aproximadamente a mesma altura. Também é preciso fazer isso para dimensioná-las com os outros minigráficos.  
+     Também observe que, para cada linha, a maior barra na linha é da altura da linha. Isso também é confuso, porque os valores mais altos para cada linha não são iguais: o maior valor de Budget Movie-Maker é r $10.400, mas o maior valor de Slim Digital é r $26.576 – mais de duas vezes maior. Além disso, as barras maiores nessas duas linhas têm aproximadamente a mesma altura. Também é preciso fazer isso para dimensioná-las com os outros minigráficos.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Alinhar os minigráficos vertical e horizontalmente  
- Os minigráficos são difíceis de ler quando todos não apresentam as mesmas medidas. Os eixos horizontal e vertical de cada um deles precisa corresponder ao resto.  
+ Os Minigráficos são difíceis de ler quando todos não apresentam as mesmas medidas. Os eixos horizontal e vertical de cada um deles precisa corresponder ao resto.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>Para definir o alinhamento dos minigráficos na tabela  
   

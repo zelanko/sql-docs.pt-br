@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147871"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362608"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
   Frequentemente, há situações quando um administrador de banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) quer alterar o modo leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como compartilhar o banco de dados entre um pool de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidores para uma melhor experiência de usuário.  
@@ -44,7 +44,7 @@ ms.locfileid: "50147871"
     > [!IMPORTANT]  
     >  Assim que o banco de dados for desanexado, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] já não pode lhe ajudar a obter o local do banco de dados.  
   
-3.  Clique com o botão direito do mouse no banco de dados e selecione **Desanexar...**  
+3.  O banco de dados com o botão direito e selecione **desanexar...**  
   
 4.  Atribua uma senha ao banco de dados a ser desanexado e clique em **OK** para executar o comando Desanexar.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50147871"
   
 6.  Clique com botão direito do **bancos de dados** pasta e selecione **anexar...**  
   
-7.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, use o botão Procurar (**…**) para localizar a pasta do banco de dados.  
+7.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar (**...** ) para localizar a pasta do banco de dados.  
   
 8.  Selecione o modo leitura/gravação do banco de dados.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147871"
   
 4.  Copie o modelo de script a seguir para XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147871"
   
 3.  Copiar o modelo de script a seguir para XMLA em uma nova guia XMLA  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

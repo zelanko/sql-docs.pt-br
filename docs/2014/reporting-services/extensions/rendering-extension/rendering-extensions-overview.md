@@ -15,22 +15,22 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fd9604fb38d20e03f33623bacb606d1a9d114ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2272cffe68db5c4ad417bfdbf81ed45a8d309a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092476"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376908"
 ---
 # <a name="rendering-extensions-overview"></a>Visão geral das extensões de renderização
-  Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui sete extensões de renderização: HTML, Excel, Word, CSV ou Texto, XML, Imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
+  Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui sete extensões de renderização: HTML, Excel, Word, CSV ou texto, XML, imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
   
 > [!NOTE]  
 >  Para determinar quais extensões de renderização estão disponíveis, exiba a lista das extensões instaladas no arquivo RSReportServer.config.  
   
  A tabela a seguir descreve as extensões de renderização incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Nome da Extensão|Description|  
+|Nome da Extensão|Descrição|  
 |--------------------|-----------------|  
 |`XML`|Renderiza um relatório em XML. O relatório é aberto em um navegador. Transformações adicionais aplicadas a esta saída XML podem ser uma forma econômica de evitar o desenvolvimento de sua própria extensão de renderização.|  
 |`CSV`|Renderiza um relatório em um formato delimitado por vírgula. O relatório é aberto em uma ferramenta de visualização associada a formatos de arquivo CSV.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48092476"
   
  Escrever uma extensão de renderização personalizada é difícil. Normalmente, uma extensão de renderização deve dar suporte a todas as combinações possíveis de elementos de relatório e exige que você implemente centenas de classes, de interfaces, de métodos e de propriedades. Se você tiver de renderizar um relatório em um formato não incluído no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e decidir escrever a sua própria implementação de código gerenciado de uma extensão de renderização, o código da extensão de renderização deve implementar a interface `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension`, exigida pelo servidor de relatório.  
   
- Para obter a documentação e whitepapers suplementares sobre o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte os últimos recursos técnicos no [site do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ Para obter a documentação e whitepapers suplementares sobre o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte os últimos recursos técnicos no [site do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Consulte também  
  [Implementando uma extensão de renderização](implementing-a-rendering-extension.md)   

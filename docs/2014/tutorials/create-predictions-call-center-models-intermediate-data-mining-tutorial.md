@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147996"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372968"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Criando previsões para modelos de call center (Tutorial de mineração de dados intermediário)
   Agora que aprendeu um pouco sobre as interações entre turnos, o número de operadores, as chamadas e a classificação do serviço, você está pronto para criar algumas consultas de previsão que podem ser usadas na análise e no planejamento empresarial. Primeiro, você criará algumas previsões com base no modelo exploratório para testar algumas suposições. Em seguida, você criará previsões em massa usando o modelo de regressão logística.  
@@ -175,18 +175,18 @@ ms.locfileid: "48147996"
   
 |Turno, salário e dia|Qualidade de serviço prevista como o tempo médio de resposta atual|Qualidade de serviço com a redução de 90% no tempo de resposta prevista|Qualidade de serviço prevista como a redução de 80 por cento no tempo de resposta|  
 |--------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|  
-|Feriado AM|0.165|0.05|0.05|  
-|Feriado PM1|0.05|0.05|0.05|  
-|Feriado à meia-noite|0.165|0.05|0.05|  
+|Feriado AM|0.165|0,05|0,05|  
+|Feriado PM1|0,05|0,05|0,05|  
+|Feriado à meia-noite|0.165|0,05|0,05|  
   
  Há várias consultas de previsão que podem ser criadas com base nesse modelo. Por exemplo, você pode prever quantos operadores são obrigatórios para atender a um determinado nível de serviço ou um certo número de chamadas de entrada. Como é possível incluir várias saídas em um modelo de regressão logística, é fácil testar variáveis independentes diferentes e resultados, sem a necessidade de criar muitos modelos separados.  
   
 ## <a name="remarks"></a>Comentários  
  Os Suplementos de Mineração de Dados para Excel 2007 fornecem assistentes de regressão logística que facilitam a resposta de perguntas complexas, como quantos Operadores de Nível Dois seriam obrigatórios para melhorar a classificação do serviço visando um nível de destino para um turno específico. Os suplementos de mineração de dados são um download gratuito e incluem assistentes baseados nos algoritmos de rede neural ou regressão logística. Para obter mais informações, consulte os seguintes links:  
   
--   [SQL Server 2005 Data Mining Add-Ins para Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): meta a atingir e e se a análise de cenário  
+-   [SQL Server 2005 Data Mining Add-Ins para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Análise dos cenários E se e Atingir meta  
   
--   [SQL Server 2008 Data Mining Add-Ins para Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): meta a atingir análise do cenário, e se a análise de cenário e cálculo de previsão  
+-   [SQL Server 2008 Data Mining Add-Ins para Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Análise do cenário Atingir Meta, análise do cenário E se e Cálculo de Previsão  
   
 ## <a name="conclusion"></a>Conclusão  
  Você aprendeu a criar, personalizar e interpretar modelos de mineração baseados nos algoritmos Rede Neural da Microsoft e Regressão Logística da Microsoft. Esses tipos de modelos são sofisticados e permitem uma variedade quase infinita em análise e, portanto, podem ser complexos e difíceis de dominar.  
@@ -195,8 +195,8 @@ ms.locfileid: "48147996"
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de consulta de modelo de regressão logística](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Algoritmo Regressão logística da Microsoft](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Algoritmo rede Neural da Microsoft](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Algoritmo Regressão Logística da Microsoft](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Exemplos de consulta de modelos de rede neural](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

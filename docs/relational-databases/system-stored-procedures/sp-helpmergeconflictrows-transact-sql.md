@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergeconflictrows_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26bf2e89462c0096c9a6fd2a081cb72c68e9a32a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746574"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589160"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +42,16 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação. Por exemplo, se o **MSmerge_conflict_Customers** tabela tem linhas de conflito para o **WA** e o **autoridade de certificação** publicações, passando um nome de publicação **autoridade de certificação**  recuperará os conflitos que pertencem à **autoridade de certificação** publicação.  
   
- [  **@conflict_table=**] **'***conflict_table***'**  
- É o nome da tabela de conflito. *conflict_table* está **sysname**, sem padrão. Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, tabelas de conflitos são nomeadas usando nomes de formato com **msmerge_conflict _* publicação *_* artigo * * *, com uma tabela para cada publicado artigo.  
+ [  **@conflict_table=**] **'**_conflict_table_**'**  
+ É o nome da tabela de conflito. *conflict_table* está **sysname**, sem padrão. Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, tabelas de conflitos são nomeadas usando nomes de formato com **MSmerge_conflict\__publicação\_artigo_**, com uma tabela para cada artigo publicado.  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
@@ -61,10 +60,10 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpmergeconflictrows** retorna um conjunto de resultados consistindo da estrutura da tabela base e essas colunas adicionais.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|Origem do conflito.|  
-|**conflict_type**|**int**|Código que indica o tipo de conflito:<br /><br /> **1** = conflito de atualização: O conflito é detectado no nível de linha.<br /><br /> **2** = conflito de atualização de coluna: O conflito é detectado no nível de coluna.<br /><br /> **3** = conflito de atualização exclusão Wins: A exclusão ganha o conflito.<br /><br /> **4** = conflito de exclusão vence atualização: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = carregar Falha na inserção: A inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = baixar Falha na inserção: A inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = carregar Falha na exclusão: A exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = baixar Falha na exclusão: A exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = carregar Falha na atualização: A atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = baixar Falha na atualização: A atualização do publicador não pôde ser aplicada ao assinante.<br /><br /> **12** = lógico registro atualização vence exclusão: O registro lógico excluído que perde o conflito é registrado nessa tabela.<br /><br /> **13** = lógico registro conflito de inserção de atualização: inserção em um registro lógico conflita com uma atualização.<br /><br /> **14** = lógico registro Wins atualização conflito de exclusão: O registro lógico atualizado que perde o conflito é registrado nessa tabela.|  
+|**conflict_type**|**int**|Código que indica o tipo de conflito:<br /><br /> **1** = conflito de atualização: O conflito é detectado no nível de linha.<br /><br /> **2** = conflito de atualização de coluna: O conflito é detectado no nível de coluna.<br /><br /> **3** = conflito de atualização do Wins de exclusão: A exclusão ganha o conflito.<br /><br /> **4** = conflito de exclusão do Wins de atualização: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = Falha na inserção do carregamento: A inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = Falha na inserção do download: A inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = Falha na exclusão do carregamento: A exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = Falha na exclusão do download: A exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = Falha na atualização do carregamento: A atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = Falha na atualização do download: A atualização no publicador não pôde ser aplicada ao assinante.<br /><br /> **12** = atualização de registro lógico vence exclusão: O registro lógico excluído que perde o conflito é registrado nessa tabela.<br /><br /> **13** = atualização de inserção de conflito de registro lógico: Inserir um registro lógico está em conflito com uma atualização.<br /><br /> **14** = conflito de atualização do Wins de exclusão de registro lógico: O registro lógico atualizado que perde o conflito é registrado nessa tabela.|  
 |**reason_code**|**int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar(720)**|Descrição de erro que pode ser sensível ao contexto.|  
 |**pubid**|**uniqueidentifier**|Identificador da publicação.|  
