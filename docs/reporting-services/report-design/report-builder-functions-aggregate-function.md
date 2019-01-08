@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030525"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202585"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funções do Construtor de Relatórios – Função de Agregação
   Retorna uma agregação personalizada da expressão especificada, conforme definido pelo provedor de dados.  
@@ -47,7 +47,7 @@ Aggregate(expression, scope)
   
  É possível alterar este comportamento padrão, alterando o valor da opção **Interpretar subtotais como detalhes** na caixa de diálogo **Propriedades do Conjunto de Dados** . Quando esta opção está definida como **True**, todos os dados, incluindo agregações do servidor, são exibidos como dados de detalhes. Quando está definida como **False**, as agregações do servidor são exibidas como totais. A configuração desta propriedade afeta todas as regiões de dados vinculadas a este conjunto de dados.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Todos os grupos contentores do item de relatório que faz referência a **Aggregate** devem ter referências de campos simples para suas expressões de grupos, por exemplo, `[FieldName]`. Não é possível usar a **Aggregate** em uma região de dados que usa expressões de grupos complexas. Para a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a consulta deve incluir campos MDX do tipo **LevelProperty** (não **MemberProperty**) para dar suporte à agregação com a função **Aggregate**.  
   
  *Expression* pode conter chamadas para funções de agregação aninhadas com as seguintes exceções e condições:  
