@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792026"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411293"
 ---
-# <a name="lesson-4-create-relationships"></a>Lição 4: Criar relações
+# <a name="lesson-4-create-relationships"></a>Lição 4: Criar Relações
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nesta lição, você aprenderá a verificar as relações que foram criadas automaticamente quando os dados foram importados e adicionará novas relações entre tabelas diferentes. Uma relação é uma conexão criada entre duas tabelas que estabelece como os dados dessas tabelas devem ser correlacionados. Por exemplo, a tabela DimProduct e a tabela DimProductSubcategory têm uma relação baseada no fato de que cada produto pertence a uma subcategoria. Para obter mais informações, consulte [relações](../analysis-services/tabular-models/relationships-ssas-tabular.md).
@@ -24,7 +24,7 @@ Nesta lição, você aprenderá a verificar as relações que foram criadas auto
 Tempo estimado para concluir esta lição: **10 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 3: marcar como tabela de data](../analysis-services/lesson-3-mark-as-date-table.md). 
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 3: Marcar como tabela de data](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Revisar relações existentes e adicionar novas relações  
 Quando você importar dados usando o Assistente de importação de tabela, você obteve sete tabelas do banco de dados AdventureWorksDW. Em geral, quando você importa dados de uma fonte de dados relacional, as relações existentes são importadas automaticamente junto com os dados. No entanto, antes de dar continuidade à criação do modelo, você deve verificar se essas relações entre tabelas foram criadas corretamente. Para este tutorial, você adicionará também três novas relações.  
@@ -41,7 +41,7 @@ Quando você importar dados usando o Assistente de importação de tabela, você
   
 2.  Clique na linha sólida entre a **DimCustomer** tabela e o **DimGeography** tabela. A linha sólida entre essas duas tabelas mostra que essa relação está ativa, ou seja, ela é usada por padrão durante o cálculo das fórmulas DAX.  
   
-    Observe a **GeographyKey** coluna na **DimCustomer** tabela e o **GeographyKey** coluna no **DimGeography** tabela agora ambos cada um aparecem dentro de uma caixa. Nesta apresentação, essas são as colunas usadas na relação. Agora, as propriedades da relação também são exibidas na janela **Propriedades** .  
+    Observe a **GeographyKey** coluna na **DimCustomer** tabela e o **GeographyKey** coluna no **DimGeography** tabela agora ambos cada um aparecem dentro de uma caixa. Nesta apresentação, essas são as colunas usadas na relação. As propriedades da relação agora também aparecem na **propriedades** janela.  
   
     > [!TIP]  
     > Além de usar o designer de modelo na exibição de diagrama, você também pode usar a caixa de diálogo Gerenciar relações para mostrar as relações entre todas as tabelas em um formato de tabela. Clique com botão direito **relacionamentos** no Gerenciador de modelos tabulares e clique **gerenciar relações**. A caixa de diálogo Gerenciar relações mostram as relações que foram criadas automaticamente quando você importou os dados.  
@@ -91,7 +91,7 @@ Em alguns casos, talvez seja necessário criar relações adicionais entre tabel
      ![como-tabela-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 5: criar colunas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).
+Vá para a próxima lição: [Lição 5: Criar colunas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).
   
   
   

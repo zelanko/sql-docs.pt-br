@@ -10,15 +10,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71ad9b87f701a1f1de4f13a7788bba13543056e8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7ab482a9c2a4bce9da7dc2b0a68cae6391759b92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754448"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurar a replicação do SQL Server no Linux
 

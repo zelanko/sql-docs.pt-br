@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072050"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409063"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de coluna|Description|  
+|Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|O LSN de confirmação da transação que é associado à alteração. Todas as alterações são confirmadas na mesma transação compartilham o mesmo LSN de confirmação.|  
 |__CDC_SEQVAL|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
@@ -109,7 +109,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Em seguida, os sinalizadores de bit são acrescentados ao conjunto de resultados para cada coluna identificada no parâmetro @update_flag_list. Para o **todas as alterações** wrapper, os sinalizadores de bit sempre será NULL se cdc_operation for tinha ', 'I' ou 'UO'. Se \__CDC_OPERATION é un' ', o sinalizador será definido como 1 ou 0, dependendo se a operação de atualização causou uma alteração na coluna.  
   
- O modelo de configuração do Change Data Capture 'Criar uma instância de TVFs de wrapper CDC para esquema' mostra como usar o procedimento armazenado sp_cdc_generate_wrapper_function para obter scripts CREATE para todas as funções de wrapper para funções de consulta definidas por um esquema. Em seguida, o modelo cria esses scripts. Para obter mais informações sobre modelos, consulte [Explorador de modelos](../../ssms/template/template-explorer.md).  
+ O modelo de configuração change data capture 'Criar uma instância de TVFs de Wrapper CDC para esquema' mostra como usar o procedimento armazenado sp_cdc_generate_wrapper_function para obter scripts CREATE para todas as funções de wrapper para funções de consulta definidos de um esquema. Em seguida, o modelo cria esses scripts. Para obter mais informações sobre modelos, consulte [Explorador de modelos](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

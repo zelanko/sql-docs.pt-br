@@ -13,12 +13,12 @@ ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1e8c6381aaf8afd848831c8599c4534a77b179e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc33585e165b8cdac2f7d46c322741b3eb1756c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503736"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Definir as propriedades de uma tarefa ou de um contêiner
   Você pode definir a maioria das propriedades de tarefas e contêineres usando a janela **Propriedades** . As exceções são as propriedades de coleções de tarefas e as propriedades que são muito complexas para se definir usando a janela **Propriedades** . Por exemplo, você não pode configurar o enumerador que o contêiner Loop Foreach usa na janela **Propriedades** . Você deve usar um editor de tarefa ou de contêiner para definir essas propriedades complexas. A maioria dos editores de tarefas e contêineres possui vários nós, e cada nó contém propriedades relacionadas. O nome do nó indica o assunto das propriedades contidas no nó.  
@@ -38,7 +38,7 @@ ms.locfileid: "48084786"
 5.  Na janela **Propriedades** , atualize o valor da propriedade.  
   
     > [!NOTE]  
-    >  A maioria das propriedades pode ser definida digitando um valor diretamente na caixa de texto ou selecionando um valor de uma lista. Porém, algumas propriedades são mais complexas e têm um editor de propriedade personalizado. Para definir a propriedade, clique na caixa de texto e clique no botão de criação **(...)** para abrir o editor personalizado.  
+    >  A maioria das propriedades pode ser definida digitando um valor diretamente na caixa de texto ou selecionando um valor de uma lista. Porém, algumas propriedades são mais complexas e têm um editor de propriedade personalizado. Para definir a propriedade, clique na caixa de texto e clique no botão de criação **(…)** para abrir o editor personalizado.  
   
 6.  Como alternativa, crie expressões de propriedade para atualizar as propriedades da tarefa ou do contêiner dinamicamente. Para obter mais informações, consulte [Adicionar ou alterar uma expressão de propriedade](expressions/add-or-change-a-property-expression.md).  
   

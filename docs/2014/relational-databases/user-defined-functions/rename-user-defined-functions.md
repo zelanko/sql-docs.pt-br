@@ -10,12 +10,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c0993dfccf1ab48d509f47e5d179402240b453cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399179"
 ---
 # <a name="rename-user-defined-functions"></a>Renomear funções definidas pelo usuário
   Você pode renomear funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "48219937"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Os nomes de funções devem ser compatíveis com as regras para [identificadores](../databases/database-identifiers.md).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48219937"
   
 5.  Digite o novo nome da função.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para renomear funções definidas pelo usuário**  
   
  Esta tarefa não pode ser executada usando instruções Transact-SQL. Para renomear uma função definida pelo usuário usando Transact-SQL, primeiro você deve excluir a função existente e depois recriá-la com o novo nome. Verifique se todo o código e os aplicativos que usavam o nome antigo da função agora usam o nome novo.  

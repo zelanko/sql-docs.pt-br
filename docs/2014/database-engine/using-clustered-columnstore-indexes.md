@@ -10,17 +10,17 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059396"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502698"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usando índices columnstore clusterizados
   Tarefas para usar índices columnstore clusterizados no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Para obter uma visão geral de índices columnstore, consulte [índices Columnstore descritos](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Para obter uma visão geral de índices columnstore, consulte [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
  Para obter informações sobre índices columnstore clusterizados, consulte [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
@@ -60,7 +60,7 @@ GO
  Use o [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) instrução para descartar um índice columnstore clusterizado. Essa operação irá remover o índice e converter a tabela columnstore em um heap rowstore.  
   
 ##  <a name="load"></a> Carregar dados em um índice Columnstore clusterizado  
- Você pode adicionar dados a um índice columnstore clusterizado existente usando qualquer um dos métodos de carregamento padrão.  Por exemplo, a ferramenta de carregamento em massa bcp, Integration Services e INSERT … SELECT pode carregar todos os dados em um índice columnstore clusterizado.  
+ Você pode adicionar dados a um índice columnstore clusterizado existente usando qualquer um dos métodos de carregamento padrão.  Por exemplo, a carregamento em massa bcp ferramenta, Integration Services e INSERT... SELECT pode carregar todos os dados em um índice columnstore clusterizado.  
   
  Os índices columnstore clusterizados aproveitam o deltastore a fim de evitar a fragmentação de segmentos de colunas no columnstore.  
   
@@ -68,7 +68,7 @@ GO
  Para dados particionados, primeiro o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atribui cada linha a uma partição e, depois, executa operações columnstore nos dados na partição. Cada partição tem seus próprios rowgroups e pelo menos um deltastore.  
   
 ### <a name="deltastore-loading-scenarios"></a>Cenários de carregamento de deltastore  
- As linhas são acumuladas no deltastore até que o número de linhas atinja o número máximo de linhas permitido para um rowgroup. Quando o deltastore contiver o número máximo de linhas por rowgroup, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marcará o rowgroup como "CLOSED". Um processo em segundo plano, chamado “motor de tupla”, localiza o rowgroup CLOSED e passa para o columnstore, onde o rowgroup é compactado em segmentos de colunas que, por sua vez, são armazenados no columnstore.  
+ As linhas são acumuladas no deltastore até que o número de linhas atinja o número máximo de linhas permitido para um rowgroup. Quando o deltastore contiver o número máximo de linhas por rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marcará o rowgroup como "CLOSED". Um processo em segundo plano, chamado "motor de tupla", localiza o rowgroup CLOSED e move para o columnstore, onde o rowgroup é compactado em segmentos de coluna e os segmentos de coluna são armazenados no columnstore.  
   
  Para cada índice columnstore clusterizado, podem existir vários deltastores.  
   
@@ -84,7 +84,7 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102.000|0|102.000|  
 |145.000|145.000<br /><br /> Tamanho do rowgroup: 145.000|0|  
-|1,048,577|1.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|  
+|1,048,577|1.048.576<br /><br /> Tamanho do rowgroup: 1,048,576.|1|  
 |2,252,152|2,252,152<br /><br /> Tamanhos do rowgroup: 1.048.576, 1.048.576, 155.000.|0|  
   
  O exemplo a seguir mostra os resultados do carregamento de 1.048.577 linhas em uma partição. Os resultados mostram um rowgroup COMPRESSED no columnstore (como segmentos de coluna compactados) e 1 linha no deltastore.  
@@ -120,7 +120,7 @@ SELECT * FROM sys.column_store_row_groups
 ### <a name="rebuild-process"></a>Processo de recriação  
  Para recompilar um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação.  Os dados estão “offline” e indisponíveis durante a recompilação.  
+-   Obtenha um bloqueio exclusivo na tabela ou na partição durante a recompilação.  Os dados ficam "offline" e não disponíveis enquanto você recompila.  
   
 -   Desfragmenta o columnstore excluindo fisicamente as linhas que foram excluídas logicamente da tabela; os bytes excluídos são recuperados na mídia física.  
   

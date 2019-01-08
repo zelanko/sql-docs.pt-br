@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], database option
@@ -13,12 +12,12 @@ ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a96597efbbc167cf0680c59971fd52797d018e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221456"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749028"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>Definir um banco de dados como modo de usuário único
   Este tópico descreve como configurar um banco de dados definido pelo usuário no modo de usuário único no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O modo de usuário único especifica que apenas um usuário pode acessar o banco de dados por vez e, normalmente é usado para ações de manutenção.  
@@ -41,7 +40,7 @@ ms.locfileid: "48221456"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Se outros usuários estiverem conectados ao banco de dados no momento em que você configurar o banco de dados como modo de usuário único, as conexões deles ao banco de dados serão fechadas sem aviso.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48221456"
   
  Também é possível definir o banco de dados como acesso múltiplo ou restrito usando esse procedimento. Para obter mais informações sobre as opções de Restringir o Acesso, veja [Propriedades de banco de dados &#40;Página Opções&#41;](database-properties-options-page.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-set-a-database-to-single-user-mode"></a>Para definir um banco de dados como modo de usuário único  
   

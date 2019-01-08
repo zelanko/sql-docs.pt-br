@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136626"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756638"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
   Um gerenciador de conexões OData habilita um pacote a conectar-se a uma fonte OData. Um componente de origem OData se conecta a uma origem OData usando um gerenciador de conexões OData e consome dados do serviço. Consulte a seção [OData Source](../data-flow/odata-source.md)para obter informações detalhadas, inclusive as instruções de instalação desses componentes.  
@@ -28,7 +27,7 @@ ms.locfileid: "48136626"
   
 -   Clique com o botão direito na pasta **Gerenciadores de Conexões** no **Gerenciador de Soluções** e clique em **Novo Gerenciador de Conexões**. Selecione **ODATA** para o **Tipo de gerenciador de conexões**.  
   
--   Clique com o botão direito do mouse no painel de **Gerenciadores de Conexões** na parte inferior do designer de pacote, e selecione **Nova Conexão...**. Selecione **ODATA** para o **Tipo de gerenciador de conexões**.  
+-   Clique com botão direito no **gerenciadores de Conexão** painel na parte inferior do designer de pacote e selecione **nova Conexão...** . Selecione **ODATA** para o **Tipo de gerenciador de conexões**.  
   
 ## <a name="connection-manager-authentication"></a>Autenticação do gerenciador de conexões  
  O gerenciador de conexões do OData oferece suporte a dois modos de autenticação.  
@@ -49,7 +48,7 @@ ms.locfileid: "48136626"
   
 |||  
 |-|-|  
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |Url|URL do documento de serviço.|  
 |UserName|Nome de usuário para ser usado na autenticação básica.|  
 |Senha|Senha a ser usada na autenticação básica.|  

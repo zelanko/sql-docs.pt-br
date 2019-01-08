@@ -1,5 +1,5 @@
 ---
-title: Gráfico de comparação de precisão (Analysis Services – mineração de dados) | Microsoft Docs
+title: Gráfico de comparação de precisão (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a72e7c40719511e8514c38d08cd7cd88a24055f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cd4c0ea515020067cb7dd5c49b97db69ca6a756c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016403"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401283"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34016403"
   
  Este gráfico contém vários modelos baseados nos mesmos dados. Um destes modelos foi personalizado para clientes de destino específicos. Você pode personalizar um modelo adicionando filtros nos dados usados para treinar o modo. Este filtro restringe os casos usados tanto no treinamento quanto na avaliação a clientes com menos de 30 anos de idade. Observe que um efeito de filtrar é que o modelo básico e o modelo filtrado usam conjuntos de dados diferentes e, portanto, o número de casos usados para avaliação no gráfico de comparação de precisão também é diferente. Este é um ponto importante a ser lembrado na interpretação dos resultados da previsão e de outras estatísticas.  
   
- ![gráfico de comparação de precisão mostrando dois modelos](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "gráfico de comparação de precisão mostrando dois modelos")  
+ ![comparação de precisão mostrando dois modelos de gráfico](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "mostrando dois modelos de gráfico de comparação de precisão")  
   
  O eixo x do gráfico representa a porcentagem do conjunto de dados de teste usada para comparar as previsões. O eixo y do gráfico representa a porcentagem de valores previstos.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "34016403"
 |Targeted mailing all|0.71|47.40%|61.38%|  
 |Mala direta dirigida – menos de 30 anos|0.85|51.81%|46.62%|  
 |Modelo de previsão aleatória||31.00%||  
-|Modelo ideal para: Mala direta dirigida – todos||62.48%||  
+|Modelo ideal para: Targeted mailing all||62.48%||  
 |Modelo ideal para: Mala direta dirigida – menos de 30 anos||65.28%||  
   
  [Voltar ao Início](#bkmk_Top)  
@@ -115,6 +115,6 @@ ms.locfileid: "34016403"
  [Voltar ao Início](#bkmk_Top)  
   
 ## <a name="see-also"></a>Consulte também  
- [Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

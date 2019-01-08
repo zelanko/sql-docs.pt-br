@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6843e2f2d818789a791ba12c78e5aa42a086a15d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 847de27624db305e8fc47c81de69a8e77dbf84cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224770"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754758"
 ---
 # <a name="xml-source-custom-properties"></a>Propriedades personalizadas da origem XML
   A origem XML contém propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas da origem XML. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Description|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|O modo usado para acessar os dados XML.|  
 |UseInlineSchema|Booliano|Um valor que indica se deve ser usada uma definição de esquema embutido dentro da origem XML. O valor padrão dessa propriedade é `False`.|  
@@ -32,7 +31,7 @@ ms.locfileid: "48224770"
   
  A tabela a seguir descreve as propriedades personalizadas da saída da origem XML. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Description|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |RowsetID|Cadeia de caracteres|Um valor que identifica o conjunto de linhas associado à saída.|  
   

@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501900"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funções Relacionadas a QNames – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Se o *$paramLocal* valor especificado não estiver na forma léxica correta do tipo xs: NCName, a sequência vazia será retornada e representa um erro dinâmico.  
   
--   Não é oferecido suporte à conversão do tipo xs:QName em qualquer outro tipo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Por isso, o **expanded-QName()** função não pode ser usada na construção XML. Por exemplo, quando você estiver construindo um nó, como `<e> expanded-QName(…) </e>`, o valor precisa ser não digitado. Isso exigiria que você convertesse o valor de tipo xs:QName retornado por `expanded-QName()` para xdt:untypedAtomic. Porém, não é oferecido suporte para isso. Em um exemplo posterior neste tópico é oferecida uma solução.  
+-   Não é oferecido suporte à conversão do tipo xs:QName em qualquer outro tipo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Por isso, o **expanded-QName()** função não pode ser usada na construção XML. Por exemplo, quando você estiver construindo um nó, como `<e> expanded-QName(...) </e>`, o valor precisa ser não digitado. Isso exigiria que você convertesse o valor de tipo xs:QName retornado por `expanded-QName()` para xdt:untypedAtomic. Porém, não é oferecido suporte para isso. Em um exemplo posterior neste tópico é oferecida uma solução.  
   
 -   Você pode modificar ou comparar os valores de tipo QName existentes. Por exemplo, `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` compara o valor do elemento <`e`>, com o QName retornado pela **expanded-QName()** função.  
   
@@ -132,8 +132,8 @@ drop xml schema collection SC
 go  
 ```  
   
-### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Tratando as limitações ao usar a função expanded-QName()  
- O **expanded-QName** função não pode ser usada na construção XML. O exemplo a seguir ilustra isto. Para solucionar essa limitação, o exemplo primeiro insere um nó e, em seguida, modifica o nó.  
+### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>b. Tratando as limitações ao usar a função expanded-QName()  
+ O **expanded-QName** função não pode ser usada na construção XML. O exemplo a seguir ilustra essa situação. Para solucionar essa limitação, o exemplo primeiro insere um nó e, em seguida, modifica o nó.  
   
 ```  
 -- if exists drop the table T  

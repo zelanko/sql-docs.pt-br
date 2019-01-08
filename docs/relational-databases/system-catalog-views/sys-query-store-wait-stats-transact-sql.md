@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521249"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
@@ -33,15 +33,15 @@ ms.locfileid: "49169136"
 
   Contém informações sobre as informações de espera da consulta.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificador da linha que representa as estatísticas de espera para plan_id, runtime_stats_interval_id, execution_type e wait_category. Ele é exclusivo somente para os intervalos de estatísticas de tempo de execução anterior. Para o intervalo ativo no momento, pode haver várias linhas que representa as estatísticas de espera para o plano referenciado pelo plan_id, com o tipo de execução representado pelo execution_type e categoria de espera representado por wait_category. Normalmente, uma linha representa as estatísticas de espera são liberadas para disco, enquanto outras (s) representam o estado na memória. Portanto, para obter o estado real para cada intervalo você precisa agregar as métricas, agrupando por plan_id, runtime_stats_interval_id, execution_type e wait_category. |  
 |**plan_id**|**bigint**|Chave estrangeira. Ingressa [query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chave estrangeira. Ingressa [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Tipos de espera são categorizados usando a tabela a seguir e, em seguida, o tempo de espera é agregado entre essas categorias de espera. Categorias de espera diferentes exigem uma análise de acompanhamento diferente para resolver o problema, mas aguardar tipos de cliente potencial mesma categoria para uma experiência semelhante a solução de problemas e fornecer a consulta afetada Além disso, para as esperas é a que faltava para concluir o maioria dessas investigações com êxito.|
 |**wait_category_desc**|**nvarchar(128)**|Para obter uma descrição textual do campo de categoria de espera, examine a tabela a seguir.|
-|**execution_type**|**tinyint**|Determina o tipo de execução da consulta:<br /><br /> 0 – execução regular (concluída com êxito)<br /><br /> 3 – cliente iniciado anulou a execução<br /><br /> 4 - exceção anulou a execução|  
-|**execution_type_desc**|**nvarchar(128)**|Descrição textual do campo de tipo de execução:<br /><br /> 0 – regular<br /><br /> 3 – anulada<br /><br /> 4 - exceção|  
+|**execution_type**|**tinyint**|Determina o tipo de execução da consulta:<br /><br /> 0 - execução regular (concluída com êxito)<br /><br /> 3 - cliente iniciado anulou a execução<br /><br /> 4 - exceção anulou a execução|  
+|**execution_type_desc**|**nvarchar(128)**|Descrição textual do campo de tipo de execução:<br /><br /> 0 - regular<br /><br /> 3 - anulada<br /><br /> 4 - exceção|  
 |**total_query_wait_time_ms**|**bigint**|Total `CPU wait` tempo para o plano de consulta dentro do intervalo de agregação e categoria (relatada em milissegundos) de espera.|
 |**avg_query_wait_time_ms**|**float**|Média de duração da espera para o plano de consulta por execução dentro da categoria de espera e de intervalo de agregação (relatada em milissegundos).|
 |**last_query_wait_time_ms**|**bigint**|Última duração da espera para o plano de consulta dentro do intervalo de agregação e categoria (relatada em milissegundos) de espera.|

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - queries [SQLXML], SQLXML Managed Classes
@@ -18,12 +16,12 @@ ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7387f257e7fb19ca3ec79aaf1bfc2d2f3f799584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6b24bfdcd9f6b4634a5a66ab43223285b0e3f36
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758958"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Executando consultas SQL usando o método ExecuteXMLReader
   Em vez de usar o método ExecuteToStream, você pode usar o método ExecuteXmlReader do objeto SqlXmlCommand para executar comandos. Esse método retorna um objeto XmlReader que pode ser usado para processamento adicional do resultado (que, neste exemplo está imprimindo os nomes de elemento ou atributo e os valores).  

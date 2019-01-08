@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779684"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529892"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Esta exibição do catálogo contém uma linha por idioma cujos separadores de palavras estão registrados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada linha exibe o LCID e o nome do idioma. Quando há separadores de palavras registrados para um idioma, seus outros recursos linguísticos, como lematizadores, palavras de ruído (palavras irrelevantes) e arquivos de dicionário de sinônimos, ficam disponíveis para operações de indexação/consulta de texto completo. O valor de **nome** ou **lcid** pode ser especificado no consultas de texto completo e o índice de texto completo [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções.  
+  Esta exibição do catálogo contém uma linha por idioma cujos separadores de palavras estão registrados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada linha exibe o LCID e o nome do idioma. Quando os separadores de palavras são registrados para um idioma, seus outros recursos linguísticos-lematizadores, palavras de ruído (palavras irrelevantes) e se tornar arquivos de dicionário de sinônimos disponível para operações de indexação/consulta de texto completo. O valor de **nome** ou **lcid** pode ser especificado no consultas de texto completo e o índice de texto completo [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções.  
    
-|coluna|Data type|Description|  
+|coluna|Data type|Descrição|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|O LCID (identificador de localidade) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows relativo ao idioma.|  
+|**lcid**|**int**|O LCID (identificador de localidade) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows relativo ao idioma.|  
 |**name**|**sysname**|É o valor do alias em [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondente ao valor de **lcid** ou a representação de cadeia de caracteres do LCID numérico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valores retornados para idiomas padrão  
@@ -50,10 +50,10 @@ ms.locfileid: "47779684"
 |Búlgaro|1026|  
 |Catalão|1027|  
 |Chinês (RAE de Hong Kong, RPC)|3076|  
-|Chinês (RAE de Macau)|5124|  
-|Chinês (Cingapura)|4100|  
+|Chinese (Macao SAR)|5124|  
+|Chinês (Singapura)|4100|  
 |Croata|1050|  
-|Tcheco|1029|  
+|Czech|1029|  
 |Danish|1030|  
 |Holandês|1043|  
 |Inglês|1046|  
@@ -79,10 +79,10 @@ ms.locfileid: "47779684"
 |**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Polonês|1045|  
 |Portuguese (Brazil)|1046|  
 |Portuguese (Portugal)|2070|  
-|panjabi|1094|  
+|Punjabi|1094|  
 |Romeno|1048|  
 |Russo|1049|  
-|Sérvio (Cirílico)|3098|  
+|Serbian (Cyrillic)|3098|  
 |Serbian (Latin)|2074|  
 |Chinês simplificado|2052|  
 |Eslovaco|1051|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0620aec0c710e513115455388276c72cc4371e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1a581536bb4f2a07dbbdf3d6ca187ac4a6f5250
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171036"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767178"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   A transformação Junção de Mesclagem fornece uma saída que é gerada unindo-se dois conjuntos de dados ordenados que usam uma junção FULL, LEFT ou INNER. Por exemplo, você pode usar uma associação de LEFT para unir uma tabela que inclui informações de produtos com uma tabela que lista o país/região no qual um produto foi fabricado. O resultado é uma tabela que lista todos os produtos e seu país/região de origem.  
@@ -49,7 +48,7 @@ ms.locfileid: "48171036"
  A transformação Junção de Mesclagem requer que as colunas unidas tenham metadados compatíveis. Por exemplo, você não pode unir uma coluna que tenha um tipo de dados numérico com uma coluna que tenha um tipo de dados de caracteres. Se os dados tiverem um tipo de dados de cadeia de caracteres, o comprimento da coluna na segunda entrada deve ser menor, ou igual, ao comprimento da coluna na primeira entrada com a qual é intercalado.  
   
 ## <a name="buffer-throttling"></a>Limitação de buffer  
- Você não precisa configurar o valor da `MaxBuffersPerInput` propriedade porque a Microsoft fez alterações que reduzem o risco que a transformação junção de mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
+ Não é mais preciso configurar o valor da propriedade `MaxBuffersPerInput`, pois a Microsoft fez alterações que reduzem o risco de a transformação Junção de Mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou programaticamente.  
@@ -63,9 +62,9 @@ ms.locfileid: "48171036"
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de transformação mesclagem](../../merge-join-transformation-editor.md)   
- [Transformação mesclar](merge-transformation.md)   
- [Union All Transformation](union-all-transformation.md)   
+ [Editor de Transformação Mesclagem](../../merge-join-transformation-editor.md)   
+ [Transformação Mesclar](merge-transformation.md)   
+ [Transformação Unir Tudo](union-all-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

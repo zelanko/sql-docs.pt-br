@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
@@ -19,12 +18,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11e70904aa8a67a1290cd466aeabcd33d2e7e651
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213456"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778318"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Adicionar arquivos de dados ou de log a um banco de dados
   Este tópico descreve como adicionar um arquivo de dados ou de log a um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "48213456"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Você não pode adicionar ou remover um arquivo enquanto uma instrução BACKUP está em execução.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48213456"
   
 8.  Especifique o tamanho inicial do arquivo. Deixe os arquivos de dados tão grandes quanto possível, com base na quantidade máxima de dados que você espera ter no banco de dados.  
   
-9. Para especificar como o arquivo deve se expandir, clique em (**…**) na coluna **Expansão Automática** . Selecione entre as seguintes opções:  
+9. Para especificar como o arquivo deve se expandir, clique em (**…**) na coluna **Aumento Automático**. Selecione entre as seguintes opções:  
   
     1.  Para permitir que o arquivo selecionado aumente conforme mais espaço de dados se fizer necessário; marque a caixa de seleção **Habilitar Aumento Automático** e depois selecione entre as seguintes opções:  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48213456"
   
 12. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para adicionar arquivos de dados ou de log a um banco de dados existente  
   

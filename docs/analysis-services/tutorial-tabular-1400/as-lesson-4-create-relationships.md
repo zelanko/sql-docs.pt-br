@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4 do tutorial de serviços de análise: criar relações | Microsoft Docs'
+title: 'Analysis Services lição 4 do tutorial: Criar relações | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063727"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394510"
 ---
 # <a name="create-relationships"></a>Criar relações
 
@@ -26,7 +26,7 @@ Tempo estimado para concluir esta lição: **10 minutos**
   
 ## <a name="prerequisites"></a>Prerequisites  
 
-Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 3: marcar como tabela de data](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 3: Marcar como tabela de data](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Revisar relações existentes e adicionar novas relações  
 
@@ -50,7 +50,7 @@ Antes de prosseguir com a criação de seu modelo, você deve verificar essas re
   
 2.  Clique na linha sólida entre a **DimCustomer** tabela e o **DimGeography** tabela. A linha sólida entre essas duas tabelas mostra que essa relação está ativa, ou seja, que ele é usado por padrão ao calcular fórmulas DAX.  
   
-    Observe a **GeographyKey** coluna na **DimCustomer** tabela e o **GeographyKey** coluna no **DimGeography** tabela agora ambos cada um aparecem dentro de uma caixa. Essas colunas são usadas na relação. Agora, as propriedades da relação também são exibidas na janela **Propriedades** .  
+    Observe a **GeographyKey** coluna na **DimCustomer** tabela e o **GeographyKey** coluna no **DimGeography** tabela agora ambos cada um aparecem dentro de uma caixa. Essas colunas são usadas na relação. As propriedades da relação agora também aparecem na **propriedades** janela.  
   
     > [!TIP]  
     > Você também pode usar a caixa de diálogo Gerenciar relações para mostrar as relações entre todas as tabelas em um formato de tabela. No Gerenciador de modelos tabulares, clique com botão direito **relacionamentos** > **gerenciar relações**.
@@ -65,7 +65,7 @@ Antes de prosseguir com a criação de seu modelo, você deve verificar essas re
     |Sim|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |Sim|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    Se qualquer uma das relações estiver ausente, verifique se o modelo inclui as tabelas a seguir: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory e FactInternetSales. Se as tabelas da mesma conexão de fonte de dados forem importadas em momentos distintos, eventuais relações entre essas tabelas não serão criadas e deverão ser criadas manualmente. Se nenhuma relação aparecer, significa que não há nenhuma relação na fonte de dados. Você pode criá-los manualmente no modelo de dados.
+    Se qualquer uma das relações estiver ausente, verifique se que o modelo inclui as tabelas a seguir: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory e FactInternetSales. Se as tabelas da mesma conexão de fonte de dados forem importadas em momentos distintos, eventuais relações entre essas tabelas não serão criadas e deverão ser criadas manualmente. Se nenhuma relação aparecer, significa que não há nenhuma relação na fonte de dados. Você pode criá-los manualmente no modelo de dados.
 
 ### <a name="take-a-closer-look"></a>Uma visão mais detalhada
 

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723484"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392689"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47723484"
   
  A tabela a seguir descreve as colunas disponíveis em um servidor v12:  
   
-|Colunas|Tipo de Dados|Description|  
+|Colunas|Tipo de Dados|Descrição|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Hora UTC que indica o início do intervalo de relatório de cinco minutos.|  
 |end_time|**datetime**|Hora UTC que indica o final do intervalo de relatório de cinco minutos.|  
@@ -51,7 +51,7 @@ ms.locfileid: "47723484"
 |max_worker_percent|**decimal(5,2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem do limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de cinco minutos, com base nos exemplos de trabalho simultâneos contagens de 15 segundos.|  
 |max_session_percent|**decimal(5,2)**|Máximo de sessões simultâneas em percentual, com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de cinco minutos, com base em amostras de 15 segundos de contagens de sessões simultâneas.|  
 |dtu_limit|**int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo. |  
-|allocated_storage_in_megabytes|**float**|A quantidade de formatado espaço de arquivo em MB disponibilizada para armazenar dados do banco de dados. Espaço de arquivo formatado também é chamado de espaço de dados alocado.  Para obter mais informações, consulte: [gerenciamento de espaço de arquivo no banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|A quantidade de formatado espaço de arquivo em MB disponibilizada para armazenar dados do banco de dados. Espaço de arquivo formatado também é chamado de espaço de dados alocado.  Para obter mais informações, consulte: [Gerenciamento de espaço de arquivo no banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Para obter mais contexto sobre esses limites e as camadas de serviço, consulte os tópicos [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  

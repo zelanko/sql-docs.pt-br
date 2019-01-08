@@ -1,5 +1,5 @@
 ---
-title: 'Lição suplementar de Analysis Services tutorial: segurança dinâmica | Microsoft Docs'
+title: 'Analysis Services lição suplementar de tutorial: Segurança dinâmica | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 15ff0eebd7cbbb0815544b18f0f042ef411a3657
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084589"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398419"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Lição suplementar – Segurança dinâmica
 
@@ -24,7 +24,7 @@ Nesta lição suplementar, você cria uma função adicional que implementa a se
   
 Para implementar a segurança dinâmica, você pode adicionar uma tabela ao seu modelo que contém os nomes de usuário dos usuários que podem se conectar ao modelo e procurar dados e objetos de modelo. O modelo que você cria usando este tutorial está no contexto da Adventure Works; No entanto, para concluir esta lição, você deve adicionar uma tabela que contém os usuários de seu próprio domínio. As senhas não é necessário para os nomes de usuário que são adicionados. Para criar uma tabela EmployeeSecurity com uma pequena amostra dos usuários de seu próprio domínio, use o recurso Colar, colando dados de funcionários de uma planilha do Excel. Em um cenário do mundo real, a tabela que contém os nomes de usuário normalmente seria uma tabela de banco de dados real como uma fonte de dados; Por exemplo, uma tabela real DimEmployee.  
   
-Para implementar a segurança dinâmica, você usa duas funções DAX: [função USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) e [função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Estas funções, aplicadas em um fórmula de filtro de linha, são definidas em uma nova função. Usando a função LOOKUPVALUE, a fórmula Especifica um valor da tabela EmployeeSecurity. A fórmula então passa esse valor para a função de nome de usuário, que especifica o nome de usuário do usuário conectado pertence a essa função. O usuário pode procurar apenas nos dados especificados pelos filtros de linha da função. Nesse cenário, você especificar que os funcionários de vendas só podem procurar dados de vendas pela Internet para as regiões de vendas no qual eles são membros.  
+Para implementar a segurança dinâmica, você usa duas funções DAX: [Função USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) e [função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Estas funções, aplicadas em um fórmula de filtro de linha, são definidas em uma nova função. Usando a função LOOKUPVALUE, a fórmula Especifica um valor da tabela EmployeeSecurity. A fórmula então passa esse valor para a função de nome de usuário, que especifica o nome de usuário do usuário conectado pertence a essa função. O usuário pode procurar apenas os dados especificados pelos filtros de linha da função. Nesse cenário, você especificar que os funcionários de vendas só podem procurar dados de vendas pela Internet para as regiões de vendas no qual eles são membros.  
   
 Essas tarefas que são exclusivas deste cenário de modelo de tabela do Adventure Works, mas não se aplicariam necessariamente a um cenário do mundo real, são identificadas como tal. Cada tarefa inclui informações adicionais que descrevem o propósito da tarefa.  
   
@@ -42,7 +42,7 @@ Para implementar a segurança dinâmica para este cenário do Adventure Works, v
   
 1.  No Gerenciador de modelos tabulares > **fontes de dados**, sua conexão com o botão direito e, em seguida, clique em **importar novas tabelas**.  
 
-    Se a caixa de diálogo Credenciais de Representação aparecer, digite as credenciais de representação usadas na Lição 2: Adicionar dados.
+    Se a caixa de diálogo de credenciais de representação aparecer, digite as credenciais de representação usadas na lição 2: Adicione dados.
   
 2.  No navegador, selecione a **DimSalesTerritory** tabela e, em seguida, clique em **Okey**.    
   
@@ -116,7 +116,7 @@ Nesta tarefa, ocultar a tabela EmployeeSecurity, impedindo que ela apareça na l
 Nesta tarefa, você deve criar uma função de usuário. Essa função inclui um filtro de linha definindo quais linhas da tabela DimSalesTerritory estão visíveis para os usuários. O filtro é aplicado, em seguida, na direção de relação um-para-muitos a todas as outras tabelas relacionadas a DimSalesTerritory. Você também pode aplicar um filtro que protege toda a tabela EmployeeSecurity de ser consultável por qualquer usuário que seja membro da função.  
   
 > [!NOTE]  
-> A função Sales Employees by Territory criada nesta lição restringe os membros a procurar (ou consultar) apenas dados de vendas para a região de vendas à qual eles pertencem. Se você adicionar um usuário como um membro para funcionários de vendas por função de território que também existe como um membro em uma função criada na [lição 11: criar funções](../tutorial-tabular-1400/as-lesson-11-create-roles.md), você obterá uma combinação de permissões. Quando um usuário for membro de várias funções, as permissões e os filtros de linha definidas para cada função serão cumulativos. Ou seja, o usuário tem as maiores permissões determinadas pela combinação de funções.  
+> A função Sales Employees by Territory criada nesta lição restringe os membros a procurar (ou consultar) apenas dados de vendas para a região de vendas à qual eles pertencem. Se você adicionar um usuário como um membro para funcionários de vendas por função de território que também existe como um membro em uma função criada em [lição 11: Criar funções](../tutorial-tabular-1400/as-lesson-11-create-roles.md), você obterá uma combinação de permissões. Quando um usuário for membro de várias funções, as permissões e os filtros de linha definidas para cada função serão cumulativos. Ou seja, o usuário tem as maiores permissões determinadas pela combinação de funções.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Para criar uma função de usuário Sales Employees by Territory  
   

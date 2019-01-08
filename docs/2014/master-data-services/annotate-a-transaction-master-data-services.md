@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
@@ -13,12 +12,12 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3ec3832046147ef500f61f600f8cdc9221120f59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66e545b5c02ad513724f44b1e6ed22ab94625b8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066396"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778178"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar uma transação (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], anote uma transação quando desejar fornecer detalhes de suporte sobre a transação para objetivos históricos.  
@@ -30,7 +29,7 @@ ms.locfileid: "48066396"
   
 -   Para anotar as transações criadas, você deve ter permissões para acessar a área funcional **Explorer** e ter, no mínimo, a permissão **Atualizar** no objeto do modelo que você deseja anotar.  
   
--   Para anotar transações para todos os usuários, você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** e ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Para anotar transações para todos os usuários, você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** e ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>Para anotar uma transação no Explorer  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48066396"
 5.  Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [As anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
+ [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
  [Transações &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fc4d537901d0352725260fadf1cb4446cb764419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505233"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso de repositórios de teste (SybaseToSQL)
 O repositório de teste do SSMA armazenamentos casos de teste do testador do SSMA e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_sybase_utilities** de **ssmatesterdb_syb** banco de dados.  
@@ -29,17 +29,17 @@ Os seguintes botões estão disponíveis na caixa de diálogo repositório de ca
 -   Clique o **feche** botão para fechar a caixa de diálogo repositório de casos de teste.  
   
 ## <a name="test-cases-repository"></a>Repositório de casos de teste  
-Você pode exibir o repositório de casos de teste clicando **casos de teste...** dos **testador** menu. O SSMA, em seguida, exibe o **repositório de casos de teste** janela da caixa de diálogo com uma lista de casos de teste salvos no **casos de teste** página.  
+Você pode exibir o repositório de casos de teste clicando **casos de teste...**  do **testador** menu. O SSMA, em seguida, exibe o **repositório de casos de teste** janela da caixa de diálogo com uma lista de casos de teste salvos no **casos de teste** página.  
   
 A grade mostra as seguintes informações sobre cada caso de teste:  
   
--   Nome: O nome de caso de teste.  
+-   Nome: O nome do caso de teste.  
   
--   Criado: A caso de teste data de criação.  
+-   Criado: A data de criação do caso de teste.  
   
--   Modificado: O caso de teste Data da última modificação.  
+-   Modificação: O caso de teste Data da última modificação.  
   
--   Descrição: As caso de teste descrições.  
+-   Descrição: As descrições de caso de teste.  
   
 Os seguintes botões estão disponíveis na página de casos de teste:  
   
@@ -52,19 +52,19 @@ Os seguintes botões estão disponíveis na página de casos de teste:
 -   Clique no **executados** para abrir o [executando casos de teste &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) caixa de diálogo e executar o teste selecionado.  
   
 ## <a name="test-results-repository"></a>Repositório de resultados de teste  
-Você pode exibir o repositório de resultados de teste na **resultados de teste** página do **repositório de casos de teste** janela. Abra-o clicando em **resultados de teste...** dos **testador** menu.  
+Você pode exibir o repositório de resultados de teste na **resultados de teste** página do **repositório de casos de teste** janela. Abra-o clicando em **resultados de teste...**  do **testador** menu.  
   
 Você pode usar dois filtros na **resultados de teste** página:  
   
--   O filtro de nome do caso de teste: permite escolher os resultados do teste por nome do caso de teste. Esse filtro **todos os casos de teste** valor permite que a exibição dos resultados de teste para todos os casos de teste.  
+-   O filtro de nome de caso de teste: Permite escolher os resultados do teste por nome do caso de teste. Esse filtro **todos os casos de teste** valor permite que a exibição dos resultados de teste para todos os casos de teste.  
   
--   O filtro de data de execução do caso de teste: filtros de resultados de teste por data de salvar. Esse filtro **todo o período** valor permite exibir os resultados de teste para qualquer data de salvar.  
+-   O filtro de data de execução do caso de teste: Filtros de resultados do teste por data de salvar. Esse filtro **todo o período** valor permite exibir os resultados de teste para qualquer data de salvar.  
   
 As seguintes informações sobre resultados de teste são exibidas na grade.  
   
--   Nome: nome do caso de teste.  
+-   Nome: Nome do caso de teste.  
   
--   Introdução: Data do caso de execução de teste.  
+-   Introdução: Data do caso de teste de execução.  
   
 -   Resultado: Um breve resumo da execução de teste (dica de ferramenta dessa célula exibe um resumo completo de execução de teste).  
   

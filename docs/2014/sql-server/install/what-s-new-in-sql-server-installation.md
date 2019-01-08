@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, what's new
@@ -15,12 +14,12 @@ ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92e363dacc893931073fb53e64db539ecb8b1775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206158"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752058"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novidades na instalação do SQL Server
   O Windows Vista não é um sistema operacional com suporte para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. O Service Pack 1 permanece como o requisito mínimo para sistemas operacionais [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Para obter mais informações sobre os requisitos de sistema operacional, consulte [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  

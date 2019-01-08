@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaa5a06916b0956a93fb1c473667bbb80b55bd15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229896"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750938"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
   O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócio para criar soluções de fluxo de trabalho básicas, como atualizar automaticamente e validar dados e obter o envio de notificações por email, com base nas condições especificadas. Quando você requer processamento mais complexo do que o oferecido pelas ações de fluxo de trabalho internas, use um fluxo de trabalho personalizado. Um fluxo de trabalho personalizado é um assembly .NET que você cria. Quando seu assembly de fluxo de trabalho é chamado, seu código pode executar qualquer ação que sua situação exija. Por exemplo, se seu fluxo de trabalho exigir o processamento de eventos complexos, como aprovações em várias camadas ou árvores de decisão complicadas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para iniciar um fluxo de trabalho personalizado que analisa os dados e determina para onde enviá-lo para aprovação.  
@@ -34,7 +34,7 @@ ms.locfileid: "48229896"
 5.  O Serviço de Integração de Fluxo de Trabalho MDS do SQL Server encaminha os dados para seu assembly de manipulador de fluxo de trabalho.  
   
 > [!NOTE]  
->  Observação: o Serviço de Integração de Fluxo de Trabalho do MDS do SQL Server deve disparar processos simples. Se seu código personalizado exigir processamento complexo, conclua seu processamento em um thread separado ou fora do processo de fluxo de trabalho.  
+>  Observação: Serviço de integração de fluxo de trabalho MDS do SQL Server deve disparar processos simples. Se seu código personalizado exigir processamento complexo, conclua seu processamento em um thread separado ou fora do processo de fluxo de trabalho.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurar Master Data Services para fluxos de trabalho personalizados  
  A criação de um fluxo de trabalho personalizado requer gravação de um código personalizado e configuração do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para transmitir dados de fluxo de trabalho a seu manipulador de fluxo de trabalho. Siga estas etapas para habilitar o processamento de fluxo de trabalho personalizado:  
@@ -60,7 +60,7 @@ ms.locfileid: "48229896"
   
 3.  Adicione 'using Microsoft.MasterDataServices.Core.Workflow;' ao seu arquivo de código C#.  
   
-4.  Herde de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> em sua declaração de classe. A declaração de classe deve ser semelhante a: ‘public class WorkflowTester : IWorkflowTypeExtender’.  
+4.  Herde de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> em sua declaração de classe. A declaração de classe deve ser semelhante a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
   
 5.  Implemente a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo Serviço de Integração de Fluxo de Trabalho MDS SQL Server para iniciar o fluxo de trabalho.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48229896"
   
 1.  Localize Microsoft.MasterDataServices.Workflow.exe.config em \<Sua pasta de instalação>\Master Data Services\WebApplication\bin.  
   
-2.  Adicione as informações de conexão de banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à configuração "ConnectionString". Se a sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar agrupamento com diferenciação de maiúsculas e minúsculas, o nome do banco de dados deverá ser inserido exatamente da mesma forma que no banco de dados. Por exemplo, a marca de configuração completa poderia se parecer com:  
+2.  Adicione as informações de conexão de banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à configuração "ConnectionString". Se a sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar ordenação com diferenciação de maiúsculas e minúsculas, o nome do banco de dados deverá ser inserido exatamente da mesma forma que no banco de dados. Por exemplo, a marca de configuração completa poderia se parecer com:  
   
     ```xml  
     <setting name="ConnectionString" serializeAs="String">  
@@ -79,7 +79,7 @@ ms.locfileid: "48229896"
     </setting>  
     ```  
   
-3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de marca a seu assembly de manipulador de fluxo de trabalho. Por exemplo:  
+3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de tag a seu assembly de manipulador de fluxo de trabalho. Por exemplo:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -134,14 +134,14 @@ ms.locfileid: "48229896"
  Aplique a regra de negócio a seus dados para iniciar o fluxo de trabalho. Para fazer isso, use o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para editar a entidade que contém os membros que você deseja validar. Clique em **Aplicar regras de negócio**. Em resposta à regra de negócio, o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] popula a fila do Service Broker do banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Quando Serviço de Integração de Fluxo de Trabalho MDS do SQL Server verificar a fila, enviará os dados ao assembly de manipulador de fluxo de trabalho especificado e limpará a fila. O assembly de manipulador de fluxo de trabalho executa qualquer ação que você tenha codificado para ele.  
   
 ## <a name="troubleshoot-custom-workflows"></a>Solucionar problemas fluxos de trabalho personalizados  
- Se seu assembly de manipulador de fluxo de trabalho não receber dados, você poderá tentar depurar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server ou exibir a fila do Service Broker.  
+ Se o assembly de manipulador de fluxo de trabalho não receber dados, você poderá tentar depurar o Serviço de Integração de Fluxo de Trabalho do MDS do SQL Server ou exibir a fila do Service Broker.  
   
 ### <a name="debug-sql-server-mds-workflow-integration-service"></a>Depurar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server  
  Para depurar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server, siga estas etapas:  
   
 1.  Use o snap-in Serviços para parar o serviço.  
   
-2.  Abra um prompt de comando, navegue para local do serviço e execute o serviço no modo de console inserindo: Microsoft.MasterDataServices.Workflow.exe - console.  
+2.  Abra um prompt de comando, navegue até o local do serviço e execute o serviço no modo de console inserindo: Microsoft.MasterDataServices.Workflow.exe-console.  
   
 3.  No [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], atualize seu membro e aplique regras de negócios novamente. Logs detalhados são exibidos na janela do console.  
   

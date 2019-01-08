@@ -11,12 +11,12 @@ ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 24186d0caa92b983f17b12c2f317d450af8be2bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbe37d01a3e503d5ffb9aa9dc326d19bb9360d63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506932"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Adicionar uma imagem externa (Construtor de Relatórios e SSRS)
   Imagens externas podem estar em um servidor de relatório em modo nativo ou em modo Integrado do SharePoint, ou em qualquer outro site. Quando você incluir imagens externas em seu relatório, verifique se a imagem existe e se o leitor do relatório tem permissões para acessar a imagem. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md).  
@@ -36,9 +36,9 @@ ms.locfileid: "48081866"
   
 5.  Em **Selecione a origem da imagem**, selecione **Externa**.  
   
-     Para uma imagem que está em um servidor de relatório no modo nativo, digite um caminho relativo até a imagem na caixa **Usar esta imagem** ; por exemplo, /images/image1.jpg.  
+     Para uma imagem que está em um servidor de relatório no modo nativo, digite um caminho relativo até a imagem na caixa **Usar esta imagem**, por exemplo, ../images/image1.jpg.  
   
-     Para uma imagem em um servidor de relatório no modo integrado do SharePoint ou em qualquer outro site, digite uma URL completa para a imagem na caixa **Usar esta imagem**. Por exemplo, http://\<SharePointservername>/\<site>/Documents/images/image1.jpg.  
+     Para uma imagem em um servidor de relatório no modo integrado do SharePoint, ou qualquer outro site, digite uma URL completa para a imagem na **usar esta imagem** caixa-por exemplo, http://\<SharePointservername > /\<site > / Documents/images/Image1.jpg.  
   
      Para obter mais informações, consulte [Especificando caminhos para itens externos &#40;Construtor de Relatórios e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48081866"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Inserir uma imagem em um relatório &#40;relatórios e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Inserir uma imagem em um relatório &#40;Construtor de Relatórios e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Adicionar uma imagem de tela de fundo &#40;Construtor de Relatórios e SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
  [Caixa de diálogo Propriedades da Imagem, Geral &#40;Construtor de Relatórios e SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.vstahostingui.variablepickermodaldialog.f1
@@ -16,17 +15,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e623c8ee9212d8b05aae2bf1448dc201df503d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4cd2b211755884d1b93c19d6b639880ad4bd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201176"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769348"
 ---
 # <a name="select-variables-page"></a>Página Selecionar Variáveis
   Use a caixa de diálogo **Selecionar variáveis** para selecionar uma ou mais variáveis para as propriedades **ReadOnlyVariables** e **ReadWriteVariables** ao configurar uma tarefa Script ou um componente Script.  
   
- Para abrir a caixa de diálogo **Selecionar variáveis** , na página **Script** da caixa de diálogo **Editor de Transformação Scripts** em **Propriedades Personalizadas**, localize a propriedade **ReadOnlyVariables** ou **ReadWriteVariables** e clique no botão de reticências (...) associado a essa propriedade.  
+ Para abrir a caixa de diálogo **Selecionar variáveis**, na página **Script** da caixa de diálogo **Editor de Transformação Scripts** em **Propriedades Personalizadas**, localize a propriedade **ReadOnlyVariables** ou **ReadWriteVariables** e clique no botão de reticências (...) associado a essa propriedade.  
   
 ## <a name="options"></a>Opções  
  Marque a caixa  
@@ -39,6 +38,6 @@ ms.locfileid: "48201176"
  Especifica o tipo de dados de uma variável.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa script &#40;página Script&#41;](../script-task-editor-script-page.md)  
+ [Editor da Tarefa Script &#40;Página Script&#41;](../script-task-editor-script-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurar o uso de espaço em disco (PowerPivot para SharePoint) | Microsoft Docs
+title: Configurar o uso de espaço em disco (Power Pivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024743"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409193"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurar o uso do espaço em disco (PowerPivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34024743"
   
 -   [O que há de novo no Gerenciador de recursos de servidor de arquivos](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guia passo a passo do Gerenciador de recursos de servidor de arquivos para Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guia passo a passo do Gerenciador de recursos de servidor de arquivos para o Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
 -   [Definindo alertas de espaço em disco insuficiente no Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024743"
   
 3.  Em Uso de Disco, defina um valor (em gigabytes) para **Total de espaço em disco** para definir um limite superior na quantidade de espaço usado para fins de cache. O padrão é 0, que permite ao Analysis Services usar todo o espaço disponível em disco.  
   
-4.  Em Uso de Disco, na configuração **Excluir bancos de dados armazenados em cache nas últimas ‘n’ horas** , especifique os critérios usados por último para esvaziar o cache quando o espaço em disco atingir o limite máximo.  
+4.  Uso do disco, nos **excluir armazenados em cache bancos de dados nas últimas ' n'horas** configuração, especifique os critérios usados por último para esvaziar o cache quando o espaço em disco está no limite máximo.  
   
      O padrão são 4 horas, o que significa que todos os bancos de dados que ficaram inativos por 4 horas ou mais serão excluídos do sistema de arquivos. Bancos de dados que estão inativos, mas que permanecem em memória, são descarregados e depois excluídos do sistema de arquivos.  
   

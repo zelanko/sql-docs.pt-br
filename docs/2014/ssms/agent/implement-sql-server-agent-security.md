@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210796"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754228"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar a segurança do SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent permite que o administrador do banco de dados execute cada etapa de trabalho em um contexto de segurança que tem apenas as permissões necessárias para executá-la, as quais são determinadas por um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para definir as permissões para uma etapa de trabalho em particular, crie um proxy com as permissões necessárias e atribua-o à etapa de trabalho. Um proxy pode ser especificado para mais de uma etapa de trabalho. Para etapas de trabalho que requerem as mesmas permissões, use o mesmo proxy.  
@@ -61,7 +61,7 @@ ms.locfileid: "48210796"
   
 -   Quando um TSX se inscrever com um MSX, o sysadmins do MSX obtém controle total sobre a instância de TSX do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   ACE é uma extensão e não pode se chamar. ACE é chamado por Chainer ScenarioEngine.exe, também conhecido como Microsoft.SqlServer.Chainer.Setup.exe, ou pode ser chamado por outro processo do host.  
+-   ACE é uma extensão e não pode se chamar. ACE é chamado por Chainer ScenarioEngine.exe (também conhecido como Microsoft.SqlServer.Chainer.Setup.exe) ou pode ser chamado por outro processo do host.  
   
 -   ACE depende das seguintes DLLs de configuração de propriedade do SSDP, porque essas APIs de DLLs são chamadas pelo ACE:  
   

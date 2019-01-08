@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097566"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767218"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Padrão de Coluna** selecionada no painel de solicitações. Um perfil de Padrão de Coluna informa um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres. Esse perfil pode ajudá-lo a identificar problemas em seus dados, como cadeias de caracteres inválidas, além de sugerir expressões regulares que podem ser usadas posteriormente para validar novos valores. Por exemplo, um perfil de padrão de uma coluna Códigos Postais dos Estados Unidos pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se você vir outras expressões regulares, seus dados provavelmente conterão valores inválidos ou que estão em um formato incorreto.  
@@ -40,7 +39,7 @@ ms.locfileid: "48097566"
  Todos os delimitadores são normalizados em um único espaço como parte do processo de geração de tokens, enquanto os símbolos são retidos.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Compreendendo o uso da tabela de marcas  
- Como opção, é possível agrupar tokens relacionados com uma única marca armazenando marcas e os seus termos relacionados em uma tabela especial criada em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . É necessário que a tabela de marcas tenha duas colunas de cadeias de caracteres: "Marca" e "Termo". Essas colunas podem ser do tipo `char`, `nchar`, `varchar`, ou `nvarchar`, mas não `text` ou `ntext`. É possível combinar várias marcas e os termos correspondentes em uma única tabela. Uma Solicitação de Perfil de Padrão de Coluna pode usar uma só tabela de marcas. É possível usar um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] separado para se conectar à tabela de marcas. Portanto, a tabela de marcas pode estar localizada em um banco de dados diferente ou em um servidor diferente do banco de dados de origem.  
+ Como opção, é possível agrupar tokens relacionados com uma única marca armazenando marcas e os seus termos relacionados em uma tabela especial criada em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . É necessário que a tabela de marcas tenha duas colunas de cadeias de caracteres: "Marca" e "Termo". Essas colunas podem ser dos tipos `char`, `nchar`, `varchar` ou `nvarchar`, mas não `text` ou `ntext`. É possível combinar várias marcas e os termos correspondentes em uma única tabela. Uma Solicitação de Perfil de Padrão de Coluna pode usar uma só tabela de marcas. É possível usar um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] separado para se conectar à tabela de marcas. Portanto, a tabela de marcas pode estar localizada em um banco de dados diferente ou em um servidor diferente do banco de dados de origem.  
   
  Por exemplo, é possível agrupar os valores "Leste", "Oeste", "Norte" e "Sul" que podem aparecer em endereços usando uma única marca: "Direção". A tabela a seguir é um exemplo de uma tabela de marcas desse tipo.  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48097566"
  Para obter mais informações, consulte "Compreendendo o uso da tabela de marcas" anteriormente neste tópico.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa de criação de perfil &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

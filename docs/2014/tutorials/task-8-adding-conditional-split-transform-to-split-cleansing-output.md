@@ -13,12 +13,12 @@ ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa9f529e286951aab08bb2d29f8dcc06f837e8c2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084586"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408954"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tarefa 8: Adicionando a Transformação Divisão Condicional para dividir a saída da limpeza
   Nesta transformação, você adiciona uma Transformação Divisão Condicional ao fluxo de dados. A transformação Divisão Condicional pode rotear linhas para saídas diferentes com base no conteúdo dos dados. Para este tutorial, você deve usar o **Status do registro** coluna de saída da transformação limpeza DQS. Apenas os registros corretos ou corrigidos serão carregados no servidor MDS neste tutorial. Portanto, é verificar se o **Status do registro** é **correto** ou **corrigido**e combine os registros antes de carregar os registros no MDS.  
@@ -48,6 +48,6 @@ ms.locfileid: "48084586"
 10. Clique em **Okey** para fechar o **Editor de transformação de divisão condicional** caixa de diálogo.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 9: Adicionando a Transformação Unir Tudo para combinar registros corretos e corrigidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [Tarefa 9: Adicionando a união transformação tudo para combinar registros corretos e corrigidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurar e exibir o log de diagnóstico e SharePoint | Microsoft Docs
+title: Configurar e exibir o log de diagnóstico e o SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027213"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410413"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar e exibir o log de diagnóstico e SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,12 +76,12 @@ ms.locfileid: "34027213"
   
 -   Para erros que fornecem uma ID de correlação, copie a ID e use-a como um termo de pesquisa no arquivo de log.  
   
--   Procure status de erro "Alto" ou "Exceção." Pesquise por "Serviço do[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ".  
+-   Procure status de erro "Alto" ou "Exceção." Pesquise por "[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service".  
   
 -   Se você souber quando o erro ocorreu, use a data e as informações de tempo para restringir o escopo das entradas pelas quais você deve rolar.  
   
 #### <a name="use-a-log-viewer-application"></a>Use um aplicativo de visualizador de log  
- Embora você possa usar um editor de texto para exibir os logs de rastreamento individualmente, um aplicativo de visualizador de log que permite exibir vários arquivos de log ao mesmo tempo pode ser muito mais útil. Felizmente, há vários aplicativos de visualizador de log de terceiros disponíveis para download no site da Codeplex que pode ajudar a exibir vários logs de rastreamento em um único espaço de trabalho.  
+ Embora você possa usar um editor de texto para exibir os logs de rastreamento individualmente, um aplicativo de visualizador de log que permite exibir vários arquivos de log ao mesmo tempo pode ser muito mais útil. Felizmente, há vários aplicativos de visualizador de log de terceiros disponíveis para download no site da Codeplex que pode ajudar a exibir vários logs de rastreamento em um único workspace.  
   
  As instruções a seguir incluem links para Visualizadores de Log populares de ULS do SharePoint que você pode baixar do Codeplex.  
   

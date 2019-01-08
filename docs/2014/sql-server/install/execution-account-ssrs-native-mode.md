@@ -13,12 +13,12 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a3300f448d9bc3df34369963cd4b697ada44211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150536"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352976"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Conta de execução (modo nativo do SSRS)
   Use esta página para configurar uma conta a ser usada para processamento autônomo. Essa conta é usada em circunstâncias especiais, quando outras fontes de credenciais não estiverem disponíveis:  
@@ -36,9 +36,9 @@ ms.locfileid: "48150536"
  Você pode usar qualquer conta de usuário do Windows. Para obter melhores resultados, escolha uma conta que tenha permissões de leitura e permissões de logon na rede a fim de dar suporte a conexões com outros computadores. Ela deve ter a permissão de leitura em qualquer imagem externa ou arquivo de dados que você deseja usar em um relatório. Não especifique uma conta local, a menos que todas as fontes de dados do relatório e imagens externas estejam armazenadas no computador do servidor de relatório. Use a conta somente para o processamento autônomo de relatórios.  
   
 > [!NOTE]  
->  Se você estiver utilizando o [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] com Advanced Services, deverá configurar esta conta somente se estiver referenciando imagens externas em um relatório e for exigida permissão para acessar o arquivo de imagem. O SQL Server Express não dá suporte a uma conexão de fonte de dados a um servidor remoto. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Se você estiver utilizando o [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] com Advanced Services, deverá configurar esta conta somente se estiver referenciando imagens externas em um relatório e for exigida permissão para acessar o arquivo de imagem. O SQL Server Express não dá suporte a uma conexão de fonte de dados a um servidor remoto. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
- Para abrir essa página, inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selecione **conta de execução** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Conta de Execução** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Especificar uma conta de execução**  

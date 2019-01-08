@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
@@ -14,19 +13,19 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28de150be95c10e8c1c1ef9f4c5280d185c5bc18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174326"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764018"
 ---
 # <a name="delete-a-workload-group"></a>Excluir um grupo de carga de trabalho
   É possível excluir um grupo de carga de trabalho ou um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
   
--   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **Para excluir uma carga de trabalho de grupo, usando:**  [Pesquisador de objetos](#DelWGObjEx), [propriedades do Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Não é possível excluir um grupo de carga de trabalho se ele contiver sessões ativas.  
@@ -68,9 +67,9 @@ ms.locfileid: "48174326"
 ##  <a name="DelWGTSQL"></a> Excluir grupo de cargas de trabalho usando Transact-SQL  
  **Para mover um grupo de cargas de trabalho usando Transact-SQL**  
   
-1.  Execute o `DROP WORKLOAD GROUP` instrução, especificando o nome do grupo de carga de trabalho a ser excluído.  
+1.  Execute a instrução `DROP WORKLOAD GROUP` especificando o nome do grupo de cargas de trabalho a ser excluído.  
   
-2.  Antes de emitir a instrução `ALTER RESOURCE GOVERNOR RECONFIGURE`, verifique se não há solicitações ativas no grupo de cargas de trabalho que está sendo excluído. Se houver solicitações ativas, `ALTER RESOURCE GOVERNOR` falhará. Para evitar esse problema, é possível executar uma das seguintes ações:  
+2.  Antes de emitir a instrução `ALTER RESOURCE GOVERNOR RECONFIGURE`, verifique se não há solicitações ativas no grupo de cargas de trabalho que está sendo excluído. Se houver solicitações ativas, `ALTER RESOURCE GOVERNOR` apresentará falha. Para evitar esse problema, é possível executar uma das seguintes ações:  
   
     -   Aguarde até que todas as sessões do grupo de carga de trabalho estejam desconectadas.  
   

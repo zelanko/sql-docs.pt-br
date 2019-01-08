@@ -13,17 +13,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76a4c29d0fba58eb941bf26781b052966a0bd5b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186736"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416717"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
   Descreve tarefas administrativas comuns para gerenciar FileTables.  
   
-##  <a name="HowToEnumerate"></a> Como obter uma lista de FileTables e objetos relacionados  
+##  <a name="HowToEnumerate"></a> Como: Obter uma lista de FileTables e objetos relacionados  
  Para obter uma lista de FileTables, consulte um das exibições do catálogo a seguir:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   Nenhum dos diretórios em nível de banco de dados na instância estará visível se FILESTREAM for desabilitado no nível de instância.  
   
-###  <a name="HowToDisable"></a> Como desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
+###  <a name="HowToDisable"></a> Como: Desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
  Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Para desabilitar o acesso não transacional**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> Como garantir a visibilidade do FileTables em um banco de dados  
+###  <a name="visible"></a> Como: Certifique-se a visibilidade do FileTables em um banco de dados  
  Um diretório em nível de banco de dados e os diretórios FileTable sob ele estarão visíveis quando todas essa condições forem atendidas  
   
 1.  O FILESTREAM está habilitado no nível de instância.  
@@ -138,7 +138,7 @@ GO
   
 -   O diretório de FileTable, e seus arquivos e diretórios, ficam visíveis no sistema de arquivo e ficam disponíveis para o acesso de E/S de arquivo.  
   
-###  <a name="HowToEnableNS"></a> Como desabilitar e reabilitar o namespace FileTable no nível de tabela  
+###  <a name="HowToEnableNS"></a> Como: Desabilitar e reabilitar o namespace FileTable no nível de tabela  
  Chame a instrução ALTER TABLE com a opção **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Para desabilitar o namespace da FileTable**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  A eliminação de identificadores de arquivos abertos pode levar os usuários a perderem dados não salvos. Esse comportamento é consistente com o comportamento do próprio sistema de arquivos.  
   
-###  <a name="HowToListOpen"></a> Como obter uma lista de identificadores de arquivos abertos associados a um FileTable  
+###  <a name="HowToListOpen"></a> Como: Obter uma lista de identificadores de arquivos abertos associados a um FileTable  
  Consulte a exibição de catálogo [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql).  
   
 ```tsql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Como eliminar identificadores de arquivos abertos associados a um FileTable  
+###  <a name="HowToKill"></a> Como: Eliminar identificadores de arquivos abertos associados a um FileTable  
  Chame o procedimento armazenado [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) com os argumentos apropriados para eliminar todos os identificadores de arquivos abertos no banco de dados ou na FileTable, ou para eliminar um identificador específico.  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Como identificar os bloqueios mantidos por FileTables  
+###  <a name="HowToIdentifyLocks"></a> Como: Identificar os bloqueios mantidos por FileTables  
  A maioria dos bloqueios feitos por FileTables correspondem a arquivos abertos por aplicativos.  
   
  **Para identificar arquivos abertos e os bloqueios associados**  
@@ -220,7 +220,7 @@ GO
   
  Muitas ferramentas e operações administrativas, (inclusive backup, backup de log e replicação transacional) leem dados transacionalmente consistentes lendo os logs de transações. Neste momento, eles leem quaisquer dados FILESTREAM atualizados como parte de uma transação. Quando o acesso não transacional não está habilitado no nível de banco de dados, essas ferramentas e operações funcionam com total consistência transacional.  
   
- Entretanto, quando o acesso completo não transacional estiver habilitado, uma FileTable poderá conter dados que foram atualizados mais recentemente (por meio de uma atualização não transacional) do que a transação que a ferramenta ou o processo está lendo no log de transação. Isso significa que uma operação de restauração pontual em uma transação específica pode conter dados FILESTREAM mais recentes do que aquela transação. Esse é o comportamento esperado quando são permitidas atualizações não transacionais em FileTables.  
+ Entretanto, quando o acesso completo não transacional estiver habilitado, uma FileTable poderá conter dados que foram atualizados mais recentemente (por meio de uma atualização não transacional) do que a transação que a ferramenta ou o processo está lendo no log de transação. Isso significa que uma operação de restauração de "ponto no tempo" em uma transação específica pode conter dados FILESTREAM mais recentes do que aquela transação. Esse é o comportamento esperado quando são permitidas atualizações não transacionais em FileTables.  
   
 ##  <a name="Monitor"></a> Recursos do SQL Server Profiler e FileTables  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler pode capturar as operações Abrir Arquivo e Fechar Arquivo do Windows no rastreamento gerado para arquivos que são armazenados em um FileTable.  

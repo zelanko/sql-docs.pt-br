@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c22ac7cd34a6cc762da47ec00fd42d183dbac045
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763199"
 ---
 # <a name="name-element-for-index-dta"></a>Elemento de nome para índice (DTA)
   Especifica um nome para um índice na configuração especificada pelo usuário.  
@@ -36,17 +35,17 @@ ms.locfileid: "48116246"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Exigido uma vez para cada `Index` elemento.|  
+|**Ocorrência**|Necessário uma vez para cada elemento `Index`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de índice &#40;DTA&#41;](index-element-dta.md)|  
+|**Elemento pai**|[Elemento Index &#40;DTA&#41;](index-element-dta.md)|  
 |**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  

@@ -13,12 +13,12 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506350"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Usar RDS com pool de conexões ODBC
 Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no Internet Information Services (IIS) do pool de conexão para alcançar a manipulação de alto desempenho de carga do cliente. Pooling de Conexão é um Gerenciador de recursos para conexões, mantendo o estado aberto em conexões usadas com frequência.  
@@ -49,7 +49,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 2.  Clique duas vezes em continuar.  
   
-3.  No Microsoft SQL Server — a caixa de diálogo Opções, selecione o suporte de rede de alteração e, em seguida, clique em continuar.  
+3.  No Microsoft SQL Server-caixa de diálogo de opções, selecione o suporte de rede de alteração e, em seguida, clique em continuar.  
   
 4.  Verifique se que a caixa de seleção de soquetes TCP/IP está selecionada e clique em Okey.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.facet.f1
@@ -12,12 +12,12 @@ ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7bbee8686194fcf410afef28c309773f887c2ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758648"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Caixa de diálogo Propriedades de Faceta, página Geral
   Use esta caixa de diálogo para exibir as propriedades de uma faceta de Gerenciamento Baseado em Políticas. Cada faceta pode ser se aplicada a um ou mais tipos de destino. Por exemplo: servidor, banco de dados ou tabela. Use esta página para exibir os tipos de destino relacionados a essa faceta. As propriedades de uma faceta são definidas quando ela é criada e não podem ser alteradas com o uso desta página.  

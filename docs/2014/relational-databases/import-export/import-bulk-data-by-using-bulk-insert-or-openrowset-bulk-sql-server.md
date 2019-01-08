@@ -21,12 +21,12 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 528f05021626fe22543f8ddcd3ed06215d618b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dec3a2821e2b92d431680b49e37a7b9819887b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505549"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importar Dados em Massa Usando BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
   Este tópico fornece uma visão geral de como usar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e a instrução INSERT...SELECT * FROM OPENROWSET(BULK...) para importação em massa de dados de um arquivo de dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico também descreve considerações de segurança sobre o uso de BULK INSERT e OPENROWSET(BULK...) e o uso desses métodos para importação em massa de uma fonte de dados remotos.  
@@ -64,14 +64,14 @@ ms.locfileid: "48177468"
   
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>Função OPENROWSET(BULK...)  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Função  
  O provedor de conjuntos de linhas em massa OPENROWSET é acessado chamando a função OPENROWSET e especificando a opção BULK. A função OPENROWSET(BULK...) permite acessar dados remotos conectando-se a uma fonte de dados remota, como um arquivo de dados, por meio de um provedor OLE DB.  
   
  Para importar dados em massa, chame OPENROWSET (BULK...) de uma cláusula SELECT...FROM dentro de uma instrução INSERT. A sintaxe básica para importar dados em massa é:  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Quando usada em uma instrução INSERT, OPENROWSET(BULK...) dá suporte a dicas de tabela. Além das dicas de tabela comuns, como TABLOCK, a cláusula BULK pode aceitar as seguinte dicas de tabela especializadas: IGNORE_CONSTRAINTS (ignora somente as restrições CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS e KEEPIDENTITY. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
+ Quando usada em uma instrução INSERT, OPENROWSET(BULK...) dá suporte a dicas de tabela. Além das dicas de tabela comum, como TABLOCK, a cláusula BULK pode aceitar as seguintes dicas de tabela especializadas: IGNORE_CONSTRAINTS (ignora somente as restrições CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS e KEEPIDENTITY. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
  Para obter informações sobre usos adicionais da opção de BULK, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

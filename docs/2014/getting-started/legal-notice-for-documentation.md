@@ -16,15 +16,15 @@ ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439388"
 ---
 # <a name="legal-notice-for-documentation"></a>Aviso legal para documentação
-  Este documento é fornecido "como está". As informações e opiniões expressas neste documento, inclusive URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio. Você assume o risco de usá-las.  
+  Este documento é fornecido "no estado em que se encontra". As informações e opiniões expressas neste documento, inclusive URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio. Você assume o risco de usá-las.  
   
  Alguns exemplos representados aqui são fornecidos apenas para ilustração e são fictícios. Nenhuma associação real ou conexão é desejada ou deve ser inferida.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "48228496"
   
  Em alguns casos, um recursos específico do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] não foi suficientemente testado ou desenvolvido e não é destinado para seu uso. Tais recursos normalmente estão lá como espaços reservados. Portanto, determinados recursos incluídos no software não estão documentados. Os recursos que não estão documentados ou que estão incluídos como uma notação para uso interno da Microsoft não são destinados para seu uso e não é dado suporte pelos Serviços de Atendimento ao Cliente da Microsoft. A menos que a documentação do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] indique o contrário, o conteúdo de terceiros, incluindo problemas resultantes do uso de tal conteúdo de terceiros com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], não tem suporte dos Serviços de Atendimento ao Cliente da Microsoft e pode resultar em perda de dados. Os Serviços de Atendimento ao Cliente da Microsoft também não dão suporte a bancos de dados ou aplicativos que aproveitem ou usem pontos de entrada não documentados, como APIs não documentadas, incluindo, mas não se limitando a: procedimentos armazenados, procedimentos armazenados estendidos, funções, exibições, tabelas, colunas, propriedades ou metadados.  
   
- Atualizações de servidor e banco de dados para versões futuras do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] relativos a aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados também podem não funcionar e não têm suporte. Uso de recursos do SQL Server e funcionalidades incluídos no Microsoft SQL Server que não estão documentados a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] não há suporte para a documentação para seu uso e tal uso pode causar perda de dados.  
+ Atualizações de servidor e banco de dados para versões futuras do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] relativos a aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados também podem não funcionar e não têm suporte. O uso de recursos e funcionalidade do SQL Server incluídos no Microsoft SQL Server que não estejam incluídos na documentação do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para seu uso não tem suporte, e tal uso pode causar perda de dados.  
   
   

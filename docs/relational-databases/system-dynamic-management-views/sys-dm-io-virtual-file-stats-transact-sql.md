@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741854"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407293"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
+ **APLICA-SE A:** SQL Server (começando com o 2008), o banco de dados SQL
 
  ID do banco de dados. *database_id* é int, sem padrão. São entradas válidas o número de ID de um banco de dados ou NULL. Quando NULL for especificado, serão retornados todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -66,7 +66,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
+**APLICA-SE A:** SQL Server (começando com o 2008), o banco de dados SQL
  
 ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número de ID de um arquivo ou NULL. Quando NULL for especificado, serão retornados todos os arquivos do banco de dados.  
   
@@ -74,7 +74,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados.</br></br>Para o SQL Data Warehouse, esse é o nome do banco de dados armazenado no nó que é identificado por pdw_node_id. Cada nó tem um banco de dados do tempdb que tem 13 arquivos. Cada nó também tem um banco de dados por distribuição, e cada banco de dados de distribuição tem 5 arquivos. Por exemplo, se cada nó contém 4 distribuições, os resultados mostram 20 arquivos de banco de dados de distribuição por pdw_node_id. 
 |**database_id**|**smallint**|ID do banco de dados.|  
@@ -110,13 +110,13 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retornar as estatísticas para o arquivo em tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>b. Retornar as estatísticas para o arquivo em tempdb
 
 **Aplica-se a:** Azure SQL Data Warehouse
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

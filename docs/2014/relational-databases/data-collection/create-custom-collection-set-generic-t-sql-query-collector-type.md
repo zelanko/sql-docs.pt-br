@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - T-SQL Query collector type
@@ -13,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 454f5c9dad5872c84774e184813b221cdb99767a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b0575c3be5e0a5ce30267f32934ff073c5c3d86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748878"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico (Transact-SQL)
   É possível criar um conjunto de coleta personalizado com itens de coleta que usam o tipo de coletor de Consultas T-SQL Genérico, usando os procedimentos armazenados fornecidos com o coletor de dados. A execução dessa tarefa envolve o uso do Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para aplicar os seguintes procedimentos:  
@@ -163,6 +163,6 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Gerenciar Agendas](../../ssms/agent/manage-schedules.md)   
- [Iniciar ou parar um conjunto de coleta](start-or-stop-a-collection-set.md)  
+ [Iniciar ou interromper um conjunto de coleta](start-or-stop-a-collection-set.md)  
   
   

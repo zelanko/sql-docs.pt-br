@@ -16,12 +16,12 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c5697fea6bea90407686f909e6c5cbafa2e2877b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66ee754963d6020b39f046ff6a5d73ea46450437
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120786"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407584"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
   No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.  
@@ -45,7 +45,7 @@ ms.locfileid: "48120786"
   
 -   Equilibrar as demandas de processamento de relatórios feitas pelo servidor agendando o processamento do relatório e especificando quais podem ser executados sob demanda e quais serão carregados por meio do cache.  
   
--   Fornecer permissão para executar tarefas de gerenciamento usando funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções.  
+-   Fornece permissão para executar tarefas de gerenciamento usando funções predefinidas: **Administrador do sistema** e **Gerenciador de conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções.  
   
  Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios. Para obter mais informações, consulte [Ferramentas do Reporting Services](../tools/reporting-services-tools.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48120786"
 |![Ícone Fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
- Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  
+ Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. Permissão para mover um item é concedida quando as tarefas a seguir são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciam pastas" e "Gerenciar fontes de dados".  
   
 ##  <a name="bkmk_Folders"></a> Pastas  
  Uma hierarquia de pastas é usada para tratar itens que são armazenados e gerenciados por um servidor de relatório.  Por padrão, a estrutura de pastas consiste em um nó raiz denominado Página Inicial e em pastas reservadas que dão suporte ao recurso opcional Meus Relatórios. Pastas adicionais são definidas pelo usuário. As pastas do servidor de relatórios serão úteis se você quiser conceder o mesmo nível de acesso a vários itens. As permissões que você define na pasta podem ser herdadas por itens na pasta e por pastas adicionais ramificadas dessa pasta. Por exemplo, você pode criar um conjunto de pastas na pasta Base, atribuir permissões de equipe a cada pasta e permitir que os membros da equipe personalizem pastas sob a pasta de equipe quando necessário.  
@@ -99,7 +99,7 @@ ms.locfileid: "48120786"
 |------------|-------------|  
 |Base|O nó raiz da hierarquia de pastas.|  
 |Usuários|Esta pasta aparece quando você habilita o recurso Meus Relatórios. Ela contém subpastas para todos os usuários que usam o recurso Meus Relatórios e está acessível somente para administradores do servidor de relatórios. Cada nome de subpasta corresponde ao nome do usuário.|  
-|Meus Relatórios|Fornece uma área de trabalho pessoal para cada usuário.|  
+|Meus Relatórios|Fornece um workspace pessoal para cada usuário.|  
   
 ### <a name="creating-folders"></a>Criando pastas  
  Você pode criar uma pasta em qualquer pasta disponível na hierarquia.  
@@ -119,7 +119,7 @@ ms.locfileid: "48120786"
  A visibilidade de um item em uma pasta depende das atribuições de função (isto é, da permissão para exibir um item) e das opções de exibição habilitadas para uma pasta. No Gerenciador de Relatórios, você pode definir a página Conteúdo para exibição de lista ou de detalhes. Em alguns casos, um relatório ou item pode estar oculto na exibição de lista. Não se esqueça de exibir uma pasta em detalhes antes de excluir seu conteúdo.  
   
 ##  <a name="bkmk_Resources"></a> Recursos  
- Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
+ Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, confira [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Adicionando e exibindo um recurso  
  Para adicionar um recurso a um servidor de relatórios, você carrega ou publica um arquivo:  
@@ -148,7 +148,7 @@ ms.locfileid: "48120786"
  Para obter mais informações, consulte [Atualizar um recurso &#40;Gerenciador de Relatórios&#41;](update-a-resource-report-manager.md).  
   
 ##  <a name="bkmk_MyReports"></a> Meus Relatórios  
- A pasta Meus Relatórios é um espaço de trabalho pessoal para cada usuário que efetua logon em um servidor de relatório com uma conta de domínio válida. Essa pasta de finalidade especial armazena relatórios de trabalhos em andamento, relatórios que não serão distribuídos amplamente ou relatórios que foram modificados para atender a uma necessidade. Não é possível restringir o número ou o tamanho dos itens armazenados em uma pasta Meus Relatórios, nem configurá-la para ser compartilhada entre usuários.  
+ A pasta Meus Relatórios é um workspace pessoal para cada usuário que efetua logon em um servidor de relatório com uma conta de domínio válida. Essa pasta de finalidade especial armazena relatórios de trabalhos em andamento, relatórios que não serão distribuídos amplamente ou relatórios que foram modificados para atender a uma necessidade. Não é possível restringir o número ou o tamanho dos itens armazenados em uma pasta Meus Relatórios, nem configurá-la para ser compartilhada entre usuários.  
   
  Tecnicamente, a pasta Meus Relatórios mapeia o nome de uma pasta virtual que cada usuário vê (Meus Relatórios) para uma pasta Pastas dos Usuários mestre e uma subpasta exclusiva baseada no nome de usuário. Quando um usuário acessa sua pasta Meus Relatórios, na realidade, ele é redirecionado para sua subpasta em Pastas dos Usuários. Cada subpasta armazena os relatórios e itens que um usuário adiciona à sua pasta Meus Relatórios.  
   

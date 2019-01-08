@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice d: tipos de dados | Microsoft Docs'
+title: 'Apêndice d: Tipos de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfaecb5b3705e2c5affe8c2cda3e42eeaddf4156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669374"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504024"
 ---
-# <a name="appendix-d-data-types"></a>Apêndice D: Tipos de dados
-ODBC define dois conjuntos de tipos de dados: SQL tipos de dados e tipos de dados C. Tipos de dados SQL indicam o tipo de dados dos dados armazenados na fonte de dados. Tipos de dados C indicam o tipo de dados dos dados armazenados em buffers do aplicativo.  
+# <a name="appendix-d-data-types"></a>Apêndice d: Tipos de dados
+ODBC define dois conjuntos de tipos de dados: Tipos de dados SQL e tipos de dados C. Tipos de dados SQL indicam o tipo de dados dos dados armazenados na fonte de dados. Tipos de dados C indicam o tipo de dados dos dados armazenados em buffers do aplicativo.  
   
  Tipos de dados SQL são definidos por cada DBMS de acordo com o padrão SQL-92. Para cada tipo de dados SQL especificado no padrão SQL-92, ODBC define um identificador de tipo, que é um **#define** valor que é passado como um argumento em funções ODBC ou retornada nos metadados de um conjunto de resultados. O SQL-92 somente tipos de dados não suportados pelo ODBC são BIT (o tipo de ODBC SQL_BIT tem características diferentes), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. Drivers são responsáveis por mapeamento de tipos de dados do SQL de específico da fonte de dados para identificadores de tipo de dados SQL ODBC e identificadores de tipo de dados SQL específica do driver. O tipo de dados SQL é especificado no campo SQL_DESC_CONCISE_TYPE de um descritor de implementação.  
   

@@ -14,12 +14,12 @@ ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603e88703f7a2554ab874a3e5fdd8b4b1a87cda0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ee9cd3cf92c61030211c4b00be88d3f14dfd9e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507069"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (Driver do dBASE)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47833844"
   
  **SQLGetInfo** dá suporte ao tipo de informações SQL_FILE_USAGE. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
   
--   SQL_FILE_NOT_SUPPORTED — O driver não é um driver de camada única.  
+-   SQL_FILE_NOT_SUPPORTED - o driver não é um driver de camada única.  
   
--   SQL_FILE_TABLE — Um driver de camada única trata arquivos em uma fonte de dados como tabelas.  
+-   SQL_FILE_TABLE - um driver de camada única trata arquivos em uma fonte de dados como tabelas.  
   
--   SQL_FILE_QUALIFIER — Um driver de camada única trata arquivos em uma fonte de dados como um qualificador.  
+-   SQL_FILE_QUALIFIER - um driver de camada única trata arquivos em uma fonte de dados como um qualificador.  
   
  O driver ODBC retorna SQL_FILE_TABLE porque cada arquivo é uma tabela.  
   

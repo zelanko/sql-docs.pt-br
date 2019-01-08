@@ -19,26 +19,26 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734025"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407143"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna as informações sobre todas as esperas de trava organizadas por classe.  
   
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_latch_stats**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nome da classe da trava.|  
 |waiting_requests_count|**bigint**|Número de esperas em travas nessa classe. O contador é incrementado no início de uma espera de trava.|  
-|wait_time_ms|**bigint**|Tempo de espera total, em milissegundos, nas travas dessa classe.<br /><br /> **Observação:** esta coluna é atualizada a cada cinco minutos, durante uma espera de trava e no final de uma espera de trava.|  
+|wait_time_ms|**bigint**|Tempo de espera total, em milissegundos, nas travas dessa classe.<br /><br /> **Observação:** Esta coluna é atualizada a cada cinco minutos durante uma espera de trava e ao término de uma espera de trava.|  
 |max_wait_time_ms|**bigint**|Tempo máximo durante qual um objeto de memória esperou essa trava. Se o valor for exageradamente alto, pode indicar um deadlock interno.|  
 |pdw_node_id|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
@@ -74,7 +74,7 @@ GO
   
  A tabela a seguir contém breves descrições das diversas classes de trava.  
   
-|Classe de trava|Description|  
+|Classe de trava|Descrição|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Usada internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para inicializar a sincronização da criação de um buffer de anel de alocação.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Usada para inicializar a sincronização de caches internos de espaço livre para heaps.|  
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Somente para uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Somente para uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Somente para uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Usado para sincronizar um mapa de nível de instância de filas de espera. Existe uma fila por tupla de ID, a versão do banco de dados e a ID de fila do banco de dados. A contenção em travas dessa classe pode ocorrer quando o número de conexões é: em um WAITFOR(RECEIVE) aguardar o estado; chamar WAITFOR(RECEIVE); tempo limite WAITFOR; recebendo uma mensagem. Confirmar ou reverter a transação que contém o WAITFOR(RECEIVE); Você pode reduzir a contenção, reduzindo o número de threads em um estado de espera WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Usado para sincronizar um mapa de nível de instância de filas de espera. Existe uma fila por tupla de ID, a versão do banco de dados e a ID de fila do banco de dados. A contenção em travas dessa classe pode ocorrer quando o número de conexões é: Em um WAITFOR(RECEIVE) aguardar o estado. chamar WAITFOR(RECEIVE); tempo limite WAITFOR; recebendo uma mensagem. Confirmar ou reverter a transação que contém o WAITFOR(RECEIVE); Você pode reduzir a contenção, reduzindo o número de threads em um estado de espera WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Somente para uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Somente para uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Somente para uso interno.|  
 |SERVICE_BROKER_MIRROR_ROUTE|Somente para uso interno.|  
 |TRACE_ID|Somente para uso interno.|  
 |TRACE_AUDIT_ID|Somente para uso interno.|  
-|TRACE|Somente para uso interno.|  
+|rastreamento|Somente para uso interno.|  
 |TRACE_CONTROLLER|Somente para uso interno.|  
 |TRACE_EVENT_QUEUE|Somente para uso interno.|  
 |TRANSACTION_DISTRIBUTED_MARK|Somente para uso interno.|  

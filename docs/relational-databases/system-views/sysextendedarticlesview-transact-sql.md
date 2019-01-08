@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysextendedarticlesview_TSQL
@@ -19,24 +18,24 @@ ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe6c88ac0dc8b131323282478a2330525d0fcf9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648184"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757028"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **sysextendedarticlesview** exibição fornece informações sobre artigos publicados. Essa exibição é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|A coluna de identidade que fornece um número de ID exclusivo para o artigo.|  
 |**creation_script**|**nvarchar(255)**|O script de criação de esquema para o artigo.|  
 |**del_cmd**|**nvarchar(255)**|O comando para executar em DELETE; caso contrário, construir do log.|  
-|**Descrição**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
+|**description**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
 |**dest_table**|**nvarchar(128)**|O nome da tabela de destino.|  
 |**filtro**|**int**|O identificador de objeto do procedimento armazenado usado para particionamento horizontal.|  
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo, usado para filtragem horizontal.|  

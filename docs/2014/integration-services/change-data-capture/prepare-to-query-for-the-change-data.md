@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756988"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparar para consultar os dados de alterações
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a terceira e última tarefa servem para consultar as alterações dos dados e adicionar uma tarefa de fluxo de dados.  
@@ -125,7 +124,7 @@ ms.locfileid: "48173246"
   
         ```  
   
-5.  Deixe a linha de código que retorna padrão `DtsExecResult.Success` da execução do script.  
+5.  Tire a linha padrão de código que retorna `DtsExecResult.Success` da execução do script.  
   
 6.  Feche o ambiente de desenvolvimento de script e o **Editor da Tarefa Script**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173246"
         ```  
   
         > [!NOTE]  
-        >  O `else` cláusula neste exemplo gera uma consulta para o carregamento inicial de dados de alteração, passando um valor nulo para a data e hora de início. Este exemplo não indica o cenário em que as alterações realizadas antes da captura dos dados de alteração também tenham que ser carregadas para o Data Warehouse.  
+        >  Neste exemplo, a cláusula `else` gera uma consulta para a carga inicial dos dados de alteração indicando um valor nulo para a data e hora de início. Este exemplo não indica o cenário em que as alterações realizadas antes da captura dos dados de alteração também tenham que ser carregadas para o Data Warehouse.  
   
 3.  Na página **Mapeamento de Parâmetros** do **Editor de Tarefa Executar SQL**, faça o seguinte mapeamento:  
   

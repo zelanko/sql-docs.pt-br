@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518264"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador de nuvem para SQL Server
   O serviço de Adaptador de Nuvem é criado como parte do provisionamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma máquina virtual do Windows Azure. O serviço de Adaptador de Nuvem gera um certificado SSL autoassinado como parte da sua primeira execução e é executado como uma conta **Sistema Local** . Ele gera um arquivo de configuração que é usado para autoconfiguração. O Adaptador de Nuvem também cria uma regra de Firewall do Windows para permitir suas conexões TCP de entrada na porta padrão 11435.  
@@ -29,11 +29,11 @@ ms.locfileid: "48157986"
 ## <a name="cloud-adapter-requirements"></a>Requisitos do Adaptador de Nuvem  
  Observe os requisitos a seguir para instalação, habilitação e execução do Adaptador de Nuvem para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   O adaptador de nuvem é compatível com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 e superior. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, o Adaptador de Nuvem para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exige SQL Management Objects para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
+-   O Adaptador de Nuvem tem suporte com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 e superior. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, o Adaptador de Nuvem para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exige SQL Management Objects para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
 -   O serviço Web do Adaptador de Nuvem é executado como uma conta **Sistema Local** e verifica as credenciais do cliente antes de executar qualquer tarefa. As credenciais fornecidas pelo cliente devem pertencer à conta do usuário que seja membro do local **administradores** grupo no computador remoto.  
   
--   O Adaptador de Nuvem oferece suporte somente à Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   O Adaptador de Nuvem oferece suporte somente à Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   O Adaptador de Nuvem usa a conta do administrador local da VM para executar comandos no computador local, e não uma conta sa.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48157986"
 ## <a name="cloud-adapter-configuration-settings"></a>Definições de configuração do Adaptador de Nuvem  
  Use os detalhes de configuração a seguir para modificar as configurações de um Adaptador de Nuvem.  
   
--   **Caminho padrão para o arquivo de configuração** – C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Caminho padrão para o arquivo de configuração** -C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Parâmetros do arquivo de configuração** -  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48157986"
   
     -   \</ Configuração >  
   
--   **Detalhes do certificado** – o certificado tem os seguintes valores:  
+-   **Detalhes do certificado** -o certificado tem os seguintes valores:  
   
     -   Assunto – "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
   
@@ -81,11 +81,11 @@ ms.locfileid: "48157986"
 ## <a name="cloud-adapter-troubleshooting"></a>Solução de problemas do Adaptador de Nuvem  
  Use as informações a seguir para solucionar problemas do Adaptador de Nuvem para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   **Tratamento de erros e log** – as mensagens de status e erros são gravadas no Log de Eventos do Aplicativo.  
+-   **Tratamento de erros e registro em log** -mensagens de status e erros são gravadas no Log de eventos do aplicativo.  
   
--   **Rastreamento, eventos** – todos os eventos são gravados no Log de Eventos do Aplicativo.  
+-   **Rastreamento, eventos** -todos os eventos são gravados no Log de eventos do aplicativo.  
   
--   **Controle, configuração** – Use o arquivo de configuração localizado em: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Controle, configuração** -Use o arquivo de configuração localizado em:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Erro|ID do erro|Causa|Resolução|  
 |-----------|--------------|-----------|----------------|  

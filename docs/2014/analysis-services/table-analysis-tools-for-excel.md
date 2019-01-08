@@ -14,12 +14,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049066"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391894"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Ferramentas de Análise de Tabela para Excel
   As ferramentas de mineração de dados das **analisar** barra de ferramentas são a maneira mais fácil para começar com a mineração de dados. Cada ferramenta analisa automaticamente a distribuição e o tipo de dados, e define os parâmetros para garantir que os resultados sejam válidos. Não é necessário selecionar um algoritmo ou configurar parâmetros complexos.  
@@ -34,7 +34,7 @@ ms.locfileid: "48049066"
  O **analisar os influenciadores principais** ferramenta usa o algoritmo Microsoft Naïve Bayes.  
   
  [Detectar categorias &#40;ferramentas de análise de tabela para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- Essa ferramenta permite que você adicione qualquer conjunto de dados e aplique clustering para localizar agrupamentos de dados. É útil para encontrar semelhanças e para criar grupos para mais análise.  
+ Essa ferramenta permite que você adicione qualquer conjunto de dados e aplique clustering para localizar agrupamentos de dados. É útil para encontrar semelhanças e para criar grupos para analisar mais profundamente.  
   
  O **detectar categorias** ferramenta usa o algoritmo Microsoft Clustering.  
   

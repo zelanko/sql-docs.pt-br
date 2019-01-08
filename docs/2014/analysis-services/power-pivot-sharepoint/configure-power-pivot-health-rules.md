@@ -11,12 +11,12 @@ ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbeb44d09f9825a640bc849f4127751ef39aa72c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118526"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401471"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Regras de integridade do PowerPivot - Configurar
   O PowerPivot para SharePoint inclui regras de integridade do SharePoint que o ajudam a monitorar e solucionar problemas de disponibilidade e configuração do servidor. Regras de integridade que se aplicam ao PowerPivot para SharePoint aparecem na página Revisar definições de regra.  
@@ -29,10 +29,10 @@ ms.locfileid: "48118526"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Observação:** as definições de regra de integridade são configuradas separadamente para a instância do SQL Server Analysis Services e o aplicativo de serviço PowerPivot. Use as instruções neste tópico para configurar as regras de integridade para cada serviço. Para uma implantação do SharePoint 2013, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] usa apenas o aplicativo de serviço. Portanto, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala diferentes conjuntos de regras de integridade para diferentes versões do SharePoint. Consulte a coluna "versão" no tópico [referência de regras de integridade &#40;PowerPivot para SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou você pode executar o seguinte comando do Windows PowerShell para ver as regras instaladas.  
+ **Observação:** As definições de regra de integridade são configuradas separadamente para a instância do SQL Server Analysis Services e o aplicativo de serviço PowerPivot. Use as instruções neste tópico para configurar as regras de integridade para cada serviço. Para uma implantação do SharePoint 2013, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] usa apenas o aplicativo de serviço. Portanto, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala diferentes conjuntos de regras de integridade para diferentes versões do SharePoint. Consulte a coluna "versão" no tópico [referência de regras de integridade &#40;PowerPivot para SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou você pode executar o seguinte comando do Windows PowerShell para ver as regras instaladas.  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **Neste tópico:**  
@@ -74,27 +74,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Alocação insuficiente de recursos da CPU (o padrão é 80%)  
      Esta regra de integridade será disparada se os recursos de CPU usados pelo processo de servidor do Analysis Services (msmdsrv.exe) permanecer em 80% ou acima por um período de 4 horas (conforme especificado pela configuração de Intervalo de Coleta de Dados).  
   
-     Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: o Analysis Services não tem recursos suficientes de CPU para executar as operações solicitadas.**  
+     Essa configuração corresponde à definição de regra a seguir sobre o **rever problemas e soluções** página: **PowerPivot: Analysis Services não tem recursos suficientes de CPU para executar as operações solicitadas.**  
   
      Recursos insuficientes da CPU no sistema (o padrão é 90%)  
      Esta regra de integridade será disparada se os recursos da CPU para o servidor permanecerem em 90% ou acima por mais de 4 horas (conforme especificado pela configuração do Intervalo de Coleta de Dados). A utilização de CPU global é medida como parte do algoritmo de balanceamento de carga baseado em integridade que monitora o uso da CPU como uma medida da integridade de servidor.  
   
-     Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: o uso geral da CPU é muito alto.**  
+     Essa configuração corresponde à definição de regra a seguir sobre o **rever problemas e soluções** página: **PowerPivot: Em geral, o uso da CPU é muito alto.**  
   
      Limite de memória insuficiente (o padrão é 5%)  
      Em um servidor de aplicativos do SharePoint, uma instância do SQL Server Analysis Services deve ter sempre uma pequena quantidade de memória reservada que nunca é usada. Como o servidor é associado à memória na maioria de suas operações, o servidor apresenta execução melhor quando não é executado no limite máximo. Os 5% de memória não usados são calculados como um percentual de memória alocada para o Analysis Services. Por exemplo, se você tiver 200 GB de memória total, e for alocado 80% (ou 160 GB) para o Analysis Services, os 5% de memória não usada serão 5% de 160 GB (ou 8 GB).  
   
-     Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: o Analysis Services não tem memória suficiente para executar as operações solicitadas.**  
+     Essa configuração corresponde à definição de regra a seguir sobre o **rever problemas e soluções** página: **PowerPivot: Analysis Services não tem memória suficiente para executar as operações solicitadas.**  
   
      Número máximo de conexões (o padrão é 100).  
      Esta regra de integridade será disparada se o número de conexões para a instância do Analysis Services permanecer em ou acima de 100 conexões por um período de 4 horas (conforme especificado pela configuração de Intervalo de Coleta de Dados). Este valor padrão é arbitrário (não é baseado nas especificações de hardware de seu servidor ou na atividade do usuário), portanto, você pode aumentá-lo ou abaixá-lo dependendo da capacidade do servidor e da atividade do usuário em seu ambiente.  
   
-     Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: o número alto de conexões indica que mais servidores devem ser implantados para tratar a carga atual.**  
+     Essa configuração corresponde à definição de regra a seguir sobre o **rever problemas e soluções** página: **PowerPivot: O número alto de conexões indica que mais servidores devem ser implantados para tratar a carga atual.**  
   
      Espaço insuficiente em disco (o padrão é 5%)  
      O espaço em disco é usado para armazenar em cache os dados PowerPivot cada vez que o banco de dados é solicitado. Esta regra permite conhecer quando o espaço em disco é insuficiente. Por padrão, esta regra de integridade é disparada quando o espaço em disco é inferior a 5% na unidade de disco onde a pasta de backup está localizada. Para obter mais informações sobre o uso do disco, consulte [configurar o uso de espaço em disco &#40;PowerPivot para SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
-     Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: o espaço em disco é insuficiente na unidade onde os dados PowerPivot estão armazenados em cache.**  
+     Essa configuração corresponde à definição de regra a seguir sobre o **rever problemas e soluções** página: **PowerPivot: Espaço em disco é insuficiente na unidade onde os dados do PowerPivot é armazenado em cache.**  
   
      Intervalo de coleta de dados (em horas)  
      Você pode especificar o período de coleta de dados usado para calcular os números usados para disparar regras de integridade. Embora o sistema seja constantemente monitorado, os limites usados para disparar avisos de regra de integridade são calculados usando dados que foram gerados em um intervalo predefinido. O intervalo padrão é 4 horas. O servidor recupera os dados de sistema e uso coletados durante as 4 horas anteriores para avaliar o número de conexões de usuário, uso de espaço em disco, e taxas de CPU e de utilização de memória.  
@@ -116,7 +116,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Taxa de conexão de carregamento (o padrão é 20%)  
      Esta regra de integridade será disparada se o número de eventos de carga for alto em relação ao número de eventos de conexão, sinalizando que o servidor pode estar descarregando bancos de dados muito rapidamente, ou que essas configurações de redução de cache são muito agressivas.  
   
-     Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: a taxa de eventos de carga para conexões é muito alta.**  
+     Essa configuração corresponde à definição de regra a seguir sobre o **rever problemas e soluções** página: **PowerPivot: A taxa de eventos de carga para conexões é muito alta.**  
   
      Intervalo de coleta de dados (o padrão é 4 horas)  
      Você pode especificar o período de coleta de dados usado para calcular os números usados para disparar regras de integridade. Embora o sistema seja constantemente monitorado, os limites usados para disparar avisos de regra de integridade são calculados usando dados que foram gerados em um intervalo predefinido. O intervalo padrão é 4 horas. O servidor recupera os dados de sistema e uso coletados durante as 4 horas anteriores para avaliar a carga para a taxa de coleção.  
@@ -126,7 +126,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      Para obter mais informações sobre a coleta de dados de uso, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
-     Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: dados de uso não são atualizados com a frequência esperada.**  
+     Essa configuração corresponde à definição de regra a seguir sobre o **rever problemas e soluções** página: **PowerPivot: Dados de uso não são atualizados com a frequência esperada.**  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar o uso de espaço em disco &#40;PowerPivot para SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   

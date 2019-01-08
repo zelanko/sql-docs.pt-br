@@ -10,12 +10,12 @@ ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 254a2ee7d920d9a3296951f38094aefac9996241
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a6f3daadf8d26da15a5ef0d9a01cb7f491d974e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714504"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407943"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>Conecte-se ao SQL Server (MySQLToSQL)
 Use o **conectar-se ao SQL Server** caixa de diálogo para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja migrar para o. Para acessar o **conectar-se ao SQL Server** caixa de diálogo do **arquivo** menu, clique em **conectar-se ao SQL Server**.  

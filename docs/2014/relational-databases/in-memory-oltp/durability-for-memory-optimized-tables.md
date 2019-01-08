@@ -10,12 +10,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 981b0b57debf6e1916adb65620feca7025bd3803
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063486"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392020"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornece a durabilidade completa para tabelas com otimização de memória. Quando uma transação que modificou uma tabela com otimização de memória é confirmada, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como faz em tabelas baseadas em disco), garante que as alterações sejam permanentes (sobreviverão uma reinicialização do banco de dados), contanto que o armazenamento subjacente esteja disponível. Há dois principais componentes de durabilidade: log de transações e persistência das alterações de dados para armazenamento em disco.  
@@ -24,7 +24,7 @@ ms.locfileid: "48063486"
  Todas as alterações feitas nas tabelas baseadas em disco ou tabelas duráveis com otimização de memória são capturadas em um ou mais registros de log de transações. Depois da confirmação de uma transação, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grava os registros de log associados com a transação no disco antes de comunicar ao aplicativo ou à sessão de usuário que a transação foi confirmada. Isso garante que as alterações feitas pela transação sejam duráveis. O log de transações para tabelas com otimização de memória está totalmente integrado ao mesmo fluxo de log usado por tabelas baseadas em disco. Essa integração permite que operações existentes de backup, recuperação e restauração do log de transações continuem funcionando, sem exigir etapas adicionais. No entanto, como o [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] pode aumentar significativamente a taxa de transferência de transações de sua carga de trabalho, será necessário verificar se o armazenamento de log de transações está configurado adequadamente para controlar os requisitos de aumento de E/S.  
   
 ## <a name="data-and-delta-files"></a>Arquivos delta e de dados  
- Os dados nas tabelas com otimização de memória são armazenados como as linhas de dados de forma livre que são vinculadas por meio de um ou mais índices de memória, na memória. Não há nenhuma estrutura de página para linhas de dados, como as usadas para tabelas baseadas em disco. Quando o aplicativo está pronto para confirmar a transação, o [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] gera os registros de log da transação. A persistência de tabelas com otimização de memória é feita com um conjunto de dados e arquivos delta usando um thread em segundo plano. Os dados e os arquivos delta estão localizados em um ou mais contêineres (com o mesmo mecanismo usado para dados FILESTREAM). Esses contêineres são mapeados para um novo tipo de grupo de arquivos, chamado de grupo de arquivos com otimização de memória.  
+ Os dados nas tabelas com otimização de memória são armazenados como as linhas de dados de forma livre que são vinculadas por meio de um ou mais índices de memória, na memória. Não há nenhuma estrutura de página para linhas de dados, como as usadas para tabelas baseadas em disco. Quando o aplicativo está pronto para confirmar a transação, o [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] gera os registros de log para a transação. A persistência de tabelas com otimização de memória é feita com um conjunto de dados e arquivos delta usando um thread em segundo plano. Os dados e os arquivos delta estão localizados em um ou mais contêineres (com o mesmo mecanismo usado para dados FILESTREAM). Esses contêineres são mapeados para um novo tipo de grupo de arquivos, chamado de grupo de arquivos com otimização de memória.  
   
  Os dados são gravados nesses arquivos de maneira estritamente sequencial, o que minimiza a latência do disco na rotação da mídia. Você pode usar vários contêineres em discos diferentes para distribuir a atividade de E/S. Os arquivos delta e de dados em vários contêineres em discos diferentes aumentarão o desempenho de recuperação quando os dados forem lidos nos arquivos delta e de dados em disco, na memória.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48063486"
  Se necessário, uma mesclagem manual pode ser executada explicitamente chamando [sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de um CFP  
- Transição de CPFs por vários estados antes de poderem ser desalocados. A qualquer momento, os CFPs estarão em uma das seguintes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Transição de CPFs por vários estados antes de poderem ser desalocados. Em um determinado momento, os CFPs estão em uma das seguintes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
  Após a contagem do armazenamento ocupado pelos CFPs em diversos estados, o armazenamento geral ocupado pelas tabelas com otimização de memória duráveis poderá ser muito maior do que 2 vezes o tamanho das tabelas na memória. O DMV [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) pode ser consultado para listar todos os CFPs em arquivos com otimização de memória, incluindo a fase. A transição de estados de CFPs de MERGE SOURCE para TOMBSTONE e por fim a coleta de lixo pode demorar cinco pontos de verificação, com cada ponto de verificação seguido por um backup de log de transações, caso o banco de dados esteja configurado para o modelo de recuperação completa ou bulk-logged.  
   

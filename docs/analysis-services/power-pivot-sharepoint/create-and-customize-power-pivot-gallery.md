@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025973"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417117"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Criar e personalizar a galeria do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "34025973"
   
     > [!NOTE]  
     >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
-    > Para exibir o conteúdo da biblioteca no Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
+    > Para exibir o conteúdo da biblioteca no Microsoft Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
     > Para alterar a exibição padrão, clique na guia **Biblioteca** e depois clique em Modificar exibição. Clique em "Fazer desta a exibição padrão" e, em seguida, clique em OK para salvar a exibição padrão.  
-    >  Para obter mais informações sobre ao que o Microsoft Edge dá suporte, consulte o blog do Windows, [Uma ruptura com o passado, parte 2: adeus ao ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Para obter mais informações sobre quais Edge dá suporte, consulte o blog do Windows, [uma ruptura com o passado, parte 2: Adeus ao ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Você deve ser proprietário do site para criar uma biblioteca.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "34025973"
 ##  <a name="createlib"></a> Criar a Galeria do Power Pivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é criada para você durante a instalação do [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] usando-se a opção de instalação Novo Servidor. Se você adicionar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a um farm existente ou se desejar uma biblioteca adicional, poderá criar uma nova para seu aplicativo ou site.  
   
-1.  1.  **SharePoint 2010**: clique em **Ações de Site** no canto superior esquerdo da home page do site.  
+1.  1.  **SharePoint 2010**: Clique em **ações do Site** no canto superior esquerdo da home page do seu site.  
   
     2.  Clique em **Mais Opções**.  
   
     3.  Em Bibliotecas, clique em **Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
   
-    1.  **SharePoint 2013**: clique no ícone configurações ![configurações SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configurações SharePoint"). Clique em **Conteúdo do Site**  
+    1.  **SharePoint 2013**: Clique no ícone de configurações ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configurações do SharePoint"). Clique em **Conteúdo do Site**  
   
     2.  Clique em **Adicionar um aplicativo**.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "34025973"
   
 2.  Na faixa de opções, clique em **Biblioteca**.  
   
-3.  **SharePoint 2010:** em Exibições Personalizadas, clique em **Modificar esta Exibição**.  
+3.  **SharePoint 2010:** Em exibições personalizadas, clique em **modificar esta exibição**.  
   
-     **SharePoint 2013:** em **Gerenciar Exibições**, clique em **Modificar Exibição**.  
+     **SharePoint 2013:** Na **gerenciar modos de exibição**, clique em **modificar exibição**.  
   
 4.  Em Classificação, especifique os critérios que serão usados para determinar como pastas de trabalho aparecem na lista. Por padrão, os documentos são listados na ordem em que são adicionados.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "34025973"
   
  A seguinte tabela descreve os layouts diferentes para apresentar esboços em miniatura de cada página visualizada:  
   
-|Exibição|Description|  
+|Exibição|Descrição|  
 |----------|-----------------|  
 |Exibição de Galeria (padrão)|Galeria é a exibição padrão para uma Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A visualização é exibida à esquerda. As miniaturas menores de cada planilha são exibidas ao lado dela em uma ordem sequencial da esquerda para a direita.|  
 |Todos os documentos|Esse é o layout padrão para bibliotecas de documentos. É possível escolher essa exibição para gerenciar documentos individuais ou exibir o conteúdo da biblioteca em um formato de lista.<br /><br /> Use essa exibição para editar propriedades, excluir ou mover documentos individuais.<br /><br /> Se habilitou o controle de versão, você deverá usar essa exibição para fazer check-in ou check-out de documentos da biblioteca.|  
-|Exibição de Teatro e Exibição de Carrossel|Essas serão exibições especializados que funcionarão melhor se você estiver mostrando um número pequeno de documentos relacionados. A rotação total de miniaturas inclui todas as páginas em todos os documentos na biblioteca. Se você tiver um número grande de documentos, essas exibições poderão não ser práticas para usuários que desejam localizar ou abrir uma pasta de trabalho específica do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Exibição de teatro: A área de visualização é centralizada. Miniaturas menores de cada planilha são exibidas na parte mais inferior da página, em qualquer lado.<br /><br /> Exibição de carrossel: A área de visualização é centralizada. As miniaturas pouco antes e depois da miniatura atual estão próximas à área de visualização.|  
+|Exibição de Teatro e Exibição de Carrossel|Essas serão exibições especializados que funcionarão melhor se você estiver mostrando um número pequeno de documentos relacionados. A rotação total de miniaturas inclui todas as páginas em todos os documentos na biblioteca. Se você tiver um número grande de documentos, essas exibições poderão não ser práticas para usuários que desejam localizar ou abrir uma pasta de trabalho específica do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Exibição de teatro: A área de visualização é centralizada. Miniaturas menores de cada planilha são exibidas na parte mais inferior da página, em qualquer lado.<br /><br /> Exibição do carrossel: A área de visualização é centralizada. As miniaturas pouco antes e depois da miniatura atual estão próximas à área de visualização.|  
   
 ### <a name="switch-to-a-different-view"></a>Alternar para uma exibição diferente  
   
@@ -148,8 +148,8 @@ ms.locfileid: "34025973"
   
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas de instalação do Power Pivot para SharePoint](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
- [Usar a Galeria Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [Criar um local confiável para sites do PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Usar Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Excluir Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   

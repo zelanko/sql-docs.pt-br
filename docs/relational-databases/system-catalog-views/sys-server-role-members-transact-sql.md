@@ -21,19 +21,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b5234cf66bc5f829ab9d83c2642da14b5716161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735444"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406453"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Retorna uma linha para cada membro de cada função de servidor fixa e definida pelo usuário.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|ID do principal do servidor da função.|  
 |**member_principal_id**|**int**|ID do principal do servidor do membro.|  
@@ -41,7 +41,7 @@ ms.locfileid: "47735444"
  Para adicionar ou remover a associação à função de servidor, use o [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)instrução.  
   
 ## <a name="permissions"></a>Permissões  
- Os logons podem exibir a própria associação de função de servidor e também o principal_id dos membros das funções de servidor fixas. Para exibir todos os membro da função de servidor requer o **VIEW DEFINITION ON SERVER ROLE** permissão ou associação na **securityadmin** função de servidor fixa.  
+ Logons podem exibir a própria associação de função de servidor e podem exibir o principal_id dos membros de funções de servidor fixas. Para exibir todos os membro da função de servidor requer o **VIEW DEFINITION ON SERVER ROLE** permissão ou associação na **securityadmin** função de servidor fixa.  
   
  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

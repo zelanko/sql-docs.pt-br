@@ -11,12 +11,12 @@ ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 91db405d30b3d7dbcfc351b6a7a0c95e5238902a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 362ead31e7cb7b1a35411fa6f8b211e65342a721
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099763"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393724"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportando para um arquivo PDF (Construtor de Relatórios e SSRS)
   A extensão de renderização PDF renderiza um relatório para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e versões posteriores, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao Adobe Acrobat 6 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.  
@@ -68,7 +68,7 @@ ms.locfileid: "48099763"
 |`Subject`|O elemento RDL `Description`.|  
 |`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nome e versão da extensão de renderização.|  
-|`CreationDate`|Tempo de execução em PDF do relatório `datetime` formato.|  
+|`CreationDate`|Tempo de execução do relatório no formato PDF `datetime`.|  
   
   
   
@@ -100,7 +100,7 @@ ms.locfileid: "48099763"
  Para preservar a compactação de imagens incluídas no arquivo em PDF, quando possível, as imagens JPEG são armazenadas como JPEG e todos os demais tipos de imagens são armazenados como BMP.  
   
 > [!NOTE]  
->  Os arquivos PDF não suportam a incorporação de imagens PNG.  
+>  Os arquivos PDF não têm suporte para a incorporação de imagens PNG.  
   
   
   
@@ -112,7 +112,7 @@ ms.locfileid: "48099763"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

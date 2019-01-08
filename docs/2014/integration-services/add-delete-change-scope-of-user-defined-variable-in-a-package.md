@@ -13,19 +13,19 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e19b832bc3d7ebf1f883633491b309971cf2938e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125696"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398299"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote
   Estes procedimentos descrevem como adicionar, excluir e alterar o escopo de uma variável definida pelo usuário em um pacote usando a janela **Variáveis**.  
   
- Para obter mais informações sobre escopo variável, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Para obter mais informações sobre escopo variável, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também fornece variáveis do sistema que disponibilizam informações do sistema em tempo de execução e podem ser usadas em contêineres como pacotes e manipuladores de eventos. Você não pode excluir as variáveis de sistema.  
+ O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também fornece variáveis do sistema que disponibilizam informações sobre o sistema em tempo de execução e podem ser usadas em contêineres como pacotes e manipuladores de eventos. Você não pode excluir as variáveis de sistema.  
   
 ### <a name="to-add-a-variable"></a>Para adicionar uma variável  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48125696"
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
  [Definir as propriedades de uma variável definida pelo usuário](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Usar os valores de variáveis e parâmetros em um pacote filho](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

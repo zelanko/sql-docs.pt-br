@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - PropertyType Property (ClientNetworkProtocolProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8fc1b4b35ee753802413eda232661376b085bcf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244775d3b2a5fe301bd1d5d56803873aae21eaa8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758468"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Propriedade PropertyType (classe ClientNetworkProtocolProperty)
   Obtém o tipo da propriedade atual referenciado pelo valor [PropertyIdx Property (classe ClientNetworkProtocolProperty) (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  

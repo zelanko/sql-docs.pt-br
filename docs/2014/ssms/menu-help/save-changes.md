@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.file.close.f1
@@ -15,12 +15,12 @@ ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85c5987c8fdc5589ca3130ce908febea0fe04433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751218"
 ---
 # <a name="save-changes"></a>Salvar alterações
   Avisa que as alterações nos itens listados não serão salvas a menos que você clique em **Sim**.  

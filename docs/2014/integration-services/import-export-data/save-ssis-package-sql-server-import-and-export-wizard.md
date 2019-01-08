@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
@@ -13,12 +12,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b8ef62839d7379c35b55af7bcb65ab46e4b455d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a8211f27d3ea5377d0f68375ecb75aca5a83e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048227"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747938"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salvar Pacote SSIS (Assistente de Importação e Exportação do SQL Server)
   Use o **salvar pacote SSIS** página para nomear, descrever e salvar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) do pacote para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` de banco de dados ou em um arquivo que tenha o dtsx extensão.  
@@ -26,7 +25,7 @@ ms.locfileid: "48048227"
 > [!NOTE]  
 >  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], a opção para salvar o pacote criado pelo assistente não está disponível.  
   
- Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  O objetivo do Assistente de Importação e Exportação do SQL Server é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48048227"
  Forneça uma descrição para o pacote. Como prática recomendada, descreva o pacote em termos de objetivo, para facilitar a documentação e a manutenção dos pacotes.  
   
  **Target (destino)**  
- Exiba o destino ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou arquivo) que foi especificado anteriormente para o arquivo de destino.  
+ Exiba o destino ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou arquivo) que foi especificado previamente para o arquivo de destino.  
   
 ## <a name="target-dynamic-options"></a>Opções dinâmicas de destino  
   
@@ -50,13 +49,13 @@ ms.locfileid: "48048227"
  Depois de selecionar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique se deseja se conectar ao servidor usando a Autenticação Integrada do Windows. Esse é o método de autenticação preferido.  
   
  **Usar Autenticação do SQL Server**  
- Quando você tiver selecionado um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino, especifique se deseja se conectar ao servidor usando a autenticação do SQL Server.  
+ Depois de selecionar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique se deseja se conectar ao servidor usando a Autenticação do SQL Server.  
   
  **Nome de usuário**  
- Quando você tiver selecionado um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino, e especificar a autenticação do SQL Server, digite o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de usuário.  
+ Depois de selecionar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar a Autenticação do SQL Server, digite o nome de usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Senha**  
- Quando você tiver selecionado um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino, e especificar a autenticação do SQL Server, digite o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha.  
+ Depois de selecionar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar a Autenticação do SQL Server, digite a senha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="target--file-system"></a>Destino = Sistema de Arquivos  
  **Nome do arquivo**  

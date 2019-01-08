@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
@@ -15,15 +15,15 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fecaa0fb1b4bb68ee2decddd50e1410313f17fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda582c7b9171e89a43b6870b3b6c2df139b7b11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763608"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Remover tabelas de consultas (Visual Database Tools)
-  Você pode remover uma tabela — ou qualquer objeto com valor de tabela — da consulta  
+  Você pode remover uma tabela ou qualquer objeto com valor de tabela da consulta.  
   
 > [!NOTE]  
 >  Removendo uma tabela ou objeto com valor de tabela não exclui nada do banco de dados; só remove isto da consulta atual. Para obter detalhes sobre como remover uma tabela de um banco de dados, consulte [excluir tabelas &#40;mecanismo de banco de dados&#41;](../../relational-databases/tables/delete-tables-database-engine.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48056192"
   
 -   No **Painel de Diagrama**, selecione a tabela, a exibição, a função definida pelo usuário, o sinônimo ou a consulta e, depois, pressione DELETE ou clique com o botão direito do mouse no objeto e escolha **Remover** na caixa de diálogo resultante. Você pode selecionar e remover vários objetos de uma vez.  
   
-     –ou–  
+     -ou-  
   
 -   Remova todas as referências ao objeto no **Painel SQL**.  
   

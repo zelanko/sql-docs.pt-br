@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59522b39650d9e42555ad9463cc16c042fbb116e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 123cc4cc977e52334b085691caa74e853d5f3fb6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088226"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756178"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Classe de evento Audit Object Derived Permission
   A classe de evento **Audit Object Derived Permission** registra quando um comando CREATE, ALTER ou DROP é emitido para um objeto especificado. Esse evento só acontecerá se o objeto não tiver permissões ou proprietários diretamente associados a ele.  
@@ -29,15 +28,15 @@ ms.locfileid: "48088226"
   
 ## <a name="audit-object-derived-permission-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Object Derived Permission  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**DBUserName**|**nvarchar**|Nome de usuário do emissor no banco de dados.|40|Sim|  
-|**EventClass**|**int**|Tipo de evento = 118.|27|não|  
-|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|não|  
+|**EventClass**|**int**|Tipo de evento = 118.|27|Não|  
+|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |**EventSubClass**|**int**|Tipo de subclasse de evento.<br /><br /> 1=Create<br /><br /> 2=Alter<br /><br /> 3=Drop<br /><br /> 4=Dump<br /><br /> 11=Load|21|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
@@ -51,7 +50,7 @@ ms.locfileid: "48088226"
 |**ObjectType**|**int**|Valor que representa o tipo do objeto envolvido no evento. Esse valor corresponde à coluna do tipo na exibição de catálogo **sys.objects** . Para obter valores, consulte [Coluna de evento de rastreamento ObjectType](objecttype-trace-event-column.md).|28|Sim|  
 |**OwnerName**|**nvarchar**|Nome de usuário do banco de dados do proprietário de objeto do objeto que está sendo criado, alterado ou descartado.|37|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

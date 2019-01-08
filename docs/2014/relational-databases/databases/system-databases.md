@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server]
@@ -16,23 +15,23 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07a40ea61c38792b9809f1bc0cf7a64e3077aa78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750808"
 ---
 # <a name="system-databases"></a>Bancos de dados do sistema
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui os seguintes bancos de dados do sistema.  
   
-|Banco de dados do sistema|Description|  
+|Banco de dados do sistema|Descrição|  
 |---------------------|-----------------|  
 |[Banco de dados mestre](master-database.md)|Registra toda a informações de nível de sistema por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Banco de dados msdb](msdb-database.md)|É usado pelo SQL Server Agent para programar alertas e trabalhos.|  
-|[Banco de dados modelo](model-database.md)|É usado como modelo de todos os bancos de dados criados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As modificações feitas no banco de dados **modelo** , como tamanho, agrupamento, modelo de recuperação, e outras opções de bancos de dados, são aplicadas a qualquer banco de dados criados em seguida.|  
+|[Banco de dados modelo](model-database.md)|É usado como modelo de todos os bancos de dados criados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As modificações feitas no banco de dados **modelo**, como tamanho, ordenação, modelo de recuperação, e outras opções de bancos de dados, são aplicadas a qualquer banco de dados criados em seguida.|  
 |[Banco de dados de recursos](resource-database.md)|É um banco de dados do tipo somente leitura que contém objetos de sistema incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os objetos de sistema são fisicamente persistentes no banco de dados **Recurso** , mas aparecem logicamente no esquema **sys** de todo banco de dados.|  
-|[Banco de dados tempdb](tempdb-database.md)|É um espaço de trabalho para reter objetos temporários ou conjuntos de resultados intermediários.|  
+|[Banco de dados tempdb](tempdb-database.md)|É um workspace para reter objetos temporários ou conjuntos de resultados intermediários.|  
   
 ## <a name="modifying-system-data"></a>modificando dados do sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte aos usuários diretamente na atualização de informações de objetos do sistema como tabelas de sistema, procedimentos armazenados do sistema  e exibições de catálogo. Em lugar disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto completo de ferramentas administrativas que permitem aos usuários administrar totalmente seus sistemas e gerenciar todos os usuários e objetos de um banco de dados. Entre elas estão as seguintes:  

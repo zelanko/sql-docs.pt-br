@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.QueryViewColumn
@@ -12,12 +12,12 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b49ee8643b7cc86ea385d1d3ccd458edf5c3283e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121426"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771858"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Propriedades de (coluna) de objeto com valor de tabela (Visual Database Tools)
   Essas propriedades aparecem quando uma coluna de objeto com valor de tabela é selecionada no painel **Diagrama** do Designer de Consulta e Exibição.  
@@ -35,13 +35,13 @@ ms.locfileid: "48121426"
  Mostra o nome da coluna selecionada.  
   
  **Categoria Designer de Consultas**  
- Expande para mostrar as propriedades de **Permitir Nulos**, **Agrupamento**, **Tipo de dados**, **Comprimento**, **Precisão**, **Escala**e **Tamanho**.  
+ Expande para mostrar as propriedades de **Permitir Nulos**, **Ordenação**, **Tipo de dados**, **Comprimento**, **Precisão**, **Escala**e **Tamanho**.  
   
  **Permitir Nulos**  
  Mostra se o tipo de dados da coluna permite ou não valores nulos.  
   
- **Agrupamento**  
- Mostra a configuração de agrupamento da coluna selecionada. O agrupamento pode ser definido na guia Propriedades de coluna do Designer de Tabela.  
+ **Ordenação**  
+ Mostra a configuração de ordenação da coluna selecionada. A ordenação pode ser definida na guia Propriedades de coluna do Designer de Tabela.  
   
  **Tipo de Dados**  
  Mostra o tipo de dados da coluna selecionada.  

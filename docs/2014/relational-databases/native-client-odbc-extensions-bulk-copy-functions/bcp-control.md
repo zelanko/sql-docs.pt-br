@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753078"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Altera as configurações padrão de vários parâmetros de controle para uma cópia em massa entre um arquivo e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue* contém o número da página de código para o arquivo de dados. Você pode especificar o número da página de código, como 1252 ou 850, ou como um destes valores:  
   
- BCPFILE_ACP: os dados do arquivo estão na página de código do Microsoft Windows® do cliente.  
+ BCPFILE_ACP: os dados no arquivo estão no Windows a Microsoft?? página de código do cliente.  
   
  BCPFILE_OEMCP: os dados do arquivo estão na página de código OEM do cliente (padrão).  
   
@@ -102,7 +102,7 @@ iValue
  Quando *iValue* for TRUE, especifica que as funções de cópia em massa inserem valores de dados fornecidos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colunas definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.  
   
  BCPKEEPNULLS  
- Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando *iValue* for TRUE, valores vazios serão convertidos para NULL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
+ Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando *iValue* for TRUE, valores vazios serão convertidos para NULL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
   
  BCPLAST  
  É a última linha a ser copiada. O padrão é copiar todas as linhas; um valor menor que 1 redefine essa opção para seu padrão.  

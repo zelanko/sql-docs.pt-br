@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofileprops.f1
@@ -15,12 +14,12 @@ ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1ffaf34b0fca7dc03a5c8eb0d5ee1d95c2e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221396"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763568"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Propriedades de &lt;AgentProfileName&gt;
   Use a caixa de diálogo **Propriedades de Perfis do Agente** para exibir os valores especificados para cada parâmetro de agente em um perfil e modificar os valores de perfis definidos pelo usuário.  

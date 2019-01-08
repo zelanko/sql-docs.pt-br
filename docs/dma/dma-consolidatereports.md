@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503284"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o DMA
 
@@ -70,7 +70,7 @@ Esse inventário pode estar em uma das duas formas:
 - Tabela do SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Se usando um arquivo CSV
-Ao usar um arquivo csv para importar os dados, verifique se há apenas duas colunas de dados – **nome da instância** e **nome do banco de dados**, e que as colunas não tem linhas de cabeçalho.
+Ao usar um arquivo csv para importar os dados, verifique se há apenas duas colunas de dados - **nome da instância** e **nome do banco de dados**, e que as colunas não tem linhas de cabeçalho.
  
  ![conteúdo do arquivo CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -96,7 +96,7 @@ Depois de carregar os módulos do PowerShell para o diretório de módulos e cri
 
 Os parâmetros associados à função dmaDataCollector são descritos na tabela a seguir.
 
-|Parâmetro  |Description
+|Parâmetro  |Descrição
 |---------|---------|
 |**getServerListFrom** | Seu inventário. Os valores possíveis são **SqlServer** e **CSV**.<br/>Para obter mais informações, consulte [criar um inventário de servidores SQL](#create-inventory). |
 |**serverName** | O nome da instância do SQL Server do inventário ao usar **SqlServer** na **getServerListFrom** parâmetro. |
@@ -118,7 +118,7 @@ Após a avaliação, você agora está pronto para importar os dados no SQL Serv
 
 Os parâmetros associados à função dmaProcessor são descritos na tabela a seguir.
 
-|Parâmetro  |Description
+|Parâmetro  |Descrição
 |---------|---------|
 |**processTo**  | O local para o qual o arquivo JSON será processado. Os valores possíveis são **SQLServer** e **AzureSQLDatabase**. |
 |**serverName** | A instância do SQL Server para o qual os dados serão processados.  Se você especificar **AzureSQLDatabase** para o **processTo** parâmetro, em seguida, inclua apenas o nome do SQL Server (não inclua. database.windows.net). Você será solicitado a fornecer dois logons durante o direcionamento para o banco de dados SQL Azure; a primeira é suas credenciais de locatário do Azure, enquanto o segundo é o logon de administrador para o servidor do SQL Azure. |

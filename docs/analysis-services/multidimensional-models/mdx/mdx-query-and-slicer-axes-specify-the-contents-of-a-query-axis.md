@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38a48fd99ae9a03599914a1dfdac0bf204301c4c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026803"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399569"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Consulta MDX e o eixo da segmentação de dados - especificar o conteúdo de um eixo de consulta
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Consulta MDX e Eixos de segmentação – Especificar o conteúdo de um eixo de consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Eixos de consulta especificam as extremidades de um conjunto de células retornadas por uma instrução MDX SELECT. Especificar as extremidades de um conjunto de células permitir restringir os dados retornados que ficam visíveis ao cliente.  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
 ```  
   
- A palavra-chave NON EMPTY, usada antes da definição fixa, é um modo fácil de remover todas as tuplas vazias de um eixo. Por exemplo, nos exemplos observamos que não existem dados no cubo desde agosto de 2004. Para remover todas as linhas do conjunto de células que não têm dados em nenhuma coluna, basta adicionar NON EMPTY antes do conjunto na definição do eixo Rows, desta forma:  
+ A palavra-chave NON EMPTY, usada antes da definição fixa, é um modo fácil de remover todas as tuplas vazias de um eixo. Por exemplo, nos exemplos que vimos até agora não há nenhum dado no cubo a partir de agosto de 2004 em diante. Para remover todas as linhas do conjunto de células que não têm dados em nenhuma coluna, basta adicionar NON EMPTY antes do conjunto na definição do eixo Rows, desta forma:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -112,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Especificando o conteúdo de um eixo do Slicer & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Especificando o conteúdo de um eixo da segmentação &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

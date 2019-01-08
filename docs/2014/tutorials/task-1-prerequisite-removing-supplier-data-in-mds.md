@@ -13,12 +13,12 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227696"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394237"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarefa 1 (pré-requisito): Removendo os dados do fornecedor no MDS
   Nesta tarefa, você removerá os dados do fornecedor armazenados no MDS. Você carregou os dados manualmente usando **Suplemento MDS do Excel** na lição anterior. O pacote SSIS que será criado nesta lição carregará automaticamente os dados no MDS para você. Consequentemente, antes de testar o pacote SSIS, será necessário remover os dados do fornecedor do MDS, remover da hierarquia derivada, remover entidades de fornecedor e estado e criar a entidade do fornecedor sem dados.  
@@ -39,11 +39,11 @@ ms.locfileid: "48227696"
   
 8.  Repita a etapa anterior para excluir a entidade **State** .  
   
-9. Não feche o **Master Data Manager**.  
+9. Não feche **Master Data Manager**.  
   
 10. Alterne para a janela do Excel que tem o arquivo **Cleansed and Matched Suppliers.xls** aberto. Alterne para a guia **Planilha1** na parte inferior.  
   
-11. Selecione apenas a **primeira linha com cabeçalhos**. Não selecione nenhuma outra linha. Você deseja criar as entidades com base nas colunas do Excel, mas não deseja carregar os dados. Portanto, selecione apenas a primeira linha com os cabeçalhos.  
+11. Selecione apenas a **primeira linha com cabeçalhos**. Não selecione nenhuma outra linha. Você deseja criar as entidades com base nas colunas do Excel, mas não deseja carregar todos os dados. Portanto, selecione apenas a primeira linha com os cabeçalhos.  
   
 12. Clique em **Dados Mestres** na barra de menus.  
   

@@ -10,12 +10,12 @@ ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408903"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Usando OLTP na Memória em um Ambiente de VM
   A virtualização do servidor pode ajudá-lo a diminuir os custos operacionais e de capital com a TI, e atingir uma maior eficiência de TI com processos de provisionamento de aplicativo, manutenção, disponibilidade e backup/recuperação aprimorados. Com os avanços tecnológicos recentes, as cargas de trabalho de banco de dados complexas podem mais ser prontamente consolidadas usando a virtualização. Este tópico sobre as práticas recomendadas para usar o [!INCLUDE[hek_1](../includes/hek-1-md.md)] em um ambiente virtualizado.  
@@ -29,7 +29,7 @@ ms.locfileid: "48103276"
   
 -   Não defina o valor de pré-alocação de memória muito alto. Caso contrário, outros processos podem não obter memória suficiente no momento em que a exigirem e isso pode levar à paginação de memória.  
   
- Se você seguir as práticas acima para um banco de dados com tabelas otimizadas pela memória, uma tentativa de restaurar e recuperar um banco de dados poderá resultar no banco de dados ficando em um estado de "Recuperação Pendente", mesmo se você tiver memória suficiente para recuperá-lo. A razão para isso é que, ao iniciar, o [!INCLUDE[hek_2](../includes/hek-2-md.md)] coloca os dados na memória de maneira mais agressiva que a alocação dinâmica de memória aloca a memória para o banco de dados.  
+ Se você seguir as práticas acima para um banco de dados com tabelas otimizadas pela memória, uma tentativa de restaurar e recuperar um banco de dados poderá resultar no banco de dados ficando em um estado de “Recuperação Pendente”, mesmo se você tiver memória suficiente para recuperá-lo. A razão para isso é que, ao iniciar, o [!INCLUDE[hek_2](../includes/hek-2-md.md)] coloca os dados na memória de maneira mais agressiva que a alocação dinâmica de memória aloca a memória para o banco de dados.  
   
  **Resolução**  
   

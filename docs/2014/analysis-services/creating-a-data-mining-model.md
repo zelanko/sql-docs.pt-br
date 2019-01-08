@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134786"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394459"
 ---
 # <a name="creating-a-data-mining-model"></a>Criando um modelo de mineração de dados
   Modelagem de dados é a etapa de mineração de dados em que você cria padrões e tendências, aplicando *algoritmos* aos dados. Posteriormente, você poderá usar esses padrões para análise ou para fazer previsões.  
@@ -72,7 +72,7 @@ ms.locfileid: "48134786"
  [Assistente de cluster &#40;Data Mining Add-ins para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md).  
   
 ## <a name="detect-categories-analyze"></a>Detectar categorias (Analisar)  
- O **detectar categorias** ferramenta permite que você adicione qualquer conjunto de dados e aplique clustering para localizar agrupamentos de dados. É útil para encontrar semelhanças e para criar grupos para mais análise.  
+ O **detectar categorias** ferramenta permite que você adicione qualquer conjunto de dados e aplique clustering para localizar agrupamentos de dados. É útil para encontrar semelhanças e para criar grupos para analisar mais profundamente.  
   
  O **detectar categorias** ferramenta usa o algoritmo Microsoft Clustering.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48134786"
   
  [Cálculo de previsão &#40;ferramentas de análise de tabela para Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-goal-seek-analyze"></a>Cenário: Metas a Atingir (Analisar)  
+## <a name="scenario-goal-seek-analyze"></a>Cenário: Meta a atingir (Analisar)  
  No **meta a atingir** ferramenta, você especifica um valor de destino e a ferramenta identificará os fatores subjacentes que devem ser alterados para alcançar a meta. Por exemplo, se você sabe que deve aumentar a satisfação da chamada em 20%, poderá solicitar ao modelo que preveja os fatores que devem mudar para que essa meta seja produzida.  
   
  O **meta a atingir** ferramenta usa o algoritmo de regressão logística da Microsoft.  
@@ -125,7 +125,7 @@ ms.locfileid: "48134786"
   
  [Cenário de metas a atingir &#40;ferramentas de análise de tabela para Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>Cenário: cenário E-Se (Analisar)  
+## <a name="scenario-what-if-scenario-analyze"></a>Cenário: Cenário e-se (Analisar)  
  O **hipóteses** ferramenta complementa o **meta a atingir** ferramenta. Com essa ferramenta, você inseriu o valor que deseja alterar, e o modelo prevê se essa alteração será suficiente para obtenção do resultado desejado. Por exemplo, você poderia perguntar ao modelo para inferir se a adição de um operador de chamada extra poderia aumentar a satisfação do cliente em um ponto.  
   
  O **hipotética** ferramenta usa o algoritmo de regressão logística da Microsoft.  

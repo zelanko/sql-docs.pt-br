@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637464"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396169"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar várias sub-redes grupos de disponibilidade AlwaysOn e instâncias de cluster de failover
 
@@ -24,7 +24,7 @@ Quando uma instância de cluster sempre no grupo de disponibilidade (AG) ou do f
 
 ## <a name="vlan-based-solution"></a>Solução baseada em VLAN
  
-**Pré-requisito**: solução para uma VLAN-based, cada servidor participante em um grupo de disponibilidade ou FCI precisa de duas placas de rede (NICs) para disponibilidade adequada (uma porta dupla NIC seria um ponto único de falha em um servidor físico), para que ele pode ser atribuído endereços IP sua sub-rede nativo, bem como um na VLAN. Isso vai além de quaisquer outras necessidades de rede, como iSCSI, que também precisa de sua própria rede.
+**Pré-requisito**: Para uma solução baseada em VLAN, cada servidor que participam de um grupo de disponibilidade ou FCI precisa de duas placas de rede (NICs) para disponibilidade adequada (uma porta dupla NIC seria um ponto único de falha em um servidor físico), para que ele pode ser atribuído a endereços IP em sua sub-rede nativo, bem como um na VLAN. Isso vai além de quaisquer outras necessidades de rede, como iSCSI, que também precisa de sua própria rede.
 
 A criação de endereço IP para o grupo de disponibilidade ou FCI é feita na VLAN. No exemplo a seguir, a VLAN tem uma sub-rede de 192.168.3. *x*, portanto, o endereço IP criado para o grupo de disponibilidade ou FCI é 192.168.3.104. Nenhuma tarefa adicional precisará ser configurado, já que há um único endereço IP atribuído ao grupo de disponibilidade ou FCI.
 

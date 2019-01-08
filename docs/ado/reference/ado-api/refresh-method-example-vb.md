@@ -15,17 +15,17 @@ ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90fecd4dcb60907137aecdbe4cbfb792e9dc4c23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ecf2064576a9124a34d8ab70873f8848e9bfd6d
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801334"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158614"
 ---
 # <a name="refresh-method-example-vb"></a>Exemplo do método Refresh (VB)
 Este exemplo demonstra como usar o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método para atualizar o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção para um procedimento armazenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
-```  
+```vb
 'BeginRefreshVB  
 Public Sub Main()  
     On Error GoTo ErrorHandler  
@@ -60,7 +60,7 @@ Public Sub Main()
     cmdByRoyalty.CommandType = adCmdStoredProc  
     cmdByRoyalty.Parameters.Refresh  
   
-    ' Get paramater value, execute the command  
+    ' Get parameter value, execute the command  
     ' and store the results in a recordset  
     strRoyalty = InputBox("Enter royalty:")  
     If strRoyalty = "" Then  

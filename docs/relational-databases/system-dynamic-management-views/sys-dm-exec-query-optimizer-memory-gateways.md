@@ -21,19 +21,19 @@ author: josack
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ebd9b778f48e42c9200e7586983aba801b52e4c
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 6e5c54d116f4d4d8a71ba3660a31b324d9952970
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570715"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405532"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Retorna o status atual de semáforos de recursos usado para limitar a otimização de consultas simultâneas.
 
-|coluna|Tipo|Description|  
+|coluna|Tipo|Descrição|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|ID do pool de recursos sob o Resource Governor|  
 |**name**|**sysname**|Compilar o nome de porta (Gateway pequeno, médio de Gateway, o Gateway grande)|

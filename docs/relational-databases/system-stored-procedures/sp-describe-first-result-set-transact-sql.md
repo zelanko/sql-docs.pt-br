@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072060"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400629"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -66,10 +66,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Estes metadados comuns são retornados como um conjunto de resultados com uma linha para cada coluna nos metadados de resultados. Cada linha descreve o tipo e a nulidade da coluna no formato descrito na seção a seguir. Se a primeira instrução não existir para todo caminho de controle, um conjunto de resultados com zero linhas será retornado.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indica que a coluna é uma coluna extra adicionada para fins de informações de navegação e que ela não é exibida realmente no conjunto de resultados.|  
-|**column_ordinal**|**int NOT NULL**|Contém a posição ordinal da coluna no conjunto de resultados. A posição da primeira coluna será especificada como 1.|  
+|**column_ordinal**|**int NOT NULL**|Contém a posição ordinal da coluna no conjunto de resultados. A primeira posição da coluna será especificada como 1.|  
 |**name**|**sysname NULL**|Conterá o nome da coluna se um nome puder ser determinado. Caso contrário, conterá NULL.|  
 |**is_nullable**|**bit NOT NULL**|Conterá o valor 1 se a coluna permitir NULLs, 0 se a coluna não permitir NULLs e 1 caso não seja possível determinar se a coluna permite NULLs.|  
 |**system_type_id**|**int NOT NULL**|Contém o system_type_id do tipo de dados da coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
@@ -77,7 +77,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**max_length**|**smallint não NULL**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido pelo **sp_tableoption 'text in row'**.|  
 |**precisão**|**tinyint NOT NULL**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
 |**scale**|**tinyint NOT NULL**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
-|**collation_name**|**sysname NULL**|Nome do agrupamento da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
+|**collation_name**|**sysname NULL**|Nome da ordenação da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
 |**user_type_id**|**int NULL**|Para tipos de CLR e alias, contém o user_type_id do tipo de dados da coluna como especificado em sys.types. Caso contrário, é NULL.|  
 |**user_type_database**|**sysname NULL**|Para tipos de CLR e de alias, contém o nome do banco de dados no qual o tipo é definido. Caso contrário, é NULL.|  
 |**user_type_schema**|**sysname NULL**|Para tipos de CLR e de alias, contém o nome do esquema no qual o tipo é definido. Caso contrário, é NULL.|  
@@ -179,7 +179,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>B. Exemplos do modo de procura  
+#### <a name="b-browse-mode-examples"></a>b. Exemplos do modo de procura  
  Os três exemplos a seguir ilustram a principal diferença entre os modos de procurar informações. Somente as colunas relevantes foram incluídas nos resultados da consulta.  
   
  Exemplo que usa 0 indicando que nenhuma informação foi retornada.  
@@ -273,7 +273,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Resultado: \<nome de coluna desconhecido > **varchar(20) NULL**  
+ Resultado: \<Nome de coluna desconhecido > **varchar(20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nome de coluna forçado a ser idêntico via alias  
  Igual ao anterior, mas as colunas têm o mesmo nome via alias de coluna.  

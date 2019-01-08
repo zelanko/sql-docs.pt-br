@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
@@ -25,12 +24,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbe4a733479e23e8630e3bbc043ba5dcbf30c1bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: beee5a99f345a4f70f31bfec78b4fb6d9280ab0a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091486"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761278"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
   O gerenciamento de pacotes envolve tarefas, inclusive as seguintes:  
@@ -45,7 +44,7 @@ ms.locfileid: "48091486"
 >  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
 ## <a name="package-store"></a>Repositório de pacotes  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece duas pastas de nível superior para acessar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes: **pacotes em execução** e **pacotes armazenados**. A pasta **Pacotes em Execução** lista os pacotes que estão sendo executados atualmente no servidor. A pasta **Pacotes Armazenados** lista os pacotes que são salvos no armazenamento de pacotes. Esses são os únicos pacotes que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gerencia. O repositório de pacotes pode consistir em um ou em ambos, o banco de dados msdb e as pastas do sistema de arquivos, listados no arquivo de configuração de serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O arquivo de configuração especifica o msdb e as pastas do sistema de arquivos a serem gerenciados. Você também pode ter pacotes armazenados em outros lugares no sistema de arquivos que não são gerenciados pelo serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece duas pastas de nível superior para acessar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes: **Execução de pacotes** e **pacotes armazenados**. A pasta **Pacotes em Execução** lista os pacotes que estão sendo executados atualmente no servidor. A pasta **Pacotes Armazenados** lista os pacotes que são salvos no armazenamento de pacotes. Esses são os únicos pacotes que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gerencia. O repositório de pacotes pode consistir em um ou em ambos, o banco de dados msdb e as pastas do sistema de arquivos, listados no arquivo de configuração de serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O arquivo de configuração especifica o msdb e as pastas do sistema de arquivos a serem gerenciados. Você também pode ter pacotes armazenados em outros lugares no sistema de arquivos que não são gerenciados pelo serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Os pacotes salvos no msdb são armazenados em uma tabela chamada sysssispackages. Quando você salva pacotes no msdb, também pode agrupá-los em pastas lógicas. O uso de pastas lógicas pode ajudar a organizar os pacotes por finalidade ou filtrar os pacotes na tabela sysssispackages. Você pode criar pastas lógicas por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por padrão, qualquer pasta lógica que você adicionar ao msdb será automaticamente incluída no repositório de pacotes.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48091486"
   
  A pasta **Pacotes em Execução** não contém nenhuma subpasta e não é extensível.  
   
- Por padrão, a pasta **Pacotes Armazenados** contém duas pastas: **Sistema de Arquivos** e **MSDB**. A pasta **Sistema de Arquivos** lista os pacotes salvos no sistema de arquivos. O local desses arquivos é especificado no arquivo de configuração do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A pasta padrão é a pasta Pacotes, localizada em %Arquivos de Programas%\Microsoft SQL Server\100\DTS. A pasta **MSDB** lista os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram salvos no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do msdb no servidor. A tabela sysssispackages contém os pacotes salvos no msdb.  
+ Por padrão, o **pacotes armazenados** pasta contém duas pastas: **Sistema de arquivos** e **MSDB**. A pasta **Sistema de Arquivos** lista os pacotes salvos no sistema de arquivos. O local desses arquivos é especificado no arquivo de configuração do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A pasta padrão é a pasta Pacotes, localizada em %Arquivos de Programas%\Microsoft SQL Server\100\DTS. A pasta **MSDB** lista os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram salvos no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do msdb no servidor. A tabela sysssispackages contém os pacotes salvos no msdb.  
   
  Para exibir a lista de pacotes no repositório de pacotes, você precisa abrir o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e conectar-se ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48091486"
 ## <a name="managing-package-storage"></a>Gerenciamento do armazenamento de pacotes  
  Para organizar pacotes, você pode adicionar pastas personalizadas às pastas de repositório de pacotes de raiz que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lista em seu arquivo de configuração. Por padrão, as pastas raiz são as pastas **Sistema de Arquivos** e **MSDB** . Por exemplo, talvez você queira adicionar à pasta **Sistema de Arquivos** uma pasta **Limpeza de dados** que contém todos os pacotes usados para limpar dados. Você pode adicionar pastas personalizadas às pastas personalizadas, criando uma hierarquia de pastas aninhadas adequadas às suas necessidades. As pastas personalizadas podem ser excluídas e renomeadas; porém, você não pode renomear ou excluir as pastas raiz especificadas pelo arquivo de configuração. Para atualizar as pastas raiz que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lista, você deve atualizar o arquivo de configuração.  
   
- Para obter mais informações, consulte [Configurando o serviço Integration Services &#40; Serviço SSIS&#41;](../configuring-the-integration-services-service-ssis-service.md).  
+ Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## <a name="importing-and-exporting-packages"></a>Importação e exportação de pacotes  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os pacotes podem ser salvos no banco de dados msdb ou no sistema de arquivos. Você pode copiar um pacote de um tipo de armazenamento para o outro com o recurso de importação ou exportação fornecido pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você também pode importar um pacote para o mesmo tipo de armazenamento e dar ao pacote um nome diferente para criar uma cópia do pacote. O utilitário de prompt de comando **dtutil** (dtutil.exe) também pode ser usado para importar e exportar pacotes.  
@@ -80,9 +79,9 @@ ms.locfileid: "48091486"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Importar e exportar pacotes &#40;serviço SSIS&#41;](../import-and-export-packages-ssis-service.md)  
+-   [Importar e exportar pacotes &#40;Serviço SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Exibir pacotes no SQL Server Management Studio do Integration Services &#40;serviço SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Exibir pacotes do Integration Services no SQL Server Management Studio &#40;Serviço SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviço Integration Services &#40;Serviço SSIS&#41;](integration-services-service-ssis-service.md)  

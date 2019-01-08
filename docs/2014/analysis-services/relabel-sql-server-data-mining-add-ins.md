@@ -15,12 +15,12 @@ ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd98b0225caad7d6cd723e462eca031750d96d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049022"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414603"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Rotular novamente (Suplementos de Mineração de Dados do SQL Server)
   ![Ícone do Office 13 para a ferramenta rotular novamente](media/dm13-relabel.gif "ícone do Office 13 para a ferramenta rotular novamente")  

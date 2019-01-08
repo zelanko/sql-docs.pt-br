@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155126"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762429"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -54,7 +53,7 @@ ms.locfileid: "48155126"
 ## <a name="exclusion-terms"></a>Exclusão de termos  
  Além disso, a transformação Extração de Termos pode referir-se a uma coluna em uma tabela que contenha termos de exclusão, significando termos que a transformação não deve considerar ao extrair termos de um conjunto de dados. Isso é útil quando um conjunto de termos já foi identificado como inconsequente em um negócio específico e na indústria, porque o termo ocorre com uma frequência tão alta que se torna uma palavra de ruído. Por exemplo, ao extrair termos de um conjunto de dados que contém informações de apoio ao cliente sobre uma marca específica de carros, a própria marca poderá ser excluída porque a marca é mencionada com muita frequência e significativa. Portanto, os valores na lista de exclusão devem ser personalizados conforme o conjunto de dados com o qual está trabalhando.  
   
- Quando você acrescenta um termo à lista de exclusão, todos os termos - palavras ou frases nominais - que contenham o termo são também excluídos. Por exemplo, se a lista de exclusões incluir a apenas a palavra *dados*então, todos os termos que contenham essa palavra, como *dados*, *mineração de dados*, *integridade de dados*e *validade de dados* também serão excluídos. Se você quiser excluir apenas compostos que contenham a palavra *dados*, será necessário adicionar esses termos compostos explicitamente na lista de exclusões. Por exemplo, se você quisesse extrair incidências de *dados*, mas excluir *validação de dados*, você adicionaria *validação de dados* à lista de exclusão e teria certeza de que o termo *dados* seria removido da lista de exclusões.  
+ Quando você adiciona um termo à lista de exclusões, todos os termos, como palavras ou frases nominais, que contêm o termo também são excluídos. Por exemplo, se a lista de exclusões incluir a apenas a palavra *dados*então, todos os termos que contenham essa palavra, como *dados*, *mineração de dados*, *integridade de dados*e *validade de dados* também serão excluídos. Se você quiser excluir apenas compostos que contenham a palavra *dados*, será necessário adicionar esses termos compostos explicitamente na lista de exclusões. Por exemplo, se você quisesse extrair incidências de *dados*, mas excluir *validação de dados*, você adicionaria *validação de dados* à lista de exclusão e teria certeza de que o termo *dados* seria removido da lista de exclusões.  
   
  A tabela de referência deve ser uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou do Access. A transformação Extração de Termos utiliza uma conexão OLE DB separada para conectar-se à tabela de referência. Para obter mais informações, consulte [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
@@ -139,7 +138,7 @@ ms.locfileid: "48155126"
   
 -   Caracteres 0x0d de quebra de linha ASCII (retorno de carro) e 0x0a (avanço de linha). Para usar esse caractere como um limite de orações, deve haver dois ou mais caracteres de quebra de linha consecutivos.  
   
--   Hífens (-). Para usar esse caractere como um limite de orações,  nem o caractere à esquerda nem à direita do hífen pode ser uma letra.  
+-   Hifens (-). Para usar esse caractere como um limite de orações,  nem o caractere à esquerda nem à direita do hífen pode ser uma letra.  
   
 -   Sublinhado (_). Para usar esse caractere como um limite de orações,  nem o caractere à esquerda nem à direita do hífen pode ser uma letra.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "48155126"
   
 -   Combinações de números, sinais de pontuação e caracteres alfabéticos. Por exemplo, *A23B#99* retorna o termo *A23B*.  
   
--   Os caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+-   Os caracteres, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
   
     > [!NOTE]  
     >  Acrônimos que contêm um ou mais pontos (.) não são separados em várias sentenças.  
@@ -174,11 +173,11 @@ ms.locfileid: "48155126"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Extração de Termos** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação extração de termo &#40;guia de extração de termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Editor de Transformação Extração de Termos &#40;Guia Extração de Termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor de transformação extração de termo &#40;guia de exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor de Transformação Extração de Termos &#40;Guia Exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Editor de transformação extração de termo &#40;guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Extração de Termos &#40;Guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

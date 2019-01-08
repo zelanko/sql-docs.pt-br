@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 4 (opcional): combinando, correspondendo e publicando o novo conjunto de dados | Microsoft Docs'
+title: 'Tarefa 4 (opcional): Combinando, correspondendo e publicando o novo conjunto de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061746"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353070"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarefa 4 (Opcional): Combinando, correspondendo e publicando o novo conjunto de dados
-  Com o tempo, você desejará adicionar mais dados ao repositório do MDS. Antes de adicionar dados, ele pode ser útil comparar os novos dados aos dados que já são gerenciados no MDS, para garantir que você não está adicionando dados duplicados ou inexatos. No Suplemento Master Data Services para Excel, você pode combinar dados de duas planilhas e comparar esses dados para identificar e remover duplicatas antes de publicar os dados no MDS. O recurso de correspondência do Suplemento MDS do Excel usa a funcionalidade correspondente do DQS para identificar correspondências nos dados. Nesta tarefa, você combinará dados de duas planilhas em uma e executará a atividade de correspondência para identificar e remover duplicatas antes de publicar no MDS. Ver [correspondência de qualidade de dados em que o suplemento do MDS para Excel](http://msdn.microsoft.com/library/hh548681.aspx) e [combinar dados](http://msdn.microsoft.com/library/hh548680.aspx) tópicos para obter mais detalhes.  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarefa 4 (opcional): Combinando, correspondendo e publicando o novo conjunto de dados
+  Com o tempo, você desejará adicionar mais dados ao repositório do MDS. Antes de adicionar dados, ele pode ser útil comparar os novos dados aos dados que já são gerenciados no MDS, para garantir que você não está adicionando dados duplicados ou inexatos. No Suplemento Master Data Services para Excel, você pode combinar dados de duas planilhas e comparar esses dados para identificar e remover duplicatas antes de publicar os dados no MDS. O recurso de correspondência do Suplemento MDS do Excel usa a funcionalidade correspondente do DQS para identificar correspondências nos dados. Nesta tarefa, você combinará dados de duas planilhas em uma e executará a atividade de correspondência para identificar e remover duplicatas antes de publicar no MDS. Ver [correspondência de qualidade de dados em que o suplemento do MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combinar dados](https://msdn.microsoft.com/library/hh548680.aspx) tópicos para obter mais detalhes.  
   
 1.  Iniciar nova instância do **Excel**. Clique em **começar**, aponte para **execute**, digite **Excel**e clique em **Okey**.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48061746"
   
 4.  Você deve ver a **Master Data Explorer** painel à direita. Se você não vir o Master Data Explorer, clique em **Mostrar Gerenciador** botão na faixa de opções.  
   
-5.  No **Master Data Explorer** janela, selecione **fornecedores** na lista suspensa para o **modelo**. Você deve ver que o modelo tem uma entidade: **Supplier**.  
+5.  No **Master Data Explorer** janela, selecione **fornecedores** na lista suspensa para o **modelo**. Você deve observar que o modelo tem uma entidade: **Fornecedor**.  
   
      ![Excel - janela Master Data Explorer](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - janela Master Data Explorer")  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061746"
   
 25. Clique em **OK**.  
   
-26. O processo de correspondência deve identificar uma duplicata para o fornecedor com **código: S1**.  
+26. O processo de correspondência deve identificar uma duplicata para o fornecedor com **Código: S1**.  
   
      ![Excel - resultados correspondentes](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - resultados correspondentes")  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48061746"
   
 33. **Classificar** a lista por **código** e procure registros com **S57** e **S66** como códigos. Você também pode usar o **filtro** na barra de ferramentas para procurar um registro específico na lista.  
   
-34. Agora, feche **Livro1-Microsoft Excel** janela sem salvar o arquivo.  
+34. Agora, feche **Book1 - Microsoft Excel** janela sem salvar o arquivo.  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 5: Criando um atributo baseado em domínio no Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  

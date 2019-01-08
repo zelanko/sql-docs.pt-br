@@ -19,12 +19,12 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8429c02d84520524906fb0fbd411ee0a49169815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dcfda333d3381b1a35313c00e6c95173b869c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194636"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352497"
 ---
 # <a name="write-enabled-partitions"></a>Partições habilitadas para gravação
   Os dados em um cubo geralmente são somente leitura. Porém, em determinados cenários, você pode desejar que uma partição seja gravada. As partições habilitadas para gravação são usadas para permitir que os usuários empresariais explorem cenários alterando valores de célula e analisando os efeitos das mudanças em dados de cubo. Quando você habilita uma partição para gravação, os aplicativos cliente podem registrar mudanças nos dados da partição. Essas mudanças, conhecidas como dados de write-back, são armazenadas em uma tabela separada e não sobrescrevem quaisquer dados existentes em um grupo de medidas. Porém, elas estarão incorporadas nos resultados de consulta como se elas fizessem parte dos dados de cubo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48194636"
  Você pode habilitar um cubo inteiro para gravação, ou apenas determinadas partições do cubo. As dimensões habilitadas para gravação são diferentes, mas complementares. Uma partição habilitada para gravação permite aos usuários atualizarem células da partição, enquanto uma dimensão habilitada para gravação permite aos usuários atualizarem membros de dimensão. Você também pode usar esses dois recursos combinados. Por exemplo, um cubo ou uma partição habilitada para gravação não tem que incluir quaisquer dimensões habilitadas para gravação. **Tópico relacionado:**[Write-Enabled dimensões](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
->  Para habilitar um cubo para gravação que tem um banco de dados do Microsoft Access como fonte de dados, não use o Microsoft OLE DB Provider for ODBC drivers nas definições de fonte de dados para o cubo, suas partições ou dimensões. Em vez disso, você pode usar o Microsoft Jet 4.0 OLE DB Provider ou qualquer versão do Jet Service Pack que inclua o Jet 4.0 OLE. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento da Microsoft [como obter o service pack mais recente para o mecanismo de banco de dados Microsoft Jet 4.0](http://support.microsoft.com/?kbid=239114).  
+>  Para habilitar um cubo para gravação que tem um banco de dados do Microsoft Access como fonte de dados, não use o Microsoft OLE DB Provider for ODBC drivers nas definições de fonte de dados para o cubo, suas partições ou dimensões. Em vez disso, você pode usar o Microsoft Jet 4.0 OLE DB Provider ou qualquer versão do Jet Service Pack que inclua o Jet 4.0 OLE. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento da Microsoft [como obter o service pack mais recente para o mecanismo de banco de dados Microsoft Jet 4.0](https://support.microsoft.com/?kbid=239114).  
   
  Um cubo só poderá ser habilitado para gravação se todas as suas medidas usarem a função de agregação `Sum`. Grupos de medidas vinculados e cubos locais não podem ser habilitados para gravação.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48194636"
 ## <a name="see-also"></a>Consulte também  
  [Dimensões habilitadas para gravação](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [As agregações e Designs de agregação](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [Partições &#40;Analysis Services - dados multidimensionais&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Dimensões habilitadas para gravação](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

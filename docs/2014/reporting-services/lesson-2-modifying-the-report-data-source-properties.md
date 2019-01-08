@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Modificando as propriedades de fonte de dados de relatório | Microsoft Docs'
+title: 'Lição 2: Propriedades da fonte de modificação de dados de relatório | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3dbc789b561702d21d705d1b9d362f7f3c01d7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159616"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416657"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lição 2: Modificando as propriedades de fonte de dados de relatório
   Nesta lição, você usará o Gerenciador de Relatórios para selecionar um relatório que será entregue a destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
   
  Você também modificará o conjunto de dados e relatório para usar um parâmetro para filtrar o relatório no `[Order]` para que a assinatura possa produzir instâncias diferentes do relatório para pedidos específicos e formatos de renderização.  
@@ -53,19 +53,19 @@ ms.locfileid: "48159616"
   
 6.  Clique em **Credenciais armazenadas com segurança no servidor de relatórios**.  
   
-7.  Digite seu nome de usuário (use o formato *domain\user*) e a senha. Se você não tiver permissão para acessar o [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de banco de dados, especifique um logon que tenha.  
+7.  Digite seu nome de usuário (use o formato *domain\user*) e a senha. Se você não tiver permissão para acessar o banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , especifique um logon que tenha tal permissão.  
   
-8.  Clique em **Usar as credenciais do Windows ao conectar-se à fonte de dados**e depois clique em **OK**. Se você não estiver usando uma conta de domínio (por exemplo, se você estiver usando um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logon), não clique essa caixa de seleção.  
+8.  Clique em **Usar as credenciais do Windows ao conectar-se à fonte de dados**e depois clique em **OK**. Se não estiver usando uma conta de domínio (se você estiver um logon do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por exemplo), não marque essa caixa de seleção.  
   
 9. Clique em **Testar Conexão** para verificar se é possível conectar-se à fonte de dados.  
   
 10. Clique em **Aplicar**.  
   
-11. Exiba o relatório para verificar se o relatório está sendo executado com as credenciais especificadas. Para exibir o relatório, clique na guia **Exibir** . Observe que, quando o relatório é aberto, você deve selecionar um nome de funcionário e, em seguida, clique no **Exibir relatório** botão para exibir o relatório.  
+11. Exiba o relatório para verificar se o relatório está sendo executado com as credenciais especificadas. Para exibir o relatório, clique na guia **Exibir** . Observe que quando o relatório é aberto, é necessário selecionar um nome para o Funcionário e depois clicar no botão **Exibir Relatório** para visualizar o relatório.  
   
 ##  <a name="bkmk_modify_dataset"></a> Para modificar o AdventureWorksDataset  
   
-1.  Abra o relatório pedidos de vendas no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  Abra o relatório Pedidos de Vendas no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
 2.  Clique com o botão direito do mouse no conjunto de dados `AdventureWorksDataset` e clique em **Propriedades do Conjunto de Dados**.  
   
@@ -114,16 +114,16 @@ ms.locfileid: "48159616"
   
          ![Visualizador de relatórios com área de parâmetro visível](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "Visualizador de relatórios com área de parâmetro visível")  
   
-8.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção “Para publicar o relatório no Servidor de Relatório (opcional)” da [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+8.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção ' Para publicar o relatório no servidor de relatório (opcional)' de [lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ##  <a name="bkmk_redeploy"></a> Para implantar o relatório novamente  
   
-1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção “Para publicar o relatório no Servidor de Relatório (opcional)” da [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção ' Para publicar o relatório no servidor de relatório (opcional)' de [lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Na barra de ferramentas, clique em **Compilar** e, em seguida, em **Implantar tutorial**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você configurou o relatório com êxito para obter dados usando credenciais armazenadas. Depois, especifique a assinatura usando as páginas de Assinatura Controlada por Dados no Gerenciador de Relatórios. Consulte [Lição 3: Definindo uma assinatura controlada por dados](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
+ Você configurou o relatório com êxito para obter dados usando credenciais armazenadas. Depois, especifique a assinatura usando as páginas de Assinatura Controlada por Dados no Gerenciador de Relatórios. Consulte [lição 3: Definindo uma assinatura controlada por dados](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar fontes de dados de relatório](report-data/manage-report-data-sources.md)   

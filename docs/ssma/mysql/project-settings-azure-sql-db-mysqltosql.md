@@ -10,12 +10,12 @@ ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b319db9bb867e94e2a7400acffe9fb87ccb6b7b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c16fe617b5808f22f15cdf89af8dc7a1e79898
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756196"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410863"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Configurações do projeto (BD SQL do Azure) (MySQLToSQL)
 As configurações do projeto do SQL Azure permitem que você configurar o sufixo do banco de dados do SQL Azure a serem adicionados na caixa de diálogo de conexão e também permite implementar o mecanismo de pulsação na conexão do SQL Azure.  

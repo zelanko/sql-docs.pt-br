@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 668e8f1955290c31ee63ca5b81fc5e9c286d54c4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742445"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418388"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -36,10 +36,10 @@ Expression1 OR Expression2
  Uma expressão MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna **true** se um ou ambos os argumentos forem avaliados como **true**; caso contrário, **false**.  
+ Um valor booliano que retorna **verdadeira** se um ou ambos os argumentos forem avaliados como **verdadeiro**; caso contrário, **false**.  
   
-## <a name="remarks"></a>Remarks  
- O **ou** operador trata ambos os argumentos como valores boolianos (zero, 0, como **false**; caso contrário, **true**) antes que o operador realize a disjunção lógica. A tabela a seguir ilustra como o **ou** operador executa a disjunção lógica.  
+## <a name="remarks"></a>Comentários  
+ O **ou** operador trata ambos os argumentos como valores boolianos (zero, 0, como **falso**; caso contrário, **verdadeiro**) antes que o operador realize a disjunção lógica. A tabela a seguir ilustra como o **ou** operador executa a disjunção lógica.  
   
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  
@@ -49,7 +49,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>Exemplo  
- A consulta a seguir contém uma medida calculada que retorna a cadeia de caracteres "CASADO OU HOMEM" (MARRIED OR MALE) se o membro atual na hierarquia de Gênero da dimensão de Cliente for Masculino ou o membro atual na hierarquia Status Matrimonial da dimensão de Cliente for Casado; caso contrário, ela retornará a cadeia de caracteres "MULHER OU SOLTEIRA" (UNMARRIED OR FEMALE).  
+ A consulta a seguir contém uma medida calculada que retorna a cadeia de caracteres "CASADO ou HOMEM" se o membro atual na hierarquia de Gênero da dimensão cliente for Masculino ou o membro atual na hierarquia Status matrimonial da dimensão cliente for casado; Caso contrário, ele retorna a cadeia de caracteres "Sem CASAMENTO ou FEMALE".  
   
 ```  
 WITH  

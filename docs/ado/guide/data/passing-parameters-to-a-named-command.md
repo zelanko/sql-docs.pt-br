@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505709"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passar parâmetros para um comando nomeado
 Assim como o resultado do comando é passado como um *horizontalmente* variável do comando nomeado, parâmetros para um comando parametrizado pode foi passado como *no* variáveis para o comando nomeado.  
@@ -77,21 +77,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Observe que todos os parâmetros de entrada devem preceder qualquer variável de saída e os tipos de dados de parâmetros devem corresponder ou podem ser convertidos para aqueles dos campos correspondentes. A instrução a seguir:  
+ Observe que todos os parâmetros de entrada devem preceder qualquer variável de saída e os tipos de dados de parâmetros devem corresponder ou podem ser convertidos para aqueles dos campos correspondentes. A seguinte instrução:  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- — resultará em um erro de tipos de dados incompatíveis, porque o parâmetro de entrada necessário é de um **cadeia de caracteres** tipo, não de um **inteiro** tipo.  
+ -resultará em um erro de tipos de dados incompatíveis, porque o parâmetro de entrada necessário é de um **cadeia de caracteres** tipo, não de um **inteiro** tipo.  
   
- A chamada a seguir:  
+ A seguinte chamada:  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- — é válido, mas produzirá um resultado vazio definido porque esses registros não existem no banco de dados.  
+ -é válido, mas produzirá um resultado vazio definido porque esses registros não existem no banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

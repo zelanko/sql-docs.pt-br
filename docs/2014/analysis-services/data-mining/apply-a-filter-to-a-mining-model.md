@@ -16,12 +16,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512636"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar um filtro a um modelo de mineração
   Se a sua estrutura de mineração tiver uma tabela aninhada, você poderá aplicar um filtro à tabela de casos, à tabela aninhada ou a ambas.  
@@ -47,7 +47,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Selecione o modelo, e clique com o botão direito do mouse para abrir o menu de atalho.  
   
-     –ou–  
+     -ou-  
   
      Selecione o modelo. Em seguida, no menu **Modelo de Mineração** , selecione **Definir Filtro de Modelos**.  
   
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Clique na caixa de texto **Valor** e digite um valor na caixa.  
   
-     Por exemplo, selecione `Income` como a coluna, selecione a maior que (>) do operador e digite `30000`.  
+     Por exemplo, selecione `Income` como a coluna, selecione o operador maior que (>) e digite `30000`.  
   
 9. Na grade, clique na linha seguinte.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Selecione um operador e digite um valor conforme descrito nas etapas 7 e 8.  
   
-     Por exemplo, selecione `Income` como a coluna novamente, selecione o operador menor que (<) e, em seguida, digite `40000`.  
+     Por exemplo, selecione novamente `Income` como a coluna, selecione o operador menor que (<) e digite `40000`.  
   
 12. Na grade, clique na linha seguinte.  
   
@@ -97,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Essas são as únicas condições disponíveis para a tabela aninhada na caixa de diálogo **Filtro de Modelos** , pois você está restringindo a tabela de casos a apenas aqueles que têm um determinado valor na tabela aninhada. Você definirá o valor da condição na tabela aninhada na próxima etapa.  
   
-4.  Clique na caixa **Valor** e no botão **(…)** para compilar uma expressão.  
+4.  Clique o **valor** caixa e, em seguida, clique no **(...)**  botão para criar uma expressão.  
   
      O  **\<nome > filtro** caixa de diálogo é aberta. Essa caixa de diálogo só pode definir condições na tabela atual, que neste caso é a tabela aninhada.  
   
@@ -127,8 +127,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
- [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](delete-a-filter-from-a-mining-model.md)  
   
   

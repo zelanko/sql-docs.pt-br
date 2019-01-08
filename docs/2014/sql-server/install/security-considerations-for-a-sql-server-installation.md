@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -27,12 +26,12 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762908"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerações sobre segurança para uma instalação do SQL Server
   A segurança é importante para todo produto e todo negócio. Seguindo práticas recomendadas simples, você pode evitar muitas vulnerabilidades de segurança. Este tópico discute algumas práticas recomendadas de segurança que você deve considerar antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e depois de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Está incluída orientação de segurança para recursos específicos nos tópicos de referência para esses recursos.  
@@ -81,7 +80,7 @@ ms.locfileid: "48093586"
 ###  <a name="isolated_services"></a> Isolate Services  
  O isolamento de serviços reduz o risco de que um serviço comprometido possa ser usado para comprometer outros. Para isolar serviços, considere as seguintes diretrizes:  
   
--   Execute serviços separados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob contas separadas do Windows. Sempre que possível, use contas de usuário Local ou do Windows separadas e com poucos direitos para cada serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Execute serviços separados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob contas separadas do Windows. Sempre que possível, use contas de usuário Local ou do Windows separadas e com poucos direitos para cada serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  O uso do sistema de arquivos correto aumenta a segurança. Para instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve executar as seguintes tarefas:  
@@ -144,7 +143,7 @@ ms.locfileid: "48093586"
   
  **Senhas fortes**  
   
--   Sempre atribua uma senha forte para o `sa` conta.  
+-   Sempre atribua uma senha forte à conta `sa`.  
   
 -   Sempre habilite a verificação de política de senha sobre nível de segurança e expiração de senhas.  
   

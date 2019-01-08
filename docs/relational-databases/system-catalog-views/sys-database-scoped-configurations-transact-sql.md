@@ -19,25 +19,25 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 350f3af1bfd6e2765f74d074727577541378d2e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733826"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947650"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha por configuração. 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|ID da opção de configuração.|  
 |**name**|**nvarchar(60)**|O nome da opção de configuração. Para obter informações sobre as configurações possíveis, consulte [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**value**|**sqlvariant**|O valor definido para essa opção de configuração para a réplica primária.|  
 |**value_for_secondary**|**sqlvariant**|O valor definido para essa opção de configuração para as réplicas secundárias.|  
-|**elevate_online**|**nvarchar(60)** |O banco de dados no escopo padrão definido para a opção online para operações de índice |
+|**is_value_default**|**bit** |Especifica se o valor definido é o valor padrão.|
 |**elevate_resumable**|nvarchar(60)|O banco de dados no escopo padrão definido para a opção retomável para operações de índice| 
   
 ##  <a name="Permissions"></a> Permissões  

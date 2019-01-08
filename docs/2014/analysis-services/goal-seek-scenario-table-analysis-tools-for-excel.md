@@ -15,19 +15,19 @@ ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e3b99c917b6f272f4af325a35712f059313742c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172556"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400459"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Cenário de Metas a Atingir (Ferramentas de Análise de Tabela para Excel)
   ![Botão meta a atingir em ferramentas de análise de tabela](media/tat-goalseek.gif "botão meta a atingir em ferramentas de análise de tabela")  
   
  O **meta a atingir** ferramenta de cenário é um complementa para o [e se](what-if-scenario-table-analysis-tools-for-excel.md) ferramenta de cenário. O **hipotética** ferramenta informa o impacto da alteração, ao passo que o **meta a atingir** ferramenta informa os fatores subjacentes que devem ser alterados para obter o resultado desejado.  
   
- Por exemplo, digamos que sua meta seja aumentar a satisfação do cliente. Você pode usar **meta a atingir** análise para determinar quais fatores teriam mais prováveis aumentar a satisfação do cliente e decidir se essas alterações são eficazes.  
+ Por exemplo, digamos que sua meta é aumentar a satisfação do cliente. Você pode usar **meta a atingir** análise para determinar quais fatores teriam mais prováveis aumentar a satisfação do cliente e decidir se essas alterações são eficazes.  
   
  Quando a ferramenta conclui sua análise, ela cria duas colunas novas na tabela de dados de origem. Essas colunas mostram a *probabilidade* que o resultado pretendido ser alcançado e a alteração recomendada, se houver.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172556"
   
 2.  Clique em **cenários**e selecione **meta a atingir**.  
   
-3.  No **análise de cenário: meta a atingir** caixa de diálogo, selecione a coluna que contém o destino do valor da lista.  
+3.  No **análise do cenário: Meta a atingir** caixa de diálogo, selecione a coluna que contém o destino do valor da lista.  
   
 4.  Especifique o valor que você deseja atingir.  
   

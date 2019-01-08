@@ -15,15 +15,15 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c7ddfeda7538027c56af17664e5962d09903b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512094"
 ---
 # <a name="diagnostics"></a>Diagnóstico
-Funções no ODBC retornam informações de diagnóstico de duas maneiras. O código de retorno indica o êxito ou falha da função, geral, enquanto os registros de diagnóstico fornecem informações detalhadas sobre a função. Pelo menos um registro de diagnóstico — o registro de cabeçalho — será retornado, mesmo se a função for bem-sucedida.  
+Funções no ODBC retornam informações de diagnóstico de duas maneiras. O código de retorno indica o êxito ou falha da função, geral, enquanto os registros de diagnóstico fornecem informações detalhadas sobre a função. Pelo menos um registro de diagnóstico - registro de cabeçalho - será retornado, mesmo se a função for bem-sucedida.  
   
  Informações de diagnóstico são usadas no momento do desenvolvimento para capturar erros de programação, como identificadores inválidos e erros de sintaxe em instruções de SQL embutido em código. Ele é usado em tempo de execução para capturar erros de tempo de execução e avisos, como truncamento de dados, violações de acesso e erros de sintaxe em instruções SQL inseridas pelo usuário.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
@@ -16,12 +15,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770188"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
   Chave primárias e estrangeiras são dois tipos de restrições que podem ser usadas para impor integridade de dados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esses são objetos de banco de dados importantes.  

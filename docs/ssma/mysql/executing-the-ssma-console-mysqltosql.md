@@ -18,12 +18,12 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd560a17c10b5e076236195107d0a9154921422a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701804"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411253"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o console do SSMA (MySQLToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA.  
@@ -59,7 +59,7 @@ Os comandos de projeto lidar com a criação de projetos, abrir, salvar e sair d
   
    overwrite-if-exists="<true/false>"   (optional)  
   
-   project-type==”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”   (optional)  
+   project-type=="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"   (optional)  
   
 />  
 ```  
@@ -94,7 +94,7 @@ Abrir projeto:
   
 **Comando**  
   
-projeto salvar: salva o projeto de migração.  
+Salvar projeto: Salva o projeto de migração.  
   
 **Script**  
   
@@ -307,7 +307,7 @@ ou em
 ## <a name="migration--script-file-commands"></a>Comandos de arquivo de Script de migração  
 Os comandos de migração converter o esquema de banco de dados de destino para o esquema de origem e migra dados para o servidor de destino.  
   
-A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 **Comando**  
   
@@ -402,7 +402,7 @@ migrar dados
 ```xml  
 <migrate-data  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true">  
   
@@ -429,7 +429,7 @@ ou em
   
    object-type="<object-category>"  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true"/>  
 ```  
@@ -463,7 +463,7 @@ Mapeamento de esquema de banco de dados de origem ao esquema de destino.
 Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de banco de dados de destino com o banco de dados de origem.  
   
 > [!NOTE]  
-> A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+> A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 **Comando**  
   
@@ -593,7 +593,7 @@ ou em
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Comandos de arquivo de Script de geração de script  
-Os comandos de geração de Script executam duas tarefas: eles ajudam a salvar o console de saída em um arquivo de script; e registrar a saída do T-SQL para o console ou um arquivo de acordo com o parâmetro que você especificar.  
+Os comandos de geração de Script executam tarefas duplas: Eles ajudam a salvar o console de saída em um arquivo de script; e registrar a saída do T-SQL para o console ou um arquivo de acordo com o parâmetro que você especificar.  
   
 **Comando**  
   
@@ -626,7 +626,7 @@ Requer um ou vários nós de metabase como parâmetro de linha de comando.
   
    object-type="<object-category>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
    overwrite="<true/false>"   (optional)  
   
@@ -639,7 +639,7 @@ ou em
   
    metabase="<source/target>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
       <metabase-object object-name="<object-name>"  
   

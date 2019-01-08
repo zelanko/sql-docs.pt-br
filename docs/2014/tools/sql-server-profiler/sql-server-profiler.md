@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -26,12 +25,12 @@ ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfaad106f7d2671dad24de87c64e02859b021769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780718"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma interface avançada para criar e gerenciar rastreamentos, e analisar e reproduzir resultados de rastreamento. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema.  
@@ -50,7 +49,7 @@ ms.locfileid: "48138278"
 ## <a name="benefits-of-sql-server-profiler"></a>Benefícios do SQL Server Profiler  
  O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma interface gráfica do usuário que o Rastreamento do SQL usa para monitorar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do Analysis Services. Você pode capturar e salvar dados sobre cada evento em um arquivo ou tabela para análise posterior. Por exemplo, é possível monitorar um ambiente de produção para observar quais procedimentos armazenados estão afetando o desempenho devido à lentidão na execução. O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é usado para atividades como:  
   
--   Percorrer consultas de problemas para localizar a causa do problema.  
+-   Percorrer consultas problemáticas para localizar a causa do problema.  
   
 -   Localizar e diagnosticar consultas de execução lenta.  
   

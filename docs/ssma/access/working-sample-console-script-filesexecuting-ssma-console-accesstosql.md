@@ -10,12 +10,12 @@ ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: caf97b65c9c7b2a0ce49cfcf42e2f90cd0db74cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679384"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407843"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Trabalhando com o FilesExecuting de Script de Console de exemplo o Console do SSMA (AccessToSQL)
 Alguns arquivos de exemplo foram fornecidos juntamente com o produto para a referência de usuário e o uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para as necessidades do usuário final.  
@@ -39,11 +39,11 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     -   Para obter mais informações sobre como se conectar ao servidor de origem e destino, consulte [criar os arquivos de Conexão de servidor &#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) .  
   
--   **VariableValueFileSample.xml:** arquivos de script de todas as variáveis que foram usadas no console do exemplo e `ServersConnectionFileSample.xml` foram agrupadas nesse arquivo. Para executar os scripts de console de exemplo que o usuário tem que simplesmente substituir a variável de exemplo valores com o usuário definido aqueles e passam esse arquivo como um argumento de linha de comando adicionais, juntamente com o arquivo de script.  
+-   **VariableValueFileSample.xml:** Arquivos de script de todas as variáveis que foram usadas no console do exemplo e `ServersConnectionFileSample.xml` foram agrupadas nesse arquivo. Para executar os scripts de console de exemplo que o usuário tem que simplesmente substituir a variável de exemplo valores com o usuário definido aqueles e passam esse arquivo como um argumento de linha de comando adicionais, juntamente com o arquivo de script.  
   
     Para obter mais informações sobre o arquivo de valor de variável, consulte [criando arquivos de valor de variável &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
--   **AssessmentReportGenerationSample.xml:** Este exemplo permite que o usuário gerar um relatório de avaliação de xml que pode ser usado pelo usuário para análise antes que ele comece a converter e migrar os dados.  
+-   **AssessmentReportGenerationSample.xml:** Este exemplo permite ao usuário gerar um relatório de avaliação de xml que pode ser usado pelo usuário para análise antes que ele comece a converter e migrar os dados.  
   
     No `generate-assessment-report` o usuário deve alterar mandatorily o valor da variável de comando (consulte **VariableValueFileSample.xml**) na `object-name` do atributo a ser o nome de banco de dados em uso pelo usuário. Dependendo do tipo de objeto especificado, o `object-type` valor também terá que ser alterado.  
   
@@ -57,7 +57,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
 -   **ConversionAndDataMigrationSample.xml:** Este exemplo permite que o usuário executar uma migração de ponta a ponta da conversão para a migração de dados. A lista de valores de atributo obrigatório que eles terão de alterar é listada abaixo:  
   
-    |Nome do comando|Description|attribute|  
+    |Nome do comando|Descrição|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Mapeamento de esquema de banco de dados de origem ao esquema de destino.|`source-schema:` Especifica o banco de dados de origem que requer a ser convertido.<br /><br />`sql-server-schema`: Especifica o banco de dados de destino que deve ser migrados para o|  
     |`convert-schema`|Executa a conversão de esquema de origem ao esquema de destino.<br /><br />Se o usuário tem que avaliar vários objetos / bancos de dados ele pode especificar vários `metabase-object` nós conforme ilustrado no `convert-schema` 4 de exemplo do comando do exemplo de arquivo de script de console.|`object-name`: Especifique o banco de dados de origem / nome que exige a ser convertido do objeto. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado no `object-name`|  
