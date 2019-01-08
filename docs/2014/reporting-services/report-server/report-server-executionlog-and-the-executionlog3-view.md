@@ -14,12 +14,12 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095876"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404993"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log de execução do servidor de relatório e a exibição ExecutionLog3
   O log de execução do servidor de relatório contém informações sobre os relatórios executados no servidor ou em vários servidores em uma implantação em expansão no modo nativo ou no farm do SharePoint. É possível usar o log de execução de relatório para descobrir a frequência na qual um relatório é solicitado, quais são os formatos de saída mais usados e qual é o tempo de processamento em milissegundos em cada fase do processamento. O log contém informações sobre o período de tempo gasto na execução da consulta do conjunto de dados de um relatório e a hora gasta no processamento dos dados. Se você for um administrador de servidor de relatório, poderá revisar as informações de log, identificar tarefas demoradas e dar sugestões aos autores de relatório sobre as áreas do relatório (conjunto de dados ou processamento) que eles podem melhorar.  
@@ -29,7 +29,7 @@ ms.locfileid: "48095876"
 ##  <a name="bkmk_top"></a> Exibindo as informações do log  
  A execução do servidor de relatório registra dados sobre execução de relatório em uma tabela de banco de dados interna. As informações da tabela estão disponíveis nas exibições do SQL Server.  
   
- O log de execução de relatório é armazenado no banco de dados do servidor de relatório que, por padrão, é denominado **ReportServer**. As exibições SQL fornecem as informações do log de execução. As exibições “2” e “3” foram adicionadas às versões mais recentes e contêm novos campos ou contêm campos com nomes mais amigáveis que as versões anteriores. As exibições mais antigas permanecem no produto; portanto, os aplicativos que dependem delas não são impactados. Se você não tem uma dependência em uma exibição mais antiga, por exemplo, ExecutionLog, é recomendável que use a exibição mais recente, ExecutionLog**3**.  
+ O log de execução de relatório é armazenado no banco de dados do servidor de relatório que, por padrão, é denominado **ReportServer**. As exibições SQL fornecem as informações do log de execução. As exibições "2" e "3" foram adicionadas às versões mais recentes e contêm novos campos ou contêm campos com nomes mais amigáveis que as versões anteriores. As exibições mais antigas permanecem no produto; portanto, os aplicativos que dependem delas não são impactados. Se você não tem uma dependência em uma exibição mais antiga, por exemplo, ExecutionLog, é recomendável que use a exibição mais recente, ExecutionLog**3**.  
   
  Neste tópico:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48095876"
   
  **Para habilitar o log de execução:**  
   
-1.  Inicie o SQL Server Management Studio com privilégios administrativos. Por exemplo, clique com o botão direito do mouse no ícone do Management Studio e clique em ‘Executar como administrador’.  
+1.  Inicie o SQL Server Management Studio com privilégios administrativos. Por exemplo, clique com o botão direito do mouse no ícone do Management Studio e clique em 'Executar como administrador'.  
   
 2.  Conecte-se ao servidor de relatório desejado.  
   
@@ -109,14 +109,14 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação. Se seu ambiente tiver mais de um servidor de relatório, você poderá analisar a distribuição de InstanceName para monitorar e determinar se o balanceador da carga de rede distribui solicitações pelos servidores de relatório conforme esperado.|  
 |ItemPath|Caminho onde um relatório ou item de relatório é armazenado.|  
 |UserName|Identificador do usuário.|  
 |ExecutionID|O identificador interno associado a uma solicitação. Solicitações nas mesmas sessões de usuário compartilham a mesma id de execução.|  
 |RequestType|Valores possíveis:<br />**Interativo**<br />**Assinatura**<br /><br /> <br /><br /> A análise dos dados de log filtrados por RequestType=Subscription e classificados por TimeStart pode revelar períodos de uso de assinatura pesados e talvez você queira modificar algumas assinaturas de relatório para um horário diferente.|  
-|Formato|Formato de renderização.|  
+|Formatar|Formato de renderização.|  
 |Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
 |ItemAction|Valores possíveis:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Executar**<br /><br /> **RenderEdit**|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados.|  
 |TimeProcessing|Número de milissegundos gastos no processamento do relatório.|  
 |TimeRendering|Número de milissegundos gastos na renderização do relatório.|  
-|Origem|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Ao vivo**<br /><br /> **Cache**: indica uma execução em cache, por exemplo, conjunto de dados de consultas não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **Ad hoc** : indica um relatório gerado dinamicamente modelo com base em relatório detalhado ou um construtor de relatórios que é visualizado em um cliente utilizando o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento em uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**: indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
+|Origem|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Ao vivo**<br /><br /> **Cache**: Indica uma execução em cache, por exemplo, conjunto de dados de consultas não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **Ad hoc** : indica um modelo de relatório gerado dinamicamente com base no relatório detalhado ou um relatório do Construtor de Relatórios que é visualizado em um cliente utilizando o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento em uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**:  Indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
 |Status|Status (rsSuccess ou um código de erro; se vários erros ocorrerem, só o primeiro erro será registrado).|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
@@ -225,7 +225,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  O exemplo a seguir descreve algumas das propriedades que você verá no campo AdditionalInfo:  
   
--   **ProcessingEngine**: 1 = SQL Server 2005, 2 = o novo mecanismo de processamento sob demanda. Se a maioria de seus relatórios ainda estiver mostrando o valor 1, você poderá investigar como reprojetá-los para que utilizem o mecanismo de processamento sob demanda mais novo e eficiente.  
+-   **ProcessingEngine**: 1=SQL Server 2005, 2=O novo Mecanismo de Processamento sob Demanda. Se a maioria de seus relatórios ainda estiver mostrando o valor 1, você poderá investigar como reprojetá-los para que utilizem o mecanismo de processamento sob demanda mais novo e eficiente.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
@@ -237,7 +237,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: uma estimativa da quantidade máxima de memória, em quilobytes, consumida por cada componente durante uma solicitação específica.  
+-   **EstimatedMemoryUsageKB**: Uma estimativa da quantidade máxima de memória, em quilobytes, consumida por cada componente durante uma solicitação específica.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -245,7 +245,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: os tipos de extensões de dados ou fontes de dados usadas no relatório. O número é uma contagem do número de ocorrências da fonte de dados específica.  
+-   **DataExtension**: Os tipos de extensões de dados ou fontes de dados usados no relatório. O número é uma contagem do número de ocorrências da fonte de dados específica.  
   
     ```  
     <DataExtension>  
@@ -263,7 +263,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Conexões**: uma estrutura em vários níveis. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Conexões**: Uma estrutura em vários níveis. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -308,14 +308,14 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
-|ReportPath|A estrutura de caminho para o relatório.  Por exemplo, um relatório chamado ”test”, que está na pasta raiz do Gerenciador de Relatórios, teria um ReportPath “/test”.<br /><br /> Um relatório chamado “test”, salvo na pasta “samples” do Gerenciador de Relatórios, terá o ReportPath “/Samples/test/”|  
+|ReportPath|A estrutura de caminho para o relatório.  Por exemplo, um relatório chamado "test", que está na pasta raiz do Gerenciador de Relatórios, teria um ReportPath "/test".<br /><br /> Um relatório chamado "test", salvo na pasta "samples" do Gerenciador de Relatórios, terá o ReportPath "/Samples/test/"|  
 |UserName|Identificador do usuário.|  
 |ExecutionID||  
 |RequestType|Tipo de solicitação (usuário ou sistema).|  
-|Formato|Formato de renderização.|  
+|Formatar|Formato de renderização.|  
 |Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
 |ReportAction|Valores possíveis: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
@@ -340,13 +340,13 @@ select * from ExecutionLog order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
 |ReportID|Identificador do relatório.|  
 |UserName|Identificador do usuário.|  
 |RequestType|Valores possíveis:<br /><br /> True = Uma solicitação de assinatura<br /><br /> False = Uma solicitação interativa|  
-|Formato|Formato de renderização.|  
+|Formatar|Formato de renderização.|  
 |Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
 |TimeEnd||  

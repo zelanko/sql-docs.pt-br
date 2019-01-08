@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595205"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777908"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
+ [  **@publication=** ] **'**_publicação_**'**  
  É o nome da publicação na qual o filtro de mesclagem está sendo adicionado. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=** ] **'***artigo***'**  
+ [  **@article=** ] **'**_artigo_**'**  
  É o nome do artigo no qual o filtro de mesclagem está sendo adicionado. *artigo* está **sysname**, sem padrão.  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  É o nome do filtro. *FilterName* é um parâmetro obrigatório. *FilterName*está **sysname**, sem padrão.  
   
- [  **@join_articlename=** ] **'***join_articlename***'**  
+ [  **@join_articlename=** ] **'**_join_articlename_**'**  
  É o artigo pai ao qual o artigo filho, especificado por *artigo*, deve ser Unido com a cláusula de junção especificada por *join_filterclause*, para determinar as linhas no artigo filho que atendem aos o critério de filtro de filtro de mesclagem. *join_articlename* está **sysname**, sem padrão. O artigo deve estar na publicação fornecida por *publicação*.  
   
  [  **@join_filterclause=** ] *join_filterclause*  
@@ -85,7 +84,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [  **@filter_type=** ] *filter_type*  
  Especifica o tipo de filtro que está sendo adicionado. *filter_type* está **tinyint**, e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Somente filtro de junção. Necessário para dar suporte [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.|  
 |**2**|Somente relação de registro lógico.|  
@@ -119,7 +118,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte também  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Definir e modificar um filtro de junção entre artigos de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c3fa39cde45e568ad713a3238c98e96d40f8495
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd5bc058acf58a62c07fd5bdc65a33a43a6a7d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155036"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749788"
 ---
 # <a name="look-up-infoobject"></a>Pesquisar InfoObject
   Use a caixa de diálogo **Pesquisar InfoObject** para pesquisar um InfoObject definido no sistema SAP Netweaver BW. Quando a lista de InfoObjects disponível é exibida, selecione o InfoObject que você quer e o destino do SAP BW preencherá as opções associadas com os valores necessários.  
@@ -80,12 +79,12 @@ ms.locfileid: "48155036"
  Quando a lista de InfoObjects disponível é exibida, selecione o InfoObject que você quer e o destino preencherá as opções associadas com os valores necessários.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar InfoCube para os dados da transação](create-infocube-for-transaction-data.md)   
+ [Criar InfoCube para os Dados da Transação](create-infocube-for-transaction-data.md)   
  [Criar InfoSource](create-infosource.md)   
- [Criar InfoSource para os dados da transação](create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para os Dados da Transação](create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestre](create-infosource-for-master-data.md)   
- [Criar novo InfoObject](create-new-infoobject.md)   
- [Editor de destino SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [Criar Novo InfoObject](create-new-infoobject.md)   
+ [Editor de Destino SAP BW &#40;Página Gerenciador de Conexões&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

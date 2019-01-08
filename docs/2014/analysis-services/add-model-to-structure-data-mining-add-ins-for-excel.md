@@ -13,12 +13,12 @@ ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cbbbbcd154642ef3437b0860d8346d76f84bd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521044"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Adicionar modelo à estrutura (Suplementos de Mineração de Dados para Excel)
   ![Adicionar modelo de botão de estrutura](media/dmc-addmodel.gif "Add Model ao botão de estrutura")  
@@ -35,13 +35,13 @@ ms.locfileid: "48104786"
   
 2.  No **selecionar estrutura** diálogo caixa, escolha a estrutura que contém os dados que você deseja usar e, em seguida, clique em **próxima**.  
   
-     **Dica**: se você não tiver certeza de qual estrutura de mineração contém os dados necessários, use o **modelo de documento** Assistente para exibir as colunas e estatísticas básicas sobre os dados.  
+     **Dica**: Se você não tiver certeza de qual estrutura de mineração contém os dados necessários, use o **modelo de documento** Assistente para exibir as colunas e estatísticas básicas sobre os dados.  
   
-     Se você não conseguir encontrar uma estrutura de mineração, verifique a conexão que está usando no momento. Talvez você precise abrir uma conexão com um servidor diferente.  
+     Se você não conseguir encontrar uma estrutura de mineração, verifique a conexão que você está usando no momento. Talvez você precise abrir uma conexão com um servidor diferente.  
   
 3.  No **Selecionar algoritmo de mineração** caixa de diálogo, escolha um algoritmo de mineração usar no novo modelo de mineração.  
   
-     Observe que a caixa de diálogo fornece muito mais opções do que aparecem nos assistentes. Você pode criar um modelo usando qualquer algoritmo com suporte do servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], desde que seus dados sejam compatíveis.  
+     Observe que a caixa de diálogo fornece muito mais opções que aparecem nos assistentes. Você pode criar um modelo usando qualquer algoritmo com suporte do servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], desde que seus dados sejam compatíveis.  
   
 4.  É recomendável que você clique também o **parâmetros** para abrir o **parâmetros de algoritmo** caixa de diálogo caixa e personalizar os parâmetros no algoritmo. Essa opção é a maneira mais fácil de criar modelos de mineração personalizados.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "48104786"
 |Opção|Comentários|  
 |------------|--------------|  
 |**Selecionar estrutura ou modelo** caixa de diálogo|Escolha uma estrutura de mineração existente para usar como a base para criar um novo modelo.  A estrutura que você escolhe deve estar localizada na conexão atual. Se não estiver, altere as conexões usando o [conectar-se a fonte de dados &#40;cliente de mineração de dados para Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) ferramenta.|  
-|**Selecione o algoritmo de mineração de** caixa de diálogo|A lista de algoritmos de mineração de dados varia de acordo com o servidor ao qual você está conectado. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece algoritmos diferentes nas edições Standard e Enterprise. O administrador também pode ter adicionado algoritmos personalizados.<br /><br /> Se você não conseguir ver algoritmos, verifique se está conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Selecione o algoritmo de mineração de** caixa de diálogo|A lista de algoritmos de mineração de dados varia de acordo com o servidor ao qual você está conectado. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece algoritmos diferentes nas edições Standard e Enterprise. O administrador também pode ter adicionado algoritmos personalizados.<br /><br /> Se você não pode ver algoritmos, verifique se você está conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Parâmetros do algoritmo** caixa de diálogo|Nessas configurações, você pode personalizar cada algoritmo usando parâmetros específicos ao método analítico. Você também pode definir uma semente para garantir que os resultados do modelo possam ser reproduzidos nas passagens de treinamento.<br /><br /> Para obter mais informações, consulte [parâmetros de algoritmo &#40;SQL Server Data Mining Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Definir sinalizadores de modelo da coluna** caixa de diálogo|Os sinalizadores de modelagem podem melhorar seu modelo especificando como os dados ausentes devem ser tratados. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](data-mining/modeling-flags-data-mining.md).|  
   
 ###  <a name="Bkmk_mdlcolumn"></a> Definindo o uso de coluna  
- Ao adicionar um novo modelo a uma estrutura de mineração existente, você deverá especificar como o modelo usará cada coluna de dados na estrutura de mineração. Provavelmente você notará que as opções nesse assistente são bem mais detalhadas do que as opções na estrutura de mineração. Por quê?  
+ Ao adicionar um novo modelo a uma estrutura de mineração existente, você deverá especificar como o modelo usará cada coluna de dados na estrutura de mineração. Provavelmente, você notará que as opções nesse assistente são muito mais detalhadas do que as opções na estrutura de mineração. Por quê?  
   
  Isso ocorre porque, quando você cria um modelo e uma estrutura juntos usando um assistente, muitas das opções que controlam a forma como os dados são usados pelo algoritmo são definidas automaticamente. No entanto, ao adicionar um novo modelo a um existente, você precisa ver essas opções manualmente e especificar se os dados devem ser usados para análise, se o tipo de dados está correto e assim por diante.  
   

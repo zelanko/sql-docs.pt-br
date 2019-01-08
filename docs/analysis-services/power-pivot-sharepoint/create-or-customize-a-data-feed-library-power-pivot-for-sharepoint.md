@@ -1,5 +1,5 @@
 ---
-title: Criar ou personalizar uma biblioteca de Feed de dados (PowerPivot para SharePoint) | Microsoft Docs
+title: Criar ou personalizar uma biblioteca de feeds de dados (Power Pivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021244"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519103"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021244"
   
 -   Compartilhar e gerenciar documentos do serviço de dados em um local central.  
   
--   Identificar visualmente documentos do serviço de dados por um ícone, para que você possa distinguir facilmente documentos do serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Identificar visualmente documentos do serviço de dados por um ícone, de forma que você possa distinguir facilmente documentos do serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Uma biblioteca de feeds de dados sempre contém arquivos de documento do serviço de dados (.atomsvc) e nunca o próprio feed de dados. Ao contrário de um feed de dados, que consiste em dados XML estáticos, o documento do serviço de dados especifica uma URL para um serviço ou aplicativo que gera um feed sob solicitação, fornecendo informações de conexão reutilizáveis para operações de importação repetíveis.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34021244"
   
 1.  Clique em **Ações do Site** no canto superior esquerdo da página.  
   
-2.  Clique em **Mais Opções**…  
+2.  Clique em **mais opções**...  
   
 3.  Em Bibliotecas, clique em **Biblioteca de Feeds de Dados**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34021244"
   
  As etapas a seguir devem ser repetidas para cada biblioteca na qual você deseja criar ou editar documentos de registro de feed de dados.  
   
-#### <a name="step-1-enable-content-type-management"></a>Etapa 1: Habilitar o gerenciamento do tipo de conteúdo  
+#### <a name="step-1-enable-content-type-management"></a>Etapa 1: Habilitar o gerenciamento de tipo de conteúdo  
   
 1.  Abra a biblioteca de documentos para a qual você deseja habilitar vários tipos de conteúdo.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34021244"
   
 7.  Clique em **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Etapa 2: Adicionar o tipo de conteúdo de documento de serviço de dados  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Etapa 2: Adicione o tipo de conteúdo do documento de serviço de dados  
   
 1.  Na seção Tipos de Conteúdo, clique em **Adicionar a partir de tipos de conteúdo de site existentes**. Se você não vir essa página, volte para o site, clique em **Biblioteca** em Ferramentas de Biblioteca e clique em **Definições da Biblioteca**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021244"
   
 ## <a name="see-also"></a>Consulte também  
  [Use feeds de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Excluir uma biblioteca de Feed de dados do Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Excluir uma Biblioteca de Feeds de Dados Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Feeds de dados do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

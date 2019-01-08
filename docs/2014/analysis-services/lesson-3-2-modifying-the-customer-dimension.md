@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513275"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modificando a dimensão Cliente
   Há várias formas de aumentar a facilidade de uso e melhorar a funcionalidade das dimensões em um cubo. Nas tarefas deste tópico, você modificará a dimensão Customer.  
@@ -32,11 +32,11 @@ ms.locfileid: "48178116"
   
 3.  Altere os nomes dos seguintes atributos da mesma maneira:  
   
-    -   **Educação em inglês** atributo — altere para `Education`  
+    -   **Educação em inglês** do atributo – altere para `Education`  
   
-    -   **Ocupação em inglês** atributo — altere para `Occupation`  
+    -   **Ocupação em inglês** do atributo – altere para `Occupation`  
   
-    -   **State Province Name** atributo — altere para `State-Province`  
+    -   **State Province Name** do atributo – altere para `State-Province`  
   
 4.  No menu **Arquivo** , clique em **Salvar Tudo**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48178116"
   
 4.  No **nome** campo de propriedade, tipo `Full Name`.  
   
-5.  Clique no campo de propriedade **NameColumn** na parte inferior e clique no botão Procurar (**…**) para abrir a caixa de diálogo **Coluna de Nome** .  
+5.  Clique na **NameColumn** propriedade de campo na parte inferior e, em seguida, clique no botão Procurar (**...** ) para abrir o **nome da coluna** caixa de diálogo.  
   
 6.  Selecione `FullName` na parte inferior a **coluna de origem** e, em seguida, clique **Okey**.  
   

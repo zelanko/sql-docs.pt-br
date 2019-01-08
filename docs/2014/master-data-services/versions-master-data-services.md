@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -16,12 +15,12 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190898"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778388"
 ---
 # <a name="versions-master-data-services"></a>Versões (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode criar várias versões dos dados mestre dentro de um modelo. As versões podem ser bloqueadas enquanto você valida seus dados e confirmadas depois que os dados forem validados. Versões confirmadas formam um registro auditável de alterações. Cada versão que você cria contém todos os membros, valores de atributo, membros de hierarquia, relações de hierarquia e coleções para o modelo.  
@@ -48,7 +47,7 @@ ms.locfileid: "48190898"
   
 1.  Uma versão inicial é criada automaticamente quando você cria um modelo e popula o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] com os dados mestres de sua empresa. Com base em permissões, os usuários podem fazer alterações nessa versão conforme necessário.  
   
-2.  Quando você desejar confirmar uma versão de modelo, bloqueie a versão de forma que somente os administradores de modelo possam atualizar os dados. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md). Se as notificações forem configuradas, uma notificação será enviada por email aos administradores de modelos sempre que o status da versão for alterado. Para obter mais informações, consulte [Configurar notificações por email &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Quando você desejar confirmar uma versão de modelo, bloqueie a versão de forma que somente os administradores de modelo possam atualizar os dados. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md). Se as notificações forem configuradas, uma notificação será enviada por email aos administradores de modelos sempre que o status da versão for alterado. Para obter mais informações, consulte [Configurar notificações por email &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Aplique regras de negócio aos dados da versão bloqueada e revise qualquer problema de validação. Se necessário, você poderá preencher informações ausentes ou reverter a transação que causou o problema. Poderá também desbloquear a versão para que os usuários façam alterações.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48190898"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Alterar o nome de uma versão existente.|[Alterar um nome de versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|Alterar o nome de uma versão existente.|[Alterar o nome de uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
 |Bloquear uma versão para que apenas os administradores possam editar seus dados.|[Bloquear uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
 |Desbloquear uma versão para que os usuários possam editar seus dados.|[Desbloquear uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
 |Confirmar uma versão depois que os dados forem validados.|[Confirmar uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
@@ -82,7 +81,7 @@ ms.locfileid: "48190898"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Reverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Inverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
 -   [Notificações &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - xe
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120253"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767518"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
   Uma sessão de eventos estendidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é criada no processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando o mecanismo de eventos estendidos. Os seguintes aspectos de uma sessão de eventos estendidos fornecem um contexto para entender a infraestrutura de eventos estendidos e o processamento geral que ocorre:  
@@ -36,7 +35,7 @@ ms.locfileid: "49120253"
   
  Mencionando a figura precedente, observe que o estado da sessão é alterado quando os comandos DDL diferentes são emitidos para uma sessão de evento. Essas alterações de estado são descritas na tabela a seguir.  
   
-|Rótulo de ilustração|instrução DDL|Description|  
+|Rótulo de ilustração|instrução DDL|Descrição|  
 |------------------------|-------------------|-----------------|  
 |Criar|CREATE EVENT SESSION|O processo do host cria um objeto de sessão que contém os metadados fornecidos pela CREATE EVENT SESSION. O processo do host valida a definição de sessão, valida o nível de permissão do usuário, e armazena os metadados no banco de dados mestre. Neste momento a sessão não está ativa.|  
 |Alter|ALTER EVENT SESSION, STATE=START|O processo do host inicia a sessão. O processo do host lê os metadados armazenados, valida a definição da sessão, verifica o nível de permissão do usuário e cria a sessão. Objetos de sessão, como eventos e destinos, são carregados e a manipulação de eventos está ativa.|  
@@ -55,7 +54,7 @@ ms.locfileid: "49120253"
   
  Em relação à ilustração anterior, observe que:  
   
--   O mapeamento entre objetos de pacote e sessões é muitos para muitos, o que significa que um objeto pode aparecer em várias sessões e uma sessão pode conter vários objetos.  
+-   O mapeamento entre objetos de pacote e sessões são muitos para muitos, o que significa que um objeto pode aparecer em várias sessões, e uma sessão pode conter vários objetos.  
   
 -   O mesmo evento (Evento 1) ou destino (Destino 1) pode ser habilitado em mais de uma sessão.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], about merge replication
@@ -14,12 +13,12 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c734af98b906be974a92e2c4286e7b91b6e1d25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752349"
 ---
 # <a name="merge-replication"></a>Replicação de mesclagem
   A replicação de mesclagem, como a replicação transacional, normalmente inicia com um instantâneo dos objetos e dos dados do banco de dados de publicação. As alterações dos dados subsequentes e as modificações de esquema feitas no Publicador e nos Assinantes são rastreadas com gatilhos. O Assinante sincroniza com o Publicador quando está conectado à rede e permuta todas as linhas que foram alteradas entre o Publicador e o Assinante desde a última vez que a sincronização ocorreu.  
@@ -40,7 +39,7 @@ ms.locfileid: "48148236"
   
  A replicação de mesclagem é implementada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente de Instantâneo e Agente de Mesclagem. Se a publicação não for filtrada ou usar filtros estáticos, o Agente de Instantâneo criará um único instantâneo. Se a publicação usar filtros com parâmetros, o Agente de Instantâneo criará um instantâneo para cada partição de dados. O Agente de Mesclagem aplica os instantâneos iniciais aos Assinantes. Ele também mescla as alterações incrementais de dados que ocorreram no Publicador ou nos Assinantes após a criação do instantâneo inicial, e detecta e soluciona qualquer conflito de acordo com as regras que você configura.  
   
- Para rastrear as alterações, a replicação de mesclagem (e a replicação transacional, com assinaturas de atualização em fila) deve poder identificar exclusivamente cada linha em cada tabela publicada. Para fazer isso, a replicação de mesclagem adiciona a coluna `rowguid` a cada tabela, a menos que a tabela já tenha uma coluna do tipo de dados `uniqueidentifier` com a propriedade `ROWGUIDCOL` definida (neste caso, esta coluna será usada). Se a tabela for descartada da publicação, o `rowguid` coluna é removida; mas, se uma coluna existente foi usada para o rastreamento, a coluna não é removida. Um filtro não deve incluir o `rowguidcol` usado por replicação para identificar linhas. A função `newid()` é fornecida como um padrão para a coluna `rowguid`, mas os clientes podem fornecer um guid para cada linha, se necessário. Entretanto, não forneça o valor 00000000-0000-0000-0000-000000000000.  
+ Para rastrear as alterações, a replicação de mesclagem (e a replicação transacional, com assinaturas de atualização em fila) deve poder identificar exclusivamente cada linha em cada tabela publicada. Para fazer isso, a replicação de mesclagem adiciona a coluna `rowguid` a cada tabela, a menos que a tabela já tenha uma coluna do tipo de dados `uniqueidentifier` com a propriedade `ROWGUIDCOL` definida (neste caso, esta coluna será usada). Se a tabela for descartada da publicação, a coluna `rowguid` será removida; mas, se uma coluna existente foi usada para o rastreamento, ela não será removida. Um filtro não deve incluir o `rowguidcol` usado por replicação para identificar linhas. A função `newid()` é fornecida como um padrão para a coluna `rowguid`, mas os clientes podem fornecer um guid para cada linha, se necessário. Entretanto, não forneça o valor 00000000-0000-0000-0000-000000000000.  
   
  O diagrama a seguir mostra os componentes usados em replicação de mesclagem.  
   

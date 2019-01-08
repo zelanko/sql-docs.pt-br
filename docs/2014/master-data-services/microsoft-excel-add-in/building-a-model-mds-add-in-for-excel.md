@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 297441a73dcf2ff6f6e0e1808f863c7641edfa30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0076abb28b486627d12c177d7f301b274239225c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190566"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784445"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilando um modelo (Suplemento do MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os administradores podem executar um subconjunto das funções administrativas disponíveis no aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -34,7 +33,7 @@ ms.locfileid: "48190566"
   
 |Descrição da tarefa|Ferramenta|Tópico|  
 |----------------------|----------|-----------|  
-|Criar modelos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar um modelo de &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
+|Criar modelos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar um modelo &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
 |Criar uma entidade.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web ou [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Criar uma entidade &#40;Suplemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
 |Criar um atributo baseado em domínio.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web ou [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Criar um atributo baseado em domínio &#40;Suplemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Criar grupos de atributos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar um grupo de atributos &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
@@ -65,10 +64,10 @@ ms.locfileid: "48190566"
   
 -   [Coleções &#40;Master Data Services&#41;](../collections-master-data-services.md)  
   
--   [Versões de &#40;Master Data Services&#41;](../versions-master-data-services.md)  
+-   [Versões &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
 -   [Segurança &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
--   [Implantação de modelos de &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
+-   [Implantando modelos &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
   
   

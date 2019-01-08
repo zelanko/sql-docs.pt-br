@@ -16,12 +16,12 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d76840f084f40b77b6b6539d41d2c9f8a1e1ff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077566"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401441"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renomear uma instância do Analysis Services
   Você pode renomear uma instância existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o **renomear instância** caixa de diálogo.  
@@ -52,13 +52,13 @@ ms.locfileid: "48077566"
   
 2.  Atualize scripts do PowerShell ou scripts AMO que você costuma usar para fazer backup, sincronizar ou processar bancos de dados.  
   
-3.  Atualize propriedades de projeto para projetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com os quais você trabalha no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Para instâncias de servidor de modo de tabela, atualize a propriedade de Servidor de Espaço de trabalho no arquivo model.bim, assim como a propriedade Servidor no projeto.  
+3.  Atualize propriedades de projeto para projetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com os quais você trabalha no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Para instâncias de servidor de modo de tabela, atualize a propriedade de Servidor de Workspace no arquivo model.bim, assim como a propriedade Servidor no projeto.  
   
 4.  Dependendo de como você especificou a conta de serviço, poderá precisar atualizar logons de banco de dados ou permissões de arquivo que concedam ao serviço direitos de acesso a dados (por exemplo, se você usar a conta de serviço para processar dados ou acessar objetos vinculados em outro servidor).  
   
      A atualização de um logon de banco de dados ou de permissões de arquivo será necessária se você tiver usado uma conta virtual para provisionar o serviço. Contas virtuais se baseiam no nome de instância; portanto, se você renomear a instância, a conta virtual também será atualizada ao mesmo tempo. Isso significa que qualquer logon anterior ou permissões criadas para a instância anterior não serão mais válidas.  
   
-     O exemplo a seguir ilustra esse cenário. Digamos que você instalou um servidor de modo de tabela como uma instância denominada "Tabelar" usando a conta virtual padrão, resultando na seguinte configuração:  
+     O exemplo a seguir ilustra esse cenário. Suponha que você instalou um servidor de modo de tabela como uma instância denominada "Tabelar" usando a conta virtual padrão, resultando na configuração a seguir:  
   
     1.  Nome da instância = \<server > \TABULAR  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48077566"
   
     3.  Conta virtual = NT Service\ MSOLAP$TABULAR  
   
-     Digamos que você renomeie a instância como "TAB2". Como resultado da alteração de nome, sua configuração teria a seguinte aparência agora:  
+     Agora suponha que você renomeie a instância como "TAB2". Como resultado da alteração de nome, sua configuração teria a seguinte aparência agora:  
   
     1.  Nome da instância = \<server > \TAB2  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48077566"
   
     3.  Conta virtual = NT Service\ MSOLAP$TAB2  
   
-     Como você pode observar, as permissões de banco de dados e de arquivo antes concedidas ao “NT Service\ MSOLAP$TABULAR” não são mais válidas. Para garantir que tarefas e operações realizadas pelo serviço sejam executadas antes, você precisaria conceder novas permissões de banco de dados e de arquivo ao “NT Service\ MSOLAP$TAB2”.  
+     Como você pode ver, as permissões de banco de dados e arquivos que anteriormente foram concedidas ao "NT Service \ MSOLAP$ TABULAR" não são mais válidas. Para garantir que as tarefas e operações executadas pelo serviço de executam como antes, você faria agora precisa conceder permissões de banco de dados e arquivo novo ao "NT Service \ MSOLAP$TAB2".  
   
   

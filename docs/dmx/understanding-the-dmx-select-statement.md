@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144831"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398069"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Compreendendo a instrução DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144831"
   
      Nesse caso, você precisa detalhar a estrutura de mineração, que é o domínio de dados, e verificar as linhas individuais em colunas como Gender, Bike Buyer e assim por diante.  
   
- **IMPORTANTE:** tudo o que está incluído na lista de expressões ou na **onde** cláusula deve vir do domínio de dados que é definido pela **FROM** cláusula. Você não pode misturar domínios de dados.  
+ **IMPORTANTE:** Tudo o que está incluído na lista de expressões ou na **onde** cláusula deve vir do domínio de dados que é definido pela **FROM** cláusula. Você não pode misturar domínios de dados.  
   
 ##  <a name="Select_Types"></a> Selecione os tipos de  
  A sintaxe da **selecionar** instrução dá suporte a muitas tarefas diferentes. Use os seguintes padrões para executar essas tarefas:  
@@ -61,7 +61,7 @@ ms.locfileid: "50144831"
   
  Você pode incluir qualquer um de pesquisa ou previsão **selecionar** instruções dentro de **FROM** e **onde** cláusulas de uma junção de previsão **selecione** instrução.  
   
-|Tipo de consulta|Description|  
+|Tipo de consulta|Descrição|  
 |----------------|-----------------|  
 |SELECT FROM [NATURAL] PREDICTION JOIN|Retorna uma previsão criada pela associação de colunas no modelo de mineração para as colunas de uma fonte de dados interna.<br /><br /> O domínio desse tipo de consulta são as colunas previsíveis do modelo e as colunas da fonte de dados de entrada.<br /><br /> [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Consultas de previsão &#40;Mineração de dados&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
 |SELECT FROM  *\<modelo >*|Retorna o estado mais provável da coluna previsível, com base apenas no modelo de mineração. Esse tipo de consulta é um atalho para criação de uma previsão com junção de previsão vazia.<br /><br /> O domínio desse tipo de consulta são as colunas previsíveis do modelo.<br /><br /> [SELECT FROM &#60;modelo&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Consultas de previsão &#40;Mineração de dados&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
@@ -71,7 +71,7 @@ ms.locfileid: "50144831"
 ###  <a name="Browsing"></a> Navegação  
  Os conteúdos de um modelo de mineração podem ser pesquisados usando-se os seguintes tipos de consultas.  
   
-|Tipo de consulta|Description|  
+|Tipo de consulta|Descrição|  
 |----------------|-----------------|  
 |SELECT DISTINCT FROM  *\<modelo >*|Retorna todos os valores de estado do modelo de mineração para a coluna especificada.<br /><br /> O domínio de dados para esse tipo de consulta é o modelo de mineração de dados.<br /><br /> [SELECT DISTINCT FROM &#60;modelo &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Consultas de conteúdo &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<modelo >*. CONTEÚDO|Retorna o conteúdo que descreve um modelo de mineração.<br /><br /> O domínio de dados para este tipo de consulta é o conjunto de linhas do esquema de conteúdo.<br /><br /> [SELECT FROM &#60;modelo&#62;. CONTEÚDO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Consultas de conteúdo &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
@@ -83,7 +83,7 @@ ms.locfileid: "50144831"
 ###  <a name="Copying"></a> Copiando  
  É possível copiar um modelo de mineração e a estrutura de mineração associada em um novo modelo e, depois, renomear o modelo na instrução.  
   
-|Tipo de consulta|Description|  
+|Tipo de consulta|Descrição|  
 |----------------|-----------------|  
 |SELECT INTO  *\<novo modelo >*|Cria uma cópia do modelo de mineração.<br /><br /> O domínio para esse tipo de consulta é o modelo da mineração de dados.<br /><br /> [SELECT INTO &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "50144831"
 ###  <a name="Drillthrough"></a> Detalhamento  
  Pesquise os casos ou a representação desses casos, que foram usados para treinar o modelo, usando os tipos de consulta a seguir.  
   
-|Tipo de consulta|Description|  
+|Tipo de consulta|Descrição|  
 |----------------|-----------------|  
 |SELECT FROM  *\<modelo >*. CASOS|Retorna os casos usados para treinar o modelo de mineração.<br /><br /> O domínio para esse tipo de consulta é o modelo da mineração de dados.<br /><br /> [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Criar consultas de detalhamento usando DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<modelo >*. SAMPLE_CASES|Retorna um caso de exemplo, representante dos casos usados para treinar o modelo de mineração.<br /><br /> O domínio para esse tipo de consulta é o modelo da mineração de dados.<br /><br /> [SELECT FROM &#60;modelo&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  

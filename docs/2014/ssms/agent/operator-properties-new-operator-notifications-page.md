@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.operator.notifications.f1
@@ -12,14 +12,14 @@ ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1731d975b89f828dd3e0cf65e241dbb1fcdbfa3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752588"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>Propriedades do operador: novo operador (página Notificações)
+# <a name="operator-properties-new-operator-notifications-page"></a>Propriedades do operador: Novo operador (página notificações)
   Use esta página para definir os alertas e trabalhos que notificam o operador.  
   
 ## <a name="options"></a>Opções  

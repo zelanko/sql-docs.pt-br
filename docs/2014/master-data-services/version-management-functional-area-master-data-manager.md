@@ -4,31 +4,30 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6603dedcf4708eca1d9c49c5c013e8b6f85116f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ced43d5008531f540bd9985a817794baa88705fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229376"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782338"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Área funcional Gerenciamento de Versões (Master Data Manager)
   Na área funcional Gerenciamento de Versão, os administradores podem validar dados, rever e inverter transações, criar cópias com controle de versão de dados e versões de sinalizador de dados para sistemas de assinatura. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="versions"></a>Versões  
- [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
  [Confirmar uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
  [Bloquear uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
- [Alterar um nome de versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
+ [Alterar o nome de uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
  [Copiar uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
@@ -44,9 +43,9 @@ ms.locfileid: "48229376"
 ## <a name="validation"></a>Validação  
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
- [Validar uma versão em relação às regras de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+ [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
- [Reverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+ [Inverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativo Web Master Data Manager](../../2014/master-data-services/master-data-manager-web-application.md)  

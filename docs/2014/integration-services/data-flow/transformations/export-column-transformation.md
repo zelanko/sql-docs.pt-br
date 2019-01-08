@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exportcolumntrans.f1
@@ -20,12 +19,12 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc32abc07dd76137e735692a4ed1e1f392e9ae29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 790e7b0aeb6ec7ec73c6eed8f3dc8dd67e0b28ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205116"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767498"
 ---
 # <a name="export-column-transformation"></a>Transformação Exportar Colunas
   A transformação Exportar Coluna lê dados em um fluxo de dados e os insere em um arquivo. Por exemplo, se o fluxo de dados contiver informações de produtos, como uma imagem de cada produto, você poderá usar a transformação Exportar Coluna para salvar essas imagens em arquivos.  
@@ -35,10 +34,10 @@ ms.locfileid: "48205116"
   
 |Acrescentar|Truncar|O arquivo existe|Resultados|  
 |------------|--------------|-----------------|-------------|  
-|Falso|Falso|não|A transformação cria um novo arquivo e grava os dados nele.|  
-|True|Falso|não|A transformação cria um novo arquivo e grava os dados nele.|  
-|Falso|True|não|A transformação cria um novo arquivo e grava os dados nele.|  
-|True|True|não|A transformação falha na validação do tempo de design. Ela não é válida para definir ambas as propriedades como `true`.|  
+|Falso|Falso|Não|A transformação cria um novo arquivo e grava os dados nele.|  
+|True|Falso|Não|A transformação cria um novo arquivo e grava os dados nele.|  
+|Falso|True|Não|A transformação cria um novo arquivo e grava os dados nele.|  
+|True|True|Não|A transformação falha na validação do tempo de design. Ela não é válida para definir ambas as propriedades como `true`.|  
 |Falso|Falso|Sim|Ocorre um erro em tempo de execução. O arquivo existe, mas a transformação não pode ser gravada nele.|  
 |Falso|True|Sim|A transformação exclui e recria o arquivo e grava os dados nele.|  
 |True|Falso|Sim|A transformação abre o arquivo e grava os dados no final do arquivo.|  
@@ -56,7 +55,7 @@ ms.locfileid: "48205116"
     > [!NOTE]  
     >  Uma BOM só é gravada quando os dados não são anexados a um arquivo existente e eles são do tipo DT_NTEXT.  
   
- A transformação usa pares de colunas de entrada; uma coluna contém um nome de arquivo e a outra contém os dados. Cada linha no conjunto de dados pode especificar um arquivo diferente. Como a transformação processa uma linha, os dados são inseridos no arquivo especificado. No tempo de execução, a transformação cria os arquivos caso eles ainda não existam e, posteriormente, grava os dados nos arquivos. Os dados a serem gravados devem ser do tipo DT_TEXT, DT_NTEXT ou DT_IMAGE. Para obter mais informações, consulte [Integration Services Data Types](../integration-services-data-types.md).  
+ A transformação usa pares de colunas de entrada: Uma coluna contém um nome de arquivo e a outra coluna contém dados. Cada linha no conjunto de dados pode especificar um arquivo diferente. Como a transformação processa uma linha, os dados são inseridos no arquivo especificado. No tempo de execução, a transformação cria os arquivos caso eles ainda não existam e, posteriormente, grava os dados nos arquivos. Os dados a serem gravados devem ser do tipo DT_TEXT, DT_NTEXT ou DT_IMAGE. Para obter mais informações, consulte [Integration Services Data Types](../integration-services-data-types.md).  
   
  Essa transformação tem uma entrada, uma saída e uma saída de erro.  
   

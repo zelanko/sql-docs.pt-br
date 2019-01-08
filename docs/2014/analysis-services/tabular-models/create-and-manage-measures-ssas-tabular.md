@@ -11,15 +11,15 @@ ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc49813893a296ac5342452a286f39284a8901d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3b50c9284610cfa8c35eba21de7723c18729401
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126340"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404991"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>Criar e Gerenciar medidas (SSAS tabular)
-  Medida é uma fórmula criada para ser usada em um relatório ou Tabela Dinâmica (ou Gráfico Dinâmico) do Excel. As medidas podem se basear em funções de agregação padrão, como COUNT ou SUM, ou é possível definir sua própria fórmula usando-se o DAX. As tarefas nesse tópico descrevem como criar e gerenciar medidas usando a Grade de Medida de uma tabela.  
+  Medida é uma fórmula criada para ser usada em um relatório ou Tabela Dinâmica (ou Gráfico Dinâmico) do Excel. As medidas podem se basear em funções de agregação padrão, como COUNT ou SUM, ou é possível definir sua própria fórmula usando-se o DAX. As tarefas neste tópico descrevem como criar e gerenciar medidas usando uma grade de medida.  
   
  Este tópico inclui as seguintes tarefas:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48126340"
 -   [Para excluir uma medida](#bkmk_delete)  
   
 ## <a name="tasks"></a>Tarefas  
- Para criar e gerenciar medidas, você usará a grade de medida de uma tabela. Você só pode exibir a grade de medida para uma tabela no designer de modelos em Exibição de Dados. Você não pode criar medidas ou exibir a grade de medida quando estiver na Exibição de Diagrama; porém, você pode exibir medidas existentes na Exibição de Diagrama. Para mostrar a grade de medida para uma tabela, clique no menu **Tabela** e em **Mostrar Grade de Medida**.  
+ Para criar e gerenciar medidas, você usará uma grade de medida. Você só pode exibir a grade de medida para uma tabela no designer de modelos em Exibição de Dados. Você não pode criar medidas ou exibir a grade de medida quando estiver na Exibição de Diagrama; porém, você pode exibir medidas existentes na Exibição de Diagrama. Para mostrar a grade de medida para uma tabela, clique no menu **Tabela** e em **Mostrar Grade de Medida**.  
   
 ###  <a name="bkmk_create_stand"></a> Para criar uma medida usando uma fórmula de agregação padrão  
   
@@ -61,8 +61,8 @@ ms.locfileid: "48126340"
 -   Na Grade de Medida, clique com o botão direito do mouse em uma medida e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)   
- [KPIs &#40;Tabular do SSAS&#41;](kpis-ssas-tabular.md)   
- [Colunas calculadas &#40;Tabular do SSAS&#41;](ssas-calculated-columns.md)  
+ [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)   
+ [KPIs &#40;SSAS de Tabela&#41;](kpis-ssas-tabular.md)   
+ [Colunas calculadas &#40;SSAS de Tabela&#41;](ssas-calculated-columns.md)  
   
   

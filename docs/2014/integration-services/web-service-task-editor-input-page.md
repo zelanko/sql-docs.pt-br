@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056686"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515146"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor da Tarefa Serviço da Web (página Entrada)
   Use a página **Entrada** da caixa de diálogo do **Editor da Tarefa Serviço da Web** para especificar o Serviço da Web, o método Web e os valores a serem fornecidos ao método Web como entrada. Os valores podem ser fornecidos digitando cadeias de caracteres diretamente na coluna Valor ou selecionando variáveis na coluna Valor.  
@@ -35,7 +35,7 @@ ms.locfileid: "48056686"
  Selecione na lista um método Web a ser executado pela tarefa.  
   
  **WebMethodDocumentation**  
- Digite uma descrição do método Web ou clique no botão Procurar **(...)** e digite a descrição na caixa de diálogo **Documentação do Método Web** .  
+ Digite uma descrição do método Web ou clique no botão Procurar **(...)** e digite a descrição na caixa de diálogo **Documentação do Método Web**.  
   
  **Nome**  
  Lista os nomes das entradas no método Web.  
@@ -54,8 +54,8 @@ ms.locfileid: "48056686"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da tarefa serviço da Web &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da tarefa serviço da Web &#40;página de saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor da Tarefa Serviço da Web &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da Tarefa Serviço da Web &#40;Página Saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

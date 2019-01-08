@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984058"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400010"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "38984058"
  Para obter informações sobre como instalar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para a ferramenta de configuração do SharePoint 2016, consulte [instalar ou desinstalar o Power Pivot para SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Executar a configuração do Power Pivot para SharePoint 2016  
- **Observação:** para concluir as etapas a seguir, você deve ser um administrador de farm. Se uma mensagem de erro semelhante à seguinte for exibida:  
+ **Observação:** Para concluir as etapas a seguir, você deve ser um administrador de farm. Se uma mensagem de erro semelhante à seguinte for exibida:  
   
--   “O usuário não é um administrador de farm. Corrija as falhas de validação e tente novamente.”  
+-   "O usuário não é um administrador de farm. Corrija as falhas de validação e tente novamente."  
   
  Faça logon como a conta que instalou o SharePoint ou configure a conta de instalação como administrador primário do site da Administração Central do SharePoint.  
   
 1.  No menu **Iniciar** , selecione **Todos os Programas**e selecione [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], selecione **Ferramentas de Configuração**e selecione **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Para SharePoint 2016**. As ferramentas serão listadas apenas quando o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint estiver instalado no servidor local.  
   
-2.  Selecione **configurar ou reparar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint** e, em seguida, selecione **Okey**.  
+2.  Selecione **Configurar ou Reparar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint** e selecione **OK**.  
   
 3.  A ferramenta executa uma validação para verificar o estado atual do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e quais etapas são necessárias para concluir a configuração. Expanda a janela para o tamanho total. Você verá uma barra de botões na parte inferior da janela que inclui os comandos **Validar**, **Executar**e **Sair** .  
   
 4.  Na guia **Parâmetros** :  
   
-    1.  **Nome de Usuário da Conta Padrão**: insira uma conta de usuário de domínio para a conta padrão. Essa conta será usada para provisionar serviços, inclusive o pool de aplicativos do serviço [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.  
+    1.  **Padrão de nome de conta de usuário**: Insira uma conta de usuário de domínio para a conta padrão. Essa conta será usada para provisionar serviços, inclusive o pool de aplicativos do serviço [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.  
   
-    2.  **Servidor de Banco de Dados**: você pode usar qualquer mecanismo de Banco de Dados do SQL Server com suporte para farm do SharePoint.  
+    2.  **Servidor de banco de dados**: Você pode usar o mecanismo de banco de dados do SQL Server com suporte para o farm do SharePoint.  
   
-    3.  **Frase Secreta**: insira um frase secreta. Se você estiver criando um novo farm do SharePoint, a frase secreta será usada sempre que você adicionar um servidor ou aplicativo ao farm do SharePoint. Se o farm já existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.  
+    3.  **Frase secreta**: Insira um frase secreta. Se você estiver criando um novo farm do SharePoint, a frase secreta será usada sempre que você adicionar um servidor ou aplicativo ao farm do SharePoint. Se o farm já existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.  
   
-    4.  Clique em **Criar Coleção de Sites** na janela esquerda. Observe a **URL do Site** para poder referenciá-la em etapas posteriores. Se o servidor do SharePoint ainda não estiver configurado, o assistente de configuração usa como padrão o aplicativo Web e as URLs da coleção de sites da raiz de `http://[ServerName]`. Para alterar os padrões, analise as seguintes páginas na janela esquerda: **Criar Aplicativo Web Padrão** e **Implantar Solução de Aplicativo Web**  
+    4.  Clique em **Criar Coleção de Sites** na janela esquerda. Observe a **URL do Site** para poder referenciá-la em etapas posteriores. Se o servidor do SharePoint ainda não estiver configurado, o assistente de configuração usa como padrão o aplicativo Web e as URLs da coleção de sites da raiz de `http://[ServerName]`. Para modificar os padrões, analise as seguintes páginas na janela esquerda: **Criar aplicativo Web padrão** e **implantar solução de aplicativo Web**  
   
-5.  Opcionalmente, revise os valores de entrada restantes usados para concluir cada ação. Clique em cada ação na janela esquerda para exibir e revisar os detalhes da ação. Para obter mais informações sobre cada um, consulte a seção “Valores de entrada usados para configurar o servidor” em [Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) neste tópico.  
+5.  Opcionalmente, revise os valores de entrada restantes usados para concluir cada ação. Clique em cada ação na janela esquerda para exibir e revisar os detalhes da ação. Para obter mais informações sobre cada um, consulte a seção "valores de entrada usados para configurar o servidor no [configurar ou reparar o PowerPivot para SharePoint 2010 (ferramenta de configuração do Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) neste tópico.  
   
 6.  Opcionalmente, remova as ações que você não deseja processar neste momento. Por exemplo, se você deseja configurar o Serviço de Repositório Seguro posteriormente, clique em **Configurar Serviço de Repositório Seguro**e desmarque a caixa de seleção **Inclua esta ação na lista de tarefas**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "38984058"
   
 1.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar serviços no servidor**.  
   
-2.  Verifique **SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] serviço do sistema** é iniciado.  
+2.  Verifique se o **Serviço de Sistema [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] do SQL Server** foi iniciado.  
   
  **Recurso do farm:**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "38984058"
   
 4.  Verifique se **Habilitar coleta de dados de integridade** está selecionado.  
   
-5.  Escolha **OK**.  
+5.  Selecione **OK**.  
   
  Para obter mais informações sobre atualização de dados de solução de problemas, consulte [solução de problemas de atualização de dados PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   

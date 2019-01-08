@@ -11,33 +11,33 @@ ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d3ca1e013ede0e8bd40c1ce5af36d44ea45122d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506771"
 ---
-# <a name="lesson-12-create-roles"></a>Lição 12: Criar funções
-  Nesta lição, você criará funções. As funções fornecem objeto de banco de dados modelo e segurança de dados, limitando o acesso somente a esses usuários do Windows, que são os membros da função. Cada função é definida com uma permissão única: Nenhum, Leitura, Leitura e Processo, Processo, ou Administrador. As funções podem ser definidas durante a criação do modelo usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Depois que um modelo foi implantado, você pode gerenciar funções usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](tabular-models/roles-ssas-tabular.md).  
+# <a name="lesson-12-create-roles"></a>Lição 12: Criar Funções
+  Nesta lição, você criará funções. As funções fornecem objeto de banco de dados modelo e segurança de dados, limitando o acesso somente a esses usuários do Windows, que são os membros da função. Cada função é definida com uma única permissão: Nenhum, leitura, leitura e processo, processo ou administrador. As funções podem ser definidas durante a criação do modelo usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Depois que um modelo foi implantado, você pode gerenciar funções usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  
 >  A criação de funções não é necessária para concluir este tutorial. Por padrão, a conta à qual você está conectada no momento terá privilégios de Administrador no modelo. No entanto, para que outros usuários da organização procurem o modelo usando um aplicativo cliente de relatório, você deve criar pelo menos uma função com permissões Leitura e adicionar esses usuários como membros.  
   
  Você criará três funções:  
   
--   Gerente de Vendas – Essa função pode incluir os usuários da organização na qual você deseja ter a permissão Leitura para todos os dados e objetos de modelo.  
+-   Gerente de vendas – essa função pode incluir usuários em sua organização para o qual você deseja ter permissão de leitura para todos os objetos de modelo e dados.  
   
--   Analista de Vendas dos EUA – Esta função pode incluir usuários em sua organização para a qual você só deseja ser capaz de procurar dados relacionados a vendas nos EUA (Estados Unidos). Para esta função, você usará uma fórmula DAX para definir um *Filtro de Linha*, que restringe os membros procurar somente dados dos Estados Unidos.  
+-   Analista de vendas dos EUA – essa função pode incluir usuários em sua organização para o qual você deseja apenas ser capaz de procurar dados relacionados a vendas nos EUA (Estados Unidos). Para esta função, você usará uma fórmula DAX para definir um *Filtro de Linha*, que restringe os membros procurar somente dados dos Estados Unidos.  
   
--   Administrador – Essa função pode incluir os usuários para os quais você deseja ter a permissão Administrador, que fornece acesso ilimitado e permissões para executar tarefas administrativas no banco de dados modelo.  
+-   Administrador – essa função pode incluir usuários para o qual você deseja ter a permissão de administrador, que permite acesso ilimitado e permissões para executar tarefas administrativas no banco de dados modelo.  
   
- Como o usuário e as contas de grupo do Windows da sua organização são exclusivas, você pode adicionar contas da sua organização específica a membros. Porém, para este tutorial, você também pode deixar os membros em branco. Você ainda poderá testar o efeito de cada função posteriormente na Lição 12: Analisar no Excel.  
+ Como o usuário e as contas de grupo do Windows da sua organização são exclusivas, você pode adicionar contas da sua organização específica a membros. Porém, para este tutorial, você também pode deixar os membros em branco. Você ainda poderá testar o efeito de cada função posteriormente na lição 12: Analise no Excel.  
   
  Tempo estimado para concluir esta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 11: Criar partições](lesson-10-create-partitions.md).  
+ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 11: Criar partições](lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Criar Funções  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48164076"
   
      `=Geography[Country Region Code] = "US"`  
   
-     Uma fórmula de Filtro de Linha deve resolver para um valor Booliano (TRUE/FALSE). Com esta fórmula, você está especificando que somente linhas com o valor Country Region Code de "US" estão visíveis ao usuário.  
+     Uma fórmula de Filtro de Linha deve resolver para um valor Booliano (TRUE/FALSE). Com esta fórmula, você está especificando que somente as linhas com o valor de código do país região "US" fique visível para o usuário.  
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "48164076"
   
 4.  Clique na guia **Membros** e em **Adicionar**.  
   
-5.  Opcional: na caixa de diálogo **Selecionar Usuários ou Grupos** , digite os usuários ou grupos do Windows de sua organização a serem incluídos na função.  
+5.  Opcional: Na caixa de diálogo **Selecionar Usuários ou Grupos** , insira os usuários ou grupos do Windows de sua organização a serem incluídos na função.  
   
 6.  Verifique as seleções e clique em **OK**  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Para continuar este tutorial, vá para a próxima lição: [Lição 13: Analisar no Excel](lesson-12-analyze-in-excel.md).  
+ Para continuar este tutorial, vá para a próxima lição: Lição: [Lição 13: Analisar no Excel](lesson-12-analyze-in-excel.md).  
   
   

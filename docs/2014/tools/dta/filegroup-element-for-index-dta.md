@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71de5e0e883961af7737ba0aec5495fa59d2b453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196606"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782968"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento de grupo de arquivos para índice (DTA)
   Especifica o grupo de arquivos no qual o índice será criado para uma configuração especificada pelo usuário.  
@@ -38,17 +37,17 @@ ms.locfileid: "48196606"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode ser usado uma vez para cada `Index` elemento. Esse elemento não pode ser usado se o `PartitionScheme` e `PartitionColumn` elementos são especificados para o `Index` elemento.|  
+|**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento `Index`. Esse elemento não poderá ser usado se os elementos `PartitionScheme` e `PartitionColumn` forem especificados para o elemento `Index`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de índice &#40;DTA&#41;](index-element-dta.md)|  
+|**Elemento pai**|[Elemento Index &#40;DTA&#41;](index-element-dta.md)|  
 |**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  

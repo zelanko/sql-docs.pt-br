@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123176"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769158"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navegar no Designer de Consulta e Exibição (Visual Database Tools)
   Você pode trabalhar no Designer de Consulta e Exibição usando o teclado ou o mouse. Consulte as seguintes tabelas para obter métodos específicos.  
@@ -42,7 +42,7 @@ ms.locfileid: "48123176"
 |Mover entre as colunas de uma tabela ou objeto estruturado por tabela|Teclas de direção|Na coluna para a qual ir|  
 |Escolher a coluna de dados selecionada para saída|BARRA DE ESPAÇOS ou tecla +|Na caixa de seleção próxima ao nome da coluna|  
 |Remover a coluna de dados selecionada da saída da consulta|BARRA DE ESPAÇOS ou tecla -|Na caixa de seleção próxima ao nome da coluna|  
-|Remover a tabela selecionada, o objeto estruturado por tabela ou a linha de junção da consulta|Delete (excluir)|Clique com o botão direito do mouse e escolha **Remover**|  
+|Remover a tabela selecionada, o objeto estruturado por tabela ou a linha de junção da consulta|DELETE|Clique com o botão direito do mouse e escolha **Remover**|  
   
 > [!NOTE]  
 >  Se forem selecionados vários itens, pressionar esta tecla afetará todos os itens selecionados. Selecione vários itens mantendo a tecla CTRL pressionada enquanto clica neles.  
@@ -66,8 +66,8 @@ ms.locfileid: "48123176"
 |Colar o texto da Área de Transferência (no modo de edição)|CTRL+V||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
 |Alternar a caixa de seleção na coluna Saída|BARRA DE ESPAÇOS|Na caixa de seleção|  
-|Desmarcar o conteúdo selecionado de uma célula|Delete (excluir)||  
-|Limpar todos os valores de uma coluna selecionada de grade|Delete (excluir)||  
+|Desmarcar o conteúdo selecionado de uma célula|DELETE||  
+|Limpar todos os valores de uma coluna selecionada de grade|DELETE||  
 |Inserir uma linha entre as linhas existentes|INS depois de selecionar uma linha de grade||  
 |Adicionar uma coluna Ou...|INS depois de selecionar qualquer coluna Ou...||  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48123176"
 |Selecionar o último caractere em uma célula|SHIFT+END||  
 |Alternar entre o modo de edição e o modo de seleção de célula|F2||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
-|Excluir uma linha da tabela|Delete (excluir)||  
+|Excluir uma linha da tabela|DELETE||  
 |Desfazer alterações na célula atual|ESC em célula alterada||  
 |Desfazer alterações na linha atual|ESC em qualquer célula não alterada||  
 |Inserir null em uma célula|CTRL+0||  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148141"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420647"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurar o acesso HTTP ao Analysis Services no IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,12 +91,12 @@ ms.locfileid: "50148141"
 > [!NOTE]  
 >  Lembre-se de desbloquear as portas no Firewall do Windows para permitir conexões de cliente a um servidor remoto do Analysis Services. Para obter mais informações, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Etapa 1: Copiar os arquivos MSMDPUMP para uma pasta no servidor Web.  
+##  <a name="bkmk_copy"></a> Etapa 1: Copiar os arquivos MSMDPUMP para uma pasta no servidor Web  
  Cada ponto de extremidade HTTP criado deve ter seu próprio conjunto de arquivos MSMDPUMP. Nesta etapa, você copia o executável do MSMDPUMP, o arquivo de configuração e os arquivos de recurso das pastas de programas do Analysis Services para uma nova pasta de diretório virtual que será criada no sistema de arquivos do computador que está executando o IIS.  
   
  A unidade deve ser formatada para o sistema de arquivos NTFS. O caminho para a pasta que você cria não deve conter espaços.  
   
-1.  Copie os seguintes arquivos, encontrados em \<unidade >: \Program Files\Microsoft do SQL Server\\< instância\>\OLAP\bin\isapi: MSMDPUMP. DLL, MSMDPUMP. INI e uma pasta de recursos.  
+1.  Copie os seguintes arquivos, encontrados em \<unidade >: \Program Files\Microsoft do SQL Server\\< instância\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI e uma pasta Resources.  
   
      ![Estrutura de pastas de arquivos MSMDPUMP](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "estrutura de pastas de arquivos MSMDPUMP")  
   
@@ -148,7 +148,7 @@ ms.locfileid: "50148141"
 > [!NOTE]  
 >  Versões anteriores dessas instruções incluíam etapas para criar um diretório virtual. Essa etapa não é mais necessária.  
   
-##  <a name="bkmk_auth"></a> Etapa 3: Configurar a autenticação do IIS e adicionar a extensão  
+##  <a name="bkmk_auth"></a> Etapa 3: Configurar a autenticação de IIS e adicionar a extensão  
  Nesta etapa, você configura mais o diretório virtual do SSAS recém-criado. Você especificará um método de autenticação e depois adicionará um mapa de script. Estes são métodos de autenticação com suporte para o Analysis Services sobre HTTP:  
   
 -   Autenticação do Windows (Kerberos ou NTLM)  
@@ -165,9 +165,9 @@ ms.locfileid: "50148141"
   
  A**Autenticação anônima** é frequentemente usada durante o teste inicial porque a facilidade de configuração ajuda a validar rapidamente a conectividade HTTP com o Analysis Services. Em apenas algumas etapas, você pode atribuir uma conta de usuário exclusiva como identidade, conceder essas permissões de conta no Analysis Services, usar a conta para verificar o acesso aos dados em um aplicativo cliente e, em seguida, desabilitar a autenticação Anônima quando o teste for concluído.  
   
- Você também poderá usar a autenticação Anônima em um ambiente de produção se os usuários não tiverem contas de usuário do Windows, mas siga as práticas recomendadas bloqueando as permissões no sistema host, conforme destacado neste artigo: [Habilitar a autenticação Anônima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Verifique se a autenticação está definida no diretório virtual, e não no site pai, a fim de reduzir ainda mais o nível da conta de acesso.  
+ Você também poderá usar a autenticação Anônima em um ambiente de produção se os usuários não tiverem contas de usuário do Windows, mas siga as práticas recomendadas bloqueando as permissões no sistema host, conforme destacado neste artigo: [Habilitar a autenticação anônima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Verifique se a autenticação está definida no diretório virtual, e não no site pai, a fim de reduzir ainda mais o nível da conta de acesso.  
   
- Quando a opção Anônima for habilitada, qualquer conexão de usuário com o ponto de extremidade HTTP será permitida como usuário anônimo. Não será possível fazer a auditoria de cada conexão de usuário nem usar a identidade do usuário para selecionar dados em um modelo. Como você pode ver, o uso da opção Anônima impacta tudo, do modelo de design ao acesso e à atualização dos dados. No entanto, se os usuários não tiverem um logon de usuário do Windows para começar, o uso da conta Anônima talvez seja sua única opção.  
+ Quando a opção Anônima for habilitada, qualquer conexão de usuário com o ponto de extremidade HTTP será permitida como usuário anônimo. Você não conseguirá auditar as conexões de usuário individuais, nem usar a identidade do usuário para selecionar dados de um modelo. Como você pode ver, o uso da opção Anônima impacta tudo, do modelo de design ao acesso e à atualização dos dados. No entanto, se os usuários não tiverem um logon de usuário do Windows para começar, o uso da conta Anônima talvez seja sua única opção.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>Definir o tipo de autenticação e adicionar um mapa de script  
   
@@ -188,7 +188,7 @@ ms.locfileid: "50148141"
   
 5.  Desabilite **Autenticação Anônima** se estiver usando a autenticação Básica ou do Windows. Quando a autenticação Anônima for habilitada, o IIS sempre a usará primeiro, mesmo se outros métodos de autenticação estiverem habilitados.  
   
-     Na autenticação Anônima, a bomba (msmdpump.dll) é executada como a conta de usuário estabelecida para o usuário anônimo. Não há distinção entre o usuário que está se conectando o IIS e o usuário que está se conectando ao Analysis Services. Por padrão, o IIS usa a conta IUSR, mas é possível transformá-la em uma conta de usuário de domínio que tenha permissões de rede. Você precisará desse recurso se o IIS e o Analysis Services estiverem em computadores diferentes.  
+     Na autenticação Anônima, a bomba (msmdpump.dll) é executada como a conta de usuário estabelecida para o usuário anônimo. Não há distinção entre o usuário que está se conectando o IIS e o usuário que está se conectando ao Analysis Services. Por padrão, o IIS usa a conta IUSR, mas é possível transformá-la em uma conta de usuário de domínio que tenha permissões de rede. Se o IIS e o Analysis Services estiverem em computadores diferentes, você precisará desse recurso.  
   
      Para obter instruções sobre como configurar credenciais para a autenticação Anônima, consulte [Autenticação Anônima](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication).  
   
@@ -242,7 +242,7 @@ ms.locfileid: "50148141"
   
  Para saber mais sobre como definir permissões, veja [Autorizar o acesso a objetos e operações &#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
-##  <a name="bkmk_test"></a> Etapa 6: Testar a configuração  
+##  <a name="bkmk_test"></a> Etapa 6: Testar sua configuração  
  A sintaxe da cadeia de conexão para MSMDPUMP é a URL para o arquivo MSMDPUMP.dll.  
   
  Se o aplicativo web está escutando uma porta fixa, acrescente o número da porta para o nome do servidor ou endereço IP (por exemplo, `http://my-web-srv01:8080/OLAP/msmdpump.dll` ou `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
@@ -251,7 +251,7 @@ ms.locfileid: "50148141"
   
  **Solucionar problemas de conexões usando o Internet Explorer**  
   
- Uma solicitação de conexão que termina com este erro pode não oferecer muitos esclarecimentos: "a uma conexão não pode ser feita '\<nome do servidor >', ou o serviço de análise não está em execução no servidor".  
+ Uma solicitação de conexão que termina com este erro pode não oferecer muitos esclarecimentos:  "A uma conexão não pode ser feita '\<nome do servidor >', ou o serviço de análise não está em execução no servidor".  
   
  Para obter um erro mais informativo, faça o seguinte:  
   

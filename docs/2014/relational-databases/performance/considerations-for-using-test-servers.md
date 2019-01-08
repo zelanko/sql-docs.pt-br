@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -20,12 +19,12 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50d488f4de5dc3581dae12655790bc935265d8f2
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776708"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerações para usar servidores de teste
   Usar um servidor de teste para ajustar um banco de dados em um servidor de produção é uma vantagem importante do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Usando esse recurso, você pode descarregar a sobrecarga de ajuste em um servidor de teste sem copiar os dados reais no servidor de teste do servidor de produção.  
@@ -53,7 +52,7 @@ ms.locfileid: "49991279"
   
 -   Todas as informações da sessão são armazenadas no **msdb** do servidor de produção. Isso permite explorar qualquer servidor de teste disponível para o ajuste e as informações sobre todas as sessões estão disponíveis em um só lugar (o servidor de produção).  
   
-## <a name="issues-related-to-the-shell-database"></a>Problemas relacionados ao banco de dados shell   
+## <a name="issues-related-to-the-shell-database"></a>Problemas relacionados ao banco de dados shell  
   
 -   Depois de ajustar, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deverá remover quaisquer metadados que criou no servidor de teste durante o processo de ajuste. Isso inclui o banco de dados shell. Se você estiver executando uma série de sessões de ajuste com os mesmos servidores de produção e de teste, poderá desejar reter esse banco de dados shell para economizar tempo. No arquivo de entrada XML, especifique o subelemento **RetainShellDB** com os outros subelementos no elemento pai **TuningOptions** . Usar essas opções faz o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] reter o banco de dados shell. Para obter mais informações, veja [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](database-engine-tuning-advisor.md).  
   

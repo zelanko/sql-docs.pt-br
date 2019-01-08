@@ -10,21 +10,21 @@ ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214246"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407214"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gerenciando memória para OLTP na memória
   As tabelas com otimização de memória requerem a existência de memória suficiente para manter todas as linhas e índices na memória. Como a memória é um recurso finito, é importante compreender e gerenciar o uso de memória no sistema. Os tópicos nessa seção abordam os cenários comuns de uso e gerenciamento de memória.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Seção|Description|  
+|Seção|Descrição|  
 |-------------|-----------------|  
-|[Estimar requisitos de memória para tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estimar as necessidades de memória de uma tabela.|  
+|[Estimar requisitos de memória para tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estime as necessidades de memória de uma tabela.|  
 |[Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Passo a passo para associar um banco de dados a um pool de recursos.|  
 |[Monitorar e solucionar problemas de uso da memória](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Ferramentas que você pode usar para monitorar o uso da memória. Também abrange a solução de problemas se o uso de memória ficar muito alto.|  
 |[Resolver problemas de memória insuficiente](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Etapas para recuperar-se de uma situação de OOM (memória insuficiente).|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175647"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772012"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
   Após considerar as dicas para o desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](enhance-general-replication-performance.md), considere estas áreas adicionais específicas da replicação de mesclagem.  
@@ -42,9 +41,9 @@ ms.locfileid: "48175647"
   
 -   Considere tabelas supernormalizadas que incluam tipos de dados LOB (Large Object).  
   
-     Quando a sincronização ocorre, o Merge Agent poderá precisar ler e transferir a linha de dados inteira de um Publicador ou Assinante. Se a linha contiver colunas que usam LOBs, esse processo poderá precisar alocar memória adicional e comprometer o desempenho negativamente, embora essas colunas possam não ter sido atualizadas. Para reduzir a probabilidade de ocorrer esse comprometimento no desempenho, considere colocar colunas LOB em uma tabela separada, usando uma relação um para um no resto dos dados de linha. Os tipos de dados `text`, `ntext`, e `image` são preteridos. Se incluir LOBs, recomendamos que você use os tipos de dados `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivamente.  
+     Quando a sincronização ocorre, o Merge Agent poderá precisar ler e transferir a linha de dados inteira de um Publicador ou Assinante. Se a linha contiver colunas que usam LOBs, esse processo poderá precisar alocar memória adicional e comprometer o desempenho negativamente, embora essas colunas possam não ter sido atualizadas. Para reduzir a probabilidade de ocorrer esse comprometimento no desempenho, considere colocar colunas LOB em uma tabela separada, usando uma relação um para um no resto dos dados de linha. Os tipos de dados `text`, `ntext` e `image`são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivamente.  
   
-## <a name="publication-design"></a>Design de publicação   
+## <a name="publication-design"></a>Design de publicação  
   
 -   Use um nível de compatibilidade de publicação de 90RTM ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou uma versão posterior).  
   
@@ -64,11 +63,11 @@ ms.locfileid: "48175647"
   
 -   Use partições pré-computadas com filtros com parâmetros (esse recurso é usado por padrão). Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
-     Partições pré-computadas impõem vários limites no comportamento de filtragem. Se seu aplicativo não puder aderir a essas limitações, defina a opção **keep_partition_changes** como **True**, fornecendo um benefício de desempenho. Para saber mais, confira [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+     Partições pré-computadas impõem vários limites no comportamento de filtragem. Se seu aplicativo não puder aderir a essas limitações, defina a opção **keep_partition_changes** como **True**, fornecendo um benefício de desempenho. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Use partições não sobrepostas se os dados forem filtrados, mas não forem compartilhados entre os usuários.  
   
-     A replicação pode aperfeiçoar o desempenho para obter dados que não são compartilhados entre as partições ou assinaturas. Para saber mais, confira [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+     A replicação pode aperfeiçoar o desempenho para obter dados que não são compartilhados entre as partições ou assinaturas. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Não crie hierarquias de filtro de junção complexas.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "48175647"
   
      Atualizar o Assinante para o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou para uma versão posterior atualiza o Merge Agent usado pelas assinaturas do Assinante. Para se beneficiar dos muitos recursos e otimizações de desempenho, é necessário o Merge Agent do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou de uma versão posterior.  
   
--   Se uma assinatura for sincronizada em uma conexão rápida e as alterações forem enviadas do Publicador e do assinante, use o parâmetro **–ParallelUploadDownload** para o Agente de Mesclagem.  
+-   Se uma assinatura for sincronizada em uma conexão rápida e as alterações forem enviadas do Editor e do Assinante, use o parâmetro **–ParallelUploadDownload** para o Agente de Mesclagem.  
   
      O[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um novo parâmetro no Agente de Mesclagem: **–ParallelUploadDownload**. Definir esse parâmetro permite ao Merge Agent processar em paralelo as mudanças carregadas no Publicador e as baixadas no Assinante. É útil em ambientes com grandes volumes e largura de banda de rede alta. Os parâmetros de agente podem ser especificados em perfis de agente e na linha de comando. Para obter mais informações, consulte:  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48175647"
   
 -   Esporadicamente, indexe novamente as tabelas do sistema de replicação de mesclagem.  
   
-     Como parte da manutenção da replicação de mesclagem, verifique esporadicamente o crescimento das tabelas do sistema associadas à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**e **MSmerge_past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte da manutenção de replicação de mesclagem, verifique esporadicamente o crescimento das tabelas do sistema associadas à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory**, e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, e **msmerge _ past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Monitore o desempenho de sincronização usando a guia **Histórico de Sincronização** no Replication Monitor.  
   

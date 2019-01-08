@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
@@ -14,12 +13,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8800491b0c4cb576b7255c1be0648b87daebfcc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772278"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
   Restrições UNIQUE e CHECK são dois tipos de restrições que podem ser usadas para impor a integridade de dados em tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esses são objetos de banco de dados importantes.  
@@ -46,7 +45,7 @@ ms.locfileid: "48082306"
   
  Você pode aplicar várias restrições CHECK a uma única coluna. Você também pode aplicar uma única restrição CHECK a várias colunas criando-as ao nível de tabela. Por exemplo, uma restrição CHECK de várias colunas poderia ser usada para confirmar que qualquer linha com o valor de coluna **country_region** de **USA** também tenha um valor de dois caracteres na coluna **state** . Isto permite que várias condições sejam verificadas em um local.  
   
- Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como elas determinam quais valores são válidos: restrições FOREIGN KEY obtêm uma lista de valores válidos de uma outra tabela, enquanto que restrições CHECK determinam valores válidos de uma expressão lógica.  
+ Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como elas determinam quais valores são válidos: As restrições FOREIGN KEY obtêm uma lista de valores válidos de outra tabela, enquanto restrições CHECK determinam valores válidos de uma expressão lógica.  
   
 > [!CAUTION]  
 >  Restrições que incluem conversão de tipo de dados implícita ou explícita podem causar falhas em certas operações. Por exemplo, tais restrições definidas em tabelas que são fontes de opção de partição podem causar falha na operação ALTER TABLE...SWITCH. Evite a conversão de tipo de dados em definições de restrição.  
@@ -88,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
 ##  <a name="Tasks"></a> Tarefas relacionadas  
   
 > [!NOTE]  
->  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
+>  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema, usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
 |Tarefa|Tópico|  
 |----------|-----------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130326"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771388"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar uma assinatura
   Este tópico descreve como reinicializar uma assinatura no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Assinaturas individuais podem ser marcadas para reinicialização, para que durante a próxima sincronização, um novo instantâneo seja aplicado.  
@@ -55,7 +54,7 @@ ms.locfileid: "48130326"
   
 #### <a name="to-mark-a-single-push-or-pull-subscription-for-reinitialization-in-management-studio-at-the-publisher"></a>Para marcar uma única assinatura push ou pull para reinicialização no Management Studio (no Publicador)  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48130326"
   
 #### <a name="to-mark-all-subscriptions-for-reinitialization-in-management-studio"></a>Para marcar todas as assinaturas para reinicialização no Management Studio  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48130326"
   
 3.  Na caixa de diálogo **Reinicializar Assinatura(s)** , selecione opções e então clique em **Marcar para Reinicialização**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  As assinaturas podem ser reinicializadas forma programática, usando procedimentos armazenados. O procedimento armazenado usado depende do tipo de assinatura (push ou pull) e o tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar uma assinatura pull para uma publicação transacional  
@@ -147,7 +146,7 @@ ms.locfileid: "48130326"
     > [!IMPORTANT]  
     >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
   
-     Para obter mais informações, consulte [Create a Publication](publish/create-a-publication.md).  
+     Para obter mais informações, consulte [Criar uma assinatura](publish/create-a-publication.md).  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Para alterar a política de reinicialização para uma publicação de mesclagem existente  
   
@@ -174,9 +173,9 @@ ms.locfileid: "48130326"
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto.  
   
     > [!NOTE]  
-    >  Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura pull não existe.  
+    >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura pull não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Esse método marca a assinatura para reinicialização.  
   
 5.  Sincronize a assinatura pull. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -189,9 +188,9 @@ ms.locfileid: "48130326"
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto.  
   
     > [!NOTE]  
-    >  Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura push não existe.  
+    >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura push não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Esse método marca a assinatura para reinicialização.  
   
 5.  Sincronize a assinatura push. Para obter mais informações, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -204,9 +203,9 @@ ms.locfileid: "48130326"
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto.  
   
     > [!NOTE]  
-    >  Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura pull não existe.  
+    >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura pull não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
   
     > [!NOTE]  
     >  As alterações não poderão ser carregadas se a assinatura estiver vencida. Para obter mais informações, consulte [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -222,9 +221,9 @@ ms.locfileid: "48130326"
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto.  
   
     > [!NOTE]  
-    >  Se esse método retornar `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura push não existe.  
+    >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura push não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
   
     > [!NOTE]  
     >  As alterações não poderão ser carregadas se a assinatura estiver vencida. Para obter mais informações, consulte [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  

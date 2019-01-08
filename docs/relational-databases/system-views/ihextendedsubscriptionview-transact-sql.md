@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHextendedSubscriptionView_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d34a2c60059eb9c5f74981cf3258b5e5b6bc3fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30ba4a0947f98ab34ed8c11ef0e8f3a25c3e453b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752634"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756978"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **IHextendedSubscriptionView** exibição expõe informações de assinatura de uma publicação não SQL Server. Essa exibição é armazenada na **distribuição** banco de dados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|O identificador exclusivo para um artigo.|  
 |**dest_db**|**sysname**|O nome do banco de dados de destino.|  

@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5e70f08293132f570ddb0663db7944ecb4bba497
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071840"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507966"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
   Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "49071840"
   
      O nome padrão da definição de alerta é o nome do relatório. Os nomes de definições de alertas não precisam ser exclusivos, o que pode dificultar sua diferenciação quando você exibir a lista de alertas mais tarde no Gerenciador de Alertas de Dados. É recomendável usar nomes de definições de alertas significativos e exclusivos.  
   
-6.  Opcionalmente, altere a opção de dados padrão de **todos os dados no feed de dados tem** à **nenhum dado no feed de dados tem**.  
+6.  Opcionalmente, altere a opção de dados padrão de **quaisquer dados do feed de dados tem** para **nenhum dado do feed de dados tem**.  
   
 7.  Clique em **Adicionar regra**.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "49071840"
   
      Dependendo do tipo dos dados da coluna selecionada, diferentes operadores de comparação serão listados. Se a coluna tiver um tipo de dados de data, um ícone de calendário será exibido ao lado do valor de limite da regra. É possível inserir dados com um clique em uma data no calendário ou por meio de digitação da data.  
   
-     O Designer de Alertas de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
+     Designer de alertas de dados fornece dois modos de comparação: **Modo de entrada de valor** e **modo de seleção de campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
   
 9. Para adicionar uma cláusula OR, clique na seta para baixo e clique em **Modo de Entrada de Valor**.  
   
 10. Digite o valor de comparação.  
   
-11. Opcionalmente, clique nas reticências **(...)** novamente.  
+11. Opcionalmente, clique no botão de reticências **(...)** novamente.  
   
      As reticências **(...)** aparecem na linha que contém a primeira cláusula.  
   

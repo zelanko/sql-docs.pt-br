@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,24 +14,24 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781259"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   Você pode criar ou configurar entidades do Administrador de Recursos, como pools de recursos e grupos de cargas de trabalho, usando a página de Propriedades do Administrador de Recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  **Antes de começar:**  [Permissões](#Permissions)  
   
-2.  **Para exibir as propriedades do Administrador de Recursos usando:**  [Página de propriedades do Administrador de Recursos](#ViewRGProp)  
+2.  **Para exibir as propriedades do administrador de recursos, usando:**  [Página de propriedades do administrador de recursos](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Além de exibir as propriedades de entidades do Administrador de Recursos, você pode executar várias tarefas de configuração usando a página **Propriedades do Administrador de Recursos** . Para obter mais informações, consulte estes tópicos:  
   
--   [Habilitar o Resource Governor](enable-resource-governor.md)  
+-   [Habilitar Administrador de Recursos](enable-resource-governor.md)  
   
 -   [Desabilitar Administrador de Recursos](disable-resource-governor.md)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48116406"
   
 -   [Alterar configurações do pool de recursos](change-resource-pool-settings.md)  
   
--   [Alterar as configurações do grupo de carga de trabalho](change-workload-group-settings.md)  
+-   [Alterar as configurações de grupo de carga de trabalho](change-workload-group-settings.md)  
   
 -   [Mover um Grupo de Cargas de Trabalho](move-a-workload-group.md)  
   

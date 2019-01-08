@@ -10,12 +10,12 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032703"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395509"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Limpeza de dados é o processo de analisar a qualidade de dados em uma fonte de dados, aprovando/rejeitando as sugestões manualmente pelo sistema e fazer alterações assim aos dados. A limpeza de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) inclui um processo auxiliado por computador que analisa a conformidade dos dados em relação ao conhecimento de uma base de dados de conhecimento, e um processo interativo que permite que o administrador de dados examine e modifique resultados de processo auxiliado por computador para garantir que a limpeza de dados seja executada exatamente como desejado.  
@@ -28,7 +28,7 @@ ms.locfileid: "51032703"
   
 -   Oferece processo de duas etapas para limpar os dados: *auxiliado por computador* e *interativo*. O processo por computador usa o conhecimento em uma base de conhecimento de DQS para processar os dados automaticamente e sugere substituições/correções. A próxima etapa, interativa, permite que o administrador de dados aprove, rejeite ou modifique as alterações propostas pelo DQS durante a limpeza auxiliada por computador.  
   
--   Unifica e enriquece dados de cliente usando valores de domínio, regras de domínio e dados de referência. Por exemplo, padronize o uso do termo alterando "R." por "Rua", enriqueça os dados inserindo elementos ausentes ao alterar "1 Microsoft way Redmond 98006" por "1 Microsoft Way, Redmond, WA 98006".  
+-   Unifica e enriquece dados de cliente usando valores de domínio, regras de domínio e dados de referência. Por exemplo, padronize o uso do termo alterando "R." para "Rua", enriqueça os dados inserindo elementos ausentes ao alterar "1 Microsoft way Redmond 98006" por "1 Microsoft Way, Redmond, WA 98006".  
   
 -   Oferece uma interface de assistente simples, intuitiva e consistente para que o usuário navegue pelos dados e inspecione erros em um conjunto muito grande de dados.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "51032703"
 ##  <a name="Interactive"></a> Limpeza interativa  
  Com base no processo de limpeza auxiliada por computador, o DQS fornece ao administrador de dados as informações necessárias para que ele tome uma decisão sobre a alteração dos dados. O DQS categoriza os dados sob estas cinco guias:  
   
--   **Sugerido**: valores de domínio para os quais o DQS encontrou sugestões com um nível de confiança superior ao valor de *limite de sugestão automática* , mas inferior ao valor do *limite de correção automática* . Você deve revisar esses valores e aprovar ou rejeitar conforme apropriado.  
+-   **Sugerido**: Valores para os quais o DQS encontrou sugestões com um nível de confiança maior do que o *limite de sugestão automática* , mas inferior ao valor de *limite de correção automática* valor. Você deve revisar esses valores e aprovar ou rejeitar conforme apropriado.  
   
--   **Novo**: valores válidos para os quais o DQS não tem informações suficientes (sugestão) e, portanto, não podem ser mapeados para nenhuma outra guia. Posteriormente, essa guia também conterá valores que tenham um nível de confiança inferior ao valor de *limite de sugestão automática* , porém alto o suficiente para ser marcado como válido.  
+-   **Novo**: Valores válidos para o qual o DQS não tem informações suficientes (sugestão) e, portanto, não pode ser mapeado para nenhuma outra guia. Posteriormente, essa guia também conterá valores que tenham um nível de confiança inferior ao valor de *limite de sugestão automática* , porém alto o suficiente para ser marcado como válido.  
   
--   **Inválido**: valores que foram marcados como inválidos no domínio na base de dados de conhecimento ou os valores que falharam em uma regra de domínio ou em dados de referência. Esta guia também conterá valores rejeitados pelo usuário em quaisquer das outras quatro guias durante o processo de limpeza interativo.  
+-   **Inválido**: Valores que foram marcados como inválidos no domínio da base de dados de conhecimento ou os valores que falharam em um domínio regra ou dados de referência. Esta guia também conterá valores rejeitados pelo usuário em quaisquer das outras quatro guias durante o processo de limpeza interativo.  
   
--   **Corrigido**: valores corrigidos pelo DQS durante o processo de limpeza automatizado uma vez que o DQS localizou uma correção para o valor com um nível de confiança acima do valor do *limite de correção automática* . Esta guia também conterá valores para os quais o usuário especificou um valor correto na coluna **Corrigir para** durante a limpeza interativa e então aprovou clicando no botão de opção na coluna **Aprovar** em quaisquer das outras quatro guias.  
+-   **Corrigido**: Valores corrigidos pelo DQS durante o processo de limpeza automatizado que o DQS localizou uma correção para o valor com o nível de confiança acima de *limite de correção automática* valor. Esta guia também conterá valores para os quais o usuário especificou um valor correto na coluna **Corrigir para** durante a limpeza interativa e então aprovou clicando no botão de opção na coluna **Aprovar** em quaisquer das outras quatro guias.  
   
--   **Correto**: valores avaliados como corretos. Por exemplo, o valor correspondeu a um valor de domínio. Se preciso for, você poderá anular a limpeza do DQS ao rejeitar valores desta guia ou especificando uma palavra alternativa na coluna **Corrigir para** e depois clicando no botão de opção da coluna **Aceitar** . Essa guia também contém os valores que foram aprovados pelo usuário durante a limpeza interativa clicando no botão de opção na coluna **Aprovar** nas guias **Novo** ou **Inválido** .  
+-   **Correto**: Valores que foram considerados corretos. Por exemplo, o valor correspondeu a um valor de domínio. Se preciso for, você poderá anular a limpeza do DQS ao rejeitar valores desta guia ou especificando uma palavra alternativa na coluna **Corrigir para** e depois clicando no botão de opção da coluna **Aceitar** . Essa guia também contém os valores que foram aprovados pelo usuário durante a limpeza interativa clicando no botão de opção na coluna **Aprovar** nas guias **Novo** ou **Inválido** .  
   
 > [!NOTE]  
 >  Nas guias **Sugerido**, **Corrigido**e **Correto** , o DQS exibe o valor principal para um domínio, se aplicável, no coluna **Corrigir para** em relação ao respectivo valor de domínio.  

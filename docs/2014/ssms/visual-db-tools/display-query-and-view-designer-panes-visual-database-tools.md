@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], panes
@@ -17,12 +17,12 @@ ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aedc73a4cb3ffa14e5f701dee54788783690bb59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198086"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769038"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Exibir painéis do Designer de Consulta e Exibição (Visual Database Tools)
   O Designer de Consulta e Exibição é composto por quatro painéis separados: o painel Diagrama, o painel Critérios, o painel SQL e o painel Resultados. Normalmente quando você abre uma exibição ou cria uma nova consulta todas as quatro janelas são abertas, mas se houver necessidade de abrir qualquer uma delas, será possível fazer isso, desde que o Designer de Consulta e Exibição esteja aberto.  

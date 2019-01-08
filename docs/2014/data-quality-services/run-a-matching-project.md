@@ -14,12 +14,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031503"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512048"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
   Este tópico descreve como executar a correspondência de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de correspondência identifica clusters de registros de correspondência com base em regras de correspondência na política de correspondência, designa um registro de cada cluster como o sobrevivente com base em uma regra de sobrevivência, e exporta os resultados. O DQS executa o processo de correspondência, também chamado de eliminação de duplicação, em um processo assistido por computador, mas você cria regras de correspondência interativamente e seleciona a regra de correspondência a partir de várias opções; assim, você controla o processo de correspondência.  
@@ -41,7 +41,7 @@ ms.locfileid: "51031503"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para executar um projeto de correspondência.  
   
-##  <a name="StartingaMatchingProject"></a> Primeira etapa: iniciando uma projeto de correspondência  
+##  <a name="StartingaMatchingProject"></a> Primeira etapa: Iniciando um projeto de correspondência  
  Você executa a atividade de correspondência em um projeto de qualidade de dados criado no aplicativo cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "51031503"
     > [!NOTE]  
     >  Você poderá mapear sua fonte de dados para um domínio DQS somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre tipos de dados que oferecem suporte no DQS, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Clique no controle **mais (+)** para adicionar uma linha à tabela Mapeamentos ou no controle **menos (–)** para remover uma linha.  
+4.  Clique no controle **mais (+)** para adicionar uma linha à tabela Mapeamentos ou no controle **menos (-)** para remover uma linha.  
   
 5.  Clique em **Visualizar fonte de dados** para visualizar os dados na tabela do SQL Server ou visualizar os dados selecionados ou a planilha do Excel selecionada.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51031503"
   
  A sobrevivência é opcional. Você pode exportar os resultados sem executar a sobrevivência; nesse caso, o DQS usaria o registro dinâmico que foi designado na análise correspondente. Se dois ou mais registros em um cluster obedecerem a regra de sobrevivência, o processo de sobrevivência selecionará a menor ID de registro entre os registros conflitantes para ser a sobrevivente. Você pode exportar os sobreviventes para arquivos ou tabelas diferentes usando regras de sobrevivência diferentes.  
   
-1.  Na página **Exportar** , selecione o destino para onde você deseja exportar os dados correspondentes em **Tipo de Destino**: **SQL Server**, **Arquivo CSV**ou **Arquivo do Excel**.  
+1.  Sobre o **exportar** , selecione o destino no qual você deseja exportar os dados correspondentes na **tipo de destino**: **SQL Server**, **arquivo CSV**, ou **arquivo do Excel**.  
   
     > [!IMPORTANT]  
     >  Se você estiver usando uma versão de 64 bits do Excel, não poderá exportar os dados compatíveis para um arquivo do Excel; você só poderá exportar para um banco de dados do SQL Server ou para um arquivo .csv.  
@@ -123,7 +123,7 @@ ms.locfileid: "51031503"
   
     -   Uma lista de clusters e os registros correspondentes em cada cluster, inclusive o nome de regra e a contagem. O registro dinâmico será marcado como "Dinâmico". Os clusters aparecerão primeiro na lista de exportação.  
   
-    -   Uma lista dos registros sem correspondência, com “NULL” nas colunas Pontuação e Nome da Regra. Esses registros serão anexados à lista de exportação depois dos clusters.  
+    -   Uma lista dos registros sem correspondência, com "NULL" nas colunas Pontuação e Nome da Regra. Esses registros serão anexados à lista de exportação depois dos clusters.  
   
      Isto será exportado para resultados de sobrevivência:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "51031503"
     > [!NOTE]  
     >  Se você concluiu um projeto de correspondência e o utilizou novamente, ele usará a base de dados de conhecimento existente quando ele foi publicado. Ele não usará as alterações feitas na base de dados de conhecimento desde a conclusão do projeto. Para usar essas alterações, ou para usar uma nova base de dados de conhecimento, você terá que criar um novo projeto de correspondência. Por outro lado, se ele já foi criado, mas não concluído, um projeto de correspondência, quaisquer alterações publicadas na política de correspondência serão usados se você executar a correspondência no projeto.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após executar um projeto de correspondência  
+##  <a name="FollowUp"></a> Acompanhar: Depois de executar um projeto de correspondência  
  Depois executar uma projeto de correspondência, você pode alterar a política de correspondência na base de dados de conhecimento, e criar e executar outro projeto de correspondência com base na política de correspondência atualizada. Para obter mais informações, consulte [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Guias Criador de Perfil e Resultados  
@@ -175,27 +175,27 @@ ms.locfileid: "51031503"
   
  As estatísticas do banco de dados de origem incluem o seguinte:  
   
--   **Registros**: o número total de registros no banco de dados  
+-   **Registros**: O número total de registros no banco de dados  
   
--   **Valores Totais**: o número total de valores nos campos  
+-   **Valores totais**: O número total de valores nos campos  
   
--   **Novos Valores**: o número total de valores novos desde a execução anterior e seu percentual em relação ao todo  
+-   **Novos valores**: O número total de valores novos desde a execução anterior e seu percentual em relação ao todo  
   
--   **Valores Exclusivos**: o número total de valores exclusivos nos campos e seu percentual em relação ao todo  
+-   **Valores exclusivos**: O número total de valores exclusivos nos campos e seu percentual em relação ao todo  
   
--   **Novos Valores Exclusivos**: o número total de valores exclusivos novos nos campos e seu percentual em relação ao todo  
+-   **Novos valores exclusivos**: O número total de valores exclusivos que são novos nos campos e seu percentual em relação ao todo  
   
  As estatísticas de campo incluem o seguinte:  
   
--   **Campo**: nome do campo que foi incluído nos mapeamentos.  
+-   **Campo**: Nome do campo que foi incluído nos mapeamentos.  
   
--   **Domínio**: o nome do domínio que foi mapeado para o campo.  
+-   **Domínio**: Nome do domínio que foi mapeado para o campo.  
   
--   **Novo**: o número de novas correspondências localizadas e sua porcentagem do total  
+-   **Novo**: O número de novas correspondências localizadas e seu percentual do total  
   
--   **Exclusivo**: o número de registros exclusivos no campo e seu percentual do total  
+-   **Exclusivo**: O número de registros exclusivos no campo e seu percentual do total  
   
--   **Integridade**: a porcentagem de conclusão da execução da regra.  
+-   **Integridade**: A porcentagem que a execução da regra foi concluída.  
   
 ### <a name="matching-policy-notifications"></a>Notificações de Política de Correspondência  
  Para a atividade de política de correspondência, as seguintes condições resultam em notificações:  

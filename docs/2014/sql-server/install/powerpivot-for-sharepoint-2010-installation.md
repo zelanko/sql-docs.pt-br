@@ -11,26 +11,26 @@ ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e44342686c8de426032a3f0147b867d6eb1b19e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42c6f97e23ea36e606047f683c7fc118b1726a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202946"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403951"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>Instalação do PowerPivot para SharePoint 2010
-  O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma coleção de componentes de servidor que fornece processamento de consultas e controle de gerenciamento em pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que você publica no SharePoint. Os serviços incluem o mecanismo Analysis Services e o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+  O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma coleção de componentes de servidor que fornece processamento de consultas e controle de gerenciamento em pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que você publica no SharePoint. Os serviços incluem o mecanismo Analysis Services e o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
 >  Para obter informações sobre o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] e a instalação com o SharePoint Server 2013, consulte o seguinte:  
 >   
 >  -   A seção "SQL Server 2012 SP1" de [visão geral do SQL Server Servicing Installation](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- O Analysis Services oferece processamento do lado de servidor para pastas de trabalho do Excel que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. O Serviço do Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabalha com o Analysis Services, adicionando integração do SharePoint, balanceamento de carga e gerenciamento de conexão. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estende os serviços do Excel aproveitando seus recursos de processamento de dados de grande escala com os serviços de renderização fornecidos pelo Excel.  
+ O Analysis Services oferece processamento do lado de servidor para pastas de trabalho do Excel que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O Serviço do Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabalha com o Analysis Services, adicionando integração do SharePoint, balanceamento de carga e gerenciamento de conexão. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estende os serviços do Excel aproveitando seus recursos de processamento de dados de grande escala com os serviços de renderização fornecidos pelo Excel.  
   
- Para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]mídia de instalação.  
+ Para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use a mídia de instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e [lista de verificação de implantação: expansão adicionando servidores do PowerPivot para um Farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
+ Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e [lista de verificação de implantação: Expansão adicionando servidores do PowerPivot a um farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Instalar o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

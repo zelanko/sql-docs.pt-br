@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpeer_topologyrequest_TSQL
@@ -19,19 +18,19 @@ ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f638d95416336a3d74eaafbdf7c6fdd25407ce18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41555cb746cdfc7785a67a1b679459c415b2cad7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818874"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773828"
 ---
 # <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Usado em replicação ponto a ponto para controlar as solicitações de status de topologia para uma publicação. Essa tabela é armazenada no banco de dados de publicação.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identifica uma solicitação de status de topologia. A coluna request_id em [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) usa esse valor.|  
 |publication|**sysname**|Nome da publicação da qual a solicitação de status de topologia originou.|  

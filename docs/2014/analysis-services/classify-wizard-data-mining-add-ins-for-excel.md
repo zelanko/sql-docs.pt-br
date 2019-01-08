@@ -14,12 +14,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419677"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistente de Classificação (Suplementos de Mineração de Dados para Excel)
   ![Assistente de classificar na faixa de opções mineração de dados](media/dmc-classify.gif "Assistente classificar na faixa de opções mineração de dados")  
@@ -34,7 +34,7 @@ ms.locfileid: "48094116"
   
 2.  No **Selecionar fonte de dados** , escolha os dados a serem analisados.  
   
-     Esse assistente oferece suporte a vários tipos de dados: tabelas do Excel, intervalos do Excel e fontes de dados externas. Com dados externos, você poderá adicioná-la ao Excel ou escolher um conjunto de tabelas ou exibições em uma fonte de dados do Analysis Services. Você também pode adicionar tabelas e alterar colunas para criar fontes de dados ad hoc.  
+     Esse assistente oferece suporte a vários tipos de dados: Tabelas do Excel, intervalos do Excel e fontes de dados externas. Com dados externos, você poderá adicioná-la ao Excel ou escolher um conjunto de tabelas ou exibições em uma fonte de dados do Analysis Services. Você também pode adicionar tabelas e alterar colunas para criar fontes de dados ad hoc.  
   
 3.  Sobre o **classificação** página, escolha a coluna que você deseja classificar.  
   

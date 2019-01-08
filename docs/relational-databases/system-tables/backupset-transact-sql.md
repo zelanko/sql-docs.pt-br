@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596155"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402840"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47596155"
  Essa tabela é armazenada na **msdb** banco de dados.  
 
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Número de identificação exclusivo de conjunto de backup que o identifica. Identidade, chave primária.|  
 |**backup_set_uuid**|**uniqueidentifier**|Número de identificação exclusivo de conjunto de backup que o identifica.|  
@@ -47,11 +47,11 @@ ms.locfileid: "47596155"
 |**last_media_number**|**smallint**|Número de mídia da mídia em que conjunto de backup é encerrado. Pode ser NULL.|  
 |**catalog_family_number**|**tinyint**|Número de família da mídia que contém o início do diretório de conjunto de backup. Pode ser NULL.|  
 |**catalog_media_number**|**smallint**|Número de mídia da mídia que contém o início do diretório de conjunto de backup. Pode ser NULL.|  
-|**posição**|**int**|Posição de backup usada na operação de restauração para localizar o conjunto de backup e arquivos apropriados. Pode ser NULL. Para obter mais informações, consulte o arquivo no [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Posição de backup usada na operação de restauração para localizar o conjunto de backup e arquivos apropriados. Pode ser NULL. Para obter mais informações, consulte o arquivo no [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Data e hora de vencimento do conjunto de backup. Pode ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificação do fornecedor de software que escreve o cabeçalho de mídia de backup. Pode ser NULL.|  
 |**name**|**nvarchar(128)**|Nome do conjunto de backup. Pode ser NULL.|  
-|**Descrição**|**nvarchar(255)**|Descrição do conjunto de backup. Pode ser NULL.|  
+|**description**|**nvarchar(255)**|Descrição do conjunto de backup. Pode ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nome do usuário que realizou a operação de backup. Pode ser NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] número de versão principal. Pode ser NULL.|  
 |**software_minor_version**|**tinyint**|Número de versão secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
@@ -77,7 +77,7 @@ ms.locfileid: "47596155"
 |**flags**|**int**|Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **sinalizadores** coluna foi preterida e está sendo substituída com as colunas de bit a seguir:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Pode ser NULL.<br /><br /> Em conjuntos de backup de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os bits de sinalizador:<br />1 = Backup contém dados registrados minimamente. <br />2 = WITH SNAPSHOT foi usado. <br />4 = Banco de dados era somente leitura na hora do backup.<br />8 = Banco de dados estava no modo de usuário único na hora do backup.|  
 |**unicode_locale**|**int**|Localidade Unicode. Pode ser NULL.|  
 |**unicode_compare_style**|**int**|Estilo de comparação Unicode. Pode ser NULL.|  
-|**collation_name**|**nvarchar(128)**|Nome do agrupamento. Pode ser NULL.|  
+|**collation_name**|**nvarchar(128)**|Nome da ordenação. Pode ser NULL.|  
 |**Is_password_protected**|**bit**|É o conjunto de backup<br /><br /> protegido por senha:<br /><br /> 0 = Não protegido<br /><br /> 1 = Protegido|  
 |**recovery_model**|**nvarchar(60)**|Modelo de recuperação do banco de dados:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
 |**has_bulk_logged_data**|**bit**|1 = Backup contém dados bulk-logged.|  
@@ -100,7 +100,7 @@ ms.locfileid: "47596155"
 |**compressed_backup_size**|**Numeric(20,0)**|Contagem total de bytes do backup armazenado em disco.<br /><br /> Para calcular a taxa de compactação, use **compressed_backup_size** e **backup_size**.<br /><br /> Durante um **msdb** atualização, esse valor é definido como NULL. o que indica um backup não compactado.|  
 |**key_algorithm**|**nvarchar(32)**|O algoritmo de criptografia usado para criptografar o backup. O valor de NO_Encryption indica que o backup não foi criptografado.|  
 |**encryptor_thumbprint**|**varbinary(20)**|A impressão digital do criptografador que pode ser usada para localizar o certificado ou chave assimétrica no banco de dados. Quando o backup não tiver sido criptografado, esse valor será NULL.|  
-|**encryptor_type**|**nvarchar(32)**|O tipo de criptografador usado: certificado ou chave assimétrica. para obter informações sobre a ferramenta de configuração e recursos adicionais. Quando o backup não tiver sido criptografado, esse valor será NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Tipo de criptografador usado: Certificate ou Asymmetric Key. para obter informações sobre a ferramenta de configuração e recursos adicionais. Quando o backup não tiver sido criptografado, esse valor será NULL.|  
   
 ## <a name="remarks"></a>Comentários  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY preenche a coluna da **backupmediaset** tabela com os valores apropriados do cabeçalho de conjunto de mídias.  

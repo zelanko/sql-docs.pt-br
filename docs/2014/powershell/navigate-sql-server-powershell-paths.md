@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135886"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752079"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar em caminhos do SQL Server PowerShell
   O provedor do [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell expõe o conjunto de objetos em uma instância do SQL Server em uma estrutura semelhante a um caminho de arquivo. Você pode usar cmdlets do Windows PowerShell para navegar até o caminho do provedor e criar unidades personalizadas para encurtar o caminho que você tem que digitar.  
@@ -26,7 +25,7 @@ ms.locfileid: "48135886"
   
  O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa um subconjunto de cmdlets do provedor, mostrados na tabela a seguir:  
   
-|cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|Description|  
+|cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|Descrição|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtém o nó atual.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Altera o nó atual.|  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Criar uma unidade personalizada  
  **Criar e usar uma unidade personalizada**  
   
-1.  Use `New-PSDrive` para definir uma unidade personalizada. Use o `Root` parâmetro para especificar o caminho que é representado por um nome de unidade personalizada.  
+1.  Use `New-PSDrive` para definir uma unidade personalizada. Use o parâmetro `Root` para especificar o caminho que é representado pelo nome de unidade personalizada.  
   
-2.  O nome de unidade personalizada em cmdlets de navegação do caminho de referência, como `Set-Location`.  
+2.  Referencie o nome de unidade personalizada em cmdlets de navegação do caminho como `Set-Location`.  
   
 ### <a name="custom-drive-example-powershell"></a>Exemplo de unidade personalizada (PowerShell)  
  Este exemplo cria uma unidade virtual chamada AWDB que é mapeada para o nó de uma cópia implantada do banco de dados de exemplo AdventureWorks2012. A unidade virtual é usada para navegar até uma tabela no banco de dados.  
@@ -131,7 +130,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
  [Trabalhar com caminhos do SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Converter URNs em caminhos de provedor SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

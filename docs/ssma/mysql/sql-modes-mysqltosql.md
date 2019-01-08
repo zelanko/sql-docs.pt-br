@@ -10,12 +10,12 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737304"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394869"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos SQL (MySQLToSQL)
 O SSMA para MySQL pode operar em diferentes modos SQL e pode aplicar esses modos de forma diferente para diferentes clientes.  
@@ -24,11 +24,11 @@ Modos de definem a sintaxe SQL MySQL deve dar suporte e o tipo de validação de
   
 ## <a name="sql-modes-grid"></a>Grade de modos SQL:  
   
--   Grade de modos SQL no nível raiz contém as seguintes colunas: **nome do modo SQL**, **modos de SQL carregado**, e **efetivo modos de SQL**.  
+-   Grade de modos SQL no nível raiz contém as seguintes colunas: **Nome do modo SQL**, **carregados modos SQL**, e **modos SQL eficaz**.  
   
--   Grade de modos de SQL em bancos de dados categoria, banco de dados, tabela categoria, categoria de instruções, categoria de exibições, tabelas, exibições, funções, procedimentos, UDF e o nível de objeto do evento contém as seguintes colunas: **nome do modo SQL**,  **Herdado modos SQL**, e **modos SQL eficaz**.  
+-   Grade de modos de SQL em bancos de dados categoria, banco de dados, tabela categoria, categoria de instruções, categoria de exibições, tabelas, exibições, funções, procedimentos, UDF e o nível de objeto do evento contém as seguintes colunas: **Nome do modo SQL**, **herdadas modos SQL**, e **modos SQL eficaz**.  
   
--   Grade de modos SQL no nível de procedimento armazenado, função armazenado e disparador contém as seguintes colunas: **nome do modo SQL**, **modos Original do SQL**, e **modos de efetivas SQL**.  
+-   Grade de modos SQL no nível de procedimento armazenado, função armazenado e disparador contém as seguintes colunas: **Nome do modo SQL**, **modos SQL Original**, e **modos SQL eficaz**.  
   
 > [!NOTE]  
 > Modos de grupo serão mostrados em negrito, sob a coluna 'Nome do modo SQL'.  

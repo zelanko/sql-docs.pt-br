@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222646"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776378"
 ---
 # <a name="use-the-eventdata-function"></a>Usar a função EVENTDATA
   As informações sobre um evento que aciona um disparador DDL são capturadas por meio da função EVENTDATA. Essa função retorna um valor `xml`. O esquema XML contém informações sobre o seguinte:  
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que capturou o evento.  
   
- Novamente, os últimos dois itens são capturados usando XQuery em relação a `xml` dados gerados por EVENTDATA.  
+ Outra vez, os últimos dois itens são capturados pelo uso de XQuery em relação aos dados `xml` gerados por EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para retornar dados de evento, recomenda-se usar o método `value()` de XQuery, em vez do método `query()`. O `query()` método retorna instâncias XML e retorno de carro com escape com e comercial e alimentação de linha (CRLF) na saída, enquanto o `value()` método renderiza instâncias CR/LF invisíveis na saída.  
+>  Para retornar dados de evento, recomenda-se usar o método `value()` de XQuery, em vez do método `query()`. O método `query()` retorna instâncias XML e CR/LF (retorno de carro e alimentação de linha) com escape de E comercial na saída, enquanto que o método `value()` processa instâncias CR/LF invisíveis na saída.  
   
  Um exemplo similar de disparador DDL é fornecido com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obter o exemplo, localize a pasta Gatilhos de Banco de Dados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta pasta está localizada na pasta **Programação** do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Clique com o botão direito do mouse em **ddlDatabseTriggerLog** e selecione **Script de Gatilho de Banco de Dados como**. Por padrão, o gatilho DDL **ddlDatabseTriggerLog** está desabilitado.  
   
