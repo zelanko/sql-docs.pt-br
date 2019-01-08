@@ -12,18 +12,18 @@ ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64eb7b3dc6f058d5f061f4c015105ba4fc44f183
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f65c26e1c6b9588b770acf1a66409dfde8ea1072
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206756"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362119"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField pode ser usado para definir campos de descritor para parâmetros com valor de tabela e colunas de parâmetro com valor de tabela. Para obter informações sobre os campos disponíveis, consulte [campos de descritor de parâmetro com valor de tabela](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) e [campos de descritor para colunas de constituintes do parâmetro com valor de tabela](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md).  
   
 ## <a name="remarks"></a>Comentários  
- As colunas do parâmetro com valor de tabela ficam disponíveis somente quando o campo do cabeçalho do descritor SQL_SOPT_SS_PARAM_FOCUS é definido como o ordinal de um registro que tenha SQL_DESC_TYPE definido como SQL_SS_TABLE. Para obter mais informações sobre sql_spot_ss_param_focus, consulte [SQLSetStmtAttr](sqlsetstmtattr.md).  
+ As colunas do parâmetro com valor de tabela ficam disponíveis somente quando o campo do cabeçalho do descritor SQL_SOPT_SS_PARAM_FOCUS é definido como o ordinal de um registro que tenha SQL_DESC_TYPE definido como SQL_SS_TABLE. Para obter mais informações sobre SQL_SPOT_SS_PARAM_FOCUS, consulte [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  Se for feita uma tentativa de definir SQL_SOPT_SS_PARAM_FOCUS como o ordinal de um parâmetro que não é um parâmetro com valor de tabela, SQLSetStmtAttr retornará SQL_ERROR e um registro de diagnóstico é criado com SQLSTATE = HY024 e a mensagem "valor de atributo inválido". SQL_SOPT_SS_PARAM_FOCUS não é alterado quando SQL_ERROR é retornado.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48206756"
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetdescfield-support-for-enhanced-date-and-time-features"></a>Suporte do SQLSetDescField a recursos aprimorados de data e hora  
- Os recursos de data/hora foram aprimorados no ODBC. Para obter informações sobre o campo de descritor fornecido para os tipos de data/hora de novo, consulte [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Os recursos de data/hora foram aprimorados no ODBC. Para obter informações sobre o campo de descritor fornecido para os novos tipos de data/hora, consulte [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48206756"
  Para obter mais informações, consulte [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [SQLSetDescField](http://go.microsoft.com/fwlink/?LinkId=80705)   
+ [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

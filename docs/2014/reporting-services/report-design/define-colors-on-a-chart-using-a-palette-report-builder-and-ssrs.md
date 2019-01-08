@@ -11,12 +11,12 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0db138c140b0f5e51a148a3114ad6f0a7054f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49feffa82a1ae20735a2b9b70982782c3562c9cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166946"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370088"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Definir cores em um gráfico usando uma paleta (Construtor de Relatórios e SSRS)
   Você pode alterar a paleta de cores para um gráfico, selecionando uma paleta predefinida ou definindo uma paleta personalizada. Paletas personalizadas são específicas para relatórios.  
@@ -49,7 +49,7 @@ ms.locfileid: "48166946"
   
 5.  Clique em **Adicionar** para adicionar uma cor. Selecione uma cor na lista suspensa ou selecione Expressão e especifique um valor hexadecimal para uma cor específica, como ff6600 para "Laranja".  
   
-     Para obter mais informações sobre valores hexadecimais, consulte [Tabela de Cores](http://go.microsoft.com/fwlink/?linkid=9258) n MSDN.  
+     Para obter mais informações sobre valores hexadecimais, consulte [Tabela de Cores](https://go.microsoft.com/fwlink/?linkid=9258) n MSDN.  
   
 6.  Clique em **Adicionar** para adicionar mais cores à paleta.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - editTabProps
@@ -13,12 +12,12 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de312eefac0c9eaa61374bbf79a628dd3ed9cd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca7f7a34989719565950153c53932f36dc92d2ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804808"
 ---
 # <a name="edit-the-table-properties"></a>Editar as propriedades da tabela
   Use esta caixa de diálogo para editar as colunas específicas da tabela selecionada onde as alterações estão sendo capturadas. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  
@@ -41,18 +40,18 @@ ms.locfileid: "48105518"
   
 2.  Salve a instância de captura como um dos seguintes:  
   
-    -   **Nova Instância de Captura**: neste caso, uma nova instância de captura é salva e a instância de captura antiga não é excluída.  
+    -   **Nova instância de captura**: Nesse caso, uma nova instância de captura é salva e a instância de captura antiga não é excluída.  
   
-         **Observação**: você não pode ter mais que duas instâncias de captura por tabela. Se já houver duas instâncias de captura, esta opção não estará disponível.  
+         **Observação**: Você pode ter não mais de duas instâncias de captura por tabela. Se já houver duas instâncias de captura, esta opção não estará disponível.  
   
-    -   **Substituir Existente**: neste caso, a instância de captura atual é excluída e é substituída pela instância de captura criada. Se houver duas instâncias de captura definidas para esta tabela, você deverá selecionar uma para substituir.  
+    -   **Substitua**: Nesse caso, a instância de captura atual é excluída e substituída pela instância de captura que você criou. Se houver duas instâncias de captura definidas para esta tabela, você deverá selecionar uma para substituir.  
   
- **Observação**: você pode remover uma instância de captura da lista de tabelas na guia **Tabela** .  
+ **Observação**: Você pode remover uma instância de captura da lista de tabelas na **tabela** guia.  
   
  Depois de terminar de inserir as informações nesta caixa de diálogo, clique em **OK** para aceitar as alterações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como editar as propriedades da instância CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Fazer alterações nas tabelas selecionadas para capturar alterações](make-changes-to-the-tables-selected-for-capturing-changes.md)  
+ [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Fazer alterações às tabelas selecionadas para capturar alterações](make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

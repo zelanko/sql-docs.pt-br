@@ -1,22 +1,22 @@
 ---
 title: Recuperar dados numéricos com SQL_NUMERIC_STRUCT | Microsoft Docs
 description: C/C++ usando o ODBC recupera o tipo de dados numéricos do SQL Server usando SQL_NUMERIC_STRUCT, relacionados a SQL_C_NUMERIC.
-authors: MightyPen
-manager: craigg
 editor: ''
 ms.prod: sql
 ms.technology: ''
-ms.devlang: C++
+ms.devlang: cpp
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: a4d6545deb5431322d2bd6bf5f8a42de7cfc8008
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+authors: MightyPen
+manager: craigg
+ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665965"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731933"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Recuperar dados numéricos com SQL\_numéricos\_STRUCT
 

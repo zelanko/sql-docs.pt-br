@@ -1,24 +1,23 @@
 ---
-title: 'Etapa 1: copiar o pacote da Lição 4 | Microsoft Docs'
+title: 'Etapa 1: Copiando o pacote da lição 4 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76017bf54455d702dbea060e4f966765ddb1e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070007"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360848"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>Etapa 1: Copiando o pacote da Lição 4
+# <a name="step-1-copying-the-lesson-4-package"></a>Etapa 1: Copiando o pacote da lição 4
   Nesta tarefa, você criará uma cópia do pacote Lesson 4.dtsx criado na Lição 4. Como alternativa, é possível adicionar o pacote concluído da Lição 4 incluído no tutorial do projeto e copiá-lo. Você usará essa cópia nova durante toda a Lição 5.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>Para copiar o pacote da Lição 4  
@@ -49,11 +48,11 @@ ms.locfileid: "48070007"
   
 3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.  
   
-4.  Clique no botão Procurar **(…)** , navegue até **Lesson 4.dtsx** no computador e clique em **Abrir**.  
+4.  Clique no botão Procurar **(…)**, navegue até **Lesson 4.dtsx** no computador e clique em **Abrir**.  
   
      Para baixar todos os pacotes de lição para este tutorial, faça o seguinte.  
   
-    1.  Navegue para os [Exemplos de Produtos do Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue para os [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Clique na guia **DOWNLOADS** .  
   

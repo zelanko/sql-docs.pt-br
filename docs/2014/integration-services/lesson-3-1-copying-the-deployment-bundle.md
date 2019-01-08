@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 1: copiar o pacote de implantação | Microsoft Docs'
+title: 'Etapa 1: Copiando o pacote de implantação | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1317cfd51aec5e32fab0f1a02ecc3313525ae5f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cacb3c9e14e49ef4f755d9c19f3782aa62c69c9d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101426"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375438"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>Etapa 1: Copiando o pacote de implantação
   Nesta tarefa, você copiará o pacote de implantação no computador de destino.  
@@ -34,8 +33,8 @@ ms.locfileid: "48101426"
 3.  Localize o compartilhamento público para o qual você deseja copiar a pasta no computador de destino e clique em **Colar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: Executando o Assistente de Instalação de Pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+ [Etapa 2: Executar o Assistente de instalação de pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

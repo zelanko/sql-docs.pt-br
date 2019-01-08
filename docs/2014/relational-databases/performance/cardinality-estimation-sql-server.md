@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,15 +14,15 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200606"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363788"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
-  A lógica de estimativa de cardinalidade, chamada de avaliador de cardinalidade, foi reformulada no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para melhorar a qualidade dos planos de consulta e, portanto, para melhorar o desempenho da consulta. O novo avaliador de cardinalidade incorpora as suposições e os algoritmos que funcionam bem em OLTP moderno e em cargas de trabalho de data warehouse. Ele se baseia na pesquisa detalhada da estimativa de cardinalidade em cargas de trabalho modernas, bem como em nosso aprendizado nos últimos 15 anos de aperfeiçoamento do avaliador de cardinalidade do SQL Server. Os comentários dos clientes mostram que, apesar de a maioria das consultas se beneficiarem da alteração ou permanecerem inalteradas, poucas mostram regressões em comparação ao avaliador de cardinalidade anterior.  
+  A lógica de estimativa de cardinalidade, chamada de avaliador de cardinalidade, foi reformulada no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para melhorar a qualidade dos planos de consulta e, consequentemente, melhorar o desempenho de consulta. O novo avaliador de cardinalidade incorpora as suposições e os algoritmos que funcionam bem em OLTP moderno e em cargas de trabalho de data warehouse. Ele se baseia na pesquisa detalhada da estimativa de cardinalidade em cargas de trabalho modernas, bem como em nosso aprendizado nos últimos 15 anos de aperfeiçoamento do avaliador de cardinalidade do SQL Server. Os comentários dos clientes mostram que, apesar de a maioria das consultas se beneficiarem da alteração ou permanecerem inalteradas, poucas mostram regressões em comparação ao avaliador de cardinalidade anterior.  
   
 > [!NOTE]  
 >  As estimativas de cardinalidade são uma previsão do número de linhas no resultado da consulta. O otimizador de consulta usa essas estimativas para escolher um plano para executar a consulta. A qualidade do plano de consulta tem um impacto direto sobre a melhoria no desempenho da consulta.  
@@ -37,11 +36,11 @@ ms.locfileid: "48200606"
   
 2.  Execute sua carga de trabalho de teste com o novo avaliador de cardinalidade e, em seguida, solucione qualquer novo problema de desempenho da mesma forma que soluciona os problemas de desempenho atuais.  
   
-3.  Quando sua carga de trabalho está em execução com o novo avaliador de cardinalidade (nível de compatibilidade de banco de dados (SQL Server 2014) de 120), e uma consulta específica já foi retornada, você pode executar a consulta com o sinalizador de rastreamento 9481 para usar a versão do avaliador de cardinalidade usado em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e versões anteriores. Para executar uma consulta com um sinalizador de rastreamento, consulte o artigo de banco de dados [Habilitar o comportamento do otimizador de consulta do SQL Server que afeta o plano e pode ser controlado por diferentes sinalizadores de rastreamento em um nível de consulta específico](http://support.microsoft.com/kb/2801413)  
+3.  Quando sua carga de trabalho está em execução com o novo avaliador de cardinalidade (nível de compatibilidade de banco de dados (SQL Server 2014) 120), e uma consulta específica já foi retornada, você pode executar a consulta com o sinalizador de rastreamento 9481 para usar a versão do avaliador de cardinalidade usado em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versões anteriores. Para executar uma consulta com um sinalizador de rastreamento, consulte o artigo de banco de dados [Habilitar o comportamento do otimizador de consulta do SQL Server que afeta o plano e pode ser controlado por diferentes sinalizadores de rastreamento em um nível de consulta específico](https://support.microsoft.com/kb/2801413)  
   
 4.  Se você não pode alterar todos os bancos de dados ao mesmo tempo, para usar o novo avaliador de cardinalidade, você pode usar o avaliador de cardinalidade anterior para todos os bancos de dados usando [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) para Defina o nível de compatibilidade do banco de dados como 110.  
   
-5.  Se a carga de trabalho está em execução com o nível de compatibilidade 110 do banco de dados, e você deseja testar ou executar uma consulta específica com o novo avaliador de cardinalidade, pode executar a consulta com o sinalizador de rastreamento 2312 para usar a versão 2014 do SQL Server do avaliador de cardinalidade.  Para executar uma consulta com um sinalizador de rastreamento, consulte o artigo de banco de dados [Habilitar o comportamento do otimizador de consulta do SQL Server que afeta o plano e pode ser controlado por diferentes sinalizadores de rastreamento em um nível de consulta específico](http://support.microsoft.com/kb/2801413)  
+5.  Se a carga de trabalho está em execução com o nível de compatibilidade 110 do banco de dados, e você deseja testar ou executar uma consulta específica com o novo avaliador de cardinalidade, pode executar a consulta com o sinalizador de rastreamento 2312 para usar a versão 2014 do SQL Server do avaliador de cardinalidade.  Para executar uma consulta com um sinalizador de rastreamento, consulte o artigo de banco de dados [Habilitar o comportamento do otimizador de consulta do SQL Server que afeta o plano e pode ser controlado por diferentes sinalizadores de rastreamento em um nível de consulta específico](https://support.microsoft.com/kb/2801413)  
   
 ## <a name="new-xevents"></a>Novos XEvents  
  Há dois novos XEvents query_optimizer_estimate_cardinality para dar suporte aos novos planos de consulta.  

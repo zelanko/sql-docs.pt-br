@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -20,12 +20,12 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91483db92422a4510a6cefd2eca7d7f1f6f3f1e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067606"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377478"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
   O Gerenciamento Baseado em Políticas é um sistema para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando os administradores de políticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam o Gerenciamento Baseado em Políticas, eles usam o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar políticas para gerenciar entidades no servidor, como as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bancos de dados ou outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "48067606"
  Para as políticas com falha, o Pesquisador de Objetos indica um aviso de integridade crítica como um ícone vermelho ao lado do destino e dos nós superiores na árvore do Pesquisador de Objetos.  
   
 > [!NOTE]  
->  Quando o sistema computar o objeto definido para uma política, por padrão os objetos do sistema serão excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  Quando o sistema computar o objeto definido para uma política, por padrão os objetos do sistema serão excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Conceitos do Gerenciamento Baseado em Políticas  
  O Gerenciamento Baseado em Políticas tem três componentes:  
@@ -91,7 +91,7 @@ ms.locfileid: "48067606"
  Um conjunto de propriedades lógicas que modelam o comportamento ou as características de certos tipos de destinos gerenciados. O número e as características das propriedades são incorporados à faceta e só podem ser adicionados ou removidos pelo criador da faceta. Um tipo de destino pode implementar uma ou mais facetas de gerenciamento, e uma faceta de gerenciamento pode ser implementada por um ou mais tipos de destino. Algumas propriedades de uma faceta só podem ser aplicadas a uma versão específica.  
   
  Condição de Gerenciamento Baseado em Políticas  
- Uma expressão booliana que especifica um conjunto de estados permitidos de um destino gerenciado pelo Gerenciamento Baseado em Políticas em relação a uma faceta de gerenciamento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta observar agrupamentos ao avaliar uma condição. Quando os agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não correspondem exatamente a agrupamentos do Windows, teste sua condição para determinar como o algoritmo resolve conflitos.  
+ Uma expressão booliana que especifica um conjunto de estados permitidos de um destino gerenciado pelo Gerenciamento Baseado em Políticas em relação a uma faceta de gerenciamento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta observar ordenações ao avaliar uma condição. Quando as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não correspondem exatamente às ordenações do Windows, teste sua condição para determinar como o algoritmo resolve conflitos.  
   
  Política de Gerenciamento Baseado em Políticas  
  Uma condição do Gerenciamento Baseado em Políticas e o comportamento esperado, como, por exemplo, modo de avaliação, filtros de destino e agenda. Uma política só pode conter uma condição. As políticas podem ser habilitadas ou desabilitadas. As políticas são armazenadas no banco de dados msdb.  
@@ -127,7 +127,7 @@ ms.locfileid: "48067606"
 |Descreve como criar, exibir, modificar e excluir uma política do Gerenciamento Baseado em Políticas.|[Criar uma política do gerenciamento baseado em políticas](create-a-policy-based-management-policy.md)<br /><br /> [Excluir uma política do gerenciamento baseado em políticas](delete-a-policy-based-management-policy.md)<br /><br /> [Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
 |Descreve como exportar e importar uma política do Gerenciamento Baseado em Políticas.|[Exportar uma política do gerenciamento baseado em políticas](export-a-policy-based-management-policy.md)<br /><br /> [Importar uma política de gerenciamento baseado em políticas](import-a-policy-based-management-policy.md)|  
 |Descreve como verificar se uma instância de servidor, banco de dados, objeto de servidor ou objeto de banco de dados obedece a uma política.|[Avaliar uma política do gerenciamento baseado em políticas de um objeto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Avaliar uma política do gerenciamento baseado em políticas dessa política](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Avaliar uma política do gerenciamento baseado em políticas em um agendamento](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
-|Descreve como exibir e copiar um estado de faceta de Gerenciamento Baseado em Políticas em um arquivo.|[Trabalhando com facetas do gerenciamento baseado em políticas](working-with-policy-based-management-facets.md)|  
+|Descreve como exibir e copiar um estado de faceta de Gerenciamento Baseado em Políticas em um arquivo.|[Trabalhando com facetas do Gerenciamento Baseado em Políticas](working-with-policy-based-management-facets.md)|  
 |Fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e descreve como avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados.|[Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |Fornece os tópicos da Ajuda F1 para o nó **PolicyManagement** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nó de gerenciamento de política &#40;Pesquisador de objetos&#41;](../../ssms/object/object-explorer.md)|  
   

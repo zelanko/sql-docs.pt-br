@@ -17,15 +17,15 @@ ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa97baae4ad6331193cab16ae2609212753c5be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368708"
 ---
 # <a name="batches-of-statements"></a>Lotes de instruções
-  Um lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções contém duas ou mais instruções, separadas por ponto e vírgula (;), criado em uma única cadeia de caracteres passada para **SQLExecDirect** ou [função SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360). Por exemplo:  
+  Um lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções contém duas ou mais instruções, separadas por ponto e vírgula (;), criado em uma única cadeia de caracteres passada para **SQLExecDirect** ou [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Por exemplo:  
   
 ```  
 SQLExecDirect(hstmt,   

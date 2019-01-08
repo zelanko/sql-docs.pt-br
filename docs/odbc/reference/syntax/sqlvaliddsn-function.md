@@ -20,16 +20,16 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e376d10f21fa00c6bbe86fc692b0185f3c8d8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642844"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201455"
 ---
 # <a name="sqlvaliddsn-function"></a>Função SQLValidDSN
 **Conformidade com**  
- Versão introduziu: ODBC 2.0  
+ Versão introduzida: ODBC 2.0  
   
  **Resumo**  
  **SQLValidDSN** verifica o comprimento e a validade do nome de fonte de dados antes do nome é adicionado às informações do sistema.  
@@ -39,7 +39,7 @@ ms.locfileid: "47642844"
 ```  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -52,7 +52,7 @@ BOOL SQLValidDSN(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLValidDSN** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. Um  *\*pfErrorCode* é retornado somente se a chamada de função falha, não se falso foi retornado porque o nome da fonte de dados é inválido. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  

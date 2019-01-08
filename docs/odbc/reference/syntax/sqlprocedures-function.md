@@ -20,16 +20,16 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120074"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204665"
 ---
 # <a name="sqlprocedures-function"></a>Função SQLProcedures
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLProcedures** retorna a lista de nomes de procedimentos armazenados em uma fonte de dados específico. *Procedimento* é um termo genérico usado para descrever uma *objeto executável*, ou uma entidade nomeada que pode ser invocada usando parâmetros de entrada e saída. Para obter mais informações sobre procedimentos, consulte a [procedimentos](../../../odbc/reference/develop-app/procedures-odbc.md).  
@@ -82,7 +82,7 @@ SQLRETURN SQLProcedures(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLProcedures** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLProcedures** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
@@ -131,11 +131,11 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2.0)|1|Varchar|Identificador do catálogo de procedimento; NULL se não for aplicável à fonte de dados. Se um driver compatível com catálogos para alguns procedimentos, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para esses procedimentos que não têm catálogos.|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|Identificador do esquema de procedimento; NULL se não for aplicável à fonte de dados. Se um driver compatível com esquemas para alguns procedimentos, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para esses procedimentos que não tem esquemas.|  
 |PROCEDURE_NAME (ODBC 2.0)|3|Varchar não nulo|Identificador de procedimento.|  
-|NUM_INPUT_PARAMS (ODBC 2.0)|4|N/A|Reservado para uso futuro. Aplicativos não devem confiar nos dados retornados nessas colunas de resultado.|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/A|Reservado para uso futuro. Aplicativos não devem confiar nos dados retornados nessas colunas de resultado.|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|N/A|Reservado para uso futuro. Aplicativos não devem confiar nos dados retornados nessas colunas de resultado.|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|N/D|Reservado para uso futuro. Aplicativos não devem confiar nos dados retornados nessas colunas de resultado.|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/D|Reservado para uso futuro. Aplicativos não devem confiar nos dados retornados nessas colunas de resultado.|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|N/D|Reservado para uso futuro. Aplicativos não devem confiar nos dados retornados nessas colunas de resultado.|  
 |COMENTÁRIOS (ODBC 2.0)|7|Varchar|Uma descrição do procedimento.|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Define o tipo de procedimento:<br /><br /> SQL_PT_UNKNOWN: Ele não é possível determinar se o procedimento retorna um valor.<br /><br /> SQL_PT_PROCEDURE: O objeto retornado é um procedimento; ou seja, ele não tem um valor de retorno.<br /><br /> SQL_PT_FUNCTION: O objeto retornado é uma função; ou seja, ele tem um valor de retorno.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Define o tipo de procedimento:<br /><br /> SQL_PT_UNKNOWN: Não é possível determinar se o procedimento retorna um valor.<br /><br /> SQL_PT_PROCEDURE: O objeto retornado é um procedimento; ou seja, ele não tem um valor de retorno.<br /><br /> SQL_PT_FUNCTION: O objeto retornado é uma função; ou seja, ele tem um valor de retorno.|  
   
  O *SchemaName* e *ProcName* argumentos aceitam os padrões de pesquisa. Para obter mais informações sobre padrões de pesquisa válida, consulte [argumentos de valor padrão de](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   

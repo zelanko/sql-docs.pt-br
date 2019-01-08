@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119864"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377528"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarefa 4: Gerenciando e exibindo resultados
-  Nesta tarefa, você revisará os resultados da limpeza auxiliada por computador, além de executar a limpeza interativa nos dados do fornecedor. Ver [estágio de limpeza interativa](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obter mais detalhes.  
+  Nesta tarefa, você revisará os resultados da limpeza auxiliada por computador, além de executar a limpeza interativa nos dados do fornecedor. Ver [estágio de limpeza interativa](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obter mais detalhes.  
   
 1.  Selecione **Contact Email** domínio na lista de domínios.  
   
-2.  Alterne para o **inválido** guia no painel à direita. Observe que dois endereços de email não tinham o caractere ‘s’ no final. Esses dois email foram considerado inválidos pela regra de domínio que exige que todos os endereços de email terminem com **@adventure-works.com** (do '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
+2.  Alterne para o **inválido** guia no painel à direita. Observe que dois endereços de email não tinham o caractere ' no final. Esses dois email foram considerado inválidos pela regra de domínio que exige que todos os endereços de email terminem com **@adventure-works.com** (do '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
   
 3.  No **corrigir para** coluna, digite o certo endereço de email que terminam com **@adventure-works.com** (do ').  
   
@@ -90,6 +90,6 @@ ms.locfileid: "49119864"
 25. Clique em **próxima** para alternar para o **exportar** página.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 5: Exportando os resultados da limpeza para um arquivo do Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Tarefa 5: Exportando os resultados para um arquivo do Excel da limpeza](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

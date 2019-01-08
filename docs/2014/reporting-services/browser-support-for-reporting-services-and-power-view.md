@@ -20,15 +20,15 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1f1b4d74d7ad7f34254a5c56c6dafc5fd2fb829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157036"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350490"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planejando o suporte ao navegador do Reporting Services e do Power View (Reporting Services 2014)
-  Na [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], use um navegador da web para exibir relatórios e executar o Gerenciador de relatórios. Nem todos os navegadores dão suporte à funcionalidade de relatório. Este tópico descreve o suporte e os requisitos para os recursos de gerenciamento do Gerenciador de Relatórios, exibir relatórios, os controles do Visualizador de Relatórios no Visual Studio. O tópico também resume a disponibilidade de recursos para os navegadores com suporte, os requisitos de autenticação e os requisitos de script.  
+  No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], você usa um navegador da Web para exibir relatórios e executar o Gerenciador de Relatórios. Nem todos os navegadores dão suporte à funcionalidade de relatório. Este tópico descreve o suporte e os requisitos para os recursos de gerenciamento do Gerenciador de Relatórios, exibir relatórios, os controles do Visualizador de Relatórios no Visual Studio. O tópico também resume a disponibilidade de recursos para os navegadores com suporte, os requisitos de autenticação e os requisitos de script.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]** Modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
@@ -45,23 +45,23 @@ ms.locfileid: "48157036"
 -   [Suporte ao navegador para controles de servidor Web ReportViewer no Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Cenários de navegador do Power View  
- A lista de navegadores com suporte e versões de navegador que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] dá suporte a, depende do tipo de documento é aberto. As pastas de trabalho e os arquivos “**.rdlx**” do Excel 2013 utilizam componentes diferentes.  
+ A lista de navegadores com suporte e versões de navegador à qual o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] oferece suporte depende do tipo de documento aberto. Pastas de trabalho do Excel 2013 e "**rdlx**" arquivos utilizam componentes diferentes.  
   
 |Tipo de documento|Ambiente|Suporte a navegador|  
 |-------------------|-----------------|---------------------|  
-|Relatório do Power View (.RDLX)|**Servidor do SharePoint:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] em [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o aplicativo web do Power View e modo integrado do SharePoint.|Consulte [Power View no SharePoint Server e no modo integrado do SharePoint do Reporting Services](#bkmk_powerview_on_SSRS).|  
-|Pasta de trabalho do Excel 2013 com planilhas do Power View|**Servidor do SharePoint:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] nos serviços do Excel.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] no Excel Web App.|Consulte [Power View nos Serviços do Excel ou Excel Web App no SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
+|Relatório do Power View (.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] no modo integrado do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint e no aplicativo Web do Power View.|Consulte [Power View no SharePoint Server e no modo integrado do SharePoint do Reporting Services](#bkmk_powerview_on_SSRS).|  
+|Pasta de trabalho do Excel 2013 com planilhas do Power View|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] nos Serviços do Excel.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] no Excel Web App.|Consulte [Power View nos Serviços do Excel ou Excel Web App no SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> Power View no SharePoint Server e o modo integrado do Reporting Services SharePoint  
  A tabela a seguir resume as versões de navegador com suporte para [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando um usuário abre um relatório do Power View (.RDLX) em um farm do SharePoint que tenha um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e o suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para SharePoint instalados e configurados.  
   
 -   A tabela se aplica ao SharePoint 2010 e ao SharePoint 2013.  
   
--   Para obter mais informações sobre o suporte de navegador do SharePoint 2013, consulte [planejar suporte ao navegador no SharePoint 2013](http://technet.microsoft.com//library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Para obter mais informações sobre o suporte de navegador do SharePoint 2013, consulte [planejar suporte ao navegador no SharePoint 2013](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
--   Para obter mais informações sobre o suporte a navegador do SharePoint 2010, consulte [planejar suporte a navegador (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
+-   Para obter mais informações sobre o suporte a navegador do SharePoint 2010, consulte [planejar suporte a navegador (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.9 10.6**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
 |**Internet Explorer 10 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
@@ -77,11 +77,11 @@ ms.locfileid: "48157036"
  O [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] não dá suporte ao recurso de navegação InPrivate no Internet Explorer 8 e no Internet Explorer 9 da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obter mais informações sobre a navegação InPrivate, consulte [o que é Navegação InPrivate?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View nos serviços do Excel ou Excel Web App no SharePoint Online  
- A tabela a seguir resume as versões de navegador com suporte para [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando um usuário abre uma pasta de trabalho do Excel 2013 com planilhas do Power View em um servidor do SharePoint que está executando os serviços do Excel:  
+ A tabela a seguir resume as versões de navegador com suporte para [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando um usuário abre uma pasta de trabalho do Excel 2013 com planilhas do Power View em um SharePoint Server que está executando os Serviços do Excel:  
   
--   Para obter mais informações sobre o suporte de navegador do SharePoint 2013, consulte [planejar suporte ao navegador no SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Para obter mais informações sobre o suporte de navegador do SharePoint 2013, consulte [planejar suporte ao navegador no SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.9 10.6**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
 |**Internet Explorer 10 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
@@ -94,19 +94,19 @@ ms.locfileid: "48157036"
  **(\*)** Chrome deixará de dar suporte ao Netscape Plug-in API (NPAPI), usado pelo Silverlight. O Power View depende do Silverlight.  Para saber mais, confira [A contagem regressiva do NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
 ##  <a name="bkmk_reportmanager"></a> Requisitos de navegador do Gerenciador de relatórios (modo nativo)  
- A seguir está a lista atual de navegadores com suporte, você pode usar para executar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gerenciador de relatórios para gerenciar relatórios e o servidor de relatório do modo nativo.  
+ A seguir é apresentada a lista atual de navegadores com suporte que você pode usar para executar o Gerenciador de Relatórios do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para gerenciar relatórios e o servidor de relatório.  
   
 |Navegador|  
 |-------------|  
 |O Internet Explorer 7 ou mais novo e scripts devem ser habilitados.|  
-|Mozilla FireFox (a versão lançada mais recente)|  
-|Apple Safari (a versão lançada mais recente)|  
-|Google Chrome (a versão lançada mais recente)|  
+|Mozilla FireFox (mais recente versão lançada)|  
+|Apple Safari (mais recente versão lançada)|  
+|Google Chrome (mais recente versão lançada)|  
   
 ##  <a name="bkmk_reportviewer"></a> Requisitos de navegador para exibir relatórios  
- Veja a seguir uma lista atual de navegadores e recursos com suporte com o visualizador de relatório. O Visualizador de relatórios dá suporte à exibição de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatório Gerenciador e bibliotecas do SharePoint.  
+ Veja a seguir uma lista atual de navegadores e recursos com suporte com o visualizador de relatório. O visualizador de relatórios oferece suporte à visualização de relatórios do gerenciador de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e de bibliotecas do SharePoint.  
   
-|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6-7 para iPad**|  
+|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.9 10.6**|**iOS 6-7 para iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|Sem suporte|Sem suporte|  
 |**Internet Explorer 10 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|Sem suporte|Sem suporte|  
@@ -117,7 +117,7 @@ ms.locfileid: "48157036"
 |**Apple Safari (mais recente versão lançada)**|Sem suporte|Sem suporte|Sem suporte|Sem suporte|Sem suporte|32 bits, 64 bits|Suporte com recursos limitados <sup>(1)</sup>|  
 |**Google Chrome (mais recente versão lançada)**|32 bits|32 bits|32 bits|32 bits|32 bits|Sem suporte|Sem suporte|  
   
- **<sup>(1) </sup>**  Os recursos a seguir têm suporte:  
+ **<sup>(1)</sup>**  Os seguintes recursos têm suporte:  
   
 -   Exportação para formatos PDF e TIFF.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48157036"
   
 -   Para obter mais informações, consulte [exibição de relatórios do Reporting Services em dispositivos do Microsoft Surface e Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Observação** : Se você estiver acessando um servidor de relatórios a partir de um computador Macintosh, recomendamos a utilização do Safari. Se você estiver usando um produto do SharePoint que esteja integrado com [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Plan browser support (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Observação** : Se você estiver acessando um servidor de relatórios a partir de um computador Macintosh, recomendamos a utilização do Safari. Se você estiver usando um produto do SharePoint que esteja integrado com [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Plan browser support (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### <a name="url-access-for-viewing-reports"></a>Acesso URL para exibir relatórios  
  Para exibir relatórios diretamente, em vez de exibi-los por meio do Gerenciador de Relatórios, você pode usar Acesso à URL para vincular ao relatório ao visualizador de relatórios. O acesso à URL dá suporte a uma variedade de navegadores.  
@@ -169,7 +169,7 @@ ms.locfileid: "48157036"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Navegador**|**Windows 8** e **Windows 8.1**|**Windows 7**|**Windows Server 2012** e **2012 R2**|**Windows Server 2008** e **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**Observações**|  
+|**Navegador**|**Windows 8** e **Windows 8.1**|**Windows 7**|**Windows Server 2012** e **2012 R2**|**Windows Server 2008** e **2008 R2**|**Windows Server 2003**|**Mac OS X 10.9 10.6**|**Observações**|  
 |**Internet Explorer 11 (para a área de trabalho**|Sim|Sim|Sim|Sem suporte|Sem suporte|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer.|  
 |**Internet Explorer 10 (para a área de trabalho)**|Sim|Sim|Sim|Sem suporte|Sem suporte|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer.|  
 |**Internet Explorer 9**|Sem suporte|Sim|Sem suporte|Sim|Sim|Sim|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer.|  
@@ -191,13 +191,13 @@ ms.locfileid: "48157036"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- Para obter mais informações sobre modos de compatibilidade no Internet Explorer, consulte [definindo a compatibilidade do documento](http://go.microsoft.com/fwlink/?LinkId=180380) (http://go.microsoft.com/fwlink/?LinkId=180380).  
+ Para obter mais informações sobre modos de compatibilidade no Internet Explorer, consulte [definindo a compatibilidade do documento](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380).  
   
- Para obter mais informações sobre como usar os controles ReportViewer, consulte [implantando relatórios e controles do ReportViewer](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
+ Para obter mais informações sobre como usar os controles ReportViewer, consulte [implantando relatórios e controles do ReportViewer](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas do Reporting Services](tools/reporting-services-tools.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visualizador de HTML e a barra de ferramentas de relatório](html-viewer-and-the-report-toolbar.md)   
  [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)  
   

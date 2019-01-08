@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqueued_artinfo
@@ -17,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2e596ecc5e6470bbcc1a62684c1fd1a6533711d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770154"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590891"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +50,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@artid=** ] **'***artid***'**  
+ [  **@artid=** ] **'**_artid_**'**  
  É o nome da ID do artigo. *artid* está **int**, sem padrão  
   
- [  **@article=**] **'***artigo***'**  
+ [  **@article=**] **'**_artigo_**'**  
  É o nome do artigo para o qual gerar um script. *artigo* está **sysname**, sem padrão  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  É o nome do servidor do Publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão.  
   
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação para a qual gerar um script. *publicação* está **sysname**, sem padrão.  
   
- [  **@dest_table=** ] *'dest_table *'**  
+ [  **@dest_table=** ] _' dest_table_**'**  
  É o nome da tabela de destino. *dest_table* está **sysname**, sem padrão.  
   
- [ **@owner =** ] **'***proprietário***'**  
+ [ **@owner =** ] **'**_proprietário_**'**  
  É o proprietário da assinatura. *proprietário* está **sysname**, sem padrão.  
   
- [  **@cft_table=** ] **'***cft_table***'**  
+ [  **@cft_table=** ] **'**_cft_table_**'**  
  Nome da tabela de conflito de atualização enfileirada para esse artigo. *cft_table*está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

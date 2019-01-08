@@ -13,15 +13,15 @@ ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75529b9880183a644abdbdce1f6174c375245ba2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177286"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355840"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarefa 14: Adicionando a tarefa Executar SQL ao fluxo de controle para executar o procedimento armazenado para MDS
-  Depois de carregar dados nas tabelas de preparo do MDS, você executará um procedimento armazenado associado a essa tabela para carregar os dados de preparo nas tabelas adequadas no banco de dados MDS. Esse procedimento armazenado tem dois parâmetros necessários que você precisa passar: LogFlag e VersionName. LogFlag especifica se as transações serão registradas em log durante o processo de preparo e VersionName representa a versão do modelo. Ver [procedimento armazenado preparado](http://msdn.microsoft.com/library/hh231028.aspx) tópico para obter mais detalhes.  
+  Depois de carregar dados nas tabelas de preparo do MDS, você executará um procedimento armazenado associado a essa tabela para carregar os dados de preparo nas tabelas adequadas no banco de dados MDS. Esse procedimento armazenado tem dois parâmetros necessários que você precisa passar: LogFlag e VersionName. LogFlag especifica se as transações serão registradas em log durante o processo de preparo e VersionName representa a versão do modelo. Ver [procedimento armazenado preparado](https://msdn.microsoft.com/library/hh231028.aspx) tópico para obter mais detalhes.  
   
  Nesta tarefa, você adicionará a Tarefa Executar SQL ao fluxo de controle para invocar o procedimento armazenado para carregar os dados preparados nas tabelas adequadas do MDS.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48177286"
 15. Clique em **Okey** para fechar o **Editor de SQL executar** caixa de diálogo.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 15: Criando e executando o projeto SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
+ [Tarefa 15: Compilar e executar o projeto do SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
   
   

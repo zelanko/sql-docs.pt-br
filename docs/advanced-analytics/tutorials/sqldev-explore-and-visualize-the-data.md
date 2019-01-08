@@ -1,6 +1,6 @@
 ---
-title: Lição 1 explorar e visualizar dados usando R e T-SQL (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Tutorial que mostra como incorporar o R no SQL Server procedimentos armazenados e funções T-SQL
+title: Lição 1 explorar e visualizar dados usando R e T-SQL – SQL Server Machine Learning
+description: Tutorial que mostra como explorar e visualizar dados do SQL Server usando funções de R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032213"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645495"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lição 1: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ O conjunto de dados público original, os identificadores de táxi e os registro
 
 **Identificadores de táxi**
   
--   A coluna _medallion_ representa o número de ID exclusivo do táxi.
+-   O _medallion_ coluna representa o número de id exclusivo do táxi.
   
 -   O _hack\_licença_ coluna contém o número de licença do motorista do táxi (anônimo).
   
@@ -67,7 +67,7 @@ Para criar o gráfico, use [rxHistogram](https://docs.microsoft.com/machine-lear
 
 2. Cole o script a seguir para criar um procedimento armazenado que plota o histograma. Este exemplo é denominada **RPlotRxHistogram*.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], execute a seguinte instrução:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
 2.  Abra um prompt de comando do PowerShell e execute o seguinte comando, fornecendo o nome da instância apropriada, o nome de banco de dados, nome de usuário e as credenciais como argumentos. Para aqueles que usam identidades do Windows, você pode substituir **- U** e **-P** com **-T**.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
     -   Digite **Y** se você desejar salvar os parâmetros de saída para reutilização posterior.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
     **Resultados**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ Este armazenado procedimento usa o **Hist** função para criar o histograma, ex
 
 2. Cole o script a seguir para criar um procedimento armazenado que plota o histograma. Este exemplo é denominada **RPlotHist** .
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ Este armazenado procedimento usa o **Hist** função para criar o histograma, ex
 
 Execute a instrução a seguir para exportar dados de plotagem binário para formatos de arquivo JPEG e PDF.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **Resultados**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 

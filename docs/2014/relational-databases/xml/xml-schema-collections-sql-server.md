@@ -21,12 +21,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054727"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362778"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
   Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio de `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD com uma variável ou uma coluna de `xml` tipo por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
@@ -48,7 +48,7 @@ ms.locfileid: "48054727"
  Também é possível usar a coleção de esquema XML para digitar variáveis, parâmetros e colunas XML.  
   
 ##  <a name="ddl"></a> DDL para gerenciar coleções de esquemas  
- Você pode criar coleções de esquemas XML no banco de dados e associá-las a variáveis e colunas do `xml` tipo. Para gerenciar coleções de esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece as seguintes instruções DDL:  
+ Você pode criar coleções de esquemas XML no banco de dados e associá-las a variáveis e colunas do tipo `xml`. Para gerenciar coleções de esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece as seguintes instruções DDL:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) Importa os componentes de esquema para um banco de dados.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054727"
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) Exclui uma coleção de esquema XML completa e todos os seus componentes.  
   
- Para usar uma coleção de esquema XML e os esquemas contidos nela, você deve primeiro criar a coleção e os esquemas usando a instrução CREATE XML SCHEMA COLLECTION. Depois que a coleção de esquema é criada, você pode criar variáveis e colunas do `xml` de tipo e associar a coleção de esquema elas. Observe que depois que uma coleção de esquema é criada, são armazenados vários componentes de esquema nos metadados. Também é possível usar ALTER XML SCHEMA COLLECTION para adicionar mais componentes a esquemas existentes ou adicionar novos esquemas a uma coleção existente.  
+ Para usar uma coleção de esquema XML e os esquemas contidos nela, você deve primeiro criar a coleção e os esquemas usando a instrução CREATE XML SCHEMA COLLECTION. Após a criação da coleção de esquema, é possível criar variáveis e colunas do tipo `xml` e associar a coleção de esquema a elas. Observe que depois que uma coleção de esquema é criada, são armazenados vários componentes de esquema nos metadados. Também é possível usar ALTER XML SCHEMA COLLECTION para adicionar mais componentes a esquemas existentes ou adicionar novos esquemas a uma coleção existente.  
   
  Para descartar a coleção de esquema, use a instrução DROP XML SCHEMA COLLECTION. Ela descarta todos os esquemas que estão contidos na coleção e remove o objeto da coleção. Observe que, antes de conseguir remover uma coleção de esquema, as condições descritas em [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) deverão ser atendidas.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48054727"
   
  Esses são ilustrados nos exemplos a seguir.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumere os namespaces XML em uma coleção de esquema XML  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumere os Namespaces XML em uma coleção de esquema XML  
  Use a consulta a seguir para a coleção de esquema XML "myCollection":  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemplo: Enumere o conteúdo de uma coleção de esquema XML  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemplo: Enumerar o conteúdo de uma coleção de esquemas XML  
  A instrução a seguir enumera o conteúdo da coleção de esquema XML "myCollection" dentro do esquema relacional dbo.  
   
 ```  
@@ -190,12 +190,12 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Esquemas XML individuais dentro da coleção podem ser obtidos como `xml` instâncias de tipo de dados, especificando o namespace de destino como o terceiro argumento para **xml_schema_namespace ()**. Isso é mostrado no exemplo a seguir.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Produza um esquema especificado de uma coleção de esquema XML  
- A instrução a seguir produz o esquema XML com o namespace de destino "http://www.microsoft.com/books" da coleção de esquemas XML "myCollection" dentro do esquema relacional dbo.  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Um esquema especificado de uma coleção de esquemas XML de saída  
+ A instrução a seguir produz o esquema XML com o namespace de destino "<https://www.microsoft.com/books>" da coleção de esquemas XML "myCollection" dentro do esquema relacional dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Consultando esquemas XML  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   Escreva consultas Transact-SQL em exibições do catálogo para namespaces de esquema XML.  
   
--   Crie uma tabela que contenha uma coluna de tipo de dados `xml` para armazenar seus esquemas XML e também para carregá-las no sistema de tipo XML. Você pode consultar a coluna XML usando o `xml` métodos de tipo de dados. Além disso, é possível construir um índice XML nessa coluna. No entanto, com essa abordagem, o aplicativo deve manter consistência entre os esquemas XML armazenados na coluna XML e no sistema de tipo XML. Por exemplo, se você descartar o namespace do esquema XML do sistema de tipo XML, também deverá descartá-lo da tabela para preservar a consistência.  
+-   Crie uma tabela que contenha uma coluna de tipo de dados `xml` para armazenar seus esquemas XML e também para carregá-las no sistema de tipo XML. É possível consultar a coluna XML usando os métodos de tipo de dados `xml`. Além disso, é possível construir um índice XML nessa coluna. No entanto, com essa abordagem, o aplicativo deve manter consistência entre os esquemas XML armazenados na coluna XML e no sistema de tipo XML. Por exemplo, se você descartar o namespace do esquema XML do sistema de tipo XML, também deverá descartá-lo da tabela para preservar a consistência.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir uma coleção de esquemas XML armazenados](../xml/view-a-stored-xml-schema-collection.md)   

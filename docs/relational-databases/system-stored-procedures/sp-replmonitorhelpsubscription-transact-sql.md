@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42bd6f5d20fff8a02c6bc10261505ffc65196f75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac45c3b25e1a13366ae273b8d21d7e41e768251
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629444"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748299"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  [ **@publication_type** =] *publication_type*  
  Se o tipo de publicação. *publication_type* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Publicação transacional.|  
 |**1**|Publicação de instantâneo.|  
@@ -68,7 +67,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  [ **@mode** =] *modo*  
  É o modo de filtragem a ser usado ao retornar informações de monitoramento de assinatura. *modo* está **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Retorna todas as assinaturas.|  
 |**1**|Retorna somente assinaturas com erros.|  
@@ -90,7 +89,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Verifica o status de todos os agentes de replicação associados com a publicação e retorna o status mais alto encontrado na seguinte ordem:<br /><br /> **6** = falha<br /><br /> **5** = tentando novamente<br /><br /> **2** = parado<br /><br /> **4** = ocioso<br /><br /> **3** = em andamento<br /><br /> **1** = iniciado|  
 |**Aviso**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente à publicação, que pode ser o resultado de OR lógico de um ou mais desses valores.<br /><br /> **1** = expiration – uma assinatura para uma publicação transacional não foi sincronizada dentro do limite de período de retenção.<br /><br /> **2** = latency – o tempo necessário para replicar dados de um publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration – uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite de período de retenção.<br /><br /> **8** = mergefastrunduration – o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration - o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed – a taxa de entrega de linhas durante a sincronização de uma assinatura de mesclagem falhou em manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  

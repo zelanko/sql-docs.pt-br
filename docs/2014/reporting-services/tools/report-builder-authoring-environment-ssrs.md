@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117486"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358148"
 ---
 # <a name="report-builder-ssrs"></a>Construtor de Relatórios (SSRS)
   O Construtor de Relatórios é um ambiente de criação de relatório para usuários comerciais que preferem trabalhar no ambiente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório.  
@@ -42,10 +42,10 @@ ms.locfileid: "48117486"
   
 -   Salvar o relatório e os itens relacionados em uma biblioteca do SharePoint, em um servidor de relatório ou em seu computador local.  
   
- O Construtor de Relatórios e o Designer de Relatórios compartilham muitos recursos. Para obter mais informações sobre o Construtor de Relatórios, consulte a [Documentação do Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) no msdn.microsoft.com.  
+ O Construtor de Relatórios e o Designer de Relatórios compartilham muitos recursos. Para obter mais informações sobre o Construtor de Relatórios, consulte a [Documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) no msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar o acesso do construtor de relatórios](../report-server/configure-report-builder-access.md)   
+ [Configurar o acesso ao Construtor de Relatórios](../report-server/configure-report-builder-access.md)   
  [Ferramentas do Reporting Services](reporting-services-tools.md)   
  [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

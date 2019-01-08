@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7427ffe72ef46c9099e6914fa0a26dd8492d1f6f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 52cd97e832c73c795dc6a08e6877b70dec29f49f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205104"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar dados em massa usando IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,11 +58,11 @@ ms.locfileid: "51666785"
 ## <a name="example"></a>Exemplo  
  Neste exemplo, são adicionados 10 registros à tabela IRFLTable. Você precisa criar a tabela IRFLTable no banco de dados. Este exemplo não tem suporte em IA64.  
   
- Execute a primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para criar a tabela usada pelo aplicativo.  
+ Execute a primeira ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem para criar a tabela usada pelo aplicativo de código.  
   
  Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
- Execute a terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para excluir a tabela usada pelo aplicativo.  
+ Execute a terceira ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem para excluir a tabela usada pelo aplicativo de código.  
   
 ```  
 USE AdventureWorks  

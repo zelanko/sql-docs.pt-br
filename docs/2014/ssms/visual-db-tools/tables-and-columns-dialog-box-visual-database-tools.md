@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.tablesandcolumns
@@ -12,15 +12,15 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a89dbc440cd47dc7ed951181c49d20d52097faa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 056c200ec6b73cb7cf11ee4b3acf35bc331110b3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821990"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Caixa de dialogo Tabelas e Colunas (Visual Database Tools)
-  Use esta caixa de diálogo para mapear uma chave primária em uma tabela para uma chave estrangeira em outra. Para acessar essa caixa de diálogo, no menu **Designer de Tabela** , clique em **Relações**. Na caixa de diálogo **Relações de Chave Estrangeira** , clique no campo **Especificação das Tabelas e Colunas** e, em seguida, clique nas reticências **(…)** à direita da propriedade.  
+  Use esta caixa de diálogo para mapear uma chave primária em uma tabela para uma chave estrangeira em outra. Para acessar essa caixa de diálogo, no menu **Designer de Tabela** , clique em **Relações**. Na caixa de diálogo **Relações de Chave Estrangeira**, clique no campo **Especificação das Tabelas e Colunas** e, em seguida, clique nas reticências **(…)** à direita da propriedade.  
   
 > [!NOTE]  
 >  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SQL Server Native Client]
@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bba3322fdd55116cb872a8653a515ac449f5a112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365118"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos do sistema do SQL Server Native Client
   Para usar recursos de acesso a dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o MARS, você precisa ter este software instalado:  
@@ -29,7 +29,7 @@ ms.locfileid: "48150918"
   
 -   Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seu servidor.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige o Windows Installer 3.0. O Windows Installer 3.0 já está instalado nos sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para todas as outras plataformas, é preciso instalá-lo explicitamente. Para obter mais informações, consulte [Windows Installer 3.0 redistribuível](http://go.microsoft.com/fwlink/?LinkId=46459).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige o Windows Installer 3.0. O Windows Installer 3.0 já está instalado nos sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para todas as outras plataformas, é preciso instalá-lo explicitamente. Para obter mais informações, consulte [Windows Installer 3.0 redistribuível](https://go.microsoft.com/fwlink/?LinkId=46459).  
   
 > [!NOTE]  
 >  Certifique-se de que tenha efetuado logon com privilégios de administrador antes de instalar esse software.  
@@ -67,11 +67,11 @@ ms.locfileid: "48150918"
 |Tipo de dados|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC e<br /><br /> Aplicativos OLE DB do SQL Server Native Client com DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|image|  
+|varbinary(max)|varbinary|varbinary|Image|  
 |varchar(max)|varchar|varchar|Texto|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|image|  
+|CLR UDT (> 8Kb)|udt|varbinary|Image|  
 |Data|Data|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

@@ -20,19 +20,19 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814069"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761442"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
   Use o **registrar Data-tier Application Wizard** ou um Windows script do PowerShell para compilar uma definição de DAC (aplicativo) de camada de dados que descreve os objetos no banco de dados existente e registre a definição do DAC na `msdb` banco de dados do sistema (**mestre** em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
   
--   **Para atualizar um DAC, usando o:**  [Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Para atualizar um DAC, usando:**  [O Assistente de aplicativo da camada de dados de registro](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de registro cria uma definição do DAC que define os objetos no banco de dados. A combinação da definição do DAC e do banco de dados forma uma instância do DAC. Se você registrar um banco de dados como um DAC em uma instância gerenciada do Mecanismo de Banco de Dados, o DAC registrado será incorporado ao Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o Ponto de Controle do Utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
@@ -52,7 +52,7 @@ ms.locfileid: "51814069"
   
 2.  Expanda o nó **Bancos de Dados** .  
   
-3.  Clique com o botão direito do mouse no banco de dados a ser registrado, aponte para **Tarefas**e selecione **Registrar como Aplicativo da Camada de Dados…**  
+3.  Clique com o botão direito do mouse no banco de dados a ser registrado, aponte para **Tarefas** e selecione **Registrar como Aplicativo da Camada de Dados...**  
   
 4.  Conclua as etapas das caixas de diálogo do assistente:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51814069"
 ##  <a name="Set_properties"></a> Página Definir Propriedades  
  Use essa página para especificar propriedades no nível do DAC, como o nome e a versão do aplicativo.  
   
- **Nome do aplicativo.** -Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo é foi preenchida com o nome do banco de dados.  
+ **Nome do aplicativo.** – Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo foi populado com o nome do banco de dados.  
   
  **Versão.** - Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada na `msdb` do banco de dados e pode ser exibida posteriormente na **aplicativos da camada de dados** nó no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

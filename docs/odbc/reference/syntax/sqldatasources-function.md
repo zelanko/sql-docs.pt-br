@@ -20,16 +20,16 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9055fa6c277ebcbeccae909ddd397d39d62cf04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846054"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213105"
 ---
 # <a name="sqldatasources-function"></a>Função SQLDataSources
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLDataSources** retorna informações sobre uma fonte de dados. Essa função é implementada somente pelo Gerenciador de Driver.  
@@ -71,7 +71,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [Saída] Ponteiro para um buffer no qual retornar o número total de caracteres (exceto o caractere nulo de terminação) disponíveis para retornar na \* *ServerName*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength1*, o nome da fonte de dados no \* *ServerName* será truncado para *BufferLength1* menos o comprimento de um caractere nulo de terminação.  
   
- *Description*  
+ *Descrição*  
  [Saída] Ponteiro para um buffer no qual retornar a descrição do driver associado com a fonte de dados. Por exemplo, dBASE ou SQL Server.  
   
  Se *descrição* for NULL, *NameLength2Ptr* ainda retornará o número total de caracteres (exceto o caractere nulo de terminação para dados de caracteres) disponíveis para retornar no buffer apontado por *Descrição*.  
@@ -88,7 +88,7 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLDataSources** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType*SQL_HANDLE_ENV e uma *manipular* dos *EnvironmentHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLDataSources** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|(DM) mensagem informativa do Gerenciador de Driver específico. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|(DM) buffer \* *ServerName* não era grande o suficiente para retornar o nome de fonte de dados completos. Portanto, o nome foi truncado. O tamanho da fonte de dados inteira será retornado no \* *NameLength1Ptr*. (A função retornará SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) buffer \* *descrição* não era grande o suficiente para retornar a descrição completa do driver. Portanto, a descrição foi truncada. O comprimento da descrição da fonte de dados completo é retornado no **NameLength2Ptr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

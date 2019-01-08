@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097576"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215855"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   Você pode transmitir parâmetros de relatório a um relatório incluindo-os em uma URL de relatório. Esses parâmetros de URL não são prefixados, pois eles são transmitidos diretamente para o mecanismo de processamento de relatório.  
@@ -31,12 +31,12 @@ ms.locfileid: "48097576"
   
  Todos os parâmetros de consulta podem ter parâmetros de relatório correspondentes. Você passa um parâmetro de consulta para um relatório, transmitindo o parâmetro de relatório correspondente. Para obter mais informações, consulte [Criar uma consulta no Designer de Consultas Relacionais &#40;Construtor de Relatórios e SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Os parâmetros de relatório diferenciam maiúsculas de minúsculas.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Os parâmetros de relatório diferenciam maiúsculas de minúsculas e utilizam os seguintes caracteres especiais:  
->   
+> 
 >  -   Qualquer caractere de espaço na cadeia de caracteres da URL será substituído pelos caracteres "% 20", de acordo com os padrões de codificação de URL.  
 > -   Um caractere de espaço na parte do parâmetro da URL será substituído por um sinal de adição (+).  
 > -   Um ponto-e-vírgula em qualquer parte da cadeia de caracteres será substituído pelos caracteres "%3A."  
@@ -84,17 +84,17 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> Exemplos adicionais  
  O exemplo de URL a seguir inclui espaços e vários parâmetros  
   
--   O nome de pasta “Equipe de instrução do usuário do SQL Server” inclui espaços e, portanto, o sinal “+” substitui cada espaço.  
+-   O nome de pasta "Equipe de Instrução do Usuário do SQL Server" inclui espaços e, portanto, o sinal "+" substitui cada espaço.  
   
--   O nome de relatório “relatório do projeto da equipe” inclui espaços e, portanto, o sinal “+” substitui cada espaço.  
+-   O nome de relatório "relatório do projeto de equipe" inclui espaços e, portanto, o sinal "+" substitui cada espaço.  
   
--   Passa dois parâmetros “teamgrouping2” com um valor “xgroup” e “teamgrouping1” com um valor “ygroup”.  
+-   Passa dois parâmetros "teamgrouping2" com um valor "xgroup" e "teamgrouping1" com um valor "ygroup".  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- O exemplo de URL a seguir inclui um parâmetros com vários valores, ”OrderID. O formato de um parâmetro com vários valores é repetir o nome do parâmetro para cada valor.  
+ O exemplo de URL a seguir inclui um parâmetros com vários valores, "OrderID. O formato de um parâmetro com vários valores é repetir o nome do parâmetro para cada valor.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  

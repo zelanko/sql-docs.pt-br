@@ -12,12 +12,12 @@ ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149856"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361368"
 ---
 # <a name="clr-transactions-sample"></a>Exemplo de transações CLR
   Este exemplo demonstra como controlar transações usando as APIs gerenciadas localizadas no namespace `System.Transactions` . Especificamente, a classe `System.Transactions.TransactionScope` é usada para estabelecer um limite para a transação a fim de garantir que os números de estoque não sejam ajustados, a menos que haja estoque suficiente para atender à solicitação e, se houver estoque suficiente, que a transferência do estoque de um local para outro ocorra de forma atômica. O registro automático em uma transação distribuída é demonstrado pelo log de alterações no estoque em um banco de dados de auditoria armazenado em uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -25,9 +25,9 @@ ms.locfileid: "48149856"
 ## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](http://go.microsoft.com/fwlink/?linkid=62796)Developer  
+-   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48149856"
   
 8.  Instale o banco de dados de auditoria executando o seguinte  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i installDB.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i installDB.sql`  
   
      com valores apropriados da instância e do servidor.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48149856"
   
 12. Execute o script com o seguinte comando  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i cleanup.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i cleanup.sql`  
   
          com valores apropriados da instância e do servidor.  
   

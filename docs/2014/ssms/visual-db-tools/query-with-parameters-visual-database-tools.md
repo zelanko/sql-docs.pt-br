@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], Visual Database Tools
@@ -14,12 +14,12 @@ ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c677215024dbb5a0a862fba3e9fd3232190dd453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9167f4ec0f62c34ddf6bae5838b36dcf4bdb6967
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213986"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791238"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Consultar com parâmetros (Visual Database Tools)
   Em muitas instâncias, é útil criar uma consulta que pode ser reutilizada muitas vezes nos aplicativos com uma entrada diferente a cada vez. Nesta seção você encontrará informações sobre como criar consultas de parâmetros para usos gerais.  

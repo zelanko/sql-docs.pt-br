@@ -1,5 +1,5 @@
 ---
-title: Gerenciar funções usando SSMS | Microsoft Docs
+title: Gerenciar funções de modelo tabular do Analysis Services usando o SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045344"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072613"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Gerenciar funções usando SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "38045344"
 >  Reimplantar um projeto de modelo de tabela com funções definidas usando o Gerenciador de Função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] substituirá as funções definidas em um modelo de tabela implantado.  
   
 > [!CAUTION]  
->  Usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar um banco de dados de espaço de trabalho de modelo de tabela enquanto o projeto de modelo está aberto no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pode corromper o arquivo Model.bim. Ao criar e gerenciar funções para um banco de dados de espaço de trabalho de modelo de tabela, use o Gerenciador de Função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+>  Usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar um banco de dados de workspace de modelo de tabela enquanto o projeto de modelo está aberto no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pode corromper o arquivo Model.bim. Ao criar e gerenciar funções para um banco de dados de workspace de modelo de tabela, use o Gerenciador de Função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ###  <a name="bkmk_new_role"></a> Para criar uma nova função  
   
@@ -48,7 +48,7 @@ ms.locfileid: "38045344"
   
 4.  Em **Defina as permissões de banco de dados para essa função**, selecione uma das opções de permissão a seguir:  
   
-    |Permissão|Description|  
+    |Permissão|Descrição|  
     |----------------|-----------------|  
     |**Controle total (Administrador)**|Os membros podem fazer modificações ao esquema modelo e podem exibir todos os dados.|  
     |**Processar banco de dados**|Membros podem executar operações de Processar e Processar Tudo. Não é possível modificar o esquema modelo e não é possível exibir dados.|  

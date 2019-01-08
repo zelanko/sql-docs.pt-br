@@ -21,21 +21,21 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1c4d2d5c90f651d1d24dd6fabbaa74213a6fff9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061892"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212005"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é uma ferramenta para gerenciar os serviços associados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], configurar os protocolos de rede usados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e para gerenciar a configuração de conectividade de rede de computadores cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager é um snap-in do [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponível no menu Iniciar ou pode ser adicionado a qualquer outra exibição do Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] Console de gerenciamento (mmc.exe) usa o arquivo SQLServerManager10.msc na pasta System32 do Windows para abrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do Configuration Manager.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager e o SQL Server Management Studio usam o WMI (Instrumentação de Gerenciamento do Windows) para exibir e modificar algumas das propriedades de servidor. O WMI fornece uma forma unificada para fazer interface com as chamadas de API que gerenciam as operações de registro solicitadas pelas ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e para fornecer um controle e manipulação melhorados sobre os serviços selecionados de SQL do componente de snap-in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Para obter informações sobre como configurar permissões relacionadas ao WMI, veja [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é um snap-in do programa Console de Gerenciamento [!INCLUDE[msCoName](../includes/msconame-md.md)] e não um programa autônomo, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager não aparece como um aplicativo nas versões mais recentes do Windows.  
->   
+> 
 >  -   **Windows 10**:  
 >          Para abrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, no **página inicial**, digite SQLServerManager12.msc (para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Para versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] substitua 12 por um número menor. Clicar SQLServerManager12.msc abre o Configuration Manager. Para fixar o Configuration Manager para a página inicial ou na barra de tarefas, clique com botão direito SQLServerManager12.msc e, em seguida, clique em **abrir local do arquivo**. No Explorador de arquivos do Windows, clique com botão direito SQLServerManager12.msc e, em seguida, clique em **Fixar na tela inicial** ou **Fixar na barra de tarefas**.  
 > -   **Windows 8**:  
@@ -63,11 +63,11 @@ ms.locfileid: "48061892"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager permite que você crie ou remova um alias, altere a ordem em que os protocolos são usados ou exiba as propriedades do alias de um servidor, incluindo:  
   
--   Alias de Servidor –– O alias de servidor usado para o computador ao qual o cliente está se conectando.  
+-   Alias de servidor: alias do servidor usado para o computador ao qual o cliente está se conectando.  
   
--   Protocolo –– O protocolo de rede usado para a entrada de configuração.  
+-   Protocolo – o protocolo de rede usado para a entrada de configuração.  
   
--   Parâmetros de Conexão –– Os parâmetros associados ao endereço de conexão da configuração de protocolo de rede.  
+-   Parâmetros de Conexão – os parâmetros associados ao endereço de conexão da configuração do protocolo de rede.  
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager também permite que você visualize as informações sobre as instâncias de cluster de failover, apesar do Administrador de Cluster dever ser usado para algumas ações como iniciar e interromper os serviços.  
   

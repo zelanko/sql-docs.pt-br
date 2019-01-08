@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_copymergesnapshot
@@ -17,17 +16,17 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4cc5310a96376957110e3baf11da606ba91c296
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0c9fecbd4296f9b097b513f032214063cf7a5d9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822009"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589240"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Copia a pasta de instantâneo da publicação especificada para a pasta listada no **@destination_folde* * * r*. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  Copia a pasta de instantâneo da publicação especificada para a pasta listada na **@destination_folde** _r_. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,10 +38,10 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação cujo conteúdo de instantâneo deve ser copiado. *publicação* está **sysname**, sem padrão.  
   
- [  **@destination_folder=**] **'***destination_folder***'**  
+ [  **@destination_folder=**] **'**_destination_folder_**'**  
  É o nome da pasta onde o conteúdo do instantâneo da publicação deve ser copiado. *destination_folder*está **nvarchar (255)**, sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou mídia removível (como CD-ROMs ou discos removíveis).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

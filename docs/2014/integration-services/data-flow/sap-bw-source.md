@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159962"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374739"
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
   A fonte SAP BW é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW. Assim, a origem do SAP BW extrai dados de um sistema SAP Netweaver BW versão 7 e torna estes dados disponíveis para o fluxo de dados em um pacote do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -115,18 +114,18 @@ ms.locfileid: "48159962"
   
  Se você não souber todos os valores necessários para configurar a origem, talvez precise perguntar ao administrador do SAP.  
   
- Para obter um passo a passo que demonstre como configurar e usar o gerenciador de conexões do SAP BW, a origem e o destino, consulte o white paper [Usando o SQL Server 2008 Integration Services com SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Este white paper também mostra como configurar os objetos necessários no SAP BW.  
+ Para obter um passo a passo que demonstre como configurar e usar o gerenciador de conexões do SAP BW, a origem e o destino, consulte o white paper [Usando o SQL Server 2008 Integration Services com SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Este white paper também mostra como configurar os objetos necessários no SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Usando o Designer SSIS para configurar a origem  
  Para obter mais informações sobre as propriedades da origem do SAP BW que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor de origem SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Gerenciador de Conexões&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor de origem SAP BW &#40;página de colunas&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Colunas&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Editor de origem SAP BW &#40;página de saída de erro&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Saída de Erro&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origem SAP BW &#40;página Avançado&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Avançado&#41;](sap-bw-source-editor-advanced-page.md)  
   
  Quando você estiver configurando a origem do SAP BW, também poderá usar várias caixas de diálogo para pesquisar objetos do SAP Netweaver BW ou visualizar os dados da origem. Para obter mais informações sobre essas caixas de diálogo, clique em um dos seguintes tópicos:  
   

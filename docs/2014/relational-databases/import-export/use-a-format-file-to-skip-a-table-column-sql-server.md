@@ -13,12 +13,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc1101225eae5fd02eec2ee7c29e8ca21a778370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188216"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373128"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)
   Este tópico descreve arquivos de formato. Você pode usar um arquivo de formato para ignorar a importação de uma coluna de tabela, quando o campo não existir no arquivo de dados. Um arquivo de dados só poderá conter um número menor de campos que o número de colunas na tabela, se as colunas ignoradas forem anuláveis e/ou possuírem valor padrão.  
@@ -85,7 +85,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
     2       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
     ```  
   
--   Como alternativa para ignorar uma coluna de tabela, é possível modificar a definição da linha do arquivo de formato que corresponde à coluna de tabela. Nessa linha do arquivo de formato, os valores "comprimento do prefixo", "comprimento dos dados do arquivo host" e "ordem da coluna do servidor" devem ser definidos como 0. Além disso, o campos "terminador" e "agrupamento de colunas" devem ser definidos como "" (NULO).  
+-   Como alternativa para ignorar uma coluna de tabela, é possível modificar a definição da linha do arquivo de formato que corresponde à coluna de tabela. Nessa linha do arquivo de formato, os valores "comprimento do prefixo", "comprimento dos dados do arquivo host" e "ordem da coluna do servidor" devem ser definidos como 0. Além disso, o campos "terminador" e "ordenação de colunas" devem ser definidos como "" (NULO).  
   
      O valor "nome da coluna de servidor" requer uma cadeia de caracteres não vazios, ainda que o nome de coluna em si não seja necessário. Os campos de formato restantes requerem seus valores padrão.  
   
@@ -134,7 +134,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -156,7 +156,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

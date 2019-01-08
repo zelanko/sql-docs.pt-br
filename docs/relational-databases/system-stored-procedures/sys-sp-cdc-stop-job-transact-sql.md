@@ -20,12 +20,12 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 931b25de9acbf851f3a68475000833080d25ae93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e39a456e9d6c6479f6dab95270dcbd2d549c986
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846514"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589150"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [[  **@job_type=** ] **' * * * job_type*']  
+ [[  **@job_type=** ] **'**_job_type_']  
  Tipo de trabalho a adicionar. *job_type* está **nvarchar (20)** com um padrão de **capturar**. As entradas válidas são **capturar** e **limpeza**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

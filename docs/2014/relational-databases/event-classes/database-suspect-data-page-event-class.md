@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,12 +17,12 @@ ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50ee8a83c87ec6f2b14ac07caa77774b7a7c2d15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137896"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816388"
 ---
 # <a name="database-suspect-data-page-event-class"></a>classe de evento Database Suspect Data Page
   A classe do evento **Database Suspect Data Page** indica quando uma página é acrescentada à tabela [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) no [msdb](../databases/msdb-database.md). Inclua esta classe de evento em rastreamentos que estiverem monitorando a ocorrência de páginas suspeitas.  
@@ -35,11 +34,11 @@ ms.locfileid: "48137896"
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Colunas de dados da classe de evento Database Suspect Data Page  
   
-|Nome da coluna de dados|Tipo de Dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|O ID do banco de dados para o qual foi levantado o evento de página suspeita. Isso é igual à coluna **database_id** da tabela **suspect_pages** .|3|Sim|  
-|**EventClass**|**int**|O tipo do evento é 213.|27|não|  
-|**EventSequence**|**int**|Sequência de classe de evento em lote.|51|não|  
+|**EventClass**|**int**|O tipo do evento é 213.|27|Não|  
+|**EventSequence**|**int**|Sequência de classe de evento em lote.|51|Não|  
 |**SPID**|**int**|ID da tarefa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que encontrou a página suspeita.|12|Sim|  
 |**StartTime**|**datetime**|Hora que o evento ocorreu.|14|Sim|  
 |**ObjectID**|**int**|ID do arquivo do banco de dados que encontrou a página suspeita. Isso é igual à coluna **file_id** da tabela **suspect_pages** .|22|Sim|  

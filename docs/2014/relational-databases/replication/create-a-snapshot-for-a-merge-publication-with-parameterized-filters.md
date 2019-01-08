@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -15,12 +14,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10e8c84af197c600c9b89f850ab84fc27fd56e2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99aabef0bd8e7ba293c0e66428607fe7fb4642e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217736"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361928"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros
   Este tópico descreve como criar um instantâneo para uma publicação de mesclagem com filtros parametrizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -45,7 +44,7 @@ ms.locfileid: "48217736"
   
 #### <a name="to-generate-a-schema-snapshot"></a>Para gerar um instantâneo de esquema  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações** .  
   
@@ -101,14 +100,14 @@ ms.locfileid: "48217736"
   
     -   (Opcional) O número de processos de instantâneo dinâmico que pode executar simultaneamente para **@max_concurrent_dynamic_snapshots**. Se o número máximo de processos estiver em execução e o Assinante tentar gerar um instantâneo, o processo será colocado em uma fila. Por padrão não há nenhum limite para o número de processos simultâneos.  
   
-2.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique o nome da publicação usado na etapa 1 para **@publication** e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais do Windows sob as quais o [Replication Snapshot Agent](agents/replication-snapshot-agent.md) autenticação ao conectar-se para o Publisher, você também deve especificar um valor de **0** para **@publisher_security_mode** e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de logon para **@publisher_login** e **@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md).  
+2.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique o nome da publicação usado na etapa 1 para **@publication** e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais do Windows sob as quais o [Replication Snapshot Agent](agents/replication-snapshot-agent.md) autenticação ao conectar-se para o Publisher, você também deve especificar um valor de **0** para **@publisher_security_mode** e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de logon para **@publisher_login** e **@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para adicionar artigos à publicação. Esse procedimento armazenado deve ser executado uma vez para cada artigo na publicação. Ao usar filtros com parâmetros, você deve especificar um filtro de linha com parâmetros para um ou mais artigos que usam o parâmetro **@subset_filterclause** . Para obter mais informações, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para adicionar artigos à publicação. Esse procedimento armazenado deve ser executado uma vez para cada artigo na publicação. Ao usar filtros com parâmetros, você deve especificar um filtro de linha com parâmetros para um ou mais artigos que usam o parâmetro **@subset_filterclause** . Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Quando o Merge Agent solicita que o instantâneo inicialize o Assinante, o instantâneo para a solicitação de partição de assinatura é gerado automaticamente.  
   
@@ -116,14 +115,14 @@ ms.locfileid: "48217736"
   
 1.  Execute [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) para criar a publicação. Para obter mais informações, consulte [Create a Publication](publish/create-a-publication.md).  
   
-2.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique o nome da publicação usado na etapa 1 para **@publication** e as credenciais do Windows no qual o Snapshot Agent executa para **@job_login** e **@password**. Se o agente usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando se conectar ao Publicador, você também deverá especificar um valor de **0** para **@publisher_security_mode** e as credenciais do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md).  
+2.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique o nome da publicação usado na etapa 1 para **@publication** e as credenciais do Windows no qual o Snapshot Agent executa para **@job_login** e **@password**. Se o agente usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando se conectar ao Publicador, você também deverá especificar um valor de **0** para **@publisher_security_mode** e as credenciais do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para adicionar artigos à publicação. Esse procedimento armazenado deve ser executado uma vez para cada artigo na publicação. Ao usar filtros com parâmetros, você deve especificar um filtro de linha com parâmetros para um artigo usando o parâmetro **@subset_filterclause** . Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  No Publicador do banco de dados de publicação, execute [sp_helpmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), especificando o valor de **@publication** da etapa 1. Observe o valor **snapshot_jobid** no conjunto de resultados.  
   
@@ -148,14 +147,14 @@ ms.locfileid: "48217736"
   
 1.  Execute [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) para criar a publicação. Para obter mais informações, consulte [Create a Publication](publish/create-a-publication.md).  
   
-2.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique o nome da publicação usado na etapa 1 para **@publication** e as credenciais do Windows no qual o Snapshot Agent executa para **@job_login** e **@password**. Se o agente usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando se conectar ao Publicador, você também deverá especificar um valor de **0** para **@publisher_security_mode** e as credenciais do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md).  
+2.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique o nome da publicação usado na etapa 1 para **@publication** e as credenciais do Windows no qual o Snapshot Agent executa para **@job_login** e **@password**. Se o agente usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando se conectar ao Publicador, você também deverá especificar um valor de **0** para **@publisher_security_mode** e as credenciais do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para adicionar artigos à publicação. Esse procedimento armazenado deve ser executado uma vez para cada artigo na publicação. Ao usar filtros com parâmetros, você deve especificar um filtro de linha com parâmetros para pelo menos um artigo usando o parâmetro **@subset_filterclause** . Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Se outros artigos serão filtrados com base no filtro de linha parametrizado, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir as relações de junção ou de registro lógico entre artigos. Esse procedimento armazenado deve ser executado uma vez para cada artigo sendo definido. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Inicie o trabalho de instantâneo ou execute o Replication Snapshot Agent no prompt de comando para gerar o esquema de instantâneo padrão e outros arquivos. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
@@ -257,7 +256,7 @@ PAUSE
 >  Quando a filtragem de um artigo gerar partições não sobrepostas, exclusivas de cada assinatura (especificando um valor de <xref:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription> para <xref:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption%2A> ao criar um artigo de mesclagem), metadados são limpos sempre que o Merge Agent for executado. Isso significa que o instantâneo particionado irá expirar mais rapidamente. Ao usar essa opção, considere permitir que os Assinantes solicitem geração do instantâneo. Para obter mais informações, consulte a seção "Usando as opções de filtragem” apropriadas no tópico [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
+>  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Para criar uma publicação que permita que os Assinantes inicializem geração e entrega de instantâneo  
   
@@ -265,7 +264,7 @@ PAUSE
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> para o banco de dados de publicação; defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1 e chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retornar `false`, confirme a existência do banco de dados.  
   
-3.  Se <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> é de propriedade `false`, defina-o como `true` e chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+3.  Se a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> for `false`, defina-a como `true` e chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 4.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> e defina as propriedades a seguir para esse objeto:  
   
@@ -277,7 +276,7 @@ PAUSE
   
     -   O número máximo de trabalhos de instantâneo dinâmicos a serem executados para <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>. Uma vez que solicitações de instantâneo iniciado pelo Assinante podem ocorrer a qualquer momento, essa propriedade limita o número de trabalhos do Snapshot Agent que podem ser executados simultaneamente quando vários Assinantes solicitam seu instantâneo particionado ao mesmo tempo. Quando o número máximo de trabalhos estiver sendo executado, solicitações de instantâneos particionados adicionais são enfileiradas até que um dos trabalhos que está sendo executado seja concluído.  
   
-    -   Use o OR lógico bit a bit (`|` no Visual c# e `Or` no Visual Basic) para adicionar o valor <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> para <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+    -   Use o operador lógico bit a bit OR (`|` em Visual C# e `Or` em Visual Basic) para adicionar o valor <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> a <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
     -   Os campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> para fornecer as credenciais para a conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] em que o Snapshot Agent é executado.  
   
@@ -291,9 +290,9 @@ PAUSE
   
 6.  Use a propriedade <xref:Microsoft.SqlServer.Replication.MergeArticle> para adicionar artigos à publicação. Especifique a propriedade <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> para pelo menos um artigo que defina o filtro com parâmetros. (Opcional) Crie objetos <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> que definam filtros de junção entre artigos. Para obter mais informações, consulte [Define an Article](publish/define-an-article.md).  
   
-7.  Se o valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> está `false`, chame <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para criar o trabalho inicial do Snapshot Agent para essa publicação.  
+7.  Se o valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> for `false`, chame <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para criar o trabalho inicial do Snapshot Agent para essa publicação.  
   
-8.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> do objeto <xref:Microsoft.SqlServer.Replication.MergePublication> criado na etapa 4. Isso inicia o trabalho do agente que gera o instantâneo inicial. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md).  
+8.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> do objeto <xref:Microsoft.SqlServer.Replication.MergePublication> criado na etapa 4. Isso inicia o trabalho do agente que gera o instantâneo inicial. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 9. (Opcional) Procure um valor de `true` para a propriedade <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> a fim de determinar quando o instantâneo inicial está pronto para ser usado.  
   
@@ -305,7 +304,7 @@ PAUSE
   
 2.  Use a propriedade <xref:Microsoft.SqlServer.Replication.MergeArticle> para adicionar artigos à publicação. Especifique a propriedade <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> para pelo menos um artigo que defina o filtro com parâmetros e crie quaisquer objetos <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> que definam filtros de junção entre artigos. Para obter mais informações, consulte [Define an Article](publish/define-an-article.md).  
   
-3.  Se o valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> está `false`, chame <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para criar o trabalho do snapshot agent para essa publicação.  
+3.  Se o valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> for `false`, chame <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para criar o trabalho do Snapshot Agent para essa publicação.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> do objeto <xref:Microsoft.SqlServer.Replication.MergePublication> criado na etapa 1. Esse método inicia o trabalho do agente que gera o instantâneo inicial. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md).  
   
@@ -392,7 +391,7 @@ PAUSE
   
  [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Instantâneos para publicações de mesclagem com filtros parametrizados](snapshots-for-merge-publications-with-parameterized-filters.md)   

@@ -14,12 +14,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111486"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357406"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables pode ser executado em um cursor de servidor estático. Uma tentativa de executar SQLTables em um cursor atualizável (dinâmico ou conjunto de chaves) retornará SQL_SUCCESS_WITH_INFO, indicando que o tipo de cursor foi alterado.  
@@ -28,7 +28,7 @@ ms.locfileid: "48111486"
   
  Para relatar catálogos disponíveis, esquemas e tipos de tabela, SQLTables faz uso especial de cadeias de caracteres vazias (ponteiros de comprimento zero bytes). As cadeias de caracteres vazias não são os valores padrões (ponteiros NULL).  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *CatalogName* parâmetro: *linked_server_name*.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *CatalogName* parâmetro: *Linked_server_name*.  
   
  SQLTables retorna informações sobre quaisquer tabelas cujo nomes correspondem ao *TableName* e são de propriedade do usuário atual.  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLTables](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [Função SQLTables](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

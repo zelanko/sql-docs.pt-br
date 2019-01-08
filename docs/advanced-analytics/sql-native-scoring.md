@@ -1,5 +1,5 @@
 ---
-title: Pontuação nativa no aprendizado de máquina do SQL Server | Microsoft Docs
+title: Pontuação nativa usando a instrução T-SQL PREVER - serviços do SQL Server Machine Learning
 description: Gere previsões usando a função PREVER T-SQL, pontuação dta entradas em relação a um modelo previamente treinado escritos em R ou Python no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713148"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645125"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Pontuação nativa usando a função PREVER T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Neste exemplo, você deve cria um modelo e, em seguida, chame a função de prev
 
 Execute o seguinte código para criar o banco de dados de exemplo e as tabelas necessárias.
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 Use a seguinte instrução para popular a tabela de dados com os dados do **iris** conjunto de dados.
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 Agora, crie uma tabela para armazenar modelos.
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 O código a seguir cria um modelo baseado na **íris** conjunto de dados e salva-à tabela denominada **modelos**.
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 Você pode executar uma instrução a seguir para exibir o modelo armazenado em formato binário:
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 A seguinte instrução de previsão simple obtém uma classificação do modelo de árvore de decisão usando o **pontuação nativa** função. Ele prevê a espécie de íris com base em atributos que você fornecer, comprimento da pétala e largura.
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
@@ -168,5 +168,5 @@ Se você receber o erro, "Erro durante a execução da função PREDICT. Modelo 
 
 Para uma solução completa que inclui a pontuação nativa, consulte estes exemplos da equipe de desenvolvimento do SQL Server:
 
-+ Implantar o seu script de ML: [usando um modelo de Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Implantar o seu script de ML: [usando um modelo do R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Implante o seu script de ML: [Usando um modelo de Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Implante o seu script de ML: [Usando um modelo do R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

@@ -19,15 +19,15 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201838"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369728"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar propriedades de servidor no Analysis Services
-  Um administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode modificar as propriedades padrão de configuração do servidor para uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cada instância tem suas próprias propriedades de configuração que podem ser definidas independentemente de outras instâncias no mesmo servidor.  
+  Um administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode modificar as propriedades padrão de configuração do servidor para uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instância tem suas próprias propriedades de configuração que podem ser definidas independentemente de outras instâncias no mesmo servidor.  
   
  Para definir propriedades de servidor, use o SQL Server Management Studio ou edite o arquivo msmdsrv.ini de uma instância específica.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48201838"
   
      Modificar as propriedades de servidor tem suporte somente para servidores de modos de tabela e modos multidimensionais. Se você instalou o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], sempre use os valores padrão a menos que você seja direcionado de outra forma por um engenheiro de suporte de produto da Microsoft.  
   
-     Para obter orientação sobre como resolver problemas operacionais ou de desempenho por meio de propriedades de servidor, consulte [Guia de operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+     Para obter orientação sobre como resolver problemas operacionais ou de desempenho por meio de propriedades de servidor, consulte [Guia de operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     Você também pode ler sobre as propriedades de servidor (basicamente, muitas delas permanecem inalteradas nas últimas versões) neste white paper da Microsoft, [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)(Propriedades de servidor do SSAS [SQL Server 2005 Analysis Services]).  
+     Você também pode ler sobre as propriedades de servidor (basicamente, muitas delas permanecem inalteradas nas últimas versões) neste white paper da Microsoft, [SQL Server 2005 Analysis Services (SSAS) Server Properties](https://go.microsoft.com/fwlink/?LinkID=199102)(Propriedades de servidor do SSAS [SQL Server 2005 Analysis Services]).  
   
     > [!NOTE]  
     >  Algumas propriedades só podem ser definidas no msmdrsrv.ini arquivo. Se a propriedade que você deseja definir não for nem sequer visível que depois que você mostrar propriedades avançadas, precisará editar o msmdsrv.ini arquivo diretamente.  
@@ -76,14 +76,14 @@ ms.locfileid: "48201838"
 ##  <a name="bkmk_ref"></a> Referência à propriedade de servidor  
  As propriedades de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são importantes para o ajuste refinado do sistema. Por exemplo, para tornar o comportamento das consultas consistente com seus requisitos, você pode definir as propriedades pertinentes.  
   
- Os tópicos a seguir explicam as várias [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propriedades de configuração:  
+ Os tópicos seguintes explicam as várias propriedades de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Propriedades gerais](general-properties.md)|As propriedades gerais são básicas e avançadas e, incluem propriedades que definem o diretório de dados, diretório de backup e outros comportamentos do servidor.|  
 |[Propriedades de mineração de dados](data-mining-properties.md)|As propriedades de mineração de dados que controlam quais algoritmos são habilitados e quais são desabilitados. Por padrão, todos os algoritmos são habilitados.|  
 |DSO|DSO não tem mais suporte. Propriedades DSO são ignoradas.|  
-|[Propriedades do recurso](feature-properties.md)|As propriedades do recurso pertencem aos recursos de produtos, a maioria delas avançadas, inclusive propriedades que controlam vínculos entre instâncias do servidor.|  
+|[Propriedades de recurso](feature-properties.md)|As propriedades do recurso pertencem aos recursos de produtos, a maioria delas avançadas, inclusive propriedades que controlam vínculos entre instâncias do servidor.|  
 |[Propriedades de armazenamento de arquivos](filestore-properties.md)|As propriedades de repositório de arquivos são apenas para uso avançado. Elas incluem configurações de gerenciamento de memória avançadas.|  
 |[Propriedades do gerenciador de bloqueio](lock-manager-properties.md)|As propriedades do gerenciador de bloqueio definem os comportamentos do servidor em relação aos bloqueios e aos tempos limite. A maioria dessas propriedades é apenas para uso avançado.|  
 |[Propriedades do log](log-properties.md)|As propriedades de log controlam onde e como os eventos são registrados no servidor. Isso inclui log de erros, log de exceções, flight recorder, log de consultas e rastreamentos.|  

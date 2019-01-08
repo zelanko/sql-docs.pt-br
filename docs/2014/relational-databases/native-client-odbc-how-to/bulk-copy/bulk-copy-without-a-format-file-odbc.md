@@ -15,18 +15,18 @@ ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4298c3cc0283ab268dbf5336fef32ddfb35856f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d5ff1d19e6ead1cb24ebe666a7bab2187ddaa13
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074006"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366788"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Copiar em massa sem um arquivo de formato (ODBC)
   Este exemplo completo mostra como usar as funções de cópia em massa para criar um arquivo de dados de modo nativo, sem um arquivo de formato. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ### <a name="to-bulk-copy-without-a-format-file"></a>Para copiar em massa sem um arquivo de formato  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48074006"
   
     -   O nome de um arquivo de dados que receberá qualquer mensagem de erro de cópia em massa (especifique NULL se não desejar um arquivo de mensagens).  
   
-    -   A direção da cópia: DB_IN do arquivo para a exibição ou tabela, ou DB_OUT para o arquivo da tabela ou exibição.  
+    -   A direção da cópia: DB_IN do arquivo para o modo de exibição ou tabela ou DB_OUT para o arquivo da tabela ou exibição.  
   
 5.  Chame [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48074006"
 ## <a name="example"></a>Exemplo  
  Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   

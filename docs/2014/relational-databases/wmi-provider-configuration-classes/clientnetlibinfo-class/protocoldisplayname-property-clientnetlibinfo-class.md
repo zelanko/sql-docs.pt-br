@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolDisplayName Property (ClientNetLibInfo Class)
@@ -20,12 +18,12 @@ ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c1ca74f20b0710dfd8dcd3f21500aaa2b6c29efa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33113482d021b1f0aa105ccb039f8076cf6a6549
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085246"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375408"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>Propriedade ProtocolDisplayName (classe ClientNetLibInfo)
   Obtém ou define o nome usado para exibir o protocolo.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

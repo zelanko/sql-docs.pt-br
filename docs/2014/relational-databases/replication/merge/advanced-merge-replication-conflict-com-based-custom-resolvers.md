@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8519b2e1a54854fc90ffbcf9253a9f4007538cea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823514"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   Resolvedores personalizados fornecem maior flexibilidade do que o mecanismo de resolução padrão, e podem implementar a lógica comercial exigida por aplicativos usando dados replicados. Um resolvedor personalizado com base em COM é uma biblioteca de vínculo dinâmico (DLL) que implementa a interface COM **ICustomResolver** , seus métodos e propriedades e outras interfaces de suporte e definições de tipo criadas especificamente para resolução de conflito.  
@@ -39,10 +38,10 @@ ms.locfileid: "48217576"
   
  Um resolvedor personalizado é especificado para um artigo, não para uma publicação inteira. O mesmo resolvedor pode ser usado com mais de um artigo, mas a lógica em resolvedores personalizados é em geral específica para uma determinada tabela. Se a tabela usada no artigo for modificada depois que o resolvedor for criado (por exemplo, renomeando o nome da coluna que é usada em resolução de conflito), o resolvedor personalizado pode precisar ser modificado e recompilado.  
   
- Para especificar um resolvedor personalizado, consulte [Specify a Merge Article Resolver](../publish/specify-a-merge-article-resolver.md).  
+ Para especificar um resolvedor personalizado, consulte [Especificar um resolvedor de artigo de mesclagem](../publish/specify-a-merge-article-resolver.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Microsoft COM-Based Resolvers](advanced-merge-replication-conflict-com-based-resolvers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Detecção e resolução de conflito de replicação de mesclagem avançada](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Resolvedores baseados em do Microsoft](advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

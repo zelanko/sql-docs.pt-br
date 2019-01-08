@@ -11,12 +11,12 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80287951be04d9d8381db0f05810e103c8bedfb8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166636"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356632"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referências globais internas e referências de usuários (Construtor de Relatórios e SSRS)
   A coleção de campos internos que inclui as coleções de `Globals` e de `User` representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de `Globals` fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de `User` fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  
@@ -25,7 +25,7 @@ ms.locfileid: "48166636"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Usando a coleção de globais  
- O `Globals` coleção contém as variáveis globais para o relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (E comercial), por exemplo, `[&ReportName]`. A tabela a seguir descreve os membros do `Globals` coleção.  
+ A coleção de `Globals` contém as variáveis globais para o relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (E comercial), por exemplo, `[&ReportName]`. A tabela a seguir descreve os membros da coleção de `Globals`.  
   
 |**Membro**|**Tipo**|**Descrição**|  
 |----------------|--------------|---------------------|  
@@ -40,12 +40,12 @@ ms.locfileid: "48166636"
 |OverallTotalPages|`Integer`|O número total de páginas para todo o relatório. Esse valor não é afetado por ResetPageNumber.<br /><br /> OverallTotalPages somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
 |RenderFormat|`RenderFormat`|Informações sobre a solicitação de renderização atual.<br /><br /> Para obter mais informações, consulte "RenderFormat" na próxima seção.|  
   
- Os membros de `Globals` coleção retornam uma variante. Se você desejar usar um membro dessa coleção em uma expressão que exige um tipo de dados específico, deverá primeiro converter a variável. Por exemplo, para converter a variante de tempo de execução em um formato de Data, use `=CDate(Globals!ExecutionTime)`. Para obter mais informações, consulte [tipos de dados em expressões &#40;construtor de relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Membros da coleção de `Globals` retornam uma variante. Se você desejar usar um membro dessa coleção em uma expressão que exige um tipo de dados específico, deverá primeiro converter a variável. Por exemplo, para converter a variante de tempo de execução em um formato de Data, use `=CDate(Globals!ExecutionTime)`. Para obter mais informações, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  A tabela a seguir descreve os membros de `RenderFormat`.  
   
-|Membro|Tipo|Description|  
+|Membro|Tipo|Descrição|  
 |------------|----------|-----------------|  
 |Nome|`String`|O nome do renderizador conforme registrado no arquivo de configuração RSReportServer.<br /><br /> Disponível durante partes específicas do ciclo de processamento/renderização do relatório.|  
 |IsInteractive|`Boolean`|Se a solicitação de renderização atual usa um formato de renderização interativo.|  
@@ -69,16 +69,16 @@ ms.locfileid: "48166636"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Usando a coleção de usuário  
- O `User` coleção contém dados sobre o usuário que está executando o relatório. É possível usar essa coleção para filtrar os dados exibidos em um relatório, por exemplo, mostrando apenas os dados do usuário atual ou para exibir a ID do usuário, por exemplo, em um título do relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (E comercial), por exemplo, `[&UserID]`.  
+ A coleção de `User` contém dados sobre o usuário que está executando o relatório. É possível usar essa coleção para filtrar os dados exibidos em um relatório, por exemplo, mostrando apenas os dados do usuário atual ou para exibir a ID do usuário, por exemplo, em um título do relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (E comercial), por exemplo, `[&UserID]`.  
   
- A tabela a seguir descreve os membros do `User` coleção.  
+ A tabela a seguir descreve os membros da coleção de `User`.  
   
 |**Membro**|**Tipo**|**Descrição**|  
 |----------------|--------------|---------------------|  
 |`Language`|`String`|O idioma do usuário que está executando o relatório. Por exemplo, `en-US`.|  
 |`UserID`|`String`|A ID do usuário que está executando o relatório. Se a Autenticação do Windows estiver sendo usada, esse valor será a conta de domínio do usuário atual. O valor é determinado pela extensão de segurança do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que pode usar a Autenticação do Windows ou a autenticação personalizada.|  
   
- Para obter mais informações sobre como oferecer suporte a diversos idiomas em um relatório, consulte "Solution Design Considerations for Multi-Lingual or Global Deployments" (Considerações sobre design de solução para implantações globais ou em vários idiomas) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
+ Para obter mais informações sobre como oferecer suporte a diversos idiomas em um relatório, consulte "Solution Design Considerations for Multi-Lingual or Global Deployments" (Considerações sobre design de solução para implantações globais ou em vários idiomas) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  
   
 ### <a name="using-locale-settings"></a>Usando configurações de localidade  
  É possível usar expressões para se fazer referência a configurações de localidade em um computador cliente por meio do valor de `User.Language` para determinar como um relatório é exibido para o usuário. Por exemplo, você pode criar um relatório que usa uma expressão de consulta diferente baseada no valor da localidade. A consulta pode se alterada para recuperar informações localizadas de uma coluna diferente dependendo do idioma retornado. Também é possível usar uma expressão nas configurações do idioma do relatório ou de itens de relatório baseados nessa variável.  
@@ -93,7 +93,7 @@ ms.locfileid: "48166636"
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](../expression-dialog-box-report-builder.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Formatando números e datas &#40;relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

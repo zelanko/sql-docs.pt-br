@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
@@ -14,12 +12,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7257973db070b0f06cc48d217f232be2f81efeb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159706"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362848"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilando, implantando e depurando objetos personalizados
   Depois de escrever o código de um objeto personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve compilar o assembly, implantá-lo e integrá-lo ao [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer para disponibilizar seu uso em pacotes, além de testá-lo e depurá-lo.  
@@ -61,7 +59,7 @@ ms.locfileid: "48159706"
 ##  <a name="building"></a> Compilando o assembly  
  Depois de assinar o projeto, você deve compilar ou recompilar o projeto ou a solução usando os comandos disponíveis no menu **Compilar** do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Sua solução pode conter um projeto separado para uma interface do usuário personalizada, que também deve ser assinada com um nome forte e pode ser compilada ao mesmo tempo.  
   
- O método mais conveniente para efetuar as próximas duas etapas – implantação e instalação do assembly no cache de assembly global – é gerar o script dessas etapas como um evento pós-compilação em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Os eventos de build estão disponíveis na página **Compilar** de Propriedades do Projeto para um projeto do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e na página **Eventos de Build** para um projeto em C#. O caminho completo é obrigatório para utilitários de prompt de comando, como **gacutil.exe**. São necessárias aspas nos caminhos que contêm espaços e nas macros, como $ (TargetPath) que se expande para caminhos que contêm espaços.  
+ O método mais conveniente para realizar as próximas duas etapas – implantação e instalação do assembly no cache de assembly global – é gerar o script dessas etapas como um evento pós-build em [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Os eventos de build estão disponíveis na página **Compilar** de Propriedades do Projeto para um projeto do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e na página **Eventos de Build** para um projeto em C#. O caminho completo é obrigatório para utilitários de prompt de comando, como **gacutil.exe**. São necessárias aspas nos caminhos que contêm espaços e nas macros, como $ (TargetPath) que se expande para caminhos que contêm espaços.  
   
  Eis um exemplo de uma linha de comando de evento pós-compilação para um provedor de log personalizado:  
   
@@ -153,7 +151,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Retorne ao pacote em pausa e continue até o ponto de interrupção ou clique em **OK** para ignorar a caixa de mensagem gerada pela tarefa Script e continue a execução e a depuração do pacote.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Desenvolvendo objetos personalizados para o Integration Services](developing-custom-objects-for-integration-services.md)   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25650af3e66e568815a466c1e0bf9b98fe6b5d39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d17f7b1f4d2f0d7674e59eb53948475ccde31ab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702234"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204855"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar Parâmetros com valor de tabela (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "47702234"
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Exemplo  
- A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria o banco de dados usado pelo exemplo.  
+ O primeiro ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem de código cria o banco de dados usado pelo exemplo.  
   
  Coloque a segunda listagem de código em um arquivo chamado stdafx.h.  
   
  Coloque a terceira listagem de código em um arquivo chamado OLEDBUtils.hpp.  
   
- Compile com ole32.lib oleaut32.lib e execute a quarta listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a quarta listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
- A quinta listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria o banco de dados usado pelo exemplo.  
+ A quinta ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem de código cria o banco de dados usado pelo exemplo.  
   
 ```  
 create database testdb  

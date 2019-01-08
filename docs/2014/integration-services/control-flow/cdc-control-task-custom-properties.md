@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196356"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771098"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propriedades personalizadas da tarefa Controle de CDC
   A tabela a seguir descreve as propriedades personalizadas da tarefa Controle de CDC. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Description|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |Conexão|Conexão ADO.NET|Uma conexão ADO.NET com o banco de dados de CDC do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para acesso às tabelas de alterações e ao Estado de CDC se estiver armazenado no mesmo banco de dados.<br /><br /> A conexão deve ser a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitado para CDC e onde a tabela de alteração selecionada está localizada.|  
 |TaskOperation|Inteiro (enumeração)|A operação selecionada para a tarefa de controle de CDC. Os valores possíveis são: **Marcar Início da Carga Inicial**, **Marcar Fim da Carga Inicial**, **Marcar Início de CDC**, **Obter Intervalo de Processamento**, **Marcar Intervalo Processado**e **Redefinir Estado de CDC**.<br /><br /> Se você selecionar **MarkCdcStart**, **MarkInitialLoadStart**ou **MarkInitialLoadEnd** ao trabalhar na CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ou seja, não Oracle), o usuário especificado no gerenciador de conexão deverá ser  **db_owner** ou **sysadmin**.<br /><br /> Para obter mais informações sobre essas operações, consulte [Editor da Tarefa Controle de CDC](../cdc-control-task-editor.md) e [Tarefa Controle de CDC](cdc-control-task.md).|  
@@ -34,7 +33,7 @@ ms.locfileid: "48196356"
 |CommandTimeOut|inteiro|Esse valor indica o tempo limite (em segundos) a ser usado ao se comunicar com o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esse valor é usado quando o tempo de resposta do banco de dados é muito lento e o valor padrão (30 segundos) não é o suficiente.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefa controle CDC](cdc-control-task.md)   
+ [Tarefa Controle de CDC](cdc-control-task.md)   
  [Editor da Tarefa Controle de CDC](../cdc-control-task-editor.md)  
   
   

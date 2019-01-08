@@ -14,12 +14,12 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a45edaedce83d741d24ee085ccf962854303a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63154af6d155dd05e1f07d38185830fefc30068a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129346"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371358"
 ---
 # <a name="use-my-subscriptions"></a>Usar Minhas Assinaturas
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Gerenciador de relatórios inclui um **Minhas assinaturas** página que organiza todas as suas assinaturas em um só lugar. É possível usar Minhas Assinaturas para exibir, modificar e excluir assinaturas existentes. Entretanto, você não pode usar Minhas Assinaturas para criar assinaturas.  
@@ -40,7 +40,7 @@ ms.locfileid: "48129346"
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>Usar o Windows PowerShell para listar MySubscriptions  
  ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")  
   
- O seguinte script do PowerShell retornará a lista de assinaturas e as propriedades de assinatura do usuário atual. Para obter mais informações, consulte [Método ReportingService2010.ListMySubscriptions](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
+ O seguinte script do PowerShell retornará a lista de assinaturas e as propriedades de assinatura do usuário atual. Para obter mais informações, consulte [Método ReportingService2010.ListMySubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   
 ```  
 #server -  all subscriptions of the current user at the given server or site  
@@ -56,7 +56,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
   
 ## <a name="see-also"></a>Consulte também  
  [Assinaturas controladas por dados](data-driven-subscriptions.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b38aaceb3f40051138e124286e51922f3e8f218a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d78614f8ba47f011c26cc8589c87e6704f8ea33
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182186"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374728"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar e classificar dados (Construtor de Relatórios e SSRS)
   Em um relatório, as expressões são usadas para ajudar a controlar, organizar e classificar dados de relatório. Por padrão, quando você cria conjuntos de dados e cria o layout de relatório, as propriedades de itens de relatório são definidas automaticamente como expressões baseadas nos campos de conjuntos de dados, parâmetros e outros itens que aparecem no painel de dados do relatório. Também é possível adicionar um botão de classificação interativo a uma tabela ou célula de matriz para permitir que um usuário altere a ordem de classificação de linha interativamente para grupos ou linhas em grupos.  
@@ -38,19 +38,19 @@ ms.locfileid: "48182186"
   
 -   **Classificação interativa** Para permitir que um usuário classifique ou inverta a ordem de classificação de uma coluna, você pode adicionar um botão de classificação interativo a um cabeçalho de coluna ou célula de cabeçalho de grupo em uma tabela ou matriz.  
   
- Para ajudar seus usuários a personalizar o filtro, o grupo ou as expressões de classificação, você pode alterar uma expressão para adicionar uma referência a um parâmetro de relatório. Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
+ Para ajudar seus usuários a personalizar o filtro, o grupo ou as expressões de classificação, você pode alterar uma expressão para adicionar uma referência a um parâmetro de relatório. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md).  
   
  Para obter mais informações e exemplos, consulte os seguintes tópicos:  
   
--   [Exemplos de expressões de grupo &#40;relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
   
 -   [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
--   [Exemplos de relatório (Construtor de Relatórios e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Exemplos de relatório (Construtor de Relatórios e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,7 +60,7 @@ ms.locfileid: "48182186"
   
  Quando possível, compile as consultas de conjunto de dados que retornem apenas os dados que você precisa exibir no relatório. Quando você reduz a quantidade dos dados que devem ser recuperados e processados, ajuda a melhorar o desempenho de relatório. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Depois que os dados são recuperados da fonte de dados externa, é possível adicionar filtros a conjuntos de dados, regiões de dados e grupos de regiões de dados, inclusive grupos de detalhes. Os filtros são aplicados em tempo de execução, primeiro, no conjunto de dados, depois, na região de dados e, em seguida, no grupo, de cima para baixo nas hierarquias de grupo. Em uma tabela, matriz ou lista, os filtros para grupos de linha, grupos de coluna e grupos adjacentes são aplicados de forma independente. Em um gráfico, os filtros para grupos de categoria e grupos de série são aplicados de forma independente. Para obter mais informações, consulte [adicionar filtros de conjunto de dados, filtros de região de dados e filtros de grupo &#40;construtor de relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Depois que os dados são recuperados da fonte de dados externa, é possível adicionar filtros a conjuntos de dados, regiões de dados e grupos de regiões de dados, inclusive grupos de detalhes. Os filtros são aplicados em tempo de execução, primeiro, no conjunto de dados, depois, na região de dados e, em seguida, no grupo, de cima para baixo nas hierarquias de grupo. Em uma tabela, matriz ou lista, os filtros para grupos de linha, grupos de coluna e grupos adjacentes são aplicados de forma independente. Em um gráfico, os filtros para grupos de categoria e grupos de série são aplicados de forma independente. Para obter mais informações, consulte [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
  Para cada filtro, você especifica uma *equação de filtro*. Uma equação de filtro inclui um campo de conjunto de dados ou expressão que especifica os dados a serem filtrados, um operador e um valor para comparação. Apenas esses valores de dados que correspondem à condição do filtro são incluídos quando o item é processado.  
   
@@ -98,10 +98,10 @@ ms.locfileid: "48182186"
 ### <a name="defining-group-variables"></a>Definindo variáveis de grupo  
  Ao definir um grupo, você pode criar uma variável de grupo para usar em expressões cujo escopo seja o grupo e que seja acessada nos grupos aninhados. Uma variável de grupo é calculada uma vez por instância de grupo e é acessada de expressões em grupos filho. Por exemplo, para dados agrupados por região e sub-região, é possível calcular um imposto para cada região e usar esse imposto em cálculos do grupo de sub-regiões.  
   
- Para obter mais informações, consulte [relatório e referências de coleções de variáveis de grupo &#40;construtor de relatórios e SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) e [escopo das expressões para totais, agregações e coleções internas &#40;relatório Construtor e o SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Para obter mais informações, consulte [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md) e [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Grupos e escopo em regiões de dados  
- Para fornecer várias exibições de dados do mesmo conjunto de dados, é possível especificar as mesmas expressões de grupo para cada região de dados. Por exemplo, é possível exibir dados categorizados em uma tabela para mostrar todos os dados detalhados e em um gráfico de pizza para mostrar agregações e ajudar a visualizar cada categoria em relação ao conjunto de dados inteiro. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Para fornecer várias exibições de dados do mesmo conjunto de dados, é possível especificar as mesmas expressões de grupo para cada região de dados. Por exemplo, é possível exibir dados categorizados em uma tabela para mostrar todos os dados detalhados e em um gráfico de pizza para mostrar agregações e ajudar a visualizar cada categoria em relação ao conjunto de dados inteiro. Para obter mais informações, consulte [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Quando você aninha uma região de dados em uma célula de uma tabela, matriz ou lista, automaticamente está definindo o escopo dos dados como as associações de grupo internas da célula. Por exemplo, suponha que você adicione um gráfico a uma célula que está tanto no grupo de linhas quanto no grupo de colunas. O escopo dos dados disponíveis do gráfico é a instância de grupo de linhas internas e de colunas internas em tempo de execução. Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
@@ -112,12 +112,12 @@ ms.locfileid: "48182186"
   
  Todos os três tipos de classificação podem ser combinados no mesmo relatório. Por padrão, a ordem de classificação é determinada pela ordem em que os dados são retornados pela consulta de conjunto de dados. As expressões de classificação são aplicadas na região de dados e no grupo de regiões de dados. As classificações interativas são aplicadas depois das expressões de classificação.  
   
- Para expressões que contêm funções de agregação, a maioria dos resultados não é afetada pela ordem de classificação. Os valores de retorno para as seguintes funções de agregação são afetados pela ordem de classificação: primeiro, último e anterior. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Para expressões que contêm funções de agregação, a maioria dos resultados não é afetada pela ordem de classificação. Valores de retorno para as seguintes funções de agregação são afetados pela ordem de classificação:: Primeiro, último e anterior. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Classificando dados em uma consulta de conjunto de dados  
  Inclua a ordem de classificação na consulta de conjunto de dados para pré-classificar os dados antes que eles sejam recuperados para um relatório. Com a classificação de dados na consulta, o trabalho de classificação é feito pela fonte de dados em vez de pelo processador de relatório.  
   
- Para um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados de tipo, você pode adicionar uma cláusula ORDER BY à consulta de conjunto de dados. Por exemplo, a seguinte consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] classifica as colunas Sales e Region por Sales em ordem decrescente na tabela SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obter mais informações, consulte "Classificando linhas com ORDER BY" nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Para um tipo de fonte de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é possível adicionar uma cláusula ORDER BY à consulta de conjunto de dados. Por exemplo, a seguinte consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] classifica as colunas Sales e Region por Sales em ordem decrescente na tabela SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obter mais informações, consulte "Classificando linhas com ORDER BY" nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Nem todas as fontes de dados dão suporte à capacidade de especificar a ordem de classificação na consulta.  
@@ -172,43 +172,43 @@ FROM Production.Product
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [Exibir cabeçalhos e rodapés com um grupo de &#40;relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Exibir cabeçalhos e rodapés com um grupo &#40;Construtor de Relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Adicionar classificação interativa a uma tabela ou matriz &#40;relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Definir uma mensagem Nenhum dado para uma região de dados &#40;relatórios e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Definir uma mensagem Nenhum Dado para uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Criar um grupo de hierarquia recursiva &#40;relatórios e SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [Criar um grupo de hierarquia recursiva &#40;Construtor de Relatórios e SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [Adicionar ou excluir um grupo em uma região de dados &#40;relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [Exibir cabeçalhos e rodapés com um grupo de &#40;relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Exibir cabeçalhos e rodapés com um grupo &#40;Construtor de Relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Adicionar ou excluir um grupo em um gráfico &#40;relatórios e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar ou excluir um grupo em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [Adicionar um Total a um grupo ou região de dados Tablix &#40;relatórios e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> Nesta seção  
- [Exemplos de expressões de grupo &#40;relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [Adicionar filtros de conjunto de dados, filtros de região de dados e de grupo &#40;relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> Seções relacionadas  
- [Noções básicas sobre grupos &#40;relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [Criando grupos de hierarquia recursiva &#40;relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Criar grupos de hierarquia recursiva &#40;Construtor de Relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Referências de coleções de variáveis de grupo e de relatório &#40;relatórios e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Exibindo uma série com vários intervalos de dados em um gráfico &#40;relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Como exibir uma série com vários intervalos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
@@ -216,7 +216,7 @@ FROM Production.Product
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Medidores &#40;relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

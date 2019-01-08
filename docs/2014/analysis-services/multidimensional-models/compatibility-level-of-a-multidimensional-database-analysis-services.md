@@ -11,12 +11,12 @@ ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219116"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363758"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Definir o nível de compatibilidade de um banco de dados multidimensional (Analysis Services)
   No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a propriedade de nível de compatibilidade do banco de dados determina o nível funcional de um banco de dados. Os níveis de compatibilidade são exclusivos de cada tipo de modelo. Por exemplo, um nível de compatibilidade de `1100` tem um significado diferente dependendo se o banco de dados é multidimensional ou tabular.  
@@ -24,7 +24,7 @@ ms.locfileid: "48219116"
  Este tópico descreve o nível de compatibilidade apenas para bancos de dados multidimensionais. Para obter mais informações sobre soluções tabulares, consulte [nível de compatibilidade &#40;SP1 de tabela SSAS&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
 > [!NOTE]  
->  Os modelos de tabela têm níveis adicionais de compatibilidade de banco de dados que não se aplicam a modelos multidimensionais. Nível de compatibilidade `1103` não existe para modelos multidimensionais. Ver [o que há de novo para o modelo de tabela no nível de compatibilidade e o SQL Server 2012 SP1](http://go.microsoft.com/fwlink/?LinkId=301727) para obter mais informações sobre `1103` para soluções tabulares.  
+>  Os modelos de tabela têm níveis adicionais de compatibilidade de banco de dados que não se aplicam a modelos multidimensionais. O nível de compatibilidade `1103` não existe para modelos multidimensionais. Ver [o que há de novo para o modelo de tabela no nível de compatibilidade e o SQL Server 2012 SP1](https://go.microsoft.com/fwlink/?LinkId=301727) para obter mais informações sobre `1103` para soluções tabulares.  
   
  **Níveis de compatibilidade para bancos de dados multidimensionais**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48219116"
   
  Para um banco de dados multidimensional, os valores válidos para a propriedade `CompatibilityLevel` incluem o seguinte:  
   
-|Configuração|Description|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |`1050`|Este valor não é visível em script ou em ferramentas, mas ele corresponde a bancos de dados criados no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ou no [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Qualquer banco de dados que não tenha `CompatibilityLevel` definido explicitamente será executado implicitamente no nível `1050`.|  
 |`1100`|Este é o valor padrão para novos bancos de dados criados no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Você também pode especificá-lo para bancos de dados criados em versões anteriores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para habilitar o uso de recursos com suporte apenas neste nível de compatibilidade (isto é, aumento no armazenamento de cadeia de caracteres para atributos de dimensão ou medidas de contagens distintas que contêm dados de cadeia de caracteres).<br /><br /> Bancos de dados com um `CompatibilityLevel` definido como `1100` obtêm uma propriedade adicional, `StringStoresCompatibilityLevel`, que permite que você escolha o armazenamento de cadeia de caracteres alternativo para partições e dimensões.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48219116"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>Como determinar o nível de compatibilidade do banco de dados existente para um banco de dados multidimensional  
  A única maneira de exibir ou modificar o nível de compatibilidade do banco de dados é através do XMLA. Você pode exibir ou modificar o script XMLA que especifica o banco de dados no SQL Server Management Studio.  
   
- Se você pesquisar a definição XMLA de um banco de dados para a propriedade `CompatibilityLevel` e ele não existir, você provavelmente terá um banco de dados a `1050` nível.  
+ Se você procurar a definição XMLA de um banco de dados para a propriedade `CompatibilityLevel` e ela não existir, é provável que você tenha um banco de dados no nível `1050`.  
   
  Instruções para exibir e modificar o script XMLA são fornecidas na próxima seção.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48219116"
 3.  A sincronização de servidores tem suporte apenas para servidores que compartilham a mesma versão e o mesmo nível de compatibilidade de banco de dados.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Após aumentar o nível de compatibilidade do banco de dados, você pode definir as `StringStoresCompatibilityLevel` propriedade em [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Isso aumenta o armazenamento de cadeia de caracteres para medidas e dimensões. Para obter mais informações sobre esse recurso, consulte [Configurar o armazenamento de cadeia de caracteres para dimensões e partições](configure-string-storage-for-dimensions-and-partitions.md).  
+ Após aumentar o nível de compatibilidade do banco de dados, você pode definir a propriedade `StringStoresCompatibilityLevel` no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Isso aumenta o armazenamento de cadeia de caracteres para medidas e dimensões. Para obter mais informações sobre esse recurso, consulte [Configurar o armazenamento de cadeia de caracteres para dimensões e partições](configure-string-storage-for-dimensions-and-partitions.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  

@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798198"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Executar etapas do Windows PowerShell no SQL Server Agent
   Use o SQL Server Agent para executar scripts do SQL Server PowerShell nas horas agendadas.  
   
 1.  **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions)  
   
-2.  **Para executar o PowerShell no SQL Server Agent, usando:**  [Etapa de Trabalho do PowerShell](#PShellJob), [Etapa de Trabalho de Prompt de Comando](#CmdExecJob)  
+2.  **Para executar o PowerShell no SQL Server Agent, usando:**  [Etapa de trabalho do PowerShell](#PShellJob), [etapa de trabalho de Prompt de comando](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Existem vários tipos de etapas de trabalho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. Cada tipo está associado a um subsistema que implementa um ambiente específico, como um agente de replicação ou ambiente de prompt de comando. Você pode codificar os scripts do Windows PowerShell e usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent para incluir os scripts em trabalhos que são executados em horários programados ou em resposta a eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Scripts do Windows PowerShell podem ser executados usando uma etapa de trabalho de prompt de comando ou uma etapa de trabalho do PowerShell.  
   
 1.  Use uma etapa de trabalho do PowerShell para fazer com que o subsistema do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent execute o utilitário `sqlps`, que inicia o PowerShell 2.0 e importa o módulo `sqlps`.  
   
-2.  Use uma etapa de trabalho de prompt de comando para executar PowerShell.exe e especifique um script que importa o `sqlps` módulo.  
+2.  Use uma etapa de trabalho de prompt de comando para executar o PowerShell.exe e especifique um script que importa o módulo `sqlps`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
   

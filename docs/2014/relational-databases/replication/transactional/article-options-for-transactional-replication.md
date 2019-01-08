@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], transactional replication options
@@ -14,19 +13,19 @@ ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e003ab7a1928c98e2e4e004d53d71fc001227d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 992b479ea0867aef1ca75e42cc865db2cc5a735f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816718"
 ---
 # <a name="article-options-for-transactional-replication"></a>Opções de artigo para replicação transacional
   Há vários um número de opções para artigos em publicações transacionais. Com a replicação transacional, você pode fazer o seguinte:  
   
 -   Especificar como as alterações são propagadas do Publicador para os Assinantes. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](transactional-articles-specify-how-changes-are-propagated.md).  
   
--   Especificar que a execução de um procedimento armazenado seja replicada. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](publishing-stored-procedure-execution-in-transactional-replication.md).  
+-   Especificar que a execução de um procedimento armazenado seja replicada. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Especificar opções de esquema se as restrições e os gatilhos são copiados para o Assinante. Para obter mais informações, veja [Especificar opções de esquema](../publish/specify-schema-options.md).  
   

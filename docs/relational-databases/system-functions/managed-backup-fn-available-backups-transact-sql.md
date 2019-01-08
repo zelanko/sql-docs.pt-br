@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769415"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409793"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 Se um banco de dados for ignorado e, em seguida, recriado, os conjuntos de backup para todos os bancos de dados serão retornados. A saída é ordenada pelo database_guid, que identifica exclusivamente cada banco de dados.   
 Se houver lacunas no LSN, significando que há uma quebra na cadeia de logs, a tabela conterá uma linha especial para cada segmento ausente do LSN.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|A URL do arquivo de backup.|  
-|backup_type|NVARCHAR(6)|‘DB’ para o backup do banco de dados ‘LOG’ para o backup de log|  
+|backup_type|NVARCHAR(6)|'DB' para o banco de dados de backup 'LOG' para o backup de log|  
 |expiration_date|DATETIME|A data em que este arquivo deve ser excluído. Isso é definido com base na capacidade de recuperar o banco de dados para um ponto no tempo dentro do período de retenção especificado.|  
 |database_guid|UNIQUEIDENTIFIER|O valor de GUID para o banco de dados especificado.  A GUID identifica um banco de dados com exclusividade.|  
 |first_lsn|NUMERIC(25, 0)|Número de sequência de log do primeiro ou mais antigo registro de log no conjunto de backup. Pode ser NULL.|  
@@ -75,7 +75,7 @@ Se houver lacunas no LSN, significando que há uma quebra na cadeia de logs, a t
  Requer **selecionar** permissões nessa função.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir lista todos os backups disponíveis feitos pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados ‘MyDB’  
+ O exemplo a seguir lista todos os backups disponíveis feitos pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados 'MyDB'  
   
 ```  
 SELECT *   

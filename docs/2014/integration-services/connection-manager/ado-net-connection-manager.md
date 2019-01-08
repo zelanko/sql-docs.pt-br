@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
@@ -15,19 +14,19 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7452c96f624199bb2dca7d1b817b60ce68dafb42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c58df877a98ac5c62aeb7d7ca45beed7f129eaf0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147546"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799808"
 ---
 # <a name="adonet-connection-manager"></a>Gerenciador de conexões ADO.NET
   Um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite que um pacote acesse fontes de dados usando um provedor .NET. Esse gerenciador de conexões é geralmente usado para acessar fontes de dados como do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e também fontes de dados exibidas pelo OLE DB e XML em tarefas personalizadas, gravadas em códigos gerenciados e usando uma linguagem C#.  
   
  Quando você adiciona uma [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexão a um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão manager é resolvido como um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] conexão em tempo de execução, define propriedades do Gerenciador da conexão e adiciona o Gerenciador de conexão o `Connections` coleção do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `ADO.NET`. O valor de `ConnectionManagerType` está qualificado para incluir o nome do provedor de .NET que usa o Gerenciador de conexão.  
+ A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `ADO.NET`. O valor de `ConnectionManagerType` está qualificado para incluir o nome do provedor .NET usado pelo gerenciador de conexões.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>Solução de problemas do gerenciador de conexões ADO.NET  
  Você pode registrar as chamadas que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz a provedores de dados externos. Você pode usar esse recurso de registro para solucionar problemas de conexões que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz com fontes de dados externas. Para registrar as chamadas que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz aos provedores de dados externos, habilite o registro do pacote e selecione o evento **Diagnóstico** no nível de pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -61,9 +60,9 @@ ms.locfileid: "48147546"
   
 -   [Configurar Gerenciador de Conexões ADO.NET](../configure-ado-net-connection-manager.md)  
   
- Para obter informações sobre como configurar um Gerenciador de conexão programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; conexões](integration-services-ssis-connections.md)  
+ [Conexões do SSIS &#40;Integration Services&#41;](integration-services-ssis-connections.md)  
   
   

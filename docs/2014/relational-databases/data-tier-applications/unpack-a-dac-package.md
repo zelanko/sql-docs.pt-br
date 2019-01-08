@@ -15,19 +15,19 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798728"
 ---
 # <a name="unpack-a-dac-package"></a>Desempacotar um pacote de DAC
   Use a caixa de diálogo Desempacotar Aplicativo da Camada de Dados para descompactar os scripts e arquivos de um pacote de DAC (aplicativo da camada de dados). Os scripts e arquivos são colocados em uma pasta onde podem ser examinados antes do pacote ser usado para implantar o DAC em um sistema de produção. O conteúdo de um DAC também pode ser comparado com o conteúdo de outro pacote desempacotado em outra pasta.  
   
 1.  **Antes de começar:**  [Segurança](#Security)  
   
-2.  **Para desempacotar um DAC, usando:**  [Caixa de diálogo Desempacotar Aplicativo da Camada de Dados](#UnpackDACDial), [Examinar o Conteúdo de um Pacote de DAC](#ExamDACPack)  
+2.  **Para desempacotar um DAC, usando:**  [Caixa de diálogo de aplicativo de camada de dados desempacotar](#UnpackDACDial), [examinar o conteúdo de um pacote de DAC](#ExamDACPack)  
   
 ##  <a name="Security"></a> Segurança  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário.  
@@ -83,7 +83,7 @@ ms.locfileid: "48125476"
  Para obter mais informações, consulte [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de Dados](data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](upgrade-a-data-tier-application.md)  
   

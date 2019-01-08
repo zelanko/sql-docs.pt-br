@@ -11,12 +11,12 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211946"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363368"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexão XML (SSRS)
   Para incluir dados em uma fonte de dados XML em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo XML. Esse tipo interno de fonte de dados é baseado na extensão de dados XML. Use esse tipo de fonte de dados para se conectar e recuperar dados de documentos XML, serviços Web ou XML inseridos na consulta.  
@@ -47,7 +47,7 @@ ms.locfileid: "48211946"
   
 -   Usuário atual do Windows (também conhecido como segurança integrada).  
   
--   Nenhuma credencial é necessária. Se você não selecionar nenhuma credencial, o acesso Anônimo será usado. Verifique se você definiu a conta de execução autônoma do servidor de relatório para se conectar a uma fonte de dados externa. A extensão de processamento de dados XML não passa credenciais para a URL de destino nem para o serviço Web; a conexão não será bem-sucedida a menos que você tenha definido a conta de execução autônoma. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+-   Nenhuma credencial é necessária. Se você não selecionar nenhuma credencial, o acesso Anônimo será usado. Verifique se você definiu a conta de execução autônoma do servidor de relatório para se conectar a uma fonte de dados externa. A extensão de processamento de dados XML não passa credenciais para a URL de destino nem para o serviço Web; a conexão não será bem-sucedida a menos que você tenha definido a conta de execução autônoma. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
   
  Não há suporte para credenciais armazenadas nem solicitadas. Lembre-se de que, se você desabilitar a segurança integrada do Windows, não poderá usá-la para recuperar dados. Se você especificar as credenciais armazenadas ou solicitadas, ocorrerá um erro em tempo de execução.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "48211946"
   
  Os valores possíveis para uma consulta de conjunto de dados de uma fonte de dados do tipo XML são mostrados abaixo.  
   
--   *Vazio*: Use uma consulta vazia para criar um conjunto de resultados padrão. A consulta padrão é criada lendo a fonte de dados e desviando a hierarquia do nó XML para a primeira coleção de folhas. O conjunto de resultados inclui todos os nós com valores de texto e todos os atributos de nó ao longo desse caminho. As colunas no conjunto de resultados são mapeadas para os campos no conjunto de dados.  
+-   *Vazio*: Use uma consulta em branco para criar um conjunto de resultados padrão. A consulta padrão é criada lendo a fonte de dados e desviando a hierarquia do nó XML para a primeira coleção de folhas. O conjunto de resultados inclui todos os nós com valores de texto e todos os atributos de nó ao longo desse caminho. As colunas no conjunto de resultados são mapeadas para os campos no conjunto de dados.  
   
--   Um caminho de elemento: Especifica a sequência de nós a serem usadas ao recuperar dados XML da fonte de dados.  
+-   Um caminho de elemento: Especifica a sequência dos nós a ser usada ao recuperar dados XML da fonte de dados.  
   
--   Um elemento consulta XML: especificação do XML de uma consulta com os seguintes elementos opcionais:  
+-   Um elemento consulta XML: Uma especificação de consulta XML com os seguintes elementos opcionais:  
   
     -   **Para um serviço Web:**  
   
@@ -108,14 +108,14 @@ ms.locfileid: "48211946"
   
          `<ElementPath IgnoreNamespaces="true">`  *caminho do elemento*  `</ElementPath>`  
   
- Para obter mais informações sobre sintaxe de consulta, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
+ Para obter mais informações sobre sintaxe de consulta, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
   
- Para obter exemplos, consulte [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)[Reporting Services: usando fontes de dados XML e de serviço Web].  
+ Para obter exemplos, consulte [Reporting Services: Usando XML e fontes de dados de serviço Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar os dados do serviço Web XML  
  A extensão de processamento de dados XML não detecta o esquema para você. Portanto, você deve ter alguma maneira de descobrir quais métodos SOAP recuperarão os dados desejados. Você também deve entender o namespace ou esquema de endereçamento que o serviço Web usa para seus dados.  
   
- Para um serviço Web, você pode fornecer um elemento <`Query`> que especifica um método a ser chamado ou ação SOAP. Você pode deixar a consulta em branco e usar a consulta padrão se os dados XML tiverem uma estrutura hierárquica que gera os dados que você deseja usar em seu relatório. Os atributos e valores de nó do elemento XML recuperados quando a consulta é executada são mapeados para os campos do conjunto de dados usados no seu relatório.  
+ Para um serviço Web, você pode fornecer um elemento <`Query`> que especifica um método a ser chamado ou uma ação SOAP. Você pode deixar a consulta em branco e usar a consulta padrão se os dados XML tiverem uma estrutura hierárquica que gera os dados que você deseja usar em seu relatório. Os atributos e valores de nó do elemento XML recuperados quando a consulta é executada são mapeados para os campos do conjunto de dados usados no seu relatório.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Requisitos para recuperar os dados de documento XML  
  Usando o protocolo http, o servidor deve retornar dados XML ou os dados XML devem ser inseridos no elemento XML `Query`. Se você se referir a um documento XML diretamente usando o protocolo http, a extensão deverá ser .xml.  
@@ -124,7 +124,7 @@ ms.locfileid: "48211946"
   
  Você pode fornecer um caminho de elemento usando a sintaxe XML semelhante a XQuery.  
   
- Para obter mais informações, consulte [Sintaxe caminho de elemento para dados de relatório XML &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
+ Para obter mais informações, consulte [Sintaxe caminho de elemento para dados de relatório XML &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Parâmetros  
  A consulta não é analisada para identificar parâmetros.  
@@ -160,7 +160,7 @@ ms.locfileid: "48211946"
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
 ## <a name="see-also"></a>Consulte também  

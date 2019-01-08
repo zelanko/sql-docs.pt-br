@@ -1,21 +1,21 @@
 ---
-title: Lição 4 resultados potenciais de previsão usando modelos do R (aprendizado de máquina do SQL Server) | Microsoft Docs
+title: Lição 4 Predict potencial os resultados usando modelos do R - aprendizagem de máquina do SQL Server
 description: Tutorial que mostra como colocar o script R inserido no SQL Server em procedimentos armazenados com funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/30/2018
+ms.date: 11/16/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032533"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644776"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lição 4: Previsões de execução usando o R inserido em um procedimento armazenado
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lição 4: Execute previsões usando R inserido em um procedimento armazenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
@@ -24,7 +24,7 @@ Nesta etapa, você aprenderá a usar o modelo em relação a novas observações
 
 - **Modo de pontuação em lote**: Use uma consulta SELECT como uma entrada para o procedimento armazenado. O procedimento armazenado retorna uma tabela de observações correspondente aos casos de entrada.
 
-- **Modo de pontuação individual**: passe um conjunto de valores de parâmetros individuais como entrada.  O procedimento armazenado retorna uma única linha ou valor.
+- **Modo de pontuação individual**: Passe um conjunto de valores de parâmetro individuais como entrada.  O procedimento armazenado retorna uma única linha ou valor.
 
 Primeiro, vamos ver como a pontuação funciona em geral.
 
@@ -32,12 +32,12 @@ Primeiro, vamos ver como a pontuação funciona em geral.
 
 O procedimento armazenado **RxPredict** ilustra a sintaxe básica para encapsular uma chamada de rxPredict RevoScaleR em um procedimento armazenado.
 
-```SQL
-CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
+```sql
+CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
-  
-DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);  
+
+DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
     mod <- unserialize(as.raw(model)); 
@@ -70,7 +70,7 @@ Um cenário mais comum é gerar previsões para várias observações no modo de
 
 1.  Comece obtendo um conjunto menor de trabalhar com dados de entrada. Esta consulta cria uma lista das “10 primeiras” corridas com contagem de passageiros e outros recursos necessários para fazer uma previsão.
   
-    ```SQL
+    ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
     
     FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
@@ -86,7 +86,7 @@ Um cenário mais comum é gerar previsões para várias observações no modo de
 
     **Resultados do exemplo**
     
-    ```
+    ```sql
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
     1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
     1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
@@ -95,12 +95,11 @@ Um cenário mais comum é gerar previsões para várias observações no modo de
 
 2. Criar um procedimento armazenado chamado **RxPredictBatchOutput** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-    ```SQL
-    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
-    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
     AS
     BEGIN
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script 
       @language = N'R',
       @script = N'
@@ -119,13 +118,13 @@ Um cenário mais comum é gerar previsões para várias observações no modo de
 
 3.  Forneça o texto da consulta em uma variável e passá-lo como um parâmetro para o procedimento armazenado:
 
-    ```SQL
+    ```sql
     -- Define the input data
     DECLARE @query_string nvarchar(max)
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
-
+    
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
 O procedimento armazenado retorna uma série de valores que representam a previsão para cada uma das viagens 10 principais. No entanto, as primeiras corridas também são corridas de passageiro único com uma distância de corrida relativamente curta, para o qual o driver é improvável que receber uma gorjeta.
@@ -145,12 +144,12 @@ Se você chamar o procedimento armazenado de um aplicativo externo, certifique-s
 
 1. Criar um procedimento armazenado **RxPredictSingleRow**.
   
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script  
       @language = N'R',
       @script = N'  
@@ -170,20 +169,21 @@ Se você chamar o procedimento armazenado de um aplicativo externo, certifique-s
   
     Abra uma nova **consulta** janela e chame o procedimento armazenado, fornecendo valores para cada um dos parâmetros. Os parâmetros representam as colunas de recursos usadas pelo modelo e são necessários.
 
-    ```
-    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+    @passenger_count = 1,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
     @pickup_longitude = -73.973373,
     @dropoff_latitude =  40.782139,
-    @dropoff_longitude = 73.977303
+    @dropoff_longitude = -73.977303
     ```
 
     Ou, use este formulário mais curto com suporte para [parâmetros para um procedimento armazenado](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
-    ```SQL
-    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. Os resultados indicam que a probabilidade de receber uma gorjeta é baixa (zero) dessas viagens 10 principais, como todos são corridas de passageiro único em uma distância relativamente curta.

@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837754"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591480"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'**_schedule_name_**'**  
  O nome da agenda. *schedule_name* está **sysname**, sem padrão.  
   
  [  **@enabled =** ] *habilitado*  
@@ -64,7 +64,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@freq_type =** ] *freq_type*  
  Um valor que indica quando um trabalho deve ser executado. *freq_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**4**|Diariamente|  
@@ -98,7 +98,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Hours (horas)|  
   
  [  **@freq_subday_interval =** ] *freq_subday_interval*  
- O número de *freq_subday_type* períodos ocorrer entre cada execução de um trabalho. *freq_subday_interval* está **int**, com um padrão de **0**. Observação: o intervalo deve ser maior que 10 segundos. *freq_subday_interval* é ignorado nos casos em que *freq_subday_type* é igual a **1**.  
+ O número de *freq_subday_type* períodos ocorrer entre cada execução de um trabalho. *freq_subday_interval* está **int**, com um padrão de **0**. Observação: Intervalo deve ser maior que 10 segundos. *freq_subday_interval* é ignorado nos casos em que *freq_subday_type* é igual a **1**.  
   
  [  **@freq_relative_interval =** ] *freq_relative_interval*  
  Ocorrência de um trabalho de *freq_interval* em cada mês, se *freq_interval* é 32 (mensal relativo). *freq_relative_interval* está **int**, com um padrão de **0**, e pode ser um destes valores. *freq_relative_interval* é ignorado nos casos em que *freq_type* não é igual a 32.  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@active_end_time =** ] *active_end_time*  
  A hora em qualquer dia entre *active_start_date* e *active_end_date* para terminar a execução de um trabalho. *active_end_time* está **int**, com um padrão de **235959**, que indica a 11:59:59 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**  
  O nome da entidade de segurança do servidor que possui a agenda. *owner_login_name* está **sysname**, com um padrão NULL, que indica que a agenda é pertence ao criador.  
   
- [ **@schedule_uid**=] *schedule_uid * * * saída**  
+ [ **@schedule_uid**=] _schedule_uid_**saída**  
  Um identificador exclusivo da agenda. *schedule_uid* é uma variável do tipo **uniqueidentifier**.  
   
- [ **@schedule_id**=] *schedule_id * * * saída**  
+ [ **@schedule_id**=] _schedule_id_**saída**  
  Um identificador da agenda. *schedule_id* é uma variável do tipo **int**.  
   
  [ **@originating_server**= ] *server_name*  
@@ -179,7 +179,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. Criando uma agenda e anexando-a a vários trabalhos  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>b. Criando uma agenda e anexando-a a vários trabalhos  
  O exemplo a seguir cria uma agenda chamado `NightlyJobs`. Os trabalhos que usam essa agenda são executados diariamente quando a hora no servidor é `01:00`. O exemplo anexa a agenda ao trabalho `BackupDatabase` e ao trabalho `RunReports`.  
   
 > [!NOTE]  

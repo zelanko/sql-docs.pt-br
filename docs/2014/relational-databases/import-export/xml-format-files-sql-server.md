@@ -14,12 +14,12 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201036"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373868"
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece um esquema XML que define a sintaxe para escrever *arquivos de formato XML* a serem usados para importar dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Arquivos no formato XML devem aderir a este esquema que está definido no Schema Definition Language XML (XSDL). Os arquivos de formato XML só têm suporte quando as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são instaladas junto com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -178,7 +178,7 @@ ms.locfileid: "48201036"
 |LENGTH **="*`n`*"**|Esse atributo define o comprimento de uma instância de um tipo de dados de comprimento fixo.<br /><br /> O valor de *n* deve ser um inteiro positivo.|Opcional, a menos que exigido pelo valor xsi:type|  
 |PREFIX_LENGTH **= "*`p`*"**|Esse atributo define o comprimento do prefixo para uma representação de dados binária. O valor PREFIX_LENGTH, *p*, deve ser um dos seguintes: 1, 2, 4 ou 8.|Opcional, a menos que exigido pelo valor xsi:type|  
 |MAX_LENGTH **= "*`m`*"**|Esse atributo é o número máximo de bytes que pode ser armazenado em um determinado campo. Sem uma tabela de destino, o comprimento máximo da coluna é conhecido. O atributo MAX_LENGTH restringe o comprimento máximo de uma coluna de caracteres de saída, limitando o armazenamento alocado para o valor da coluna. Isso é especialmente conveniente ao usar a opção BULK da função OPENROWSET em uma cláusula SELECT FROM.<br /><br /> O valor de *m* deve ser um inteiro positivo. Por padrão, o comprimento máximo é 8.000 caracteres para uma coluna **char** e 4.000 caracteres para uma coluna **nchar** .|Opcional|  
-|AGRUPAMENTO **= "*`collationName`*"**|COLLATION só é permitido para campos de caracteres. Para obter uma lista dos nomes de agrupamento do SQL, veja [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Opcional|  
+|AGRUPAMENTO **= "*`collationName`*"**|COLLATION só é permitido para campos de caracteres. Para obter uma lista dos nomes de ordenação do SQL, veja [Nome de ordenação do SQL Server &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Opcional|  
 |TERMINADOR **= "*`terminator`*"**|Esse atributo especifica o terminador de um campo de dados. O terminador pode ser qualquer caractere. O terminador deve ser um caractere exclusivo que não faça parte dos dados.<br /><br /> Por padrão, o terminador de campo é o caractere de tabulação (representado como \t). Para representar uma marca de parágrafo, use \r\n.|Usado somente com um xsi:type de dados de caracteres, que requer esse atributo|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Valores de Xsi:type do elemento \<FIELD>  
@@ -224,7 +224,7 @@ ms.locfileid: "48201036"
   
  Um campo é mapeado para uma coluna na tabela de destino usando os seguintes atributos:  
   
-|Atributo COLUMN|Description|Opcional /<br /><br /> Obrigatório|  
+|Atributo COLUMN|Descrição|Opcional /<br /><br /> Obrigatório|  
 |----------------------|-----------------|------------------------------|  
 |CÓDIGO-FONTE **= "*`fieldID`*"**|Especifica a ID do campo que é mapeado para a coluna.<br /><br /> < COLUMN SOURCE **= "*`fieldID`*"**/ > mapeia para < FIELD ID **= "*`fieldID`*"**/>|Obrigatório|  
 |NAME = "*columnName*"|Especifica o nome da coluna no conjunto de linhas representado pelo arquivo de formato. Esse nome de coluna é usado para identificar a coluna no conjunto de resultados e não precisa corresponder ao nome da coluna usado na tabela de destino.|Obrigatório|  
@@ -249,7 +249,7 @@ ms.locfileid: "48201036"
 |Cadeia de caracteres|`SQLCHAR`, `SQLVARYCHAR`, `SQLNCHAR` e `SQLNVARCHAR`|Nenhum.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Para importar ou exportar em massa dados SQLXML, use um dos seguinte tipos de dados em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código cliente ou na página de código indicada pelo agrupamento), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode) e SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
+>  Para exportar ou importar dados SQLXML em massa, use um dos tipos de dados a seguir em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código do cliente ou na página de código implicada pelo agrupamento), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode), SQLBINARY ou SQLVARYBIN (os dados são enviados sem qualquer conversão).  
   
  Para obter mais informações sobre os tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
@@ -308,9 +308,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. Ordenar campos de dados de caracteres da mesma forma que colunas de tabelas  
  O exemplo a seguir mostra um arquivo de formato XML que descreve um arquivo de dados com três campos de dados de caracteres. O arquivo de formato mapeia o arquivo de dados para uma tabela que contém três colunas. Os campos de dados correspondem um a um às colunas da tabela.  
   
- **Tabela (linha):** Person [Age int, FirstName varchar(20), LastName varchar(30)]  
+ **Tabela (linha):** Person (Age int, varchar(20) FirstName, LastName varchar(30))  
   
- **Arquivo de dados (registro)**: Age\<tab>Firstname\<tab>Lastname\<return>  
+ **Arquivo de dados (registro):** Idade\<tab > Firstname\<tab > Lastname\<retornar >  
   
  O arquivo de formato XML a seguir grava do arquivo de dados na tabela.  
   
@@ -321,7 +321,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -346,9 +346,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordenar campos de dados e colunas de tabela diferentemente  
  O exemplo a seguir mostra um arquivo de formato XML que descreve um arquivo de dados com três campos de dados de caracteres. O arquivo de formato mapeia o arquivo de dados para uma tabela que contém três colunas ordenadas diferentemente dos campos do arquivo de dados.  
   
- **Tabela (linha):** Person [Age int, FirstName varchar(20), LastName varchar(30)]  
+ **Tabela (linha):** Person (Age int, varchar(20) FirstName, LastName varchar(30))  
   
- **Arquivo de dados (registro)**: Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Arquivo de dados** (registro): Idade\<tab > Lastname\<tab > Firstname\<retornar >  
   
  No elemento `<RECORD>` , o arquivo de formato representa os valores de dados em todos os três campos como dados de caracteres.  
   
@@ -357,7 +357,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -376,14 +376,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  Para obter um exemplo equivalente de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , veja [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
+>  Para obter um exemplo equivalente de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , veja [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
 ### <a name="c-omitting-a-data-field"></a>C. Omitir um campo de dados  
  O exemplo a seguir mostra um arquivo de formato XML que descreve um arquivo de dados com quatro campos de dados de caracteres. O arquivo de formato mapeia o arquivo de dados para uma tabela que contém três colunas. O segundo campo de dados não corresponde a nenhuma coluna de tabela.  
   
- **Tabela (linha):** Person [Age int, FirstName Varchar(20), LastName Varchar(30)]  
+ **Tabela (linha):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **Arquivo de dados (registro):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **Arquivo de dados (registro):** Idade\<tab > employeeID\<tab > Firstname\<tab > Lastname\<retornar >  
   
  No elemento `<RECORD>` , o arquivo de formato representa os valores de dados em todos os quatro campos como dados de caractere. Para cada campo, o atributo TERMINATOR indica o terminador que segue o valor dos dados.  
   
@@ -391,7 +391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ```  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -423,7 +423,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -465,7 +465,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -484,7 +484,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  

@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 788aead525e8a4d21728de60a2162aafb5d286cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163286"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355650"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Abrir o Designer de Tabela (Visual Database Tools)
   O Designer de Tabela é uma ferramenta visual que permite projetar e visualizar tabelas do banco de dados ao qual você está conectado. Você pode usar o Designer de Tabela para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições.  
@@ -34,7 +34,7 @@ ms.locfileid: "48163286"
      O menu **Designer de Tabela** é adicionado ao menu principal e os painéis do designer são abertos.  
   
 > [!NOTE]  
->  Se você estiver conectado a um banco de dados SQL Azure, a nova opção de tabela iniciará um script de modelo de criação de tabela. Edite os parâmetros e execute o script para criar uma nova tabela. Para obter mais informações, consulte [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948)(em inglês).  
+>  Se você estiver conectado a um banco de dados SQL Azure, a nova opção de tabela iniciará um script de modelo de criação de tabela. Edite os parâmetros e execute o script para criar uma nova tabela. Para obter mais informações, consulte [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948)(em inglês).  
   
 ### <a name="open-an-existing-table"></a>Abrir uma tabela existente  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -24,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169309"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797948"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referência da interface do usuário do utilitário de Execução de Pacotes (DtExecUI)
   Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando `dtexecui` em um prompt de comando, é uma alternativa à execução de pacotes usando o **DTExec** ferramenta de prompt de comando.  
@@ -67,7 +66,7 @@ ms.locfileid: "49169309"
   
 |||  
 |-|-|  
-|Valor|Description|  
+|Valor|Descrição|  
 |**SQL Server**|Selecione esta opção quando o pacote estiver no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** *nome de usuário* e **/PASSWORD** *senha* options to the comme prompt.|  
 |**Sistema de arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
 |**Armazenamento de Pacotes SSIS**|Selecione esta opção quando o pacote estiver no Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
@@ -99,7 +98,7 @@ ms.locfileid: "49169309"
 >  Quando possível, use a Autenticação do Windows.  
   
  **Pacote**  
- Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote SSIS** .  
+ Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote do SSIS**.  
   
 #### <a name="package-source--file-system"></a>Origem do pacote = Sistema de arquivos  
  **Pacote**  
@@ -119,7 +118,7 @@ ms.locfileid: "49169309"
  Esta opção não estará disponível quando você executar um pacote armazenado no **Repositório de Pacotes SSIS**.  
   
  **Pacote**  
- Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote SSIS** .  
+ Digite o nome do pacote ou clique no botão de reticências **(…)** para localizar um pacote usando a caixa de diálogo **Selecionar um Pacote do SSIS**.  
   
 ## <a name="configurations-page"></a>Página Configurações  
  Use a página **Configurações** da caixa de diálogo **Utilitário de Execução de Pacotes** para selecionar os arquivos de configuração a serem carregados no momento da execução e para especificar a ordem em que serão carregados.  
@@ -207,7 +206,7 @@ ms.locfileid: "49169309"
  Liste o arquivo de ponto de verificação que será usado pelo pacote se você ativar os pontos de verificação do pacote.  
   
  **Procurar**  
- Clique no botão Procurar **(…)** para localizar o arquivo de ponto de verificação usando a caixa de diálogo **Abrir** se você habilitar os pontos de verificação do pacote. Se algum arquivo de ponto de verificação já tiver sido especificado, ele será substituído pelo arquivo selecionado.  
+ Se você habilitar os pontos de verificação do pacote, clique no botão Procurar **(…)** para localizar o arquivo de ponto de verificação usando a caixa de diálogo **Abrir**. Se algum arquivo de ponto de verificação já tiver sido especificado, ele será substituído pelo arquivo selecionado.  
   
  **Substituir opções de reinicialização**  
  Indique se as opções de reinicialização serão substituídas se você ativar os pontos de verificação do pacote.  
@@ -228,7 +227,7 @@ ms.locfileid: "49169309"
  **Eventos do console**  
  Indique os eventos e os tipos de mensagens a serem relatados.  
   
- **Nenhuma**  
+ **Nenhum**  
  Selecione para não gerar relatórios.  
   
  **Erros**  

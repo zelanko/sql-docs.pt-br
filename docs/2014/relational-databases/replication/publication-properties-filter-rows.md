@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.filterrows.f1
@@ -13,12 +12,12 @@ ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33c0344fd0b195f920919bcabfdbf49fb0b63dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a12867b5efe457fa2361a85ac426db07c2760ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065666"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780378"
 ---
 # <a name="publication-properties-filter-rows"></a>Propriedades de Publicação, Filtrar Linhas
   A página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação** permite adicionar, editar ou excluir e permite também:  
@@ -51,7 +50,7 @@ ms.locfileid: "48065666"
  Esse painel é populado com filtros à medida que são adicionados a artigos de tabela na publicação. Tabelas com filtros de linha são mostradas como nós de alto nível no painel. Para publicações de mesclagem, tabelas para as quais a filtragem foi estendida através de um filtro de junção são mostradas como nós filhos.  
   
  **Adicionar**  
- Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar Junção para Estender o Filtro Selecionado**; **Gerar Filtros Automaticamente**.  
+ Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicando em **adicionar** para uma mesclagem publicação exibe três opções: **Adicionar filtro**; **Adicionar junção para estender o filtro selecionado**; **Gerar automaticamente filtros**.  
   
 -   Selecione **Adicionar Filtro** para iniciar a caixa de diálogo **Adicionar filtro** . Essa caixa de diálogo permite aplicar filtros de linha a um artigo de tabela. Na caixa de diálogo **Adicionar Filtro** você pode, por exemplo, especificar que uma tabela com dados de cliente só contenha dados de clientes franceses quando for replicada para Assinantes.  
   

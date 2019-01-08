@@ -16,12 +16,12 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fb0616503af2cb4da30fd69a98deaf635095b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057676"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360348"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Conceitos de programação da Integração CLR (Common Language Runtime)
   A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] apresenta a integração do componente CLR do .NET Framework para o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Isso significa que você pode agora gravar procedimentos armazenados, gatilhos, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e funções de streaming com valor de tabela, usando qualquer linguagem do .NET Framework, incluindo o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET e o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
@@ -29,7 +29,7 @@ ms.locfileid: "48057676"
  O namespace Microsoft.SqlServer.Server inclui a funcionalidade principal para programação de CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Porém, o namespace Microsoft.SqlServer.Server é documentado no .NET Framework SDK. Esta documentação não é incluída em Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Por padrão, o .NET Framework é instalado com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas não o .NET Framework SDK. Sem o SDK instalado no computador e incluído na coleção de Manuais Online, os links para o conteúdo do SDK desta seção não funciona. Instale o .NET Framework SDK. Uma vez instalado, adicione o SDK à coleta de Manuais Online e ao sumário seguindo as instruções em [instalar o SDK do .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  Por padrão, o .NET Framework é instalado com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas não o .NET Framework SDK. Sem o SDK instalado no computador e incluído na coleção de Manuais Online, os links para o conteúdo do SDK desta seção não funciona. Instale o .NET Framework SDK. Uma vez instalado, adicione o SDK à coleta de Manuais Online e ao sumário seguindo as instruções em [instalar o SDK do .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
  A tabela a seguir lista os tópicos desta seção.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "48057676"
   
 ## <a name="see-also"></a>Consulte também  
  [Assemblies &#40;mecanismo de banco de dados&#41;](assemblies-database-engine.md)   
- [Instalar o SDK do .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [Instalar o SDK do .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

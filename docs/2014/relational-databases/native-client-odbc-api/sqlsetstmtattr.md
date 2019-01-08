@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208507"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361278"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não dá suporte ao modelo de cursor misto (conjunto de chaves/dinâmico). As tentativas de definir o tamanho do conjunto de chaves usando SQL_ATTR_KEYSET_SIZE falhará se o valor definido não for igual a 0.  
@@ -48,7 +48,7 @@ ms.locfileid: "48208507"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  O atributo SQL_SOPT_SS_CURSOR especifica se o driver usará opções de desempenho específicas do driver em cursores. [SQLGetData](sqlgetdata.md) não é permitido quando estas opções são definidas. A configuração padrão é SQL_CO_OFF. O valor *ValuePtr* é do tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descrição|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|Padrão. Desabilita cursores de somente avanço, somente leitura e autofetch, habilita **SQLGetData** em cursores de somente avanço, somente leitura. Quando SQL_SOPT_SS_CURSOR_OPTIONS for definido como SQL_CO_OFF, o tipo de cursor não será alterado. Ou seja, o cursor somente de avanço rápido permanecerá um cursor somente de avanço rápido. Para alterar o tipo de cursor, o aplicativo agora deve definir um tipo de cursor diferente usando `SQLSetStmtAttr`/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Habilita cursores de somente avanço, somente leitura, desabilita **SQLGetData** em cursores de somente avanço, somente leitura.|  
@@ -62,9 +62,9 @@ ms.locfileid: "48208507"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  O atributo SQL_SOPT_SS_DEFER_PREPARE determina se a instrução é preparada imediatamente ou adiada até **SQLExecute**, [SQLDescribeCol](sqldescribecol.md) ou [SQLDescribeParam](sqldescribeparam.md) é executado. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e anteriores, essa propriedade é ignorada (sem adiamento da preparação). O valor *ValuePtr* é do tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descrição|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Padrão. Depois de chamar [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), a preparação da instrução é adiada até **SQLExecute** é chamado ou a operação de metapropriedade (**SQLDescribeCol** ou **SQLDescribeParam**) é executado.|  
+|SQL_DP_ON|Padrão. Depois de chamar [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), a preparação da instrução é adiada até **SQLExecute** é chamado ou a operação de metapropriedade (**SQLDescribeCol** ou **SQLDescribeParam**) é executado.|  
 |SQL_DP_OFF|A instrução será preparada assim **SQLPrepare** é executado.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -72,7 +72,7 @@ ms.locfileid: "48208507"
   
  O valor *ValuePtr* é do tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descrição|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Padrão. O driver não converte dados de data, hora e moeda em dados de cadeia de caracteres usando a configuração de localidade do cliente.|  
 |SQL_RE_ON|O driver usa a configuração de localidade do cliente ao converter dados de data, hora e moeda em dados de cadeia de caracteres.|  
@@ -87,7 +87,7 @@ ms.locfileid: "48208507"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  O atributo SQL_SOPT_SS_TEXTPTR_LOGGING alterna o log de operações em colunas que contenham **texto** ou **imagem** dados. O valor *ValuePtr* é do tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descrição|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Desabilita o log de operações executadas nos **texto** e **imagem** dados.|  
 |SQL_TL_ON|Padrão. Habilita o log de operações executadas nos **texto** e **imagem** dados.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48208507"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  O atributo SQL_SOPT_SS_HIDDEN_COLUMNS expõe, no conjunto de resultados, colunas ocultas em uma instrução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE. Por padrão, o driver não expõe estas colunas. O valor *ValuePtr* é do tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descrição|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|Padrão. As colunas FOR BROWSE são ocultadas do conjunto de resultados.|  
 |SQL_HC_ON|Expõe colunas FOR BROWSE.|  
@@ -122,14 +122,14 @@ ms.locfileid: "48208507"
   
  O tipo para SQL_SOPT_SS_PARAM_FOCUS é SQLULEN.  
   
- O padrão é 0, o que significa que estas chamadas são endereçadas a parâmetros que correspondem a marcadores de parâmetro na instrução SQL. Quando definido como o número de um parâmetro com valor de tabela, estas chamadas são endereçadas a colunas desse parâmetro com valor de tabela. Quando definido como um valor que não é o número de um parâmetro com valor de tabela, estas chamadas retornam o erro IM020: "O foco do parâmetro não se refere a um parâmetro com valor de tabela".  
+ O padrão é 0, o que significa que estas chamadas são endereçadas a parâmetros que correspondem a marcadores de parâmetro na instrução SQL. Quando definido como o número de um parâmetro com valor de tabela, estas chamadas são endereçadas a colunas desse parâmetro com valor de tabela. Quando definido como um valor que não é o número do parâmetro de um parâmetro com valor de tabela, estas chamadas retornam o erro IM020: "O foco do parâmetro não faz referência a um parâmetro com valor de tabela".  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  O atributo SQL_SOPT_SS_NAME_SCOPE especifica o escopo de nome para chamadas de função de catálogo subsequentes. O conjunto de resultados retornado por SQLColumns depende da configuração de SQL_SOPT_SS_NAME_SCOPE.  
   
  O tipo para SQL_SOPT_SS_NAME_SCOPE é SQLULEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descrição|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|Padrão.<br /><br /> Ao usar parâmetros com valor de tabela, indica que metadados de tabelas reais devem ser retornados.<br /><br /> Ao usar o recurso de colunas esparsas, SQLColumns retornará apenas colunas que não são membros de esparso `column_set`.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que o aplicativo exige metadados para um tipo de tabela, em vez de uma tabela real (funções de catálogo devem retornar metadados para tipos de tabela). O aplicativo passa então o TYPE_NAME do parâmetro com valor de tabela como o *TableName* parâmetro.|  
@@ -146,7 +146,7 @@ ms.locfileid: "48208507"
  Se a função de um catálogo diferente SQLTables, SQLColumns ou SQLPrimaryKeys é chamada quando SQL_SOPT_SS_NAME_SCOPE tiver um valor diferente de SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR será retornado. Um registro de diagnóstico é gerado com SQLSTATE HY010 e a mensagem "Erro de sequência de função (SQL_SOPT_SS_NAME_SCOPE não está definido como SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [Função SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

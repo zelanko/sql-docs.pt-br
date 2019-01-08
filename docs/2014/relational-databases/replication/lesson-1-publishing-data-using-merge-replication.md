@@ -13,12 +13,12 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 65debc2ad15045984f43e05d0afcf3011c50f2b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112906"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589260"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lição 1: Publicando dados usando replicação de mesclagem
   Nesta lição, você aprenderá a criar uma publicação de mesclagem usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto das tabelas **Employee**, **SalesOrderHeader**e **SalesOrderDetail** no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Essas tabelas são filtradas com filtros de linha com parâmetros de modo que cada assinatura contenha uma partição exclusiva dos dados. Você também adicionará o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Agente de Mesclagem à PAL (lista de acesso à publicação). Este tutorial exige a conclusão do tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "48112906"
   
 21. Selecione **Criar um instantâneo imediatamente**, desmarque a opção **Agendar o agente de instantâneo para ser executado nos seguintes momentos**e clique em **Avançar**.  
   
-22. Na página Segurança do Agente, clique em **Configurações de Segurança**, digite \<*Machine_Name>***\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e, em seguida, clique em **OK**. Clique em **Concluir**.  
+22. Na página Segurança do Agente, clique em **Configurações de Segurança**, digite \<_Machine_Name>_**\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**. Clique em **Concluir**.  
   
 23. Na página Concluir o Assistente, insira **AdvWorksSalesOrdersMerge** na caixa **Nome da publicação** e clique em **Concluir**.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48112906"
   
 3.  Selecione a página **Lista de Acesso à Publicação** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo Adicionar Acesso à Publicação, selecione *<Machine_Name>***\repl_merge** e clique em **OK**. Clique em **OK**.  
+4.  Na caixa de diálogo Adicionar Acesso à Publicação, selecione _<Machine_Name>_**\repl_merge** e clique em **OK**. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou a publicação de mesclagem com sucesso. A seguir, você assinará essa publicação. Consulte [Lição 2: Criando uma assinatura na publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ Você criou a publicação de mesclagem com sucesso. A seguir, você assinará essa publicação. Consulte [lição 2: Criando uma assinatura para a publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar os dados publicados](publish/filter-published-data.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193666"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816328"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Práticas recomendadas de segurança com bancos de dados independentes
-  Bancos de dados independentes têm algumas ameaças exclusivas que devem ser entendidas e mitigadas pelos administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . A maioria das ameaças está relacionada à `USER WITH PASSWORD` processo de autenticação, que move o limite de autenticação do [!INCLUDE[ssDE](../../includes/ssde-md.md)] nível para o nível de banco de dados.  
+  Bancos de dados independentes têm algumas ameaças exclusivas que devem ser entendidas e mitigadas pelos administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . A maioria das ameaças está relacionada ao processo de autenticação `USER WITH PASSWORD` que move o limite de autenticação do nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o nível do banco de dados.  
   
 ## <a name="threats-related-to-users"></a>Ameaças relacionadas a usuários  
- Usuários em um banco de dados independente que têm o `ALTER ANY USER` permissão, como os membros do **db_owner** e **db_securityadmin** banco de dados fixa, podem conceder acesso ao banco de dados sem o dados de conhecimento ou permissão se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador. A concessão de acesso a um banco de dados independente a usuários aumenta a área da superfície de ataque potencial contra toda a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os administradores devem entender essa delegação de controle de acesso e ter muito cuidado ao conceder aos usuários no banco de dados independente a `ALTER ANY USER` permissão. Todos os proprietários de banco de dados têm o `ALTER ANY USER` permissão. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditar os usuários periodicamente em um banco de dados independente.  
+ Usuários em um banco de dados independente que têm o `ALTER ANY USER` permissão, como os membros do **db_owner** e **db_securityadmin** banco de dados fixa, podem conceder acesso ao banco de dados sem o dados de conhecimento ou permissão se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador. A concessão de acesso a um banco de dados independente a usuários aumenta a área da superfície de ataque potencial contra toda a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os administradores devem entender essa delegação de controle de acesso e ter muito cuidado ao conceder permissão `ALTER ANY USER` aos usuários no banco de dados independente. Todos os proprietários de banco de dados têm a permissão `ALTER ANY USER`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditar os usuários periodicamente em um banco de dados independente.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Acessando outros bancos de dados que usam a conta Convidado  
  Os proprietários e os usuários de banco de dados com a permissão `ALTER ANY USER` podem criar usuários de banco de dados independente. Após conectar-se a um banco de dados independente em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário de banco de dados independente poderá acessar outros bancos de dados no [!INCLUDE[ssDE](../../includes/ssde-md.md)], caso os outros bancos de dados tenham habilitado a conta de **convidado** .  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- Para executar uma consulta entre bancos de dados, você deve definir o `TRUSTWORTHY` opção de banco de dados de chamada. Por exemplo se o usuário (Carlo) definida acima estiver em DB1, para executar `SELECT * FROM db2.dbo.Table1;`, a configuração `TRUSTWORTHY` deve estar ativada para o banco de dados DB1. Execute o seguinte código para definir o `TRUSTWORHTY` definindo em.  
+ Para executar uma consulta de bancos de dados cruzado, você deve definir a opção `TRUSTWORTHY` no banco de dados de chamada. Por exemplo se o usuário (Carlo) definida acima estiver em DB1, para executar `SELECT * FROM db2.dbo.Table1;`, a configuração `TRUSTWORTHY` deve estar ativada para o banco de dados DB1. Execute o código a seguir para ativar a configuração `TRUSTWORHTY`.  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

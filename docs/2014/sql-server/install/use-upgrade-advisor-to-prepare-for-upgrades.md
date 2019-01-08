@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209286"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368068"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar o Supervisor de Atualização para preparar para atualizações
   O Supervisor de Atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda você a se preparar para atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização analisa os componentes instalados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gera um relatório que identifica os problemas a serem corrigidos antes ou depois da atualização.  
@@ -65,9 +65,9 @@ ms.locfileid: "48209286"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer a partir de [site da Web do Windows Installer](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer a partir de [site da Web do Windows Installer](https://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. .NET framework 4 está disponível na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mídia do produto e para o [página de download do .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET framework 4 está disponível na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mídia do produto e para o [página de download do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Para instalar o .NET Framework 4 a partir da mídia do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localize a raiz da unidade de disco. Clique duas vezes nas pastas \redist e DotNetFrameworks; execute o dotNetFx40_Full_x86_x64.exe (para sistemas operacionais de 32 ou 64 bits).  
   

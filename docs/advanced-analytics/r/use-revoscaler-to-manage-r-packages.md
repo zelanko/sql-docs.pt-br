@@ -1,5 +1,5 @@
 ---
-title: Como usar funções RevoScaleR para localizar ou instalar o R de pacotes no SQL Server | Microsoft Docs
+title: Como usar funções RevoScaleR para localizar ou instalar pacotes R - serviços do SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563972"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645355"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Como usar funções RevoScaleR para localizar ou instalar pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ Serviços de aprendizado de máquina do SQL Server 2017 já inclui uma versão m
 
 A tabela a seguir descreve as funções usadas para gerenciamento e instalação do pacote de R.
 
-| Função | Description |
+| Função | Descrição |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Determine o caminho da biblioteca de instância no SQL Server remoto. |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Obtém o caminho para um ou mais pacotes no SQL Server remoto. |
@@ -181,7 +181,7 @@ A sincronização do pacote funciona em um por banco de dados e por usuário. Pa
 
 Execute este comando do Management Studio ou outra ferramenta que dá suporte a T-SQL, para obter uma lista de pacotes instalados na instância atual, usando `rxInstalledPackages` em um procedimento armazenado.
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 
 O `rxSqlLibPaths` função pode ser usada para determinar a biblioteca do Active Directory usada por serviços do SQL Server Machine Learning. Esse script pode retornar apenas o caminho da biblioteca para o servidor atual. 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',
