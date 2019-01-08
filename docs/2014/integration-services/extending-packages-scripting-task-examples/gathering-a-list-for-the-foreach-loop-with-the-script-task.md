@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Foreach Loop containers
@@ -17,12 +15,12 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a876962d68d081542c7c5032c1bf06a0e527fe4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 674ec4fc122c845b57026897aabe8816a6a585ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155046"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364038"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Obtendo uma lista para o loop ForEach com a tarefa Script
   O Enumerador Foreach De Variável enumera os itens em uma lista que é passada para ele em uma variável e executa as mesmas tarefas em cada item. Você pode usar o código personalizado em uma tarefa Script para preencher uma lista com esse propósito. Para obter mais informações sobre o enumerador, consulte [Contêiner do Loop Foreach](../control-flow/foreach-loop-container.md).  
@@ -30,7 +28,7 @@ ms.locfileid: "48155046"
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O exemplo a seguir usa métodos do namespace `System.IO` para reunir uma lista de pastas de trabalho do Excel no computador, que são anteriores ou posteriores a um número de dias especificado pelo usuário em uma variável. Ele busca diretórios na Unidade C recursivamente para arquivos com a extensão .xls e verifica a data da última modificação em cada arquivo para determinar se o arquivo pertence a essa lista. Ele adiciona arquivos de qualificação a um `ArrayList` e salva o `ArrayList` em uma variável para uso posterior em um contêiner do Loop de Foreach. O contêiner do Loop de Foreach é configurado para usar o Foreach de enumerador de Variável.  
   
 > [!NOTE]  
@@ -247,7 +245,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contêiner do Loop Foreach](../control-flow/foreach-loop-container.md)   

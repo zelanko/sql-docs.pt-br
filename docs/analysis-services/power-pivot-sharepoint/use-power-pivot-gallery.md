@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980579"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405391"
 ---
 # <a name="use-power-pivot-gallery"></a>Usar Galeria do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "38980579"
   
 > [!NOTE]  
 >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
-> Para exibir o conteúdo da biblioteca no Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
+> Para exibir o conteúdo da biblioteca no Microsoft Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
 > Para alterar a exibição padrão, clique na guia **Biblioteca** e depois clique em Modificar exibição. Clique em "Fazer desta a exibição padrão" e, em seguida, clique em OK para salvar a exibição padrão.  
->  Para obter mais informações sobre ao que o Microsoft Edge dá suporte, consulte o blog do Windows, [Uma ruptura com o passado, parte 2: adeus ao ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Para obter mais informações sobre quais Edge dá suporte, consulte o blog do Windows, [uma ruptura com o passado, parte 2: Adeus ao ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Para obter uma lista completa dos pré-requisitos, consulte [Criar e personalizar a galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md).  
   
 ##  <a name="icons"></a> Ícones na Galeria do Power Pivot  
  Os ícones fornecem um indicativo visual quanto à disponibilidade do conteúdo e ao status.  
   
-|Ícone|Description|  
+|Ícone|Descrição|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|O ícone de ampulheta é exibido quando uma imagem em miniatura de cada página no documento está sendo gerada. Atualize a página para exibir a atualização da imagem.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|O ícone de página é exibido quando uma pasta de trabalho ou um relatório tem mais páginas do que as que podem ser exibidas na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para exibir todas as páginas, você deve usar um aplicativo cliente.|  
@@ -68,13 +68,13 @@ ms.locfileid: "38980579"
   
 1.  Salve o arquivo.  
   
-2.  1.  **Excel 2010:** no menu Arquivo, clique em **Salvar e Enviar**.  
+2.  1.  **Excel 2010:** No menu Arquivo, clique em **salvar e enviar**.  
   
     2.  Clique em **Salvar no SharePoint**.  
   
     3.  Clique em **Opções de Publicação** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
-    1.  **Excel 2013:**  no menu Arquivo do Excel, clique em **Salvar**  
+    1.  **Excel 2013:**  No menu Arquivo, clique em **salvar**.  
   
     2.  Clique em **Opções de Exibição do Navegador** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "38980579"
 |![GMNI_btn_NewDocReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|Clique na parte de seta para baixo do botão Novo Relatório para iniciar o Construtor de Relatórios ou o Excel 2010. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] A Galeria deve usar uma das exibições pré-criadas (Teatro, Galeria ou Carrossel) para o botão Novo Relatório estar disponível.|  
   
 #### <a name="create-report-builder-report"></a>Criar relatórios no Construtor de Relatórios  
- A criação de um novo relatório baseado em uma pasta de trabalho DO [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] existente na biblioteca exige a configuração do Reporting Services para integração do SharePoint para os mesmos sites que contêm a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Quando você selecionar a opção Criar Relatório do Construtor de Relatórios, o Construtor de Relatórios será baixado do servidor de relatórios e instalado na estação de trabalho local em primeiro uso. Um arquivo de relatório de espaço reservado é criado para o novo relatório e salvo na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . As informações de conexão para a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são criadas para você como uma nova fonte de dados no relatório. Como uma próxima etapa, você pode criar conjuntos de dados e layout de relatório no espaço de trabalho do projeto. À medida que você usar o Construtor de Relatórios para montar seu relatório, você poderá salvar suas alterações e o resultado final no documento de relatório na galeria. Para evitar desconexões de dados posteriormente, certifique-se de manter juntos os arquivos de relatório e pasta de trabalho na mesma biblioteca.  
+ A criação de um novo relatório baseado em uma pasta de trabalho DO [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] existente na biblioteca exige a configuração do Reporting Services para integração do SharePoint para os mesmos sites que contêm a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Quando você selecionar a opção Criar Relatório do Construtor de Relatórios, o Construtor de Relatórios será baixado do servidor de relatórios e instalado na estação de trabalho local em primeiro uso. Um arquivo de relatório de espaço reservado é criado para o novo relatório e salvo na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . As informações de conexão para a pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são criadas para você como uma nova fonte de dados no relatório. Como uma próxima etapa, você pode criar conjuntos de dados e layout de relatório no workspace de design. À medida que você usar o Construtor de Relatórios para montar seu relatório, você poderá salvar suas alterações e o resultado final no documento de relatório na galeria. Para evitar desconexões de dados posteriormente, certifique-se de manter juntos os arquivos de relatório e pasta de trabalho na mesma biblioteca.  
   
 #### <a name="open-new-excel-workbook"></a>Abrir Nova Pasta de Trabalho do Excel  
  Para criar uma nova pasta de trabalho do Excel a partir de uma pasta de trabalho existente, você já deve ter o Excel e o [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] no computador local. A escolha de Abrir Nova Pasta de Trabalho do Excel abre um arquivo de pasta de trabalho em branco (.xlsx) e carrega dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em segundo plano, como uma fonte de dados conectada. Somente os dados da janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho original são usados na nova pasta de trabalho. Tabelas Dinâmicas ou Gráficos Dinâmicos são excluídos da pasta de trabalho original. A nova pasta de trabalho vincula a dados na pasta de trabalho original. Os dados não são copiados na própria pasta de trabalho nova.  
@@ -153,16 +153,16 @@ ms.locfileid: "38980579"
 ### <a name="document-type-is-not-supported"></a>Não há suporte ao tipo de documento  
  O tipo de conteúdo **Documento de Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** não tem suporte. Se você habilitar o tipo de conteúdo **Documento de Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** para uma biblioteca de documentos e tentar criar um novo documento desse tipo, verá uma mensagem de erro semelhante a uma destas:  
   
--   O ‘Novo Documento’ exige um aplicativo e um navegador da Web compatíveis com o Microsoft SharePoint Foundation. Para adicionar um documento nessa biblioteca de documentos, clique no botão 'Carregar Documento'.  
+-   'Novo documento' exige um navegador de aplicativo e da web compatível com o Microsoft Sharepoint Foundation. Para adicionar um documento à biblioteca de documentos, clique no botão 'Carregar documento'.  
   
--   "O endereço na Internet 'http://[nome do servidor]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' não é válido."“O Microsoft Excel não consegue acessar o arquivo 'http://[nome do servidor]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Há várias razões possíveis:  
+-   "O endereço de Internet ' nome http://[server] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx ' não é válido." " O Microsoft Excel não pode acessar o arquivo ' nome http://[server] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx '. Há várias razões possíveis:  
   
  O tipo de conteúdo do **Documento de Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** não é adicionado automaticamente nas bibliotecas de documentos. Você não encontrará esse problema, a menos que habilite manualmente o tipo de conteúdo sem suporte.  
   
 ## <a name="see-also"></a>Consulte também  
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Excluir Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [Criar e personalizar a Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Criar e personalizar a galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Agendar uma atualização de dados (Power Pivot para SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

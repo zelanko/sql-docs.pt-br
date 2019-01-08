@@ -15,12 +15,12 @@ ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c451111875b2e1a638f49ad710b7456d3ba5eb17
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4b188554ddbfba6d70ba1d869987aa96efd42f83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148425"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361579"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Desconectar usuários e sessões no Analysis Services Server
   Um administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] talvez queira encerrar a atividade de usuário como parte do gerenciamento da carga de trabalho. Para fazer isso, cancele sessões e conexões. As sessões podem ser formadas automaticamente quando uma consulta é executada (implícito) ou nomeada no momento da criação pelo administrador (explícito). As conexões são canais abertos nos quais as consultas podem ser executadas. Tanto as sessões quanto as conexões podem ser encerradas enquanto estiverem ativas. Por exemplo, o administrador pode encerrar o processamento de uma sessão caso o processamento esteja demorando muito ou se surgir alguma dúvida sobre a gravação do comando que está sendo executado.  
@@ -49,7 +49,7 @@ ms.locfileid: "50148425"
 1.  Cole a sintaxe a seguir em uma janela de consulta MDX, substituindo o espaço reservado de ConnectionID, SessionID ou SPID por um valor válido copiado da etapa anterior.  
   
     ```  
-    <Cancel xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Cancel xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   
        <ConnectionID>111</ConnectionID>  
        <SessionID>222</SessionID>  

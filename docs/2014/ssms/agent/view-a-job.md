@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], viewing
@@ -15,12 +15,12 @@ ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64646e3a462aa232f65cdc734cd9bfb0275b473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a732ccf71e0b52b83ae1fabdef88235595d4c194
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052036"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366428"
 ---
 # <a name="view-a-job"></a>View a Job
   Este tópico descreve como exibir um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48052036"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Security"></a> Segurança  
- Você só pode exibir trabalhos de sua propriedade, a não ser que você seja membro da função de servidor fixa **sysadmin** . Membros dessa função podem exibir todos os trabalhos. Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Você só pode exibir trabalhos de sua propriedade, a não ser que você seja membro da função de servidor fixa **sysadmin** . Membros dessa função podem exibir todos os trabalhos. Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48052036"
   
 3.  Clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-view-a-job"></a>Para exibir um trabalho  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48052036"
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para exibir um trabalho**  
   
- Use o `Job` classe usando uma linguagem de programação que você escolher, como Visual Basic, Visual c# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use a classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

@@ -12,12 +12,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 310ab71162dedf64e12ae28c8ffedf3465f1fc14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517869"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Conectar ao Windows Azure Storage (Restaurar)
   A caixa de diálogo permite que você especifique a conexão com as informações da conta de armazenamento do Windows Azure para recuperar o armazenamento de arquivos da conta de armazenamento do Windows Azure. Depois de especificar as informações necessárias, clique em **Conectar** para estabelecer a conexão com o armazenamento do Windows Azure.  
@@ -30,7 +30,7 @@ ms.locfileid: "48130896"
  Especifique a chave de acesso da conta de armazenamento do Windows Azure.  
   
  Caixa de seleção**Usar pontos de extremidade seguros (HTTPS)**   
- Selecione esta opção para estabelecer uma conexão segura com o armazenamento do Windows Azure – recomendado.  
+ Selecione esta opção para estabelecer uma conexão segura com o armazenamento do Microsoft Azure – recomendado.  
   
  Caixa de seleção**Salvar chave de conta**   
  Marque esta caixa de seleção se desejar que o SQL Server se lembre da chave de acesso para essa conta de armazenamento.  

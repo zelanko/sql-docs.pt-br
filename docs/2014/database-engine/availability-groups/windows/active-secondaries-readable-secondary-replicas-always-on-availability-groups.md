@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169606"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358578"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade) Always On
   Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para acesso somente leitura para uma ou mais réplicas secundárias (*réplicas secundárias legíveis*). Uma réplica secundária legível permite acesso somente leitura a todos os seus bancos de dados secundários. No entanto, os bancos de dados secundários legíveis não são definidos como somente leitura. Eles são dinâmicos. Um banco de dados secundário determinado muda conforme as alterações nos dados do banco de dados primário correspondente são aplicadas ao banco de dados secundário. Para uma réplica secundária típica, os dados, incluindo tabelas com otimização de memória durável, nos bancos de dados secundários estão quase em tempo real. Além disso, os índices de texto completo são sincronizados com os bancos de dados secundários. Em muitas circunstâncias, a latência de dados entre um banco de dados primário e o banco de dados secundário correspondente é de somente alguns segundos.  
   
  Configurações de segurança que ocorrem nos bancos de dados primários para os bancos de dados secundários são permitidas. Isso inclui os usuários, as funções de banco de dados e de aplicativos junto com suas permissões respectivas e a TDE (criptografia de dados transparente), se habilitada no banco de dados primário.  
@@ -82,7 +82,7 @@ ms.locfileid: "48169606"
      Para obter informações, veja [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
+>  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> Limitações e restrições  
  Algumas operações não têm suporte total, como segue:  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   Para transações entre contêineres, as transações com o nível de isolamento de sessão “instantâneo” que acessa as tabelas com otimização de memória não têm suporte. Por exemplo,  
+-   Para transações entre contêineres, as transações com nível de isolamento da sessão "instantâneo" que não há suporte para tabelas com otimização de memória de acesso. Por exemplo,  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -271,12 +271,12 @@ GO
   
     |Réplica secundária legível?|O isolamento do instantâneo ou nível RCSI está habilitado?|Banco de dados primário|Banco de dados secundário|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |não|não|Nenhuma versão de linha ou sobrecarga de 14 bytes|Nenhuma versão de linha ou sobrecarga de 14 bytes|  
-    |não|Sim|Versões de linha e sobrecarga de 14 bytes|Nenhuma versão de linha, mas sobrecarga de 14 bytes|  
-    |Sim|não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
+    |Não|Não|Nenhuma versão de linha ou sobrecarga de 14 bytes|Nenhuma versão de linha ou sobrecarga de 14 bytes|  
+    |Não|Sim|Versões de linha e sobrecarga de 14 bytes|Nenhuma versão de linha, mas sobrecarga de 14 bytes|  
+    |Sim|Não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
     |Sim|Sim|Versões de linha e sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
   
-##  <a name="bkmk_RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="bkmk_RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -292,12 +292,12 @@ GO
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Blog da equipe do AlwaysOn do SQL Server: O SQL Server AlwaysOn Team Blog oficial](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: O Team Blog oficial do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   

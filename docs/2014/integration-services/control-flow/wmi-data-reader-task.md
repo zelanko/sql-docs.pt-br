@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
@@ -16,12 +15,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a6e6fd3c6639abedc0324d2f8831e782270bc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229776"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363118"
 ---
 # <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI
   A tarefa Leitor de Dados do WMI executa consultas por meio da linguagem de consulta WMI (Instrumentação de Gerenciamento do Windows) que retorna informações de WMI sobre um sistema de computador. Pode-se utilizar o Leitor de Dados WMI para as seguintes finalidades:  
@@ -49,7 +48,7 @@ ms.locfileid: "48229776"
  A tarefa Leitor de Dados do WMI usa um gerenciador de conexões WMI para se conectar ao servidor do qual lê informações de WMI. Para obter mais informações, consulte [WMI Connection Manager](../connection-manager/wmi-connection-manager.md).  
   
 ## <a name="wql-query"></a>Consulta WQL  
- WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](http://go.microsoft.com/fwlink/?linkid=7022).  
+ WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](https://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
 >  As classes WMI variam entre versões de Windows.  
@@ -75,7 +74,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Mensagens de log personalizadas disponíveis na tarefa Leitor de Dados do WMI  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Leitor de Dados do WMI. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|Indica que a tarefa começou a ser ler os dados do WMI.|  
 |`WMIDataReaderOperation`|Informa a consulta WQL executada pela tarefa.|  
@@ -85,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor da tarefa leitor de dados WMI &#40;página de opções do WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Editor da Tarefa Leitor de Dados do WMI &#40;Página Opções do WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

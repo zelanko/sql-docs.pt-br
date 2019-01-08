@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_conflicts_info_TSQL
@@ -19,25 +18,25 @@ ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34dd7496d514db14399134eb7ffe222af7251f95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b5332394ac9b05765542be8593446100ea281b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737724"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822770"
 ---
 # <a name="msmergeconflictsinfo-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **MSmerge_conflicts_info** tabela rastreia conflitos que ocorrem ao sincronizar uma assinatura para uma publicação de mesclagem. Os dados de linha está em conflito são armazenados na [MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md) tabela para o artigo no qual o conflito ocorreu. Essa tabela é armazenada no Publicador, no banco de dados de publicação, e no Assinante, no banco de dados de assinatura.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|O apelido da tabela publicada.|  
 |**ROWGUID**|**uniqueidentifier**|O identificador para a linha de conflito.|  
 |**origin_datasource**|**nvarchar(255)**|O nome do banco de dados onde a alteração conflitante teve origem.|  
-|**conflict_type**|**int**|O tipo de conflito ocorrido, que pode ser um dos seguintes:<br /><br /> **1** = conflito de atualização: O conflito é detectado no nível de linha.<br /><br /> **2** = conflito de atualização de coluna: O conflito é detectado no nível de coluna.<br /><br /> **3** = conflito de atualização exclusão Wins: A exclusão ganha o conflito.<br /><br /> **4** = conflito de exclusão vence atualização: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = carregar Falha na inserção: A inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = baixar Falha na inserção: A inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = carregar Falha na exclusão: A exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = baixar Falha na exclusão: A exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = carregar Falha na atualização: A atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = baixar Falha na atualização: A atualização do publicador não pôde ser aplicada ao assinante.<br /><br /> **11** = resolução<br /><br /> **12** = lógico registro atualização vence exclusão: O registro lógico excluído que perde o conflito é registrado nessa tabela.<br /><br /> **13** = lógico registro conflito de inserção de atualização: inserção em um registro lógico conflita com uma atualização.<br /><br /> **14** = lógico registro Wins atualização conflito de exclusão: O registro lógico atualizado que perde o conflito é registrado nessa tabela.|  
-|**reason_code**|**int**|O código de erro que pode ser sensível ao contexto. No caso de conflitos de atualização-atualização e exclusão de atualização, o valor usado para esta coluna é igual a **conflict_type**. No entanto, em conflitos de alteração com falha, o código da razão é o erro que impediu o Merge Agent de aplicar a alteração. Por exemplo, se o agente de mesclagem não é possível aplicar uma inserção no assinante devido a uma violação de chave primária, ele registrará uma **conflict_type** de 6 ("na inserção do download") e uma **reason_code** de 2627, que é o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de erro interno de uma violação de chave primária: "violação da restrição %ls ' %. * ls'. Não é possível inserir chave duplicada no objeto ' %. \*ls'. "|  
+|**conflict_type**|**int**|O tipo de conflito ocorrido, que pode ser um dos seguintes:<br /><br /> **1** = conflito de atualização: O conflito é detectado no nível de linha.<br /><br /> **2** = conflito de atualização de coluna: O conflito é detectado no nível de coluna.<br /><br /> **3** = conflito de atualização do Wins de exclusão: A exclusão ganha o conflito.<br /><br /> **4** = conflito de exclusão do Wins de atualização: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = Falha na inserção do carregamento: A inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = Falha na inserção do download: A inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = Falha na exclusão do carregamento: A exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = Falha na exclusão do download: A exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = Falha na atualização do carregamento: A atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = Falha na atualização do download: A atualização no publicador não pôde ser aplicada ao assinante.<br /><br /> **11** = resolução<br /><br /> **12** = atualização de registro lógico vence exclusão: O registro lógico excluído que perde o conflito é registrado nessa tabela.<br /><br /> **13** = atualização de inserção de conflito de registro lógico: Inserir um registro lógico está em conflito com uma atualização.<br /><br /> **14** = conflito de atualização do Wins de exclusão de registro lógico: O registro lógico atualizado que perde o conflito é registrado nessa tabela.|  
+|**reason_code**|**int**|O código de erro que pode ser sensível ao contexto. No caso de conflitos de atualização-atualização e exclusão de atualização, o valor usado para esta coluna é igual a **conflict_type**. No entanto, em conflitos de alteração com falha, o código da razão é o erro que impediu o Merge Agent de aplicar a alteração. Por exemplo, se o agente de mesclagem não é possível aplicar uma inserção no assinante devido a uma violação de chave primária, ele registrará uma **conflict_type** de 6 ("na inserção do download") e uma **reason_code** de 2627, que é o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de erro interno de uma violação de chave primária: "Violação da restrição %ls ' %. * ls'. Não é possível inserir chave duplicada no objeto ' %. \*ls'. "|  
 |**reason_text**|**nvarchar(720)**|A descrição do erro que pode ser sensível ao contexto.|  
 |**pubid**|**uniqueidentifier**|O identificador para a publicação.|  
 |**MSrepl_create_time**|**datetime**|A hora em que o conflito ocorreu.|  

@@ -11,12 +11,12 @@ ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f1dff5b37bdf608478105e684a09dab8cae9280
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 527c089b1fd1dc49330ea3ee3c9b3576f7c969ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161946"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369658"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
   Para recuperar dados de uma fonte de dados externa, use uma conexão de dados. As informações da conexão de dados normalmente são fornecidas pelo proprietário da fonte de dados externa que é responsável por conceder permissões e especificar os tipos de credenciais a serem usados. As informações de conexão de dados são salvas como uma fonte de dados de relatório. O tipo de fonte de dados especifica a extensão de processamento de dados a ser usada para recuperar a fonte de dados.  
@@ -101,14 +101,14 @@ ms.locfileid: "48161946"
 ##  <a name="Related"></a> Seções relacionadas  
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)|Fornece uma visão geral de como acessar dados de seu relatório.|  
 |[Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Fornece informações sobre conexões de dados e fontes de dados.|  
 |[Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Fornece informações sobre conjuntos de dados inseridos e compartilhados.|  
 |[Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.|  
-|[Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.|  
-|[Visão geral das extensões de processamento de dados](../extensions/data-processing/data-processing-extensions-overview.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](http://go.microsoft.com/fwlink/?linkid=121312).|Fornece informações detalhadas para usuários avançados sobre extensões de dados.|  
+|[Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.|  
+|[Visão geral das extensões de processamento de dados](../extensions/data-processing/data-processing-extensions-overview.md) na documentação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](https://go.microsoft.com/fwlink/?linkid=121312).|Fornece informações detalhadas para usuários avançados sobre extensões de dados.|  
   
 
   

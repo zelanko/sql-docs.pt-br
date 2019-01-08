@@ -16,12 +16,12 @@ ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ff309ae3964bf7346ddf131db61c5d6efea073fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f768da85b70168b090bfde19058926e098cd418
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143616"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356491"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementando a interface IDeliveryExtension para uma extensão de entrega
   A sua classe de extensão de entrega é usada para entregar notificações de relatório a usuários com base no conteúdo das notificações. A classe de extensão de entrega também oferece infraestrutura para validar configurações de usuário passadas à extensão de entrega. Além disso, a sua classe de extensão de entrega deve conter propriedades específicas que os clientes poderão usar para obter informações sobre o nome da extensão, as configurações suportadas pela extensão e os formatos disponíveis para a extensão de entrega.  
@@ -35,7 +35,7 @@ A interface IDeliveryExtension permite a validação de dados de usuário como t
   
  Você também pode usar a sua classe de extensão de entrega para recuperar e processar dados de configuração personalizados armazenados no arquivo RSReportServer.config. Para obter mais informações sobre como processar dados de configuração personalizados, consulte o método <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
   
- Para obter uma implementação da classe **IDeliveryExtension** de exemplo, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obter uma implementação da classe **IDeliveryExtension** de exemplo, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Consulte também  
  [Implementando uma extensão de entrega](../delivery-extension/implementing-a-delivery-extension.md)   

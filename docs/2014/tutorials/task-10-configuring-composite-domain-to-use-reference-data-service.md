@@ -13,15 +13,15 @@ ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e4a8ef8c3b9d60040d6d9b5fcbff145a600cd88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167676"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370018"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tarefa 10: Configurando o domínio composto para usar o serviço de dados de referência
-  Nesta tarefa, você configura a **Address Validation** domínio composto para usar o **Melissa Data – Address Check** service. Em tempo de execução, durante a atividade de limpeza, o DQS passa os valores de domínios existentes no domínio Address Validation para o serviço de limpeza. Ver [mapa de domínio/domínio composto para dados de referência](http://msdn.microsoft.com/library/hh213030.aspx) para obter mais detalhes.  
+  Nesta tarefa, você configura a **Address Validation** domínio composto para usar o **Melissa Data – Address Check** service. Em tempo de execução, durante a atividade de limpeza, o DQS passa os valores de domínios existentes no domínio Address Validation para o serviço de limpeza. Ver [mapa de domínio/domínio composto para dados de referência](https://msdn.microsoft.com/library/hh213030.aspx) para obter mais detalhes.  
   
 1.  Na página principal do **cliente DQS**, clique em **fornecedores (gerenciamento de domínio)** sob **Bases de dados de Conhecimento recentes** para iniciar o **gerenciamento de domínio**página.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48167676"
 9. Clique em **OK** para fechar a caixa de diálogo.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 11: Publicando a base de dados de conhecimento](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
+ [Tarefa 11: Publicando a Base de dados de Conhecimento](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

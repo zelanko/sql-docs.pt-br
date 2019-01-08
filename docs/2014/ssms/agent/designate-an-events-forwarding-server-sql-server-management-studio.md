@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d8e24883fe71463b4c03e4caefc1735cf794bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167266"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760718"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
   Este tópico descreve como designar um servidor para o qual o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encaminhe eventos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Observe que o encaminhamento de eventos se aplica a eventos encaminhados entre servidores, não a eventos encaminhados entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas em um único computador. Note também que, para receber eventos encaminhados, o servidor de gerenciamento de alertas deve ser uma instância padrão do SQL Server.  
@@ -48,9 +48,9 @@ ms.locfileid: "48167266"
 1.  No **Pesquisador de Objetos** , clique no sinal de adição para expandir o servidor do qual você deseja encaminhar eventos para outro servidor.  
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
-  
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent –***server_name*, em **Selecionar uma página**, selecione **Avançado**.  
-  
+
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent –**_nome_do_servidor_, em **Selecionar uma página**, selecione **Avançado**.  
+
 4.  Em **Encaminhamento de evento do SQL Server**, marque a caixa de seleção **Encaminhar eventos para um servidor diferente** .  
   
 5.  Na lista **Servidor** , selecione um servidor e, em **Eventos**, selecione um destes procedimentos:  

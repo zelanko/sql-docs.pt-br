@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,24 +23,24 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4529ded6049327261ac92a76cc9861b7cec7dd61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204576"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354631"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabalhando com imagens com a tarefa Script
   Um banco de dados de produtos ou usuários costuma incluir imagens além de texto e dados numéricos. O namespace `System.Drawing` no Microsoft .NET Framework fornece classes para manipular imagens.  
   
- [Exemplo 1: converter imagens para o formato JPEG](#example1)  
+ [Exemplo 1: Converter imagens em formato JPEG](#example1)  
   
- [Exemplo 2: criar e salvar imagens em miniatura](#example2)  
+ [Exemplo 2: Criar e salvar imagens em miniatura](#example2)  
   
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Descrição do exemplo 1: converter imagens para o formato JPEG  
+##  <a name="example1"></a> Descrição do exemplo 1: Converter imagens em formato JPEG  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável e salva-o como um arquivo JPEG compactado usando um codificador. O código para recuperar informações de codificador é encapsulado em uma função particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  
@@ -151,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Descrição do exemplo 2: criar e salvar imagens em miniatura  
+##  <a name="example2"></a> Descrição do exemplo 2: Criar e salvar imagens em miniatura  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável, cria uma miniatura da imagem, mantendo uma taxa de proporção constante e salva a miniatura com um nome de arquivo modificado. O código que calcula a altura e largura da miniatura, mantendo uma taxa de proporção constante, é encapsulado em uma sub-rotina particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  
@@ -291,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

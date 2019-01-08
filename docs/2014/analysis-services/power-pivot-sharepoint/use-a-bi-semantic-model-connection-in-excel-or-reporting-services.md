@@ -11,12 +11,12 @@ ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123536"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366288"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services
   Este tópico explica como usar as conexões de modelo semântico de BI que você criou usando as instruções em outros tópicos. Se você ainda não tiver criado um modelo semântico de BI, consulte [criar uma Conexão de modelo semântico do BI para uma pasta de trabalho do PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [criar uma Conexão de modelo semântico do BI para um banco de dados de modelo Tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -46,9 +46,9 @@ ms.locfileid: "48123536"
   
 5.  Na última página, você pode fornecer um nome e uma descrição amigáveis. Clique em **Concluir**e, depois, em **OK** na caixa de diálogo Importar Dados para importar os dados.  
   
- Para que as conexões tenham êxito, você precisa ter o Excel 2010 e o MSOLAP.5.dll instalados no computador cliente. Você pode obter o provedor instalando a versão do PowerPivot para Excel que é atual para esta versão ou você pode baixar apenas o provedor OLE DB do Analysis Services dos [página de download do Feature Pack](http://go.microsoft.com/fwlink/?linkid=214066).  
+ Para que as conexões tenham êxito, você precisa ter o Excel 2010 e o MSOLAP.5.dll instalados no computador cliente. Você pode obter o provedor instalando a versão do PowerPivot para Excel que é atual para esta versão ou você pode baixar apenas o provedor OLE DB do Analysis Services dos [página de download do Feature Pack](https://go.microsoft.com/fwlink/?linkid=214066).  
   
- Para confirmar que esse MSOLAP.5.dll é a versão atual, verifique `HKEY_CLASSES_ROOT\MSOLAP` no registro. `CurVer` deve ser definido como MSOLAP.5.  
+ Para confirmar que esse MSOLAP.5.dll é a versão atual, verifique `HKEY_CLASSES_ROOT\MSOLAP` no Registro. `CurVer` deve ser definido como MSOLAP.5.  
   
  Você também deve ter permissões de leitura no arquivo do modelo semântico de BI no SharePoint. Permissões de leitura incluem direitos de download. O Excel baixa a informações de conexão de modelo semântico de BI do SharePoint e abre uma conexão direta com o banco de dados através de `HTTP Get`. Solicitações de conexão não fluem através do SharePoint pois as informações de conexão de modelo semântico de BI são armazenadas localmente.  
   

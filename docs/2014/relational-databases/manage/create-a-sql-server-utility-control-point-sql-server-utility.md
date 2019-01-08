@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -20,12 +20,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189266"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377658"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
   Uma empresa pode ter vários Utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerenciar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos da camada de dados. Cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um UCP (ponto de controle do utilitário). Você deve criar um novo UCP para cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cada aplicativo da camada de dados é membro somente de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e é gerenciada por um único UCP.  
@@ -76,7 +76,7 @@ ms.locfileid: "48189266"
   
 -   Esse procedimento deve ser executado por um usuário com permissões de sysadmin, as mesmas permissões necessárias para criar um UCP.  
   
--   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, consulte [Como remover uma instância do SQL Server do Utilitário do SQL Server](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, consulte [como: Remover uma instância do SQL Server do utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use este procedimento para remover um SQL Server UCP do Utilitário do SQL Server. Após a conclusão da operação, um UCP pode ser novamente criado na instância do SQL Server.  
   
@@ -131,7 +131,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Especificar Instância  
  Especifique as seguintes informações sobre o UCP que você está criando:  
   
--   **Nome da Instância** – Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar…**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
+-   **Nome da Instância** – para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
   
 -   **Nome do Utilitário** – Especifique um nome que será usado para identificar o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na rede.  
   
@@ -220,7 +220,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Use o seguinte exemplo para criar um novo ponto de controle de utilitário:  
   
 ```  
-> $UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
 > $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  

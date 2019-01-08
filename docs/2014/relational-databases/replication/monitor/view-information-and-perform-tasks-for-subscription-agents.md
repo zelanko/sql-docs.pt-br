@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
@@ -15,12 +14,12 @@ ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 872053f2f48518fc3586369c46677e21287866a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1ded219b3b4a103b5cc8f98cdb86c2a8a52e21d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111286"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815708"
 ---
 # <a name="view-information-and-perform-tasks-for-the-agents-associated-with-a-subscription-replication-monitor"></a>Exibir informações e executar tarefas para os agentes associados a uma assinatura (Replication Monitor)
   O Replication Monitor fornece duas guias que permitem acesso às informações sobre o(s) agente(s) associado(s) a uma assinatura:  

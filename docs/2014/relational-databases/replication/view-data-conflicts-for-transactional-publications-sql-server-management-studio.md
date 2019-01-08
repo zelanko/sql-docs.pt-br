@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4a2f9a8927b5cf6a1a93f66f075a2600c3f98e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76f5e18a6555f4facf068dbd68429a770ebd9676
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052946"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797438"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Exibir conflitos de dados para publicações transacionais (SQL Server Management Studio)
   É possível exibir conflitos para replicação transacional ponto a ponto e replicação transacional com assinaturas de atualização enfileiradas no Visualizador de Conflitos de Replicação [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter informações sobre como os conflitos são detectados e resolvidos, consulte [Detecção de conflitos em replicação ponto a ponto](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) e [Definir opções de resolução de conflitos em atualização na fila &#40;SQL Server Management Studio&#41;](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  

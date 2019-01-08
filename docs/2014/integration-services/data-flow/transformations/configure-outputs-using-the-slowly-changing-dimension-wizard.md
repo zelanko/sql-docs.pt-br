@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
@@ -15,12 +14,12 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79ae2c560bfc5e5e38d46e72bad0b1a734421ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6665b08662834226feac1c99df3e8a63e7026c7b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750073"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta
   O Assistente para Dimensões de Alteração Lenta funciona como o editor da transformação Dimensão de Alteração Lenta. Criar e configurar o fluxo de dados para alterar dados de dimensão lentamente pode ser uma tarefa complexa. O Assistente para Dimensões de Alteração Lenta oferece o método mais simples para criar o fluxo de dados para as saídas da transformação Dimensão de Alteração Lenta, guiando você pelas etapas de mapeamento de colunas, selecionando colunas de chave de negócio, definindo atributos de alteração de coluna e configurando o suporte para membros de dimensão deduzidos.  
@@ -81,6 +80,6 @@ ms.locfileid: "48085416"
  O modo mais simples de atualizar a configuração de saídas da transformação Dimensão de Alteração Lenta é executar novamente o Assistente para Dimensões de Alteração Lenta e modificar as propriedades das páginas do assistente. Você também pode atualizar a transformação Dimensão de Alteração Lenta usando a caixa de diálogo **Editor Avançado** ou programaticamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação Dimensão de Alteração Lenta](slowly-changing-dimension-transformation.md)  
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

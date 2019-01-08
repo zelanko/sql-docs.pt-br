@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131936"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362838"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131936"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC3_CHECK_CATALOG|  
-|Texto da mensagem|Verifique a mensagem do catálogo ERROR nível LEVEL Estado STATE: MESSAGE.|  
+|Texto da mensagem|Verificação de catálogo Msg erro nível LEVEL estado STATE: MENSAGEM.|  
   
 ## <a name="explanation"></a>Explicação  
  DBCC CHECKCATALOG ou DBCC CHECKDB localizou uma inconsistência nas tabelas de metadados do sistema para o objeto especificado. Isto é, há uma inconsistência entre a ID do objeto registrado e o objeto especificado na mensagem de erro.  
@@ -75,6 +75,6 @@ ms.locfileid: "48131936"
  Não faça atualizações manuais em tabelas do sistema. O SQL Server não oferece suporte a alterações manuais em bancos de dados do sistema. Se você atualizar uma tabela do sistema em um banco de dados do SQL Server, dois eventos (ID de evento 17659 e ID de evento 3859) serão registrados em log. Para obter mais informações, consulte o artigo KB 2688307, "ID de evento 17659 e ID de evento 3859 são registrados em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server".  
   
 ## <a name="see-also"></a>Consulte também  
- [A ID de evento 17659 e a ID de evento 3859 são registradas em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server](http://support.microsoft.com/kb/2688307/EN-US)  
+ [A ID de evento 17659 e a ID de evento 3859 são registradas em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

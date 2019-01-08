@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3df6a97e37f301c4ac55b8e662e81098023a5064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 038fdb6f07604d3fac1fcbd8e9ee632e3af2fbdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159506"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360238"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos. As fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As transformações modificam, resumem e limpam dados. Os destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  
@@ -68,7 +67,7 @@ ms.locfileid: "48159506"
  Quando a guia **Fluxo de Dados** está ativa, a Caixa de Ferramentas contém as origens, as transformações e os destino que podem ser adicionados ao fluxo de dados.  
   
 ## <a name="expressions"></a>Expressões  
- Vários componentes de fluxo de dados — origens, transformações e destinos — oferecem suporte ao uso de expressões de propriedade em algumas de suas propriedades. Uma expressão de propriedade é uma expressão que substitui o valor da propriedade quando o pacote é carregado. Em tempo de execução, o pacote usa os valores atualizados de propriedade. As expressões são criadas usando a sintaxe de expressão do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e podem incluir as funções, os operadores, os identificadores e as variáveis do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
+ Vários dos componentes do fluxo de dados, como origens, transformações e destinos, permitem o uso de expressões de propriedade em algumas de suas propriedades. Uma expressão de propriedade é uma expressão que substitui o valor da propriedade quando o pacote é carregado. Em tempo de execução, o pacote usa os valores atualizados de propriedade. As expressões são criadas usando a sintaxe de expressão do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e podem incluir as funções, os operadores, os identificadores e as variáveis do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
   
  Se você criar um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], as propriedades de quaisquer componentes de fluxo de dados que oferecem suporte às expressões de propriedade estarão expostas na tarefa de Fluxo de Dados à qual pertencem. Para adicionar, alterar e remover as expressões de propriedade dos componentes de fluxo de dados, clique na tarefa de Fluxo de Dados e, em seguida, use a janela Propriedades ou o editor para a tarefa adicionar, alterar ou excluir expressões de propriedade. As expressões de propriedades para a tarefa de Fluxo de Dados em si são gerenciadas na janela Propriedades.  
   
@@ -98,18 +97,18 @@ ms.locfileid: "48159506"
 ### <a name="sources-available-for-download"></a>Fontes disponíveis para download  
  A tabela a seguir lista mais tipos de fontes que podem ser baixadas do site da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origem|Description|  
+|Origem|Descrição|  
 |------------|-----------------|  
-|Fonte Oracle|A fonte Oracle é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|Fonte SAP BI|A fonte SAP BI é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Fonte Teradata|A fonte Teradata é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Fonte Oracle|A fonte Oracle é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Fonte SAP BI|A fonte SAP BI é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Fonte Teradata|A fonte Teradata é o componente de fonte do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369).  
+ Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369).  
   
 ## <a name="transformations"></a>Transformações  
  A capacidade das transformações varia amplamente. As transformações podem executar tarefas como atualizar, resumir, limpar, mesclar e distribuir dados. É possível modificar valores em colunas, pesquisar valores em tabelas, limpar dados e agregar valores de colunas.  
   
- As entradas e saídas de uma transformação definem as colunas de dados de entrada e de saída. Dependendo da operação executada nos dados, algumas transformações têm uma única entrada e várias saídas, enquanto outras têm várias entradas e uma única saída. As transformações também podem incluir saídas de erro, que fornecem informações sobre o erro ocorrido, juntamente com os dados com falha: por exemplo, os dados de cadeia de caracteres que não puderam ser convertidos em um tipo de dados inteiro. O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não restringe o número de entradas, de saídas regulares e de saídas de erro que as transformações podem conter. Você pode criar transformações personalizadas que implementam qualquer combinação de várias entradas, saídas regulares e saídas de erro.  
+ As entradas e saídas de uma transformação definem as colunas de dados de entrada e de saída. Dependendo da operação executada nos dados, algumas transformações têm uma única entrada e várias saídas, enquanto outras têm várias entradas e uma única saída. As transformações também podem incluir saídas de erro, que fornecem informações sobre o erro que ocorreu, junto com os dados que falhou: Por exemplo, dados cadeia de caracteres que não pôde ser convertidos para um tipo de dados inteiro. O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não restringe o número de entradas, de saídas regulares e de saídas de erro que as transformações podem conter. Você pode criar transformações personalizadas que implementam qualquer combinação de várias entradas, saídas regulares e saídas de erro.  
   
  A entrada de uma transformação é definida como uma ou mais colunas de entrada. Algumas transformações do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também podem fazer referência a colunas externas como entrada. Por exemplo, a entrada da transformação Comando OLE DB inclui colunas externas. Uma coluna de saída é uma coluna que a transformação adiciona ao fluxo de dados. Saídas regulares e saídas de erro contêm colunas de saída. Essas colunas de saída, por sua vez, agem como colunas de entrada para o próximo componente do fluxo de dados, seja outra transformação ou um destino.  
   
@@ -159,13 +158,13 @@ ms.locfileid: "48159506"
 ### <a name="destinations-available-for-download"></a>Destinos disponíveis para download  
  A tabela a seguir lista mais tipos de destinos que podem ser baixados do site da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origem|Description|  
+|Origem|Descrição|  
 |------------|-----------------|  
-|Destino Oracle|O destino Oracle é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|Destino SAP BI|O destino SAP BI é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Destino Teradata|O destino Teradata é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Destino Oracle|O destino Oracle é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Destino SAP BI|O destino SAP BI é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Destino Teradata|O destino Teradata é o componente de destino do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369).  
+ Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369).  
   
 ## <a name="connection-managers"></a>Gerenciadores de conexões  
  Muitos componentes de fluxo de dados se conectam às fontes de dados e você deve adicionar ao pacote os gerenciadores de conexões necessários para que o componente possa ser configurado corretamente. Você pode adicionar os gerenciadores de conexões conforme cria o fluxo de dados ou antes que você comece a criação do fluxo de dados. Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](../create-connection-managers.md).  
@@ -179,7 +178,7 @@ ms.locfileid: "48159506"
  As fontes têm saídas, os destinos têm entradas e as transformações têm entradas e saídas. Além disso, vários componentes de fluxo de dados podem ser configurados para usar uma saída de erro.  
   
 ### <a name="inputs"></a>Entradas  
- Destinos e transformações têm entradas. Uma entrada contém uma ou mais colunas de entrada, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As entradas podem ser configuradas para monitorar e controlar o fluxo de dados: por exemplo, você pode especificar se o componente deverá falhar em resposta a um erro, ignorar os erros ou redirecionar linhas de erro à saída de erro. Você também pode atribuir uma descrição à entrada ou atualizar o nome da entrada. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , as entradas são configuradas usando a caixa de diálogo **Editor Avançado** . Para obter mais informações sobre o **Editor Avançado** , consulte [Integration Services User Interface](../integration-services-user-interface.md).  
+ Destinos e transformações têm entradas. Uma entrada contém uma ou mais colunas de entrada, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. Entradas podem ser configuradas para monitorar e controlar o fluxo de dados: Por exemplo, você pode especificar se o componente deve falhar em resposta a um erro, ignorar erros ou redirecionar as linhas de erro para a saída de erro. Você também pode atribuir uma descrição à entrada ou atualizar o nome da entrada. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , as entradas são configuradas usando a caixa de diálogo **Editor Avançado** . Para obter mais informações sobre o **Editor Avançado** , consulte [Integration Services User Interface](../integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Saídas  
  Fontes e transformações sempre têm saídas. Uma saída contém uma ou mais colunas de saída, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As saídas podem ser configuradas para fornecer informações úteis ao processamento downstream dos dados. Por exemplo, você pode indicar se a saída é classificada. Você também pode fornecer uma descrição para a saída ou atualizar o nome da saída. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , as saídas são configuradas usando a caixa de diálogo **Editor Avançado** .  
@@ -190,7 +189,7 @@ ms.locfileid: "48159506"
  Para obter mais informações, consulte [Tratamento de erros em dados](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colunas  
- Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna será configurável dependendo do tipo da coluna, entrada, saída, ou externa. O[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para a coluna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado**.  
+ Entradas, saídas e saídas de erro são coleções de colunas. Cada coluna é configurável e dependendo da coluna tipo de entrada, saída ou externa - [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece propriedades diferentes para a coluna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três maneiras diferentes de definir propriedades de coluna: programaticamente, por meio das caixas de diálogo específicas aos componentes ou por meio da caixa de diálogo **Editor Avançado**.  
   
 ## <a name="paths"></a>Caminhos  
  Os caminhos conectam os componentes de fluxo de dados. No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , você pode exibir e modificar as propriedades de caminho, exibir os metadados de saída do ponto inicial do caminho e anexar visualizadores de dados a um caminho.  
@@ -217,8 +216,8 @@ ms.locfileid: "48159506"
 -   [Conectar componentes em um fluxo de dados](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369), em technet.microsoft.com.  
+ Vídeo, [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369), em technet.microsoft.com.  
   
- Resposta da curadoria, [Como criar uma cadeia de conexão dinâmica no SSIS](http://go.microsoft.com/fwlink/?LinkId=321994), em curatedviews.cloudapp.  
+ Resposta da curadoria, [Como criar uma cadeia de conexão dinâmica no SSIS](https://go.microsoft.com/fwlink/?LinkId=321994), em curatedviews.cloudapp.  
   
   

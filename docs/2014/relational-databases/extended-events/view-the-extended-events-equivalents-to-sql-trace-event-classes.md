@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, extended events equivalents
@@ -15,12 +14,12 @@ ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 838a5a3c6b2693ad1d96cab131dd59864ca4788c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123880"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764758"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL
   Se você desejar usar os Eventos Estendidos para coletar dados de evento equivalentes a colunas e classes de evento do Rastreamento do SQL, será útil entender como os eventos do Rastreamento do SQL são mapeados para os eventos e as ações dos Eventos Estendidos.  

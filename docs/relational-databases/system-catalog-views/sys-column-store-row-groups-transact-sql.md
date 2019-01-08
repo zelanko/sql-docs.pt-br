@@ -20,19 +20,19 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bff4582f8bf46d094db2a1689ad8c9fd6de92185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782894"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531656"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações do índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema. **column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (inclusive as marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **column_store_row_groups** para determinar qual linha grupos têm uma alta porcentagem de linhas excluídas em devem ser recriados.  
    
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|A ID da tabela na qual esse índice é definido.|  
 |**index_id**|**int**|ID do índice para a tabela que contém esse índice columnstore.|  
@@ -40,7 +40,7 @@ ms.locfileid: "47782894"
 |**row_group_id**|**int**|O número do grupo de linhas associado a esse grupo de linhas. Isso é exclusivo dentro da partição.<br /><br /> -1 = a parte final de uma tabela na memória.|  
 |**delta_store_hobt_id**|**bigint**|O hobt_id para o grupo de linhas aberto no repositório delta.<br /><br /> NULL se o grupo de linhas não está no repositório delta.<br /><br /> NULL para o final de uma tabela na memória.|  
 |**state**|**tinyint**|O número de ID associado a state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = DA MARCA PARA EXCLUSÃO|  
-|**state_description**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> INVISIBLE – um segmento compactado oculto no processo de ter sido criado a partir dos dados em um repositório delta. As ações de leitura usarão o repositório delta até que o segmento compactado invisível seja concluído. Em seguida, o novo segmento é tornado visível e o repositório delta da origem é removido.<br /><br /> OPEN – Um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED – Um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo Tuple Mover.<br /><br /> COMPRESSED – Um grupo de linhas que foi preenchido e compactado.|  
+|**state_description**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> INVISÍVEL - um segmento compactado oculto no processo que está sendo criado a partir de dados em um repositório delta. As ações de leitura usarão o repositório delta até que o segmento compactado invisível seja concluído. Em seguida, o novo segmento é tornado visível e o repositório delta da origem é removido.<br /><br /> Abra - um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> FECHADO – um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo de motor de tupla.<br /><br /> COMPACTADOS - um grupo de linhas que foi preenchido e compactado.|  
 |**total_rows**|**bigint**|Total de linhas fisicamente armazenadas no grupo de linhas. Algumas podem ter sido excluídas, mas ainda estão armazenadas. O número máximo de linhas em um grupo de linhas é 1.048.576 (FFFFF hexadecimal).|  
 |**deleted_rows**|**bigint**|Total de linhas no grupo de linhas marcadas como excluídas. Isso é sempre 0 para grupos de linhas DELTA.|  
 |**size_in_bytes**|**bigint**|Tamanho em bytes de todos os dados nesse grupo de linhas (que não inclui metadados ou dicionários compartilhados), para rowgroups DELTA e COLUMNSTORE.|  

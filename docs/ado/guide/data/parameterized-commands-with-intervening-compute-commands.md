@@ -16,15 +16,15 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1675e80522feb0c0b2a46a89dfa6e3bba182198
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851634"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527660"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos parametrizados com comandos COMPUTE de intervenção
-Uma forma com parâmetros típica comando APPEND tem uma cláusula que cria um pai **conjunto de registros** com um comando de consulta e outra cláusula que cria um filho **Recordset** com um comando de consulta parametrizada — ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). Em forma resultante **Recordset** tem dois níveis, no qual o pai ocupa o nível superior e o filho ocupa um nível inferior.  
+Uma forma com parâmetros típica comando APPEND tem uma cláusula que cria um pai **conjunto de registros** com um comando de consulta e outra cláusula que cria um filho **Recordset** com um comando de consulta parametrizada - ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). Em forma resultante **Recordset** tem dois níveis, no qual o pai ocupa o nível superior e o filho ocupa um nível inferior.  
   
  A cláusula que cria o filho **Recordset** pode agora ser um número arbitrário de forma aninhada comandos de computação, em que o comando mais profundamente aninhado contém a consulta parametrizada. Em forma resultante **conjunto de registros** tem vários níveis, na qual o pai ocupa o nível superior, o filho ocupa o nível mais baixo e um número arbitrário de **conjunto de registros**s gerado pelo comandos de computação de forma ocupam os níveis intermediários.  
   

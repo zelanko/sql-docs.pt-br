@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c94cba40d4a78e33e2c272aa0534eeeac87937a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203866"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361758"
 ---
-# <a name="lesson-2-adding-looping"></a>Lição 2: Adicionando loop
-  Na [lição 1: Criando o projeto e pacote básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), você criou um pacote que extraiu dados de uma fonte de arquivo simples, transformou os dados usando transformações pesquisa e, por fim, carregou os dados no  **FactCurrency** tabela de fatos a **AdventureWorksDW2012** banco de dados de exemplo.  
+# <a name="lesson-2-adding-looping"></a>Lição 2: Adicionando um loop
+  No [lição 1: Criando o projeto e pacote básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), você criou um pacote que extraiu dados de uma fonte de arquivo simples, transformou os dados usando transformações pesquisa e, por fim, carregou os dados na **FactCurrency** tabela de fatos a **AdventureWorksDW2012** banco de dados de exemplo.  
   
  Porém, é raro para um processo de extração, transformação e carregamento (ETL) usar um único arquivo simples. Um típico processo ETL extrairia dados de várias fontes de arquivo simples. Extrair dados de várias fontes requer um fluxo de controle iterativo. Um dos recursos mais aguardados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é a capacidade de adicionar iterações ou loops aos pacotes com facilidade.  
   
@@ -48,23 +47,23 @@ ms.locfileid: "48203866"
  Nesta lição, você não modificará o fluxo de dados, apenas o fluxo de controle.  
   
 > [!IMPORTANT]  
->  Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Amostras de produto do Reporting Services no CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+>  Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Reporting Services Product Samples on CodePlex (Amostras de produto do Reporting Services no CodePlex)](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
  Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote da Lição 1](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [Etapa 1: Copiando o pacote da lição 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [Etapa 2: Adicionando e configurando o contêiner Loop Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Etapa 3: Modificando o Gerenciador de Conexões de Arquivo Simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Etapa 3: Modificando o Gerenciador de Conexão de arquivo simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Etapa 4: Testando o pacote de tutorial da Lição 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Etapa 4: Testando o pacote de Tutorial da lição 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
- [Etapa 1: Copiando o pacote da Lição 1](lesson-2-1-copying-the-lesson-1-package.md)  
+ [Etapa 1: Copiando o pacote da lição 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Contêiner do Loop For](control-flow/for-loop-container.md)  
+ [Contêiner Loop For](control-flow/for-loop-container.md)  
   
   

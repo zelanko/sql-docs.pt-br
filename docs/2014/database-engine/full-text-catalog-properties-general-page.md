@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182766"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353579"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriedades do Catálogo de Texto Completo (página Geral)
   Esta seção mostra as opções e funções disponíveis na página **Geral** da caixa de diálogo **Propriedades do Catálogo de Texto Completo** .  
@@ -50,7 +50,7 @@ ms.locfileid: "48182766"
   
 -   **Criando índice**  
   
--   **Disco está cheio – em pausa**  
+-   **Disco está em pausa completo**  
   
 -   **Change tracking**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48182766"
   
 -   **Sim**  
   
--   Para obter mais informações sobre sinais diacríticos, consulte [Diacritical Mark](http://go.microsoft.com/fwlink/?LinkId=154091) (em inglês) na Enciclopédia Encarta MSN.  
+-   Para obter mais informações sobre sinais diacríticos, consulte [Diacritical Mark](https://go.microsoft.com/fwlink/?LinkId=154091) (em inglês) na Enciclopédia Encarta MSN.  
   
  **Data da última população**  
  Exibe a data em que o catálogo foi populado pela última vez.  
@@ -85,7 +85,7 @@ ms.locfileid: "48182766"
   
 |||  
 |-|-|  
-|**Nenhuma**|Não executa operações de **Otimizar catálogo**, **Recriar catálogo**nem **Repopular catálogo** .|  
+|**Nenhum**|Não executa operações de **Otimizar catálogo**, **Recriar catálogo**nem **Repopular catálogo** .|  
 |**Otimizar catálogo**|Otimiza a utilização de espaço do catálogo e melhora o desempenho de consultas. Também melhora a exatidão da classificação de relevância de resultados de pesquisa.<br /><br /> Esta ação executa ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
 |**Recriar catálogo**|Exclui e recria o catálogo de texto completo. Esta operação deve ser executada se uma propriedade de catálogo fundamental for alterada, como distinção de acentos.<br /><br /> Para que a recriação seja bem-sucedida, o grupo de arquivos em que reside o catálogo de texto completo deve estar online ou poder ser lido-gravado. Após a recriação, o índice de texto completo será populado novamente.<br /><br /> Esta ação executa ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Repopular catálogo**|Atualiza o catálogo com alterações recentes dos dados. Esta opção requer tempo para manutenção do catálogo.|  

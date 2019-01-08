@@ -15,15 +15,15 @@ ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c815ff9b1c5bb4fb13f622aab2624be9db9f8b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d3ed68462736058ae386d8b5b6ad874f6fde8c0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219746"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362678"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Remover um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como excluir o grupo de disponibilidade (remover) um AlwaysOn, usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se uma instância de servidor que hospeda uma das réplicas de disponibilidade estiver offline quando você exclui um grupo de disponibilidade, ela removerá a réplica de disponibilidade local quando estiver online novamente. O descarte de um grupo de disponibilidade exclui qualquer ouvinte de grupo de disponibilidade associado.  
+  Este tópico descreve como excluir (descartar) um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se uma instância de servidor que hospeda uma das réplicas de disponibilidade estiver offline quando você exclui um grupo de disponibilidade, ela removerá a réplica de disponibilidade local quando estiver online novamente. O descarte de um grupo de disponibilidade exclui qualquer ouvinte de grupo de disponibilidade associado.  
   
  Observe que, se for necessário, você pode remover um grupo de disponibilidade de qualquer nó WSFC (Windows Server Failover Clustering) que processa as credenciais de segurança corretas para o grupo de disponibilidade. Isso permite excluir um grupo de disponibilidade quando nenhuma de suas réplicas de disponibilidade permanece.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48219746"
   
 -   Evite remover um grupo de disponibilidade quando o cluster WSFC (Windows Server Failover Clustering) não tem quorum. Caso seja necessário remover um grupo de disponibilidade enquanto o cluster perde quorum, o grupo de disponibilidade de metadados armazenado no cluster não será removido. Depois que o cluster recuperar o quorum, será necessário remover novamente o grupo de disponibilidade para removê-lo do cluster WSFC.  
   
--   Em uma réplica secundária, DROP AVAILABILITY GROUP só deve ser usado para fins de emergência. Isso ocorre porque, ao remover um grupo de disponibilidade, você o coloca offline. Se você remover o grupo de disponibilidade de uma réplica secundária, a réplica primária não poderá determinar se o estado OFFLINE ocorreu devido à perda de quorum, a um failover forçado ou a um comando DROP AVAILABILITY GROUP. A réplica primária passa para o estado RESTORING para evitar uma possível situação de separação. Para obter mais informações, consulte [How It Works: DROP AVAILABILITY GROUP Behaviors](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (Como funcionam os comportamentos de DROP AVAILABILITY GROUP) (blog CSS SQL Server Engineers).  
+-   Em uma réplica secundária, DROP AVAILABILITY GROUP só deve ser usado para fins de emergência. Isso ocorre porque, ao remover um grupo de disponibilidade, você o coloca offline. Se você remover o grupo de disponibilidade de uma réplica secundária, a réplica primária não poderá determinar se o estado OFFLINE ocorreu devido à perda de quorum, a um failover forçado ou a um comando DROP AVAILABILITY GROUP. A réplica primária passa para o estado RESTORING para evitar uma possível situação de separação. Para obter mais informações, consulte [como funciona: Comportamentos DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (blog CSS SQL Server Engineers).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48219746"
   
 5.  Na caixa de diálogo **Remover Grupo de Disponibilidade** , para excluir todos os grupos de disponibilidade listados, clique em **OK**. Se você não desejar remover todos os grupos de disponibilidade listados, clique em **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para excluir um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária, se possível, ou conecte-se a outra instância de servidor que é habilitada para Grupos de Disponibilidade AlwaysOn em um nó WSFC que possuem as credenciais de segurança corretas para o grupo de disponibilidade.  
@@ -114,7 +114,7 @@ ms.locfileid: "48219746"
     ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48219746"
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (Como funcionam os comportamentos de DROP AVAILABILITY GROUP) (blog CSS SQL Server Engineers)  
+-   [Como funciona: Comportamentos DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (blog CSS SQL Server Engineers)  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

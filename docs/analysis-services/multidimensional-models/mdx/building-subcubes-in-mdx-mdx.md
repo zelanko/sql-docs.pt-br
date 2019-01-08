@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9f9bcc170883c9c663903d17f3355e27b2b14177
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bf6396ebe7cfe18aa7d1005d39095a35713e10b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026243"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419047"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Criando subcubos em MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Além disso, valores de agregação de um subcubo são visualmente totalizados. Por exemplo, um subcubo contém `USA`, `WA`e `OR`. O valor de agregação para `USA` será a soma de `{WA,OR}` , pois `WA` e `OR` são os únicos estados definidos pelo subcubo. Todos os outros estados serão ignorados.  
   
- Além disso, referências explicitas a células fora do subcubo retornarão valores de células que são avaliados no contexto do cubo inteiro. Por exemplo, você cria um subcubo limitado ao ano atual. Você usa a função [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) para comparar o ano atual ao anterior. A diferença em valores será retornada mesmo o valor do ano anterior estando fora do subcubo.  
+ Além disso, referências explicitas a células fora do subcubo retornarão valores de células que são avaliados no contexto do cubo inteiro. Por exemplo, você cria um subcubo limitado ao ano atual. Você usa a função [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) para comparar o ano atual ao anterior. A diferença nos valores será retornada, mesmo que o valor do ano anterior estando fora do subcubo.  
   
  Por fim, se o contexto original não for substituído, as funções de conjunto de uma subseleção serão avaliadas no contexto da subseleção. Se o contexto for substituído, as funções de conjunto serão avaliadas no contexto do cubo inteiro.  
   
@@ -60,7 +60,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>Consulte também  
- [Estabelecendo o contexto de cubo em uma consulta & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [Conceitos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Estabelecendo o contexto de cubo em uma consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

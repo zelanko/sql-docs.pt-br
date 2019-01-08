@@ -12,22 +12,22 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20adc991d3d9c497b4bab1f7c665f941bd98e7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088576"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365798"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   Este tópico discute SQLSetDescRec funcionalidade específica para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="sqlsetdescrec-and-table-valued-parameters"></a>SQLSetDescRec e parâmetros com valor de tabela  
- SQLSetDescRec pode ser usado para definir campos de descritor para parâmetros com valor de tabela e colunas de parâmetro com valor de tabela. As colunas do parâmetro com valor de tabela ficam disponíveis somente quando o campo do cabeçalho do descritor SQL_SOPT_SS_PARAM_FOCUS é definido como o ordinal de um registro que tenha SQL_DESC_TYPE definido como SQL_SS_TABLE. Para obter mais informações sobre sql_spot_ss_param_focus, consulte [SQLSetStmtAttr](sqlsetstmtattr.md).  
+ SQLSetDescRec pode ser usado para definir campos de descritor para parâmetros com valor de tabela e colunas de parâmetro com valor de tabela. As colunas do parâmetro com valor de tabela ficam disponíveis somente quando o campo do cabeçalho do descritor SQL_SOPT_SS_PARAM_FOCUS é definido como o ordinal de um registro que tenha SQL_DESC_TYPE definido como SQL_SS_TABLE. Para obter mais informações sobre SQL_SPOT_SS_PARAM_FOCUS, consulte [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  A seguinte tabela descreve o mapeamento entre parâmetros e campos de descritor.  
   
-|Parâmetro|Atributo relacionado a tipos de parâmetros sem-valor de tabela, inclusive colunas de parâmetros com valor de tabela|Atributo relacionado para parâmetros com valor de tabela|  
+|Parâmetro|Atributo relacionado para tipos de parâmetro com valor tabela, incluindo colunas de parâmetro com valor de tabela|Atributo relacionado para parâmetros com valor de tabela|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*SubType*|Ignored|Para registros de tipo SQL_DATETIME ou SQL_INTERVAL, defina como SQL_DESC_DATETIME_INTERVAL_CODE.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48088576"
  `SQLSetDescRec` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

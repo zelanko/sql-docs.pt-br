@@ -17,15 +17,15 @@ ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f577d48d14790ca946348ccff030f4ff31d9c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 785a03a5d9fffe3adf072a32f578b0ba936ae6f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169716"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521017"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>A consulta básica de MDX (MDX)
-  A consulta básica das expressões multidimensionais (MDX) é a instrução SELECT, a consulta MDX mais usada. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  
+  A consulta básica de MDX (Multidimensional Expressions) é a consulta usada com mais frequência: a instrução SELECT em MDX. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  
   
 ## <a name="specifying-a-result-set"></a>Especificando um conjunto de resultados  
  Na linguagem MDX, a instrução SELECT especifica um conjunto de resultados que contém um subconjunto de dados multidimensionais retornados a partir de um cubo. Para especificar um conjunto de resultados, a consulta MDX deve conter as seguintes informações:  

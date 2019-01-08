@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe0eb799d7f3a78d46d38940805f203a91b7b6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9df741090bf896019c6d1c4ede5215982497cb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183266"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366988"
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
   Quando você importa em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exporta em massa dados de uma tabela, pode usar um arquivo de formato para um sistema flexível para gravar arquivos de dados que exigem pouca ou nenhuma edição para ficar em conformidade com outros formatos de dados ou para ler arquivos de dados de outros programas de software.  
@@ -46,7 +46,7 @@ ms.locfileid: "48183266"
   
 -   A. Criando um arquivo de formato não XML para dados nativos  
   
--   B. Criando um arquivo de formato não XML para dados de caracteres  
+-   b. Criando um arquivo de formato não XML para dados de caracteres  
   
 -   C. Criando um arquivo de formato não XML para dados nativos Unicode  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48183266"
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Description|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica o arquivo de formato não XML.|  
 |**-n**|Especifica tipos de dados nativos.|  
@@ -84,12 +84,12 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Para obter mais informações, veja [Arquivos de formato não XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. Criando um arquivo de formato não XML para dados de caracteres  
+#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>b. Criando um arquivo de formato não XML para dados de caracteres  
  O exemplo a seguir cria um arquivo de formato XML, `Department.fmt`, para a tabela [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . O arquivo de formato usa formatos de dados de caracteres e um terminador de campo não padrão (`,`). O conteúdo do arquivo de formato gerado é apresentado após o comando.  
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Description|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica um arquivo de formato não XML.|  
 |**-c**|Especifica dados de caracteres.|  
@@ -147,7 +147,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 -   A. Criando um arquivo de formato XML para dados de caracteres  
   
--   B. Criando um arquivo de formato XML para dados nativos  
+-   b. Criando um arquivo de formato XML para dados nativos  
   
  Os exemplos usam a tabela `HumanResources.Department` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . A tabela `HumanResources.Department` contém quatro colunas: `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
@@ -159,24 +159,24 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Description|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica o arquivo de formato XML.|  
 |**-c**|Especifica dados de caracteres.|  
-|**-t** `,`|Especifica uma vírgula (**,**) como terminador de campo.<br /><br /> Se o arquivo de dados usar o terminador de campo padrão (`\t`), a opção **-t** será desnecessária.|  
+|**-t** `,`|Especifica uma vírgula (**,**) como terminador de campo.<br /><br /> Observação: Se o arquivo de dados usa o terminador de campo padrão (`\t`), o **-t** será desnecessária.|  
 |**-T**|Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para o logon ser efetuado com êxito.|  
   
  No prompt de comando do Windows, digite o seguinte comando `bcp` :  
   
 ```  
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  O arquivo de formato gerado, `Department-c.xml`, contém os seguintes elementos XML:  
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -194,12 +194,12 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Para obter informações sobre a sintaxe deste arquivo de formato XML, veja [Arquivos de formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md). Para obter informações sobre dados de caractere, veja [Usar o formato de caractere para importar ou exportar dados &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md).  
   
-#### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. Criando um arquivo de formato XML para dados nativos  
+#### <a name="b-creating-an-xml-format-file-for-native-data"></a>b. Criando um arquivo de formato XML para dados nativos  
  O exemplo a seguir cria um arquivo de formato XML, `Department-n.xml`, para a tabela `HumanResources.Department` . O arquivo de formato usa tipos de dados nativos. O conteúdo do arquivo de formato gerado é apresentado após o comando.  
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Description|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica o arquivo de formato XML.|  
 |**-n**|Especifica tipos de dados nativos.|  
@@ -215,7 +215,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -234,7 +234,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  Para obter informações sobre a sintaxe deste arquivo de formato XML, veja [Arquivos de formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md). Para obter informações sobre como usar dados nativos, veja [Usar o formato nativo para importar ou exportar dados &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Mapeando campos de dados para colunas de tabelas  
- Como criado pelo **bcp**, um arquivo de formato descreve todas as colunas da tabela em ordem. Você pode modificar um arquivo de formato para reorganizar ou omitir linhas de tabela. Isso permite a personalização de um arquivo de formato cujos campos não são mapeados diretamente para as colunas da tabela. Para obter mais informações, consulte os tópicos a seguir:  
+ Como criado pelo **bcp**, um arquivo de formato descreve todas as colunas da tabela em ordem. Você pode modificar um arquivo de formato para reorganizar ou omitir linhas de tabela. Isso permite a personalização de um arquivo de formato cujos campos não são mapeados diretamente para as colunas da tabela. Para mais informações, consulte os seguintes tópicos:  
   
 -   [Usar um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

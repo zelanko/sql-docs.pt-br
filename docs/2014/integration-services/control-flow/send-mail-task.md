@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
@@ -19,12 +18,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 799fe96b22881af08f1c94b10b44bd0038fa78a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1bcb08da6b28555502bb39658fb2f1fcbacb3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064816"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354279"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  
@@ -59,7 +58,7 @@ ms.locfileid: "48064816"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Mensagens de log personalizadas disponíveis na tarefa Enviar Email  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Enviar Email. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|Indica que a tarefa começou a enviar uma mensagem de email.|  
 |`SendMailTaskEnd`|Indica que a tarefa terminou de enviar uma mensagem de email.|  
@@ -70,9 +69,9 @@ ms.locfileid: "48064816"
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Enviar email Editor da tarefa &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Enviar Email &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Enviar email Editor da tarefa &#40;página de email&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor da Tarefa Enviar Email &#40;Página Email&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48064816"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](http://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
+-   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](https://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](integration-services-tasks.md)   

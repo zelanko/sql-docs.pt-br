@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140636"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361068"
 ---
 # <a name="create-package-configurations"></a>Criar configurações de pacote
   Você cria as configurações do pacote por meio da caixa de diálogo **Organizador de Configurações do Pacote** e do Assistente de Configuração de Pacote. Para acessar essas ferramentas, clique em **Configurações do Pacote** no menu de **SSIS** em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -74,11 +74,11 @@ ms.locfileid: "48140636"
   
  A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-|coluna|Description|  
+|coluna|Descrição|  
 |------------|-----------------|  
 |**Nome da Configuração**|O nome da configuração.|  
 |**Tipo de Configuração**|O tipo de configuração.|  
-|**Cadeia de Caracteres de Configuração**|O local da configuração. O local pode ser um caminho, uma variável de ambiente, uma chave do Registro, um nome de variável do pacote pai ou uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|**Cadeia de Caracteres de Configuração**|O local da configuração. O local pode ser um caminho, uma variável de ambiente, uma chave do Registro, um nome de variável do pacote pai ou uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Objeto de Destino**|O nome do objeto com uma propriedade que tem uma configuração. Se a configuração for um arquivo de configuração XML, a coluna ficará em branco, devido à configuração poder atualizar vários objetos.|  
 |**Propriedade de Destino**|O nome da propriedade. Se a configuração gravar em um arquivo de configuração XML ou em uma tabela do SQL Server, a coluna ficará em branco, pois a configuração pode atualizar vários objetos.|  
   
@@ -111,14 +111,14 @@ ms.locfileid: "48140636"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Artigo técnico de [Noções básicas sobre configurações de pacotes do Integration Services](http://go.microsoft.com/fwlink/?LinkId=165643), em msdn.microsoft.com  
+-   Artigo técnico de [Noções básicas sobre configurações de pacotes do Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643), em msdn.microsoft.com  
   
--   Entrada de blog, [Criando pacotes em código – Configurações de Pacote](http://go.microsoft.com/fwlink/?LinkId=217663), em www.sqlis.com.  
+-   Entrada de blog [criando pacotes em código – configurações de pacote](https://go.microsoft.com/fwlink/?LinkId=217663), em www.sqlis.com.  
   
--   Entrada de blog, [Exemplo de API – Adicione programaticamente um arquivo de configuração a um pacote](http://go.microsoft.com/fwlink/?LinkId=217664), em blogs.msdn.com.  
+-   Entrada de blog [exemplo de API – adicione programaticamente um arquivo de configuração para um pacote](https://go.microsoft.com/fwlink/?LinkId=217664), em blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurações de pacote](../../2014/integration-services/package-configurations.md)   
+ [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
  [Implantação de pacote &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Trabalhar com variáveis programaticamente](building-packages-programmatically/working-with-variables-programmatically.md)  
   

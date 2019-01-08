@@ -11,12 +11,12 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084756"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363658"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexão SAP NetWeaver BI (SSRS)
   Para incluir dados de uma fonte de dados externa do SAP NetWeaver® Business Intelligence em seu relatório, você deve ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Esse tipo de fonte de dados interna tem como base a extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -72,17 +72,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> Propriedades de campo estendidas  
- A fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] dá suporte a propriedades de campo estendidas. Propriedades de campo estendidas são propriedades além `Value` e `IsMissing` que são definidos pela extensão de processamento de dados para um campo de conjunto de dados. As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados. As propriedades personalizadas são exclusivas para cada fonte de dados.  
+ A fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] dá suporte a propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais a `Value` e `IsMissing` definidas para um campo de conjunto de dados pela extensão de processamento de dados. As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados. As propriedades personalizadas são exclusivas para cada fonte de dados.  
   
 ### <a name="working-with-field-properties"></a>Trabalhando com propriedades de campo  
- As propriedades de campo estendidas não são exibidas no painel de dados do relatório como itens que você pode arrastar em seu layout de relatório. Em vez disso, você pode arrastar o campo pai da propriedade para o relatório e, em seguida, altere a propriedade padrão de `Value` para a propriedade que você deseja usar. Por exemplo, se o nome do campo **Ano Calendário/Nível Mensal 01** é criado em um designer de consulta MDX, soltando um nível do painel Metadados para o painel Consulta, consulte a propriedade estendida personalizada **Nome Longo** em uma expressão usando a sintaxe a seguir:  
+ As propriedades de campo estendidas não são exibidas no painel de dados do relatório como itens que você pode arrastar em seu layout de relatório. Em vez disso, você arrasta o campo pai da propriedade para o relatório e altera a propriedade padrão de `Value` para a propriedade que você deseja usar. Por exemplo, se o nome do campo **Ano Calendário/Nível Mensal 01** é criado em um designer de consulta MDX, soltando um nível do painel Metadados para o painel Consulta, consulte a propriedade estendida personalizada **Nome Longo** em uma expressão usando a sintaxe a seguir:  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- O nome de uma propriedade de campo estendida é exibido na Dica de Ferramenta quando você para o mouse sobre um campo no painel Metadados. Para obter mais informações sobre os designers de consulta que você pode usar para explorar os dados subjacentes, consulte [Interface de usuário do Designer de consulta do SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
+ O nome de uma propriedade de campo estendida é exibido na Dica de Ferramenta quando você para o mouse sobre um campo no painel Metadados. Para obter mais informações sobre os designers de consultas que você pode usar para explorar os dados subjacentes, consulte [Interface do usuário do Designer de Consulta do SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
->  Os valores para essas propriedades de campo estendidas passarão a existir somente se a fonte de dados fornecer esses valores quando você executar e recuperar os dados de seus conjuntos de dados. Você pode consultar esses `Field` valores de propriedade de qualquer expressão usando a sintaxe descrita abaixo. Entretanto, como esses campos são específicos para esse provedor de dados e não faz parte da linguagem de definição de relatório, as alterações que forem feitas nesse valor não serão salvas com a definição de relatório.  
+>  Os valores para essas propriedades de campo estendidas passarão a existir somente se a fonte de dados fornecer esses valores quando você executar e recuperar os dados de seus conjuntos de dados. Dessa forma, você poderá consultar esses valores da propriedade `Field` a partir de qualquer expressão usando a sintaxe descrita a seguir. Entretanto, como esses campos são específicos para esse provedor de dados e não faz parte da linguagem de definição de relatório, as alterações que forem feitas nesse valor não serão salvas com a definição de relatório.  
   
  Use uma das seguintes sintaxes para consultar as propriedades estendidas predefinidas em uma expressão:  
   
@@ -118,7 +118,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> Comentários  
  Nem todos os modos de entrega de relatório são suportados por esse provedor de dados. Não há suporte para a entrega de relatórios através de assinaturas controladas por dados para essa extensão de processamento de dados. Para obter mais informações, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- Para obter mais informações, consulte [Usando o Reporting Services do SQL Server 2008 com o SAP NetWeaver Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=167352).  
+ Para obter mais informações, consulte [Usando o Reporting Services do SQL Server 2008 com o SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   

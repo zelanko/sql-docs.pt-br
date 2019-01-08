@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192516"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359558"
 ---
 # <a name="securing-sql-server"></a>Protegendo o SQL Server
   A segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser exibida como uma série de etapas, envolvendo quatro áreas: a plataforma, a autenticação, os objetos (inclusive os dados) e os aplicativos que acessam o sistema. Os tópicos a seguir guiarão você pela criação e implementação de um plano de segurança efetivo.  
   
- Você pode encontrar mais informações sobre a segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no site do [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . Ele inclui um guia de práticas recomendadas e uma lista de verificação de segurança. Este site também contém as informações mais recentes de service packs e downloads.  
+ Você pode encontrar mais informações sobre a segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no site do [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . Ele inclui um guia de práticas recomendadas e uma lista de verificação de segurança. Este site também contém as informações mais recentes de service packs e downloads.  
   
 ## <a name="platform-and-network-security"></a>Segurança de rede e plataforma  
  A plataforma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui hardware físico e sistemas de redes que conectam os clientes aos servidores de banco de dados e os arquivos binários que são usados para processar solicitações do banco de dados.  
@@ -76,7 +76,7 @@ ms.locfileid: "48192516"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivos de programa|[Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os service packs e as atualizações fornecem segurança avançada. Para determinar o último service pack disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte o site [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os service packs e as atualizações fornecem segurança avançada. Para determinar o último service pack disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte o site [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  Você pode usar o script a seguir para determinar o service pack instalado no sistema.  
   

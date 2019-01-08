@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516217"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
   Você pode criar índices clusterizados em tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Com poucas exceções, toda tabela deveria ter um índice clusterizado. Além de melhorar o desempenho da consulta, o índice clusterizado pode ser recompilado ou reorganizado sob demanda para controlar a fragmentação de tabela. Um índice clusterizado também pode ser criado em uma exibição. (Os índices clusterizados são definidos no tópico [Índices clusterizados e não clusterizados descritos](clustered-and-nonclustered-indexes-described.md).)  
@@ -59,7 +59,7 @@ ms.locfileid: "48063156"
   
      Você pode criar um índice clusterizado em uma coluna diferente da coluna de chave primária se uma restrição de chave primária não clusterizada tiver sido especificada.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Quando uma estrutura de índice clusterizado é criada, o espaço em disco de ambas as estruturas, a antiga (origem) e a nova (destino), é necessário em seus respectivos arquivos e grupos de arquivos. A antiga estrutura não é desalocada até que a transação completa seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
   
@@ -80,11 +80,11 @@ ms.locfileid: "48063156"
   
 1.  No Pesquisador de Objetos, expanda a tabela na qual você deseja criar um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Clusterizado…**.  
+2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...**.  
   
 3.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-4.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
+4.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
 5.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48063156"
   
 10. No menu **Arquivo**, clique em **Salvar***table_name*.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Para criar um índice clusterizado  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e45532fc19a4fa3cc45857213b75474fc34cd82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b6c7ff7a5ac2539bc6732d68522bb361d6b1b0a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751598"
 ---
 # <a name="uninstall-reporting-services"></a>Desinstalar o Reporting Services
   A desinstalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não remove o conteúdo que você criou ou a configuração que você modificou. Porém, se algum conteúdo precisar ser utilizado depois que a desinstalação for concluída, é recomendável fazer cópias do conteúdo antes de começar o processo de desinstalação.  
@@ -34,11 +33,11 @@ ms.locfileid: "48138696"
   
  A seguir são apresentados nomes de exemplo dos três bancos de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que não são removidos.  
   
--   **Banco de dados do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065e  
+-   **Banco de dados de servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065e  
   
--   **Banco de dados temporário do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
+-   **Relatório servidor banco de dados temporário:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
   
--   **Banco de dados de alertas do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
+-   **Alerta banco de dados:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Desinstale o suplemento para produtos do SharePoint.  
  Ao desinstalar o suplemento de um computador, você pode optar por desinstalar somente os arquivos ou também para remover o recursos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do farm. Para obter informações sobre como desinstalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint, consulte [instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  

@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507273"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
   Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
@@ -83,7 +83,7 @@ Network=dbnmpntw;
 >  Como pipes nomeados não usam o algoritmo de nova tentativa TCP/IP, em muitos casos, uma tentativa de conexão de pipes nomeados pode exceder o tempo limite antes da conexão com um banco de dados espelho.  
   
 #### <a name="server-attribute"></a>Atributo de servidor  
- A cadeia de conexão deve conter um `Server` atributo que forneça o nome do parceiro inicial que deverá identificar a instância do servidor principal atual.  
+ A cadeia de conexão deve conter um atributo `Server` que forneça o nome do parceiro inicial que deverá identificar a instância do servidor principal atual.  
   
  A forma mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[**\\***<SQL_Server_instance_name>*]. Por exemplo:  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  Quando só o nome do parceiro inicial é fornecido, os desenvolvedores de aplicativos não precisam tomar nenhuma ação ou gravar nenhum código, exceto sobre como se reconectar.  
   
 > [!NOTE]  
->  Os desenvolvedores de aplicativos de código gerenciado fornecem o nome do parceiro de failover na `ConnectionString` do `SqlConnection` objeto. Para obter informações sobre como usar essa cadeia de conexão, consulte “Suporte ao espelhamento de banco de dados no Provedor de Dados .NET Framework para SQL Server" na documentação ADO.NET que é parte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
+>  Desenvolvedores de aplicativos de código gerenciado fornecem o nome do parceiro de failover no `ConnectionString` do objeto `SqlConnection`. Para obter informações sobre como usar essa cadeia de conexão, consulte “Suporte ao espelhamento de banco de dados no Provedor de Dados .NET Framework para SQL Server" na documentação ADO.NET que é parte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
   
 #### <a name="example-connection-string"></a>Cadeia de conexão de exemplo  
  Por exemplo, para fazer a conexão explícita com o banco de dados **AdventureWorks** usando o TCP/IP em Partner_A ou Partner_B, um aplicativo cliente que utiliza o driver ODBC pode fornecer a seguinte cadeia de conexão:  
@@ -192,7 +192,7 @@ Server=123.34.45.56,4724;
 )  
   
 ### <a name="retry-delays-during-failover"></a>Atrasos de nova tentativa durante o failover  
- Se um cliente tentar se conectar a um parceiro que está em failover, o parceiro responderá imediatamente que é inativo. Neste caso, cada turno de tentativas de conexão é muito mais breve que o tempo de retentar estimado. Isso significa que muitos turnos de tentativas de conexão poderiam acontecer antes que o período de logon expire. Para evitar a sobrecarrega dos parceiros com uma série rápida de tentativas de conexão durante um failover, o provedor de acesso de dados adiciona um breve retardo ao retentar depois de cada turno de retentar. A duração de um determinado retardo ao retentar é determinada pelo algoritmo de retardo ao retentar. Depois do primeiro turno, o retardo é 100 milissegundos. Após cada um dos três turnos, o retardo ao retentar dobra—para 200, 400 e 800. Em todos os últimos turnos, o atraso de nova tentativa é de 1 segundo até que a tentativa de conexão tenha êxito ou expire.  
+ Se um cliente tentar se conectar a um parceiro que está em failover, o parceiro responderá imediatamente que é inativo. Neste caso, cada turno de tentativas de conexão é muito mais breve que o tempo de retentar estimado. Isso significa que muitos turnos de tentativas de conexão poderiam acontecer antes que o período de logon expire. Para evitar a sobrecarrega dos parceiros com uma série rápida de tentativas de conexão durante um failover, o provedor de acesso de dados adiciona um breve retardo ao retentar depois de cada turno de retentar. A duração de um determinado retardo ao retentar é determinada pelo algoritmo de retardo ao retentar. Depois do primeiro turno, o retardo é 100 milissegundos. Após cada um dos três turnos, o retardo ao repetir dobra – para 200, 400 e 800. Em todos os últimos turnos, o atraso de nova tentativa é de 1 segundo até que a tentativa de conexão tenha êxito ou expire.  
   
 > [!NOTE]  
 >  Se a instância de servidor for parada, então a solicitação de conexão falhará imediatamente.  

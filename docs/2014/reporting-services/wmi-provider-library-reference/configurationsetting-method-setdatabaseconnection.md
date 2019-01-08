@@ -19,12 +19,12 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68907320922f0181521a9ff30de708f660e8dd8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518634"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Método SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
   Define a conexão do banco de dados do servidor de relatório para um banco de dados do servidor de relatório específico.  
@@ -76,20 +76,20 @@ public void BackupEncryptionKey(string Server,
   
  Quando o parâmetro *CredentialsType* for definido como 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), o valor transmitido no parâmetro *UserName* deverá estar em conformidade com os requisitos de um nome de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Quando o parâmetro *CredentialsType* é definido como 2 (serviço Windows), o servidor de relatório usa a segurança integrada para se conectar ao banco de dados do servidor de relatório, e os parâmetros *UserName* e *Password* são ignorados. O serviço Web do servidor de relatório usará a conta [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ou uma conta do pool de aplicativos e a conta do serviço do Windows para acessar o banco de dados do servidor de relatório.  
+ Quando o parâmetro *CredentialsType* é definido como 2 (serviço Windows), o servidor de relatório usa a segurança integrada para se conectar ao banco de dados do servidor de relatório, e os parâmetros *UserName* e *Password* são ignorados. O serviço Web Servidor de Relatórios usará a conta [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ou uma conta do pool de aplicativos e a conta de serviço Windows para acessar o banco de dados do servidor de relatório.  
   
  Quando chamado, o método SetDatabaseConnection criptografa e armazena as credenciais e informações do banco de dados no arquivo de configuração para o servidor de relatório especificado.  
   
  O método SetDatabaseConnection não verifica se o servidor de relatório pode se conectar ao banco de dados do servidor de relatório usando os dados especificados.  
   
- Quando configurada pela primeira vez, a propriedade ConnectionPoolSize é definida com base nos seguintes processadores: ConnectionPoolSize = #Processadores * 75.  
+ Quando definido pela primeira vez, o ConnectionPoolSize propriedade é definida com base nos seguintes processadores: ConnectionPoolSize = #Processors * 75.  
   
- O método SetDatabaseConnection não concede permissões para as contas especificadas. Você deve chamar o [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) método para cada conta que requer acesso ao banco de dados de servidor de relatório e executa o script resultante.  
+ O método SetDatabaseConnection não concede permissões para as contas especificadas. Você deve chamar o método [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) para cada conta que requer acesso ao banco de dados do servidor de relatório e executar o script resultante.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

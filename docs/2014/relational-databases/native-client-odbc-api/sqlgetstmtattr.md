@@ -14,25 +14,25 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd74525cda5946fb7c86f21638437ee91c3ac7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359919"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLGetStmtAttr para expor atributos de instrução específicos de driver estende o driver ODBC Native Client.  
   
- [SQLSetStmtAttr](sqlsetstmtattr.md) listas de atributos de instrução que sejam de leitura e gravação. Este tópico lista os atributos de instrução somente leitura.  
+ [SQLSetStmtAttr](sqlsetstmtattr.md) lista atributos de instrução que sejam de leitura e gravação. Este tópico lista os atributos de instrução somente leitura.  
   
 ## <a name="sqlsoptsscurrentcommand"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  O atributo SQL_SOPT_SS_CURRENT_COMMAND expõe o comando atual de um lote de comando. O retorno é um inteiro que especifica o local do comando no lote. O valor *ValuePtr* é do tipo SQLLEN.  
   
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- O atributo SQL_SOPT_SS_NOCOUNT_STATUS indica a configuração atual de NOCOUNT opção, que controla se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relata o número de linhas afetadas por uma instrução quando [SQLRowCount](sqlrowcount.md) é chamado. O valor *ValuePtr* é do tipo SQLLEN.  
+ O atributo SQL_SOPT_SS_NOCOUNT_STATUS indica a configuração atual da opção NOCOUNT, que controla se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relata o número de linhas afetadas por uma instrução quando [SQLRowCount](sqlrowcount.md) é chamado. O valor *ValuePtr* é do tipo SQLLEN.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT é OFF. SQLRowCount retorna o número de linhas afetadas.|  
 |SQL_NC_ON|NOCOUNT é ON. O número de linhas afetadas não é retornado pelo SQLRowCount e o valor retornado é 0.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48211177"
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLSetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [Função SQLSetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

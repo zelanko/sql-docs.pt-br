@@ -12,15 +12,15 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ff6bcd9379e6e20351dacee75cb92e56b79d374
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056146"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362788"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colunas com um nome especificado como um caractere curinga
-  Se o nome da coluna especificado for um caractere curinga (\*), o conteúdo dessa coluna será inserido como se não houvesse nenhum nome de coluna especificado. Se essa coluna não for`xml` coluna de tipo, o conteúdo da coluna será inserida como um nó de texto, conforme mostrado no exemplo a seguir:  
+  Se o nome da coluna especificado for um caractere curinga (\*), o conteúdo dessa coluna será inserido como se não houvesse nenhum nome de coluna especificado. Se essa coluna não for do tipo `xml`, o conteúdo da coluna será inserido como um nó de texto, conforme mostrado no exemplo a seguir:  
   
 ```  
 USE AdventureWorks2012;  
@@ -36,9 +36,9 @@ WHERE E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
- `<row EmpID="1">KenJSánchez</row>`  
+ `<row EmpID="1">KenJS??nchez</row>`  
   
  Se a coluna for do tipo `xml`, a árvore XML correspondente será inserida. Por exemplo, a coluna a seguir especifica "*" para o nome da coluna que contém o XML retornado pelo XQuery em relação à coluna Instructions.  
   
@@ -46,7 +46,7 @@ FOR XML PATH;
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
                 /MI:root/MI:Location   
               ') as "*"  
 FROM Production.ProductModel  

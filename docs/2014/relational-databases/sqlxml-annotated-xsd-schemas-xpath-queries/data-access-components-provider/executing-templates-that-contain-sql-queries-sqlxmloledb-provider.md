@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - templates [SQLXML]
@@ -18,12 +16,12 @@ ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 060d7164aee0546e814d090718bcb21400130fdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9405bbb1eb8737b38c1e9214713b5447f1917d7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081786"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800238"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Executando modelos que contêm consultas SQL (provedor SQLXMLOLEDB)
   Este exemplo ilustra o uso da propriedade específica do provedor SQLXMLOLEDB ClientSideXML. Nesse aplicativo de exemplo de ADO do lado cliente, um modelo XML que consiste em uma consulta SQL é executado no servidor.  

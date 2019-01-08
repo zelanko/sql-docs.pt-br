@@ -20,21 +20,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4cc9715d3b4fc6874b992201a1913838ff7f86cf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9e80fcce9d3ecd1e39131da807805691eb59721c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517619"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada tipo de dados de alias que pode ser acessado pelo usuário atual no banco de dados atual.  
   
- Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA. * * * view_name*.  
+ Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Banco de dados no qual o tipo de dados de alias existe.|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o tipo de dados de alias.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  

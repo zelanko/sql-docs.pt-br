@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac6f4fe956c63edb217467b06f5c03f0d43368b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145466"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775778"
 ---
 # <a name="rpccompleted-event-class"></a>classe de evento RPC:Completed
   A classe de evento RPC:Completed indica que uma chamada de procedimento remoto foi concluída.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Colunas de dados da classe de evento RPC:Completed  
   
-|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|`image`|Valor binário dependente da classe de evento capturada no rastreamento.|2|Sim|  
@@ -38,8 +37,8 @@ ms.locfileid: "48145466"
 |Duração|`bigint`|Tempo de CPU usado pelo evento. Em microssegundos, começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Em milissegundos em versões anteriores.|13|Sim|  
 |EndTime|`datetime`|Hora de término da chamada de procedimento remoto.|15|Sim|  
 |Erro|`int`|Número de erro de um determinado evento.<br /><br /> 0=OK<br /><br /> 1=Erro<br /><br /> 2=Anular<br /><br /> 3=Ignorar|31|Sim|  
-|EventClass|`int`|Tipo de evento = 10.|27|não|  
-|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|não|  
+|EventClass|`int`|Tipo de evento = 10.|27|Não|  
+|EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  

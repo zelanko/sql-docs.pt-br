@@ -13,15 +13,15 @@ ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dfcf89c2130426e0c1cfb3c86f88f5f9d74cead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aca49b5260fc68f899a012aadaac7609fdb7062
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106106"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360328"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarefa 3: Limpando dados em relação à base de dados de conhecimento de fornecedores
-  Nesta tarefa, você executará o processo de limpeza auxiliado por computador. O DQS usa algoritmos avançados e níveis de confiança baseados nos valores de limite especificados para analisar os dados em relação à base de dados de conhecimento selecionada e depois limpá-los. Ver [conhecimento de limpeza de dados usando o DQS (interno)](http://msdn.microsoft.com/library/hh213061.aspx) para obter mais detalhes.  
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarefa 3: Limpando dados em relação à base de dados de conhecimento Fornecedores
+  Nesta tarefa, você executará o processo de limpeza auxiliado por computador. O DQS usa algoritmos avançados e níveis de confiança baseados nos valores de limite especificados para analisar os dados em relação à base de dados de conhecimento selecionada e depois limpá-los. Ver [conhecimento de limpeza de dados usando o DQS (interno)](https://msdn.microsoft.com/library/hh213061.aspx) para obter mais detalhes.  
   
 1.  Clique em **iniciar** para iniciar o processo de limpeza auxiliada por computador.  
   

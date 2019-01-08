@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204816"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367308"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
   A tarefa Executar SQL executa instruções SQL ou procedimentos armazenados a partir de um pacote. A tarefa pode conter uma única instrução SQL ou várias instruções SQL que são executadas em sequência. Você pode usar a tarefa Executar SQL para os seguintes propósitos:  
@@ -46,7 +45,7 @@ ms.locfileid: "48204816"
 |Tipo de conexão|Gerenciador de conexões|  
 |---------------------|------------------------|  
 |EXCEL|[Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[Gerenciador de Conexões OLE DB](../connection-manager/ole-db-connection-manager.md)|  
+|OLE DB|[Gerenciador de conexões OLE DB](../connection-manager/ole-db-connection-manager.md)|  
 |ODBC|[Gerenciador de Conexões ODBC](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gerenciador de conexões ADO](../connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gerenciador de conexões ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
@@ -63,7 +62,7 @@ ms.locfileid: "48204816"
 >  Instruções SQL válidas gravadas fora da tarefa Executar SQL talvez não sejam analisadas com êxito pela tarefa Executar SQL.  
   
 > [!NOTE]  
->  A Tarefa Executar SQL usa o valor de enumeração `RecognizeAll` ParseMode. Para obter mais informações, consulte [Namespace ManagedBatchParser](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  A Tarefa Executar SQL usa o valor de enumeração `RecognizeAll` ParseMode. Para obter mais informações, consulte [Namespace ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>Enviando várias instruções em um lote  
  Se várias instruções forem incluídas em uma tarefa Executar SQL, é possível agrupá-las e executá-las como um lote. Para sinalizar o final de um lote, use o comando GO. Todas as instruções SQL entre dois comandos GO são enviadas em um lote para o provedor OLE DB a fim de serem executadas. O comando SQL pode incluir vários lotes separados por comandos GO.  
@@ -81,7 +80,7 @@ ms.locfileid: "48204816"
 -   Se a tarefa usar associações de parâmetro, todas as consultas do lote devem ter o mesmo número e os mesmos tipos de parâmetros.  
   
 ## <a name="running-parameterized-sql-commands"></a>Executando comandos SQL parametrizados  
- As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros de entrada, parâmetros de saída e códigos de retorno. A tarefa Executar SQL dá suporte a `Input`, `Output`, e `ReturnValue` tipos de parâmetro. Você usa o `Input` tipo para parâmetros de entrada `Output` para parâmetros de saída e `ReturnValue` para códigos de retorno.  
+ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros de entrada, parâmetros de saída e códigos de retorno. A tarefa Executar SQL suporta os tipos de parâmetro `Input`, `Output` e `ReturnValue`. Use o tipo `Input` para parâmetros de entrada, `Output` para parâmetros de saída e `ReturnValue` para códigos de retorno.  
   
 > [!NOTE]  
 >  Você só poderá usar parâmetros em uma tarefa Executar SQL se o provedor de dados der suporte a eles.  
@@ -96,7 +95,7 @@ ms.locfileid: "48204816"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Solucionando problemas da tarefa Executar SQL  
  Você pode registrar as chamadas que a tarefa Executar SQL faz para provedores de dados externos. É possível usar esse recurso de registro para solucionar problemas dos comandos SQL executados pela tarefa Executar SQL. Para registrar as chamadas que a tarefa Executar SQL faz aos provedores de dados externos, habilite o registro de pacotes e selecione o evento **Diagnóstico** no nível de pacotes. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Às vezes um comando SQL ou procedimento armazenado retorna vários conjuntos de resultados. Esses conjuntos de resultados incluem não só conjuntos de linhas que são o resultado de `SELECT` consultas, mas também valores únicos que resultam de erros do `RAISERROR` ou `PRINT` instruções. A tarefa poderá ignorar ou não os erros nos conjuntos de resultados que ocorrem após o primeiro conjunto de resultados dependendo do tipo de gerenciador de conexões usado:  
+ Às vezes um comando SQL ou procedimento armazenado retorna vários conjuntos de resultados. Esses conjuntos de resultados incluem não só conjuntos de linhas que resultam de consultas `SELECT`, mas também valores únicos que resultam de erros das instruções `RAISERROR` ou `PRINT`. A tarefa poderá ignorar ou não os erros nos conjuntos de resultados que ocorrem após o primeiro conjunto de resultados dependendo do tipo de gerenciador de conexões usado:  
   
 -   Quando você usa gerenciadores de conexões OLE DB e ADO, a tarefa ignora os conjuntos de resultados que ocorrem após o primeiro conjunto de resultados. Portanto, com esses gerenciadores de conexões, a tarefa ignora um erro retornado por um comando SQL ou um procedimento armazenado quando o erro não faz parte do primeiro conjunto de resultados.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "48204816"
 ### <a name="custom-log-entries"></a>Entradas personalizadas do log  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Executar SQL. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Description|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
   
@@ -159,6 +158,6 @@ ms.locfileid: "48204816"
   
 -   [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)  
   
--   Entrada de blog, [Novas funções de data e hora no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783)em mssqltips.com  
+-   Entrada de blog, [Novas funções de data e hora no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783)em mssqltips.com  
   
   

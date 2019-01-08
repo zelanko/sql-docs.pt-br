@@ -12,15 +12,15 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21a74ca2a57186727aac79d3111b71e93f5d1443
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: aa906aaf6d9ae2033b6d029f4844c5d388bb44ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018111"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358378"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Atualizar para o SQL Server 2014
-  Você pode atualizar instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], confira o [Guia Técnico de Atualização do SQL Server 2014](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (download em PDF), consulte os tópicos sobre o processo de atualização nesta seção e leia as o [Notas de Versão do SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
+  Você pode atualizar instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], confira o [Guia Técnico de Atualização do SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (download em PDF), consulte os tópicos sobre o processo de atualização nesta seção e leia as o [Notas de Versão do SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Esta seção contém os seguintes tópicos:  
@@ -58,8 +58,8 @@ ms.locfileid: "51018111"
  [Atualização do Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Atualizar bancos de dados replicados](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Atualizar o Master Data Services](upgrade-master-data-services.md)   
- [Analisador de práticas recomendadas do SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=197134)   
- [Analisador de Práticas Recomendadas do SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=197135)   
+ [Analisador de práticas recomendadas do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=197134)   
+ [Analisador de Práticas Recomendadas do SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=197135)   
  [Compatibilidade com versões anteriores](../../../2014/getting-started/backward-compatibility.md)  
   
   

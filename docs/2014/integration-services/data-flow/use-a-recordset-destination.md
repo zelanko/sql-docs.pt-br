@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,17 +12,17 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102456"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791098"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
   O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados `Object`. Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  
   
- Você pode usar o destino do Conjunto de Registros em muitos cenários diferentes. Veja alguns exemplos:  
+ Você pode usar o destino do Conjunto de Registros em muitos cenários diferentes. Estes são alguns exemplos:  
   
 -   É possível usar uma tarefa Enviar Email e a linguagem da expressão do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para enviar uma mensagem de email personalizada para cada linha no conjunto de registros.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48102456"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], crie ou abra um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Crie uma variável que conterá o conjunto de registros salvo na memória pelo destino do conjunto de registros e defina o tipo da variável `Object`.  
+2.  Crie uma variável que conterá o conjunto de registros salvo na memória pelo destino do Conjunto de Registros e defina o tipo de variável como `Object`.  
   
 3.  Crie mais variáveis dos tipos apropriados para conter os valores de cada coluna no conjunto de registros que você deseja usar.  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102456"
   
 3.  Na janela **Variáveis** , crie as variáveis que conterão o conjunto de registros e os valores de coluna da linha atual:  
   
-    1.  Crie uma variável denominada `BonusRecordset`e defina seu tipo como `Object`.  
+    1.  Crie uma variável denominada `BonusRecordset` e defina seu tipo como `Object`.  
   
-         O `BonusRecordset` variável contém o conjunto de registros.  
+         A variável `BonusRecordset` contém o conjunto de registros.  
   
-    2.  Crie uma variável denominada `EmailAddress`e defina seu tipo como `String`.  
+    2.  Crie uma variável denominada `EmailAddress` e defina seu tipo como `String`.  
   
-         O `EmailAddress` variável contém o endereço de email do vendedor.  
+         A variável `EmailAddress` contém o endereço de email do vendedor.  
   
-    3.  Crie uma variável denominada `FirstName`e defina seu tipo como `String`.  
+    3.  Crie uma variável denominada `FirstName` e defina seu tipo como `String`.  
   
-         O `FirstName` variável contém o nome do vendedor.  
+         A variável `FirstName` contém o nome do vendedor.  
   
-    4.  Crie uma variável denominada `Bonus`e defina seu tipo como `Double`.  
+    4.  Crie uma variável denominada `Bonus` e defina seu tipo como `Double`.  
   
-         O `Bonus` variável contém o valor do bônus do vendedor.  
+         A variável `Bonus` contém o valor do bônus do vendedor.  
   
 #### <a name="to-configure-the-connection-managers"></a>Para configurar os gerenciadores de conexões  
   

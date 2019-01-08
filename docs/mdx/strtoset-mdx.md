@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7184dc872624f6589ec6e93911b39c9f8b4e4aa3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ee1e0cbeaa4e33be223e1b777ff243b5c3ef2d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742975"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524409"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
 
-  Retorna o conjunto especificado por uma cadeia de caracteres formatada por MDX (Multidimensional Expressions).  
+  Retorna o conjunto especificado por uma cadeia de caracteres formatada para MDX.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,10 +32,10 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  Uma expressão de cadeia de caracteres válida especificando, direta ou indiretamente, um conjunto.  
   
-## <a name="remarks"></a>Remarks  
- O **StrToSet** função retorna o conjunto especificado na expressão de cadeia de caracteres. O **StrToSet** função geralmente é usada com funções definidas pelo usuário para retornar uma especificação de conjunto de uma função externa para uma instrução MDX, ou quando uma consulta MDX é parametrizada.  
+## <a name="remarks"></a>Comentários  
+ O **StrToSet** função retorna o conjunto especificado na expressão de cadeia de caracteres. O **StrToSet** função normalmente é usada com funções definidas pelo usuário para retornar uma especificação de conjunto de uma função externa para uma instrução MDX, ou quando uma consulta MDX é realizada com parâmetros.  
   
--   Quando o sinalizador CONSTRAINED for usado, a especificação de conjunto deve conter nomes de membros qualificados ou ou um conjunto de tuplas que contém nomes de membros qualificados ou entre chaves {}. Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres fornecida não pode ser totalmente resolvida para nomes de membros qualificados ou não qualificados, surge o seguinte erro: "As restrições impostas pelo sinalizador CONSTRAINED na função STRTOVALUE foram violadas."  
+-   Quando o sinalizador CONSTRAINED for usado, a especificação de conjunto deve conter nomes de membros qualificados ou ou um conjunto de tuplas que contém os nomes de membros qualificados ou delimitados por chaves {}. Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres for fornecida que não é nomes de membros diretamente resolvido para qualificados ou não qualificados, surge o seguinte erro: "As restrições impostas pelo CONSTRAINED sinalizador na função STRTOVALUE foram violadas."  
   
 -   Quando o sinalizador CONSTRAINED não é usado, a especificação de conjunto especificada é resolvida como uma linguagem MDX válida que retorna um conjunto.  
   
@@ -69,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

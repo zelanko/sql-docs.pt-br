@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -16,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81d2bf84e758ccfd8664408a760e77700a323e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141056"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357833"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
   O banco de dados do sistema **tempdb** é um recurso global disponível a todos os usuários conectados a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é usado para manter o seguinte:  
@@ -71,28 +70,28 @@ ms.locfileid: "48141056"
 |ANSI_PADDING|OFF|Sim|  
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
-|AUTO_CLOSE|OFF|não|  
+|AUTO_CLOSE|OFF|Não|  
 |AUTO_CREATE_STATISTICS|ON|Sim|  
-|AUTO_SHRINK|OFF|não|  
+|AUTO_SHRINK|OFF|Não|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|não|  
+|CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> não<br /><br /> não|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Não<br /><br /> Não|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|não|  
-|ENCRYPTION|OFF|não|  
+|DB_CHAINING|ON|Não|  
+|ENCRYPTION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM para novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE para atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
-|READ_COMMITTED_SNAPSHOT|OFF|não|  
-|RECOVERY|SIMPLE|não|  
+|READ_COMMITTED_SNAPSHOT|OFF|Não|  
+|RECOVERY|SIMPLE|Não|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|ENABLE_BROKER|Sim|  
-|TRUSTWORTHY|OFF|não|  
+|TRUSTWORTHY|OFF|Não|  
   
  Para obter uma descrição dessas opções de banco de dados, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48141056"
   
 -   Backup ou restauração de banco de dados.  
   
--   Alteração de agrupamento. O agrupamento padrão é o agrupamento de servidor.  
+-   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
 -   Alteração do proprietário do banco de dados. **tempdb** pertence a **sa**.  
   
@@ -144,6 +143,6 @@ ms.locfileid: "48141056"
  [Mover arquivos de banco de dados](move-database-files.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com tempdb no SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Trabalhando com tempdb no SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
   
   

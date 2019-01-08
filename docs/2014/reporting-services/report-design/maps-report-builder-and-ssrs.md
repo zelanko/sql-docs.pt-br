@@ -18,12 +18,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187956"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354468"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
   Para visualizar dados comerciais em um plano de fundo geográfico, você pode acrescentar um mapa a seu relatório. O tipo de mapa selecionado depende de qual informação você deseja comunicar no seu relatório. Você pode adicionar um mapa que só exibe locais ou um mapa de bolhas que varia o tamanho da bolha com base no número de residências em uma área, ou um mapa de marcador que varia o estilo de marcador com base no produto mais lucrativo para cada loja, ou um mapa de linha que exibe rotas entre lojas.  
@@ -32,7 +32,7 @@ ms.locfileid: "48187956"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- Para começar a usar o mapa imediatamente, consulte [Tutorial: relatório de mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md) ou [Exemplos de relatórios (Construtor de Relatórios e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Para começar a usar um mapa imediatamente, consulte [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41; ](../tutorial-map-report-report-builder.md) ou [(construtor de relatórios e SSRS) de exemplos de relatórios](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Você pode salvar mapas separadamente de um relatório como partes de relatório.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -83,13 +83,13 @@ ms.locfileid: "48187956"
     > [!NOTE]  
     >  Esse recurso de mapeamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dados de arquivos de forma TIGER/Line fornecidos pela Agência de Recenseamento norte-americana ([http://www.census.gov/](http://www.census.gov/)). Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Esses arquivos de forma podem ser obtidos sem encargos com a Agência de Recenseamento norte-americana. Para saber mais sobre os arquivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas da Agência de Recenseamento norte-americana.  
   
--   **Arquivos de forma ESRI.** Os arquivos de forma ESRI contêm dados compatíveis com o Environmental Systems Research Institute, Inc. ESRI (Environmental Systems Research Institute, Inc.). Os arquivos de forma ESRI referem-se a um conjunto de arquivos. Dados no arquivo .shp especificam as formas geográficas ou geométricas. Os dados no arquivo .dbf fornecem atributos para as formas. Para exibir um mapa em modo design ou executar um mapa do servidor de relatório, ambos os arquivos devem estar na mesma pasta. Quando você adicionar dados espaciais de um arquivo .shp em seu sistema de arquivos local, os dados espaciais serão incorporados em seu relatório. Para recuperar dados espaciais dinamicamente em tempo de execução, carregue os arquivos de forma no servidor de relatório e especifique-os como a fonte de dados espaciais. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](http://go.microsoft.com/fwlink/?linkid=178814).  
+-   **Arquivos de forma ESRI.** Os arquivos de forma ESRI contêm dados compatíveis com o Environmental Systems Research Institute, Inc. ESRI (Environmental Systems Research Institute, Inc.). Os arquivos de forma ESRI referem-se a um conjunto de arquivos. Dados no arquivo .shp especificam as formas geográficas ou geométricas. Os dados no arquivo .dbf fornecem atributos para as formas. Para exibir um mapa em modo design ou executar um mapa do servidor de relatório, ambos os arquivos devem estar na mesma pasta. Quando você adicionar dados espaciais de um arquivo .shp em seu sistema de arquivos local, os dados espaciais serão incorporados em seu relatório. Para recuperar dados espaciais dinamicamente em tempo de execução, carregue os arquivos de forma no servidor de relatório e especifique-os como a fonte de dados espaciais. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Dados espaciais do SQL Server armazenados em um banco de dados.** É possível usar uma consulta que especifique tipos de dados `SQLGeometry` ou `SQLGeography` de um banco de dados relacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md) nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Dados espaciais do SQL Server armazenados em um banco de dados.** É possível usar uma consulta que especifique tipos de dados `SQLGeometry` ou `SQLGeography` de um banco de dados relacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md) nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
      No conjunto de resultados que você vê no designer de consulta, cada linha de dados espaciais é tratada como uma unidade e armazenada em um único elemento de mapa. Por exemplo, se houver vários pontos definidos em uma linha no conjunto de resultados, as propriedades de vídeo se aplicarão a todos os pontos naquele elemento de mapa.  
   
--   **Locais personalizados que você cria.** Você pode acrescentar locais manualmente como pontos incorporados a uma camada de ponto incorporada. Para obter mais informações, consulte [adicionar locais personalizados a um mapa &#40;construtor de relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Locais personalizados que você cria.** Você pode acrescentar locais manualmente como pontos incorporados a uma camada de ponto incorporada. Para obter mais informações, consulte [Adicionar locais personalizados a um mapa &#40;Construtor de Relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Dados espaciais no modo Design  
  No modo Design, o processador de relatório exibe dados espaciais de exemplo para ajudá-lo a criar a camada do mapa. Os dados exibidos dependem da disponibilidade dos dados espaciais:  
@@ -172,9 +172,9 @@ ms.locfileid: "48187956"
   
 -   Se deseja usar uma conexão segura para recuperar as peças do serviço Web do Bing Maps.  
   
- Para obter instruções passo a passo, consulte [adicionar, alterar ou excluir um mapa ou camada do mapa &#40;construtor de relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Para obter instruções passo a passo, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
  
   
@@ -197,7 +197,7 @@ ms.locfileid: "48187956"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- Para obter mais informações sobre as camadas do mapa, consulte [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre as camadas do mapa, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>Propriedades de exibição variáveis para pontos, linhas e polígonos  
  As opções de exibição para elementos do mapa podem ser definidas no nível de camada, usando as regras da camada ou elementos individuais. Por exemplo, você pode definir propriedades de exibição para todos os pontos em uma camada ou pode definir as regras que controlam as propriedades de exibição de todos os pontos em uma camada, quer eles sejam inseridos ou não, ou pode substituir as configurações das propriedades de exibição para pontos inseridos específicos.  
@@ -244,35 +244,35 @@ ms.locfileid: "48187956"
   
  Se você não visualizar o resultado desejado quando quiser exibir um relatório de mapa, as causas-raiz poderão vir vários problemas. Para ajudá-lo a isolar e entender cada problema, é útil trabalhar com uma camada de cada vez. Use o painel de Mapa para selecionar uma camada e alternar sua visibilidade facilmente.  
   
- Para obter mais informações sobre problemas de relatório de mapa, consulte [Solucionar problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Para obter mais informações sobre problemas de relatório de mapa, consulte [solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista procedimentos que mostram para você, passo a passo, como trabalhar com mapas e camadas do mapa em seus relatórios.  
   
--   [Adicionar, alterar ou excluir um mapa ou camada do mapa &#40;relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Adicionar locais personalizados a um mapa &#40;relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Adicionar locais personalizados a um mapa &#40;Construtor de Relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> Nesta seção  
- [Planejar um relatório de mapa &#40;relatórios e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personalizar os dados e a exibição de um mapa ou camada do mapa &#40;relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Adicionar, alterar ou excluir um mapa ou camada do mapa &#40;relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Adicionar locais personalizados a um mapa &#40;relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Adicionar locais personalizados a um mapa &#40;Construtor de Relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

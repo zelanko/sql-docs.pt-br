@@ -12,18 +12,18 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81b10966cd87a57de50e89f5a8327b2e19424ba0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095426"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350679"
 ---
 # <a name="log-long-running-queries-odbc"></a>Registrar Consultas de execução longa (ODBC)
   Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar consultas de longa execução. Quando executado, esse exemplo cria o Odbcqry.log, que contém uma lista de consultas cuja execução excede um conjunto de intervalos pelo aplicativo. Este exemplo não tem suporte em IA64. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Para registrar consultas de execução demorada que usam o Administrador ODBC  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48095426"
 4.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_QUERY e SQL_PERF_STOP para interromper o log de consultas de longa execução.  
   
 ## <a name="example"></a>Exemplo  
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   

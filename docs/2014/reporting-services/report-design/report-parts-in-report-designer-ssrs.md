@@ -13,19 +13,19 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8a04fb5ec226f346e9fe5fa2259361c1a29230ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63a76234d4d3e394b838cb99b99e4607ea765de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182786"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363278"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Partes de relatório no Designer de Relatórios (SSRS)
   No Designer de Relatórios, depois de criar tabelas, gráficos e outros itens de relatório em um projeto, você pode publicá-los como *partes de relatório* em um servidor de relatório ou site do SharePoint integrado com um servidor de relatório de forma que você e outros usuários possam reutilizá-las em outros relatórios.  
   
- Em geral, as partes do relatório funcionam da mesma maneira no Designer de Relatórios e no Construtor de Relatórios. Para ler sobre a funcionalidade básica, consulte [partes de relatório &#40;construtor de relatórios e SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) no [documentação do construtor de relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+ Em geral, as partes do relatório funcionam da mesma maneira no Designer de Relatórios e no Construtor de Relatórios. Para ler sobre a funcionalidade básica, consulte [partes de relatório &#40;construtor de relatórios e SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) no [documentação do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
- Há diferenças fundamentais na maneira como as partes do relatório funcionam no Designer de Relatórios. Uma diferença principal é o fluxo de trabalho. O Construtor de Relatórios permite criação colaboradora: eu crio uma parte de relatório e a publico. Você pode reutilizar, modificar e republicá-la. No Designer de Relatórios, a publicação é unidirecional: eu posso publicar uma parte de relatório no Designer de Relatórios, e você pode reutilizá-la. Mas eu não posso reutilizar uma parte de relatório existente em um relatório em Designer de Relatórios. Este tópico aborda essas diferenças, depois de uma visão geral rápida das partes de relatório.  
+ Há diferenças fundamentais na maneira como as partes do relatório funcionam no Designer de Relatórios. Uma diferença principal é o fluxo de trabalho. Construtor de relatórios permite criação colaboradora: Eu crio uma parte de relatório e publicá-lo. Você pode reutilizar, modificar e republicá-la. No Designer de relatórios, a publicação é unidirecional: Eu posso publicar uma parte de relatório do Designer de relatórios, e você pode reutilizá-lo. Mas eu não posso reutilizar uma parte de relatório existente em um relatório em Designer de Relatórios. Este tópico aborda essas diferenças, depois de uma visão geral rápida das partes de relatório.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo de vida da publicação de partes de relatório  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -67,7 +67,7 @@ ms.locfileid: "48182786"
   
 -   Listas  
   
- Se você estiver publicando uma parte de relatório que exibe dados, como uma tabela, matriz ou gráfico, poderá baseá-la em um conjunto de dados compartilhado. Caso contrário, quando você publicar a parte de relatório, o conjunto de dados do qual ela depende será salvo como um conjunto de dados inserido. Conjuntos de dados inseridos podem ser baseados em fontes de dados inseridas, mas as credenciais não são armazenadas nas fontes de dados inseridas. Portanto, se sua parte de relatório depender de um conjunto de dados inserido que usa uma fonte de dados inserida, qualquer um que reutilizar essa parte de relatório precisará fornecer as credenciais para a fonte de dados inserida. Para evitar isso, baseie seus conjuntos de dados inseridos e compartilhados em fontes de dados compartilhadas com credenciais armazenadas. Para obter mais informações, consulte [partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md) na [documentação do construtor de relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+ Se você estiver publicando uma parte de relatório que exibe dados, como uma tabela, matriz ou gráfico, poderá baseá-la em um conjunto de dados compartilhado. Caso contrário, quando você publicar a parte de relatório, o conjunto de dados do qual ela depende será salvo como um conjunto de dados inserido. Conjuntos de dados inseridos podem ser baseados em fontes de dados inseridas, mas as credenciais não são armazenadas nas fontes de dados inseridas. Portanto, se sua parte de relatório depender de um conjunto de dados inserido que usa uma fonte de dados inserida, qualquer um que reutilizar essa parte de relatório precisará fornecer as credenciais para a fonte de dados inserida. Para evitar isso, baseie seus conjuntos de dados inseridos e compartilhados em fontes de dados compartilhadas com credenciais armazenadas. Para obter mais informações, consulte [partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md) na [documentação do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
  A publicação de uma parte de relatório no Designer de Relatórios é um processo de duas etapas:  
   

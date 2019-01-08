@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpeer_lsns
@@ -19,12 +18,12 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2629149db23a03dbb9d06d35cce7dde980f6d747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08926758b2d217bde6f858405ebde1c2b38b4d66
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727194"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796168"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47727194"
   
 ## <a name="definition"></a>Definição  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica um LSN ponto a ponto.|  
 |**last_updated**|**datetime**|O **datetime** no qual foi feita a última atualização de linha.|  

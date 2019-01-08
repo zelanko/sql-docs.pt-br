@@ -13,12 +13,12 @@ ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779236a22eee429f6574a202e07eeccffc6b8d1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074906"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364268"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer de Modelos Tabulares (SSAS tabular)
   O designer de modelos de tabela faz parte do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]integrado ao Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 ou posterior, com modelos de tipo de projeto adicionais especificamente para desenvolver soluções profissionais de modelo de tabela.  
@@ -36,7 +36,7 @@ ms.locfileid: "48074906"
 ##  <a name="bkmk_benefits"></a> Benefícios  
  Quando você instala o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], novos modelos de projeto para criar modelos de tabela são adicionados aos tipos de projeto disponíveis. Depois de criar um novo projeto de modelo tabular com o uso de um dos modelos, você pode começar a criar modelos usando as ferramentas e os assistentes de designer de modelo tabular.  
   
- Além dos novos modelos e ferramentas para criar soluções profissionais multidimensionais de modelo tabular, o ambiente de desenvolvimento do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fornece recursos de desenvolvimento, depuração e ciclo de vida de projeto que garantem a criação das mais avançadas soluções de BI para sua organização. Para obter mais informações sobre o [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consulte o [Guia de Introdução ao Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
+ Além dos novos modelos e ferramentas para criar soluções profissionais multidimensionais de modelo tabular, o ambiente de desenvolvimento do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fornece recursos de desenvolvimento, depuração e ciclo de vida de projeto que garantem a criação das mais avançadas soluções de BI para sua organização. Para obter mais informações sobre o [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consulte o [Guia de Introdução ao Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
 ##  <a name="bkmk_proj_temp"></a> Modelos de projeto  
  Quando você instala o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], os seguintes modelos de projeto de modelo de tabela são adicionados aos tipos de projeto de Business intelligence:  
@@ -108,7 +108,7 @@ ms.locfileid: "48074906"
  As informações de build e implantação são exibidas na janela **Saída** (além da caixa de diálogo de andamento modal). Para exibir a janela **Saída** , clique no menu **Exibir** e clique em Saída.  
   
 ### <a name="menu-items"></a>Itens de menu  
- Quando você instala o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], itens de menu adicionais especificamente para criação de modelos tabulares são adicionados à barra de menus do Visual Studio. O menu **Modelo** pode ser usado para iniciar o Assistente de Importação de Dados, exibir as conexões existentes, processar dados do espaço de trabalho e navegar no espaço de trabalho de modelo no [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel. O menu **Tabela** é usado para criar e gerenciar relações entre tabelas, criar e gerenciar medidas, especificar configurações de tabelas de dados, especificar opções de cálculo e especificar outras propriedades de tabela. Com o menu **Coluna** é possível adicionar e excluir colunas em uma tabela, ocultar e reexibir colunas e especificar outras propriedades de coluna, como tipos de dados e filtros. Você pode criar e implantar soluções de modelo de tabela no menu **Criar** . As funções Copiar/Colar são incluídas no menu **Editar** .  
+ Quando você instala o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], itens de menu adicionais especificamente para criação de modelos tabulares são adicionados à barra de menus do Visual Studio. O menu **Modelo** pode ser usado para iniciar o Assistente de Importação de Dados, exibir as conexões existentes, processar dados do workspace e navegar no workspace de modelo no [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel. O menu **Tabela** é usado para criar e gerenciar relações entre tabelas, criar e gerenciar medidas, especificar configurações de tabelas de dados, especificar opções de cálculo e especificar outras propriedades de tabela. Com o menu **Coluna** é possível adicionar e excluir colunas em uma tabela, ocultar e reexibir colunas e especificar outras propriedades de coluna, como tipos de dados e filtros. Você pode criar e implantar soluções de modelo de tabela no menu **Criar** . As funções Copiar/Colar são incluídas no menu **Editar** .  
   
  Além desses itens de menu, mais configurações foram adicionadas às opções do Analysis Services nos itens do menu Ferramentas.  
   
@@ -117,16 +117,16 @@ ms.locfileid: "48074906"
   
 ##  <a name="bkmk_vsint"></a> Integração com o Visual Studio  
  **Controle do código-fonte**  
- Os projetos do Analysis Services são integrados com o plug-in de controle do código-fonte selecionado. Se você configurou o Visual Studio para usar o controle do código-fonte, poderá usar check in/check out no Gerenciador de Soluções. Para configurar o uso do Team Foundation Server, consulte [Configurar o Visual Studio com o controle de versão do Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). Muitos plug-ins de controle do código-fonte de terceiros também têm suporte.  
+ Os projetos do Analysis Services são integrados com o plug-in de controle do código-fonte selecionado. Se você configurou o Visual Studio para usar o controle do código-fonte, poderá usar check in/check out no Gerenciador de Soluções. Para configurar o uso do Team Foundation Server, consulte [Configurar o Visual Studio com o controle de versão do Team Foundation](https://msdn.microsoft.com/library/ms253064.aspx). Muitos plug-ins de controle do código-fonte de terceiros também têm suporte.  
   
  **Fontes**  
- Os modelos tabulares usam a fonte de ambiente [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para controlar as fontes na exibição. Poderá ser necessário alterar esta fonte se a fonte padrão de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] não tiver todos os caracteres Unicode que você precisa para seu idioma. Para alterar fontes, clique no menu **Ferramentas** , **Opções**e **Fontes e Cores**.  
+ Os modelos de tabela usam a fonte de ambiente do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para controlar as fontes na exibição. Poderá ser necessário alterar esta fonte se a fonte padrão de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] não tiver todos os caracteres Unicode que você precisa para seu idioma. Para alterar fontes, clique no menu **Ferramentas** , **Opções**e **Fontes e Cores**.  
   
  **Atalhos de teclado**  
  Os atalhos de teclado do Analysis Services podem ser configurados/remapeados pela caixa de diálogo Ferramentas->Opções->Teclado. Alguns atalhos globais [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , como criar, salvar, depurar, novo projeto, etc. têm suporte no contexto do designer de modelo de tabela. Outros atalhos específicos do designer de modelo tabular estão no contexto do Analysis Services.  
   
 ## <a name="see-also"></a>Consulte também  
- [Projetos de modelo tabular &#40;Tabular do SSAS&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propriedades &#40;Tabular do SSAS&#41;](tabular-models/properties-ssas-tabular.md)  
+ [Projetos de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Propriedades &#40;SSAS de Tabela&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

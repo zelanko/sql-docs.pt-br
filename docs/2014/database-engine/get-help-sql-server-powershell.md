@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065316"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363548"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Há várias origens de informações sobre como usar o provedor e os cmdlets do provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell. Isso inclui a ajuda que está disponível no ambiente Windows PowerShell.  
@@ -33,7 +33,7 @@ ms.locfileid: "48065316"
 ### <a name="help-in-the-windows-powershell-environment"></a>Ajude no ambiente de Windows PowerShell  
  Use o cmdlet **Get-Help** para obter ajuda no ambiente Windows PowerShell. **Get-Help** fornece ajuda básica para a linguagem Windows PowerShell e os diversos cmdlets e provedores disponíveis no Windows PowerShell.  
   
- Para obter mais informações sobre os modos você pode usar **Get-Help**, veja [Get-Help: Obtendo Ajuda](http://go.microsoft.com/fwlink/?LinkId=102136).  
+ Para obter mais informações sobre as maneiras como você pode usar **Get-Help**, consulte [Get-Help: Obtendo ajuda](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
 ### <a name="sql-server-powershell-provider-help"></a>Ajuda do provedor do SQL Server PowerShell  
  O provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell implementa várias pastas em uma unidade virtual SQLSERVER, como as pastas SQLSERVER:\SQL e SQLSERVER:\DAC. Cada pasta é associada com um dos modelos de objeto de gerenciamento do SQL Server. Enquanto você puder listar os métodos e propriedades associadas com cada nó em um caminho de SQL Server, não poderá obter ajuda por eles no ambiente PowerShell. Para obter uma tabela das pastas com links para a referência de programação associada, consulte [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  
@@ -62,16 +62,16 @@ ms.locfileid: "48065316"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>Obtenha uma lista de provedores  
@@ -79,9 +79,9 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  Execute Get-Help especificando a categoria de provedor.  
   
- Para obter mais informações sobre como obter ajuda do provedor no Windows PowerShell, consulte [Unidades e Provedores](http://go.microsoft.com/fwlink/?LinkId=102137).  
+ Para obter mais informações sobre como obter ajuda do provedor no Windows PowerShell, consulte [Unidades e Provedores](https://go.microsoft.com/fwlink/?LinkId=102137).  
   
-### <a name="example-get-a-list-of-providers"></a>Exemplo: obtenha uma lista de provedores  
+### <a name="example-get-a-list-of-providers"></a>Exemplo: Obtenha uma lista de provedores  
  Esse código retorna uma lista de provedores habilitados atualmente em sua sessão do Windows PowerShell:  
   
 ```  
@@ -105,9 +105,9 @@ Get-Help SQLServer
   
 1.  O CD para um nó no caminho do SQL Server ou crie uma variável definida para esse local.  
   
-2.  Execute o cmdlet **Get-Member** com o parâmetro –Type definido como Métodos ou Propriedades  
+2.  Execute o **Get-Member** cmdlet com o parâmetro - Type definido como métodos ou propriedades  
   
-### <a name="examples-listing-methods-and-properties"></a>Exemplos: listando métodos e propriedades  
+### <a name="examples-listing-methods-and-properties"></a>Exemplos: Listando métodos e propriedades  
  Este exemplo lista os métodos com suporte para o nó Bancos de Dados:  
   
 ```  

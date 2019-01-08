@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepartitioninfo_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056527bea994d8ba47b50108d0e83d6c52166a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cea1f26a93627d2a3719ad362d2bd62ee1e3ba1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716014"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802768"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações sobre partições para cada artigo. Contém uma linha para cada artigo de mesclagem definido no banco de dados local. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
 |**pubid**|**uniqueidentifier**|O número de identificação exclusivo desta publicação, gerado quando a publicação foi adicionada.|  

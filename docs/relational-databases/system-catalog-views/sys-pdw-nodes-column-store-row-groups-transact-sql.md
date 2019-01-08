@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7332f9e4196c901777e0c35a349f55207e7608dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698234"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520358"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Fornece informações de índice de columnstore clusterizado em uma base por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (inclusive as marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **sys.pdw_nodes_column_store_row_groups** para determinar qual linha grupos têm uma alta porcentagem de linhas excluídas em devem ser recriados.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id da tabela lógica no nó de controle. Por exemplo, object_id não coincide com o object_id em sys. Tables.<br /><br /> Para ingressar com Sys. Tables, use sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID do índice columnstore clusterizado em *object_id* tabela.|  
@@ -33,7 +33,7 @@ ms.locfileid: "47698234"
 |**row_group_id**|**int**|ID nesse grupo de linhas. Isso é exclusivo dentro da partição.|  
 |**dellta_store_hobt_id**|**bigint**|O hobt_id para grupos de linhas delta ou NULL se o tipo de grupo de linhas não for delta. Um grupo de linhas delta é um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas delta tem o **abrir** status. Um grupo de linhas delta ainda está no formato rowstore e não foi compactado para o formato columnstore.|  
 |**state**|**tinyint**|O número de ID associado a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> OPEN – Um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED – Um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo Tuple Mover.<br /><br /> COMPRESSED – Um grupo de linhas que foi preenchido e compactado.|  
+|**state_desccription**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> Abra - um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> FECHADO – um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo de motor de tupla.<br /><br /> COMPACTADOS - um grupo de linhas que foi preenchido e compactado.|  
 |**total_rows**|**bigint**|Total de linhas fisicamente armazenadas no grupo de linhas. Algumas podem ter sido excluídas, mas ainda estão armazenadas. O número máximo de linhas em um grupo de linhas é 1.048.576 (FFFFF hexadecimal).|  
 |**deleted_rows**|**bigint**|Número de linhas fisicamente armazenadas no grupo de linhas que são marcados para exclusão.<br /><br /> Sempre 0 para DELTA grupos de linhas.|  
 |**size_in_bytes**|**int**|Tamanho combinado, em bytes, de todas as páginas nesse grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  

@@ -16,20 +16,20 @@ ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4dd5b6f8a241d3173cdca8b03cce4fb9a373b8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34de23fca71f4dc7949a04a36323d19d35826fa9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196036"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359818"
 ---
 # <a name="database-dimension-properties"></a>Propriedades de dimensão do banco de dados
   Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], as características de uma dimensão são definidas pelos metadados da dimensão, com base nas configurações de várias propriedades de dimensão e nos atributos ou hierarquias contidas pela dimensão. A tabela a seguir descreve as propriedades de dimensão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|Especifica o nome de todos os membros para atributos em uma dimensão.|  
-|`Collation`|Determina o agrupamento usado pela dimensão.|  
+|`Collation`|Determina a ordenação usada pela dimensão.|  
 |`CurrentStorageMode`|Contém o modo de armazenamento atual para a dimensão.|  
 |`DependsOnDimension`|Contém o ID de outra dimensão da qual a dimensão depende, se houver.|  
 |`Description`|Contém a descrição da dimensão.|  
@@ -51,12 +51,12 @@ ms.locfileid: "48196036"
 |`WriteEnabled`|Indica se write-backs de dimensão estão disponíveis (sujeito a permissões de segurança).|  
   
 > [!NOTE]  
->  Para obter mais informações sobre como definir valores para as propriedades ErrorConfiguration e UnknownMember quando trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obter mais informações sobre como definir valores para as propriedades ErrorConfiguration e UnknownMember quando trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributo](attributes-and-attribute-hierarchies.md)   
- [Hierarquias de usuário](user-hierarchies.md)   
+ [Atributos e hierarquias de atributos](attributes-and-attribute-hierarchies.md)   
+ [Hierarquias do usuário](user-hierarchies.md)   
  [Relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

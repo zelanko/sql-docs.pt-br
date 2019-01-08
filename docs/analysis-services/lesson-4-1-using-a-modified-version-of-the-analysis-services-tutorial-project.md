@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017693"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401109"
 ---
-# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lição 4-1-usando uma versão modificada do projeto Tutorial do Analysis Services
+# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lição 4-1: usando uma versão modificada do projeto de Tutorial do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 As demais lições neste tutorial tem como base uma versão aprimorada do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você concluiu nas três primeiras lições. Foram adicionadas outras tabelas e cálculos nomeados à exibição da fonte de dados **Adventure Works DW 2012** e outras dimensões ao projeto. Essas novas dimensões foram adicionadas ao cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Além disso, um segundo grupo de medidas foi adicionado; ele contém medidas de uma segunda tabela de fatos. Esse projeto aprimorado permitirá que você continue a aprender como adicionar funcionalidades ao seu aplicativo de inteligência empresarial sem ter que repetir as ações já aprendidas.  
@@ -25,7 +25,7 @@ Antes de continuar com o tutorial, você deve baixar, extrair, carregar e proces
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Baixando e extraindo o Arquivo do Projeto  
   
-1.  [Clique aqui](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos de tutorial são incluídos na **adventure-works-multidimensional-tutorial-projects.zip** baixar.  
+1.  [Clique aqui](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos de tutorial estão incluídos na **adventure-works-multidimensional-tutorial-projects.zip** baixar.  
   
 2.  Clique em **adventure-works-multidimensional-tutorial-projects.zip** para baixar o pacote que contém os projetos para este tutorial.  
   
@@ -33,7 +33,7 @@ Antes de continuar com o tutorial, você deve baixar, extrair, carregar e proces
   
 3.  Crie uma subpasta na unidade de raiz ou perto dela, por exemplo, C:\Tutorial.  
   
-4.  Mover o **adventure-works-multidimensional-tutorial-projects.zip** arquivo para a subpasta.  
+4.  Mover o **adventure-works-multidimensional-tutorial-projects.zip** arquivo na subpasta.  
   
 5.  Clique com o botão direito do mouse no arquivo e selecione **Extrair Tudo**.  
   
@@ -41,9 +41,9 @@ Antes de continuar com o tutorial, você deve baixar, extrair, carregar e proces
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Carregando e processando o projeto aprimorado  
   
-1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Fechar Solução** para fechar os arquivos que não serão usados.  
+1.  Na [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]diante a **arquivo** menu, clique em **fechar solução** para fechar os arquivos que não serão usados.  
   
-2.  No menu **Arquivo**, aponte para **Abrir** e clique em **Projeto/Solução**.  
+2.  No menu **Arquivo** , aponte para **Abrir**e clique em **Projeto/Solução**.  
   
 3.  Navegue até o local onde você extraiu os arquivos de projeto do tutorial.  
   
@@ -54,7 +54,7 @@ Antes de continuar com o tutorial, você deve baixar, extrair, carregar e proces
 ## <a name="understanding-the-enhancements-to-the-project"></a>Entendendo os aprimoramentos do projeto  
 A versão aprimorada do projeto é diferente da versão do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você concluiu nas três primeiras lições. As diferenças são descritas nas seções a seguir. Revise estas informações antes de continuar com as demais lições do tutorial.  
   
-### <a name="data-source-view"></a>Exibição da fonte de dados  
+### <a name="data-source-view"></a>Exibição da Fonte de Dados  
 A exibição da fonte de dados no projeto aprimorado contém uma tabela de fatos adicional e quatro tabelas de dimensão adicionais do banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
 Observe que, com dez tabelas na exibição da fonte de dados, o diagrama <All Tables> está ficando muito cheio. Isso dificulta a compreensão das relações entre as tabelas e a localização de tabelas específicas. Para solucionar esse problema, as tabelas são organizadas em dois diagramas lógicos: **Vendas pela Internet** e **Vendas do Revendedor** . Esses diagramas são organizados com base em uma única tabela de fato. Criar diagramas lógicos permite que você exiba e trabalhe com um subconjunto específico de tabelas em uma exibição de fonte de dado em vez de ter que exibir sempre todas as tabelas e suas relações em um único diagrama.  
@@ -62,7 +62,7 @@ Observe que, com dez tabelas na exibição da fonte de dados, o diagrama <All Ta
 #### <a name="internet-sales-diagram"></a>Diagrama Vendas pela Internet  
 O diagrama **Vendas pela Internet** contém as tabelas relacionadas à venda de produtos do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] diretamente aos clientes pela Internet. As tabelas do diagrama são as quatro tabelas de dimensão e a tabela de fatos que você adicionou à exibição da fonte de dados **Adventure Works DW 2012** na Lição 1. Essas tabelas são as seguintes:  
   
--   **Geografia**  
+-   **Geography**  
   
 -   **Cliente**  
   
@@ -118,5 +118,5 @@ O cubo **Tutorial do Analysis Services** agora tem dois grupos de medidas: o gru
 [Definindo propriedades de atributo pai em uma hierarquia pai-filho](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Implantar um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Implantando um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1df7792f5850ad9d312baefc374bcb9f99e904c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 685e8e2147066e8bdb1f34de3d5271bc56c7aac3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618264"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206635"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Enviar e receber dados de forma incremental com FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47618264"
 ## <a name="example"></a>Exemplo  
  Antes de compilar e executar esse exemplo, habilitar o suporte a FILESTREAM ([habilitar e configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria um banco de dados usado por este exemplo. Sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter acesso de gravação para executar este script (por exemplo, faça logon como uma conta de sistema local).  
+ O primeiro ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem de código cria um banco de dados usado por este exemplo. Sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter acesso de gravação para executar este script (por exemplo, faça logon como uma conta de sistema local).  
   
  A segunda listagem de código é o código C++. Especifique um servidor; na listagem de código C++, altere "MyServer" para um nome de servidor válido. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h. Compile a listagem de código C++ com odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib e /EHsc.  
   
- A terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui o banco de dados usado por este exemplo.  
+ O terceiro ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem de código exclui o banco de dados usado por este exemplo.  
   
 ```  
 USE master  

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018235"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525492"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  A Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa uma rede *multicamadas Perceptron*, também denominada *rede Regra-Delta com Algoritmo Backpropagation*, composta de até três camadas de neurônios ou *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
+  A Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa uma rede *multicamadas Perceptron* , também denominada *rede Regra-Delta com Algoritmo Backpropagation*, composta de até três camadas de neurônios ou *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
   
  Uma descrição detalhada das redes neurais de multicamadas Perceptron está fora do escopo da presente documentação. Este tópico explica a implementação básica do algoritmo, incluindo o método usado para normalizar valores de entrada e saída, e os métodos de seleção de recursos utilizados para reduzir a cardinalidade do atributo. Este tópico descreve os parâmetros e outras configurações que podem ser usadas para personalizar o comportamento do algoritmo, além de fornecer links para informações adicionais sobre como consultar o modelo.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34018235"
   
  **Valores discretos**  
   
- `μ = p` – a probabilidade anterior de um estado  
+ `μ = p` -a probabilidade anterior de um estado  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34018235"
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir.  
   
-|Coluna|Tipos de conteúdo|  
+|coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Contínuo, cíclico, discreto, diferenciado, chave, tabela, e ordenado|  
 |Atributo previsível|Contínuo, cíclico, discreto, diferenciado, e ordenado|  
@@ -183,8 +183,8 @@ ms.locfileid: "34018235"
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos de rede Neural & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Exemplos de consulta de modelo de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Exemplos de consulta de modelos de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

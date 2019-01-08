@@ -1,5 +1,5 @@
 ---
-title: Sintaxe de filtro e exemplos de modelo (Analysis Services – mineração de dados) | Microsoft Docs
+title: Sintaxe de filtro e exemplos de modelo (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 467d3efbe979bf2ea58c700409913ef0767457ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018673"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393542"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxe de filtro de modelo e exemplos (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "34018673"
   
  Se o argumento *avPredicate*for aplicado a uma coluna de dados discretos, o valor usado no filtro poderá ser qualquer valor em um bloco específico.  
   
- Em outras palavras, você não define a condição como `AgeDisc = ’25-35’`, mas calcula e usa um valor desse intervalo.  
+ Em outras palavras, você não define a condição como `AgeDisc = '25-35'`, mas calcula e usa um valor desse intervalo.  
   
  Exemplo:  `AgeDisc = 27`  significa que qualquer valor no mesmo intervalo como 27, que nesse caso é de 25 a 35.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "34018673"
 ## <a name="examples-of-filters"></a>Exemplos de filtros  
  Os exemplos a seguir demonstram o uso de filtros aplicados a um modelo de mineração. Se você criar a expressão de filtro usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na janela **Propriedade** e o painel **Expressão** da caixa de diálogo de filtro, você verá somente a cadeia exibida depois das palavras-chave WITH FILTER. A seguir, a definição da estrutura de mineração incluída para facilitar o entendimento do tipo de coluna e uso.  
   
-###  <a name="bkmk_Ex1"></a> Exemplo 1: filtragem do nível de caso típico  
+###  <a name="bkmk_Ex1"></a> Exemplo 1: Filtragem de nível de caso típico  
  Esse exemplo mostra um simples filtro que restringe os casos usados no modelo para clientes cuja ocupação seja arquiteto e cuja idade seja mais de 30 anos.  
   
 ```  
@@ -133,11 +133,11 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
   
-###  <a name="bkmk_Ex2"></a> Exemplo 2: filtragem de nível de caso usando atributos da tabela aninhada  
+###  <a name="bkmk_Ex2"></a> Exemplo 2: Filtragem de nível de caso usando atributos da tabela aninhada  
  Se sua estrutura de mineração contiver tabelas aninhadas, você poderá filtrar pela existência de um valor em uma tabela aninhada ou filtrar pelas linhas da tabela aninhada que contêm um valor específico. Esse exemplo restringe os casos usados para o modelo para clientes com mais de 30 anos que fizeram pelo menos uma compra que incluísse leite.  
   
  Como esse exemplo mostra, não é necessário que o filtro use somente colunas incluídas no modelo. A tabela aninhada **Produtos** faz parte da estrutura de mineração, mas não está incluída no modelo de mineração. No entanto, você ainda pode filtrar por valores e atributos na tabela aninhada. Para exibir os detalhes desses casos, o detalhamento deve ser habilitado.  
@@ -151,17 +151,17 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
   
-###  <a name="bkmk_Ex3"></a> Exemplo 3: filtragem de nível de caso em vários atributos de tabela aninhada  
+###  <a name="bkmk_Ex3"></a> Exemplo 3: Filtragem de nível de caso em vários atributos de tabela aninhada  
  Esse exemplo mostra um filtro de três partes: uma condição aplicada à tabela de casos, outra condição para um atributo na tabela aninhada e outra condição em um valor específico em uma das colunas da tabela aninhada.  
   
  A primeira condição no filtro, `Age > 30`, é aplicada a uma coluna na tabela de casos. As outras condições são aplicadas à tabela aninhada.  
   
- A segunda condição, o `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`verifica a presença de, pelo menos, uma compra na tabela aninhada que inclua leite. A terceira condição, `Quantity>=2`, significa que o cliente deve ter comprado pelo menos duas unidades de leite em uma única transação.  
+ A segunda condição, o `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`verifica a presença de, pelo menos, uma compra na tabela aninhada que inclua leite. A terceira condição, `Quantity>=2`, significa que o cliente deve ter comprado pelo menos duas unidades de leite em uma única transação.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -176,12 +176,12 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
   
-###  <a name="bkmk_Ex4"></a> Exemplo 4: filtragem de nível de caso na ausência de atributos da tabela aninhada  
+###  <a name="bkmk_Ex4"></a> Exemplo 4: Filtragem de nível de caso na ausência de atributos de tabela aninhada  
  Esse exemplo mostra como limitar os casos para o cliente que não comprou um item específico, filtrando pela ausência de um atributo na tabela aninhada. Nesse exemplo, o modelo é treinado usando clientes com mais de 30 anos que nunca compraram leite.  
   
 ```  
@@ -196,11 +196,11 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
   
-###  <a name="bkmk_Ex5"></a> Exemplo 5: filtrando por vários valores de tabela aninhada  
+###  <a name="bkmk_Ex5"></a> Exemplo 5: Filtrando por vários valores de tabela aninhada  
  O objetivo do exemplo é mostrar a filtragem de tabela aninhada. O filtro da tabela aninhada é aplicado depois do filtro de caso e só restringe as linhas da tabela aninhada.  
   
  Esse modelo pode conter vários casos com tabelas aninhadas vazias porque EXISTS não está especificado.  
@@ -216,13 +216,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
   
-###  <a name="bkmk_Ex6"></a> Exemplo 6: filtrando por atributos de tabelas aninhadas e EXISTS  
+###  <a name="bkmk_Ex6"></a> Exemplo 6: Filtrando por atributos de tabela aninhada e EXISTS  
  Nesse exemplo, o filtro na tabela aninhada restringe as linhas para aquelas que contêm leite ou garrafa de água. Em seguida, os casos no modelo são restringidos usando uma instrução **EXISTS** . Isso garante que a tabela aninhada não está vazia.  
   
 ```  
@@ -236,13 +236,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
   
   
-###  <a name="bkmk_Ex7"></a> Exemplo 7: combinações complexas de filtro  
+###  <a name="bkmk_Ex7"></a> Exemplo 7: Combinações complexas de filtro  
  O cenário desse modelo se assemelha a do Exemplo 4, mas é muito mais complexo. A tabela aninhada, **ProductsOnSale**, tem a condição de filtro `(OnSale)` significando que o valor de **OnSale** deve ser **true** para o produto listado em **ProductName**. Aqui, **OnSale** é uma coluna de estrutura.  
   
  A segunda parte do filtro, para **ProductsNotOnSale**, repete essa sintaxe, mas filtra por produtos para os quais o valor de **OnSale** é **not true**`(!OnSale)`.  
@@ -284,7 +284,7 @@ FILTER (EXISTS (Products))
  `FILTER (EXISTS (ProductsOnSale) AND EXISTS(ProductsNotOnSale) AND Age > 25)`  
   
   
-###  <a name="bkmk_Ex8"></a> Exemplo 8: filtrando por datas  
+###  <a name="bkmk_Ex8"></a> Exemplo 8: Filtrando por datas  
  É possível filtrar colunas de entrada por datas, como você faria com qualquer outro dado. As datas contidas em uma coluna de tipo de data/hora são valores contínuos; por isso, é possível especificar um intervalo de datas usando-se operadores como maior que (>) ou menos que (<). Se a fonte de dados não representar datas por um tipo de dados Contínuo, mas como valores discretos ou de texto, não será possível filtrar por um intervalo de datas, e você deverá especificar valores discretos individuais.  
   
  No entanto, não será possível criar um filtro na coluna de data em um modelo de série temporal se a coluna de data usada para o filtro também for a coluna de chave do modelo. Isso porque, em modelos de série temporal e modelos MSC, a coluna de data pode ser manipulada como o tipo **KeyTime** ou **KeySequence**.  
@@ -307,7 +307,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Teste e validação & #40; mineração de dados & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

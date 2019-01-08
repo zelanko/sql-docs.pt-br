@@ -22,12 +22,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7f71384b89be479d8388e4af8e897f384f2b141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a132395bbd95997832e2a1df6948179cb2ffe8aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198696"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353631"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Cálculos em modelos multidimensionais
   Use a guia **Cálculos** do Designer de Cubo para criar membros calculados, conjuntos nomeados e outros cálculos de expressões multidimensionais (MDX).  
@@ -41,7 +41,7 @@ ms.locfileid: "48198696"
 -   O painel Expressões de Cálculo oferece suporte a uma exibição de formulário e de script.  
   
 > [!NOTE]  
->  Para obter mais informações sobre como criar scripts MDX, consulte [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892)e a seção Additional Resources do [SQL Server 2005 – Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) no site da Microsoft TechNet. Para obter mais informações sobre questões de desempenho relacionadas ao design de cubo, consulte o [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Para obter mais informações sobre como criar scripts MDX, consulte [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)e consulte a seção recursos adicionais sobre o [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) página sobre o Site da Web do Microsoft TechNet. Para obter mais informações sobre questões de desempenho relacionadas ao design de cubo, consulte o [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="creating-a-new-calculation"></a>Criando um novo cálculo  
  Para criar um novo cálculo, na guia **Cálculos** do Designer de Cubo, no menu **Cubo** , clique em **Novo Membro Calculado**, **Novo Conjunto Nomeado**ou **Novo Comando de Script**, de acordo com o tipo de cálculo que você deseja criar. Você também pode clicar em algum dos botões correspondentes na barra de ferramentas ou clicar com o botão direito do mouse em qualquer lugar do painel **Organizador de Script** e clique em um dos comandos do menu de atalho. Essa ação adiciona um novo cálculo ao painel **Organizador de Script** e exibe campos para ele no formulário de cálculo do painel Expressões de Cálculos. Se você criar um novo script, essa ação abrirá a exibição Script no painel Expressões de Cálculos. Para obter mais informações sobre a criação de três tipos de cálculos, consulte [Criar membros calculados](create-calculated-members.md), [Criar conjuntos nomeados](create-named-sets.md)e [Definir atribuições e outros comandos de Script](define-assignments-and-other-script-commands.md).  

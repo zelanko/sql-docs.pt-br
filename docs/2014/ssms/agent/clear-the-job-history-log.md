@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -16,12 +16,12 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c94197add9410a0680e874f3d802c833d9ba953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c9bc55a6a5af15d6d21c4d3e7d74e2dc8296e84
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227546"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363988"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
   Este tópico descreve como excluir o conteúdo do log do histórico de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -43,7 +43,7 @@ ms.locfileid: "48227546"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Security"></a> Segurança  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48227546"
   
 5.  Clique em **Excluir**.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-clear-the-job-history-log"></a>Para limpar o log de histórico do trabalho  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227546"
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para limpar o log de histórico do trabalho**  
   
- Use o método `PurgeJobHistory` da classe `JobServer` usando uma linguagem de programação que você escolher, como o Visual Basic, Visual C# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use o método `PurgeJobHistory` da classe `JobServer` usando uma linguagem de programação que você escolher, como o Visual Basic, Visual C# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

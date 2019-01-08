@@ -12,12 +12,12 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84fcd5451bae28f1817d7cf9b874938436f3d2f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210176"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372388"
 ---
 # <a name="udt-utilities"></a>Utilitários UDT
   O exemplo Utilitários UDT contém várias funções de utilitário. Elas incluem funções para expor metadados de assembly para Transact-SQL, funções com valor de tabela de fluxo de exemplo para retornar os tipos em um assembly como uma tabela e funções para retornar campos, métodos e propriedades em um tipo de dados definido pelo usuário. As tecnologias demonstradas incluem funções com valor de tabela de fluxo, APIs de reflexão do .NET Framework e invocação de funções com valor de tabela do Transact-SQL.  
@@ -25,9 +25,9 @@ ms.locfileid: "48210176"
 ## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   O banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que está disponível no [site do Codeplex](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   O banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que está disponível no [site do Codeplex](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   

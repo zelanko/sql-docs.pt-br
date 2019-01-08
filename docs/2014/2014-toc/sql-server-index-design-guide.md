@@ -10,17 +10,17 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178247"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360408"
 ---
 # <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
   Os índices criados inadequadamente e a falta de índices são as principais fontes de gargalos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
   
-**Aplica-se ao**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] por meio de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado o contrário.  
+**Aplica-se a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado em contrário.  
   
  Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   Alterar a nulidade da coluna da coluna NOT NULL até NULL.  
   
-    -   Aumente o tamanho das `varchar`, `nvarchar`, ou `varbinary` colunas.  
+    -   Aumentar o comprimento das colunas `varchar`, `nvarchar`, ou `varbinary` .  
   
         > [!NOTE]  
         >  Estas restrições de modificação de coluna também se aplicam para indexar colunas de chave.  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
   
 ##  <a name="Additional_Reading"></a> Leitura adicional  
- [Melhorando o desempenho com exibições indexadas do SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [Melhorando o desempenho com exibições indexadas do SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

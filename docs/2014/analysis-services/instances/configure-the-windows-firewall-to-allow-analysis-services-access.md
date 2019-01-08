@@ -15,12 +15,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371158"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
   Uma primeira etapa essencial para tornar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponível na rede é determinar se você precisa desbloquear portas em um firewall A maioria das instalações exigirão que você crie, pelo menos, uma regra de firewall de entrada que permita conexões com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48068918"
   
 -   Para o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, não abra portas no Firewall do Windows. Da mesma maneira que ocorre com um suplemento do SharePoint, o serviço usa as portas configuradas para SharePoint e faz apenas conexões locais à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que carrega e consulta os modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
--   Para as instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executadas em máquinas virtuais do Windows Azure, use instruções alternativas para configurar o acesso ao servidor. Consulte [SQL Server Business Intelligence em máquinas virtuais do Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   Para as instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executadas em máquinas virtuais do Windows Azure, use instruções alternativas para configurar o acesso ao servidor. Consulte [SQL Server Business Intelligence em máquinas virtuais do Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
  Embora a instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta na porta TCP 2383, você pode configurar o servidor para escutar em uma porta fixa diferente, conectando ao servidor neste formato: \<servername >:\<portnumber >.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "48068918"
 ##  <a name="bkmk_checkport"></a> Verificar as configurações de porta e de firewall do Analysis Services  
  Nos sistemas operacionais Microsoft Windows com suporte pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o Windows Firewall fica ativo por padrão e bloqueia conexões remotas. Abra uma porta manualmente no firewall para permitir solicitações de entrada para o Analysis Services. A instalação do SQL Server não executa essa etapa para você.  
   
- As configurações de porta são especificadas no arquivo msmdsrv.ini e na página de propriedades Geral de uma instância do Analysis Services no SQL Server Management Studio. Se `Port` é definido como um inteiro positivo, o serviço está escutando em uma porta fixa. Se `Port` é definido como 0, o serviço está escutando na porta 2383 se for a instância padrão ou em uma porta atribuída dinamicamente se for uma instância nomeada.  
+ As configurações de porta são especificadas no arquivo msmdsrv.ini e na página de propriedades Geral de uma instância do Analysis Services no SQL Server Management Studio. Se `Port` for definido como um inteiro positivo, o serviço estará escutando em uma porta fixa. Se `Port` for definido como 0, o serviço estará escutando na porta 2383 se for a instância padrão, ou em uma porta atribuída dinamicamente se for uma instância nomeada.  
   
  Atribuições de porta dinâmica só são usadas por instâncias nomeadas. O serviço `MSOLAP$InstanceName` determina a porta a ser usada quando inicia. Você pode determinar o número de porta real em uso por uma instância nomeada da seguinte forma:  
   
 -   Inicie o Gerenciador de tarefas e, em seguida, clique em **Services** para obter o PID do `MSOLAP$InstanceName`.  
   
--   Execute `netstat –ao –p TCP` da linha de comando para exibir as informações de porta TCP para esse PID.  
+-   Execute `netstat -ao -p TCP` da linha de comando para exibir as informações de porta TCP para esse PID.  
   
--   Verifique se a porta usando o SQL Server Management Studio e conecte-se a um servidor do Analysis Services neste formato: \<IPAddress >:\<portnumber >.  
+-   Verifique se a porta usando o SQL Server Management Studio e conecte-se a um servidor do Analysis Services neste formato: \<Endereço IP >:\<portnumber >.  
   
  Embora um aplicativo possa escutar em uma porta específica, as conexões não terão êxito se um firewall estiver bloqueando o acesso. Para que conexões alcancem uma instância nomeada do Analysis Services, desbloqueie o acesso ao msmdsrv.exe ou à porta fixa na qual ele está escutando no firewall. As seções restantes neste tópico fornecem instruções para fazer isso.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48068918"
   
  Se você não puder usar o serviço SQL Server Browser, deverá atribuir uma porta fixa na cadeia de conexão, ignorando a resolução do nome de domínio. Sem o serviço SQL Server Browser, todas as conexões de cliente devem incluir o número da porta na cadeia de conexão (por exemplo, AW-SRV01: 54321).  
   
- **Opção 1: Use as atribuições de porta dinâmica e desbloqueie o acesso ao serviço SQL Server Browser**  
+ **Opção 1: Use as atribuições de porta dinâmica e desbloqueie o acesso ao serviço navegador do SQL Server**  
   
  As atribuições de porta dinâmica para instâncias nomeadas do Analysis Services são estabelecidas pelo `MSOLAP$InstanceName` quando o serviço inicia. Por padrão, o serviço reivindica o primeiro número de porta disponível encontrado, usando um número de porta diferente cada vez que o serviço é reiniciado.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "48068918"
   
 1.  Determine uma porta TCP/IP disponível a ser usada.  
   
-     Para exibir uma lista de portas reservadas e registradas que você deve evitar usar, consulte [Port Numbers (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469)(página em inglês). Para exibir uma lista de portas que já estão em uso em seu sistema, abra uma janela de prompt de comando e digite `netstat –a –p TCP` para exibir uma lista de portas TCP que estão abertas no sistema.  
+     Para exibir uma lista de portas reservadas e registradas que você deve evitar usar, consulte [Port Numbers (IANA)](https://go.microsoft.com/fwlink/?LinkID=198469)(página em inglês). Para exibir uma lista de portas que já estão em uso em seu sistema, abra uma janela de prompt de comando e digite `netstat -a -p TCP` para exibir uma lista de portas TCP que estão abertas no sistema.  
   
 2.  Após determinar a porta a ser usada, especifique a porta editando a configuração de `Port` no arquivo msmdsrv.ini ou na página de propriedades Geral de uma instância do Analysis Services no SQL Server Management Studio.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "48068918"
 5.  Verifique isso conectando-se localmente (no Management Studio) e, em seguida, remotamente, de um aplicativo cliente em outro computador. Para usar o Management Studio, conecte-se à instância padrão do Analysis Services especificando um nome de servidor neste formato: \<servername >:\<portnumber >. Para uma instância nomeada, especifique o nome do servidor como \<servername >\\< instancename\>.  
   
 ##  <a name="bkmk_cluster"></a> Configuração de porta para um cluster do Analysis Services  
- Um cluster de failover do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre realiza a escuta na porta TCP 2383, independentemente de você ter feito a instalação como uma instância padrão ou nomeada. As atribuições de porta dinâmica não são usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando ele é instalado em um cluster de failover do Windows. Abra a TCP 2383 em todos os nós que estão executando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no cluster. Para obter mais informações sobre o clustering do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Como clusterizar o SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Um cluster de failover do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre realiza a escuta na porta TCP 2383, independentemente de você ter feito a instalação como uma instância padrão ou nomeada. As atribuições de porta dinâmica não são usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando ele é instalado em um cluster de failover do Windows. Abra a TCP 2383 em todos os nós que estão executando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no cluster. Para obter mais informações sobre o clustering do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Como clusterizar o SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ##  <a name="bkmk_powerpivot"></a> Configuração de porta do PowerPivot para SharePoint  
  A arquitetura de servidor para o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é bem diferente dependendo da versão do SharePoint que você está usando.  
@@ -230,7 +230,7 @@ ms.locfileid: "48068918"
   
  **SharePoint 2010**  
   
- Se você estiver usando o SharePoint 2010, não precisa abrir portas no Firewall do Windows. O SharePoint abre as portas necessárias e os suplementos como o PowerPivot para SharePoint funcionam no ambiente do SharePoint. Em uma instalação do PowerPivot para SharePoint 2010, o Serviço de Sistema PowerPivot tem uso exclusivo da instância de serviço local do SQL Server Analysis Services (PowerPivot) que é instalada com ele no mesmo computador. Ele usa conexões locais, e não de rede, para acessar o serviço de mecanismo local Analysis Services que carrega, consulta e processa dados PowerPivot no servidor do SharePoint. Para solicitar dados PowerPivot de aplicativos cliente, solicitações são roteadas através de portas que são abertas pela Instalação de SharePoint (especificamente, regras de entrada são definidas para permitir o acesso ao SharePoint – 80, Administração Central do SharePoint v4, Serviços Web de SharePoint e SPUserCodeV4). Como os serviços Web PowerPivot são executados em um farm do SharePoint, as regras de firewall do SharePoint são suficientes para o acesso remoto a dados PowerPivot em um farm do SharePoint.  
+ Se você estiver usando o SharePoint 2010, não precisa abrir portas no Firewall do Windows. O SharePoint abre as portas necessárias e os suplementos como o PowerPivot para SharePoint funcionam no ambiente do SharePoint. Em uma instalação do PowerPivot para SharePoint 2010, o Serviço de Sistema PowerPivot tem uso exclusivo da instância de serviço local do SQL Server Analysis Services (PowerPivot) que é instalada com ele no mesmo computador. Ele usa conexões locais, e não de rede, para acessar o serviço de mecanismo local Analysis Services que carrega, consulta e processa dados PowerPivot no servidor do SharePoint. Para solicitar dados do PowerPivot de aplicativos cliente, as solicitações são roteadas por meio de portas que são abertas pela instalação do SharePoint (especificamente, as regras de entrada são definidas para permitir o acesso ao SharePoint - 80, Administração Central do SharePoint v4, serviços Web do SharePoint e SPUserCodeV4). Como os serviços Web PowerPivot são executados em um farm do SharePoint, as regras de firewall do SharePoint são suficientes para o acesso remoto a dados PowerPivot em um farm do SharePoint.  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviço SQL Server Browser &#40;Mecanismo de Banco de Dados e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

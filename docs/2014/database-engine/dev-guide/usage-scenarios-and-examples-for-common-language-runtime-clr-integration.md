@@ -19,19 +19,19 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126866"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360468"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Cenários de uso e exemplos para a integração de CLR (Common Language Runtime)
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui aplicativos de exemplo, exemplos de pacote e vários exemplos de codificação que você pode usar para conhecer os recursos de programação da integração CLR (common language runtime).  
   
- Para projetos completos do Visual Studio implementando esses exemplos e materiais adicionais, visite [Microsoft SQL Server Community Projects & Samples CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ Para projetos completos do Visual Studio implementando esses exemplos e materiais adicionais, visite [Microsoft SQL Server Community Projects & Samples CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[Acessando código nativo em uma UDF CLR](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Mostra como invocar uma função em código C++ nativo (não gerenciado) a partir de uma função definida pelo usuário em um assembly, no seu banco de dados.|  
 |[Exemplo de parâmetro de matriz](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Demonstra como criar, atualizar ou excluir um conjunto de linhas em um banco de dados, passando uma matriz de informações de um cliente para um procedimento armazenado de integração CLR no servidor. Isso é feito com um UDT.|  

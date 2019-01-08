@@ -11,12 +11,12 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8199d7fc40da29c9fc0657ddcc242252eeace9c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a042f9f28b9be59f3f72773ae745308fe160853d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057481"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369428"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Relatórios detalhados (Construtor de Relatórios e SSRS)
   Um relatório detalhado é um relatório que pode ser aberto pelo usuário quando ele clicar em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Por exemplo, nesta ilustração, o relatório de resumo de vendas lista ordens e totais de vendas. Quando um usuário clica em um número de ordem na lista de resumo, outro relatório é aberto, exibindo os detalhes da ordem.  
@@ -28,7 +28,7 @@ ms.locfileid: "48057481"
 > [!NOTE]  
 >  Ao trabalhar no Construtor de Relatórios, você deve estar conectado a um servidor de relatório para exibir o relatório detalhado que é aberto quando clica no link de detalhamento no relatório principal.  
   
- Para se familiarizar rapidamente com os relatórios detalhados, consulte [Tutorial: Criando relatórios principais e de detalhamento &#40;Construtor de Relatórios&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). O relatório detalhado também é caracterizado em duas soluções de business intelligence, [BI Reporting: Reports and Subscriptions Scenario](http://technet.microsoft.com/bi/ff769487.aspx) e [Corporate Dashboards: Sales Solution](http://technet.microsoft.com/bi/ff643005.aspx)  
+ Para se familiarizar rapidamente com os relatórios detalhados, consulte [Tutorial: Criando relatórios principais e detalhamento &#40;construtor de relatórios&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Relatório detalhado também é caracterizado em duas soluções de business intelligence, [BI Reporting: Reports and Subscriptions Scenario](https://technet.microsoft.com/bi/ff769487.aspx) e [Corporate Dashboards: Solução de vendas](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -52,6 +52,6 @@ ms.locfileid: "48057481"
  Para exibir um relatório de resumo com links de detalhamento após sua publicação, é preciso verificar se os relatórios detalhados estão no mesmo servidor do relatório de resumo. Em todas as situações, o usuário deve ter permissões no relatório detalhado para exibi-lo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;relatórios e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

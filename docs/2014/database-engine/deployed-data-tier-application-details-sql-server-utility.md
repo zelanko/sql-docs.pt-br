@@ -18,12 +18,12 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073287"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354920"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalhes do aplicativo da camada de dados implantado (Utilitário do SQL Server)
   As informações da exibição Aplicativos da Camada de Dados Implantados do Gerenciador do Utilitário fornecem dados de utilização para aplicativos da camada de dados individuais, o histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de aplicativo da camada de dados para utilização da CPU e para arquivos de log e arquivos de dados do banco de dados. Você também pode exibir detalhes de propriedades de aplicativos da camada de dados individuais.  
@@ -76,17 +76,17 @@ ms.locfileid: "48073287"
   
 -   Data de Implantação  
   
--   Confiável: (True ou False)  
+-   Confiável: (Verdadeiro ou falso)  
   
--   Agrupamento  
+-   Ordenação  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia Habilitada: (True ou False)  
+-   Criptografia habilitada: (Verdadeiro ou falso)  
   
--   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de recuperação: (Simples, completa ou Bulk-Logged)  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
+-   Última hora relatada: Essa coluna mostra o UCP data e hora locais usando o tipo de dados de data e hora. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização de CPU do computador e do aplicativo da camada de dados.  
@@ -104,7 +104,7 @@ ms.locfileid: "48073287"
 -   1 Ano, exibido em intervalos de 1 mês.  
   
  Guia Utilização de Armazenamento  
- A guia de Utilização do Armazenamento tem uma exibição de árvore que exibe detalhes de utilização de armazenamento para arquivos de banco de dados e arquivos de log que pertencem ao aplicativo da camada de dados selecionado na exibição de lista. Observe que os dados de tempo mostram a data e hora locais do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
+ A guia de Utilização do Armazenamento tem uma exibição de árvore que exibe detalhes de utilização de armazenamento para arquivos de banco de dados e arquivos de log que pertencem ao aplicativo da camada de dados selecionado na exibição de lista. Observe que os dados de tempo mostram a data e hora locais do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
  A exibição pode ser agrupada por grupo de arquivos ou por volume. Para usar a exibição de árvore do grupo de arquivos, selecione o botão de opção **Grupo de arquivos** na seleção **Agrupar arquivos por:** .  
   
@@ -153,17 +153,17 @@ ms.locfileid: "48073287"
   
 -   Data de Implantação  
   
--   Confiável: (True ou False)  
+-   Confiável: (Verdadeiro ou falso)  
   
--   Agrupamento  
+-   Ordenação  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia Habilitada: (True ou False)  
+-   Criptografia habilitada: (Verdadeiro ou falso)  
   
--   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de recuperação: (Simples, completa ou Bulk-Logged)  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
+-   Última hora relatada: Essa coluna mostra o UCP data e hora locais usando o tipo de dados de data e hora. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
 ## <a name="see-also"></a>Consulte também  
  [Detalhes de instâncias gerenciadas &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

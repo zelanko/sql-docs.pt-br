@@ -11,12 +11,12 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078338"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376438"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS)
   Os parâmetros em cascata fornecem um modo de gerenciar grandes volumes de dados de relatório. É possível definir um conjunto de parâmetros relacionados de forma que a lista de valores de um parâmetro dependa do valor escolhido em outro parâmetro. Por exemplo, o primeiro parâmetro é independente e pode apresentar uma lista de categorias de produtos. Quando o usuário seleciona uma categoria, o segundo parâmetro é dependente do valor do primeiro parâmetro. Seus valores são atualizados com uma lista de subcategorias dentro da categoria escolhida. Quando o usuário exibe o relatório, os valores dos dois parâmetros de categoria e subcategoria são usados para filtrar dados do relatório.  
@@ -28,7 +28,7 @@ ms.locfileid: "48078338"
   
  A ordem é importante para parâmetros em cascata porque a consulta do conjunto de dados para um parâmetro posterior na lista inclui uma referência a cada parâmetro anterior na lista. Em tempo de execução, a ordem dos parâmetros no painel de dados do relatório determina a ordem na qual as consultas de parâmetro aparecem no relatório e, portanto, a ordem na qual um usuário escolhe cada valor de parâmetro sucessivo.  
   
- Para obter informações sobre como criar parâmetros em cascata com diversos valores e o recurso Selecionar Tudo, consulte [Como ter um parâmetro em cascata de diversos valores com Selecionar Tudo](http://go.microsoft.com/fwlink/?LinkId=184757).  
+ Para obter informações sobre como criar parâmetros em cascata com diversos valores e o recurso Selecionar Tudo, consulte [Como ter um parâmetro em cascata de diversos valores com Selecionar Tudo](https://go.microsoft.com/fwlink/?LinkId=184757).  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Para criar o conjunto de dados principal com uma consulta que inclui múltiplos parâmetros relacionados  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48078338"
   
     1.  Uma lista de campos de fonte de dados. Por exemplo, em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , a instrução SELECT especifica uma lista de nomes de colunas do banco de dados de uma determinada tabela ou exibição.  
   
-    2.  Um parâmetro de consulta para cada parâmetro em cascata. Um parâmetro de consulta limita os dados recuperados da fonte de dados especificando determinados valores a serem incluídos ou excluídos da consulta. Normalmente, parâmetros de consulta ocorrem em uma cláusula de restrição na consulta. Por exemplo, em uma instrução SELECT do [!INCLUDE[tsql](../../includes/tsql-md.md)] , os parâmetros de consulta ocorrem na cláusula WHERE. Para obter mais informações, consulte "Filtering Rows by Using WHERE and HAVING" na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+    2.  Um parâmetro de consulta para cada parâmetro em cascata. Um parâmetro de consulta limita os dados recuperados da fonte de dados especificando determinados valores a serem incluídos ou excluídos da consulta. Normalmente, parâmetros de consulta ocorrem em uma cláusula de restrição na consulta. Por exemplo, em uma instrução SELECT do [!INCLUDE[tsql](../../includes/tsql-md.md)] , os parâmetros de consulta ocorrem na cláusula WHERE. Para obter mais informações, consulte "Filtering Rows by Using WHERE and HAVING" na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 6.  Clique em **Executar** (**!**). Depois que você incluir parâmetros de consulta e executar a consulta, os parâmetros do relatório que correspondem aos parâmetros da consulta serão criados automaticamente.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48078338"
 4.  Clique em **Exibir Relatório**. O relatório atualiza a exibição com base nos parâmetros escolhidos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar, alterar ou excluir um parâmetro de relatório &#40;relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Adicionar, alterar ou excluir um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

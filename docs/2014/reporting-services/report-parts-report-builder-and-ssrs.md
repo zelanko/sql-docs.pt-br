@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098986"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366368"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório que foram publicados separadamente em um servidor de relatório e podem ser reutilizados em outros relatórios. As partes de relatório têm uma extensão de arquivo .rsc.  
@@ -27,7 +27,7 @@ ms.locfileid: "48098986"
   
  A parte de relatório que você adiciona ao relatório mantém uma relação com a instância da parte de relatório no site ou servidor por meio de uma identificação exclusiva. Depois de adicionar partes de relatório de um site ou servidor a um relatório, você pode modificá-los, independentemente de a parte de relatório original estar no site ou servidor. Você pode aceitar atualizações que outros fizeram à parte de relatório no site ou servidor e pode salvar a parte de relatório modificada no site ou servidor, adicionando uma nova parte de relatório ou gravando sobre o original, se você tiver permissões suficientes.  
   
- Para começar rapidamente com partes de relatório, veja os vídeos [partes de relatório de 3 de construtor de relatórios no SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) e [como eu faço para: Criar relatório partes reutilizáveis com o construtor de relatórios do SQL Server](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ Para começar rapidamente com partes de relatório, veja os vídeos [partes de relatório de 3 de construtor de relatórios no SQL Server 2008 R2](https://technet.microsoft.com/edge/Video/ff711300) e [como: Criar partes de relatório reutilizáveis com o construtor de relatórios do SQL Server](https://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo de vida de uma parte de relatório  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -75,7 +75,7 @@ ms.locfileid: "48098986"
   
  Algumas partes de relatório podem conter outros itens de relatório. Por exemplo, uma tabela pode conter um gráfico e um retângulo pode conter uma matriz e um gráfico. Quando você publicar um item de relatório que contém outros itens de relatório, eles serão salvos como uma unidade. Os outros itens de relatório são salvos inseridos na parte de relatório de contêiner. Você não pode atualizá-los separadamente e não pode salvar os itens no contêiner como partes de relatório separadas.  
   
- Para obter mais informações sobre a publicação de partes de relatório, consulte [publicar e republicar partes de relatório &#40;construtor de relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre a publicação de partes de relatório, consulte [Publicar e republicar partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
   
 ### <a name="modifying-report-part-metadata"></a>Modificando metadados de parte de relatório  
  Você pode publicar partes de relatório com configurações padrão para uma localização padrão ou pode salvar cada parte de relatório em um local diferente e modificar os metadados, como o título e a descrição.  
@@ -92,9 +92,9 @@ ms.locfileid: "48098986"
  O modo mais fácil de criar um relatório é adicionar uma parte de relatório existente, como uma tabela ou gráfico, ao relatório a partir da Galeria de Partes de Relatório. Depois de adicioná-lo a seu relatório, você poderá modificá-lo o quanto precisar, ou aceitar as atualizações do servidor. Alterar o item de relatório em seu relatório não afetará a instância da parte de relatório publicada no site ou servidor, nem interromperá a relação entre a instância no relatório e no site ou servidor. Se você tiver permissões suficientes, poderá salvar a cópia atualizada no site ou servidor. Se outra pessoa modificar a cópia no site ou servidor, você poderá decidir manter sua cópia como está, ou poderá atualizá-la para ficar com a cópia no site ou servidor.  
   
 ### <a name="searching-for-report-parts"></a>Procurando partes de relatório  
- Você deve procurar partes de relatório para adicionar a seu relatório na Galeria de Partes de Relatório. Você pode filtrar as partes de relatório por tudo ou parte do nome da parte, quem criou, quem modificou por último, quando foi a última modificação, onde está armazenado, ou que tipo de parte de relatório. Por exemplo, você pode procurar todos os gráficos criados na semana passada por um de seus colaboradores.  
+ Você deve procurar partes de relatório para adicionar a seu relatório na Galeria de Partes de Relatório. É possível filtrar as partes de relatório por tudo ou parte do nome da parte, quem criou, quem modificou por último, quando foi a última modificação, onde está armazenada ou que tipo de parte de relatório é. Por exemplo, você pode procurar todos os gráficos criados na semana passada por um de seus colaboradores.  
   
- Você pode exibir os resultados da pesquisa como miniaturas ou como uma lista, e classificar os resultados da pesquisa por nome, data de criação e modificação, e criador. Para obter mais informações, consulte [Procurar partes de relatório e definir uma pasta padrão &#40;construtor de relatórios e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
+ Você pode exibir os resultados da pesquisa como miniaturas ou como uma lista, e classificar os resultados da pesquisa por nome, data de criação e modificação, e criador. Para obter mais informações, consulte [Procurar partes de relatório e definir uma pasta padrão &#40;Construtor de Relatórios e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### <a name="what-comes-with-a-report-part"></a>O que vem com uma parte de relatório  
  Quando você adiciona uma parte de relatório a seu relatório, também está adicionando tudo que ele deve ter para funcionar. Por exemplo, qualquer objeto que exiba dados depende de um conjunto de dados: uma consulta e uma conexão com uma fonte de dados. Também pode ter um ou mais parâmetros. Todos os itens dos quais ele depende são suas *dependências*e todos eles, ou ponteiros para eles, serão incluídos com a parte de relatório quando você adicioná-lo ao relatório. O conjunto de dados e os parâmetros são listados no painel de dados do relatório do seu relatório.  
@@ -142,17 +142,17 @@ ms.locfileid: "48098986"
  O funcionamento de partes de relatório é um pouco diferente no Designer de Relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. No Designer de Relatórios, a publicação é unidirecional: você pode publicar uma parte de relatório no Designer de Relatórios, mas não pode reutilizar uma parte de relatório existente no Designer de Relatórios. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Publicar e republicar partes de relatório &#40;relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Publicar e republicar partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Procurar partes de relatório e definir uma pasta padrão &#40;relatórios e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Procurar partes de relatório e definir uma pasta padrão &#40;Construtor de Relatórios e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
  [Verificar ou desativar atualizações &#40;relatórios e SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Partes de relatório e conjuntos de dados no construtor de relatórios](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Partes de relatório e conjuntos de dados no Construtor de Relatórios](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Gerenciando partes de relatório](report-design/managing-report-parts.md)   
- [Partes de relatório do construtor de relatórios 3 no SQL Server 2008 R2 (vídeo)](http://technet.microsoft.com/edge/Video/ff711300)   
- [Como fazer: partes de relatório reutilizáveis criar com o construtor de relatórios do SQL Server (vídeo)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Partes de relatório do construtor de relatórios 3 no SQL Server 2008 R2 (vídeo)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [Como faço Criar partes de relatório reutilizáveis com o construtor de relatórios do SQL Server (vídeo)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

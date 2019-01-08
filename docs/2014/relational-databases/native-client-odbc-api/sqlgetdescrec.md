@@ -12,12 +12,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51f83f4bc0cfc60a2e8137407a7efc9635dd9f70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229216"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368585"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   Este tópico discute SQLGetDescRec funcionalidade específica para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -59,7 +59,7 @@ ms.locfileid: "48229216"
  `SQLGetDescRec` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [SQLGetDescRec](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

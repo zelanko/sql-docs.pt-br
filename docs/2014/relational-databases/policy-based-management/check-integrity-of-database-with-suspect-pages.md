@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8fc6356b4a4325f394324f91e2e7f8e76e30f367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8abad1f3dbeb8a8667999e90de63d80c2328d90c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170576"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359458"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>Verificar a integridade do banco de dados com páginas suspeitas
   Esta regra verifica os bancos de dados de usuários que têm o status do banco de dados definido como suspeito. Quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lê uma página do banco de dados que contém um erro 824, a página é considerada suspeita, sua ID é registrada na tabela suspect_pages do msdb e o banco de dados que a contém é definido como suspeito.  
@@ -30,7 +30,7 @@ ms.locfileid: "48170576"
   
 -   Execute uma verificação de consistência completa do banco de dados ([DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)).  
   
--   Implemente as ações de usuário definidas em [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397).  
+-   Implemente as ações de usuário definidas em [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397).  
   
 ## <a name="for-more-information"></a>Para obter mais informações  
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  

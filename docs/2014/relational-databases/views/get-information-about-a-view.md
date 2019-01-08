@@ -21,12 +21,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb169a7054a5b93bd923bc989baf95f5d9e22ce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528437"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
   Você pode obter informações sobre a definição ou as propriedades de uma exibição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da exibição para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela exibição.  
@@ -137,7 +137,7 @@ ms.locfileid: "48140336"
      Mostra se todas as colunas são retornadas pela exibição selecionada. Isso é definido no momento em que a exibição é criada.  
   
      **Comentário SQL**  
-     Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique na descrição e então clique nas reticências **(...)** à direita da propriedade. Os comentários podem incluir informações como quem usa a exibição e quando ela é usada.  
+     Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique nela e, em seguida, clique nas reticências **(…)** à direita da propriedade. Os comentários podem incluir informações como quem usa a exibição e quando ela é usada.  
   
      **Especificação de Top**  
      Expande para mostrar as propriedades **Top**, **Expression**, **Percent**e **With Ties** .  
@@ -175,7 +175,7 @@ ms.locfileid: "48140336"
   
 4.  Selecione **Objetos dos quais [nome da exibição] depende** para ver os objetos que são referenciados pela exibição.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obter a definição e as propriedades de uma exibição  
   

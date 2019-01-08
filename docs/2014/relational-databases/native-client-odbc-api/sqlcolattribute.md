@@ -14,20 +14,20 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204916"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361268"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Você pode usar `SQLColAttribute` para recuperar um atributo de uma coluna do conjunto de resultados para instruções ODBC preparadas ou executadas. Chamando `SQLColAttribute` em instruções preparadas causa uma ida e volta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client recebe os dados de coluna do conjunto de resultados como parte da execução da instrução, por isso a chamada `SQLColAttribute` após a conclusão da **SQLExecute** ou **SQLExecDirect** faz não envolvem uma ida e volta do servidor.  
   
 > [!NOTE]  
->  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Identificador de campo|Description|  
+|Identificador de campo|Descrição|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
@@ -54,7 +54,7 @@ ms.locfileid: "48204916"
   
  Para todas as versões, os atributos de coluna são informados somente para o primeiro conjunto de resultados quando vários conjuntos são gerados por um lote preparado de instruções SQL.  
   
- Os seguintes atributos de coluna são extensões expostas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client retorna todos os valores de *NumericAttrPtr* parâmetro. Os valores são retornados como SDWORD (signed long) com exceção de SQL_CA_SS_COMPUTE_BYLIST, que é um ponteiro para uma matriz de WORD.  
+ Os atributos de coluna a seguir são extensões expostas pelo driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna todos os valores no parâmetro *NumericAttrPtr* . Os valores são retornados como SDWORD (signed long) com exceção de SQL_CA_SS_COMPUTE_BYLIST, que é um ponteiro para uma matriz de WORD.  
   
 |Identificador de campo|Valor retornado|  
 |----------------------|--------------------|  
@@ -76,7 +76,7 @@ ms.locfileid: "48204916"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu campos de descritor específicos de driver para fornecer informações adicionais para denotar o nome de coleção de esquemas XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do catálogo, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME do IRD, que é um campo de leitura-gravação.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME do IRD, que é um campo de leitura-gravação.|  
@@ -84,7 +84,7 @@ ms.locfileid: "48204916"
   
  Além disso, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu campos de descritor específicos de driver para fornecer informações adicionais para uma coluna de UDT (tipo definido pelo usuário) de um conjunto de resultados ou um parâmetro de UDT de um procedimento armazenado ou consulta parametrizada. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo que contém o UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema que contém o UDT.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48204916"
  O identificador do campo de descritor SQL_DESC_TYPE_NAME existente é usado para indicar o nome do UDT. O campo SQL_DESC_TYPE para uma coluna de tipo UDT é SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Suporte do SQLColAttribute a recursos aprimorados de data e hora  
- Para obter os valores retornados para tipos de data/hora, consulte a seção "Informações retornadas em campos IRD" [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Para obter os valores retornados para tipos de data/hora, consulte a seção sobre informações retornadas em campos IRD em [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48204916"
  Para obter mais informações, consulte [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLColAttribute](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Função SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [Detalhes de implementação de API do ODBC](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

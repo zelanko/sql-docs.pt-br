@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataviewer.f1
@@ -15,12 +14,12 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4744860e9a220771374863be2bfd4138b2f553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d310dfc5add8771ae0369da46eb42095f2f36a17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156846"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790488"
 ---
 # <a name="data-viewer"></a>Visualizador de Dados
   Se um caminho for configurado para usar um visualizador de dados, o Visualizador de Dados exibirá o buffer de dados por buffer à medida que os dados se movimentarem entre dois componentes de fluxo de dados.  

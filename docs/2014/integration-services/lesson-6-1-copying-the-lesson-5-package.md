@@ -1,24 +1,23 @@
 ---
-title: 'Etapa 1: copiar o pacote da Lição 5 | Microsoft Docs'
+title: 'Etapa 1: Copiando o pacote da lição 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71d12e661036d2ccd227429903c19c273c3c9268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357854"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Etapa 1: Copiando o pacote da Lição 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Etapa 1: Copiando o pacote da lição 5
   Nesta tarefa, você criará uma cópia do pacote Lesson 5.dtsx criado na lição 5. Como alternativa, é possível adicionar o pacote concluído da Lição 5 incluído com o tutorial do projeto e copiá-lo. Você usará esta cópia nova ao longo de toda a lição 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Para copiar o pacote da Lição 5  
@@ -53,7 +52,7 @@ ms.locfileid: "48111466"
   
      Para baixar todos os pacotes de lição para este tutorial, faça o seguinte.  
   
-    1.  Navegue para os [Exemplos de Produtos do Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue para os [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Clique na guia **DOWNLOADS** .  
   
@@ -64,6 +63,6 @@ ms.locfileid: "48111466"
      Depois de copiar o pacote da lição 5, se você tiver atualmente os pacotes das lições anteriores em sua solução, clique com o botão direito do mouse em cada pacote das lições de 1 a 5 e clique em Excluir do Projeto. Ao terminar, você deve ter apenas a Lição 6.dtsx em sua solução.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: Convertendo o projeto para o modelo de implantação de projetos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Etapa 2: Convertendo o projeto para o modelo de implantação de projeto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

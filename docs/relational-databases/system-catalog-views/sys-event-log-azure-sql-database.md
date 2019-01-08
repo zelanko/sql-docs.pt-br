@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c4a21f9ccbf1dd8bcb7918c67b98aa51a0956d41
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673525"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590950"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51673525"
   
  A exibição `sys.event_log` contém as seguintes colunas.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados. Se a conexão falhar e o usuário não especificou um nome de banco de dados, essa coluna ficará em branco.|  
 |**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. Para eventos agregados, a hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -69,18 +69,18 @@ ms.locfileid: "51673525"
 |**conectividade**|**connection_failed**|3|**change_password_not_supported**|2|O usuário solicitou alterar a senha de logon do usuário que não tem suporte.|  
 |**conectividade**|**connection_failed**|4|**login_failed_for_user**|2|Falha de logon do usuário.|  
 |**conectividade**|**connection_failed**|5|**login_disabled**|2|O logon foi desabilitado.|  
-|**conectividade**|**connection_failed**|6|**failed_to_open_db**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> O banco de dados não pôde ser aberto. Pode ser causada porque o banco de dados não existe ou falta autenticação para abrir o banco de dados.|  
+|**conectividade**|**connection_failed**|6|**failed_to_open_db**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> O banco de dados não pôde ser aberto. Pode ser causada porque o banco de dados não existe ou falta autenticação para abrir o banco de dados.|  
 |**conectividade**|**connection_failed**|7|**blocked_by_firewall**|2|O endereço IP do cliente não tem permissão para acessar o servidor.|  
-|**conectividade**|**connection_failed**|8|**client_close**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> O cliente pode ter atingido tempo limite ao estabelecer a conexão. Experimente aumentar o tempo limite da conexão.|  
-|**conectividade**|**connection_failed**|9|**reconfiguração**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A conexão falhou porque o banco de dados estava passando por uma reconfiguração no momento.|  
-|**conectividade**|**connection_terminated**|0|**idle_connection_timeout**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A conexão ficou ociosa por mais tempo do que o limite definido pelo sistema.|  
-|**conectividade**|**connection_terminated**|1|**reconfiguração**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi encerrada devido a uma reconfiguração do banco de dados.|  
-|**conectividade**|**a limitação**|*\<código de motivo >*|**reason_code**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A solicitação é restrita.  Código de motivo da limitação:  *\<código de motivo >*. Para obter mais informações, consulte [limitação do mecanismo](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
-|**conectividade**|**throttling_long_transaction**|40549|**long_transaction**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada porque você tem uma transação de longa execução. Tente encurtar a transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividade**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada porque ela adquiriu muitos bloqueios. Tente ler ou modificar menos linhas em uma única transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividade**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada devido a uso excessivo de TEMPDB. Tente modificar a consulta para reduzir o uso de espaço de tabela temporária. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividade**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada devido a uso excessivo de espaço de log de transação. Tente modificar menos linhas em uma única transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividade**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Observação: Aplicável somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada devido a uso excessivo de memória. Tente modificar a consulta para processar menos linhas. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**conectividade**|**connection_failed**|8|**client_close**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> O cliente pode ter atingido tempo limite ao estabelecer a conexão. Experimente aumentar o tempo limite da conexão.|  
+|**conectividade**|**connection_failed**|9|**reconfiguração**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A conexão falhou porque o banco de dados estava passando por uma reconfiguração no momento.|  
+|**conectividade**|**connection_terminated**|0|**idle_connection_timeout**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A conexão ficou ociosa por mais tempo do que o limite definido pelo sistema.|  
+|**conectividade**|**connection_terminated**|1|**reconfiguração**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi encerrada devido a uma reconfiguração do banco de dados.|  
+|**conectividade**|**a limitação**|*\<código de motivo >*|**reason_code**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A solicitação é restrita.  Código de motivo da limitação:  *\<código de motivo >*. Para obter mais informações, consulte [limitação do mecanismo](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**conectividade**|**throttling_long_transaction**|40549|**long_transaction**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada porque você tem uma transação de longa execução. Tente encurtar a transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**conectividade**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada porque ela adquiriu muitos bloqueios. Tente ler ou modificar menos linhas em uma única transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**conectividade**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada devido a uso excessivo de TEMPDB. Tente modificar a consulta para reduzir o uso de espaço de tabela temporária. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**conectividade**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada devido a uso excessivo de espaço de log de transação. Tente modificar menos linhas em uma única transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**conectividade**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Observação: Aplica-se somente a V11 de banco de dados SQL do Azure.*<br /><br /> A sessão foi terminada devido a uso excessivo de memória. Tente modificar a consulta para processar menos linhas. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**mecanismo**|**deadlock**|0|**deadlock**|2|Ocorreu um deadlock.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -101,7 +101,7 @@ ms.locfileid: "51673525"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time e end_time do intervalo  
- Um evento é incluído em um intervalo de agregação quando ocorre o evento *na* ou *depois de * * * start_time** e *antes de * * * end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
+ Um evento é incluído em um intervalo de agregação quando ocorre o evento *na* ou _depois_**start_time** e _antes_  **end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
   
 ```  
 start_time                    end_time  

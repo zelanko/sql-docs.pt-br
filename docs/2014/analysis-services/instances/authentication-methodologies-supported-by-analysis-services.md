@@ -11,12 +11,12 @@ ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077826"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365040"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologias de autenticação com suporte no Analysis Services
   As conexões de um aplicativo cliente com uma instância do Analysis Services requerem a autenticação do Windows (integrada). Você pode fornecer uma identidade de usuário do Windows usando qualquer um dos seguintes métodos:  
@@ -33,7 +33,7 @@ ms.locfileid: "48077826"
   
  Observe que a autenticação por Declarações não tem suporte. Você não pode usar o token de Declarações do Windows para acessar o Analysis Services. As bibliotecas de cliente do Analysis Services só funcionam com os princípios de segurança do Windows. Se a solução de BI incluir identidades de declarações, você precisará das contas de sombra de identidade do Windows para cada usuário ou usará as credenciais armazenadas para acessar os dados do Analysis Services.  
   
- Para obter mais informações sobre os fluxos de autenticação do BI e do Analysis Services, consulte [Autenticação do Microsoft BI e delegação de identidade](http://go.microsoft.com/fwlink/?LinkID=286576).  
+ Para obter mais informações sobre os fluxos de autenticação do BI e do Analysis Services, consulte [Autenticação do Microsoft BI e delegação de identidade](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
 ##  <a name="bkmk_auth"></a> Noções básicas sobre alternativas de autenticação  
  A conexão a um banco de dados do Analysis Services requer uma identidade de usuário ou grupo do Windows e as permissões associadas. A identidade pode ser um logon com finalidade geral usado por todos que precisam exibir um relatório, mas um cenário mais provável inclui a identidade de usuários individuais.  
@@ -63,7 +63,7 @@ ms.locfileid: "48077826"
   
  EffectiveUserName é uma propriedade de cadeia de conexão usada para passar informações de identidade para o Analysis Services. O PowerPivot para SharePoint a utiliza para registrar a atividade de usuários nos logs de uso. Os Serviços do Excel e os Serviços do PerformancePoint podem usá-lo para recuperar dados usados por pastas de trabalho ou painéis no SharePoint. Ele pode ser usado também em aplicativos ou scripts personalizados que executam operações em uma instância do Analysis Services.  
   
- Para obter mais informações sobre o uso do EffectiveUserName no SharePoint, consulte [Usar o EffectiveUserName do Analysis Services no SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=311905).  
+ Para obter mais informações sobre o uso do EffectiveUserName no SharePoint, consulte [Usar o EffectiveUserName do Analysis Services no SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
  **Autenticação Básica e usuário anônimo**  
   
@@ -71,18 +71,18 @@ ms.locfileid: "48077826"
   
  Na autenticação Anônima, você pode definir a identidade de usuário anônimo para uma conta de usuário do Windows específica (IUSR_GUEST, por padrão) ou uma identidade de pool de aplicativos. A conta de usuário anônimo será usada na conexão do Analysis Services, e deve ter permissões de acesso a dados na instância do Analysis Services. Quando você usa esse método, somente a identidade de usuário associada à conta Anônima é usada na conexão. Se o seu aplicativo exigir gerenciamento de identidade adicional, você deverá escolher um dos outros métodos, ou o suplemento com uma solução de gerenciamento de identidade que você fornecer.  
   
- As autenticações Básica e Anônima estão disponíveis apenas quando você configura o Analysis Services para acesso HTTP usando o IIS e o arquivo msmdpump.dll para estabelecer a conexão. Para obter mais informações, consulte [Configurar o acesso HTTP ao Analysis Services nos Serviços de Informações da Internet &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
+ As autenticações Básica e Anônima estão disponíveis apenas quando você configura o Analysis Services para acesso HTTP usando o IIS e o arquivo msmdpump.dll para estabelecer a conexão. Para obter mais informações, consulte [Configurar o acesso HTTP ao Analysis Services no IIS &#40;(Serviços de Informações da Internet)&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
  **Stored Credentials**  
   
  A maioria dos serviços de aplicativos de camada intermediária inclui a funcionalidade de armazenamento de um nome de usuário e uma senha usados mais tarde para recuperar dados de um repositório de dados de versão anterior, como o Analysis Services ou o mecanismo relacional do SQL Server. Com isso, as credenciais armazenadas fornecem uma quinta alternativa de recuperação de dados. As limitações desse método incluem sobrecarga de manutenção associada a manter nomes de usuários e senhas atualizados, e o uso de uma única identidade na conexão. Se sua solução exigir a identidade do chamador original, as credenciais armazenadas não serão uma alternativa viável.  
   
- Para obter mais informações sobre credenciais armazenadas, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [Usar os Serviços do Excel com Serviços de Repositório Seguro no SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
+ Para obter mais informações sobre credenciais armazenadas, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [Usar os Serviços do Excel com Serviços de Repositório Seguro no SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando a representação com segurança de transporte](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurar o acesso HTTP ao Analysis Services no ISS &#40;Serviços de Informações da Internet &#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [Configurar o Analysis Services para delegação restrita de Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Usando a representação com segurança de transporte](https://go.microsoft.com/fwlink/?LinkId=311727)   
+ [Configurar o acesso HTTP ao Analysis Services no IIS &#40;(Serviços de Informações da Internet)&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Configurar a delegação restrita do Analysis Services para Kerberos)](configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Registro de SPN de uma instância do Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
  [Conectar ao Analysis Services](connect-to-analysis-services.md)  
   

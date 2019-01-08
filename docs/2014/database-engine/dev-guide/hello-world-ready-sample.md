@@ -12,12 +12,12 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc2ba0e196fa2440152fe1bd7415feeeb6f4e079
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbbb50000f88e35b03f5a006c4a50708f10b05b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079636"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366868"
 ---
 # <a name="hello-world-ready-sample"></a>Exemplo pronto do Hello World
   O exemplo Hello World Ready demonstra as operações básicas envolvidas na criação, implantação e teste de um procedimento armazenado simples e pronto para uso, baseado na integração CLR (common language runtime). Um componente pronto para uso pode ser facilmente localizado em diferentes idiomas para diferentes mercados do mundo, sem alterar o código-fonte do componente. Este exemplo também demonstra como retornar dados por meio de um parâmetro de saída e de um registro, que é construído dinamicamente pelo procedimento armazenado e retornado ao cliente. Esse exemplo é quase idêntico ao Exemplo Hello World, com a exceção de que é muito mais fácil e mais seguro localizar este aplicativo. Para alterar textos localizados é necessário o seguinte:  
@@ -37,9 +37,9 @@ ms.locfileid: "48079636"
   
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](http://go.microsoft.com/fwlink/?linkid=62796)Developer  
+-   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48079636"
   
     -   Para ler   
   
-    -   `<value xml:space="preserve">` `ã“ã‚“ã«ã¡ã¯</value>`  
+    -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   
 11. Em c:\MySample, crie o arquivo `build.com` e copie o código de exemplo no arquivo  
   

@@ -14,12 +14,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196986"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420387"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Conectar a um servidor de mineração de dados
   ![Botão de conexões](media/misc-connection.gif "botão conexões")  
@@ -68,7 +68,7 @@ ms.locfileid: "48196986"
   
  **Perdi minha conexão; Perdi todo o meu trabalho?**  
   
- Se você encerrar a conexão ao servidor, seus resultados e seus dados não serão perdidos, uma vez que estão armazenados no Excel. Entretanto, se você tiver criado modelos temporários, esses modelos serão excluídos do servidor após um período curto. Dessa forma, se você perder a conexão temporariamente, os modelos não terão sido excluídos após um tempo.  
+ Se você encerrar a conexão ao servidor, seus resultados e seus dados não serão perdidos, uma vez que estão armazenados no Excel. Entretanto, se você tiver criado modelos temporários, esses modelos serão excluídos do servidor após um período curto. Portanto, se você perder a conexão temporariamente, em algum momento os modelos não terão sido excluídos.  
   
  Dados ou resultados que tenham sido gerados não serão perdidos, pois todos os relatórios e tabelas são armazenados no Excel.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48196986"
   
 2.  Exibir o log de atividades de conexão e localize o modelo ao examinar as colunas e os resultados previsíveis (por exemplo).  
   
-     Usuários avançados: se você tiver experiência com DMX ou XMLA, poderá copiar as instruções para um arquivo para uso posterior.  
+     Usuários avançados: Se você estiver familiarizado com DMX ou XMLA, você pode copiar as instruções em um arquivo para uso posterior.  
   
 3.  Quando você encontrar o nome do modelo temporário e da estrutura, abra **Gerenciar modelo** e selecione o modelo.  
   

@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55feda84f7c64b4d33229ac6fe58b6b2d782b7a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 728e404c5f64b137b8260da82846d97c8647a430
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671135"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215442"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gerenciar colunas Text e Image – Usar parâmetros de dados em execução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "51671135"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para criar a tabela usada pelo exemplo.  
+ Execute a primeira ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem para criar a tabela usada pelo exemplo de código.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- Execute a terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para excluir a tabela usada pelo aplicativo.  
+ Execute a terceira ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem para excluir a tabela usada pelo exemplo de código.  
   
 ```  
 use AdventureWorks  

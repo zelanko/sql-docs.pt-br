@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 12: Descobrindo os dados de Conhecimento (descoberta de Conhecimento) | Microsoft Docs'
+title: 'Tarefa 12: Descoberta de Conhecimento (descoberta de Conhecimento) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167696"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367178"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarefa 12: Descobrindo a base de dados de conhecimento (descoberta da base de dados de conhecimento)
   Nesta tarefa, você deve executar o **descoberta de Conhecimento** atividade nos **Supplier ID** e **Supplier Name** domínios. Neste cenário, o processo de descoberta da base de dados de conhecimento importa basicamente valores desses dois domínios.  
   
- Neste tutorial, você começou a criar a base de dados de conhecimento do zero. Você também pode começar a criar uma base de dados de conhecimento executando uma atividade de descoberta de conhecimento. Quando você clica em **criar uma Base de dados de Conhecimento** na página principal, cliente DQS levará você para uma página com **gerenciamento de domínio** atividade selecionada para a atividade. Você pode alterar o **atividade** à **descoberta de Conhecimento** e, em seguida, na próxima página você pode criar domínios como parte do processo de descoberta de Conhecimento. Ver [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) para obter mais detalhes.  
+ Neste tutorial, você começou a criar a base de dados de conhecimento do zero. Você também pode começar a criar uma base de dados de conhecimento executando uma atividade de descoberta de conhecimento. Quando você clica em **criar uma Base de dados de Conhecimento** na página principal, cliente DQS levará você para uma página com **gerenciamento de domínio** atividade selecionada para a atividade. Você pode alterar o **atividade** à **descoberta de Conhecimento** e, em seguida, na próxima página você pode criar domínios como parte do processo de descoberta de Conhecimento. Ver [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) para obter mais detalhes.  
   
 1.  Na página principal do cliente do DQS no **Base de dados de conhecimento recente** seção, clique em **seta para a direita** lado a **fornecedores** da Base de dados de conhecimento e clique em **dados de Conhecimento Descoberta**. Como alternativa, você pode clicar **abrir Base de dados de Conhecimento**, selecione **fornecedores** do **lista de bases de dados de Conhecimento**, selecione **descoberta de Conhecimento**como **atividade** e clique em **próxima**.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "48167696"
      Você concluiu a primeira lição do tutorial.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Lição 2: Limpando dados de fornecedor usando a base de dados de conhecimento de fornecedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Lição 2: Limpeza de dados do fornecedor usando a Base de dados de Conhecimento fornecedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

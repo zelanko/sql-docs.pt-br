@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138179"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376868"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarefa 7: Adicionando a Transformação de Limpeza DQS ao fluxo de dados
-  Nesta tarefa, você adiciona a Transformação de Limpeza DQS ao fluxo de dados para limpar os dados do fornecedor de entrada usando o DQS. Ver **[transformação de limpeza DQS](http://msdn.microsoft.com/library/ee677619.aspx)** para obter mais detalhes sobre a transformação.  
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarefa 7: Adicionando a Transformação Limpeza DQS ao fluxo de dados
+  Nesta tarefa, você adiciona a Transformação de Limpeza DQS ao fluxo de dados para limpar os dados do fornecedor de entrada usando o DQS. Ver **[transformação de limpeza DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para obter mais detalhes sobre a transformação.  
   
 1.  Clique com botão direito **limpeza DQS** na **fluxo de dados** guia e, em seguida, clique em **Renomear**. Tipo de **limpar dados do fornecedor**e pressione **ENTER**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138179"
 12. Clique em **Okey** para fechar o **Editor de transformação de limpeza DQS** caixa de diálogo.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 8: Adicionando a Transformação Divisão Condicional para dividir a saída da limpeza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Tarefa 8: Adicionando a transformação divisão condicional para dividir a saída de limpeza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

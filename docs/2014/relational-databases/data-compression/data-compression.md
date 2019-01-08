@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204936"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364178"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à compactação de linha e página para tabelas e índices rowstore e dá suporte a columnstore e compactação de arquivamento columnstore para tabelas e índices columnstore.  
+  O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte à compactação de linha e página para tabelas e índices rowstore, e oferece suporte a columnstore e à compactação de arquivamento columnstore para tabelas e índices columnstore.  
   
  Para tabelas e índices rowstore, use o recurso de compactação de dados para ajudar a reduzir o tamanho do banco de dados. Além de economizar espaço, a compactação de dados pode ajudar a aprimorar o desempenho de cargas de trabalho intensivas de E/S, pois os dados são armazenados em menos páginas e as consultas precisam ler menos páginas do disco. No entanto, recursos extras de CPU são necessários no servidor de banco de dados para compactar e descompactar os dados, enquanto os dados são trocados com o aplicativo. Você pode configurar a compactação de linha e página nos seguintes objetos de banco de dados:  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204936"
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Noções básicas  
  As tabelas e os índices columnstore são sempre armazenados com a compactação columnstore. Você pode reduzir ainda mais o tamanho dos dados de columnstore configurando um compactação adicional denominada compactação de arquivamento.  Para executar a compactação de arquivamento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa o algoritmo de compactação XPRESS da Microsoft nos dados. Adicione ou remova a compactação de arquivamento usando os seguintes tipos de compactação de dados:  
   
--   Use `COLUMNSTORE_ARCHIVE` compactação de dados para compactar os dados de columnstore com a compactação de arquivamento.  
+-   Use a compactação de dados `COLUMNSTORE_ARCHIVE` para compactar os dados de columnstore com a compactação de arquivamento.  
   
 -   Use a compactação de dados **COLUMNSTORE** para descompactar a compactação de arquivamento. Esses dados resultantes continuarão a ser compactadas com a compactação columnstore.  
   
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys. Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - o `type` e `type_desc` colunas incluem CLUSTERED COLUMNSTORE e NONCLUSTERED COLUMNSTORE.  
   
--   [sys. Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – a `data_compression` e `data_compression_desc` colunas incluem COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
+-   [sys. Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - o `data_compression` e `data_compression_desc` colunas incluem COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
   
  O procedimento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) não se aplica a índices columnstore.  
   

@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 762c644690cb556ba316705f1e22e3673e811bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077706"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363398"
 ---
 # <a name="overview-of-clr-integration"></a>Visão geral da integração CLR
   O CLR (Common Language Runtime) é o centro do Microsoft .NET Framework; ele fornece o ambiente de execução para todo o código do .NET Framework. O código executado no CLR é chamado de código gerenciado. O CLR fornece diversas funções e serviços necessários para a execução de programas, incluindo a compilação JIT (Just-In-Time), alocação e gerenciamento de memória, imposição de segurança de tipos, tratamento de exceções, gerenciamento de threads e segurança.  Consulte o SDK do .NET Framework para obter mais informações.  
@@ -56,7 +56,7 @@ ms.locfileid: "48077706"
  Os procedimentos armazenados estendidos podem ser criados de forma a executar funcionalidades que não são possíveis com os procedimentos armazenados do [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Porém, os procedimentos armazenados estendidos podem comprometer a integridade do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o que não ocorre com o código gerenciado, que é verificado para assegurar que é fortemente tipado. Além disso, o gerenciamento da memória, o agendamento de threads e fibras, e os serviços de sincronização são integrados de forma mais aprofundada entre o código gerenciado do CLR e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Com a integração CLR, você tem uma forma mais segura do que os procedimentos armazenados estendidos para gravar os procedimentos armazenados necessários à execução de tarefas que não são possíveis no [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para obter mais informações sobre a integração de CLR e procedimentos armazenados estendidos, consulte [desempenho da integração CLR](clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalando o .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Instalando o .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Arquitetura da integração CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [Acesso a dados de objetos de banco de dados CLR](data-access/data-access-from-clr-database-objects.md)   
  [Introdução à integração CLR](database-objects/getting-started-with-clr-integration.md)  

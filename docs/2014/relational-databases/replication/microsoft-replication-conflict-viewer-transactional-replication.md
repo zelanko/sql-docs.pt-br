@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvqueued.f1
@@ -13,12 +12,12 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 003450f73ae1026a294827a6d52c50f38d259b52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788379"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação transacional)
   O Visualizador de Conflitos de Replicação permite exibir conflitos que ocorreram durante a sincronização para uma replicação transacional ponto a ponto de uma replicação transacional com assinaturas de atualização enfileiradas. Para obter mais informações, consulte [Exibir conflitos de dados em publicações transacionais &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
@@ -61,8 +60,8 @@ ms.locfileid: "48072476"
  **Mostrar as primeiras cinco colunas e outras colunas com dados conflitantes**  
  Selecione para exibir as primeiras cinco colunas e qualquer coluna com conflitos. Isso é útil quando a tabela tem um grande número de colunas, mas você quer ver apenas as mais relevantes para resolver o conflito. As primeiras cinco colunas sempre são incluídas nessa exibição, como campos que identificam uma linha, como chave primária ou campo de nomes, estão sempre entre as primeiras colunas da tabela.  
   
- **Exibir Informações da Coluna** (**.**)  
- Clique para exibir informações da coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados**e **Valor da Coluna**.  
+ **Exibir Informações da Coluna** (**...**)  
+ Clique para exibir informações de coluna: **Nome da tabela**, **nome da coluna**, **tipo de dados**, e **o valor da coluna**.  
   
  **Registrar em log os detalhes do conflito**  
  Marque essa caixa para registrar em log os detalhes do conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e clique em **Opções**. Insira um valor ou clique em (**...**) e navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  

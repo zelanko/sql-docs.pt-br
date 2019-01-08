@@ -16,12 +16,12 @@ ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4892ab57fc39f2888431b61e7b924496d9749f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161837"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522169"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matriz de classificação (Suplementos de Mineração de Dados do SQL Server)
   ![Botão matriz de classificação, faixa de opções mineração de dados](media/dmc-cmatrix.gif "botão matriz de classificação, faixa de opções mineração de dados")  
@@ -31,7 +31,7 @@ ms.locfileid: "48161837"
  Esses suplementos, use o **matriz de classificação** Assistente para selecionar um modelo, especifique os dados de teste e, em seguida, gerar uma matriz de resultados.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Como ler uma matriz de classificação  
- Digamos que seu objetivo seja criar um programa de lealdade de cliente e atribuir clientes a categorias apropriadas, de forma que você possa fornecer a eles o nível apropriado de incentivos. Você implementou três níveis para o programa de recompensa -- bronze, prata e ouro – e forneceu isso aos clientes em uma fase de avaliação. Você também criou um modelo que analisa clientes e prevê as categorias corretas. Agora você usará a matriz de classificação nos dados de avaliação para determinar quão bom era o modelo em prever a oferta correta para todos os clientes.  
+ Vamos supor que seu objetivo é criar um programa de fidelidade do cliente e, em seguida, atribuir clientes a categorias apropriadas, para que você possa lhe fornecer o nível apropriado de incentivos. Você implementou três níveis para o programa de recompensa-- bronze, Prata e ouro – e forneceu isso aos clientes em uma fase de avaliação. Você também criou um modelo que analisa clientes e prevê as categorias corretas. Agora você usará a matriz de classificação nos dados de avaliação para determinar quão bom era o modelo em prever a oferta correta para todos os clientes.  
   
  A tabela da matriz de classificação mostra quantos clientes seriam atribuídos a cada categoria com base no modelo, e compara esse resultado ao número de clientes que de fato se inscreveram em cada nível de recompensa.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48161837"
   
 3.  Selecione a coluna cuja precisão você deseja avaliar. Você pode escolher apenas uma coluna ao criar uma matriz, mas a coluna pode ter vários valores.  
   
-     Dica: talvez seja difícil interpretar uma matriz de classificação se a coluna previsível tiver muitas colunas a serem comparadas.  
+     Dica: Ele pode ser difícil de interpretar uma matriz de classificação, se a coluna previsível tiver muitas colunas a ser comparado.  
   
      No **selecionar colunas para prever** página, você também pode especificar se deseja exibir a contagem de valores corretos e incorretos ou exibir uma porcentagem.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48161837"
   
 -   O modelo que você está medindo precisa prever um valor que seja discreto ou que já tenha sido discretizado.  
   
--   Se você não tiver usado a opção para salvar um conjunto de teste junto com sua estrutura ou modelo, precisará obter um conjunto de dados de entrada que tenha essencialmente o mesmo número de colunas, com tipos de dados compatíveis, como aqueles usados no modelo.  
+-   Se você não usou a opção para salvar um conjunto de teste junto com sua estrutura ou modelo, você precisará obter um conjunto de dados de entrada que tem essencialmente o mesmo número de colunas com tipos de dados, como aqueles usados no modelo de correspondência.  
   
 -   O modelo de mineração de dados e os novos dados que você estiver usando para teste deverão conter pelo menos uma coluna que possa ser prevista, e as colunas devem conter o mesmo tipo de dados.  
   

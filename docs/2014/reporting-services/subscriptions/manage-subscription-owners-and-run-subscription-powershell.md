@@ -11,15 +11,15 @@ ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1b0c51cd8750cb83ebeccbd0520c0ace32198ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebe7f44d4e2ddc9d6da69daae7787c1b40d5b6e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367518"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
-  Começando com [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] por meio de programação, você pode transferir a propriedade de um [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] assinatura de um usuário para outro. Este tópico fornece vários scripts do Windows PowerShell que você pode usar para mudar ou simplesmente listar a propriedade das assinaturas. Cada amostra inclui a sintaxe de amostra do modo Nativo e do modo SharePoint. Após mudar o proprietário da assinatura, está será executada no contexto de segurança do novo proprietário, e o campo User!UserID no relatório exibirá o valor do novo proprietário. Para obter mais informações sobre o modelo de objeto que as amostras do PowerShell chamam, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  A partir do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , você pode transferir de forma programática a propriedade de uma assinatura do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de um usuário para outro. Este tópico fornece vários scripts do Windows PowerShell que você pode usar para mudar ou simplesmente listar a propriedade das assinaturas. Cada amostra inclui a sintaxe de amostra do modo Nativo e do modo SharePoint. Após mudar o proprietário da assinatura, está será executada no contexto de segurança do novo proprietário, e o campo User!UserID no relatório exibirá o valor do novo proprietário. Para obter mais informações sobre o modelo de objeto que as amostras do PowerShell chamam, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")  
   
@@ -31,44 +31,44 @@ ms.locfileid: "48216013"
   
 -   [Como usar os scripts](#bkmk_how_to)  
   
--   [Script: listar a propriedade de todas as assinaturas](#bkmk_list_ownership_all)  
+-   [Script: Listar a propriedade de todas as assinaturas](#bkmk_list_ownership_all)  
   
--   [Script: listar todas as assinaturas de propriedade de um usuário específico](#bkmk_list_all_one_user)  
+-   [Script: Listar todas as assinaturas pertencentes a um usuário específico](#bkmk_list_all_one_user)  
   
--   [Script: alterar a propriedade de todas as assinaturas de propriedade de um usuário específico](#bkmk_change_all)  
+-   [Script: Alterar a propriedade de todas as assinaturas pertencentes a um usuário específico](#bkmk_change_all)  
   
--   [Script: listar todas as assinaturas associadas a um relatório específico](#bkmk_list_for_1_report)  
+-   [Script: Lista todas as assinaturas associadas a um relatório específico](#bkmk_list_for_1_report)  
   
--   [Script: alterar a propriedade de uma assinatura específica](#bkmk_change_all_1_subscription)  
+-   [Script: Alterar a propriedade de uma assinatura específica](#bkmk_change_all_1_subscription)  
   
--   [Script: executar (acionar) uma única assinatura](#bkmk_run_1_subscription)  
+-   [Script: Executar (acionar) uma única assinatura](#bkmk_run_1_subscription)  
   
 ##  <a name="bkmk_how_to"></a> Como usar os scripts  
   
 ### <a name="permissions"></a>Permissões  
- Esta seção resume os níveis de permissão necessários para usar cada um dos métodos para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] em modo Nativo e SharePoint. Os scripts neste tópico usam os seguintes métodos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
+ Esta seção resume os níveis de permissão necessários para usar cada um dos métodos para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]em modo Nativo e SharePoint. Os scripts neste tópico usam os seguintes métodos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
   
--   [Método ReportingService2010.ListSubscriptions](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [Método ReportingService2010.ListSubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [Método ReportingService2010.ChangeSubscriptionOwner](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [Método ReportingService2010.ChangeSubscriptionOwner](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   O método [ReportingService2010.FireEvent](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) é usado apenas no último script para disparar uma assinatura específica a ser executada. Se você não planeja usar esse script, é possível ignorar os requisitos de permissão para o método FireEvent.  
+-   O método [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) é usado apenas no último script para disparar uma assinatura específica a ser executada. Se você não planeja usar esse script, é possível ignorar os requisitos de permissão para o método FireEvent.  
   
  **Modo Nativo:**  
   
--   Listar assinaturas: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription no relatório e o usuário é o proprietário da assinatura) ou ReadAnySubscription  
+-   Listar Assinaturas: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription no relatório e o usuário é o proprietário da assinatura) ou ReadAnySubscription  
   
--   Alterar Assinaturas: o usuário deve ser membro do grupo BUILTIN\Administrators  
+-   Alterar Assinaturas: O usuário deve ser membro do grupo BUILTIN\Administrators  
   
--   Listar Filhos: ReadProperties no Item  
+-   Listar Filhos: ReadProperties no item  
   
--   Acionar Evento: GenerateEvents (System)  
+-   Acionar Evento: GenerateEvents (Sistema)  
   
  **Modo SharePoint:**  
   
--   Listar assinaturas: ManageAlerts ou (HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts no relatório e o usuário é o proprietário da assinatura e a assinatura é cronometrada).  
+-   Listar Assinaturas: ManageAlerts ou (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts no relatório e o usuário é o proprietário da assinatura e a assinatura é cronometrada).  
   
 -   Alterar Assinaturas: ManageWeb  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48216013"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> Script: listar a propriedade de todas as assinaturas  
+##  <a name="bkmk_list_ownership_all"></a> Script: Listar a propriedade de todas as assinaturas  
  Esse script lista todas as assinaturas em um site. Você pode usar esse script para testar sua conexão ou para verificar o caminho do relatório e a identificação de assinatura para uso em outros scripts. Ele também é um script útil para simplesmente auditar as assinaturas existentes e seus proprietários.  
   
  **Sintaxe do modo Nativo:**  
@@ -134,9 +134,9 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  Para verificar URLs de sites no modo do SharePoint, use o cmdlet **Get-SPSite**do SharePoint. Para obter mais informações, consulte [Get-SPSite](http://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
+>  Para verificar URLs de sites no modo do SharePoint, use o cmdlet **Get-SPSite**do SharePoint. Para obter mais informações, consulte [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Script: listar todas as assinaturas de propriedade de um usuário específico  
+##  <a name="bkmk_list_all_one_user"></a> Script: Listar todas as assinaturas de propriedade de um usuário específico  
  Esse script lista todas as assinaturas de propriedade de um usuário específico. Você pode usar esse script para testar sua conexão ou para verificar o caminho do relatório e a identificação de assinatura para uso em outros scripts. Esse script é útil quando alguém sai da organização e você deseja verificar quais assinaturas essa pessoa possuía para alterar o proprietário ou excluir a assinatura.  
   
  **Sintaxe do modo Nativo:**  
@@ -173,7 +173,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Script: alterar a propriedade de todas as assinaturas de propriedade de um usuário específico  
+##  <a name="bkmk_change_all"></a> Script: Alterar a propriedade de todas as assinaturas de propriedade de um usuário específico  
  Esse script muda a propriedade de todas as assinaturas de um usuário específico para o parâmetro do novo proprietário.  
   
  **Sintaxe do modo Nativo:**  
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Script: listar todas as assinaturas associadas a um relatório específico  
+##  <a name="bkmk_list_for_1_report"></a> Script: Listar todas as assinaturas associadas a um relatório específico  
  Esse script lista todas as assinaturas associadas a um relatório específico. A sintaxe do caminho do relatório é um modo SharePoint diferente que exige uma URL completa. Nos exemplos de sintaxe, o nome do relatório usado é "somente título", que contém um espaço e, portanto, requer aspas simples em torno do nome do relatório.  
   
  **Sintaxe do modo Nativo:**  
@@ -281,7 +281,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> Script: alterar a propriedade de uma assinatura específica  
+##  <a name="bkmk_change_all_1_subscription"></a> Script: Alterar a propriedade de uma assinatura específica  
  Esse script altera a propriedade de uma assinatura específica. A assinatura é identificada pela SubscriptionID que você passa no script. Você pode usar um dos scripts de assinatura da lista para determinar a SubscriptionID correta.  
   
  **Sintaxe do modo Nativo:**  
@@ -327,7 +327,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Script: executar (acionar) uma única assinatura  
+##  <a name="bkmk_run_1_subscription"></a> Script: Executar (acionar) uma única assinatura  
  Esse script executa uma assinatura específica usando o método FireEvent. O script executa a assinatura de maneira imediata, independentemente da agenda configurada para a assinatura. O EventType é comparado com o conjunto conhecido de eventos que estão definidos no arquivo de configuração do servidor do relatório **rsreportserver.config** O script usa o tipo de evento a seguir para assinaturas padrão:  
   
  `<Event>`  
@@ -336,9 +336,9 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- Para obter mais informações sobre o arquivo de configuração, consulte [arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md).  
+ Para obter mais informações sobre o arquivo de configuração, confira [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
- O script inclui a lógica de atraso “`Start-Sleep -s 6`” para que haja tempo após o evento ser acionado e para que o status atualizado fique disponível com o método ListSubscription.  
+ O script inclui a lógica de atraso "`Start-Sleep -s 6`" para que haja tempo após o evento ser acionado e para que o status atualizado fique disponível com o método ListSubscription.  
   
  **Sintaxe do modo Nativo:**  
   

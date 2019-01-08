@@ -11,12 +11,12 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a551b7be49ebcb38221973657658000c38d369a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f77a0163c40d29dd06f49fc61a816c92d9484e80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223936"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374898"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexão Hyperion Essbase (SSRS)
   Para incluir dados de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados do relatório do tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar dados multidimensionais de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -62,22 +62,22 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ##  <a name="Parameters"></a> Parâmetros  
  Para incluir parâmetros de consulta, crie um filtro na área de filtros no designer de consultas e marque o filtro como um parâmetro. Para cada filtro, um conjunto de dados é criado automaticamente para fornecer os valores disponíveis. Por padrão, esses conjuntos de dados não são exibidos no painel de dados do relatório. Para obter mais informações, consulte [Mostrar conjuntos de dados ocultos para obter valores de parâmetros para dados multidimensionais &#40;Construtor de Relatórios e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
- Por padrão, cada parâmetro de relatório tem o tipo de dados **Text**. Depois que os parâmetros de relatório forem criados, talvez seja necessário alterar os valores padrão. Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Por padrão, cada parâmetro de relatório tem o tipo de dados **Text**. Depois que os parâmetros de relatório forem criados, talvez seja necessário alterar os valores padrão. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
 ##  <a name="Extended"></a> Propriedades de campo estendidas  
- A extensão de processamento de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] oferece suporte às propriedades de campo estendidas. Propriedades de campo estendidas são propriedades além `Value` e `IsMissing` que são definidos pela extensão de processamento de dados para um campo de conjunto de dados. As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados. As propriedades personalizadas são exclusivas para cada fonte de dados.  
+ A extensão de processamento de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] oferece suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais a `Value` e `IsMissing` definidas para um campo de conjunto de dados pela extensão de processamento de dados. As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados. As propriedades personalizadas são exclusivas para cada fonte de dados.  
   
- As propriedades de campo estendidas não são exibidas no painel de dados do relatório como itens que você pode arrastar em seu layout de relatório. Em vez disso, você pode arrastar o campo pai da propriedade para o relatório e, em seguida, altere a propriedade padrão de `Value` para a propriedade que você deseja usar.  
+ As propriedades de campo estendidas não são exibidas no painel de dados do relatório como itens que você pode arrastar em seu layout de relatório. Em vez disso, você arrasta o campo pai da propriedade para o relatório e altera a propriedade padrão de `Value` para a propriedade que você deseja usar.  
   
- O nome de uma propriedade de campo estendida aparece na Dica de Ferramenta quando você para o mouse sobre um campo no painel Metadados no designer de consulta. Para obter mais informações sobre o designer de consulta que você pode usar para explorar os dados subjacentes, consulte [Interface de usuário do Designer de consultas do Hyperion Essbase](hyperion-essbase-query-designer-user-interface.md).  
+ O nome de uma propriedade de campo estendida aparece na Dica de Ferramenta quando você para o mouse sobre um campo no painel Metadados no designer de consulta. Para obter mais informações sobre o designer de consultas que você pode usar para explorar os dados subjacentes, consulte [Interface do usuário do Designer de Consultas do Hyperion Essbase](hyperion-essbase-query-designer-user-interface.md).  
   
 > [!NOTE]  
 >  Os valores para essas propriedades de campo estendidas passarão a existir somente se eles forem incluídos na expressão MDX e a fonte de dados fornecer esses valores quando você executar e recuperar os dados de seus conjuntos de dados. Dessa forma, você poderá consultar esses valores da propriedade `Field` a partir de qualquer expressão usando a sintaxe descrita na seção seguinte. Entretanto, como esses campos são específicos para esse provedor de dados e não faz parte da linguagem de definição de relatório, as alterações que forem feitas nesse valor não serão salvas com a definição de relatório.  
   
   
 ### <a name="predefined-field-properties"></a>Propriedades de campo predefinidas  
- Propriedades de campo predefinidas para as quais normalmente existe suporte de vários provedores de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório. Por exemplo, a propriedade de dimensão MDX MEMBER_UNIQUE_NAME é mapeada para a propriedade de campo de conjunto de dados do relatório predefinido `UniqueName`. Para incluir o valor de nome exclusivo em uma caixa de texto, use a expressão `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Propriedades de campo predefinidas para as quais normalmente existe suporte de vários provedores de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório. Por exemplo, a propriedade de dimensão MDX MEMBER_UNIQUE_NAME é mapeada para a propriedade de campo predefinida do conjunto de dados de relatório `UniqueName`. Para incluir o valor de nome exclusivo em uma caixa de texto, use a expressão `=Fields!`*\<FieldName>*`.UniqueName`.  
   
  A tabela a seguir fornece uma lista das propriedades de campo predefinidas que você pode usar para a fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -108,9 +108,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> Comentários  
- Nem todos os modos de entrega de relatório são suportados por esse provedor de dados. Não há suporte para a entrega de relatórios através de assinaturas controladas por dados para essa extensão de processamento de dados. Para obter mais informações, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nem todos os modos de entrega de relatório são suportados por esse provedor de dados. Não há suporte para a entrega de relatórios através de assinaturas controladas por dados para essa extensão de processamento de dados. Para obter mais informações, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para obter mais informações, consulte [Usando o SQL Server 2005 Reporting Services com Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970).  
+ Para obter mais informações, consulte [Usando o SQL Server 2005 Reporting Services com Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970).  
   
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
@@ -138,10 +138,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos gerada pela consulta do conjunto de dados.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
- [Usando o SQL Server 2005 Reporting Services com Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Usando o SQL Server 2005 Reporting Services com Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Fornece informações detalhadas sobre como trabalhar com esta extensão de dados.  
   
   

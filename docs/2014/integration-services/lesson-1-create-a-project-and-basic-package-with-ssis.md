@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229476"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359361"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lição 1: Criando o projeto e pacote básico
   Nessa lição, você criará um pacote ETL simples que extrai dados de uma fonte exclusiva de arquivo simples, transforma os dados usando dois componentes de transformação pesquisa e grava esses dados na tabela de fatos **FactCurrency** no **AdventureWorksDW2012**. Como parte dessa lição, você irá aprender como criar novos pacotes, adicionar e configurar fonte de dados, e conexões de destino, e trabalhar com novos fluxos de controle e componentes de fluxo.  
   
 > [!IMPORTANT]  
->  Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar **AdventureWorksDW2012**, consulte [Reporting Services Product Samples on CodePlex (Amostras de produto do Reporting Services no CodePlex)](http://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar **AdventureWorksDW2012**, consulte [Reporting Services Product Samples on CodePlex (Amostras de produto do Reporting Services no CodePlex)](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
   
 ## <a name="understanding-the-package-requirements"></a>Compreendendo os requisitos de pacote  
  Este tutorial requer o Microsoft SQL Server Data Tools.  
@@ -83,21 +82,21 @@ ms.locfileid: "48229476"
   
 -   [Etapa 1: Criando um novo projeto do Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Etapa 2: Adicionando e configurando um gerenciador de conexões de arquivo simples](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Etapa 2: Adicionando e configurando um Gerenciador de Conexão de arquivo simples](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Etapa 3: Adicionando e configurando um gerenciador de conexões OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Etapa 3: Adicionando e configurando um Gerenciador de Conexão do OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Etapa 4: Adicionando uma tarefa de fluxo de dados ao pacote](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Etapa 5: Adicionando e configurando a fonte de arquivo simples](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Etapa 6: Adicionando e configurando a transformação Pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Etapa 6: Adicionando e configurando a transformação pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Etapa 7: Adicionando e configurando o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Etapa 8: Tornando o pacote da lição 1 mais fácil de entender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Etapa 9: Testando o pacote de tutorial da Lição 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Etapa 9: Testando o pacote de Tutorial da lição 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
  [Etapa 1: Criando um novo projeto do Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

@@ -12,46 +12,46 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fbca94db76fb0b3df636f3681dc01b0ef51571cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183666"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364298"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
   O recurso Auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite examinar grupos de eventos e eventos individuais no nível do servidor e no nível do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Auditorias consistem em zero ou mais itens de ação de auditoria registrados em um *destino*de auditoria. O destino de auditoria pode ser um arquivo binário, o log de eventos de Aplicativo do Windows ou o log de eventos de Segurança do Windows. Os registros enviados ao destino podem conter os elementos descritos na tabela a seguir.  
   
-|Nome da coluna|Description|Tipo|Sempre disponível|  
+|Nome da coluna|Descrição|Tipo|Sempre disponível|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data/hora em que a ação auditável é acionada.|`datetime2`|Sim|  
 |**sequence_no**|Rastreia a sequência de registros dentro de um único registro de auditoria que é muito grande para se ajustar no buffer de gravação das auditorias.|`int`|Sim|  
-|**action_id**|ID da ação<br /><br /> Dica: para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres para um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|`varchar(4)`|Sim|  
-|**succeeded**|Indica se a ação que acionou o evento foi realizada com êxito|`bit` – 1 = êxito, 0 = falha|Sim|  
-|**permission_bitmask**|Quando aplicável, mostra as permissões concedidas, negadas ou revogadas|`bigint`|não|  
-|**is_column_permission**|Sinalizador que indica uma permissão no nível da coluna|`bit` – 1 = verdadeiro, 0 = False|não|  
+|**action_id**|ID da ação<br /><br /> Dica: Para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres para um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|`varchar(4)`|Sim|  
+|**succeeded**|Indica se a ação que acionou o evento foi realizada com êxito|`bit` -1 = êxito, 0 = falha|Sim|  
+|**permission_bitmask**|Quando aplicável, mostra as permissões concedidas, negadas ou revogadas|`bigint`|Não|  
+|**is_column_permission**|Sinalizador que indica uma permissão no nível da coluna|`bit` -1 = verdadeiro, 0 = False|Não|  
 |**session_id**|Identificação da sessão em que ocorreu o evento.|`int`|Sim|  
 |**server_principal_id**|ID do contexto de logon em que a ação é executada.|`int`|Sim|  
-|**database_principal_id**|ID do contexto do usuário de banco de dados no qual a ação é executada.|`int`|não|  
-|**object_id**|ID primária da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema|`int`|não|  
+|**database_principal_id**|ID do contexto do usuário de banco de dados no qual a ação é executada.|`int`|Não|  
+|**object_id**|ID primária da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema|`int`|Não|  
 |**target_server_principal_id**|Entidade de servidor a qual se aplica a ação auditável.|`int`|Sim|  
-|**target_database_principal_id**|Entidade de banco de dados a qual se aplica a ação auditável.|`int`|não|  
+|**target_database_principal_id**|Entidade de banco de dados a qual se aplica a ação auditável.|`int`|Não|  
 |**class_type**|Tipo de entidade auditável no qual ocorre a auditoria.|`varchar(2)`|Sim|  
 |**session_server_principal_name**|Entidade do servidor da sessão.|`sysname`|Sim|  
 |**server_principal_name**|Logon atual.|`sysname`|Sim|  
 |**server_principal_sid**|SID do logon atual.|`varbinary`|Sim|  
-|**database_principal_name**|Usuário atual.|`sysname`|não|  
-|**target_server_principal_name**|Logon de destino da ação.|`sysname`|não|  
-|**target_server_principal_sid**|SID do logon de destino.|`varbinary`|não|  
-|**target_database_principal_name**|Usuário de destino da ação.|`sysname`|não|  
+|**database_principal_name**|Usuário atual.|`sysname`|Não|  
+|**target_server_principal_name**|Logon de destino da ação.|`sysname`|Não|  
+|**target_server_principal_sid**|SID do logon de destino.|`varbinary`|Não|  
+|**target_database_principal_name**|Usuário de destino da ação.|`sysname`|Não|  
 |**server_instance_name**|Nome da instância de servidor no qual a auditoria ocorreu. Usa o formato máquina\instância padrão.|`nvarchar(120)`|Sim|  
-|**database_name**|O contexto do banco de dados no qual a ação aconteceu.|`sysname`|não|  
-|**schema_name**|O contexto do esquema no qual a ação aconteceu.|`sysname`|não|  
-|**object_name**|O nome da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema<br /><br /> instrução TSQL (se houver)|`sysname`|não|  
-|**instrução**|instrução TSQL (se houver)|`nvarchar(4000)`|não|  
-|**additional_information**|Qualquer informação adicional sobre o evento, armazenado em XML.|`nvarchar(4000)`|não|  
+|**database_name**|O contexto do banco de dados no qual a ação aconteceu.|`sysname`|Não|  
+|**schema_name**|O contexto do esquema no qual a ação aconteceu.|`sysname`|Não|  
+|**object_name**|O nome da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema<br /><br /> instrução TSQL (se houver)|`sysname`|Não|  
+|**instrução**|instrução TSQL (se houver)|`nvarchar(4000)`|Não|  
+|**additional_information**|Qualquer informação adicional sobre o evento, armazenado em XML.|`nvarchar(4000)`|Não|  
   
 ## <a name="remarks"></a>Comentários  
  Algumas ações não populam o valor de uma coluna porque pode não ser aplicável à ação.  

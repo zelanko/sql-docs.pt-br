@@ -11,12 +11,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 69388d1b8f3bf572b7db264c8ab1f56d9d7f454e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 290e88a1f96b6cec6d4120464bb098abb0f422ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100966"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360458"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
   Adicionar um segundo ou mais servidores de relatório de modo do SharePoint ao seu farm do SharePoint pode melhorar o desempenho e o tempo de resposta do processamento do servidor de relatório. Se você perceber que o desempenho está mais lento à medida que você adiciona mais usuários, relatórios e outros aplicativos ao servidor de relatório, então a adição de servidores de relatório pode melhorar o desempenho. Isto também é recomendado para adicionar um segundo servidor de relatório para aumentar a disponibilidade de servidores de relatório quando houver problemas com hardware ou você estiver realizando manutenção geral em servidores individuais em seu ambiente. A partir da versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , as etapas para expansão de um ambiente do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo do SharePoint seguem a implantação padrão de farm do SharePoint e aproveita os recursos de balanceamento de carga do SharePoint.  
@@ -29,7 +29,7 @@ ms.locfileid: "48100966"
   
  Para obter informações sobre como expandir os servidores de relatório do modo nativo, veja [Configurar uma implantação em expansão do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
--   [O balanceamento de carga](#bkmk_loadbalancing)  
+-   [Balanceamento de carga](#bkmk_loadbalancing)  
   
 -   [Pré-requisitos](#bkmk_prerequisites)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48100966"
 |----------|--------------------------|  
 |Execute a ferramenta de preparação dos produtos do SharePoint 2010.|Você deve ter a mídia de instalação do SharePoint 2010. A ferramenta de preparação é o **PrerequisiteInstaller.exe** na mídia de instalação.|  
 |Instale um produto do SharePoint 2010.|1) selecione a **Farm de servidores** tipo de instalação.<br /><br /> 2) selecione **concluir** para o tipo de servidor.<br /><br /> 3) Quando a instalação for concluída, não execute o assistente de Configuração de Produtos do SharePoint se seu farm do SharePoint existente tiver o SharePoint 2010 SP1 instalado. Você deve instalar o SharePoint SP1 antes de executar o assistente de configuração de produtos do SharePoint.|  
-|Instale o SharePoint Server 2010 SP1.|Se seu farm do SharePoint existente tiver o SharePoint 2010 SP1 instalado baixar e instalar o SharePoint 2010 SP1 de:[http://support.microsoft.com/kb/2460045](http://go.microsoft.com/fwlink/p/?linkID=219697).<br /><br /> Para obter mais informações sobre o SharePoint 2010 SP1, consulte [Problemas conhecidos quando você instala o Office 2010 SP1 e o SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126):|  
+|Instale o SharePoint Server 2010 SP1.|Se seu farm do SharePoint existente tiver o SharePoint 2010 SP1 instalado baixar e instalar o SharePoint 2010 SP1 de:[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697).<br /><br /> Para obter mais informações sobre o SharePoint 2010 SP1, consulte [Problemas conhecidos quando você instala o Office 2010 SP1 e o SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126):|  
 |Execute o Assistente de Configuração de Produtos do SharePoint para adicionar o servidor ao farm.|1) na **produtos do Microsoft SharePoint 2010** grupo de programas, clique em **Assistente de configuração de produtos do Microsoft SharePoint 2010**.<br /><br /> 2) na **conectar-se a um Farm de servidores** página, selecione **conectar-se a um Farm existente** e clique em **próxima**.<br /><br /> 3) na **especificar definições do banco de dados de configuração** página, digite o nome do servidor de banco de dados usado para o farm existente e o nome do banco de dados de configuração. Clique em **Avançar**.<br />**\*\* Importante \* \***  se você vir uma mensagem de erro semelhante à seguinte e você tiver verificado que tem permissões, em seguida, verificar quais protocolos estão habilitados para a configuração de rede do SQL Server no **do Sql Server Configuration Manager**: "Falha ao conectar ao servidor de banco de dados. Verifique se o banco de dados existe, é um Sql Server e que você tenha as permissões apropriadas para acessar o servidor."<br />**\*\* Importante \* \***  se você vir a página **produto de Farm de servidor e o Status do Patch**, você precisará analisar as informações na página e atualizar o servidor com os arquivos necessários antes de prosseguir a unir o servidor ao farm.<br /><br /> 4) na **especificar configurações de segurança do Farm** página digitar sua frase secreta de farm e clique em **próxima**. Clique em **Avançar** na página de confirmação para executar o assistente.<br /><br /> 5) clique em **próxima** para executar o **Assistente de configuração de Farm**.|  
 |Verifique se o servidor foi adicionado ao farm do SharePoint.|1) Na Administração Central do SharePoint, clique em **Gerenciar servidores neste farm** no grupo **Configurações do Sistema** .<br /><br /> 2) Verifique se o novo servidor foi adicionado e se o status está correto.<br /><br /> 3) Observe você não vir o serviço **serviço do SQL Server Reporting Services** em execução. O serviço será instalado na Próxima etapa.<br /><br /> 4) para remover este servidor da função WFE, clique em **gerenciar serviços no servidor** e interrompa o serviço **aplicativo Web do Microsoft SharePoint Foundation**.|  
 |Instalar e configurar o modo do SharePoint do Reporting Services.|Executar a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obter mais informações sobre a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint, consulte [instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) se o servidor só será usado como um servidor de aplicativos e o servidor não serão usados como um WFE, você não precisa selecionar **suplemento Reporting Services para produtos do SharePoint** em:<br /><br /> o **função de instalação** página, selecione **instalação de recurso do SQL Server**<br /><br /> o **seleção de recursos** página, selecione **Reporting Services - SharePoint**<br /><br /> -ou-<br /><br /> o **configuração do Reporting Services** verificação de página a **instalar somente** opção estiver selecionada para **Reporting Services SharePoint Mode**.|  
@@ -93,7 +93,7 @@ ms.locfileid: "48100966"
  O Serviço Web do Reporting Services não está habilitado. Configure pelo menos uma instância do serviço Reporting Services SharePoint ter \<IsWebServiceEnable > definido como true. Para obter mais informações, veja [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar servidores web ou aplicativo para farms do SharePoint 2013](http://technet.microsoft.com/library/cc261752.aspx)   
- [Configurar serviços (SharePoint Server 2010)](http://technet.microsoft.com/library/ee794878.aspx)  
+ [Adicionar servidores web ou aplicativo para farms do SharePoint 2013](https://technet.microsoft.com/library/cc261752.aspx)   
+ [Configurar serviços (SharePoint Server 2010)](https://technet.microsoft.com/library/ee794878.aspx)  
   
   

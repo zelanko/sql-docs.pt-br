@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a8b84210372484ba8128c188b9f741063083d6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100986"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747709"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição
   Use esta caixa de diálogo para adicionar uma descrição e informações a uma política do Gerenciamento Baseado em Políticas.  

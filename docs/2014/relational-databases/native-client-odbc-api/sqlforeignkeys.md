@@ -14,12 +14,12 @@ ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e81a2099cb06be63b6684f223277dcc127eab75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8481b0f19566ed0e55f31480f9ab8be0c9441c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145536"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360438"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a atualizações e exclusões em cascata por meio do mecanismo de restrição de chave estrangeira. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará SQL_CASCADE para as colunas UPDATE_RULE e/ou DELETE_RULE se a opção CASCADE estiver especificada na cláusula ON UPDATE e/ou ON DELETE das restrições FOREIGN KEY. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará SQL_NO_ACTION para as colunas UPDATE_RULE e/ou DELETE_RULE se a opção NO ACTION estiver especificada na cláusula ON UPDATE e/ou ON DELETE das restrições FOREIGN KEY.  
@@ -28,10 +28,10 @@ ms.locfileid: "48145536"
   
  **SQLForeignKeys** pode ser executado em um cursor de servidor estático. Uma tentativa de executar **SQLForeignKeys** em um cursor atualizável (dinâmico ou conjunto de chaves) retornará SQL_SUCCESS_WITH_INFO, indicando que o tipo de cursor foi alterado.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *FKCatalogName* e *PKCatalogName* parâmetros:  *Linked_server_name*.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a informações de relatórios para tabelas em servidores vinculados, aceitando um nome de duas partes para o *FKCatalogName* e *PKCatalogName* parâmetros: *Linked_server_name*.  
   
 ## <a name="see-also"></a>Consulte também  
- [Função SQLForeignKeys](http://go.microsoft.com/fwlink/?LinkId=59344)   
+ [Função SQLForeignKeys](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [Detalhes da implementação da API do ODBC](odbc-api-implementation-details.md)  
   
   

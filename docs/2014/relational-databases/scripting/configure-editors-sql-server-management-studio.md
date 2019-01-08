@@ -11,26 +11,26 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd9aaf7f069cd9454a9f735dd08f2956aaf582c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263cdf9ddd1c140a4cb2d3142c8b3db29e558791
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543888"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
   Você pode personalizar a operação dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando as opções para cada editor.  
   
 ## <a name="settng-editor-options"></a>Opções do Editor de Configurações  
- A maioria das opções de editor é definida no menu **Ferramentas** e selecionando **Opções...** para exibir uma caixa de diálogo **Opções** . Na caixa de diálogo **Opções** , abra o nó **Editor de Texto** no painel esquerdo para definir opções de edição de código e texto. Os nós sob Editor de Texto se aplicam a editores específicos:  
+ A maioria das opções de editor é definida no menu **Ferramentas** e selecionando **Opções...** para exibir uma caixa de diálogo **Opções**. Na caixa de diálogo **Opções** , abra o nó **Editor de Texto** no painel esquerdo para definir opções de edição de código e texto. Os nós sob Editor de Texto se aplicam a editores específicos:  
   
-1.  **Todos os Idiomas** – as opções definidas com esse nó se aplicam a todos os editores do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Você pode anular essas configurações usando os outros nós para definir opções diferentes para um editor específico.  
+1.  **Todos os Idiomas** – as opções definidas com esse nó se aplicam a todos os editores do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Você pode anular essas configurações usando os outros nós para definir opções diferentes para um editor específico.  
   
-2.  **Texto Comum** – as opções definidas com esse nó se aplicam a editores de MDX, DMX e texto.  
+2.  **Texto sem formatação** – as opções definidas com esse nó se aplicam a editores de MDX, DMX e texto.  
   
 3.  **Transact-SQL** – as opções definidas com esse nó se aplicam ao Editor de Consultas do Mecanismo de Banco de Dados.  
   
-4.  **XML** – as opções definidas com esse nó se aplicam ao editor XML for Analysis.  
+4.  **XML** – as opções definidas com esse nó se aplicam ao editor XMLA.  
   
  Abra os nós **Execução de Consulta** ou **Resultados da Consulta** para personalizar a execução de consultas e como os resultados são exibidos.  
   

@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652464"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542786"
 ---
 # <a name="connection-string-format-and-attributes"></a>Atributos e formato da cadeia de conexão
 > [!IMPORTANT]  
@@ -40,12 +40,12 @@ ms.locfileid: "47652464"
   
  Os atributos da cadeia de caracteres de conexão são da seguinte maneira:  
   
-|attribute|Description|Valor padrão|  
+|attribute|Descrição|Valor padrão|  
 |---------------|-----------------|-------------------|  
 |DSN|O nome da fonte de dados listados na guia Drivers do **administrador de fonte de dados ODBC** caixa de diálogo.|""|  
 |PWD|A senha para o servidor Oracle que você deseja acessar. Este driver suporta limitações Oracle coloca em senhas.|""|  
 |SERVER|A cadeia de conexão para o servidor Oracle que você deseja acessar.|""|  
-|UID|O nome de usuário do servidor Oracle. Dependendo do sistema, esse atributo pode não ser opcional — ou seja, determinadas tabelas e bancos de dados podem exigir esse atributo para fins de segurança.<br /><br /> Use "/" usar o Oracle de operação da autenticação do sistema.|""|  
+|UID|O nome de usuário do servidor Oracle. Dependendo do sistema, esse atributo não pode ser opcional – ou seja, determinadas tabelas e bancos de dados podem exigir esse atributo para fins de segurança.<br /><br /> Use "/" usar o Oracle de operação da autenticação do sistema.|""|  
 |BUFFERSIZE|O tamanho ideal do buffer usado ao buscar colunas.<br /><br /> O driver otimiza a busca de forma que uma busca no servidor Oracle retorne linhas suficientes para preencher um buffer desse tamanho. Valores maiores tendem a aumentar o desempenho se você buscar muitos dados.|65535|  
 |SYNONYMCOLUMNS|Quando esse valor é true (1), uma chamada à API (,) SQLColumn retornar informações de coluna. Caso contrário, (SQLColumn) retorna apenas colunas para tabelas e exibições. O Driver ODBC para Oracle fornece acesso mais rápido quando esse valor não está definido.|1|  
 |REMARKS|Quando esse valor é true (1), o driver retorna colunas de comentários para o [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conjunto de resultados. O Driver ODBC para Oracle fornece acesso mais rápido quando esse valor não está definido.|0|  

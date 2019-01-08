@@ -11,12 +11,12 @@ ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 873b4cce7a2bd72c74bb7aff3147351b0062eb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7ab0a864d99e3cade96b7715adf7d307ca355c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124916"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394169"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lição 1: Criar um novo projeto de modelo de tabela
   Nesta lição, você criará um novo projeto de modelo de tabela em branco no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Quando seu novo projeto é criado, você pode começar a adicionar dados usando o Assistente de Importação de Tabela. Além de criar um novo projeto, esta lição inclui também uma introdução breve ao ambiente de criação de modelo de tabela em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "48124916"
 4.  Clique em **OK**.  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Compreendendo o ambiente de criação do modelo de tabela de ferramentas de dados do SQL Server  
- Agora que você criou um novo projeto de modelo tabular, vamos dedicar um tempo para explorar o ambiente de criação de modelo tabular no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 ou posterior).  
+ Agora que você criou um novo projeto de modelo de tabela, vamos dedicar um tempo para explorar o ambiente de criação de modelos tabulares [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 ou posterior).  
   
  Depois que seu projeto for criado, ele será aberto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Um modelo vazio será exibido no designer de modelos e o arquivo **Model.bim** estará selecionado na janela **Gerenciador de Soluções** . Quando você adiciona dados, tabelas e colunas aparecerão no designer. Se você não vir o designer (a janela vazia com a guia Model. BIM), em **Gerenciador de soluções**, em `AW Internet Sales Tabular Model`, clique duas vezes o **Model. BIM** arquivo.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "48124916"
   
  No **Gerenciador de soluções**, clique com botão direito do `AW Internet Sales Tabular Model` de projeto e, em seguida, clique em **propriedades**. A caixa de diálogo **Páginas de Propriedades de Modelo de Tabela de Vendas pela Internet do AW** é exibida. Essas são as propriedades de projeto avançadas. Você definirá posteriormente algumas dessas propriedades quando estiver pronto para implantar o modelo.  
   
- Agora, vamos analisar as propriedades do modelo. Em **Gerenciador de Soluções**, clique em **Model.bim**. Na janela **Propriedades** , você verá as propriedades do modelo, sendo **Modo DirectQuery** a mais importante delas. Essa propriedade especifica se o modelo será implantado ou não no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Neste tutorial, você criará e implantará o modelo no modo Em Memória.  
+ Agora, vamos examinar as propriedades do modelo. Em **Gerenciador de Soluções**, clique em **Model.bim**. Na janela **Propriedades** , você verá as propriedades do modelo, sendo **Modo DirectQuery** a mais importante delas. Essa propriedade especifica se o modelo será implantado ou não no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Neste tutorial, você criará e implantará o modelo no modo Em Memória.  
   
- Quando você criar um novo modelo, determinadas propriedades de modelo serão definidas automaticamente de acordo com as configurações de Modelagem de Dados que podem ser especificadas na caixa de diálogo de Ferramentas\Opções. As propriedades de Backup de Dados, Retenção de Espaço de trabalho e Servidor de Espaço de Trabalho especificam como e onde o banco de dados de espaço de trabalho (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você poderá alterar essas configurações posteriormente se necessário, mas, por enquanto, deixe essas propriedades como estão.  
+ Quando você criar um novo modelo, determinadas propriedades de modelo serão definidas automaticamente de acordo com as configurações de Modelagem de Dados que podem ser especificadas na caixa de diálogo de Ferramentas\Opções. As propriedades de Backup de Dados, Retenção de Workspace e Servidor de Workspace especificam como e onde o banco de dados de workspace (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você poderá alterar essas configurações posteriormente se necessário, mas, por enquanto, deixe essas propriedades como estão.  
   
- Quando você instalar o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vários novos itens de menu serão adicionados ao ambiente do Visual Studio. Vamos analisar os novos itens de menu que são específicos da criação dos modelos de tabela. Clique no menu **Modelo** . Aqui, você pode iniciar o Assistente de Importação de Tabela, exibir e editar conexões existentes, atualizar dados do espaço de trabalho, procurar seu modelo no [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel com o recurso Analisar no Excel, criar perspectivas e funções, selecionar a exibição do modelo e definir opções de cálculo.  
+ Quando você instalar o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vários novos itens de menu serão adicionados ao ambiente do Visual Studio. Vamos examinar os novos itens de menu que são específicos para a criação de modelos de tabela. Clique no menu **Modelo** . Aqui, você pode iniciar o Assistente de Importação de Tabela, exibir e editar conexões existentes, atualizar dados do workspace, procurar seu modelo no [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel com o recurso Analisar no Excel, criar perspectivas e funções, selecionar a exibição do modelo e definir opções de cálculo.  
   
  Clique no menu **Tabela**. Aqui, você pode criar e gerenciar relações entre tabelas, criar e gerenciar, especifique configurações de tabela de data, criar partições e editar propriedades de tabela.  
   

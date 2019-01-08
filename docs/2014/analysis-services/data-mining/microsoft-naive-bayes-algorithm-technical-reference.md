@@ -19,12 +19,12 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4121f988d8cdaa22d2249a76aeb542f80fbebd8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086346"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376928"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Naive Bayes
   O algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de classificação fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso em modelagem de previsão. O algoritmo calcula a probabilidade condicional entre as colunas de entrada e as previsíveis e assume que as colunas são independentes. Esta pressuposição de independência leva ao nome Naive Bayes.  
@@ -32,7 +32,7 @@ ms.locfileid: "48086346"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementação do algoritmo Naive Bayes da Microsoft  
  Esse algoritmo é computacionalmente menos intenso de que outros algoritmos da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e, portanto, é útil para gerar modelos de mineração rapidamente para descobrir as relações entre as colunas de entrada e as colunas previsíveis. O algoritmo considera cada par de valores de atributo de entrada e valores de atributo de saída.  
   
- Uma descrição das propriedades matemáticas do Teorema de Bayes está além do escopo desta documentação; para obter mais informações, consulte o documento da Microsoft Research denominado [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=207029) (Aprendendo sobre redes Bayesianas: a combinação de dados de conhecimento e estatísticos).  
+ Uma descrição das propriedades matemáticas do Teorema de Bayes está além do escopo desta documentação; Para obter mais informações, consulte o documento da Microsoft Research denominado [Learning Bayesian Networks: A combinação de dados de conhecimento e estatísticos](https://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Para obter uma descrição de como são ajustadas as probabilidades em todos os modelos para considerar valores ausentes, consulte [Valores ausentes &#40;Analysis Services – Mineração de dados&#41;](missing-values-analysis-services-data-mining.md).  
   
@@ -73,16 +73,16 @@ ms.locfileid: "48086346"
  O padrão é 0,5.  
   
  *MAXIMUM_STATES*  
- Especifica o número máximo de estados de atributo para os quais o algoritmo dá suporte. Se o número de estados que um atributo tiver for maior do que o número máximo de estados, o algoritmo usará os estados mais populares do atributo e tratará os demais estados como ausentes.  
+ Especifica o número máximo de estados de atributo para os quais o algoritmo dá suporte. Se o número de estados que um atributo tiver for maior que o número máximo de estados, o algoritmo usa os estados mais populares do atributo e tratará os demais estados como ausentes.  
   
  O padrão é 100.  
   
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|Description|  
+|Sinalizador de modelagem|Descrição|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Significa que a  coluna será tratada como tendo dois estados possíveis: Ausente e Existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
+|MODEL_EXISTENCE_ONLY|Significa que a coluna será tratada como se tivesse dois estados possíveis: Ausente e existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se à coluna de estrutura de mineração.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -100,8 +100,8 @@ ms.locfileid: "48086346"
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
- [Exemplos de consulta de modelo naive Bayes](naive-bayes-model-query-examples.md)   
- [Mining Model Content para modelos Naive Bayes &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Algoritmo Naïve Bayes da Microsoft](microsoft-naive-bayes-algorithm.md)   
+ [Naive Bayes Model Query Examples](naive-bayes-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

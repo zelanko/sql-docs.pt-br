@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149206"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372888"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Conectar a um Banco de Dados SQL do Azure (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite que você se conecte a um [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149206"
 > [!NOTE]  
 >  Se você estiver se conectando a um conjunto de dados do Azure DataMarket, consulte [Conectar-se a um relatório ou feed de dados &#40;SSAS&#41](connect-to-a-report-or-data-feed-ssas.md).  
   
- O [!INCLUDE[ssSDS](../includes/sssds-md.md)] é um banco de dados hospedado, relacional, a que você se conecta usando a Autenticação do SQL Server. Para obter mais informações sobre o [!INCLUDE[ssSDS](../includes/sssds-md.md)], consulte o site [Banco de dados SQL](http://go.microsoft.com/fwlink/?LinkID=157856). Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador.  
+ O [!INCLUDE[ssSDS](../includes/sssds-md.md)] é um banco de dados hospedado, relacional, a que você se conecta usando a Autenticação do SQL Server. Para obter mais informações sobre o [!INCLUDE[ssSDS](../includes/sssds-md.md)], consulte o site [Banco de dados SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador.  
   
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um banco de dados nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do banco de dados selecionado.  

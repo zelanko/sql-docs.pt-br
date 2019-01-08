@@ -10,18 +10,18 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad93f867eb10768806d3384c05596f7d4f008dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209146"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359748"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitorando o desempenho de procedimentos armazenados compilados nativamente
   Este tópico discute como você pode monitorar o desempenho de procedimentos armazenados compilados de modo nativo  
   
 ## <a name="using-extended-events"></a>Usando eventos estendidos  
- Use o `sp_statement_completed` eventos estendidos para rastrear a execução de uma consulta. Crie uma sessão de evento estendido com esse evento, opcionalmente com um filtro no object_id para um procedimento armazenado específico compilado nativamente. O evento estendido é ativado depois da execução de cada consulta. O tempo de CPU e a duração relatados pelo evento estendido indicam a quantidade de CPU usada pela consulta e o tempo de execução. Um procedimento armazenado compilado de modo nativo que usa muito tempo da CPU pode ter problemas de desempenho.  
+ Use o evento estendido `sp_statement_completed` para rastrear a execução de uma consulta. Crie uma sessão de evento estendido com esse evento, opcionalmente com um filtro no object_id para um procedimento armazenado específico compilado nativamente. O evento estendido é ativado depois da execução de cada consulta. O tempo de CPU e a duração relatados pelo evento estendido indicam a quantidade de CPU usada pela consulta e o tempo de execução. Um procedimento armazenado compilado de modo nativo que usa muito tempo da CPU pode ter problemas de desempenho.  
   
  `line_number` junto com `object_id` no evento estendido pode ser usado para investigar a consulta. A consulta a seguir pode ser usada para recuperar a definição de procedimento. O número da linha pode ser usado para identificar a consulta na definição:  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48209146"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Para obter mais informações sobre o `sp_statement_completed` evento estendido, consulte [como recuperar a instrução que gerou um evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Para obter mais informações sobre o `sp_statement_completed` evento estendido, consulte [como recuperar a instrução que gerou um evento](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Usando exibições de gerenciamento de dados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à coleta de estatísticas de execução para procedimentos armazenados compilados de modo nativo, nos níveis de procedimento e de consulta. Coletar estatísticas de execução não está habilitado por padrão devido ao impacto sobre o desempenho.  

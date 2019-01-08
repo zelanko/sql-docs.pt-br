@@ -14,12 +14,12 @@ ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a7df105a383cb7a647df1f26dbfc7793ae376df5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83fad699c78a1d405d7d67bda544b6c5781fbed5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660155"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540306"
 ---
 # <a name="managing-passwords-sybasetosql"></a>Gerenciamento de senhas (SybaseToSQL)
 Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
@@ -35,15 +35,15 @@ Use o procedimento a seguir para implementar uma conexão segura:
   
 Especifique uma senha válida, usando um dos três métodos a seguir:  
   
-1.  **Texto não criptografado:** digite a senha do banco de dados no atributo de valor do nó 'senha'. Ele é encontrado sob o nó de definição de servidor na seção de servidor do arquivo de script ou arquivo de conexão do servidor.  
+1.  **Texto não criptografado:** Digite a senha do banco de dados no atributo de valor do nó 'senha'. Ele é encontrado sob o nó de definição de servidor na seção de servidor do arquivo de script ou arquivo de conexão do servidor.  
   
-    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"servidor &lt;id do servidor&gt; senha é fornecida na forma de texto não criptografado não seguro, o aplicativo de Console do SSMA fornece uma opção para proteger o senha por meio da criptografia, consulte a opção – securepassword no SSMA arquivo de ajuda para obter mais informações."*  
+    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"Servidor &lt;id do servidor&gt; senha é fornecida na forma de texto não criptografado não seguro, o aplicativo de Console do SSMA fornece uma opção para proteger a senha por meio da criptografia, consulte a opção de - securepassword no arquivo de Ajuda do SSMA para obter mais informações informações".*  
   
-    **Senhas criptografadas:** a senha especificada, nesse caso, é armazenada em um formato criptografado no computador local em ProtectedStorage.ssma.  
+    **Senhas criptografadas:** A senha especificada, nesse caso, é armazenada em um formato criptografado no computador local em ProtectedStorage.ssma.  
   
     -   **Proteger senhas**  
   
-        -   Execute o `SSMAforSybaseConsole.exe` com o `–securepassword` e adicione o comutador na linha de comando, passando o servidor de conexão ou arquivo de script que contém o nó de senha na seção de definição de servidor.  
+        -   Execute o `SSMAforSybaseConsole.exe` com o `-securepassword` e adicione o comutador na linha de comando, passando o servidor de conexão ou arquivo de script que contém o nó de senha na seção de definição de servidor.  
   
         -   No prompt, o usuário é solicitado a inserir a senha do banco de dados e confirmá-la.  
   
@@ -53,7 +53,7 @@ Especifique uma senha válida, usando um dos três métodos a seguir:
             
                 Specify password
                 
-                C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -61,7 +61,7 @@ Especifique uma senha válida, usando um dos três métodos a seguir:
             
             Exemplo 2:
             
-                C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -73,20 +73,20 @@ Especifique uma senha válida, usando um dos três métodos a seguir:
     
     -   **Remover senhas criptografadas**  
   
-        Execute o `SSMAforSybaseConsole.exe` com o`–securepassword` e `–remove` alternar na linha de comando, passando as ids do servidor, para remover as senhas criptografadas do armazenamento protegido arquivo presente no computador local.  
+        Execute o `SSMAforSybaseConsole.exe` com o`-securepassword` e `-remove` alternar na linha de comando, passando as ids do servidor, para remover as senhas criptografadas do armazenamento protegido arquivo presente no computador local.  
   
         Exemplo:  
         
-            C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove all
-            C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove all
+            C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove "source_1,target_1"  
   
     -   **Listando as Ids do servidor cujas senhas são criptografadas**  
   
-        Execute o `SSMAforSybaseConsole.exe` com o `–securepassword` e `–list` alternar na linha de comando para listar todas as ids do servidor cujas senhas foram criptografadas.  
+        Execute o `SSMAforSybaseConsole.exe` com o `-securepassword` e `-list` alternar na linha de comando para listar todas as ids do servidor cujas senhas foram criptografadas.  
   
         Exemplo:  
         
-            C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –list  
+            C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -list  
   
     > [!NOTE]  
     > 1.  A senha em texto não criptografado mencionado no arquivo de conexão de servidor ou de script tem precedência sobre a senha criptografada no arquivo protegido.  
@@ -101,13 +101,13 @@ Exemplo:
     
     Enter password for protecting the exported file
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –export all "machine1passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –p –e "SybaseDB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -p -e "SybaseDB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -119,13 +119,13 @@ Exemplo:
     
     Enter password for protecting the imported file
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –import all "machine1passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –p –i "SybaseDB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -p -i "SybaseDB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - dropping jobs
@@ -17,12 +17,12 @@ ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7954b4d7e624498a469a385406cfb23f486bf225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123516"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365518"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
   Este tópico descreve como configurar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para excluir trabalhos automaticamente quando eles obtiverem êxito, falharem ou forem concluídos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou SQL Server Management Objects.  
@@ -56,7 +56,7 @@ ms.locfileid: "48123516"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Security"></a> Segurança  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
   
@@ -79,6 +79,6 @@ ms.locfileid: "48123516"
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para excluir um trabalho automaticamente**  
   
- Use a propriedade `DeleteLevel` da classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use a propriedade `DeleteLevel` da classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

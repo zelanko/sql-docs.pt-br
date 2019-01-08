@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc80ecaecdc51235928a5ff0e66704449f493d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177316"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792778"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar os dados de rastreamento de entrada
   Antes de iniciar uma reprodução distribuída com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay, é necessário preparar os dados de rastreamento de entrada iniciando o estágio de pré-processamento da ferramenta de administração de reprodução distribuída. No estágio de pré-processamento, o controlador de reprodução distribuída processa os dados de rastreamento e gera um arquivo intermediário:  
@@ -29,7 +29,7 @@ ms.locfileid: "48177316"
   
 ### <a name="to-prepare-the-input-trace-data"></a>Para preparar os dados de rastreamento de entrada  
   
-1.  **(Opcional) Modifique as definições de configuração de pré-processamento**: se desejar modificar as definições de configuração de pré-processamento, como a opção de filtrar sessões do sistema ou configurar o tempo ocioso máximo, modifique o elemento `<PreprocessModifiers>` do arquivo de configuração de pré-processamento baseado em XML, `DReplay.exe.preprocess.config`. Se você modificar o arquivo de configuração de pré-processamento, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
+1.  **(Opcional) Modificar definições de configuração de pré-processamento**: Se você quiser modificar as definições de configuração de pré-processamento, como a filtrar sessões do sistema ou configurar o tempo ocioso máximo, você deve modificar o `<PreprocessModifiers>` elemento do arquivo de configuração de pré-processamento baseado em XML, `DReplay.exe.preprocess.config`. Se você modificar o arquivo de configuração de pré-processamento, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
   
     1.  Faça uma cópia do arquivo de configuração de pré-processamento padrão, `DReplay.exe.preprocess.config`, e renomeie o novo arquivo. O arquivo de configuração de pré-processamento padrão está localizado na pasta de instalação da ferramenta de administração.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48177316"
   
      Para obter mais informações sobre o arquivo de configuração de pré-processo, veja [Configurar o Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Inicie o estágio de pré-processamento**: para preparar os dados de rastreamento de entrada, execute a ferramenta de administração com a opção **preprocess** . Para obter mais informações, veja [Opção de Pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Inicie o estágio de pré-processamento**: Para preparar os dados de rastreamento de entrada, você deve executar a ferramenta de administração com a **pré-processar** opção. Para obter mais informações, veja [Opção de Pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
-    1.  Abra o utilitário de Prompt de comando do Windows (`CMD.exe`) e navegue até o local de instalação da ferramenta de administração do Distributed Replay (`DReplay.exe`).  
+    1.  Abra o utilitário Prompt de Comando do Windows (`CMD.exe`) e navegue até o local de instalação da ferramenta de administração Distributed Replay (`DReplay.exe`).  
   
     2.  (Opcional) Use o parâmetro *controller* , **-m**, para especificar o controlador, se o serviço de controlador estiver em execução em um computador diferente da ferramenta de administração.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "48177316"
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Requisitos do Distributed Replay](distributed-replay-requirements.md)   
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar o Distributed Replay](configure-distributed-replay.md)  
+ [Configurar Distributed Replay](configure-distributed-replay.md)  
   
   

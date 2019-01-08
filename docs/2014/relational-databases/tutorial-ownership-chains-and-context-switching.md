@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial: cadeias de propriedade e alternância de contexto | Microsoft Docs'
+title: 'Tutorial: Cadeias de propriedade e alternância de contexto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - context switching [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5e46d5f6f28a1d93df5cf92194164a4335501523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081996"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369758"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadeias de propriedade e troca de contexto
   Este tutorial usa um cenário para ilustrar os conceitos de segurança do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envolvendo cadeias de propriedade e alternância de contexto de usuário.  
   
 > [!NOTE]  
@@ -96,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Para obter mais informações sobre a instrução GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obter mais informações sobre procedimentos armazenados, consulte [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](stored-procedures/stored-procedures-database-engine.md). Para obter um cartaz de todas as permissões [!INCLUDE[ssDE](../includes/ssde-md.md)], consulte [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para obter mais informações sobre a instrução GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obter mais informações sobre procedimentos armazenados, consulte [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](stored-procedures/stored-procedures-database-engine.md). Para obter um cartaz de todas as permissões [!INCLUDE[ssDE](../includes/ssde-md.md)], consulte [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Crie um procedimento armazenado para acessar os dados  
  Para alternar o contexto dentro de um banco de dados, use a instrução EXECUTE AS. EXECUTE AS exige permissões IMPERSONATE.  

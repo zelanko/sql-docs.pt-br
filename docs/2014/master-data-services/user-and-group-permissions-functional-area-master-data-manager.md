@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f333b030158072fa268da73d0ff33f6e67ddf8aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061016"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353264"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Área funcional Permissões de Usuário e de Grupo (Master Data Manager)
   Na área funcional Permissões de Usuário e de Grupo, os administradores podem conceder permissão a áreas funcionais, a atributos (na guia Modelos) e a membros (na guia Membros da Hierarquia). Permissões sobrepostas são resolvidas para determinar uma permissão de usuário para cada valor de atributo individual.  
   
- [Os administradores de &#40;Master Data Services&#41;](administrators-master-data-services.md)  
+ [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md)  
   
  [Criar um administrador de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   
@@ -41,11 +40,11 @@ ms.locfileid: "48061016"
   
  [Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
- [Aplicação imediata de permissões de membro &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
- [Solucionando problemas de segurança do Master Data Manager](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
+ [Solucionando problemas de segurança do Master Data Manager](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativo Web Master Data Manager](../../2014/master-data-services/master-data-manager-web-application.md)  

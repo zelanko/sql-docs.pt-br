@@ -13,19 +13,19 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364418"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar dados em massa de variáveis de programa (ODBC)
   Este exemplo mostra como usar funções de cópia em massa para copiar dados em massa de variáveis de programa para o SQL Server por meio de `bcp_bind` e `bcp_sendrow`. (O código de verificação de erro foi removido para simplificar o exemplo.)  
   
  Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
- **Observação de segurança** quando possível, use a autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário persistir as credenciais, criptografe-as com a [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504).  
+ **Observação de segurança** quando possível, use a autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário persistir as credenciais, criptografe-as com a [Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>Para usar funções de cópia em massa diretamente em variáveis de programa  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192865"
   
     -   O nome de um arquivo de dados que receberá qualquer mensagem de erro de cópia em massa (especifique NULL se você não desejar um arquivo de mensagem).  
   
-    -   A direção da cópia: DB_IN do aplicativo para a exibição ou tabela ou DB_OUT para o aplicativo da tabela ou exibição.  
+    -   A direção da cópia: DB_IN do aplicativo para o modo de exibição, tabela ou DB_OUT para o aplicativo da tabela ou exibição.  
   
 5.  Chame [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada coluna na cópia em massa para associar a coluna a uma variável de programa.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48192865"
 ## <a name="example"></a>Exemplo  
  Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   

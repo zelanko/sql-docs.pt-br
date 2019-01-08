@@ -19,15 +19,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161756"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353909"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Manuais online do SQL Server 2014
-  Bem-vindo ao [!INCLUDE[msCoName](../includes/msconame-md.md)]® Manuais Online para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Os Manuais Online contém as descrições de tarefa e a documentação de referência que descreve como executar o trabalho de inteligência de negócios e gerenciamento de dados usando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Bem-vindo ao [!INCLUDE[msCoName](../includes/msconame-md.md)]® Manuais Online para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Os Manuais Online contêm as descrições de tarefa e documentação de referência que descrevem como executar o gerenciamento de dados e o trabalho de business intelligence usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Experimente:**  
  ![Máquina Virtual pequena do Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
@@ -50,17 +50,17 @@ ms.locfileid: "48161756"
   
  **Sites do SQL Server**  
   
--   [SQL Server no Microsoft.com](http://go.microsoft.com/fwlink/?linkid=8504)  
+-   [SQL Server no Microsoft.com](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [Central de Recursos do SQL Server](http://go.microsoft.com/fwlink/?linkid=218841)  
+-   [Central de Recursos do SQL Server](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [TechCenter do SQL Server](http://go.microsoft.com/fwlink/?linkid=28107)  
+-   [TechCenter do SQL Server](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [Centro de desenvolvedores da plataforma de dados](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [Centro de desenvolvedores da plataforma de dados](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>Consulte também  
  [Ajuda do SQL Server Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - DisplayName Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5438ccd554023f6a942f56b81d1c0ec0d9120bec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb5a00278e8b740df5efa93e71c417ccb4943f5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124556"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356099"
 ---
 # <a name="displayname-property-sqlservice-class"></a>Propriedade DisplayName (classe SqlService)
   Obtém o nome para exibição do serviço.  
@@ -55,6 +53,6 @@ mysqlservice.DisplayName = "Atdisk"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
@@ -13,12 +13,12 @@ ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6af00799e343ced8005cec118398c50eb8996c7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b679eac51bf6fd51d10a88816017f2b767a69041
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202076"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773618"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>Resumir ou agregar valores usando expressões personalizadas (Visual Database Tools)
   Além de utilizar funções de agregação para agregar dados, você pode criar expressões personalizadas para produzir valores de agregação. É possível utilizar expressões personalizadas ao invés de funções de agregação em qualquer lugar de uma consulta de agregação.  

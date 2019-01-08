@@ -10,17 +10,17 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363778"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensões do AdventureWorks para demonstrar OLTP na memória
     
 ## <a name="overview"></a>Visão geral  
- Este exemplo apresenta o novo recurso [!INCLUDE[hek_2](../includes/hek-2-md.md)], que faz parte do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ele mostra as novas tabelas com otimização de memória e os procedimentos armazenados compilados nativamente, e pode ser usado para demonstrar os benefícios de desempenho do [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ Este exemplo apresenta o novo recurso [!INCLUDE[hek_2](../includes/hek-2-md.md)] , que faz parte do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ele mostra as novas tabelas com otimização de memória e os procedimentos armazenados compilados nativamente, e pode ser usado para demonstrar os benefícios de desempenho do [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Para exibir esse tópico para o SQL Server 2016, consulte [Extensões do AdventureWorks para demonstrar OLTP na memória](https://msdn.microsoft.com/library/mt465764.aspx)  
@@ -35,9 +35,9 @@ ms.locfileid: "50100407"
   
 -   Instruções para [Instalando a amostra OLTP In-Memory com base no AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Descrição das tabelas e procedimentos de exemplo](#Descriptionofthesampletablesandprocedures) – isso inclui descrições das tabelas e dos procedimentos adicionados ao AdventureWorks pelo exemplo [!INCLUDE[hek_2](../includes/hek-2-md.md)] , bem como considerações para migrar algumas das tabelas originais do AdventureWorks para otimização de memória  
+-   [Descrição das tabelas de exemplo e procedimentos](#Descriptionofthesampletablesandprocedures) -isso inclui descrições das tabelas e dos procedimentos adicionados ao AdventureWorks pelo [!INCLUDE[hek_2](../includes/hek-2-md.md)] exemplo, bem como considerações para migrar algumas das original AdventureWorks tabelas para otimização de memória  
   
--   Instruções para executar [Medidas de desempenho usando a carga de trabalho de demonstração](#PerformanceMeasurementsusingtheDemoWorkload) – isso inclui instruções para instalar e executar ostress, uma ferramenta usada para direcionar a carga de trabalho, bem como executar a própria carga de trabalho de demonstração  
+-   Instruções para executar [Medidas de desempenho usando a carga de trabalho de demonstração](#PerformanceMeasurementsusingtheDemoWorkload) – inclui instruções para instalar e executar ostress, uma ferramenta usada para direcionar a carga de trabalho, bem como executar a própria carga de trabalho de demonstração  
   
 -   [Utilização de memória e espaço em disco na amostra](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -87,13 +87,13 @@ ms.locfileid: "50100407"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Baixe o exemplo de script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ de [Exemplo de OLTP na memória do SQL Server 2014 RTM](http://go.microsoft.com/fwlink/?LinkID=396372) em uma pasta local.  
+5.  Baixe o script de exemplo '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' de [exemplo SQL Server 2014 RTM In-Memory OLTP](https://go.microsoft.com/fwlink/?LinkID=396372) em uma pasta local.  
   
-6.  Atualize o valor da variável ‘checkpoint_files_location’ no script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', para apontar para o local de destino dos arquivos de ponto de verificação de [!INCLUDE[hek_2](../includes/hek-2-md.md)] . Os arquivos de ponto de verificação devem ser colocados em uma unidade com bom desempenho sequencial de E/S.  
+6.  Atualize o valor da variável 'checkpoint_files_location' no script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ', para apontar para o local de destino para o [!INCLUDE[hek_2](../includes/hek-2-md.md)] arquivos de ponto de verificação. Os arquivos de ponto de verificação devem ser colocados em uma unidade com bom desempenho sequencial de E/S.  
   
      Atualize o nome da variável 'database_name' para apontar para o banco de dados do AdventureWorks2014.  
   
-    1.  Inclua a barra invertida ‘\’ como parte do nome do caminho  
+    1.  Certifique-se de incluir a barra invertida '\' como parte do nome do caminho  
   
     2.  Exemplo:  
   
@@ -108,23 +108,23 @@ ms.locfileid: "50100407"
     1.  Usando o utilitário de linha de comando sqlcmd. Por exemplo, ao executar o seguinte comando do prompt de linha de comando na pasta que contém o script:  
   
         ```  
-        sqlcmd –S . –E –i "ssSQL14 RTM hek_2 Sample.sql"  
+        sqlcmd -S . -E -i "ssSQL14 RTM hek_2 Sample.sql"  
         ```  
   
     2.  Usando o Management Studio:  
   
-        1.  Abra o script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ em uma janela de consulta  
+        1.  Abra o script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' em uma janela de consulta  
   
         2.  Conecte-se ao servidor de destino que contém o banco de dados AdventureWorks2014  
   
-        3.  Habilite o modo SQLCMD, clicando em ‘Consulta -> modo SQLCMD’  
+        3.  Habilitar o modo SQLCMD, clicando em 'Consulta -> modo SQLCMD'  
   
         4.  Clique no botão 'Executar' para executar o script  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Descrição das tabelas e procedimentos de exemplo  
  O exemplo cria novas tabelas para produtos e pedidos de vendas, com base em tabelas existentes no AdventureWorks. O esquema das novas tabelas é semelhante às tabelas existentes, com algumas diferenças, conforme explicado a seguir.  
   
- As novas tabelas com otimização de memória têm o sufixo '_inmem'. O exemplo também inclui as tabelas correspondentes que têm o sufixo '_ondisk' – essas tabelas podem ser usadas para fazer uma comparação um-para-um entre o desempenho de tabelas com otimização de memória e tabelas baseadas em disco em seu sistema.  
+ As novas tabelas com otimização de memória têm o sufixo "_inmem". O exemplo também inclui as tabelas correspondentes que têm o sufixo "_ondisk" – essas tabelas podem ser usadas para fazer uma comparação um-para-um entre o desempenho de tabelas com otimização de memória e tabelas baseadas em disco em seu sistema.  
   
  Observe que as tabelas com otimização de memória usadas na carga de trabalho para a comparação de desempenho são totalmente duráveis e registradas. Elas não sacrificam a durabilidade ou a confiabilidade para ter o ganho de desempenho.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "50100407"
   
 -   *Restrições padrão* – semelhante ao SalesOrderHeader, a restrição padrão que requer a data/hora do sistema não é migrada; o procedimento armazenado que insere os pedidos de vendas fica responsável por inserir a data/hora atual do sistema na primeira inserção.  
   
--   *Colunas computadas* – a coluna computada LineTotal não foi migrada pois colunas computadas não têm suporte em tabelas com otimização de memória no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Para acessar essa coluna, use a exibição Sales.vSalesOrderDetail_extended_inmem.  
+-   *Colunas computadas* – a coluna computada LineTotal não foi migrada pois colunas computadas não são compatíveis com tabelas com otimização de memória no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Para acessar essa coluna, use a exibição Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
@@ -221,9 +221,9 @@ ms.locfileid: "50100407"
   
  Production.Product  
   
--   *UDTs de alias* – a tabela original usa dados definidos pelo usuário do tipo dbo.Flag, que equivalem ao tipo de dados bit do sistema. A tabela migrada usa o tipo de dados bit.  
+-   *UDTs de alias* – a tabela original usa tipo de dados definidos pelo usuário dbo.Flag, que equivalem ao tipo de dados bit do sistema. A tabela migrada usa o tipo de dados bit.  
   
--   *Ordenação BIN2* – As colunas Name e ProductNumber são incluídas em chaves de índice e devem ter ordenações BIN2 no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de ordenação, como a não diferenciação de maiúsculas e minúsculas.  
+-   *Agrupamento BIN2* -as colunas Name e ProductNumber são incluídas em chaves de índice e devem ter agrupamentos BIN2 no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de ordenação, como a não diferenciação de maiúsculas e minúsculas.  
   
 -   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "50100407"
   
  Os índices de HASH podem ser usados para otimizar mais a carga de trabalho. Eles são particularmente otimizados para pesquisas de ponto e inserções de linhas. No entanto, lembre-se de que eles não dão suporte a exames de intervalo, exames ordenados ou pesquisas nas colunas de chave de índice. Consequentemente, tome cuidado ao usar esses índices. Além disso, é necessário especificar o bucket_count na hora da criação. Normalmente, ele deve ser definido entre uma e duas vezes o número de valores de chave de índice, mas valores superestimados não costumam ser um problema.  
   
- Consulte os Manuais Online para obter mais detalhes sobre [diretrizes de índice](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) e diretrizes para [escolher o bucket_count certo](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+ Consulte os Manuais Online para obter mais detalhes sobre [diretrizes de índice](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) e diretrizes para [escolher o bucket_count certo](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
   
  Os índices nas tabelas migradas foram ajustados para a carga de trabalho de processamento de pedidos de vendas de demonstração. A carga de trabalho se baseia em inserções e pesquisas de ponto nas tabelas Sales.SalesOrderHeader_inmem e Sales.SalesOrderDetail_inmem, e ela também se baseia em pesquisas de ponto nas colunas de chave primária nas tabelas Production.Product_inmem e Sales.SpecialOffer_inmem.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "50100407"
   
 -   Índice de HASH em (SalesOrderID): o bucket_count é dimensionado em 10 milhões (arredondado para 16 milhões), pois o número esperado de pedidos de vendas é de 10 milhões  
   
--   Índice de HASH em (SalesPersonID): o bucket_count é de 1 milhão. O conjunto de dados fornecido não tem muitos vendedores, mas permite futuro crescimento; além disso, não é necessário pagar uma penalidade de desempenho por pesquisas de ponto se o bucket_count é superdimensionado.  
+-   Índice de HASH em (SalesPersonID): o bucket_count é de 1 milhão. O conjunto de dados fornecido não tem muitos vendedores, mas permite futuro crescimento; além disso, não haverá uma penalidade de desempenho por pesquisas de ponto se o bucket_count for superdimensionado.  
   
 -   Índice de HASH em (CustomerID): o bucket_count é de 1 milhão. O conjunto de dados fornecido não tem muitos clientes, mas permite futuro crescimento.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "50100407"
   
     -   Parâmetro de saída:  
   
-        -   @SalesOrderID int – a SalesOrderID da ordem de venda recém-inserida  
+        -   @SalesOrderID int – a SalesOrderID do pedido de venda recém-inserido  
   
     -   Parâmetros de entrada (obrigatório):  
   
@@ -323,7 +323,7 @@ ms.locfileid: "50100407"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – TVP que contém os itens de linha da ordem  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – TVP que contém os itens de linha do pedido  
   
     -   Parâmetros de entrada (opcional):  
   
@@ -351,7 +351,7 @@ ms.locfileid: "50100407"
   
     -   Atualize as informações de envio de um pedido de vendas específico. Isso também atualizará as informações de envio para todos os itens de linha do pedido de vendas.  
   
-    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -379,7 +379,7 @@ ms.locfileid: "50100407"
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   Parâmetro opcional: @object_id – ID do objeto para validar a integridade  
+    -   Parâmetro opcional: @object_id – ID do objeto para o qual validar a integridade  
   
     -   Esse procedimento depende das tabelas dbo.DomainIntegrity, dbo.ReferentialIntegrity e dbo.UniqueIntegrity para as regras de integridade que precisam ser verificadas – o exemplo popula essas tabelas com base na verificação, na chave estrangeira e nas restrições exclusivas que existem para as tabelas originais no banco de dados do AdventureWorks.  
   
@@ -393,16 +393,16 @@ ms.locfileid: "50100407"
   
  Etapas da instalação:  
   
-1.  Baixe e execute o pacote de instalação do x64 para os utilitários do RML na seguinte página: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Baixe e execute o pacote de instalação do x64 para os utilitários do RML na seguinte página: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
-2.  Se houver uma caixa de diálogo indicando que alguns arquivos estão em uso, clique em “Continuar”  
+2.  Se houver uma caixa de diálogo indicando que alguns arquivos estão em uso, clique em "Continuar"  
   
 ### <a name="running-ostress"></a>Executando ostress  
  Ostress é executada do prompt de linha de comando. É mais conveniente executar a ferramenta do “Prompt Cmd RML”, que é instalado como parte dos utilitários de RML.  
   
  Para abrir o Prompt Cmd RML, siga estas instruções:  
   
- No Windows Server 2012 [R2] e no Windows 8 e 8.1, abra o menu iniciar clicando na tecla Windows, e digite 'rml'. Clique em “Prompt Cmd RML”, que estará na lista de resultados da pesquisa.  
+ No Windows Server 2012 [R2] e no Windows 8 e 8.1, abra o menu iniciar clicando na tecla Windows e digite "rml". Clique em "RML Cmd Prompt", que estará na lista de resultados da pesquisa.  
   
  Verifique se o prompt de comando está localizado na pasta de instalação Utilitários de RML. Por exemplo:  
   
@@ -412,7 +412,7 @@ ms.locfileid: "50100407"
   
 -   -S nome da instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à qual se conectar  
   
--   -E use a autenticação do Windows para conexão (padrão); se você usar a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use as opções –U e –P para especificar o nome de usuário e a senha, respectivamente  
+-   -E use a autenticação do Windows para se conectar (padrão); Se você usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticação, use as opções-u e -P para especificar o nome de usuário e senha, respectivamente  
   
 -   -d nome do banco de dados; para este exemplo, AdventureWorks2014  
   
@@ -457,9 +457,9 @@ END
   
  Com esse script, cada pedido de exemplo criado é inserido 20 vezes, com 20 procedimentos armazenados executados em um loop WHILE. O loop é usado para considerar o fato de que o banco de dados é usado para criar o pedido de exemplo. Em ambientes de produção típicos, o aplicativo da camada intermediária criará o pedido de vendas a ser inserido.  
   
- O script anterior insere pedidos de vendas em tabelas com otimização de memória. O script para inserir pedidos de vendas em tabelas baseadas em disco é derivado, substituindo as duas ocorrências de ‘_inmem’ por ‘_ondisk’.  
+ O script anterior insere pedidos de vendas em tabelas com otimização de memória. O script para inserir pedidos de vendas em tabelas baseadas em disco é derivado substituindo as duas ocorrências de "_inmem" por "_ondisk".  
   
- Usaremos a ferramenta ostress para executar os scripts através de várias conexões simultâneas. Usaremos o parâmetro ‘-n’ para controlar o número de conexões, e o parâmetro 'r' para controlar quantas vezes o script é executado em cada conexão.  
+ Usaremos a ferramenta ostress para executar os scripts através de várias conexões simultâneas. Usaremos o parâmetro "-n" para controlar o número de conexões e o parâmetro "r" para controlar quantas vezes o script é executado em cada conexão.  
   
 #### <a name="functional-validation-of-the-workload"></a>Validação funcional da carga de trabalho  
  Para verificar se tudo funciona, começaremos com um teste de exemplo, usando 10 conexões simultâneas e 5 iterações, inserindo um total de 10 * 5 \* 20 = 1000 pedidos de vendas.  
@@ -471,7 +471,7 @@ END
  Clique no botão Copiar para copiar o comando, e cole-o no prompt de comando Utilitários de RML.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Se tudo funcionar conforme esperado, a janela de comando terá a aparência a seguir. Mensagens de erro não são esperadas.  
@@ -483,11 +483,11 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  Clique no botão Copiar para copiar o comando, e cole-o no prompt de comando Utilitários de RML.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
 #### <a name="running-the-workload"></a>Executando a carga de trabalho  
- Para testar na escala, inserimos 10 milhões de pedidos de vendas, usando 100 conexões. Esse teste é executado de forma razoável em um servidor modesto (por exemplo, 8 núcleos físicos, 16 núcleos lógicos), e o armazenamento básico de SSD para o log. Se o teste não for bem-executado no hardware, verifique a seção [Solução de problemas em testes com execução lenta](#Troubleshootingslow-runningtests). Se desejar reduzir o nível de estresse nesse teste, diminua o número de conexões, alterando o parâmetro ‘-n’. Por exemplo, para diminuir a contagem de conexões para 40, altere o parâmetro ‘-n100’ para ‘-n40’.  
+ Para testar na escala, inserimos 10 milhões de pedidos de vendas, usando 100 conexões. Esse teste é executado de forma razoável em um servidor modesto (por exemplo, 8 núcleos físicos, 16 núcleos lógicos), e o armazenamento básico de SSD para o log. Se o teste não for bem-executado no hardware, verifique a seção [Solução de problemas em testes com execução lenta](#Troubleshootingslow-runningtests). Se desejar reduzir o nível de estresse nesse teste, diminua o número de conexões, alterando o parâmetro "-n". Por exemplo, para diminuir a contagem de conexões para 40, altere o parâmetro "-n100" para "-n40".  
   
  Como medida de desempenho da carga de trabalho, usamos o tempo decorrido conforme relatado por ostress.exe após executar a carga de trabalho.  
   
@@ -499,7 +499,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  Clique no botão Copiar para copiar o comando, e cole-o no prompt de comando Utilitários de RML.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Em um servidor de teste com um número total de 8 núcleos físicos (16 lógicos), isso levou 2 minutos e 5 segundos. Em um segundo servidor de teste com 24 núcleos físicos (48 lógicos), isso levou 1 minuto e 0 segundos.  
@@ -514,16 +514,16 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
  Clique no botão Copiar para copiar o comando, e cole-o no prompt de comando Utilitários de RML.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Em um servidor de teste com um número total de 8 núcleos físicos (16 lógicos), isso levou 41 minutos e 25 segundos. Em um segundo servidor de teste com 24 núcleos físicos (48 lógicos), isso levou 52 minutos e 16 segundos.  
   
- O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo [!INCLUDE[hek_2](../includes/hek-2-md.md)] é livre de travas, e as linhas de dados não são organizadas em páginas. Portanto, as transações simultâneas não bloqueiam as inserções umas das outras, permitindo que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use toda a CPU.  
+ O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo [!INCLUDE[hek_2](../includes/hek-2-md.md)] é livre de travas, e as linhas de dados não são organizadas em páginas. Portanto, as transações simultâneas não bloqueiam as inserções umas das outras, permitindo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para uso total da CPU.  
   
  Você pode observar a utilização da CPU enquanto a carga de trabalho está em execução. Use, por exemplo, o gerenciador de tarefas. Note que, em tabelas baseadas em disco, a utilização da CPU é bem inferior a 100%. Em uma configuração de teste com 16 processadores lógicos, a utilização fica em torno de 24%.  
   
- Opcionalmente, você pode exibir o número de esperas de trava por segundo usando o Monitor de Desempenho, com o contador de desempenho ‘\SQL Server:Travas\Esperas de Trava/s’.  
+ Opcionalmente, você pode exibir o número de esperas de trava por segundo usando o Monitor de Desempenho, com o contador de desempenho "\SQL Server:Latches\Latch Waits/sec".  
   
 #### <a name="resetting-the-demo"></a>Redefinindo a demonstração  
  Para redefinir a demonstração, abra o Prompt Cmd RML e execute o seguinte comando:  
@@ -539,13 +539,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes com execução lenta  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
--   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../includes/hek-2-md.md)] provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
+-   Número de transações simultâneas: Ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../includes/hek-2-md.md)] provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
   
--   Número baixo de núcleos disponíveis para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
+-   Baixo número de núcleos disponíveis para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
   
     -   Sintoma: se há alta utilização da CPU ao executar a carga de trabalho em tabelas baseadas em disco, isso significa não há muita contenção, apontando para uma falta de simultaneidade.  
   
--   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../includes/hek-2-md.md)], se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
+-   Velocidade da unidade de log: Se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../includes/hek-2-md.md)], se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um gargalo de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Como você pode observar, as tabelas são bem pequenas: SalesOrderHeader_inmem tem cerca de 7MB e SalesOrderDetail_inmem mede cerca de 15MB.  
+ Como você pode ver, as tabelas são pequenas: o SalesOrderHeader_inmem possui cerca de 7 MB e o SalesOrderDetail_inmem possui cerca de 15 MB.  
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   
@@ -872,7 +872,7 @@ ORDER BY state, file_type
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
   
- Nesse caso, há dois pares de arquivos de ponto de verificação no estado 'em construção', o que significa que vários pares de arquivos foram movidos para o estado 'em construção', provavelmente devido ao nível alto de simultaneidade na carga de trabalho. Vários threads simultâneos exigiam um novo par de arquivos ao mesmo tempo e, portanto, moviam um par de 'criados previamente' para 'em construção'.  
+ Nesse caso, há dois pares de arquivos do ponto de verificação no estado "em construção", o que significa que vários pares de arquivos foram movidos para o estado "em construção", provavelmente devido ao nível alto de simultaneidade na carga de trabalho. Vários threads simultâneos exigiam um novo par de arquivos ao mesmo tempo e, portanto, moviam um par de "pré-criados" para "em construção".  
   
 ## <a name="see-also"></a>Consulte também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

@@ -10,20 +10,20 @@ ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eec5269c6711377e0934e5fe85a5f4d94125ea8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf62d09de1180687598d817ff9199d7098008829
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604915"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525926"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Criando arquivos de valor da variável (DB2ToSQL)
-Arquivo de valor de variável é um arquivo XML que compõem os valores de parâmetro de comandos, como o nome do servidor de origem ou destino que mudam frequentemente de migração de um servidor para outro. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com o **– v** alternar na linha de comando. Isso ajuda a manter os valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
+Arquivo de valor de variável é um arquivo XML que compõem os valores de parâmetro de comandos, como o nome do servidor de origem ou destino que mudam frequentemente de migração de um servidor para outro. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com o **- v** alternar na linha de comando. Isso ajuda a manter os valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
   
 > [!NOTE]  
 > 1.  Nomes de variáveis são o prefixo e o sufixo com um símbolo $ (cifrão). Se as variáveis não são atribuídas a um valor no arquivo de valor da variável, você encontrará um erro durante a análise do arquivo de script, resultando em atrasando o processo de execução do console.  
 > 2.  O caractere de escape para o **$** é **$$**. Se o valor de um valor estático ou variável de um parâmetro contiver **$** símbolo (cifrão), em seguida, **$$** devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
-> 3.  Para fins de facilidade de manutenção, as variáveis podem ser declaradas dentro `‘variable-group’` variáveis definidas de elementos para uma separação lógica do usuário.  O uso desse elemento não é obrigatório.  
+> 3.  Para fins de facilidade de manutenção, as variáveis podem ser declaradas dentro `'variable-group'` variáveis definidas de elementos para uma separação lógica do usuário.  O uso desse elemento não é obrigatório.  
   
 **Exemplos:**  
   

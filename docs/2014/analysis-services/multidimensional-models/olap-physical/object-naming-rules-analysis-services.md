@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511319"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "50147841"
   
  As regras a seguir se aplicam às propriedades `Name` e `ID`.  
   
--   Os nomes não diferenciam maiúsculas de minúsculas. Não é possível ter um cubo chamado "vendas" e outro chamado "Vendas" no mesmo banco de dados.  
+-   Os nomes não diferenciam maiúsculas de minúsculas. Você não pode ter um cubo chamado "vendas" e outro chamado "Vendas" no mesmo banco de dados.  
   
 -   Não são permitidos espaços à esquerda ou à direita em um nome de objeto, embora você possa inserir espaços em um nome. Os espaços de abertura e fechamento são eliminados implicitamente. Isso se aplica a `Name` e `ID` de um objeto.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "50147841"
   
 |Modo de servidor e nível de compatibilidade de banco de dados|Caracteres reservados permitidos?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (todas as versões)|não|  
-|Tabela - 1050|não|  
-|Tabela - 1100|não|  
+|MOLAP (todas as versões)|Não|  
+|Tabela - 1050|Não|  
+|Tabela - 1100|Não|  
 |Tabela – 1130 e superior|Sim|  
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  

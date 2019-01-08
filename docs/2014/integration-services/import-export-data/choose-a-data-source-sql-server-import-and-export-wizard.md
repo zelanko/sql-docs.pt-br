@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,19 +12,19 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370268"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
   Use o **escolher uma fonte de dados** página para especificar a origem dos dados que você deseja copiar.  
   
- Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- A finalidade de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ O objetivo do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opções  
  **Fonte de dados**  
@@ -44,10 +43,10 @@ ms.locfileid: "48216336"
  Especifique se o pacote deve usar a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para fazer login no banco de dados. A Autenticação do Windows é recomendada para obter melhor segurança.  
   
  **Usar Autenticação do SQL Server**  
- Especifique se o pacote deve usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação para fazer logon no banco de dados. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
+ Especifique se o pacote deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para fazer login no banco de dados. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
  **Nome de usuário**  
- Especifique um nome de usuário para a conexão de banco de dados quando você estiver usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+ Especifique um nome de usuário para estabelecer conexão com o banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Senha**  
  Forneça uma senha para estabelecer conexão de banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,15 +67,15 @@ ms.locfileid: "48216336"
  Digite o nome do banco de dados de origem.  
   
  **Segurança Integrada**  
- Especificar `True` para se conectar usando a autenticação integrada do Windows, o que é recomendada, ou `False` para se conectar usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se você especificar `False`, deverá inserir uma ID de usuário e uma senha. O valor padrão é `False`.  
+ Especifique `True` para estabelecer conexão usando a autenticação integrada do Windows (recomendado) ou `False` para estabelecer conexão usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar `False`, deverá inserir uma ID de usuário e uma senha. O valor padrão é `False`.  
   
  **ID de usuário**  
- Especifique um nome de usuário para a conexão de banco de dados quando você estiver usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+ Especifique um nome de usuário para estabelecer conexão com o banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Senha**  
  Forneça uma senha para estabelecer conexão de banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- As opções adicionais que são listadas ao selecionar esse provedor não são necessárias para estabelecer uma conexão bem-sucedida com o banco de dados de origem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma descrição dessas opções adicionais, consulte a documentação para o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provedor de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit.  
+ As opções adicionais que são listadas ao selecionar esse provedor não são necessárias para estabelecer uma conexão bem-sucedida com o banco de dados de origem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma descrição dessas opções, consulte a documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit.  
   
 ### <a name="data-source--microsoft-excel"></a>Fonte de Dados = Microsoft Excel  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48216336"
  Forneça a senha do usuário para estabelecer conexão quando o arquivo de informações do grupo de trabalho estiver associado ao banco de dados. No entanto, se o banco de dados estiver protegido com uma única senha para todos os usuários, você deve fornecer esse valor na **propriedades de vínculo de dados** caixa de diálogo que é acessada clicando **avançado**.  
   
  **Avançado**  
- Você talvez queira especificar opções avançadas, como a senha do banco de dados ou um arquivo de informações do grupo de trabalho não padrão, usando o **propriedades de vínculo de dados** caixa de diálogo. Para obter mais informações sobre as propriedades do provedor OLE DB, pesquise na seção acesso a dados das [biblioteca MSDN](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Você talvez queira especificar opções avançadas, como a senha do banco de dados ou um arquivo de informações do grupo de trabalho não padrão, usando o **propriedades de vínculo de dados** caixa de diálogo. Para obter mais informações sobre as propriedades do provedor OLE DB, pesquise na seção acesso a dados das [biblioteca MSDN](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Fonte de Dados = Fonte de Arquivos Simples  
  Consulte os tópicos a seguir para obter informações sobre as opções para uma fonte de dados de arquivos simples.  

@@ -13,12 +13,12 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1618bb590ea0733d537216548679eeb67f53ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8fe601413985cd61cb3c1c7c1fb61a65cdc49de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180286"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354316"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Copiar em massa usando um arquivo de formato (ODBC)
   Este exemplo mostra como usar a função ODBC bcp_init com um arquivo de formato.  
@@ -29,7 +29,7 @@ ms.locfileid: "48180286"
   
 2.  Defina SQL_COPT_SS_BCP e SQL_BCP_ON para habilitar operações de cópia em massa.  
   
-3.  Conecte ao Microsoft® SQL Server™.  
+3.  Conectar-se à Microsoft?? SQL Server???.  
   
 4.  Chame [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48180286"
 ## <a name="example"></a>Exemplo  
  Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   

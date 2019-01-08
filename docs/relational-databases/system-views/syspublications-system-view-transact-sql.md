@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - syspublications
@@ -19,21 +18,21 @@ ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf2c03c08d6653756fa9a65cc0dbe5be8ec2e173
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db146c450afdae024942d543ff5c9fa5d7c169e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773979"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Exibição de sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O **syspublications** exibição expõe informações da publicação. Essa exibição é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Descrição**|**nvarchar(255)**|A entrada descritiva para a publicação.|  
+|**description**|**nvarchar(255)**|A entrada descritiva para a publicação.|  
 |**name**|**sysname**|O nome exclusivo associado com a publicação.|  
 |**pubid**|**int**|A coluna de identidade que fornece um ID exclusivo para a publicação.|  
 |**repl_freq**|**tinyint**|A frequência da replicação:<br /><br /> **0** = a transação com base (transacional).<br /><br /> **1** = atualização de tabela agendada (instantâneo).|  
@@ -66,8 +65,8 @@ ms.locfileid: "47780485"
 |**centralized_conflicts**|**bit**|Especifica se registros de conflito são ou não armazenados no Publicador:<br /><br /> **0** = registros de conflito são armazenados no publicador e no assinante que causou o conflito.<br /><br /> **1** = registros de conflito são armazenados no publicador.|  
 |**conflict_retention**|**int**|Especifica o período de retenção para registros de conflito, em dias.|  
 |**conflict_policy**|**int**|Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. Pode ser um destes valores:<br /><br /> **1** = o publicador ganha o conflito.<br /><br /> **2** = o assinante ganha o conflito.<br /><br /> **3** = assinatura é reinicializada.|  
-|**queue_type**|**int**|Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **1** = MSMQ, que usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **2** = SQL, que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens foi preterido e não é mais suportado.|  
-|**ad_guidname**|**sysname**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um GUID (identificador global exclusivo) válido especifica que a publicação é publicada no Active Directory e o GUID é o objectGUID de publicação do Active Directory correspondente. Se for NULL, a publicação não será publicada no Active Directory.<br /><br /> Observação: Não há suporte para publicação no Active Directory.|  
+|**queue_type**|**int**|Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **1** = MSMQ, que usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **2** = SQL, que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: O uso do Serviço de Enfileiramento de Mensagens da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi preterido e não tem mais suporte.|  
+|**ad_guidname**|**sysname**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um GUID (identificador global exclusivo) válido especifica que a publicação é publicada no Active Directory e o GUID é o objectGUID de publicação do Active Directory correspondente. Se for NULL, a publicação não será publicada no Active Directory.<br /><br /> Observação: Publicação no Active Directory não tem mais suporte.|  
 |**backward_comp_level**|**int**|Nível de compatibilidade de banco de dados, que pode ser um dos valores seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indica se os assinantes podem iniciar uma assinatura para esta publicação de um backup em vez de um instantâneo inicial. **1** significa que as assinaturas podem ser inicializadas de um backup, e **0** significa que eles não podem. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

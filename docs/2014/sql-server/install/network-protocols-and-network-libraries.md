@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056318"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371818"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de rede e bibliotecas de rede
   Um servidor pode escutar ou monitorar vários protocolos de rede ao mesmo tempo. Entretanto, cada protocolo deve ser configurado. Se um protocolo específico não for configurado, o servidor não poderá escutar naquele protocolo. Após a instalação, você pode alterar as configurações de protocolo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
@@ -35,16 +34,16 @@ ms.locfileid: "48056318"
 ## <a name="default-sql-server-network-configuration"></a>Configuração de rede padrão do SQL Server  
  Uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurada para a porta TCP/IP 1433 e para o pipe nomeado \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são configuradas para portas dinâmicas TCP, com um número de porta atribuído pelo sistema operacional.  
   
- Se não for possível usar endereços de porta dinâmicos (por exemplo, quando as conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam passar por um servidor de firewall configurado para passar por endereços de porta específicos). Selecione um número de porta não atribuído. As atribuições de número da porta são gerenciadas pela Internet Assigned Numbers Authority e são listadas em [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
+ Se não for possível usar endereços de porta dinâmicos (por exemplo, quando as conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam passar por um servidor de firewall configurado para passar por endereços de porta específicos). Selecione um número de porta não atribuído. As atribuições de número da porta são gerenciadas pela Internet Assigned Numbers Authority e são listadas em [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Para aumentar a segurança, a conectividade de rede não é habilitada completamente quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. Para habilitar, desabilitar e configurar protocolos de rede depois que a Instalação for concluída, use a Área de Configuração de Rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## <a name="server-message-block-protocol"></a>Protocolo SMB  
  Os servidores na rede de perímetro devem ter todos os protocolos desnecessários desabilitados, incluindo o SMB. Os servidores Web e DNS (Sistema de Nome de Domínio) não requerem SMB. Este protocolo deve ser desabilitado para contra-atacar a ameaça de enumeração de usuário.  
   
-> [!WARNING]  
+> [!WARNING]
 >  A desabilitação do protocolo SMB impede que o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Cluster do Windows acesse o compartilhamento de arquivos remoto. Não desabilite o SMB se você implementa ou planeja implementar uma destas ações:  
->   
+> 
 >  -   Usar o modo de quorum da maioria do compartilhamento de arquivos e o nó de Custer do Windows  
 > -   Especificar um compartilhamento de arquivos SMB como o diretório de dados durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Criar um arquivo de banco de dados em um compartilhamento de arquivos SMB  

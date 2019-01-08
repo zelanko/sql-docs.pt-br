@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89ab6ca4f8b95f4f78b1f6c8b9e33fbd1a3fa138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816274"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502558"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classes gerenciadas SQLXML – Objeto SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47816274"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Onde `cnString` é a cadeia de conexão OLEDB ou ADO que identifica o servidor, o banco de dados e as informações de logon – por exemplo, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ Em que `cnString` é a cadeia de conexão OLEDB ou ADO que identifica o servidor, banco de dados e as informações de logon – por exemplo, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
   
  Na cadeia de conexão, o `Provider` precisa ser SQLOLEDB e o `Data Provider` não deve ser incluído na cadeia de caracteres do provedor.  
   
@@ -109,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifica o tipo de comando. Esta propriedade será usada para especificar o tipo de comando que você quer executar. Os valores da tabela a seguir determinam o tipo do comando. Para obter um exemplo funcional, consulte [acessando a funcionalidade SQLXML no ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|Executa um comando SQL (por exemplo, `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType.XPath|Executa um comando XPath (por exemplo, `Employees[@EmployeeID=1]`).|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
@@ -15,12 +13,12 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f8bb180ef8c0b7483ce8bab27d11804ac81a387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7a569bbc5672b0fc5996507e37ed250721bd2fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774918"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Diretrizes e limitações de Carregamento em Massa de XML (SQLXML 4.0)
   Ao usar o Carregamento em Massa de XML, você deve estar familiarizado com as diretrizes e limitações a seguir:  
@@ -31,7 +29,7 @@ ms.locfileid: "48082656"
   
 -   Um documento XML é verificado para que esteja bem formado, mas ele não é validado.  
   
-     O Carregamento em Massa de XML verifica o documento XML para determinar se ele está bem formado – ou seja, para garantir que o XML se conforme com os requisitos de sintaxe da recomendação feita pelo World Wide Web Consortium para o XML 1.0. Se o documento não estiver bem formado, o Carregamento em Massa de XML cancelará o processamento e retornará um erro. A única exceção é quando o documento é um fragmento (por exemplo, o documento não tem nenhum elemento raiz), caso em que o Carregamento em Massa de XML carregará o documento.  
+     Carregamento em massa de XML verifica o documento XML para determinar se é que bem formed é, para garantir que o XML está de acordo com os requisitos de sintaxe da recomendação de XML 1.0 do World Wide Web Consortium. Se o documento não estiver bem formado, o Carregamento em Massa de XML cancelará o processamento e retornará um erro. A única exceção é quando o documento é um fragmento (por exemplo, o documento não tem nenhum elemento raiz), caso em que o Carregamento em Massa de XML carregará o documento.  
   
      O Carregamento em Massa de XML não valida o documento com relação a qualquer esquema DTD ou de Dados XML definido ou referenciado no arquivo de dados XML. Além disso, o Carregamento em Massa de XML não valida o arquivo de dados XML com base no esquema de mapeamento fornecido.  
   
@@ -159,7 +157,7 @@ ms.locfileid: "48082656"
   
      São criadas as tabelas identificadas no esquema de mapeamento (o banco de dados precisa existir). Se já existir um ou mais das tabelas no banco de dados, a propriedade SGDropTables determina se essas tabelas preexistentes devem ser descartadas e recriadas.  
   
--   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true), são criadas as tabelas são identificadas no esquema de mapeamento. Mas SchemaGen não cria restrições (como as restrições PRIMARY KEY/FOREIGN KEY) nessas tabelas com uma exceção: se os nós XML que constituem a chave primária em uma relação são definidos como tendo um tipo XML de ID (ou seja, `type="xsd:ID"` para XSD) e a propriedade SGUseID é definida como True para SchemaGen, não apenas as chaves primárias são criadas de nós de digitado a ID, mas relações de chave estrangeira/chave primária são criadas a partir de relações de esquema de mapeamento.  
+-   Se você especificar a propriedade SchemaGen (por exemplo, SchemaGen = true), são criadas as tabelas são identificadas no esquema de mapeamento. Mas SchemaGen não cria restrições (como as restrições PRIMARY KEY/FOREIGN KEY) nessas tabelas com uma exceção: Se os nós XML que constituem a chave primária em uma relação são definidos como tendo um tipo XML de ID (ou seja, `type="xsd:ID"` para XSD) e a propriedade SGUseID é definida como True para SchemaGen, não apenas as chaves primárias são criadas da ID do digitado nós , mas as relações de chave estrangeira/chave primária são criadas a partir de relações de esquema de mapeamento.  
   
 -   SchemaGen não usa facetas de esquema XSD e extensões para gerar o relacional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esquema.  
   

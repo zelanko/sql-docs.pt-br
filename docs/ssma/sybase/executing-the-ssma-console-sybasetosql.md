@@ -19,12 +19,12 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 517c96deaf37934e82c1161c66b8e5825d1b14b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780435"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406403"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o console do SSMA (SybaseToSQL)
 Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos.  
@@ -57,7 +57,7 @@ Este comando cria um novo projeto SSMA.
   
   overwrite-if-exists="<true/false>" (optional)  
   
-   project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
+   project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
 Atributo 'Substituir-if-exists' está **falsos** por padrão.  
@@ -136,7 +136,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
 **Exemplo de sintaxe:**  
   
 ```xml  
-<force-load metabase=”<source/target>” >  
+<force-load metabase="<source/target>" >  
   
   <metabase-object object-name="<object-name>"/>  
   
@@ -219,7 +219,7 @@ Falha ao se conectar ao servidor de banco de dados de origem durante a execuçã
   
   object-type="<object-category>"  
   
-  write-summary-report-to="<file-name/folder-name>”             (optional)  
+  write-summary-report-to="<file-name/folder-name>"             (optional)  
   
   verbose="<true/false>"                       (optional)  
   
@@ -370,7 +370,7 @@ ou em
 O comando de preparação de migração inicia o mapeamento de esquema entre os bancos de dados de origem e destino.  
   
 > [!NOTE]  
-> A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+> A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 ### <a name="map-schema"></a>map-schema  
 Esse comando fornece o mapeamento de esquema do banco de dados de origem ao esquema de destino.  
@@ -391,7 +391,7 @@ sql-server-schema="<target-schema>"/>
 Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de banco de dados de destino com o banco de dados de origem.  
   
 > [!NOTE]  
-> A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: resumo apenas no nó de raiz da árvore de objeto de origem.  
+> A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
   
 ### <a name="synchronize-target"></a>Sincronizar de destino  
 Este comando sincroniza os objetos de destino com o banco de dados de destino.  

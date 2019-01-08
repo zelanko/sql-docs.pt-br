@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51f65bc99f5fa4ac3840c283c110594eeb48800c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156106"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814548"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir a serialização de dados XML
   Ao converter tipos de dados xml explícita ou implicitamente em uma cadeia de caracteres SQL ou tipo binário, o conteúdo do tipo de dados xml será serializado de acordo com as regras descritas neste tópico.  
@@ -34,10 +34,10 @@ ms.locfileid: "48156106"
  Por exemplo:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -48,24 +48,24 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
  Por exemplo:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
- Se o tipo de destino SQL for VARCHAR ou NCHAR, o resultado será serializado na codificação correspondente à página de código de agrupamento do banco de dados sem uma marca de ordem de bytes ou declaração XML. Se o tipo de destino for muito pequeno ou se o valor não puder ser mapeado para a página de código de agrupamento de destino, será retornado um erro.  
+ Se o tipo de destino SQL for VARCHAR ou NCHAR, o resultado será serializado na codificação correspondente à página de código de ordenação do banco de dados sem uma marca de ordem de bytes ou declaração XML. Se o tipo de destino for muito pequeno ou se o valor não puder ser mapeado para a página de código de ordenação de destino, será retornado um erro.  
   
  Por exemplo:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Isso pode resultar em um erro, se a página de código de agrupamento atual não puder representar o caractere Unicode Δ ou ela o representará na codificação especificada.  
+ Isso pode resultar em um erro, se a página de código de agrupamento atual não pode representar o caractere Unicode??, ou ela o representará na codificação específica.  
   
  Ao retornar resultados XML para o lado do cliente, os dados serão enviados em codificação UTF-16. O provedor do lado do cliente exporá os dados de acordo com as regras de sua API.  
   
@@ -96,11 +96,11 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   
@@ -118,7 +118,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 This example contains an entitized char: <.  
@@ -130,7 +130,7 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 This example contains an entitized char: <.  

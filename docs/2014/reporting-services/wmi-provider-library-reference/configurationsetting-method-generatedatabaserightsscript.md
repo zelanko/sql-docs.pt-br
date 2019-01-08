@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221286"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502915"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Gera um Script SQL que pode ser usado para conceder direitos de usuário ao banco de dados do servidor de relatório e a outros bancos de dados necessários para a execução de um servidor de relatório. O chamador deve se conectar ao servidor de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executar o script.  
@@ -84,20 +84,20 @@ out Int32 HRESULT);
 |LocalSystem|Sistema Local|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Serviço Local|Erro – consulte abaixo.|  
-|NT AUTHORITY\LocalService|Serviço Local|Erro – consulte abaixo.|  
+|(S-1-5-19)|Serviço Local|Erro – veja abaixo.|  
+|NT AUTHORITY\LocalService|Serviço Local|Erro – veja abaixo.|  
   
  No [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], se você estiver usando uma conta interna e o banco de dados do servidor de relatório for remoto, será retornado um erro.  
   
- Se o `LocalService` conta interna é especificada e o banco de dados do servidor de relatório for remoto, um erro será retornado.  
+ Se a conta interna `LocalService` for especificada e o banco de dados do servidor de relatório for remoto, um erro será retornado.  
   
  Quando *IsWindowsUser* for true e o valor fornecido no *UserName* precisar ser convertido, o provedor WMI determinará se o banco de dados do servidor de relatório está localizado no mesmo computador ou em um computador remoto. Para determinar se a instalação é local, o provedor de WMI avaliará a propriedade DatabaseServerName da lista de valores a seguir. Se uma correspondência for localizada, o banco de dados é local. Caso contrário, é remoto. A comparação não diferencia maiúsculas e minúsculas.  
   
 |Valor do DatabaseServerName|Exemplo|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
 |\<MachineFQDN>|example.redmond.microsoft.com|  
@@ -117,6 +117,6 @@ out Int32 HRESULT);
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

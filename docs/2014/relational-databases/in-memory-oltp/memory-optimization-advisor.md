@@ -13,19 +13,19 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d616312ffec682ad7c37da62c23c4ada1eb98f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140986"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359268"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
   A ferramenta de relatórios de desempenho de transação (consulte [Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informa sobre as tabelas em seu banco de dados que se beneficiarão se forem compatibilizadas para usar o OLTP na memória. Após identificar uma tabela que você gostaria de compatibilizar para usar o OLTP na memória, você poderá usar o orientador de otimização de memória para ajudá-lo a migrar a tabela de banco de dados baseada em disco para o OLTP na memória.  
   
  Para começar, conecte-se à instância que contém a tabela de banco de dados baseada em disco. Você pode se conectar a uma instância do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . No entanto, se você desejar executar uma operação de migração com o orientador, deverá se conectar a uma instância do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] na qual a funcionalidade de OLTP na memória está habilitada. Para obter mais informações sobre os requisitos de OLTP na memória, consulte [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Para obter informações sobre as metodologias de migração, consulte [OLTP na memória – Padrões comuns de carga de trabalho e considerações de migração](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Para obter informações sobre as metodologias de migração, confira [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Passo a passo usando o orientador de otimização da memória  
  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela que você deseja converter e selecione **Orientador de Otimização da Memória**. Isso exibirá a página de boas-vindas do **Orientador de Otimização da Memória da Tabela**.  
@@ -89,9 +89,9 @@ ms.locfileid: "48140986"
 ### <a name="review-primary-key-conversion"></a>Examinar conversão de chaves primárias  
  A tela seguinte é **Examinar Conversão de Chaves Primárias**. O Orientador de Otimização da Memória detectará se há uma ou mais chaves primárias na tabela, e populará a lista de colunas com base nos metadados de chave primária. Caso contrário, se desejar migrar para uma tabela com otimização de memória durável, você deverá criar uma chave primária.  
   
- Se uma chave primária não existir e a tabela estiver sendo migrada para uma tabela não durável, esta tela não aparecerá.  
+ Se não existir uma chave primária e a tabela estiver sendo migrada para uma tabela não durável, esta tela não aparecerá.  
   
- Para as colunas textuais (colunas com tipos `char`, `nchar`, `varchar` e `nvarchar`), selecione um agrupamento adequado. O OLTP na memória somente dá suporte a agrupamentos BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a agrupamentos com caracteres suplementares. Consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md) para obter informações sobre os agrupamentos com suporte e o impacto potencial de uma alteração no agrupamento.  
+ Para as colunas textuais (colunas com tipos `char`, `nchar`, `varchar` e `nvarchar`), selecione uma ordenação adequada. O OLTP na memória somente dá suporte a ordenações BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a ordenações com caracteres suplementares. Consulte [Páginas de código de ordenações](../../database-engine/collations-and-code-pages.md) para obter informações sobre as ordenações com suporte e o impacto potencial de uma alteração na ordenação.  
   
  Você pode configurar os seguintes parâmetros para a chave primária:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48140986"
 ### <a name="review-index-conversion"></a>Examinar conversão de índice  
  A próxima página é **Examinar conversão de índice**. O Orientador de Otimização da Memória detectará se há um ou mais índices na tabela, e populará a lista de colunas e tipo de dados. Os parâmetros que você pode configurar na página **Examinar conversão de índice** são semelhantes à página anterior, **Examinar conversão de chaves primárias** .  
   
- Se a tabela somente tiver uma chave primária e estiver sendo migrada para uma tabela durável, esta tela não aparecerá.  
+ Se a tabela tiver somente uma chave primária e estiver sendo migrada para uma tabela durável, esta tela não aparecerá.  
   
  Depois de tomar uma decisão para cada índice na tabela, clique em **Avançar**.  
   

@@ -15,12 +15,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6d89cd1ee72b39c3441a4aea70f3e0ad622b4e49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204486"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365648"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Escolher um algoritmo de criptografia
   A criptografia é um dos muitos recursos de proteção que estão disponíveis para o administrador que deseja oferecer segurança a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48204486"
 >   
 >  O uso repetido do mesmo RC4 ou RC4_128 KEY_GUID em blocos de dados diferentes resulta na mesma chave RC4 porque o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não fornece um salt automaticamente. O uso da mesma chave RC4 repetidamente é um erro bem conhecido que resulta em criptografia muito fraca. Portanto, preterimos as palavras-chave RC4 e RC4_128. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Para obter mais informações sobre os algoritmos de criptografia e sobre a tecnologia de criptografia, consulte [Conceitos de segurança de chave](http://go.microsoft.com/fwlink/?LinkId=62082) no Guia do desenvolvedor do .NET Framework do MSDN.  
+ Para obter mais informações sobre os algoritmos de criptografia e sobre a tecnologia de criptografia, consulte [Conceitos de segurança de chave](https://go.microsoft.com/fwlink/?LinkId=62082) no Guia do desenvolvedor do .NET Framework do MSDN.  
   
  **Esclarecimento em relação aos algoritmos DES:**  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -15,19 +15,19 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211846"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763938"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
   O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A tabela a seguir descreve as instâncias de contadores dos Recursos Preteridos do SQL Server.  
   
-|Instâncias do contador de Recursos Preteridos do SQL Server|Description|  
+|Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
 |sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM`  *\< nome_da_função >*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
@@ -36,8 +36,8 @@ ms.locfileid: "48211846"
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de horas que a opção TORN_PAGE_DETECTION do recurso preterido de ALTER DATABASE foi usada desde a inicialização da instância de servidor. Em seu lugar, use a sintaxe PAGE_VERIFY. Ocorre uma vez por uso em uma instrução DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|As sintaxes de recurso preterido ALTER LOGIN WITH SET CREDENCIAL ou ALTER LOGIN WITH NO CREDENTIAL foram encontradas. Em seu lugar, use as sintaxes ADD ou DROP CREDENCIAL. Ocorre uma vez por compilação.|  
-|Azeri_Cyrilllic_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
-|Azeri_Latin_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
+|Azeri_Cyrilllic_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
+|Azeri_Latin_90|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
 |BACKUP DATABASE ou LOG TO TAPE|O recurso preterido BACKUP { DATABASE &#124; LOG } TO TAPE ou BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape* foi encontrado.<br /><br /> Em seu lugar, use { DATABASE &#124; LOG } TO DISK ou BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*. Ocorre uma vez por uso.|  
 |BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|Os recursos preteridos BACKUP DATABASE WITH MEDIAPASSWORD ou BACKUP LOG WITH MEDIAPASSWORD foram encontrados. Não use WITH MEDIAPASSWORD.|  
 |BACKUP DATABASE ou LOG WITH PASSWORD|Os recursos preteridos BACKUP DATABASE WITH PASSWORD ou BACKUP LOG WITH PASSWORD foram encontrados. Não use WITH PASSWORD.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48211846"
 |CREATE TRIGGER WITH APPEND|A instrução CREATE TRIGGER com a cláusula WITH APPEND foi encontrada. Recrie o gatilho inteiro. Ocorre uma vez por uso em uma instrução DDL.|  
 |CREATE_DROP_DEFAULT|As sintaxes CREATE DEFAULT ou DROP DEFAULT foram encontradas. Reescreva o comando usando a opção DEFAULT de CREATE TABLE ou ALTER TABLE. Ocorre uma vez por compilação.|  
 |CREATE_DROP_RULE|A sintaxe CREATE RULE foi encontrada. Reescreva o comando usando restrições. Ocorre uma vez por compilação.|  
-|Tipos de dados: texto ntext ou imagem|Os tipos de dados `text`, `ntext` ou `image` foram encontrados. Reescreva os aplicativos para usar o `varchar(max)` tipo de dados e removido `text`, `ntext`, e `image` sintaxe de tipo de dados. Ocorre uma vez por consulta.|  
+|Tipos de dados: texto ntext ou imagem|Os tipos de dados `text`, `ntext` ou `image` foram encontrados. Reescreva os aplicativos para usar o tipo de dados `varchar(max)` e remover as sintaxes de tipos de dados `text`, `ntext` e `image`. Ocorre uma vez por consulta.|  
 |Nível de compatibilidade 80 do banco de dados|O número total de vezes que um banco de dados foi alterado para o nível de compatibilidade 80. Planeje atualizar o banco de dados e o aplicativo antes da próxima versão. Também ocorre quando se inicia um banco de dados em nível de compatibilidade 80.|  
 |Nível de compatibilidade 90 do banco de dados|O número total de vezes que um banco de dados foi alterado para o nível de compatibilidade 90. Planeje atualizar o banco de dados e o aplicativo para uma versão futura. Também ocorre quando se inicia um banco de dados em nível de compatibilidade 90.|  
 |DATABASE_MIRRORING|Referencia a recurso de espelhamento de banco de dados foi encontrado. Planeje atualizar para os Grupos de Disponibilidade AlwaysOn ou, se você estiver executando uma edição de SQL Server que não suporte Grupos de Disponibilidade AlwaysOn, planeje migrar para envio de logs.|  
@@ -91,7 +91,7 @@ ms.locfileid: "48211846"
 |FULLTEXTSERVICEPROPERTY('DataTimeout')|A propriedade DataTimeout da função FULLTEXTSERVICEPROPERTY foi encontrada. Evite usar esta propriedade.|  
 |FULLTEXTSERVICEPROPERTY('ResourceUsage')|A propriedade ResourceUsage da função FULLTEXTSERVICEPROPERTY foi encontrada. Evite usar esta propriedade.|  
 |GROUP BY ALL|O número total de vezes que a sintaxe GROUP BY ALL foi encontrada. Modifique a sintaxe para agrupar de acordo com tabelas específicas.|  
-|Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento. Use Indic_General_90.|  
+|Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação. Use Indic_General_90.|  
 |Dica da tabela HOLDLOCK sem parênteses||  
 |IDENTITYCOL|A sintaxe de INDENTITYCOL foi encontrada. Reescreva instruções para usar a sintaxe de identidade $. Ocorre uma vez por compilação.|  
 |Lista de seleção de exibição indexada sem COUNT_BIG (\*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
@@ -100,9 +100,9 @@ ms.locfileid: "48211846"
 |Dicas TVF indiretas|A aplicação indireta de dicas de tabela à invocação de uma TVF (função com valor de tabela) com várias instruções através de uma exibição será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |INSERT NULL em colunas TIMESTAMP|Um valor NULL foi inserido em uma coluna TIMESTAMP. Use um valor padrão. Ocorre uma vez por compilação.|  
 |INSERT_HINTS||  
-|Korean_Wansung_Unicode|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
-|Lithuanian_Classic|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
-|Macedônio|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento. Use Macedonian_FYROM_90.|  
+|Korean_Wansung_Unicode|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
+|Lithuanian_Classic|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
+|Macedônio|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação. Use Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|A sintaxe MODIFY FILEGROUP READONLY foi encontrada. Reescreva as instruções para usar a sintaxe READ_ONLY. Ocorre uma vez por compilação.|  
 |MODIFY FILEGROUP READWRITE|A sintaxe MODIFY FILEGROUP READWRITE foi encontrada. Reescreva as instruções para usar a sintaxe READ_WRITE. Ocorre uma vez por compilação.|  
 |Nome de coluna com mais de duas partes|Uma consulta usou um nome de 3 partes ou de 4 partes na lista de colunas. Altere a consulta para usar os nomes de 2 partes em conformidade com o padrão. Ocorre uma vez por compilação.|  
@@ -112,14 +112,14 @@ ms.locfileid: "48211846"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Referencias a sys.numbered_procedure_parameters preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
 |numbered_procedures|Referencias a sys.numbered_procedures preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
-|RAISEERROR em estilo antigo|A sintaxe preterida RAISERROR (Formato: cadeia de inteiros RAISERROR) foi encontrada. Reescreva a instrução usando a sintaxe RAISERROR atual. Ocorre uma vez por compilação.|  
+|RAISEERROR em estilo antigo|A sintaxe RAISERROR preterida (formato: cadeia de inteiros RAISERROR) foi encontrada. Reescreva a instrução usando a sintaxe RAISERROR atual. Ocorre uma vez por compilação.|  
 |OLEDB para conexões ad hoc|SQLOLEDB não é um provedor com suporte. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para conexões ad hoc.|  
 |PERMISSIONS|Foram encontradas referencias à função intrínseca PERMISSIONS. Consulte sys.fn_my_permissions. Ocorre uma vez por consulta.|  
 |ProcNums|A sintaxe ProcNums preterida foi encontrada. Reescreva as instruções para remover as referências. Ocorre uma vez por compilação.|  
 |READTEXT|A sintaxe READTEXT foi encontrada. Reescreva os aplicativos para usar o tipo de dados `varchar(max)` e as sintaxes de tipos de dados removidas `text`. Ocorre uma vez por consulta.|  
-|RESTORE DATABASE ou LOG WITH DBO_ONLY|A sintaxe RESTORE ... WITH DBO_ONLY foi encontrada. Em vez disso, use RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|A sintaxe RESTORE ... WITH MEDIAPASSWORD foi encontrada. WITH MEDIAPASSWORD fornece pouca segurança e deve ser removida.|  
-|RESTORE DATABASE ou LOG WITH PASSWORD|A sintaxe RESTORE ... WITH PASSWORD foi encontrada. WITH PASSWORD fornece pouca segurança e deve ser removida.|  
+|RESTORE DATABASE ou LOG WITH DBO_ONLY|A RESTORE ... WITH DBO_ONLY foi encontrada. Use RESTORE ... RESTRICTED_USER.|  
+|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|A RESTORE ... WITH MEDIAPASSWORD foi encontrada. WITH MEDIAPASSWORD fornece pouca segurança e deve ser removida.|  
+|RESTORE DATABASE ou LOG WITH PASSWORD|A RESTORE ... WITH PASSWORD foi encontrada. WITH PASSWORD fornece pouca segurança e deve ser removida.|  
 |Retornando resultados de gatilho|Este evento ocorre uma vez por invocação de gatilho. Reescreva o gatilho de forma a não retornar conjuntos de resultados.|  
 |ROWGUIDCOL|A sintaxe ROWGUIDCOL foi encontrada. Reescreva as instruções para usar a sintaxe $rowguid. Ocorre uma vez por compilação.|  
 |SET ANSI_NULLS OFF|A sintaxe SET ANSI_NULLS OFF foi encontrada. Remova esta sintaxe preterida. Ocorre uma vez por compilação.|  
@@ -156,13 +156,13 @@ ms.locfileid: "48211846"
 |sp_configure 'ft notify bandwidth (min)'|A opção ft notify bandwidth (min) de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta.|  
 |sp_configure 'locks'|A opção locks de sp_configure foi encontrada. Não é mais possível configurar locks. Não use. Ocorre uma vez por consulta.|  
 |sp_configure 'open objects'|A opção open objects de sp_configure foi encontrada. Não é mais possível configurar o número de open objects. Não use. Ocorre uma vez por consulta.|  
-|sp_configure 'priority boost'|A opção priority boost de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta. Usar a opção start/high… program.exe do Windows.|  
+|sp_configure 'priority boost'|A opção priority boost de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta. Em vez disso, use a opção start /high ... program.exe do Windows.|  
 |sp_configure 'remote proc trans'|A opção remote proc trans option de sp_configure foi encontrada. Não use. Ocorre uma vez por consulta.|  
 |sp_configure 'set working set size'|A opção set working set size de sp_configure foi encontrada. Não é mais possível configurar working set size. Não use. Ocorre uma vez por consulta.|  
 |sp_control_dbmasterkey_password|O procedimento armazenado sp_control_dbmasterkey_password não verifica se uma chave mestra existe. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, deverá existir uma chave mestra e a senha usada no procedimento armazenado sp_control_dbmasterkey_password deverá ser a mesma senha usada para criptografar a chave mestra do banco de dados.|  
 |sp_create_removable|O procedimento sp_create_removable foi encontrado. Em vez disso, use CREATE DATABASE. Ocorre uma vez por consulta.|  
-|sp_db_vardecimal_storage_format|Uso de `vardecimal` o formato de armazenamento foi encontrado. Em vez disso, use a compactação de dados.|  
-|sp_dbcmptlevel|O procedimento sp_dbcmptlevel foi encontrado. Em vez disso, use ALTER DATABASE … SET COMPATIBILITY_LEVEL. Ocorre uma vez por consulta.|  
+|sp_db_vardecimal_storage_format|O uso do formato de armazenamento `vardecimal` foi encontrado. Em vez disso, use a compactação de dados.|  
+|sp_dbcmptlevel|O procedimento sp_dbcmptlevel foi encontrado. Use ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Ocorre uma vez por consulta.|  
 |sp_dbfixedrolepermission|O procedimento sp_dbfixedrolepermission foi encontrado. Não use. Ocorre uma vez por consulta.|  
 |sp_dboption|O procedimento sp_dboption foi encontrado. Em vez disso, use ALTER DATABASE e DATABASEPROPERTYEX. Ocorre uma vez por compilação.|  
 |sp_dbremove|O procedimento sp_dbremove foi encontrado. Em vez disso, use DROP DATABASE. Ocorre uma vez por consulta.|  
@@ -179,7 +179,7 @@ ms.locfileid: "48211846"
 |sp_droprole|O procedimento sp_droprole foi encontrado. Em vez disso, use DROP ROLE. Ocorre uma vez por consulta.|  
 |sp_droptype|O procedimento sp_droptype foi encontrado. Em vez disso, use DROP TYPE.|  
 |sp_dropuser|O procedimento sp_dropuser foi encontrado. Em vez disso, use DROP USER. Ocorre uma vez por consulta.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|Uso de `vardecimal` o formato de armazenamento foi encontrado. Use compactação de dados e sp_estimate_data_compression_savings em vez disso.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|O uso do formato de armazenamento `vardecimal` foi encontrado. Use compactação de dados e sp_estimate_data_compression_savings em vez disso.|  
 |sp_fulltext_catalog|O procedimento sp_fulltext_catalog foi encontrado. Em vez disso, use CREATE/ALTER/DROP FULLTEXT CATALOG. Ocorre uma vez por compilação.|  
 |sp_fulltext_column|O procedimento sp_fulltext_column foi encontrado. Em vez disso, use ALTER FULLTEXT INDEX. Ocorre uma vez por compilação.|  
 |sp_fulltext_database|O procedimento sp_fulltext_database foi encontrado. Em vez disso, use ALTER DATABASE. Ocorre uma vez por compilação.|  
@@ -212,7 +212,7 @@ ms.locfileid: "48211846"
 |sp_srvrolepermission|O procedimento preterido sp_srvrolepermission foi encontrado. Não use. Ocorre uma vez por consulta.|  
 |sp_unbindefault|O procedimento sp_unbindefault foi encontrado. Em vez disso, use a palavra-chave DEFAULT em instruções CREATE TABLE ou ALTER TABLE. Ocorre uma vez por compilação.|  
 |sp_unbindrule|O procedimento sp_unbindrule foi encontrado. Use restrições de verificação em vez de regras. Ocorre uma vez por compilação.|  
-|SQL_AltDiction_CP1253_CS_AS|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento.|  
+|SQL_AltDiction_CP1253_CS_AS|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação.|  
 |Literais de cadeia de caracteres como aliases de coluna|Foi encontrada sintaxe que contém uma cadeia de caracteres usada como um alias de coluna em uma instrução SELECT, como `'string' = expression`. Não use. Ocorre uma vez por compilação.|  
 |sys.sql_dependencies|Referências a sys.sql_dependencies foram encontradas. Use sys.sql_expression_dependencies em seu lugar. Ocorre uma vez por compilação.|  
 |sysaltfiles|Referências a sysaltfiles foram encontradas. Use sys.master_files em seu lugar. Ocorre uma vez por compilação.|  
@@ -249,13 +249,13 @@ ms.locfileid: "48211846"
 |sysusers|Referências a sysusers foram encontradas. Use sys.database_principals em vez disso. Ocorre uma vez por compilação.|  
 |Dica de tabela sem WITH|Uma instrução que usou dicas de tabela sem usar a palavra-chave WITH foi encontrada. Modifique as instruções para incluir a palavra WITH. Ocorre uma vez por compilação.|  
 |Opção de tabela 'text in row'|Referências à opção de tabela 'text in row' foram encontradas. Use 'large value types out of row' de sp_tableoption em seu lugar. Ocorre uma vez por consulta.|  
-|TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para usar o `varchar(max)` tipo de dados e removido `text`, `ntext`, e `image` sintaxe de tipo de dados. Ocorre uma vez por consulta.|  
-|TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para usar o `varchar(max)` tipo de dados e removido `text`, `ntext`, e `image` sintaxe de tipo de dados. Ocorre uma vez por consulta.|  
-|timestamp|Número total de vezes preteridas `timestamp` foi encontrado o tipo de dados em uma instrução DDL. Use o `rowversion` em vez disso, o tipo de dados.|  
-|UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para usar o `varchar(max)` tipo de dados e removido `text`, `ntext`, e `image` sintaxe de tipo de dados. Ocorre uma vez por consulta.|  
+|TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para usar o tipo de dados `varchar(max)` e remover as sintaxes de tipos de dados `text`, `ntext` e `image`. Ocorre uma vez por consulta.|  
+|TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para usar o tipo de dados `varchar(max)` e remover as sintaxes de tipos de dados `text`, `ntext` e `image`. Ocorre uma vez por consulta.|  
+|timestamp|Número total de vezes que o tipo preterido de dados `timestamp` foi encontrado em uma instrução DDL. Use o tipo de dados `rowversion` em vez disso.|  
+|UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para usar o tipo de dados `varchar(max)` e remover as sintaxes de tipos de dados `text`, `ntext` e `image`. Ocorre uma vez por consulta.|  
 |USER_ID|Referências à função USER_ID foram encontradas. Use a função DATABASE_PRINCIPAL_ID em seu lugar. Ocorre uma vez por compilação.|  
 |Usando OLEDB para servidores vinculados||  
-|Formato de armazenamento vardecimal|Uso de `vardecimal` o formato de armazenamento foi encontrado. Em vez disso, use a compactação de dados.|  
+|Formato de armazenamento vardecimal|O uso do formato de armazenamento `vardecimal` foi encontrado. Em vez disso, use a compactação de dados.|  
 |XMLDATA|A sintaxe FOR XML foi encontrada. Use a geração de XSD para os modos RAW e AUTO. Não há nenhuma substituição para o modo explícito. Ocorre uma vez por compilação.|  
 |XP_API|Uma instrução de procedimento armazenado estendido foi encontrada. Não use.|  
 |xp_grantlogin|O procedimento xp_grantlogin foi encontrado. Em vez disso, use CREATE LOGIN. Ocorre uma vez por compilação.|  

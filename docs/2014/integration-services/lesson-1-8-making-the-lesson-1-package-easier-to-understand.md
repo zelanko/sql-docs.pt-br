@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender | Microsoft Docs'
+title: 'Etapa 8: Tornando o pacote da lição 1 mais fácil de compreender | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e549018c7f0654ba40ddd486149059b37ddd46e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072526"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750608"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender
   Agora que você concluiu a configuração do pacote da Lição 1, é uma boa ideia verificar o layout do pacote. Se as formas dos layouts de controle e dos fluxos de dados são de tamanhos aleatórias ou se as formas não estão alinhadas ou agrupadas, a funcionalidade de pacote pode ser mais difícil de ser entendida.  
@@ -52,6 +51,6 @@ ms.locfileid: "48072526"
      Se você não inserir um texto na caixa de anotação, essa caixa desaparecerá ao clicar fora dela.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 9: Testando o pacote de tutorial da Lição 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Etapa 9: Testando o pacote de Tutorial da lição 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

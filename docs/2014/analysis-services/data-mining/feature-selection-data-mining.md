@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067916"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360138"
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
   *Seleção de recursos* é um termo geralmente usado em mineração de dados para descrever as ferramentas e técnicas disponíveis para reduzir entradas a um tamanho gerenciável para processamento e análise. Seleção de recursos implica não só *redução de cardinalidade*, o que significa impor um corte arbitrário ou predefinido no número de atributos que podem ser considerados ao criar um modelo, mas também a escolha de atributos, que significa que que o analista ou a ferramenta de modelagem ativamente seleciona ou descarta atributos com base em sua utilidade para análise.  
@@ -43,9 +43,9 @@ ms.locfileid: "48067916"
  Se somente 50 das 500 colunas na fonte de dados tiverem informações úteis para criar um modelo, você poderá apenas omiti-las do modelo ou pode usar técnicas de seleção de recursos para descobrir automaticamente os melhores recursos e excluir valores que são estatisticamente insignificantes. A seleção de recursos ajuda a resolver os problemas de ter dados demais de pouco valor, ou de ter pouquíssimos dados de alto valor.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Seleção de recursos na mineração de dados do Analysis Services  
- Normalmente, a seleção de recursos é executada automaticamente no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], e cada algoritmo tem um conjunto de técnicas padrão para a aplicação de forma inteligente redução de recursos. A seleção de recursos sempre é feita antes do treinamento do modelo, para que os atributos de um conjunto de dados com maior probabilidade de uso no modelo sejam escolhidos de forma automática. Porém, você também pode definir manualmente parâmetros para influenciar o comportamento de seleção de recursos.  
+ Normalmente, a seleção de recursos é executada automaticamente no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e cada algoritmo tem um conjunto de técnicas padrão para aplicar redução de recursos de maneira inteligente. A seleção de recursos sempre é feita antes do treinamento do modelo, para que os atributos de um conjunto de dados com maior probabilidade de uso no modelo sejam escolhidos de forma automática. Porém, você também pode definir manualmente parâmetros para influenciar o comportamento de seleção de recursos.  
   
- Em geral, ela funciona calculando uma pontuação para cada atributo e, em seguida, selecionando apenas os atributos com a pontuação mais alta. Também é possível ajustar o limiar para os pontos mais altos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários métodos para calcular estas pontuações e o método exato aplicado em qualquer modelo depende destes fatores:  
+ Em geral, ela funciona calculando uma pontuação para cada atributo e, em seguida, selecionando apenas os atributos com a pontuação mais alta. Também é possível ajustar o limiar para os pontos mais altos. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários métodos para calcular estas pontuações e o método exato que é aplicado em qualquer modelo depende destes fatores:  
   
 -   O algoritmo usado em seu modelo  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067916"
 #### <a name="bayesian-with-k2-prior"></a>Bayesian com K2 a priori  
  O Analysis Services fornece duas pontuações para seleção de recursos que se baseiam em redes Bayesianas. Uma rede Bayesiana é um gráfico *direcionado* ou *acíclico* de estados e transições entre estados, ou seja, alguns estados vêm sempre antes do estado atual, alguns ocorrem depois, e o gráfico não se repete nem gera um loop. Por definição, as redes Bayesianas permitem o uso do conhecimento prévio. No entanto, a questão de qual estado anterior usar no cálculo de probabilidades de estados posteriores é importante para o design, o desempenho e a precisão do algoritmo.  
   
- O algoritmo K2 para aprender com a rede Bayesiana foi desenvolvido por Cooper e Herskovits e é usado com frequência na mineração de dados. Ele é escalável e analisa diversas variáveis, mas requer ordenação das variáveis usadas como entrada. Para obter mais informações, consulte [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) (em inglês) de Chickering, Geiger e Heckerman.  
+ O algoritmo K2 para aprender com a rede Bayesiana foi desenvolvido por Cooper e Herskovits e é usado com frequência na mineração de dados. Ele é escalável e analisa diversas variáveis, mas requer ordenação das variáveis usadas como entrada. Para obter mais informações, consulte [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) (em inglês) de Chickering, Geiger e Heckerman.  
   
  Esse método de pontuação está disponível para atributos discretos e diferenciados.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48067916"
   
  O método BDEU (Bayesiano Dirichlet Equivalente com Uniforme a priori) assume um caso especial da distribuição Dirichlet, na qual uma constante matemática é usada para criar uma distribuição fixa ou uniforme de estados anteriores. A pontuação do BDE também assume equivalência de probabilidade, o que significa que não se pode esperar que os dados separem estruturas equivalentes. Em outras palavras, se a pontuação de Se A Então B for igual à pontuação de Se B Então A, não será possível distinguir as estruturas com base nos dados nem deduzir a causa.  
   
- Para obter mais informações sobre redes Bayesianas e a implementação desses métodos de pontuação, consulte [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885)(em inglês).  
+ Para obter mais informações sobre redes Bayesianas e a implementação desses métodos de pontuação, consulte [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885)(em inglês).  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Métodos de seleção de recursos usados pelos algoritmos do Analysis Services  
  A tabela a seguir lista os algoritmos que suportam a seleção de recursos, os métodos de seleção de recursos usados por eles e os parâmetros que você define para controlar o comportamento da seleção de recursos:  

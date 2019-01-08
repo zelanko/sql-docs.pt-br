@@ -16,28 +16,28 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635864"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542599"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica o tipo de erro de tempo de execução do ADO.  
   
  Três formas do número do erro estão listadas:  
   
--   Decimal positivo — os dois bytes baixa do número total em formato decimal. Esse número é exibido na caixa de diálogo de mensagem de erro padrão Visual Basic. Por exemplo, erro de tempo de execução '3707'.  
+-   Positivos decimal a baixa dois bytes do número total em formato decimal. Esse número é exibido na caixa de diálogo de mensagem de erro padrão Visual Basic. Por exemplo, erro de tempo de execução '3707'.  
   
--   Decimal negativo — a conversão decimal do número de erro completa.  
+-   Negativo decimal: A conversão decimal do número de erro completa.  
   
--   Hexadecimal — a representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo: 0x800***um***0E7B.  
+-   Hexadecimal: A representação hexadecimal do número de erro completa. O código de recurso do Windows está em quarto dígito. É o código de recurso para os números de erro ADO *um*. Por exemplo: 0x800***um***0E7B.  
   
 > [!NOTE]
 >  Erros de OLE DB podem ser passados para o seu aplicativo do ADO. Normalmente, elas podem ser identificadas por um código de recurso do Windows do *4*. Por exemplo, 0x800***4***.  
   
-|Constante|Valor|Description|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|Não é possível alterar o **ActiveConnection** propriedade de uma **conjunto de registros** objeto que tem um **comando** objeto como sua fonte.|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|Servidor não pode concluir a operação.|  

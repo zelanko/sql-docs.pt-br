@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0939540af0c302832925a7a1bef6367718b8c1be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369274"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover um Banco de Dados do Analysis Services
   Frequentemente, há situações em que um dba (administrador de banco de dados) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer mover um modelo de banco de dados multidimensional ou de tabela para um local diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145321"
   
 1.  Localize o banco de dados a ser movido no painel esquerdo ou direito do SSMS.  
   
-2.  Clique com o botão direito do mouse no banco de dados e selecione **Desanexar...**  
+2.  Clique com botão direito no banco de dados e selecione **desanexar...**  
   
 3.  Atribua uma senha ao banco de dados a ser desanexado e clique em **OK** para executar o comando detach.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145321"
   
 5.  Localize a pasta **Bancos de Dados** no painel esquerdo ou direito do SSMS.  
   
-6.  Clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**  
+6.  Clique com botão direito no **bancos de dados** pasta e selecione **anexar...**  
   
-7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, use o botão Procurar (**…**) para localizar a pasta do banco de dados.  
+7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar (**...** ) para localizar a pasta do banco de dados.  
   
 8.  Selecione o `ReadWrite` modo para o banco de dados.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50145321"
   
 2.  Copie o modelo de script a seguir para XMLA  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +128,11 @@ ms.locfileid: "50145321"
   
 4.  Copiar o modelo de script a seguir para XMLA em uma nova guia XMLA  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

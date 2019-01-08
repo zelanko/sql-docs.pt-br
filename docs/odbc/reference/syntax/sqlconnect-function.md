@@ -20,16 +20,16 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04daf57a348f20c8a5febe8d56f8ed9358b9053
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631984"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213686"
 ---
 # <a name="sqlconnect-function"></a>Função SQLConnect
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLConnect** estabelece conexões com um driver e uma fonte de dados. O armazenamento de referências do identificador de conexão de todas as informações sobre a conexão à fonte de dados, incluindo status, o estado de transação e informações de erro.  
@@ -76,7 +76,7 @@ SQLRETURN SQLConnect(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLConnect** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_DBC e uma *manipular* dos *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLConnect** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01S02|Valor de opção alterado|O driver não oferecia suporte para o valor especificado do *ValuePtr* argumento **SQLSetConnectAttr** e substituído, um valor semelhante. (A função retornará SQL_SUCCESS_WITH_INFO.)|  

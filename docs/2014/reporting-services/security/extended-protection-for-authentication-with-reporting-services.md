@@ -11,37 +11,37 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04cc82d92c1b2fecb79bbe044408c90295ac1226
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851895"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355663"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
   A Proteção Estendida é um conjunto de melhorias das versões recentes do sistema operacional Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] . A Proteção Estendida aprimora a maneira como as credenciais e a autenticação podem ser protegidas através de aplicativos. O recurso em si não oferece proteção diretamente contra ataques específicos, tais como encaminhamento de credenciais, mas oferece uma infraestrutura para aplicativos tais como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para fiscalizar a Proteção Estendida para Autenticação.  
   
- Os principais aprimoramentos de autenticação que fazem parte de proteção estendida são a associação de serviço e a associação de canal. A associação de canal usa um token de associação de canal (CBT) para verificar se o canal estabelecido entre dois terminais não foi comprometido. A associação de serviço usa Nomes de Serviço Principais (SPN) para verificar o destino pretendido dos tokens de autenticação. Para obter mais informações básicas sobre a proteção estendida, consulte [Autenticação Integrada do Windows com Proteção Estendida](http://go.microsoft.com/fwlink/?LinkId=179922).  
+ Os principais aprimoramentos de autenticação que fazem parte de proteção estendida são a associação de serviço e a associação de canal. A associação de canal usa um token de associação de canal (CBT) para verificar se o canal estabelecido entre dois terminais não foi comprometido. A associação de serviço usa Nomes de Serviço Principais (SPN) para verificar o destino pretendido dos tokens de autenticação. Para obter mais informações básicas sobre a proteção estendida, consulte [Autenticação Integrada do Windows com Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=179922).  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dá suporte e impõe Proteção Estendida que foi ativada no sistema operacional e configurada no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM e, portanto, podem aproveitar o suporte à Proteção Estendida no sistema operacional e os recursos da proteção estendida do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Por padrão, a Proteção Estendida não está habilitada no o Windows. Para obter informações sobre como habilitar a Proteção Estendida no Windows, consulte [Proteção Estendida para Autenticação](http://go.microsoft.com/fwlink/?LinkID=178431). O sistema operacional e a pilha de autenticação de cliente devem suportar a Proteção Estendida de forma que a autenticação seja bem-sucedida. Para sistemas operacionais mais antigos, pode ser necessário instalar mais de uma atualização para um computador completo compatível com a Proteção Estendida. Para obter informações sobre os desenvolvimentos mais recentes da Proteção Estendida, consulte as informações atualizadas do [com a Proteção Estendida](http://go.microsoft.com/fwlink/?LinkId=183362).  
+>  Por padrão, a Proteção Estendida não está habilitada no o Windows. Para obter informações sobre como habilitar a Proteção Estendida no Windows, consulte [Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkID=178431). O sistema operacional e a pilha de autenticação de cliente devem suportar a Proteção Estendida de forma que a autenticação seja bem-sucedida. Para sistemas operacionais mais antigos, pode ser necessário instalar mais de uma atualização para um computador completo compatível com a Proteção Estendida. Para obter informações sobre os desenvolvimentos mais recentes da Proteção Estendida, consulte as informações atualizadas do [com a Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=183362).  
   
 ## <a name="reporting-services-extended-protection-overview"></a>Visão Geral da Proteção Estendida do Reporting Services  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] suporta e impõe a Proteção Estendida que foi ativada no sistema operacional. Se o sistema operacional não suportar a proteção estendida ou se o recurso não foi ativado no sistema operacional, o recurso de Proteção Estendida do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não conseguirá ser autenticado. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] também exige um Certificado de SSL. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatório do Modo Nativo](configure-ssl-connections-on-a-native-mode-report-server.md)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não vem com a Proteção Estendida habilitada. O recurso pode ser habilitado por meio da modificação do arquivo de configuração `rsreportserver.config` ou por meio das APIs WMI para atualização do arquivo de configuração. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não fornece uma interface do usuário para modificar ou exibir configurações de proteção de estendida. Para obter mais informações, consulte a seção [de parâmetros de configuração](#ConfigurationSettings) neste tópico.  
   
  Problemas que normalmente ocorrem em virtude de alterações nas configurações de proteção estendida ou de parâmetros incorretamente configurados não são expostos com mensagens de erro óbvias nem com janelas de caixa de diálogo. Problemas relacionados à configuração e à compatibilidade de proteção estendida geram falhas de autenticação e erros nos logs de rastreamento do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Algumas tecnologias de acesso a dados podem não dar suporte à proteção estendida. Uma tecnologia de acesso a dados é usada para conexão às fontes de dados do SQL Server e ao banco de dados do catálogo do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Se uma tecnologia de acesso a dados não der suporte à proteção estendida, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] será afetado das seguintes maneiras:  
->   
+> 
 >  -   O SQL Server que executa o banco de dados de catálogo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não pode ter a proteção estendida ativada; caso contrário, o servidor de relatório não se conectará com sucesso ao banco de dados de catálogo e gerará erros de autenticação.  
 > -   Os servidores SQL Server usados como fontes de dados de relatórios [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não podem ter a proteção estendida habilitada. Caso contrário, as tentativas do servidor de relatório de se conectar à fonte de dados de relatório falharão e gerarão erros de autenticação.  
->   
+> 
 >  A documentação de uma tecnologia de acesso a dados deve ter informações sobre suporte para proteção estendida.  
   
 ### <a name="upgrade"></a>UPGRADE  
@@ -54,7 +54,7 @@ ms.locfileid: "48851895"
   
 -   O valor padrão da configuração `RSWindowsExtendedProtectionScenario` é `Proxy`.  
   
--   O Supervisor de Atualização do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] não verifica se o suporte à Proteção Estendida do sistema operacional ou da instalação atual do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] está habilitada.  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] não verifica se o suporte à Proteção Estendida do sistema operacional ou da instalação atual do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] está habilitada.  
   
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>O que a proteção estendida do Reporting Services não contempla  
  As seguintes áreas de recursos e cenários não têm suporte no recurso de proteção estendida do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
@@ -98,7 +98,7 @@ ms.locfileid: "48851895"
   
 |Cenário|Diagrama do cenário|Como proteger|  
 |--------------|----------------------|-------------------|  
-|Acesso indireto e direto do cliente ao serviço do servidor de relatórios sem SSL em um cliente para o proxy ou o cliente para conexões de servidor de relatório.|1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy<br /><br /> 4) Aplicativo cliente|A Associação de Serviço do cliente para o servidor de relatórios pode ser imposta.<br /><br /> O nome de Proxy deve ser conhecido pelo servidor de relatórios e o administrador de servidor de relatórios deverá criar uma reserva de URL para ele, com um cabeçalho de host, ou configurar o nome de Proxy na entrada `BackConnectionHostNames` do Registro do Windows.<br /><br /> Defina `RSWindowsExtendedProtectionLevel` como `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Any`.|  
+|Acesso indireto e direto do cliente ao serviço do servidor de relatórios sem SSL em conexões do cliente para o proxy ou do cliente para o servidor de relatórios.|1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy<br /><br /> 4) Aplicativo cliente|A Associação de Serviço do cliente para o servidor de relatórios pode ser imposta.<br /><br /> O nome de Proxy deve ser conhecido pelo servidor de relatórios e o administrador de servidor de relatórios deverá criar uma reserva de URL para ele, com um cabeçalho de host, ou configurar o nome de Proxy na entrada `BackConnectionHostNames` do Registro do Windows.<br /><br /> Defina `RSWindowsExtendedProtectionLevel` como `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Any`.|  
 |Acesso indireto e direto do cliente com o servidor de relatórios onde o cliente estabelece uma conexão SSL com o proxy ou servidor de relatórios.|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy<br /><br /> 4) Aplicativo cliente|A Associação de Canal pode ser usada<br /><br /> O nome de Proxy deve ser conhecido pelo servidor de relatórios e o administrador de servidor de relatórios deverá criar uma reserva de URL para o proxy, com um cabeçalho de host ou configurar o nome de Proxy na entrada `BackConnectionHostNames` do Registro do Windows.<br /><br /> Defina `RSWindowsExtendedProtectionLevel` como `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Proxy`.|  
   
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Configurando a proteção estendida do Reporting Services  
@@ -111,10 +111,10 @@ ms.locfileid: "48851895"
 ###  <a name="ConfigurationSettings"></a> Parâmetros de configuração para a proteção estendida dos serviços de relatórios  
  A tabela a seguir fornece informações sobre os parâmetros de configuração que aparecem no  `rsreportserver.config` para proteção estendida.  
   
-|Configuração|Description|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|Especifica o grau de imposição da proteção estendida. Os valores válidos são `Off`, `Allow` e `Require`.<br /><br /> O valor padrão é `Off`.<br /><br /> O valor `Off` especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> O valor `Allow` suporta a proteção estendida mas não a exige. O valor Permitir especifica.<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida. A maneira como a proteção é imposta é determinada pelo parâmetro `RsWindowsExtendedProtectionScenario`.<br /><br /> A autenticação será permitida para aplicativos executados em sistemas operacionais que não suportam a proteção estendida.<br /><br /> O valor `Require` especifica:<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não suportam a proteção estendida.|  
-|`RsWindowsExtendedProtectionScenario`|Especifica que formas de proteção estendida serão validadas: Associação de Canal, Associação de Serviço ou ambas. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: Essa configuração será ignorada se `RsWindowsExtendedProtectionLevel` é definido como `OFF`.|  
+|`RsWindowsExtendedProtectionScenario`|Especifica que formas de proteção estendida serão validadas: associação de canal, associação de serviço ou ambas. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: Esta configuração será ignorada se `RsWindowsExtendedProtectionLevel` for definido como `OFF`.|  
   
  Entradas de exemplo no arquivo de configuração `rsreportserver.config`:  
   
@@ -143,7 +143,7 @@ ms.locfileid: "48851895"
 ### <a name="hosts-collection-sources"></a>Fontes de coleta de hosts.  
  A tabela a seguir lista as possíveis fontes da lista de Hosts.  
   
-|Tipo da fonte.|Description|  
+|Tipo da fonte.|Descrição|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|O nome do domínio DNS atribuído ao computador local. Se o computador local for um nó de um cluster, será usado o nome de domínio DNS do servidor virtual de cluster.|  
 |ComputerNameDnsFullyQualified|O nome DNS totalmente qualificado que identifica exclusivamente o computador local. Esse nome é uma combinação do nome de host do DNS e o nome de domínio do DNS, usando o formato *HostName*.*DomainName*. Se o computador local for um nó de um cluster, será usado o nome do DNS totalmente qualificado do servidor virtual de cluster.|  
@@ -164,9 +164,9 @@ ms.locfileid: "48851895"
   
 ## <a name="see-also"></a>Consulte também  
  [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
- [Visão geral sobre a Proteção Estendida para Autenticação](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Autenticação Integrada do Windows com Proteção Estendida](http://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft Security Advisory: Proteção estendida para autenticação](http://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Visão geral sobre a Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Autenticação Integrada do Windows com Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=179922)   
+ [Microsoft Security Advisory: Proteção estendida para autenticação](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [Log de rastreamento do serviço Servidor de Relatório](../report-server/report-server-service-trace-log.md)   
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

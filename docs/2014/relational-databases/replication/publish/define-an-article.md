@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a46975d15b9e1aecaabf704d34a749f157b1f74d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084926"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355972"
 ---
 # <a name="define-an-article"></a>Defina um Artigo
   Este tópico descreve como definir um artigo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -52,7 +51,7 @@ ms.locfileid: "48084926"
 -   Os nomes de artigos não podem incluir nenhum dos caracteres a seguir: % , * , [ , ] , | , : , " , ? , ', \, /, \< , >. Se algum objeto do banco de dados incluir qualquer um desses caracteres, para replicá-los será necessário especificar um nome de artigo que seja diferente do nome do objeto.  
   
 ##  <a name="Security"></a> Segurança  
- Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
+ Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Crie publicações e defina artigos com o Assistente para Nova Publicação. Após a criação de uma publicação, exiba e modifique as propriedades da publicação na caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter informações sobre como criar uma publicação de um banco de dados Oracle, consulte [Criar uma publicação de um banco de dados Oracle](create-a-publication-from-an-oracle-database.md).  
@@ -108,7 +107,7 @@ ms.locfileid: "48084926"
   
 2.  Para filtrar linhas horizontalmente em uma tabela ou exibir um artigo, use [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) para definir a cláusula de filtro. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
   
-3.  Para filtrar colunas verticalmente em uma tabela ou exibir um artigo, use [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Para obter mais informações, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+3.  Para filtrar colunas verticalmente em uma tabela ou exibir um artigo, use [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md).  
   
 4.  Execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) se o artigo for filtrado.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48084926"
   
 1.  No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique o nome da publicação para **@publication**; um nome de artigo para **@article**e o objeto sendo publicado para **@source_object**. Para filtrar horizontalmente linhas de tabelas, especifique um valor para **@subset_filterclause**. Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) e [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md). Se o artigo não for um artigo de tabela, especifique o tipo de artigo para **@type**. Para obter mais informações, consulte [Especificar tipos de artigo &#40;Programação Transact-SQL de replicação&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
-2.  (Opcional) No Assinante do banco de dados de publicação, execute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir um filtro de junção entre dois artigos. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+2.  (Opcional) No Assinante do banco de dados de publicação, execute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir um filtro de junção entre dois artigos. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 3.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) para filtrar colunas de tabela. Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md).  
   
@@ -152,7 +151,7 @@ ms.locfileid: "48084926"
   
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](create-a-publication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Adicionar e remover artigos de publicações existentes](add-articles-to-and-drop-articles-from-existing-publications.md)   

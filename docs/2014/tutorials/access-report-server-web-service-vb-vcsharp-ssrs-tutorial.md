@@ -17,12 +17,12 @@ ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167626"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366678"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Acessando o Serviço Web do Servidor de Relatórios com Visual Basic ou Visual C# (Tutorial SSRS)
   O tutorial a seguir mostra como acessar o serviço Web servidor de relatório de um aplicativo criado com [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -47,17 +47,17 @@ ms.locfileid: "48167626"
   
 -   Permissões suficientes para acessar o serviço Web Servidor de Relatórios do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador em que o servidor de relatório está localizado.  
   
--   Um relatório instalado no servidor de relatório. Este tutorial usa o relatório de exemplo, Vendas da Empresa. Para obter mais informações sobre relatórios de exemplo, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Um relatório instalado no servidor de relatório. Este tutorial usa o relatório de exemplo, Vendas da Empresa. Para obter mais informações sobre relatórios de exemplo, consulte [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  Os exemplos não são instalados automaticamente durante a instalação, mas podem ser instalados a qualquer momento. Para obter informações sobre exemplos, consulte [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  Os exemplos não são instalados automaticamente durante a instalação, mas podem ser instalados a qualquer momento. Para obter informações sobre exemplos, consulte [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Tempo estimado para concluir o tutorial:** 60 minutos  
   
 ## <a name="tasks"></a>Tarefas  
- [Lição 1: Criando o serviço Web Projeto de Cliente](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Lição 1: Criando o projeto de cliente de serviço Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Lição 2: Adicionando uma referência Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Lição 2: Adicionar uma referência Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
  [Lição 3: Acessando o serviço Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   

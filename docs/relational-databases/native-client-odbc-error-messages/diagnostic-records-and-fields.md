@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac31a6f55e365a208bd2a4d3d8f6690693775a0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 603eb8682b69a5f2abc3cd0f46adbd735de05170
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780227"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591370"
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros e campos de diagnóstico
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47780227"
   
  Os campos dos registros de status contêm informações sobre erros ou avisos específicos retornados pelo Gerenciador de Driver ODBC, driver ou fonte de dados, incluindo o SQLSTATE, número do erro nativo, mensagem de diagnóstico, número da coluna e número da linha. Os registros de status só são criados se a função retornar SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA ou SQL_STILL_EXECUTING. Para obter uma lista completa dos campos dos registros de status, consulte **SQLGetDiagField**.  
   
- **SQLGetDiagRec** recupera um único registro de diagnóstico junto com seu ODBC SQLSTATE, número do erro nativo e campos de mensagem de diagnóstico. Essa funcionalidade é semelhante ao ODBC 2. *x * * * SQLError** função. A função mais simples de tratamento de erros em ODBC 3. *x* é chamar repetidamente **SQLGetDiagRec** começando com o *RecNumber* parâmetro definido como 1 e aumentando *RecNumber* em 1 até **SQLGetDiagRec** retorne SQL_NO_DATA. Isso é equivalente a um ODBC 2. *x* aplicativo que chama **SQLError** até ele retornar SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** recupera um único registro de diagnóstico junto com seu ODBC SQLSTATE, número do erro nativo e campos de mensagem de diagnóstico. Essa funcionalidade é semelhante ao ODBC 2. _x_**SQLError** função. A função mais simples de tratamento de erros em ODBC 3. *x* é chamar repetidamente **SQLGetDiagRec** começando com o *RecNumber* parâmetro definido como 1 e aumentando *RecNumber* em 1 até **SQLGetDiagRec** retorne SQL_NO_DATA. Isso é equivalente a um ODBC 2. *x* aplicativo que chama **SQLError** até ele retornar SQL_NO_DATA_FOUND.  
   
  ODBC 3. *x* dá suporte a muito mais informações de diagnóstico que o ODBC 2. *x*. Essas informações são armazenadas nos campos adicionais recuperados por meio de registros de diagnóstico **SQLGetDiagField**.  
   

@@ -16,17 +16,17 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 532a9ae9b44b300cb8d75ea0ea45d24ad5827887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114766"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359678"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configurando o serviço Integration Services (serviço SSIS)
     
 > [!IMPORTANT]  
->  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+>  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
  O serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] depende de um arquivo de configuração para suas configurações. Por padrão, o nome para esse arquivo de configuração é MsDtsSrvr. ini e o arquivo está localizado na pasta %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
@@ -123,7 +123,7 @@ A chave do registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server
   
   
 > [!CAUTION]  
->  A edição incorreta do Registro pode provocar problemas sérios que exigem a reinstalação do sistema operacional. [!INCLUDE[msCoName](../includes/msconame-md.md)] não pode garantir que problemas resultantes da edição incorreta do Registro podem ser resolvidos. Antes de editar o Registro, faça backup de todos os dados valiosos. Para obter informações sobre como fazer backup, restaurar e editar o Registro, consulte o artigo da Base de Dados de Conhecimento sobre o [!INCLUDE[msCoName](../includes/msconame-md.md)] , [Descrição do Registro do Microsoft Windows](http://support.microsoft.com/kb/256986).  
+>  A edição incorreta do Registro pode provocar problemas sérios que exigem a reinstalação do sistema operacional. [!INCLUDE[msCoName](../includes/msconame-md.md)] não pode garantir que os problemas resultantes da edição incorreta do Registro podem ser resolvidos. Antes de editar o Registro, faça backup de todos os dados valiosos. Para obter informações sobre como fazer backup, restaurar e editar o Registro, consulte o artigo da Base de Dados de Conhecimento sobre o [!INCLUDE[msCoName](../includes/msconame-md.md)] , [Descrição do Registro do Microsoft Windows](https://support.microsoft.com/kb/256986).  
   
  O serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] carrega o arquivo de configuração quando o serviço é iniciado. Qualquer alteração na entrada do Registro exige que o serviço seja reiniciado.  
   

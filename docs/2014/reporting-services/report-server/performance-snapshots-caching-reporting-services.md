@@ -14,15 +14,15 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091676"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353156"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Desempenho, instantâneos, cache (Reporting Services)
-  O desempenho do servidor de relatório é afetado por uma combinação de fatores que incluem o hardware, o número de usuários simultâneos que acessam relatórios, a quantidade de dados em um relatório e o formato de saída. Para entender os fatores de desempenho específicos de sua instalação e quais reparos produzirão os resultados desejados, será necessário obter dados de linha de base e executar testes. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Otimização de desempenho do Reporting Services](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) e [Usando o Visual Studio 2005 para executar um teste de carregamento em um servidor de relatório do SQL Server 2005](http://go.microsoft.com/fwlink/?LinkID=77519).  
+  O desempenho do servidor de relatório é afetado por uma combinação de fatores que incluem o hardware, o número de usuários simultâneos que acessam relatórios, a quantidade de dados em um relatório e o formato de saída. Para entender os fatores de desempenho específicos de sua instalação e quais reparos produzirão os resultados desejados, será necessário obter dados de linha de base e executar testes. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Reporting Services a otimização de desempenho](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) e [usando o Visual Studio 2005 para realizar testes de carga em um SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
  Os princípios gerais a serem considerados incluem o seguinte:  
   
@@ -38,16 +38,16 @@ ms.locfileid: "48091676"
   
 -   Para saber quanto demora o processamento de um relatório e obter outras métricas de uso, revise o log de execução do servidor de relatório. Para obter mais informações, consulte [Log de execução do servidor de relatório e exibição do ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
--   Para obter mais informações sobre como solucionar problemas de desempenho ajustando configurações de gerenciamento de memória, consulte [configurar memória disponível para aplicativos de servidor de relatório](../report-server/configure-available-memory-for-report-server-applications.md).  
+-   Para obter mais informações sobre como solucionar problemas de desempenho ajustando configurações de gerenciamento de memória, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Monitorar o desempenho do servidor de relatório](monitoring-report-server-performance.md)  
+ [Monitorando o desempenho do servidor de relatório](monitoring-report-server-performance.md)  
  Descreve os objetos de desempenho que podem ser usados para controlar a carga de processamento no servidor.  
   
  [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)  
  Descreve maneiras de configurar um relatório para ser executado sob demanda, a partir do cache ou em uma agenda como um instantâneo de relatório.  
   
- [Configurar a memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md)  
+ [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md)  
  Descreve como você pode substituir o comportamento padrão de gerenciamento de memória.  
   
  [Armazenando relatórios em cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
@@ -59,11 +59,11 @@ ms.locfileid: "48091676"
  [Processar relatórios grandes](process-large-reports.md)  
  Fornece recomendações para configurar e distribuir um relatório grande.  
   
- [Definindo valores de tempo limite para processamento de relatório e conjunto de dados compartilhado &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  Explica como definir tempos limite no processamento de consultas e relatórios.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar um processo em execução](../subscriptions/manage-a-running-process.md)   
- [Verificar a execução de um relatório](verifying-a-report-run.md)  
+ [Manage a Running Process](../subscriptions/manage-a-running-process.md)   
+ [Verificando uma execução de relatório](verifying-a-report-run.md)  
   
   

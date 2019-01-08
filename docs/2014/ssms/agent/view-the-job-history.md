@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -16,12 +16,12 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83c5cee010b95d18988b7139fc43b9e1214bd51e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec79de6769f8059819ebe4e6eacaa3aff6d2dbec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128726"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364278"
 ---
 # <a name="view-the-job-history"></a>View the Job History
   Este tópico descreve como exibir o histórico de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -41,7 +41,7 @@ ms.locfileid: "48128726"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Security"></a> Segurança  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48128726"
   
 5.  Para atualizar o histórico do trabalho, clique em **Atualizar**. Para exibir menos linhas, clique no botão **Filtro** e insira parâmetros de filtro.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-view-the-job-history-log"></a>Para exibir o log de histórico do trabalho  
   
@@ -82,6 +82,6 @@ ms.locfileid: "48128726"
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para exibir o log de histórico do trabalho**  
   
- Chame o método `EnumHistory` da classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Chame o método `EnumHistory` da classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

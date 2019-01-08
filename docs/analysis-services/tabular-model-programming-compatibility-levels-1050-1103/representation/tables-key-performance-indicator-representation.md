@@ -1,5 +1,5 @@
 ---
-title: Representação de indicador de desempenho (tabela) de chave | Microsoft Docs
+title: Representação de indicador de desempenho (Tabular) da chave | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513978"
 ---
-# <a name="tables---key-performance-indicator-representation"></a>Tabelas - representação de indicador chave de desempenho
+# <a name="tables---key-performance-indicator-representation"></a>Tabelas – Representação de indicador chave de desempenho
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino  
   
 ## <a name="key-performance-indicator-representation"></a>Representação de indicador chave de desempenho  
- Em modelos de objeto de tabela, um indicador chave de desempenho –kpi- é uma medida com informações adicionais para o aplicativo cliente exibi-lo graficamente. Um kpi normalmente tem informações sobre uma meta a ser obtida, o status da medida comparada à meta e informações para a ferramenta de cliente sobre como exibir o status graficamente.  
+ No objeto de tabela modela um indicador chave de desempenho – kpi-é uma medida com informações adicionais para o aplicativo cliente exibi-lo graficamente. Um kpi normalmente tem informações sobre uma meta a ser obtida, o status da medida comparada à meta e informações para a ferramenta de cliente sobre como exibir o status graficamente.  
   
 ### <a name="key-performance-indicator-in-amo"></a>Indicador chave de desempenho no AMO  
  Ao usar o AMO para gerenciar um kpi de modelo de tabela, não há nenhuma correspondência de objeto um para um para um kpi no AMO, o objeto de AMO <xref:Microsoft.AnalysisServices.Kpi>não é usado para este propósito; no AMO, para modelos de tabela, um kpi é representado por uma série de objetos criada em um dos elementos na coleção <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> e no <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  
   
- O trecho de código a seguir mostra como criar uma de muitas possíveis definições de kpi.  
+ O snippet de código a seguir mostra como criar uma de muitas possíveis definições de kpi.  
   
 ```  
   
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Exemplo de AMO2Tabular  
- Para ter um entendimento sobre como usar o AMO para criar e manipular indicador chave de desempenho representações, consulte o código-fonte do AMO para exemplo de Tabular; Verifique especificamente o seguinte arquivo de origem: AddKPIs.cs. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
+ Para compreender como usar o AMO para criar e manipular representações de Indicador Chave de Desempenho, consulte o código-fonte do exemplo AMO para Tabela; verifique especificamente o seguinte arquivo de origem: AddKPIs.cs. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
   
   

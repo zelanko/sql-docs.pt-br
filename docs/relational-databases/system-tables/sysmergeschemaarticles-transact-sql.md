@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergeschemaarticles_TSQL
@@ -19,25 +18,25 @@ ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 397608f755e302c1500cb2b94f18f3e8cbc98ffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721544"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802808"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rastreia artigos somente esquema para replicação de mesclagem. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo somente esquema em uma publicação de mesclagem.|  
 |**type**|**tinyint**|Indica o tipo de artigo somente esquema que pode ser um dos seguintes:<br /><br /> **0x20** = o artigo de somente esquema do procedimento armazenado.<br /><br /> **0x40** = artigo somente esquema de exibição ou artigo somente esquema de exibição indexada.|  
 |**objid**|**int**|O identificador de objeto do objeto base do artigo. Pode ser o identificador de objeto de um procedimento, exibição indexada, exibição ou função definida pelo usuário.|  
 |**artid**|**uniqueidentifier**|A ID do artigo.|  
-|**Descrição**|**nvarchar(255)**|A descrição do artigo.|  
+|**description**|**nvarchar(255)**|A descrição do artigo.|  
 |**pre_creation_command**|**tinyint**|A ação padrão a ser executada quando o artigo é criado no banco de dados de assinatura:<br /><br /> **0 =** nenhum - se a tabela já existir no assinante, nenhuma ação será tomada.<br /><br /> **1** = descartar - descarta a tabela antes de recriá-lo.<br /><br /> **2** = excluir-emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.<br /><br /> **3** = truncar-mesmo que **2**, mas exclui páginas em vez de linhas. Porém, não exige uma cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|O identificador exclusivo da publicação.|  
 |**status**|**tinyint**|Indica o status do artigo somente esquema, que pode ser um dos seguintes:<br /><br /> **1** = não sincronizado - o script de processamento inicial para publicar a tabela é executado na próxima vez em que o Snapshot Agent é executado.<br /><br /> **2** = ativo - o script de processamento inicial para publicar a tabela tiver sido executado.<br /><br /> **5** = New_inactive - a ser adicionado.<br /><br /> **6** = New_active - a ser adicionado.|  

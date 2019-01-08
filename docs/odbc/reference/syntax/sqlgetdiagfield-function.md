@@ -20,16 +20,16 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826194"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203975"
 ---
 # <a name="sqlgetdiagfield-function"></a>Função SQLGetDiagField
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetDiagField** retorna o valor atual de um campo de um registro da estrutura de dados de diagnóstico (associado a um identificador especificado) que contém informações de erro, aviso e status.  
@@ -100,11 +100,11 @@ SQLRETURN SQLGetDiagField(
 ## <a name="diagnostics"></a>Diagnóstico  
  **SQLGetDiagField** não envia os registros de diagnóstico para si mesmo. Ele usa os seguintes valores de retornados para relatar o resultado da execução do seu próprio:  
   
--   SQL_SUCCESS: A função retornou com êxito as informações de diagnóstico.  
+-   SQL_SUCCESS: A função retornado com êxito as informações de diagnóstico.  
   
--   SQL_SUCCESS_WITH_INFO: \* *DiagInfoPtr* era muito pequeno para conter o campo de diagnóstico solicitado. Portanto, os dados no campo de diagnóstico foi truncados. Para determinar o que ocorreu um truncamento, o aplicativo deve comparar *BufferLength* o número real de bytes disponíveis, que é gravado em **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: \**DiagInfoPtr* era muito pequeno para conter o campo de diagnóstico solicitado. Portanto, os dados no campo de diagnóstico foi truncados. Para determinar o que ocorreu um truncamento, o aplicativo deve comparar *BufferLength* o número real de bytes disponíveis, que é gravado em **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: O identificador indicado por *HandleType* e *manipular* não era um identificador válido.  
+-   SQL_INVALID_HANDLE: O identificador é indicado por *HandleType* e *manipular* não era um identificador válido.  
   
 -   SQL_ERROR: Um dos seguintes ocorreu:  
   
@@ -178,7 +178,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|Se o campo SQL_DIAG_ROW_NUMBER é um número de linha válida em um conjunto de linhas ou um conjunto de parâmetros, esse campo contém o valor que representa o número da coluna no conjunto de resultados ou o número do parâmetro no conjunto de parâmetros. Os números sempre começam em 1; de coluna do conjunto de resultados Se este registro de status pertence a uma coluna de indicador, o campo pode ser zero. Parâmetro números começam em 1. Ele tem o valor SQL_NO_COLUMN_NUMBER se o registro de status não está associado um número de coluna ou o número do parâmetro. Se o driver não puder determinar o número de coluna ou parâmetro que este registro está associado, esse campo tem o valor SQL_COLUMN_NUMBER_UNKNOWN.<br /><br /> O conteúdo desse campo é definido apenas para identificadores de instrução.|  
 |SQL_DIAG_CONNECTION_NAME|SQLCHAR *|Uma cadeia de caracteres que indica o nome da que o registro de diagnóstico está relacionado a conexão. Este campo é definido pelo driver. Para estruturas de dados de diagnóstico associadas com o identificador de ambiente e diagnóstico não estão relacionados a qualquer conexão, este campo é uma cadeia de caracteres de comprimento zero.|  
 |SQL_DIAG_MESSAGE_TEXT|SQLCHAR *|Uma mensagem informativa sobre o erro ou aviso. Esse campo é formatado, conforme descrito em [mensagens de diagnóstico](../../../odbc/reference/develop-app/diagnostic-messages.md). Não há nenhum tamanho máximo para o texto da mensagem de diagnóstico.|  
-|SQL_DIAG_NATIVE|SQLINTEGER|Um código de erro nativo de específico da fonte de dados/driver. Se não houver nenhum código de erro nativo, o driver retornará 0.|  
+|SQL_DIAG_NATIVE|SQLINTEGER|Um código de erro nativo específicas da fonte de dados/driver. Se não houver nenhum código de erro nativo, o driver retornará 0.|  
 |SQL_DIAG_ROW_NUMBER|SQLLEN|Este campo contém o número da linha no conjunto de linhas ou o número do parâmetro no conjunto de parâmetros, ao qual o registro de status está associado. Números de linha e números de parâmetro começam com 1. Este campo tem o valor SQL_NO_ROW_NUMBER se este registro de status não está associado um número de linha ou o número do parâmetro. Se o driver não puder determinar o número de linha ou parâmetro que este registro está associado, esse campo tem o valor SQL_ROW_NUMBER_UNKNOWN.<br /><br /> O conteúdo desse campo é definido apenas para identificadores de instrução.|  
 |SQL_DIAG_SERVER_NAME|SQLCHAR *|Uma cadeia de caracteres que indica que o registro de diagnóstico se relaciona com o nome do servidor. É o mesmo que o valor retornado para uma chamada para **SQLGetInfo** com a opção SQL_DATA_SOURCE_NAME. Para estruturas de dados de diagnóstico associadas com o identificador de ambiente e diagnóstico não estão relacionados a qualquer servidor, este campo é uma cadeia de caracteres de comprimento zero.|  
 |SQL_DIAG_SQLSTATE|SQLCHAR *|Um código de diagnóstico de SQLSTATE de cinco caracteres. Para obter mais informações, consulte [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md).|  
@@ -229,11 +229,11 @@ n-definição *|"CRIAR DOMÍNIO"|SQL_DIAG_CREATE_DOMAIN|
   
 -   Registros que não correspondem a qualquer linha aparecem na frente de registros que correspondem a uma linha específica, pois SQL_NO_ROW_NUMBER é definido como -1.  
   
--   Registros para o qual o número de linha é desconhecido aparecem na frente de todos os outros registros, porque SQL_ROW_NUMBER_UNKNOWN é definido para ser – 2.  
+-   Registros para o qual o número de linha é desconhecido aparecem na frente de todos os outros registros, pois SQL_ROW_NUMBER_UNKNOWN é definido como -2.  
   
 -   Todos os registros que pertencem a linhas específicas, os registros são classificados pelo valor no campo SQL_DIAG_ROW_NUMBER. Todos os erros e avisos da primeira linha afetados são listados e, em seguida, todos os erros e avisos da próxima linha afetada e assim por diante.  
   
-> [!NOTE]  
+> [!NOTE]
 >  O ODBC 3 *. x* Gerenciador de Driver não ordena os registros de status na fila de diagnóstico se SQLSTATE 01S01 (erro na linha) é retornado pelo ODBC de 2 *. x* driver ou se SQLSTATE 01S01 (erro na linha) é retornado pelo ODBC 3 *. x* driver quando **SQLExtendedFetch** é chamado ou **SQLSetPos** for chamado em um cursor que foi posicionado com **SQLExtendedFetch** .  
   
  Dentro de cada linha, ou para todos os registros que não correspondem a uma linha ou para o qual o número de linhas é desconhecido ou para todos os registros com um número de linhas igual a SQL_NO_ROW_NUMBER, o primeiro registro listado é determinado por meio de um conjunto de regras de classificação. Após o primeiro registro, a ordem dos registros que afetam uma linha é indefinida. Um aplicativo não pode presumir que erros precedem avisos após o primeiro registro. Aplicativos devem examinar a estrutura de dados de diagnóstico completo para obter informações completas sobre uma chamada bem-sucedida para uma função.  

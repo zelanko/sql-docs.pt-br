@@ -13,12 +13,12 @@ ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 48119fdcfe2957926910faae03af27c66e719b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d94043e338ddcaeffbfc87a1cfad74e6fd854be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132206"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355561"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nova Agenda Compartilhada (Management Studio)
   Use essa página para criar uma agenda compartilhada para executar relatórios publicados e assinaturas. As agendas compartilhadas podem ser usadas no lugar de agendas específicas de relatório ou de assinaturas. Informações de agenda centralizadas e a capacidade de pausar e retomar operações de agendamento são dois recursos básicos que distinguem as agendas compartilhadas de agendas específicas de item.  
@@ -30,7 +30,7 @@ ms.locfileid: "48132206"
  Para abrir essa página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte a um servidor de relatório, clique com o botão direito do mouse em **Agenda Compartilhada**e selecione **Nova Agenda**. Para salvar a agenda, o serviço SQL Server Agent deve estar em execução.  
   
 > [!NOTE]  
->  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Opções  
  **Nome**  

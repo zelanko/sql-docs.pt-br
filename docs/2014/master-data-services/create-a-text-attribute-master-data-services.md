@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
@@ -14,12 +13,12 @@ ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 100039cc1fff2e7c4eb4d5631cd8721427a985f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a58aaee32970b157b70a9f6a7c9477c18d9f19a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177156"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796868"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Criar um atributo de texto (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de texto quando desejar que os usuários insiram uma cadeia de caracteres de texto como um valor de atributo.  
@@ -29,7 +28,7 @@ ms.locfileid: "48177156"
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Uma entidade deve existir para que se possa criar o atributo para ela. Para obter mais informações, consulte [Criar uma entidade &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   

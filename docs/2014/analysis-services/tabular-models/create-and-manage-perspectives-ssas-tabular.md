@@ -13,12 +13,12 @@ ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6a8fb56ea065fea1a4077dcc1aae9ebc49d14da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25f8de0649f82abbcc6ceb4ac6a92844de04b4b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121686"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502280"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>Criar e Gerenciar Perspectivas (SSAS tabular)
   As perspectivas definem subconjuntos visíveis de um modelo que fornece pontos de vista concentrados, específicos à empresa ou específicos ao aplicativo. As tarefas neste tópico descrevem como criar e gerenciar perspectivas usando a caixa de diálogo **Perspectivas** no designer modelo.  
@@ -50,18 +50,18 @@ ms.locfileid: "48121686"
   
 ###  <a name="bkmk_rename"></a> Para renomear uma perspectiva  
   
--   Quando você focaliza um cabeçalho da coluna da perspectiva (o nome da perspectiva), o botão **Renomear** é exibido. Para renomear a perspectiva, clique em **Renomear**e insira um novo nome ou edite o nome existente.  
+-   Quando você focaliza o cabeçalho da coluna da perspectiva (o nome da perspectiva), o **Renomear** botão é exibido. Para renomear a perspectiva, clique em **Renomear**e insira um novo nome ou edite o nome existente.  
   
 ###  <a name="bkmk_delete"></a> Para excluir uma perspectiva  
   
--   Quando você focaliza um cabeçalho da coluna da perspectiva (o nome da perspectiva), o botão **Excluir** é exibido. Para excluir a perspectiva, clique no botão **Excluir** e clique em **Sim** na janela de confirmação.  
+-   Quando você focaliza o cabeçalho da coluna da perspectiva (o nome da perspectiva), o **excluir** botão é exibido. Para excluir a perspectiva, clique no botão **Excluir** e clique em **Sim** na janela de confirmação.  
   
 ###  <a name="bkmk_copy"></a> Para copiar uma perspectiva  
   
--   Quando você focaliza um cabeçalho de coluna da perspectiva, o botão **Copiar** é exibido. Para criar uma cópia dessa perspectiva, clique no botão **Copiar** . Uma cópia da perspectiva selecionada é adicionada como uma nova perspectiva à direita das perspectivas existentes. A nova perspectiva herda o nome da perspectiva copiada e uma anotação *- Copiar* é acrescentada ao final do nome. Por exemplo, se uma cópia da perspectiva *Vendas* for criada, a nova perspectiva será chamada *Vendas – Cópia*.  
+-   Quando você focaliza o cabeçalho de coluna da perspectiva, o **cópia** botão é exibido. Para criar uma cópia dessa perspectiva, clique no botão **Copiar** . Uma cópia da perspectiva selecionada é adicionada como uma nova perspectiva à direita das perspectivas existentes. A nova perspectiva herda o nome da perspectiva copiada e uma anotação *- Copiar* é acrescentada ao final do nome. Por exemplo, se uma cópia do *Sales* perspectiva é criada, a nova perspectiva será chamada *vendas – cópia*.  
   
 ## <a name="see-also"></a>Consulte também  
- [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)   
- [Hierarquias &#40;Tabular do SSAS&#41;](hierarchies-ssas-tabular.md)  
+ [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
+ [Hierarquias &#40;SSAS de Tabela&#41;](hierarchies-ssas-tabular.md)  
   
   

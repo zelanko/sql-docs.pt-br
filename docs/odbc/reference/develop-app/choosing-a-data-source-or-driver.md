@@ -16,15 +16,15 @@ ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e47248ac5719b2303c71f2e7b93161112ca7f870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507634"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Escolher uma fonte de dados ou um driver
-A fonte de dados ou o driver usado por um aplicativo às vezes é embutido em código no aplicativo. Por exemplo, um aplicativo personalizado escrito por um departamento de MIS para transferir dados de uma fonte de dados para outro contém os nomes das fontes de dados — o aplicativo simplesmente não funciona com outras fontes de dados. Outro exemplo é um aplicativo vertical, como aquele usado para entrada de ordem. Esse aplicativo sempre usa a mesma fonte de dados, que tem um esquema predefinido conhecido pelo aplicativo.  
+A fonte de dados ou o driver usado por um aplicativo às vezes é embutido em código no aplicativo. Por exemplo, um aplicativo personalizado escrito por um departamento de MIS para transferir dados de uma fonte de dados para outro contém os nomes desses dados de fontes – o aplicativo simplesmente não funcionariam com outras fontes de dados. Outro exemplo é um aplicativo vertical, como aquele usado para entrada de ordem. Esse aplicativo sempre usa a mesma fonte de dados, que tem um esquema predefinido conhecido pelo aplicativo.  
   
  Outros aplicativos selecione a fonte de dados ou o driver no tempo de execução. Normalmente, esses são aplicativos genéricos que fazer consultas ad hoc, como uma planilha que usa o ODBC para importar dados. Esses aplicativos geralmente listam as fontes de dados disponíveis ou os drivers e permitir que os usuários a escolher aqueles que desejam trabalhar com. Se um aplicativo genérico lista fontes de dados, drivers ou ambos com frequência depende se o aplicativo usa os drivers com base em arquivo ou DBMS.  
   

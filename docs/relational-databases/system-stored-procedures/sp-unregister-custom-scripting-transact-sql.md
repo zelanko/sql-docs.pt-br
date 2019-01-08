@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_unregister_custom_scripting_TSQL
@@ -17,12 +16,12 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 778019343c6dfd277196644d5956abb2f93c9121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d28ff96d07aa1b7e65097fbf7946b40dfb56adea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647344"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808738"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
  [ **@type** =] **'***tipo***'**  
  É o tipo de procedimento armazenado personalizado ou o script que está sendo removido. *tipo de* está **varchar(16)**, sem padrão e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**insert**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução INSERT é replicada.|  
 |**Atualização**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução UPDATE é replicada.|  

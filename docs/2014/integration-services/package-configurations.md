@@ -22,15 +22,15 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44b923f98a5e54f8907953d38bf42c37ca0968b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200916"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369498"
 ---
 # <a name="package-configurations"></a>Configurações do Pacote
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece configurações de pacote que você pode usar para atualizar os valores das propriedades em tempo de execução.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece configurações de pacote que podem ser usadas para atualizar os valores das propriedades em tempo de execução.  
   
 > [!NOTE]  
 >  As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "48200916"
   
 -   As configurações tornam os pacotes mais flexíveis. Por exemplo, uma configuração pode atualizar o valor de uma variável usada em uma expressão de propriedade.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a vários métodos diferentes de armazenar configurações de pacote, como arquivos XML, tabelas em um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados e variáveis de ambiente e pacote.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece suporte a vários métodos diferentes de armazenamento de configurações de pacote, como arquivos XML, tabelas em um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e variáveis de ambiente e pacote.  
   
  Cada configuração é um par propriedade/valor. O arquivo de configuração XML e os tipos de configuração [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem incluir várias configurações.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "48200916"
 ## <a name="package-configuration-types"></a>Tipos de configuração de pacotes  
  A tabela a seguir descreve os tipos de configuração de pacotes.  
   
-|Tipo|Description|  
+|Tipo|Descrição|  
 |----------|-----------------|  
 |Arquivo de configuração XML|Um arquivo XML contém as configurações. O arquivo XML pode incluir várias configurações.|  
 |Variável de ambiente|Uma variável de ambiente contém a configuração.|  
 |Entrada de Registro|Uma entrada de Registro contém a configuração.|  
 |Variável de pacote pai|Uma variável no pacote contém a configuração. Normalmente, esse tipo de configuração é usado para atualizar as propriedades em pacotes filho.|  
-|Tabela [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Uma tabela em um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contém a configuração. A tabela pode incluir várias configurações.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|Uma tabela em um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contém a configuração. A tabela pode incluir várias configurações.|  
   
 ### <a name="xml-configuration-files"></a>Arquivos de configuração XML  
  Se você selecionar o tipo de configuração **arquivo de configuração XML** , poderá criar um novo arquivo de configuração, reutilizar um arquivo existente e adicionar configurações novas ou reutilizar um arquivo existente, mas substituir o conteúdo do arquivo.  
@@ -122,7 +122,7 @@ ms.locfileid: "48200916"
 ```  
   
 ### <a name="registry-entry"></a>Entrada de Registro  
- Se você desejar usar uma entrada de Registro para armazenar a configuração, poderá usar uma chave existente ou criar uma nova chave em HKEY_CURRENT_USER. A chave do registro que você usa deve ter um valor chamado `Value`. O valor pode ser um DWORD ou uma cadeia de caracteres.  
+ Se você desejar usar uma entrada de Registro para armazenar a configuração, poderá usar uma chave existente ou criar uma nova chave em HKEY_CURRENT_USER. A chave do Registro que você usa deve ter um valor denominado `Value`. O valor pode ser um DWORD ou uma cadeia de caracteres.  
   
  Se você selecionar o tipo de configuração **Entrada de Registro** , digitará o nome da chave do Registro na caixa de entrada de Registro. O formato é \<registry key>. Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave. Por exemplo, para usar a chave MyPackage localizada em SSISPackages, digite `SSISPackages\MyPackage`.  
   
@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico de [Noções básicas sobre configurações de pacotes do Integration Services](http://go.microsoft.com/fwlink/?LinkId=165643), em msdn.microsoft.com  
+-   Artigo técnico de [Noções básicas sobre configurações de pacotes do Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643), em msdn.microsoft.com  
   
--   Entrada de blog, [Criando pacotes em código – Configurações de Pacote](http://go.microsoft.com/fwlink/?LinkId=217663), em www.sqlis.com.  
+-   Entrada de blog [criando pacotes em código – configurações de pacote](https://go.microsoft.com/fwlink/?LinkId=217663), em www.sqlis.com.  
   
--   Entrada de blog, [Exemplo de API – Adicione programaticamente um arquivo de configuração a um pacote](http://go.microsoft.com/fwlink/?LinkId=217664), em blogs.msdn.com.  
+-   Entrada de blog [exemplo de API – adicione programaticamente um arquivo de configuração para um pacote](https://go.microsoft.com/fwlink/?LinkId=217664), em blogs.msdn.com.  
   
   

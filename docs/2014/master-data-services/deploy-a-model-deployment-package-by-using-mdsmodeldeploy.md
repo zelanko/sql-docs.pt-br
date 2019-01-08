@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 048929ec4ff58def3d392df3f326f31f98fe9d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02db491e350de93aff1015583f71566af747c878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205866"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780258"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implantar um pacote de implantação de modelo usando MDSModelDeploy
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use a ferramenta MDSModelDeploy para implantar um pacote que contém:  
@@ -37,9 +36,9 @@ ms.locfileid: "48205866"
   
 -   Um pacote de implantação de modelo deverá existir. Para obter mais informações, consulte  [Criar um pacote de implantação de modelo usando MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   Você deve ser um administrador no ambiente onde está implantando o modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador no ambiente onde está implantando o modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Se estiver atualizando um modelo com dados, a versão que está sendo implantada não poderá ser **Bloqueada** nem **Confirmada**.  
+-   Se estiver atualizando um modelo com os dados, a versão que está sendo implantada não poderá ser **Bloqueada** nem **Confirmada**.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>Para implantar um pacote de implantação de modelo  
   
@@ -70,19 +69,19 @@ ms.locfileid: "48205866"
     -   Para criar um novo modelo:  
   
         ```  
-        MDSModelDeploy deploynew –package PackageName -model ModelName -service ServiceName  
+        MDSModelDeploy deploynew -package PackageName -model ModelName -service ServiceName  
         ```  
   
     -   Para criar um clone de um modelo:  
   
         ```  
-        MDSModelDeploy deployclone –package PackageName  
+        MDSModelDeploy deployclone -package PackageName  
         ```  
   
     -   Para atualizar um modelo existente e seus dados:  
   
         ```  
-        MDSModelDeploy deployupdate –package PackageName –version VersionName  
+        MDSModelDeploy deployupdate -package PackageName -version VersionName  
         ```  
   
     > [!IMPORTANT]  
@@ -118,6 +117,6 @@ ms.locfileid: "48205866"
 -   [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantação de modelos de &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [Implantando modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

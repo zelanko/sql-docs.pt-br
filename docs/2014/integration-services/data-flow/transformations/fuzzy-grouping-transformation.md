@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -26,18 +25,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122997"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357352"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
   A transformação Agrupamento Difuso executa tarefas de limpeza de dados identificando linhas de dados que provavelmente sejam duplicatas e selecionando uma linha canônica de dados a ser usada na padronização dos dados.  
   
 > [!NOTE]  
->  Para obter informações mais detalhadas sobre transformação de Agrupamento Difuso, incluindo limitações de desempenho e de memória, consulte o white paper, [Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Para obter informações mais detalhadas sobre transformação de Agrupamento Difuso, incluindo limitações de desempenho e de memória, consulte o white paper, [Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  A transformação Agrupamento Difuso requer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criar tabelas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] temporárias que o algoritmo de transformação necessita para executar seu trabalho. A conexão deve determinar um usuário que tenha permissão para criar tabelas no banco de dados.  
   
@@ -84,17 +83,17 @@ ms.locfileid: "48122997"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Agrupamento Difuso** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação agrupamento difuso &#40;guia do Gerenciador de Conexão&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Editor de Transformação Agrupamento Difuso &#40;Guia Gerenciador de Conexões&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor de transformação agrupamento difuso &#40;guia colunas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor de Transformação Agrupamento Difuso &#40;Guia Colunas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Editor de transformação agrupamento difuso &#40;guia Avançado&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Agrupamento Difuso &#40;Guia Avançado&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir as propriedades dessa tarefa, clique em um dos tópicos a seguir:  
@@ -104,7 +103,7 @@ ms.locfileid: "48122997"
 -   [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação pesquisa difusa](lookup-transformation.md)   
+ [Transformação Pesquisa Difusa](lookup-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

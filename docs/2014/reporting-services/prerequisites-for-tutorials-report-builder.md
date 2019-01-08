@@ -11,17 +11,17 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14be04840683999430fc4bd1fd65ce35ea13eb2a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056206"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355479"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Pré-requisitos para tutoriais (Construtor de Relatórios)
   Os tutoriais do Construtor de Relatórios esperam que você possa exibir e salvar relatórios em um servidor de relatório ou site do SharePoint que esteja integrado com o servidor de relatório. Para dados, todos os tutoriais usam consultas literais que devem ser processadas por uma instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- Se você não tiver acesso a um servidor de relatório, a um site ou a uma fonte de dados, poderá obter informações sobre o Construtor de Relatórios criando um relatório offline. Consulte [Tutorial: Criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Se você não tiver acesso a um servidor de relatório, a um site ou a uma fonte de dados, poderá obter informações sobre o Construtor de Relatórios criando um relatório offline. Consulte [Tutorial: Criar um relatório de gráfico rápido Offline &#40;construtor de relatórios&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Você deve ter os seguintes pré-requisitos para concluir os tutoriais do Construtor de Relatórios:  
@@ -36,9 +36,9 @@ ms.locfileid: "48056206"
   
 -   O nome de um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instância e credenciais suficientes para acesso somente leitura a qualquer banco de dados. As consultas a conjuntos de dados nos tutoriais usam dados literais, mas cada consulta deve ser processada por uma instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para retornar os metadados necessários a um conjunto de dados de relatório. Por exemplo, a seguinte cadeia de conexão especifica apenas um servidor: `data source=<servername>`. Você deve ter acesso de leitura ao banco de dados padrão atribuído a você pelo administrador do sistema que concede permissão para acessar o servidor. Também é possível especificar um banco de dados, conforme mostrado na seguinte cadeia de conexão: `data source=<servername>;initial catalog=<database>`.  
   
--   Para o tutorial que inclui um mapa, o servidor de relatório deve ser configurado para dar suporte ao Bing Maps como plano de fundo. Para obter mais informações, consulte [planejar suporte ao relatório de mapa](plan-for-map-report-support.md) na [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentação [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
+-   Para o tutorial que inclui um mapa, o servidor de relatório deve ser configurado para dar suporte ao Bing Maps como plano de fundo. Para obter mais informações, consulte [planejar suporte ao relatório de mapa](plan-for-map-report-support.md) na [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentação [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](https://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
   
--   O tutorial [Tutorial: Criando e detalhamento relatórios principais &#40;construtor de relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), usa o conjunto de dados de demonstração do Contoso business intelligence. Esse conjunto de dados é composto do data warehouse ContosoDW e do banco de dados OLAP (processamento analítico online) Contoso_Retail. Os relatórios que você criará neste tutorial recuperam dados do cubo Vendas da Contoso. O banco de dados OLAP Contoso_Retail pode ser baixado no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkID=191575). Basta baixar o arquivo ContosoBIdemoABF.exe. Ele contém o banco de dados OLAP.  
+-   O tutorial, [Tutorial: Criando relatórios principais e detalhamento &#40;construtor de relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), usa o conjunto de dados de demonstração do Contoso business intelligence. Esse conjunto de dados é composto do data warehouse ContosoDW e do banco de dados OLAP (processamento analítico online) Contoso_Retail. Os relatórios que você criará neste tutorial recuperam dados do cubo Vendas da Contoso. O banco de dados OLAP Contoso_Retail pode ser baixado no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Basta baixar o arquivo ContosoBIdemoABF.exe. Ele contém o banco de dados OLAP.  
   
      O outro arquivo, ContosoBIdemoBAK.exe, é para o data warehouse ContosoDW que não é usado neste tutorial.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48056206"
   
      Você deve ter acesso a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na qual instalar o banco de dados OLAP.  
   
- O administrador do servidor de relatório deve conceder as permissões necessárias no servidor de relatório, configurar [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] locais das pastas e configurar as opções do construtor de relatórios padrão. Para obter mais informações, consulte [instalar, desinstalar e oferecer suporte ao construtor de relatórios](install-uninstall-and-report-builder-support.md).  
+ O administrador do servidor de relatório deve conceder a você as permissões necessárias no servidor de relatório, configurar os locais das pastas do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e configurar as opções padrão do Construtor de Relatórios. Para obter mais informações, consulte [instalar, desinstalar e oferecer suporte ao construtor de relatórios](install-uninstall-and-report-builder-support.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)  

@@ -1,22 +1,21 @@
 ---
-title: 'Etapa 3: adicionar pacotes e outros arquivos | Microsoft Docs'
+title: 'Etapa 3: Adicionando pacotes e outros arquivos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e7b1be922673978ee512fac105a89670a6764f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83902f57b758089235abafc9f8289b6f9fdb8653
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140576"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361598"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Etapa 3: Adicionando pacotes e outros arquivos
   Nesta tarefa, você adicionará pacotes existentes, arquivos auxiliares, que oferecem suporte a pacotes individuais, e um Leiame para o projeto do Tutorial de Implantação criado na tarefa anterior. Por exemplo, você adicionará um arquivo de dados XML que contém os dados para um pacote e um arquivo de texto que fornece as informações do Leiame sobre todos os pacotes do projeto.  
@@ -52,7 +51,7 @@ ms.locfileid: "48140576"
   
 4.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de Arquivos**.  
   
-5.  Clique no botão Procurar **(…)** , vá para C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selecione **DataTransfer.dtsx**e clique em **Abrir**.  
+5.  Clique no botão Procurar **(…)**, vá para C:\Arquivos de Programas\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selecione **DataTransfer.dtsx**e clique em **Abrir**.  
   
 6.  Clique em **OK**.  
   
@@ -71,6 +70,6 @@ ms.locfileid: "48140576"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 4: Adicionando configurações de pacote](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

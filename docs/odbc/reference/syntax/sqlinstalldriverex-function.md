@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169308"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208621"
 ---
 # <a name="sqlinstalldriverex-function"></a>Função SQLInstallDriverEx
 **Conformidade com**  
@@ -71,7 +71,7 @@ BOOL SQLInstallDriverEx(
  *Frequentes*  
  [Entrada] Tipo de solicitação. O *frequentes* argumento deve conter um dos seguintes valores:  
   
- ODBC_INSTALL_INQUIRY: Perguntar sobre onde um driver pode ser instalado.  
+ ODBC_INSTALL_INQUIRY: Pesquisa sobre onde um driver pode ser instalado.  
   
  ODBC_INSTALL_COMPLETE: Conclua a solicitação de instalação.  
   
@@ -86,7 +86,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLInstallDriverEx** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Description|  
+|*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O *lpszPathOut* argumento não era grande o suficiente para conter o caminho de saída. O buffer contém o caminho truncado.<br /><br /> O *cbPathOutMax* argumento era 0, e *frequentes* foi ODBC_INSTALL_COMPLETE.|  

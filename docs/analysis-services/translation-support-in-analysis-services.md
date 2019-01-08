@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041830"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213625"
 ---
 # <a name="translation-support-in-analysis-services"></a>Suporte a tradução no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34041830"
   
  Planeje o uso de **Locale Identifier** se desejar dar suporte a várias traduções simultâneas do mesmo objeto em idiomas diferentes. Definir a propriedade **Language** funciona, mas isso também afeta o processamento e as consultas, o que pode ter consequências indesejadas. Definir **Locale Identifier** é a melhor opção porque ele é usado somente para retornar cadeias de caracteres traduzidas.  
   
- Uma tradução consiste em um identificador de localidade (LCID), uma legenda traduzida para o objeto (por exemplo, a dimensão ou o nome do atributo) e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar o mesmo agrupamento, então, quando criar a solução, tenha essas restrições naturais em mente.  
+ Uma tradução consiste em um identificador de localidade (LCID), uma legenda traduzida para o objeto (por exemplo, a dimensão ou o nome do atributo) e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há nenhum limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar a mesma ordenação, portanto, ao criar a solução, lembre-se dessas restrições naturais.  
   
 > [!TIP]  
 >  Você pode usar os aplicativos cliente, como o Excel, o Management Studio e o SQL Server Profiler para retornar cadeias de caracteres traduzidas. Consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) para obter detalhes.  
@@ -39,8 +39,8 @@ ms.locfileid: "34041830"
   
 ## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Idiomas e agrupamentos & #40; Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
- [Definir ou alterar o agrupamento de coluna](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Dicas de globalização e práticas recomendadas & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Definir ou alterar a ordenação de coluna](../relational-databases/collations/set-or-change-the-column-collation.md)   
+ [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   
