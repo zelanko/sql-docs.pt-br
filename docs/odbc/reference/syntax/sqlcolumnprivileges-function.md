@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120163"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207685"
 ---
 # <a name="sqlcolumnprivileges-function"></a>Função SQLColumnPrivileges
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 1.0 ODBC: ODBC  
+ Versão introduzida: Conformidade com padrões 1.0 ODBC: ODBC  
   
  **Resumo**  
  **SQLColumnPrivileges** retorna uma lista de colunas e os privilégios associados para a tabela especificada. O driver retorna as informações como um conjunto de resultados em especificado *StatementHandle*.  
@@ -92,7 +92,7 @@ SQLRETURN SQLColumnPrivileges(
 ## <a name="diagnostics"></a>Diagnóstico  
  Quando **SQLColumnPrivileges** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* sql_handle_stmt e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLColumnPrivileges** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Driver Gerenciador. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|Varchar não nulo|Nome da coluna. O driver retornará uma cadeia de caracteres vazia para uma coluna que não tem um nome.|  
 |CONCESSOR (ODBC 1.0)|5|Varchar|Nome do usuário que recebe o privilégio; NULL se não for aplicável à fonte de dados.<br /><br /> Para todas as linhas em que o valor na coluna usuário autorizado é o proprietário do objeto, a coluna GRANTOR será sistema".|  
 |USUÁRIO AUTORIZADO (ODBC 1.0)|6|Varchar não nulo|Nome do usuário a quem o privilégio foi concedido.|  
-|PRIVILÉGIO DE (ODBC 1.0)|7|Varchar não nulo|Identifica o privilégio de coluna. Pode ser um dos seguintes (ou outras suportadas pelos dados de origem definido pela implementação):<br /><br /> Selecione: O usuário autorizado tem permissão para recuperar dados da coluna.<br /><br /> INSERÇÃO: O usuário autorizado tem permissão para fornecer dados para a coluna nas novas linhas são inseridas na tabela associada.<br /><br /> ATUALIZAÇÃO: O usuário autorizado tem permissão para atualizar os dados na coluna.<br /><br /> REFERÊNCIAS: O usuário autorizado tem permissão para fazer referência à coluna dentro de uma restrição (por exemplo, um único, referencial, ou restrição de verificação de tabela).|  
+|PRIVILÉGIO DE (ODBC 1.0)|7|Varchar não nulo|Identifica o privilégio de coluna. Pode ser um dos seguintes (ou outras suportadas pelos dados de origem definido pela implementação):<br /><br /> SELECIONE: O usuário autorizado tem permissão para recuperar dados da coluna.<br /><br /> INSERIR: O usuário autorizado tem permissão para fornecer dados para a coluna nas novas linhas são inseridas na tabela associada.<br /><br /> ATUALIZAÇÃO: O usuário autorizado tem permissão para atualizar os dados na coluna.<br /><br /> REFERÊNCIAS: O usuário autorizado tem permissão para fazer referência à coluna dentro de uma restrição (por exemplo, um único, referencial, ou restrição de verificação de tabela).|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|Indica se o usuário autorizado tem permissão para conceder o privilégio para outros usuários. "Sim", "Não" ou "Nulo" se desconhecido ou não aplicável à fonte de dados.<br /><br /> Um privilégio é que podem ser concedidas ou que não podem ser concedidas, mas não ambos. O conjunto de resultados retornado por **SQLColumnPrivileges** nunca conterá duas linhas para o qual todas as colunas, exceto a coluna IS_GRANTABLE contêm o mesmo valor.|  
   
 ## <a name="code-example"></a>Exemplo de código  

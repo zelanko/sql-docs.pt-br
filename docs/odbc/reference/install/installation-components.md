@@ -14,12 +14,12 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 961ff9fe552fa30eaad4667fdd1911a44f3a35f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793034"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208775"
 ---
 # <a name="installation-components"></a>Componentes de instalação
 > [!NOTE]  
@@ -29,7 +29,7 @@ ms.locfileid: "47793034"
   
  ![Relação entre componentes de instalação](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  O arquivo Odbc.inf que foi usado no ODBC 2. *x* para descrever os arquivos necessários para cada ODBC componente não é usada em ODBC 3 *. x*. Drivers que são fornecidos ODBC 3 *. x* componentes não é necessário criar um arquivo Odbc.inf. A remoção de **SQLInstallDriver** e **SQLInstallODBC**e a substituição do **SQLInstallTranslator**, ter processado Odbc.inf desnecessários. As informações do driver que costumavam ser nas seções a palavra-chave Driver Odbc.inf agora são fornecidas na *lpszDriver* argumento **SQLInstallDriverEx**. As informações de tradução que costumava ser no [ODBC tradutor] e seções de especificação de tradução de Odbc.inf agora é fornecido na *lpszTranslator* argumento de **SQLInstallTranslatorEx**. Essas alterações permitem que o instalador ODBC seja mais portátil entre plataformas.  
   
  Para obter mais informações sobre esses componentes, consulte os tópicos a seguir no final desta seção.  

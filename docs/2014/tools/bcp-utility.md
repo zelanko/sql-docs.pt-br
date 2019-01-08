@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -28,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1ba79898fe1f218e51b8eda10f2fb91784a8d7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757346"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
   O **bcp** copia dados entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
@@ -89,9 +88,9 @@ ms.locfileid: "48205856"
  *database_name*  
  É o nome do banco de dados no qual a tabela ou exibição especificada reside. Se não estiver especificado, esse será o banco de dados padrão do usuário.  
   
- Você também pode especificar explicitamente o nome do banco de dados com `d-`.  
+ Você também pode especificar explicitamente o nome de banco de dados com `d-`.  
   
- **na** *data_file* | **out * * * data_file* | **queryout * * * data_file* | **Formatar nul**  
+ **in** *data_file* | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
  Especifica a direção da cópia em massa, do seguinte modo:  
   
 -   **in** copia de um arquivo em uma tabela ou exibição de banco de dados.  
@@ -135,9 +134,9 @@ ms.locfileid: "48205856"
  Especifica a página de código dos dados no arquivo de dados. *code_page* só será relevante se os dados contiverem `char`, `varchar`, ou `text` colunas com valores de caractere maiores que 127 ou menores que 32.  
   
 > [!NOTE]  
->  Recomendamos que você especifique um nome de agrupamento para cada coluna em um arquivo de formato.  
+>  Recomendamos que você especifique um nome de ordenação para cada coluna em um arquivo de formato.  
   
-|Valor da página de código|Description|  
+|Valor da página de código|Descrição|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Página de código padrão usada pelo cliente. Essa é a página de código padrão usada se **-C** não for especificado.|  
@@ -174,15 +173,15 @@ ms.locfileid: "48205856"
  **-F** *first_row*  
  Especifica o número da primeira linha que deve ser exportada de uma tabela ou importada de um arquivo de dados. Este parâmetro requer um valor maior que (>) 0, mas menor que (\<) ou igual a (=), o número total de linhas. Na ausência desse parâmetro, o padrão é a primeira linha do arquivo.  
   
- *first_row* pode ser um inteiro positivo com um valor de até 2^63-1. **-F * * * first_row* é baseado em 1.  
+ *first_row* pode ser um inteiro positivo com um valor de até 2^63-1. **-F**_first_row_ é baseado em 1.  
   
  **-h"** *hint*[ **,**... *n*] **"**  
  Especifica a dica ou dicas a serem usadas durante uma importação de dados em massa para uma tabela ou exibição.  
   
- ORDEM **(* **coluna*[ASC | DESC] [**,**... *n*]**) * *  
+ ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
  A ordem de classificação dos dados no arquivo de dados. O desempenho da importação em massa será melhorado se os dados importados forem armazenados de acordo com o índice clusterizado na tabela, se houver. Se o arquivo de dados for armazenado em uma ordem diferente, ou seja, distinta da ordem de uma chave de índice clusterizado, ou se não houver nenhum índice clusterizado na tabela, a cláusula ORDER será ignorada. Os nomes das colunas fornecidos devem ser nomes de colunas válidas na tabela de destino. Por padrão, o **bcp** supõe que o arquivo de dados não está classificado. Para obter uma importação em massa otimizada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também valida que os dados importados sejam classificados.  
   
- ROWS_PER_BATCH **= * * * bb*  
+ ROWS_PER_BATCH **=**_bb_  
  Número de linhas de dados por lote (como *bb*). É usado quando **-b** não é especificado, resultando no envio de todo o arquivo de dados ao servidor como uma transação única. O servidor otimiza o carregamento em massa de acordo com o valor *bb*. Por padrão, ROWS_PER_BATCH é desconhecido.  
   
  KILOBYTES_PER_BATCH **=** *cc*  
@@ -219,7 +218,7 @@ ms.locfileid: "48205856"
  Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas. Para obter mais informações, veja [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** *application_intent*  
- Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não oferecerá suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [ secundárias ativas: réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não oferecerá suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [ secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-L** *last_row*  
  Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados. Este parâmetro requer um valor maior que (>) 0, mas menor que (\<) ou igual a (=), o número da última linha. Na ausência desse parâmetro, o padrão é a última linha do arquivo.  
@@ -266,7 +265,7 @@ ms.locfileid: "48205856"
  `-q`  
  Executa a instrução SET QUOTED_IDENTIFIERS ON na conexão entre o utilitário **bcp** e uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use essa opção para especificar um nome de banco de dados, proprietário, tabela ou exibição que contenha um espaço ou aspas simples. Inclua todo o nome da tabela de três partes ou da exibição entre aspas duplas ("").  
   
- Para especificar um nome de banco de dados que contenha um espaço ou aspas simples, você deve usar a opção **-q** .  
+ Para especificar um nome de banco de dados que contenha um espaço ou aspas simples, você deve usar a opção **-q**.  
   
  `-q` não se aplica a valores passados para `-d`.  
   
@@ -282,8 +281,8 @@ ms.locfileid: "48205856"
  **-R**  
  Especifica que dados de moeda, data e horário são copiados em massa no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o formato regional definido para as configurações de localidade do computador cliente. Por padrão, as configurações regionais são ignoradas.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à qual se conectar. Se nenhum servidor for especificado, o utilitário **bcp** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é requerida quando um comando **bcp** é executado de um computador remoto na rede ou de uma instância local nomeada. Para se conectar à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um servidor, especifique apenas *server_name*. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], especifique *server_name***\\***instance_name*.  
+ **-S** *server_name*[ **\\**_instance_name_]  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à qual se conectar. Se nenhum servidor for especificado, o utilitário **bcp** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é requerida quando um comando **bcp** é executado de um computador remoto na rede ou de uma instância local nomeada. Para se conectar à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um servidor, especifique apenas *server_name*. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], especifique *server_name**_\\_** instance_name*.  
   
  `-t` *field_term*  
  Especifica o terminador de campo. O padrão é **\t** (caractere de tabulação). Use esse parâmetro para substituir o terminador de campo padrão. Para obter mais informações, consulte [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
@@ -293,7 +292,7 @@ ms.locfileid: "48205856"
  Se *field_term* começa com um hífen (-) ou uma barra (/), não inclua um espaço entre `-t` e o *field_term* valor.  
   
  **-T**  
- Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. As credenciais de segurança do usuário de rede, *login_id*e *password* não são necessárias. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para o logon ser efetuado com êxito.  
+ Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. As credenciais de segurança do usuário de rede, *login_id*e *password* não são necessárias. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para que o logon tenha êxito.  
   
  **-U** *login_id*  
  Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -325,7 +324,7 @@ ms.locfileid: "48205856"
  Para obter mais informações, consulte [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
  **-x**  
- Usado com o **formato** e **-f * * * format_file* opções, gera um arquivo de formato baseado em XML em vez do arquivo de formato não XML padrão. O **-x** não funciona ao importar ou exportar dados. Ele gera um erro se usado sem **formato** e **-f * * * format_file*.  
+ Usado com as opções **format** e **-f**_format_file_, gera um arquivo em formato baseado em XML, em vez do arquivo em formato não XML padrão. O **-x** não funciona ao importar ou exportar dados. Ele gera um erro se for usado sem **format** e **-f**_format_file_.  
   
 ## <a name="remarks"></a>Comentários  
  O **bcp** 12.0 é instalado quando você instala [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ferramentas. Se as ferramentas forem instaladas para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e para uma versão anterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dependendo do valor na variável de ambiente PATH, você poderá estar usando o cliente **bcp** anterior em vez do cliente **bcp** 12.0. Essa variável de ambiente define o conjunto de diretórios usado pelo Windows para pesquisar por arquivos executáveis. Para descobrir qual versão você está usando, execute o comando **bcp /v** no Prompt de Comando do Windows. Para obter mais informações sobre como definir o caminho de comando na variável de ambiente PATH, consulte a Ajuda do Windows.  
@@ -344,7 +343,7 @@ ms.locfileid: "48205856"
 ## <a name="computed-columns-and-timestamp-columns"></a>Colunas computadas e colunas de carimbo de data/hora  
  Os valores no arquivo de dados sendo para computado ou colunas `timestamp` são ignorados e o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atribui valores automaticamente. Se o arquivo de dados não contiver valores para as colunas computadas ou de `timestamp` na tabela, use um arquivo de formato para especificar que as colunas computadas ou de `timestamp` na tabela devem ser ignoradas ao importar dados; o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automaticamente atribuirá valores para a coluna.  
   
- Computado e `timestamp` colunas são copiadas em massa do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um arquivo de dados como de costume.  
+ Colunas computadas e de `timestamp` são copiadas em massa do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um arquivo de dados, como sempre.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Especificando identificadores que contêm espaços ou aspas  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem incluir caracteres como espaços inseridos e aspas. Tais identificadores devem ser tratados do seguinte modo:  
@@ -368,7 +367,7 @@ ms.locfileid: "48205856"
 ## <a name="data-validation"></a>Validação de dados  
  Agora, o**bcp** impõe validação de dados e verificações de dados que podem provocar falhas em scripts se forem executados em dados inválidos em um arquivo de dados. Por exemplo, o **bcp** agora verifica se:  
   
--   A representação nativa dos `float` ou `real` tipos de dados são válidos.  
+-   A representação nativa de tipos de dados `float` ou `real` é válida.  
   
 -   Dados Unicode têm um comprimento regular de byte.  
   
@@ -379,7 +378,7 @@ ms.locfileid: "48205856"
   
 |Tipo de dados|Efeito|  
 |---------------|------------|  
-|SQLCHAR ou SQLVARYCHAR|Os dados são enviados na página de código do cliente ou na página de código implicada pelo agrupamento. O efeito é o mesmo que especificar a opção `-c` sem especificar um arquivo de formato.|  
+|SQLCHAR ou SQLVARYCHAR|Os dados são enviados na página de código do cliente ou na página de código implicada pela ordenação. O efeito é o mesmo que especificar a opção `-c` sem especificar um arquivo de formato.|  
 |SQLNCHAR ou SQLNVARCHAR|Os dados são enviados como Unicode. O efeito é o mesmo que especificar a opção `-w` sem especificar um arquivo de formato.|  
 |SQLBINARY ou SQLVARYBIN|Os dados são enviados sem qualquer conversão.|  
   
@@ -417,7 +416,7 @@ ms.locfileid: "48205856"
   
 -   A. Copiando linhas de tabela em um arquivo de dados (com uma conexão confiável)  
   
--   B. Copiando linhas de tabela em um arquivo de dados (com autenticação mista)  
+-   b. Copiando linhas de tabela em um arquivo de dados (com autenticação mista)  
   
 -   C. Copiando dados de um arquivo em uma tabela  
   
@@ -442,7 +441,7 @@ ms.locfileid: "48205856"
 bcp AdventureWorks2012.Sales.Currency out Currency.dat -T -c  
 ```  
   
-### <a name="b-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>B. Copiando linhas de tabela em um arquivo de dados (com autenticação mista)  
+### <a name="b-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>b. Copiando linhas de tabela em um arquivo de dados (com autenticação mista)  
  O exemplo a seguir ilustra a opção **out** na tabela `AdventureWorks2012.Sales.Currency` . Este exemplo cria um arquivo de dados nomeado `Currency.dat` e copia os dados da tabela nesse arquivo usando formato de caractere.  
   
  O exemplo pressupõe que você esteja usando autenticação mista; é necessário usar a opção **-U** para especificar sua ID de logon. Além disso, a menos que você esteja se conectando à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local, use a opção **-S** para especificar o nome do sistema e, opcionalmente, um nome de instância.  
@@ -532,7 +531,7 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c -x -f Currency.xml
  Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).  
   
 ### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>I. Usando um arquivo de formato para importação em massa com bcp  
- Para usar um arquivo de formato criado anteriormente ao importar dados para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use a opção **-f** com a opção **in** . Por exemplo, o comando a seguir copia em massa os conteúdos de um arquivo de dados, `Currency.dat`, em uma cópia da tabela `Sales.Currency` (`Sales.Currency2`) usando o arquivo de formato criado anteriormente (`Currency.xml`). O exemplo presume que você esteja usando a Autenticação do Windows e tenha uma conexão confiável com a instância do servidor na qual está executando o comando **bcp** .  
+ Para usar um arquivo de formato criado anteriormente ao importar dados para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use a opção **-f** com a opção **in**. Por exemplo, o comando a seguir copia em massa os conteúdos de um arquivo de dados, `Currency.dat`, em uma cópia da tabela `Sales.Currency` (`Sales.Currency2`) usando o arquivo de formato criado anteriormente (`Currency.xml`). O exemplo presume que você esteja usando a Autenticação do Windows e tenha uma conexão confiável com a instância do servidor na qual está executando o comando **bcp** .  
   
  No prompt de comando do Windows, digite:  
   

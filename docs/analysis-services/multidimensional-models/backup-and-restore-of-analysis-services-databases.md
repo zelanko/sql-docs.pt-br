@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e43357e843f28133f7bb2f5cd9db078ee4bace27
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa0e023b32418cd5eabee04819213955c517e0ee
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024443"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983997"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e restauração de bancos de dados do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34024443"
   
  Para um backup completo que inclua dados de origem, você tem que fazer o backup do banco de dados que contém os detalhes dos dados. Especificamente, se você estiver usando o armazenamento de banco de dados ROLAP ou DirectQuery, os dados detalhados serão armazenados em um banco de dados relacional externo do SQL Server que é diferente do banco de dados do Analysis Services. Caso contrário, se todos os objetos forem de tabela ou multidimensionais, o backup do Analysis Services incluirá os metadados e os dados de origem.  
   
- Um benefício claro de automatizar o backup é que os instantâneos de dados sempre estarão tão atualizados quanto à frequência automatizada de backup especifica. Agendadores automatizados garantem o não esquecimento dos backups. A restauração de um banco de dados também pode ser automatizada e ser uma boa maneira de replicar dados, mas certifique-se de fazer o backup do arquivo da chave de criptografia na instância para a qual deseja fazer a replicação. O recurso de sincronização é dedicado à replicação de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas somente para os dados obsoletos. Todos os recursos mencionados aqui podem ser implementados pela interface do usuário, por meio de comandos XML/A ou executados programaticamente pelo AMO. Para obter mais informações sobre estratégias de backup, consulte [Backup Strategies with SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888).  
+ Um benefício claro de automatizar o backup é que os instantâneos de dados sempre estarão tão atualizados quanto à frequência automatizada de backup especifica. Agendadores automatizados garantem o não esquecimento dos backups. A restauração de um banco de dados também pode ser automatizada e ser uma boa maneira de replicar dados, mas certifique-se de fazer o backup do arquivo da chave de criptografia na instância para a qual deseja fazer a replicação. O recurso de sincronização é dedicado à replicação de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas somente para os dados obsoletos. Todos os recursos mencionados aqui podem ser implementados pela interface do usuário, por meio de comandos XML/A ou executados programaticamente pelo AMO.
   
  Este tópico inclui as seguintes seções:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34024443"
  Os administradores podem fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um único arquivo de backup (.abf) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , seja qual for o tamanho do banco de dados. Para obter instruções passo a passo, consulte [Como fazer backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) e [Automatizar o backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], usado para carregar e consultar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelos de dados em um ambiente do SharePoint, carrega seus modelos de bancos de dados de conteúdo do SharePoint. Esses bancos de dados de conteúdo são relacionais e executados no mecanismo de banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Como tal, não há backup do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e estratégia de restauração para modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se você tiver um plano de recuperação de desastres em vigor para o conteúdo do SharePoint, esse plano abrangerá os modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] armazenados nos bancos de dados de conteúdo.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], usado para carregar e consultar modelos de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um ambiente do SharePoint, carrega seus modelos de bancos de dados de conteúdo do SharePoint. Esses bancos de dados de conteúdo são relacionais e executados no mecanismo de banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Como tal, não há backup do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e estratégia de restauração para modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se você tiver um plano de recuperação de desastres em vigor para o conteúdo do SharePoint, esse plano abrangerá os modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] armazenados nos bancos de dados de conteúdo.  
   
  **Partições remotas**  
   

@@ -1,7 +1,8 @@
 ---
-title: Dados do Azure Studio perguntas Frequentes | Microsoft Docs
-description: Perguntas frequentes (FAQ para o Studio de dados do Azure).
-ms.custom: tools|sos
+title: PERGUNTAS FREQUENTES
+titleSuffix: Azure Data Studio
+description: Perguntas frequentes (FAQ) sobre o Studio de dados do Azure.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356347"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030321"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] PERGUNTAS FREQÜENTES
 
@@ -94,7 +95,7 @@ Nenhum. Os investimentos em ferramentas do Windows principal (SSMS, SSDT, PowerS
 |Painel de tarefas|Sim||
 |Temas|Sim||
 |Modo escuro|Sim||
-|Gerenciador de recursos do Azure|Visualização||
+|Gerenciador de recursos do Azure|Visualizar||
 |Assistente para Gerar Scripts||Sim
 |Importação \ exportação DACPAC||Sim|
 |Propriedades de objeto||Sim|
@@ -108,7 +109,7 @@ Nenhum. Os investimentos em ferramentas do Windows principal (SSMS, SSDT, PowerS
 |Exportar resultados para o CSV, JSON, XLSX|Sim||
 |IntelliSense|Sim|Sim|
 |Trechos de código|Sim|Sim|
-|Mostrar plano|Visualização|Sim|
+|Mostrar plano|Visualizar|Sim|
 |Estatísticas do cliente||Sim|
 |Estatísticas de consulta ao vivo||Sim|
 |Opções de consulta||Sim|
@@ -130,18 +131,18 @@ Nenhum. Os investimentos em ferramentas do Windows principal (SSMS, SSDT, PowerS
 
 |Recurso|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Assistente de dados externa|Visualização||
-|Integração do HDFS|Visualização||
-|Notebooks|Visualização||
+|Assistente de dados externa|Visualizar||
+|Integração do HDFS|Visualizar||
+|Notebooks|Visualizar||
 
 ### <a name="database-administration"></a>Administração de banco de dados
 
 |Recurso|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Backup / restauração|Sim|Sim|
-|Importar arquivo simples|Visualização|Sim|
-|SQL Agent|Visualização|Sim|
-|SQL Profiler|Visualização|Sim|
+|Importar arquivo simples|Visualizar|Sim|
+|SQL Agent|Visualizar|Sim|
+|SQL Profiler|Visualizar|Sim|
 |Always On||Sim|
 |Sempre Criptografado||Sim|
 |Assistente para cópia de dados||Sim|

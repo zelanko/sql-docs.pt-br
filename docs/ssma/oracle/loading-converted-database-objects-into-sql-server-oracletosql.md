@@ -13,12 +13,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: fa7e74d94fba34ebb3ae1e11ccaae308dd14e3e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685254"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204935"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Carregar objetos de banco de dados convertidos no SQL Server (OracleToSQL)
 Depois de converter esquemas Oracle para o SQL Server, você pode carregar os objetos de banco de dados resultantes no SQL Server. Você pode ter o SSMA criar os objetos, ou você pode gerar script dos objetos e executar os scripts por conta própria. Além disso, o SSMA permite atualizar os metadados de destino com o conteúdo real do banco de dados do SQL Server.  
@@ -99,7 +99,7 @@ Você pode executar um script ou instruções individuais, em [!INCLUDE[ssManStu
   
 4.  Para executar um conjunto de instruções, selecione as instruções na janela do editor de consulta e, em seguida, pressione a **F5** chave.  
   
-Para obter mais informações sobre como usar o editor de consultas para executar scripts, consulte "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta" nos Manuais Online do SQL Server.  
+Para obter mais informações sobre como usar o editor de consultas para executar scripts, consulte " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta" nos Manuais Online do SQL Server.  
   
 Você também pode executar scripts da linha de comando usando o **sqlcmd** utility e no SQL Server Agent. Para obter mais informações sobre **sqlcmd**, consulte "utilitário sqlcmd" nos Manuais Online do SQL Server. Para obter mais informações sobre o SQL Server Agent, consulte "Automatizando tarefas administrativas (SQL Server Agent)" nos Manuais Online do SQL Server.  
   

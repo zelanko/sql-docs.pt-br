@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034675"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401631"
 ---
 # <a name="lesson-2-add-data"></a>Lição 2: Adicionar dados
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +26,7 @@ Usando o Assistente de importação de tabela, você pode importar dados de uma 
 Tempo estimado para concluir esta lição: **20 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deve ter concluído a lição anterior: [Lição 1: Criar um novo projeto de modelo de tabela](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 1: Criar um novo projeto de modelo de tabela](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Criar uma conexão  
   
@@ -57,7 +57,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 7.  Na página **Escolher como Importar os Dados** , verifique se a opção **Selecionar itens em uma lista de tabelas e exibições para escolher os dados a serem importados** está marcada. Para selecionar em uma lista de tabelas e exibições, clique em **Avançar** para exibir uma lista de todas as tabelas de origem do banco de dados de origem.  
   
-8.  Na página **Selecionar tabelas e exibições** , marque a caixa de seleção para as tabelas a seguir: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**e **FactInternetSales**.  
+8.  No **selecionar tabelas e exibições** , marque a caixa de seleção para as tabelas a seguir: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, e **FactInternetSales**.  
   
     **NÃO** clique em **Concluir**.  
   
@@ -76,7 +76,7 @@ A tabela DimCustomer que você está importando do banco de dados de exemplo con
   
 3.  Verifique se todas as outras colunas estão marcadas e clique em **OK**.  
   
-    Observe que, agora, as palavras **Filtros aplicados** são exibidas na coluna **Detalhes do Filtro** na linha **DimCustomer** ; se você clicar nesse link, verá uma descrição textual dos filtros recém-aplicados.  
+    Observe as palavras **filtros aplicados** são exibidas agora na **detalhes do filtro** coluna no **DimCustomer** de linha; se você clicar no link você verá uma descrição de texto a filtros recém-aplicados.  
     
     ![como-tabela-lição 2--filtros aplicados](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
@@ -164,7 +164,7 @@ Agora que você visualizou e filtrou os dados desnecessários, você pode import
 -   Click **Arquivo** > **Salvar Tudo**.  
   
 ## <a name="whats-next"></a>O que vem a seguir?
-Vá para a próxima lição: [lição 3: marcar como tabela de data](../analysis-services/lesson-3-mark-as-date-table.md).
+Vá para a próxima lição: [Lição 3: Marcar como tabela de data](../analysis-services/lesson-3-mark-as-date-table.md).
 
   
   

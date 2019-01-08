@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9131bda927e123d3b718d9a769ef59efff157903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111557"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350863"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
   O desempenho da indexação de texto completo e das consultas de texto completo é influenciado por recursos de hardware, como memória, velocidade de disco, velocidade da CPU, e pela arquitetura do computador.  
@@ -64,14 +64,14 @@ ms.locfileid: "48111557"
   
 -   Atualize as estatísticas da tabela base usando a instrução [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) . E, o mais importante, atualize as estatísticas no índice clusterizado ou na chave de texto completo para uma população completa. Isso ajuda uma população de vários intervalos a gerar boas partições na tabela.  
   
--   Crie um índice secundário em um `timestamp` coluna se você quiser melhorar o desempenho da população incremental.  
+-   Crie um índice secundário em uma coluna `timestamp` para melhorar o desempenho da população incremental.  
   
 -   Antes de executar uma população completa em um computador com várias CPUs, é recomendável limitar o tamanho do pool de buffers temporariamente definindo o valor de `max server memory` para deixar memória suficiente para o processo do fdhost.exe e para uso do sistema operacional. Para obter mais informações, consulte "Estimando os requisitos de memória da memória compartilhada de saída do processo do host do daemon de filtro (fdhost.exe)", posteriormente neste tópico.  
   
   
   
 ##  <a name="full"></a> O desempenho das populações completas de solução de problemas  
- Para diagnosticar problemas de desempenho, examine os logs de rastreamento de texto completo. Para obter informações sobre os logs de rastreamento, consulte [popular índices de texto completo](../indexes/indexes.md).  
+ Para diagnosticar problemas de desempenho, examine os logs de rastreamento de texto completo. Para obter informações sobre logs de rastreamento, veja [Popular índices de texto completo](../indexes/indexes.md).  
   
  É recomendável seguir a ordem de solução de problemas especificada abaixo se o desempenho das populações completas não for satisfatório.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48111557"
  Durante uma população de texto completo, é possível que o fdhost.exe ou o sqlservr.exe fique com pouca memória não tenha memória suficiente. Se o log de rastreamento de texto completo mostrar que fdhost.exe está sendo reiniciado com frequência ou que o código de erro 8007008 está sendo retornado, isso indica que um desses processos está sendo executado sem memória. Se fdhost.exe estiver gerando despejos, principalmente em computadores grandes com várias CPUs, talvez ele esteja ficando com memória insuficiente.  
   
 > [!NOTE]  
->  Para obter informações sobre buffers de memória usados por um rastreamento de texto completo, consulte [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
+>  Para obter informações sobre os buffers de memória usados por um rastreamento de texto completo, veja [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
   
  As causas possíveis são as seguintes:  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48111557"
 > [!IMPORTANT]  
 >  Para obter informações essenciais sobre as fórmulas, consulte <sup>1</sup>, <sup>2</sup>, e <sup>3</sup>, abaixo.  
   
-|Plataforma|Estimando os requisitos de memória fdhost.exe em MB —*F*<sup>1</sup>|Fórmula para calcular a memória máxima do servidor —*M*<sup>2</sup>|  
+|Plataforma|Estimando as necessidades de memória de fdhost.exe em MB –*F*<sup>1</sup>|Fórmula para calcular a memória máxima do servidor -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= mínimo (** *T* **,** 2000 **) –*`F`*–** 500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= mínimo (** *T* **,** 2000 **)-*`F`* -**  500|  
+|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
   
- <sup>1</sup> se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2*e assim por diante. Em seguida, calcule *M* como *T***–** sigma **(***F*i**)**.  
+ <sup>1</sup> se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2*e assim por diante. Em seguida, calcule *M* como *T * * *-** sigma **(* **F*eu**) * *.  
   
  <sup>2</sup> 500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "48111557"
   
  **Exemplo: Estimando os requisitos de memória de fdhost.exe**  
   
- Este exemplo é para um computador AMD64 com 8 GB de RAM e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe —*F*. O número de intervalos de rastreamento é `8`.  
+ Este exemplo é para um computador AMD64 com 8 GB de RAM e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe -*F*. O número de intervalos de rastreamento é `8`.  
   
  `F = 8*10*8=640`  
   
- O próximo cálculo obtém o valor ideal para `max server memory`—*M*. *O*total de memória física disponível no sistema em MB –*T*– é `8192`.  
+ O próximo cálculo obtém o valor ideal para `max server memory` - *M*. *T*total de memória física disponível no sistema em MB -*T*-for `8192`.  
   
  `M = 8192-640-500=7052`  
   
- **Exemplo: Configurando a memória máxima do servidor**  
+ **Exemplo: Memória máxima do servidor de configuração**  
   
  Este exemplo usa o [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [RECONFIGURAR](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções para definir `max server memory` com o valor calculado para *M* no exemplo anterior , `7052`:  
   
@@ -171,7 +171,7 @@ GO
   
 -   Alta espera por páginas  
   
-     Para descobrir se um tempo de espera de página é alto, execute o seguinte [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução:  
+     Para saber se o tempo de espera de uma página é alto, execute a seguinte instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
     ```  
     Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
@@ -179,12 +179,12 @@ GO
   
      A tabela a seguir descreve os tipos de espera de interesse aqui mencionados.  
   
-    |Tipo de espera|Description|Solução possível|  
+    |Tipo de espera|Descrição|Solução possível|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX ou _UP)|Isso pode indicar um gargalo de E/S, caso em que normalmente você também observa um comprimento médio da fila de disco alto.|Mover o índice de texto completo para outro grupo de arquivos em outro disco pode ajudar a reduzir o gargalo de E/S.|  
     |PAGELATCH_EX (ou _UP)|Isso pode indicar muita contenção entre os threads que estão tentando para gravar no mesmo arquivo de banco de dados.|Adicionar arquivos ao grupo de arquivos em que reside o índice de texto completo pode ajudar a aliviar essa contenção.|  
   
-     Para obter mais informações, confira [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
+     Para obter mais informações, veja [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
   
 -   Ineficiências ao examinar a tabela base  
   
@@ -203,7 +203,7 @@ GO
   
  Por razões de segurança, os filtros são carregados por processos de host do daemon de filtro. Uma instância de servidor usa um processo multi-threaded para todos os filtros multi-threaded e um processo single-threaded para todos os filtros single-threaded. Quando um documento que usa um filtro multithread contém um documento incorporado que usa um filtro de thread único, o Mecanismo de Texto Completo inicia um processo de thread único para o documento incorporado. Por exemplo, ao encontrar um documento do Word que contém um documento em PDF, o Mecanismo de Texto Completo usa o processo multithread para o conteúdo do Word e inicia um processo de thread único para o conteúdo do PDF. Um filtro de thread único pode não funcionar bem neste ambiente e pode desestabilizar o processo de filtragem. Em determinadas circunstâncias em que o processo de incorporação é comum, a desestabilização pode causar o travamento do processo de filtragem. Quando isso ocorrer, o Mecanismo de Texto Completo refaz a rota do documento que falhou (por exemplo, um documento do Word que contém um conteúdo em PDF incorporado) para o processo de filtragem em thread único. Se isso acontecer com frequência, ocorrerá uma degradação de desempenho do processo de indexação de texto completo.  
   
- Para solucionar esse problema, marque o filtro para o documento que contém o conteúdo (neste caso, o Word) como filtro de thread único. É possível alterar o valor do registro de filtro para marcar um determinado filtro como filtro de thread único. Para marcar um filtro como filtro de thread único, você precisa definir a **ThreadingModel** o valor do registro para o filtro como `Apartment Threaded`. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
+ Para solucionar esse problema, marque o filtro para o documento que contém o conteúdo (neste caso, o Word) como filtro de thread único. É possível alterar o valor do registro de filtro para marcar um determinado filtro como filtro de thread único. Para marcar um filtro como filtro de thread único, você precisa definir a **ThreadingModel** o valor do registro para o filtro como `Apartment Threaded`. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
   
   
   

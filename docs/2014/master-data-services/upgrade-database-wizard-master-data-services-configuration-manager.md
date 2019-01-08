@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ce9dd246ed810f1b7e04f22b43f9dec34f26ab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797949"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Atualizar Assistente para Banco de Dados (Gerenciador de Configuração do Master Data Services)
   Use o **Assistente para Atualizar Banco de Dados** para atualizar um banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -27,7 +26,7 @@ ms.locfileid: "48050028"
 ## <a name="upgrade-review"></a>Análise da atualização  
  Analise as informações especificadas nesta página. Se estiver correto, clique em **Avançar** para atualizar o banco de dados especificado.  
   
-|Nome do controle|Description|  
+|Nome do controle|Descrição|  
 |------------------|-----------------|  
 |**Instância do SQL Server**|O nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] selecionada no momento.|  
 |**Banco de dados dos Master Data Services**|O nome do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] selecionado no momento.|  

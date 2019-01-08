@@ -17,12 +17,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c80d2736082e99d2e08f4c30fe311d98beff137a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169636"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349741"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Fontes de dados com suporte (SSAS Multidimensional)
   Este tópico descreve os tipos de fonte de dados que você pode usar em um modelo multidimensional.  
@@ -47,16 +47,16 @@ ms.locfileid: "48169636"
   
  <sup>1</sup> fontes de dados ODBC não têm suporte para soluções multidimensionais. Embora o próprio Analysis Services trate a conexão, os designers no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usado para criar soluções não podem se conectar a uma fonte de dados ODBC, mesmo ao usar driver do MSDASQL. Se seus requisitos comerciais incluírem uma fonte de dados ODBC, crie uma solução tabelar em vez disso.  
   
- <sup>2</sup> para obter mais informações, consulte [!INCLUDE[ssSDS](../../includes/sssds-md.md)], na [azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> para obter mais informações, consulte [!INCLUDE[ssSDS](../../includes/sssds-md.md)], na [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, consulte [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, consulte [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> em alguns casos, usar o provedor OLE DB MSDAORA pode resultar em erros de conexão, especialmente com versões mais novas do Oracle. Se você encontrar algum erro, será recomendável usar um dos outros provedores listados para Oracle.  
   
  <sup>5</sup> alguns recursos exigem um SQL Server banco de dados relacional que é executado localmente. Mais especificamente, os armazenamentos ROLAP e de write-back requerem que a fonte de dados subjacente seja um banco de dados relacional do SQL Server.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fontes de dados com suporte no &#40;Tabular do SSAS&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Fontes de dados em modelos multidimensionais](data-sources-in-multidimensional-models.md)   
  [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)  
   

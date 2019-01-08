@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 168fced99d74cb2d3716929b4b47fda1c03b92ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666165"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532392"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositórios de teste (OracleToSQL)
 O repositório de teste do SSMA armazenamentos casos de teste do testador do SSMA e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** de **ssmatesterdb** banco de dados.  
@@ -30,17 +30,17 @@ Os seguintes botões estão disponíveis na caixa de diálogo repositório de ca
 -   Clique o **feche** botão para fechar a caixa de diálogo repositório de casos de teste.  
   
 ## <a name="test-cases-repository"></a>Repositório de casos de teste  
-Você pode exibir o repositório de casos de teste clicando **casos de teste...** dos **testador** menu. O SSMA, em seguida, exibe o **repositório de casos de teste** janela da caixa de diálogo com uma lista de casos de teste salvos no **casos de teste** página.  
+Você pode exibir o repositório de casos de teste clicando **casos de teste...**  do **testador** menu. O SSMA, em seguida, exibe o **repositório de casos de teste** janela da caixa de diálogo com uma lista de casos de teste salvos no **casos de teste** página.  
   
 A grade mostra as seguintes informações sobre cada caso de teste:  
   
--   Nome: O nome de caso de teste.  
+-   Nome: O nome do caso de teste.  
   
--   Criado: A caso de teste data de criação.  
+-   Criado: A data de criação do caso de teste.  
   
--   Modificado: O caso de teste Data da última modificação.  
+-   Modificação: O caso de teste Data da última modificação.  
   
--   Descrição: As caso de teste descrições.  
+-   Descrição: As descrições de caso de teste.  
   
 Os seguintes botões estão disponíveis na página de casos de teste:  
   
@@ -53,19 +53,19 @@ Os seguintes botões estão disponíveis na página de casos de teste:
 -   Clique o **executados** para abrir o [executando casos de teste (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) caixa de diálogo e executar o teste selecionado.  
   
 ## <a name="test-results-repository"></a>Repositório de resultados de teste  
-Você pode exibir o repositório de resultados de teste na **resultados de teste** página do **repositório de casos de teste** janela. Abra-o clicando em **resultados de teste...** dos **testador** menu.  
+Você pode exibir o repositório de resultados de teste na **resultados de teste** página do **repositório de casos de teste** janela. Abra-o clicando em **resultados de teste...**  do **testador** menu.  
   
 Você pode usar dois filtros na **resultados de teste** página:  
   
--   O filtro de nome do caso de teste: permite escolher os resultados do teste por nome do caso de teste. Esse filtro **todos os casos de teste** valor permite que a exibição dos resultados de teste para todos os casos de teste.  
+-   O filtro de nome de caso de teste: Permite escolher os resultados do teste por nome do caso de teste. Esse filtro **todos os casos de teste** valor permite que a exibição dos resultados de teste para todos os casos de teste.  
   
--   O filtro de data de execução do caso de teste: filtros de resultados de teste por data de salvar. Esse filtro **todo o período** valor permite exibir os resultados de teste para qualquer data de salvar.  
+-   O filtro de data de execução do caso de teste: Filtros de resultados do teste por data de salvar. Esse filtro **todo o período** valor permite exibir os resultados de teste para qualquer data de salvar.  
   
 As seguintes informações sobre resultados de teste são exibidas na grade.  
   
--   Nome: nome do caso de teste.  
+-   Nome: Nome do caso de teste.  
   
--   Salvo: Teste a data do caso de salvar.  
+-   Salvo: Data do caso de teste de salvar.  
   
 -   Resultados: Um breve resumo da execução de teste (dica de ferramenta dessa célula exibe um resumo completo de execução de teste).  
   

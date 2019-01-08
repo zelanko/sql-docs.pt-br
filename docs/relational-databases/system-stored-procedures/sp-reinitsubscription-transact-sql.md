@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_reinitsubscription
@@ -17,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e22ef6cd6ed820bf290125c109ab5e0f772cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207325"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Indica se a reinicialização ocorre como resultado de uma alteração de esquema no banco de dados de publicação. *for_schema_change* está **bit**, com um padrão de 0. Se **0**, assinaturas ativas para publicações que permitem atualização imediata serão reativadas desde que a publicação inteira e não apenas alguns de seus artigos sejam reinicializados. Isso significa que a reinicialização está ocorrendo como resultado de alterações de esquema. Se **1**, assinaturas ativas não serão reativadas até que o Snapshot Agent é executado.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Especifica um publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
+ Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  

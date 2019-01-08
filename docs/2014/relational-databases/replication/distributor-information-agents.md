@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.Distributor.commonjobs..f1
@@ -13,12 +12,12 @@ ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d885c6b62917759b77473f0811bbf534c8db2ccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc21cb1e775bcaeeea2d54718024b03a557864ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208086"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752218"
 ---
 # <a name="distributor-information-agents"></a>Distributor Information, Agentes
   A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados com o Publicador e o Assinante.  

@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720920da4dbd935bca493e3a2e76ab9a683fff21
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 010e416115e793c46f8744c7724dc164ca01ec87
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019343"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951688"
 ---
-# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lição 4-5 - membros de atributo de classificação com base em um atributo secundário
+# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lição 4 – 5 – classificando membros de atributo com base em um atributo secundário
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 Na Lição 3, você aprendeu a classificar membros de atributo com base no nome ou valor de chave deles. Aprendeu também a usar uma chave de membro composta para afetar os membros de atributo e a ordem de classificação. Para obter mais informações, consulte [Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). No entanto, se nem o nome e nem a chave do atributo primário fornecerem a ordem de classificação desejada, você poderá usar um atributo secundário para obter a ordem desejada. Com a definição de uma relação entre os atributos, você pode usar o segundo atributo para classificar os membros do primeiro atributo.  
   
 As relações de atributos definem as relações ou dependências entre atributos. Em uma dimensão com base em apenas uma tabela relacional, todos os atributos são geralmente relacionados uns aos outros através do atributo de chave. Isso acontece porque todos os atributos de uma dimensão fornecem informações sobre os membros vinculados pelo atributo de chave da dimensão aos fatos de uma tabela de fatos para cada grupo de medidas relacionado. Em uma dimensão com base em várias tabelas relacionais, os atributos são geralmente vinculados com base na chave de junção entre as tabelas. Se os dados subjacentes derem suporte, os atributos relacionados poderão ser usados para especificar uma ordem de classificação. Por exemplo, você pode criar um novo atributo que forneça a lógica de classificação para um atributo relacionado.  
   
-O Designer de Dimensão permite que você defina relações adicionais entre atributos ou altere as relações padrão para aumentar o desempenho. A principal restrição ao criar uma relação de atributo é certificar-se de que o atributo referenciado não possui mais que um valor para qualquer membro no atributo ao qual ele está relacionado. Ao definir uma relação entre dois atributos, você pode defini-la como rígida ou flexível dependendo se as relações entre os membros mudarem com o tempo. Por exemplo, um funcionário pode mudar para uma região de vendas diferente, mas uma cidade não mudará para um estado diferente. Se uma relação for definida como rígida, as agregações do atributo não serão recalculadas toda vez que a dimensão for processada de forma incremental. Porém, se a relação entre membros mudar, a dimensão deve ser processada completamente. Para obter mais informações, consulte [Relações de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configurar propriedades de relação de atributo](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)e [Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
+O Designer de Dimensão permite que você defina relações adicionais entre atributos ou altere as relações padrão para aumentar o desempenho. A principal restrição ao criar uma relação de atributo é certificar-se de que o atributo referenciado não possui mais que um valor para qualquer membro no atributo ao qual ele está relacionado. Ao definir uma relação entre dois atributos, você pode defini-la como rígida ou flexível dependendo se as relações entre os membros mudarem com o tempo. Por exemplo, um funcionário pode mudar para uma região de vendas diferente, mas uma cidade não mudará para um estado diferente. Se uma relação for definida como rígida, as agregações do atributo não serão recalculadas toda vez que a dimensão for processada de forma incremental. Porém, se a relação entre membros mudar, a dimensão deve ser processada completamente. Para obter mais informações, consulte [Relações de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configurar propriedades de relação de atributo](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)e [Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
   
 Nas tarefas deste tópico, você definirá um novo atributo na dimensão **Data** com base em uma coluna existente na tabela de dimensão subjacente. Você usará este novo atributo para classificar os membros mês do calendário cronologicamente, em vez de alfabeticamente. Você também definirá um novo atributo na dimensão **Cliente** com base no cálculo nomeado que você usará para classificar os membros de atributo **Distância do Trabalho** . Nas tarefas do próximo tópico, você aprenderá a usar relações de atributo para aumentar o desempenho de consulta.  
   
@@ -69,7 +69,7 @@ Nas tarefas deste tópico, você definirá um novo atributo na dimensão **Data*
   
     Observe que os meses agora estão classificados em ordem cronológica, como mostra a imagem a seguir:  
   
-    ![Modificação da hierarquia de usuário em ordem cronológica](../analysis-services/media/l4-memberproperties-3.gif "modificado hierarquia de usuário em ordem cronológica")  
+    ![Modificado a hierarquia de usuário em ordem cronológica](../analysis-services/media/l4-memberproperties-3.gif "modificado a hierarquia de usuário em ordem cronológica")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definindo relações de atributo e ordem de classificação na dimensão Cliente  
   
@@ -115,10 +115,10 @@ Nas tarefas deste tópico, você definirá um novo atributo na dimensão **Data*
   
     Observe que os membros da hierarquia de atributo agora estão classificados em ordem lógica com base no aumento da distância, como mostra a imagem a seguir:  
   
-    ![Reclassificada hierarquia de atributo distância do trabalho](../analysis-services/media/l4-memberproperties-5.gif "hierarquia de atributo distância do trabalho Re-sorted")  
+    ![Classificados novamente a hierarquia de atributo distância do trabalho](../analysis-services/media/l4-memberproperties-5.gif "hierarquia de atributo distância do trabalho Re-sorted")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

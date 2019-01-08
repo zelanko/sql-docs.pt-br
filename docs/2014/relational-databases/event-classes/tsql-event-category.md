@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3da1aaeb83f57fedad30a12fb70e65c04a1a739b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786558"
 ---
 # <a name="tsql-event-category"></a>Categoria de evento TSQL
   A categoria de evento **TSQL** contém eventos gerais TSQL.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Exec Prepared SQL](exec-prepared-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library executou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.|  
 |[Classe de evento Prepare SQL](prepare-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library preparou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para uso.|  

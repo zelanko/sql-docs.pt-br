@@ -1,5 +1,5 @@
 ---
-title: Modelos de tabela | Microsoft Docs
+title: Modelos de tabela no Analysis Services | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1f894ad30f6344eb832cb9549a60c7f60071188c
-ms.sourcegitcommit: e34e9cd1b1ec02393dc88b1f0471023a7f7f278b
+ms.openlocfilehash: ae7dfd78e71c41ab5b826a27742923445117417d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506124"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072033"
 ---
 # <a name="tabular-models"></a>Modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

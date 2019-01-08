@@ -1,22 +1,24 @@
 ---
-title: Configurar o serviço Kubernetes do Azure para implantações de cluster do SQL Server 2019 big data | Microsoft Docs
+title: Configurar o serviço de Kubernetes do Azure
+titleSuffix: SQL Server 2019 big data clusters
 description: Saiba como configurar o serviço de Kubernetes do Azure (AKS) para implantações de cluster (versão prévia) do SQL Server 2019 big data.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: b36a81b4fa99cf6c7db2c1638f63cd464646badf
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700370"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246555"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurar o serviço Kubernetes do Azure para implantações do SQL Server 2019 (visualização)
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configurar o serviço Kubernetes do Azure para implantações de cluster (versão prévia) do SQL Server 2019 big data
 
-Este artigo descreve como configurar o serviço de Kubernetes do Azure (AKS) para implantações de cluster (versão prévia) do SQL Server 2019 big data. 
+Este artigo descreve como configurar o serviço de Kubernetes do Azure (AKS) para implantações de cluster (versão prévia) do SQL Server 2019 big data.
 
 AKS torna simples a criar, configurar e gerenciar um cluster de máquinas virtuais que são pré-configuradas com um cluster Kubernetes para executar aplicativos em contêineres. Isso permite que você use suas habilidades existentes ou explore um grande e crescente Conhecimento da comunidade, para implantar e gerenciar aplicativos baseados em contêiner no Microsoft Azure.
 
@@ -27,18 +29,15 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Para um ambiente de AKS, para uma experiência ideal ao validar cenários básicos, recomendamos VMs de agente de pelo menos três (além de mestre), com pelo menos 4 vCPUs e 32 GB de memória cada. Infraestrutura do Azure oferece várias opções de tamanho para VMs, consulte [aqui](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) para seleções na região em que você planeja implantar.
-  
-- Nesta seção requer que você esteja executando a CLI do Azure versão 2.0.4 ou posterior. Se você precisar instalar ou atualizar, consulte [instalar o Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Executar `az --version` para localizar a versão, se necessário.
+- [Implantar as ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **Extensão do SQL Server de 2019**
+   - **CLI do Azure**
 
-- Instale [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) com um mínimo de versão 1.10. Se você quiser instalar uma versão específica no cliente kubectl, consulte [instalar kubectl binário por meio de rotação](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+- Versão mínima 1.10 para o servidor de Kubernetes. Para o AKS, você precisará usar `--kubernetes-version` parâmetro para especificar uma versão diferente do padrão.
 
-- Versão mínima do mesmo 1,10 aplica-se ao servidor do Kubernetes. Para o AKS, você precisará usar `--kubernetes-version` parâmetro para especificar uma versão diferente do padrão.
-
-> [!NOTE]
-Observe que a versão de cliente/servidor que é distorção com suporte é + /-1 versão secundária. A documentação do Kubernetes afirma que "um cliente deve ser distorcida não mais de uma versão secundária do mestre, mas pode levar o mestre por até uma versão secundária. Por exemplo, um mestre v1.3 deve funcionar com a versão 1.1, v 1.2 e nós v1.3 e deve funcionar com v1.2, v1.3 e v1.4 clientes." Para obter mais informações, consulte [Kubernetes suporte para versões e componente distorção](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
-
-Além disso, observe que `az aks kubernetes install-cli` instalará o cliente kubectl com uma versão inferior que o 1.10 necessária. Siga acima instruções para instalar a versão correta do cliente kubectl.
+- Para um ambiente de AKS, para uma experiência ideal ao validar cenários básicos, recomendamos pelo menos três VMs de agente com pelo menos 4 vCPUs e 32 GB de memória cada. Infraestrutura do Azure oferece várias opções de tamanho para VMs, consulte [aqui](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) para seleções na região em que você planeja implantar.
 
 ## <a name="create-a-resource-group"></a>Criar um grupo de recursos
 
@@ -73,20 +72,20 @@ Um grupo de recursos do Azure é um grupo lógico no qual Azure recursos são im
 
 ## <a name="create-a-kubernetes-cluster"></a>Criar um cluster Kubernetes
 
-1. Criar um cluster Kubernetes no AKS com o [criar az aks](https://docs.microsoft.com/cli/azure/aks) comando. O exemplo a seguir cria um cluster Kubernetes chamado *kubcluster* com Linux de um nó mestre dois nós de agente do Linux. Certifique-se de que criar o cluster do AKS no mesmo grupo de recursos que você usou nas seções anteriores.
+1. Criar um cluster Kubernetes no AKS com o [criar az aks](https://docs.microsoft.com/cli/azure/aks) comando. O exemplo a seguir cria um cluster Kubernetes chamado *kubcluster* com três nós de agente do Linux. Certifique-se de que criar o cluster do AKS no mesmo grupo de recursos que você usou nas seções anteriores.
 
     ```bash
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_E4s_v3 \
+    --node-vm-size Standard_L4s \
     --node-count 3 \
     --kubernetes-version 1.10.8
     ```
 
-    Você pode aumentar ou diminuir o número de nós de agente do Kubernetes, alterando a `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja ter, que ele não inclui o nó mestre do Kubernetes. Portanto, no exemplo acima, haverá **4** VMs de tamanho **Standard_E4s_v3** usada para o cluster do AKS: **1** para o mestre e **3** para o nós de agente.
+   Você pode aumentar ou diminuir o número de nós de agente do Kubernetes, alterando a `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja usar. Isso não inclui o nó mestre do Kubernetes, que é gerenciado pelo AKS em segundo plano. Portanto, no exemplo acima, há **3** VMs de tamanho **Standard_L4s** usadas para os nós de agente do cluster do AKS.
 
-    Após alguns minutos, o comando for concluído e retorna informações formatadas em JSON sobre o cluster.
+   Após alguns minutos, o comando for concluído e retorna informações formatadas em JSON sobre o cluster.
 
 1. Salve a saída JSON do comando anterior para uso posterior.
 
@@ -108,4 +107,4 @@ Um grupo de recursos do Azure é um grupo lógico no qual Azure recursos são im
 
 As etapas neste artigo configurado um cluster Kubernetes no AKS. A próxima etapa é implantar o SQL Server 2019 grandes dados ao cluster.
 
-[Início rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)](quickstart-big-data-cluster-deploy.md)
+[Guia de início rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)](quickstart-big-data-cluster-deploy.md)

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145012"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207515"
 ---
 # <a name="canceling-commands-xmla"></a>Cancelando comandos (XMLA)
   Dependendo das permissões administrativas do usuário que emite o comando, o [Cancelar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) comando no XML for Analysis (XMLA) pode cancelar um comando em uma sessão, uma sessão, uma conexão, um processo do servidor ou uma sessão associada ou conexão.  
@@ -36,7 +36,7 @@ ms.locfileid: "50145012"
 ## <a name="canceling-connections"></a>Cancelando conexões  
  Especificando um identificador de conexão na [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) propriedade da **Cancelar** de comando, um administrador de servidor pode cancelar todas as sessões associadas a uma determinada conexão, incluindo todos os executando comandos e cancelar a conexão.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Se a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não é possível localizar e cancelar as sessões associadas a uma conexão, como quando a bomba de dados abre várias sessões enquanto fornece conectividade HTTP, a instância não é possível cancelar a conexão. Se esse caso é encontrado durante a execução de um **Cancelar** de comando, ocorre um erro.  
   
  Um administrador de servidor pode recuperar as conexões ativas para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância recuperando o conjunto de linhas de esquema DISCOVER_CONNECTIONS usando o XMLA **Discover** método.  
