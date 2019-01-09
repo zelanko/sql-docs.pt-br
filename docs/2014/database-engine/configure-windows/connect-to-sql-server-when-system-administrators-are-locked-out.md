@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - sa account
@@ -15,12 +14,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119783"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641557"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados
   Este tópico descreve como você pode recuperar o acesso ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador do sistema. Um administrador do sistema pode perder o acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devido a um dos seguintes motivos:  
@@ -66,7 +65,7 @@ ms.locfileid: "49119783"
   
 6.  Clique em `OK`e, após a mensagem de reinicialização, o nome do servidor com o botão direito e, em seguida, clique em **reiniciar**.  
   
-7.  Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciar, o servidor estará no modo de usuário único. Certifique-se de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente não está em execução. Se for iniciado, ele usará sua única conexão.  
+7.  Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciar, o servidor estará no modo de usuário único. Verifique se o Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está em execução. Se for iniciado, ele usará sua única conexão.  
   
 8.  Na tela inicial do Windows 8, clique com o botão direito do mouse no ícone do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Na parte inferior da tela, selecione **Executar como administrador**. (As credenciais do administrador serão passadas para o SSMS.)  
   

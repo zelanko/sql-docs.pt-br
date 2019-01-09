@@ -13,12 +13,12 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071800"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201775"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lição 1: Navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 - Baixar o [Bancos de dados de exemplo do AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
 
 
-Instruções para restaurar bancos de dados no SSMS são encontradas em [Como restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+As instruções para restaurar os bancos de dados no SSMS estão aqui: Restaurar um banco de dados
 
   >[!NOTE]
   > Este tutorial destina-se um usuário familiarizado com o uso do SQL Server Management Studio e as tarefas de administração de banco de dados básico. 
@@ -62,7 +62,7 @@ Dois painéis principais são exibidos na GUI do Orientador de Otimização do M
   
 -   O painel direito contém as guias **Geral** e **Opções de Ajuste** . É aí que você pode definir sua sessão de Otimização do Mecanismo de Banco de Dados. Na guia **Geral** , você digita o nome de sua sessão de ajuste, especifica o arquivo de carga de trabalho ou tabela a ser usada e seleciona os bancos de dados e tabelas que deseja ajustar nesta sessão. A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. O Orientador de Otimização do Mecanismo de Banco de Dados utiliza arquivos de rastreamento, tabelas de rastreamento, scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] ou arquivos XML como entrada de carga de trabalho ao ajustar bancos de dados. Na guia **Opções de Ajuste** , você pode selecionar as estruturas de design de banco de dados físicas (índices ou exibições indexadas) e a estratégia de particionamento que deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a análise. Nessa guia, você pode especificar também o tempo máximo que o Orientador de Otimização do Mecanismo de Banco de Dados leva para ajustar uma carga de trabalho. Por padrão, o Orientador de Otimização do Mecanismo de Banco de Dados ajustará uma carga de trabalho durante uma hora.  
   
-> [!NOTE]  
+> [!NOTE]
 > O Orientador de Otimização do Mecanismo de Banco de Dados pode usar arquivos XML como entrada quando um script [!INCLUDE[tsql](../../includes/tsql-md.md)] é importado do Editor de Consultas do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Para obter mais informações, consulte a seção sobre como iniciar o Orientador de Otimização do Mecanismo de Banco de Dados no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## <a name="configure-tool-options-and-layout"></a>Configurar o layout e opções de ferramentas 
@@ -86,7 +86,7 @@ Dois painéis principais são exibidos na GUI do Orientador de Otimização do M
     -   Por padrão, **Perguntar antes de parar a análise da sessão** está marcada para evitar parar uma sessão de ajuste acidentalmente antes que o Orientador de Otimização do Mecanismo de Banco de Dados termine de analisar uma carga de trabalho.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 2: usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

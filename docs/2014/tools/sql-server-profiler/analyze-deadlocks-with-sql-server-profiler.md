@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -20,19 +19,19 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780678"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analisar deadlocks com o SQL Server Profiler
   Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar a causa de um deadlock. Um deadlock ocorre quando há uma dependência cíclica entre dois ou mais threads, ou processos, do mesmo conjunto de recursos dentro do SQL Server. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é possível criar um rastreamento que registra, reproduz e exibe eventos de deadlock para análise.  
   
  Para rastrear eventos de deadlock, adicione a classe de evento **Deadlock graph** a um rastreamento. Esta classe de evento popula a coluna de dados **TextData** no rastreamento com dados XML sobre o processo e objetos que estão envolvidos no deadlock. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode extrair o documento XML para um arquivo XML de deadlock (.xdl) que pode ser exibido posteriormente no SQL Server Management Studio. Você pode configurar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para extrair eventos **Deadlock graph** para um único arquivo contendo todos os eventos **Deadlock graph** ou para arquivos separados. Essa extração pode ser feita de qualquer uma destas formas:  
   
--   No momento da configuração do rastreamento, usando a guia **Configurações de Extração de Eventos** . Observe que essa guia não será exibida a menos que você selecione o evento **Deadlock graph** na guia **Seleção de Eventos** .  
+-   No momento da configuração do rastreamento, usando a guia **Configurações de Extração de Eventos** . Observe que essa guia não será exibida a menos que você selecione o evento Deadlock graph na guia **Seleção de Eventos** .  
   
 -   Usando a opção **Extrair Eventos do SQL Server** no menu **Arquivo** .  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48176576"
  Um objeto de banco de dados; por exemplo, uma tabela, índice ou linha.  
   
  Borda  
- Uma relação entre um processo e um recurso. Um `request` borda ocorre quando um processo aguarda um recurso. Um `owner` borda ocorre quando um recurso espera por um processo. O modo de bloqueio encontra-se na descrição da borda. Por exemplo, **Modo: X**.  
+ Uma relação entre um processo e um recurso. Uma borda `request` ocorre quando um processo espera por um recurso. Uma borda `owner` ocorre quando um recurso espera por um processo. O modo de bloqueio encontra-se na descrição da borda. Por exemplo, **modo: X**.  
   
 ## <a name="deadlock-process-node"></a>Nó de processo de deadlock  
  Em um gráfico de espera, o nó de processo contém informações sobre o processo. A tabela a seguir explica os componentes de um processo.  

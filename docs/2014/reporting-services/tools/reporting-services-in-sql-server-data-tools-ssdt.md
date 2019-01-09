@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: MT
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906296"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409693"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente com aprimoramentos específicos para soluções de business intelligence. O [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é incluído com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48906296"
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
- Designer de relatórios suporta duas exibições: **Design** para definir os dados do relatório e layout do relatório, e **visualização** para exibir uma exibição processada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
+ O Designer de relatórios dá suporte a dois modos de exibição: **Design** para definir os dados do relatório e layout do relatório, e **visualização** para exibir uma exibição processada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Painel de Dados do Relatório  
  O painel de Dados do Relatório exibe campos internos, fontes de dados, conjuntos de dados, coleções de campos, parâmetros do relatório e imagens.  
@@ -188,7 +188,7 @@ ms.locfileid: "48906296"
   
 -   **Propriedades do Relatório** Selecione esta opção para abrir a caixa de diálogo **Propriedades do Relatório** . Nesta caixa de diálogo, é possível atribuir propriedades gerais do relatório, como o nome do autor e espaçamento da grade, além de propriedades específicas do layout, como o número de colunas e o tamanho da página. Você também pode incluir código personalizado, referência a assemblies e classes, e os nomes de elementos de saída de dados, transformações de dados e esquemas de dados.  
   
--   **Exibição** Alternar entre as duas guias do Designer de relatórios: Design e visualização.  
+-   **Modo de exibição** alternar entre as duas guias do Designer de relatórios: Design e visualização.  
   
 -   **Cabeçalho da Página** Adicione (ou exclua) um cabeçalho de página ao relatório. Quando você exclui um cabeçalho de página, todos os itens no cabeçalho são excluídos.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "48906296"
   
 -   Controlar janelas e modos no [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]:  
   
-    |Description|Combinação de teclas|  
+    |Descrição|Combinação de teclas|  
     |-----------------|---------------------|  
     |Compilar o projeto selecionado|CTRL+SHIFT+B|  
     |Exibir a janela Propriedades|F4|  
@@ -307,7 +307,7 @@ ms.locfileid: "48906296"
   
 -   Controlar itens na superfície de design de relatório:  
   
-    |Description|Combinação de teclas|  
+    |Descrição|Combinação de teclas|  
     |-----------------|---------------------|  
     |Mover o foco de um item de relatório para outro item de relatório|TAB|  
     |Mover o item de relatório selecionado|Teclas de direção|  
