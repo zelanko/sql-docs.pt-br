@@ -1,5 +1,5 @@
 ---
-title: Documentação de extensões de programação e Machine Learning do SQL Server | Microsoft Docs
+title: Documentação de extensões de programação e aprendizado de máquina do R e Python – Machine Learning do SQL Server
 description: R e Python no SQL Server, com a modelagem de ciência de dados interna e algoritmos de aprendizado de máquina para análise de dados corporativos em escala.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c56d49e4cf168c7d1b6b1830caa6c79e237f46c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712378"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596537"
 ---
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 # <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>Documentação de extensões de programação e Machine Learning do SQL Server
@@ -68,6 +68,6 @@ Saiba como usar bibliotecas externas do R e Python e linguagens em dados relacio
 | [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | R | Processamento paralelo e distribuído para tarefas do R: transformação de dados, exploração, visualização, estatística e análise preditiva. |
 | [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Funções com base em algoritmos de IA da Microsoft, adaptado para R. |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | R | Importa dados de cubos OLAP. |
-| [sqlRUtils]() | R | Funções de auxiliar para encapsular o R e T-SQL. |
+| [sqlRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | R | Funções de auxiliar para encapsular o R e T-SQL. |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | Processamento paralelo e distribuído para tarefas do Python: transformação de dados, exploração, visualização, estatística e análise preditiva.  | 
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | Funções com base em algoritmos de IA da Microsoft, adaptado para Python.  |

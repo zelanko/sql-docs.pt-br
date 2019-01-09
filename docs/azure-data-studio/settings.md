@@ -1,7 +1,8 @@
 ---
-title: Configurações de espaço de trabalho e usuário do Studio de dados do Azure | Microsoft Docs
-description: Como modificar as configurações de espaço de trabalho e de usuário do Azure Data Studio.
-ms.custom: tools|sos
+title: Usuário e configurações de espaço de trabalho
+titleSuffix: Azure Data Studio
+description: Como personalizar o Studio de dados do Azure, modificando as configurações de espaço de trabalho e usuário.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355947"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030500"
 ---
-# <a name="user-and-workspace-settings"></a>Usuário e configurações de espaço de trabalho
+# <a name="modify-user-and-workspace-settings"></a>Modificar configurações de espaço de trabalho e de usuário
 
 É fácil configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] de sua preferência por meio das configurações. Quase todas as partes do [!INCLUDE[name-sos](../includes/name-sos-short.md)]do editor de interface do usuário e comportamento funcional tem opções você pode modificar.
 
@@ -30,7 +31,7 @@ ms.locfileid: "49355947"
 
 O comando de menu **arquivo** > **preferências** > **configurações** (**código**  >  **Preferências** > **configurações** em Mac) fornece o ponto de entrada para definir as configurações de usuário e o espaço de trabalho. Você receberá uma lista de configurações padrão. Copie qualquer configuração que você deseja alterar para apropriado `settings.json` arquivo. As guias à direita permitem que você alternar rapidamente entre os arquivos de configurações do usuário e o espaço de trabalho.
 
-Você também pode abrir as configurações de usuário e o espaço de trabalho do **paleta de comandos** (**Ctrl + Shift + P**) com **preferências: abrir as configurações do usuário** e  **Preferências: Abrir configurações do espaço de trabalho** ou use o atalho de teclado (**Ctrl +,**).
+Você também pode abrir as configurações de usuário e o espaço de trabalho do **paleta de comandos** (**Ctrl + Shift + P**) com **preferências: Abrir configurações de usuário** e **preferências: Abra as configurações de espaço de trabalho** ou use o atalho de teclado (**Ctrl +,**).
 
 O exemplo a seguir desabilita os números de linha no editor e configura as linhas de código a ser recuado automaticamente.
 
@@ -38,7 +39,7 @@ O exemplo a seguir desabilita os números de linha no editor e configura as linh
 
 As alterações nas configurações são recarregadas por [!INCLUDE[name-sos](../includes/name-sos-short.md)] após a modificação `settings.json` arquivo é salvo.
 
->**Observação:** configurações de espaço de trabalho são úteis para compartilhar configurações específicas do projeto em uma equipe.
+>**Observação:** Configurações de espaço de trabalho são úteis para compartilhar configurações específicas do projeto em uma equipe.
 
 ## <a name="settings-file-locations"></a>Locais de arquivo de configurações
 

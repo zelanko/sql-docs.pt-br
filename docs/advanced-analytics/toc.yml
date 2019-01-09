@@ -52,22 +52,32 @@ items:
   items:
   - name: R
     items:
+    - name: Verificar se o R existe no SQL Server
+      href: tutorials/quickstart-r-verify.md
     - name: Olá, Mundo em R e SQL
-      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+      href: tutorials/quickstart-r-run-using-tsql.md
     - name: Lidar com entradas e saídas
-      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+      href: tutorials/quickstart-r-inputs-and-outputs.md
     - name: Lidar com tipos de dados e objetos
-      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+      href: tutorials/quickstart-r-data-types-and-objects.md
     - name: Usando funções de R
-      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
+      href: tutorials/quickstart-r-functions.md
     - name: Criar um modelo preditivo
-      href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: Prever e plotar com base no modelo
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+      href: tutorials/quickstart-r-create-predictive-model.md
+    - name: Prever com base no modelo
+      href: tutorials/quickstart-r-predict-from-model.md
   - name: Python
     items:
-    - name: Executar Python usando T-SQL
-      href: tutorials/run-python-using-t-sql.md
+    - name: Verificar se o Python existe no SQL Server
+      href: tutorials/quickstart-python-verify.md
+    - name: Olá, Mundo em Python e SQL
+      href: tutorials/quickstart-python-run-using-t-sql.md
+    - name: Lidar com entradas e saídas
+      href: tutorials/quickstart-python-inputs-and-outputs.md
+    - name: Estruturas de dados do Python e SQL
+      href: tutorials/quickstart-python-data-structures.md
+    - name: Treinar e usar seu primeiro modelo
+      href: tutorials/quickstart-python-train-score-in-tsql.md
 - name: Tutoriais
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -79,24 +89,6 @@ items:
       href: tutorials/demo-data-iris-in-sql.md
     - name: Conjunto de dados NYC Taxi
       href: tutorials/demo-data-nyctaxi-in-sql.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Treinar e usar seu primeiro modelo
-      href: tutorials/train-score-using-python-in-tsql.md
-    - name: Criar um modelo Python usando revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Aprender análise no banco de dados
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 1 – Exploração
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 – Engenharia de recursos
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 – Treinar e implantar
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 – Previsões
-        href: tutorials/sqldev-py6-operationalize-the-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -157,6 +149,22 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Enviar R personalizado usando rxExec
         href: tutorials/r-tutorial-custom-r-functions.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Criar um modelo Python usando revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: Aprender análise no banco de dados
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 1 – Exploração
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 2 – Engenharia de recursos
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 3 – Treinar e implantar
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 4 – Previsões
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Exemplos
   href: https://github.com/Microsoft/sql-server-samples
 - name: Soluções
@@ -180,8 +188,6 @@ items:
       href: r/installing-and-managing-r-packages.md
     - name: Obter informações sobre o pacote
       href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: Instalar os novos pacotes Python
-      href: python/install-additional-python-packages-on-sql-server.md
     - name: Instalar os novos pacotes R
       href: r/install-additional-r-packages-on-sql-server.md
       items:
@@ -200,22 +206,28 @@ items:
         href: r/create-a-local-package-repository-using-minicran.md
       - name: Dicas para usar pacotes de R
         href: r/packages-installed-in-user-libraries.md
+    - name: Instalar os novos pacotes Python
+      href: python/install-additional-python-packages-on-sql-server.md
   - name: Exploração de dados e modelagem
     items:
-    - name: Tipos de dados e bibliotecas do R
+    - name: Conversões de tipo de dados de R para SQL
       href: r/r-libraries-and-data-types.md
-    - name: Bibliotecas Python e tipos de dados
+    - name: Conversões de tipo de dados de Python para SQL
       href: python/python-libraries-and-data-types.md
-    - name: Modelagem preditiva com R
-      href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Carregar objetos de R usando o ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Converter o código de R para uso nos Serviços de Machine Learning
-      href: r/converting-r-code-for-use-in-sql-server.md
-    - name: Criar vários modelos usando rxExecBy
-      href: r/creating-multiple-models-using-rxexecby.md
     - name: Usar dados de cubos OLAP no R
       href: r/using-data-from-olap-cubes-in-r.md
+    - name: Como criar consultas MDX usando olapR
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: Modelagem preditiva com R
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: Criar vários modelos usando rxExecBy
+      href: r/creating-multiple-models-using-rxexecby.md
+  - name: Implantar
+    items:
+    - name: Converter o código R para SQL Server
+      href: r/converting-r-code-for-use-in-sql-server.md
     - name: Criar um procedimento armazenado usando sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Previsões
@@ -269,25 +281,23 @@ items:
     - name: Funções de criação de perfil de código de R
       href: r/using-r-code-profiling-functions.md
 - name: Referência
-  href: r/machine-learning-services-r-reference.md
   items:
   - name: Pacotes do R
-    href: r/machine-learning-services-r-reference.md
     items:
-    - name: olapR no SQL
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: MicrosoftML no SQL
-      href: using-the-microsoftml-package.md
-    - name: RevoScaleR no SQL
-      href: r/revoscaler-overview.md
-    - name: Lista de funções RevoScaleR para dados do SQL Server
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: sqlrutils no SQL
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: RevoScaleR
+      href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
+    - name: sqlrutils
+      href: r/ref-r-sqlrutils.md
   - name: Pacotes do Python
     items:
-    - name: revoscalepy no SQL
-      href: python/what-is-revoscalepy.md
+    - name: revoscalepy
+      href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: Recursos
   items:
   - name: Notas de versão
@@ -319,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
-ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
+ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52717189"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046596"

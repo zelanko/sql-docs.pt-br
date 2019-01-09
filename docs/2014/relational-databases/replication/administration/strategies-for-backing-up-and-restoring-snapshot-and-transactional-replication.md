@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229986"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823510"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
   Ao projetar uma estratégia de backup e restauração para instantâneo e replicação transacional, há três áreas a serem consideradas:  
@@ -72,7 +71,7 @@ ms.locfileid: "48229986"
   
  **Para definir a opção sync with backup**  
   
--   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Habilitar backups coordenados para a replicação transacional &#40;Programação Transact-SQL de replicação&#41;](enable-coordinated-backups-for-transactional-replication.md)  
+-   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Habilitar backups coordenados para a replicação transacional &#40;programação Transact-SQL de replicação&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restaurando bancos de dados envolvidos em replicação  
  É possível restaurar todos os bancos de dados em uma topologia de replicação se backups recentes estiverem disponíveis e as etapas adequadas forem seguidas. As etapas de restauração para o banco de dados de publicação dependem do tipo de replicação e das opções que foram usadas; entretanto, as etapas de restauração para todos os outros bancos de dados independem de tipo e opções.  
@@ -92,7 +91,7 @@ ms.locfileid: "48229986"
   
  A restauração dos bancos de dados **msdb** e **mestre** , que também são tratados nesta seção, é a mesma para todos os quatro tipos.  
   
-#### <a name="publication-database-snapshot-replication"></a>Banco de dados de publicação: replicação de instantâneo  
+#### <a name="publication-database-snapshot-replication"></a>Banco de dados de publicação: Replicação de instantâneo  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48229986"
   
      Para obter mais informações sobre como remover a replicação, consulte [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Banco de dados de publicação: replicação transacional somente para leitura  
+#### <a name="publication-database-read-only-transactional-replication"></a>Banco de dados de publicação: Replicação transacional somente leitura  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48229986"
   
          Para obter mais informações sobre como especificar que o Assinante já tem os dados, consulte [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Banco de dados de publicação: replicação transacional ponto a ponto  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Banco de dados de publicação: Peer-to-Peer Transactional Replication  
  Nas etapas seguintes, os bancos de dados de publicação **A**, **B**e **C** estão em uma topologia de replicação transacional ponto a ponto. Os bancos de dados **A** e **C** estão online e funcionando corretamente; o banco de dados **B** é o banco de dados a ser restaurado. O processo aqui descrito, especialmente as etapas 7,10 e 11, são muito similares ao processo requerido para adicionar um nó a uma topologia ponto a ponto. O modo mais direto para executar essas etapas é por meio do Assistente para Configurar Topologia Ponto a Ponto, mas você também pode usar procedimentos armazenados.  
   
 1.  Execute os Agentes de Distribuição para sincronizar as assinaturas nos bancos de dados **A** e **C**. Vá para a etapa 2.  
@@ -322,7 +321,7 @@ ms.locfileid: "48229986"
   
 2.  Restaure o último backup de banco de dados de assinatura. Vá para a etapa 3.  
   
-3.  Se o banco de dados de assinatura só contiver assinaturas push, vá para etapa 4. Se o banco de dados de assinatura contiver qualquer assinatura pull, faça as perguntas a seguir: As informações de assinatura são atuais? O banco de dados inclui todas as tabelas e opções que foram definidas na hora da falha? Se sim, vá para a etapa 4. Se não, reinicialize a assinatura. A recuperação está concluída.  
+3.  Se o banco de dados de assinatura só contiver assinaturas push, vá para etapa 4. Se o banco de dados de assinatura contiver qualquer assinatura pull, faça as seguintes perguntas: As informações de assinatura são atuais? O banco de dados inclui todas as tabelas e opções que foram definidas na hora da falha? Se sim, vá para a etapa 4. Se não, reinicialize a assinatura. A recuperação está concluída.  
   
 4.  Para sincronizar o Assinante, execute o Distribution Agent. A recuperação está concluída.  
   

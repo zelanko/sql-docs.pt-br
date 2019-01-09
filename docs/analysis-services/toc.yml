@@ -109,7 +109,7 @@ items:
       href: analysis-services-tutorial-scenario.md
     - name: Instalar dados de exemplo e projetos para o tutorial de modelagem Multidimensional do Analysis Services
       href: install-sample-data-and-projects.md
-    - name: Lição 1 – Definir uma exibição da fonte de dados em um projeto do Analysis Services
+    - name: 'Lição 1: Definir uma exibição da fonte de dados em um projeto do Analysis Services'
       href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
       items:
       - name: Lição 1-1 – Criar um projeto do Analysis Services
@@ -120,7 +120,7 @@ items:
         href: lesson-1-3-defining-a-data-source-view.md
       - name: Lição 1-4 – Modificar nomes de tabela padrão
         href: lesson-1-4-modifying-default-table-names.md
-    - name: Lição 2 – Definir e implantar um cubo
+    - name: 'Lição 2: Definir e implantar um cubo'
       href: lesson-2-defining-and-deploying-a-cube.md
       items:
       - name: Lição 2-1 – Definir uma dimensão
@@ -135,7 +135,7 @@ items:
         href: lesson-2-5-deploying-an-analysis-services-project.md
       - name: Lição 2-6 – Navegar pelo cubo
         href: lesson-2-6-browsing-the-cube.md
-    - name: Lição 3 – Modificar medidas, atributos e hierarquias
+    - name: 'Lição 3: Modificar medidas, atributos e hierarquias'
       href: lesson-3-modifying-measures-attributes-and-hierarchies.md
       items:
       - name: Lição 3-1 – Modificar medidas
@@ -148,7 +148,7 @@ items:
         href: lesson-3-4-modifying-the-date-dimension.md
       - name: Lição 3-5 – Navegar no cubo implantado
         href: lesson-3-5-browsing-the-deployed-cube.md
-    - name: Lição 4 – Definir propriedades de dimensão e atributo avançadas
+    - name: 'Lição 4: Definir propriedades avançadas de dimensão e atributo'
       href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
       items:
       - name: Lição 4-1 – Usar uma versão modificada do projeto do tutorial do Analysis Services
@@ -162,10 +162,10 @@ items:
       - name: Lição 4-5 – Classificar membros de atributo com base em um atributo secundário
         href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
       - name: Lição 4-6 – Especificar relações de atributos entre atributos em uma hierarquia definida pelo usuário
-        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+        href: lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
       - name: Lição 4-7 – Definir o membro desconhecido e as propriedades de processamento nulo
         href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-    - name: Lição 5 – Definir relações entre grupos de medidas e dimensões
+    - name: 'Lição 5: Definir relações entre grupos de medidas e dimensões'
       href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
       items:
       - name: Lição 5-1 – Definir uma relação referenciada
@@ -176,31 +176,31 @@ items:
         href: lesson-5-3-defining-a-many-to-many-relationship.md
       - name: Lição 5-4 – Definir a granularidade da dimensão dentro de um grupo de medidas
         href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-    - name: Lição 6 – Definir cálculos
+    - name: 'Lição 6: Definir cálculos'
       href: lesson-6-defining-calculations.md
       items:
       - name: Lição 6-1 – Definir membros calculados
         href: lesson-6-1-defining-calculated-members.md
       - name: Lição 6-2 – Definir conjuntos nomeados
         href: lesson-6-2-defining-named-sets.md
-    - name: 'Lição 7: Definindo KPIs (indicadores chave de desempenho)'
+    - name: 'Lição 7: Definir KPIs (indicadores chave de desempenho)'
       href: lesson-7-defining-key-performance-indicators-kpis.md
       items:
       - name: Lição 7-1 – Definir e procurar KPIs
         href: lesson-7-1-defining-and-browsing-kpis.md
-    - name: Lição 8 – Definir ações
+    - name: 'Lição 8: Definir ações'
       href: lesson-8-defining-actions.md
       items:
       - name: Lição 8-1 – Definir e usar uma ação de detalhamento
         href: lesson-8-1-defining-and-using-a-drillthrough-action.md
-    - name: Lição 9 – Definir perspectivas e traduções
+    - name: 'Lição 9: Definir perspectivas e traduções'
       href: lesson-9-defining-perspectives-and-translations.md
       items:
       - name: Lição 9-1 – Definir e procurar perspectivas
         href: lesson-9-1-defining-and-browsing-perspectives.md
       - name: Lição 9-2 – Definir e procurar traduções
         href: lesson-9-2-defining-and-browsing-translations.md
-    - name: Lição 10 – Definir funções administrativas
+    - name: 'Lição 10: Definir funções administrativas'
       href: lesson-10-defining-administrative-roles.md
       items:
       - name: Lição 10 – Conceder permissões ao banco de dados do processo
@@ -489,8 +489,6 @@ items:
           href: ./multidimensional-models/set-data-source-properties-ssas-multidimensional.md
         - name: Definir opções de representação para uma conexão de fonte de dados
           href: ./multidimensional-models/set-impersonation-options-ssas-multidimensional.md
-        - name: Programação de modelo multidimensional
-          href: ./multidimensional-models/multidimensional-model-programming.md
       - name: Exibições da fonte de dados
         href: ./multidimensional-models/data-source-views-in-multidimensional-models.md
         items:
@@ -707,7 +705,7 @@ items:
           href: ./multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
       - name: KPIs
         href: ./multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md
-      - name: Ações
+      - name: Visão geral das ações
         href: ./multidimensional-models/actions-in-multidimensional-models.md
         items:
         - name: Ações
@@ -1308,7 +1306,7 @@ items:
     - name: Referência de erros e eventos (Power Pivot para SharePoint)
       href: ./power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
       items:
-      - name: 'Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: dados do Power Pivot'
+      - name: 'Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As conexões a seguir não foram atualizadas: Dados do Power Pivot'
         href: ./power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
       - name: Não foi possível carregar o arquivo ou assembly Microsoft.Data.Services
         href: ./power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -1316,7 +1314,7 @@ items:
         href: ./power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
       - name: O caminho de conexão de dados na pasta de trabalho aponta para um arquivo na unidade local ou é um URI inválido
         href: ./power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-      - name: 'A conexão de dados usa a Autenticação do Windows e não foi possível delegar as credenciais de usuário. As seguintes conexões não foram atualizadas: dados do Power Pivot'
+      - name: 'A conexão de dados usa a Autenticação do Windows e não foi possível delegar as credenciais de usuário. As conexões a seguir não foram atualizadas: Dados do Power Pivot'
         href: ./power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
       - name: 'Os recursos a seguir não têm suporte dos Serviços do Excel e podem não ser exibidos ou ser exibidos apenas parcialmente: Comentários, Formas ou outros objetos'
         href: ./power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
@@ -1357,6 +1355,7 @@ items:
       - name: Propriedades de segurança
         href: ./server-properties/security-properties.md
       - name: Propriedades de pool de threads
+        href: ./server-properties/thread-pool-properties.md
     - name: Monitorar o Analysis Services
       items:
       - name: Ferramentas de monitoramento
@@ -1418,8 +1417,6 @@ items:
         href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
       - name: Objetos de Gerenciamento de Análise (AMO)
         href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-      - name: Conjuntos de linhas de esquema
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: Tabular 1103 e inferior
       items:
       - name: Nível de compatibilidade 1103 e inferior de programação do modelo tabular
@@ -1430,8 +1427,6 @@ items:
         href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
       - name: Interface IMDEmbeddedData
         href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
-      - name: Conjuntos de linhas de esquema
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
       - name: Representação
         items:
         - name: Representação de conexão (de tabela)
@@ -1463,11 +1458,9 @@ items:
     - name: Programação de modelo multidimensional
       href: ./multidimensional-models/multidimensional-model-programming.md
     - name: Objetos de Gerenciamento de Análise (AMO)
-      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+      href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
     - name: ASSL (linguagem de script do Analysis Services)
       href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: Conjuntos de linhas de esquema
-      href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: XML for Analysis (XMLA)
       href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: ADOMD.NET
@@ -1530,9 +1523,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Eventos de rastreamento
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: feee35408dd9439862dce7ca043184bf2d9fd05f
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ee7868cfee9c8f087ffd43959ccfa7f30b643b7e
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302909"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785997"

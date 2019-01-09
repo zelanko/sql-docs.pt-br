@@ -10,7 +10,7 @@ items:
     href: supported-version-and-edition-upgrades.md
   - name: Preparar o upgrade executando o Assistente de Migração de Dados
     href: prepare-for-upgrade-by-running-data-migration-assistant.md
-  - name: Você está atualizando do SQL Server 2005?
+  - name: Está atualizando do SQL 2005, 2008 ou 2008 R2?
     href: are-you-upgrading-from-sql-server-2005.md
   - name: Atualizar o Analysis Services
     href: upgrade-analysis-services.md
@@ -85,9 +85,9 @@ items:
     href: installing-updates-from-the-command-prompt.md
 - name: Auditoria Local da coleta de comentários sobre o uso do SQL Server
   href: local-audit-for-sql-server-usage-feedback-collection.md
-ms.openlocfilehash: 80ecbf7365d231b16040b52de30c18de94fb97db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 66feed7cd88251f980900ebb23b9b5716e7520d2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144841"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328396"

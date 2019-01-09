@@ -15,7 +15,7 @@ items:
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: Bancos de dados +
       href: ../relational-databases/databases/databases.md
-    - name: Grafos +
+    - name: SQL Graph +
       href: ../relational-databases/graphs/sql-graph-overview.md
     - name: Dados hierárquicos
       href: hierarchical-data-sql-server.md
@@ -108,6 +108,8 @@ items:
     items:
     - name: Gerenciar
       items:
+      - name: Utilitário do SQL Server +
+        href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
       - name: Administrar vários servidores usando os Servidores Centrais de Gerenciamento
         href: administer-multiple-servers-using-central-management-servers.md
       - name: Configuration Manager
@@ -122,6 +124,8 @@ items:
         href: ../relational-databases/maintenance-plans/maintenance-plans.md
       - name: Gerenciamento baseado em políticas +
         href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+      - name: Gerenciamento do log de transações +
+        href: ../relational-databases/logs/log-file-viewer.md
     - name: Monitor
       items:
       - name: Coleção de dados +
@@ -178,7 +182,7 @@ items:
     items:
     - name: 'Lição 1: conectando-se ao mecanismo de banco de dados'
       href: lesson-1-connecting-to-the-database-engine.md
-    - name: 'Lição 2: Conectando de outro computador'
+    - name: 'Lição 2: conectando de outro computador'
       href: lesson-2-connecting-from-another-computer.md
   - name: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
     href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
@@ -210,9 +214,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: Exibições do sistema +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: 63116a51771db804d7e0a30dac73f24934c29c51
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 38de54db48c48ee439c3ff737f93dad8974cd228
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439748"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328876"

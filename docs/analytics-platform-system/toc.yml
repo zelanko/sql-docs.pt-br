@@ -2,6 +2,8 @@ items:
 - name: Novidades no APS
   href: whats-new-analytics-platform-system.md
   items:
+  - name: APS CU7.3
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.3
   - name: APS CU7.2
     href: whats-new-analytics-platform-system.md#h2-aps-cu7.2
   - name: APS CU7.1
@@ -42,6 +44,8 @@ items:
     href: configure-auto-statistics.md
   - name: Monitorar consultas ativas
     href: monitoring-active-queries.md
+  - name: Eliminação de subexpressão comum
+    href: common-sub-expression-elimination.md
 - name: Carregar
   items:
   - name: Visão geral
@@ -221,9 +225,9 @@ items:
     href: tsql-statements.md
   - name: Exibições do sistema do T-SQL
     href: tsql-system-views.md
-ms.openlocfilehash: 04bf7785ce070800e059c9914c28d9bcf6ddbec5
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: d1aef2cdc187c2bcf8c53a8e675b1f1c11cad1d6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236992"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626297"
