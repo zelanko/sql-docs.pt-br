@@ -14,12 +14,12 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35fdba2dff5f4b68040007c8c5d21c127bd1548c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d5e59264036380f6c8b5c9e73df5a6700c4b1ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788798"
 ---
 # <a name="get-information-about-ddl-triggers"></a>Obter informações sobre gatilhos DDL
   Pode-se usar as exibições do catálogo listadas nesta seção para obter informações sobre gatilhos DDL.  
@@ -36,7 +36,7 @@ ms.locfileid: "48113754"
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)  
   
-## <a name="database-scoped-ddl-triggers"></a>gatilhos DDL no escopo do banco de dados  
+## <a name="database-scoped-ddl-triggers"></a> gatilhos DDL no escopo do banco de dados  
  **Para obter informações sobre gatilhos no escopo do banco de dados**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-triggers-transact-sql)  

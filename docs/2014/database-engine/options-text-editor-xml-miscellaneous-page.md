@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126666"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328426"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opções (página Editor de texto – XML – Diversos)
-  A caixa de diálogo **Opções** permite alteração das configurações de preenchimento automático e de esquema para o Editor de XML. Essas configurações estão disponíveis quando, no menu **Ferramentas** , você clica em **Opções**expande a pasta **Editor de Texto** , clica em **XML** e, então, clica em **Diversos** .  
+
+A caixa de diálogo **Opções** permite alteração das configurações de preenchimento automático e de esquema para o Editor de XML. Essas configurações estão disponíveis quando, no menu **Ferramentas** , você clica em **Opções**expande a pasta **Editor de Texto** , clica em **XML** e, então, clica em **Diversos** .  
   
 ## <a name="auto-insert"></a>Inserir automaticamente  
  **Fechar marcas**  
@@ -47,5 +46,3 @@ ms.locfileid: "48126666"
 ## <a name="caching"></a>Cache  
  **Esquemas**  
  Especifica o local do cache de esquema. O botão Procurar (...) abre o local d cache de esquema atual em uma janela nova. O local padrão é  *\<diretório de instalação do Management Studio >* \XML\Schemas.  
-  
-  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807378"
 ---
 # <a name="add-or-change-a-property-expression"></a>Adicionar ou alterar uma expressão de propriedade
   Você pode criar expressões de propriedade para pacotes, tarefas contêineres Loop Foreach, contêineres Loop For, contêineres de Sequência, manipuladores de eventos, gerenciadores de conexões de nível de pacote e projeto, e provedores de logs.  
@@ -38,15 +37,15 @@ ms.locfileid: "48178496"
   
     -   Clique com o botão direito do mouse no item e clique em **Propriedades**.  
   
-3.  Clique na caixa **Expressões** e clique nas reticências (...).  
+3.  Clique na caixa **Expressões** e, em seguida, clique nas reticências (...).  
   
 4.  No **Editor de Propriedades de Expressões**, selecione uma propriedade na lista **Propriedade** e execute um dos seguintes procedimentos:  
   
     -   Digite ou altere a expressão de propriedade diretamente na coluna **Expressão** e clique em **OK**.  
   
-         — ou —  
+         -ou-  
   
-    -   Clique nas reticências (…) na linha de expressão da propriedade para abrir o **Construtor de Expressões**.  
+    -   Clique nas reticências (...) na linha de expressão da propriedade para abrir o **Construtor de Expressões**.  
   
 5.  (Opcional) No **Construtor de Expressões**, execute qualquer uma das seguintes tarefas:  
   
@@ -66,12 +65,12 @@ ms.locfileid: "48178496"
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões do SSIS &#40;Integration Services&#41;](integration-services-ssis-expressions.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](use-property-expressions-in-packages.md)   
- [Serviços de integração &#40;SSIS&#41; pacotes](../integration-services-ssis-packages.md)   
+ [Pacotes do Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Contêineres do Integration Services](../control-flow/integration-services-containers.md)   
  [Tarefas do Integration Services](../control-flow/integration-services-tasks.md)   
- [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../integration-services-ssis-event-handlers.md)   
+ [Manipuladores de eventos do Integration Services &#40;SSIS&#41](../integration-services-ssis-event-handlers.md)   
  [Conexões do SSIS &#40;Integration Services&#41;](../connection-manager/integration-services-ssis-connections.md)   
  [Registro em Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md)  
   

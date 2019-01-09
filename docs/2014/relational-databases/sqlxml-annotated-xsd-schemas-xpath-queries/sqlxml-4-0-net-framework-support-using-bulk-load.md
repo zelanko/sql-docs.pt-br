@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -17,12 +15,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b832f6d92b847ee823a350559dbc54fd35a13ec2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807358"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Usando o Carregamento em Massa de SQLXML no ambiente .NET
   Este tópico explica como a funcionalidade de Carregamento em Massa de XML pode ser usada no ambiente .NET. Para obter informações detalhadas sobre o XML Bulk Load, consulte [execução de carregar dados em massa de XML &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -30,7 +28,7 @@ ms.locfileid: "48175876"
  Para usar o objeto COM do Carregamento em Massa de SQLXML de um ambiente gerenciado, você precisa adicionar uma referência de projeto a esse objeto. Isso gera uma interface de wrapper gerenciado em torno do objeto COM do Carregamento em Massa.  
   
 > [!NOTE]  
->  O Carregamento em Massa de XML gerenciado não funciona com fluxos gerenciados e exige um wrapper em torno dos fluxos nativos. O componente de Carregamento em Massa de SQLXML não será executado em um ambiente multithread (atributo '[MTAThread]'). Se você tentar executar o componente de carregamento em massa em um ambiente de vários thread, você obtém uma exceção InvalidCastException com as seguintes informações adicionais: "Falha em QueryInterface para interface Isqlxmlbulkload." A solução alternativa é tornar o objeto que contém o carregamento em massa thread único do objeto acessível (por exemplo, usando o **[STAThread]** conforme mostrado no exemplo de atributo).  
+>  O Carregamento em Massa de XML gerenciado não funciona com fluxos gerenciados e exige um wrapper em torno dos fluxos nativos. O componente de Carregamento em Massa de SQLXML não será executado em um ambiente multithread (atributo '[MTAThread]'). Se você tentar executar o componente de carregamento em massa em um ambiente de vários thread, você receberá uma exceção InvalidCastException com as seguintes informações adicionais: "Falha em QueryInterface para interface Isqlxmlbulkload." A solução alternativa é tornar o objeto que contém o carregamento em massa thread único do objeto acessível (por exemplo, usando o **[STAThread]** conforme mostrado no exemplo de atributo).  
   
  Este tópico fornece um exemplo de aplicativo C# funcional para carregamento em massa de dados XML no banco de dados. Para criar um exemplo funcional, siga estas etapas:  
   

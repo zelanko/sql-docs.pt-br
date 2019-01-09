@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5157d67fe96939c8942ff3dc0351cc09deb030f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91547692c9a703b1d989015a0b56525e3e7c40f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779068"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services
   Use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma conexão com um servidor executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou para editar propriedades de conexão.  
@@ -45,6 +44,6 @@ ms.locfileid: "48063238"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../integration-services-error-and-message-reference.md)   
- [Serviços de integração &#40;SSIS&#41; conexões](integration-services-ssis-connections.md)  
+ [Conexões do SSIS &#40;Integration Services&#41;](integration-services-ssis-connections.md)  
   
   

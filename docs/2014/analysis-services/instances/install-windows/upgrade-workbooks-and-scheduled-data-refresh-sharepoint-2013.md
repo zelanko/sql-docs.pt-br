@@ -11,18 +11,18 @@ ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f321f4851a5257ebaacccbc05ecec46ba1baae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190256"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373931"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013)
-  Este tópico explica a experiência do usuário das pastas de trabalho criadas em ambientes anteriores do PowerPivot e como atualizar pastas de trabalho PowerPivot de forma que você possa aproveitar os novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, consulte o artigo sobre [Novidades no PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+  Este tópico explica a experiência do usuário das pastas de trabalho criadas em ambientes anteriores do PowerPivot e como atualizar pastas de trabalho PowerPivot de forma que você possa aproveitar os novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, consulte [Novidades no PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
->  Você não pode reverter uma atualização para pastas de trabalho que são atualizadas automaticamente no servidor. Quando uma pasta de trabalho é atualizada, ela permanece atualizada. Para usar uma versão anterior, você pode republicar a pasta de trabalho anterior para o SharePoint, restaurar uma versão anterior ou reciclar a pasta de trabalho. Para obter mais informações sobre como restaurar ou reciclar um documento no SharePoint, consulte [Planejar para proteger o conteúdo usando lixeiras e controle de versão](http://go.microsoft.com/fwlink/?LinkId=238669).  
+>  Você não pode reverter uma atualização para pastas de trabalho que são atualizadas automaticamente no servidor. Quando uma pasta de trabalho é atualizada, ela permanece atualizada. Para usar uma versão anterior, você pode republicar a pasta de trabalho anterior para o SharePoint, restaurar uma versão anterior ou reciclar a pasta de trabalho. Para obter mais informações sobre como restaurar ou reciclar um documento no SharePoint, consulte [Planejar para proteger o conteúdo usando lixeiras e controle de versão](https://go.microsoft.com/fwlink/?LinkId=238669).  
   
  Este tópico contém as seguintes seções:  
   
@@ -53,24 +53,24 @@ ms.locfileid: "48190256"
 |Criado em|\<|Suporte e comportamento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot para SharePoint 2010**|**2012 PowerPivot para SharePoint 2010**|**2012 SP1 PowerPivot para SharePoint 2013**|  
-|**2008 R2 PowerPivot para Excel 2010**|Todos os recursos|**Experiência:** os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** as pastas de trabalho serão atualizadas automaticamente na biblioteca de documentos se a Atualização Automática estiver habilitada para o serviço do sistema do PowerPivot no farm do SharePoint,<br /><br /> **Atualização de dados agendada:** SEM suporte. A pasta de trabalho precisa ser atualizada.|**Experiência:** os usuários podem interagir com a pasta de trabalho e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** a atualização automática não está disponível. Os usuários devem atualizar manualmente suas pastas de trabalho do 2008 R2 para a versão 2012 ou para a versão 2013 do Office.<br /><br /> **Atualização de dados agendada:** SEM suporte. A pasta de trabalho precisa ser atualizada.|  
-|**2012 PowerPivot para Excel**|Sem suporte|Todos os recursos|**Experiência:** os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções. A atualização de dados agendada está disponível.<br /><br /> **Atualização:** a atualização automática não tem suporte. Os usuários podem atualizar manualmente suas pastas de trabalho para a versão 2013 do Office.<br /><br /> **Atualização de dados agendada:** com suporte.|  
+|**2008 R2 PowerPivot para Excel 2010**|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** As pastas de trabalho serão atualizadas automaticamente na biblioteca de documentos se a Atualização Automática estiver habilitada para o serviço do sistema do PowerPivot no farm do SharePoint.<br /><br /> **Agendar atualização de dados:** SEM suporte. A pasta de trabalho precisa ser atualizada.|**Experiência:** Os usuários podem interagir com a pasta de trabalho e usá-la como uma fonte de dados para outras soluções.<br /><br /> **Atualização:** A atualização automática não está disponível. Os usuários devem atualizar manualmente suas pastas de trabalho do 2008 R2 para a versão 2012 ou para a versão 2013 do Office.<br /><br /> **Agendar atualização de dados:** SEM suporte. A pasta de trabalho precisa ser atualizada.|  
+|**2012 PowerPivot para Excel**|Sem suporte|Todos os recursos|**Experiência:** Os usuários podem interagir com a pasta de trabalho no navegador e usá-la como uma fonte de dados para outras soluções. A atualização de dados agendada está disponível.<br /><br /> **Atualização:** A atualização automática não tem suporte. Os usuários podem atualizar manualmente suas pastas de trabalho para a versão 2013 do Office.<br /><br /> **Atualização de dados agendada:** com suporte.|  
 |**Excel 2013**|Sem suporte|Sem suporte|Todos os recursos|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Atualizar para pastas de trabalho do SQL Server 2012 Service Pack 1 (SP1) de pastas de trabalho do 2008 R2  
  Esta seção descreve como atualizar para pastas de trabalho do SQL Server 2012 SP1 PowerPivot para Excel 2013 de pastas de trabalho do SQL Server 2008 R2 PowerPivot para Excel 2010.  
   
- **Alteração de comportamento:** as pastas de trabalho do SQL Server 2008 R2 PowerPivot não serão atualizadas automaticamente quando são usadas no SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Portanto, as atualizações de dados agendadas não funcionarão para pastas de trabalho do SQL Server 2008 R2 PowerPivot  
+ **Alteração de comportamento:** As pastas de trabalho do SQL Server 2008 R2 PowerPivot não serão atualizadas automaticamente quando são usadas no SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Portanto, as atualizações de dados agendadas não funcionarão para pastas de trabalho do SQL Server 2008 R2 PowerPivot  
   
  As pastas de trabalho do 2008 R2 serão abertas no PowerPivot para SharePoint 2013, porém as atualizações de dados agendadas não funcionarão. Se você revisar o histórico de atualização, verá uma mensagem de erro semelhante à seguinte:  
   
- “A pasta de trabalho contém um modelo do PowerPivot sem suporte. O modelo do PowerPivot na pasta de trabalho está no formato do SQL Server 2008 R2 PowerPivot para Excel 2010. Os modelos do PowerPivot com suporte são os seguintes:  
+ "A pasta de trabalho contém um modelo PowerPivot sem suporte. O modelo do PowerPivot na pasta de trabalho está no formato do SQL Server 2008 R2 PowerPivot para Excel 2010. Os modelos do PowerPivot com suporte são os seguintes:  
   
 -   SQL Server 2012 PowerPivot para Excel 2010.  
   
 -   SQL Server 2012 PowerPivot para Excel 2013.  
   
- **Como atualizar uma pasta de trabalho:** a atualização de dados agendada não funcionará até você atualizar para uma pasta de trabalho do 2012. Para atualizar a pasta de trabalho e o modelos que ela contém, siga um destes procedimentos:  
+ **Como atualizar uma pasta de trabalho:** A atualização de dados agendada não funcionará até você atualizar para uma pasta de trabalho do 2012. Para atualizar a pasta de trabalho e o modelos que ela contém, siga um destes procedimentos:  
   
 -   Baixe e abra a pasta de trabalho no Microsoft Excel 2010 com o suplemento SQL Server 2012 PowerPivot para Excel instalado.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48190256"
   
  Atualizar uma pasta de trabalho resolve o seguinte erro que ocorre ao tentar atualizar dados agendados na versão anterior da pasta de trabalho:  
   
- "A operação de atualização de pastas de trabalho criadas com a versão anterior do PowerPivot não está disponível."  
+ "A operação de atualização para pastas de trabalho criadas com a versão anterior do PowerPivot não está disponível."  
   
  **Como atualizar uma pasta de trabalho**  
   
@@ -110,15 +110,15 @@ ms.locfileid: "48190256"
   
  Atualizar uma pasta de trabalho resolve o seguinte erro que ocorre ao tentar atualizar dados agendados na versão anterior da pasta de trabalho:  
   
- "A operação de atualização de pastas de trabalho criadas com a versão anterior do PowerPivot não está disponível."  
+ "A operação de atualização para pastas de trabalho criadas com a versão anterior do PowerPivot não está disponível."  
   
  **Como atualizar uma pasta de trabalho**  
   
  A atualização pode ser feita de duas maneiras:  
   
-1.  Atualizar cada pasta de trabalho manualmente abrindo-a no Excel em um computador que tenha o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] versão do PowerPivot para Excel e, em seguida, republicá-lo para o servidor. Quando a pasta de trabalho é aberta na versão mais recente do suplemento, ocorrem as seguintes operações internas: o provedor de dados na cadeia de conexão de dados da pasta de trabalho é atualizado para o MSOLAP.5; os metadados são atualizados e as relações são recriadas para se conformarem à implementação mais recente.  
+1.  Atualizar cada pasta de trabalho manualmente abrindo-a no Excel em um computador que tem a versão [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] do PowerPivot para Excel e então republicá-la no servidor. Quando a pasta de trabalho é aberta na versão mais recente do suplemento, ocorrem as seguintes operações internas: o provedor de dados na cadeia de conexão de dados da pasta de trabalho é atualizado para o MSOLAP.5; os metadados são atualizados e as relações são recriadas para se conformarem à implementação mais recente.  
   
-2.  Como alternativa, um administrador do SharePoint pode habilitar o recurso de atualização automática para o serviço do sistema PowerPivot em um farm do SharePoint atualizar automaticamente um [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] pasta de trabalho PowerPivot quando dados agendada for executado (somente pastas de trabalho configurado para atualização de dados agendada são atualizados).  
+2.  Como alternativa, um administrador do SharePoint pode habilitar o recurso da atualização automática para o Serviço do Sistema PowerPivot em um farm do SharePoint para atualizar automaticamente uma pasta de trabalho PowerPivot do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] quando a atualização de dados agendada for executada (são atualizadas somente pastas de trabalho que são configuradas para atualização de dados agendada).  
   
     > [!NOTE]  
     >  Atualização automática é um recurso de configuração de servidor; você não pode habilitá-lo nem desabilitá-lo para pastas de trabalho, bibliotecas ou coleções de sites específicas.  
@@ -138,7 +138,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
  Para habilitar a atualização automática da pasta de trabalho, execute o seguinte comando:  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  Depois de atualizar a pasta de trabalho, poderá usar a atualização de dados agendada e novos recursos no suplemento PowerPivot para Excel.  

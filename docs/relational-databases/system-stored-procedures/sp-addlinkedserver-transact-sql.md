@@ -18,12 +18,12 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26a4fa63ea41e2e8933a0d7d11cc6b2100e85f54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be80ed76713788f81704609c4828e0a871ffdc7d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795044"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590100"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,30 +45,30 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server=** ] **'***server***'**  
+ [  **@server=** ] **'**_servidor_**'**  
  É o nome do servidor vinculado a ser criado. *server* é **sysname**, sem padrão.  
   
- [  **@srvproduct=** ] **'***product_name***'**  
+ [  **@srvproduct=** ] **'**_product_name_**'**  
  É o nome do produto da fonte de dados OLE DB a ser adicionado como um servidor vinculado. *product_name* está **nvarchar (** 128 **)**, com um padrão NULL. Se **SQL Server**, *provider_name*, *data_source*, *local*, *provider_string*, e *catálogo* não deve ser especificado.  
   
- [  **@provider=** ] **'***provider_name***'**  
+ [  **@provider=** ] **'**_provider_name_**'**  
  É o identificador programático exclusivo (PROGID) do provedor OLE DB que corresponde a essa fonte de dados. *provider_name* deve ser exclusivo para o provedor OLE DB especificado instalado no computador atual. *provider_name* está **nvarchar (** 128 **)**, com um padrão de NULL; no entanto, se *provider_name* é omitido, SQLNCLI será usado. (Use SQLNCLI, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará o redirecionamento para a última versão do provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Espera-se que o provedor OLE DB seja registrado com o PROGID especificado fornecido no Registro.  
   
- [  **@datasrc=** ] **'***data_source***'**  
+ [  **@datasrc=** ] **'**_data_source_**'**  
  É o nome da fonte de dados conforme interpretada pelo provedor OLE DB. *data_source* está **nvarchar (** 4000 **)**. *data_source* é passado como a propriedade DBPROP_INIT_DATASOURCE para inicializar o provedor OLE DB.  
   
- [  **@location=** ] **'***local***'**  
+ [  **@location=** ] **'**_local_**'**  
  É o local do banco de dados conforme interpretado pelo provedor OLE DB. *local* está **nvarchar (** 4000 **)**, com um padrão NULL. *local* é passado como a propriedade DBPROP_INIT_LOCATION para inicializar o provedor OLE DB.  
   
- [  **@provstr=** ] **'***provider_string***'**  
+ [  **@provstr=** ] **'**_provider_string_**'**  
  É a cadeia de conexão específica ao provedor OLE DB que identifica uma fonte de dados exclusiva. *provider_string* está **nvarchar (** 4000 **)**, com um padrão NULL. *provstr* é passada para IDataInitialize ou definido como a propriedade DBPROP_INIT_PROVIDERSTRING para inicializar o provedor OLE DB.  
   
  Quando o servidor vinculado é criado em relação a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, a instância pode ser especificada usando a palavra-chave SERVER como SERVER =*servername*\\*instancename*para especificar uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* é o nome do computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução, e *instancename* é o nome da instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual o usuário será conectado.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Para acessar um banco de dados espelho, uma cadeia de conexão deve conter o nome do banco de dados. Esse nome é necessário para habilitar tentativas de failover pelo provedor de acesso de dados. O banco de dados pode ser especificado na **@provstr** ou **@catalog** parâmetro. Opcionalmente, a cadeia de conexão também pode fornecer um nome de parceiro de failover.  
   
- [  **@catalog=** ] **'***catálogo***'**  
+ [  **@catalog=** ] **'**_catálogo_**'**  
  É o catálogo a ser usado quando uma conexão for feita ao provedor OLE DB. *catálogo* está **sysname**, com um padrão NULL. *catálogo* é passado como a propriedade DBPROP_INIT_CATALOG para inicializar o provedor OLE DB. Quando o servidor vinculado for definido em relação a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o catálogo se referirá ao banco de dados padrão ao qual o servidor vinculado estará mapeado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -105,8 +105,8 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
  **sp_addlinkedserver** não pode ser executado em uma transação definida pelo usuário.  
   
-> [!IMPORTANT]  
->  Quando um servidor vinculado é criado usando **sp_addlinkedserver**, um automapeamento padrão é adicionado para todos os logons locais. Para provedores não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os logos autenticados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem conseguir acesso ao provedor sob a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os administradores deveriam considerar o uso de `sp_droplinkedsrvlogin <linkedserver_name>, NULL` para remover o mapeamento global.  
+> [!IMPORTANT]
+>  Quando um servidor vinculado é criado usando **sp_addlinkedserver**, um automapeamento padrão é adicionado para todos os logons locais. Para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logos autenticados podem até conseguir obter acesso ao provedor sob a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço. Os administradores deveriam considerar o uso de `sp_droplinkedsrvlogin <linkedserver_name>, NULL` para remover o mapeamento global.  
   
 ## <a name="permissions"></a>Permissões  
  O `sp_addlinkedserver` instrução requer o `ALTER ANY LINKED SERVER` permissão. (O SSMS **novo servidor vinculado** caixa de diálogo é implementada de forma que requer a participação no `sysadmin` função de servidor fixa.)  
@@ -135,7 +135,7 @@ EXEC sp_addlinkedserver
    @datasrc=N'S1\instance1';  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>B. Usando o Provedor Microsoft OLE DB para Microsoft Access  
+### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>b. Usando o Provedor Microsoft OLE DB para Microsoft Access  
  O provedor Microsoft.Jet.OLEDB.4.0 se conecta a bancos de dados Microsoft Access que usam o formato 2002-2003. O exemplo abaixo cria um servidor vinculado chamado `SEATTLE Mktg`.  
   
 > [!NOTE]  
@@ -270,11 +270,11 @@ EXEC sp_addlinkedserver
 ### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>G. Adicionar um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como um servidor vinculado para uso com consultas distribuídas em bancos de dados locais e de nuvem  
  Você pode adicionar um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como um servidor vinculado e usá-lo com consultas distribuídas que abrangem os bancos de dados locais e de nuvem. Esse é um componente para as soluções híbridas de banco de dados que abrangem redes corporativas locais e a nuvem do Windows Azure.  
   
- O produto da caixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém o recurso de consulta distribuída, que permite gravar consultas para combinar dados de fontes de dados locais e dados de fontes remotas (inclusive dados de fontes de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) definidos como servidores vinculados. Cada [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (exceto o mestre virtual) pode ser adicionado como um servidor vinculado individual e pode ser usado diretamente em seus aplicativos de banco de dados, como qualquer outro banco de dados.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produto caixa contém o recurso de consulta distribuída, o que permite que você escreva consultas para combinar dados de fontes de dados locais e dados de fontes remotas (incluindo dados de não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fontes de dados) definidos como servidores vinculados. Cada [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (exceto o mestre virtual) pode ser adicionado como um servidor vinculado individual e pode ser usado diretamente em seus aplicativos de banco de dados, como qualquer outro banco de dados.  
   
  Os benefícios de usar o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] incluem capacidade de gerenciamento, alta disponibilidade, escalabilidade, trabalhando com um modelo familiar de desenvolvimento, e um modelo de dados relacionais. Os requisitos de seu aplicativo de banco de dados determinam como ele usaria o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] na nuvem. Você pode mover todos os dados imediatamente para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], ou mover progressivamente alguns de seus dados, mantendo os demais dados no local. Para um aplicativo de banco de dados tão híbrido, o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] agora pode ser adicionado como servidores vinculados, e o aplicativo de banco de dados pode emitir consultas distribuídas para combinar dados do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e fontes de dados locais.  
   
- Aqui está um exemplo simples que explica como conectar-se a um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] usando consultas distribuídas:  
+ Aqui está um exemplo simples, explicando como se conectar a um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] usando consultas distribuídas:  
   
 ```  
 ------ Configure the linked server  

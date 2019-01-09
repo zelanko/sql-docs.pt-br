@@ -1,22 +1,24 @@
 ---
-title: O que é os clusters de grandes dados do SQL Server de mestre de instância? | Microsoft Docs
-description: Este artigo descreve a instância mestre em um cluster de big data do SQL Server de 2019.
+title: O que é a instância mestre?
+titleSuffix: SQL Server 2019 big data clusters
+description: Este artigo descreve a instância mestre do SQL Server em um cluster de big data do SQL Server 2019 (visualização).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221592"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208162"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>O que é o big data do SQL Server de instância mestre do cluster?
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>O que é a instância mestre em um cluster de big data do SQL Server 2019?
 
-Este artigo descreve a função dos *instância mestre do SQL Server* em um cluster do SQL Server 2019 ata big. A instância mestre é uma instância do SQL Server em execução em um cluster de big data do SQL Server [plano de controle](big-data-cluster-overview.md#controlplane).
+Este artigo descreve a função dos *instância mestre do SQL Server* em um cluster de big data do SQL Server de 2019. A instância mestre é uma instância do SQL Server em execução em um cluster de big data do SQL Server [plano de controle](big-data-cluster-overview.md#controlplane).
 
 A instância mestre do SQL Server fornece a seguinte funcionalidade:
 
@@ -26,7 +28,7 @@ A instância mestre do SQL Server fornece um ponto de extremidade TDS acessível
 
 ## <a name="scale-out-query-management"></a>Gerenciamento de consulta de expansão
 
-A instância mestre do SQL Server contém o mecanismo de consulta de expansão que é usado para distribuir consultas entre instâncias do SQL Server em nós de [computação do pool de](concept-compute-pool.md). O mecanismo de consulta de expansão também fornece acesso por meio do Transact-SQL para todas as tabelas de Hive no cluster sem qualquer configuração adicional. (Suporte de tabelas do hive não está no CTP 2.1)
+A instância mestre do SQL Server contém o mecanismo de consulta de expansão que é usado para distribuir consultas entre instâncias do SQL Server em nós de [computação do pool de](concept-compute-pool.md). O mecanismo de consulta de expansão também fornece acesso por meio do Transact-SQL para todas as tabelas de Hive no cluster sem qualquer configuração adicional. (O suporte não está na CTP 2.2 de tabelas do hive)
 
 ## <a name="metadata-and-user-databases"></a>Bancos de dados de usuário e metadados
 
@@ -43,7 +45,7 @@ Você também pode optar por adicionar seus próprios bancos de dados do usuári
 
 Serviços de aprendizado de máquina de SQL Server é um recurso de complemento para o mecanismo de banco de dados, usado para executar o código Java, R e Python no SQL Server. Esse recurso se baseia na estrutura de extensibilidade do SQL Server, que isola os processos externos do principais processos de mecanismo, mas integra-se totalmente com os dados relacionais, como procedimentos armazenados, script T-SQL que contém instruções de R ou Python ou Java, R ou Código do Python que contém o T-SQL.
 
-Como parte de um cluster de big data do SQL Server, serviços de machine learning serão disponibilizado na instância SQL Serevr mestre por padrão. Isso significa que, depois que a execução do script externo estiver habilitada na instância mestre do SQL Server, ele vai ser possível executar o Java, scripts de R e Python usando sp_execute_external_script.
+Como parte de um cluster de big data do SQL Server, serviços de machine learning serão disponibilizado na instância mestre do SQL Server por padrão. Isso significa que, depois que a execução do script externo estiver habilitada na instância mestre do SQL Server, ele vai ser possível executar o Java, scripts de R e Python usando sp_execute_external_script.
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vantagens de serviços do machine learning em um cluster de big data
 

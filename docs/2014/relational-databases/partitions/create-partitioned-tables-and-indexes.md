@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.createpartition.partitionscheme.f1
@@ -28,12 +28,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed0ac1ebc529544959b25e00c26502637acc3b92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748458"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Criar tabelas e índices particionados
   Você pode criar uma tabela ou um índice particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os dados das tabelas e dos índices particionados são divididos horizontalmente em unidades que podem ser disseminadas por mais de um grupo de arquivos em um banco de dados. O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
@@ -64,7 +64,7 @@ ms.locfileid: "48078336"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   O escopo de uma função e de um esquema de partição é limitado ao banco de dados em que foram criados. No banco de dados, as funções de partição residem em um namespace separado das outras funções.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48078336"
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados no qual você deseja criar uma tabela particionada e selecione **Propriedades**.  
   
-2.  Na caixa de diálogo **Propriedades do Banco de dados –** *database_name* , em **Selecionar uma página**, selecione **Grupos de Arquivos**.  
+2.  Na caixa de diálogo **Propriedades do Banco de dados –** *database_name*, em **Selecionar uma página**, selecione **Grupos de Arquivos**.  
   
 3.  Em **Linhas**, clique em **Adicionar**. Na nova linha, digite o nome do grupo de arquivos.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48078336"
   
      Se você selecionar **Agenda**, clique em **Alterar agenda**.  
   
-    1.  Na caixa de diálogo **Nova Agenda de Trabalho** , na caixa **Nome** , digite o nome da agenda de trabalho.  
+    1.  Na caixa de diálogo **Nova Agenda de Trabalho**, na caixa **Nome**, digite o nome da agenda de trabalho.  
   
     2.  Na lista **Tipo de Agenda** , selecione o tipo de agenda:  
   
@@ -199,15 +199,15 @@ ms.locfileid: "48078336"
   
             -   Se você selecionar **Mensalmente**, selecione **Dia** ou **O**.  
   
-                -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
+                -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeira**, **segundo**, **terceira**, ou **quarto**, bem como dias específicos da semana (por exemplo: Domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
         2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
             -   Se você selecionar **Ocorre uma vez às**, digite a hora específica do dia em que a agenda de trabalho deve ser executada na caixa **Ocorre uma vez às** . Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
-            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite “2” na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
+            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
   
                  Na caixa **Iniciando às** , digite a hora em que a agenda de trabalho deve começar a ser executada. Na caixa **Terminando às** , digite a hora em que a agenda de trabalho deve parar de se repetir. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
@@ -249,16 +249,16 @@ ms.locfileid: "48078336"
      Abre a caixa de diálogo **Salvar Relatório Como** .  
   
      **Copiar Relatório na Área de Transferência**  
-     Copia os resultados do relatório de progresso do assistente na área de transferência.  
+     Copia os resultados do relatório de progresso do assistente na Área de transferência.  
   
      **Enviar Relatório como Email**  
-     Copia os resultados do relatório de progresso do assistente em uma mensagem de email.  
+     Copia os resultados do relatório de progresso do assistente para uma mensagem de email.  
   
      Quando terminar, clique em **Fechar**.  
   
  O Assistente para Criar Partição cria a função e o esquema de partição e aplica o particionamento à tabela especificada. Para verificar o particionamento da tabela, no Pesquisador de Objetos, clique com o botão direito do mouse na tabela e selecione **Propriedades**. Clique na página **Armazenamento** . A página exibe informações como o nome da função e do esquema de partição e o número de partições.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Para criar uma tabela particionada  
   

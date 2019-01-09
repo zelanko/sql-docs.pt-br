@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033573"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750358"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use o Visual Studio para criar bancos de dados para o SQL Server no Linux
 
@@ -99,7 +99,7 @@ Há suporte para o SQL Server no Linux pelo SSDT versão 17.0 RC ou posterior.
 
 5. Verifique o status de publicação no **operações de ferramentas de dados** janela.
 
-6. Clique em **exibição Reulst** ou **Exibir Script** para ver os detalhes do banco de dados a publicar resultados no SQL Server no Linux.
+6. Clique em **exibir resultados** ou **Exibir Script** para ver os detalhes do banco de dados a publicar resultados no SQL Server no Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,12 +107,12 @@ Você criou um novo banco de dados na instância do SQL Server no Linux e aprend
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Se você ainda não conhece bem o T-SQL, consulte [Tutorial: Gravando Instruções Transact-SQL] e [Referência de Transact-SQL (mecanismo de banco de dados)].
+Se você for novo no T-SQL, consulte [Tutorial: Gravando instruções Transact-SQL] e o [referência de Transact-SQL (mecanismo de banco de dados)].
 
 Para obter mais informações sobre o desenvolvimento de um banco de dados com ferramentas de dados SQL, consulte [Documentos do SSDT MSDN]
 
 [Baixar e instalar o Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [Documentos do SSDT MSDN]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Tutorial: Gravando instruções Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [Referência de Transact-SQL (mecanismo de banco de dados)]:https://msdn.microsoft.com/library/bb510741.aspx

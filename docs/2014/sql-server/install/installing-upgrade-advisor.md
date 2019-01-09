@@ -15,12 +15,12 @@ ms.assetid: 1b7d6eca-1df1-47df-bbba-0fc485706a95
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95bcdfca34b618043515c27030bc74104e4da590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82db1c6f36d8b03d2a603c0a616090ec9d3544af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078066"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353996"
 ---
 # <a name="installing-upgrade-advisor"></a>Instalando o Supervisor de Atualização
   O local da instalação do Supervisor de Atualização do SQL Server 2014 depende do que você analisará. O Supervisor de Atualização oferece suporte para análise remota de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , com exceção do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se não estiver verificando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode instalar o Supervisor de Atualização em qualquer computador que pode se conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e que esteja em conformidade com [Upgrade Advisor Prerequisites](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). Se você estiver verificando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], será necessário instalar o Supervisor de Atualização no servidor de relatório.  
@@ -31,7 +31,7 @@ ms.locfileid: "48078066"
   
 -   Na pasta **redist** da mídia do produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Como parte do [download do SQL 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295).  
+-   Como parte do [download do SQL 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 ## <a name="uninstalling-upgrade-advisor"></a>Desinstalando o Supervisor de Atualização  
  Você pode desinstalar o Supervisor de Atualização usando **Adicionar ou Remover Programas**. A sintaxe do prompt de comando também dá suporte à remoção/desinstalação.  

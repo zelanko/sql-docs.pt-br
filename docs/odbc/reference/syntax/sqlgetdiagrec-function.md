@@ -20,16 +20,16 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683012"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207505"
 ---
 # <a name="sqlgetdiagrec-function"></a>Função SQLGetDiagRec
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetDiagRec** retorna os valores atuais de vários campos de um registro de diagnóstico que contém informações de erro, aviso e status. Diferentemente **SQLGetDiagField**, que retorna um campo de diagnóstico por chamada, **SQLGetDiagRec** retorna vários campos de um registro de diagnóstico, incluindo o SQLSTATE, o código de erro nativo comumente usados e o texto da mensagem de diagnóstico.  
@@ -94,11 +94,11 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>Diagnóstico  
  **SQLGetDiagRec** não envia os registros de diagnóstico para si mesmo. Ele usa os seguintes valores de retornados para relatar o resultado da execução do seu próprio:  
   
--   SQL_SUCCESS: A função retornou com êxito as informações de diagnóstico.  
+-   SQL_SUCCESS: A função retornado com êxito as informações de diagnóstico.  
   
 -   SQL_SUCCESS_WITH_INFO: O \* *MessageText* buffer era muito pequeno para conter a mensagem de diagnóstico solicitada. Não há registros de diagnóstico foram gerados. Para determinar o que ocorreu um truncamento, o aplicativo deve comparar *BufferLength* o número real de bytes disponíveis, que é gravado em **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: O identificador indicado por *HandleType* e *manipular* não era um identificador válido.  
+-   SQL_INVALID_HANDLE: O identificador é indicado por *HandleType* e *manipular* não era um identificador válido.  
   
 -   SQL_ERROR: Um dos seguintes ocorreu:  
   

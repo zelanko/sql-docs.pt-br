@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e112d0cfdd1e4558dcad1888531774357ce0102a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020913"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516729"
 ---
-# <a name="attribute-properties---define-a-default-member"></a>Propriedades de atributo - definir um membro padrão
+# <a name="attribute-properties---define-a-default-member"></a>Propriedades do atributo – Definir um membro padrão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O membro padrão de uma hierarquia de atributo será usado para avaliar as expressões quando uma hierarquia de atributo não for explicitamente incluída em uma consulta. O membro padrão será ignorado sempre que a consulta tiver uma hierarquia de atributo ou hierarquia de usuário que contenha o atributo que dá origem à hierarquia de atributo. Isso porque será usado o membro especificado na consulta.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "34020913"
   
  A configuração **DefaultMember** de um atributo é válida para toda hierarquia da qual o atributo participa. Não é possível usar configurações diferentes para hierarquias diferentes em uma dimensão. Por exemplo, se o membro [1998] for o membro padrão do atributo [Ano], essa configuração será válida para todas as hierarquias da dimensão. Neste caso, a configuração **DefaultMember** não pode ser [1998] em uma hierarquia e [1997] em outra.  
   
- Se você definir um membro padrão para um determinado nível de uma hierarquia que não é agregada naturalmente, defina os membros padrão de todos os níveis acima desse nível da hierarquia. Por exemplo, na hierarquia Todos-Países-Clima, não é possível definir um membro padrão para cada Clima a menos que você defina um membro padrão para Países. Se ele não for criado, ocorrerão erros de consulta-tempo.  
+ Se você definir um membro padrão para um determinado nível de uma hierarquia que não é agregada naturalmente, defina os membros padrão de todos os níveis acima desse nível da hierarquia. Por exemplo, na hierarquia todos-países-clima, você não pode definir um membro padrão para cada clima a menos que você defina um membro padrão para países. Se ele não for criado, ocorrerão erros de consulta-tempo.  
   
- Quando os níveis de uma hierarquia agregam-se naturalmente, você pode definir um membro padrão para qualquer atributo da hierarquia sem relação com os demais atributos da mesma. Por exemplo, na hierarquia País-Estado-Cidade, é possível definir um membro padrão para Cidade, como [Cidade] [São Paulo] sem definir o membro padrão para Estado ou País.  
+ Quando os níveis de uma hierarquia agregam-se naturalmente, você pode definir um membro padrão para qualquer atributo da hierarquia sem relação com os demais atributos da mesma. Por exemplo, na hierarquia de país-província-cidade, você pode definir um membro padrão para cidade, como [Cidade]. [São Paulo] sem definir o membro padrão para o estado ou país.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar o & #40; Todos os & #41; Nível para hierarquias de atributo](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar o nível &#40;All&#41; para hierarquias de atributo](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

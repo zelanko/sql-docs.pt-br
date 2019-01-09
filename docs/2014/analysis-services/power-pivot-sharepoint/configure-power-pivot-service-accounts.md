@@ -11,12 +11,12 @@ ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8bc8f0d48b2f439b421f205187343b5ca0e2f010
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526656"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurar contas de serviço PowerPivot
   Uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services (PowerPivot)** é um serviço do Windows que fornece processamento de dados PowerPivot e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
@@ -39,9 +39,9 @@ ms.locfileid: "48080186"
   
  [Requisitos e permissões de conta](#requirements)  
   
- [Solucionando problemas: Conceder permissões administrativas manualmente](#updatemanually)  
+ [Solução de problemas: Conceder permissões administrativas manualmente](#updatemanually)  
   
- [Solucionando problemas: resolver erros HTTP 503 devido a senhas expiradas para Administração Central ou serviço do aplicativo Web do Microsoft SharePoint Foundation](#expired)  
+ [Solução de problemas: Resolver HTTP serviço do aplicativo Web de 503 erros devido a senhas expiradas para Administração Central ou o SharePoint Foundation](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> Atualizar uma senha expirada para instância do SQL Server Analysis Services (PowerPivot)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48080186"
   
 #### <a name="analysis-services-service-account"></a>Conta de serviço do Analysis Services  
   
-|Requisito|Description|  
+|Requisito|Descrição|  
 |-----------------|-----------------|  
 |Requisito de provisionamento|Essa conta deve ser especificada durante a instalação do SQL Server usando o **Analysis Services - página de configuração** no Assistente de instalação (ou o `ASSVCACCOUNT` parâmetro de instalação em uma instalação de linha de comando).<br /><br /> Você pode modificar o nome de usuário ou a senha usando a Administração Central, o PowerShell ou a Ferramenta de Configuração do PowerPivot. Não há suporte para o uso de outras ferramentas para alterar contas e senhas.|  
 |Requisito da conta de usuário de domínio|Essa conta deve ser uma conta de usuário de domínio do Windows. São proibidas contas de máquinas internas (como Serviço de Rede ou Serviço Local). A Instalação do SQL Server impõe o requisito de conta de usuário de domínio bloqueando a instalação sempre que uma conta de computador é especificada.|  
@@ -109,14 +109,14 @@ ms.locfileid: "48080186"
   
 #### <a name="powerpivot-service-application-pool"></a>Pool de aplicativos do serviço PowerPivot  
   
-|Requisito|Description|  
+|Requisito|Descrição|  
 |-----------------|-----------------|  
-|Requisito de provisionamento|O Serviço do Sistema PowerPivot é um recurso compartilhado no farm que fica disponível quando você cria um aplicativo de serviço. O pool de aplicativos de serviço deve ser especificado quando o aplicativo de serviço é criado. Ele pode ser especificado de dois modos: usando a ferramenta de configuração do PowerPivot ou por comandos do PowerShell.<br /><br /> Você pode ter configurado a identidade do pool de aplicativos para executar sob uma conta exclusiva. Mas se você não fez isso, considere alterá-la agora para executar sob uma conta diferente.|  
+|Requisito de provisionamento|O Serviço do Sistema PowerPivot é um recurso compartilhado no farm que fica disponível quando você cria um aplicativo de serviço. O pool de aplicativos de serviço deve ser especificado quando o aplicativo de serviço é criado. Ele pode ser especificado de dois modos: usando a ferramenta de configuração do PowerPivot ou por comandos do PowerShell.<br /><br /> Você pode ter configurado a identidade do pool de aplicativos para executar sob uma conta exclusiva. Porém, se você não fez isso, considere alterá-la agora para ser executado sob uma conta diferente.|  
 |Requisito da conta de usuário de domínio|A identidade do pool de aplicativos deve ser uma conta de usuário de domínio do Windows. São proibidas contas de máquinas internas (como Serviço de Rede ou Serviço Local).|  
 |Requisitos de permissão|Esta conta não precisa de permissões de Administrador do sistema local no computador. Entretanto, essa conta deve ter permissões de administrador de sistema do Analysis Services no [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local instalado no mesmo computador. Essas permissões são concedidas automaticamente pela Instalação do SQL Server, ou quando você define ou altera a identidade de pool e aplicativos na Administração Central.<br /><br /> Permissões administrativas são necessárias para encaminhar consultas ao [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Elas também são necessárias para monitorar a integridade, fechar sessões inativas e escutar eventos de rastreamento.<br /><br /> A conta precisa ter permissões de conexão, leitura e gravação no banco de dados do aplicativo do serviço PowerPivot. Essas permissões são concedidas automaticamente quando o aplicativo é criado e são atualizadas automaticamente quando você altera as contas ou senhas na Administração Central.<br /><br /> O aplicativo de serviço PowerPivot verificará se um usuário do SharePoint está autorizado a exibir dados antes de recuperar o arquivo, mas ele não representa o usuário. Não há requisitos de permissão para representação.|  
 |Requisitos de expansão|Nenhum.|  
   
-##  <a name="updatemanually"></a> Solucionando problemas: Conceder permissões administrativas manualmente  
+##  <a name="updatemanually"></a> Solução de problemas: Conceder permissões administrativas manualmente  
  As permissões administrativas não atualizarão se a pessoa que atualiza as credenciais não for um administrador local no computador. Se isto ocorrer, você poderá conceder permissões administrativas manualmente. O modo mais fácil de fazer isto é executar o trabalho de timer de Configuração do PowerPivot na Administração Central. Com esta abordagem, você pode reiniciar permissões para todos os servidores do PowerPivot no farm. Observe que esta abordagem somente funcionará se o trabalho de timer do SharePoint estiver sendo executado como administrador de farm e como administrador local no computador.  
   
 1.  Em Monitoração, clique em **Revisar definições de trabalho**.  
@@ -151,7 +151,7 @@ ms.locfileid: "48080186"
   
 11. Digite o nome da conta que é usada para o pool de aplicativos do serviço PowerPivot e clique em **OK**.  
   
-##  <a name="expired"></a> Solucionando problemas: resolver erros HTTP 503 devido a senhas expiradas para Administração Central ou serviço do aplicativo Web do Microsoft SharePoint Foundation  
+##  <a name="expired"></a> Solução de problemas: resolver erros HTTP 503 devido a senhas expiradas para Administração Central ou serviço do aplicativo Web do Microsoft SharePoint Foundation  
  Se o serviço da Administração Central ou o serviço do aplicativo Web do Microsoft SharePoint Foundation deixar de funcionar devido a uma redefinição de conta ou expiração de senha, você receberá a mensagem de erro HTTP 503 "Serviço não disponível" ao tentar abrir a Administração Central do SharePoint ou um site do SharePoint. Siga estas etapas para colocar o servidor online novamente. Quando a Administração Central estiver disponível, você poderá continuar atualizando informações de conta expiradas.  
   
 1.  Em Ferramentas administrativas, clique em **Gerenciador dos Serviços de Informações da Internet**.  
@@ -160,7 +160,7 @@ ms.locfileid: "48080186"
   
     1.  Clique com o botão direito do mouse no nome do pool de aplicativos e selecione **Configurações Avançadas**.  
   
-    2.  Selecione **Identidade** e clique no botão de reticências (...) para abrir a caixa de diálogo de Identidade do Pool de Aplicativos.  
+    2.  Selecione **identidade** e clique em de... para abrir a caixa de diálogo de identidade do Pool de aplicativos.  
   
     3.  Clique em **Definir**.  
   

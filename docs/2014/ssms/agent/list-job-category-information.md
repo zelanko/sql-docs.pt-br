@@ -4,28 +4,28 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69abea91334f53993fec78e2204cee1573afd780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac903ecb951e98e29dcd6521f8c9623f8cc62768
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754248"
 ---
 # <a name="list-job-category-information"></a>Listar informações de categoria de trabalho
   Como listar informações de categoria de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
 
   
 ##  <a name="Security"></a> Segurança  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
 
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-list-job-category-information"></a>Para listar informações de categoria de trabalho  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48181576"
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para listar informações de categoria de trabalho**  
   
- Use o `JobCategory` classe usando uma linguagem de programação que você escolher, como Visual Basic, Visual c# ou PowerShell... Para obter mais informações, consulte [SQL Server Management Objects &#40;SMO&#41; guia de programação](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Use a classe `JobCategory` usando uma linguagem de programação que você possa escolher, como Visual Basic, Visual C# ou PowerShell. Para obter mais informações, consulte [SQL Server Management Objects &#40;SMO&#41; guia de programação](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
   
   
   

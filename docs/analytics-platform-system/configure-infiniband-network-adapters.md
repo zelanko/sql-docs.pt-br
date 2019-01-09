@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169306"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518268"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de rede InfiniBand para o Analytics Platform System
 Descreve como configurar os adaptadores de rede InfiniBand em um servidor não seja de dispositivo cliente para se conectar ao nó de controle no Parallel Data Warehouse (PDW). Use estas instruções para a conectividade básica e de alta disponibilidade, para que o carregamento, backup e outros processos se conectam automaticamente à rede InfiniBand Active Directory.  
@@ -42,9 +42,9 @@ Depois de configurar os adaptadores de rede InfiniBand, processos de cliente pod
   
 Por exemplo, se o nome da região PDW é MyPDW e o nome do dispositivo é MyAPS, a especificação do servidor de dwloader de carregamento de dados é um dos seguintes:  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>Antes de começar  
   
@@ -161,7 +161,7 @@ Para atender aos seus requisitos de negócios, você também pode ingressar o se
   
 1.  Na janela Conexões de rede, clique duas vezes em um dos slots de rede para o adaptador Mellanox e selecione Propriedades.  
   
-2.  Clique em avançada... .  
+2.  Clique em Advanced botão.  
   
 3.  Na janela Configurações avançadas de TCP/IP, se o acréscimo opção esses sufixos DNS (em ordem) não está desativada, o chamado da caixa de seleção Acrescentar estes sufixos DNS (em ordem):, selecione o sufixo de domínio do dispositivo e clique em Adicionar... É o sufixo de domínio do dispositivo `appliance_domain.local`  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540653"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funções de previsão a um modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34014873"
     > [!WARNING]  
     >  O Construtor de Consultas de Previsão não valida o DMX até você clicar em **Resultados**. Você poderá eventualmente descobrir que a expressão gerada pelo construtor de consultas não é um DMX válido. As causas típicas fazem referência a uma coluna que não está relacionada à coluna previsível ou tentando prever uma coluna em uma tabela aninhada, que requer uma instrução sub-SELECT. Neste momento, você pode alternar a exibição do DMX e continuar editando a instrução.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Exemplo: criar uma consulta em um modelo de clustering  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Exemplo: Criar uma consulta em um modelo de clustering  
   
 1.  Se você não tiver um modelo de clustering disponível para criar esta consulta de exemplo, crie o modelo [TM_Clustering] usando o [Tutorial Básico de Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34014873"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- Se você quiser adicionar outras cláusulas em outro lugar na instrução — por exemplo, se quiser adicionar uma cláusula WHERE — não poderá adicioná-las usando a grade; deverá primeiro alternar para a exibição DMX.  
+ Se você deseja adicionar outras cláusulas em outro lugar na instrução-por exemplo, se você deseja adicionar uma cláusula WHERE-não é possível adicioná-lo usando a grade; Você deve alternar para a exibição DMX pela primeira vez.  
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)  

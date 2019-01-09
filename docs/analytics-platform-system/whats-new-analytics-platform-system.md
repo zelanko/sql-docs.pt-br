@@ -1,6 +1,6 @@
 ---
 title: O que há de novo no Analytics Platform System – um depósito de dados de expansão
-description: Veja o que há de novo no Microsoft® Analytics Platform System, um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse.
+description: Veja o que há de novo no Microsoft Analytics Platform System, um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,25 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700354"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626350"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
-Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft® Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
+Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## <a name="aps-cu73"></a>CU7.3 DE APS
+Data de lançamento - dezembro de 2018
+
+### <a name="common-subexpression-elimination"></a>Eliminação de subexpressão comum
+APS CU7.3 melhora o desempenho de consulta com eliminação de subexpressão comum no otimizador de consulta SQL. O aprimoramento melhora a consultas de duas maneiras. A primeira vantagem é a capacidade de identificar e eliminar tais expressões ajudam a reduzir o tempo de compilação do SQL. O benefício de segundo e mais importante é que operações de movimentação de dados para essas subexpressão com redundância são eliminadas, portanto, o tempo de execução para consultas se torna mais rápido. Uma explicação detalhada desse recurso pode ser encontrada [aqui](common-sub-expression-elimination.md).
+
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Conector de APS Informatica para o Informatica 10.2.0 publicado
+Lançamos uma nova versão dos conectores do Informatica para APS que funciona com o Informatica versão 10.2.0. Os novos conectores podem ser baixados em [site de download](https://www.microsoft.com/download/details.aspx?id=57472).
+
+#### <a name="supported-versions"></a>Versões com suporte
+| Versão APS | PowerCenter de Informatica | Driver |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 e posterior | 10.2.0 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
 Data de lançamento - outubro de 2018
 
 ### <a name="support-for-tls-12"></a>Suporte para TLS 1.2
-APS CU7.2 dá suporte a TLS 1.2. Computador cliente para pontos de acesso e APS comunicação entre nós agora pode ser definida para se comunicar somente por TLS1.2. Ferramentas como o SSDT, SSIS e Dwloader instalado nos computadores cliente que são definidas para se comunicar somente por TLS 1.2 agora podem se conectar ao APS usando o TLS 1.2. Por padrão, os APS oferecerão suporte a todas as versões do TLS (1.0, 1.1 e 1.2) para compatibilidade com versões anteriores. Se você quiser definir seu dispositivo de APS para stictly usar TLS 1.2, você pode fazer isso alterando as configurações do registro. 
+APS CU7.2 dá suporte a TLS 1.2. Computador cliente para pontos de acesso e APS comunicação entre nós agora pode ser definida para se comunicar somente por TLS1.2. Ferramentas como o SSDT, SSIS e Dwloader instalado nos computadores cliente que são definidas para se comunicar somente por TLS 1.2 agora podem se conectar ao APS usando o TLS 1.2. Por padrão, os APS oferecerão suporte a todas as versões do TLS (1.0, 1.1 e 1.2) para compatibilidade com versões anteriores. Se você deseja definir o seu dispositivo de APS estritamente usar TLS 1.2, você pode fazer isso alterando as configurações do registro. 
 
-Ver [Configurando o TLS1.2 em APS](configure-tls12-aps.md) para obter mais informações.
+Para obter mais informações, consulte [Configurando o TLS1.2 em APS](configure-tls12-aps.md).
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Suporte a zona de criptografia do Hadoop para o PolyBase
 PolyBase agora pode comunicar-se às zonas de criptografia do Hadoop. Veja as alterações de configuração de pontos de acesso que são necessários no [configurar a segurança do Hadoop](polybase-configure-hadoop-security.md#encryptionzone).
@@ -85,7 +101,7 @@ Usar objetos de catálogo para chamadas de metadados em vez de usar o SMO mostro
 ### <a name="bug-fixes"></a>Correções de bugs
 Atualizamos para SQL Server 2016 SP2 CU2 com CU7.1 APS. A atualização corrige alguns problemas descritos abaixo.
 
-| Title | Description |
+| Title | Descrição |
 |:---|:---|
 | **Deadlock potencial de motor de tupla** |A atualização corrige uma possibilidade de longa data de deadlock em um thread de plano de fundo de motor tupla e de transação distribuído. Depois de instalar CU7.1, os clientes que usaram TF634 para interromper o motor da tupla como parâmetro de inicialização do SQL Server ou o sinalizador de rastreamento global com segurança remova-a. | 
 | **Ocorre falha na consulta determinados lag/lead.** |Determinadas consultas em tabelas CCI com funções aninhadas lag/lead que seriam o erro agora é corrigido com essa atualização. | 
@@ -101,9 +117,9 @@ APS 2016 é um pré-requisito para atualizar para AU7. Estes são os novos recur
 APS AU7 cria e atualiza as estatísticas automaticamente, por padrão. Para atualizar as configurações de estatísticas, os administradores podem usar um novo item de menu do comutador de recurso nas [Configuration Manager](appliance-configuration.md#CMTasks). O [comutador de recurso](appliance-feature-switch.md) controla a auto-create, a atualização automática e o comportamento de atualização assíncrona de estatísticas. Você também pode atualizar as configurações de estatísticas com o [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) instrução.
 
 ### <a name="t-sql"></a>T-SQL
-Selecione @var agora tem suporte. Para obter mais informações, consulte [Selecione variável local] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Selecione @var agora tem suporte. Para obter mais informações, consulte [selecione a variável local](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Agora há suporte para dicas de consulta HASH e o grupo de ordem. Para obter mais informações, consulte [Hints(Transact-SQL) - consulta] (/ sql/t-sql/consultas/dicas-transact-sql-query)
+Agora há suporte para dicas de consulta HASH e o grupo de ordem. Para obter mais informações, consulte [Hints(Transact-SQL) - consulta ](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Comutador de recurso
 Apresenta o comutador de recurso no APS AU7 [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled e DmsProcessStopMessageTimeoutInSeconds agora são opções configuráveis que podem ser alteradas por administradores.

@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168806"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540841"
 ---
 # <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
   Este tópico descreve como adicionar colunas incluído (ou não chave) para estender a funcionalidade de índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao incluir colunas não chave, você pode criar você índices não clusterizados que abrangem mais consultas. Isto porque as colunas não chave têm os seguintes benefícios:  
@@ -63,23 +63,23 @@ ms.locfileid: "48168806"
   
 -   Inclua colunas não chave em um índice não clusterizado para evitar exceder as limitações do tamanho atual do índice, de um máximo de 16 colunas de chave, e um tamanho máximo de chave de índice de 900 bytes. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não considera as colunas não chave ao calcular o número de colunas de chave de índice, ou o tamanho da chave do índice.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   As colunas não chave só podem ser definidas em índices não clusterizados.  
   
--   Todos os tipos de dados, exceto `text`, `ntext`, e `image` podem ser usados como colunas não chave.  
+-   Todos os tipos de dados, exceto `text`, `ntext` e `image`, podem ser usados como colunas não chave.  
   
 -   As colunas computadas que são determinísticas e precisas ou imprecisas podem ser colunas não chave. Para obter mais informações, consulte [Indexes on Computed Columns](indexes-on-computed-columns.md).  
   
 -   As colunas computadas derivadas dos tipos de dados `image`, `ntext` e `text` podem ser colunas não chave, desde que o tipo de dados da coluna computada seja permitido como uma coluna de índice não chave.  
   
--   As colunas não chave não podem ser descartadas de uma tabela, a menos que o índice dessa tabela seja descartado primeiro.  
+-   As colunas que não são de chave não podem ser removidas de uma tabela, a menos que o índice dessa tabela seja removido primeiro.  
   
 -   As colunas não chave não podem ser alteradas, exceto para fazerem o seguinte:  
   
     -   Alterar a nulidade da coluna da coluna NOT NULL até NULL.  
   
-    -   Aumente o tamanho das `varchar`, `nvarchar`, ou `varbinary` colunas.  
+    -   Aumentar o comprimento das colunas `varchar`, `nvarchar`, ou `varbinary` .  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -96,17 +96,17 @@ ms.locfileid: "48168806"
   
 3.  Clique no sinal de adição para expandir a tabela na qual você deseja criar um índice com colunas não chave.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-6.  Na guia **Colunas de chave de índice** , clique em **Adicionar…**.  
+6.  Na guia **Colunas de chave de índice**, clique em **Adicionar...**.  
   
 7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
   
 8.  Clique em **OK**.  
   
-9. Na guia **Colunas incluídas** , clique em **Adicionar…**.  
+9. Na guia **Colunas incluídas**, clique em **Adicionar...**.  
   
 10. Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48168806"
   
 12. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Para criar um índice com colunas não chave  
   

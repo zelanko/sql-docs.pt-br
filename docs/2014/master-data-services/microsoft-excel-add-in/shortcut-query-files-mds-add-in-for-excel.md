@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e49af33f5e7c02536757cf408e9b774852a9002b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e966260ac9880ffbdc722abca8eef86c5409da6a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750858"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Arquivos de consulta de atalho (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use arquivos de consulta de atalho para conectar e carregar dados usados frequentemente de forma rápida. Você também pode usá-los quando desejar compartilhar dados do MDS com outros usuários. Em vez de salvar a planilha e enviá-la por email, você deve salvar um arquivo de consulta de atalho e enviá-lo por email. Isso garante que vocês se conectem ao repositório do MDS para obter os dados mais recentes.  
@@ -36,7 +35,7 @@ ms.locfileid: "48215656"
 ## <a name="queryopener-application"></a>Aplicativo QueryOpener  
  Todos os usuários que instalam o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] têm um aplicativo chamado QueryOpener instalado. Esse aplicativo é usado para abrir arquivos de consulta de atalho no [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]. Se você clicar duas vezes em um arquivo de consulta de atalho, esse aplicativo será usado para abrir o arquivo automaticamente no suplemento.  
   
- Ao abrir um arquivo de consulta de atalho com esse aplicativo, você será solicitado tornar a conexão "segura", que o significa que você confia no conteúdo desse local. Sempre que você marca uma conexão como segura, ela é adicionada a uma lista. Se desejar apagar essa lista, abra a caixa de diálogo **Configurações** e, na seção **Servidores Adicionados à Lista Segura** , clique em **Desmarcar Tudo**.  
+ Ao abrir um arquivo de consulta de atalho com esse aplicativo, você será solicitado tornar a conexão "segura", que o significa que você confia no conteúdo dessa localização. Sempre que você marca uma conexão como segura, ela é adicionada a uma lista. Se desejar apagar essa lista, abra a caixa de diálogo **Configurações** e, na seção **Servidores Adicionados à Lista Segura** , clique em **Desmarcar Tudo**.  
   
  O local padrão para o aplicativo é *unidade*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-in\microsoft.masterdataservices.queryopener.exe.  
   

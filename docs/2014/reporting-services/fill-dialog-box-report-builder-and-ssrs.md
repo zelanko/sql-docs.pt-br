@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204646"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591430"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Preenchimento (Construtor de Relatórios e SSRS)
   Na guia **Preenchimento**, você pode especificar as opções de cor da tela de fundo de uma única ou de várias células dentro de uma região de dados ou de uma caixa de texto.  
   
 ## <a name="options"></a>Opções  
  **Cor de preenchimento**  
- Clique no botão de cor para selecionar uma cor de preenchimento para o retângulo. Clique o **Expression***(fx)* botão para editar a expressão, que pode ser um valor hexadecimal para a cor RGB ou um dos nomes de cor predefinidos que são fornecidos na **expressão** caixa de diálogo. Para consultar uma lista de cores predefinidas, selecione **Web** no painel **Item**. Os nomes de cor listados no painel **Título** podem ser digitados no painel de texto da expressão. Não use sinal de igual (=) ou aspas ("") ao digitar o nome da cor.  
+ Clique no botão de cor para selecionar uma cor de preenchimento para o retângulo. Clique no botão **Expressão** _(fx)_ para editar a expressão, que pode ser um valor hexadecimal para a cor RGB ou um dos nomes de cor predefinidos que foram fornecidos na caixa de diálogo **Expressão**. Para consultar uma lista de cores predefinidas, selecione **Web** no painel **Item**. Os nomes de cor listados no painel **Título** podem ser digitados no painel de texto da expressão. Não use sinal de igual (=) ou aspas ("") ao digitar o nome da cor.  
   
  **Selecione a origem da imagem**  
  Indique onde a imagem está armazenada para que, quando o relatório for renderizado, o processador de relatórios possa exibi-la.  
@@ -61,7 +61,7 @@ ms.locfileid: "48204646"
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Imagens &#40;relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba670583dbc81789726392a6d9f54d1dd78c3ba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c54e545bdbd1ae137c24f79c71b53502480cbca9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812544"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391279"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notificação de conclusão da função assíncrona
 No SDK do Windows 8, ODBC adicionado um mecanismo para notificar aplicativos quando uma operação assíncrona é concluída, que nos referiremos a como "notificação de conclusão". (Consulte [execução assíncrona (método de notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) para obter mais informações.) Este tópico discute alguns dos problemas para os desenvolvedores de driver.  

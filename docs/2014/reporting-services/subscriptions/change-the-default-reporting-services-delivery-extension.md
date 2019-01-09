@@ -13,19 +13,19 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 054d67de8b05d7f3b913ade660902c764cab9b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f80f6a86e8a73241ee681719c684bf2ba39e02
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206826"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394710"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Alterar a extensão de entrega padrão do Reporting Services
   Você pode modificar as definições de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para alterar a extensão de entrega padrão que aparece na lista **Entregue por** de uma página de definição de assinatura. Por exemplo, você pode modificar a configuração de modo que quando os usuários criem uma nova assinatura, a entrega de compartilhamento de arquivos seja selecionada por padrão, em vez da entrega de email. Você também pode alterar a ordem em que as extensões de entrega são listadas na interface do usuário.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | Modo do SharePoint do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]   
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui as entregas email e compartilhamento de arquivos do Windows são extensões. O servidor de relatório pode ter extensões de entrega adicionais caso extensões personalizadas ou de terceiros tenham sido implantadas para oferecer suporte à entrega personalizada. A disponibilidade de uma extensão de entrega depende de sua implantação em um servidor de relatório.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui as entregas de Email e Compartilhamento de Arquivos do Windows como extensões. O servidor de relatório pode ter extensões de entrega adicionais caso extensões personalizadas ou de terceiros tenham sido implantadas para oferecer suporte à entrega personalizada. A disponibilidade de uma extensão de entrega depende de sua implantação em um servidor de relatório.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Configuração padrão de servidor de relatório em modo nativo  
  A ordem de uma extensão de entrega que aparece no Report Manager na lista **Entregue por** baseia-se na ordem das entradas de extensão de entrega do arquivo **RSReportServer.config** . Por exemplo, a imagem a seguir mostra email em primeiro lugar na lista e é selecionada por padrão.  
@@ -52,7 +52,7 @@ ms.locfileid: "48206826"
   
 1.  As etapas neste procedimento modificam a configuração para que a entrega de compartilhamento de arquivos seja listada como a primeira opção na interface do usuário e seja a seleção padrão.  
   
-     Abra o arquivo RSReportServer.config em um editor de texto. Para obter mais informações sobre o arquivo de configuração, consulte [arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md). Após a configuração ter sido alterada, a interface do usuário será semelhante à imagem a seguir:  
+     Abra o arquivo RSReportServer.config em um editor de texto. Para obter mais informações sobre o arquivo de configuração, confira [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Após a configuração ter sido alterada, a interface do usuário será semelhante à imagem a seguir:  
   
      ![lista modificada de extensões de entrega](../media/ssrs-modified-delivery.png "lista modificada de extensões de entrega")  
   
@@ -86,26 +86,26 @@ ms.locfileid: "48206826"
   
      O evento a seguir é gravado no log de eventos do Windows quando a configuração é lida.  
   
-     **ID do Evento:** 109  
+     **ID do evento:** 109  
   
      **Fonte:** Serviço Windows Servidor de Relatórios (nome da instância)  
   
      O arquivo RSReportServer.config foi modificado  
   
 ## <a name="sharepoint-mode-report-servers"></a>Servidores de relatório no modo do SharePoint  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo do SharePoint armazena informações de extensões nos bancos de dados de aplicativo de serviço do SharePoint e não no arquivo Rsrreportserver. No modo do SharePoint, a configuração de extensão de entrega é modificada usando o PowerShell.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] O modo do SharePoint armazena informações de extensões nos bancos de dados de aplicativo do serviço SharePoint e não no arquivo RsrReportServer.config. No modo do SharePoint, a configuração de extensão de entrega é modificada usando o PowerShell.  
   
 #### <a name="configure-the-default-delivery-extension"></a>Configurar a extensão de entrega padrão  
   
 1.  Abra o **Shell de Gerenciamento do SharePoint**.  
   
-2.  Você pode ignorar esta etapa se você já souber o nome do seu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aplicativo de serviço. Use o PowerShell a seguir lista o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aplicativos no seu farm do SharePoint do serviço.  
+2.  Você poderá ignorar esta etapa se já souber o nome do seu aplicativo de serviço [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Use o PowerShell a seguir para listar os aplicativos de serviço [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no seu farm do SharePoint.  
   
     ```  
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Execute o PowerShell a seguir para verificar se a extensão de entrega padrão atual para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] "ssrsapp" do aplicativo de serviço.  
+3.  Execute o PowerShell a seguir para verificar a extensão de entrega padrão atual para o aplicativo de serviço "ssrsapp" do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
@@ -115,7 +115,7 @@ ms.locfileid: "48206826"
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Entrega de compartilhamento de arquivos no Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Entrega de email no Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
