@@ -7,20 +7,18 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c26b1be3e0a107978df25f5f66f9dbd6b330b618
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a69ead28479ba16df7439d6e551163be48737562
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783764"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328566"
 ---
 # <a name="external-tools"></a>Ferramentas Externas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,4 +78,3 @@ Fecha a janela aberta pela ferramenta quando ela for encerrada.
   
 > [!NOTE]  
 > Veja as propriedades do atalho do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no menu **Iniciar** para confirmar o local dos arquivos em seu computador.  
-  

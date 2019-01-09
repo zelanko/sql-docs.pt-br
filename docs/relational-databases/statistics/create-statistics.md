@@ -15,16 +15,16 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 494272f6609af4d8cf8747aff8d3dd5eda85483f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8c1dbccf3b45896f56aba5c478e1a37954f37f8
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510171"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380697"
 ---
 # <a name="create-statistics"></a>Criar estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52510171"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Antes de criar estatísticas com a instrução de CREATE STATISTICS, verifique se a opção AUTO_CREATE_STATISTICS está definida no nível do banco de dados. Isso assegurará que o otimizador de consulta continue criando rotineiramente estatísticas de coluna única para colunas de predicado de consulta.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "52510171"
   
 7.  Na caixa de diálogo **Novas Estatísticas na Tabela**_table\_name_, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Para criar estatísticas  
   

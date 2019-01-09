@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696634"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201865"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de rede e bibliotecas de rede
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696634"
 ## <a name="server-message-block-protocol"></a>Protocolo SMB  
  Os servidores na rede de perímetro devem ter todos os protocolos desnecessários desabilitados, incluindo o SMB. Os servidores Web e DNS (Sistema de Nome de Domínio) não requerem SMB. Este protocolo deve ser desabilitado para contra-atacar a ameaça de enumeração de usuário.  
   
-> [!WARNING]  
+> [!WARNING]
 >  A desabilitação do protocolo SMB impede que o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Cluster do Windows acesse o compartilhamento de arquivos remoto. Não desabilite o SMB se você implementa ou planeja implementar uma destas ações:  
->   
+> 
 >  -   Usar o modo de quorum da maioria do compartilhamento de arquivos e o nó de Custer do Windows  
 > -   Especificar um compartilhamento de arquivos SMB como o diretório de dados durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Criar um arquivo de banco de dados em um compartilhamento de arquivos SMB  

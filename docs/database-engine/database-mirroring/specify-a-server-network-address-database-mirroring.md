@@ -16,12 +16,12 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7217be66fa41328d2483bc42fa66f2f71fcc1beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cbc26b45f5845cf563bb1cc8855ecf6b600b999
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789034"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588700"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47789034"
 ##  <a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
  A sintaxe para um endereço de rede de servidor é do formato:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
   
  onde  
   
@@ -41,15 +41,15 @@ ms.locfileid: "47789034"
   
     -   Se os sistemas estiverem no mesmo domínio, você poderá usar o nome do sistema de computador; por exemplo, `SYSTEM46`.  
   
-    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve estar entre colchetes. Por exemplo: **[***<IPv6_address>***]**.  
+    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve estar entre colchetes. Por exemplo: **[**_<IPv6_address>_**]**.  
   
          Para saber o endereço IP de um sistema, no prompt de comando do Windows, digite no comando **ipconfig** .  
   
     -   O nome de domínio completamente qualificado tem seu funcionamento garantido. Esta é uma cadeia de caracteres de endereço definida localmente de formatos diferentes em lugares diferentes. Frequentemente, mas não sempre, um nome de domínio completamente qualificado é um nome composto que inclui o nome do computador e uma série de segmentos de domínio separados por pontos no formato:  
   
-         *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
   
-         em que *computer_name* é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.***domain_segment*] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
+         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.**_domain_segment_] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
   
          O conteúdo e número de segmentos de domínio são determinados dentro da companhia ou organização. Se você não conhecer o nome de domínio completamente qualificado do seu servidor, consulte seu administrador de sistema.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47789034"
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Usando um nome de domínio completamente qualificado  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Usando um nome de domínio completamente qualificado  
  O endereço de rede de servidor a seguir especifica um nome de domínio completamente qualificado, `DBSERVER8.manufacturing.Adventure-Works.com`e a porta `7024`.  
   
 ```  
@@ -109,7 +109,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  Para formar o nome de domínio totalmente qualificado, concatene os valores de *<host_name>* e *<Primary_Dns_Suffix>* da seguinte forma:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  Por exemplo, a configuração IP  
   

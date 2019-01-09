@@ -11,12 +11,12 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23d07daa8b67edc171dce033c3e46ebc8f9a9f1c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b3d90e98fd80a1ee7e7f1f6704800401d6e76a00
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419887"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201645"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (Expressão SSIS)
   Retornará o valor do parâmetro da segunda expressão se o valor do parâmetro da primeira expressão for NULL; caso contrário, retornará o valor da primeira expressão.  
@@ -54,8 +54,8 @@ REPLACENULL(expression 1,expression 2)
 REPLACENULL(MyColumn, "1900-01-01")  
 ```  
   
-> [!NOTE]  
->  O exemplo a seguir mostra como isso foi feito no [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)].  
+> [!NOTE]
+>  O exemplo a seguir mostra como isso foi feito no [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/ [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)].  
   
 ```  
 (DT_DBTIMESTAMP) (ISNULL(MyColumn) ? "1900-01-01" : MyColumn)   

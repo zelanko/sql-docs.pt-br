@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3421dd1189edf648f1e512851223f5baceaef8ff
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: ad41d2f0c0274aeaefdfcbe0b33fca6de1e0454a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018871"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978922"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,16 +77,15 @@ SELECT TOP ( number )
  É recomendado que os novos mosaicos de índice espaciais sejam usados para índices usados em consultas de Vizinhos Mais Próximos. Para obter mais informações sobre mosaicos de índice espacial, veja [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que pode usar um índice espacial. O exemplo usa a tabela `Person.Address` no banco de dados `AdventureWorks2012` .  
+ O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que pode usar um índice espacial. O exemplo usa a tabela `Person.Address` no banco de dados `AdventureWorks2016` .  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 WHERE SpatialLocation.STDistance(@g) IS NOT NULL  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  Crie um índice espacial na coluna SpatialLocation para ver como uma consulta de Vizinho Mais Próximo usa um índice espacial. Para obter mais informações sobre como criar índices espaciais, consulte [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
@@ -95,12 +94,11 @@ ORDER BY SpatialLocation.STDistance(@g);
  O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que não pode usar um índice espacial.  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  A consulta não tem uma cláusula **WHERE** que usa `STDistance()` em uma forma especificada na seção de sintaxe; portanto, a consulta não pode usar um índice espacial.  

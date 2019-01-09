@@ -17,12 +17,12 @@ ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 515699af51ea0a4a9dd685bf221eb8a08b9fc8a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa0a8b5cf40d306c873545784cae65b5fa79db9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774464"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589401"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>Permissões de chave assimétrica REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  *permission*  
  Especifica uma permissão que pode ser revogada em um assembly. Listada abaixo.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Especifica a chave assimétrica na qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  

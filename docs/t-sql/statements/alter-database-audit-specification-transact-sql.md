@@ -20,12 +20,12 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 622e6be1e798569de5184333144ff53e3e7d80a6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667124"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979582"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,11 +93,11 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  Após a criação de uma especificação de auditoria de banco de dados, ela pode ser exibida por entidades de segurança com as permissões CONTROL SERVER ou ALTER ANY DATABASE AUDIT, com a conta sysadmin ou com entidades de segurança que têm acesso explícito à auditoria.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir altera uma especificação de auditoria de banco de dados denominada `HIPPA_Audit_DB_Specification` que audita as instruções `SELECT` pelo usuário `dbo`, para uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPPA_Audit`.  
+ O exemplo a seguir altera uma especificação de auditoria de banco de dados denominada `HIPAA_Audit_DB_Specification` que audita as instruções `SELECT` pelo usuário `dbo`, para uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPAA_Audit`.  
   
 ```  
-ALTER DATABASE AUDIT SPECIFICATION HIPPA_Audit_DB_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  
          ON OBJECT::dbo.Table1  
          BY dbo)  

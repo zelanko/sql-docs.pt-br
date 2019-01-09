@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba81029a195bcee0e747bfe517fa5d6b27e4ead1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401621"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588370"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar fator de preenchimento para um índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52401621"
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
+8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Para especificar um fator de preenchimento em um índice usando o Pesquisador de Objetos  
   
@@ -103,7 +103,7 @@ ms.locfileid: "52401621"
   
 8.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Para especificar um fator de preenchimento em um índice existente  
   

@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0aa0261ebd896f8f7c8291d24f79a51b99e80bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eaf2a4e5deb782533b945e85209c6ed7f2200db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760544"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202605"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -194,7 +194,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Uma operação de índice offline que cria, recria ou remove um índice XML adquire um bloqueio de Modificação de esquema (Sch-M) na tabela. Isso evita o acesso de todos os usuários à tabela subjacente enquanto durar a operação.  
   
-> [!NOTE]  
+> [!NOTE]
 >  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
@@ -234,7 +234,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="remarks"></a>Remarks  
@@ -265,7 +265,7 @@ CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
 GO  
 ```  
   
-### <a name="b-creating-a-secondary-xml-index"></a>B. Criando um índice XML secundário  
+### <a name="b-creating-a-secondary-xml-index"></a>b. Criando um índice XML secundário  
  O exemplo a seguir cria um índice XML secundário na coluna `CatalogDescription` da tabela `Production.ProductModel`.  
   
 ```sql  

@@ -17,16 +17,16 @@ ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d743652fa35a5f3cb6a8438d0ad6dffd66e7a01d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7367a3f3ce663966b583f6946923e3c312a5eb41
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736004"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213605"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Limpar resultados da consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Depois de executar uma consulta no **Designer de Consulta e Exibição**, você pode limpar o painel de Resultados. Esse procedimento aplica-se a consultas criadas usando as opções **Abrir Exibição** ou **Abrir Tabela** do Pesquisador de Objetos. No[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], após executar uma consulta no Editor de Consultas, o painel de Resultados não pode ser apagado, exceto se a janela do Editor de Consultas for fechada ou se outra consulta for executada.  
+Depois de executar uma consulta no **Designer de Consulta e Exibição**, você pode limpar o painel de Resultados. Esse procedimento aplica-se a consultas criadas usando as opções **Abrir Exibição** ou **Abrir Tabela** do Pesquisador de Objetos. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], após executar uma consulta no Editor de Consultas, o painel Resultados não pode ser apagado, exceto se a janela do Editor de Consultas for fechada ou se outra consulta for executada.  
   
 > [!NOTE]  
 > Isso não desfaz as alterações feitas no banco de dados. Para obter mais informações sobre como funciona o painel de Resultados, consulte [Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

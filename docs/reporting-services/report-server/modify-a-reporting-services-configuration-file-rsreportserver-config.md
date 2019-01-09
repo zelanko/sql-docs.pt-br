@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758648"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202135"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativo em um conjunto de arquivos de configuração. A instalação cria os arquivos de configuração para cada instância instalada do servidor de relatório. Em cada arquivo, os valores são definidos durante a instalação ou quando você usa ferramentas e aplicativos para configurar um servidor para operação. Em alguns casos, é necessário modificar um arquivo diretamente para adicionar ou definir configurações avançadas. As configurações são especificadas como elementos ou atributos XML. Se você entender de XML e arquivos de configuração, use um editor de texto ou de código para modificar configurações definidas pelo usuário.  
   
  Algumas configurações podem ser definidas somente com uma ferramenta. As configurações que contêm valores criptografados devem ser modificadas com a ferramenta Configuração do Reporting Services, o programa de Instalação ou o utilitário de linha de comando **rsconfig** . Você deve ser um membro do grupo Administradores local para executar estas ferramentas.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Tenha cuidado ao modificar arquivos de configuração. Se você modificar uma configuração que é reservada para uso interno, poderá desabilitar sua instalação. Geralmente, a modificação de configurações não é recomendada, a menos que você esteja tentando resolver um problema específico. Para obter mais informações sobre quais configurações podem ser alteradas com segurança, consulte [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) ou [Arquivo de configuração RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Para obter mais informações sobre arquivos de configuração, confira a documentação do produto [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Neste tópico:  

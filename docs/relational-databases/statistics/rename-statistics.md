@@ -10,16 +10,16 @@ helpviewer_keywords:
 - renaming statistics
 - statistics [SQL Server], renaming
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 198a4d40f479e30e129acaf3d78283041b01bc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38062676a3ddd4eb7daa6db06b71cd41bf59efad
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781150"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380847"
 ---
 # <a name="rename-statistics"></a>Renomear estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47781150"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  Por padrão, a criação de um índice cria uma estatística nas colunas de chave desse índice. Portanto, a renomeação do índice renomeia automaticamente o objeto de estatísticas e vice-versa.  
   
  A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. Em vez de renomear, é recomendável que você remova o objeto de estatísticas e recrie-o com o novo nome.  
@@ -49,7 +49,7 @@ ms.locfileid: "47781150"
 ####  <a name="Permissions"></a> Permissões  
  Requer a permissão ALTER na tabela ou exibição.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-rename-a-statistics-object"></a>Para renomear um objeto de estatísticas  
   

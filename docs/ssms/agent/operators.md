@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e89c598b31da3bd8aef755dec49a18bb820afd5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 60e05754e43056e3f71d4abccb1d8af91c650684
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698813"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212115"
 ---
 # <a name="operators"></a>Operadores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Todo operador deve ter um nome. Os nomes de operador devem ser exclusivos dentro
 ### <a name="contact-information"></a>Informações de contato  
 As informações de contato de um operador definem como ele é notificado. Os operadores podem ser notificados por email, pager ou através do comando **net send** :  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 -   **Notificação por email**  

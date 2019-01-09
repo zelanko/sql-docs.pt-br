@@ -18,12 +18,12 @@ ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 144bc0915836fadf0965a305d8d10014106a85b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf66db2279aa6400f96564d0b364fb998009e1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598445"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979268"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ FOR SERVER AUDIT audit_name
  Depois que uma especificação de auditoria de servidor é criada, ela pode ser exibida por entidades que tenham a permissão CONTROL SERVER ou ALTER ANY SERVER AUDIT, com a conta sysadmin, ou por entidades que tenham acesso explícito à auditoria.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma especificação de auditoria de servidor denominada `HIPPA_Audit_Specification` que audita logons que falharam, para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit denominado `HIPPA_Audit`.  
+ O exemplo a seguir cria uma especificação de auditoria de servidor denominada `HIPAA_Audit_Specification` que audita logons que falharam, para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit denominado `HIPAA_Audit`.  
   
 ```  
-CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP);  
 GO  
 ```  

@@ -13,12 +13,12 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f186e6236930b6bfdc4d5a9a461695e328212879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 223d1f8cab99a75d78bfa75b25a2092e4ba83865
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761945"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591570"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47761945"
   
  Conexões são usadas pelos gatilhos acionados no Assinante e propagam as alterações no Publicador. Essa conta é necessária mesmo que você selecionou **Colocar alterações na fila e confirmar quando possível** na página **Assinaturas Atualizáveis**. Por padrão, o Assistente para Nova Assinatura configura a atualização na fila com a capacidade de alternar para a atualização imediata, se necessário.  
   
-> **IMPORTANTE:** A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação. Ela não deve receber nenhuma permissão adicional. Conceda permissões para Exibições no banco de dados de publicação nomeadas no formato **syncobj_***\<HexadecimalNumber>* para a conta configurada em cada Assinante.  
+> **IMPORTANTE:** A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação. Ela não deve receber nenhuma permissão adicional. Conceda permissões para Exibições no banco de dados de publicação nomeadas no formato **syncobj_**_\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
   
  Há três opções disponíveis para o tipo de conexão:  
   

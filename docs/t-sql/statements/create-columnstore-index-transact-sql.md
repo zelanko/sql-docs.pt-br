@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7f9c78dc06da0cbb12e34483d3bdd7b469a8f78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398031"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215645"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -215,7 +215,7 @@ Criar um índice columnstore não clusterizado na memória em uma tabela rowstor
     Especifica as colunas a serem armazenadas. Um índice columnstore não clusterizado é limitado a 1024 colunas.  
    Cada coluna deve ser de um tipo de dados com suporte para índices columnstore. Confira [Limitações e restrições](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obter uma lista dos tipos de dados compatíveis.  
 
-ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*  
+ON [*database_name*. [*schema_name* ]. |  *schema_name*. ] *table_name*  
    Especifica o nome de uma, duas ou três partes da tabela que contém o índice.  
 
 #### <a name="with-options"></a>Opções WITH
@@ -234,7 +234,7 @@ ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*
   
    Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
@@ -324,7 +324,7 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
   
  Para obter mais informações sobre índices filtrados, consulte [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitações e restrições  
+##  <a name="LimitRest"></a> Limitações e Restrições  
 
 **Cada coluna em um índice columnstore precisa ser de um dos seguintes tipos de dados de negócios comuns:** 
 -   datetimeoffset [ ( *n* ) ]  
@@ -425,7 +425,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Converta um índice clusterizado em um índice columnstore clusterizado com o mesmo nome.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>b. Converta um índice clusterizado em um índice columnstore clusterizado com o mesmo nome.  
  Este exemplo cria uma tabela com um índice clusterizado e, em seguida, demonstra a sintaxe de conversão do índice clusterizado em índice columnstore clusterizado. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.  
   
 ```sql  
@@ -614,7 +614,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Criar um índice columnstore não clusterizado simples usando todas as opções  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>b. Criar um índice columnstore não clusterizado simples usando todas as opções  
  O exemplo a seguir demonstra a sintaxe de criação de um índice columnstore não clusterizado usando todas as opções.  
   
 ```sql  
@@ -694,7 +694,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Recompilar um índice columnstore clusterizado  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>b. Recompilar um índice columnstore clusterizado  
  Com base no exemplo anterior, este exemplo usa CREATE CLUSTERED COLUMNSTORE INDEX para recompilar o índice columnstore clusterizado existente chamado cci_xDimProduct.  
   
 ```sql  

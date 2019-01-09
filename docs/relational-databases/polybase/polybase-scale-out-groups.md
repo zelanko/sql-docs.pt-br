@@ -14,12 +14,12 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412633"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205415"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escala horizontal do PolyBase
 
@@ -46,7 +46,7 @@ Ao consultar instâncias externas do SQL Server, do Oracle ou do Teradata, as ta
 Por exemplo, digamos que você tenha uma tabela externa do SQL Server com 12 partições mensais e um grupo expansão do PolyBase com 3 nós; cada nó usará 4 leitores do PolyBase para processar cada uma das 12 partições. Isso é ilustrado na imagem a seguir. 
 
 > [!NOTE]
- isso é diferente das leituras de expansão no Hadoop. 
+>  isso é diferente das leituras de expansão no Hadoop. 
 
 ![Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escala horizontal do PolyBase")
   

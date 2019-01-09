@@ -18,12 +18,12 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706294"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590270"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Serviços SCM – impedir a inicialização automática de uma instância
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "47706294"
   
 3.  No painel detalhes, clique com o botão direito do mouse em **MSSQLServer**e clique em **Propriedades.**  
   
-4.  Na caixa de diálogo **Propriedades de \<***instancename***> do SQL Server**, na guia **Serviço** da caixa **Geral**, defina o valor de **Modo Inicial** como **Manual**.  
+4.  Na caixa de diálogo **Propriedades de \<**_instancename_**> do SQL Server**, na guia **Serviço** da caixa **Propriedades**, defina o valor de **Modo Inicial** como **Manual**.  
   
-5.  Clique em **OK** para fechar a caixa de diálogo **Propriedades de \<***instancename***> do SQL Server** e, em seguida, feche o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager.  
+5.  Clique em **OK** para fechar a caixa de diálogo **Propriedades de \<**_instancename_**> do SQL Server** e feche o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

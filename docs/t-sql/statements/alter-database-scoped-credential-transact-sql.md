@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f29f5b662266a789f7aad6bdfb151df999e8ad67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26e845e9d4e7d1ad34e902b0d37fe60cda33f5f0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807894"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206925"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  SECRET **='***secret***'**  
  Especifica o segredo necessário para a autenticação de saída. *secret* é necessário para importar um arquivo de armazenamento de Blobs do Azure. *secret* pode ser opcional para outros fins.   
->  [!WARNING]
+> [!WARNING]
 >  O valor da chave SAS pode começar com um '?' (ponto de interrogação). Quando você usa a chave SAS, deve remover o '?' à esquerda. Caso contrário, seus esforços poderão ser bloqueados.    
   
 ## <a name="remarks"></a>Remarks  
@@ -74,7 +74,7 @@ ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>B. Removendo a senha de uma credencial  
+### <a name="b-removing-the-password-from-a-credential"></a>b. Removendo a senha de uma credencial  
  O exemplo a seguir remove a senha de uma credencial no escopo do banco de dados chamada `Frames`. A credencial no escopo do banco de dados contém o logon do Windows `Aboulrus8` e uma senha. Depois que a instrução for executada, a credencial no escopo do banco de dados terá uma senha NULL porque a opção SECRET não é especificada.  
   
 ```  

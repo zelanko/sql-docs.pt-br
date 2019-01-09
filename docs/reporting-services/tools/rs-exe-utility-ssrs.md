@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e923092cbd81bcee6bee7c76f956bae2ede45c35
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543959"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983977"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  
@@ -56,7 +56,7 @@ rs {-?}
  (Obrigatório) Especifica o arquivo .rss a ser executado. Esse valor pode ser um parente ou caminho totalmente qualificado para o arquivo .rss.  
   
  **-s** *serverURL*  
- (Obrigatório) Especifica o nome do servidor Web e nome do diretório virtual do servidor de relatório no qual executar o arquivo. Um exemplo de uma URL de servidor de relatório é `https://examplewebserver/reportserver`. O prefixo https:// no início do nome do servidor é opcional. Se você omitir o prefixo, o host de script do servidor de relatório tentará usar https primeiro e depois usará http se https não funcionar.  
+ (Obrigatório) Especifica o nome do servidor Web e nome do diretório virtual do servidor de relatório no qual executar o arquivo. Um exemplo de uma URL de servidor de relatório é `https://examplewebserver/reportserver`. O prefixo http:// ou https:// no início do nome do servidor é opcional. Se você omitir o prefixo, o host de script do servidor de relatório tentará usar https primeiro e depois usará http se https não funcionar.  
   
  **-u** [*domain*\\]*username*  
  (Opcional) Especifica uma conta do usuário usada para conexão com o servidor de relatório. Se **-u** e **-p** forem omitidos, a conta do usuário do Windows atual será usada.  

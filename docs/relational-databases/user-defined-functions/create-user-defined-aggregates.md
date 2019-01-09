@@ -14,12 +14,12 @@ ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 705c71cd3b6872bfa8fe08509ed3d46b2799c445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41f6e01b027049f5ac418aa9199cf9e576aebd0a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848154"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208505"
 ---
 # <a name="create-user-defined-aggregates"></a>Criar agregações definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47848154"
   
 -   Criar a agregação definida pelo usuário que referencia o assembly registrado que usa a instrução CREATE AGGREGATE.  
   
-> [!NOTE]  
+> [!NOTE]
 >  A implantação de um projeto SQL Server no [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registra um assembly no banco de dados especificado para o projeto. Implantar um projeto também cria uma agregação definida pelo usuário no banco de dados para todas as definições de classe anotadas pelo atributo **SqlUserDefinedAggregate** . Para obter mais informações, consulte [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  A capacidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de executar o código CLR, por padrão, está desativada. É possível criar, alterar e remover objetos do banco de dados que fazem referência aos módulos de código gerenciados, mas essas referências não serão executadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que a [Opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) tenha sido habilitada com [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  **Para criar, modificar ou descartar um assembly**  

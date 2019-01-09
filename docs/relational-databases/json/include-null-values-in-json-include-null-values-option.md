@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01399a829222204d497f853c7969f47291489e55
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 264fb99c4bda933fdb5acfbcfe2674e36eecbe4c
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662796"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886692"
 ---
 # <a name="include-null-values-in-json---includenullvalues-option"></a>Incluir valores nulos na opção JSON – INCLUDE_NULL_VALUES
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,6 @@ FOR JSON AUTO, INCLUDE_NULL_VALUES
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Saiba mais sobre JSON no SQL Server e no Banco de Dados SQL do Azure  
   
-### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
-  
-Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
-
 ### <a name="microsoft-videos"></a>Vídeos da Microsoft
 
 Para obter uma introdução visual ao suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure, consulte os seguintes vídeos:

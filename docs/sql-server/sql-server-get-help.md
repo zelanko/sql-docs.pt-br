@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531486"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205325"
 ---
 # <a name="sql-server-help-and-feedback"></a>Ajuda e comentários do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ Há alguns veículos de mídia social que também podem alcançar a equipe do SQ
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>Quero contribuir com a documentação do SQL Server
 
-###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![editar conteúdo](../includes/media/edit-topic-pencil.png) Como editar conteúdo
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![editar conteúdo](../includes/media/edit-topic-pencil.png) Como editar conteúdo
 Você encontrou algo de errado com nossa documentação? Ou você tem uma contribuição que pode melhorar nossa documentação? Bem, você mesmo pode editar o conteúdo encontrado em docs.microsoft.com. Se você fizer isso, não apenas melhorará nossa documentação, como também será creditado como um colaborador para a página! Descubra mais informações em [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 Todas as contribuições públicas são revisadas pela equipe de conteúdo do SQL para exatidão técnica e consistência. 

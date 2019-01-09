@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90a9a377391e04a97adf3d542c8493b31649141e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027806"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590810"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvar relatórios em um servidor de relatório (Construtor de Relatórios)
   No Construtor de Relatórios, é possível salvar uma definição de relatório em um servidor de relatório (processo também conhecido como publicação de relatório). Quando o relatório for salvo em um servidor de relatório, outros usuários poderão exibi-lo. Cada vez que você executa o relatório publicado, recupera os dados mais atuais. Para salvar uma cópia estática de um relatório renderizado, exporte o relatório para um formato de arquivo diferente e salve-o ou use o recurso de histórico de relatório para salvar versões dos relatórios renderizados.  
@@ -23,7 +23,7 @@ ms.locfileid: "50027806"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Para salvar um relatório em um servidor de relatório  
   
-1.  No botão Construtor de Relatórios, clique em **Salvar**. A caixa de diálogo **Salvar como***\<Item de relatório>* é exibida.  
+1.  No botão Construtor de Relatórios, clique em **Salvar**. A caixa de diálogo **Salvar Como**_\<Item de Relatório>_ será exibida.  
   
     > [!NOTE]  
     >  Se você estiver salvando um relatório de novo, ele será salvo novamente automaticamente em seu local anterior. Use a opção Salvar como para alterar o local.  
@@ -38,7 +38,7 @@ ms.locfileid: "50027806"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para salvar um relatório com um nome diferente  
   
-1.  No botão Construtor de Relatórios, clique em **Salvar como**. A caixa de diálogo **Salvar como***\<Item de relatório>* é exibida.  
+1.  No botão Construtor de Relatórios, clique em **Salvar como**. A caixa de diálogo **Salvar Como**_\<Item de Relatório>_ será exibida.  
   
 2.  Vá até o local do servidor de relatório ou o compartilhamento de arquivo em que você deseja salvar o relatório.  
   

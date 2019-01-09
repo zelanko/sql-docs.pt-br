@@ -10,19 +10,19 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e286f90ddbe008346f70654ca4d9daa24dccb739
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528376"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215522"
 ---
 # <a name="remove-data-quality-server-objects"></a>Remover objetos do Data Quality Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   A desinstalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou a total remoção de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tem o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] não exclui alguns objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , incluindo bancos de dados DQS. Isso implica que você não perca seus dados DQS se desinstalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando a instalação do SQL Server. Exclua manualmente esses objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] quando o processo de desinstalação estiver concluído.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Antes de desinstalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], considere fazer backup de todas as suas bases de dados de conhecimento exportando-as para um arquivo .dqsb e use o arquivo posteriormente para importar todas as bases de conhecimento em uma nova instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . A exportação e a importação de todas as bases de dados de conhecimento DQS podem ser realizadas somente executando DQSInstaller.exe com os parâmetros de linha de comando apropriados no prompt de comando. Para obter mais informações, consulte [Exportar e importar bases de dados de conhecimento DQS usando o DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
 > -   Antes de excluir os bancos de dados do DQS, faça backup dos bancos de dados se desejar preservá-los, e use-o posteriormente para restaurar os dados. Para obter informações sobre como fazer isso, consulte [Gerenciar bancos de dados do DQS](../../data-quality-services/manage-dqs-databases.md).  
   

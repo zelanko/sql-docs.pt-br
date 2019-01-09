@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ed641edd4ff8b979f7e753c9e83b38654082e61
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d99aac35afb4d5e4cc9fc4c56c497a95641300e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660555"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210805"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Configure a distribuição, usando o Assistente para Novas Publicações ou o As
 
   - Além disso, faça o script das definições de configuração. Para obter mais informações, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).
 
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL 
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL 
 Publicação e distribuição de replicação podem ser configuradas de forma programada, usando-se procedimentos de replicação armazenados.
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>Para configurar publicação usando um distribuidor local
 1. Execute [sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) para determinar se o servidor já está configurado como um Distribuidor.
@@ -130,7 +130,7 @@ O exemplo a seguir mostra como configurar publicação e distribuição programa
 
 4. Defina a propriedade <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> ao nome do banco de dados e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> ao <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.
 
-5. Instale o Distribuidor chamando o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Especifique uma senha segura (usada pelo Publicador ao se conectar ao Distribuidor remoto) e o objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> da etapa 3. Para obter mais informações, consulte [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).
+5. Instale o Distribuidor chamando o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Especifique uma senha segura (usada pelo Publicador ao se conectar ao Distribuidor remoto) e o objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> da etapa 3. Para obter mais informações, consulte [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).
 
    > `IMPORTANT!!` Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.
 
@@ -156,8 +156,8 @@ O exemplo a seguir mostra como configurar publicação e distribuição programa
 
 11. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passe o nome do Distribuidor remoto e a senha para o Distribuidor remoto especificados na etapa 5.
 
->[!IMPORTANT]
-Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.
+> [!IMPORTANT]
+> Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.
 
 ###  <a name="PShellExample"></a> Exemplo (RMO) 
 Você pode configurar a replicação da publicação e da distribuição de forma programada usando o RMO (Replication Management Objects).

@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c7765138f3ff4fd1ef31b6d3a606d427020c376d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018631"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979822"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018631"
   
  ![Exemplos de instâncias geométricas LineString](../../relational-databases/spatial/media/linestring.gif "Exemplos de instâncias geométricas LineString")  
   
- Conforme mostrado na ilustração:  
+Conforme mostrado na ilustração:  
   
 -   A Figura 1 é uma instância **LineString** simples, não fechada.  
   
@@ -41,69 +41,69 @@ ms.locfileid: "51018631"
 -   A Figura 4 é uma instância **LineString** fechada, não simples e, portanto, não é um anel.  
   
 ### <a name="accepted-instances"></a>Instâncias aceitas  
- As instâncias **LineString** aceitas podem ser inseridas em uma variável geometry, mas talvez não sejam instâncias **LineString** válidas. Os critérios a seguir devem ser atendidos para que uma instância **LineString** seja aceita. A instância deve ser formada por pelo menos dois pontos ou deve estar vazia. As instâncias LineString a seguir são aceitas.  
+As instâncias **LineString** aceitas podem ser inseridas em uma variável geometry, mas talvez não sejam instâncias **LineString** válidas. Os critérios a seguir devem ser atendidos para que uma instância **LineString** seja aceita. A instância deve ser formada por pelo menos dois pontos ou deve estar vazia. As instâncias LineString a seguir são aceitas.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` mostra que uma instância **LineString** pode ser aceita, mas não válida.  
+`@g3` mostra que uma instância **LineString** pode ser aceita, mas não válida.  
   
- A instância **LineString** a seguir não é aceita. Ela irá gerar um `System.FormatException`.  
+A instância **LineString** a seguir não é aceita. Ela irá gerar um `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Para que uma instância **LineString** seja válida, ela deve atender aos critérios a seguir.  
+Para que uma instância **LineString** seja válida, ela deve atender aos critérios a seguir.  
   
 1.  A instância **LineString** deve ser aceita.  
-  
 2.  Se uma instância **LineString** não for vazia, ela deverá conter, pelo menos, dois pontos distintos.  
-  
 3.  A instância **LineString** não pode se sobrepor sobre um intervalo de dois ou mais pontos consecutivos.  
   
- As instâncias **LineString** a seguir são válidas.  
+As instâncias **LineString** a seguir são válidas.  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- As instâncias **LineString** a seguir não são válidas.  
+As instâncias **LineString** a seguir não são válidas.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  A detecção de sobreposições de **LineString** baseia-se em cálculos de pontos flutuantes, os quais não são exatos.  
+> A detecção de sobreposições de **LineString** baseia-se em cálculos de pontos flutuantes, os quais não são exatos.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra como criar uma instância `geometry``LineString` com três pontos e uma SRID de 0:  
+### <a name="example-a"></a>Exemplo A.    
+O exemplo a seguir mostra como criar uma instância `geometry``LineString` com três pontos e uma SRID de 0:  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- Cada ponto na instância `LineString` pode conter valores Z (elevação) e M (medida). Esse exemplo adiciona valores de M à instância `LineString` criada no exemplo acima. M e Z podem ser valores nulos.  
+### <a name="example-b"></a>Exemplo B.   
+Cada ponto na instância `LineString` pode conter valores Z (elevação) e M (medida). Esse exemplo adiciona valores de M à instância `LineString` criada no exemplo acima. M e Z podem ser valores nulos.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- O exemplo a seguir mostra como criar uma instância `geometry LineString` com dois pontos iguais. Uma chamada para `IsValid` indica que a instância **LineString** não é válida e uma chamada para `MakeValid` converterá a instância **LineString** em um **Point**.  
+### <a name="example-c"></a>Exemplo C.   
+O exemplo a seguir mostra como criar uma instância `geometry LineString` com dois pontos iguais. Uma chamada para `IsValid` indica que a instância **LineString** não é válida e uma chamada para `MakeValid` converterá a instância **LineString** em um **Point**.  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +118,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- Os snippets de código acima irão retornar o seguinte:  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  

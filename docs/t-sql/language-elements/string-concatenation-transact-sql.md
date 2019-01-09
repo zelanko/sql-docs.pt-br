@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835914"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991789"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concatenação de cadeias de caracteres) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  Uma conversão explícita em dados de caractere deve ser usada ao concatenar cadeias binárias e quaisquer caracteres entre as cadeias binárias. O exemplo a seguir mostra quando `CONVERT` ou `CAST` deve ser usado com a concatenação binária e quando `CONVERT` ou `CAST` não precisa ser usado.  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. Usando a concatenação de cadeias de caracteres  
  O exemplo a seguir cria uma única coluna sob o título de coluna `Name` a partir de colunas de vários caracteres, com o sobrenome da pessoa seguido por uma vírgula, um único espaço e o nome da pessoa. O conjunto de resultados está em ordem alfabética crescente pelo sobrenome e depois pelo nome.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -86,10 +86,10 @@ FROM Person.Person
 ORDER BY LastName ASC, FirstName ASC;  
 ```  
   
-### <a name="b-combining-numeric-and-date-data-types"></a>B. Combinando tipos de dados numéricos e de data  
+### <a name="b-combining-numeric-and-date-data-types"></a>b. Combinando tipos de dados numéricos e de data  
  O exemplo a seguir usa a função `CONVERT` para concatenar os tipos de dados **numeric** e **date**.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>C. Usando concatenação de várias cadeias de caracteres  
  O exemplo a seguir concatena várias cadeias de caracteres para formar uma cadeia de caracteres longa a fim de exibir o sobrenome e a primeira inicial dos vice-presidentes na [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Uma vírgula é adicionada depois do sobrenome e um ponto depois da primeira inicial.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>D. Usando cadeias de caracteres grandes em concatenação
 O exemplo a seguir concatena várias cadeias de caracteres para formar uma cadeia de caracteres longa e, em seguida, tenta calcular o tamanho da cadeia de caracteres final. O tamanho final do conjunto de resultados é 16000, porque a avaliação da expressão começa na esquerda, ou seja, @x + @z + @y => (@x + @z) + @y. Nesse caso, o resultado de (@x + @z) é truncado em 8.000 bytes e, em seguida, @y é adicionado ao conjunto de resultados, o que faz o tamanho da cadeia de caracteres final chegar a 16000. Como @y é uma cadeia de caracteres de tipo de valor grande, não ocorre o truncamento.
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>E. Usando concatenação de várias cadeias de caracteres  
  O exemplo a seguir concatena várias cadeias de caracteres para formar uma cadeia de caracteres longa, a fim de exibir o sobrenome e a primeira inicial dos vice-presidentes em um banco de dados de exemplo. Uma vírgula é adicionada depois do sobrenome e um ponto depois da primeira inicial.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - notifications [Master Data Services]
@@ -17,12 +16,12 @@ ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab3388df365458d7fdc8fcac7692b58c6a2da743
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b255b5e0d82b70237bd9933f49c6b3b247560be2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701285"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819218"
 ---
 # <a name="notifications-master-data-services"></a>Notificações (Master Data Services)
 
@@ -39,7 +38,7 @@ ms.locfileid: "51701285"
 |Instância|Descrição|  
 |--------------|-----------------|  
 |Os dados falham na validação de regras de negócio.|Regras de negócio individuais devem ser configuradas para enviar email quando um valor de atributo é reprovado na validação da regra de negócio. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> Entidade<br /><br /> Código do Membro<br /><br /> Regra de negócio com falha<br /><br /> Link do membro para o qual o valor do atributo não atende à regra de negócio<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, consulte [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
-|O status da versão do modelo é alterado|Cada vez que o status de uma versão de modelo muda, os usuários que são administradores de modelo recebem notificações automaticamente. A notificação contém as seguintes informações.<br /><br /> Modelo<br /><br /> Versão<br /><br /> status atual e anterior da versão<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
+|O status da versão do modelo é alterado|Cada vez que o status de uma versão de modelo muda, os usuários que são administradores de modelo recebem notificações automaticamente. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> status atual e anterior da versão<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
 |Alterações de status do conjunto de alterações|Cada vez que o status de um conjunto de alterações muda para uma entidade que exige aprovação, os administradores da entidade e/ou proprietários do conjunto de alteração recebe notificações automaticamente. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> Nome do conjunto de alterações<br /><br /> Status Anterior<br /><br /> Novo status<br /><br /> Link para aplicar o conjunto de alterações para exibir e modificar as alterações pendentes.<br /><br /> Para obter mais informações, consulte [Conjuntos de alterações &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
   
 ## <a name="system-settings"></a>Configurações do sistema  

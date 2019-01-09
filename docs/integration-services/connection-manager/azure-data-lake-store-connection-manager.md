@@ -14,12 +14,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 3e9caa6e272e4b1e2479f0abf10547e52721049c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5db5df2a209cf9f291c37f960cdd9b2947966061
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719264"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531101"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gerenciador de conexões do Azure Data Lake Store
 Um pacote do SSIS (SQL Server Integration Services) pode usar o Gerenciador de Conexões do Azure Data Lake Store para se conectar a uma conta do Azure Data Lake Storage Gen1 com um dos dois tipos de autenticação a seguir:
@@ -28,7 +28,7 @@ Um pacote do SSIS (SQL Server Integration Services) pode usar o Gerenciador de C
 
 O Gerenciador de Conexões do Azure Data Lake Store é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
->   [!NOTE]
+> [!NOTE]
 > Para garantir que o Gerenciador de Conexões do Azure Data Lake Store e os componentes que o utilizam, isto é, a fonte do Data Lake Storage Gen1 e o destino do Data Lake Storage Gen1, possam se conectar aos serviços, verifique se você baixou a versão mais recente do Azure Feature Pack [aqui](https://www.microsoft.com/download/details.aspx?id=49492). 
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Configurar o Gerenciador de conexões do Azure Data Lake Store
@@ -44,7 +44,7 @@ O Gerenciador de Conexões do Azure Data Lake Store é um componente do [Feature
     
         2. Selecione **Testar Conexão** para testar a conexão. Se você ou o administrador do locatário não consentiu anteriormente em permitir que o SSIS acessasse os dados do Data Lake Storage Gen1, selecione **Aceitar** quando solicitado. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-        >   [!NOTE] 
+        > [!NOTE] 
         > Quando você seleciona a opção de autenticação por **Identidade do Usuário do Azure AD**, a autenticação multifator e a autenticação por conta da Microsoft não têm suporte.
     
     2. Se você selecionou a opção de autenticação **Identidade do Serviço do Azure AD**, faça o seguinte:

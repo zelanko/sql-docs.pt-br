@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 61cf0d2acb9dbe2e2f5a9ec68be92cecf16ce22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bcc98052bf076515ff3d961fee24e6550830118
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731674"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414161"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ajuda de F1 do Assistente para Gerenciar Partição
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -249,7 +249,7 @@ ms.locfileid: "47731674"
 ### <a name="one-time-schedule-types-options"></a>Opções de tipos de agendas que ocorrem apenas uma vez  
  Se você agendar um trabalho para uma única execução, selecione uma data e uma hora no futuro.  
   
- **Date**  
+ **Data**  
  Selecione a data para que o trabalho seja executado.  
   
  **Hora**  

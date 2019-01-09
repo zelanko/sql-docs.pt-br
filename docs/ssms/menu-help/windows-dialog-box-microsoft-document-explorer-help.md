@@ -7,20 +7,18 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.windows
 helpviewer_keywords:
 - Windows dialog box
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9dffd3854e2ccf153b099bce26a916b53b7c221a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 004ac3bc70ca52efbd13336067bc958a0e975cde
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660344"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328065"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Caixa de diálogo Windows (Ajuda do Gerenciador de Documentos da Microsoft)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,4 +39,3 @@ Salva a janela selecionada. Nem todas as janelas podem ser salvas.
   
 **Fechar o Windows**  
 Fecha os documentos e janelas selecionados na lista.  
-  

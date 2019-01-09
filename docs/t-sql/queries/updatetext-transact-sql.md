@@ -21,19 +21,19 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b7b0072620a15bf0a05c2667553c1ea51a2cf54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c41ca4147e9722edac021c746833ac0e010952c8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806164"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211445"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza um campo **text**, **ntext** ou **image** existente. Use UPDATETEXT para alterar apenas uma parte de uma coluna **text**, **ntext** ou **image** em vigor. Use WRITETEXT para atualizar e substituir todo um campo **text**, **ntext** ou **image**.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use os tipos de dados de valor grande e a cláusula **.** WRITE da instrução [UPDATE](../../t-sql/queries/update-transact-sql.md) nesse caso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

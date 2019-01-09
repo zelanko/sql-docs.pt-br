@@ -24,19 +24,19 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c405884f8ff87cb0b37991dc5639bf69068a6ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503095"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203965"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Altera um assembly pela modificação das propriedades do catálogo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um assembly. ALTER ASSEMBLY o atualiza para a cópia mais recente dos módulos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contêm sua implementação e adiciona ou remove os arquivos associados a ele. Os assemblies são criados usando [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
->  [!WARNING]
+> [!WARNING]
 >  O CLR usa o CAS (Segurança de Acesso do Código) no .NET Framework, para o qual não há mais suporte como um limite de segurança. Um assembly CLR criado com o `PERMISSION_SET = SAFE` pode conseguir acessar recursos externos do sistema, chamar um código não gerenciado e adquirir privilégios sysadmin. A partir do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], uma opção `sp_configure` chamada `clr strict security` é introduzida, a fim de aumentar a segurança de assemblies CLR. A `clr strict security` está habilitada por padrão e trata assemblies `SAFE` e `EXTERNAL_ACCESS` como se eles fossem marcados como `UNSAFE`. A opção `clr strict security` pode ser desabilitada para compatibilidade com versões anteriores, mas isso não é recomendado. A Microsoft recomenda que todos os assemblies sejam assinados por um certificado ou uma chave assimétrica com um logon correspondente que recebeu a permissão `UNSAFE ASSEMBLY` no banco de dados mestre. Para obter mais informações, consulte [Segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md).  
 
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,11 +85,11 @@ ALTER ASSEMBLY assembly_name
  Devem ser emitidas instruções ALTER ASSEMBLY separadas para qualquer assembly dependente que também requeira atualização.  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }   
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  A opção `PERMISSION_SET` é afetada pela opção `clr strict security`, descrita no aviso de abertura. Quando `clr strict security` está habilitada, todos os assemblies são tratados como `UNSAFE`.  
- Especifica a propriedade do conjunto de permissões de acesso ao código do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] do assembly. Para obter mais informações sobre essa propriedade, confira [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
-  
-> [!NOTE]  
+>  Especifica a propriedade do conjunto de permissões de acesso ao código do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] do assembly. Para obter mais informações sobre essa propriedade, confira [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
+> 
+> [!NOTE]
 >  As opções EXTERNAL_ACCESS e UNSAFE não estão disponíveis em um banco de dados contido.  
   
  VISIBILITY = { ON | OFF }  
@@ -209,7 +209,7 @@ As seguintes permissões são necessárias para alterar um assembly CLR quando `
 > [!IMPORTANT]
 > O Banco de Dados SQL do Azure não é compatível com a referência a um arquivo.
 
-### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Adicionando um arquivo a ser associado a um assembly  
+### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>b. Adicionando um arquivo a ser associado a um assembly  
  O exemplo a seguir carrega o arquivo de código fonte `Class1.cs` a ser associado ao assembly `MyClass`. Este exemplo assume que o assembly `MyClass` já foi criado no banco de dados.  
   
 ```  

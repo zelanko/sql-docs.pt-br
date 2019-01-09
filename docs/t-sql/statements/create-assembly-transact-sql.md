@@ -24,19 +24,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b81e8cb39a9520697af41624dfda2609bdbbef9f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697145"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207655"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Cria um módulo de aplicativo gerenciado que contém metadados de classe e código gerenciado como um objeto em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao fazer referência a esse módulo, funções CLR (Common Language Runtime), procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário podem ser criados no banco de dados.  
   
->  [!WARNING]
+> [!WARNING]
 >  O CLR usa o CAS (Segurança de Acesso do Código) no .NET Framework, para o qual não há mais suporte como um limite de segurança. Um assembly CLR criado com o `PERMISSION_SET = SAFE` pode conseguir acessar recursos externos do sistema, chamar um código não gerenciado e adquirir privilégios sysadmin. A partir do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], uma opção `sp_configure` chamada `clr strict security` é introduzida, a fim de aumentar a segurança de assemblies CLR. A `clr strict security` está habilitada por padrão e trata assemblies `SAFE` e `EXTERNAL_ACCESS` como se eles fossem marcados como `UNSAFE`. A opção `clr strict security` pode ser desabilitada para compatibilidade com versões anteriores, mas isso não é recomendado. A Microsoft recomenda que todos os assemblies sejam assinados por um certificado ou uma chave assimétrica com um logon correspondente que recebeu a permissão `UNSAFE ASSEMBLY` no banco de dados mestre. Para obter mais informações, consulte [Segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,8 +85,8 @@ Especifica o caminho local ou o local da rede onde o assembly que está sendo ca
  É uma expressão do tipo **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
- >  [!IMPORTANT]  
- >  A opção `PERMISSION_SET` é afetada pela opção `clr strict security`, descrita no aviso de abertura. Quando `clr strict security` está habilitada, todos os assemblies são tratados como `UNSAFE`.
+> [!IMPORTANT]
+>  A opção `PERMISSION_SET` é afetada pela opção `clr strict security`, descrita no aviso de abertura. Quando `clr strict security` está habilitada, todos os assemblies são tratados como `UNSAFE`.
  
  Especifica um conjunto de permissões de acesso de código que são concedidas ao assembly quando ele é acessado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se não especificado, SAFE será aplicado por padrão.  
   
@@ -129,7 +129,7 @@ Ao tentar acessar o assembly especificado em \<client_assembly_specifier>, o [!I
   
 -   O binário de assembly está bem formado com metadados e segmentos de código válidos, e os segmentos de código têm instruções do Microsoft Intermediate Language (MSIL) válidas.  
   
--   O conjunto de assemblies de sistema a que ele faz referência é um dos seguintes assemblies suportados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll e System.Xml.Linq.dll. Outros assemblies de sistema podem ser referenciados, mas eles devem ser registrados explicitamente no banco de dados.  
+-   O conjunto de assemblies do sistema ao qual ele faz referência é um dos assemblies a seguir, aos quais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll e System.Xml.Linq.dll. Outros assemblies de sistema podem ser referenciados, mas eles devem ser registrados explicitamente no banco de dados.  
   
 -   Para assemblies criados usando os conjuntos de permissões SAFE ou EXTERNAL ACCESS:  
   
@@ -143,7 +143,7 @@ Ao tentar acessar o assembly especificado em \<client_assembly_specifier>, o [!I
   
  Além das verificações anteriores realizadas durante a execução de CREATE ASSEMBLY, existem duas verificações adicionais que são realizadas no tempo de execução do código no assembly:  
   
--   A chamada de determinadas APIs do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que requerem uma Permissão de Acesso ao Código específica pode falhar se o conjunto de permissões não contiver essa permissão.  
+-   A chamada de determinadas APIs do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que requerem uma permissão de acesso de código específica poderá falhar se o conjunto de permissões do assembly não incluir essa permissão.  
   
 -   Para assemblies SAFE e EXTERNAL_ACCESS, qualquer tentativa de chamar APIs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que são anotadas com certos HostProtectionAttributes falhará.  
   
@@ -168,7 +168,7 @@ As seguintes permissões necessárias para criar um assembly CLR quando o `CLR s
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemplo A: criando um assembly por meio de uma dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemplo A: Criando um assembly a partir de uma dll  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -183,7 +183,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > O Banco de Dados SQL do Azure não é compatível com a criação de um assembly a partir de um arquivo.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemplo B: criando um assembly de bits do assembly  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemplo B: Criando um assembly a partir de bits do assembly  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

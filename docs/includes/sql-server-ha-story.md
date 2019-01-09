@@ -35,7 +35,7 @@ Como os grupos de disponibilidade fornecem apenas proteção no nível do banco 
 
 Um grupo de disponibilidade também tem outro componente chamado ouvinte, que permite que aplicativos e usuários finais se conectem sem a necessidade de saber qual instância do SQL Server está hospedando a réplica primária. Cada grupo de disponibilidade deve ter seu próprio ouvinte. Enquanto as implementações do ouvinte são um pouco diferentes no Windows Server em comparação ao Linux, a funcionalidade que fornece e como é usada é a mesma. A figura abaixo mostra um grupo de disponibilidade com base no Windows Server que está usando um Cluster de Failover do Windows Server (WSFC). Um cluster subjacente na camada do sistema operacional é necessário para disponibilidade se estiver no Linux ou no Windows Server. O exemplo mostra uma configuração de dois servidores ou nós simples, na qual um WSFC é o cluster subjacente. 
 
-![Grupo de disponibilidade simples][SimpleAG]
+![Grupo de disponibilidade simples](media/sql-server-ha-story/image1.png)
  
 As Standard e Enterprise Editions têm valores máximos diferentes quando se trata de réplicas. Um grupo de disponibilidade na Standard Edition, conhecido como um Grupo de Disponibilidade Básico, dá suporte a duas réplicas (uma primária e uma secundária) com apenas um único banco de dados no grupo de disponibilidade. A Enterprise Edition não só permite que vários bancos de dados sejam configurados em um único grupo de disponibilidade, mas também pode ter até nove réplicas no total (uma primária, oito secundárias). A Enterprise Edition também fornece outros benefícios opcionais, como réplicas secundárias legíveis, a capacidade de fazer backups de uma réplica secundária e muito mais.
 
@@ -81,7 +81,7 @@ Para aqueles que estão procurando apenas adicionar outras cópias de somente le
 
 A captura de tela abaixo mostra o suporte para os diferentes tipos de cluster no SSMS. Você deve estar executando a versão 17.1 ou posterior. A captura de tela abaixo é da versão 17.2.
 
-![Opções do grupo de disponibilidade do SSMS][SSMSAGOptions]
+![Opções do grupo de disponibilidade do SSMS](media/sql-server-ha-story/image2.png)
  
 ##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
@@ -111,11 +111,11 @@ Outra melhoria no suporte DTC para grupos de disponibilidade é que, no SQL Serv
 #### <a name="always-on-failover-cluster-instances"></a>Instâncias do cluster de failover do AlwaysOn
 As instalações de cluster são um recurso do SQL Server desde a versão 6.5. As FCIs são um método comprovado para fornecer disponibilidade para toda a instalação do SQL Server, conhecida como uma instância. Isso significa que tudo dentro da instância, incluindo bancos de dados, trabalhos do SQL Server Agent, servidores vinculados, entre outros, será movido para outro servidor se o servidor adjacente encontrar um problema. Todas as FCIs exigem algum tipo de armazenamento compartilhado, mesmo se ele for fornecido através da rede. Os recursos da FCI só poderão ser executados e controlados por um nó a qualquer momento. Na imagem abaixo, o primeiro nó do cluster controla a FCI, o que também significa que ele controla os recursos de armazenamento compartilhados associados a ele, indicados por uma linha sólida para o armazenamento.
 
-![Instância de Cluster de Failover][BasicFCI]
+![Instância de Cluster de Failover](media/sql-server-ha-story/image3.png)
  
 Após um failover, a propriedade é alterada conforme a figura abaixo.
 
-![Após o Failover][PostFailoverFCI]
+![Após o Failover](media/sql-server-ha-story/image4.png)
  
 Não há perda de dados com uma FCI, mas o armazenamento compartilhado subjacente é um ponto único de falha, pois há uma cópia dos dados. As FCIs geralmente são combinadas com outro método de disponibilidade, como um grupo de disponibilidade ou o envio de logs, para ter cópias redundantes dos bancos de dados. O método adicional implantado deve usar armazenamento fisicamente separado da FCI. Quando a FCI executar o failover para outro nó, ela será interrompida em um nó e iniciará em outro, o que não é muito diferente de desligar um servidor e ligá-lo. Uma FCI passa pelo processo de recuperação normal, o que significa que todas as transações que precisam que o roll forward seja efetuado serão revertidas, assim como todas as transações que estão incompletas. Portanto, o banco de dados é consistente de um ponto de dados até o momento da falha ou do failover manual, portanto, sem perda de dados. Os bancos de dados estão disponíveis somente após a conclusão da recuperação, portanto o tempo de recuperação dependerá de muitos fatores e geralmente será maior do que a execução de um failover em um grupo de disponibilidade. A desvantagem é que, ao fazer failover em um grupo de disponibilidade, poderá haver tarefas adicionais necessárias para tornar um banco de dados utilizável, como a habilitação de uma tarefa de trabalhos do SQL Server Agent.
 
@@ -132,7 +132,7 @@ Se os objetivos do ponto de recuperação e do tempo de recuperação forem mais
 > [!IMPORTANT] 
 > No Linux, os trabalhos do SQL Server Agent não são incluídos como parte da instalação do SQL Server em si. Ele está disponível no pacote mssql-server-Agent, que também deve ser instalados para usar o envio de log.
 
-![Envio de logs][LogShipping]
+![Envio de logs](media/sql-server-ha-story/image5.png)
  
 Possivelmente, a maior vantagem de usar o envio de logs, de alguma forma, é que ele é responsável por erro humano. O aplicativo dos logs de transações pode estar atrasado. Portanto, se alguém emitir algo parecido com uma ATUALIZAÇÃO sem uma cláusula WHERE, o modo em espera poderá não ter a alteração, então você poderá alternar para ela enquanto repara o sistema primário. Enquanto o envio de logs é fácil de configurar, a troca do primário para um estado de espera passiva, conhecido como uma alteração de função, é sempre manual. Uma alteração de função é iniciada por meio do Transact-SQL e, como um grupo de disponibilidade, todos os objetos não capturados no log de transações devem ser sincronizados manualmente. O envio de logs também precisa ser configurado por banco de dados, enquanto um único grupo de disponibilidade pode conter vários bancos de dados. Ao contrário de um grupo de disponibilidade ou FCI, o envio de logs não tem nenhuma abstração para uma alteração de função. Os aplicativos devem ser capazes de lidar com isso. Podem ser empregadas técnicas como um alias DNS (CNAME), mas há vantagens e desvantagens, como o tempo necessário que o DNS leva para atualizar após a troca.
 
@@ -144,17 +144,17 @@ Quando seu local de disponibilidade primária passa por um evento catastrófico,
 
 Um dos benefícios dos grupos de disponibilidade é que a alta disponibilidade e a recuperação de desastres podem ser configuradas usando um único recurso. Sem a necessidade de garantir que o armazenamento compartilhado também é altamente disponível, é mais fácil ter réplicas que são locais em um data center para alta disponibilidade e remotas em outros dados centers para recuperação de desastres, cada uma com armazenamento separado. Ter cópias adicionais do banco de dados é a desvantagem para garantir redundância. Um exemplo de um grupo de disponibilidade que abrange vários data centers é mostrado abaixo. Uma réplica primária é responsável por manter todas as réplicas secundárias sincronizadas.
 
-![Grupo de disponibilidade][AG]
+![Grupo de disponibilidade](media/sql-server-ha-story/image6.png)
  
 Fora de um grupo de disponibilidade com um tipo de cluster Nenhum, um grupo de disponibilidade requer que todas as réplicas sejam parte do mesmo cluster subjacente, seja um WSFC ou Pacemaker. Isso significa que, na figura acima, o WSFC é estendido para trabalhar em dois data centers diferentes, o que adiciona complexidade. independentemente da plataforma (Windows Server ou Linux). Transferir clusters em distância adiciona complexidade. Introduzido no SQL Server 2016, um grupo de disponibilidade distribuído permite que um grupo de disponibilidade abranja grupos de disponibilidade configurados em diferentes clusters. Isso separa a necessidade de ter os nós todos participando no mesmo cluster, o que facilita a configuração de recuperação de desastres. Para obter mais informações sobre grupos de disponibilidade distribuídos, veja [Grupos de disponibilidade distribuídos](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups).
 
-![Grupos de Disponibilidade Distribuídos][DAG]
+![Grupos de Disponibilidade Distribuídos](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Instâncias do cluster de failover do AlwaysOn
 
 As FCIs podem ser usadas para recuperação de desastres. Assim como acontece com um grupo de disponibilidade normal, o mecanismo do cluster subjacente deve ser estendido para todos os locais que adicionam complexidade. Há uma consideração adicional sobre as FCIs: o armazenamento compartilhado. Os mesmos discos precisam estar disponíveis em sites primários e secundários, então um método externo, como a funcionalidade fornecida pelo fornecedor de armazenamento na camada de hardware ou o uso da Réplica de armazenamento no Windows Server, é necessário para garantir que os discos usados pela FCI existam em outro lugar. 
 
-![FCI do AlwaysOn][AlwaysOnFCI]
+![FCI do AlwaysOn](media/sql-server-ha-story/image8.png)
  
 ### <a name="log-shipping"></a>Envio de logs
 O envio de logs é um dos métodos mais antigos para fornecer recuperação de desastres aos bancos de dados do SQL Server. O envio de logs é geralmente usado em conjunto com grupos de disponibilidade e FCIs para fornecer recuperação de desastres mais simples e econômica na qual outras opções podem ser difíceis devido ao ambiente, habilidades administrativas ou orçamento. Similar à história de alta disponibilidade para envio de logs, muitos ambientes atrasarão o carregamento de um log de transações para responsabilizar por erro humano.
@@ -174,7 +174,7 @@ Se a meta é migrar para novos servidores e não alterar a configuração (inclu
 
 Os grupos de disponibilidade distribuídos também são outro método para migrar para uma nova configuração ou atualizar o SQL Server. Como um grupo de disponibilidade distribuído dá suporte a diferentes grupos de disponibilidade subjacentes em arquiteturas diferentes, por exemplo, você poderá alterar do SQL Server 2016 em execução no Windows Server 2012 R2 para o SQL Server 2017 em execução no Windows Server 2016. 
 
-![Grupo de Disponibilidade Distribuído][image10]
+![Grupo de Disponibilidade Distribuído](media/sql-server-ha-story/image10.png)
 
 Por fim, os grupos de disponibilidade com um tipo de cluster Nenhum também podem ser usados para a migração ou atualização. Você não pode misturar e corresponder os tipos de cluster em uma configuração de grupo de disponibilidade comum, então todas as réplicas precisariam ser do tipo Nenhum. Um grupo de disponibilidade distribuído pode ser usado para estender os grupos de disponibilidade configurados com tipos de cluster diferentes. Esse método também tem suporte em todas as plataformas de sistema operacional diferentes.
 
@@ -218,7 +218,7 @@ Antes de abordar os cenários de interoperabilidade e de multiplataforma, dois f
 
 Os grupos de disponibilidade distribuídos são projetados para abranger as configurações do grupo de disponibilidade, esses dois clusters subjacentes abaixo dos grupos de disponibilidade sendo duas diferentes distribuições do Linux e de WSFCs ou uma em um WSFC e a outra no Linux. Um grupo de disponibilidade distribuído será o principal método para ter uma solução de plataforma cruzada. Um grupo de disponibilidade distribuído também é a principal solução para migrações, como converter de uma infraestrutura do SQL Server com base no Windows Server para uma com base em Linux, se isso for o que sua empresa deseja fazer. Conforme observado acima, os grupos de disponibilidade e, especialmente, os grupos de disponibilidade distribuídos, devem minimizar o tempo que um aplicativo estaria indisponível para uso. Um exemplo de um grupo de disponibilidade distribuído que abrange um WSFC e o Pacemaker é mostrado abaixo.
 
-![Grupos de Disponibilidade Distribuídos][BasicDAG]
+![Grupos de Disponibilidade Distribuídos](media/sql-server-ha-story/image9.png)
  
 Se um grupo de disponibilidade estiver configurado com um tipo de cluster Nenhum, isso poderá abranger o Windows Server e o Linux, bem como várias distribuições do Linux. Como esta não é uma configuração de alta disponibilidade verdadeira, ela não deve ser usada para implantações de missão crítica, mas para cenários de escala de leitura ou migração/atualização.
 
@@ -230,12 +230,12 @@ Como o envio de logs baseia-se somente no backup e na restauração, e não exis
 
 Desde seu lançamento no SQL Server 2012, as réplicas secundárias tiveram a capacidade de serem usadas para consultas somente leitura. Há duas maneiras que podem ser obtidas com um grupo de disponibilidade: permitindo o acesso direto ao secundário, bem como [configurando o roteamento de somente leitura](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), que requer o uso do ouvinte.  O SQL Server 2016 introduziu a capacidade de balancear carga de conexões de somente leitura por meio do ouvinte usando um algoritmo de round robin, permitindo que as solicitações de somente leitura sejam distribuídas em todas as réplicas legíveis. 
 
-> [!NOTE] 
-As réplicas secundárias legíveis são um recurso apenas na Enterprise Edition e cada instância que hospeda uma réplica legível precisaria de uma licença do SQL Server.
+> [!NOTE]
+> As réplicas secundárias legíveis são um recurso apenas na Enterprise Edition e cada instância que hospeda uma réplica legível precisaria de uma licença do SQL Server.
 
 O dimensionamento de cópias legíveis de um banco de dados por meio de grupos de disponibilidade foi introduzido com grupos de disponibilidade distribuídos no SQL Server 2016. Isso permitiria que as empresas tivessem cópias de somente leitura do banco de dados não apenas localmente, mas regional e globalmente com uma quantidade mínima de configuração e reduziria o tráfego de rede e a latência ao executar as consultas localmente. Cada réplica primária de um grupo de disponibilidade pode propagar dois grupos de disponibilidade, mesmo se não for a cópia de leitura/gravação completa, então cada grupo de disponibilidade distribuído poderá oferecer suporte a até 27 cópias dos dados que podem ser lidos. 
 
-![Grupos de Disponibilidade Distribuídos][DAG]
+![Grupos de Disponibilidade Distribuídos](media/sql-server-ha-story/image11.png)
 
 Começando com o SQL Server 2017, é possível criar uma solução de somente leitura quase em tempo real com grupos de disponibilidade configurados com um tipo de cluster Nenhum. Se a meta é usar grupos de disponibilidade para réplicas secundárias legíveis e não de disponibilidade, isso elimina a complexidade do uso de um WSFC ou Pacemaker, além de oferecer os benefícios legíveis de um grupo de disponibilidade em um método de implantação mais simples. 
 

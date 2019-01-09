@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d9760d692e30a7d33828f27202ba7818c1ac047
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523464"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590220"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,55 +113,55 @@ replmerg [-?]
  **-?**  
  Imprime todos os parâmetros disponíveis.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  É o nome da publicação. Esse parâmetro só é válido se a publicação estiver definida para ter sempre um instantâneo disponível para assinaturas novas ou reiniciadas.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  É o nome do banco de dados do Assinante.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  É o caminho para a pasta que contém o instantâneo inicial para uma assinatura.  
   
  **-Continuous**  
  Especifica se o agente tenta sondar transações replicadas continuamente. Se especificado, o agente sondará as transações replicadas da origem em intervalos de sondagem, mesmo que não haja transações pendentes.  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  Especifica o número de threads de destino que o Merge Agent usa para aplicar alterações ao destino. O destino é o Publicador durante o carregamento e o Assinante durante o download. O padrão é 4.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de prompt de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Para distribuição (push) do Distribuidor, o nome assumirá o padrão do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Para distribuição (push) do Distribuidor, o nome assumirá o padrão do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  É o nome de logon do Distribuidor.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  É a senha do Distribuidor.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Especifica o modo de segurança do Distribuidor. Um valor de **0** indica Modo (padrão) de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor de **1** indica Modo de Autenticação do Windows.  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  É o número de gerações a ser processado em um único lote durante o download de alterações do Publicador para o Assinante. Uma geração está definida como um grupo lógico de alterações por artigo. O padrão para um vínculo de comunicação confiável é 100. O padrão para um vínculo de comunicação não confiável é 10.  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  É o número de alterações a ser lido em um único lote durante o download de alterações do Publicador para o Assinante. O padrão é 100.  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  É o número de alterações a ser aplicado em um único lote durante o download de alterações do Publicador para o Assinante. O padrão é 100.  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  É o local dos arquivos de instantâneo de dados filtrados quando a publicação usa filtros de linha com parâmetros.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -179,7 +179,7 @@ replmerg [-?]
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
- > [!WARNING]  
+> [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir o carregamento, use o **@subscriber_upload_options** de **sp_addmergearticle** .  
   
  Especifica o tipo de troca de dados durante a sincronização, que pode ser um dos seguintes:  
@@ -209,16 +209,16 @@ replmerg [-?]
 |**1**|Impõe convergência para todas as gerações.|  
 |**2**|Impõe convergência para todas as gerações e linhagens corruptas corretas. Ao especificar esse valor, especifique onde as linhagens devem ser corrigidas: no Publicador, no Assinante ou em ambos.|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  É o endereço de rede do serviço FTP para o Distribuidor. Quando não especificado, **Distributor** é usado.  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  É a senha de usuário usada para se conectar ao serviço FTP.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  É o número da porta do serviço FTP para o Distribuidor. Quando não especificado, o número da porta padrão para serviço de FTP (21) é usado.  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  É o nome de usuário usado para se conectar ao serviço FTP. Quando não especificado, anônimo é usado.  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -231,16 +231,16 @@ replmerg [-?]
 |**2**|Padrão. Registre detalhes incrementais da sessão em cada status da sessão e detalhes da sessão no nível do artigo, incluindo porcentagem concluída, além da mensagem de status final do agente, detalhes finais da sessão e qualquer erro. Mensagens de status de agente também são registradas.|  
 |**3**|O mesmo que **-HistoryVerboseLevel** = **2**, exceto que mais mensagens de progresso de agente são registradas.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  É o nome de rede do computador local. O padrão é o nome do computador local.  
   
  **-InteractiveResolution** [**0**|**1**]  
  Especifica se resolução de conflito interativa é usada quando um conflito ocorre durante a sincronização. O padrão é **0**, indicando que resolução de conflito interativa não é usada.  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  Especifica o nome de logon usado ao conectar a um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL que requer autenticação.  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  Especifica a senha usada ao conectar a um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL que requer autenticação.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
@@ -255,36 +255,36 @@ replmerg [-?]
  **-InternetSecurityMode** [**0**|**1**]  
  Especifica o modo de segurança IIS usado ao conectar ao servidor Web durante sincronização da Web. Um valor de **0** indica Autenticação Básica e um valor de **1** indica Autenticação Integrada do Windows (padrão).  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  É o número de segundos antes que uma conexão para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL expire.  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  Especifica o URL usado para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL. Essa propriedade deve ser especificada.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  É o número de segundos antes que o thread de histórico verifique se alguma das conexões existentes está esperando por uma resposta do servidor. Esse valor pode ser diminuído para evitar que o agente de verificação marque o Merge Agent como suspeito ao executar um lote de execução longa. O padrão é **300** segundos.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  É o número de segundos antes que o logon expire. O padrão é **15** segundos.  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  É o número de segundos a aguardar entre a criação de gerações ou lotes de alterações, para baixar ao cliente. O padrão é **1** segundo.  
   
  Makegeneration é o processo que prepara as alterações do Publicador para download para os assinantes e pode ser um gargalo de desempenho durante os downloads. Se o processo makegeneration já foi executado no intervalo especificado por **-MakeGenerationInterval**, esse processo será ignorado para a sessão de sincronização atual. Isso poderá beneficiar a simultaneidade de sincronização e poderá ser especialmente útil se os Assinantes não esperarem baixar alterações.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Especifica o número de operações de cópia em massa que podem ser executadas em paralelo. O número máximo de threads e conexões ODBC que existe simultaneamente no menor dos **MaxBcpThreads** ou o número de solicitações de cópia em massa que aparece na tabela do sistema **sysmergeschemachange** no banco de dados de publicação. **MaxBcpThreads** deve ter um valor maior que 0 e não tem um limite superior embutido em código. O padrão é **1**.  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  Especifica o número máximo de linhas alteradas que deveria ser baixado do Publicador para o Assinante. O número de linhas baixado deve ser maior do que o máximo especificado porque as gerações concluídas são processadas e os threads de destino paralelos podem executar, cada um processando no mínimo 100 alterações na primeira passagem. Por padrão, todas as alterações que estão prontas serem baixadas são enviadas.  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  Especifica o número máximo de linhas alteradas que deve ser carregado do Assinante para o Publicador. O número de linhas carregado deve ser maior do que o máximo especificado porque as gerações concluídas são processadas e os threads de destino paralelos podem executar, cada um processando no mínimo 100 alterações na primeira passagem. Por padrão, todas as alterações que estão prontas serem carregadas são enviadas.  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  Especifica se os metadados são removidos de [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)e [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) com base no período de retenção da publicação. O padrão é **1**, indicando que deve ocorrer limpeza total. Um valor de **0** indica que não deve ocorrer limpeza total automaticamente.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -296,34 +296,34 @@ replmerg [-?]
  **-PacketSize**  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  É a frequência, em segundos, de consulta no Publicador ou no Assinante por alterações de dados. O padrão é 60 segundos.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  É o nome de logon do Publicador. Se **PublisherSecurityMode** for **0** (para Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), esse parâmetro deve ser especificado.  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  É a senha do Publicador. Se **PublisherSecurityMode** for **0** (para Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), esse parâmetro deve ser especificado.  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  Especifica o modo de segurança do Publicador. Um valor de **0** indica Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (padrão), e um valor de **1** indica Modo de Autenticação do Windows.  
   
- **-QueryTimeOut** *tempo_limite_da_consulta_em_segundos*  
+ **-QueryTimeOut** _tempo_limite_da_consulta_em_segundos_  
  É o número de segundos antes que a consulta expire. O padrão é 300 segundos. O Merge Agent também usa o valor de **QueryTimeout** para determinar o tempo de espera para a geração de um instantâneo particionado, quando seu valor é maior do que 1800.  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  Especifica o número de threads de origem que o Merge Agent usa para enumerar alterações da origem. A origem é o Publicador durante o carregamento e o Assinante durante o download. O padrão é **3**.  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  É o número máximo de segundos que o Merge Agent aguarda quando o número de processos de mesclagem simultâneos em execução está no limite definido pela propriedade **@max_concurrent_merge** de **sp_addmergepublication**. Se o número máximo de segundos for alcançado e o Merge Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  É o caminho para o banco de dados Jet (arquivo .mdb) se **SubscriberType** for **2** (permite uma conexão com o banco de dados Jet sem o DSN (Nome da Fonte de Dados) ODBC).  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -339,10 +339,10 @@ replmerg [-?]
 > [!NOTE]  
 >  Quando você usa os valores **2** e **3**, o caminho do banco de dados para o Assinante deve ser especificado na opção **SubscriberDatabasePath** .  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  É o nome de logon do Assinante. Se **SubscriberSecurityMode** for **0** (para Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), esse parâmetro deverá ser especificado.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  É a senha de Assinante. Se **SubscriberSecurityMode** for **0** (para Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), esse parâmetro deverá ser especificado.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -360,13 +360,13 @@ replmerg [-?]
  **-SyncToAlternate** [ **0|1**]  
  Especifica se o Merge Agent está sincronizando entre um Assinante e um Publicador alternativo. Um valor de **1** indica que é um Publicador alternativo. O padrão é **0**.  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  É o número de gerações a ser processado em um único lote durante o carregamento de alterações do Assinante para o Publicador. Uma geração está definida como um grupo lógico de alterações por artigo. O padrão para um vínculo de comunicação confiável é **100**. O padrão para um vínculo de comunicação não confiável é **1**.  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  É o número de alterações a ser lido em um único lote durante o carregamento de alterações do Assinante para o Publicador. O padrão é **100**.  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  É o número de alterações a ser aplicado em um único lote durante o carregamento de alterações do Assinante para o Publicador. O padrão é **100**.  
   
  **-UseInprocLoader**  
@@ -385,7 +385,7 @@ replmerg [-?]
 > [!NOTE]  
 >  A validação com o uso de soma de verificação binária ou soma de verificação pode reportar incorretamente uma falha se os tipos de dados forem diferentes no Assinante e no Publicador. Para obter mais informações, consulte a seção "Considerações para validação de dados" em [Validar dados replicados](../../../relational-databases/replication/validate-replicated-data.md).  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  É a frequência, em minutos, com que a assinatura é validada em modo contínuo. O padrão é **60** minutos.  
   
 ## <a name="remarks"></a>Remarks  

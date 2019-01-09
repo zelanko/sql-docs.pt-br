@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642533"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211805"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51642533"
   
 -   O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] dá suporte para variáveis de ambiente e variáveis definidas como parte de um script SQLCMD, mas não dá suporte para variáveis SQLCMD internas ou **osql** . O processamento SQLCMD feito pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] diferencia maiúsculas de minúsculas para variáveis. Por exemplo, PRINT '$ (COMPUTERNAME)' produz o resultado correto, mas PRINT '$(ComputerName)' retorna um erro.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient para a execução em modo regular e SQLCMD. Quando executado na linha de comando, o SQLCMD usa o provedor OLE DB. Devido às diferentes opções padrão que podem ser aplicadas, é possível observar um comportamento diferente ao executar a mesma consulta no Modo SQLCMD do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no utilitário SQLCMD.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Sintaxe SQLCMD com suporte  

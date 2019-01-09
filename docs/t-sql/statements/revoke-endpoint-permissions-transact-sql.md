@@ -17,12 +17,12 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad53aef8b06cca5dc37bca1b5a95d82d6c89d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae9f994111a6c15c3bdf0a5c8d4f972e62605a9c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839904"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591787"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Especifica uma permissão que pode ser concedida em um ponto de extremidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Especifica o ponto de extremidade no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório.  
   
  { FROM | TO } \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do qual a permissão está sendo revogada.  
@@ -113,7 +113,7 @@ REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revogando a permissão TAKE OWNERSHIP com a opção CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>b. Revogando a permissão TAKE OWNERSHIP com a opção CASCADE  
  O exemplo a seguir revoga a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` do usuário `PKomosinski` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de todas as entidades de segurança às quais `PKomosinski` concedeu `TAKE OWNERSHIP` em `Shipping83`.  
   
 ```  

@@ -5,19 +5,18 @@ ms.date: 12/20/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2fec17446829d39deae233c205360d768aec313c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682454"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212375"
 ---
 # <a name="master-data-manager-web-application"></a>Aplicativo Web Master Data Manager
 
@@ -25,12 +24,12 @@ ms.locfileid: "47682454"
 
   O aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] é usado principalmente por administradores para executar tarefas administrativas. Por exemplo, apenas administradores podem criar modelos, regras de negócio ou versões de dados. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funciona apenas no IE (Internet Explorer) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.  
-
+> 
 > **Não está conseguindo criar um site do MDS?**
->>Confira este artigo de suporte da Microsoft para obter instruções sobre como resolver esse problema.
-[Não é possível criar um site do MDS por meio de uma conta de baixo privilégio no SQL Server 2016](https://aka.ms/mdssupport) 
+> >Confira este artigo de suporte da Microsoft para obter instruções sobre como resolver esse problema.
+> [Não é possível criar um site do MDS por meio de uma conta de baixo privilégio no SQL Server 2016](https://aka.ms/mdssupport) 
   
  A área funcional Gerenciador do aplicativo Web é a única área não usada por administradores. O Gerenciador é para quem atualiza dados mestre com frequência. Esses usuários têm permissão nos dados necessários para realizar seus trabalhos.  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: c2f2cf71f30848c60a000eaaeefcc1447f2a5a6d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302683"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328776"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ O Orientador de Otimização do Mecanismo de Banco de Dados é projetado para tr
  **Arquivo de entrada XML**  
  Um arquivo formatado pelo XML que o Orientador de Otimização do Mecanismo de Banco de Dados pode usar para ajustar cargas de trabalho. O arquivo de entrada XML dá suporte a opções de ajuste avançadas que não estão disponível na GUI nem no utilitário **dta** .  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  O Orientador de Otimização do Mecanismo de Banco de Dados tem as seguintes limitações e restrições:  
   
 -   Ele não pode adicionar nem remover índices exclusivos ou índices que impõem restrições `PRIMARY KEY` ou `UNIQUE`.  

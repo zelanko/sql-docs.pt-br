@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834754"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979942"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -160,15 +160,15 @@ Força a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. Criando uma auditoria de servidor com um arquivo de destino  
- O exemplo a seguir cria uma auditoria de servidor denominada `HIPPA_Audit` com um arquivo binário como o destino e nenhuma opção.  
+ O exemplo a seguir cria uma auditoria de servidor denominada `HIPAA_Audit` com um arquivo binário como o destino e nenhuma opção.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Criando uma auditoria de servidor com um destino de log de aplicativos do Windows com opções  
- O exemplo a seguir cria uma auditoria de servidor denominada `HIPPA_Audit` com o conjunto de destino para o log de aplicativos do Windows. A fila é gravada a cada segundo e o mecanismo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é desligado em caso de falha.  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>b. Criando uma auditoria de servidor com um destino de log de aplicativos do Windows com opções  
+ O exemplo a seguir cria uma auditoria de servidor denominada `HIPAA_Audit` com o conjunto de destino para o log de aplicativos do Windows. A fila é gravada a cada segundo e o mecanismo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é desligado em caso de falha.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

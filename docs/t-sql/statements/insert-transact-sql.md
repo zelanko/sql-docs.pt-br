@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e717254256468a04ed4502a63c14dc742a1101a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522908"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206985"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -296,7 +296,7 @@ Cláusula OUTPUT
   
  Indica o número aproximado de linhas de dados no fluxo de dados binários. Para obter mais informações, veja [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
->  [!NOTE]
+> [!NOTE]
 >  Um erro de sintaxe é gerado se uma lista de colunas não é fornecida.  
 
 ## <a name="remarks"></a>Remarks  
@@ -391,7 +391,7 @@ Essas otimizações são semelhantes àquelas disponíveis com o comando BULK IN
 ## <a name="interoperability"></a>Interoperabilidade  
  Quando um gatilho INSTEAD OF é definido em ações INSERT em uma tabela ou exibição, o gatilho é executado em vez da instrução INSERT. Para obter mais informações sobre gatilhos INSTEAD OF, confira [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Quando você insere valores em tabelas remotas e nem todos os valores de todas as colunas são especificados, é necessário identificar as colunas para as quais os valores devem ser inseridos.  
   
  Quando TOP é usado com INSERT, as linhas referenciadas não são organizadas em nenhuma ordem e a cláusula ORDER BY não pode ser especificada diretamente nessas instruções. Se você precisar usar TOP para inserir linhas em uma ordem cronológica significativa, deverá usar TOP junto com uma cláusula ORDER BY especificada em uma instrução de subseleção. Consulte a seção Exemplos a seguir neste tópico.
@@ -439,7 +439,7 @@ INSERT INTO Production.UnitMeasure
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
   
-#### <a name="b-inserting-multiple-rows-of-data"></a>B. Inserindo várias linhas de dados  
+#### <a name="b-inserting-multiple-rows-of-data"></a>b. Inserindo várias linhas de dados  
  O exemplo a seguir usa o [construtor de valor de tabela](../../t-sql/queries/table-value-constructor-transact-sql.md) para inserir três linhas na tabela `Production.UnitMeasure` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] em uma única instrução INSERT. Como os valores de todas as colunas são fornecidos e listados na mesma ordem que as colunas da tabela, os nomes das colunas não precisam ser especificados na lista de colunas.  
   
 ```sql

@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSCM.F1
@@ -16,12 +15,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: a4bcd7368d457b9648baf04285f8e48bcc2a6841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d544999b83645e40b7579d7c5e049cff2d36439
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782058"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gerenciador de conexão do Azure Data Lake Analytics
 

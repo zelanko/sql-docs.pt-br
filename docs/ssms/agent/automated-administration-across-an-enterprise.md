@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbd32c13badb86db8dae7156b14ca3f93f97d76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6949ff07fccb7de14a597b754e7f2beeaa9bfe8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710644"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206285"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administração automatizada em toda a empresa
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Contém informações sobre como criar e gerenciar os servidores mestre e de des
 Contém informações sobre como o uso contas não administrativas do Windows ou a conta Sistema Local para o serviço de agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode afetar os ambientes multisservidores.  
   
 [Definir opções de criptografia em servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Contém informações sobre como definir a subchave de Registro MsxEncryptChannelOptions do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em servidores de destino.  
+Contém informações sobre como definir a subchave de Registro de agente MsxEncryptChannelOptions do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em servidores de destino.  
   
 [Gerenciar trabalhos em toda a empresa](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Contém informações sobre a verificação do status de trabalho, alteração de servidores de destino para os trabalhos, sincronização de relógios do servidor de destino e sondagem de servidores mestres para o status de trabalho atual.  

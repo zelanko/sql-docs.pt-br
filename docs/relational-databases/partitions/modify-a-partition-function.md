@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84c4c13cf1382fd757e2e7ad8832d6170edf3302
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b529ce2337fa92a5c5ae6fe3ed2810a8b6c7ec11
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391040"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414141"
 ---
 # <a name="modify-a-partition-function"></a>Modificar uma função de partição
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52391040"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   ALTER PARTITION FUNCTION só pode ser usada para dividir uma partição em duas ou para mesclar duas partições em uma. Para alterar a forma como uma tabela ou índice é particionado (por exemplo, de 10 partições em 5), você pode usar qualquer uma das opções a seguir.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52391040"
   
 4.  Na caixa de diálogo **Excluir Objeto** , verifique se a função de partição correta está selecionada e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Para dividir uma única partição em duas partições  
   

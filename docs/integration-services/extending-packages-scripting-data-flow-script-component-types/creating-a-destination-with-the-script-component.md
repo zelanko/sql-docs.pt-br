@@ -17,12 +17,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77bb9538c24be9fac285ab94b77d46ab85a29907
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 390f2734b36cfb956abd33ad2e5175ecd2320c34
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541943"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210825"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
   Você usa um componente de destino no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para salvar dados recebidos de fontes upstream e transformações em uma fonte de dados. Em geral, o componente de destino se conecta à fonte de dados através de um gerenciador de conexões existente.  
@@ -101,7 +101,7 @@ ms.locfileid: "52541943"
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir demonstram o código que é necessário na classe **ScriptMain** para criar um componente de destino.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Esses exemplos usam a tabela **Person.Address** no banco de dados de exemplo **AdventureWorks** e passam a primeira e a quarta colunas, as colunas **int*AddressID*** e **nvarchar(30)City**, pelo fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="adonet-destination-example"></a>Exemplo de destino ADO.NET  

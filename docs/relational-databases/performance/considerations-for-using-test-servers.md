@@ -16,15 +16,15 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7823aaccf45a5752b107cf12a7cb97e568346b35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7556ef2e67eafe541558bd6a6033f4aa3c875d5d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784474"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328716"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerações para usar servidores de teste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47784474"
   
 -   Todas as informações da sessão são armazenadas no **msdb** do servidor de produção. Isso permite explorar qualquer servidor de teste disponível para o ajuste e as informações sobre todas as sessões estão disponíveis em um só lugar (o servidor de produção).  
   
-## <a name="issues-related-to-the-shell-database"></a>Problemas relacionados ao banco de dados shell   
+## <a name="issues-related-to-the-shell-database"></a>Problemas relacionados ao banco de dados shell  
   
 -   Depois de ajustar, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deverá remover quaisquer metadados que criou no servidor de teste durante o processo de ajuste. Isso inclui o banco de dados shell. Se você estiver executando uma série de sessões de ajuste com os mesmos servidores de produção e de teste, poderá desejar reter esse banco de dados shell para economizar tempo. No arquivo de entrada XML, especifique o subelemento **RetainShellDB** com os outros subelementos no elemento pai **TuningOptions** . Usar essas opções faz o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] reter o banco de dados shell. Para obter mais informações, veja [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
