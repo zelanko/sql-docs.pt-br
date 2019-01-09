@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_pfield
@@ -22,12 +20,12 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6243ceb9d96c5cb3c681aea8832ba35f45e80703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170068"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353850"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimento armazenado estendido)
     
@@ -89,6 +87,6 @@ len
  Um ponteiro para uma cadeia de caracteres terminada por caractere nulo que contém o valor atual do campo especificado na estrutura SRV_PROC. Se o campo for vazio, um ponteiro válido para uma cadeia de caracteres vazia será retornado e *len* conterá 0. Se o campo for desconhecido, NULL será retornado e *len* conterá o valor -1.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre análise e teste de segurança, consulte a [ 	Central de Desenvolvedores de Segurança](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre análise e teste de segurança, consulte a [ 	Central de Desenvolvedores de Segurança](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

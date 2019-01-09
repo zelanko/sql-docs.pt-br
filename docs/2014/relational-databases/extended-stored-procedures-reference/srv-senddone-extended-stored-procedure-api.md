@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_senddone
@@ -22,12 +20,12 @@ ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51589cea0306f7a9fe3e4074c586c7c89892d9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157936"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361038"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimento armazenado estendido)
     
@@ -63,7 +61,7 @@ count
  *status*  
  É um campo de 2 bytes para vários sinalizadores *status* . Vários sinalizadores podem ser definidos usando os operadores lógicos AND e OR com valores de sinalizador *status* . A seguinte tabela lista os possíveis sinalizadores *status* .  
   
-|Sinalizador de status|Description|  
+|Sinalizador de status|Descrição|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|O parâmetro *count* contém uma contagem válida.|  
 |SRV_DONE_ERROR|O comando do cliente atual recebeu um erro.|  
@@ -85,6 +83,6 @@ count
  Não chame **srv_senddone** no manipulador SRV_CONNECT.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   
