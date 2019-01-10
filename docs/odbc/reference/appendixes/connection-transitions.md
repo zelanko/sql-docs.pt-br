@@ -15,17 +15,17 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46d480683a2d10f760a02049ab28bc590353fcbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619094"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537504"
 ---
 # <a name="connection-transitions"></a>Transições de conexão
 Conexões ODBC tem os seguintes estados.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |C0|Ambiente não alocado, não alocado a conexão|  
 |C1|Ambiente alocado, não alocado a conexão|  
@@ -70,7 +70,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] a conexão estava no modo de confirmação manual.  
   
- [2]] a conexão estava no modo de confirmação automática.  
+ [2] a conexão estava no modo de confirmação automática.  
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges e SQLTables  
   
@@ -80,7 +80,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] a conexão estava no modo de confirmação automática, ou a fonte de dados não iniciaram uma transação.  
   
- [2]] a conexão estava no modo de confirmação manual e a fonte de dados iniciou uma transação.  
+ [2] a conexão estava no modo de confirmação manual e a fonte de dados iniciou uma transação.  
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
@@ -147,7 +147,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] a conexão estava no modo de confirmação automática e a instrução executada não era um *cursor* *especificação* (por exemplo, uma instrução SELECT); ou a conexão estava no modo de confirmação manual e a instrução executado não iniciaram uma transação.  
   
- [2]] a conexão estava no modo de confirmação automática e a instrução executada foi uma *cursor* *especificação* (como uma instrução SELECT).  
+ [2] a conexão estava no modo de confirmação automática e a instrução executada foi uma *cursor* *especificação* (como uma instrução SELECT).  
   
  [3] a conexão estava no modo de confirmação manual e a fonte de dados iniciou uma transação.  
   
@@ -199,7 +199,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] o *atributo* argumento era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE ou SQL_ATTR_TRACEFILE ou um valor foi definido para o atributo de conexão.  
   
- [2]] o *atributo* argumento não era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE ou SQL_ATTR_TRACEFILE e um valor não tiver sido definido para a conexão atributo.  
+ [2] o *atributo* argumento não era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE ou SQL_ATTR_TRACEFILE e um valor não tiver sido definido para a conexão atributo.  
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField e SQLGetDiagRec  
   
@@ -238,7 +238,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] o *tipo de informação* argumento era SQL_ODBC_VER.  
   
- [2]] o *tipo de informação* argumento não era SQL_ODBC_VER.  
+ [2] o *tipo de informação* argumento não era SQL_ODBC_VER.  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
@@ -248,7 +248,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] a conexão estava no modo de confirmação automática e a chamada para **SQLMoreResults** não inicializou o processamento de um conjunto de resultados de uma especificação de cursor.  
   
- [2]] a conexão estava no modo de confirmação automática e a chamada para **SQLMoreResults** inicializou o processamento de um conjunto de resultados de uma especificação de cursor.  
+ [2] a conexão estava no modo de confirmação automática e a chamada para **SQLMoreResults** inicializou o processamento de um conjunto de resultados de uma especificação de cursor.  
   
  [3] a conexão estava no modo de confirmação manual.  
   
@@ -266,7 +266,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] a conexão estava no modo de confirmação automática, ou a fonte de dados não iniciaram uma transação.  
   
- [2]] a conexão foi no modo de confirmação – manual e a fonte de dados iniciou uma transação.  
+ [2] a conexão estava no modo de confirmação manual e a fonte de dados iniciou uma transação.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
@@ -276,7 +276,7 @@ Conexões ODBC tem os seguintes estados.
   
  [1] o *atributo* argumento não era SQL_ATTR_TRANSLATE_LIB ou SQL_ATTR_TRANSLATE_OPTION.  
   
- [2]] o *atributo* argumento era SQL_ATTR_TRANSLATE_LIB ou SQL_ATTR_TRANSLATE_OPTION.  
+ [2] o *atributo* argumento era SQL_ATTR_TRANSLATE_LIB ou SQL_ATTR_TRANSLATE_OPTION.  
   
  [3] quanto *atributo* argumento não era SQL_ATTR_ODBC_CURSORS ou SQL_ATTR_PACKET_SIZE.  
   

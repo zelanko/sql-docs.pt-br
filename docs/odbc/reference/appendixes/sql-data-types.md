@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507499"
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses tipos de dados SQL que define o DBMS associado. Informações sobre como um driver mapeia tipos de DBMS SQL para os identificadores de tipo definidas pelo ODBC SQL e como um driver mapeia os tipos de DBMS SQL para seus próprio identificadores de tipo SQL específica do driver é retornado por uma chamada para **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados de colunas e parâmetros por meio de chamadas para **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -45,14 +45,14 @@ Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses 
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Dados de caractere de comprimento variável Unicode. Comprimento máximo é dependente da fonte de dados|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Assinado, um valor numérico exato, com uma precisão de pelo menos *p* e a escala *s.* (A precisão máxima é definido pelo driver). (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRICO (*p*,*s*)|Valor numérico exato, com uma precisão sinal *p* e a escala *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valor numérico exato com precisão 5 e escala 0 (assinado: – 32,768 < = *n* < = 32,767, sem sinal: 0 < = *n* < = 65,535) [3].|  
-|SQL_INTEGER|INTEGER|Valor numérico exato com precisão 10 e escala 0 (assinado: – 2 [31] < = *n* < = 2 [31] – 1, sem sinal: 0 < = *n* < = 2 [32] – 1) [3].|  
-|SQL_REAL|real|Assinado, o valor numérico aproximado com uma precisão binária de 24 (zero ou valor absoluto 10 [–38] para 10[38]).|  
+|SQL_SMALLINT|SMALLINT|Valor numérico exato com precisão 5 e escala 0 (assinado: -32.768 < = *n* < = 32,767, sem sinal:  0 < = *n* < = 65,535) [3].|  
+|SQL_INTEGER|INTEGER|Valor numérico exato com precisão 10 e escala 0 (assinado: -2 [31] < = *n* < = 2 [31] – 1, sem sinal:  0 < = *n* < = 2 [32] – 1) [3].|  
+|SQL_REAL|real|Assinado, o valor numérico aproximado com uma precisão binária de 24 (zero ou valor absoluto 10 [-38] para 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Assinado, valor numérico aproximado com uma precisão binária de pelo menos *p*. (A precisão máxima é definido pelo driver). [5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|Assinado, o valor numérico aproximado com uma precisão binária de 53 (zero ou valor absoluto 10 [–308] para 10[308]).|  
+|SQL_DOUBLE|DOUBLE PRECISION|Assinado, o valor numérico aproximado com uma precisão binária de 53 (zero ou valor absoluto 10 [-308] para 10[308]).|  
 |SQL_BIT|BIT|Dados binários de bit único. [8]|  
-|SQL_TINYINT|TINYINT|Valor numérico exato com precisão 3 e escala 0 (assinado: – 128 < = *n* < = 127, sem sinal: 0 < = *n* < = 255) [3].|  
-|SQL_BIGINT|bigint|Valor numérico exato com precisão 19 (se tiver sinal) ou 20 (se não tiver sinal) e escala 0 (assinado: – 2 [63] < = *n* < = 2 [63] – 1, sem sinal: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
+|SQL_TINYINT|TINYINT|Valor numérico exato com precisão 3 e escala 0 (assinado: -128 < = *n* < = 127, sem sinal:  0 < = *n* < = 255) [3].|  
+|SQL_BIGINT|bigint|Valor numérico exato com precisão 19 (se tiver sinal) ou 20 (se não tiver sinal) e escala 0 (assinado: -2 [63] < = *n* < = 2 [63] – 1, sem sinal: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
 |SQL_BINARY|BINÁRIO (*n*)|Dados binários de comprimento fixo *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Dados binários de comprimento máximo de comprimento variável *n*. O máximo é definido pelo usuário. [9]|  
 |SQL_LONGVARBINARY|VARBINARY LONGO|Dados binários de comprimento variável. Comprimento máximo é dependente da fonte de dados. [9]|  
@@ -78,7 +78,7 @@ Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses 
   
  [1] esse é o valor retornado na coluna DATA_TYPE por uma chamada para **SQLGetTypeInfo**.  
   
- [2] esse é o valor retornado na coluna Nome e criar PARAMS por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação — por exemplo, CHAR — ao passo que a coluna de criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como precisão, escala e comprimento.  
+ [2] esse é o valor retornado na coluna Nome e criar PARAMS por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação-por exemplo, CHAR-enquanto a coluna criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como precisão, escala e comprimento.  
   
  [3] um aplicativo usa **SQLGetTypeInfo** ou **SQLColAttribute** para determinar se um determinado tipo de dados ou uma coluna específica em um conjunto de resultados é sem sinal.  
   

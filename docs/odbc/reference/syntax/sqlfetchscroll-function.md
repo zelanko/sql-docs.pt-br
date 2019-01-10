@@ -20,16 +20,16 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146967ebc31d5e7d8176d37ee5b8b0b97b6c0674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540809"
 ---
 # <a name="sqlfetchscroll-function"></a>Função SQLFetchScroll
 **Conformidade com**  
- Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
+ Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLFetchScroll** busca o conjunto de linhas especificado de dados do conjunto de resultados e retorna dados para todas as colunas associadas. Conjuntos de linhas podem ser especificados em uma posição absoluta ou relativa, ou pelo indicador.  
@@ -84,7 +84,7 @@ SQLRETURN SQLFetchScroll(
   
  Para todos esses SQLSTATEs que podem retornar SQL_SUCCESS_WITH_INFO ou SQL_ERROR (exceto 01xxx SQLSTATEs), SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em um ou mais, mas nem todas as linhas de uma operação de várias linhas, e SQL_ERROR será retornado se ocorrer um erro em um operação de uma única linha.  
   
-|SQLSTATE|Erro|Description|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Cadeia de caracteres ou dados binários retornados para uma coluna resultaram em truncamento de caractere não vazios ou nulos de dados binários. Se fosse um valor de cadeia de caracteres, ele era truncados à direita.|  
@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
 |22001|Dados de cadeia de caracteres truncados à direita|Um indicador de comprimento variável retornado para uma coluna foi truncado.|  
 |22002|Variável de indicador necessária, mas não fornecida|Dados nulos foi buscados em uma coluna cuja *StrLen_or_IndPtr* definido por **SQLBindCol** (ou SQL_DESC_INDICATOR_PTR definido pela **SQLSetDescField** ou  **SQLSetDescRec**) é um ponteiro nulo.|  
-|22003|Valor numérico fora do intervalo|Retornando o valor numérico (como numérico ou cadeia de caracteres) para um ou mais colunas associadas teria causado parte inteira (em vez de fracionários) o número a ser truncado.<br /><br /> Para obter mais informações, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) na [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
+|22003|Valor numérico fora do intervalo|Retornando o valor numérico (como numérico ou cadeia de caracteres) para um ou mais colunas associadas teria causado parte inteira (em vez de fracionários) o número a ser truncado.<br /><br /> Para obter mais informações, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) em [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
 |22007|Formato de data/hora inválido|Uma coluna de caractere no conjunto de resultados foi associada a uma data, hora ou estrutura de carimbo de hora C, e um valor na coluna foi, respectivamente, uma data inválida, hora ou carimbo de hora.|  
 |22012|Divisão por zero|Um valor de uma expressão aritmética foi retornado, que resultou na divisão por zero.|  
 |22015|Estouro no campo de intervalo|A atribuição de um numérico exato ou o intervalo de tipo SQL para um tipo de intervalo C causou uma perda de dígitos significativos no campo à esquerda.<br /><br /> Ao buscar dados para um tipo de intervalo de C, não houve nenhuma representação do valor do tipo SQL no tipo de intervalo de C.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync** não foi chamado para concluir a operação assíncrona anterior neste identificador.|Se a chamada de função anterior no identificador retornará SQL_STILL_EXECUTING e se o modo de notificação está habilitado, **SQLCompleteAsync** deve ser chamado no identificador de fazer o pós-processamento e concluir a operação.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLFetchScroll** retorna um conjunto de linhas especificado do conjunto de resultados. Conjuntos de linhas podem ser especificados por posição absoluta ou relativa, ou pelo indicador. **SQLFetchScroll** pode ser chamado somente enquanto existe um conjunto de resultados — ou seja, após uma chamada que cria um conjunto de resultados e antes do cursor over que o conjunto de resultados está fechado. Se todas as colunas são associadas, ele retorna os dados nessas colunas. Se o aplicativo tiver especificado um ponteiro para um buffer no qual retornar o número de linhas buscadas, ou uma matriz de status de linha **SQLFetchScroll** retorna essas informações também. Chamadas para **SQLFetchScroll** podem ser misturadas a chamadas para **SQLFetch** , mas não podem ser misturadas a chamadas para **SQLExtendedFetch**.  
+ **SQLFetchScroll** retorna um conjunto de linhas especificado do conjunto de resultados. Conjuntos de linhas podem ser especificados por posição absoluta ou relativa, ou pelo indicador. **SQLFetchScroll** pode ser chamado somente enquanto existe um conjunto de resultados – ou seja, após uma chamada que cria um conjunto de resultados e antes do cursor over que o conjunto de resultados está fechado. Se todas as colunas são associadas, ele retorna os dados nessas colunas. Se o aplicativo tiver especificado um ponteiro para um buffer no qual retornar o número de linhas buscadas, ou uma matriz de status de linha **SQLFetchScroll** retorna essas informações também. Chamadas para **SQLFetchScroll** podem ser misturadas a chamadas para **SQLFetch** , mas não podem ser misturadas a chamadas para **SQLExtendedFetch**.  
   
  Para obter mais informações, consulte [usando cursores em bloco](../../../odbc/reference/develop-app/using-block-cursors.md) e [usando cursores roláveis](../../../odbc/reference/develop-app/using-scrollable-cursors.md).  
   
@@ -141,7 +141,7 @@ SQLRETURN SQLFetchScroll(
   
  Drivers não são necessários para dar suporte a todas as orientações de busca; um aplicativo chama **SQLGetInfo** com um tipo de informação de SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 (dependendo do tipo de cursor) para determinar quais fetch as orientações são compatíveis com o driver. O aplicativo deve examinar as máscaras de bits SQL_CA1_NEXT, SQL_CA1_RELATIVE, SQL_CA1_ABSOLUTE e WQL_CA1_BOOKMARK nesses tipos de informações. Além disso, se o cursor é de somente avanço e FetchOrientation não SQL_FETCH_NEXT, **SQLFetchScroll** retornará SQLSTATE HY106 (tipo fora do intervalo de busca).  
   
- O atributo da instrução SQL_ATTR_ROW_ARRAY_SIZE Especifica o número de linhas no conjunto de linhas. Se o conjunto de linhas que estão sendo buscadas por **SQLFetchScroll** sobrepõe o final do conjunto de resultados, **SQLFetchScroll** retorna um conjunto de linhas parcial. Ou seja, se S + R – 1 é maior que L, onde S é a linha inicial do conjunto de linhas que estão sendo buscada, R é o tamanho do conjunto de linhas e L é a última linha no conjunto de resultados, em seguida, somente o primeiro L – S + 1 linhas do conjunto de linhas são válidos. As linhas restantes estão vazias e têm um status de SQL_ROW_NOROW.  
+ O atributo da instrução SQL_ATTR_ROW_ARRAY_SIZE Especifica o número de linhas no conjunto de linhas. Se o conjunto de linhas que estão sendo buscadas por **SQLFetchScroll** sobrepõe o final do conjunto de resultados, **SQLFetchScroll** retorna um conjunto de linhas parcial. Ou seja, se S + R - 1 é maior que L, onde S é a linha inicial do conjunto de linhas que estão sendo buscada, R é o tamanho do conjunto de linhas e L é a última linha no conjunto de resultados, em seguida, somente o primeiro L - S + 1 linhas do conjunto de linhas são válidos. As linhas restantes estão vazias e têm um status de SQL_ROW_NOROW.  
   
  Após **SQLFetchScroll** retorna, a linha atual é a primeira linha do conjunto de linhas.  
   
@@ -178,9 +178,9 @@ SQLRETURN SQLFetchScroll(
 |*Antes de iniciar*|*Antes de iniciar*|  
 |*CurrRowsetStart = 1*|*Antes de iniciar*|  
 |*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart – RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Após o término e LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*Após o término LastResultRow e > = RowsetSize* <sup>[2]</sup>|*LastResultRow – RowsetSize + 1* <sup>[2].</sup>|  
+|*Após o término LastResultRow e > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
   
  [1] **SQLFetchScroll** retornará SQLSTATE 01S06 (tentativa de buscar antes do conjunto de resultados retornado o primeiro conjunto de linhas) e SQL_SUCCESS_WITH_INFO.  
   
@@ -236,7 +236,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow – RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] se o tamanho do conjunto de linhas tiver sido alterado desde a chamada anterior para buscar linhas, isso é o novo tamanho do conjunto de linhas.  
@@ -271,7 +271,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- Quando **SQLFetchScroll** retorna um novo conjunto de linhas que tem uma posição em relação ao conjunto de linhas atual — ou seja, FetchOrientation é SQL_FETCH_NEXT, SQL_FETCH_PRIOR ou SQL_FETCH_RELATIVE — ele não inclui alterações no conjunto de linhas atual ao calcular a posição inicial do novo conjunto de linhas. No entanto, ele inclui alterações fora do conjunto de linhas atual se ele é capaz de detectá-las. Além disso, quando **SQLFetchScroll** retorna um novo conjunto de linhas que tem uma posição independente do conjunto de linhas atual — ou seja, FetchOrientation é SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE ou SQL_FETCH_BOOKMARK — ele inclui todas as alterações, que ele é capaz de detectar, mesmo se estiverem no conjunto de linhas atual.  
+ Quando **SQLFetchScroll** retorna um novo conjunto de linhas que tem uma posição em relação ao conjunto de linhas atual – ou seja, FetchOrientation é SQL_FETCH_NEXT, SQL_FETCH_PRIOR ou SQL_FETCH_RELATIVE - não inclui alterações no conjunto de linhas atual ao calcular a posição inicial do novo conjunto de linhas. No entanto, ele inclui alterações fora do conjunto de linhas atual se ele é capaz de detectá-las. Além disso, quando **SQLFetchScroll** retorna um novo conjunto de linhas que tem uma posição independente do conjunto de linhas atual – ou seja, FetchOrientation é SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE ou SQL_FETCH_BOOKMARK -- inclui todas as alterações, que ele é capaz de detectar, mesmo se estiverem no conjunto de linhas atual.  
   
  Ao determinar se as linhas adicionadas recentemente são dentro ou fora do conjunto de linhas atual, um conjunto de linhas parcial é considerado para terminar a última linha válido; ou seja, a última linha para o qual o status de linha não está SQL_ROW_NOROW. Por exemplo, suponha que o cursor é capaz de detectar linhas adicionadas recentemente, o conjunto de linhas atual é um conjunto de linhas parcial, o aplicativo adiciona novas linhas e o cursor adiciona essas linhas ao final do conjunto de resultados. Se o aplicativo chamar **SQLFetchScroll** com FetchOrientation definido como SQL_FETCH_NEXT, **SQLFetchScroll** retorna o conjunto de linhas começando com a primeira linha recém-adicionada.  
   
@@ -297,7 +297,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  [1] essa coluna usa os números de linha antes de todas as linhas foram inseridas ou excluídas.  
   
- [2]] nesse caso, o cursor tenta retornar as linhas a partir da linha 21. Porque a linha 21 foi excluída, a primeira linha, que ela retorna é linha 22.  
+ [2] nesse caso, o cursor tenta retornar as linhas a partir da linha 21. Porque a linha 21 foi excluída, a primeira linha, que ela retorna é linha 22.  
   
  Linhas de erro (ou seja, as linhas com um status de SQL_ROW_ERROR) não afetam o movimento do cursor. Por exemplo, se o conjunto de linhas atual começa com a linha 11 e o status da linha 11 é SQL_ROW_ERROR, chamando **SQLFetchScroll** com FetchOrientation definido como SQL_FETCH_RELATIVE e FetchOffset definido como 5 retorna o conjunto de linhas a partir da linha 16, Assim como faria se o status da linha 11 foi SQL_SUCCESS.  
   
@@ -327,7 +327,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  Em cada grupo de registros de status que se aplica a uma linha individual, o primeiro registro de status retornado pelo SQLExtendedFetch deve conter o SQLSTATE 01S01 (erro na linha); **SQLFetchScroll** não retorna este SQLSTATE. Se não puder retornar SQLSTATEs adicionais SQLExtendedFetch, ele deve retornar essa SQLSTATE.  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll e simultaneidade otimista  
- Se um cursor usa a simultaneidade otimista — ou seja, o atributo de instrução SQL_ATTR_CONCURRENCY tem um valor de SQL_CONCUR_VALUES ou SQL_CONCUR_ROWVER — **SQLFetchScroll** atualiza os valores de simultaneidade otimista usados pelos dados o código-fonte para detectar se uma linha foi alterada. Isso acontece sempre que **SQLFetchScroll** busca um novo conjunto de linhas, incluindo quando ele refetches o conjunto de linhas atual. (Ele é chamado com FetchOrientation definido como SQL_FETCH_RELATIVE e FetchOffset definido como 0.)  
+ Se um cursor usa a simultaneidade otimista, ou seja, o atributo de instrução SQL_ATTR_CONCURRENCY tem um valor de SQL_CONCUR_VALUES ou SQL_CONCUR_ROWVER - **SQLFetchScroll** atualiza os valores de simultaneidade otimista usados pelos dados o código-fonte para detectar se uma linha foi alterada. Isso acontece sempre que **SQLFetchScroll** busca um novo conjunto de linhas, incluindo quando ele refetches o conjunto de linhas atual. (Ele é chamado com FetchOrientation definido como SQL_FETCH_RELATIVE e FetchOffset definido como 0.)  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll e ODBC Drivers de 2. x  
  Quando um aplicativo chama **SQLFetchScroll** em um driver do ODBC 2. x, o Gerenciador de Driver mapeia essa chamada para **SQLExtendedFetch**. Ele passa os seguintes valores para os argumentos de **SQLExtendedFetch**.  
@@ -340,7 +340,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |RowCountPtr|O endereço especificado pelo atributo SQL_ATTR_ROWS_FETCHED_PTR instrução.|  
 |RowStatusArray|O endereço especificado pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR.|  
   
- Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+ Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>Descritores e SQLFetchScroll  
  **SQLFetchScroll** interage com descritores da mesma maneira como **SQLFetch**. Para obter mais informações, consulte a seção "Descritores e SQLFetchScroll" [função SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md).  
