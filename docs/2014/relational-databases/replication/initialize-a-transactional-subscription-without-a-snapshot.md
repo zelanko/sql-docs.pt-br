@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, initializing
@@ -15,12 +14,12 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7680a62293bd9a15b12e0a979be22c33220af4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811978"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar uma assinatura transacional sem um instantâneo
   Por padrão, uma assinatura a uma publicação transacional é inicializada com um instantâneo, que é gerado pelo Agente de Instantâneo e aplicado pelo Agente de Distribuição. Em alguns cenários, como os que envolvem grandes conjuntos de dados iniciais, é preferível inicializar uma assinatura usando outro método. Outros métodos de inicializar um Assinante incluem:  
@@ -47,7 +46,7 @@ ms.locfileid: "48107806"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar a inicialização com um backup para publicações transacionais &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programação Transact-SQL de replicação: [Inicializar uma assinatura transacional de um backup &#40;programação Transact-SQL de replicação&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
+-   Programação Transact-SQL de replicação:  [Inicializar uma assinatura transacional de um backup &#40;Programação de Transact-SQL de Replicação&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Se uma assinatura for inicializada sem usar um instantâneo, a em que o serviço do SQL Server será executado no Publicador deverá ter permissões para gravação na pasta do instantâneo no Distribuidor. Para obter mais informações sobre permissões, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_paramdata
@@ -22,12 +20,12 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90ef2956d169cc9591102ab945b0545ab1b325b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151926"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357561"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimento armazenado estendido)
     
@@ -64,14 +62,14 @@ n
   
 |Novos tipos de dados|Comprimento dos dados de entrada|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VP, NULL<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** N/A<br /><br /> **<255:** N/A|  
-|BIGVARCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais|  
-|BIGCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|BIGBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|BIGVARBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais|  
-|NCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|NVARCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais|  
-|NTEXT|**NULL:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>=255:** N/A<br /><br /> **\<255:** N/A|  
+|BITN|**NULL:** VICE-PRESIDENTE, NULO<br /><br /> **ZERO:** VICE-PRESIDENTE, NULO<br /><br /> **> = 255:** N/D<br /><br /> **< 255:** N/D|  
+|BIGVARCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VICE-PRESIDENTE, NULO<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados|  
+|BIGCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados + preenchimento (até 255)|  
+|BIGBINARY|**NULL:** NULL, N/D<br /><br /> **ZERO:** VP, 255 0X00<br /><br /> **> = 255:** VP, 255 bytes<br /><br /> **< 255:** VP, dados + preenchimento (até 255)|  
+|BIGVARBINARY|**NULL:** NULL, N/D<br /><br /> **ZERO:** VICE-PRESIDENTE, 0X00<br /><br /> **> = 255:** VP, 255 bytes<br /><br /> **< 255:** VP, dados|  
+|NCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados + preenchimento (até 255)|  
+|NVARCHAR|**NULL:** NULL, N/D<br /><br /> **ZERO:** VICE-PRESIDENTE, NULO<br /><br /> **> = 255:** VP, 255 caracteres<br /><br /> **< 255:** VP, dados|  
+|NTEXT|**NULL:** N/D<br /><br /> **ZERO:** N/D<br /><br /> **> = 255:** N/D<br /><br /> **\<255:** N/D|  
   
  \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
   
@@ -81,7 +79,7 @@ n
  Quando uma chamada de procedimento armazenado remoto for feita com parâmetros, os parâmetros poderão ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. Em caso de erro, o manipulador SRV_RPC ainda será chamado, mas aparecerá como se não houvesse parâmetros e **srv_rpcparams** retornará 0.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte também  
  [srv_rpcparams &#40;API de Procedimento Armazenado Estendido&#41;](srv-rpcparams-extended-stored-procedure-api.md)  

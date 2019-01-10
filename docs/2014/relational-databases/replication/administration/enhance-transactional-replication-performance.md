@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eaf1d549ecf5e40593c3602cc35b4f4ad5e39790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813648"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
   Após considerar as dicas para o de desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](enhance-general-replication-performance.md), considere essas áreas adicionais específicas da replicação transacional.  
@@ -66,20 +65,20 @@ ms.locfileid: "48085496"
   
      Definir que os agentes executem continuamente, em vez de criar agendamentos frequentes (como a cada minuto), melhora o desempenho da replicação, eliminando as interrupções do agente. Quando você define que o Distribution Agent execute continuamente, as alterações são propagadas com uma baixa latência para os demais servidores conectados na topologia. Para obter mais informações, consulte:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendamentos de sincronização](../specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendas de sincronização](../specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parâmetros do Distribution Agent e do Log Reader Agent  
   
--   Para resolver gargalos esporádicos e acidentais, use o parâmetro **–MaxCmdsInTran** para o Agente de Leitor de Log.  
+-   Para resolver gargalos esporádicos e acidentais, use o parâmetro **-MaxCmdsInTran** do Agente de Leitor de Log.  
   
-     O parâmetro **–MaxCmdsInTran** especifica o número máximo de instruções agrupadas em uma transação à medida que o Log Reader grava comandos no banco de dados de distribuição. O uso desse parâmetro permite que o Log Reader Agent e o Distribution Agent dividam transações volumosas (consistindo em muitos comandos) no Publicador em várias transações menores, ao aplicar os comandos no Assinante. A especificação desse parâmetro pode reduzir a contenção no Distribuidor e pode reduzir a latência entre o Publicador e o Assinante. Como a transação original é aplicada em unidades menores, o Assinante pode acessar linhas de uma transação lógica de Publicador antes do fim da transação original, O padrão é **0**, que preserva os limites de transação do Publicador. Esse parâmetro não se aplica aos Editores Oracle.  
+     O parâmetro **-MaxCmdsInTran** especifica o número máximo de instruções agrupadas em uma transação à medida que o Leitor de Log grava comandos no banco de dados de distribuição. O uso desse parâmetro permite que o Log Reader Agent e o Distribution Agent dividam transações volumosas (consistindo em muitos comandos) no Publicador em várias transações menores, ao aplicar os comandos no Assinante. A especificação desse parâmetro pode reduzir a contenção no Distribuidor e pode reduzir a latência entre o Publicador e o Assinante. Como a transação original é aplicada em unidades menores, o Assinante pode acessar linhas de uma transação lógica de Publicador antes do fim da transação original, O padrão é **0**, que preserva os limites de transação do Publicador. Esse parâmetro não se aplica aos Editores Oracle.  
   
     > [!WARNING]  
     >  O `MaxCmdsInTran` não foi criado para estar sempre ativado. Ele existe para solucionar casos em que alguém acidentalmente realizou um número grande de operações DML em uma única transação (causando atraso na distribuição de comandos até que a transação inteira esteja no banco de dados de distribuição, os bloqueios sejam mantidos etc.). Se você rotineiramente enfrentar essa situação, deverá revisar seus aplicativos e descobrir maneiras de reduzir o tamanho da transação.  
   
--   Use o parâmetro **–SubscriptionStreams** para o Agente de Distribuição.  
+-   Use o **- SubscriptionStreams** parâmetro para o agente de distribuição.  
   
-     O parâmetro **–SubscriptionStreams** pode melhorar significativamente a taxa de transferência da replicação de agregação. Ele permite várias conexões a um Assinante para aplicar lotes de alterações em paralelo, mantendo presentes, ao mesmo tempo, várias características transacionais, quando for usar um thread único. Se uma das conexões falhar na execução ou na confirmação, todas as conexões abortarão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha. Antes de concluir a fase de repetição pode haver inconsistências transacionais temporárias no Assinante. Depois que os lotes com falha são confirmados com êxito, o Assinante é levado de volta a um estado de consistência transacional.  
+     O parâmetro **-SubscriptionStreams** pode melhorar significativamente a taxa de transferência da replicação de agregação. Ele permite várias conexões a um Assinante para aplicar lotes de alterações em paralelo, mantendo presentes, ao mesmo tempo, várias características transacionais, quando for usar um thread único. Se uma das conexões falhar na execução ou na confirmação, todas as conexões abortarão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha. Antes de concluir a fase de repetição pode haver inconsistências transacionais temporárias no Assinante. Depois que os lotes com falha são confirmados com êxito, o Assinante é levado de volta a um estado de consistência transacional.  
   
      Um valor para esse parâmetro de agente pode ser especificado usando o **@subscriptionstreams** de [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
