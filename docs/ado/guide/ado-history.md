@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709554"
@@ -32,10 +32,10 @@ Este tópico lista os novos recursos introduzidos por cada versão do ADO MD ADO
  *Acesso de unidade de disco rígido não é permitido fora de uma zona confiável.*
 No domínio cruzado que envolvem sites não confiáveis de script, as operações a seguir estão desabilitadas: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, e **Recordset.Open**, usado em conjunto com o **adCmdFile** sinalizador ou com o Microsoft OLE DB provedor de persistência (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, e* **Stream.LoadFromFile***operam em arquivos físicos apenas.* 
+ **Recordset.Open** *,* **Recordset.Save** *,* **Stream.SaveToFile** *, e* **Stream.LoadFromFile** *operam em arquivos físicos apenas.*
 Esses métodos agora verificam se os identificadores de arquivos apontam para apenas os arquivos físicos.
 
- **Recordset.ActiveCommand***retornará um erro quando invocada a partir de uma página HTML/ASP.* 
+ **Recordset.ActiveCommand** *retornará um erro quando invocada a partir de uma página HTML/ASP.*
 Isso impede que o **comando** objeto sejam mal utilizadas.
 
  *O número de***conjuntos de registros***retornado por uma aninhada***forma***comando tem um limite superior.* 

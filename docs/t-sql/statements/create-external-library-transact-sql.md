@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538766"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205155"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Carrega os pacotes do R em um banco de dados do caminho de arquivo ou fluxo de bytes especificado.
+Carrega os arquivos de pacotes do R em um banco de dados do caminho de arquivo ou fluxo de bytes especificado. Essa instrução funciona como um mecanismo genérico para que o administrador de banco de dados carregue os artefatos necessários para novos tempos de execução de idiomas externos (atualmente, apenas R) e plataformas de sistema operacional compatíveis com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-Essa instrução funciona como um mecanismo genérico para que o administrador de banco de dados faça o upload dos artefatos necessários para novos tempos de execução de idiomas externos (R, Python, Java, etc.) e plataformas de sistema operacional compatíveis com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
-
-Atualmente, há compatibilidade apenas com a linguagem R e a plataforma Windows. O suporte para o Python e Linux está previsto para uma versão posterior.
+No SQL Server 2017 e posterior, há compatibilidade apenas com a linguagem R e a plataforma Windows. O suporte para o Python e Linux está previsto para uma versão posterior.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -94,7 +92,7 @@ Essa opção será útil se você precisar criar uma biblioteca ou alterar uma b
 
 Especifica a plataforma para o conteúdo da biblioteca. O valor usa como padrão a plataforma de host na qual o SQL Server está sendo executado. Portanto, o usuário não precisa especificar o valor. É necessário no caso em que várias plataformas são compatíveis ou quando o usuário precisa especificar outra plataforma. 
 
-no SQL Server 2017, o Windows é a única plataforma compatível.
+Atualmente, o Windows é a única plataforma compatível.
 
 ## <a name="remarks"></a>Remarks
 
@@ -129,7 +127,7 @@ EXEC sp_execute_external_script
 @script=N'library(customPackage)'
 ```
 
-### <a name="b-installing-packages-with-dependencies"></a>B. Instalando pacotes com dependências
+### <a name="b-installing-packages-with-dependencies"></a>b. Instalando pacotes com dependências
 
 Se o pacote que você deseja instalar tiver dependências, será essencial que você analise as dependências de primeiro e segundo níveis e garanta que todos os pacotes estejam disponíveis _antes_ de tentar instalar o pacote de destino.
 
