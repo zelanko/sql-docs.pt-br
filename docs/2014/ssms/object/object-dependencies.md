@@ -12,12 +12,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7f0cf758123331dae9f3a3132bdc81880b7ce6a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823260"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129316"
 ---
 # <a name="object-dependencies"></a>Dependências de objeto
   Alguns objetos de banco de dados têm dependências de outros objetos de banco de dados. Por exemplo, exibições e procedimentos armazenados dependem da existência de tabelas que contenham dados retornados pela exibição ou pelo procedimento. As **Dependências entre objetos (página Geral)** para o objeto atual lista ambos os objetos de banco de dados que devem estar presentes para o objeto funcionar corretamente e os objetos que dependem do objeto selecionado. Um objeto que faz referência a outro objeto em sua definição, e essa definição é armazenada no catálogo do sistema, é denominado *entidade de referência*. Um objeto que é referenciado por outro objeto é denominado *entidade referenciada*.  
@@ -27,14 +27,14 @@ ms.locfileid: "52823260"
  Use esta caixa de diálogo para entender as dependências antes de alterar ou excluir o objeto selecionado.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Objetos que dependem***\<objeto selecionado >*  
+ **Objetos que dependem**_\<objeto selecionado >_  
  Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e que dependem do objeto selecionado.  
   
- **Objetos dos quais***\<objeto selecionado >***depende**  
+ **Objetos dos quais**_\<objeto selecionado >_**depende**  
  Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e dos quais depende o objeto selecionado.  
   
  **Dependências**  
- Se **objetos que dependem**  *\<objeto selecionado >* é clicado, será exibida uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se **objetos dos quais**  *\<objeto selecionado >* **depende** é clicado, será exibida uma exibição hierárquica dos objetos do qual depende o objeto selecionado .  
+ Se **objetos que dependem**  _\<objeto selecionado >_ é clicado, será exibida uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se **objetos dos quais**  _\<objeto selecionado >_ **depende** é clicado, será exibida uma exibição hierárquica dos objetos do qual depende o objeto selecionado .  
   
  **Nome**  
  Exibe o nome do objeto selecionado no modo de exibição de árvore **Dependências** acima.  

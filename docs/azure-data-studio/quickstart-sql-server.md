@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 9e25008836b72ac8860953c5a1f98c13d7540d92
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030280"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143446"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guia de início rápido: Conectar e consultar usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Neste início rápido mostra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Server e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
@@ -28,7 +28,7 @@ Para concluir este início rápido, você precisa [!INCLUDE[name-sos](../include
 - [Instale [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
 Se você não tiver acesso a um SQL Server, selecione sua plataforma nos links a seguir (certifique-se de lembrar seu logon do SQL e uma senha!):
-- [Windows – Baixar o SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [Windows – Baixar o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS – Baixar o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 - [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -você só precisará seguir as etapas até *criar e consultar dados*.
 

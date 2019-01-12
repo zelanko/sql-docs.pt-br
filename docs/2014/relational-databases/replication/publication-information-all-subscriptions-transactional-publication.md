@@ -12,12 +12,12 @@ ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1383a7cd470e162a2c25a121fea7455ea381c06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6cc3ae7c4c39517f40b49d2ddd98ccdc397ee345
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762078"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134216"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>Informações da Publicação, Todas as Assinaturas (publicação transacional)
   A guia **Todas as Assinaturas** exibe informações sobre todas as assinaturas na publicação transacional selecionada.  
@@ -86,8 +86,7 @@ ms.locfileid: "52762078"
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Exibir informações e realizar tarefas para uma assinatura &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Exibir informações e realizar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)  
   
   

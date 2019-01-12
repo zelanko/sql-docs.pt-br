@@ -13,41 +13,25 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cd024310b00338749147b56e3b63a09fbd515de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814008"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127676"
 ---
 # <a name="transactional-replication"></a>Replicação transacional
   A replicação transacional normalmente inicia com um instantâneo dos objetos e dados do banco de dados de publicação. Assim que o instantâneo inicial é tirado, as alterações subsequentes nos dados e as modificações no esquema efetuadas no Publicador geralmente são distribuídas para o Assinante assim que ocorrem (quase em tempo real). As alterações nos dados são aplicadas ao Assinante na mesma ordem e dentro dos mesmos limites de transação conforme ocorreram no Publicador; por isso, dentro de uma publicação, a consistência transacional é assegurada.  
   
  A replicação transacional é normalmente usada em ambientes do tipo servidor para servidor e é apropriada em cada um dos seguintes casos:  
   
--   Você quer que as alterações com incremento sejam propagadas para os Assinantes à medida que ocorrem.  
-  
--   O aplicativo requer baixa latência entre as mudanças de hora feitas no Publicador, assim as mudanças chegarão ao Assinante.  
-  
--   O aplicativo requer acesso aos estados de dados intermediários. Por exemplo, se uma linha muda cinco vezes, a replicação transacional permite que um aplicativo responda a cada mudança (como acionar um gatilho), e não simplesmente uma mudança de dados da rede na linha.  
-  
--   O Publicador tem um volume muito alto de atividade de inserção, atualização e exclusão.  
-  
+-   Você quer que as alterações com incremento sejam propagadas para os Assinantes à medida que ocorrem.    
+-   O aplicativo requer baixa latência entre as mudanças de hora feitas no Publicador, assim as mudanças chegarão ao Assinante.    
+-   O aplicativo requer acesso aos estados de dados intermediários. Por exemplo, se uma linha muda cinco vezes, a replicação transacional permite que um aplicativo responda a cada mudança (como acionar um gatilho), e não simplesmente uma mudança de dados da rede na linha.    
+-   O Publicador tem um volume muito alto de atividade de inserção, atualização e exclusão.    
 -   O Publicador ou Assinante é um banco de dados que não é do tipo[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , como Oracle.  
   
  Por padrão, os Assinantes de publicações transacionais devem ser tratados como somente leitura, porque as alterações não são propagadas de volta para o Publicador. Porém, replicação transacional oferece opções que permitem atualizações ao Assinante.  
-  
- **Neste tópico**  
-  
- [Como a replicação transacional funciona](#HowWorks)  
-  
- [Conjunto de dados inicial](#Dataset)  
-  
- [Snapshot Agent](#SnapshotAgent)  
-  
- [Agente de Leitor de Log](#LogReaderAgent)  
-  
- [Agente de Distribuição](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> Como a replicação transacional funciona  
  A replicação transacional é implementada pelo Agente de Instantâneo, Agente de Leitor de Log e Agente de Distribuição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O Snapshot Agent prepara os arquivos de instantâneo que contêm o esquema e os dados das tabelas publicadas e os objetos do banco de dados, armazena os arquivos na pasta do instantâneo e registra os trabalhos de sincronização do banco de dados de distribuição no Distribuidor.  
@@ -82,5 +66,17 @@ ms.locfileid: "52814008"
   
 ##  <a name="DistributionAgent"></a> Agente de Distribuição  
  O Distribution Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. O agente move as transações do banco de dados de distribuição para o Assinante. Se uma assinatura estiver marcada para validação, o Agente de Distribuição também verificará se os dados do Publicador e do Assinante coincidem.  
+
+## <a name="publication-types"></a>Tipos de publicação
+
+  
+A replicação transacional oferece quatro tipos de publicação:  
+  
+|Tipo de Publicação|Descrição|  
+|----------------------|-----------------|  
+|Publicação Transacional padrão|Apropriada para topologias em que todos os dados do Assinante são do modo somente leitura (a replicação transacional não impõe isto no Assinante).<br /><br /> As publicações transacionais padrão são criadas por padrão ao usar Transact-SQL ou RMO (Replication Management Objects). Ao usar o Assistente para Nova Publicação, elas são criadas selecionando **Publicação Transacional** na página **Tipo de Publicação** .<br /><br /> Para obter mais informações sobre como criar publicações, veja [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Publicação transacional com assinaturas atualizáveis|As características deste tipo de publicação são:<br /><br /> -Cada local tem dados idênticos, com um publicador e um assinante. <br /> -É possível atualizar linhas no assinante<br /> -Esta topologia é mais adequada para ambientes de servidor que requerem alta disponibilidade e escalabilidade de leitura.<br /><br />Para obter mais informações, consulte [inscrições atualizáveis](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topologia ponto a ponto|As características deste tipo de publicação são:<br /> -Cada local tem dados idênticos e atua como um publicador e assinante.<br /> -A mesma linha pode ser alterada apenas em um local de cada vez.<br /> – Dá suporte a [a detecção de conflitos](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-Esta topologia é mais adequada para ambientes de servidor que requerem alta disponibilidade e escalabilidade de leitura.<br /><br />Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Replicação transacional bidirecional|As características deste tipo de publicação são:<br />Replicação bidirecional é semelhante para replicação ponto a ponto, no entanto, ele não fornece a resolução de conflitos. Além disso, a replicação bidirecional é limitada a 2 servidores. <br /><br /> Para obter mais informações, consulte [replicação transacional bidirecional](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41927fa4008731c1ff047189735a5e8a50d6165a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751208"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127176"
 ---
 # <a name="add-objects"></a>Adicionar Objetos
   Limita as caixas de diálogo de seleção de objeto aos tipos de objetos que você quer consultar.  
@@ -29,7 +29,7 @@ ms.locfileid: "52751208"
  **Todos os objetos dos tipos**  
  Abra a caixa de diálogo **Selecionar Tipos de Objetos** para especificar os tipos de objetos que devem ser incluídos na lista subjacente.  
   
- **O servidor***\<servername >*  
+ **O servidor**_\<servername >_  
  Adicione todos os objetos adequados no servidor especificado. Aparece apenas quando aberto de caixas de diálogo no escopo do servidor, como a caixa de diálogo **Logon – Novo** .  
   
  **Todos os objetos pertencentes ao esquema**  

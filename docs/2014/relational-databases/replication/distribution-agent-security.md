@@ -14,12 +14,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a28ee9f405e589e7956be4391f22d9ea2a46388
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815518"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135516"
 ---
 # <a name="distribution-agent-security"></a>Segurança do Distribution Agent
   A caixa de diálogo **Segurança do Distribution Agent** permite especificar a conta do Windows na qual o Distribution Agent é executado. O Distribution Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta. Opções adicionais disponíveis na caixa de diálogo dependem de como você a acessa:  
@@ -94,7 +94,7 @@ Persist Security Info=False;Connection Pooling=True;
  A maioria das opções na cadeia de caracteres é específica do servidor DB2 que você está configurando, mas a opção **Processar Binário como Caractere** sempre deve ser definida como **False**. Um valor é necessário para a opção **Catálogo Inicial** para identificar o banco de dados de assinatura. Para obter mais informações, consulte [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar logons e senhas na replicação](security/manage-logins-and-passwords-in-replication.md)   
+ [Gerenciar logons e senhas na replicação](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

@@ -17,19 +17,19 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4614ab97c2f5726c1c5382fbe87b9198f9cf2f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800724"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136026"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada alteração aplicada à tabela de origem dentro do intervalo LSN (número de sequência de log) especificado. Se uma linha de origem tiver passado por várias alterações durante o intervalo, todas as alterações serão representadas no conjunto de resultados retornado. Além de retornar os dados de alteração, quatro colunas de metadados fornecem as informações necessárias para a aplicação de alterações em outra fonte de dados. As opções de filtragem de linha regem o conteúdo das colunas de metadados, bem como as linhas retornadas no conjunto de resultados. Quando a opção de filtragem de linha 'all' é especificada, cada alteração tem exatamente uma linha para identificar a alteração. Quando a opção 'all update old' é especificada, as operações de atualização são representadas como duas linhas: uma contendo os valores das colunas capturadas antes da atualização e outra contendo os valores das colunas capturadas após a atualização.  
   
- Essa função de enumeração é criada no momento em que uma tabela de origem é habilitada para change data capture. O nome da função é derivado e usa o formato **cdc.fn_cdc_get_all_changes_***capture_instance* onde *capture_instance* é o valor especificado para a instância de captura quando a tabela de origem é habilitado para change data capture.  
+ Essa função de enumeração é criada no momento em que uma tabela de origem é habilitada para change data capture. O nome da função é derivado e usa o formato **CDC. fn_cdc_get_all_changes _**_capture_instance_ onde *capture_instance* é o valor especificado para a captura instância quando a tabela de origem está habilitada para change data capture.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +69,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN de confirmação associado à alteração que preserva a ordem de confirmação da alteração. Alterações confirmadas na mesma transação compartilham o mesmo valor LSN de confirmação.|  
 |**__$seqval**|**binary(10)**|Valor de sequência usado para solicitar alterações em uma linha dentro de uma transação.|  

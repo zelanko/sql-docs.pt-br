@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540918"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127226"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
   Este tópico descreve como criar um índice exclusivo em uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Não existe nenhuma diferença significativa entre criar uma restrição UNIQUE e criar um índice exclusivo que seja independente de uma restrição. A validação de dados ocorre da mesma maneira, e o otimizador de consultas não diferencia entre um índice exclusivo criado por uma restrição ou manualmente criado. No entanto, criar uma restrição UNIQUE na coluna torna claro o objetivo do índice. Para obter mais informações sobre restrições UNIQUE, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
@@ -124,7 +124,7 @@ ms.locfileid: "52540918"
   
 13. Clique em **Fechar**.  
   
-14. No menu **Arquivo**, clique em **Salvar***table_name*.  
+14. No menu **Arquivo** , clique em **Salvar**_table_name_.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Crie um índice exclusivo usando o Pesquisador de Objetos  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52540918"
   
 7.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
-8.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+8.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 9. Clique em **OK**.  
   

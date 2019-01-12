@@ -20,28 +20,28 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abf906a905a56e4372e94a130b9a340589a97fb6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c6f93be8caa4b571693092ed93f5747f8506aa9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663205"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133996"
 ---
 # <a name="constraintcolumnusage-transact-sql"></a>CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada coluna no banco de dados atual que tem uma restrição definida na coluna. Esta exibição de esquema de informações retorna informações sobre os objetos para os quais o usuário atual tem permissões.  
   
- Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA. * * * view_name*.  
+ Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o proprietário da tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o proprietário da tabela.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nome da tabela.|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nome da coluna.|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificador da restrição.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**nvarchar(** 128 **)**|Nome da restrição.|  
   
 ## <a name="see-also"></a>Consulte também  

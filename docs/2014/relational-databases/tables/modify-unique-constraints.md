@@ -15,12 +15,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb997c180d614169600ad32e3206332aaa7deb10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 311862d3612760da88d62f3ab51a5ca16d554b0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782078"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131246"
 ---
 # <a name="modify-unique-constraints"></a>Modificar restrições exclusivas
   Você pode modificar uma restrição exclusiva no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "52782078"
     |Definir a opção clustered|Na grade, em selecione **Designer de Tabela**, selecione **Criar como Clusterizado** e, na lista suspensa, escolha Sim para criar um índice clusterizado e Não para criar um não clusterizado. Só pode existir um índice clusterizado por tabela. Se já houver um índice clusterizado nessa tabela, você deverá desmarcar essa configuração no índice original.|  
     |Definir um fator de preenchimento|Na grade, em **Designer de Tabela**, expanda a categoria **Especificação de Preenchimento** e digite um inteiro de 0 a 100 na caixa **Fator de Preenchimento** .|  
   
-5.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+5.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> **Para modificar uma restrição exclusiva**  
   

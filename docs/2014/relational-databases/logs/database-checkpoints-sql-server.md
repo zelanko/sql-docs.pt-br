@@ -26,12 +26,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f9fec2db69f28f832aa8745cf54ea0ff635f491
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354456"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128566"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
   Este tópico fornece uma visão geral dos pontos de verificação de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
@@ -45,7 +45,7 @@ ms.locfileid: "53354456"
 |Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Descrição|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Emitido automaticamente em segundo plano para atender o limite de tempo superior sugerido pelo `recovery interval` opção de configuração do servidor. Pontos de verificação automáticos executados até a conclusão.  Os pontos de verificação automáticos são acelerados com base no número de gravações pendentes e se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta um aumento na latência de gravação acima de 20 milissegundos.<br /><br /> Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indireto.|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A hora de recuperação de destino padrão é 0, o que faz com que a heurística de ponto de verificação automático seja usada no banco de dados. Se você usou ALTER DATABASE para definir TARGET_RECOVERY_TIME a >0, esse valor será usado, em vez do intervalo de recuperação especificado para a instância do servidor.<br /><br /> Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indireto.|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A hora de recuperação de destino padrão é 0, o que faz com que a heurística de ponto de verificação automático seja usada no banco de dados. Se você usou ALTER DATABASE para definir TARGET_RECOVERY_TIME a >0, esse valor será usado, em vez do intervalo de recuperação especificado para a instância do servidor.<br /><br /> Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Emitido quando você executa um comando [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT. O ponto de verificação manual ocorre no banco de dados atual para sua conexão. Por padrão, pontos de verificação manuais são executados até a conclusão. A aceleração funciona da mesma forma que para pontos de verificação automáticos.  Opcionalmente, o parâmetro *checkpoint_duration* especifica a quantidade de tempo solicitada, em segundos, para a conclusão do ponto de verificação.<br /><br /> Para obter mais informações, consulte [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Internal|Nenhum.|Emitido por várias operações de servidor, como backup e criação de instantâneo de banco de dados, para garantir que as imagens de disco coincidam com o estado atual do log.|  
   

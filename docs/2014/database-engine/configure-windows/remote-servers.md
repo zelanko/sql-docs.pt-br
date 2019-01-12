@@ -16,12 +16,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e400c24476df7d9e663f17c71425f11b5155058
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641007"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123946"
 ---
 # <a name="remote-servers"></a>Servidores remotos
   Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "52641007"
 >  Quando possível, use a Autenticação do Windows.  
   
 ### <a name="remote-server-security-example"></a>Exemplo de segurança de servidor remoto  
- Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** está configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **serverReceive**, chamado **Brenda**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive***,* chamado **Joe**.  
+ Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** está configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **serverReceive**, chamado **Brenda**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive**_,_ chamado **Joe**.  
   
  O exemplo de código do Transact-SQL a seguir configura `serverSend` para executar RPCs em `serverReceive`.  
   

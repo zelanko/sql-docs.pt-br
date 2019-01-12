@@ -1,6 +1,6 @@
 ---
 title: Compatibilidade com versões anteriores do SQL Server 2017 Analysis Services | Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072423"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185072"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilidade com versões anteriores do Analysis Services (2017 do SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072423"
 Este artigo descreve as alterações na disponibilidade de recursos e o comportamento entre a versão atual e a versão anterior.
 
 ## <a name="deprecated-features"></a>Recursos preteridos
-Um *recurso preterido* será descontinuado do produto em uma versão futura, mas é ainda tem suporte e incluído na versão atual para manter a compatibilidade com versões anteriores. Recomenda-se que você interromper o uso de recursos preteridos em projetos novos e existentes para manter a compatibilidade com versões futuras.
+Um *recurso preterido* será descontinuado do produto em uma versão futura, mas é ainda tem suporte e incluído na versão atual para manter a compatibilidade com versões anteriores. Recomenda-se que você interromper o uso de recursos preteridos em projetos novos e existentes para manter a compatibilidade com versões futuras. Documentação não é atualizada para recursos preteridos.
 
 Os seguintes recursos foram preteridos nessa versão:
   

@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 088d6681910aad6a02205c812ff0e5a9d7d090ee
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: c3df07da100bf0bbfc0b2238cb4154b4c3a363e3
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030800"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241607"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>Quais são os pools de dados em um cluster de big data do SQL Server 2019?
 

@@ -15,12 +15,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f90f0f332aff728699a92daadec2c28a71552dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803248"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130316"
 ---
 # <a name="modify-check-constraints"></a>Modificar restrições de verificação
   Você pode modificar uma restrição de verificação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] quando você quiser alterar a expressão de restrição ou as opções que habilitam ou desabilitam a restrição de condições específicas.  
@@ -69,7 +69,7 @@ ms.locfileid: "52803248"
   
 5.  Clique em **Fechar**.  
   
-6.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+6.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para modificar uma restrição de verificação**  

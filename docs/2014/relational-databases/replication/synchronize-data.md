@@ -21,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781938"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128556"
 ---
 # <a name="synchronize-data"></a>Sincronizar dados
   Sincronizando dados se refere ao processo de alterações de dados e esquemas sendo propagadas entre o Publicador e os Assinantes após o instantâneo inicial ter sido aplicado ao Assinante. A sincronização pode acontecer:  
@@ -69,6 +69,6 @@ ms.locfileid: "52781938"
 -   Manipuladores de lógica de negócios possuem suporte para replicação de mesclagem. Usando a estrutura dos manipuladores de lógica de negócios, você pode escrever um assembly de código gerenciado durante o processo de sincronização de mesclagem. O assembly inclui lógica comercial que pode responder a uma série de condições durante a sincronização: alterações de dados, conflitos e erros. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](merge/execute-business-logic-during-merge-synchronization.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Detectar e resolver conflitos de replicação de mesclagem](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [Detectar e resolver conflitos de replicação de mesclagem](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

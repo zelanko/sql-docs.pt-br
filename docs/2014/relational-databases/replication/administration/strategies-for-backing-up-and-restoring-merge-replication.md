@@ -15,22 +15,19 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757469"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131906"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estratégias para fazer backup e restaurar a replicação de mesclagem
   Para replicação de mesclagem, faça backup dos seguintes bancos de dados regularmente:  
   
--   O banco de dados de publicação no Publicador.  
-  
--   O banco de dados de distribuição no Distribuidor.  
-  
--   O banco de dados de assinatura em cada Assinante.  
-  
+-   O banco de dados de publicação no Publicador.   
+-   O banco de dados de distribuição no Distribuidor.    
+-   O banco de dados de assinatura em cada Assinante.    
 -   Os bancos de dados de sistema **mestre** e **msdb** no Publicador, Distribuidor e todos os Assinantes. Esses bancos de dados devem ter, cada um, seus backups realizados em simultâneo com o banco de dados de replicação relevante. Por exemplo, faça o backup dos bancos de dados **mestre** e **msdb** no Publicador ao mesmo tempo em que executa o backup do banco de dados de publicação. Se o banco de dados de publicação for restaurado, assegure-se de que os bancos de dados **mestre** e **msdb** são consistentes com o banco de dados de publicação, em termos de configuração de replicação e ajustes.  
   
  Se você executar backups de log regulares, qualquer alteração relacionada à replicação deverá ser capturada nos backups de log. Se você não executar backups de log, um backup deverá ser executado sempre que uma configuração relevante à replicação for alterada. Para obter mais informações, consulte [Ações comuns que requerem um backup atualizado](common-actions-requiring-an-updated-backup.md).  

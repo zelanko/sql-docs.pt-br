@@ -15,12 +15,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f8db8ba77e913d1ae07b4dc0008650afe311565
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d92a15ae855c5521319abd252b1f5a7efc2bf300
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762588"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131406"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente de Leitor de Fila de Replicação
   O Replication Queue Reader Agent é um executável que lê mensagens armazenadas em uma fila do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue e aplica essas mensagens no Publicador. O Queue Reader Agent é usado com publicações de instantâneo e transacionais que permitem atualização em fila.  
@@ -59,19 +59,19 @@ ms.locfileid: "52762588"
  **-Continuous**  
  Especifica se o agente tenta processar transações em fila continuamente. Se especificado, o agente continua a execução, mesmo que não haja transações na fila pendentes de nenhum dos assinantes.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
  É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name*\\*instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Se não for especificado, o nome assumirá o padrão do nome da instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
   
- **-DistributionDB** *distribution_database*  
+ **-DistributionDB** _distribution_database_  
  É o banco de dados de distribuição.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  É o nome de logon do Distribuidor.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  É a senha do Distribuidor.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -89,7 +89,7 @@ ms.locfileid: "52762588"
  > [!NOTE]  
  >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro 'Alias Name' deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
   
- Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../security/security-overview-replication.md).  
+ Para obter mais informações, consulte [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  Especifica a quantidade de histórico registrada durante uma operação de leitura de fila. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
@@ -101,25 +101,25 @@ ms.locfileid: "52762588"
 |**2**|Insira novos registros de histórico, incluindo mensagens ociosas ou mensagens de trabalho de execução longa.|  
 |**3**|Insira novos registros de histórico que incluam detalhes adicionais que podem ser úteis na solução de problemas.|  
   
- **-LoginTimeOut** *segundos_de_tempo_limite_de_logon*  
+ **-LoginTimeOut** _segundos_de_tempo_limite_de_logon_  
  É o número de segundos antes que o logon expire. O padrão é 15 segundos.  
   
- **-Output** *caminho_de_saída_e_nome_do_arquivo*  
+ **-Output** _caminho_de_saída_e_nome_do_arquivo_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Especifica se a saída deve ser detalhada. Se o nível detalhado for **0**, só mensagens de erro serão impressas. Se o nível detalhado for **1**, todas as mensagens de relatório de progresso serão impressas. Se o nível detalhado for **2** (padrão), todas as mensagens de erro e de relatório de progresso serão impressas, o que é útil na depuração.  
   
- **-PollingInterval** *intervalo_de_sondagem*  
+ **-PollingInterval** _intervalo_de_sondagem_  
  É relevante apenas para assinaturas de atualização que usam filas com base no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Especifica com que frequência, em segundos, a fila do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é sondada para transações em fila pendentes. O valor pode ser entre 0 e 240 segundos. O padrão é 5 segundos.  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-ProfileName** *nome_do_perfil_do_agente*  
+ **-ProfileName** _nome_do_perfil_do_agente_  
  É o nome de um perfil de agente usado para fornecer um conjunto de valores padrão ao agente. Para obter mais informações, consulte [Perfis do agente de replicação](replication-agent-profiles.md).  
   
- **-QueryTimeOut** *tempo_limite_da_consulta_em_segundos*  
+ **-QueryTimeOut** _tempo_limite_da_consulta_em_segundos_  
  É o número de segundos antes que a consulta expire. O padrão é 1800 segundos.  
   
  **-ResolverState** [ **1**| **2**| **3**]  

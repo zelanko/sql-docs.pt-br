@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197306"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129886"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server)
-  Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve o formato que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa na mídia de backup, a correspondência entre mídia de backup e dispositivos de backup, a organização dos backups na mídia de backup, e as várias considerações sobre conjuntos de mídias e famílias de mídia. O tópico também descreve as etapas de inicialização ou formatação de mídia de backup antes que você use isso pela primeira vez ou substitua um conjunto de mídias antigo por um novo conjunto de mídias, como substituir conjuntos de backup antigos em um conjunto de mídias, e como acrescentar novos conjuntos de backup a um conjunto de mídias.  
+  Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve o formato que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa na mídia de backup, a correspondência entre mídia de backup e dispositivos de backup, a organização dos backups na mídia de backup, e as várias considerações sobre conjuntos de mídias e famílias de mídia. O tópico também descreve as etapas de inicialização ou formatação de mídia de backup antes que você use isso pela primeira vez ou substitua um conjunto de mídias antigo por um novo conjunto de mídias, como substituir conjuntos de backup antigos em um conjunto de mídias, e como acrescentar novos conjuntos de backup a um conjunto de mídias.  
   
 > [!NOTE]  
->  Para obter mais informações sobre o backup do SQL Server para o serviço de armazenamento de Blob do Windows Azure, consulte, [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Para obter mais informações sobre o backup do SQL Server no serviço de armazenamento do Blob do Windows Azure, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Termos e definições  
@@ -54,7 +54,7 @@ ms.locfileid: "48197306"
  Um conjunto de mídias é criado na mídia de backup durante uma operação de backup ao formatar a mídia de backup. Para obter mais informações, consulte [Criando um novo conjunto de mídias](#CreatingMediaSet), posteriormente neste tópico. Após a formatação, cada arquivo ou fita conterá um cabeçalho de mídia para o conjunto de mídias e estará pronto para receber conteúdo de backup. Com o cabeçalho no lugar, a operação de backup continua a fazer backup dos dados especificados na mídia de backup em todos os dispositivos de backup especificados para a operação.  
   
 > [!NOTE]  
->  Os conjuntos de mídias podem ser espelhados para proteger contra um volume de mídia danificado (uma fita ou arquivo de disco). Para obter mais informações, consulte [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+>  Os conjuntos de mídias podem ser espelhados para proteger contra um volume de mídia danificado (uma fita ou arquivo de disco). Para obter mais informações, veja [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] ou posterior pode ler backups compactados. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48197306"
 ### <a name="backup-sets"></a>Conjuntos de backup  
  Uma operação de backup bem-sucedida adiciona um único *conjunto de backup* ao conjunto de mídias. O conjunto de backup é descrito nos termos do conjunto de mídias ao qual o backup pertence. Se a mídia de backup consistir de apenas uma família de mídia, a família conterá o conjunto de backup completo. Se a mídia de backup consistir de várias famílias de mídia, o conjunto de backup será distribuído entre elas. Em cada mídia, o conjunto de backup contém um cabeçalho que descreve o conjunto de backup.  
   
- A exemplo a seguir mostra uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução que cria um conjunto de mídias chamado `MyAdvWorks_MediaSet_1` para o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando três unidades de fita como dispositivos de backup de banco de dados:  
+ O exemplo a seguir mostra uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que cria um conjunto de mídias chamado de `MyAdvWorks_MediaSet_1` para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando três unidades de fita como dispositivos de backup:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -140,7 +140,7 @@ WITH
   
  ![Segundo conjunto de backups distribuído em três fitas de conjunto de mídias](../../database-engine/media/bnr-mediaset-appendedto.gif "Segundo conjunto de backups distribuído em três fitas de conjunto de mídias")  
   
- Ao restaurar backups, você pode usar a opção FILE para especificar quais backups deseja usar. O exemplo a seguir mostra o uso de cláusulas FILE **=***backup_set_file_number* ao restaurar um backup de banco de dados completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguido de um backup de banco de dados diferencial no mesmo conjunto de mídias. O conjunto de mídias usa três fitas de backup, que estão nas unidades de fita `\\.\tape0`, `tape1`e `tape2`.  
+ Ao restaurar backups, você pode usar a opção FILE para especificar quais backups deseja usar. O exemplo a seguir mostra o uso de cláusulas FILE **=**_backup_set_file_number_ ao restaurar um backup de banco de dados completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguido de um backup de banco de dados diferencial no mesmo conjunto de mídias. O conjunto de mídias usa três fitas de backup, que estão nas unidades de fita `\\.\tape0`, `tape1`e `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -219,7 +219,7 @@ GO
  No caso de cabeçalhos de fita, deixar o cabeçalho no lugar pode fazer sentido. Em mídias de backup em disco, serão substituídos somente os arquivos usados pelos dispositivos de backup especificados na operação de backup; os outros arquivos no disco não são afetados. Quando backups são substituídos, qualquer cabeçalho da mídia existente é preservado e o backup novo é criado como o primeiro backup no dispositivo de backup. Se não houver nenhum cabeçalho da mídia, será gravado automaticamente um cabeçalho da mídia válido com um nome e descrição de mídia associados. Se o cabeçalho da mídia existente for inválido, a operação de backup será encerrada. Se a mídia estiver vazia, o novo cabeçalho de mídia será gerado com o MEDIANAME, MEDIAPASSWORD e MEDIADESCRIPTION fornecidos, se houver.  
   
 > [!IMPORTANT]  
->  Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a opção MEDIAPASSWORD é interrompida para a criação de backups. No entanto, você ainda poderá restaurar os backups criados com senhas.  
+>  Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a opção MEDIAPASSWORD é interrompida para a criação de backups. No entanto, você ainda poderá restaurar os backups criados com senhas.  
   
  A mídia de backup não será substituída se qualquer uma das condições for aplicável:  
   
@@ -303,7 +303,7 @@ GO
   
   
 ## <a name="see-also"></a>Consulte também  
- [Backup e Restauração de bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
  [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   

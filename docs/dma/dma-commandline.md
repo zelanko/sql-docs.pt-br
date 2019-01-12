@@ -2,7 +2,7 @@
 title: Executar o Assistente de migração de dados da linha de comando (SQL Server) | Microsoft Docs
 description: Saiba como executar o Assistente de migração de dados da linha de comando para avaliar os bancos de dados do SQL Server para a migração
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: c308dc9e0f05ec8abed83a75a3a1d0ea396fd46c
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643984"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226393"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar o Assistente de migração de dados da linha de comando
-Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
+Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
 
 > [!NOTE]
 > Dmacmd.exe dá suporte à execução apenas para avaliações. Não há suporte para migrações no momento.
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argumento  |Description  | Obrigatório (S/N)
+|Argumento  |Descrição  | Obrigatório (S/N)
 |---------|---------|---------------|
 | `/help or /?`     | Como usar o texto de ajuda de dmacmd.exe        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
@@ -96,13 +96,13 @@ Catalog=DatabaseName;Integrated Security=true"
 **Avaliação de banco de dados de único para a plataforma de destino de banco de dados do SQL Azure, salvar resultados em arquivo. JSON e. csv**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -123,24 +123,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>Recomendações de SKU do banco de dados SQL do Azure usando a CLI
 
-> [!IMPORTANT]
-> Recomendações de SKU para o banco de dados SQL estão disponíveis atualmente para migrações do SQL Server 2016 ou posterior.
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
-
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -150,7 +132,7 @@ Catalog=DatabaseName3;Integrated Security=true"***
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argumento  |Description  | Obrigatório (S/N)
+|Argumento  |Descrição  | Obrigatório (S/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Executar avaliação de SKU usando a linha de comando DMA | S
 |`/SkuRecommendationInputDataFilePath`  | Caminho completo para o arquivo de contador de desempenho coletado do computador que hospeda seus bancos de dados |    S

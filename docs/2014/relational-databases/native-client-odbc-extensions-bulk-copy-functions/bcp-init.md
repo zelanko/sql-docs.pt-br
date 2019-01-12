@@ -18,12 +18,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125466"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131166"
 ---
 # <a name="bcpinit"></a>bcp_init
   Inicializa a operação de cópia em massa.  
@@ -60,7 +60,7 @@ eDirection
   
  Se *eDirection* for DB_OUT, *szTable* também pode ser o nome de uma exibição de banco de dados.  
   
- Se *eDirection* for DB_OUT e uma instrução SELECT for especificada usando [bcp_control](bcp-control.md) antes [bcp_exec](bcp-exec.md) for chamado, **bcp_init * * * szTable*deve ser definido como NULL.  
+ Se *eDirection* for DB_OUT e uma instrução SELECT for especificada usando [bcp_control](bcp-control.md) antes [bcp_exec](bcp-exec.md) é chamado, **bcp_init** _szTable_ deve ser definido como NULL.  
   
  *szDataFile*  
  É o nome do arquivo de usuário a ser copiado de ou para. Se os dados estão sendo copiados diretamente de variáveis usando [bcp_sendrow](bcp-sendrow.md), defina *szDataFile* como NULL.  

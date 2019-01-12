@@ -14,12 +14,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d64d1d589d00222c7c48b4a5516dba8bd1185406
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752635"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125017"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizar uma assinatura pull
   Este tópico descreve como sincronizar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](agents/replication-agents-overview.md), ou RMO (Replication Management Objects).  
@@ -43,7 +43,7 @@ ms.locfileid: "52752635"
 5.  Clique em **Fechar**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- As assinaturas pull podem ser sincronizadas programaticamente e sob demanda chamando o arquivo executável do agente de replicação apropriado do prompt de comando. O arquivo executável do agente de replicação chamado dependerá do tipo de publicação para a qual a assinatura pull pertence. Para obter mais informações, consulte [Replication Agents](agents/replication-agents.md).  
+ As assinaturas pull podem ser sincronizadas programaticamente e sob demanda chamando o arquivo executável do agente de replicação apropriado do prompt de comando. O arquivo executável do agente de replicação chamado dependerá do tipo de publicação para a qual a assinatura pull pertence. Para obter mais informações, consulte [Replication Agents](agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Os agentes de replicação conectam-se ao servidor local usando as credenciais de Autenticação do Windows do usuário que inicializou o agente a partir do prompt de comando. Estas credenciais de Windows também são usadas ao conectar a servidores remotos que usam Autenticação Integrada do Windows.  

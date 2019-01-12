@@ -12,18 +12,18 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ccf1a79b2dc27bbc49628d11a0c6fb0cf0e4e50
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816618"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135366"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
   Se você tiver selecionado **replicar** sobre o **inscrições atualizáveis** página desse assistente, você deve especificar uma conta no assinante na qual as conexões com o publicador são feitas para atualização imediata assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Essa conta é necessária mesmo se você selecionou **enfileirar alterações e confirmar quando possível** sobre o **inscrições atualizáveis** página, porque, por padrão o Assistente para nova assinatura configura atualização enfileirada com a capacidade de alternar para atualização imediata, se necessário.  
   
 > [!IMPORTANT]  
->  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_***\<HexadecimalNumber>* para a conta configurada em cada Assinante.  
+>  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_**_\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
   
  Há três opções disponíveis para o tipo de conexão:  
   

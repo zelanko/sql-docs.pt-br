@@ -15,12 +15,12 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 623378b83bf0ae248ee2559f2ef18d5cadfc7452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8520607baa223931169300ab2840d364598d0dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176956"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135116"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar um relatório em uma biblioteca do SharePoint
   Para publicar um relatório em um site do SharePoint configurado para integração do SharePoint, você deve definir as propriedades do projeto no Designer de Relatórios. Nas propriedades do projeto, todas as referências a servidores, relatórios e fontes de dados compartilhadas devem ser URLs totalmente qualificadas. Na definição de relatórios, todas as referências a sub-relatórios, relatórios detalhados e recursos como imagens com base na Web devem ser URLs totalmente qualificadas.  
@@ -31,7 +31,7 @@ ms.locfileid: "48176956"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra um projeto existente ou novo do Servidor de Relatório.  
   
-2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo *\<project>***Páginas de Propriedades** será exibida.  
+2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo _\<project>_**Páginas de Propriedades do**  será exibida.  
   
 3.  Na lista **Configuração** , selecione o nome de uma configuração de build de solução a ser usado para criar e publicar seu relatório. A configuração atual está listada como **Ativa**(*\<configuration>*).  
   
@@ -54,6 +54,6 @@ ms.locfileid: "48176956"
  [Definir propriedades de implantação &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Publicando relatórios em um servidor de relatório](publishing-reports-to-a-report-server.md)   
  [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Usar uma Conexão de dados do Office &#40;. odc&#41; com relatórios &#40;modo integrado do Reporting Services no SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Usar uma conexão de dados do Office &#40;.odc&#41; com relatórios &#40;Reporting Services no modo integrado do SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

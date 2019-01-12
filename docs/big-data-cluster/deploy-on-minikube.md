@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246565"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241157"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configurar o minikube para implantações de cluster do SQL Server 2019 big data
 
@@ -25,7 +26,7 @@ Este artigo descreve como configurar **minikube** em um único computador para i
 - Para executar um cluster Minikube para SQL Server 2019 (visualização) para clusters de big data, é recomendável que seu computador tenha pelo menos 32 GB de RAM.
 
    > [!TIP] 
-   > Se o computador tem apenas o mínimo recomendado de memória, em seguida, configure a implantação do cluster para ter apenas 1 instância de pool de computação, 1 instância de pool de dados e instância de pool de armazenamento de 1. Essa configuração só deve ser usada para ambientes de avaliação em que a durabilidade e disponibilidade dos dados são importantes. Consulte a [documentação de implantação](deployment-guidance.md#define-environment-variables) para obter mais informações sobre as variáveis de ambiente para configurar o número de réplicas para pools de dados, computação pools e pools de armazenamento.
+   > Se o computador tem apenas o mínimo recomendado de memória, em seguida, configure a implantação do cluster para ter apenas 1 instância de pool de computação, 1 instância de pool de dados e instância de pool de armazenamento de 1. Essa configuração só deve ser usada para ambientes de avaliação em que a durabilidade e disponibilidade dos dados são importantes. Consulte a [documentação de implantação](deployment-guidance.md#env) para obter mais informações sobre as variáveis de ambiente para configurar o número de réplicas para pools de dados, computação pools e pools de armazenamento.
 
 - Virtualização x VT ou AMD-v deve ser habilitada no BIOS do computador.
 

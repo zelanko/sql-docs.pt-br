@@ -18,12 +18,12 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 172602fcaff2764256c9aa7b3e660c2400abdfd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06198932c654bf7e8d855b4a008b3de3401dda1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596444"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131506"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'***função***'**  
+ [  **@rolename =** ] **'**_função_**'**  
  É o nome da função de aplicativo. *função* está **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
   
- [  **@newpwd =** ] **'***senha***'**  
+ [  **@newpwd =** ] **'**_senha_**'**  
  É a nova senha da função de aplicativo. *senha* está **sysname**, sem padrão. *senha* não pode ser NULL.  
   
 > [!IMPORTANT]  

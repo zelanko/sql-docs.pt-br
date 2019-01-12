@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813978"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126426"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813978"
   
  Para habilitar assinaturas atualizáveis para publicações transacionais, [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
- Para criar assinaturas atualizáveis para publicações transacionais, consulte [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Para criar assinaturas atualizáveis para publicações transacionais, consulte [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 ## <a name="switching-between-update-modes"></a>Alternando entre modos de atualização  
  Ao usar assinaturas atualizáveis você pode especificar que uma assinatura use um modo de atualização e, então, passe para o outro se o aplicativo assim o exigir. Por exemplo, é possível especificar que uma assinatura use atualização imediata, mas alterne para atualização enfileirada se uma falha do sistema resultar na perda de conectividade de rede.  
@@ -124,7 +124,7 @@ ms.locfileid: "52813978"
   
 ## <a name="see-also"></a>Consulte também  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [Tipos de publicação para a Replicação Transacional](publication-types-for-transactional-replication.md)   
+ [Replicação transacional](transactional-replication.md)   
  [Publicar dados e objetos de banco de dados](../publish/publish-data-and-database-objects.md)   
  [Assinar publicações](../subscribe-to-publications.md)  
   

@@ -21,12 +21,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e88773137297430763f5ddd47cf7b95030f53d87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050375"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124246"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
   Este tópico é relevante apenas para bancos de dados que estejam usando modelos de recuperação completa ou bulk-logged.  
@@ -41,7 +41,7 @@ ms.locfileid: "48050375"
  O LSN de um registro de log no qual ocorreu um evento significativo pode ser útil para construir sequências de restauração corretas. Como são ordenadas, as LSNs podem ser comparadas quanto à igualdade e desigualdade (isto é **\<**, **>**, **=**, **\<=**, **>=**). Essas comparações são úteis ao construir sequências de restauração.  
   
 > [!NOTE]  
->  Os LSNs são valores de tipo de dados `numeric`(25,0). Operações aritméticas (por exemplo, adição ou subtração) não são significativas e não devem ser usadas com LSNs.  
+>  Os LSNs são valores do tipo de dados `numeric`(25,0). Operações aritméticas (por exemplo, adição ou subtração) não são significativas e não devem ser usadas com LSNs.  
   
 
   
@@ -64,11 +64,11 @@ ms.locfileid: "48050375"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxe de Transact-SQL para restaurar para um LSN  
  Usando uma instrução [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) é possível parar no LSN ou imediatamente antes, da seguinte maneira:  
   
--   Use a cláusula WITH STOPATMARK **='** lsn:*<lsn_number>***'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK **='** lsn:_<lsn_number>_**'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e inclui o registro de log no roll forward.  
   
--   Use a cláusula WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log imediatamente anterior ao registro de log que contém o número do LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK **='** lsn:_<lsn_number>_**'**, em que lsn:*\<lsnNumber>* é uma sequência que determina que o registro de log imediatamente anterior ao registro de log que contém o número do LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e exclui o registro de log do roll forward.  
   

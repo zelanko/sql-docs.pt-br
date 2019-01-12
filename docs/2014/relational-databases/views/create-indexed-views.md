@@ -17,12 +17,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164596"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131806"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
   Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  
@@ -86,11 +86,11 @@ ms.locfileid: "48164596"
   
 -   Quando você cria o índice, a opção IGNORE_DUP_KEY deve ser definida como OFF (a configuração padrão).  
   
--   As tabelas devem ser referenciadas por meio de nomes de duas partes, *schema ***.*** tablename* na definição da exibição.  
+-   As tabelas devem ser referenciadas por meio de nomes de duas partes, _schema_**.**_tablename_ na definição da exibição.  
   
 -   Funções definidas pelo usuário referenciadas na exibição devem ser criadas usando a opção WITH SCHEMABINDING.  
   
--   Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, *schema ***.*** function*.  
+-   Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, _esquema_**.**_função_.  
   
 -   A propriedade de acesso de dados de uma função definida pelo usuário deve ser NO SQL e a propriedade de acesso externa deve ser NO.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48164596"
 ###  <a name="Recommendations"></a> Recomendações  
  Quando você referencia os literais de cadeia de caracteres `datetime` e `smalldatetime` em exibições indexadas, é recomendável que converta explicitamente o literal no tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressões que envolvem a conversão implícita de cadeias de caracteres para `datetime` ou `smalldatetime` são consideradas não determinísticas. Isso ocorre porque os resultados dependem das configurações de LANGUAGE e DATEFORMAT da sessão de servidor. Por exemplo, os resultados da expressão `CONVERT (datetime, '30 listopad 1996', 113)` dependem da configuração LANGUAGE porque a cadeia de caracteres '`listopad`' significa meses diferentes em idiomas. Semelhantemente, na expressão `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta a cadeia de caracteres `'2000-12-01'` com base na configuração DATEFORMAT.  
   
- A conversão implícita de dados de caracteres não Unicode entre agrupamentos também é considerada não determinística.  
+ A conversão implícita de dados de caracteres não Unicode entre ordenações também é considerada não determinística.  
   
 ###  <a name="Considerations"></a> Considerações  
  A configuração da opção **large_value_types_out_of_row** de colunas em uma exibição indexada é herdada da configuração da coluna correspondente na tabela base. Esse valor é definido usando [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). A configuração padrão para colunas formadas de expressões é 0. Isso significa que tipos de valor grandes são armazenados na linha.  
@@ -151,7 +151,7 @@ ms.locfileid: "48164596"
 ####  <a name="Permissions"></a> Permissões  
  Requer a permissão CREATE VIEW no banco de dados e a permissão ALTER no esquema no qual a exibição está sendo criada.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Para criar uma exibição indexada  
   

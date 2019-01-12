@@ -12,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775788"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132781"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
   Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Superfície de Design do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
@@ -55,7 +55,7 @@ ms.locfileid: "52775788"
   
 3.  Clique com o botão direito do mouse na pasta **Planos de Manutenção** e selecione **Novo Plano de Manutenção**.  
   
-4.  Na caixa de diálogo **Novo Plano de Manutenção** , na caixa **Nome** , digite um nome para o plano e clique em **OK**. Isso abre a Caixa de Ferramentas e a superfície *maintenance_plan_name* **[Design]** com o subplano **Subplan_1** criado na grade principal.  
+4.  Na caixa de diálogo **Novo Plano de Manutenção** , na caixa **Nome** , digite um nome para o plano e clique em **OK**. Isso abre a Caixa de Ferramentas e a superfície _maintenance_plan_name_ **[Design]** com o subplano **Subplan_1** criado na grade principal.  
   
      As opções a seguir estão disponíveis no cabeçalho do espaço de design.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52775788"
   
         1.  Se você selecionar **Gerar um relatório de arquivo de texto**, selecione **Criar um novo arquivo** ou **Acrescentar ao arquivo**.  
   
-        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(...)**  e selecione o caminho para o nome de arquivo ou pasta do **localizar pasta – * * * server_name* ou **localizar arquivos de banco de dados-* * * nome_do_servidor* caixas de diálogo.  
+        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(...)**  e selecione o caminho para o nome de arquivo ou pasta do **localizar pasta -**_nome_do_servidor_ ou **localizar arquivos de banco de dados -**_nome_do_servidor_  caixas de diálogo.  
   
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52775788"
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
   
-     As seguintes opções estão disponíveis no **Visualizador do arquivo de Log-* * * nome_do_servidor* caixa de diálogo.  
+     As seguintes opções estão disponíveis na **Visualizador do arquivo de Log -**_nome_do_servidor_ caixa de diálogo.  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  

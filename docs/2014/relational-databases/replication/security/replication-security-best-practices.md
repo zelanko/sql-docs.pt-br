@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781168"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135926"
 ---
 # <a name="replication-security-best-practices"></a>Práticas recomendadas em relação à segurança de replicação
   A replicação move dados em ambientes distribuídos variando deste intranets em um único domínio até aplicativos que acessam dados entre domínios não confiáveis e na internet. É importante para entender a melhor abordagem para proteger as conexões de replicação sob essas diversas circunstâncias.  
@@ -37,7 +37,7 @@ ms.locfileid: "52781168"
   
     -   [Conceitos dos executáveis do Replication Agent](../concepts/replication-agent-executables-concepts.md)  
   
--   Execute cada agente de replicação em uma conta diferente do Windows e use a Autenticação do Windows para todas as conexões de agente de replicação. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](manage-logins-and-passwords-in-replication.md).  
+-   Execute cada agente de replicação em uma conta diferente do Windows e use a Autenticação do Windows para todas as conexões de agente de replicação. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 -   Conceda somente as permissões exigidas para cada agente. Para obter mais informações, consulte a seção "Permissões necessárias para agentes" em [Replication Agent Security Model](replication-agent-security-model.md).  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781168"
  [Proteger o Assinante](secure-the-subscriber.md)   
  [Proteger o Distribuidor](secure-the-distributor.md)   
  [Proteger o Publicador](secure-the-publisher.md)   
- [Segurança e proteção &#40;Replicação&#41;](security-and-protection-replication.md)  
+ [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)  
   
   

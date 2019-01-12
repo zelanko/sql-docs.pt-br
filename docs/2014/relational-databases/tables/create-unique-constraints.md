@@ -14,12 +14,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98b2b9e94ea6474d2e10e1da9282c37af9bb0c27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814388"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132566"
 ---
 # <a name="create-unique-constraints"></a>Criar restrições exclusivas
   Você pode criar uma restrição exclusiva no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para assegurar que nenhum valor duplicado seja digitado em colunas específicas que não integram uma chave primária. Criar uma restrição exclusiva cria automaticamente um índice exclusivo correspondente.  
@@ -55,7 +55,7 @@ ms.locfileid: "52814388"
   
 4.  Na grade, em **Geral**, clique em **Tipo** e selecione **Chave Exclusiva** na caixa de listagem suspensa à direita da propriedade.  
   
-5.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+5.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

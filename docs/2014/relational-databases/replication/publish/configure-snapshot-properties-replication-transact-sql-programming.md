@@ -14,12 +14,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 880f2f6fc155338aa65637fbc71402ba7ec55821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800208"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127877"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurar propriedades de instantâneo (Programação Transact-SQL de replicação)
   Propriedades de instantâneo podem ser definidas e modificadas de forma programada usando-se procedimentos armazenados de replicação, nos quais os procedimentos armazenados usados dependem do tipo de publicação.  
@@ -101,7 +101,7 @@ ms.locfileid: "52800208"
 ## <a name="see-also"></a>Consulte também  
  [Locais da pasta de instantâneos alternativos](../alternate-snapshot-folder-locations.md)   
  [Instantâneos compactados](../compressed-snapshots.md)   
- [Executar scripts antes e depois da aplicação do instantâneo](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [Executar scripts antes e depois da aplicação do instantâneo](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Transferir instantâneos pelo FTP](../transfer-snapshots-through-ftp.md)   
  [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md)  

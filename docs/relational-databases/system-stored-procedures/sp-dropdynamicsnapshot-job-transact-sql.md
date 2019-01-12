@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 410a852ed1535a219208a62b7d0b45849333cb49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818988"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126251"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação da qual o trabalho de instantâneo de dados filtrados está sendo removido. *publicação* está **sysname**, sem padrão.  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
  É o nome do trabalho do instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobname*é sysname, e se não for fornecido, será padronizado para qualquer trabalho que o nome é associado ao *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
  É um identificador do trabalho de instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobid*está **uniqueidentifier**, com um padrão NULL.  
   
 > [!IMPORTANT]  

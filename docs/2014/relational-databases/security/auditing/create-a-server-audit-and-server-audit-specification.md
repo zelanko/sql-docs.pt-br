@@ -17,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ab52d307d914e1f3f4b1e808b59999dcae96cccb
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979792"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135756"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
   Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "53979792"
      Especifica a localização da pasta em que os dados de auditoria serão gravados quando o **Destino da auditoria** for um arquivo.  
   
      **Reticências (...)**  
-     Abre o **localizar pasta – * * * nome_do_servidor* caixa de diálogo para especificar um caminho de arquivo ou criar uma pasta em que o arquivo de auditoria é gravado.  
+     Abre o **localizar pasta –**_nome_do_servidor_ caixa de diálogo para especificar um caminho de arquivo ou criar uma pasta em que o arquivo de auditoria é gravado.  
   
      **Audite o limite máximo de arquivo:**  
      **Máximo de arquivos de substituição**  

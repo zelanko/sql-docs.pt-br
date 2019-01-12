@@ -20,26 +20,26 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d718e6c2108b26406b0e141aa7b5df91f91d730
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 907e7d73651075a122cfb6b7e4a8d3eac44f072c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662815"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124316"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada coluna com um privilégio concedido para ou concedido pelo usuário atual no banco de dados atual.  
   
- Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA. * * * view_name*.  
+ Para recuperar informações dessas exibições, especifique o nome totalmente qualificado do **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**CONCESSOR**|**nvarchar(** 128 **)**|Concessor do privilégio.|  
 |**USUÁRIO AUTORIZADO**|**nvarchar(** 128 **)**|Beneficiado do privilégio.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  
 |**COLUMN_NAME**|**sysname**|Nome da coluna.|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo de privilégio.|  

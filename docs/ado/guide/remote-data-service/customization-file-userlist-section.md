@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516749"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130666"
 ---
 # <a name="customization-file-userlist-section"></a>Seção UserList do arquivo de personalização
 O **userlist** seção se refere à **connect** seção com a mesma seção *identificador* parâmetro.  
@@ -32,13 +32,13 @@ O **userlist** seção se refere à **connect** seção com a mesma seção *ide
 ## <a name="syntax"></a>Sintaxe  
  Uma entrada de acesso do usuário está no formato:  
   
- *userName* **=**   
- ***accessRights***  
+ _userName_ **=**   
+ **_accessRights_**  
   
 |Parte|Descrição|  
 |----------|-----------------|  
 |*userName*|O *nome de usuário* da pessoa empregando essa conexão. Nomes de usuário válidos são estabelecidos com o IIS **do Service Manager** caixa de diálogo.|  
-|***accessRights***|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -usuário pode ler ou gravar na fonte de dados.|  
+|**_accessRights_**|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -usuário pode ler ou gravar na fonte de dados.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Seção conexão do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

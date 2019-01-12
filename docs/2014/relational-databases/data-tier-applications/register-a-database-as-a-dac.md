@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761442"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129414"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
   Use o **registrar Data-tier Application Wizard** ou um Windows script do PowerShell para compilar uma definição de DAC (aplicativo) de camada de dados que descreve os objetos no banco de dados existente e registre a definição do DAC na `msdb` banco de dados do sistema (**mestre** em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -101,7 +101,7 @@ ms.locfileid: "52761442"
  **Cancelar** - Finaliza o assistente sem registrar o DAC.  
   
 ### <a name="validating-objects"></a>Validando objetos  
- **Verificando**  *SchemaName* **.** *ObjectName* **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. *SchemaName ***.*** ObjectName* identifica qual objeto está sendo verificado no momento.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_**.**_ObjectName_ identifica qual objeto está sendo verificado no momento.  
   
  **\< Anterior** -retorna para o **propriedades do conjunto de** página para alterar suas entradas.  
   

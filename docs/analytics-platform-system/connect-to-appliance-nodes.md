@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f57719bae769a75d704454af03af82689715644d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506296"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124435"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conectar-se a nós de dispositivo no Analytics Platform System
 Este artigo explica as várias maneiras para se conectar a cada nó em que o dispositivo do Analytics Platform System.  
@@ -30,7 +30,7 @@ Cada um de nós de dispositivo é acessada diretamente somente em cenários de u
 |||  
 |-|-|  
 |**Nó**|**Cenários de acesso**|  
-|Nó de controle|Use um navegador da web para acessar o Console de administração, que é executado no nó de controle. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração do &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Todas as ferramentas e aplicativos cliente se conectar ao nó de controle, independentemente da conexão usando Ethernet ou InfiniBand.<br /><br />Para configurar uma conexão de Ethernet ao nó de controle, use o endereço de IP do Cluster de nó de controle e a porta **17001**. Por exemplo, "192.168.0.1,17001".<br /><br />Para configurar uma conexão de InfiniBand para o nó de controle, use ***appliance_domain *-SQLCTL01** e a porta **17001**. Usando ***appliance_domain *-SQLCTL01**, o servidor DNS de dispositivo se conectará o servidor à rede InfiniBand Active Directory. Para configurar seu servidor não seja de dispositivo para usá-la, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).<br /><br />O administrador do dispositivo se conecta ao nó de controle para executar operações de gerenciamento. Por exemplo, o administrador do dispositivo executa as seguintes operações do nó de controle:<br /><br />Configurar o Analytics Platform System com o **dwconfig.exe** ferramenta de configuração.|  
+|Nó de controle|Use um navegador da web para acessar o Console de administração, que é executado no nó de controle. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração do &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Todas as ferramentas e aplicativos cliente se conectar ao nó de controle, independentemente da conexão usando Ethernet ou InfiniBand.<br /><br />Para configurar uma conexão de Ethernet ao nó de controle, use o endereço de IP do Cluster de nó de controle e a porta **17001**. Por exemplo, "192.168.0.1,17001".<br /><br />Para configurar uma conexão de InfiniBand para o nó de controle, use  <strong>*appliance_domain*-SQLCTL01</strong> e a porta **17001**. Usando  <strong>*appliance_domain*-SQLCTL01</strong>, o servidor DNS de dispositivo se conectará o servidor à rede InfiniBand Active Directory. Para configurar seu servidor não seja de dispositivo para usá-la, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).<br /><br />O administrador do dispositivo se conecta ao nó de controle para executar operações de gerenciamento. Por exemplo, o administrador do dispositivo executa as seguintes operações do nó de controle:<br /><br />Configurar o Analytics Platform System com o **dwconfig.exe** ferramenta de configuração.|  
 |Nó de computação|As conexões de nó são direcionadas ao nó de controle de computação. Os endereços IP de nós de computação nunca são inseridos em comandos do aplicativo como parâmetros.<br /><br />Para carregamento, backup, cópia de tabela remota e o Hadoop, o SQL Server PDW enviar ou receber dados diretamente em paralelo entre os nós de computação e os nós não seja de dispositivo ou servidores. Esses aplicativos se conectar com o SQL Server PDW conectando-se ao nó de controle e, em seguida, o nó de controle direciona o SQL Server PDW para estabelecer a comunicação entre os nós de computação e o servidor não seja de dispositivo.<br /><br />Por exemplo, essas operações de transferência de dados ocorram em paralelo com conexões diretas com os nós de computação:<br /><br />Carregamento do servidor de carregamento para o SQL Server PDW.<br /><br />Fazendo o backup de um banco de dados do SQL Server PDW para o servidor de backup.<br /><br />Restaurando um banco de dados do servidor de backup para o SQL Server PDW.<br /><br />Consultando dados do Hadoop do SQL Server PDW.<br /><br />Exportando dados do SQL Server PDW para uma tabela externa do Hadoop.<br /><br />Copiando uma tabela do SQL Server PDW para um banco de dados do SQL Server do SMP remoto.|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>Conectando à Ethernet e redes InfiniBand  

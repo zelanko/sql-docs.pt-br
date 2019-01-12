@@ -16,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781228"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133626"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Como as assinaturas de atualização em fila permitem modificações nos mesmos dados em vários locais, pode haver conflitos quando os dados forem sincronizados no Publicador. A replicação detecta todos os conflitos quando alterações são sincronizadas com o Publicador, resolvendo-os por meio da política de resolução selecionada durante a criação da publicação. Podem ocorrer os seguintes conflitos:  
@@ -54,7 +54,7 @@ ms.locfileid: "52781228"
   
  **Para definir a política de resolução de conflitos de atualização em fila**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Definir opções de resolução de conflitos de atualização na fila &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Definir opções de resolução de conflitos de atualização na fila &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   Programação Transact-SQL de replicação:  [Habilitar atualização de assinaturas para publicações transacionais](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e723c42dd41c21abb2c11059b8706a098f7fcfd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353339"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135536"
 ---
 # <a name="create-a-push-subscription"></a>Criar uma assinatura push
   Este tópico descreve como criar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects). Para obter informações sobre como criar uma assinatura push para um assinante que não seja do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Create a Subscription for a Non-SQL Server Subscriber](create-a-subscription-for-a-non-sql-server-subscriber.md) (Criar uma assinatura para um assinante que não é do SQL Server).  
@@ -93,7 +93,7 @@ ms.locfileid: "53353339"
   
     -   Se o valor de **allow_push** é **0**, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando **allow_push** para **@property** e `true` para **@value**.  
   
-2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber** e **@destination_db**. Especifique um valor **push** para **@subscription_type**. Para obter informações sobre como atualizar assinaturas, consulte [criar uma assinatura atualizável para uma publicação transacional](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber** e **@destination_db**. Especifique um valor **push** para **@subscription_type**. Para obter informações sobre como atualizar assinaturas, consulte [criar uma assinatura atualizável para uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  No Publicador do banco de dados de publicação, execute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique o seguinte:  
   

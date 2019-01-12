@@ -1,6 +1,6 @@
 ---
-title: Adicionar SQLRUserGroup como um usuário de banco de dados - serviços do SQL Server Machine Learning
-description: Para conexões de loopback usando autenticação implícita, adicione SQLRUserGroup como um usuário de banco de dados para que uma conta de trabalho pode fazer logon no servidor, para conversão de identidade para o usuário que está chamando.
+title: Adicionar SQLRUserGroup como um logon do SQL Server – serviços de aprendizado de máquina do SQL Server
+description: Para conexões de loopback usando autenticação implícita, adicione SQLRUserGroup como um logon do SQL Server para que uma conta de trabalho pode fazer logon no servidor, para conversão de identidade para o usuário que está chamando.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143416"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>Adicionar SQLRUserGroup como um usuário de banco de dados
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>Adicionar SQLRUserGroup como um logon do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Crie um logon de banco de dados para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando um [loop conexão back-](../../advanced-analytics/concepts/security.md#implied-authentication) em seu script especifica um *confiáveis conexão*e a identidade usada para executar um objeto contém o código é uma conta de usuário do Windows.
+Crie um logon do SQL Server para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando um [loop conexão back-](../../advanced-analytics/concepts/security.md#implied-authentication) em seu script especifica um *confiáveis conexão*e a identidade usada para executar um objeto contém o código é uma conta de usuário do Windows.
 
 Confiáveis conexões são aqueles que `Trusted_Connection=True` na cadeia de conexão. Quando o SQL Server recebe uma solicitação especificar uma conexão confiável, ele verifica se a identidade do usuário atual do Windows tem um logon. Para execução como uma conta de trabalho de processos externos (como MSSQLSERVER01 partir **SQLRUserGroup**), a solicitação falha porque essas contas não têm um logon por padrão.
 

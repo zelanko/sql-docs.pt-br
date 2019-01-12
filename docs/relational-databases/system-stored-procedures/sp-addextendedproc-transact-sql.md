@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c66f3ac4395e3985d6881ddb085db1d9a71c366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713214"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133006"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@functname =** ] **'***procedimento***'**  
+ [  **@functname =** ] **'**_procedimento_**'**  
  É o nome da função a ser chamada dentro da DLL (biblioteca de vínculo dinâmico). *procedimento* está **nvarchar(517)**, sem padrão. *procedimento* , opcionalmente, pode incluir o nome do proprietário na forma *owner.function*.  
   
- [  **@dllname =** ] **'***dll***'**  
+ [  **@dllname =** ] **'**_dll_**'**  
  É o nome da DLL que contém a função. *dll* está **varchar(255)**, sem padrão. É recomendável especificar o caminho completo da DLL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -1,19 +1,19 @@
 ---
-title: Guia de início rápido para uma execução de código "Hello World" básico Puyjpm no T-SQL – SQL Server Machine Learning
+title: Guia de início rápido para um Python básico de "Hello World" a execução no T-SQL – SQL Server Machine Learning do código
 description: Guia de início rápido para o script Python no SQL Server. Conheça os fundamentos de chamar o script de Python usando o procedimento armazenado do sistema sp_execute_external_script em um exercício de Olá, mundo.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 01/11/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 9c5838621086c651d6f8ad25f053ebbe634a1e26
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 0061e96168f16d8a92ed47578c32a3b16bf57306
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046738"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241807"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Guia de início rápido: Script de Python de "Hello world" no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

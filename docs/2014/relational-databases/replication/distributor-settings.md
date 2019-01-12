@@ -1,5 +1,5 @@
 ---
-title: Configurações de distribuidor | Microsoft Docs
+title: Caixa de diálogo de configurações do distribuidor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ccd710e20ba1cb280b60dea72bad368e80505846
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753208"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132316"
 ---
-# <a name="distributor-settings"></a>Configurações de distribuidor
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Caixa de diálogo de configurações do distribuidor de replicação do SQL Server
   A caixa de diálogo **Configurações do Distribuidor** permite alterar configurações para Distribuidores que foram adicionados ao painel esquerdo no Replication Monitor.  
   
 ## <a name="options"></a>Opções  

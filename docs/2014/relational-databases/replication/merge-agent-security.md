@@ -14,12 +14,12 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47571fcfe6b11945ab910f40feeb35145ab8d2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af3d3490957114d6ba7731b49435dc7e90122f90
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765078"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134686"
 ---
 # <a name="merge-agent-security"></a>Segurança do Merge Agent
   A caixa de diálogo **Segurança do Merge Agent** permite especificar a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o Merge Agent é executado. O Merge Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. A conta do Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta. Opções adicionais disponíveis na caixa de diálogo dependem de como você a acessa:  
@@ -82,7 +82,7 @@ ms.locfileid: "52765078"
  A conta do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para conexão com o Assinante deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de assinatura.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar logons e senhas na replicação](security/manage-logins-and-passwords-in-replication.md)   
+ [Gerenciar logons e senhas na replicação](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

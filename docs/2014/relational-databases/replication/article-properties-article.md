@@ -14,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124986"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
   A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
@@ -121,7 +121,7 @@ ms.locfileid: "52785218"
   
 ### <a name="resolver-tab"></a>Guia Resolvedor  
  **Usar o resolvedor padrão**  
- Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detectar e resolver conflitos de replicação de mesclagem](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detectar e resolver conflitos de replicação de mesclagem](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar um resolvedor personalizado (registrado no Distribuidor)**  
  Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

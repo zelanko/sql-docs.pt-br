@@ -12,12 +12,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7514af7f2b9d76772dd56060c98a4d195afe763
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781998"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126676"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Assinatura, Histórico do Publicador para o Distribuidor (assinatura transacional)
   A guia **Histórico do Publicador para o Distribuidor** exibe informações detalhadas sobre o Log Reader Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
@@ -62,7 +62,7 @@ ms.locfileid: "52781998"
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Exibir informações e realizar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)  
   

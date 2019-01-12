@@ -13,12 +13,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03a7640f95242538d01c8f135a005729b15042b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813959"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135440"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Detecção de conflitos na replicação ponto a ponto
   A replicação transacional ponto a ponto permite inserir, atualizar ou excluir dados em qualquer modo em uma topologia e faz com que as alterações de dados sejam propagadas para os outros nós. Uma vez que você pode alterar dados em qualquer nó, as alterações de dados em nós diferentes podem entrar em conflito umas com as outras. Se uma linha for modificada em mais de um nó, isso poderá causar um conflito ou mesmo uma atualização perdida quando a linha for propagada para outros nós.  
@@ -26,7 +26,7 @@ ms.locfileid: "52813959"
  A replicação ponto a ponto no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e em versões posteriores oferece a opção de habilitar a detecção de conflito em uma topologia ponto a ponto. Essa opção ajuda a evitar os problemas causados por conflitos não detectados, inclusive o comportamento inconsistente do aplicativo e as atualizações perdidas. Com essa opção habilitada, por padrão uma alteração de conflito é tratada como erro crítico que causa a falha do Agente de Distribuição. No evento de um conflito, a topologia é mantida em um estado inconsistente até que o conflito seja resolvido e os dados sejam tornados consistentes em toda a topologia.  
   
 > [!NOTE]  
->  Para evitar inconsistência potencial de dados, certifique-se de evitar conflitos em uma topologia ponto a ponto, mesmo com a detecção de conflitos ativada. Para assegurar que as operações de gravação de uma linha particular sejam realizadas em um único nó, os aplicativos que acessam e alteram dados devem realizar operações de partição, inserção, atualização e exclusão. Esse particionamento assegurará que as modificações em uma determinada linha originária de um nó sejam sincronizadas com todos os outros nós da topologia antes que a linha seja modificada por um outro nó. Se um aplicativo requerer detecção de conflito e recursos de resolução sofisticados, use a replicação de mesclagem. Para obter mais informações, consulte [Mesclar a replicação](../merge/merge-replication.md) e [Detectar e resolver conflitos na replicação de mesclagem](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Para evitar inconsistência potencial de dados, certifique-se de evitar conflitos em uma topologia ponto a ponto, mesmo com a detecção de conflitos ativada. Para assegurar que as operações de gravação de uma linha particular sejam realizadas em um único nó, os aplicativos que acessam e alteram dados devem realizar operações de partição, inserção, atualização e exclusão. Esse particionamento assegurará que as modificações em uma determinada linha originária de um nó sejam sincronizadas com todos os outros nós da topologia antes que a linha seja modificada por um outro nó. Se um aplicativo requerer detecção de conflito e recursos de resolução sofisticados, use a replicação de mesclagem. Para obter mais informações, consulte [Mesclar a replicação](../merge/merge-replication.md) e [Detectar e resolver conflitos na replicação de mesclagem](../merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>Entendendo conflitos e detecção de conflitos  
  Em um único banco de dados, as alterações feitas na mesma linha por aplicativos diferentes não causam um conflito. Isso ocorre uma vez que as transações são serializadas, e os bloqueios são usados para controlar as alterações simultâneas. Em um sistema distribuído assíncrono como a replicação ponto a ponto, as transações agem de maneira independente em cada nó e não há nenhum mecanismo para serializar as transações por diversos nós. Um protocolo como o protocolo 2PC pode ser usado, mas isso afeta o desempenho significativamente.  
@@ -92,7 +92,7 @@ ms.locfileid: "52813959"
   
     3.  Verifique os conflitos detectados usando o visualizador de conflitos e determine as linhas que foram envolvidas, o tipo de conflito e o vencedor. O conflito é resolvido com base no valor da ID do originador especificado durante a configuração: a linha originada no nó com a ID mais alta vence o conflito. Para obter mais informações, consulte [Exibir conflitos de dados em publicações transacionais &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
-    4.  Execute a validação para garantir que as linhas de conflito se encontraram corretamente. Para obter mais informações, consulte [Validar os dados replicados](../validate-replicated-data.md).  
+    4.  Execute a validação para garantir que as linhas de conflito se encontraram corretamente. Para obter mais informações, consulte [Validar os dados replicados](../validate-data-at-the-subscriber.md).  
   
         > [!NOTE]  
         >  Se os dados forem inconsistentes depois dessa etapa, você deve atualizar manualmente as linhas no nó que tem a prioridade mais alta e, em seguida, permitir que as alterações propagem a partir desse nó. Se não houver nenhuma outra alteração conflitante na topologia, todos os nós serão levados para um estado consistente.  

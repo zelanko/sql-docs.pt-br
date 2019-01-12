@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e107acad4bfd844478c47cfc5c19aa947c74bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104106"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126997"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Replicação e envio de logs (SQL Server)
   O envio de logs envolve duas cópias de um único banco de dados que, normalmente, residem em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados primário. As atualizações feitas pelos clientes no banco de dados primário são propagadas por meio do envio de logs para a outra cópia do banco de dados, conhecida como banco de dados secundário. O envio de logs envolve a aplicação de um log de transações de todas as inserções, atualizações ou exclusões feitas no banco de dados primário para o banco de dados secundário.  
@@ -48,7 +48,7 @@ ms.locfileid: "48104106"
 ### <a name="log-shipping-with-transactional-replication"></a>Envio de logs com replicação transacional  
  Para replicação transacional, o comportamento do envio de logs depende da opção **sincronizar com backup** . Essa opção pode ser definida no banco de dados de publicação e no banco de dados de distribuição; no envio de logs para o Publicador, apenas a configuração no banco de dados de publicação é relevante.  
   
- Definir essa opção no banco de dados de publicação assegura que as transações não serão entregues ao banco de dados de distribuição até ser realizado o backup do banco de dados de publicação. O último backup do banco de dados de publicação poderá então ser restaurado no servidor secundário sem qualquer possibilidade do banco de dados de distribuição possuir transações que o banco de dados de publicação restaurado não possua. Essa opção garante que se ocorrer failover do Publicador para o servidor secundário, será mantida a consistência entre o Publicador, o Distribuidor e os Assinantes. A latência e a taxa de transferência serão afetadas porque as transações não poderão ser entregues ao banco de dados de distribuição até que tenha sido feito backup no Publicador. É recomendável definir essa opção no banco de dados de publicação caso o seu aplicativo possa tolerar essa latência. Se a opção **sincronizar com backup** ainda não estiver definida, os Assinantes poderão receber alterações que não estão mais incluídas no banco de dados recuperado no servidor secundário. Para obter mais informações, consulte [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/transactional/transactional-replication.md).  
+ Definir essa opção no banco de dados de publicação assegura que as transações não serão entregues ao banco de dados de distribuição até ser realizado o backup do banco de dados de publicação. O último backup do banco de dados de publicação poderá então ser restaurado no servidor secundário sem qualquer possibilidade do banco de dados de distribuição possuir transações que o banco de dados de publicação restaurado não possua. Essa opção garante que se ocorrer failover do Publicador para o servidor secundário, será mantida a consistência entre o Publicador, o Distribuidor e os Assinantes. A latência e a taxa de transferência serão afetadas porque as transações não poderão ser entregues ao banco de dados de distribuição até que tenha sido feito backup no Publicador. É recomendável definir essa opção no banco de dados de publicação caso o seu aplicativo possa tolerar essa latência. Se a opção **sincronizar com backup** ainda não estiver definida, os Assinantes poderão receber alterações que não estão mais incluídas no banco de dados recuperado no servidor secundário. Para obter mais informações, consulte [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](../../relational-databases/replication/transactional/transactional-replication.md).  
   
  **Para configurar a replicação transacional e o envio de logs com a opção sincronizar com backup**  
   
@@ -109,12 +109,12 @@ ms.locfileid: "48104106"
   
     -   Se a publicação não for filtrada, você deverá conseguir atualizar o banco de dados de publicação com uma sincronização com o Assinante mais atualizado.  
   
-    -   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura receba os dados de clientes somente de uma região: norte, leste, sul e oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados. Nesse caso, é recomendável reinicializar todas as assinaturas de forma que os dados no Publicador e nos Assinantes convirjam. Para obter mais informações, consulte [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura recebe os dados do cliente somente para uma única região: Centro-Norte, Leste, Sul e Oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados. Nesse caso, é recomendável reinicializar todas as assinaturas de forma que os dados no Publicador e nos Assinantes convirjam. Para obter mais informações, consulte [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
      Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a assinatura não poderá ser anônima; ela deverá ser a assinatura de um cliente ou de um servidor (referenciadas como assinaturas locais e assinaturas globais nas versões anteriores). Para obter mais informações, consulte [Sincronizar dados](../../relational-databases/replication/synchronize-data.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

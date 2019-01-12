@@ -13,12 +13,12 @@ ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc2bf4573408606c38f368e58b3a245dfdea4ece
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806848"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131207"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modificar um proxy do SQL Server Agent
   Este tópico descreve como modificar um proxy do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52806848"
   
 5.  Clique com o botão direito do mouse na conta proxy cujas propriedades serão modificadas e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo *proxy_name***Propriedades da Conta Proxy*, faça alterações na conta proxy conforme necessário. Para obter mais informações sobre as opções dessa caixa de diálogo, consulte [Criar um proxy do SQL Server Agent](create-a-sql-server-agent-proxy.md).  
+6.  Na caixa de diálogo _proxy_name_**Propriedades da Conta Proxy** , faça alterações na conta proxy conforme necessário. Para obter mais informações sobre as opções dessa caixa de diálogo, consulte [Criar um proxy do SQL Server Agent](create-a-sql-server-agent-proxy.md).  
   
 7.  Quando terminar, clique em **OK**.  
   

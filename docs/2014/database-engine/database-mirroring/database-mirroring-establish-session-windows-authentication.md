@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508415"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135517"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows (Transact-SQL)
     
@@ -63,13 +63,13 @@ ms.locfileid: "52508415"
   
 4.  Para definir o servidor principal como parceiro no banco de dados espelho, conecte-se ao servidor espelho e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
      em que *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros) e *<server_network_address>* é o endereço de rede de servidor do servidor principal.  
   
      A sintaxe para um endereço de rede do servidor é a seguinte:  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<strong>://</strong>\<*system-address>*<strong>:</strong>\<*port>*  
   
      em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52508415"
   
 5.  Para definir o servidor espelho como parceiro no banco de dados principal, conecte-se ao servidor principal e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
      Para obter mais informações, consulte a etapa 4.  
   

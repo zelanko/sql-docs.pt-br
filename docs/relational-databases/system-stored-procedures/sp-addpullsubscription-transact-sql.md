@@ -16,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802496"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126046"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="see-also"></a>Consulte também  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Criar uma assinatura atualizável para uma publicação transacional](../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) [assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Criar uma assinatura atualizável para uma publicação transacional](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

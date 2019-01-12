@@ -10,12 +10,12 @@ ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13cd77270554a3c68ab07bfe8820295f9136f3dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751668"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127156"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Alterar os detalhes do agendamento para um trabalho mestre do SQL Server Agent
   Este tópico descreve como alterar os detalhes do agendamento para uma definição de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52751668"
   
 4.  Clique com o botão direito do mouse no trabalho cujo agendamento você quer editar e selecione **Propriedades**.  
   
-5.  No **propriedades do trabalho – * * * job_name* caixa de diálogo **selecionar uma página**, selecione **agendas**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: Novo trabalho de &#40;página de agenda&#41;](job-properties-new-job-schedules-page.md).  
+5.  No **propriedades do trabalho –**_job_name_ caixa de diálogo **selecionar uma página**, selecione **agendas**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: Novo trabalho de &#40;página de agenda&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Quando terminar, clique em **OK**.  
   

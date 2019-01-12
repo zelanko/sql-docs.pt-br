@@ -14,12 +14,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec91a27daf01a77cc9c1916db36d80de4864964f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752698"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128972"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional
     
@@ -46,7 +46,7 @@ ms.locfileid: "52752698"
   
  **Para especificar que as exclusões não devem ser controladas**  
   
--   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Especificar que as exclusões não devem ser controladas para artigos de mesclagem &#40;programação Transact-SQL de replicação&#41;](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Especificar que as exclusões não devem ser controladas para artigos de mesclagem &#40;programação Transact-SQL de replicação&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções de artigos para a replicação de mesclagem](article-options-for-merge-replication.md)   

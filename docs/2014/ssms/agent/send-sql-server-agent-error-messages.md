@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779038"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130167"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
   Este tópico descreve como configurar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para enviar suas mensagens de erro via net send no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52779038"
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  No **propriedades do SQL Server Agent-* * * nome_do_servidor* caixa de diálogo **log de erros** no **geral** de página, digite o nome de usuário ou o nome do computador ao qual você deseja enviar mensagens de erro no **destinatário do Net send** caixa.  
+3.  No **propriedades do SQL Server Agent -**_nome_do_servidor_ caixa de diálogo **log de erros** no **geral** de página, digite o nome de usuário ou nome do computador ao qual você deseja enviar erro mensagens na **destinatário do Net send** caixa.  
   
 4.  Clique em **OK**.  
   

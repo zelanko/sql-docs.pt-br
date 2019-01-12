@@ -12,12 +12,12 @@ ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 340bf8f8b5c85195d1ac0a061cf16d6dcfe4c084
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1f292841c227db26f1c518b2eaef896f7ce3570c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823620"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134616"
 ---
 # <a name="mssqleng014151"></a>MSSQL_ENG014151
     
@@ -40,11 +40,7 @@ ms.locfileid: "52823620"
   
 -   Reinicie o agente com falha para verificar se será possível executá-lo sem falhas agora. Para obter mais informações, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](concepts/replication-agent-executables-concepts.md).  
   
--   Verifique o histórico de agente e o histórico de trabalho para outros erros que aconteceram quase no mesmo momento. Para obter informações sobre como exibir o status do agente e os detalhes de erro no Replication Monitor, consulte os seguintes tópicos:  
-  
-    -   Para o Snapshot Agent, o Agente de Leitor de Log e o Queue Reader Agent, consulte [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md).  
-  
-    -   Para o Agente de Distribuição e o Agente de Mesclagem, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Verifique o histórico de agente e o histórico de trabalho para outros erros que aconteceram quase no mesmo momento. Para obter informações sobre como exibir detalhes de status e de erro do agente no Replication Monitor, consulte [exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Verifique se a conectividade básica está funcionado entre os computadores acessados pelo agente e, depois, conecte-se a cada computador com um utilitário como [sqlcmd Utility](../../tools/sqlcmd-utility.md). Ao se conectar, use a mesma conta com a qual o agente faz conexões. Para obter mais informações sobre as permissões exigidas para cada conta de agente, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   

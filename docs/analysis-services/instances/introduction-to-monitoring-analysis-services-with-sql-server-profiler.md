@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebae2156d1c0cc7c3459c5083723368c66d87b9e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c72c30584137caa998d4bec3bd6194abfbdc6a7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144693"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128146"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introdução ao monitoramento do Analysis Services com o SQL Server Profiler
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50144693"
 -   Um rastreamento pode continuar quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] parar e for reiniciado.  
   
     > [!NOTE]  
-    >  As senhas não são reveladas em eventos de rastreamento, mas são substituídas por ****** no evento.  
+    >  As senhas não são reveladas em eventos de rastreamento, mas são substituídas por \* \* \* \* \* \* no evento.  
   
  Para obter o desempenho ideal, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar somente os eventos pelos quais você tem maior interesse. O monitoramento de muitos eventos pode causar sobrecarga e aumentar muito a tabela ou o arquivo de rastreamento, especialmente durante o monitoramento em um longo período de tempo. Além disso, use a filtragem para limitar a quantidade de dados coletados e impedir o aumento em excesso dos rastreamentos.  
   

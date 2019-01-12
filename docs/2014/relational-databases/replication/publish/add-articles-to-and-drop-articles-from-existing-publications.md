@@ -19,12 +19,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d067f6cd8981780efa057f7367cd5282c7e668a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 064b6e915b2b1fbc7de1ef9b280bc406d7fc92e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203335"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132336"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
   Depois que uma publicação é criada, é possível adicionar e descartar artigos. Os artigos podem ser adicionados a qualquer hora, mas as ações necessárias para descartar artigos dependem do tipo de replicação e de quando o artigo é descartado.  

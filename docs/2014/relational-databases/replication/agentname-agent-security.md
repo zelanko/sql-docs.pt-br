@@ -12,12 +12,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25dc706689ec136a5423de8051fecd3c6071d5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d77f8d6acb449bc9aa2298dbcba9782fd7bc07e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762378"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127430"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Segurança do Agente &lt;AgentName&gt;
   A página **Segurança do agente \<AgentName>** permite especificar as contas nas quais o Agente de Distribuição (para replicação transacional ou de instantâneo) ou o Agente de Mesclagem (para replicação de mesclagem) é executado e faz conexões com os computadores em uma topologia de replicação. Para obter informações sobre as permissões necessárias para os agentes e as melhores práticas de segurança da replicação, consulte [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md) e [Melhores práticas de segurança da replicação](security/replication-security-best-practices.md).  
@@ -54,8 +54,8 @@ ms.locfileid: "52762378"
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   
- [Gerenciar logons e senhas na replicação](security/manage-logins-and-passwords-in-replication.md)   
+ [Gerenciar logons e senhas na replicação](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)   
- [Segurança e proteção &#40;Replicação&#41;](security/security-and-protection-replication.md)  
+ [Segurança de replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

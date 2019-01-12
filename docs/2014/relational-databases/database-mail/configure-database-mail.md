@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371178"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131486"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
   Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
@@ -394,7 +394,7 @@ ms.locfileid: "53371178"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use a página **Enviar Email de Teste de***<nome_da_instância>* para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
+ Use a página **Enviar Email de Teste de**_<instance_name>_ para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
   
  **Perfil do Database Mail**  
  Selecione um perfil da lista do Database Mail. Esse é um campo obrigatório. Se nenhum perfil for mostrado, não há nenhum perfil ou você não tem permissão para um perfil. Use o **Assistente para Configuração do Database Mail** para criar e configurar perfis. Se nenhum perfil for listado, use o Assistente para Configuração do Database Mail para criar um perfil para seu uso.  

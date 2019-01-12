@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408264"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130186"
 ---
 # <a name="set-index-options"></a>Opções Set Index
   Este tópico descreve como modificar as propriedades de um índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "52408264"
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
+8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar as propriedades de um índice no Pesquisador de Objetos  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52408264"
   
 7.  Altere as configurações de alguma ou de todas as propriedades para personalizar o índice.  
   
-8.  Para adicionar, remover ou alterar a posição de uma coluna de índice, selecione a página **Geral** na caixa de diálogo **Propriedades do Índice –** *index_name* . Para obter mais informações, consulte [Index Properties F1 Help](index-properties-f1-help.md).  
+8.  Para adicionar, remover ou alterar a posição de uma coluna de índice, selecione a página **Geral** na caixa de diálogo **Propriedades do Índice –** _index_name_ . Para obter mais informações, consulte [Index Properties F1 Help](index-properties-f1-help.md).  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

@@ -19,12 +19,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7e8f2f9de721f2e314961a6d2c10cf14c99be53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786098"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132876"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   Quando o Publicador e o Assinante estão conectados e ocorre a sincronização, o Agente de Mesclagem detecta se há algum conflito. Se forem detectados conflitos, o Agente de Mesclagem usará o resolvedor de conflitos (especificado quando um artigo é adicionado à publicação) para determinar quais dados serão aceitos e propagados para outros sites.  
@@ -57,7 +57,7 @@ ms.locfileid: "52786098"
   
  Para obter mais informações, consulte [Detectando e resolvendo conflitos em registros lógicos](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Para especificar o nível de controle e resolução de conflitos para um artigo, consulte [especificar o nível de resolução e de rastreamento de conflito para artigos de mesclagem](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Para especificar o nível de controle e resolução de conflitos para um artigo, consulte [especificar o nível de resolução e de rastreamento de conflito para artigos de mesclagem](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-resolution"></a>Resolução de conflitos  
  Após a detecção de um conflito, o Agente de Mesclagem inicia o resolvedor do conflito selecionado e usa o resolvedor para determinar o vencedor do conflito. A linha vencedora é aplicada ao Publicador e ao Assinante, e os dados da linha perdedora são gravados em uma tabela de conflitos. Os conflitos estão resolvidos imediatamente após a execução do resolvedor, a menor que se opte por resolver conflitos de forma interativa.  

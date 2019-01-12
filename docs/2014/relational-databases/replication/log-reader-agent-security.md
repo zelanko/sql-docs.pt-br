@@ -14,12 +14,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03455e0ae31712d4ce02beab7eebb697978a1a1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799918"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128886"
 ---
 # <a name="log-reader-agent-security"></a>Segurança do Log Reader Agent
   A caixa de diálogo **Segurança do Log Reader Agent** permite especificar:  
@@ -51,7 +51,7 @@ ms.locfileid: "52799918"
  A conta do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para conexão com o Assinante deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de publicação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar logons e senhas na replicação](security/manage-logins-and-passwords-in-replication.md)   
+ [Gerenciar logons e senhas na replicação](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  

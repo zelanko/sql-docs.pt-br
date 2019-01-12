@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133326"
 ---
 # <a name="customization-file-connect-section"></a>Seção Conexão do arquivo de personalização
 O comportamento padrão do manipulador é negar todas as conexões. O **conectar** seção especifica as exceções a esse comportamento. Por exemplo, se todos os **conectar** seções foram ausente ou vazio e, em seguida, por padrão não foi possível estabelecer conexões.  
@@ -57,11 +57,11 @@ connectionString
 |Parte|Descrição|  
 |----------|-----------------|  
 |**Connect**|Uma cadeia de caracteres literal que indica que essa é uma entrada de cadeia de caracteres de conexão.|  
-|***connectionString***|Uma cadeia de caracteres que substitui a cadeia de caracteres de conexão de cliente inteira.|  
+|**_connectionString_**|Uma cadeia de caracteres que substitui a cadeia de caracteres de conexão de cliente inteira.|  
 |**Acesso**|Uma cadeia de caracteres literal que indica que essa é uma entrada de acesso.|  
-|***accessRight***|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -usuário pode ler ou gravar na fonte de dados.|  
+|**_accessRight_**|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -usuário pode ler ou gravar na fonte de dados.|  
   
- Se você quiser permitir qualquer conexão (em vigor, desabilitando o comportamento do manipulador padrão), defina a entrada de acesso **conexão padrão** seção `Access=ReadWrite`e exclua ou comente a qualquer outro **conectar** *identificador* seção.  
+ Se você quiser permitir qualquer conexão (em vigor, desabilitando o comportamento do manipulador padrão), defina a entrada de acesso **conexão padrão** seção `Access=ReadWrite`e exclua ou comente a qualquer outro **conectar** _identificador_ seção.  
   
 ## <a name="see-also"></a>Consulte também  
  [Seção de Logs do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

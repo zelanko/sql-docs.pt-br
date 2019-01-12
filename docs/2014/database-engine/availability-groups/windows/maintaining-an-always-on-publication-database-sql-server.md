@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143756"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126977"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Mantendo um banco de dados de publicação AlwaysOn (SQL Server)
   Este tópico discute considerações especiais para manter um banco de dados de publicação quando você usa grupos de disponibilidade AlwaysOn.  
@@ -68,7 +68,7 @@ ms.locfileid: "48143756"
     > [!NOTE]  
     >  Quando um grupo de disponibilidade que publicou bancos de dados de membro é removido, ou um banco de dados publicado é removido de um grupo de disponibilidade, todas as cópias dos bancos de dados publicados permanecem no estado de recuperação. Se restaurado, cada um aparecerá como um banco de dados publicado. Apenas uma cópia deve ser retida com metadados de publicação. Para desabilitar a replicação para uma cópia de banco de dados publicada, primeiro remova todas as assinaturas e publicações do banco de dados.  
   
-     Executar `sp_dropsubscription` para remover assinaturas da publicação. Verifique se o parâmetro *@ignore_distributributor* está definido como 1 para preservar os metadados para o banco de dados de publicação ativo no distribuidor.  
+     Execute `sp_dropsubscription` para remover assinaturas da publicação. Verifique se o parâmetro *@ignore_distributributor* está definido como 1 para preservar os metadados para o banco de dados de publicação ativo no distribuidor.  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "48143756"
         @ignore_distributor = 1;  
     ```  
   
-     Executar `sp_droppublication` para remover todas as publicações. Verifique se o parâmetro *@ignore_distributor* está definido como 1 para preservar os metadados para o banco de dados de publicação ativo no distribuidor.  
+     Execute `sp_droppublication` para remover todas as publicações. Verifique se o parâmetro *@ignore_distributor* está definido como 1 para preservar os metadados para o banco de dados de publicação ativo no distribuidor.  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -106,7 +106,7 @@ ms.locfileid: "48143756"
   
 -   [A replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Administração &#40;Replicação&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Perguntas frequentes sobre administração de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Assinantes de replicação e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

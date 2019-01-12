@@ -12,12 +12,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdb16831ec27c647645ae0d63f2aa899ec49d590
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806818"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124396"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -52,15 +52,15 @@ ms.locfileid: "52806818"
   
      Verifique os detalhes de erro no Replication Monitor e, depois, reinicie o agente, se ele tiver sido interrompido. Os detalhes de erro podem fornecer informações adicionais sobre o motivo do agente não estar sendo executado corretamente. Se o agente estiver em execução, não interrompa nem reinicie o agente, já que isso pode agravar o problema. Para obter informações sobre como exibir o status do agente e os detalhes de erro no Replication Monitor, consulte os seguintes tópicos:  
   
-    -   Para o Snapshot Agent, o Agente de Leitor de Log e o Queue Reader Agent, consulte [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+    -   Para o Snapshot Agent, Log Reader Agent e Queue Reader Agent, consulte [exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-    -   Para o Agente de Distribuição e o Agente de Mesclagem, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+    -   Para o Distribution Agent e Merge Agent, consulte [exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Se o erro ocorrer frequentemente porque o agente está ocupado:  
   
      Talvez seja necessário recriar o seu aplicativo de forma que o processamento do agente leve menos tempo.  
   
-     É possível aumentar o intervalo em que o status do agente é verificado usando a caixa de diálogo **Propriedades do Trabalho** . Para obter informações sobre como acessar essa caixa de diálogo em trabalhos de replicação, consulte [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     É possível aumentar o intervalo em que o status do agente é verificado usando a caixa de diálogo **Propriedades do Trabalho** . Para obter informações sobre como acessar essa caixa de diálogo para trabalhos de replicação, consulte [exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Se um agente não puder efetuar logon em um dos computadores na topologia:  
   

@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1ba79898fe1f218e51b8eda10f2fb91784a8d7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757346"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133836"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
   O **bcp** copia dados entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
@@ -90,7 +90,7 @@ ms.locfileid: "52757346"
   
  Você também pode especificar explicitamente o nome de banco de dados com `d-`.  
   
- **in** *data_file* | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
+ **in** _data_file_ | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
  Especifica a direção da cópia em massa, do seguinte modo:  
   
 -   **in** copia de um arquivo em uma tabela ou exibição de banco de dados.  
@@ -104,7 +104,7 @@ ms.locfileid: "52757346"
  *Proprietário*  
  Corresponde ao nome do proprietário da tabela ou exibição. O*owner* será opcional se o usuário que estiver executando a operação for o proprietário da tabela ou exibição especificada. Se *owner* não estiver especificado e o usuário que está executando a operação não for proprietário da tabela ou exibição especificada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retornará uma mensagem de erro e a operação será cancelada.  
   
- **"** *query* **"**  
+ **"** _query_ **"**  
  É uma consulta [!INCLUDE[tsql](../includes/tsql-md.md)] que retorna um conjunto de resultados. Se a consulta retornar vários conjuntos de resultados, somente o primeiro conjunto de resultados será copiado no arquivo de dados; os conjuntos de resultados subsequentes serão ignorados. Coloque a consulta entre aspas duplas e qualquer coisa incorporada na consulta entre aspas simples. **queryout** também deve ser especificado quando você copiar dados em massa de uma consulta.  
   
  A consulta pode fazer referência a um procedimento armazenado desde que todas as tabelas referenciadas no procedimento armazenado existam antes da execução da instrução bcp. Por exemplo, se o procedimento armazenado gerar uma tabela temporária, ocorrerá uma falha com a instrução **bcp** , pois a tabela temporária ficará disponível somente durante o tempo de execução e não durante o tempo de execução da instrução. Nesse caso, considere a inserção do resultado do procedimento armazenado em uma tabela e, em seguida, use **bcp** para copiar os dados da tabela em um arquivo de dados.  
@@ -115,12 +115,12 @@ ms.locfileid: "52757346"
  *view_name*  
  Nome da exibição de destino ao copiar dados no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**) e da exibição de origem ao copiar dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**out**). Somente as exibições nas quais todas as colunas fazem referência à mesma tabela podem ser usadas como exibições de destino. Para obter mais informações sobre as restrições para copiar dados em exibições, veja [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql).  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  Especifica o número de bytes por pacote de rede enviado de e para o servidor. Uma opção de configuração do servidor pode ser definida usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (ou o procedimento armazenado do sistema **sp_configure** ). Contudo, a opção de configuração do servidor pode ser substituída individualmente usando-se esta opção. *packet_size* pode estar entre 4096 a 65535 bytes, sendo 4096 o padrão.  
   
  Um tamanho de pacote maior pode aumentar o desempenho de operações de cópia em massa. Se um pacote maior for pedido mas não puder ser concedido, o padrão será usado. As estatísticas de desempenho geradas pelo utilitário **bcp** mostram o tamanho de pacote usado.  
   
- **-b** *batch_size*  
+ **-b** _batch_size_  
  Especifica o número de linhas por lote de dados importados. Cada lote é importado e registrado como uma transação separada que importa o lote inteiro antes de ser confirmado. Por padrão, todas as linhas no arquivo de dados são importadas como um lote. Para distribuir as linhas entre vários lotes, especifique um *batch_size* que seja menor do que o número de linhas no arquivo de dados. Se a transação apresentar falha para qualquer lote, só serão revertidas as inserções do lote atual. Lotes já importados por transações confirmadas não serão afetados por uma falha posterior.  
   
  Não use essa opção em conjunto com o **-h "** ROWS_PER_BATCH  **= *`bb`*"** opção.  
@@ -141,12 +141,12 @@ ms.locfileid: "52757346"
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Página de código padrão usada pelo cliente. Essa é a página de código padrão usada se **-C** não for especificado.|  
 |RAW|Não ocorre nenhuma conversão de uma página de código para outra. Essa é a opção mais rápida porque não acontece nenhuma conversão.|  
-|*code_page*|Um número de página de código específico, por exemplo, 850.<br /><br /> **\*\* Importante \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a página de código 65001 (codificação UTF-8).|  
+|*code_page*|Um número de página de código específico, por exemplo, 850.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a página de código 65001 (codificação UTF-8).|  
   
  `-d` *Database_Name*  
  Especifica o banco de dados que deve ser conectado. Por padrão, bcp.exe se conecta ao banco de dados padrão do usuário. Se `-d` *database_name* e um nome de três partes (*database_name.schema.table*passado como o primeiro parâmetro para bcp.exe) for especificado, ocorrerá um erro porque você não pode especificar o nome do banco de dados duas vezes. Se *database_name* começa com um hífen (-) ou uma barra (/), não adicione um espaço entre `-d` e o nome do banco de dados.  
   
- **-e** *err_file*  
+ **-e** _err_file_  
  Especifica o caminho completo de um arquivo de erro usado para armazenar as linhas que o utilitário **bcp** não pode transferir do arquivo para o banco de dados. As mensagens de erro do comando **bcp** vão para a estação de trabalho do usuário. Se essa opção não for usada, o arquivo de erros não será criado.  
   
  Se *err_file* começar com um hífen (-) ou uma barra (/), não inclua um espaço entre **-e** e o valor *err_file* .  
@@ -158,7 +158,7 @@ ms.locfileid: "52757346"
   
  A opção **-E** tem um requisito de permissões especial. Para obter mais informações, consulte "Comentários" mais adiante neste tópico.  
   
- **-f** *format_file*  
+ **-f** _format_file_  
  Especifica o caminho completo de um arquivo de formato. O significado dessa opção depende do ambiente no qual é usada, do seguinte modo:  
   
 -   Se **-f** for usado com a opção **format** , o *format_file* especificado será criado para a tabela ou exibição especificada. Para criar um arquivo de formato XML, especifique também a opção **-x**. Para obter mais informações, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).  
@@ -170,12 +170,12 @@ ms.locfileid: "52757346"
   
  Se *format_file* começar com um hífen (-) ou uma barra (/), não inclua um espaço entre **-f** e o valor *format_file* .  
   
- **-F** *first_row*  
+ **-F** _first_row_  
  Especifica o número da primeira linha que deve ser exportada de uma tabela ou importada de um arquivo de dados. Este parâmetro requer um valor maior que (>) 0, mas menor que (\<) ou igual a (=), o número total de linhas. Na ausência desse parâmetro, o padrão é a primeira linha do arquivo.  
   
  *first_row* pode ser um inteiro positivo com um valor de até 2^63-1. **-F**_first_row_ é baseado em 1.  
   
- **-h"** *hint*[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,**... *n*] **"**  
  Especifica a dica ou dicas a serem usadas durante uma importação de dados em massa para uma tabela ou exibição.  
   
  ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
@@ -184,7 +184,7 @@ ms.locfileid: "52757346"
  ROWS_PER_BATCH **=**_bb_  
  Número de linhas de dados por lote (como *bb*). É usado quando **-b** não é especificado, resultando no envio de todo o arquivo de dados ao servidor como uma transação única. O servidor otimiza o carregamento em massa de acordo com o valor *bb*. Por padrão, ROWS_PER_BATCH é desconhecido.  
   
- KILOBYTES_PER_BATCH **=** *cc*  
+ KILOBYTES_PER_BATCH **=** _cc_  
  Número aproximado de kilobytes de dados por lote (como *cc*). Por padrão, KILOBYTES_PER_BATCH é desconhecido.  
   
  TABLOCK  
@@ -204,12 +204,12 @@ ms.locfileid: "52757346"
 >  Agora, o**bcp** impõe validação de dados e verificações de dados que podem provocar falhas em scripts se forem executados em dados inválidos em um arquivo de dados.  
   
 > [!NOTE]  
->  A opção **-m** *max_errors* não se aplica à verificação de restrição.  
+>  A opção **-m** _max_errors_ não se aplica à verificação de restrição.  
   
  FIRE_TRIGGERS  
  Especificado com o argumento **in**, todos os gatilhos de inserção definidos na tabela de destino serão executados durante a operação de cópia em massa. Se FIRE_TRIGGERS não for especificado, nenhum gatilho de inserção será executado. FIRE_TRIGGERS é ignorado para os argumentos **out**, **queryout** e **format**.  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  Especifica o nome de um arquivo de resposta que contém as respostas às perguntas de prompt de comando para cada campo de dados quando uma cópia em massa está sendo executada usando o modo interativo (**- n**, `-c`, `-w`, ou **- N** não especificado).  
   
  Se *input_file* começar com um hífen (-) ou uma barra (/), não inclua um espaço entre **-i** e o valor *input_file* .  
@@ -217,15 +217,15 @@ ms.locfileid: "52757346"
  **-k**  
  Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas. Para obter mais informações, veja [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- **-K** *application_intent*  
+ **-K** _application_intent_  
  Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não oferecerá suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [ secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- **-L** *last_row*  
+ **-L** _last_row_  
  Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados. Este parâmetro requer um valor maior que (>) 0, mas menor que (\<) ou igual a (=), o número da última linha. Na ausência desse parâmetro, o padrão é a última linha do arquivo.  
   
  *last_row* pode ser um inteiro positivo com um valor de até 2^63-1.  
   
- **-m** *max_errors*  
+ **-m** _max_errors_  
  Especifica o número máximo de erros de sintaxe que podem ocorrer antes que a operação **bcp** seja cancelada. Um erro de sintaxe implica em um erro de conversão de dados para o tipo de dados de destino. O total de *max_errors* exclui todos os erros que podem ser detectados apenas no servidor, como violações de restrição.  
   
  Uma linha que não possa ser copiada pelo utilitário **bcp** é ignorada e contada como um erro. Se essa opção não estiver incluída, o padrão será 10.  
@@ -247,12 +247,12 @@ ms.locfileid: "52757346"
   
  O aviso pode ser ignorado. Uma maneira de resolver este aviso é usar **-n** em vez de **-N**.  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  Especifica o nome de um arquivo que recebe a saída redirecionada do prompt de comando.  
   
  Se *output_file* começar com um hífen (-) ou uma barra (/), não inclua um espaço entre **-o** e o valor *output_file*.  
   
- **-P** *password*  
+ **-P** _password_  
  Especifica a senha para a ID de logon. Se essa opção não for usada, o comando **bcp** solicitará uma senha. Se essa opção for usada ao término do prompt de comando sem uma senha, o **bcp** usará a senha padrão (NULL).  
   
 > [!IMPORTANT]  
@@ -271,7 +271,7 @@ ms.locfileid: "52757346"
   
  Para obter mais informações, consulte Comentários posteriormente neste tópico.  
   
- **-r** *row_term*  
+ **-r** _row_term_  
  Especifica o terminador de linha. O padrão é **\n** (caractere de nova linha). Use esse parâmetro para substituir o terminador de linha padrão. Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Se você especificar o terminador de linha em notação hexadecimal em um comando bcp.exe, o valor será truncado em 0x00. Por exemplo, se você especificar 0x410041, 0x41 será usado.  
@@ -281,7 +281,7 @@ ms.locfileid: "52757346"
  **-R**  
  Especifica que dados de moeda, data e horário são copiados em massa no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o formato regional definido para as configurações de localidade do computador cliente. Por padrão, as configurações regionais são ignoradas.  
   
- **-S** *server_name*[ **\\**_instance_name_]  
+ **-S** _server_name_[ **\\**_instance_name_]  
  Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à qual se conectar. Se nenhum servidor for especificado, o utilitário **bcp** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é requerida quando um comando **bcp** é executado de um computador remoto na rede ou de uma instância local nomeada. Para se conectar à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um servidor, especifique apenas *server_name*. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], especifique *server_name**_\\_** instance_name*.  
   
  `-t` *field_term*  
@@ -294,7 +294,7 @@ ms.locfileid: "52757346"
  **-T**  
  Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. As credenciais de segurança do usuário de rede, *login_id*e *password* não são necessárias. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para que o logon tenha êxito.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  

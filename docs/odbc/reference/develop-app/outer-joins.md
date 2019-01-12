@@ -14,12 +14,12 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513988"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135706"
 ---
 # <a name="outer-joins"></a>Junções externas
 ODBC dá suporte a SQL-92 deixada, sintaxe de junção externa completa e à direita. É a sequência de escape de junções externas  
@@ -28,7 +28,7 @@ ODBC dá suporte a SQL-92 deixada, sintaxe de junção externa completa e à dir
   
  em que *junção externa* é  
   
- *referência de tabela* {**esquerda &#124; direita &#124; completo} junção externa** {*referência de tabela* &#124; *junção externa*} **ON**  *critério de pesquisa*  
+ *referência de tabela* {**esquerda &#124; direita &#124; completo} junção externa** {*referência de tabela* &#124; *junção externa*} **ON**  _critério de pesquisa_  
   
  *referência de tabela* Especifica um nome de tabela, e *critério de pesquisa* Especifica a condição de junção entre as *referências de tabela*.  
   

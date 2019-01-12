@@ -12,12 +12,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ad635cc5dea991c1857831d874de6482b5a9b0d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816852"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133726"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
     
@@ -48,7 +48,7 @@ ms.locfileid: "52816852"
 ## <a name="user-action"></a>Ação do usuário  
  As etapas a seguir podem ajudar a solucionar o problema. Se qualquer etapa permitir que o Log Reader Agent seja iniciado sem erros, não será necessário concluir as etapas restantes.  
   
--   Verifique o histórico do Log Reader Agent em relação a qualquer outro erro que poderia estar contribuindo com esse erro. Para obter informações sobre como exibir o status do agente e detalhes de erro no Replication Monitor, consulte [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Verifique o histórico do Log Reader Agent em relação a qualquer outro erro que poderia estar contribuindo com esse erro. Para obter informações sobre como exibir detalhes de status e de erro do agente no Replication Monitor, consulte [exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Verifique o resultado de [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) para obter os SPIDs (números de identificação do processo específico) conectados ao banco de dados publicado. Feche qualquer conexão que poderia haver executado **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds**.  
   

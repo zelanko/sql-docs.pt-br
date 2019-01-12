@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bbf909004f6b3d809babfb99b1787728194bd140
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524107"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100851"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@msgnum* * * =** ] *msg_id*  
+ [  **\@msgnum =** ] *msg_id*  
  É a ID da mensagem. *msg_id* está **int** com um padrão NULL. *msg_id* erro definido pelo usuário de mensagens podem ser um inteiro entre 50.001 e 2.147.483.647. A combinação de *msg_id* e *idioma* deve ser exclusiva; um erro será retornado se a ID já existe para o idioma especificado.  
   
- [  **@severity =** ]*gravidade*  
+ [  **\@gravidade =** ]*gravidade*  
  É o nível de gravidade do erro. *gravidade* está **smallint** com um padrão NULL. Os níveis válidos são de 1 a 25. Para obter mais informações sobre severidades, consulte [Severidade de erro do mecanismo de banco de dados](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **@msgtext =** ] **'**_msg_**'**  
+ [  **\@msgtext =** ] **'**_msg_**'**  
  É o texto da mensagem de erro. *msg* está **nvarchar (255)** com um padrão NULL.  
   
- [  **@lang =** ] **'**_idioma_**'**  
+ [  **\@lang =** ] **'**_idioma_**'**  
  É o idioma desta mensagem. *linguagem* está **sysname** com um padrão NULL. Como vários idiomas podem ser instalados no mesmo servidor, *linguagem* Especifica o idioma em que cada mensagem é gravada. Quando *linguagem* é omitido, o idioma é o idioma padrão para a sessão.  
   
- [  **@with_log =** ] { **'** VERDADEIRO **'** | **'FALSE'** }  
- Especifica se a mensagem deve ser gravada no log do aplicativo do Windows quando ocorrer. **@with_log** está **varchar(5)** com um padrão de FALSE. Se for TRUE, o erro sempre será gravado no log do aplicativo do Windows. Se for FALSE, o erro nem sempre será gravado no log do aplicativo do Windows, mas poderá ser gravado dependendo de como foi gerado. Somente os membros dos **sysadmin** função de servidor pode usar essa opção.  
+ [  **\@with_log =** ] { **'** verdadeiro **'** | **'FALSE'** }  
+ Especifica se a mensagem deve ser gravada no log do aplicativo do Windows quando ocorrer. **\@with_log** está **varchar(5)** com um padrão de FALSE. Se for TRUE, o erro sempre será gravado no log do aplicativo do Windows. Se for FALSE, o erro nem sempre será gravado no log do aplicativo do Windows, mas poderá ser gravado dependendo de como foi gerado. Somente os membros dos **sysadmin** função de servidor pode usar essa opção.  
   
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [ **@replace** *=* ] **'**_substituir_**'**  
+ [  **\@substituir =** ] **'**_substituir_**'**  
  Se for especificado como a cadeia de caracteres *substituir*, uma mensagem de erro existente será substituída com o novo nível de texto e a gravidade da mensagem. *Substitua* está **varchar(7)** com um padrão NULL. Essa opção deve ser especificada se *msg_id* já existe. Se você substituir uma mensagem Mensagem em inglês, o nível de severidade é substituída para todas as mensagens em todos os outros idiomas que têm o mesmo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

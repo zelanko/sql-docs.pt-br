@@ -13,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748718"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125846"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
   As perguntas e as respostas a seguir fornecem orientação sobre várias tarefas enfrentadas pelos administradores de bancos de dados replicados.  
@@ -42,9 +42,9 @@ ms.locfileid: "52748718"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quando uma assinatura estará disponível e quando o banco de dados de assinatura poderá ser usado?  
  Uma assinatura está disponível após o instantâneo ter sido aplicado ao banco de dados de assinatura. Apesar do banco de dados de assinatura estar acessível antes disso, o banco de dados não deve ser utilizado até o instantâneo ter sido aplicado. Use o Replication Monitor para verificar o estado da geração e a aplicação do instantâneo:  
   
--   O instantâneo é gerado pelo Agente de Instantâneo. Exiba o estado da geração do instantâneo na guia **Agentes** para uma publicação no Replication Monitor. Para mais informações, consulte [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   O instantâneo é gerado pelo Agente de Instantâneo. Exiba o estado da geração do instantâneo na guia **Agentes** para uma publicação no Replication Monitor. Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   O instantâneo é aplicado pelo Agente de Distribuição ou pelo Agente de Mesclagem. Exiba o estado da aplicação do instantâneo na página **Agente de Distribuição** ou **Agente de Mesclagem** do Replication Monitor. Para obter mais informações, consulte [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md) [Exibir informações e executar tarefas para os agentes associados a uma assinatura (Replication Monitor)].  
+-   O instantâneo é aplicado pelo Agente de Distribuição ou pelo Agente de Mesclagem. Exiba o estado da aplicação do instantâneo na página **Agente de Distribuição** ou **Agente de Mesclagem** do Replication Monitor. 
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>O que acontece se o Agente de Instantâneo não concluir quando os Distribution ou Agente de Mesclagem são iniciados?  
  Nenhum erro ocorrerá se o Agente de Distribuição ou o Agente de Mesclagem executarem ao mesmo tempo em que o Agente de Instantâneo. Porém, você deve estar atento quanto ao seguinte:  
@@ -94,7 +94,7 @@ ms.locfileid: "52748718"
  Essas informações estão disponíveis por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e dos vários procedimentos de replicação armazenados. Para obter mais informações, consulte [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>A replicação criptografa dados?  
- Nenhum. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para mais informações, consulte a seção "Criptografia" do tópico [Visão geral de segurança &#40;Replicação&#41;](../security/security-overview-replication.md).  
+ Nenhum. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para obter mais informações, consulte a seção "Criptografia" do tópico [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Como posso replicar dados pela Internet?  
  Replique os dados pela Internet, por meio de:  
@@ -140,7 +140,7 @@ ms.locfileid: "52748718"
   
 -   Execute as instruções GRANT diretamente no banco de dados de assinatura.  
   
--   Use um script de pós-instantâneo para executar as instruções. Para mais informações, consulte [Executar scripts antes e depois da aplicação do instantâneo](../execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+-   Use um script de pós-instantâneo para executar as instruções. Para mais informações, consulte [Executar scripts antes e depois da aplicação do instantâneo](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
   
 -   Use o procedimento armazenado [sp_addscriptexec](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) para executar as instruções.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52748718"
  Sim. Existem várias considerações especiais para os bancos de dados envolvidos em replicação. Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>A replicação afeta o tamanho do log de transações?  
- A replicação de mesclagem e a replicação de instantâneos não afetam o tamanho do log de transações, mas uma replicação transacional sim. Se um banco de dados incluir uma ou mais publicações transacionais, o log não será truncado até que todas as transações pertinentes para as publicações sejam enviadas ao banco de dados de distribuição. Se o log de transações aumentar demasiadamente, e o Agente de Leitor de Log estiver em execução com agendamento definido, considere encurtar o intervalo entre as execuções. Ou, defina-o para executar em modo contínuo. Se ele for definido para executar em modo contínuo (o padrão), garanta que ele esteja em execução. Para mais informações sobre a verificação do status do Agente de Leitor de Log, consulte [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ A replicação de mesclagem e a replicação de instantâneos não afetam o tamanho do log de transações, mas uma replicação transacional sim. Se um banco de dados incluir uma ou mais publicações transacionais, o log não será truncado até que todas as transações pertinentes para as publicações sejam enviadas ao banco de dados de distribuição. Se o log de transações aumentar demasiadamente, e o Agente de Leitor de Log estiver em execução com agendamento definido, considere encurtar o intervalo entre as execuções. Ou, defina-o para executar em modo contínuo. Se ele for definido para executar em modo contínuo (o padrão), garanta que ele esteja em execução. Para obter mais informações sobre como verificar o status do agente de leitor de Log, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Além disso, se você tiver definido a opção 'sync with backup' no banco de dados de publicação ou no banco de dados de distribuição, o log de transações não será truncado até o backup de todas as transações ser feito. Se o log de transações crescer demasiadamente, e você tiver essa opção definida, considere encurtar o intervalo entre os backups do log de transações. Para mais informações sobre backup e restauração de bancos de dados envolvidos na replicação transacional, consulte [Estratégias de backup e restauração de instantâneo e replicação transacional](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52748718"
 ## <a name="replication-maintenance"></a>Manutenção da Replicação  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>Como posso determinar se os dados no Assinante estão sincronizados com os dados no Publicador?  
- Use a validação. A validação informa se um determinado Assinante está sincronizado com o Publicador. Para obter mais informações, consulte [Validar os dados replicados](../validate-replicated-data.md). A validação não fornece qualquer informação sobre possíveis linhas sincronizadas incorretamente, mas a [utilidade tablediff](../../../tools/tablediff-utility.md) faz isso.  
+ Use a validação. A validação informa se um determinado Assinante está sincronizado com o Publicador. Para obter mais informações, consulte [Validar os dados replicados](../validate-data-at-the-subscriber.md). A validação não fornece qualquer informação sobre possíveis linhas sincronizadas incorretamente, mas a [utilidade tablediff](../../../tools/tablediff-utility.md) faz isso.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Como posso adicionar uma tabela a uma publicação existente?  
  Não é necessário interromper a atividade no banco de dados de publicação ou de assinatura para adicionar uma tabela (ou qualquer outro objeto). Adicione uma tabela a uma publicação com a caixa de diálogo **Propriedades de Publicação – \<Publicação>** ou os procedimentos armazenados [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
@@ -207,7 +207,7 @@ ms.locfileid: "52748718"
  As ações necessárias à remoção de replicação de banco de dados dependem se o banco de dados foi usado como um banco de dados de publicação, banco de dados de assinatura ou ambos.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>Como posso determinar se há transações ou linhas a serem replicadas?  
- Para a replicação transacional, use os procedimentos armazenados ou a guia **Comandos não Distribuídos** no Replication Monitor. Para mais informações, consulte [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Para a replicação transacional, use os procedimentos armazenados ou a guia **Comandos não Distribuídos** no Replication Monitor. Para obter mais informações, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [exibir informações e executar tarefas usando O Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Para replicação de mesclagem, use o procedimento armazenado **sp_showpendingchanges**. Para mais informações, consulte [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql).  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52748718"
   
 -   A quantidade de tempo estimada para entrega de comandos ao Assinante. Se esse valor for maior do que a quantidade de tempo requerida para gerar e aplicar um instantâneo ao Assinante, considere reiniciar o Assinante. Para obter mais informações, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
   
- Para mais informações, consulte [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Para obter mais informações, consulte [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) e [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Replicação e demais recursos dos Bancos de Dados  
   
@@ -229,7 +229,7 @@ ms.locfileid: "52748718"
  Sim. Nenhuma consideração especial é exigida porque todos os dados são armazenados em um conjunto de discos no cluster.  
   
 ## <a name="see-also"></a>Consulte também  
- [Administração &#40;Replicação&#41;](administration-replication.md)   
+ [Perguntas frequentes sobre administração de replicação](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

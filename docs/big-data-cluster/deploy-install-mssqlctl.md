@@ -1,5 +1,6 @@
 ---
-title: Instalar mssqlctl para gerenciar clusters de big data SQL 2019 | Microsoft Docs
+title: Instalar mssqlctl
+titleSuffix: SQL Server 2019 big data clusters
 description: Saiba como instalar a ferramenta mssqlctl para instalar e gerenciar clusters de big data de 2019 do SQL Server (visualização).
 author: rothja
 ms.author: jroth
@@ -7,12 +8,13 @@ manager: craigg
 ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5133134a45a4110abc0a1a7a3eebe1c5ac7b6ebd
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.technology: big-data-cluster
+ms.openlocfilehash: cb012492811383154d10358e1c3ee40c422e3813
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432099"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241687"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Instalar mssqlctl para gerenciar clusters do SQL Server 2019 big data
 

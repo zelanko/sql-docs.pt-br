@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823510"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125226"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
   Ao projetar uma estratégia de backup e restauração para instantâneo e replicação transacional, há três áreas a serem consideradas:  
@@ -117,7 +117,7 @@ ms.locfileid: "52823510"
   
          Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md).  
   
-         Para obter mais informações sobre como verificar comandos, consulte [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [informações de exibição e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Remova a configuração de replicação do Publicador, Distribuidor e Assinantes e, em seguida, recrie a configuração. Ao recriar as assinaturas, especifique que o Assinante já tem os dados. A restauração está concluída.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823510"
   
          Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md).  
   
-         Para obter mais informações sobre como verificar comandos, consulte [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [informações de exibição e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Use o [tablediff utility](../../../tools/tablediff-utility.md) ou outra ferramenta para sincronizar manualmente o Publicador com o Assinante. Isso permitirá a recuperação dos dados do banco de dados de assinatura que não estavam contidos no backup de banco de dados de publicação. Vá para a etapa c.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823510"
   
      Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md).  
   
-     Para obter mais informações sobre como verificar comandos, consulte [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [informações de exibição e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Se você estiver usando assinaturas de atualização em fila, conecte a cada Assinante e exclua todas as linhas da tabela [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) no banco de dados de assinatura. Vá para a etapa 4.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823510"
   
     2.  Marque todas as publicações para validação. Reinicialize quaisquer assinaturas com falha de validação. A recuperação está concluída.  
   
-         Para obter mais informações sobre validação, consulte [Validate Replicated Data](../validate-replicated-data.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
+         Para obter mais informações sobre validação, consulte [Validate Replicated Data](../validate-data-at-the-subscriber.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>Banco de dados msdb (Distribuidor)  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823510"
   
 4.  Marque todas as publicações para validação. Reinicialize quaisquer assinaturas com falha de validação. A recuperação está concluída.  
   
-     Para obter mais informações sobre validação, consulte [Validate Replicated Data](../validate-replicated-data.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
+     Para obter mais informações sobre validação, consulte [Validate Replicated Data](../validate-data-at-the-subscriber.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>Banco de dados mestre (Distribuidor)  
   

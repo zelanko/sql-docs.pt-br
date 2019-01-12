@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367188"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127206"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conectando de outro computador
   Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367188"
     > [!NOTE]  
     >  Você pode ter opções de 32 bits e de 64 bits disponíveis.  
   
-2.  Na **SQL Server Configuration Manager**, expanda **configuração de rede do SQL Server**e, em seguida, clique em **protocolos para**  *\<InstanceName >*.  
+2.  Na **SQL Server Configuration Manager**, expanda **configuração de rede do SQL Server**e, em seguida, clique em **protocolos para**  _\<InstanceName >_.  
   
      A instância padrão (uma instância sem nome) é listada como **MSSQLSERVER**. Se você instalou uma instância nomeada, o nome fornecido será listado. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] é instalado como **SQLEXPRESS**, a menos que o nome seja alterado durante a instalação.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367188"
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , confirme **Mecanismo de Banco de Dados** na caixa **Tipo de Servidor** .  
   
-3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:***<nome_do_computador>*. Em nosso exemplo de uma instância nomeada, digite **tcp:***<nome_do_computador>***,49172**.  
+3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:**_<computer_name>_. Em nosso exemplo de uma instância nomeada, digite **tcp:**_<computer_name>_**,49172**.  
   
     > [!NOTE]  
     >  Se você omitir **tcp:** da caixa **Nome do servidor** , o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  

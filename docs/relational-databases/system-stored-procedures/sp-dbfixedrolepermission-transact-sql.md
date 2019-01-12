@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 833fc69629e76aaf4e6b7b86f0ac2afcef812878
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719794"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126206"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'***função***'**  
+ [  **@rolename =** ] **'**_função_**'**  
  É o nome de uma função de banco de dados fixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *função* está **sysname**, com um padrão NULL. Se *função* não for especificado, as permissões para todas as funções de banco de dados fixas são exibidas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -51,7 +51,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome da função de banco de dados fixa|  
 |**Permissão**|**nvarchar(70)**|Permissões associadas **DbFixedRole**|  
@@ -59,7 +59,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>Comentários  
  Para exibir uma lista das funções de banco de dados fixa, execute **sp_helpdbfixedrole**. A tabela a seguir mostra as funções de banco de dados fixas.  
   
-|Função de banco de dados fixa|Description|  
+|Função de banco de dados fixa|Descrição|  
 |-------------------------|-----------------|  
 |**db_owner**|Proprietários de banco de dados|  
 |**db_accessadmin**|Administradores de acesso de banco de dados|  

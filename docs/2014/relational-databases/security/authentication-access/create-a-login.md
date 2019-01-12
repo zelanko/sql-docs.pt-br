@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374758"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131586"
 ---
 # <a name="create-a-login"></a>Crie um logon
   Este tópico descreve como criar um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um logon é a identidade da pessoa ou do processo que está se conectando a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ ms.locfileid: "53374758"
  A página **Mapeamento de Usuário** lista todos os possíveis bancos de dados e associações de função de banco de dados nesses bancos de dados que podem ser se aplicados ao logon. Os bancos de dados selecionados determinam as associações de função que estão disponíveis para o logon. As opções a seguir estão disponíveis nesta página:  
   
  **Usuários mapeados para este logon**  
- Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, suas funções de banco de dados válidas são exibidas no painel **Associação à função de banco de dados para:** *database_name* .  
+ Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, suas funções de banco de dados válidas são exibidas no painel **Associação à função de banco de dados para:** _database_name_ .  
   
  **Mapeamento**  
  Permita que o logon acesse os bancos de dados listados abaixo.  
@@ -160,10 +160,10 @@ ms.locfileid: "53374758"
  **Esquema Padrão**  
  Especifica o esquema padrão do usuário. Quando um usuário é criado pela primeira vez, seu esquema padrão é **dbo**. É possível especificar um esquema padrão que ainda não existe. Você não pode especificar um esquema padrão para um usuário mapeado para um grupo do Windows, um certificado ou uma chave assimétrica.  
   
- **Conta Convidado habilitada para:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  Atributo somente leitura que indica se a conta de Convidado está habilitada no banco de dados selecionado. Use a página **Status** da caixa de diálogo **Propriedades de Logon** da conta Convidado para habilitar ou desabilitar a conta Convidado.  
   
- **Associação à função de banco de dados para:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  Selecione as funções para o usuário no banco de dados especificado. Todos os usuários são membros da função **pública** em todo banco de dados e não podem ser removidos. Para obter mais informações sobre as funções de banco de dados, veja [Funções no nível de banco de dados](database-level-roles.md).  
   
 ### <a name="securables"></a>Protegíveis  
@@ -176,10 +176,10 @@ ms.locfileid: "53374758"
   
 1.  Clique em **Pesquisar**.  
   
-2.  No **adicionar objetos** caixa de diálogo, selecione uma das seguintes opções: **Objetos específicos...** , **Todos os objetos dos tipos...** , ou **servidor * * * nome_do_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  No **adicionar objetos** caixa de diálogo, selecione uma das seguintes opções: **Objetos específicos...** , **Todos os objetos dos tipos...** , ou **o servidor**_nome_do_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Selecionando **o servidor * * * nome_do_servidor* preenche automaticamente a grade superior com todos os objetos protegíveis de servidores.  
+    >  A seleção de **O servidor**_server_name_ preenche automaticamente a grade superior com os objetos protegíveis de todos os servidores.  
   
 3.  Se você selecionar **Objetos específicos...**:  
   

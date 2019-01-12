@@ -14,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a3125ef66a88b8d7c47324e67b1a263581a925d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788718"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124166"
 ---
 # <a name="snapshot-agent-security"></a>Segurança do Snapshot Agent
   A caixa de diálogo **Segurança do Snapshot Agent** permite specificar:  
@@ -55,7 +55,7 @@ ms.locfileid: "52788718"
  A conta do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para conexão com o Assinante deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de publicação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar logons e senhas na replicação](security/manage-logins-and-passwords-in-replication.md)   
+ [Gerenciar logons e senhas na replicação](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  

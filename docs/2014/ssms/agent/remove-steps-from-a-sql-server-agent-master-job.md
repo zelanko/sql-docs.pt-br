@@ -10,12 +10,12 @@ ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bebe86c19482a7a86d1b19e19f0ac43292c8ece
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782858"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127803"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
   Este tópico descreve como remover etapas de um trabalho mestre do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52782858"
   
 4.  Clique com o botão direito do mouse no trabalho no qual você deseja excluir etapas e selecione **Propriedades**.  
   
-5.  No **propriedades do trabalho – * * * job_name* caixa de diálogo **selecionar uma página**, selecione **etapas**.  
+5.  Na caixa de diálogo **Propriedades do Trabalho –** _job_name_, em **Selecionar uma página**, selecione **Etapas**.  
   
 6.  Na **Lista de etapas de trabalho**, selecione a etapa de trabalho que você deseja excluir e clique em **Excluir**.  
   

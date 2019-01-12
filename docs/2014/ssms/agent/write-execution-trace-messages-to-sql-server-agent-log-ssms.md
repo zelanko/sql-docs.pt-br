@@ -16,12 +16,12 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57117e531714e93000fef6beefefffc2ef210c80
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823170"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100681"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
   Este tópico descreve como configurar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que inclua mensagens de rastreamento de execução em seu log de erros no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52823170"
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  No **propriedades do SQL Server Agent-* * * nome_do_servidor* caixa de diálogo **log de erros** no **geral** página, selecione o **incluem rastreamento de execução mensagens** caixa de seleção.  
+3.  No **propriedades do SQL Server Agent -**_nome_do_servidor_ caixa de diálogo **log de erros** no **geral** , selecione o **Incluir mensagens de rastreamento de execução** caixa de seleção.  
   
 4.  Clique em **OK**.  
   

@@ -16,12 +16,12 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed23f523e7043c3c636f7ab46628e999bb961a50
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c2b561d83167caf1fa9c3f7a41a9490873fbc484
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752238"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133066"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database=**] **'***banco de dados***'**  
+ [  **@database=**] **'**_banco de dados_**'**  
  É o banco de dados a ser removido. *banco de dados* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -14,12 +14,12 @@ ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090278"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130796"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Salvar seu trabalho no Designer de Tabela (Visual Database Tools)
   É possível salvar alterações nas tabelas que estão abertas no Designer de Tabela.  
@@ -28,7 +28,7 @@ ms.locfileid: "48090278"
   
 1.  Clique em qualquer lugar no Designer de Tabela.  
   
-2.  Dos **arquivo** menu, escolha **salvar * * * tablename*.  
+2.  No menu **Arquivo** , escolha **Salvar**_tablename_.  
   
 3.  Na caixa de diálogo **Salvar** , clique em **Sim** para atualizar o banco de dados.  
   

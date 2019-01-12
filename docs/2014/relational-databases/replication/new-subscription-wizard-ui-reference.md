@@ -12,12 +12,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 945dfd47f82f0c11dcb104d283cf61346f27903d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814684"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125196"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistente para Nova Assinatura (referência de interface do usuário)
   Esta seção fornece informações sobre as páginas seguintes do Assistente para Nova Assinatura:  
@@ -45,7 +45,7 @@ ms.locfileid: "52814684"
 ## <a name="see-also"></a>Consulte também  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
- [Referência de propriedades &#40;Replicação&#41;](properties-reference-replication.md)  
+ [Assinar publicações](subscribe-to-publications.md)   
+
   
   

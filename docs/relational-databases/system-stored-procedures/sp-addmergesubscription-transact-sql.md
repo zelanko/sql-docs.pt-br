@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822570"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133756"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação. *publicação* está **sysname**, sem padrão. A publicação já deve existir.  
   
- [  **@subscriber =**] **'***assinante***'**  
+ [  **@subscriber =**] **'**_assinante_**'**  
  É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão NULL.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
+ [  **@subscription_type=**] **'**_subscription_type_**'**  
  É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, com um padrão PUSH. Se **push**, uma assinatura push será adicionada e o Merge Agent é adicionado ao distribuidor. Se **pull**, uma assinatura pull será adicionada sem adicionar um agente de mesclagem no distribuidor.  
   
 > [!NOTE]  
 >  Assinaturas anônimas não precisam usar esse procedimento armazenado.  
   
- [  **@subscriber_type=**] **'***subscriber_type***'**  
+ [  **@subscriber_type=**] **'**_subscriber_type_**'**  
  É o tipo de assinante. *subscriber_type*está **nvarchar(15)**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
@@ -90,7 +90,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *subscription_priority*  
  É um número que indica a prioridade da assinatura. *subscription_priority*está **real**, com um padrão NULL. Para assinaturas locais e anônimas, a prioridade é 0.0. Para assinaturas globais, a prioridade deve ser menos que 100.0.  
   
- [  **@sync_type=**] **'***sync_type***'**  
+ [  **@sync_type=**] **'**_sync_type_**'**  
  É o tipo de sincronização da assinatura. *sync_type*está **nvarchar(15)**, com um padrão de **automática**. Pode ser **automáticas** ou **none**. Se **automática**, o esquema e os dados iniciais para tabelas publicadas serão transferidos para o assinante primeiro. Se **none**, supõe-se o assinante já tem o esquema e os dados iniciais para tabelas publicadas. Tabelas de sistema e dados sempre são transferidos.  
   
 > [!NOTE]  
@@ -167,13 +167,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *active_end_date*  
  É a data do último agendamento do Agente de Mesclagem, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
+ [  **@optional_command_line=**] **'**_optional_command_line_**'**  
  É o prompt de comando opcional a ser executado. *optional_command_line*está **nvarchar (4000)**, com um padrão NULL. Esse parâmetro é usado para adicionar um comando que captura a saída e a salva em um arquivo ou para especificar um arquivo de configuração ou atributo.  
   
- [  **@description=**] **'***descrição***'**  
+ [  **@description=**] **'**_descrição_**'**  
  É uma descrição breve dessa assinatura de mesclagem. *Descrição*está **nvarchar (255)**, com um padrão NULL. Esse valor é exibido pelo Replication Monitor na **nome amigável** coluna, que pode ser usada para classificar as assinaturas para uma publicação monitorada.  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
+ [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
  Especifica se a assinatura pode ser sincronizada pelo Gerenciador de Sincronização do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *enabled_for_syncmgr* está **nvarchar (5)**, com um padrão de FALSE. Se **falsos**, a assinatura não está registrada com o Gerenciador de sincronização. Se **verdadeira**, a assinatura é registrada com o Gerenciador de sincronização e será sincronizada sem iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
@@ -182,16 +182,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  Esse parâmetro foi preterido e só é mantido para compatibilidade com versões anteriores.  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
+ [  **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
  Especifica o nome da rede de servidor a ser usado para ativação de agente remota. *remote_agent_server_name*está **sysname**, com um padrão NULL.  
   
- [  **@use_interactive_resolver=** ] **'***use_interactive_resolver***'**  
+ [  **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
  Permite resolver conflitos interativamente para todos os artigos que permitem resolução interativa. *use_interactive_resolver* está **nvarchar (5)**, com um padrão de FALSE.  
   
- [  **@merge_job_name=** ] **'***merge_job_name***'**  
+ [  **@merge_job_name=** ] **'**_merge_job_name_**'**  
  O *@merge_job_name* parâmetro é preterido e não pode ser definido. *merge_job_name* está **sysname**, com um padrão NULL.  
   
- [ **@hostname**=] **'***nome do host***'**  
+ [ **@hostname**=] **'**_hostname_**'**  
  Substitui o valor retornado por [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando essa função é usada na cláusula WHERE de um filtro com parâmetros. *nome do host* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  

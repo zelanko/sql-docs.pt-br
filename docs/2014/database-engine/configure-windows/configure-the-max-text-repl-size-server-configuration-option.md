@@ -12,12 +12,12 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5e89ca1fc43c140a4c6fa9aa8f610f5b86d7ef9
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 6958283a8988fd005a491a80f626c1a3d1ef77ba
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640437"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124337"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurar a opção de configuração de servidor max text repl size
   Este tópico descreve como configurar a opção de configuração de servidor **max text repl size** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O **máximo de tamanho do texto repl** opção especifica o tamanho máximo (em bytes) de `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, e `image` dados que podem ser adicionados a uma coluna replicada ou uma coluna capturada em uma única instrução INSERT, UPDATE, WRITETEXT ou UPDATETEXT. O valor padrão é 65536 bytes. O valor -1 indica que não há limite de tamanho além do limite imposto pelo tipo de dados.  
@@ -88,7 +88,7 @@ GO
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

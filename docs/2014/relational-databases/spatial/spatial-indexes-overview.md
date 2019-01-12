@@ -11,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373218"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100881"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a dados e índices espaciais. Um *índice espacial* é um tipo de índice estendido que permite indexar uma coluna espacial. Uma coluna espacial é uma coluna de uma tabela que contém tipo de dados espaciais, como `geometry` ou `geography`.  
@@ -127,7 +127,7 @@ ms.locfileid: "53373218"
 >  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>A caixa delimitadora  
- Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, `(` *x mínima ***,*** y-min* `)` e `(` *x-max ***,*** y-max*  `)`, que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
+ Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, `(` _x mínima_**,**_y-min_ `)` e `(` _xmáxima_ **,**_y-max_`)`, que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
   
 -   *x-min* é a coordenada X do canto inferior esquerdo da caixa delimitadora.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "53373218"
 > [!NOTE]  
 >  Essas coordenadas são especificadas pela cláusula BOUNDING_BOX da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- O `(` *x-min ***,*** y-min* `)` e `(` *x-max ***,*** y-max* `)` coordenadas determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
+ O `(` _x-min_**,**_y-min_ `)` e `(` _x-max_**,** _y-max_ `)` coordenadas determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
   
  O índice espacial decompõe o espaço dentro da caixa delimitadora. A grade de nível 1 da hierarquia de grade preenche a caixa delimitadora. Para colocar um objeto geométrico na hierarquia da grade, o índice espacial compara as coordenadas do objeto com as coordenadas da caixa delimitadora.  
   
- A ilustração a seguir mostra os pontos definidos pela `(` *x mínima ***,*** y-min* `)` e `(` *x-max ***,*** y-max* `)` coordenadas da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
+ A ilustração a seguir mostra os pontos definidos pela `(` _x mínima_**,**_y-min_ `)` e `(` _x máxima_  **,**_y-max_ `)` coordenadas da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
   
  ![Caixa delimitadora que mostra as coordenadas e a célula 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Caixa delimitadora que mostra as coordenadas e a célula 0.")  
   

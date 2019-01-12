@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536968"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133876"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Visão geral do Monitor de Espelhamento de Banco de Dados
   Se tiver as permissões corretas, você pode usar o Monitor de Espelhamento de Banco de Dados para monitorar qualquer subconjunto de bancos de dados espelhado em uma instância de servidor. O monitoramento permite verificar como e se os dados estão fluindo satisfatoriamente na sessão de espelhamento de banco de dados. O Monitor de Espelhamento de Banco de Dados é também útil para solucionar problemas da causa da redução do fluxo de dados.  
@@ -45,7 +45,7 @@ ms.locfileid: "52536968"
   
  Para cada banco de dados registrado, as seguintes informações serão exibidas:  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<nome_do_banco_de_dados>*  
  O nome de um banco de dados espelho registrado no Monitor de Espelhamento de Banco de Dados.  
@@ -64,9 +64,9 @@ ms.locfileid: "52536968"
  *<SERVIDOR_PRINCIPAL>*  
  O nome do parceiro que atualmente é a principal instância do servidor. O nome está no seguinte formato:  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
   
- em que *<SYSTEM_NAME>* é o nome do sistema no qual a instância do servidor reside. Para uma instância de servidor não padrão, o nome da instância também é exibido: *<SYSTEM_NAME>***\\***<instance_name>*.  
+ em que *<SYSTEM_NAME>* é o nome do sistema no qual a instância do servidor reside. Para uma instância de servidor não padrão, o nome da instância também é exibido: _<SYSTEM_NAME>_**\\**_<instance_name>_.  
   
  *<SERVIDOR_ESPELHO>*  
  O nome do parceiro que é atualmente a instância do servidor espelho. O formato é o mesmo do servidor principal.  
@@ -81,7 +81,7 @@ ms.locfileid: "52536968"
   
  O administrador de sistemas pode visualizar a configuração de avisos atual do banco de dados, selecionando a página com guias **Avisos** . A partir deste ponto, o administrador pode iniciar a caixa de diálogo **Definir Limites de Aviso** para habilitar e configurar um ou mais limites de aviso.  
   
- Na faixa acima das guias, o painel de detalhes exibe a última vez em que o monitor atualizou as informações de status, como **Última atualização:***\<date>**\<time>*. Geralmente, o Monitor de Espelhamento de Banco de Dados recupera as informações de status a partir das instâncias de servidor principal e espelho em horários diferentes. O horário mais antigo dessas duas atualizações é exibido.  
+ Na faixa acima das guias, o painel de detalhes exibe a última vez em que o monitor atualizou as informações de status, como **Última atualização:**_\<date>_*\<time>*. Geralmente, o Monitor de Espelhamento de Banco de Dados recupera as informações de status a partir das instâncias de servidor principal e espelho em horários diferentes. O horário mais antigo dessas duas atualizações é exibido.  
   
 ## <a name="action-menu"></a>Menu Ação  
  O menu **Ação** contém sempre os seguintes comandos:  

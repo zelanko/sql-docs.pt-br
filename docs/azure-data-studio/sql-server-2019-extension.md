@@ -3,7 +3,7 @@ title: Extensão do SQL Server 2019 (visualização)
 titleSuffix: Azure Data Studio
 description: Extensão de 2019 Preview do SQL Server para o Studio de dados do Azure
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ce44d22675be344aaa1f08632e39bfdf9c190b3
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: c41c2a08f0b8d608ef21cd44a60a2d63cdeb5fed
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432809"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143302"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -31,9 +31,9 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
    |Plataforma|Download|Data de liberação|Versão
    |:---|:---|:---|:---|
-   |Windows|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2038184)|6 de novembro de 2018 |0.8.0
-   |macOS|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2038178)|6 de novembro de 2018 |0.8.0
-   |Linux|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2038246)|6 de novembro de 2018 |0.8.0
+   |Windows|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2051167)|09 de janeiro de 2019 |0.9.1
+   |macOS|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2051166)|09 de janeiro de 2019 |0.9.1
+   |Linux|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2051165)|09 de janeiro de 2019 |0.9.1
 
 1. No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado.
 

@@ -12,12 +12,12 @@ ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a4e4f951f221f9a66b69c942a3ca0f48abfaeac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772388"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132546"
 ---
 # <a name="mssqleng020575"></a>MSSQL_ENG020575
     
@@ -33,7 +33,7 @@ ms.locfileid: "52772388"
 |Texto da mensagem|Êxito na validação de dados da assinatura do assinante '%s' para o artigo '%s' na publicação '%s'.|  
   
 ## <a name="explanation"></a>Explicação  
- Os dados no Assinante foram validados de acordo com os dados no Publicador e houve correspondência entre os dados; portanto, a validação foi realizada com êxito. Para obter mais informações sobre validação, consulte [Validate Replicated Data](validate-replicated-data.md).  
+ Os dados no Assinante foram validados de acordo com os dados no Publicador e houve correspondência entre os dados; portanto, a validação foi realizada com êxito. Para obter mais informações sobre validação, consulte [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  

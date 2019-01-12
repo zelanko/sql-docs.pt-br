@@ -14,12 +14,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc2cc36a309f74c63ad13f93c9d5e76fb9140900
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135966"
 ---
 # <a name="rename-columns-database-engine"></a>Renomear colunas (Mecanismo de Banco de Dados)
   Você pode renomear uma coluna de tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "52770218"
   
 2.  Em **Nome da Coluna**, selecione o nome que você deseja alterar e digite um nome novo.  
   
-3.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+3.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 > [!NOTE]  
 >  Você também pode alterar o nome de uma coluna na guia **Propriedades da Coluna** . Selecione a coluna cujo nome você deseja alterar e digite um novo valor para **Nome**.  

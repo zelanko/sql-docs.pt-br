@@ -18,12 +18,12 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3c0d60d5c20651e525d573f8367f1aff4824f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601374"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130516"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame **=** ] **'***logon***'**  
+ [ @loginame **=** ] **'**_logon_**'**  
  É o nome do logon que está sendo adicionado à função de servidor fixa. *login* está **sysname**, sem padrão. *login* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um logon do Windows. Se o logon do Windows já não tiver acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o acesso será concedido automaticamente.  
   
- [ @rolename **=** ] **'***função***'**  
+ [ @rolename **=** ] **'**_função_**'**  
  É o nome da função de servidor fixa à qual o logon está sendo adicionado. *função* está **sysname**, com um padrão de NULL, e deve ser um dos seguintes valores:  
   
 -   sysadmin  

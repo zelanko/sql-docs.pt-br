@@ -10,12 +10,12 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a114e51ad6f2841cbd6368208bac6771e3b97ed0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392740"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133596"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funções definidas pelo usuário
   Você pode modificar funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A modificação das funções definidas pelo usuário, como descrito abaixo, não alterará as permissões das funções, nem afetará as funções dependentes, os procedimentos armazenados ou os gatilhos.  
@@ -70,7 +70,7 @@ ms.locfileid: "52392740"
   
 5.  Na Janela de Consulta, faça as alterações necessárias à instrução ALTER FUNCTION.  
   
-6.  No menu **Arquivo**, clique em **Save***function_name*.  
+6.  No menu **Arquivo** , clique em **Salvar**_function_name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

@@ -12,12 +12,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: deee5ba0d402dce6c2c0c5779c676ac7b42a926a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520320"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129036"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de Espelhamento de Banco de Dados (página Avisos)
   Exibe uma lista somente leitura de avisos com suporte em eventos de espelhamento de banco de dados e dos valores limite de aviso especificados, se houver.  
@@ -37,7 +37,7 @@ ms.locfileid: "52520320"
 |**Avisar se a idade da transação não enviada mais antiga exceder o limite**|Especifica o número de minutos de transações que podem ser acumuladas na fila de envio, antes da geração de um aviso na instância do servidor principal. Esse aviso ajuda a medir o potencial de perda de dados em termos de tempo, sendo particularmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|  
 |**Avisar se a sobrecarga espelhada confirmada exceder o limite**|Especifica o número de milissegundos de espera em média, por transação, tolerado antes da geração de um aviso no servidor principal. Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração. Esse valor é relevante somente no modo de alta segurança.|  
   
- **Limite em '** *<server_instance>* **'**  
+ **Limite em '** _<server_instance>_ **'**  
  Para cada um dos avisos, exibe o limite especificado pelo usuário atual, se houver, para uma das instâncias de servidor. O nome da instância completa da instância de servidor é indicado no título de coluna correspondente.  
   
  Para obter mais informações, consulte "Comentários", mais adiante neste tópico.  
@@ -48,7 +48,7 @@ ms.locfileid: "52520320"
  Para obter mais informações, consulte "Comentários", mais adiante neste tópico.  
   
 ## <a name="remarks"></a>Comentários  
- Se informações relativas a uma instância de servidor estiverem presentemente indisponíveis, as células da coluna **Limite em** correspondentes serão exibidas em plano de fundo cinza e texto marca d’água. Se o monitor não estiver conectado à instância do servidor, em todas as células a grade exibirá **Não conectado a** *<SYSTEM_NAME>* ou **Não conectado a** *<SYSTEM_NAME>***\\***<instance_name>*, dependendo de a instância ser padrão ou nomeada. Se o monitor estiver esperando por uma consulta para retornar, a grade exibirá **Aguardando dados…** em todas as células.  
+ Se informações relativas a uma instância de servidor estiverem presentemente indisponíveis, as células da coluna **Limite em** correspondentes serão exibidas em plano de fundo cinza e texto marca d’água. Se o monitor não estiver conectado à instância do servidor, em todas as células a grade exibirá **Não conectado a** _<SYSTEM_NAME>_ ou **Não conectado a** _<SYSTEM_NAME>_**\\**_<instance_name>_, dependendo de a instância ser padrão ou nomeada. Se o monitor estiver esperando por uma consulta para retornar, a grade exibirá **Aguardando dados…** em todas as células.  
   
  Quando houver informações disponíveis, a célula de cada aviso exibirá um valor limite especificado (e unidade de medida), ou **Não habilitado**.  
   

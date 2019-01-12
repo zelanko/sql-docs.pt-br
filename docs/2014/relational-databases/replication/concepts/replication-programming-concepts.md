@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -14,12 +14,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d66c7950a5d610a50ca6bce84f4b973c4ec9983
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788998"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129136"
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
   Antes de desenvolver um aplicativo que utilize funcionalidades de replicação, siga estas etapas de planejamento gerais:  
@@ -81,7 +81,7 @@ ms.locfileid: "52788998"
   
  Os tópicos a seguir oferecem informações sobre segurança:  
   
--   [Segurança e proteção &#40;Replicação&#41;](../security/security-and-protection-replication.md)  
+-   [Segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md)  
   
 -   [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

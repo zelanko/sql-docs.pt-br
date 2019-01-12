@@ -16,19 +16,19 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29c038fb212774015f90da0ed8855e8d46c18d09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0580ccfaa0505e027cedb5824aca26b6dbe51574
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783488"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124306"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
->  O recurso de assinaturas anexáveis está preterido e será removido em uma versão futura. Esse recurso não deveria ser usado em novo trabalho de desenvolvimento. Para publicações de mesclagem, que são particionadas usando filtros com parâmetros, recomendamos o uso de novos recursos de instantâneos particionados, que simplificam a inicialização de um grande número de assinaturas. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md). Para publicações que não são particionadas, é possível inicializar uma inscrição com um backup. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+>  O recurso de assinaturas anexáveis está preterido e será removido em uma versão futura. Esse recurso não deveria ser usado em novo trabalho de desenvolvimento. Para publicações de mesclagem, que são particionadas usando filtros com parâmetros, recomendamos o uso de novos recursos de instantâneos particionados, que simplificam a inicialização de um grande número de assinaturas. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Para publicações que não são particionadas, é possível inicializar uma inscrição com um backup. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  Copia um banco de dados de assinatura que tem assinatura pull, mas nenhuma assinatura push. Somente bancos de dados de arquivo único podem ser copiados. Esse procedimento armazenado é executado no assinante, no banco de dados de assinatura.  
   
@@ -44,13 +44,13 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@filename =**] **'***file_name***'**  
+ [  **@filename =**] **'**_file_name_**'**  
  É a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, no qual uma cópia do arquivo de dados (.mdf) é salva. *nome do arquivo* está **nvarchar (260)**, sem padrão.  
   
- [  **@temp_dir=**] **'***temp_dir***'**  
+ [  **@temp_dir=**] **'**_temp_dir_**'**  
  É o nome do diretório que contém os arquivos temporários. *temp_dir* está **nvarchar (260)**, com um padrão NULL. Se for NULL, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
   
- [  **@overwrite_existing_file=**] **'***overwrite_existing_file***'**  
+ [  **@overwrite_existing_file=**] **'**_overwrite_existing_file_**'**  
  É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente de mesmo nome especificado na **@filename**. *overwrite_existing_file*está **bit**, com um padrão de **0**. Se **1**, ele substituirá o arquivo especificado por **@filename**, se ele existir. Se **0**, o procedimento armazenado falhará se o arquivo existe e o arquivo não será substituído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -67,7 +67,7 @@ sp_copysubscription [ @filename = ] 'file_name'
  Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_copysubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/snapshot-options.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764198"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127586"
 ---
 # <a name="edit-an-operator"></a>Editar um operador
   Este tópico descreve como editar a disponibilidade de operadores para o recebimento de notificações e seus endereços de email, pager e net send no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52764198"
   
 4.  Clique com o botão direito do mouse no operador que você deseja editar e selecione **Propriedades**.  
   
-     Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo *operator_name***Propriedades*, consulte:  
+     Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo _operator_name_**Propriedades** , consulte:  
   
     -   [Propriedades do operador e operador New &#40;página geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

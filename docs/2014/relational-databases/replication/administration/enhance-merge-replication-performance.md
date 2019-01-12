@@ -19,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772012"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129116"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
   Após considerar as dicas para o desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](enhance-general-replication-performance.md), considere estas áreas adicionais específicas da replicação de mesclagem.  
@@ -144,6 +144,6 @@ ms.locfileid: "52772012"
   
 -   Monitore o desempenho de sincronização usando a guia **Histórico de Sincronização** no Replication Monitor.  
   
-     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para mais informações sobre como exibir estatísticas detalhadas, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

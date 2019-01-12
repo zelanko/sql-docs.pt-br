@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520798"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134916"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
   Este tópico descreve como conceder permissão a uma entidade de segurança no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -65,7 +65,7 @@ ms.locfileid: "52520798"
   
 4.  Clique com o botão direito do mouse em um procedimento armazenado e selecione **Propriedades**.  
   
-5.  No **propriedades do procedimento armazenado-* * * stored_procedure_name* caixa de diálogo, em selecionar uma página, selecione **permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
+5.  No **propriedades do procedimento armazenado -**_stored_procedure_name_ caixa de diálogo, em selecionar uma página, selecione **permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
   
 6.  Quando terminar, clique em **OK**.  
   

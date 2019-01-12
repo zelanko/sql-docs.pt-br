@@ -17,12 +17,12 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 786ede341e899acf2831c5c3e0a6204d3a80b1b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 791c5955cae2b1e7fec4575f43400ced245dcef5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791938"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124116"
 ---
 # <a name="debugging-control-flow"></a>Depurando o fluxo de controle
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include features e o tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "52791938"
 |Quando a tarefa ou o contêiner recebe o evento `OnTaskFailed`.|Chamado pelo host de tarefa quando ele falha.|  
 |Quando a tarefa ou o contêiner recebe o evento `OnProgress`.|Chamado para atualizar o progresso da execução de tarefa.|  
 |Quando a tarefa ou o contêiner recebe o evento `OnQueryCancel`.|Chamado a qualquer momento do processamento da tarefa quando você pode cancelar execução.|  
-|Quando a tarefa ou o contêiner recebe o evento `OnVariableValueChanged`.|Chamado pelo tempo de execução [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando o valor de uma variável muda. O RaiseChangeEvent da variável deve ser definido como `true` para gerar este evento.<br /><br /> **\*\* Aviso \*\*** A variável associada a esse ponto de interrupção deve ser definida no escopo de **contêiner** . Se a variável for definida ao escopo de pacote, o ponto de interrupção não será atingido.|  
+|Quando a tarefa ou o contêiner recebe o evento `OnVariableValueChanged`.|Chamado pelo tempo de execução [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando o valor de uma variável muda. O RaiseChangeEvent da variável deve ser definido como `true` para gerar este evento.<br /><br /> **&#42;&#42;Aviso &#42; &#42;**  a variável associada a este ponto de interrupção deve ser definida na **contêiner** escopo. Se a variável for definida ao escopo de pacote, o ponto de interrupção não será atingido.|  
 |Quando a tarefa ou o contêiner recebe o evento `OnCustomEvent`.|Chamado por tarefas para gerar eventos personalizados definidos por tarefa.|  
   
  Além das condições dos pontos de interrupção disponíveis a todas as tarefas e contêineres, algumas tarefas e contêineres incluem condições especiais de interrupção para definir os pontos de interrupção. Por exemplo, você pode habilitar uma condição de interrupção no contêiner Loop For que defina um ponto de interrupção que suspenda a execução no início de cada iteração do loop.  

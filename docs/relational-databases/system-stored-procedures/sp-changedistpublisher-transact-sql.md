@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819171"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128226"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publisher***'**  
+ [  **@publisher=** ] **'**_publisher_**'**  
  É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@property=** ] **'***propriedade***'**  
+ [  **@property=** ] **'**_propriedade_**'**  
  É uma propriedade a ser alterada para o publicador determinado. *propriedade* está **sysname** e pode ser um destes valores.  
   
- [ **@value=** ] **'***value***'**  
+ [ **@value=** ] **'**_value_**'**  
  É o valor da propriedade determinada. *valor* está **nvarchar (255)**, com um padrão NULL.  
   
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  É necessário para a instância gerenciada do banco de dados SQL, deve coincidir com a chave de acesso para o volume de armazenamento do banco de dados SQL. 
 
 

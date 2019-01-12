@@ -1,5 +1,5 @@
 ---
-title: Depurar um manipulador de lógica de negócios (Programação de replicação) | Microsoft Docs
+title: Depurar um manipulador de lógica de negócios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761508"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128756"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar um manipulador de lógica de negócios (Programação de replicação)
   Use um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "52761508"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Para depurar um manipulador de lógica de negócios em um computador local  
   
-1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura para a publicação. Para obter mais informações, consulte [Configurar publicação e distribuição](configure-publishing-and-distribution.md) e [Criar, modificar e excluir publicações e artigos &#40;Replicação&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura para a publicação. Para obter mais informações, consulte [Configure Publishing and Distribution](configure-publishing-and-distribution.md) e [criar uma publicação](publish/create-a-publication.md).  
   
 2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md).  
   

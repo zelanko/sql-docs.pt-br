@@ -10,12 +10,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36be65b9e359d4fe115e2b410db181f049c1eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766818"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131446"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Alterar o tempo de recuperação de destino de um banco de dados (SQL Server)
   Este tópico descreve como definir o tempo de recuperação de destino de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por padrão, o tempo de recuperação de destino é 0, e o banco de dados usa *pontos de verificação automáticos* (que são controlados pela opção de servidor **intervalo de recuperação** ). Definir o tempo de recuperação de destino como maior que 0 faz com que o banco de dados use os *pontos de verificação indiretos* e estabelece um limite superior no tempo de recuperação para este banco de dados.  
@@ -57,7 +57,7 @@ ms.locfileid: "52766818"
   
 2.  Use a instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options), da seguinte maneira:  
   
-     TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      Quando maior que 0 (o padrão), especifica o limite superior do tempo de recuperação para o banco de dados especificado no caso de uma falha.  

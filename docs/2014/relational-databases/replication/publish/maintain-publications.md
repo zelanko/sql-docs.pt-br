@@ -14,18 +14,18 @@ ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4d2ffcc833c47cf94fd67d3b9cd92ecf773f87a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816508"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123746"
 ---
 # <a name="maintain-publications"></a>Manter publicações
   Depois de criar uma publicação, poderá ser necessário adicionar ou descartar artigos, ou alterar as propriedades da publicação e do artigo. A maioria das alterações é permitida após a criação de uma publicação, mas em alguns casos, é necessário gerar um novo instantâneo para a publicação e/ou reinicializar as assinaturas para uma publicação. Para obter mais informações, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md) e [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ## <a name="see-also"></a>Consulte também  
- [Administração &#40;Replicação&#41;](../administration/administration-replication.md)   
+ [Perguntas frequentes sobre administração de replicação](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)   
  [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  

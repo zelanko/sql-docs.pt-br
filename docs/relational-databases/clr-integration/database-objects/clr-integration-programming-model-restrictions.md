@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538535"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136016"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrições do modelo de programação da Integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52538535"
   
 -   O assembly é um daqueles para os quais há suporte. Para obter mais informações, consulte [suporte para bibliotecas do .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Você está usando **CREATE ASSEMBLY FROM * * *\<local >,* e todos os assemblies referenciados e suas dependências estão disponíveis no  *\<local >*.  
+-   Você está usando **criar ASSEMBLY da**_\<local >,_ e todos os assemblies referenciados e suas dependências estão disponíveis no *\<local >*.  
   
--   Você está usando **CREATE ASSEMBLY FROM * * *\<bytes... >,* e todas as referências são especificadas por meio do espaço de bytes separados.  
+-   Você está usando **criar ASSEMBLY da**_\<bytes... >,_ e todas as referências são especificadas por meio do espaço de bytes separados.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Todos os **EXTERNAL_ACCESS** assemblies devem atender aos seguintes critérios:  

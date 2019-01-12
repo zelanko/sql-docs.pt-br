@@ -17,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39e9db45723d32fd78eef35c5600d05b54999e61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749210"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100871"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Atualizar um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
   Este tópico descreve como usar operações de desanexação e anexação para atualizar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Depois de ser anexado ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados estará disponível imediatamente e, em seguida, será atualizado.  
@@ -88,7 +88,7 @@ ms.locfileid: "52749210"
     > [!IMPORTANT]  
     >  Para um banco de dados de produção, coloque o banco de dados e o log de transações em discos separados.  
   
-     Para copiar arquivos pela rede para um disco ou um computador remoto, utilize o nome UNC (Convenção Universal de Nomenclatura) do local remoto. Um nome UNC assume o formato **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. Assim como ocorre com a gravação de arquivos no disco rígido local, deverão ser concedidas, à conta do usuário utilizada pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as permissões apropriadas exigidas para ler ou gravar em um arquivo no disco remoto.  
+     Para copiar arquivos pela rede para um disco ou um computador remoto, utilize o nome UNC (Convenção Universal de Nomenclatura) do local remoto. Um nome UNC possui o formato **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. Assim como ocorre com a gravação de arquivos no disco rígido local, deverão ser concedidas, à conta do usuário utilizada pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as permissões apropriadas exigidas para ler ou gravar em um arquivo no disco remoto.  
   
 3.  Anexe o banco de dados movido e, opcionalmente, seu log executando a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   

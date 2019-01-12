@@ -16,12 +16,12 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 947e02d8e4bb7236065293b718b3750d0f248fbb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21da0ca61d2d9075fe7c962156443fd85f3ebefd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811018"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135117"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_login**=] **'***job_login***'**  
+ [ **@job_login**=] **'**_job_login_**'**  
  É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL.  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
   
  [  **@frompublisher=** ] *frompublisher*  

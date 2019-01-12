@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532128"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133286"
 ---
 # <a name="create-a-server-role"></a>Criar uma função de servidor
   Este tópico descreve como criar uma nova função de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "52532128"
   
 3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...**.  
   
-4.  No **nova função de servidor-* * * server_role_name* caixa de diálogo a **gerais** , insira um nome para a nova função de servidor no **nome da função de servidor** caixa.  
+4.  No **nova função de servidor -**_server_role_name_ caixa de diálogo de **geral** página, insira um nome para a nova função de servidor no **nome da função de servidor**caixa.  
   
 5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor**.  
   

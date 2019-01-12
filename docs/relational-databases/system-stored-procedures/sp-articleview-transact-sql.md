@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cda4e884608c10e75ab4c33a89fcf23a1919fc0d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202036"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132856"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
+ [  **@article=**] **'**_artigo_**'**  
  É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [  **@view_name=**] **'***view_name***'**  
+ [  **@view_name=**] **'**_view_name_**'**  
  É o nome da exibição que define o artigo publicado. *view_name* está **nvarchar(386)**, com um padrão NULL.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave WHERE. *filter_clause* está **ntext**, com um padrão NULL.  
   
  [  **@change_active =** ] *change_active*  
@@ -69,14 +69,14 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
- [  **@force_reinit_subscription =]** *force_reinit_subscription*  
+ [  **@force_reinit_subscription =]** _force_reinit_subscription_  
  Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas sejam reiniciadas, ocorrerá um erro e nenhuma alteração é feita.  
   
  **1** Especifica que as alterações no artigo faz com que uma assinatura existente seja reiniciada e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [ **@publisher**=] **'***publisher***'**  
+ [ **@publisher**=] **'**_publisher_**'**  
  Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  

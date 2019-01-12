@@ -16,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797658"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129616"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
   Você pode modificar parte da chave estrangeira de uma relação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar a chave estrangeira de uma tabela altera as colunas que estão relacionadas às colunas na tabela de chaves primárias.  
@@ -139,7 +139,7 @@ ms.locfileid: "52797658"
   
     -   **Definir Padrão** Define o valor como o valor padrão que é definido para a coluna se todas as colunas de chave estrangeira para a tabela têm padrões definidos.  
   
-4.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para modificar uma chave estrangeira**  

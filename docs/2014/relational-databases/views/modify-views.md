@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135076"
 ---
 # <a name="modify-views"></a>Modificar exibições
   Depois de definir uma exibição, é possível alterar sua definição [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem descartar e recriar a exibição usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "52513220"
   
     3.  Clique com o botão direito do mouse na barra de título da tabela que deseja remover e selecione **Remove**.  
   
-4.  No menu **Arquivo**, clique em **Salvar***nome da exibição*.  
+4.  No menu **Arquivo** , clique em **Salvar**_view name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

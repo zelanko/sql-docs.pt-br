@@ -1,11 +1,10 @@
 ---
-title: 'Lição 1: Criando contas do Windows para replicação | Microsoft Docs'
+title: 'Lição 1: Criando Windows contas para replicação | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -14,17 +13,17 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0269a82d4ef11e53c41d7b288797064e0f3abd16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095566"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127446"
 ---
-# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lição 1: Criando contas do Windows para replicação
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lição 1: Criando Windows contas para replicação
   Nesta lição, você criará contas de Windows para executar os agentes de replicação. Você criará uma conta de Windows separada no servidor local para os seguintes agentes:  
   
-|Agente|Local|Nome da conta|  
+|Agente|Local padrão|Nome da conta|  
 |-----------|--------------|------------------|  
 |Snapshot Agent|Publicador|\<*machine_name*>\repl_snapshot|  
 |Agente de Leitor de Log|Publicador|\<*machine_name*>\repl_logreader|  
@@ -63,7 +62,7 @@ ms.locfileid: "48095566"
 6.  Clique em **Fechar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou contas de Windows com sucesso para os agentes de replicação. A seguir, você configurará a pasta de instantâneo. Consulte [Lição 2: Preparando a pasta do instantâneo](lesson-2-preparing-the-snapshot-folder.md).  
+ Você criou contas de Windows com sucesso para os agentes de replicação. A seguir, você configurará a pasta de instantâneo. Consulte [lição 2: Preparando a pasta de instantâneo](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral dos agentes de replicação.](agents/replication-agents-overview.md)  

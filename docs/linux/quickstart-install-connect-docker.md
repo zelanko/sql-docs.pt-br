@@ -5,7 +5,7 @@ description: Neste início rápido mostra como usar o Docker para executar o SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: a8ed1a9be24ab071bc3e202902b2a56f3ab3c046
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266007"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206312"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guia de início rápido: Executar imagens de contêiner do SQL Server com o Docker
 
@@ -328,7 +328,7 @@ Agora, execute uma consulta para retornar da tabela `Inventory`.
 
 Você também pode se conectar à instância do SQL Server em seu computador do Docker usando qualquer ferramenta externa do macOS, do Windows ou do Linux que seja compatível com conexões SQL.
 
-As etapas a seguir usam a **sqlcmd** fora do contêiner para conectar-se ao SQL Server em execução no contêiner. Essas etapas consideram que as ferramentas de linha de comando do SQL Server já estejam instaladas fora do contêiner. Os mesmos princípios são aplicados ao usar outras ferramentas, mas o processo de conexão é exclusivo de cada ferramenta.
+As etapas a seguir usam a **sqlcmd** fora do contêiner para conectar-se ao SQL Server em execução no contêiner. Essas etapas consideram que as ferramentas de linha de comando do SQL Server já estejam instaladas fora do contêiner. Os mesmos princípios se aplicam ao usar outras ferramentas, mas o processo de conexão é exclusivo para cada ferramenta.
 
 1. Localize o endereço IP do computador que hospeda o contêiner. No Linux, use **ifconfig** ou **ip addr**. No Windows, use **ipconfig**.
 

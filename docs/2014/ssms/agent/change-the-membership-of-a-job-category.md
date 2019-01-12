@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f309bf2f339347c6d29000b45bdaab602b3bd752
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760728"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131076"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   Este tópico descreve como alterar a associação da categoria de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -56,13 +56,13 @@ ms.locfileid: "52760728"
   
 3.  Clique com o botão direito do mouse na pasta **Trabalhos** e selecione **Gerenciar Categorias de Trabalho**.  
   
-4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*, selecione a categoria de trabalho que você deseja editar e, em seguida, clique em **Exibir Trabalhos**.  
+4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ , selecione a categoria de trabalho que você deseja editar e clique em **Exibir Trabalhos**.  
   
 5.  Marque a caixa de seleção **Mostrar todos os trabalhos** .  
   
 6.  Para adicionar um trabalho à categoria, na grade principal, marque a caixa de seleção na coluna **Selecionar** correspondente ao trabalho. Para remover um trabalho da categoria, desmarque a caixa. Quando terminar, clique em **OK**.  
   
-7.  Feche a caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*.  
+7.  Feche a caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ .  
   
 ##  <a name="TSQL"></a> Usando Transact-SQL  
   

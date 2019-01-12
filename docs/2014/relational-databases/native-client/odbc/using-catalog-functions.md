@@ -17,12 +17,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997855d160108abe530affdd2b28e464076fbbb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077006"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100631"
 ---
 # <a name="using-catalog-functions"></a>Usando funções de catálogo
   Todos os bancos de dados têm uma estrutura que contém os dados armazenados no banco de dados. Uma definição dessa estrutura, juntamente com outras informações, como permissões, é armazenada em um catálogo (implementado como um conjunto de tabelas do sistema), também conhecido como um dicionário de dados.  
@@ -43,7 +43,7 @@ ms.locfileid: "48077006"
   
      Retorna uma lista dos catálogos contidos em um servidor vinculado.  
   
- Depois de ter um nome de servidor vinculado e um nome de catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte à obtenção de informações do catálogo usando um nome de duas partes de *linked_server_name ***.*** catálogo* para *CatalogName* funções de catálogo ODBC a seguir:  
+ Depois de ter um nome de servidor vinculado e um nome de catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_**.** _catálogo_ para *CatalogName* funções de catálogo ODBC a seguir:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077006"
   
 -   **SQLTables**  
   
- As duas partes *linked_server_name ***.*** catálogo* também há suporte para *FKCatalogName* e *PKCatalogName* na [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ As duas partes _linked_server_name_**.** _catálogo_ também há suporte para *FKCatalogName* e *PKCatalogName* na [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  O uso de SQLLinkedServers e SQLLinkedCatalogs exige os seguintes arquivos:  
   

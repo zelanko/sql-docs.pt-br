@@ -13,12 +13,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2982dc2825b621248da9f9c29e4aad8ddfc51bd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764388"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129016"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server
   Este tópico descreve como configurar o WMI para mostrar o status de servidor nas ferramentas do SQL Server no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Na conexão com servidores, os componentes Servidores Registrados e Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], assim como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, usam o Windows Management Instrumentation (WMI) para obter o status dos serviços do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent (MSSQLSERVER). Para exibir o status do serviço, o usuário deve ter direitos para acessar o objeto WMI remotamente. O servidor deve ter o WMI instalado para que essa permissão possa ser configurada.  
@@ -37,7 +37,7 @@ ms.locfileid: "52764388"
   
 6.  Adicione um grupo ou usuário à caixa **Nomes de grupo ou de usuário** e selecione-o.  
   
-7.  No **permissões para * * *\<grupo ou usuário >* caixa, selecione o **permitir** coluna, para o **habilitação remota** permissão, para que os usuários que desejam remotamente detecte o status do serviço.  
+7.  No **permissões para**_\<grupo ou usuário >_ caixa, selecione o **permitir** coluna, para o **habilitação remota** permissão , para que os usuários que desejam remotamente detectar o status do serviço.  
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciar, parar ou pausar o serviço do SQL Server Agent](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

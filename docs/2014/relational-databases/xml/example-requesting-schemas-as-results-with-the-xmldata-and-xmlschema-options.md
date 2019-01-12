@@ -13,12 +13,12 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d0337ea25181ab45426353e69a4f37124aa33bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352050"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126536"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
   A consulta a seguir retorna o esquema XML-DATA que descreve a estrutura do documento.  
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema*n***, em que ***n*** é um inteiro.  
+>  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema_n_** onde **_n_** é um inteiro.  
   
  Com a especificação da opção `XMLSCHEMA` , é possível solicitar o esquema XSD para o resultado.  
   

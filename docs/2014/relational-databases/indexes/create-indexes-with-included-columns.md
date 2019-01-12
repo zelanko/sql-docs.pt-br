@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540841"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124430"
 ---
 # <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
   Este tópico descreve como adicionar colunas incluído (ou não chave) para estender a funcionalidade de índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao incluir colunas não chave, você pode criar você índices não clusterizados que abrangem mais consultas. Isto porque as colunas não chave têm os seguintes benefícios:  
@@ -102,13 +102,13 @@ ms.locfileid: "52540841"
   
 6.  Na guia **Colunas de chave de índice**, clique em **Adicionar...**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
+7.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
   
 8.  Clique em **OK**.  
   
 9. Na guia **Colunas incluídas**, clique em **Adicionar...**.  
   
-10. Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
+10. Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
   
 11. Clique em **OK**.  
   

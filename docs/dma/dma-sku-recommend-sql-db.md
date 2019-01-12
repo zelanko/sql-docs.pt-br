@@ -2,7 +2,7 @@
 title: Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local (Assistente de migração de dados) | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para identificar o direito de SKU de banco de dados SQL do Azure para seu banco de dados local
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544114"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226493"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local
 
@@ -30,9 +30,6 @@ Este artigo se concentra principalmente no recurso de recomendações de SKU de 
 
 > [!NOTE] 
 > Essa funcionalidade está disponível atualmente apenas por meio de Interface de linha de comando (CLI). Suporte para esse recurso por meio da interface do usuário DMA será adicionado em uma versão futura.
-
-> [!IMPORTANT]
-> Recomendações de SKU para o banco de dados SQL estão disponíveis atualmente para migrações do SQL Server 2016 ou posterior.
 
 As instruções a seguir o ajudarão a determinar as recomendações de SKU de banco de dados SQL do Azure e provisionar bancos de dados associados para o Azure, usando o Assistente de migração de dados.
 
@@ -66,7 +63,7 @@ Você não precisa executar essa tarefa para cada banco de dados individualmente
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     

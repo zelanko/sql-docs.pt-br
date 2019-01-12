@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acb16727506952146ace1383c8d36808d7c22a73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791498"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130736"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
+ [  **@publication=** ] **'**_publicação_**'**  
  É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e obedecer às regras para identificadores.  
   
- [  **@subscriber=**] **'***assinante***'**  
+ [  **@subscriber=**] **'**_assinante_**'**  
  É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
+ [  **@subscriber_db=** ] **'**_subscriber_db_**'**  
  É o nome do banco de dados de assinatura. *subscription_database*está **sysname**, com um padrão NULL.  
   
- [  **@subscription_type=** ] **'***subscription_type***'**  
+ [  **@subscription_type=** ] **'**_subscription_type_**'**  
  É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
   
 |Valor|Descrição|  

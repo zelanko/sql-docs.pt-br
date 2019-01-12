@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792272"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135826"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizar e modificar as propriedades da publicação
   Este tópico descreve como exibir e modificar propriedades de publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -192,8 +192,8 @@ ms.locfileid: "52792272"
  [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md)   
  [Fazer alterações de esquema em bancos de dados de publicação](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Adicionar e remover artigos em uma publicação &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
- [Exibir informações e executar tarefas para uma publicação &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Adicionar e remover artigos de uma publicação](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Exibir e modificar as propriedades do artigo](view-and-modify-article-properties.md)  
   
   

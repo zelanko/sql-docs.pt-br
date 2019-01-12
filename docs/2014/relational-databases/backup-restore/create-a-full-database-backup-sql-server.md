@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e1daefbc5625aaf034a9be9218a59daf5286cc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f432950cadf2b30b84dc00fd900737bfe21f81b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094016"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124886"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
   Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
   
 > [!NOTE]  
->  Para obter informações sobre o backup do SQL Server no serviço de armazenamento do Blob do Windows Azure, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Para obter informações sobre o backup do SQL Server no serviço de armazenamento do Blob do Windows Azure, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **Neste tópico**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48094016"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "48094016"
   
 -   À medida que um banco de dados aumenta, os backups completos de banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Portanto, para um banco de dados grande, convém complementar um backup de banco de dados completo com uma série de *backups de bancos de dados diferenciais*. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
--   Você pode estimar o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
+-   Você pode estimar o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  
   
 -   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito se acumularão muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 ###  <a name="Security"></a> Segurança  
  TRUSTWORTHY é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir TRUSTWORTHY como ON, veja [Opções do ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
- Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] as `PASSWORD` e `MEDIAPASSWORD` opções foram descontinuadas para a criação de backups. Você ainda poderá restaurar os backups criados com senhas.  
+ A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], as opções `PASSWORD` e `MEDIAPASSWORD` foram descontinuadas para a criação de backups. Você ainda poderá restaurar os backups criados com senhas.  
   
 ####  <a name="Permissions"></a> Permissões  
  As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
@@ -170,7 +170,7 @@ ms.locfileid: "48094016"
 > [!NOTE]  
 >  Alternativamente, é possível usar o Assistente de Plano de Manutenção para criar backups de bancos de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-create-a-full-database-backup"></a>Para criar um backup de banco de dados completo  
   
@@ -188,10 +188,10 @@ ms.locfileid: "48094016"
   
      [ WITH *com_opções* [ **,**...*o* ] ] ;  
   
-    |Opção|Description|  
+    |Opção|Descrição|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual fazer backup.|  
-    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, *o*. Para obter informações sobre os fundamentos de opções, consulte a etapa 2.|  
   
 2.  Opcionalmente, especifique uma ou mais opções WITH. Algumas opções WITH básicas são descritas aqui. Para obter informações sobre todas as opções WITH, consulte [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
@@ -204,10 +204,10 @@ ms.locfileid: "48094016"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          No SQL Server 2014 ou em versões posteriores somente, especifique o algoritmo de criptografia a ser usado, e o certificado ou chave assimétrica usada para proteger a criptografia.  
   
-         Descrição **=** { **'*`text`*'** | **@ * * * text_variable* }  
+         Descrição **=** { **'*`text`*'** | **@**_text_ variável_ }  
          Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
          Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
   
     -   Opções WITH do conjunto de backup básico:  
@@ -216,7 +216,7 @@ ms.locfileid: "48094016"
   
          Alternativamente, para formatar a mídia de backup, use a opção FORMAT:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text_variable_ } ]  
          Use a cláusula FORMAT quando estiver usando a mídia pela primeira vez ou quando quiser sobrescrever todos os dados existentes Opcionalmente, atribua à nova mídia um nome e uma descrição.  
   
         > [!IMPORTANT]  
@@ -238,7 +238,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>B. Fazendo backup para um dispositivo de fita  
+#### <a name="b-backing-up-to-a-tape-device"></a>b. Fazendo backup para um dispositivo de fita  
  O exemplo a seguir faz backup do banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]em fita, anexando o backup aos backups anteriores.  
   
 ```tsql  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-1.  Use o `Backup-SqlDatabase` cmdlet. Para indicar explicitamente que este é um backup de banco de dados completo, especifique o **- BackupAction** parâmetro com valor padrão, `Database`. Esse parâmetro é opcional para backups completos de banco de dados.  
+1.  Use o cmdlet `Backup-SqlDatabase`. Para indicar explicitamente que este é um backup de banco de dados completo, especifique o **- BackupAction** parâmetro com valor padrão, `Database`. Esse parâmetro é opcional para backups completos de banco de dados.  
   
      O exemplo a seguir cria um backup de banco de dados completo do banco de dados `MyDB` para o local de backup padrão da instância de servidor `Computer\Instance`. Como opção, esse exemplo especifica `-BackupAction Database`.  
   

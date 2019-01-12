@@ -14,12 +14,12 @@ ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4538774295e7456d46922a71db91527604d71fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761648"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135836"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opções de Validação de Assinatura (assinaturas transacionais)
   Use a caixa de diálogo **Opções de Validação de Assinatura** para especificar se a validação deve usar somente uma contagem de linha ou uma contagem de linhas e uma soma de verificação binária.  
@@ -36,6 +36,6 @@ ms.locfileid: "52761648"
   
 ## <a name="see-also"></a>Consulte também  
  [Validar dados no assinante](validate-data-at-the-subscriber.md)   
- [Validar os dados replicados](validate-replicated-data.md)  
+ [Validar os dados replicados](validate-data-at-the-subscriber.md)  
   
   

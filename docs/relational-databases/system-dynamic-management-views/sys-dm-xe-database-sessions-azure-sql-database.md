@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 732d0bc450c23413fb31c7336e93dbf3dc785bec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662775"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143266"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51662775"
 |-|  
 |**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
 |event_name|**nvarchar(60)**|O nome do evento ao qual uma ação está associada. Não permite valor nulo.|  
@@ -39,7 +39,7 @@ ms.locfileid: "51662775"
  Requer a permissão VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relações  
-A partir de 2015-07-13, 'sys.dm_xe_objects' é um desses DMVs de XEvents que não contêm Database"no nome. Não é um erro de digitação ou erro na coluna do lado direito da tabela a seguir. O nome é o mesmo no Microsoft SQL Server e banco de dados SQL. GeneMi.  
+A partir de 2015-07-13, 'sys.dm_xe_objects' é um desses DMVs de XEvents que não contêm Database"no nome. Não é um erro de digitação ou erro na coluna do lado direito da tabela a seguir. O nome é o mesmo no Microsoft SQL Server e banco de dados SQL.  
   
 |De|Para|Relação|  
 |--------|------|----------------|  

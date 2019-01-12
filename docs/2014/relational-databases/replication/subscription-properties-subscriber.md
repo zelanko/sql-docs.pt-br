@@ -1,5 +1,5 @@
 ---
-title: Propriedades da Assinatura – Assinante | Microsoft Docs
+title: Propriedades de assinatura de replicação do SQL Server - assinante | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,68 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.subscriber.f1
+- sql12.rep.newsubwizard.subproperties.publisher.f1
 helpviewer_keywords:
 - Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9fa0e53e7bccdadf6d1aefdde9b716ad0a75c22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761664"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134976"
 ---
-# <a name="subscription-properties---subscriber"></a>Propriedades da Assinatura - Assinante
+# <a name="sql-server-replication-subscription-properties"></a>Propriedades de assinatura de replicação do SQL Server 
+Esta seção fornece informações sobre o **propriedades da assinatura** caixa de diálogo. 
+
+## <a name="publisher-properties"></a>Propriedades do publicador 
+  A caixa de diálogo **Propriedades da Assinatura** no Publicador permite exibir e definir propriedades para assinaturas push. Você também pode exibir algumas propriedades de assinaturas pull, mas a caixa de diálogo **Propriedades da Assinatura** no Assinante exibe propriedades adicionais e permite que elas sejam modificadas.  
+  
+ Cada propriedade na caixa de diálogo **Propriedades da Assinatura** inclui uma descrição. Clique em uma propriedade para ver sua descrição exibida na parte inferior da caixa de diálogo. Esse tópico fornece informações adicionais sobre várias propriedades, muitas das quais são exibidas no Publicador somente para assinaturas push. As propriedades são agrupadas nas categorias seguintes:  
+  
+-   Propriedades que se aplicam a todas as assinaturas.    
+-   Propriedades que se aplicam a assinaturas transacionais.    
+-   Propriedades que se aplicam a assinaturas de mesclagem.  
+  
+ Se uma opção for exibida como somente leitura, só poderá ser definida quando a assinatura for criada. Se você quiser definir opções que não estão disponíveis no Assistente para Nova Assinatura, crie a assinatura com procedimentos armazenados. Para obter mais informações, consulte [Create a Pull Subscription](create-a-pull-subscription.md) e [Create a Push Subscription](create-a-push-subscription.md).  
+
+  
+### <a name="options-for-all-subscriptions"></a>Opções para todas as assinaturas  
+ **Segurança**  
+ Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades (**...**) para alterar a conta na qual o Distribution Agent ou Merge Agent são executados no Distribuidor. Para alterar a conta na qual o Distribution Agent ou Merge Agent fazem conexões com o Assinante, clique em **Conexão do Assinante**e, depois, clique no botão de propriedades (**...**).  
+  
+ Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
+  
+### <a name="publisher-options-for-transactional-subscriptions"></a>Opções de publicador para assinaturas transacionais  
+ **Evitar loop de transação**  
+ Determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante: Essa opção é usada para replicação transacional bidirecional. Para obter mais informações, consulte [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
+  
+ **Assinatura atualizável**  
+ Determina se as alterações do Assinante serão replicadas de volta no Publicador. As alterações podem ser replicadas usando atualização enfileirada ou imediata. A opção **Método de atualização do assinante** determina qual método usar. Para obter mais informações, consulte [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
+  
+### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
+ **Definição de partição (HOST_NAME)**  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas sistema funções (ou ambas, se ambas as funções de referências de filtro) durante a sincronização para determinar a data em que um assinante deve receber: **Suser_sname ()** ou **HOST_NAME ()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+  
+ **Tipo de assinatura** e **Prioridade**  
+ Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
+  
+ Se você selecionou um tipo de assinatura de servidor no Assistente para Nova Assinatura, o Assinante receberá uma prioridade que será usada durante resolução de conflito.  
+  
+ **Resolver conflitos interativamente**  
+ Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, consulte [Resolução de conflito interativo](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+
+
+## <a name="subscriber-properties"></a>Propriedades do Assinante
   A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e definir propriedades para assinaturas pull.  
   
  Cada propriedade na caixa de diálogo **Propriedades da Assinatura** inclui uma descrição. Clique em uma propriedade para ver sua descrição exibida na parte inferior da caixa de diálogo. Este tópico fornece informações adicionais sobre várias propriedades. As propriedades são agrupadas nas categorias seguintes:  
   
--   Propriedades que se aplicam a todas as assinaturas.  
-  
--   Propriedades que se aplicam a assinaturas transacionais.  
-  
+-   Propriedades que se aplicam a todas as assinaturas.    
+-   Propriedades que se aplicam a assinaturas transacionais.   
 -   Propriedades que se aplicam a assinaturas de mesclagem.  
   
  Se uma opção for exibida como somente leitura, só poderá ser definida quando a assinatura for criada. Se você quiser definir opções que não estão disponíveis no Assistente para Nova Assinatura, crie a assinatura com procedimentos armazenados. Para obter mais informações, consulte [Create a Pull Subscription](create-a-pull-subscription.md) e [Create a Push Subscription](create-a-push-subscription.md).  
@@ -37,19 +77,16 @@ ms.locfileid: "52761664"
 > [!NOTE]  
 >  Se um trabalho do Distribution Agent ou Merge Agent ainda não foi criado para a Assinatura, muitas propriedades de assinatura são exibidas agora. Para criar um trabalho de agente para uma assinatura pull, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) (para uma assinatura de publicação transacional ou de instantâneo) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (para uma assinatura de publicação de mesclagem).  
   
-## <a name="options-for-all-subscriptions"></a>Opções para todas as assinaturas  
+### <a name="options-for-all-subscriptions"></a>Opções para todas as assinaturas  
  **Inicializar os dados publicados a partir de um instantâneo**  
  Determina se as assinaturas são iniciadas com um instantâneo (o padrão) ou por outro método. Para obter mais informações sobre como inicializar assinaturas, consulte [Inicializar uma assinatura](initialize-a-subscription.md).  
   
  **Local do Instantâneo**  
  Determina o local do qual são acessados arquivos de instantâneo durante inicialização ou reinicialização. O local pode ser um dos seguintes valores:  
   
--   **Local padrão**: o local padrão, definido ao configurar um Distribuidor. Para obter mais informações, consulte [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41](specify-the-default-snapshot-location-sql-server-management-studio.md) [Especificar o local de instantâneo padrão (SQL Server Management Studio)].  
-  
--   **Pasta alternativa**: um local alternativo que pode ser especificado na caixa de diálogo **Propriedades de Publicação** . Para obter mais informações, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).  
-  
+-   **Local padrão**: o local padrão, definido ao configurar um Distribuidor. Para obter mais informações, consulte [especificar o local do instantâneo padrão](snapshot-options.md#snapshot-folder-locations).    
+-   **Pasta alternativa**: um local alternativo que pode ser especificado na caixa de diálogo **Propriedades de Publicação** . Para obter mais informações, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
 -   **Pasta de instantâneo dinâmico**: um local de instantâneo para publicações de mesclagem que usam filtros de linha com parâmetros. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
-  
 -   **Pasta de FTP**: uma pasta acessível a um servidor FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos pelo FTP](transfer-snapshots-through-ftp.md).  
   
  **Pasta do instantâneo**  
@@ -61,19 +98,17 @@ ms.locfileid: "52761664"
  **Segurança**  
  Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades (**...**) para alterar a conta na qual o Agente de Distribuição ou Agente de Mesclagem são executados no Assinante. As opções de segurança relacionadas a conexões dependem do tipo de assinatura:  
   
--   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor**e, depois, clique no botão de propriedades (**...**).  
-  
+-   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor**e, depois, clique no botão de propriedades (**...**).    
 -   Para assinaturas de atualização imediata de uma publicação transactional, além da conexão do Distribuidor descrita anteriormente, você pode alterar o método usado para propagar alterações do Assinante para o Publicador: clique em **Conexão do Publicador**e, depois, clique no botão de propriedades (**...**).  
-  
 -   Para assinaturas de publicações de mesclagem, clique em **Conexão do Publicador**e, depois, clique no botão de propriedades (**...**).  
   
  Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-## <a name="options-for-transactional-subscriptions"></a>Opções para assinaturas transacionais  
+### <a name="options-for-transactional-subscriptions"></a>Opções para assinaturas transacionais  
  **Assinatura atualizável**  
  Determina se as alterações do Assinante serão replicadas de volta no Publicador. As alterações podem ser replicadas usando atualização enfileirada ou imediata. A opção **Método de atualização do assinante** determina qual método usar. Para obter mais informações, consulte [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
-## <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
+### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
  Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas sistema funções (ou ambas, se ambas as funções de referências de filtro) durante a sincronização para determinar a data em que um assinante deve receber: **Suser_sname ()** ou **HOST_NAME ()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
@@ -90,10 +125,8 @@ ms.locfileid: "52761664"
   
  Se você selecionar **Verdadeiro** para **Usar Sincronização da Web**:  
   
--   Insira o endereço completo do servidor IIS em **Endereço do servidor Web**.  
-  
--   Clique na linha **Conexão do Servidor Web** e, depois, clique no botão de propriedades (**...**) para definir ou alterar a conta na qual o Assinante se conecta ao servidor IIS.  
-  
+-   Insira o endereço completo do servidor IIS em **Endereço do servidor Web**.   
+-   Clique na linha **Conexão do Servidor Web** e, depois, clique no botão de propriedades (**...**) para definir ou alterar a conta na qual o Assinante se conecta ao servidor IIS.   
 -   Altere o **Tempo limite do servidor Web** se necessário. O tempo limite é o período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.  
   
  Para obter mais informações sobre a configuração, consulte [Configure Web Synchronization](configure-web-synchronization.md).  

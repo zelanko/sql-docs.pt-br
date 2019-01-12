@@ -15,12 +15,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea98f596638d19994d76606ae136204ae5f8d419
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823920"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132436"
 ---
 # <a name="duplicate-tables"></a>Duplicar tabelas
   Você pode duplicar uma tabela existente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] criando uma nova tabela e copiando as informações de coluna de uma tabela existente.  
@@ -63,7 +63,7 @@ ms.locfileid: "52823920"
   
 6.  No menu **Editar** , clique em **Colar**.  
   
-7.  Usando o menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+7.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 8.  Na caixa de diálogo **Escolher Nome** , digite um nome para a nova tabela e clique em **OK**.  
   

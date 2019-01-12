@@ -1,5 +1,5 @@
 ---
-title: Configurações do Publicador | Microsoft Docs
+title: Caixa de diálogo de configurações do publicador de replicação do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d07ea418d89b36a6d759eb1fa6b71e8b909ee5cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1f1100f1c19a658fa6fe4b90816dca948e640a76
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777768"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135636"
 ---
-# <a name="publisher-settings"></a>Configurações do Publicador
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>Caixa de diálogo de configurações do publicador de replicação do SQL Server
   A caixa de diálogo **Configurações do Publicador** permite alterar configurações para Publicadores adicionados ao painel esquerdo no Replication Monitor.  
   
 ## <a name="options"></a>Opções  

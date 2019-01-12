@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721264"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123987"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tblname=** ] **'***table_or_indexed_view_name***'**  
+ [  **@tblname=** ] **'**_table_or_indexed_view_name_**'**  
  É o nome da tabela ou da exibição indexada na qual exibir a opção AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* está **nvarchar(776)**, sem padrão.  
   
- [  **@flagc=** ] **'***stats_value***'**  
+ [  **@flagc=** ] **'**_stats_value_**'**  
  Atualiza a opção AUTO_UPDATE_STATISTICS para um destes valores:  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Quando *stats_flag* não é especificado, exiba a configuração AUTO_UPDATE_STATISTICS atual. *stats_value* está **varchar(10)**, com um padrão NULL.  
   
- [  **@indname=** ] **'***statistics_name***'**  
+ [  **@indname=** ] **'**_statistics_name_**'**  
  É o nome das estatísticas de exibição ou atualização da opção AUTO_UPDATE_STATISTICS. Para exibir as estatísticas de um índice, é possível usar o nome do índice; um índice e seu objeto de estatísticas correspondente têm o mesmo nome.  
   
  *statistics_name* está **sysname**, com um padrão NULL.  
@@ -70,7 +70,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Se *stats_flag* não for especificado, **sp_autostats** retorna o conjunto de resultados a seguir.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Nome do Índice**|**varchar(60)**|Nome do índice ou das estatísticas.|  
 |**AUTOSTATS**|**varchar(3)**|Valor atual da opção AUTO_UPDATE_STATISTICS.|  
@@ -98,7 +98,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>B. Habilitar AUTO_UPDATE_STATISTICS para todas as estatísticas de uma tabela  
+### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>b. Habilitar AUTO_UPDATE_STATISTICS para todas as estatísticas de uma tabela  
  O exemplo a seguir habilita a opção AUTO_UPDATE_STATISTICS para todas as estatísticas da tabela `Product`.  
   
 ```  

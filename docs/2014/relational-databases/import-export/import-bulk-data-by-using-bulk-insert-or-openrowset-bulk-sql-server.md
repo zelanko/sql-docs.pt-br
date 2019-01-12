@@ -21,12 +21,12 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1dec3a2821e2b92d431680b49e37a7b9819887b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505549"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127576"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importar Dados em Massa Usando BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
   Este tópico fornece uma visão geral de como usar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e a instrução INSERT...SELECT * FROM OPENROWSET(BULK...) para importação em massa de dados de um arquivo de dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico também descreve considerações de segurança sobre o uso de BULK INSERT e OPENROWSET(BULK...) e o uso desses métodos para importação em massa de uma fonte de dados remotos.  
@@ -102,7 +102,7 @@ ms.locfileid: "52505549"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Windows podem ser configurados para permitir que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja conectada a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remetendo as credenciais de um usuário autenticado do Windows. Esse arranjo é conhecido como *representação* ou *delegação*. Entender como a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlam a segurança por representação de usuário é importante para usar BULK INSERT ou OPENROWSET. Representação de usuário permite que o arquivo de dados resida em um computador diferente que o processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o usuário. Por exemplo, se um usuário no **Computador_A** tiver acesso a um arquivo de dados no **Computador_B**, e a delegação de credenciais tiver sido definida adequadamente, o usuário poderá se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo executada no **Computador_C**, acessar o arquivo de dados no **Computador_B** e importar dados em massa desse arquivo em uma tabela no **Computador_C**.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Importação em massa de um arquivo de dados remoto  
- Para usar BULK INSERT ou INSERT...SELECT \* FROM OPENROWSET(BULK...) para importação de dados em massa de outro computador, o arquivo de dados deve ser compartilhado entre os dois computadores. Para especificar um arquivo de dados compartilhado, use sua UNC (convenção de nomenclatura universal), que utiliza o formato geral **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. Além disso, a conta usada para acessar o arquivo de dados deve ter as permissões necessárias para leitura do arquivo no disco remoto.  
+ Para usar BULK INSERT ou INSERT...SELECT \* FROM OPENROWSET(BULK...) para importação de dados em massa de outro computador, o arquivo de dados deve ser compartilhado entre os dois computadores. Para especificar um arquivo de dados compartilhado, use sua UNC que utiliza o formato geral **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. Além disso, a conta usada para acessar o arquivo de dados deve ter as permissões necessárias para leitura do arquivo no disco remoto.  
   
  Por exemplo, a instrução `BULK INSERT` a seguir importa dados em massa na tabela `SalesOrderDetail` do banco de dados `AdventureWorks` de um arquivo de dados denominado `newdata.txt`. Esse arquivo de dados reside em uma pasta compartilhada denominada `\dailyorders` em um diretório compartilhado de rede denominado `salesforce` em um sistema denominado `computer2`.  
   

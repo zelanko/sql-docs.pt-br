@@ -17,17 +17,17 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93b285b2e06fbe9227f9012f22ded8e932c35457
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164297"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125176"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Suporte à consulta distribuída no conjunto de linhas do esquema
   Para dar suporte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuídas, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset** interface retorna metadados em servidores vinculados.  
   
- Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Quando a restrição da saída do conjunto de linhas de esquema por catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client reconhece um nome de duas partes que contém o nome de catálogo e de servidor vinculado. Para os conjuntos de linhas de esquema na tabela abaixo, especificar um nome de catálogo em duas partes como *linked_server ***.*** catalog* restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
+ Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Quando a restrição da saída do conjunto de linhas de esquema por catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client reconhece um nome de duas partes que contém o nome de catálogo e de servidor vinculado. Para os conjuntos de linhas de esquema na tabela a seguir, especificando um nome de catálogo de duas partes como _linked_server_**.** _catálogo_ restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
   
 |Conjunto de linhas de esquema|Restrição de catálogo|  
 |-------------------|-------------------------|  

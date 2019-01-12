@@ -12,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758908"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126076"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -48,7 +48,7 @@ ms.locfileid: "52758908"
 -   Trabalhos de manutenção de replicação.  
   
 ## <a name="user-action"></a>Ação do usuário  
- O Log Reader Agent, o Queue Reader Agent e o Distribution Agent são, em geral, executados continuamente, diferente de outros agentes, que são, em geral, executados sob demanda ou de forma programada. Se você não esperar que um agente tenha concluído a sua execução, verifique o estado do agente. Para obter mais informações, consulte [Monitor Replication Agents](agents/replication-agents.md).  
+ O Log Reader Agent, o Queue Reader Agent e o Distribution Agent são, em geral, executados continuamente, diferente de outros agentes, que são, em geral, executados sob demanda ou de forma programada. Se você não esperar que um agente tenha concluído a sua execução, verifique o estado do agente. Para obter mais informações, consulte [Monitor Replication Agents](agents/replication-agents-overview.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Administração do agente de replicação](agents/replication-agent-administration.md)   

@@ -20,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770708"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135426"
 ---
 # <a name="dta-utility"></a>utilitário dta
   O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
@@ -77,13 +77,13 @@ ms.locfileid: "52770708"
  **-?**  
  Exibe informações de uso.  
   
- **-A** *time_for_tuning_in_minutes*  
+ **-A** _time_for_tuning_in_minutes_  
  Especifica o prazo de ajuste em minutos. O**dta** usa a quantidade especificada de tempo para ajustar a carga de trabalho e gerar um script com as mudanças de design físico recomendadas. Por padrão, o **dta** assume um tempo de ajuste de 8 horas. Especificar 0 permite um tempo de ajuste ilimitado. O**dta** pode terminar o ajuste da carga de trabalho inteira antes que o prazo expire. No entanto, para garantir que a carga de trabalho inteira seja ajustada, é aconselhável que você especifique um tempo de ajuste ilimitado (-A 0).  
   
  **-a**  
  Ajusta a carga de trabalho e aplica a recomendação sem uma solicitação.  
   
- **-B** *storage_size*  
+ **-B** _storage_size_  
  Especifica o espaço máximo em megabytes que pode ser consumido pelo índice e particionamento recomendados. Quando múltiplos bancos de dados são ajustados, as recomendações para todos os bancos de dados são consideradas no cálculo do espaço. Por padrão, **dta** assume o menor dos seguintes tamanhos de armazenamento:  
   
 -   Três vezes o tamanho de dados brutos atuais, o que inclui o tamanho total de heaps e índices cluster em tabelas no banco de dados.  
@@ -92,13 +92,13 @@ ms.locfileid: "52770708"
   
  O tamanho de armazenamento padrão não inclui índices não clusterizados e exibições indexadas.  
   
- **-C** *max_columns_in_index*  
+ **-C** _max_columns_in_index_  
  Especifica o número máximo de colunas nos índices proposto por **dta** . O valor máximo é 1024. Por padrão, esse argumento é definido como 16.  
   
- **-c** *max_key_columns_in_index*  
+ **-c** _max_key_columns_in_index_  
  Especifica o número máximo de colunas principais nos índices proposto por **dta** . O valor padrão é 16, o valor máximo permitido. O**dta** também considera a criação de índices com colunas incluídas. Os índices recomendados com colunas incluídas podem exceder o número de colunas especificado neste argumento.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  Especifica o nome de cada banco de dados que será ajustado. O primeiro banco de dados é o banco de dados padrão. É possível especificar bancos de dados múltiplos separando os nomes do banco de dados com vírgulas, por exemplo:  
   
 ```  
@@ -125,7 +125,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  Especifica o primeiro banco de dados ao qual **dta** se conecta ao ajustar uma carga de trabalho. Apenas um banco de dados pode ser especificado para esse argumento. Por exemplo:  
   
 ```  
@@ -141,7 +141,7 @@ dta -d AdventureWorks2012 ...
  **-E**  
  Usa uma conexão confiável em vez de pedir uma senha. O argumento **-E** ou **-U** , que especifica uma ID de logon, deve ser usado.  
   
- **-e** *tuning_log_name*  
+ **-e** _tuning_log_name_  
  Especifica o nome da tabela ou do arquivo em que **dta** registra eventos que não puderam ser ajustados. A tabela é criada no servidor onde o ajuste é executado.  
   
  Se uma tabela for usada, especifique seu nome no formato: *[database_name].[owner_name].table_name*. A seguinte tabela mostra os valores padrão para cada parâmetro:  
@@ -160,7 +160,7 @@ dta -d AdventureWorks2012 ...
  **-F**  
  Permite que **dta** substitua um arquivo de saída existente. Se um arquivo de saída com o mesmo nome já existir e **-F** não for especificado, **dta**retornará um erro. Você pode usar **-F** com **-of**, **-or**ou **-ox**.  
   
- **-fa** *physical_design_structures_to_add*  
+ **-fa** _physical_design_structures_to_add_  
  Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor for especificado, **dta** usa o padrão **-fa**`IDX`.  
   
 |Valor|Descrição|  
@@ -173,7 +173,7 @@ dta -d AdventureWorks2012 ...
  **-fi**  
  Especifica que os índices filtrados serão considerados em novas recomendações. Para saber mais, confira [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- **-fk** *keep_existing_option*  
+ **-fk** _keep_existing_option_  
  Especifica quais estruturas de design físico **dta** deve reter ao gerar sua recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
 |Valor|Descrição|  
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|Todos os índices clusterizados em tabelas|  
 |IDX|Todos os índices clusterizados e não clusterizados em tabelas|  
   
- **-fp** *partitioning_strategy*  
+ **-fp** _partitioning_strategy_  
  Especifica se as novas estruturas de design físico (índices e exibições indexadas) propostas por **dta** devem ser particionadas e como particioná-las. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
 |Valor|Descrição|  
@@ -195,10 +195,10 @@ dta -d AdventureWorks2012 ...
   
  ALIGNED significa que, na recomendação gerada por **dta** , todo índice proposto é particionado exatamente do mesmo modo que a tabela subjacente para a qual o índice foi definido. Índices não clusterizados em uma exibição indexada são alinhados com a exibição indexada. Só um valor pode ser especificado para esse argumento. O padrão é **-fp**`NONE`.  
   
- **-fx** *drop_only_mode*  
+ **-fx** _drop_only_mode_  
  Especifica que **dta** só considera a remoção das estruturas de design físico existentes. Nenhuma estrutura de design físico nova é considerada. Quando esta opção é especificada, o **dta** avalia a utilidade de estruturas de design físico existentes e recomenda descartar as estruturas raramente usadas. Este argumento não leva nenhum valor. Não pode ser usado com os argumentos **-fa**, **-fp**ou **-fk ALL**  
   
- **-ID** *session_ID*  
+ **-ID** _session_ID_  
  Especifica um identificador numérico para a sessão de ajuste. Se não estiver especificado, **dta** gerará um número de identificação. Você pode usar esse identificador para exibir informações para sessões de ajuste existentes. Se você não especificar um valor para **-ID**, um nome de sessão deverá ser especificado com **-s**.  
   
  **-ip**  
@@ -207,11 +207,11 @@ dta -d AdventureWorks2012 ...
  **-ipf**  
  Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para todos os bancos de dados são analisados. Esse valor pode ser alterado usando a opção **-n**.  
   
- **-if** *workload_file*  
+ **-if** _workload_file_  
  Especifica o caminho e o nome do arquivo de carga de trabalho a ser usado como entrada para ajuste. O arquivo deve estar em um destes formatos: .trc (arquivo de rastreamento do SQL Server Profiler), .sql (arquivo de SQL) ou .log (arquivo de rastreamento do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Um arquivo de carga de trabalho ou uma tabela de carga de trabalho deve ser especificada.  
   
- **-it** *workload_trace_table_name*  
- Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ **-it** _workload_trace_table_name_  
+ Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*]**.**[*owner_name*]**.**_table_name_.  
   
  A tabela a seguir mostra os valores padrão de cada um:  
   
@@ -224,13 +224,13 @@ dta -d AdventureWorks2012 ...
 > [!NOTE]  
 >  *owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e um erro será retornado. Também observe que uma tabela de carga de trabalho ou um arquivo de carga de trabalho deve ser especificado.  
   
- **-ix** *input_XML_file_name*  
+ **-ix** _input_XML_file_name_  
  Especifica o nome do arquivo XML que contém informações de entrada de **dta** . Esse deve ser um documento XML válido em conformidade com o DTASchema.xsd. Argumentos em conflito especificados no prompt de comando para opções de ajuste anulam o valor correspondente no arquivo XML. A única exceção será se uma configuração especificada pelo usuário for digitada dentro do modo de avaliação no arquivo de entrada XML. Por exemplo, se uma configuração for digitada no elemento **Configuration** do arquivo de entrada XML e o elemento **EvaluateConfiguration** também for especificado como um das opções de ajuste, as opções de ajuste especificadas no arquivo de entrada XML substituirão a opção de ajuste digitada no prompt de comando.  
   
- **-m** *minimum_improvement*  
+ **-m** _minimum_improvement_  
  Especifica a porcentagem mínima de melhoria que a configuração recomendada deve satisfazer.  
   
- **-N** *online_option*  
+ **-N** _online_option_  
  Especifica se são criadas estruturas de design físico online. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
 |Valor|Descrição|  
@@ -241,7 +241,7 @@ dta -d AdventureWorks2012 ...
   
  Se forem criados índices online, ONLINE = ON será anexado à definição de objeto.  
   
- **-n** *number_of_events*  
+ **-n** _number_of_events_  
  Especifica o número de eventos na carga de trabalho que **dta** deve ajustar. Se esse argumento for especificado e a carga de trabalho for um arquivo de rastreamento que contém informações de duração, **dta** ajustará os eventos em ordem decrescente de duração. Esse argumento é útil para comparar duas configurações de estruturas de design físico. Para comparar duas configurações, especifique o mesmo número de eventos a serem ajustados para ambas as configurações e também especifique um tempo de ajuste ilimitado para ambos como segue:  
   
 ```  
@@ -250,28 +250,28 @@ dta -n number_of_events -A 0
   
  Nessecaso, é importante especificar um tempo de ajuste ilimitado (`-A 0`). Caso contrário, o Orientador de Otimização do Mecanismo de Banco de Dados assume, por padrão, um tempo de ajuste de 8 horas.  
   
- **-of** *output_script_file_name*  
+ **-of** _output_script_file_name_  
  Especifica que **dta** grava a recomendação como um script [!INCLUDE[tsql](../../includes/tsql-md.md)] no nome de arquivo e destino especificados.  
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-or** e **-ox**.  
   
- **-or** *output_xml_report_file_name*  
+ **-or** _output_xml_report_file_name_  
  Especifica que **dta** grava a recomendação em um relatório de saída em XML. Se um nome de arquivo for fornecido, as recomendações serão gravadas nesse destino. Caso contrário, o **dta** usa o nome de sessão para gerar o nome de arquivo e grava-o no diretório atual.  
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-of** e **-ox**.  
   
- **-ox** *output_XML_file_name*  
+ **-ox** _output_XML_file_name_  
  Especifica que **dta** grava a recomendação como um arquivo XML no nome de arquivo e destino fornecidos. Verifique se o Orientador de Otimização do Mecanismo de Banco de Dados tem permissões para gravar no diretório de destino.  
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-of** e **-or**.  
   
- **-P** *password*  
+ **-P** _password_  
  Especifica a senha para a ID de logon. Se essa opção não for usada, o **dta** solicitará a senha.  
   
  **-q**  
  Define o modo silencioso. Nenhuma informação é gravada no console, inclusive informações de progresso e de cabeçalho.  
   
- **-rl** *analysis_report_list*  
+ **-rl** _analysis_report_list_  
  Especifica a lista de relatórios de análise a serem gerados. A seguinte tabela lista os valores que podem ser especificados para esse argumento:  
   
 |Valor|Relatório|  
@@ -299,13 +299,13 @@ dta -n number_of_events -A 0
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** *server_name*[ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  Especifica o nome do computador e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão. Se nenhum *server_name* for especificado, **dta** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador local. Essa opção é requerida na conexão à uma instância nomeada ou na execução de **dta** de um computador remoto na rede.  
   
- **-s** *session_name*  
+ **-s** _session_name_  
  Especifica o nome da sessão de ajuste. Isso será obrigatório se **-ID** não for especificado.  
   
- **-Tf** *table_list_file*  
+ **-Tf** _table_list_file_  
  Especifica o nome de um arquivo que contém uma lista de tabelas a ser ajustada. Cada tabela listada dentro do arquivo deve começar em uma linha nova. Nomes de tabela devem ser qualificados com nomeação de três partes, por exemplo, **AdventureWorks2012.HumanResources.Department**. Opcionalmente, para invocar o recurso do escalamento de tabela, o nome de uma tabela existente pode ser seguido de um número que indica o número projetado de linhas na tabela. O Orientador de Otimização do Mecanismo de Banco de Dados leva em conta o número projetado de linhas ao ajustar ou avaliar as instruções na carga de trabalho que referenciam estas tabelas. Observe que pode haver um ou mais espaços entre a contagem *number_of_rows* e *table_name*.  
   
  Este é o formato de arquivo para *table_list_file*:  
@@ -320,12 +320,12 @@ dta -n number_of_events -A 0
   
  Se os argumentos **-Tf** e **-Tl** forem omitidos, todas as tabelas de usuário nos bancos de dados especificados serão consideradas para o ajuste.  
   
- **-Tl** *table_list*  
+ **-Tl** _table_list_  
  Especifica ao prompt de comando uma lista de tabelas a serem ajustadas. Coloque vírgulas entre os nomes de tabela para separá-los. Se apenas um banco de dados for especificado com o argumento **-D** , os nomes de tabela não precisarão ser qualificados com um nome de banco de dados. Caso contrário, o nome totalmente qualificado no formato: *database_name.schema_name.table_name* será obrigatório para cada tabela.  
   
  Esse argumento é uma alternativa ao uso de um arquivo de lista de tabela (**-Tf**). Se **-Tl** e **-Tf** forem usados, **dta** falhará e retornará um erro.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-u**  

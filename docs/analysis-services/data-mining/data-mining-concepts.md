@@ -1,6 +1,6 @@
 ---
 title: Conceitos de mineração de dados | Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,28 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981998"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185132"
 ---
 # <a name="data-mining-concepts"></a>Conceitos de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> Mineração de dados foi preterida no SQL Server Analysis Services 2017. Documentação não é atualizada para recursos preteridos. Para obter mais informações, consulte [compatibilidade com versões anteriores do Analysis Services (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md).
+
   A mineração de dados é o processo de descoberta de informações acionáveis em grandes conjuntos de dados. A mineração de dados usa análise matemática para derivar padrões e tendências que existem nos dados. Normalmente, esses padrões não podem ser descobertos com a exploração de dados tradicional pelo fato de as relações serem muito complexas ou por haver muitos dados.  
   
  Esses padrões e tendências podem ser coletados e definidos como um *modelo de mineração de dados*. Os modelos de mineração podem ser se aplicados a cenários específicos, como:  
   
 -   **Previsão**: Estimando vendas, prevendo cargas de servidor ou tempo de inatividade de servidor  
   
--   **Risco e probabilidade**: escolhendo os melhores clientes para malas diretas, determinando o ponto equilibrado provável para cenários de risco, atribuindo probabilidades a diagnósticos ou outros resultados  
+-   **Risco e probabilidade**: Escolhendo os melhores clientes para malas diretas, determinando o ponto equilibrado provável para cenários de risco, atribuindo probabilidades a diagnósticos ou outros resultados  
   
 -   **Recomendações**: Determinando quais produtos são mais prováveis de serem vendidos juntos, gerando recomendações  
   
 -   **Localizando sequências**: Analisando seleções de cliente em um carrinho de compras, prevendo os próximos eventos prováveis  
   
--   **Agrupamento**: Separando clientes ou eventos em cluster de itens relacionados, analisando e prevendo afinidades  
+-   **Agrupando**: Separando clientes ou eventos em cluster de itens relacionados, analisando e prevendo afinidades  
   
  A criação de um modelo de mineração representa apenas uma parte de um processo maior que inclui desde perguntas sobre dados e criação de um modelo até respostas para as perguntas feitas e implantação do modelo em um ambiente de trabalho. Esse processo pode ser definido usando as seis etapas básicas a seguir:  
   

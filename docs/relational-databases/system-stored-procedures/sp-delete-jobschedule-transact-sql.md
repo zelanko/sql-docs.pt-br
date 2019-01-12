@@ -18,12 +18,12 @@ ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e5dc7d93b411834ae127d5bce7f775b78dc36ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12058e9c599428b6f0ba6c3014b8aab8b9ae5f61
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815344"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100852"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47815344"
 ## <a name="remarks"></a>Comentários  
  As agendas de trabalho podem ser gerenciadas independentemente dos trabalhos. Para remover uma agenda de um trabalho, use **sp_detach_schedule**. Para excluir uma agenda, use **sp_delete_schedule**.  
   
-> **Observação:****sp_delete_jobschedule** não oferece suporte a agendas que estão anexadas a vários trabalhos.   Se um script que chama **sp_delete_jobschedule** para remover uma agenda que é anexada a mais de um trabalho, o procedimento retornará um erro.  
+> **Observação: sp_delete_jobschedule** não oferece suporte a agendas que estão anexadas a vários trabalhos. Se um script que chama **sp_delete_jobschedule** para remover uma agenda que é anexada a mais de um trabalho, o procedimento retornará um erro.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  

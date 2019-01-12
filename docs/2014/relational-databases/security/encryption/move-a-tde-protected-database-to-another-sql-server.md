@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544632"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134996"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
   Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados `master` do servidor ou uma chave assimétrica protegida por um módulo EKM.  
@@ -191,7 +191,7 @@ ms.locfileid: "52544632"
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tem uma ou mais conexões ativas, o **Status** é **não está pronto** e o **mensagem** coluna exibe *< number_of_active_connections > * * * ativa**, por exemplo: **1 conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tem uma ou mais conexões ativas, o **Status** é **não está pronto** e o **mensagem** coluna exibe _< number_of_active_connections >_**Ativa** , por exemplo: **1 conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "52544632"
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
-9. No **localizar arquivos de banco de dados-* * * nome_do_servidor* caixa de diálogo, selecione o banco de dados de arquivo para anexar ao novo servidor e clique em **Okey**.  
+9. No **localizar arquivos de banco de dados -**_nome_do_servidor_ caixa de diálogo, selecione o banco de dados de arquivo para anexar ao novo servidor e clique em **Okey**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Anexar Bancos de Dados** .  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52544632"
      **Remover**  
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     **"** *<database_name>* **" detalhes do banco de dados**  
+     **"** _<database_name>_ **" detalhes do banco de dados**  
      Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (**...**).  
   
     > [!NOTE]  

@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507273"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132536"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
   Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo de servidor  
  A cadeia de conexão deve conter um atributo `Server` que forneça o nome do parceiro inicial que deverá identificar a instância do servidor principal atual.  
   
- A forma mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[**\\***<SQL_Server_instance_name>*]. Por exemplo:  
+ A forma mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[**\\**_<SQL_Server_instance_name>_]. Por exemplo:  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|`Failover_Partner`|  
 |ADO ( ActiveX Data Object)|`Failover Partner`|  
   
- A forma mais simples de identificar a instância do servidor é pelo seu nome do sistema, *<server_name>*[**\\***<SQL_Server_instance_name>*].  
+ A forma mais simples de identificar a instância do servidor é pelo seu nome do sistema, *<server_name>*[**\\**_<SQL_Server_instance_name>_].  
   
  Alternativamente, o endereço IP e número da porta podem ser fornecidos no atributo `Failover Partner`. Se a tentativa de conexão inicial falhar durante a primeira conexão com o banco de dados, a tentativa para se conectar ao parceiro de failover não precisará depender do DNS e do SQL Server Browser. Quando uma conexão é estabelecida, o nome do parceiro de failover será sobrescrito com o nome do parceiro de failover, assim, se um failover acontecer, as conexões redirecionadas necessitarão do DNS e do SQL Server Browser.  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  O tempo de retentar é calculado usando a seguinte fórmula:  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
   
  Onde *PreviousRetryTime* é inicialmente 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Arredondamento|Cálculo de*RetryTime* |Tempo de nova tentativa por tentativa|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 segundos|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 segundos|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 segundos|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 segundos|  
+|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 segundos|  
+|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 segundos|  
+|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 segundos|  
+|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 segundos|   
   
  A figura a seguir ilustra esses tempos de nova tentativa em tentativas de conexão sucessivas, todas elas com tempos limite esgotados.  
   

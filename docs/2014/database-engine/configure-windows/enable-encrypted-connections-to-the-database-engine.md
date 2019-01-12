@@ -20,12 +20,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ffe88de8533db5cf9bbec7936d30e95d64b1726
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640767"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133906"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Habilitar conexões criptografadas no Mecanismo de Banco de Dados (SQL Server Configuration Manager)
   Este tópico descreve como habilitar conexões criptografadas para uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] especificando um certificado para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. O computador servidor deve ter um certificado configurado e a máquina cliente deve estar configurada para confiar na autoridade raiz do certificado. Provisionamento é o processo de instalar um certificado importando-o para o Windows.  
@@ -83,9 +83,9 @@ ms.locfileid: "52640767"
   
 ###  <a name="ConfigureServerConnections"></a> Para configurar o servidor para aceitar conexões criptografadas  
   
-1.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos de** *\<server instance>* e, depois, selecione **Propriedades**.  
+1.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos de** _\<server instance>_ e, depois, selecione **Propriedades**.  
   
-2.  No **protocolos para * * *\<nome da instância >* **as propriedades** caixa de diálogo o **certificado** guia, selecione o certificado desejado na lista suspensa para o **certificado** caixa e, em seguida, clique em **Okey**.  
+2.  No **protocolos para**_\<nome da instância >_ **propriedades** caixa de diálogo o **certificado** guia, selecione o desejada do certificado na lista para baixo para o **certificado** caixa e, em seguida, clique em **Okey**.  
   
 3.  Na guia **Sinalizadores** , na caixa **ForceEncryption** , selecione **Sim**e clique em **OK** para fechar a caixa de diálogo.  
   

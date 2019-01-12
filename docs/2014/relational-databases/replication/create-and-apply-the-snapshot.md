@@ -13,12 +13,12 @@ ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd78bf7da1a68e7e053af52c4fa8f9cf0cd71094
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4c69b22af2a4e5a087c21b34fc719f971c3844b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755638"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128576"
 ---
 # <a name="create-and-apply-the-snapshot"></a>Criar e aplicar o instantâneo
   Instantâneos são gerados pelo Agente de Instantâneo depois que uma publicação for criada. Eles podem ser gerados:  
@@ -43,8 +43,7 @@ ms.locfileid: "52755638"
   
  Para exibir ou modificar o local padrão de pasta de instantâneo, consulte  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Especifique o local de instantâneo padrão &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
-  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Especifique o local de instantâneo padrão](snapshot-options.md#snapshot-folder-locations)
 -   Programação de replicação e programação de RMO: [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)  
   
 ## <a name="see-also"></a>Consulte também  

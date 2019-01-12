@@ -16,12 +16,12 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 798d9f09bcfa2c9f73b0b70b795ebb53cfb97a79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823060"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100771"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
   Este tópico descreve como exibir o log de erros do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "52823060"
   
 4.  Clique com o botão direito do mouse no log de erros que você deseja exibir e selecione **Exibir Log do Agente**.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log – ***nome_do_servidor*:  
+     As seguintes opções estão disponíveis na **Visualizador do arquivo de Log -**_nome_do_servidor_ caixa de diálogo:  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  

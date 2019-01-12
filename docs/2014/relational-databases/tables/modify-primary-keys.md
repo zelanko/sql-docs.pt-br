@@ -13,12 +13,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c411b3f032931dfe0964fe008d7fa1b5598d6423
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822950"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134796"
 ---
 # <a name="modify-primary-keys"></a>Modificar chaves primárias
   Você pode modificar uma chave primária no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode modificar a chave primária de uma tabela alterando a ordem das colunas, o nome do índice, a opção clusterizada ou o fator de preenchimento.  
@@ -59,7 +59,7 @@ ms.locfileid: "52822950"
     |Definir um fator de preenchimento|Expanda a categoria **Especificação de Preenchimento** e digite um inteiro de 0 a 100 na caixa **Fator de Preenchimento** . Para obter mais informações sobre fatores de preenchimento e seus usos, veja [Especificar fator de preenchimento para um índice](../indexes/specify-fill-factor-for-an-index.md).|  
     |Altere a ordem da coluna|Selecione **Colunas** e clique nas reticências **(...)** à direita da propriedade. Na caixa de diálogo  **Colunas de Índices** , remova as colunas da chave primária. Depois, adicione as colunas de novo na ordem desejada. Para remover uma coluna da chave, simplesmente remova o nome de coluna da lista de nomes **Coluna** .|  
   
-4.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para modificar uma chave primária**  

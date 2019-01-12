@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398809"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100711"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar fator de preenchimento para um índice
   Este tópico descreve o que é fator de preenchimento e como especificar um valor de fator de preenchimento em um índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "52398809"
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
+8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Para especificar um fator de preenchimento em um índice usando o Pesquisador de Objetos  
   

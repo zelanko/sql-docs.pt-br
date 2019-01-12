@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762778"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130846"
 ---
 # <a name="create-a-job-category"></a>Criar uma categoria de trabalho
   Este tópico descreve como criar uma categoria de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects.  
@@ -48,7 +48,7 @@ ms.locfileid: "52762778"
   
 3.  Clique com o botão direito do mouse na pasta **Trabalhos** e selecione **Gerenciar Categorias de Trabalho**.  
   
-4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*, clique em **Adicionar**.  
+4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ , clique em **Adicionar**.  
   
 5.  Na nova caixa de diálogo, na caixa **Nome** , insira um nome para a nova categoria de trabalho.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52762778"
   
 7.  Clique em **OK**.  
   
-8.  Na caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*, clique em **Atualizar** para garantir que a nova categoria de trabalho esteja ativa. Se tudo estiver como esperado, feche a caixa de diálogo.  
+8.  Na caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ , clique em **Atualizar** para garantir que a nova categoria de trabalho esteja ativa. Se tudo estiver como esperado, feche a caixa de diálogo.  
   
  Para obter mais informações sobre essas caixas de diálogo, consulte [categorias de trabalho: Gerenciar categorias de trabalho](job-categories-manage-job-categories.md) e [propriedades de categorias e a nova categoria de trabalho do trabalho](job-categories-properties-new-job-category.md).  
   

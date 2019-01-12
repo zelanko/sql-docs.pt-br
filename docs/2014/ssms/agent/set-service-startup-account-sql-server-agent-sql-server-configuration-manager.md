@@ -14,12 +14,12 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26412fd6727049019b289fd0245e4ebf7f826dc1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375528"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100611"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   A conta de inicialização de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent define a conta do Windows como a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado, bem como suas permissões de rede. Este tópico descreve como definir a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -71,9 +71,9 @@ ms.locfileid: "53375528"
   
 5.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no painel de console, selecione **Serviços do SQL Server**.  
   
-6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server Agent***(server_name)*, em que *server_name* é o nome da instância do Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual você deseja alterar a conta de inicialização de serviço, e selecione **Propriedades**.  
+6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server Agent**_(server_name)_, em que *server_name* é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o qual você deseja alterar a conta de inicialização de serviço e selecione **Propriedades**.  
   
-7.  Na caixa de diálogo **Propriedades** **SQL Server Agent***(server_name)*, na guia **Logon**, selecione uma das seguintes opções em **Fazer logon como**:  
+7.  Na caixa de diálogo **Propriedades**_do_ **Propriedades** , na guia **Logon** , selecione uma das seguintes opções em **Fazer logon como**:  
   
     -   **Conta interna**: selecione essa opção se os trabalhos precisarem somente de recursos do servidor local. Para obter informações sobre como escolher um tipo de conta interna do Windows, consulte [Seleção de uma conta para o Serviço do SQL Server Agent.](https://msdn.microsoft.com/library/ms191543.aspx)  
   

@@ -14,12 +14,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00bec2a06d024b4c1482b0e9865c58ea6d1e985d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766148"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127166"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar dados em colunas criptografadas (SQL Server Management Studio)
   A replicação permite que você publique dados criptografados em coluna. Para descriptografar e usar esses dados no Assinante, a chave usada para criptografar os dados no Publicador também deve estar presente no Assinante. A replicação não fornece um mecanismo seguro para transportar chaves de criptografia. Você deve recriar a chave de criptografia manualmente no Assinante. Este tópico mostra como criptografar uma coluna no Publicador e certificar-se de que a chave de criptografia está disponível no Assinante.  
@@ -86,7 +86,7 @@ ms.locfileid: "52766148"
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral da segurança &#40;Replicação&#41;](security-overview-replication.md)   
+ [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)   
  [Criar chaves simétricas idênticas em dois servidores](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

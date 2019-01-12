@@ -14,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013e2234b33d9277cabb60d95bf2c8db783e93cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350071"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135856"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
   Este tópico descreve como configurar publicação e distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -28,7 +28,7 @@ ms.locfileid: "53350071"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Security"></a> Segurança  
- Para obter mais informações, consulte [Implantação segura e &#40;Replicação&#41;](security/secure-deployment-replication.md).  
+ Para obter mais informações, consulte [proteger a implantação de replicação](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Configure a distribuição, usando o Assistente para Novas Publicações ou o Assistente para Configurar a Distribuição. Depois que o Distribuidor estiver configurado, exiba e modifique as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**. Use o Assistente para Configurar Distribuição se você desejar configurar um Distribuidor para que os membros de funções de banco de dados fixas **db_owner** possam criar publicações ou para configurar um Distribuidor remoto que não é um Publicador.  

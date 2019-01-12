@@ -3,7 +3,7 @@ title: Notas de versão e o log de alterações
 titleSuffix: Azure Data Studio
 description: Notas de versão Data Studio do Azure
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030340"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143656"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Notas de versão mais recente do Studio de dados e log de alterações do Azure
 
-**[Baixe a versão de novembro!](download.md)**
+**[Baixe a versão de janeiro!](download.md)**
+
+
+## <a name="january-2019-january-release"></a>Janeiro de 2019 (versão de janeiro)
+
+Data de lançamento: 09 de janeiro de 2019  
+Versão: 1.3.8
+
+- Adicionado um novo instalador do usuário para Windows. Ao contrário do instalador do sistema existente, o novo instalador do usuário não requer privilégios de administrador. Isso também permite uma experiência de atualização mais fácil para não administradores.
+- Suporte de autenticação do Active Directory do Azure.
+- Anunciando a análise de desempenho de DM Idera SQL (versão prévia).
+- Suporte de data-Tier Application Wizard na extensão do SQL Server Import.
+- Atualizar para o [extensão de visualização do SQL Server de 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Aprimoramentos do SQL Server Profiler.
+- Resultados de Streaming para grandes consultas (visualização).
+- Extensões de comunidade: sp_executesql to sql e o novo banco de dados.
+- Resolvido [bugs e problemas](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
+
+Para obter informações detalhadas, consulte o [Log de alterações](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), e [versões](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="november-2018-november-release"></a>Novembro de 2018 (versão de novembro)
 
@@ -35,6 +53,7 @@ Versão: 1.2.4
 - Serviço de ferramentas de atualização do SQL para.Net Core 2.2 Preview 3 (para eventual suporte do AAD)
 
 ### <a name="bug-fixes"></a>Correções de bugs
+
 - Corrigir [emitir #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Conexão perdida para BD SQL do Azure
 - Corrigir [emitir #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): Nó "Argumento inválido" exceção expansão OE banco de dados
 - Corrigir [emitir #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Exibir mensagens de várias linhas corretamente nos resultados da consulta
@@ -44,8 +63,6 @@ Versão: 1.2.4
 - Corrigir [emitir #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Adicionar uma interface de linha de comando para se conectar a um SQL Server
 - Corrigir [emitir #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Adicionar suporte de tema do plano de consulta
 - ...
-
-Para obter informações detalhadas, consulte o [Log de alterações](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), e [versões](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Outubro de 2018 (versão de outubro)
 
@@ -146,7 +163,7 @@ O *agosto Public Preview* se concentra em correções de bugs, estabilização d
 - Corrigir [emitir #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Salve a posição de rolagem de dados de edição ao alternar guias.
 - Corrigir [emitir #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Indicador de linha de grade de resultados baseado em Zero.
 
-## <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas conhecidos
 
 - [Emitir #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Salvar como apenas salva primeira linha de dados do Excel
 - [Emitir #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Não é possível conectar-se no Ubuntu 16.04 to SQL em um contêiner

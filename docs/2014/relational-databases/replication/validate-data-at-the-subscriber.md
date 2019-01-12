@@ -1,5 +1,5 @@
 ---
-title: Validar dados no assinante | Microsoft Docs
+title: Validar os dados replicados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,29 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8829bb1a585c61bfa1a8ad0a088d23e8573bace
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d8698ef84d74c98d02f0a8df0d59077fe0c7ac7b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816878"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131186"
 ---
-# <a name="validate-data-at-the-subscriber"></a>Validar dados no assinante
+# <a name="validate-replicated-data"></a>Validar os dados replicados
   Este tópico descreve como validar os dados no Assinante no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
+
+  A replicação transacional e de mesclagem permitem validar os dados no Assinante que correspondem aos dados no Publicador. A validação pode ser executada para assinaturas específicas ou para todas as assinaturas em uma publicação. Especifique um dos seguintes tipos de validação e o Distribution Agent ou o Merge Agent validarão os dados na próxima vez que executarem:  
+  
+-   **Somente a contagem de linhas**. Faz a validação se a tabela no Assinante tem o mesmo número de linhas que a tabela no Publicador, mas não faz a validação da correspondência de conteúdo das linhas. A validação de número de linhas fornece uma abordagem superficial à validação que pode alertá-lo sobre problemas com seus dados.    
+-   **Linhas e soma de verificação binária de contagem**. Além de contar o número de linhas no Publicador e no Assinante, uma soma de verificação de todos os dados é calculada usando o algoritmo de soma de verificação. Se a contagem de linhas falhar, a soma de verificação não será executada.  
+  
+ Além de validar se esses dados no Assinante e no Publicador são correspondentes, a replicação de mesclagem fornece a capacidade de validar se os dados estão particionados corretamente em cada Assinante. Para obter mais informações, consulte [Validate Partition Information for a Merge Subscriber](validate-partition-information-for-a-merge-subscriber.md) (Validar informações de partição para um assinante de mesclagem).  
+
+## <a name="how-data-validation-works"></a>Como a validação de dados trabalha  
+ O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz a validação dos dados calculando o número de linhas ou uma soma de verificação no Publicador e comparando esses valores com o número de linhas ou a soma de verificação do Assinante. Um valor é calculado para a publicação inteira e um valor é calculado para a tabela de assinatura inteira, mas os dados em `text`, `ntext` ou as colunas de `image` não são incluídas nos cálculos.  
+  
+ Enquanto os cálculos estão sendo realizados, são colocados temporariamente bloqueios compartilhados em tabelas, nas quais as contagens de linhas ou as somas de verificações estão sendo executadas, mas são completadas rapidamente e os bloqueios compartilhados removidos, normalmente em questão de segundos.  
+  
+ Quando as somas de verificação binárias são usadas, ocorre uma verificação de redundância (CRC) de 32 bits coluna a coluna, em vez de uma CRC na linha física da página de dados. Isso permite que as colunas da tabela estejam em qualquer ordem física na página de dados, mas sejam calculadas no mesmo CRC da linha. A validação de soma de verificação binária pode ser usada quando há filtros de linha ou de coluna na publicação.  
   
  A validação de dados é um processo de três etapas:  
   
@@ -34,273 +48,226 @@ ms.locfileid: "52816878"
   
 3.  Exibir os resultados de validação:  
   
-    -   Nas janelas de detalhes do Replication Monitor: na guia **Histórico do Distribuidor para o Assinante** para replicação transacional e na guia **Histórico de Sincronização** para replicação de mesclagem.  
+    -  Nas janelas de detalhes do Replication Monitor: na guia **Histórico do Distribuidor para o Assinante** para replicação transacional e na guia **Histórico de Sincronização** para replicação de mesclagem.    
+    -  Na caixa de diálogo **Exibir Status de Sincronização** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-    -   Na caixa de diálogo **Exibir Status de Sincronização** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
+
   
- **Neste tópico**  
+## <a name="considerations-and-restrictions"></a>Considerações e restrições  
   
--   **Antes de começar:**  
-  
-     [Limitações e restrições](#Restrictions)  
-  
--   **Para validar dados no Assinante, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [RMO (Replication Management Objects)](#RMOProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Restrictions"></a> Limitações e Restrições  
-  
--   Os procedimentos para o Replication Monitor são somente para assinaturas push porque as assinaturas pull não podem ser sincronizadas no Replication Monitor. Porém, você pode marcar uma assinatura para validação e exibir os resultados da validação para assinaturas pull no Replication Monitor.  
-  
+-   Os procedimentos para o Replication Monitor são somente para assinaturas push porque as assinaturas pull não podem ser sincronizadas no Replication Monitor. Porém, você pode marcar uma assinatura para validação e exibir os resultados da validação para assinaturas pull no Replication Monitor.    
 -   Os resultados da validação indicam se a validação obteve êxito ou se falhou, porém não especifica quais linhas falharam a validação caso tenha ocorrido uma falha. Para comparar dados no Publicador e no Assinante, use o [tablediff Utility](../../tools/tablediff-utility.md). Para obter informações sobre como usar esse utilitário com os dados replicados, consulte [Comparar diferenças em tabelas replicadas &#40;programação de replicação&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
+ 
+Considere os seguintes problemas ao validar dados:  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+-   Você deve cessar todas as atividades nos Assinantes antes de validar os dados (não é necessário parar as atividades do Publicador, enquanto ocorre a validação).    
+-   Como as somas de verificação e as somas de verificações binárias podem requerer recursos extensos do processador ao validar conjuntos de dados muito grandes, você deverá agendar a validação quando houver um mínimo de atividade nos servidores usados na replicação.    
+-   A replicação somente valida tabelas; não realizando a validação se os artigos somente esquema (como os procedimentos armazenados) são os mesmos no Publicador e no Assinante.    
+-   A soma de verificação binária pode ser usada com qualquer tabela publicada. A soma de verificação não pode validar as tabelas com filtros de colunas ou estruturas de tabelas lógicas nas quais os deslocamentos são diferentes (por causa das instruções ALTER TABLE que cancelam ou adicionam colunas).    
+-   Validação de replicação usa o `checksum` e **binary_checksum** funções. Para informações sobre seu comportamento, consulte [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) e [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
-#### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>Para validar dados para assinaturas para uma publicação transacional (Management Studio)  
+-   A validação com o uso de soma de verificação binária ou soma de verificação pode reportar incorretamente uma falha se os tipos de dados forem diferentes no Assinante e no Publicador. Isso poderá acontecer se você fizer o seguinte:    
+    -   Definir explicitamente opções de esquema para mapear tipos de dados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
+    -   Definir o nível de compatibilidade de uma publicação de mesclagem para uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e as tabelas publicadas contiverem um ou mais tipos de dados que devem ser mapeados para essa versão.    
+    -   Inicialize manualmente uma assinatura que estiver usando tipos de dados diferentes no Assinante.    
+-   As validações da soma de verificação binária e de soma de verificação não oferecem suporte para assinaturas transformáveis na replicação transacional.   
+-   A validação não oferece suporte para os dados replicados em não assinantes do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+## <a name="data-validation-results"></a>Resultados da validação de dados  
+ Quando a validação estiver completa, o Distribution Agent ou o Merge Agent registra mensagens relativas ao êxito ou falha (a replicação não informa quais as linhas que falharam). Essas mensagens podem ser exibidas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Replication Monitor e nas tabelas do sistema de replicação. O tópico de instruções listado acima mostra como executar a validação e exibir os resultados.  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
+ Para controlar as falhas de validação, considere o seguinte:  
   
-2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
+-   Configure o alerta de replicação chamado **replicação: Assinante Falha na validação de dados** para que você seja notificado da falha. Para obter mais informações, consulte [configurar alertas de replicação predefinidos &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
-3.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Assinaturas**.  
+-   O fato da validação falhar é um problema para o seu aplicativo? Se a falha de validação é um problema, atualize manualmente os dados para serem sincronizados ou reinicialize a assinatura:  
   
-4.  Na caixa de diálogo **Validar Assinaturas** , selecione quais assinatura validar:  
+    -   Os dados podem ser atualizados usando o [utilitário tablediff](../../tools/tablediff-utility.md). Para mais informações sobre como usar esse utilitário, consulte [Comparar tabelas replicadas para diferenças &#40;Programação de replicação&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
-    -   Selecione **Validar todas as assinaturas SQL Server**  
+    -   Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](reinitialize-subscriptions.md).   
+ 
   
-    -   Selecione **Validar estas assinaturas**e então selecione uma ou mais assinaturas.  
+## <a name="articles-in-transactional-replication"></a>Artigos em replicação transacional 
+
+### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio  
   
-5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .  
   
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.    
+2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .    
+3.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Assinaturas**.    
+4.  Na caixa de diálogo **Validar Assinaturas** , selecione quais assinatura validar:    
+    -   Selecione **Validar todas as assinaturas SQL Server**    
+    -   Selecione **Validar estas assinaturas**e então selecione uma ou mais assinaturas.    
+5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** . Para cada assinatura:  
-  
-    1.  Expanda a publicação, clique com o botão direito do mouse na assinatura e então clique em **Exibir Status da Sincronização**.  
-  
+7.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** . Para cada assinatura:    
+    1.  Expanda a publicação, clique com o botão direito do mouse na assinatura e então clique em **Exibir Status da Sincronização**.    
     2.  Se o agente não estiver sendo executado clique em **Iniciar** na caixa de diálogo **Exibir Status da Sincronização** . A caixa de diálogo exibirá mensagens informativas relacionadas à validação.  
   
      Se você não vir nenhuma mensagem relacionada à validação, o agente já registrou uma mensagem subsequente. Neste caso, exiba os resultados de validação no Replication Monitor. Para obter mais informações, consulte os procedimentos de instruções do Replication Monitor neste tópico.  
+
+### <a name="using-transact-sql-t-sql"></a>Usando Transact-SQL (T-SQL)
+
+#### <a name="all-articles"></a>Todos os artigos
   
-#### <a name="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio"></a>Para validar dados para uma única assinatura para uma publicação de mesclagem (Management Studio)  
-  
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
-  
-2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
-  
-3.  Expanda a publicação para a qual você quer validar assinaturas, clique com o botão direito do mouse na assinatura e então clique em **Validar Assinatura**.  
-  
-4.  Na caixa de diálogo **Validar Assinatura** , selecione **Validar esta assinatura**.  
-  
-5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .  
-  
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-7.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** :  
-  
-    1.  Expanda a publicação, clique com o botão direito do mouse na assinatura e então clique em **Exibir Status da Sincronização**.  
-  
-    2.  Se o agente não estiver sendo executado clique em **Iniciar** na caixa de diálogo **Exibir Status da Sincronização** . A caixa de diálogo exibirá mensagens informativas relacionadas à validação.  
-  
-     Se você não vir nenhuma mensagem relacionada à validação, o agente já registrou uma mensagem subsequente. Neste caso, exiba os resultados de validação no Replication Monitor. Para obter mais informações, consulte os procedimentos de instruções do Replication Monitor neste tópico.  
-  
-#### <a name="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio"></a>Para validar dados para todas as assinaturas para uma publicação de mesclagem (Management Studio)  
-  
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó do servidor.  
-  
-2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
-  
-3.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Todas as Assinaturas**.  
-  
-4.  Na caixa de diálogo **Validar Todas as Assinaturas** , especifique o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação).  
-  
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-6.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** . Para cada assinatura:  
-  
-    1.  Expanda a publicação, clique com o botão direito do mouse na assinatura e então clique em **Exibir Status da Sincronização**.  
-  
-    2.  Se o agente não estiver sendo executado clique em **Iniciar** na caixa de diálogo **Exibir Status da Sincronização** . A caixa de diálogo exibirá mensagens informativas relacionadas à validação.  
-  
-     Se você não vir nenhuma mensagem relacionada à validação, o agente já registrou uma mensagem subsequente. Neste caso, exiba os resultados de validação no Replication Monitor. Para obter mais informações, consulte os procedimentos de instruções do Replication Monitor neste tópico.  
-  
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-transactional-publication-replication-monitor"></a>Para validar dados para todas as inscrições push para uma publicação transacional (Replication Monitor)  
-  
-1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo e, depois, expanda um Publicador.  
-  
-2.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Assinaturas**.  
-  
-3.  Na caixa de diálogo **Validar Assinaturas** , selecione quais assinatura validar:  
-  
-    -   Selecione **Validar todas as assinaturas SQL Server**  
-  
-    -   Selecione **Validar estas assinaturas**e então selecione uma ou mais assinaturas.  
-  
-4.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .  
-  
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-6.  Clique na guia **Todas as Assinaturas** .  
-  
-7.  Exiba os resultados da validação. Para cada assinatura push:  
-  
-    1.  Se o agente não estiver sendo executado, clique com o botão direito do mouse na assinatura e então clique em **Iniciar Sincronização**.  
-  
-    2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.  
-  
-    3.  Exiba informações na guia **Histórico de Distribuidor para o Assinante** na área de texto **Ações na seção selecionada** .  
-  
-#### <a name="to-validate-data-for-a-single-push-subscription-to-a-merge-publication-replication-monitor"></a>Para validar dados para uma única assinatura push para uma publicação de mesclagem (Replication Monitor)  
-  
-1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e, depois, clique em uma publicação.  
-  
-2.  Clique na guia **Todas as Assinaturas** .  
-  
-3.  Clique com o botão direito do mouse na assinatura que você quer validar, depois clique em **Validar Assinatura**.  
-  
-4.  Na caixa de diálogo **Validar Assinatura** , selecione **Validar esta assinatura**.  
-  
-5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .  
-  
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-7.  Clique na guia **Todas as Assinaturas** .  
-  
-8.  Exiba os resultados da validação:  
-  
-    1.  Se o agente não estiver sendo executado, clique com o botão direito do mouse na assinatura e então clique em **Iniciar Sincronização**.  
-  
-    2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.  
-  
-    3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** .  
-  
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-merge-publication-replication-monitor"></a>Para validar dados para todas as assinaturas push para uma publicação de mesclagem (Replication Monitor)  
-  
-1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo e, depois, expanda um Publicador.  
-  
-2.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Todas as Assinaturas**.  
-  
-3.  Na caixa de diálogo **Validar Todas as Assinaturas** , especifique o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação).  
-  
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-5.  Clique na guia **Todas as Assinaturas** .  
-  
-6.  Exiba os resultados da validação. Para cada assinatura push:  
-  
-    1.  Se o agente não estiver sendo executado, clique com o botão direito do mouse na assinatura e então clique em **Iniciar Sincronização**.  
-  
-    2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.  
-  
-    3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** .  
-  
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
-  
-#### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>Para validar dados para todos os artigos em uma publicação transacional  
-  
-1.  No Publicador do banco de dados de publicação, execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Especifique **@publication** e um dos valores seguintes para **@rowcount_only**:  
-  
-    -   **1** - apenas verifica número de linhas (o padrão)  
-  
+1.  No Publicador do banco de dados de publicação, execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Especifique **@publication** e um dos valores seguintes para **@rowcount_only**:    
+    -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** - número de linhas e soma de verificação binária.  
   
     > [!NOTE]  
     >  Ao executar [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql), [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) é executado para cada artigo na publicação. Para executar [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) com êxito, é necessário ter permissões SELECT em todas as colunas nas tabelas base publicadas.  
   
-2.  (Opcional) Iniciar o Distribution Agent para cada assinatura se já não estiver em execução. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
+2.  (Opcional) Iniciar o Distribution Agent para cada assinatura se já não estiver em execução. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Verifique a saída de agente para o resultado da validação. Para obter mais informações, consulte [Validar os dados replicados](validate-data-at-the-subscriber.md).  
   
-3.  Verifique a saída de agente para o resultado da validação. Para obter mais informações, consulte [Validar os dados replicados](validate-replicated-data.md).  
+#### <a name="single-article"></a>Único artigo 
   
-#### <a name="to-validate-data-for-a-single-article-in-a-transactional-publication"></a>Para validar dados para um único artigo em uma publicação transacional  
-  
-1.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique **@publication**, o nome do artigo como **@article**e um dos valores seguintes como **@rowcount_only**:  
-  
-    -   **1** - apenas verifica número de linhas (o padrão)  
-  
+1.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique **@publication**, o nome do artigo como **@article**e um dos valores seguintes como **@rowcount_only**:    
+    -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** - número de linhas e soma de verificação binária.  
   
     > [!NOTE]  
     >  Para executar [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) com êxito, é necessário ter permissões SELECT em todas as colunas na tabela base publicada.  
   
-2.  (Opcional) Iniciar o Distribution Agent para cada assinatura se já não estiver em execução. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
+2.  (Opcional) Iniciar o Distribution Agent para cada assinatura se já não estiver em execução. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Verifique a saída de agente para o resultado da validação. Para obter mais informações, consulte [Validar os dados replicados](validate-data-at-the-subscriber.md).  
   
-3.  Verifique a saída de agente para o resultado da validação. Para obter mais informações, consulte [Validar os dados replicados](validate-replicated-data.md).  
+#### <a name="single-subscriber"></a>Único assinante
   
-#### <a name="to-validate-data-for-a-single-subscriber-to-a-transactional-publication"></a>Para validar dados de um único assinante para uma publicação transacional  
-  
-1.  No Publicador do banco de dados de publicação, abra uma transação explícita usando [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).  
-  
-2.  No Publicador no banco de dados de publicação, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Especifique a publicação como **@publication**, o nome do Assinante como **@subscriber**, e o nome do banco de dados da assinatura como **@destination_db**.  
-  
-3.  (Opcional) Repita a etapa 2 para cada assinatura que é validada.  
-  
-4.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique **@publication**, o nome do artigo como **@article**e um dos valores seguintes como **@rowcount_only**:  
-  
-    -   **1** - apenas verifica número de linhas (o padrão)  
-  
+1.  No Publicador do banco de dados de publicação, abra uma transação explícita usando [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
+2.  No Publicador no banco de dados de publicação, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Especifique a publicação como **@publication**, o nome do Assinante como **@subscriber**, e o nome do banco de dados da assinatura como **@destination_db**.    
+3.  (Opcional) Repita a etapa 2 para cada assinatura que é validada.    
+4.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique **@publication**, o nome do artigo como **@article**e um dos valores seguintes como **@rowcount_only**:    
+    -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** - número de linhas e soma de verificação binária.  
   
     > [!NOTE]  
     >  Para executar [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) com êxito, é necessário ter permissões SELECT em todas as colunas na tabela base publicada.  
   
-5.  No Publicador do banco de dados de publicação, confirme a transação usando [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql).  
-  
-6.  (Opcional) Repita as etapas 1 a 5 para cada artigo que é validado.  
-  
-7.  (Opcional) Iniciar o Distribution Agent se já não estiver em execução. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
-  
+5.  No Publicador do banco de dados de publicação, confirme a transação usando [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql).    
+6.  (Opcional) Repita as etapas 1 a 5 para cada artigo que é validado.    
+7.  (Opcional) Iniciar o Distribution Agent se já não estiver em execução. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
 8.  Verifique a saída de agente para o resultado da validação. Para obter mais informações, consulte [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+
+##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>Todas as assinaturas push para uma publicação transacional 
+
+### <a name="using-replication-monitor"></a>Usando o Replication Monitor
   
-#### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>Para validar dados em todas as assinaturas para uma publicação de mesclagem  
+1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo e, depois, expanda um Publicador.    
+2.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Assinaturas**.    
+3.  Na caixa de diálogo **Validar Assinaturas** , selecione quais assinatura validar:    
+    -   Selecione **Validar todas as assinaturas SQL Server**    
+    -   Selecione **Validar estas assinaturas**e então selecione uma ou mais assinaturas.   
+4.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+6.  Clique na guia **Todas as Assinaturas** .    
+7.  Exiba os resultados da validação. Para cada assinatura push:   
+    1.  Se o agente não estiver sendo executado, clique com o botão direito do mouse na assinatura e então clique em **Iniciar Sincronização**.   
+    2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.    
+    3.  Exiba informações na guia **Histórico de Distribuidor para o Assinante** na área de texto **Ações na seção selecionada** .  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Especifique **@publication** e um dos valores seguintes para **@level**:  
+
+## <a name="for-a-single-subscription-to-a-merge-publication"></a>Para uma única assinatura para uma publicação de mesclagem
   
-    -   **1** - apenas validação de número de linhas.  
+### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
   
-    -   **3** - validação de soma de verificação binária de número de linhas.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.    
+2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .    
+3.  Expanda a publicação para a qual você quer validar assinaturas, clique com o botão direito do mouse na assinatura e então clique em **Validar Assinatura**.    
+4.  Na caixa de diálogo **Validar Assinatura** , selecione **Validar esta assinatura**.    
+5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+7.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** :  
+    1.  Expanda a publicação, clique com o botão direito do mouse na assinatura e então clique em **Exibir Status da Sincronização**.   
+    2.  Se o agente não estiver sendo executado clique em **Iniciar** na caixa de diálogo **Exibir Status da Sincronização** . A caixa de diálogo exibirá mensagens informativas relacionadas à validação.  
   
-     Isso marca todas as assinaturas para validação.  
-  
-2.  Inicie o agente de mesclagem para cada assinatura. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
-  
-3.  Verifique a saída de agente para o resultado da validação. Para obter mais informações, consulte [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
-  
-#### <a name="to-validate-data-in-selected-subscriptions-to-a-merge-publication"></a>Para validar dados nas assinaturas selecionadas para uma publicação de mesclagem  
-  
-1.  No Publicador no banco de dados de publicação, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Especifique **@publication**, o nome do Assinante como **@subscriber**, o nome do banco de dados de assinatura como **@subscriber_db**e um dos valores seguintes como **@level**:  
-  
-    -   **1** - apenas validação de número de linhas.  
-  
+     Se você não vir nenhuma mensagem relacionada à validação, o agente já registrou uma mensagem subsequente. Neste caso, exiba os resultados de validação no Replication Monitor. Para obter mais informações, consulte os procedimentos de instruções do Replication Monitor neste tópico.  
+
+### <a name="using-transact-sql-t-sql"></a>Usando Transact-SQL (T-SQL)
+
+1.  No Publicador no banco de dados de publicação, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Especifique **@publication**, o nome do Assinante como **@subscriber**, o nome do banco de dados de assinatura como **@subscriber_db**e um dos valores seguintes como **@level**:   
+    -   **1** - apenas validação de número de linhas.    
     -   **3** - validação de soma de verificação binária de número de linhas.  
   
      Isso marca a assinatura selecionada para validação.  
   
-2.  Inicie o agente de mesclagem para cada assinatura. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
-  
-3.  Verifique a saída de agente para o resultado da validação.  
-  
+2.  Inicie o agente de mesclagem para cada assinatura. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Verifique a saída de agente para o resultado da validação.    
 4.  Repita as etapas 1 a 3 para cada assinatura que é validada.  
   
 > [!NOTE]  
 >  A assinatura para uma publicação de mesclagem também pode ser validada especificando-se o parâmetro **-Validate** ao executar o [Replication Merge Agent](agents/replication-merge-agent.md).  
+
   
-#### <a name="to-validate-data-in-a-subscription-using-merge-agent-parameters"></a>Para validar dados em uma assinatura usando parâmetros do Merge Agent  
+## <a name="for-all-subscriptions-to-a-merge-publication"></a>Para todas as assinaturas para uma publicação de mesclagem
+
+### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio 
   
-1.  Inicie o Merge Agent no Assinante (assinatura pull) ou no Distribuidor (assinatura push) do prompt de comando em um dos seguintes modos.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.    
+2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .    
+3.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Todas as Assinaturas**.    
+4.  Na caixa de diálogo **Validar Todas as Assinaturas** , especifique o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação).    
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+6.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** . Para cada assinatura:    
+    1.  Expanda a publicação, clique com o botão direito do mouse na assinatura e então clique em **Exibir Status da Sincronização**.   
+    2.  Se o agente não estiver sendo executado clique em **Iniciar** na caixa de diálogo **Exibir Status da Sincronização** . A caixa de diálogo exibirá mensagens informativas relacionadas à validação.  
   
-    -   Especificando o valor de **1** (número de linhas) ou **3** (número de linhas e soma de verificação binária) para o parâmetro **-Validate** .  
+     Se você não vir nenhuma mensagem relacionada à validação, o agente já registrou uma mensagem subsequente. Neste caso, exiba os resultados de validação no Replication Monitor. Para obter mais informações, consulte os procedimentos de instruções do Replication Monitor neste tópico.  
+
+### <a name="using-transact-sql-t-sql"></a>Usando Transact-SQL (T-SQL)
+
+1.  No Publicador do banco de dados de publicação, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Especifique **@publication** e um dos valores seguintes para **@level**:    
+    -   **1** - apenas validação de número de linhas.    
+    -   **3** - validação de soma de verificação binária de número de linhas.  
   
+     Isso marca todas as assinaturas para validação.  
+  
+2.  Inicie o agente de mesclagem para cada assinatura. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Verifique a saída de agente para o resultado da validação. Para obter mais informações, consulte [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+
+
+## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>Para uma única assinatura push para uma publicação de mesclagem 
+
+### <a name="using-replication-monitor"></a>Usando o Replication Monitor
+  
+1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo, expanda um Publicador e, depois, clique em uma publicação.    
+2.  Clique na guia **Todas as Assinaturas** .    
+3.  Clique com o botão direito do mouse na assinatura que você quer validar, depois clique em **Validar Assinatura**.    
+4.  Na caixa de diálogo **Validar Assinatura** , selecione **Validar esta assinatura**.    
+5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+7.  Clique na guia **Todas as Assinaturas** .    
+8.  Exiba os resultados da validação:    
+    1.  Se o agente não estiver sendo executado, clique com o botão direito do mouse na assinatura e então clique em **Iniciar Sincronização**.    
+    2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.    
+    3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** .  
+  
+## <a name="for-all-push-subscriptions-to-a-merge-publication"></a>Para todas as assinaturas push para uma publicação de mesclagem 
+
+### <a name="using-replication-monitor"></a>Usando o Replication Monitor
+  
+1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo e, depois, expanda um Publicador.    
+2.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Todas as Assinaturas**.    
+3.  Na caixa de diálogo **Validar Todas as Assinaturas** , especifique o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação).    
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+5.  Clique na guia **Todas as Assinaturas** .    
+6.  Exiba os resultados da validação. Para cada assinatura push:    
+    1.  Se o agente não estiver sendo executado, clique com o botão direito do mouse na assinatura e então clique em **Iniciar Sincronização**.    
+    2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.    
+    3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** .  
+  
+  
+## <a name="validate-data-using-merge-agent-parameters"></a>Validar dados usando parâmetros de agente de mesclagem
+  
+1.  Inicie o Merge Agent no Assinante (assinatura pull) ou no Distribuidor (assinatura push) do prompt de comando em um dos seguintes modos.    
+    -   Especificando o valor de **1** (número de linhas) ou **3** (número de linhas e soma de verificação binária) para o parâmetro **-Validate** .   
     -   Especificando **validação de número de linhas** ou **validação de número de linhas e de soma de verificação** para o parâmetro **- ProfileName** .  
   
      Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) ou [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+## <a name="using-replication-management-objects-rmo"></a>Usando o RMO (Replication Management Objects)  
  A replicação permite que você use RMO (Replication Management Objects) para validar programaticamente os dados que no Assinante correspondam aos dados do Publicador. Os objetos usados dependem do tipo de topologia de replicação. A replicação transacional necessita de validação em todas as assinaturas de uma publicação.  
   
 > [!NOTE]  
@@ -308,18 +275,12 @@ ms.locfileid: "52816878"
   
 #### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>Para validar dados para todos os artigos em uma publicação transacional  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
-  
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
-  
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
-  
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Passe o seguinte:  
-  
-    -   <xref:Microsoft.SqlServer.Replication.ValidationOption>  
-  
-    -   <xref:Microsoft.SqlServer.Replication.ValidationMethod>  
-  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.   
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.    
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Passe o seguinte:    
+    -   <xref:Microsoft.SqlServer.Replication.ValidationOption>    
+    -   <xref:Microsoft.SqlServer.Replication.ValidationMethod>    
     -   Um Booliano que indica se é preciso parar o Distribution Agent depois de completar a validação.  
   
      Isso marca os artigos para a validação.  
@@ -328,26 +289,18 @@ ms.locfileid: "52816878"
   
 #### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>Para validar dados em todas as assinaturas para uma publicação de mesclagem  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
-  
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
-  
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
-  
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Passe o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.  
-  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .   
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.   
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.    
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Passe o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.    
 5.  Execute o Merge Agent para cada assinatura iniciar a validação ou espere pela próxima execução de agente marcada. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md). O resultado da operação de validação é gravado no histórico de agente que você exibe usando o Replication Monitor. Para obter mais informações, consulte [Monitoring Replication](monitoring-replication.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>Para validar os dados em uma única assinatura em uma publicação de mesclagem  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
-  
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
-  
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
-  
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Passe o nome do Assinante e banco de dados de assinatura que estão sendo validados e o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.  
-  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.    
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.    
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Passe o nome do Assinante e banco de dados de assinatura que estão sendo validados e o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.    
 5.  Execute o Merge Agent para a assinatura iniciar a validação ou espere pela próxima execução de agente marcada. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](synchronize-a-push-subscription.md). O resultado da operação de validação é gravado no histórico de agente que você exibe usando o Replication Monitor. Para obter mais informações, consulte [Monitoring Replication](monitoring-replication.md).  
   
 ###  <a name="RMOExample"></a> Exemplo (RMO)  

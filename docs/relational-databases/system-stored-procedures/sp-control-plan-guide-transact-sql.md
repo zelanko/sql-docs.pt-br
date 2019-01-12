@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5801a38e22a0c638e9daee1e448158941499b19f
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502977"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100781"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **N'** *plan_guide_name* **'**  
+ **N'** _plan_guide_name_ **'**  
  Especifica o guia de plano que está descartado, habilitado ou desabilitado. *plan_guide_name* é resolvido para o banco de dados atual. Se não for especificado, *plan_guide_name* será padronizado como NULL.  
   
  DROP  

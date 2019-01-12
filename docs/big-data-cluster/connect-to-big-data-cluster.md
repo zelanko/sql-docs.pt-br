@@ -8,12 +8,13 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 8bccadd8fbce9fe2a8cc6f16db75dbd09f3d1ed0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.technology: big-data-cluster
+ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264358"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241817"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar a um cluster de big data do SQL Server com o Studio de dados do Azure
 
@@ -29,7 +30,7 @@ Este artigo descreve como se conectar a um cluster de big data de 2019 do SQL Se
 
 ## <a name="connect-to-the-cluster"></a>Conectar-se ao cluster
 
-Quando você se conectar a um cluster de big data, você tem a opção para se conectar ao SQL Server [instância mestre](concept-master-instance.md) ou para o gateway HDFS/Spark. As seções a seguir mostram como se conectar a cada um.
+Quando você se conectar a um cluster de big data, você tem a opção para conectar-se para a instância mestre do SQL Server ou para o gateway HDFS/Spark. As seções a seguir mostram como se conectar a cada um.
 
 ## <a id="master"></a> Instância principal
 
@@ -79,6 +80,9 @@ O **gateway HDFS/Spark** permite que você conecte para trabalhar com o pool de 
 1. No Azure Data Studio, pressione **F1** > **nova Conexão**.
 
 1. Na **tipo de Conexão**, selecione **cluster de big data do SQL Server**.
+
+   > [!TIP]
+   > Se você não vir as **cluster de big data do SQL Server** conexão de tipo, certifique-se de ter instalado o [extensão do SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) e que você reiniciou o estúdio de dados do Azure após a conclusão de extensão instalando.
 
 1. Digite o endereço IP do cluster de big data no **nome do servidor** (não especificar uma porta).
 

@@ -17,12 +17,12 @@ ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7d83a8422bc8bfbe851a77d8dc42f83db159454
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e5d21e0b5a187fa7b55e104df9b633adc180070c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146981"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128476"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introdução ao monitoramento do Analysis Services com o SQL Server Profiler
   É possível usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar eventos gerados por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode fazer o seguinte:  
@@ -55,7 +55,7 @@ ms.locfileid: "50146981"
 -   Um rastreamento pode continuar quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] parar e for reiniciado.  
   
     > [!NOTE]  
-    >  As senhas não são reveladas em eventos de rastreamento, mas são substituídas por ****** no evento.  
+    >  As senhas não são reveladas em eventos de rastreamento, mas são substituídas por \* \* \* \* \* \* no evento.  
   
  Para obter o desempenho ideal, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar somente os eventos pelos quais você tem maior interesse. O monitoramento de muitos eventos pode causar sobrecarga e aumentar muito a tabela ou o arquivo de rastreamento, especialmente durante o monitoramento em um longo período de tempo. Além disso, use a filtragem para limitar a quantidade de dados coletados e impedir o aumento em excesso dos rastreamentos.  
   

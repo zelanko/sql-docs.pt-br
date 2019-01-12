@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125932"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134826"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Salvar scripts como projetos ou soluções
   Desenvolvedores familiarizados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio darão as boas-vindas ao Gerenciador de Soluções no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os scripts que dão suporte a seu negócio podem ser agrupados em projetos de script e os projetos de script podem ser administrados juntos, como uma solução. Quando os scripts são colocados em projetos de script e soluções, eles podem ser abertos em conjunto, como um grupo, ou salvos em conjunto em um produto de controle de código-fonte, como o Visual SourceSafe. Projetos de script incluem as informações de conexão dos scripts para serem executados corretamente, e podem incluir arquivos diferentes (não script), como um arquivo de texto de suporte.  
@@ -58,11 +58,11 @@ ms.locfileid: "48125932"
     > [!NOTE]  
     >  Se você precisar de mais espaço para inserir sua consulta, pressione SHIFT+ALT+ENTER, para alternar para o modo de tela inteira.  
   
-11. No Gerenciador de Soluções, clique com o botão direito do mouse em **SQLQuery1**e clique em **Renomear**. Digite **Check Workorders****.sql** como o novo nome da consulta e pressione ENTER.  
+11. No Gerenciador de Soluções, clique com o botão direito do mouse em **SQLQuery1**e clique em **Renomear**. Tipo de **Check workorders** como o novo nome para a consulta e pressione ENTER.  
   
 12. Para salvar a solução e o projeto de script, no menu **Arquivo** , clique em **Salvar Tudo**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Resumo: Soluções e Projetos de Script](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Resumo: Soluções e projetos de Script](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

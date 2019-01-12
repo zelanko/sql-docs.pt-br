@@ -1,7 +1,7 @@
 ---
 title: O banco de dados secundário não está ingressado | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 59c8c7e13faf5c3ed9874779c2f9b38faaf33791
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5ca86d30647ea0dd2841248a512725aabb5617b7
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358938"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206292"
 ---
 # <a name="secondary-database-is-not-joined"></a>O banco de dados secundário não está unido
     
@@ -42,7 +42,7 @@ ms.locfileid: "53358938"
  Este banco de dados secundário não está unido ao grupo de disponibilidade. A configuração deste banco de dados secundário está incompleta.  
   
 ## <a name="possible-solution"></a>Solução possível  
- Use o Transact-SQL, o PowerShell ou o SQL Server Management Studio para unir a réplica secundária ao grupo de disponibilidade. Para obter mais informações sobre como unir réplicas secundárias a grupos de disponibilidade, consulte [Unir uma réplica secundária a um grupo de disponibilidade (SQL Server)](https://msdn.microsoft.com/en-sg/library/ff878473\(en-us,SQL.110\).aspx).  
+ Use o Transact-SQL, o PowerShell ou o SQL Server Management Studio para unir a réplica secundária ao grupo de disponibilidade. Para obter mais informações sobre como unir réplicas secundárias a grupos de disponibilidade, consulte [Unir uma réplica secundária a um grupo de disponibilidade (SQL Server)](https://msdn.microsoft.com/library/ff878473\(en-us,SQL.110\).aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

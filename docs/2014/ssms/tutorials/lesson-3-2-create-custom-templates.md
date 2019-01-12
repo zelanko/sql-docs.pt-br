@@ -14,12 +14,12 @@ ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215576"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127246"
 ---
 # <a name="create-custom-templates"></a>Criar modelos personalizados
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é fornecido com modelos para várias tarefas comuns, mas o poder real dos modelos está na capacidade de criar um modelo personalizado para um script complexo que deve ser criado com frequência. Nesta prática, você criará um script simples com poucos parâmetros, mas modelos também são úteis para scripts longos e repetitivos.  
@@ -67,7 +67,7 @@ ms.locfileid: "48215576"
   
 10. No Editor de Consultas, digite **EXECUTE dbo.WorkOrdersForBlade**e pressione F5 para executar a consulta. Confirme se o painel **Resultados** retorna uma lista dos pedidos de trabalho nas folhas.  
   
-11. Edite o script de modelo (o script na etapa 7), substituindo o nome de produto folha pelo parâmetro ***< * product_name**, `nvarchar(50)`, **nome*> * * *, em quatro lugares.  
+11. Edite o script de modelo (o script na etapa 7), substituindo o nome de produto folha pelo parâmetro  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nome*>*</strong> , em quatro lugares.  
   
     > [!NOTE]  
     >  Parâmetros requerem três elementos: o nome do parâmetro que você deseja substituir, o tipo de dados do parâmetro e um valor padrão do parâmetro.  

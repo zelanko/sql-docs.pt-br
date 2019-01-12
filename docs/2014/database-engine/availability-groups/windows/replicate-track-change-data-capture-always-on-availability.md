@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091256"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134086"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Há suporte para a replicação, a CDC (captura de dados de alteração) e o CT (controle de alterações) no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece alta disponibilidade e recursos adicionais de recuperação de banco de dados.  
@@ -191,9 +191,9 @@ ms.locfileid: "48091256"
   
 -   Ao usar a replicação de mesclagem e o banco de dados de publicação estiver em um grupo de disponibilidade:  
   
-    -   Assinatura push: o publicador e o distribuidor devem executar pelo menos o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Assinatura por push: o publicador e o distribuidor devem ser executados pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Assinatura pull: o publicador, o distribuidor e os bancos de dados do assinante devem estar pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
+    -   Assinatura por pull: os bancos de dados publicador, distribuidor e assinante devem estar pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
   
 -   Não há suporte à colocação do banco de dados de distribuição em um grupo de disponibilidade.  
   
@@ -205,10 +205,10 @@ ms.locfileid: "48091256"
 |||||  
 |-|-|-|-|  
 ||**Publicador**|**Distribuidor** <sup>3</sup>|**Assinante**|  
-|**Transacional.**|Sim<sup>1</sup>|não|Sim<sup>2</sup>|  
-|**P2P**|não|não|não|  
-|**Mesclagem**|Sim|não|Sim<sup>2</sup>|  
-|**Instantâneo**|Sim|não|Sim<sup>2</sup>|  
+|**Transacional.**|Sim<sup>1</sup>|Não|Sim<sup>2</sup>|  
+|**P2P**|Não|Não|Não|  
+|**Mesclagem**|Sim|Não|Sim<sup>2</sup>|  
+|**Instantâneo**|Sim|Não|Sim<sup>2</sup>|  
   
  <sup>1</sup> não inclui suporte para replicação transacional bidirecional e recíproca.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091256"
   
 -   [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Administração &#40;Replicação&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Perguntas frequentes sobre administração de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
