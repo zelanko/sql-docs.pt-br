@@ -16,12 +16,12 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbfef6f848aaa0d9dddcef68aaa3af8aca4c0880
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dc236b4b022a80c7c1cbd4aa4239200b17840db6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823800"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126876"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subscriber=** ] **'***assinante***'**  
+ [  **@subscriber=** ] **'**_assinante_**'**  
  É o nome do Assinante a ser removido. *assinante* está **sysname**, sem padrão.  
   
- [  **@reserved=** ] **'***reservado***'**  
+ [  **@reserved=** ] **'**_reservado_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  

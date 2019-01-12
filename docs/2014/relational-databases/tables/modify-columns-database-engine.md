@@ -14,12 +14,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b45418c96716cc90ac1b3f42974cd35e60c1919d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797578"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126086"
 ---
 # <a name="modify-columns-database-engine"></a>Modificar colunas (Mecanismo de Banco de Dados)
   Você pode modificar o tipo de dados de uma coluna no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52797578"
   
 3.  Na guia **Propriedades da Coluna** , clique na célula de grade da propriedade **Tipo de Dados** e selecione o novo tipo de dados na lista suspensa.  
   
-4.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 > [!NOTE]  
 >  Quando o tipo de dados de uma coluna é modificado, o Designer de Tabela aplica o comprimento padrão do tipo de dados que foi selecionado, até mesmo quando outro já tiver sido especificado. Defina sempre o comprimento do tipo de dados do valor desejado após especificar o tipo de dados.  

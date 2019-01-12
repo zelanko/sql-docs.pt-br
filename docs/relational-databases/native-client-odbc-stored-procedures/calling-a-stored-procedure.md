@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d93734ea9ef55361eb065f1f200757632dca1fd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7cd89d826177074bca18a047545a32acee115a9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662395"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128356"
 ---
 # <a name="calling-a-stored-procedure"></a>Chamando um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51662395"
   
  A sequência de escape CALL do ODBC para chamar um procedimento é:  
   
- {[**? =**]**chamada * **procedure_name*[([*parâmetro*] [**, **[* parâmetro *]]...)]}  
+ {[**? =**]**chamar**_procedure_name_[([*parâmetro*] [**,**[*deparâmetro*]] ...)]}  
   
  em que *procedure_name* Especifica o nome de um procedimento e *parâmetro* Especifica um parâmetro de procedimento. Há suporte para parâmetros nomeados somente em instruções que usam a sequência de escape ODBC CALL.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "51662395"
   
  Parâmetros de entrada e entrada/saída podem ser omitidos das chamadas de procedimento. Se um procedimento for chamado usando parênteses, mas sem nenhum parâmetro, o driver instruirá a fonte de dados a usar o valor padrão para o primeiro parâmetro. Por exemplo:  
   
- {**chamar** * * procedure_name **()**}  
+ {**chamar** _procedure_name_**()**}  
   
  Se o procedimento não tiver nenhum parâmetro, ele poderá falhar. Se um procedimento for chamado sem parênteses, o driver não enviará nenhum valor de parâmetro. Por exemplo:  
   
- {**chamar** *procedure_name*}  
+ {**chamar** _procedure_name_}  
   
  Literais podem ser especificados para parâmetros de entrada e de entrada/saída em chamadas de procedimento. Por exemplo, o procedimento InsertOrder tem cinco parâmetros de entrada. A seguinte chamada a InsertOrder omite o primeiro parâmetro, fornece um literal para o segundo parâmetro e usa um marcador de parâmetro para o terceiro, quarto e quinto parâmetros. (Os parâmetros são numerados sequencialmente, a partir do valor 1.)  
   

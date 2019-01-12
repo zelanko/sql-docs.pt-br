@@ -18,12 +18,12 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04b6717a2bab3d8a370ed50cacdce935526cb628
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354967"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127646"
 ---
 # <a name="calling-a-stored-procedure"></a>Chamando um procedimento armazenado
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a ODBC CALL sequência de escape do e o [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) instrução para a execução de procedimentos armazenados; a sequência de escape CALL do ODBC é o método preferencial. Usar a sintaxe ODBC permite que um aplicativo recupere os códigos de retorno dos procedimentos armazenados e o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client também é otimizado para usar um protocolo originalmente desenvolvido para enviar RPCs (chamadas de procedimento remoto) entre computadores que estejam executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
@@ -33,7 +33,7 @@ ms.locfileid: "53354967"
   
  A sequência de escape CALL do ODBC para chamar um procedimento é:  
   
- {[**? =**]**chamada * **procedure_name*[([*parâmetro*] [**, **[* parâmetro *]]...)]}  
+ {[**? =**]**chamar**_procedure_name_[([*parâmetro*] [**,**[*deparâmetro*]] ...)]}  
   
  em que *procedure_name* Especifica o nome de um procedimento e *parâmetro* Especifica um parâmetro de procedimento. Há suporte para parâmetros nomeados somente em instruções que usam a sequência de escape ODBC CALL.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "53354967"
   
  Parâmetros de entrada e entrada/saída podem ser omitidos das chamadas de procedimento. Se um procedimento for chamado usando parênteses, mas sem nenhum parâmetro, o driver instruirá a fonte de dados a usar o valor padrão para o primeiro parâmetro. Por exemplo:  
   
- {**chamar** * * procedure_name **()**}  
+ {**chamar** _procedure_name_**()**}  
   
  Se o procedimento não tiver nenhum parâmetro, ele poderá falhar. Se um procedimento for chamado sem parênteses, o driver não enviará nenhum valor de parâmetro. Por exemplo:  
   
- {**chamar** *procedure_name*}  
+ {**chamar** _procedure_name_}  
   
  Literais podem ser especificados para parâmetros de entrada e de entrada/saída em chamadas de procedimento. Por exemplo, o procedimento InsertOrder tem cinco parâmetros de entrada. A seguinte chamada a InsertOrder omite o primeiro parâmetro, fornece um literal para o segundo parâmetro e usa um marcador de parâmetro para o terceiro, quarto e quinto parâmetros. (Os parâmetros são numerados sequencialmente, a partir do valor 1.)  
   

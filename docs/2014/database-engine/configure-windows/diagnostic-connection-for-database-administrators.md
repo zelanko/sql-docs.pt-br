@@ -20,12 +20,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f1a426f91af1f284cc0e60505dc2fcbfae9c4ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377558"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124516"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma conexão diagnóstica especial para administradores quando conexões padrão com o servidor não são possíveis. Esta conexão diagnóstica permite que um administrador acesse o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar consultas diagnósticas e resolver problemas mesmo quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está respondendo às solicitações de conexão padrão.  
@@ -43,7 +43,7 @@ ms.locfileid: "53377558"
   
  Apenas membros da função sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se conectar usando o DAC.  
   
- O DAC está disponível e tem suporte através do utilitário de prompt de comando **sqlcmd** que usa uma opção de administrador especial (**-A**). Para obter mais informações sobre como usar **sqlcmd**, veja [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Você também pode se conectar inserindo o prefixo `admin:`para o nome da instância no formato **sqlcmd - Sadmin: * * * < nome_da_instância >.* Você também pode iniciar um DAC de um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas ao se conectar ao `admin:` \<* instance_name * >.  
+ O DAC está disponível e tem suporte através do utilitário de prompt de comando **sqlcmd** que usa uma opção de administrador especial (**-A**). Para obter mais informações sobre como usar **sqlcmd**, veja [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Você também pode se conectar inserindo o prefixo `admin:`para o nome da instância no formato **sqlcmd - Sadmin:**_< nome_da_instância >._ Você também pode iniciar um DAC de um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas ao se conectar ao `admin:` \< *instance_name*>.  
   
 ## <a name="restrictions"></a>Restrictions  
  Como o DAC existe somente para diagnosticar problemas do servidor em circunstâncias raras, há algumas restrições na conexão:  
@@ -93,7 +93,7 @@ ms.locfileid: "53377558"
   
  A porta DAC é atribuída dinamicamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a inicialização. Ao conectar-se à instância padrão, o DAC evita usar uma solicitação do Protocolo de Resolução (SSRP) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao serviço SQL Server Browser. Primeiro ele se conecta usando a porta TCP 1434. Se isso falhar, ele faz uma chamada ao SSRP para obter a porta. Se o navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver escutando as solicitações de SSRP, a solicitação de conexão retornará um erro. Consulte o log de erros para localizar o número da porta que o DAC está escutando. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for configurado para aceitar conexões de administração remotas, o DAC deverá ser iniciado com um número de porta explícito:  
   
- **Sqlcmd Stcp:**  *\<server >,\<porta >*  
+ **Sqlcmd Stcp:**  _\<server >,\<porta >_  
   
  O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lista o número da porta para o DAC, que, por padrão, é 1434. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para aceitar apenas conexões DAC locais, conecte usando o adaptador de loopback com o seguinte comando:  
   

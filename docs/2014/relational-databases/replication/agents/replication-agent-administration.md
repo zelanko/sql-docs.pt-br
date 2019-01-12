@@ -22,12 +22,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49729948f284af9ec2a638f7da3da4b248521653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762488"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130446"
 ---
 # <a name="replication-agent-administration"></a>Administração do agente de replicação
   Agentes de replicação executam muitas tarefas associadas com replicação, incluindo a criação de cópias de esquema e dados, a detecção de atualizações no Publicador ou Assinante e a distribuição de modificações entre os servidores. Por padrão, agentes de replicação são executados sob as etapas de trabalho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Os agentes são simplesmente executáveis, assim eles podem também ser chamados diretamente da linha de comando e dos scripts em lote. Cada agente de replicação suporta um jogo de parâmetros de tempo de execução usados para controlar o seu trabalho; esses parâmetros são especificados no perfil do agente ou na linha de comando.  
@@ -69,7 +69,7 @@ ms.locfileid: "52762488"
   
     -   Queue Reader Agent  
   
-     Acesse as informações e as tarefas associadas a esses agentes por meio da guia **Agentes** . Para mais informações, consulte [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+     Acesse as informações e as tarefas associadas a esses agentes por meio da guia **Agentes** . Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Os agentes a seguir estão associados às assinaturas no Replication Monitor:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52762488"
   
     -   Merge Agent  
   
-     Informações de acesso e as tarefas associadas a esses agentes por meio de guias a seguir: **Lista de observação da assinatura** (disponível para cada publicador) ou o **todas as assinaturas** guia (disponível para cada publicação). Para obter mais informações, consulte [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md) [Exibir informações e executar tarefas para os agentes associados a uma assinatura (Replication Monitor)].  
+     Informações de acesso e as tarefas associadas a esses agentes por meio de guias a seguir: **Lista de observação da assinatura** (disponível para cada publicador) ou o **todas as assinaturas** guia (disponível para cada publicação). Para obter mais informações, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="independent-and-shared-agents"></a>Agente independente e compartilhado  
  Um agente independente é um agente que presta serviço a uma assinatura. Um agente compartilhado presta serviço a múltiplas assinaturas usando a mesma necessidade de sincronização do agente compartilhado, por padrão elas esperam em uma fila, e o agente compartilhado presta serviço a elas uma de cada vez. A latência é reduzida ao usar os agentes independentes porque o agente está pronto sempre que a assinatura precisa ser sincronizada. A replicação de mesclagem sempre usa agentes independentes, e a replicação transacional usa agentes independentes por padrão para publicações criadas no Assistente para Novas Publicações (nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], por padrão a replicação transacional usava agentes compartilhados).  

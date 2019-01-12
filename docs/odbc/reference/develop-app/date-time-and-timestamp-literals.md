@@ -13,17 +13,17 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa7fb107e67d529c656a49b271744757a1a73746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651314"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128056"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Data, hora e literais de carimbo de data/hora
 É a sequência de escape para literais de data, hora e carimbo de hora  
   
- **{***-tipo* **'** *valor* **'}**   
+ **{**_-tipo_ **'** _valor_ **'}**  
   
  em que *tipo literal* é um dos valores listado na tabela a seguir.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47651314"
   
  [1] o número de dígitos à direita da vírgula decimal em um intervalo de tempo ou carimbo de hora literal que contém um componente de segundos é dependente de precisão de segundos, conforme contido no campo de descritor SQL_DESC_PRECISION. (Para obter mais informações, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- Para obter mais informações sobre a data, hora e sequências de escape de carimbo de hora, consulte [data, hora e sequências de Escape de carimbo de hora](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) na gramática do apêndice c: SQL.  
+ Para obter mais informações sobre a data, hora e sequências de escape de carimbo de hora, consulte [data, hora e sequências de Escape de carimbo de hora](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) no Apêndice c: Gramática SQL.  
   
  Por exemplo, ambas as seguintes instruções SQL atualizar a data de abertura da ordem de venda 1023 na tabela Orders. A primeira instrução usa a sintaxe da sequência de escape. A segunda instrução usa a sintaxe de Oracle Rdb nativa para a coluna de data e não é interoperável.  
   

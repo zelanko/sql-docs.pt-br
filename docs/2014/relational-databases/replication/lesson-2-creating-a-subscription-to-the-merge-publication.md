@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8634606ba3eaba8a38aefb66043c0d00e33660a2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590990"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127536"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lição 2: Criando uma assinatura na publicação de mesclagem
   Nesta lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Em seguida, definirá permissões no banco de dados da assinatura e gerará manualmente o instantâneo de dados filtrados para a nova assinatura. Esta lição exige que você tenha concluído a lição anterior, [lição 1: Publicando dados usando a replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md).  

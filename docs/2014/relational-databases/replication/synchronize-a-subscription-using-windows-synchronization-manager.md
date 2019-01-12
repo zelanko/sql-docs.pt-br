@@ -13,12 +13,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8907d3a3644c0795608495c259a93fb64d648332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782788"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125906"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows (Gerenciador de Sincronização do Windows)
   O Gerenciador de Sincronização[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows só poderá ser usado para sincronizar assinaturas para publicações do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução no mesmo computador que o Gerenciador de Sincronização (ele também pode ser usado para sincronizar arquivos offline e páginas da Web). Para usar o Gerenciador de Sincronização:  
@@ -97,7 +97,7 @@ ms.locfileid: "52782788"
   
 ### <a name="to-use-the-interactive-resolver"></a>Para usar o Resolvedor Interativo  
   
-1.  Habilite o artigo e assinatura a usarem a resolução interativa. Para obter mais informações, consulte [Especificar a resolução interativa de conflitos para artigos de mesclagem](publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Habilite o artigo e assinatura a usarem a resolução interativa. Para obter mais informações, consulte [Especificar a resolução interativa de conflitos para artigos de mesclagem](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 2.  Após o início da sincronização da assinatura no Gerenciador de Sincronização, o Resolvedor Interativo será iniciado automaticamente se a resolução interativa de conflitos estiver habilitada e se houver conflitos em um ou mais artigos. O Resolvedor Interativo exibe um conflito de cada vez, com uma sugestão de resolução para cada conflito (com base no resolvedor especificado quando a publicação e a assinatura foram criadas).  
   

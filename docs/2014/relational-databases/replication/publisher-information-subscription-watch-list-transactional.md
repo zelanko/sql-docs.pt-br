@@ -12,12 +12,12 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53a19b1de1c8aa0be89d0a743007b141bdb169b2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 55a3be7188905ccebb9f9d09567879b6bca13de5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766908"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126526"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional-publication-sql-server-2005-and-later"></a>Informações do Publicador, Lista de Observação da Assinatura (publicação transacional, SQL Server 2005 e versões posteriores)
   A guia **Lista de Observação da Assinatura** está disponível para os Distribuidores que executam o SQL Server 2005 e versões posteriores; seu propósito é exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado. Você pode filtrar a lista de assinaturas para ver erros, avisos e qualquer assinatura de desempenho insatisfatório. Este guia fornece um único local para o administrador monitorar todas as atividades de replicação em um publicador: O Replication Monitor exibe todas as assinaturas que exigem atenção, com base no tipo de replicação selecionado e na opção escolhida na **Mostrar** caixa de listagem suspensa. Como os itens mostrados nessa guia são baseados no status atual e no desempenho, as assinaturas serão exibidas nessa página somente se corresponderem à opção da caixa de listagem **Mostrar** naquele momento.  
@@ -95,7 +95,7 @@ ms.locfileid: "52766908"
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)  
   
   

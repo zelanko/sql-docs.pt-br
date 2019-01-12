@@ -15,12 +15,12 @@ ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b930defb70b64bd006026870389fc509b755c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789000"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124586"
 ---
 # <a name="rename-tables-database-engine"></a>Renomear tabelas (Mecanismo de Banco de Dados)
   Você pode renomear uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "52789000"
   
 4.  Para cancelar essa ação, pressione a tecla ESC antes de deixar o campo.  
   
-5.  No menu **Arquivo**, escolha **Salvar***nome da tabela*.  
+5.  No menu **Arquivo** , escolha **Salvar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

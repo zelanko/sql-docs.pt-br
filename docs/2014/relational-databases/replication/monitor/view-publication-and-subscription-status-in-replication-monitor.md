@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786738"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123926"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Exibir o status da publicação e da assinatura no Replication Monitor
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas:  
@@ -53,11 +53,8 @@ ms.locfileid: "52786738"
   
  **Para exibir o status da publicação e da assinatura**  
   
--   Replication Monitor: [Exibir informações e executar tarefas para uma publicação de &#40;Replication Monitor&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) e [exibir informações e executar tarefas para uma assinatura do &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Replication Monitor: [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).
   
- **Para exibir informações detalhadas para os agentes**  
-  
--   Replication Monitor: [Exibir informações e executar tarefas para os agentes associados a uma publicação de &#40;Replication Monitor&#41; ](view-information-and-perform-tasks-for-publication-agents.md) e [exibir informações e executar tarefas para os agentes associados com uma assinatura do &#40;replicação Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Valores de status da publicação  
  A tabela abaixo mostra os valores de status da publicação e seus ícones correspondentes em ordem de prioridade.  

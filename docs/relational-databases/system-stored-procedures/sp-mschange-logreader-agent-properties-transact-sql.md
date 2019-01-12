@@ -16,12 +16,12 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30f7ee9e8488fad2311adae55f973bab8a22ec22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3db4c300cad5f38b46b73b2edc065a5b98ec90f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770288"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130806"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
+ [ **@publisher** =] **'**_publisher_**'**  
  É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [  **@publisher_db=** ] **'**_publisher_db_**'**  
  É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
@@ -58,19 +58,19 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  **1** Especifica a autenticação do Windows.  
   
- [ **@publisher_login**=] **'***publisher_login***'**  
+ [ **@publisher_login**=] **'**_publisher_login_**'**  
  É o logon usado na conexão com o Publicador. *publisher_login* está **sysname**, sem padrão. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta do Windows especificada na *job_login* será usado ao conectar-se ao publicador.  
   
- [ **@publisher_password**=] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'**_publisher_password_**'**  
  É a senha usada ao conectar-se ao Publicador. *publisher_password* está **sysname**, sem padrão.  
   
- [ **@job_login**=] **'***job_login***'**  
+ [ **@job_login**=] **'**_job_login_**'**  
  É o logon da conta do Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, sem padrão. *Isso não pode ser alterado para um não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, sem padrão.  
   
- [ **@publisher_type**=] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'**_publisher_type_**'**  
  Especifica o tipo de Publicador quando o Publicador não está sendo executado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* está **sysname**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  

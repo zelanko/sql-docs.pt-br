@@ -14,12 +14,12 @@ ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c92a2d943ecbe571bd87268a7096d2adf51a06c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 47711a7e974373e9da4ac8068295029d88accaf6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534292"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125616"
 ---
 # <a name="numeric-functions"></a>Funções numéricas
 A tabela a seguir descreve as funções numéricas que estão incluídas no conjunto de função escalar ODBC. Chamando **SQLGetInfo** com um *tipo de informação* de SQL_NUMERIC_FUNCTIONS, um aplicativo pode determinar quais funções numéricas são suportadas por um driver.  
@@ -36,27 +36,27 @@ A tabela a seguir descreve as funções numéricas que estão incluídas no conj
   
 |Função|Descrição|  
 |--------------|-----------------|  
-|**ABS (** *numeric_exp* **)** (ODBC 1.0)|Retorna o valor absoluto do *numeric_exp*.|  
-|**ACOS (** *float_exp* **)** (ODBC 1.0)|Retorna o arco cosseno *float_exp* como um ângulo, expresso em radianos.|  
-|**ASIN (** *float_exp* **)** (ODBC 1.0)|Retorna o arco seno de *float_exp* como um ângulo, expresso em radianos.|  
-|**ATAN (** *float_exp* **)** (ODBC 1.0)|Retorna o arco tangente de *float_exp* como um ângulo, expresso em radianos.|  
-|**ATAN2 (** *float_exp1*, _float_exp2_**)** (ODBC 2.0)|Retorna o arco tangente do *x* e *y* coordenadas, especificado por *float_exp1* e *float_exp2*, respectivamente, como um ângulo expresso em radianos.|  
-|**CEILING (** *numeric_exp* **)** (ODBC 1.0)|Retorna o menor inteiro maior ou igual a *numeric_exp*. O valor retornado é do mesmo tipo de dados como o parâmetro de entrada.|  
-|**COS (** *float_exp* **)** (ODBC 1.0)|Retorna o cosseno *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
-|**COT (** *float_exp* **)** (ODBC 1.0)|Retorna a cotangente *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
-|**GRAUS (** *numeric_exp* **)** (ODBC 2.0)|Retorna o número de graus convertido de *numeric_exp* radianos.|  
-|**EXP (** *float_exp* **)** (ODBC 1.0)|Retorna o valor exponencial da *float_exp*.|  
-|**FLOOR (** *numeric_exp* **)** (ODBC 1.0)|Retorna o maior inteiro menor ou igual a *numeric_exp*. O valor retornado é do mesmo tipo de dados como o parâmetro de entrada.|  
-|**LOG (** *float_exp* **)** (ODBC 1.0)|Retorna o logaritmo natural de *float_exp*.|  
-|**LOG10 (** *float_exp* **)** (ODBC 2.0)|Logaritmo de base 10 de retorna de *float_exp*.|  
-|**MOD (** *integer_exp1*, _integer_exp2_**)** (ODBC 1.0)|Retorna o resto dos *integer_exp1* dividido pelo *integer_exp2*.|  
+|**ABS (** _numeric_exp_ **)** (ODBC 1.0)|Retorna o valor absoluto do *numeric_exp*.|  
+|**ACOS (** _float_exp_ **)** (ODBC 1.0)|Retorna o arco cosseno *float_exp* como um ângulo, expresso em radianos.|  
+|**ASIN (** _float_exp_ **)** (ODBC 1.0)|Retorna o arco seno de *float_exp* como um ângulo, expresso em radianos.|  
+|**ATAN (** _float_exp_ **)** (ODBC 1.0)|Retorna o arco tangente de *float_exp* como um ângulo, expresso em radianos.|  
+|**ATAN2 (** _float_exp1_, _float_exp2_**)** (ODBC 2.0)|Retorna o arco tangente do *x* e *y* coordenadas, especificado por *float_exp1* e *float_exp2*, respectivamente, como um ângulo expresso em radianos.|  
+|**CEILING (** _numeric_exp_ **)** (ODBC 1.0)|Retorna o menor inteiro maior ou igual a *numeric_exp*. O valor retornado é do mesmo tipo de dados como o parâmetro de entrada.|  
+|**COS (** _float_exp_ **)** (ODBC 1.0)|Retorna o cosseno *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
+|**COT (** _float_exp_ **)** (ODBC 1.0)|Retorna a cotangente *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
+|**GRAUS (** _numeric_exp_ **)** (ODBC 2.0)|Retorna o número de graus convertido de *numeric_exp* radianos.|  
+|**EXP (** _float_exp_ **)** (ODBC 1.0)|Retorna o valor exponencial da *float_exp*.|  
+|**FLOOR (** _numeric_exp_ **)** (ODBC 1.0)|Retorna o maior inteiro menor ou igual a *numeric_exp*. O valor retornado é do mesmo tipo de dados como o parâmetro de entrada.|  
+|**LOG (** _float_exp_ **)** (ODBC 1.0)|Retorna o logaritmo natural de *float_exp*.|  
+|**LOG10 (** _float_exp_ **)** (ODBC 2.0)|Logaritmo de base 10 de retorna de *float_exp*.|  
+|**MOD (** _integer_exp1_, _integer_exp2_**)** (ODBC 1.0)|Retorna o resto dos *integer_exp1* dividido pelo *integer_exp2*.|  
 |**(PI)** (ODBC 1.0)|Retorna o valor da constante de pi como um valor de ponto flutuante.|  
-|**POWER (** *numeric_exp*, _integer_exp_**)** (ODBC 2.0)|Retorna o valor de *numeric_exp* à potência de *integer_exp*.|  
-|**RADIANOS (** *numeric_exp* **)** (ODBC 2.0)|Retorna o número de radianos convertido de *numeric_exp* graus.|  
+|**POWER (** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|Retorna o valor de *numeric_exp* à potência de *integer_exp*.|  
+|**RADIANOS (** _numeric_exp_ **)** (ODBC 2.0)|Retorna o número de radianos convertido de *numeric_exp* graus.|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|Retorna um valor de ponto flutuante aleatório usando *integer_exp* como o valor de semente opcional.|  
-|**ROUND (** *numeric_exp*, _integer_exp_**)** (ODBC 2.0)|Retorna *numeric_exp* arredondado *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* será arredondado para &#124; *integer_exp* &#124; casas à esquerda da vírgula decimal.|  
-|**ENTRADA (** *numeric_exp* **)** (ODBC 1.0)|Retorna o sinal de um indicador *numeric_exp*. Se *numeric_exp* é menor que zero, -1 será retornado. Se *numeric_exp* é igual a zero, 0 será retornado. Se *numeric_exp* é maior que zero, 1 será retornado.|  
-|**SIN (** *float_exp* **)** (ODBC 1.0)|Retorna o seno *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
-|**SQRT (** *float_exp* **)** (ODBC 1.0)|Retorna a raiz quadrada de *float_exp*.|  
-|**TAN (** *float_exp* **)** (ODBC 1.0)|Retorna a tangente de *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
-|**Truncar (** *numeric_exp*, _integer_exp_**)** (ODBC 2.0)|Retorna *numeric_exp* truncados para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* é cortada para &#124; *integer_exp* &#124; casas à esquerda da vírgula decimal.|
+|**ROUND (** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|Retorna *numeric_exp* arredondado *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* será arredondado para &#124; *integer_exp* &#124; casas à esquerda da vírgula decimal.|  
+|**ENTRADA (** _numeric_exp_ **)** (ODBC 1.0)|Retorna o sinal de um indicador *numeric_exp*. Se *numeric_exp* é menor que zero, -1 será retornado. Se *numeric_exp* é igual a zero, 0 será retornado. Se *numeric_exp* é maior que zero, 1 será retornado.|  
+|**SIN (** _float_exp_ **)** (ODBC 1.0)|Retorna o seno *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
+|**SQRT (** _float_exp_ **)** (ODBC 1.0)|Retorna a raiz quadrada de *float_exp*.|  
+|**TAN (** _float_exp_ **)** (ODBC 1.0)|Retorna a tangente de *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
+|**Truncar (** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|Retorna *numeric_exp* truncados para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* é cortada para &#124; *integer_exp* &#124; casas à esquerda da vírgula decimal.|

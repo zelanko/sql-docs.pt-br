@@ -14,12 +14,12 @@ ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0254902ce6e2b67b29cbdf2d9a4544036a0d747b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773378"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126846"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrar uma topologia ponto a ponto (Programação Transact-SQL de replicação)
   A administração de uma topologia ponto a ponto é semelhante à administração de uma topologia de replicação transacional comum, porém, há algumas áreas com considerações especiais. A diferença principal na administração da topologia ponto a ponto é que algumas alterações exigem que o sistema seja *confirmado*. Fechar um sistema para novas sessões envolve parar as atividades em tabelas publicadas em todos os nós e garantir que todos os nós tenham recebido todas as alterações de todos os demais nós. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "52773378"
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Administração &#40;Replicação&#41;](administration-replication.md)   
+ [Perguntas frequentes sobre administração de replicação](frequently-asked-questions-for-replication-administrators.md)   
  [Fazer backup e restaurar bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Replicação transacional ponto a ponto](../transactional/peer-to-peer-transactional-replication.md)  
   

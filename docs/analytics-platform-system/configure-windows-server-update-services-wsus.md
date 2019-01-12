@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2d1e07fca7c18bdecba265a9e69994a9f728e9ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398609"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124706"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no Analytics Platform System
 Essas instruções você percorrer as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para o Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual VMM do dispositivo.  
@@ -55,7 +55,7 @@ Para configurar o WSUS, você precisa:
   
     1.  No **painel do Gerenciador do servidor**diante a **ferramentas** menu, clique em **Windows Server Update Services**.  
   
-    2.  No painel esquerdo do **serviços de atualização** , clique para expandir o servidor de nó de gerenciamento de máquinas virtuais (***appliance_domain *-VMM**) e, em seguida, clique em **opções**.  
+    2.  No painel esquerdo do **serviços de atualização** , clique para expandir o servidor de nó de gerenciamento de máquinas virtuais (**_appliance_domain_- VMM**) e, em seguida, clique em **Opções de**.  
   
     3.  No **opções** painel, clique em **Assistente de configuração de servidor do WSUS** para iniciar o Assistente de configuração.  
   

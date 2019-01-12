@@ -12,12 +12,12 @@ ms.assetid: a15eef3f-219f-45d3-8286-6a864c85a723
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16180621b22534adca219aa3c36be78853a506c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90a0fdb76c93500ba4472ed1082f6c54e56d1f3e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805571"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129597"
 ---
 # <a name="mssqleng014162"></a>MSSQL_ENG014162
     
@@ -35,7 +35,7 @@ ms.locfileid: "52805571"
 ## <a name="explanation"></a>Explicação  
  A replicação permite habilitar avisos para várias condições. Isso inclui exceder um período especificado para sincronizar alterações entre uma mesclagem de Publicador e Assinante. É possível especificar horários diferentes para conexões discadas e LAN.  
   
- Ao habilitar um aviso usando o Replication Monitor ou o [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql), você especifica um limite que determina quando um aviso é disparado. Quando esse limite é atingido ou excedido, um aviso é exibido no Replication Monitor e um evento é gravado no log de eventos do Windows. Ao atingir um limite, também é possível disparar um alerta do SQL Server Agent. Para obter mais informações, consulte [Definir limites e avisos no Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md) e [Monitorar a replicação de forma programática](monitor/monitoring-replication-overview.md).  
+ Ao habilitar um aviso usando o Replication Monitor ou o [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql), você especifica um limite que determina quando um aviso é disparado. Quando esse limite é atingido ou excedido, um aviso é exibido no Replication Monitor e um evento é gravado no log de eventos do Windows. Ao atingir um limite, também é possível disparar um alerta do SQL Server Agent. Para obter mais informações, consulte [Definir limites e avisos no Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md) e [Monitorar a replicação de forma programática](monitoring-replication.md).  
   
 ## <a name="user-action"></a>Ação do usuário  
  Se uma assinatura exceder um limite de duração, será necessário determinar se há um problema de desempenho no sistema ou se o limite deve ser ajustado. Após configurar a replicação, desenvolva uma linha de base de desempenho, a qual permitirá determinar como a replicação se comporta com uma carga de trabalho típica para seus aplicativos e topologia. Inclua a duração da sincronização na linha de base para que seja possível definir um valor apropriado para o limite.  

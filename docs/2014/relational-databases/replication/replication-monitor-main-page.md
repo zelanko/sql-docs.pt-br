@@ -12,12 +12,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2983889b79f30c18c6b6ae1ad22d614629b37654
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ed11d8f045315130fb0d9155607625659f2b8052
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778098"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125586"
 ---
 # <a name="replication-monitor-main-page"></a>Replication Monitor, página principal
   O Replication Monitor permite controlar o status e o desempenho de publicações e assinaturas em uma topologia de replicação. Os tópicos a seguir fornecem mais informações:  
@@ -30,15 +30,7 @@ ms.locfileid: "52778098"
   
     -   [Atualizar dados no Replication Monitor](monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Exibir informações e executar tarefas para uma publicação &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Exibir informações e realizar tarefas para uma assinatura &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Exibir informações e realizar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
     -   [Medir a latência e validar as conexões para a replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7acd2c6ab698a8fafb8e89c21376973163d88c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758198"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129196"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Segurança do Agente (Assistente para Nova Publicação)
   A página **Segurança do Agente** permite especificar as contas nas quais os seguintes agentes executam e fazem conexões com computadores em uma topologia de replicação:  
@@ -54,10 +54,10 @@ ms.locfileid: "52758198"
   
 ## <a name="see-also"></a>Consulte também  
  [Create a Publication](publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)   
  [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
- [Gerenciar logons e senhas na replicação](security/manage-logins-and-passwords-in-replication.md)   
+ [Gerenciar logons e senhas na replicação](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Publicar dados e objetos de banco de dados](publish/publish-data-and-database-objects.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)  
   

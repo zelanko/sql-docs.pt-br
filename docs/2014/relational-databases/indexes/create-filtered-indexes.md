@@ -16,12 +16,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 529d83451c897359152520aecbece856ef7e6ded
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125506"
 ---
 # <a name="create-filtered-indexes"></a>Criar índices filtrados
   Este tópico descreve como criar um índice filtrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice filtrado é um índice não clusterizado otimizado, criado especialmente para consultas que fazem seleções a partir de um subconjunto bem definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta, bem como reduzir os custos de manutenção e de armazenamento do índice em comparação com os índices de tabela completa.  
@@ -111,7 +111,7 @@ ms.locfileid: "52538199"
   
 6.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+7.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 8.  Clique em **OK**.  
   

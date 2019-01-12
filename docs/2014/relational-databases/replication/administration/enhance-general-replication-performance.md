@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806248"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129276"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
   É possível melhorar o desempenho geral para todos os tipos de replicação no seu aplicativo e na rede, por meio das diretrizes descritas neste tópico.  
@@ -76,7 +76,7 @@ ms.locfileid: "52806248"
   
     -   Para replicação de mesclagem, pode ser mais eficiente usar manipuladores de lógica de negócios. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Se gatilhos forem usados para manter a integridade referencial nas tabelas publicadas para replicação de mesclagem, especifique a ordem de processamento das tabelas para reduzir o número de repetições necessárias para o Merge Agent. Para obter mais informações, consulte [Especificar a ordem de processamento dos artigos de mesclagem](../merge/specify-the-processing-order-of-merge-articles.md).  
+     Se gatilhos forem usados para manter a integridade referencial nas tabelas publicadas para replicação de mesclagem, especifique a ordem de processamento das tabelas para reduzir o número de repetições necessárias para o Merge Agent. Para obter mais informações, consulte [propriedades de replicação de mesclagem especificar](../publish/specify-merge-replication-properties.md).  
   
 -   Limite o uso de tipos de dados LOB (objetos grandes).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52806248"
   
      Quando grandes quantidades de alterações precisarem ser enviadas aos Assinantes, reinicializá-los com um novo instantâneo pode ser mais rápido que usar a replicação para mover as alterações individuais. Para obter mais informações, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
   
-     Para replicação transacional, o Replication Monitor exibe na guia **Comandos Não Distribuídos** as informações sobre: o número de transações no banco de dados de distribuição que ainda não foi distribuídas ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, consulte [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md) [Exibir informações e executar tarefas para os agentes associados a uma assinatura (Replication Monitor)].  
+     Para replicação transacional, o Replication Monitor exibe na guia **Comandos Não Distribuídos** as informações sobre: o número de transações no banco de dados de distribuição que ainda não foi distribuídas ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, consulte [ exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considerações de instantâneo  
   

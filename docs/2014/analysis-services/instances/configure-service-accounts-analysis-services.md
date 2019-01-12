@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362828"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125496"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
   O provisionamento de conta de todo o produto é documentado em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações abrangentes da conta de serviço para todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
@@ -39,7 +39,7 @@ ms.locfileid: "53362828"
 ## <a name="logon-account-recommendations"></a>Recomendações de conta de logon  
  Em um cluster de failover, todas as instâncias do Analysis Services devem ser configuradas para usar uma conta de usuário de domínio do Windows. Atribua a mesma conta para todas as instâncias. Consulte [Como realizar cluster no Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) para obter detalhes.  
   
- Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$ * * * nome de instância* para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
+ Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$**_nome de instância_ para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Concedendo permissões ao Analysis Services  
  Esta seção explica as permissões exigidas para operações internas e locais do Analysis Services, tais como iniciar o executável, ler o arquivo de configuração e carregar os bancos de dados do diretório de dados. Se você estiver procurando orientação sobre definição de permissões para acesso a dados externos e interoperabilidade com outros serviços e aplicativos, consulte [Concedendo permissões adicionais para operações de servidor específicas](#bkmk_tasks) mais adiante neste tópico.  

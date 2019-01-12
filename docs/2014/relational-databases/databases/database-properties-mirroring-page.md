@@ -12,12 +12,12 @@ ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3411b259ddb3dd5ce3e4247335eb51d226aa617f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788659"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124946"
 ---
 # <a name="database-properties-mirroring-page"></a>Propriedades do banco de dados (página Espelhamento)
   Acesse esta página do banco de dados principal e use-a para configurar e modificar as propriedades de espelhamento de banco de dados de um banco de dados. Nela é possível também iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados, exibir o status de uma sessão de espelhamento e pausar ou remover a sessão de espelhamento de banco de dados.  
@@ -47,7 +47,7 @@ ms.locfileid: "52788659"
   
  O endereço de rede do servidor tem a seguinte sintaxe básica:  
   
- TCP**://***fully_qualified_domain_name***:***port*  
+ TCP **://**_nome_domínio_totalmente_qualificado_**:**_porta_  
   
  onde  
   
@@ -122,7 +122,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**Alto desempenho (assíncrono)**|Nulo (se existir; não usado, mas a sessão requer um quorum)|Para maximizar o desempenho, o banco de dados espelho fica sempre um pouco atrás do banco de dados principal, nunca se aproximando muito. Porém, a lacuna entre os bancos de dados é geralmente pequena. A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível, o espelhado continuará. Mas se a sessão não tiver nenhuma testemunha (como recomendado) ou a testemunha estiver conectada ao servidor espelho, este permanecerá acessível como uma espera passiva; o proprietário do banco de dados pode forçar um serviço para a instância do servidor espelho (com possível perda de dados).|  
 |**Alta segurança sem failover automático (síncrono)**|Não|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho. O failover manual será possível se os parceiros estiverem conectados entre si. A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância de servidor principal ficar indisponível, o espelhado será interrompido, mas ficará disponível como espera passiva e o proprietário do banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).|  
-|**Alta segurança com failover automático (síncrono)**|Sim (obrigatório)|Disponibilidade maximizada, incluindo uma instância de servidor testemunha para dar suporte ao failover automático. Observe que você só poderá selecionar a opção **Alta segurança com failover automático (síncrono)** se tiver especificado antes um endereço de um servidor testemunha. O failover manual será possível se os parceiros estiverem conectados entre si. **\*\* Importante \*\*** Se o servidor testemunha estiver desconectado, os parceiros deverão estar conectados entre si para que o banco de dados fique disponível. Para obter mais informações, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> Nos modos de operação síncronos, todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho. Na presença de um servidor testemunha, a perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor principal ficar indisponível, ocorrerá failover automático. A instância do servidor espelho é alternada para a função principal e oferece seu banco de dados como banco de dados principal.<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> <br /><br /> Para obter mais informações, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
+|**Alta segurança com failover automático (síncrono)**|Sim (obrigatório)|Disponibilidade maximizada, incluindo uma instância de servidor testemunha para dar suporte ao failover automático. Observe que você só poderá selecionar a opção **Alta segurança com failover automático (síncrono)** se tiver especificado antes um endereço de um servidor testemunha. O failover manual será possível se os parceiros estiverem conectados entre si. **&#42;&#42; Importante &#42;&#42;** Se o servidor testemunha estiver desconectado, os parceiros deverão estar conectados uns aos outros para que o banco de dados esteja disponível. Para obter mais informações, consulte [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> Nos modos de operação síncronos, todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho. Na presença de um servidor testemunha, a perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor principal ficar indisponível, ocorrerá failover automático. A instância do servidor espelho é alternada para a função principal e oferece seu banco de dados como banco de dados principal.<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> <br /><br /> Para obter mais informações, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  Depois que o espelhamento começar, você poderá alterar o modo de operação e salvar a alteração clicando em **OK**.  
   

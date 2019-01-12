@@ -14,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780078"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125418"
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
   Agentes de mesclagem e agentes de distribuição que conectam ao assinante. Essas conexões podem ser feitas no contexto de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de um logon do Windows. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos, e, também proteger o armazenamento de todas as senhas. Para obter informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "52780078"
 > [!IMPORTANT]  
 >  Para especificar as informações de conexão, use o procedimento armazenado [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Você também pode usar a página **Logon para Assinaturas Atualizáveis** do Assistente para Nova Assinatura, chamada **sp_link_publication**. Em certas condições, esse procedimento armazenado pode falhar se o Assinante estiver executando o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1(SP1) ou versão posterior e o Publicador estiver executando uma versão anterior. Se o procedimento armazenado falhar nesse cenário, atualize o Publicador para o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 ou posterior.  
   
- Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../create-updatable-subscription-transactional-publication-transact-sql.md) e [Exibir e modificar as configurações de segurança de replicação](view-and-modify-replication-security-settings.md).  
+ Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) e [Exibir e modificar as configurações de segurança de replicação](view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_***\<HexadecimalNumber>* para a conta configurada em cada Assinante.  
+>  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_**_\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
   
 ## <a name="queued-updating-subscriptions"></a>Assinaturas de atualização em fila  
  Quando você configurar assinatura de atualização em fila, há duas áreas a considerar relacionadas a segurança:  
@@ -76,6 +76,6 @@ ms.locfileid: "52780078"
 ## <a name="see-also"></a>Consulte também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Segurança e proteção &#40;Replicação&#41;](security-and-protection-replication.md)  
+ [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)  
   
   

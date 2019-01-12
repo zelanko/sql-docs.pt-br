@@ -15,12 +15,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 357678ea7a6f76554cbafade965ee6c847480d67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813558"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124226"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
   Cópias de mensagens do Database Mail e seus anexos são retidos em tabelas **msdb** junto com o log de eventos do Database Mail. Periodicamente, convém reduzir o tamanho das tabelas e arquivar mensagens e eventos que não sejam mais necessários. Os procedimentos a seguir criam um trabalho do SQL Server Agent para automatizar o processo.  
@@ -47,11 +47,11 @@ ms.locfileid: "52813558"
   
 -   O primeiro procedimento cria um trabalho denominado Archive Database Mail com as etapas a seguir.  
   
-    1.  Copie todas as mensagens das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_***<ano_mês>*.  
+    1.  Copie todas as mensagens das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_**_<year_month>_.  
   
-    2.  Copie os anexos relacionados às mensagens copiadas na primeira etapa das tabelas do Database Mail para uma nova tabela nomeada com o mês anterior no formato **DBMailArchive_Attachments_***<ano_mês>*.  
+    2.  Copie os anexos das mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Attachments_**_<year_month>_.  
   
-    3.  Copie os eventos do log de eventos do Database Mail referentes às mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Log_***<ano_mês>*.  
+    3.  Copie os eventos do log de eventos do Database Mail referentes às mensagens copiadas na primeira etapa, das tabelas do Database Mail em uma nova tabela nomeada com o mês anterior, no formato **DBMailArchive_Log_**_<year_month>_.  
   
     4.  Exclua os registros dos itens de correio transferidos das tabelas do Database Mail.  
   

@@ -13,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774348"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125646"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
   Se os dados em um banco de dados online forem danificados, em alguns casos, reverter o banco de dados para um instantâneo do banco de dados que preceda o dano pode ser uma alternativa apropriada para restaurar o banco de dados de um backup. Por exemplo, reverter um banco de dados pode ser útil para reverter um erro sério recente de usuário, como uma tabela descartada. Porém, todas as mudanças feitas depois que o instantâneo foi criado serão perdidas.  
@@ -99,7 +99,7 @@ ms.locfileid: "52774348"
   
      Uma operação de reversão requer permissões RESTORE DATABASE no banco de dados de origem. Para reverter o banco de dados, use a seguinte instrução Transact-SQL:  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      Em que *database_name* é o banco de dados de origem e *database_snapshot_name* é o nome do instantâneo para o qual você deseja reverter o banco de dados. Observe que nessa instrução, você deve especificar um nome de instantâneo em vez de um dispositivo de backup.  
   

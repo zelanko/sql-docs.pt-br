@@ -14,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813958"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124426"
 ---
 # <a name="replication-monitor"></a>Replication Monitor
   Esta seção da documentação inclui informações sobre o Replication Monitor. As páginas e caixas de diálogo exibidas no monitor diferem, dependendo do tipo de replicação e da versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo monitorado.  
@@ -31,15 +31,7 @@ ms.locfileid: "52813958"
 -   [Configurações de distribuidor](distributor-settings.md)  
   
 -   [Informações do distribuidor, publicações](distributor-information-publications.md)  
-  
--   [Informações do Distribuidor, Lista de inspeção da Assinatura &#40;Publicação transacional, SQL Server 2005 e posterior&#41;](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Informações do Distribuidor, Lista de inspeção da Assinatura &#40;Publicação de mesclagem, SQL Server 2005 e versões posteriores&#41;](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Informações do Distribuidor, Lista de inspeção da Assinatura &#40;Publicação de instantâneo, SQL Server 2005 e versões posteriores&#41;](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Informações do distribuidor, Agentes](distributor-information-agents.md)  
-  
+
 -   [Configurações do Publicador](publisher-settings.md)  
   
 -   [Informações do Publicador, Publicações](publisher-information-publications.md)  
@@ -80,8 +72,6 @@ ms.locfileid: "52813958"
   
 -   [Assinatura, Histórico de Sincronização &#40;Assinatura de mesclagem, SQL Server 2005 e versões posteriores&#41;](subscription-synchronization-history.md)  
   
--   [Assinatura, Histórico de Sincronização &#40;Assinatura de mesclagem, SQL Server 2000&#41;](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [Assinatura, Histórico do Distribuidor para o Assinante &#40;Assinatura de instantâneo&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [Agente de Leitor de Log](log-reader-agent.md)  
@@ -97,6 +87,5 @@ ms.locfileid: "52813958"
 ## <a name="see-also"></a>Consulte também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)   
- [Referência de propriedades &#40;Replicação&#41;](properties-reference-replication.md)  
   
   

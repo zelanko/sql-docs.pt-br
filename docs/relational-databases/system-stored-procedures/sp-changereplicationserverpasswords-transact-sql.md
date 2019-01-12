@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760229"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125706"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação  
   
- [ **@login** =] **'***logon***'**  
+ [ **@login** =] **'**_logon_**'**  
  É o nome da conta do Windows ou do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. *login* está **nvarchar(257)**, sem padrão  
   
- [ **@password** =] **'***senha***'**  
+ [ **@password** =] **'**_senha_**'**  
  É a nova senha a ser armazenado especificado *login*. *senha* está **sysname**, sem padrão.  
   
 > [!NOTE]  
 >  Depois de alterar a senha de replicação de um agente, você deve parar e reiniciar cada agente que a usa para que a alteração entre em vigor para aquele agente.  
   
- [ **@server** =] **'***server***'**  
+ [ **@server** =] **'**_servidor_**'**  
  É a conexão de servidor para a qual a senha armazenada está sendo alterada. *servidor* está **sysname**, e pode ser um destes valores:  
   
 |Valor|Descrição|  

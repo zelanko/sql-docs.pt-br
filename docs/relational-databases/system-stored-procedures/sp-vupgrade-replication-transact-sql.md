@@ -16,12 +16,12 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab783933dd060c23019db5a7c16e9734e59bb140
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0e21e07cb9c81b65cccafda2e938057cd16f96b4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802278"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124406"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +42,27 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@login=**] **'***logon***'**  
+ [  **@login=**] **'**_logon_**'**  
  É o logon do administrador do sistema a ser usado ao criar novos objetos do sistema no banco de dados de Distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você está atualizando para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
- [  **@password=**] **'***senha***'**  
+ [  **@password=**] **'**_senha_**'**  
  É a senha do administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de Distribuição. *senha* está **sysname**, com um padrão de **'** (cadeia de caracteres vazia). Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você estiver atualizando para o SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
- [  **@ver_old=**] **'***old_version***'**  
+ [  **@ver_old=**] **'**_old_version_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  Esse procedimento armazenado foi preterido e será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [  **@force_remove=**] **'***force_removal***'**  
+ [  **@force_remove=**] **'**_force_removal_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@security_mode=**] **'***security_mode***'**  
+ [  **@security_mode=**] **'**_security_mode_**'**  
  É o modo de segurança do logon a ser usado ao criar novos objetos do sistema no banco de dados de Distribuição. *security_mode* está **bit** com um valor padrão de **0**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, autenticação do Windows será usada.  
   
 > [!NOTE]  
@@ -79,6 +79,6 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Validar os dados replicados](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validar os dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

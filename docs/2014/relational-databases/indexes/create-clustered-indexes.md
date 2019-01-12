@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126156"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
   Você pode criar índices clusterizados em tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Com poucas exceções, toda tabela deveria ter um índice clusterizado. Além de melhorar o desempenho da consulta, o índice clusterizado pode ser recompilado ou reorganizado sob demanda para controlar a fragmentação de tabela. Um índice clusterizado também pode ser criado em uma exibição. (Os índices clusterizados são definidos no tópico [Índices clusterizados e não clusterizados descritos](clustered-and-nonclustered-indexes-described.md).)  
@@ -86,7 +86,7 @@ ms.locfileid: "52516217"
   
 4.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
   
-5.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
+5.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque a caixa de seleção das colunas de tabela a serem adicionadas ao índice clusterizado.  
   
 6.  Clique em **OK**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "52516217"
   
 9. Clique em **Fechar**.  
   
-10. No menu **Arquivo**, clique em **Salvar***table_name*.  
+10. No menu **Arquivo** , clique em **Salvar**_table_name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

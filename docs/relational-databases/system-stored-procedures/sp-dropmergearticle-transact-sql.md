@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d96dd15857847e739600f087fa63b2c34453d27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816038"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125362"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicação***'**  
+ [  **@publication=**] **'**_publicação_**'**  
  É o nome da publicação da qual remover um artigo. *publicação*está **sysname**, sem padrão.  
   
- [  **@article=**] **'***artigo***'**  
+ [  **@article=**] **'**_artigo_**'**  
  É o nome do artigo a ser removido da publicação determinada. *artigo*está **sysname**, sem padrão. Se **todos os**, todos os artigos existentes na publicação de mesclagem especificada serão removidos. Mesmo se *artigo* é **todos os**, a publicação ainda deverá ser descartada separadamente do artigo.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  

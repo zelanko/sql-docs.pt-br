@@ -13,12 +13,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 803acc60555c996a0556e456b8d31753506b43ab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205785"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126686"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Definir um filtro de rastreamento (Transact-SQL)
   Este tópico descreve como usar procedimentos armazenados para criar um filtro que recupera apenas as informações que você necessita em um evento que está sendo rastreado.  
@@ -30,7 +30,7 @@ ms.locfileid: "53205785"
 2.  Execute **sp_trace_setfilter** para configurar o tipo de informações para recuperar para o evento que está sendo rastreado.  
   
 > [!IMPORTANT]
->  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_* xx***) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados com os tipos de dados com parâmetro de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+>  Diferentemente dos procedimentos armazenados comuns, parâmetros de todos os [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] procedimentos armazenados (<strong>sp_trace*xx*</strong>) são estritamente tipados e não dão suporte a conversão de tipo de dados automática. Se esses parâmetros não forem chamados com os tipos de dados com parâmetro de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)   
