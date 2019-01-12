@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823300"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134726"
 ---
 # <a name="best-practices-for-replication-administration"></a>Práticas recomendadas para administração de replicação
   Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além de seguir as diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para se familiarizar com os problemas e perguntas comuns: [Perguntas frequentes para os administradores de replicação](frequently-asked-questions-for-replication-administrators.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "52823300"
 ## <a name="validate-data-periodically"></a>Valide os dados periodicamente  
  A validação não é requerida pela replicação, mas é recomendada a execução da validação periódica para a replicação transacional e a replicação de mesclagem. A validação permite verificar que os dados no Assinante correspondem aos dados no Publicador. Uma validação bem-sucedida indica que naquele point-in-time todas as alterações do Publicador foram replicadas no Assinante (e do Assinante no Publicador, se houver suporte para atualizações no Assinante) e que os dois bancos de dados estão em sincronia.  
   
- É recomendado que a validação seja executada de acordo com a agenda de backup do banco de dados de publicação. Por exemplo, se o banco de dados de publicação tem um backup completo uma vez por semana, a validação poderia ser executada uma vez por semana após o backup ser completado. Para obter mais informações, consulte [Validar os dados replicados](../validate-replicated-data.md).  
+ É recomendado que a validação seja executada de acordo com a agenda de backup do banco de dados de publicação. Por exemplo, se o banco de dados de publicação tem um backup completo uma vez por semana, a validação poderia ser executada uma vez por semana após o backup ser completado. Para obter mais informações, consulte [Validar os dados replicados](../validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Use perfis de agente para alterar os parâmetros de agente, se necessário  
  Os perfis de agente fornecem um método conveniente de definir parâmetros do agente de replicação. Os parâmetros podem também ser especificados na linha de comando do agente, mas é normalmente mais apropriado usar um perfil predefinido de agente ou criar um novo perfil se for necessário alterar o valor do parâmetro. Por exemplo, se estiver usando uma replicação de mesclagem e o Assinante mudar de uma conexão de banda larga para uma conexão discada, considere usar o perfil **vínculo lento** para o Agente de Mesclagem; esse perfil usa um conjunto de parâmetros que são mais adequados para vínculos de comunicações mais lentas. Para saber mais, confira [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
@@ -148,6 +148,6 @@ ms.locfileid: "52823300"
  Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
 ## <a name="see-also"></a>Consulte também  
- [Administração &#40;Replicação&#41;](administration-replication.md)  
+ [Perguntas frequentes sobre administração de replicação](frequently-asked-questions-for-replication-administrators.md)  
   
   

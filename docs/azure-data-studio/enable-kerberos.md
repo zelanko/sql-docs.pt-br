@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030210"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143319"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Conectar-se [!INCLUDE[name-sos](../includes/name-sos-short.md)] ao SQL Server usando a autenticação do Windows - Kerberos 
 
@@ -27,7 +27,7 @@ Para usar a autenticação integrada (autenticação do Windows) no macOS ou Lin
 ## <a name="prerequisites"></a>Prerequisites
 
 - Acesso a um computador ingressado no domínio do Windows para uma consulta seu controlador de domínio do Kerberos.
-- SQL Server deve ser configurado para permitir a autenticação Kerberos. Para o driver de cliente em execução em Unix, a autenticação integrada tem suporte apenas usando o Kerberos. Para obter mais informações sobre como configurar o Sql Server para se autenticar usando Kerberos podem ser encontradas [aqui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Deve haver SPNs registrados para cada instância do Sql Server que você está tentando se conectar ao. Detalhes sobre o formato de SPNs do SQL Server estão listados [aqui](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server deve ser configurado para permitir a autenticação Kerberos. Para o driver de cliente em execução em Unix, a autenticação integrada tem suporte apenas usando o Kerberos. Para obter mais informações sobre como configurar o Sql Server para se autenticar usando Kerberos podem ser encontradas [aqui](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). Deve haver SPNs registrados para cada instância do Sql Server que você está tentando se conectar ao. Detalhes sobre o formato de SPNs do SQL Server estão listados [aqui](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verificando se o Sql Server tem a instalação do Kerberos

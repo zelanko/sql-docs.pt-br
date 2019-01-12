@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d796c5e7b309ef33bf30eba851b3aedb6c1e6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823930"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134046"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publisher***'**  
+ [  **@publisher=** ] **'**_publisher_**'**  
  É o nome do servidor remoto. *Publisher* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todos os publicadores.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [  **@publisher_db=** ] **'**_publisher_db_**'**  
  É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão. **todos os** significa que todos os bancos de dados do publicador.  
   
- [  **@publication=** ] **'***publicação***'**  
+ [  **@publication=** ] **'**_publicação_**'**  
  É o nome da publicação. *publicação* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todas as publicações.  
   
  [  **@reserved=** ] *reservado*  

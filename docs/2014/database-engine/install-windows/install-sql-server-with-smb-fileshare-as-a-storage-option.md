@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366848"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136046"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento
   Iniciando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bancos de dados do sistema (mestre, modelo, MSDB e TempDB) e [!INCLUDE[ssDE](../../includes/ssde-md.md)] bancos de dados de usuário podem ser instalados com o servidor de arquivos do bloco de mensagens de servidor (SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -98,11 +98,11 @@ ms.locfileid: "53366848"
     > [!NOTE]  
     >  As permissões de compartilhamento FULL CONTROL e as permissões NTFS nas pastas de compartilhamento SMB devem ser restritas a: conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e usuários do Windows com funções de servidor admin.  
   
-     Era recomendado usar a conta de domínio como uma conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a conta do sistema é usada como uma conta de serviço, conceda as permissões para a conta do computador no formato: * < domain_name >***\\***< computer_name > ***$**.  
+     Era recomendado usar a conta de domínio como uma conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a conta do sistema for usada como uma conta de serviço, conceda as permissões para a conta do computador no formato: _<domain_name>_**\\**_<computer_name>_**$**.  
   
     > [!NOTE]  
     >  -   Durante instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será necessário especificar a conta de domínio como uma conta de serviço se o compartilhamento de arquivos SMB for especificado como uma opção de armazenamento. Com o compartilhamento de arquivos SMB, a conta de Sistema somente poderá ser especificada como uma conta de serviço após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-    > -   Contas virtuais não podem ser autenticadas em um local remoto. Todas as contas virtuais usam a permissão da conta de máquina. Provisione a conta do computador no formato *<domain_name>***\\***<computer_name>***$**.  
+    > -   Contas virtuais não podem ser autenticadas em um local remoto. Todas as contas virtuais usam a permissão da conta de máquina. Provisione a conta do computador no formato _<domain_name>_**\\**_<computer_name>_**$**.  
   
 -   A conta usada para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter permissões FULL CONTROL na pasta de compartilhamento de arquivos SMB usada como o diretório de dados ou qualquer outra pasta de dados (diretório de banco de dados de usuário, diretório de log de banco de dados de usuário, diretório de TempDB, diretório de log TempDB, diretório de backup) durante a instalação de cluster.  
   

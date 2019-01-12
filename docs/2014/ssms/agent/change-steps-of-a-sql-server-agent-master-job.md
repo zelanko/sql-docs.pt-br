@@ -10,12 +10,12 @@ ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812288"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133256"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   Este tópico descreve como realizar alterações às etapas de um trabalho mestre do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,13 +56,13 @@ ms.locfileid: "52812288"
   
 4.  Clique com o botão direito do mouse no trabalho no qual você deseja modificar etapas e selecione **Propriedades**.  
   
-5.  No **propriedades do trabalho – * * * job_name* caixa de diálogo **selecionar uma página**, selecione **etapas**.  
+5.  Na caixa de diálogo **Propriedades do Trabalho –** _job_name_, em **Selecionar uma página**, selecione **Etapas**.  
   
-6.  Clique em **edite** para abrir o **propriedades da etapa de trabalho – * * * job_step_name* caixa de diálogo. Para obter mais informações sobre as opções disponíveis nessa caixa de diálogo, consulte [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página Avançado&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Clique em **edite** para abrir o **propriedades da etapa de trabalho –**_job_step_name_ caixa de diálogo. Para obter mais informações sobre as opções disponíveis nessa caixa de diálogo, consulte [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: Nova etapa de trabalho &#40;página Avançado&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Quando terminar, clique em **OK**.  
   
-8.  No **propriedades do trabalho – * * * job_name* caixa de diálogo, clique em **Okey**.  
+8.  No **propriedades do trabalho –**_job_name_ caixa de diálogo, clique em **Okey**.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

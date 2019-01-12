@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e93025676d451444140fad80a993813c0463a2f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206755"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133556"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicação***'**  
+ [  **@publication=** ] **'**_publicação_**'**  
  É o nome da publicação Oracle. *publicação* está **sysname**, sem padrão.  
   
- [  **@article =** ] **'***artigo***'**  
+ [  **@article =** ] **'**_artigo_**'**  
  É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
- [ **@column**=] **'***coluna***'**  
+ [ **@column**=] **'**_coluna_**'**  
  É o nome da coluna da qual alterar o mapeamento de tipos de dados. *coluna* está **sysname**, sem padrão.  
   
- [ **@type** =] **'***tipo***'**  
+ [ **@type** =] **'**_tipo_**'**  
  É o nome da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *tipo de* está **sysname**, com um padrão NULL.  
   
  [ **@length** =] *comprimento*  
@@ -66,7 +66,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**=] *precisão*  
  É a precisão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na coluna de destino. *precisão* está **bigint**, com um padrão NULL.  
   
- [ **@publisher**=] **'***publisher***'**  
+ [ **@publisher**=] **'**_publisher_**'**  
  Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -15,12 +15,12 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 815615f31e033eaee63f2c296ff5daf73349714c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514299"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134116"
 ---
 # <a name="join-a-role"></a>unir uma função
   Este tópico descreve como atribuir funções a logons e usuários de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use funções em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para gerenciar permissões de maneira eficiente. Atribua permissões a funções e adicione e remova usuários e logons de funções. Com o uso de funções, as permissões não precisam ser mantidas individualmente para cada usuário.  
@@ -76,9 +76,9 @@ ms.locfileid: "52514299"
   
 4.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-5.  No **propriedades da função de servidor-* * * server_role_name* caixa de diálogo do **membros** , clique em **adicionar**.  
+5.  No **propriedades da função de servidor -**_server_role_name_ caixa de diálogo de **membros** , clique em **adicionar**.  
   
-6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **Okey** para retornar para o **propriedades de função do servidor – * * * server_role_name* caixa de diálogo.  
+6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **Okey** para retornar para o **propriedades da função de servidor -**_server_role_name_ caixa de diálogo.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "52514299"
   
 7.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-8.  No **propriedades da função de banco de dados-* * * database_role_name* na caixa de **gerais** , clique em **adicionar**.  
+8.  No **propriedades da função de banco de dados -**_database_role_name_ na caixa de **geral** , clique em **adicionar**.  
   
-9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **Okey** para retornar para o **propriedades da função de banco de dados-* * * database_role_name* caixa de diálogo.  
+9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **Okey** para retornar para o **propriedades da função de banco de dados -**_database_role_name_ caixa de diálogo.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
