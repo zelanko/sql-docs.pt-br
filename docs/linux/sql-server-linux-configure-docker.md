@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266057"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100731"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -64,19 +64,10 @@ O guia de início rápido na seção anterior é executado a edição de desenvo
 
 - Você só pode usar o SQL Server em um ambiente de produção se você tiver uma licença válida. Você pode obter uma licença de produção do SQL Server Express gratuita [aqui](https://go.microsoft.com/fwlink/?linkid=857693). Licenças do SQL Server Standard e Enterprise Edition estão disponíveis por meio [licenciamento por Volume da Microsoft](https://www.microsoft.com/licensing/default.aspx).
 
-- Imagens de contêiner do SQL Server de produção devem ser extraídas de [Docker Store](https://store.docker.com). Se você ainda não tiver um, crie uma conta no Docker Store.
 
-- A imagem de contêiner do desenvolvedor na Store do Docker pode ser configurada para executar as edições de produção. Use as etapas a seguir para executar edições de produção:
+- A imagem de contêiner do desenvolvedor pode ser configurada para executar as edições de produção. Use as etapas a seguir para executar edições de produção:
 
-   1. Primeiro, faça logon em sua id do docker da linha de comando.
-
-      ```bash
-      docker login
-      ```
-
-   2. Em seguida, você precisa obter o desenvolvedor gratuito imagens de contêiner no Docker Store. Vá para [ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux), clique em **prosseguir para o check-out**e siga as instruções.
-
-   3. Examine os requisitos e executar procedimentos [quickstart](quickstart-install-connect-docker.md). Mas há duas diferenças. Você deve fazer pull da imagem **store/microsoft/mssql-server-linux:\<nome da marca\>**  de Store de Docker. E você deve especificar sua edição de produção com o **MSSQL_PID** variável de ambiente. O exemplo a seguir mostra como executar a imagem de contêiner do SQL Server 2017 mais recente para o Enterprise Edition:
+Examine os requisitos e executar procedimentos [quickstart](quickstart-install-connect-docker.md). Você deve especificar sua edição de produção com o **MSSQL_PID** variável de ambiente. O exemplo a seguir mostra como executar a imagem de contêiner do SQL Server 2017 mais recente para o Enterprise Edition:
 
       ```bash
       docker run --name sqlenterprise \
@@ -93,10 +84,10 @@ O guia de início rápido na seção anterior é executado a edição de desenvo
       ```
 
       > [!IMPORTANT]
-      > Passando o valor **Y** à variável de ambiente **ACCEPT_EULA** e um valor de edição para **MSSQL_PID**, são expressar o que você tenha uma licença válida e existente para a edição e versão do SQL Server que você pretende usar. Você também concorda que seu uso do software SQL Server em execução em uma imagem de contêiner do Docker será regido pelos termos de licença do SQL Server.
+      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
 
       > [!NOTE]
-      > Para obter uma lista completa de valores possíveis para **MSSQL_PID**, consulte [configurações de configurar o SQL Server com variáveis de ambiente no Linux](sql-server-linux-configure-environment-variables.md).
+      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 

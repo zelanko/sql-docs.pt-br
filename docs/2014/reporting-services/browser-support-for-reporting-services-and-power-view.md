@@ -1,31 +1,20 @@
 ---
-title: Planning for Reporting Services e o suporte a navegador Power View (Reporting Services 2014) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-helpviewer_keywords:
-- displaying reports
-- scripts [Reporting Services], requirements
-- viewing reports
-- browsers [Reporting Services]
-- Web browsers [Reporting Services], about browser support
-- browsing reports [Reporting Services]
-- components [Reporting Services], browsers
-- Web browsers [Reporting Services]
-ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
+title: Planejando o suporte ao navegador do Reporting Services e do Power View (Reporting Services 2014)
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c1f1b4d74d7ad7f34254a5c56c6dafc5fd2fb829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.reviewer: ''
+ms.prod: sql-server-2014
+ms.technology: reporting-services-native
+ms.topic: conceptual
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350490"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100931"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planejando o suporte ao navegador do Reporting Services e do Power View (Reporting Services 2014)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], você usa um navegador da Web para exibir relatórios e executar o Gerenciador de Relatórios. Nem todos os navegadores dão suporte à funcionalidade de relatório. Este tópico descreve o suporte e os requisitos para os recursos de gerenciamento do Gerenciador de Relatórios, exibir relatórios, os controles do Visualizador de Relatórios no Visual Studio. O tópico também resume a disponibilidade de recursos para os navegadores com suporte, os requisitos de autenticação e os requisitos de script.  
@@ -34,17 +23,18 @@ ms.locfileid: "53350490"
   
  **Neste tópico:**  
   
--   [Cenários de navegador do Power View](#bkmk_powerview)  
+- [Cenários de navegador do Power View](#bkmk_powerview)  
   
--   [Requisitos de navegador do Gerenciador de relatórios (modo nativo)](#bkmk_reportmanager)  
+- [Requisitos de navegador do Gerenciador de relatórios (modo nativo)](#bkmk_reportmanager)  
   
--   [Requisitos de navegador para exibir relatórios](#bkmk_reportviewer)  
+- [Requisitos de navegador para exibir relatórios](#bkmk_reportviewer)  
   
--   [Requisitos de autenticação](#bkmk_authentication)  
+- [Requisitos de autenticação](#bkmk_authentication)  
   
--   [Suporte ao navegador para controles de servidor Web ReportViewer no Visual Studio](#bkmk_controls)  
+- [Suporte ao navegador para controles de servidor Web ReportViewer no Visual Studio](#bkmk_controls)  
   
-##  <a name="bkmk_powerview"></a> Cenários de navegador do Power View  
+##  <a name="bkmk_powerview"></a> Cenários de navegador do Power View
+
  A lista de navegadores com suporte e versões de navegador à qual o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] oferece suporte depende do tipo de documento aberto. Pastas de trabalho do Excel 2013 e "**rdlx**" arquivos utilizam componentes diferentes.  
   
 |Tipo de documento|Ambiente|Suporte a navegador|  
@@ -55,11 +45,11 @@ ms.locfileid: "53350490"
 ###  <a name="bkmk_powerview_on_SSRS"></a> Power View no SharePoint Server e o modo integrado do Reporting Services SharePoint  
  A tabela a seguir resume as versões de navegador com suporte para [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando um usuário abre um relatório do Power View (.RDLX) em um farm do SharePoint que tenha um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e o suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para SharePoint instalados e configurados.  
   
--   A tabela se aplica ao SharePoint 2010 e ao SharePoint 2013.  
+- A tabela se aplica ao SharePoint 2010 e ao SharePoint 2013.  
   
--   Para obter mais informações sobre o suporte de navegador do SharePoint 2013, consulte [planejar suporte ao navegador no SharePoint 2013](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
+- Para obter mais informações sobre o suporte de navegador do SharePoint 2013, consulte [planejar suporte ao navegador no SharePoint 2013](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
--   Para obter mais informações sobre o suporte a navegador do SharePoint 2010, consulte [planejar suporte a navegador (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
+- Para obter mais informações sobre o suporte a navegador do SharePoint 2010, consulte [planejar suporte a navegador (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
 |**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.9 10.6**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -71,12 +61,14 @@ ms.locfileid: "53350490"
 |**Apple Safari (mais recente versão lançada)**|Sem suporte|Sem suporte|Sem suporte|Sem suporte|Sem suporte|32 bits, 64 bits|  
   
 > [!NOTE]  
->  "32 bits" refere-se ao navegador, e não ao sistema operacional. Você pode usar o Internet Explorer 9 de 32 bits no Windows 7 de 64 bits, por exemplo.  
+> "32 bits" refere-se ao navegador, e não ao sistema operacional. Você pode usar o Internet Explorer 9 de 32 bits no Windows 7 de 64 bits, por exemplo.  
   
-#### <a name="inprivate-browsing-feature-in-internet-explorer"></a>O recurso de navegação InPrivate no Internet Explorer  
+#### <a name="inprivate-browsing-feature-in-internet-explorer"></a>O recurso de navegação InPrivate no Internet Explorer
+
  O [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] não dá suporte ao recurso de navegação InPrivate no Internet Explorer 8 e no Internet Explorer 9 da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obter mais informações sobre a navegação InPrivate, consulte [o que é Navegação InPrivate?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
-###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View nos serviços do Excel ou Excel Web App no SharePoint Online  
+###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View nos serviços do Excel ou Excel Web App no SharePoint Online
+
  A tabela a seguir resume as versões de navegador com suporte para [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando um usuário abre uma pasta de trabalho do Excel 2013 com planilhas do Power View em um SharePoint Server que está executando os Serviços do Excel:  
   
 -   Para obter mais informações sobre o suporte de navegador do SharePoint 2013, consulte [planejar suporte ao navegador no SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
@@ -93,7 +85,8 @@ ms.locfileid: "53350490"
   
  **(\*)** Chrome deixará de dar suporte ao Netscape Plug-in API (NPAPI), usado pelo Silverlight. O Power View depende do Silverlight.  Para saber mais, confira [A contagem regressiva do NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
-##  <a name="bkmk_reportmanager"></a> Requisitos de navegador do Gerenciador de relatórios (modo nativo)  
+##  <a name="bkmk_reportmanager"></a> Requisitos de navegador do Gerenciador de relatórios (modo nativo)
+
  A seguir é apresentada a lista atual de navegadores com suporte que você pode usar para executar o Gerenciador de Relatórios do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para gerenciar relatórios e o servidor de relatório.  
   
 |Navegador|  
@@ -103,7 +96,8 @@ ms.locfileid: "53350490"
 |Apple Safari (mais recente versão lançada)|  
 |Google Chrome (mais recente versão lançada)|  
   
-##  <a name="bkmk_reportviewer"></a> Requisitos de navegador para exibir relatórios  
+##  <a name="bkmk_reportviewer"></a> Requisitos de navegador para exibir relatórios
+
  Veja a seguir uma lista atual de navegadores e recursos com suporte com o visualizador de relatório. O visualizador de relatórios oferece suporte à visualização de relatórios do gerenciador de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e de bibliotecas do SharePoint.  
   
 |**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.9 10.6**|**iOS 6-7 para iPad**|  
@@ -119,22 +113,24 @@ ms.locfileid: "53350490"
   
  **<sup>(1)</sup>**  Os seguintes recursos têm suporte:  
   
--   Exportação para formatos PDF e TIFF.  
+- Exportação para formatos PDF e TIFF.  
   
--   Exibir interativamente relatórios no Safari da Apple em dispositivos iOS. O suporte a recursos inclui expandir/recolher, o painel de parâmetro e a classificação interativa.  
+- Exibir interativamente relatórios no Safari da Apple em dispositivos iOS. O suporte a recursos inclui expandir/recolher, o painel de parâmetro e a classificação interativa.  
   
--   Para obter mais informações, consulte [exibição de relatórios do Reporting Services em dispositivos do Microsoft Surface e Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
+- Para obter mais informações, consulte [exibição de relatórios do Reporting Services em dispositivos do Microsoft Surface e Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
  **Observação** : Se você estiver acessando um servidor de relatórios a partir de um computador Macintosh, recomendamos a utilização do Safari. Se você estiver usando um produto do SharePoint que esteja integrado com [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Plan browser support (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583).  
   
-### <a name="url-access-for-viewing-reports"></a>Acesso URL para exibir relatórios  
+### <a name="url-access-for-viewing-reports"></a>Acesso URL para exibir relatórios
+
  Para exibir relatórios diretamente, em vez de exibi-los por meio do Gerenciador de Relatórios, você pode usar Acesso à URL para vincular ao relatório ao visualizador de relatórios. O acesso à URL dá suporte a uma variedade de navegadores.  
   
  Para obter mais informações sobre acesso URL, consulte o seguinte tópico:  
   
--   [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)  
+- [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)  
   
-###  <a name="bkmk_authentication"></a> Requisitos de autenticação  
+###  <a name="bkmk_authentication"></a> Requisitos de autenticação
+
  Os navegadores dão suporte a esquemas de autenticação específicos que devem ser tratados pelo servidor de relatório para que a solicitação do cliente seja bem-sucedida. A tabela a seguir identifica os tipos de autenticação padrão com suporte por cada navegador que é executado em um sistema operacional Windows.  
   
 |**Tipo de navegador**|**Suporta**|**Padrão de navegador**|**Padrão de servidor**|  
@@ -144,27 +140,31 @@ ms.locfileid: "53350490"
 |**Safari**|Basic|Basic|Sim. As configurações de autenticação padrão funcionam com o Safari.|  
 |**Chrome**|Negotiated, NTLM, Basic|Negociado|Sim. As configurações de autenticação padrão funcionam com o Chrome.|  
   
-### <a name="script-requirements"></a>Requisitos de script  
+### <a name="script-requirements"></a>Requisitos de script
+
  Para usar o visualizador de relatórios, configure o seu navegador para executar scripts.  
   
  Se os scripts não estiverem habilitados, você verá uma mensagem de erro semelhante à seguinte ao abrir um relatório:  
   
--   **Seu navegador não oferece suporte para scripts ou foi configurado para não permitir que sejam executados. Clique aqui para exibir este relatório sem scripts**.  
+- **Seu navegador não oferece suporte para scripts ou foi configurado para não permitir que sejam executados. Clique aqui para exibir este relatório sem scripts**.  
   
  Se você optar por exibir o relatório sem o suporte de scripts, o relatório será renderizado em HTML sem os recursos de visualizador de relatório, como a barra de ferramentas de relatório e o mapa do documento.  
   
 > [!NOTE]  
->  A barra de ferramentas de relatório faz parte do componente Visualizador de HTML. Por padrão, a barra de ferramentas aparece na parte superior de todos os relatórios que são renderizados em uma janela de navegador. O visualizador de relatórios fornece recursos que incluem a habilidade de pesquisar informações no relatório, rolar até uma página específica e ajustar o tamanho da página para visualização. Para obter mais informações sobre a barra de ferramentas de relatório ou o Visualizador de HTML, consulte [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md).  
+> A barra de ferramentas de relatório faz parte do componente Visualizador de HTML. Por padrão, a barra de ferramentas aparece na parte superior de todos os relatórios que são renderizados em uma janela de navegador. O visualizador de relatórios fornece recursos que incluem a habilidade de pesquisar informações no relatório, rolar até uma página específica e ajustar o tamanho da página para visualização. Para obter mais informações sobre a barra de ferramentas de relatório ou o Visualizador de HTML, consulte [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md).  
   
-##  <a name="bkmk_controls"></a> Suporte ao navegador para controles de servidor Web ReportViewer no Visual Studio  
+##  <a name="bkmk_controls"></a> Suporte ao navegador para controles de servidor Web ReportViewer no Visual Studio
+
  O controle ReportViewer de servidor Web é usado para inserir a funcionalidade de relatório em um aplicativo Web ASP.NET. Os controles estão incluídos no Visual Studio e dão suporte a navegadores e versões de navegador diferentes dos outros componentes descritos neste tópico. O tipo de navegador usado para exibir o aplicativo determina o tipo de funcionalidade de ReportViewer que você pode fornecer em seu aplicativo. Use a tabela fornecida neste tópico para determinar qual dos navegadores com suporte está sujeito a restrições de funcionalidade de relatório e as plataformas com suporte.  
   
  Devido a diferenças nos mecanismos de renderização dos navegadores com suporte, alguns recursos de relatório podem ser exibidos diferentemente em diferentes navegadores.  Por exemplo, rotação do texto.  
   
-### <a name="scripting-requirements"></a>Requisitos de script  
+### <a name="scripting-requirements"></a>Requisitos de script
+
  Use um navegador que tem suporte de script habilitado. Se o navegador não puder executar scripts, você não poderá exibir o relatório.  
   
-### <a name="browser-requirements-for-viewing-reports-with-the-reportviewer-web-server-controls"></a>Requisitos de navegador para exibir relatórios com os controles ReportViewer de servidor Web  
+### <a name="browser-requirements-for-viewing-reports-with-the-reportviewer-web-server-controls"></a>Requisitos de navegador para exibir relatórios com os controles ReportViewer de servidor Web
+
  O suporte para recursos de relatório interativos varia de acordo com o tipo de navegador. A matriz de suporte a seguir mostra quais tipos de navegador têm suporte em quais plataformas, sujeito a restrições observadas na coluna de Notas.  
   
 |||||||||  
@@ -181,24 +181,20 @@ ms.locfileid: "53350490"
   
  <sup>1</sup>no modo de padrões, o Internet Explorer 7.0 e 8.0 não exibem linhas inclinadas em relatórios. Se você usar linhas inclinadas em seus relatórios, defina sua página ASP.NET para ser executada no modo de Quirks no Internet Explorer. Para fazer isso, localize o \<! DOCTYPE > marca na sua página ASP.NET. Ou, se usar uma página mestre, poderá localizar a marca no arquivo .master. Essa marca é semelhante ao seguinte:  
   
-```  
+```
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
-```  
+```
   
  Substitua o \<! DOCTYPE > marca com a seguinte marcação:  
   
-```  
+```
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
-```  
+```
   
  Para obter mais informações sobre modos de compatibilidade no Internet Explorer, consulte [definindo a compatibilidade do documento](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380).  
   
  Para obter mais informações sobre como usar os controles ReportViewer, consulte [implantando relatórios e controles do ReportViewer](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx).  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramentas do Reporting Services](tools/reporting-services-tools.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Visualizador de HTML e a barra de ferramentas de relatório](html-viewer-and-the-report-toolbar.md)   
- [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)  
-  
-  
+## <a name="next-steps"></a>Próximas etapas
+
+ [Ferramentas do Reporting Services](tools/reporting-services-tools.md) [Gerenciador de relatórios &#40;modo nativo do SSRS&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) [Visualizador de HTML e a barra de ferramentas do relatório](html-viewer-and-the-report-toolbar.md) [URL Access Parameter Reference](url-access-parameter-reference.md)  

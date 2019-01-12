@@ -12,12 +12,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbd3260e8d32811c405623dbdcc94dd34b0b8711
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753258"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100291"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Exibir as propriedades de uma faceta de gerenciamento baseado em políticas
   Este tópico descreve como exibir as propriedades de uma faceta do Gerenciamento Baseado em Políticas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "52753258"
   
 4.  Clique no sinal de adição para expandir a pasta **Facetas** .  
   
-5.  Clique com o botão direito do mouse na faceta cujas propriedades você deseja exibir e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Propriedades da faceta-***nome_da_faceta*, confira [Caixa de diálogo Propriedades de Faceta, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Propriedades da Faceta, página Políticas Dependentes](facet-properties-dialog-box-dependent-policies-page.md) e [Caixa de diálogo Propriedades da Faceta, página Condições Dependentes](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Clique com o botão direito do mouse na faceta cujas propriedades você deseja exibir e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis a **propriedades da faceta -**_facet_name_ caixa de diálogo, consulte [caixa de diálogo de propriedades da faceta, página geral](../../integration-services/general-page-of-integration-services-designers-options.md), [ Caixa de diálogo de propriedades da faceta, página políticas dependentes](facet-properties-dialog-box-dependent-policies-page.md), e [caixa de diálogo de propriedades de faceta, página condições dependentes](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Quando terminar, clique em **Fechar**.  
   
