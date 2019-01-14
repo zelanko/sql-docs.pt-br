@@ -12,26 +12,21 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19faa0690069d6c16be7591547f4a242ac2469fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805569"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128386"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Executar trabalhos de manutenção de replicação (SQL Server Management Studio)
   A replicação usa os seguintes trabalhos de manutenção:  
   
--   **Reinicializar assinaturas com falha na validação de dados**  
-  
--   **Limpeza de histórico de agente: distribuição**  
-  
--   **Atualizador de monitoramento de replicação para distribuição.**  
-  
--   **Verificação de agentes de replicação**  
-  
--   **Limpeza de distribuição: distribuição**  
-  
+-   **Reinicializar assinaturas com falha na validação de dados**
+-   **Limpeza de histórico de agente: distribuição**
+-   **Atualizador de monitoramento de replicação para distribuição.**
+-   **Verificação de agentes de replicação**
+-   **Limpeza de distribuição: distribuição**
 -   **Limpeza de assinaturas expiradas**  
   
  Inicie e pare esse trabalhos na pasta **Trabalhos** em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Exiba e modifique propriedades de cada trabalho na caixa de diálogo **Propriedades do trabalho – \<Trabalho>**, que está disponível na mesma pasta e guia.  
@@ -74,7 +69,7 @@ ms.locfileid: "52805569"
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciar e interromper um agente de replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Administração do agente de replicação](../agents/replication-agent-administration.md)  
   
   

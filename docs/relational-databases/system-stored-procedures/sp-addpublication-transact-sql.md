@@ -16,12 +16,12 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10d12ceed949a18c767e060cd35a738047ed6b74
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: c39d3b5dc054de3e9433e5f90b706bfc9fead7ee
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204976"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100911"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,29 +84,29 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicação_**'**  
+ [  **\@publicação =**] **'**_publicação_**'**  
  É o nome da publicação a ser criada. *publicação* está **sysname**, sem padrão. O nome deve ser exclusivo no banco de dados.  
   
- [  **@taskid=**] *taskid*  
+ [  **\@taskid =**] *taskid*  
  Suporte para compatibilidade com versões anteriores; Use [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
   
- [  **@restricted=**] **'**_restritas_**'**  
+ [  **\@restrito =**] **'**_restritas_**'**  
  Suporte para compatibilidade com versões anteriores; Use *default_access*.  
   
- [  **@sync_method=**] _' sync_method_**'**  
+ [  **\@sync_method =**] _' sync_method_**'**  
  É o modo de sincronização. *método sync_method* está **nvarchar(13)**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**native**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas. *Não há suportada para Publicadores Oracle*.|  
-|**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. *Para um publicador Oracle,* **caractere** *só é válida para a replicação de instantâneo*.|  
+|**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. _Para um publicador Oracle,_ **caractere** _só é válida para a replicação de instantâneo_.|  
 |**simultâneas**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais. *Não há suportada para Publicadores Oracle*.|  
 |**concurrent_c**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais.|  
 |**Instantâneo de banco de dados**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas de um instantâneo do banco de dados. Instantâneos de banco de dados não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |**caractere de instantâneo do banco de dados**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas de um instantâneo de banco de dados. Instantâneos de banco de dados não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |NULL (padrão)|O padrão é **nativos** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores, o padrão é **caractere** quando o valor de *repl_freq* é **Snapshot** e, ao **concurrent_c** todos os outros casos.|  
   
- [  **@repl_freq=**] **'**_repl_freq_**'**  
+ [  **\@repl_freq =**] **'**_repl_freq_**'**  
  É o tipo de frequência de replicação *repl_freq* é **nvarchar (10)**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
@@ -114,10 +114,10 @@ sp_addpublication [ @publication = ] 'publication'
 |**contínua** (padrão)|O Publicador fornece saída de todas as transações com base em log. Para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores, isso exige que *sync_method* ser definido como **concurrent_c**.|  
 |**Instantâneo**|O Publicador só produz eventos de sincronização agendados. Para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores, isso exige que *sync_method* ser definido como **caractere**.|  
   
- [  **@description=**] **'**_descrição_**'**  
+ [  **\@descrição =**] **'**_descrição_**'**  
  É uma descrição opcional para a publicação. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
   
- [  **@status=**] **'**_status_**'**  
+ [  **\@status =**] **'**_status_**'**  
  Especifica se os dados da publicação estão disponíveis. *status* está **nvarchar(8)**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
@@ -127,28 +127,28 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Não há suportada para Publicadores Oracle*.  
   
- [  **@independent_agent=**] **'**_independent_agent_**'**  
+ [  **\@independent_agent =**] **'**_independent_agent_**'**  
  Especifica se existe um Agente de Distribuição autônomo para esta publicação. *independent_agent* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, há um Distribution Agent autônomo para essa publicação. Se **falsos**, a publicação usa um Distribution Agent compartilhado e cada par publicador/assinante do banco de dados tem um agente compartilhado, único.  
   
- [  **@immediate_sync=**] **'**_immediate_synchronization_**'**  
+ [  **\@immediate_sync =**] **'**_immediate_synchronization_**'**  
  Especifica se os arquivos de sincronização da publicação são criados em cada execução do Agente de Instantâneo. *immediate_synchronization* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, os arquivos de sincronização são criados ou recriados cada vez que o Snapshot Agent é executado. Assinantes podem obter arquivos de sincronização imediatamente se o Snapshot Agent for concluído antes da assinatura ser criada. Novas assinaturas obtêm os arquivos de sincronização mais novos gerados pela execução mais recente do Agente de Instantâneo. *independent_agent* deve ser **verdadeira** para *immediate_synchronization* ser **true**. Se **falsos**, os arquivos de sincronização são criados somente se houver novas assinaturas. Você deve chamar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para cada assinatura quando você adicionar um novo artigo incrementalmente para uma publicação existente. Assinantes não podem receber arquivos de sincronização após a assinatura até que os Snapshot Agents sejam iniciados e concluídos.  
   
- [  **@enabled_for_internet=**] **'**_enabled_for_internet_**'**  
+ [  **\@enabled_for_internet =**] **'**_enabled_for_internet_**'**  
  Especifica se a publicação está habilitada para a Internet, e determina se o protocolo FTP pode ser usado para transferir os arquivos de instantâneo para um assinante. *enabled_for_internet* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, os arquivos de sincronização para a publicação são colocados no diretório C:\Program Files\Microsoft SQL server\mssql\mssql.x\repldata\ftp. O usuário deve criar o diretório Ftp.  
   
- [  **@allow_push=**] **'**_allow_push_**'**  
+ [  **\@allow_push =**] **'**_allow_push_**'**  
  Especifica se podem ser criadas assinaturas push para a publicação determinada. *allow_push* está **nvarchar (5)**, com um padrão de TRUE, que permite assinaturas push na publicação.  
   
- [  **@allow_pull=**] **'**_allow_pull_**'**  
+ [  **\@allow_pull =**] **'**_allow_pull_**'**  
  Especifica se podem ser criadas assinaturas pull para a publicação determinada. *allow_pull* está **nvarchar (5)**, com um padrão de FALSE. Se **falsos**, não são permitidas assinaturas pull na publicação.  
   
- [  **@allow_anonymous=**] **'**_allow_anonymous_**'**  
+ [  **\@allow_anonymous =**] **'**_allow_anonymous_**'**  
  Especifica se podem ser criadas assinaturas anônimas para a publicação determinada. *allow_anonymous* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, *immediate_synchronization* também deve ser definida como **verdadeiro**. Se **falsos**, não são permitidas assinaturas anônimas na publicação.  
   
- [  **@allow_sync_tran=**] **'**_allow_sync_tran_**'**  
+ [  **\@allow_sync_tran =**] **'**_allow_sync_tran_**'**  
  Especifica se são permitidas assinaturas de atualização imediata na publicação. *allow_sync_tran* está **nvarchar (5)**, com um padrão de FALSE. **Verdadeiro** está *não tem suporte para Publicadores Oracle*.  
   
- [  **@autogen_sync_procs=**] **'**_autogen_sync_procs_**'**  
+ [  **\@autogen_sync_procs =**] **'**_autogen_sync_procs_**'**  
  Especifica se o procedimento armazenado de sincronização para assinaturas de atualização imediata é gerado no Publicador. *autogen_sync_procs* está **nvarchar (5)**, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
@@ -160,51 +160,51 @@ sp_addpublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  O usuário forneceu um valor para *autogen_sync_procs*será substituído, dependendo dos valores especificados para *allow_queued_tran* e *allow_sync_tran*.  
   
- [  **@retention=**] *retenção*  
+ [  **\@retenção =**] *retenção*  
  É o período de retenção, em horas, para atividade de assinatura. *retenção* está **int**, com um padrão de 336 horas. Se uma assinatura não estiver ativa dentro do período de retenção, expirará e será removida. O valor pode ser maior que o período de retenção de máximo do banco de dados de distribuição usado pelo Publicador. Se **0**, assinaturas conhecidas na publicação nunca irão expirar e ser removidas pelo agente de limpeza de assinatura expirada.  
   
- [  **@allow_queued_tran=** ] **'**_allow_queued_updating_**'**  
+ [  **\@allow_queued_tran =** ] **'**_allow_queued_updating_**'**  
  Habilita ou desabilita o enfileiramento de mensagens no Assinante até que possam ser aplicadas no Publicador. *allow_queued_updating* está **nvarchar (5)** com um padrão de FALSE. Se **falsos**, as alterações no assinante não serão enfileiradas. **Verdadeiro** está *não tem suporte para Publicadores Oracle*.  
   
- [  **@snapshot_in_defaultfolder=** ] **'**_snapshot_in_default_folder_**'**  
- Especifica se os arquivos de instantâneo são armazenados na pasta padrão. *snapshot_in_default_folder* está **nvarchar (5)** com um padrão de TRUE. Se **verdadeira**, arquivos de instantâneo podem ser encontrados na pasta padrão. Se **falsos**, os arquivos de instantâneo foram armazenados no local alternativo especificado por *alternate_snapshot_folder*. Locais alternativos podem ficar em outro servidor, em uma unidade de rede, ou uma mídia removível (como um CD-ROM ou disco removível). Você também pode salvar os arquivos de instantâneo em um site de FTP para ser recuperado pelo Assinante posteriormente Observe que esse parâmetro pode ser verdadeiro e ainda ter um local na **@alt_snapshot_folder** parâmetro. Essa combinação Especifica que os arquivos de instantâneo serão armazenados em ambos os locais padrão e alternativo.  
+ [  **\@snapshot_in_defaultfolder =** ] **'**_snapshot_in_default_folder_**'**  
+ Especifica se os arquivos de instantâneo são armazenados na pasta padrão. *snapshot_in_default_folder* está **nvarchar (5)** com um padrão de TRUE. Se **verdadeira**, arquivos de instantâneo podem ser encontrados na pasta padrão. Se **falsos**, os arquivos de instantâneo foram armazenados no local alternativo especificado por *alternate_snapshot_folder*. Locais alternativos podem ficar em outro servidor, em uma unidade de rede, ou uma mídia removível (como um CD-ROM ou disco removível). Você também pode salvar os arquivos de instantâneo em um site de FTP para ser recuperado pelo Assinante posteriormente Observe que esse parâmetro pode ser verdadeiro e ainda ter um local na  **\@alt_snapshot_folder** parâmetro. Essa combinação Especifica que os arquivos de instantâneo serão armazenados em ambos os locais padrão e alternativo.  
   
- [  **@alt_snapshot_folder=** ] **'**_alternate_snapshot_folder_**'**  
+ [  **\@alt_snapshot_folder =** ] **'**_alternate_snapshot_folder_**'**  
  Especifica o local da pasta alternativa para o instantâneo. *alternate_snapshot_folder* está **nvarchar (255)** com um padrão NULL.  
   
- [  **@pre_snapshot_script=** ] **'**_pre_snapshot_script_**'**  
+ [  **\@pre_snapshot_script =** ] **'**_pre_snapshot_script_**'**  
  Especifica um ponteiro para um **. SQL** local do arquivo. *pre_snapshot_script* está **nvarchar (255),** com um padrão NULL. O Agente de Distribuição executará o script pré-instantâneo antes de executar qualquer script de objeto replicado, ao aplicar um instantâneo no Assinante. O script é executado no contexto de segurança usado pelo Distribution Agente na conexão com o banco de dados de assinatura.  
   
- [  **@post_snapshot_script=** ] **'**_post_snapshot_script_**'**  
+ [  **\@post_snapshot_script =** ] **'**_post_snapshot_script_**'**  
  Especifica um ponteiro para um **. SQL** local do arquivo. *post_snapshot_script* está **nvarchar (255)**, com um padrão NULL. O Agente de Distribuição executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tentam sido aplicados durante uma sincronização inicial. O script é executado no contexto de segurança usado pelo Distribution Agente na conexão com o banco de dados de assinatura.  
   
- [  **@compress_snapshot=** ] **'**_compress_snapshot_**'**  
- Especifica que o instantâneo gravado para o **@alt_snapshot_folder** local deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* está **nvarchar (5)**, com um padrão de FALSE. **False** Especifica que o instantâneo não será compactado; **verdadeira** Especifica que o instantâneo será compactado. Arquivos de instantâneo maiores de 2 gigabytes (GB) não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Distribution Agent é executado; assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado.  
+ [  **\@compress_snapshot =** ] **'**_compress_snapshot_**'**  
+ Especifica que o instantâneo gravado para o  **\@alt_snapshot_folder** local deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* está **nvarchar (5)**, com um padrão de FALSE. **False** Especifica que o instantâneo não será compactado; **verdadeira** Especifica que o instantâneo será compactado. Arquivos de instantâneo maiores de 2 gigabytes (GB) não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Distribution Agent é executado; assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado.  
   
- [  **@ftp_address =** ] **'**_ftp_address_**'**  
+ [  **\@ftp_address =** ] **'**_ftp_address_**'**  
  É o endereço de rede do serviço FTP para o Distribuidor. *ftp_address* está **sysname**, com um padrão NULL. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Agente de Distribuição ou por um Assinante. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter outro *ftp_address*. A publicação deve oferecer suporte à propagação de instantâneos por meio de FTP.  
   
- [  **@ftp_port=** ] *ftp_port*  
+ [  **\@ftp_port =** ] *ftp_port*  
  É o número da porta do serviço FTP para o Distribuidor. *ftp_port* está **int**, com um padrão de 21. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Distribution Agent ou por um Assinante. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter seu próprio *ftp_port*.  
   
- [  **@ftp_subdirectory =** ] **'**_ftp_subdirectory_**'**  
+ [  **\@ftp_subdirectory =** ] **'**_ftp_subdirectory_**'**  
  Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo Agente de Distribuição ou Agente de Mesclagem do Assinante se a publicação oferecer suporte à propagação de instantâneo usando o FTP.   *ftp_subdirectory* está **nvarchar (255)**, com um padrão NULL. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter seu próprio *ftp_subdirctory* ou optar por não ter um subdiretório indicado com um valor nulo.  
   
- [  **@ftp_login =** ] **'**_ftp_login_**'**  
+ [  **\@ftp_login =** ] **'**_ftp_login_**'**  
  O nome de usuário é usado para se conectar ao serviço FTP. *ftp_login* está **sysname**, com um padrão de ANONYMOUS.  
   
- [  **@ftp_password =** ] **'**_ftp_password_**'**  
+ [  **\@ftp_password =** ] **'**_ftp_password_**'**  
  É a senha de usuário usada para se conectar ao serviço FTP. *ftp_password* está **sysname**, com um padrão NULL.  
   
- [  **@allow_dts =** ] **'**_allow_dts_**'**  
+ [  **\@allow_dts =** ] **'**_allow_dts_**'**  
  Especifica que a publicação permite transformações de dados. Você pode especificar um pacote DTS ao criar uma assinatura. *allow_transformable_subscriptions* está **nvarchar (5)** com um padrão de FALSE, que não permite transformações DTS. Quando *allow_dts* for true, *sync_method* deve ser definido como **caractere** ou **concurrent_c**.  
   
  **Verdadeiro** está *não tem suporte para Publicadores Oracle*.  
   
- [  **@allow_subscription_copy =** ] **'**_allow_subscription_copy_**'**  
+ [  **\@allow_subscription_copy =** ] **'**_allow_subscription_copy_**'**  
  Habilita ou desabilita a capacidade para copiar os bancos de dados de assinatura que assinam essa publicação. *allow_subscription_copy* está**nvarchar (5)**, com um padrão de FALSE.  
   
- [  **@conflict_policy =** ] **'**_conflict_policy_**'**  
+ [  **\@conflict_policy =** ] **'**_conflict_policy_**'**  
  Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. *conflict_policy* está **nvarchar(100)** com um padrão de NULL, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
@@ -216,13 +216,13 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Não há suportada para Publicadores Oracle*.  
   
- [  **@centralized_conflicts =** ] **'**_centralized_conflicts_**'**  
+ [  **\@centralized_conflicts =** ] **'**_centralized_conflicts_**'**  
  Especifica se registros de conflito são armazenados no Publicador. *centralized_conflicts* está **nvarchar (5)**, com um padrão de TRUE. Se **verdadeira**, registros de conflito são armazenados no publicador. Se **falsos**, registros de conflito são armazenados no publicador e no assinante que causou o conflito. *Não há suportada para Publicadores Oracle*.  
   
- [  **@conflict_retention =** ] *conflict_retention*  
+ [  **\@conflict_retention =** ] *conflict_retention*  
  Especifica o período de retenção de conflito, em dias. Esse é o período de tempo em que os metadados de conflito são armazenados para replicação transacional ponto a ponto e assinaturas de atualização enfileiradas. *conflict_retention* está **int**, com um padrão de 14. *Não há suportada para Publicadores Oracle*.  
   
- [  **@queue_type =** ] **'**_queue_type_**'**  
+ [  **\@queue_type =** ] **'**_queue_type_**'**  
  Especifica o tipo de fila usado. *QUEUE_TYPE* está **nvarchar (10)**, com um padrão de NULL, e pode ser um destes valores.  
   
 |Valor|Descrição|  
@@ -235,22 +235,22 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Não há suportada para Publicadores Oracle*.  
   
- [  **@add_to_active_directory =** ] **'**_adicionar_*\_*_to_active_directory_ **'**  
+ [  **\@add_to_active_directory =** ] **'**_adicionar_*\_*_to_active_directory_ **'**  
  Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.  
   
- [  **@logreader_job_name =** ] **'**_logreader_agent_name_**'**  
+ [  **\@logreader_job_name =** ] **'**_logreader_agent_name_**'**  
  É o nome de um trabalho de agente existente. *logreader_agent_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o Log Reader Agent usa um trabalho existente em vez de um novo trabalho que está sendo criado.  
   
- [  **@qreader_job_name =** ] **'**_queue_reader_agent_name_**'**  
+ [  **\@qreader_job_name =** ] **'**_queue_reader_agent_name_**'**  
  É o nome de um trabalho de agente existente. *queue_reader_agent_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o Queue Reader Agent usa um trabalho existente em vez de um novo trabalho que está sendo criado.  
   
- [  **@publisher =** ] **'**_publisher_**'**  
+ [  **\@publisher =** ] **'**_publisher_**'**  
  Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  *Publisher* não deve ser usado ao adicionar uma publicação para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
- [  **@allow_initialize_from_backup =** ] **'**_allow_initialize_from_backup_**'**  
+ [  **\@allow_initialize_from_backup =** ] **'**_allow_initialize_from_backup_**'**  
  Indica se os Assinantes podem iniciar uma assinatura para essa publicação de um backup em vez de um instantâneo inicial. *allow_initialize_from_backup* está **nvarchar (5)**, e pode ser um destes valores:  
   
 |Valor|Descrição|  
@@ -264,18 +264,18 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  Para evitar perder dados do assinante, ao usar **sp_addpublication** com `@allow_initialize_from_backup = N'true'`, sempre use `@immediate_sync = N'true'`.  
   
- [  **@replicate_ddl =** ] *replicate_ddl*  
+ [  **\@replicate_ddl =** ] *replicate_ddl*  
  Indica se a replicação de esquema tem suporte para a publicação. *replicate_ddl* está **int**, com um padrão de **1** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores e **0** para não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. **1** indica que instruções de DDL (linguagem) de definição de dados executadas no publicador são replicadas, e **0** indica que instruções DDL não são replicadas. *Não há suporte para replicação de esquema para Publicadores Oracle.* Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
- O *@replicate_ddl* parâmetro é honrado quando uma instrução DDL adiciona uma coluna. O *@replicate_ddl* parâmetro é ignorado quando uma instrução DDL altera ou remove uma coluna pelos seguintes motivos.  
+ O  *\@replicate_ddl* parâmetro é honrado quando uma instrução DDL adiciona uma coluna. O  *\@replicate_ddl* parâmetro é ignorado quando uma instrução DDL altera ou remove uma coluna pelos seguintes motivos.  
   
--   Quando uma coluna é descartada, sysarticlecolumns deve ser atualizado para impedir que novas instruções DML incluam a coluna removida que causaria o falha do agente de distribuição. O *@replicate_ddl* parâmetro é ignorado porque a replicação sempre tem que replicar a alteração de esquema.  
+-   Quando uma coluna é descartada, sysarticlecolumns deve ser atualizado para impedir que novas instruções DML incluam a coluna removida que causaria o falha do agente de distribuição. O  *\@replicate_ddl* parâmetro é ignorado porque a replicação sempre tem que replicar a alteração de esquema.  
   
--   Quando uma coluna é alterada, o tipo de dados de origem ou nulidade podem ter sido alterados, fazendo as instruções DML conterem um valor que pode não ser compatível com a tabela no assinante. Estas instruções DML podem causar falha no agente de distribuição. O *@replicate_ddl* parâmetro é ignorado porque a replicação sempre tem que replicar a alteração de esquema.  
+-   Quando uma coluna é alterada, o tipo de dados de origem ou nulidade podem ter sido alterados, fazendo as instruções DML conterem um valor que pode não ser compatível com a tabela no assinante. Estas instruções DML podem causar falha no agente de distribuição. O  *\@replicate_ddl* parâmetro é ignorado porque a replicação sempre tem que replicar a alteração de esquema.  
   
 -   Quando uma instrução DDL adiciona uma nova coluna, sysarticlecolumns não inclui a nova coluna. Instruções DML não tentarão replicar dados para a nova coluna. O parâmetro é honrado porque replicar ou não replicar o DDL são aceitáveis.  
   
- [  **@enabled_for_p2p =** ] **'**_enabled_for_p2p_**'**  
+ [  **\@enabled_for_p2p =** ] **'**_enabled_for_p2p_**'**  
  Permite que a publicação seja usada em uma topologia de replicação ponto a ponto. *enabled_for_p2p* está **nvarchar (5)**, com um padrão de FALSE. **True** indica que a publicação oferece suporte a replicação ponto a ponto. Ao definir *enabled_for_p2p* à **verdadeiro**, as seguintes restrições se aplicam:  
   
 -   *allow_anonymous* deve ser **falso**.  
@@ -298,10 +298,10 @@ sp_addpublication [ @publication = ] 'publication'
   
  Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- [  **@publish_local_changes_only =** ] **'**_publish_local_changes_only_**'**  
+ [  **\@publish_local_changes_only =** ] **'**_publish_local_changes_only_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@enabled_for_het_sub=** ] **'**_enabled_for_het_sub_**'**  
+ [  **\@enabled_for_het_sub =** ] **'**_enabled_for_het_sub_**'**  
  Permite que a publicação dê suporte a Assinantes que não são do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *enabled_for_het_sub* está **nvarchar (5)** com um valor padrão de FALSE. Um valor de **verdadeira** significa que a publicação oferece suporte a não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes. Quando *enabled_for_het_sub* é **verdadeiro**, as seguintes restrições se aplicam:  
   
 -   *allow_initialize_from_backup* deve ser **falso**.  
@@ -342,23 +342,23 @@ sp_addpublication [ @publication = ] 'publication'
   
  Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
- [  **@p2p_conflictdetection=** ] **'**_p2p_conflictdetection_**'**  
+ [  **\@p2p_conflictdetection =** ] **'**_p2p_conflictdetection_**'**  
  Permite que o Agente de Distribuição detecte conflitos se a publicação for habilitada para replicação ponto a ponto. *p2p_conflictdetection* está **nvarchar (5)** com um valor padrão de TRUE. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [  **@p2p_originator_id=** ] *p2p_originator_id*  
+ [  **\@p2p_originator_id =** ] *p2p_originator_id*  
  Especifica uma ID para um nó em uma topologia ponto a ponto. *p2p_originator_id* está **int**, com um padrão NULL. Essa ID é usada para detecção de conflitos se *p2p_conflictdetection* é definida como TRUE. Especifica uma ID positiva, diferente de zero, que nunca foi usada na topologia. Para obter uma lista de IDs que já foram usadas, execute [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).  
   
- [  **@p2p_continue_onconflict=** ] **'**_p2p_continue_onconflict_**'**  
+ [  **\@p2p_continue_onconflict =** ] **'**_p2p_continue_onconflict_**'**  
  Determina se o Agente de Distribuição deve continuar processando alterações depois da detecção de um conflito. *p2p_continue_onconflict* está **nvarchar (5)** com um valor padrão de FALSE.  
   
 > [!CAUTION]  
 >  Recomendamos que você use o valor padrão de FALSE. Quando essa opção é definida como TRUE, o Distribution Agent tenta convergir os dados na topologia aplicando a linha conflitante do nó que tem a ID de origem mais alta. Esse método não garante convergência. Verifique se a topologia está consistente depois que um conflito é detectado. Para obter mais informações, consulte “Controlando conflitos” em [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
   
- [  **@allow_partition_switch=** ] **'**_allow_partition_switch_**'**  
+ [  **\@allow_partition_switch =** ] **'**_allow_partition_switch_**'**  
  Especifica se ALTER TABLE... Instruções SWITCH podem ser executadas no banco de dados publicado. *allow_partition_switch* está **nvarchar (5)** com um valor padrão de FALSE. Para obter mais informações, consulte [Replicar tabelas e índices particionados](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
- [  **@replicate_partition_switch=** ] **'**_replicate_partition_switch_**'**  
+ [  **\@replicate_partition_switch =** ] **'**_replicate_partition_switch_**'**  
  Especifica se ALTER TABLE... Instruções SWITCH que são executadas no banco de dados publicado devem ser replicadas para assinantes. *replicate_partition_switch* está **nvarchar (5)** com um valor padrão de FALSE. Essa opção é válida somente se *allow_partition_switch* é definida como TRUE.  
 
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209125"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131236"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicação***'**  
+ [  **@publication =** ] **'**_publicação_**'**  
  É o nome da publicação. *publicação* está **sysname**, com um padrão NULL.  
   
- [  **@property =** ] **'***propriedade***'**  
+ [  **@property =** ] **'**_propriedade_**'**  
  É a propriedade da publicação a ser alterada. *propriedade* está **nvarchar (255)**.  
   
- [  **@value =** ] **'***valor***'**  
+ [  **@value =** ] **'**_valor_**'**  
  É o novo valor da propriedade. *valor* está **nvarchar (255)**, com um padrão NULL.  
   
  Essa tabela descreve as propriedades da publicação que podem ser alteradas e restrições nos valores dessas propriedades.  
@@ -130,7 +130,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
   - **0** Especifica que as alterações no artigo fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   - **1** Especifica que as alterações no artigo fazem com que a assinatura existente seja reiniciada e dá permissão para que ocorra a reinicialização da assinatura.  
   
-[ **@publisher** =] **'***publisher***'**  
+[ **@publisher** =] **'**_publisher_**'**  
  Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
   > [!NOTE]  

@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b51100904cfa704f9177aab9c7a0e79974cc30b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: d30dbae5ffe7a392fc846b575a44af66246c9682
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363768"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132766"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
   O `dtexec` utilitário de prompt de comando é usado para configurar e executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes. O utilitário `dtexec` fornece acesso a toda a configuração e recursos de execução de pacotes, como parâmetros, conexões, propriedades, variáveis, logs e indicadores de progresso. O `dtexec` utilitário permite que você carregar pacotes destas origens: o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, um arquivo de projeto. ispac, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados, o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Store de pacote e o sistema de arquivos.  
@@ -157,24 +157,24 @@ dtexec /option [value] [/option [value]]...
 -   **/CA [llerInfo]**:   
                   Opcional. Especifica informações adicionais para uma execução de pacote. Quando você executa um pacote usando o SQL Server Agent, o agente define este argumento para indicar que a execução de pacote é chamada pelo SQL Server Agent. Este parâmetro é ignorado quando o utilitário `dtexec` é executado da linha de comando.  
   
--   **/Checkf [ile]** *filespec*:   
+-   **/Checkf [ile]** _filespec_:   
                   Opcional. Define o `CheckpointFileName` propriedade no pacote para o caminho e arquivo especificados no *filespec*. Esse arquivo é usado quando o pacote é reiniciado. Se esta opção for especificada e nenhum valor for fornecido para o nome de arquivo, o `CheckpointFileName` do pacote será definido como uma cadeia de caracteres vazia. Se esta opção não for especificada, os valores no pacote serão retidos.  
   
--   **/Checkp [ointing]** *{on\off}*:   
+-   **/Checkp [ointing]** _{on\off}_:   
                   Opcional. Define um valor que determina se o pacote usará pontos de verificação durante sua execução. O valor **on** especifica que pacotes com falha devem ser executados novamente. Quando o pacote com falha é executado novamente, o mecanismo de tempo de execução usa o arquivo de ponto de verificação para reiniciar o pacote a partir do ponto de falha.  
   
      O valor padrão será “on”, se a opção estiver declarada sem um valor. A execução do pacote falhará se o valor for definido como “on” e não for possível encontrar o arquivo de ponto de verificação. Se essa opção não for especificada, o conjunto de valores no pacote será retido. Para saber mais, confira [Reiniciar pacotes por meio de pontos de verificação](restart-packages-by-using-checkpoints.md).  
   
      O **/CheckPointing na** opção de dtexec equivale a definir o `SaveCheckpoints` propriedade do pacote como True e o `CheckpointUsage` propriedade como Always.  
   
--   **/Com [mandFile]** *filespec*:   
+-   **/Com [mandFile]** _filespec_:   
                   (Opcional). Especifica as opções de comando que são executados com `dtexec`. O arquivo especificado em *filespec* está aberto e as opções do arquivo são lidas até o EOF ser localizado no arquivo. *filespec* é um arquivo de texto. O argumento *filespec* especifica o nome de arquivo e caminho do arquivo de comando a ser associado à execução do pacote.  
   
--   **/Conf [igFile]** *filespec*: Opcional. Especifica um arquivo de configuração do qual extrair valores. Usando esta opção, você pode definir uma configuração de tempo de execução que difere da configuração especificada em tempo de design para o pacote. Você pode armazenar parâmetros de configuração diferentes em um arquivo de configuração XML e carregá-los antes de executar o pacote por meio da opção **/ConfigFile** .  
+-   **/Conf [igFile]** _filespec_: Opcional. Especifica um arquivo de configuração do qual extrair valores. Usando esta opção, você pode definir uma configuração de tempo de execução que difere da configuração especificada em tempo de design para o pacote. Você pode armazenar parâmetros de configuração diferentes em um arquivo de configuração XML e carregá-los antes de executar o pacote por meio da opção **/ConfigFile** .  
   
      Você pode usar a opção **/ConfigFile** para carregar configurações adicionais em tempo de execução que você não especificou em tempo de design. Porém, você não pode usar a opção **/ConfigFile** para substituir valores configurados que você também especificou em tempo de design. Para compreender como são aplicadas as configurações de pacote, consulte [Package Configurations](../package-configurations.md).  
   
--   **/Conn [ection]** *id_or_name; connection_string [[; id_or_name; connection_string]...]* :   
+-   **/Conn [ection]** _id_or_name; connection_string [[; id_or_name; connection_string]...]_ :   
                   Opcional. Especifica que o gerenciador de conexões com o nome ou o GUID especificado está localizado no pacote e especifica uma cadeia de conexão.  
   
      Essa opção requer que ambos os parâmetros sejam especificados: o nome ou o GUID do gerenciador de conexões deve ser fornecido no argumento *id_or_name*, e uma cadeia de conexão válida deve ser especificada no argumento *connection_string*. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../connection-manager/integration-services-ssis-connections.md).  
@@ -222,16 +222,16 @@ dtexec /option [value] [/option [value]]...
   
      Para obter exemplos do **/ConsoleLog** opção, consulte o **comentários** seção.  
   
--   **/D [ts]** *package_path*:   
+-   **/D [ts]** _package_path_:   
                   Opcional. Carrega um pacote do Armazenamento de Pacotes SSIS. Os pacotes que estão armazenados no Armazenamento de Pacotes SSIS são implantados usando o modelo de implantação de pacote herdado. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção `/ISServer`. Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
   
      O argumento *package_path* especifica o caminho relativo do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] , iniciando na raiz do Repositório de Pacotes SSIS, e inclui o nome do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Se o caminho ou o nome do arquivo especificado no argumento *package_path* contiver um espaço, você deverá colocar o argumento *package_path* entre aspas.  
   
      A opção `/DTS` não pode ser usada junto com a opção `/File` ou `/SQL`. Se forem especificadas várias opções, haverá falha no `dtexec`.  
   
--   **/De [crypt]***senha*:   Opcional. Define a senha de decodificação usada ao carregar um pacote com criptografia de senha.  
+-   **/De [crypt]**_senha_:   Opcional. Define a senha de decodificação usada ao carregar um pacote com criptografia de senha.  
   
--   **/Dump** *código de erro*:  
+-   **/Dump** _código de erro_:  
                   Opcional cria a despejo de depuração arquivos,. mdmp e. tmp, quando um ou mais eventos especificados ocorrerem durante a execução do pacote. O argumento *error code* especifica o tipo de código de evento (erro, aviso ou informação) que disparará o sistema para criar os arquivos de despejo de depuração. Para especificar vários códigos de evento, separe cada argumento *error code* por um ponto-e-vírgula (;). Não inclua aspas com o argumento *error code* .  
   
      O exemplo a seguir gera arquivos de despejo de depuração quando o erro DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER ocorre.  
@@ -274,7 +274,7 @@ dtexec /option [value] [/option [value]]...
   
      Este parâmetro é usado pelo SQL Server Agent.  
   
--   **/F [ile]** *filespec*:   
+-   **/F [ile]** _filespec_:   
                   Opcional. Carrega um pacote que é salvo no sistema de arquivos. Os pacotes que estão salvos no sistema de arquivos são implantados usando o modelo de implantação de pacote herdado. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção `/ISServer`. Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
   
      O argumento *filespec* especifica o caminho e nome de arquivo do pacote. Você pode especificar o caminho como local ou de UNC (Convenção Universal de Nomenclatura). Se o caminho ou o nome do arquivo especificado no argumento *filespec* contiver um espaço, você deverá colocar o argumento *filespec* entre aspas.  
@@ -300,7 +300,7 @@ dtexec /option [value] [/option [value]]...
   
      Este parâmetro é usado pelo SQL Server Agent.  
   
--   **/L [ogger]** *classid_orprogid; configstring*:  
+-   **/L [ogger]** _classid_orprogid; configstring_:  
                   Opcional. Associa um ou mais provedores de log à execução de um pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] . O parâmetro *classid_orprogid* especifica o provedor de log e pode ser especificado como um GUID de classe. O *configstring* é a cadeia de caracteres que é usada para configurar o provedor de log.  
   
      A lista a seguir mostra os provedores de log disponíveis:  
@@ -335,13 +335,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M [axConcurrent]** *concurrent_executables*:  
+-   **/M [axConcurrent]** _concurrent_executables_:  
                   Opcional. Especifica o número de arquivos executáveis que o pacote pode executar simultaneamente. O valor especificado deve ser um inteiro não negativo ou -1. O valor de -1 significa que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] permitirá um número máximo de executáveis em processamento simultâneo igual ao número total de processadores no computador executando o pacote mais dois.  
   
--   **/Pack [age]** *PackageName*:  
+-   **/Pack [age]** _PackageName_:  
                   Opcional. Especifica o pacote que é executado. Este parâmetro é usado principalmente quando você executa o pacote de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
--   **/P [assword]** *senha*:  
+-   **/P [assword]** _senha_:  
                   Opcional. Permite a recuperação de um pacote que está protegido pela Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção é usada junto com a opção **/User** . Se a opção **/Password** for omitida e a opção **/User** for usada, uma senha em branco será usada. O valor de *password* pode ser colocado entre aspas.  
   
     > [!IMPORTANT]  
@@ -371,13 +371,13 @@ dtexec /option [value] [/option [value]]...
     /parameter CM.SourceServer.ServerName;.  
     ```  
   
--   **/PROJ [ect]** *ProjectFile*:  
+-   **/PROJ [ect]** _ProjectFile_:  
                   Opcional. Especifica o projeto do qual recuperar o pacote que é executado. O argumento *ProjectFile* especifica o nome da arquivo .ispac. Este parâmetro é usado principalmente quando você executa o pacote de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
--   **/ Rem** *comentário*:  
+-   **/ Rem** _comentário_:  
                   Opcional. Inclui comentários no prompt de comando ou nos arquivos de comando. O argumento é opcional. O valor de *comment* é uma cadeia de caracteres que deve ser colocada entre aspas ou não conter nenhum espaço em branco. Se nenhum argumento for especificado, uma linha em branco será inserida. Os valores de*comment* serão descartados durante a fase de fornecimento.  
   
--   **/Rep [orting]** *nível* [*; event_guid_or_name*[*; event_guid_or_name*[...]]: Opcional. Especifica que tipos de mensagens devem ser relatadas. As opções de relatório disponíveis para *level* são as seguintes:  
+-   **/Rep [orting]** _nível_ [*; event_guid_or_name*[*; event_guid_or_name*[...]]: Opcional. Especifica que tipos de mensagens devem ser relatadas. As opções de relatório disponíveis para *level* são as seguintes:  
   
      **N** Sem geração de relatórios.  
   
@@ -434,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
      A opção `/Ser[ver]` é necessária quando a opção `/ISServer` é especificada.  
   
--   **/SQ [L]** *package_path*:  
+-   **/SQ [L]** _package_path_:  
                   Carrega um pacote que é armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no banco de dados `msdb`. Os pacotes que estão armazenados no banco de dados `msdb` são implantados usando o modelo de implantação de pacote. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção `/ISServer`. Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
   
      O argumento *package_path* especifica o caminho e nome de arquivo do pacote a recuperar. Se forem incluídas pastas no caminho, elas terminarão com barras invertidas ("\\"). O valor *package_path* pode estar entre aspas. Se o caminho ou o nome do arquivo especificado no argumento *package_path* contiver um espaço, você deverá colocar o argumento *package_path* entre aspas.  
@@ -454,7 +454,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Su [m]**: Opcional. Mostra um contador incremental que contém o número de linhas que serão recebidas pelo próximo componente.  
   
--   **/U [ser]** *user_name*:  
+-   **/U [ser]** _user_name_:  
                   Opcional. Permite a recuperação de um pacote que está protegido pela Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção é usada apenas quando a opção `/SQL` é especificada. O valor *user_name* pode estar entre aspas.  
   
     > [!IMPORTANT]  
@@ -463,7 +463,7 @@ dtexec /option [value] [/option [value]]...
 -   **/VA [lidate]**:  
                   Opcional. Interrompe a execução do pacote depois da fase de validação, sem executar realmente o pacote. Durante a validação, usar o **/WarnAsError** faz com que a opção `dtexec` trate um aviso como erro; portanto, o pacote falhará se ocorrer um aviso durante a validação.  
   
--   **/Verifyb [uild]** *principais*[*; minor*[*; build*]]: Opcional. Verifica o número da compilação de um pacote contra os números de compilação especificados durante a fase de verificação no *major*, *minor*e nos argumentos *build* . Se uma ocorrer um erro de correspondência, o pacote não será executado.  
+-   **/Verifyb [uild]** _principais_[*; minor*[*; build*]]: Opcional. Verifica o número da compilação de um pacote contra os números de compilação especificados durante a fase de verificação no *major*, *minor*e nos argumentos *build* . Se uma ocorrer um erro de correspondência, o pacote não será executado.  
   
      Os valores são inteiros longos. O argumento pode ter um dentre três formulários, sendo sempre obrigatório um valor para *major* :  
   
@@ -473,7 +473,7 @@ dtexec /option [value] [/option [value]]...
   
     -   *major*; *minor*; *build*  
   
--   **/Verifyp [ackageID]** *packageID*:  
+-   **/Verifyp [ackageID]** _packageID_:  
                   Opcional. Verifica o GUID do pacote a ser executado, comparando-o ao valor especificado no argumento *package_id* .  
   
 -   **/Verifys [igned]**:  
@@ -485,9 +485,9 @@ dtexec /option [value] [/option [value]]...
     > [!NOTE]  
     >  Opcional **BlockedSignatureStates** valor do registro pode especificar uma configuração que é mais restritiva que a opção de assinatura digital definida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ou no `dtexec` linha de comando. Nesta situação, a configuração de Registro mais restritiva substitui as outras configurações.  
   
--   **/Verifyv [ersionID]** *versionID*: Opcional. Verifica o GUID de versão do pacote a ser executado, comparando-o ao valor especificado no argumento *version_id* durante a fase de validação do pacote.  
+-   **/Verifyv [ersionID]** _versionID_: Opcional. Verifica o GUID de versão do pacote a ser executado, comparando-o ao valor especificado no argumento *version_id* durante a fase de validação do pacote.  
   
--   **/Vlog** *[Filespec]*: Opcional. Grava todos os eventos de pacote do Integration Services nos provedores de log que foram habilitados quando o pacote foi projetado. Para que o Integration Services habilite um provedor de log para arquivos de texto e grave eventos de log em um arquivo de texto especificado, inclua um caminho e nome de arquivo como o parâmetro *Filespec* .  
+-   **/Vlog** _[Filespec]_: Opcional. Grava todos os eventos de pacote do Integration Services nos provedores de log que foram habilitados quando o pacote foi projetado. Para que o Integration Services habilite um provedor de log para arquivos de texto e grave eventos de log em um arquivo de texto especificado, inclua um caminho e nome de arquivo como o parâmetro *Filespec* .  
   
      Se você não incluir o parâmetro *Filespec* , o Integration Services não habilitará um provedor de log para arquivos de texto. O Integration Services vai gravar eventos de log somente nos provedores de log que foram habilitados quando o pacote foi projetado.  
   

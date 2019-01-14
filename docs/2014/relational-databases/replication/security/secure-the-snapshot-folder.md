@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753948"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127796"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger uma pasta de instantâneo
   A pasta de instantâneo é um diretório que armazena arquivos de instantâneos, recomendamos que você dedique o diretório para o armazenamento de instantâneos. Conceda permissão de gravação ao Agente de Instantâneo para a pasta e assegure que a permissão de leitura seja fornecida somente para a conta do Windows usada pelo Agente de Distribuição ou Agente de Mesclagem para acessar a pasta. A conta do Windows associada com o agente deve ser uma conta de domínio para acessar uma pasta de instantâneo que está localiza em um computador remoto.  
@@ -54,7 +54,7 @@ ms.locfileid: "52753948"
  [Locais da pasta de instantâneos alternativos](../alternate-snapshot-folder-locations.md)   
  [Inicializar uma assinatura com um instantâneo](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Segurança e proteção &#40;Replicação&#41;](security-and-protection-replication.md)   
+ [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)   
  [Transferir instantâneos pelo FTP](../transfer-snapshots-through-ftp.md)  
   
   
