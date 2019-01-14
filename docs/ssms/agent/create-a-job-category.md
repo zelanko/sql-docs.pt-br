@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7dbc000d71d7d2cda2d299de476346103f2d2a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701944"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134306"
 ---
 # <a name="create-a-job-category"></a>Criar uma categoria de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Este tópico descreve como criar uma categoria de trabalho no [!INCLUDE[ssCurren
 As categorias multisservidor só existem em um servidor mestre. Há apenas uma categoria de trabalho padrão disponível em um servidor mestre: [**Não Categorizado (Multisservidor)**]. Quando um trabalho multisservidor é baixado, sua categoria é alterada para **Trabalhos do MSX** no servidor de destino.  
   
 ### <a name="Security"></a>Segurança  
-Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Usando o SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ Para obter informações detalhadas, consulte [Implement SQL Server Agent Securi
   
 3.  Clique com o botão direito do mouse na pasta **Trabalhos** e selecione **Gerenciar Categorias de Trabalho**.  
   
-4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*, clique em **Adicionar**.  
+4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ , clique em **Adicionar**.  
   
 5.  Na nova caixa de diálogo, na caixa **Nome** , insira um nome para a nova categoria de trabalho.  
   
@@ -75,7 +75,7 @@ Para obter informações detalhadas, consulte [Implement SQL Server Agent Securi
   
 7.  Clique em **OK**.  
   
-8.  Na caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*, clique em **Atualizar** para garantir que a nova categoria de trabalho esteja ativa. Se tudo estiver como esperado, feche a caixa de diálogo.  
+8.  Na caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ , clique em **Atualizar** para garantir que a nova categoria de trabalho esteja ativa. Se tudo estiver como esperado, feche a caixa de diálogo.  
   
 Para obter mais informações sobre essas caixas de diálogo, consulte [Categorias de trabalho – Gerenciar categorias de trabalho](../../ssms/agent/job-categories-manage-job-categories.md) e [Propriedades de categorias de trabalho – Nova categoria de trabalho](../../ssms/agent/job-categories-properties-new-job-category.md).  
   
