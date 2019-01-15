@@ -19,12 +19,12 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 333d51131fedac6bb87dc9dd5ba49c17ff26073e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293082"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100431"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,31 +81,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Especifica que o diagrama de sintaxe para o **sqlmaint** seja retornado. Este parâmetro deve ser usado sozinho.  
   
- **-S** *server_name*[ **\\**_instance\_name_]  
+ **-S** _server_name_[ **\\**_instance\_name_]  
  Especifica a instância de destino do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifica _server\_name_ para a conexão com a instância padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nesse servidor. Especifica _server\_name_**\\**_instance\_name_ para conectar-se a uma instância nomeada do [!INCLUDE[ssDE](../includes/ssde-md.md)] nesse servidor. Se nenhum servidor for especificado, o **sqlmaint** se conecta à instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador local.  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  Especifica a ID de logon a ser usada para se conectar ao servidor. Se não for fornecida, o **sqlmaint** tenta usar a [!INCLUDE[msCoName](../includes/msconame-md.md)] -Windows-Authentication. Se *login_ID* contiver caracteres especiais, ele deverá estar entre aspas duplas ("); caso contrário, as aspas duplas serão opcionais.  
   
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows.  
   
- **-P** *password*  
+ **-P** _password_  
  Especifica a senha para a ID de logon. Válido somente se o parâmetro **-U** também for fornecido. Se o *password* contiver caracteres especiais, ele deve estar entre aspas duplas; caso contrário, as aspas duplas são opcionais.  
   
 > [!IMPORTANT]  
 >  A senha não é mascarada. Quando possível, use a Autenticação do Windows.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  Especifica o nome do banco de dados no qual a operação de manutenção deve ser executada. Se o *database_name* contiver caracteres especiais, ele deverá estar entre aspas duplas; caso contrário, as aspas duplas são opcionais.  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  Especifica o nome de um plano de manutenção de banco de dados definido com o uso do Assistente para Planos de Manutenção de Banco de Dados. A única informação que **sqlmaint** usa do plano é a lista de bancos de dados. Todas as atividades de manutenção especificadas nos outros parâmetros do **sqlmaint** se aplicam a esta lista de bancos de dados.  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  Especifica o identificador global exclusivo (GUID) de um plano de manutenção de banco de dados definido com o uso do Assistente para Planos de Manutenção de Banco de Dados. A única informação que **sqlmaint** usa do plano é a lista de bancos de dados. Todas as atividades de manutenção especificadas nos outros parâmetros do **sqlmaint** se aplicam a esta lista de bancos de dados. Isso deve corresponder a um valor do plan_id em msdb.dbo.sysdbmaintplans.  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  Especifica o caminho completo e o nome do arquivo no qual será gerado o relatório. O relatório também é gerado na tela. O relatório mantém informações de versão adicionando uma data ao nome do arquivo. A data é gerada da seguinte forma: ao final do nome do arquivo, mas antes do ponto final, no formato _*aaaaMMddhhmm*. *aaaa* = ano, *MM* = mês, *dd* = dia, *hh* = hora, *mm* = minuto.  
   
  Se você executar o utilitário às 10h23 em 1º de dezembro de 1996, e esse é o valor de *text_file* :  
@@ -122,10 +122,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  O nome do arquivo UNC completo é necessário para *text_file* , quando **sqlmaint** acessa um servidor remoto.  
   
- **-To**  *operator_name*  
+ **-To**  _operator_name_  
  Especifica o operador para quem o relatório gerado será enviado por meio do SQL Mail.  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  Especifica o caminho completo e nome do arquivo no qual um relatório HTML será gerado. **sqlmaint** gera o nome de arquivo, acrescentando uma cadeia de caracteres no formato _*aaaaMMddhhmm* ao nome do arquivo, da mesma forma que faz para o parâmetro **-Rpt** .  
   
  O nome do arquivo UNC completo é necessário para *html_file* , quando **sqlmaint** acessa um servidor remoto.  
@@ -133,7 +133,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  Especifica que qualquer relatório HTML no diretório de relatórios deverá ser excluído se o intervalo de tempo após a criação do arquivo de relatório exceder \<*time_period*>. **-DelHtmlRpt** procura arquivos cujos nomes correspondem ao padrão gerado pelo parâmetro *html_file*. Se *html_file* for c:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fará com que **sqlmaint** exclua todos os arquivos cujos nomes correspondam ao padrão C:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm e que sejam anteriores ao \<*time_period*> especificado.  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  Especifica que o espaço não usado seja removido do banco de dados especificado em **-D**. Essa opção só é útil para bancos de dados definidos para crescer automaticamente. *Threshold_percent* especifica o tamanho em megabytes que o banco de dados deve atingir, antes que **sqlmaint** tente remover o espaço de dados não utilizado. Se o banco de dados for menor que *threshold_percent*, nenhuma ação será tomada. *Free_percent* especifica quanto espaço não utilizado deve permanecer no banco de dados, especificado como um percentual do tamanho final do banco de dados. Por exemplo, se um banco de dados com 200 MB contiver 100 MB de dados, especificar 10 para *free_percent* resultará em um tamanho final de banco de dados de 110 MB. Observe que um banco de dados não será expandido se for menor do que *free_percent* somado à quantidade de dados no banco de dados. Por exemplo, se um banco de dados de 108 MB tiver 100 MB de dados, especificar 10 para *free_percent* não expandirá o banco de dados para 110 MB; ele permanecerá com 108 MB.  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -147,7 +147,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  Especifica que uma instrução DBCC CHECKCATALOG (Transact-SQL) seja executada no banco de dados especificado em **-D**. Para obter mais informações, veja [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md).  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  Especifica que a instrução seguinte seja executada em cada tabela no banco de dados:  
   
 ```  
@@ -158,7 +158,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  Para obter mais informações, veja [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md).  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  Especifica que os índices nas tabelas do banco de dados de destino devem ser reconstruídos usando o valor percentual de *free_space* como o inverso do fator de preenchimento. Por exemplo, se o percentual de *free_space* for 30, o fator de preenchimento usado será 70. Se for especificado um valor percentual de *free_space* de 100, os índices serão reconstruídos com o fator de preenchimento original.  
   
  Se os índices estiverem em colunas computadas, também será necessário especificar o argumento **-SupportComputedColumn** quando usar **-RebldIdx**.  
@@ -253,7 +253,7 @@ dbname_log_yyyymmddhhmm.BAK
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>b. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  

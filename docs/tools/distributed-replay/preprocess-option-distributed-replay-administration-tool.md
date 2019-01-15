@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502709"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129436"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opção de pré-processamento (ferramenta de administração Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- **-m** *controller*  
+ **-m** _controller_  
  Especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.  
   
  Se o parâmetro **-m** não for especificado, será usado o computador local.  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  Especifica o caminho completo do arquivo de rastreamento de entrada no controlador, como `D:\Mytrace.trc`. O parâmetro **-i** é obrigatório.  
   
  Se houver arquivos de substituição no mesmo diretório, eles serão carregados e usados automaticamente. Os arquivos devem seguir a convenção de nomenclatura de substituição de arquivo, por exemplo: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.  
@@ -48,7 +48,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 > [!NOTE]  
 >  Se você estiver usando a ferramenta de administração em um computador diferente do controlador, precisará copiar os arquivos de rastreamento de entrada no controlador de forma que um caminho local possa ser usado para este parâmetro.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Especifica o diretório no controlador onde o arquivo intermediário será armazenado. O parâmetro **-d** é obrigatório.  
   
  Os seguintes requisitos são aplicados:  
@@ -61,14 +61,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   Não há suporte para caminhos UNC.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  É o caminho completo do arquivo de configuração de pré-processamento; usado para especificar o local do arquivo de configuração de pré-processamento quando armazenado em um local diferente. Esse parâmetro pode ser um caminho UNC ou pode residir localmente no computador onde você executa a ferramenta de administração.  
   
  O parâmetro **-c** não será obrigatório se nenhuma filtragem for necessária, ou se você não desejar modificar o tempo ocioso máximo.  
   
  Sem o parâmetro **-c** , o arquivo de configuração de pré-processamento padrão, `DReplay.exe.preprocess.config`, será usado.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Especifica a frequência (em segundos) na qual exibir mensagens de status.  
   
  Se **-f** não for especificado, o intervalo padrão será de 30 segundos.  
