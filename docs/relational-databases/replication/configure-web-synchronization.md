@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519344"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135576"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "52519344"
   
 -   Se você reproduzir grandes volumes de dados, talvez tenha que ajustar o tamanho do lote do Agente de Mesclagem.  
   
- O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando os parâmetros **DownloadGenerationsPerBatch** e -**UploadGenerationsPerBatch** do Agente de Mesclagem. Para obter mais informações, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando os parâmetros **DownloadGenerationsPerBatch** e –**UploadGenerationsPerBatch** do Agente de Mesclagem. Para obter mais informações, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Para grandes volumes de dados, especifique um número pequeno para cada um dos parâmetros para envio em lote. É recomendável começar com um valor de 10 e ajustá-lo com base nas necessidades e no desempenho do aplicativo. Normalmente, esses parâmetros são especificados em um perfil de agente. Para obter mais informações sobre perfis, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519344"
   
 -   A conta sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) executa também é a conta que se conectará ao Publicador e ao Distribuidor durante a sincronização. Essa conta deve ser mapeada para uma conta de logon do SQL no Publicador e no Distribuidor. Para obter mais informações, consulte a seção "Definindo permissões para o SQL Server Replication Listener" no [Configurar IIS para sincronização da Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   É possível usar FTP para entregar o instantâneo do Publicador ao computador que está executando o IIS. O instantâneo é sempre entregue do computador que está executando o IIS ao Assinante, usando HTTPS. Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   É possível usar FTP para entregar o instantâneo do Publicador ao computador que está executando o IIS. O instantâneo é sempre entregue do computador que está executando o IIS ao Assinante, usando HTTPS. Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   Se os servidores da topologia de replicação estiverem protegidos por firewall, poderá ser necessário abrir portas no firewall para habilitar a sincronização da Web.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52519344"
   
     -   O computador que está executando o IIS, em geral, conecta-se ao Publicador ou ao Distribuidor usando a porta 1433 (instância padrão). Quando o Publicador ou o Distribuidor é uma instância nomeada em um servidor com outra instância padrão, a porta 1500 é normalmente usada para conexão à instância nomeada.  
   
-    -   Se o computador que está executando o IIS estiver separado do Distribuidor por um firewall, e um compartilhamento de FTP for usado para a entrega de instantâneo, as portas usadas para o FTP precisarão ser abertas. Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Se o computador que está executando o IIS estiver separado do Distribuidor por um firewall, e um compartilhamento de FTP for usado para a entrega de instantâneo, as portas usadas para o FTP precisarão ser abertas. Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  A abertura de portas no firewall pode deixar o servidor exposto a ataques mal-intencionados. Certifique-se de conhecer os sistemas de firewall antes de abrir portas. Para obter mais informações, consulte [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
