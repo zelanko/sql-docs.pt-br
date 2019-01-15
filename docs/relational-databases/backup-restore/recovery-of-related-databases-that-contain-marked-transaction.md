@@ -23,12 +23,12 @@ ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0ad92c9bf7596bb30dce4adf912fb1a9aa468a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678214"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131696"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  Para obter informações sobre como inserir uma marca em uma transação que abrange vários bancos de dados, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxe Transact-SQL para recuperar a uma marca  
- Quando você assinala uma transação marcada usando uma instrução[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
+ Quando você assinala uma transação marcada usando uma instrução [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
   
--   Use a cláusula WITH STOPATMARK = **'***<mark_name>***'** para especificar que a transação marcada é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK = **'**_<nome_marca>_**'** para especificar que a transação marcada é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e inclui a transação marcada no roll-forward.  
   
--   Use a cláusula WITH STOPBEFOREMARK = **'***<mark_name>***'** para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK = **'**_<nome_marca>_**'** para especificar que o log de eventos que está imediatamente antes da marca é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e exclui a transação marcada do roll-forward.  
   

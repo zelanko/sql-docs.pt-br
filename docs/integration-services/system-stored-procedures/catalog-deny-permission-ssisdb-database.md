@@ -11,12 +11,12 @@ ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd75c7b18ef53d871a866024c96fbb7a553ee727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53bd2104d0651734d1c65c9800859254f8345b1a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648844"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127027"
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Argumentos  
  [ @object_type = ] *object_type*  
- O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`). O *object_type* é **smallint***.*  
+ O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`). O *object_type* é **smallint**_._  
   
  [ @object_id = ] *object_id*  
  A ID (identificador exclusivo) ou a chave primária do objeto protegível. O *object_id* é **bigint**.  

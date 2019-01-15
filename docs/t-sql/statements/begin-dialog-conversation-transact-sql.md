@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543835"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124786"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  É uma variável usada para armazenar o identificador da caixa de diálogo gerada pelo sistema para a nova caixa de diálogo que é retornada pela instrução BEGIN DIALOG CONVERSATION. A variável precisa ser do tipo **uniqueidentifier**.  
   
  FROM SERVICE *initiator_service_name*  
@@ -139,7 +139,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. Iniciando uma caixa de diálogo com um tempo de vida explícito  
+### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>b. Iniciando uma caixa de diálogo com um tempo de vida explícito  
  O exemplo a seguir inicia uma conversa de caixa de diálogo e armazena um identificador para a caixa de diálogo em `@dialog_handle`. O serviço `//Adventure-Works.com/ExpenseClient` é o iniciador da caixa de diálogo e o serviço `//Adventure-Works.com/Expenses` é o destino da caixa de diálogo. A caixa de diálogo segue o contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`. Se a caixa de diálogo não for fechada pelo comando END CONVERSATION em `60` segundos, o agente a encerrará com um erro.  
   
 ```  

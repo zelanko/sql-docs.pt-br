@@ -13,12 +13,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 635fe088e51c17e1367eaaeab7e528e2f12e5dd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5324e48c091f7bc4f999795f28f19f943217f7d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529678"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126126"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de Espelhamento de Banco de Dados (página Avisos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "52529678"
 |Aviso|Limite|  
 |-------------|---------------|  
 |**Avisar se o log não enviado exceder o limite**|Especifica quantos quilobytes (KB) de logs não enviados gerarão um aviso na instância principal do servidor. Esse aviso ajuda a medir o potencial de perda de dados em termos de KB e é particularmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|  
-|**Avisar se o log não restaurado exceder o limite**|Especifica quantos KB de log não restaurado gerarão um aviso na instância do servidor espelho. Esse aviso é útil para medir o período do failover em termos de quilobytes. *Tempo de failover* consiste, essencialmente, no tempo necessário para que o servidor espelho anterior efetue o roll-forward de quaisquer logs restantes em sua fila de restauração, mais um pequeno tempo adicional.<br /><br /> Observação: em um failover automático, o tempo necessário para que o sistema observe o erro é independente do período do failover.<br /><br /> Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
+|**Avisar se o log não restaurado exceder o limite**|Especifica quantos KB de log não restaurado gerarão um aviso na instância do servidor espelho. Esse aviso é útil para medir o período do failover em termos de quilobytes. *Tempo de failover* consiste, essencialmente, no tempo necessário para que o servidor espelho anterior efetue o roll-forward de quaisquer logs restantes em sua fila de restauração, mais um pequeno tempo adicional.<br /><br /> Observação: Em um failover automático, o tempo necessário para que o sistema observe o erro é independente do período do failover.<br /><br /> Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
 |**Avisar se a idade da transação não enviada mais antiga exceder o limite**|Especifica o número de minutos de transações que podem ser acumuladas na fila de envio, antes da geração de um aviso na instância do servidor principal. Esse aviso ajuda a medir o potencial de perda de dados em termos de tempo, sendo particularmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|  
 |**Avisar se a sobrecarga espelhada confirmada exceder o limite**|Especifica o número de milissegundos de espera em média, por transação, tolerado antes da geração de um aviso no servidor principal. Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração. Esse valor é relevante somente no modo de alta segurança.|  
   
- **Limite em '** *<server_instance>* **'**  
+ **Limite em '** _<server_instance>_ **'**  
  Para cada um dos avisos, exibe o limite especificado pelo usuário atual, se houver, para uma das instâncias de servidor. O nome da instância completa da instância de servidor é indicado no título de coluna correspondente.  
   
  Para obter mais informações, consulte "Comentários", mais adiante neste tópico.  
@@ -50,7 +50,7 @@ ms.locfileid: "52529678"
  Para obter mais informações, consulte "Comentários", mais adiante neste tópico.  
   
 ## <a name="remarks"></a>Remarks  
- Se informações relativas a uma instância de servidor estiverem presentemente indisponíveis, as células da coluna **Limite em** correspondentes serão exibidas em plano de fundo cinza e texto marca d’água. Se o monitor não estiver conectado à instância do servidor, em todas as células a grade exibirá **Não conectado a** *<SYSTEM_NAME>* ou **Não conectado a** *<SYSTEM_NAME>***\\***<instance_name>*, dependendo de a instância ser padrão ou nomeada. Se o monitor estiver esperando por uma consulta para retornar, a grade exibirá **Aguardando dados…** em todas as células.  
+ Se informações relativas a uma instância de servidor estiverem presentemente indisponíveis, as células da coluna **Limite em** correspondentes serão exibidas em plano de fundo cinza e texto marca d’água. Se o monitor não estiver conectado à instância do servidor, em todas as células a grade exibirá **Não conectado a** _<SYSTEM_NAME>_ ou **Não conectado a** _<SYSTEM_NAME>_**\\**_<instance_name>_, dependendo de a instância ser padrão ou nomeada. Se o monitor estiver esperando por uma consulta para retornar, a grade exibirá **Aguardando dados…** em todas as células.  
   
  Quando houver informações disponíveis, a célula de cada aviso exibirá um valor limite especificado (e unidade de medida), ou **Não habilitado**.  
   

@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 627aea0126031dc747472861ac186e600dcfaaf6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202385"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126446"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On
 
@@ -48,7 +48,7 @@ Depois que um banco de dados de distribuição no AG for configurado com base na
 - Adição ou remoção de nós do AG de um banco de dados de distribuição existente.
 - Um distribuidor pode ter vários bancos de dados de distribuição. Cada banco de dados de distribuição pode estar em seu próprio AG e não pode estar em qualquer AG. Vários bancos de dados de distribuição podem compartilhar um AG.
 - O publicador e o distribuidor devem estar em instâncias separadas do SQL Server.
-- Se o ouvinte para o grupo de disponibilidade que hospeda o banco de dados de distribuição estiver configurado para usar uma porta não padrão, será necessário configurar um alias para o ouvinte e a porta não padrão. Este alias precisaria ser criado em todas as réplicas de publicador, distribuidor e assinante (para assinantes que executam no modo de pull). 
+- Se o ouvinte para o grupo de disponibilidade que hospeda o banco de dados de distribuição estiver configurado para usar uma porta não padrão, será necessário configurar um alias para o ouvinte e a porta não padrão.
 
 ## <a name="limitations-or-exclusions"></a>Limitações e exclusões
 

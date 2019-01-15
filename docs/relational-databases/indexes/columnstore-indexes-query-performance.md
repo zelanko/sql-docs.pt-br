@@ -1,7 +1,7 @@
 ---
 title: Índices columnstore – desempenho de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637134"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255266"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Recomendações para atingir desempenho de consultas muito rápido, que os índices columnstore são projetados para fornecer.    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Aplicação de predicado de cadeia de caracteres    
-Ao criar um esquema de data warehouse, a modelagem de esquema recomendada é usar um esquema estrela ou floco de neve, consistindo em uma ou mais tabelas de fatos e muitas tabelas de dimensões. A [tabela de fatos](https://en.wikipedia.org/wiki/Fact_table) armazena as transações ou medidas de negócios e a [tabela de dimensões](https://en.wikipedia.org/wiki/Dimension_table) armazena as dimensões pelas quais os fatos precisam ser analisados.    
+Ao criar um esquema de data warehouse, a modelagem de esquema recomendada é usar um esquema estrela ou floco de neve, consistindo em uma ou mais tabelas de fatos e muitas tabelas de dimensões. A [tabela de fatos](https://wikipedia.org/wiki/Fact_table) armazena as transações ou medidas de negócios e a [tabela de dimensões](https://wikipedia.org/wiki/Dimension_table) armazena as dimensões pelas quais os fatos precisam ser analisados.    
     
 Por exemplo, um fato pode ser um registro que representa uma venda de um produto específico em uma região específica, enquanto a dimensão representa um conjunto de regiões, produtos e assim por diante. As tabelas de fatos e dimensões são conectadas por meio de uma relação de chaves primária/estrangeira. As consultas de análise mais comumente usadas unem uma ou mais tabelas de dimensão à tabela de fatos.    
     
-Vamos considerar uma tabela de dimensões `Products`. Uma chave primária típica será `ProductCode`, que normalmente é representada como um tipo de dados String. Para o desempenho de consultas, uma melhor prática é criar uma chave alternativa, normalmente uma coluna de inteiros, para referir-se à linha na tabela de dimensões da tabela de fatos.    
+Vamos considerar uma tabela de dimensões `Products`. Uma chave primária típica será `ProductCode`, que normalmente é representada como um tipo de dados String. Para o desempenho de consultas, uma melhor prática é criar uma chave alternativa, normalmente uma coluna de inteiros, para referir-se à linha na tabela de dimensões da tabela de fatos.    
     
 O índice columnstore executa consultas de análise com junções/predicados que envolvem chaves baseadas em valores numéricos ou inteiros de maneira muito eficiente. No entanto, em muitas cargas de trabalho do cliente, observamos o uso de colunas baseadas em cadeias de caracteres vinculando tabelas de fatos/dimensões e, como resultado, o desempenho de consultas com um índice columnstore não era tão bom. O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] melhora consideravelmente o desempenho de consultas de análise com colunas baseadas em cadeia de caracteres, ao realizar a aplicação dos predicados com colunas de cadeia de caracteres ao nó SCAN.    
     

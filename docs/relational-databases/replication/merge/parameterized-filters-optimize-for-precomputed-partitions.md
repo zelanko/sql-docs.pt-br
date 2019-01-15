@@ -15,12 +15,12 @@ ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9deab114f4e9185d2c652fd43021c00a6e93a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7a882660203ee2c23e1cdb6cb9dbf6aa7df407d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807294"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124296"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros com parâmetros – Otimizar para partições pré-computadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47807294"
   
  Entretanto, se o Publicador e o Assinante estiverem sendo executados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou em uma versão posterior e você pode usar partições pré-computadas, a associação de partição de todas as alterações no Publicador será pré-computada e persistirá na hora que as alterações forem feitas. Como resultado, quando um Assinante sincroniza com o Publicador, ele pode começar imediatamente a baixar as alterações relevantes à sua partição sem ter de passar pelo processo de avaliação de partição. Isso pode levar a um ganho significativo de desempenho quando a publicação tem um grande número de alterações, Assinantes ou artigos na publicação.  
   
- Além de usar partições pré-computadas, instantâneos pré-gerados e/ou permitir que os Assinantes solicitem geração e aplicação de instantâneos na primeira vez que eles sincronizarem. Use uma, ou ambas as opções, para fornecer instantâneos para publicações que usam filtros com parâmetros. Se você não especificar uma dessas opções, as assinaturas serão inicializadas usando uma série de instruções SELECT e INSERT, ao invés de usar o utilitário **bcp** , esse processo é muito mais lento. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Além de usar partições pré-computadas, instantâneos pré-gerados e/ou permitir que os Assinantes solicitem geração e aplicação de instantâneos na primeira vez que eles sincronizarem. Use uma, ou ambas as opções, para fornecer instantâneos para publicações que usam filtros com parâmetros. Se você não especificar uma dessas opções, as assinaturas serão inicializadas usando uma série de instruções SELECT e INSERT, ao invés de usar o utilitário **bcp** , esse processo é muito mais lento. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **Para usar partições pré-computadas**  
   
@@ -53,17 +53,17 @@ ms.locfileid: "47807294"
   
 -   Não deveria haver nenhuma relação de filtro de junção circular na publicação.  
   
-### <a name="database-collation"></a>Agrupamento de banco de dados  
+### <a name="database-collation"></a>Ordenação de banco de dados  
   
--   Quando partições pré-computadas são usadas, o agrupamento do banco de dados é sempre usado ao fazer comparações, ao invés de agrupamento de tabela ou coluna. Considere o cenário a seguir.  
+-   Quando partições pré-computadas são usadas, a ordenação do banco de dados é sempre usada ao fazer comparações, ao invés de ordenação de tabela ou coluna. Considere o cenário a seguir.  
   
-    -   Um banco de dados com um agrupamento com diferenciação de maiúsculas e minúsculas contém uma tabela com um agrupamento de diferenciação de maiúsculas e minúsculas.  
+    -   Um banco de dados com uma ordenação com diferenciação de maiúsculas e minúsculas contém uma tabela com uma ordenação de diferenciação de maiúsculas e minúsculas.  
   
     -   A tabela contém uma coluna **ComputerName**, que é comparada ao nome do host do Assinante em um filtro com parâmetros.  
   
     -   A tabela contém uma linha com o valor "MYCOMPUTER" e uma linha com o valor "mycomputer" nesta coluna.  
   
-     Se o Assinante sincronizar com o nome de host “mycomputer”, o Assinante receberá apenas uma linha, porque a comparação é com diferenciação de maiúsculas e minúsculas (o agrupamento do banco de dados). Se partições de pré-computadas não forem usadas, o Assinante receberá ambas as linhas, porque a tabela tem um agrupamento sem diferenciação de maiúsculas e minúsculas.  
+     Se o Assinante sincronizar com o nome de host “mycomputer”, o Assinante receberá apenas uma linha, porque a comparação é com diferenciação de maiúsculas e minúsculas (a ordenação do banco de dados). Se partições de pré-computadas não forem usadas, o Assinante receberá ambas as linhas, porque a tabela tem uma ordenação sem diferenciação de maiúsculas e minúsculas.  
   
 ## <a name="performance-of-precomputed-partitions"></a>Desempenho de partições pré-computadas  
  Há um pequeno custo de desempenho com partições pré-computadas quando as alterações são carregadas do Assinante para o Publicador, mas o tempo de processamento em massa de mesclagem é gasto avaliando as partições e baixando as alterações do Publicador para o Assinante, portanto, o ganho da rede ainda pode ser significativo. O benefício de desempenho irá variar, dependendo do número de Assinantes, sincronizando simultaneamente e o número de atualizações por sincronização que move linhas de uma partição a outra.  

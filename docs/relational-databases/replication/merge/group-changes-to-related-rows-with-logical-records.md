@@ -15,12 +15,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c76fe140a6cfd6e8d4cc2f83e3c0f3143a15708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834114"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134266"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar alterações a linhas relacionadas com registros lógicos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47834114"
   
 -   A resolução de conflitos personalizada com manipuladores de lógica de negócios ou resolvedores personalizados não tem suporte para artigos que não são incluídos em um registro lógico.  
   
--   Se registros lógicos forem usados em uma publicação que inclui filtros com parâmetros, você deverá inicializar cada Assinante com um instantâneo de sua partição. Se você inicializar um Assinante com outro método, o Merge Agent falhará. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Se registros lógicos forem usados em uma publicação que inclui filtros com parâmetros, você deverá inicializar cada Assinante com um instantâneo de sua partição. Se você inicializar um Assinante com outro método, o Merge Agent falhará. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 -   Não são exibidos conflitos que envolvem registros lógicos no Visualizador de Conflitos. Para exibir informações sobre esses conflitos, use procedimentos armazenados de replicação. Para obter mais informações, consulte [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   

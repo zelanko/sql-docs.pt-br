@@ -15,12 +15,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3aadc729667a5db3069b569df606fdd54012f2c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1983600c3eccc389bbc0a3a8995957688c173a37
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693844"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135118"
 ---
 # <a name="validate-subscription"></a>Validar Assinatura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ ms.locfileid: "47693844"
  Clique para acessar a caixa de diálogo **Opções de Validação de Assinatura** , que permite especificar se deve ser usada a validação de contagem de linhas ou validação de soma de verificação binária.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Validar os dados replicados](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validar os dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

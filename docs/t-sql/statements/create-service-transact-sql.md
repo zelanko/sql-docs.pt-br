@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739034"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131916"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Define o proprietário do serviço para o usuário ou função de banco de dados especificados. Quando o usuário atual é **dbo** ou **sa**, *owner_name* pode ser o nome de qualquer usuário ou função válida. Caso contrário, *owner_name* deve ser o nome do usuário atual, o nome de um usuário para o qual o usuário atual tenha a permissão IMPERSONATE ou o nome de uma função à qual o usuário atual pertença.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Especifica a fila que recebe as mensagens para o serviço. A fila deve existir no mesmo banco de dados assim como o serviço. Se nenhum *schema_name* for fornecido, o esquema será o esquema padrão para o usuário que executa a instrução.  
   
  *contract_name*  
@@ -91,7 +91,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses]
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="b-creating-a-service-with-multiple-contracts"></a>B. Criando um serviço com vários contratos  
+### <a name="b-creating-a-service-with-multiple-contracts"></a>b. Criando um serviço com vários contratos  
  O exemplo a seguir cria o serviço `//Adventure-Works.com/Expenses` na fila `ExpenseQueue`. Diálogos que tenham esse serviço como destino devem seguir o contrato `//Adventure-Works.com/Expenses/ExpenseSubmission` ou o contrato `//Adventure-Works.com/Expenses/ExpenseProcessing`.  
   
 ```  

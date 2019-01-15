@@ -16,12 +16,12 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5fbe0702ee25e39103c43cd689b49b563db49bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736564"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257181"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47736564"
 |[Acesso de rede](#NetworkAccess)|Documenta o requisito de cada instância do servidor para acessar as portas de outra instância do servidor ou instâncias no TCP.|  
 |[Preparação do banco de dados espelho](#MirrorDbPrep)|Resume os requisitos para preparar o banco de dados espelho para habilitar o início do espelhamento.|  
 |[Falha na operação para criar arquivo](#FailedCreateFileOp)|Descreve como responder a uma falha na operação para criar arquivo.|  
-|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem exigida para as instruções ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'**.|  
+|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem exigida para as instruções ALTER DATABASE *nome_banco_dados* SET PARTNER **='**_servidor_parceiro_**'** .|  
 |[Transações envolvendo todos os bancos de dados](#CrossDbTxns)|Um failover automático pode levar a uma resolução automática e possivelmente incorreta de transações duvidosas. Por esta razão, o espelhamento de banco de dados não dá suporte a transações envolvendo todos os bancos de dados.|  
   
 ##  <a name="Accounts"></a> Contas  
@@ -144,7 +144,7 @@ ms.locfileid: "47736564"
  Para obter mais informações, veja [Remover o espelhamento de banco de dados&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Usar certificados para um ponto de extremidade do espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) ou [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Iniciando o espelhamento usando Transact-SQL  
- A ordem na qual as instruções ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** são emitidas é muito importante.  
+ A ordem na qual as instruções ALTER DATABASE *nome_banco_dados* SET PARTNER **='**_servidor_parceiro_**'** são emitidas é muito importante.  
   
 1.  A primeira instrução deve ser executada no servidor espelho. Quando essa instrução for emitida, o servidor espelho não tenta contatar qualquer outra instância do servidor. Em vez disso, o servidor espelho instrui seu banco de dados para esperar até que o servidor espelho seja contatado pelo servidor principal.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "47736564"
   
 -   Uma transação que está atualizando vários bancos de dados na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Transações que usam MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
+-   Transações que usam MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]).  
   
  Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   

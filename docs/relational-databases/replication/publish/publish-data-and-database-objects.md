@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523069"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129006"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,36 +71,22 @@ ms.locfileid: "52523069"
 ## <a name="creating-publications"></a>Criando publicações  
  Para criar uma publicação, forneça as seguintes informações:  
   
--   O Distribuidor.  
-  
--   A localização padrão dos arquivos de instantâneo.  
-  
--   O banco de dados da publicação.  
-  
--   O tipo de publicação a ser criada (instantâneo, transacional, transacional com assinaturas atualizáveis ou mesclagem).  
-  
--   Os dados e objetos de banco de dados (artigos) a serem incluídos na publicação.  
-  
--   Filtros de linha e filtros de coluna estáticos para todos os tipos de publicação e filtros de linha com parâmetros e filtros de junção para publicações de mesclagem.  
-  
--   A agenda do Agente de Instantâneo.  
-  
--   Contas sob as quais os seguintes agentes irão executar: o Agente de Instantâneo para todas as publicações; o Agente de Leitor de Log para todas as publicações transacionais; o Agente de Leitor de Fila para publicações transacionais que permitem atualização das assinaturas.  
-  
+-   O Distribuidor.    
+-   A localização padrão dos arquivos de instantâneo.    
+-   O banco de dados da publicação.    
+-   O tipo de publicação a ser criada (instantâneo, transacional, transacional com assinaturas atualizáveis ou mesclagem).    
+-   Os dados e objetos de banco de dados (artigos) a serem incluídos na publicação.   
+-   Filtros de linha e filtros de coluna estáticos para todos os tipos de publicação e filtros de linha com parâmetros e filtros de junção para publicações de mesclagem.   
+-   A agenda do Agente de Instantâneo.    
+-   Contas sob as quais os seguintes agentes irão executar: o Agente de Instantâneo para todas as publicações; o Agente de Leitor de Log para todas as publicações transacionais; o Agente de Leitor de Fila para publicações transacionais que permitem atualização das assinaturas.    
 -   Um nome e descrição para a publicação.  
   
- Para obter informações sobre como trabalhar com publicações, consulte os tópicos a seguir:  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Defina um Artigo](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [Excluir uma publicação](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ Para obter informações sobre como trabalhar com publicações, consulte os tópicos a seguir:    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Defina um Artigo](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [Excluir uma publicação](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [Excluir um artigo](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523069"
 ## <a name="publishing-tables"></a>Publicando tabelas  
  O objeto publicado com maior frequência é uma tabela. Os vínculos a seguir fornecem informações adicionais sobre áreas relacionadas a publicação de tabelas:  
   
--   [Filtrar os dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [Filtrar os dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Ao publicar uma tabela para replicação, você pode especificar quais objetos de esquema devem ser copiados para o Assinante, como integridade referencial declarada (restrições de chave primária, restrições de referência, restrições exclusivas), índices, gatilhos DML de usuário (os disparadores DDL não podem ser replicados), propriedades estendidas e ordenação. As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada.  
@@ -199,7 +182,7 @@ ms.locfileid: "52523069"
   
 -   Para artigos em publicações que usam instantâneos de modo de caracteres (que são usados para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): por padrão o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
   
- O proprietário do objeto pode ser alterado por meio da caixa de diálogo **Propriedades do Artigo – \<***Artigo***>** e dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md) e [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ O proprietário do objeto pode ser alterado por meio da caixa de diálogo **Propriedades do Artigo – \<**_Artigo_**>** e dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md) e [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publicando dados para Assinantes que executam versões anteriores do SQL Server  
   

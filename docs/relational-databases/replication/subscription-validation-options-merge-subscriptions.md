@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c966b258a333b53a8e14686ccb32228655ce7b3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dbca4ecaab2f358e83b00a27a5f62ccbc99b9b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650104"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128686"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Opções de Validação de Assinatura (assinaturas de mesclagem)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47650104"
   
 ## <a name="see-also"></a>Consulte Também  
  [Validar dados no assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validar os dados replicados](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validar os dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09f60a9bb0a550dd91a2006be408bb25d2df42a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 849bd9e2d6c76f58e38b8f854d31686cef0ccfec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686814"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134886"
 ---
 # <a name="validate-all-subscriptions"></a>Validar Todas as Assinaturas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47686814"
  Além de contar o número de linhas no Publicador e no Assinante, uma soma de verificação de todos os dados é calculada usando o algoritmo de soma de verificação binária. Se a contagem de linhas falhar, a soma de verificação não será executada. Essa opção não é válida para [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
- [Validar os dados replicados](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validar os dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

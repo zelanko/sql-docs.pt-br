@@ -19,12 +19,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe616847c9a9883fb46508286828b679a37ed065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655954"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125956"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "47655954"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Configurar o Mecanismo de Banco de Dados do SQL Server para efetuar a escuta em uma porta TCP adicional  
   
-1.  No SQL Server Configuration Manager, expanda **Configuração de Rede do SQL Server** e clique em **Protocolos para***<instance_name>*.  
+1.  No SQL Server Configuration Manager, expanda **Configuração de Rede do SQL Server** e clique em **Protocolos para**_<instance_name>_.  
   
-2.  Expanda **Protocolos para***<instance_name>* e clique em **TCP/IP**.  
+2.  Expanda **Protocolos para**_<instance_name>_ e clique em **TCP/IP**.  
   
 3.  No painel direito, clique com o botão direito do mouse em cada endereço IP desabilitado que você deseja habilitar e clique em **Habilitar**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "47655954"
   
 6.  No painel esquerdo, clique em **Serviços do SQL Server**.  
   
-7.  No painel direito, clique com o botão direito do mouse em **SQL Server***<instance_name>* e, em seguida, clique em **Reiniciar**.  
+7.  No painel direito, clique com o botão direito do mouse em **SQL Server**_<instance_name>_ e clique em **Reiniciar**.  
   
      Quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reiniciar, o log de erros listará as portas nas quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando.  
   

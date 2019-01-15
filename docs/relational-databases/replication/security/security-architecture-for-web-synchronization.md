@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719004"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124656"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitetura de segurança para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47719004"
 |Conta de serviço do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gerenciador de Configurações do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
 |Aplicativo autônomo|O Merge Agent executa sob o contexto do usuário do Windows que estiver executando o aplicativo.|  
   
-## <a name="b-connection-to-the-subscriber"></a>B. Conexão com o Assinante  
+## <a name="b-connection-to-the-subscriber"></a>b. Conexão com o Assinante  
  O Merge Agent conecta-se com Assinante usando a Autenticação do Windows ou a ou Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O usuário do Windows ou o logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que você especificar deve ser associado a um usuário de banco de dados que seja membro da função de banco de dados fixa **dbowner** , no banco de dados de assinatura.  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ ms.locfileid: "47719004"
 |A Autenticação do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será usada se um dos seguintes for especificado:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: um valor de **0** para o parâmetro **@distributor_security_mode** do [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: um valor igual a <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Linha de comando do Agente de Mesclagem: um valor de **0** para **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: os parâmetros **@distributor_login** e **@distributor_password** do [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Linha de comando do Merge Agent: **-DistributorLogin** e **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Conexão com um servidor de FTP  
- Especifique um usuário do Windows para esta conexão somente se pretende baixar arquivos de instantâneos de um servidor de FTP, em vez de um local UNC, para o computador executando o IIS, antes de aplicar o instantâneo ao Assinante. Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Especifique um usuário do Windows para esta conexão somente se pretende baixar arquivos de instantâneos de um servidor de FTP, em vez de um local UNC, para o computador executando o IIS, antes de aplicar o instantâneo ao Assinante. Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 |Tipo de autenticação|Onde a autenticação é especificada|  
 |----------------------------|-------------------------------------------|  

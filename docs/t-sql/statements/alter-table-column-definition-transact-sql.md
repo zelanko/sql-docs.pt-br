@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664044"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130386"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  É o nome da coluna a ser alterada, adicionada ou removida. *column_name* pode consistir em 1 a 128 caracteres. Para novas colunas, criadas com um tipo de dados timestamp, *column_name* pode ser omitido. Se nenhum *column_name* é especificado para uma coluna do tipo de dados **timestamp**, o nome **timestamp** é usado.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type_schema_name_**.** ] *type_name*  
  É o tipo de dados para a coluna adicionada e o esquema ao qual ela pertence.  
   
  *type_name* pode ser:  
@@ -136,9 +136,9 @@ FILESTREAM
  Para obter um exemplo que mostra como usar a definição de coluna, consulte [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 COLLATE *collation_name*  
- Especifica o agrupamento da coluna. Se não for especificado, a coluna será atribuída ao agrupamento padrão do banco de dados. O nome do agrupamento tanto pode ser um nome de agrupamento do Windows como um nome de agrupamento SQL. Para obter uma lista e mais informações, veja [Nome do agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ Especifica a ordenação da coluna. Se não for especificado, à coluna será atribuída a ordenação padrão do banco de dados. O nome da ordenação tanto pode ser um nome de ordenação do Windows como um nome de ordenação SQL. Para obter uma lista e mais informações, veja [Nome da ordenação do Windows &#40;Transact-SQL &#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL Server &#40;Transact-SQL &#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- A cláusula COLLATE pode ser usada para especificar os agrupamentos somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**.  
+ A cláusula COLLATE pode ser usada para especificar as ordenações somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**.  
   
  Para obter mais informações sobre a cláusula COLLATE, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -155,7 +155,7 @@ DEFAULT
  É um valor literal, um NULL ou uma função de sistema usado como valor de coluna padrão. Se for usado em conjunto com uma coluna definida para ser de um tipo definido pelo usuário do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], a implementação do tipo deverá dar suporte a uma conversão implícita da *constant_expression* no tipo definido pelo usuário.  
   
 WITH VALUES   
- Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adicionando colunas não nulas como uma operação online](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
 Se isso for usado quando a coluna relacionada também não estiver sendo adicionada, não terá qualquer efeito.
  
  Especifica que o valor fornecido em DEFAULT *constant_expression* seja armazenado em uma nova coluna adicionada às linhas existentes. Se a coluna adicionada permitir valores nulos e WITH VALUES for especificado, o valor padrão será armazenado na nova coluna adicionada a linhas existentes. Se WITH VALUES não estiver especificado para colunas que permitem nulos, o valor NULL será armazenado na nova coluna nas linhas existentes. Se a nova coluna não permitir nulos, o valor padrão será armazenado em linhas novas, independentemente de WITH VALUES ser especificado.  
@@ -203,7 +203,7 @@ SPARSE
  Especifica a chave de criptografia de coluna. Para obter mais informações, veja [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. Usar criptografia determinística permite pesquisar usando comparação de igualdade, agrupamento e junção de tabelas usando junções de igualdade baseadas em valores criptografados, mas também pode permitir que usuários não autorizados adivinhem informações sobre valores criptografados examinando padrões na coluna criptografada. A união de duas tabelas em colunas criptografadas de maneira determinística só é possível se ambas as colunas são criptografadas com a mesma chave de criptografia de coluna. A criptografia determinística deve usar um agrupamento de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
+ **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. Usar criptografia determinística permite pesquisar usando comparação de igualdade, agrupamento e junção de tabelas usando junções de igualdade baseadas em valores criptografados, mas também pode permitir que usuários não autorizados adivinhem informações sobre valores criptografados examinando padrões na coluna criptografada. A união de duas tabelas em colunas criptografadas de maneira determinística só é possível se ambas as colunas são criptografadas com a mesma chave de criptografia de coluna. A criptografia determinística deve usar uma ordenação de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
   
  **Criptografia aleatória** usa um método que criptografa os dados de uma maneira menos previsível. A criptografia aleatória é mais segura, mas impede que cálculos e indexação sejam feitos em colunas criptografadas, a menos que sua instância do SQL Server tenha suporte para [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   

@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7c7c3b925b018ea7f212693b5de02fb43b425bc4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677885"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256961"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Adicionar namespaces a consultas com WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  Este é o resultado:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Apenas o prefixo de namespace xml pode ser usado sem defini-lo explicitamente em WITH XMLNAMESPACES, conforme mostrado na consulta de modo PATH a seguir. Além disso, se o prefixo for declarado, ele deverá ser associado ao namespace https://www.w3.org/XML/1998/namespace. Os nomes especificados na cláusula SELECT fazem referência ao prefixo de namespace xml que não é definido explicitamente usando WITH XMLNAMESPACES.  
+ Apenas o prefixo de namespace xml pode ser usado sem defini-lo explicitamente em WITH XMLNAMESPACES, conforme mostrado na consulta de modo PATH a seguir. Além disso, se o prefixo for declarado, ele deverá ser associado ao namespace http://www.w3.org/XML/1998/namespace. Os nomes especificados na cláusula SELECT fazem referência ao prefixo de namespace xml que não é definido explicitamente usando WITH XMLNAMESPACES.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

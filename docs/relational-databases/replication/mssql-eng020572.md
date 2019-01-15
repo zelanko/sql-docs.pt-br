@@ -13,12 +13,12 @@ ms.assetid: 636566db-ffcf-4109-8c11-15b8c7cb9cd9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dc71989a7a3ee552f36f40cfa55948ec752ba76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a4b85368a0aa83909c0d05830c64631efe9027
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603195"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134186"
 ---
 # <a name="mssqleng020572"></a>MSSQL_ENG020572
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47603195"
 |Texto da mensagem|A assinatura do assinante '%s' para o artigo '%s' na publicação '%s' foi reiniciada após uma falha na validação.|  
   
 ## <a name="explanation"></a>Explicação  
- Os dados no Assinante foram validados de acordo com os dados no Publicador, e os dados não corresponderam, portanto, houve falha na validação. Quando você especificou que a validação deveria ser realizada, selecionou a opção de reinicialização da assinatura no caso de falha de validação. Reinicializar uma assinatura envolve a aplicação de um novo instantâneo no Assinante. Para obter mais informações sobre validação, consulte [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md).  
+ Os dados no Assinante foram validados de acordo com os dados no Publicador, e os dados não corresponderam, portanto, houve falha na validação. Quando você especificou que a validação deveria ser realizada, selecionou a opção de reinicialização da assinatura no caso de falha de validação. Reinicializar uma assinatura envolve a aplicação de um novo instantâneo no Assinante. Para obter mais informações sobre validação, consulte [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 ## <a name="user-action"></a>Ação do usuário  
  Dados no Publicador e no Assinante serão correspondentes após a aplicação de um novo instantâneo no Assinante.  

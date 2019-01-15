@@ -15,12 +15,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d48c5860c097b8d027c23ead603094f9637d8368
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 271dd589a4bab4d6d7117eeb62d36dfcc32bf6a2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513919"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128646"
 ---
 # <a name="add-publisher"></a>Adicionar Publicador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "52513919"
  **Adicionar**  
  Clique para selecionar um tipo de Publicador a ser adicionado que inicia a caixa de diálogo **Conectar ao Servidor** . As opções são:  
   
--   **Adicionar Editor SQL Server...**  
+-   **Adicionar Editor SQL Server…**  
   
      Conectar-se ao Editor usando a caixa de diálogo **Conectar ao Servidor** .  
   
--   **Adicionar Editor Oracle...**  
+-   **Adicionar Editor Oracle…**  
   
      Conecte-se ao Distribuidor da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com Editor Oracle usando a caixa de diálogo **Conectar ao Servidor** .  
   
--   **Especificar um Distribuidor e Adicionar seus Publicadores...**  
+-   **Especificar um Distribuidor e Adicionar seus Publicadores…**  
   
      Conecte-se ao Distribuidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associado a um ou mais Publicadores usando a caixa de diálogo **Conectar ao Servidor** .  
   
@@ -70,6 +70,6 @@ ms.locfileid: "52513919"
   
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

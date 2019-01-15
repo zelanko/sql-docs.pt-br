@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b28271ae8ba64b9c07987f50891099ce46dda35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5c662d888d627b6dcce3d43161d16aee50a994ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523309"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124846"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar agendas de sincronização
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "52523309"
   
     -   **Executar somente sob demanda**  
   
-    -   **\<Definir Agendamento...>**  
+    -   **\<Definir agendamento...>**  
   
-2.  Se você selecionar **\<Definir Agendamento...>**, especifique uma agenda na caixa de diálogo **Propriedades da Agenda de Trabalho** e clique em **OK**.  
+2.  Se você selecionar **\<Define agendamento…>**, especifique uma agenda na caixa de diálogo **Propriedades da Agenda de Trabalho** e clique em **OK**.  
   
 3.  Conclua o assistente.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "52523309"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Você pode definir agendas de sincronização de forma programada, usando os procedimentos de replicação armazenados. Os procedimentos armazenados que você usar dependem do tipo de replicação e do tipo de assinatura (de recepção ou push).  
   
  Uma agenda é definida pelos seguintes parâmetros de programação, os comportamentos dos quais são herdados de [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  

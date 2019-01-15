@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072136"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135766"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Serviços SCM – conectar-se a outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49072136"
   
 8.  Na janela **Adicionar/Remover Snap-in** , clique em **OK**.  
   
-9. Expanda **Gerenciamento de Computador (***\<nome do computador>***)** e **Serviços e Aplicativos**.  
+9. Expanda **Gerenciamento de Computador (**_\<computer name>_**)** e **Serviços e Aplicativos**.  
   
 10. Clique com o botão direito do mouse no **SQL Server Configuration Manager**e clique em **Nova Janela daqui**.  
   

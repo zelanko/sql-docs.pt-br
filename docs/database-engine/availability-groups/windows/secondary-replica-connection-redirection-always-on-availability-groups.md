@@ -1,7 +1,7 @@
 ---
 title: Redirecionamento de conexão de leitura/gravação de réplica secundária para primária do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600519"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206302"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirecionamento de conexão de leitura/gravação de réplica secundária para primária (Grupos de Disponibilidade Always On)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 apresenta o *redirecionamento de conexão de leitura/gravação de réplica secundária para primária* para Grupos de Disponibilidade Always On. O redirecionamento de conexão de leitura/gravação está disponível em qualquer plataforma de sistema operacional. Ele permite que conexões do aplicativo cliente sejam direcionadas para a réplica primária, independentemente do servidor de destino especificado na cadeia de conexão. 
@@ -53,8 +54,8 @@ Para configurar o redirecionamento de conexão de leitura/gravação, defina `RE
 
 Em [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTING_URL` foi adicionado à especificação `<add_replica_option>`. Consulte os seguintes tópicos: 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) não definido (padrão) 
@@ -156,7 +157,8 @@ No diagrama a seguir, a réplica primária passou por failover manual para COMPU
 
 Se a instância do SQL Server especificada na cadeia de conexão não estiver disponível (devido a interrupção), a conexão falhará independentemente da função que a réplica desempenha no servidor de destino. Para evitar um tempo de inatividade prolongado no aplicativo, configure um `FailoverPartner` alternativo na cadeia de conexão. O aplicativo precisa implementar a lógica de repetição para acomodar as réplicas primária e secundária que não ficam online durante o failover real. Para obter informações sobre cadeias de conexão, consulte [Propriedade SqlConnection.ConnectionString](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
+
 [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

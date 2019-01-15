@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -17,12 +17,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ead289095f53693a7e6a487fa2a07a7c94df6219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f02932eff39003f318d2324cce85e51e54a4a77
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791814"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299113"
 ---
 # <a name="replication-agent-executables-concepts"></a>Conceitos dos executáveis do Replication Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47791814"
  Ao invocar agentes de replicação, você pode usar perfis de desempenho para transmitir automaticamente um conjunto definido de parâmetros para o executável do agente. Para saber mais, confira [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir mostram como invocar os agentes de replicação no prompt de comando. Os agentes de replicação também podem ser invocados usando RMO (Replication Management Objects). Para obter mais informações, consulte [Sincronizar assinaturas &#40;replicação&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md).  
+ Os exemplos a seguir mostram como invocar os agentes de replicação no prompt de comando. Os agentes de replicação também podem ser invocados usando RMO (Replication Management Objects). Para obter mais informações, consulte [Sincronizar assinaturas &#40;replicação&#41;](../../../relational-databases/replication/synchronize-data.md).  
   
 > [!NOTE]  
 >  As quebras de linha destes exemplos foram adicionadas para melhorar a legibilidade. Em um arquivo em lotes, devem ser feitos comandos em uma única linha.  

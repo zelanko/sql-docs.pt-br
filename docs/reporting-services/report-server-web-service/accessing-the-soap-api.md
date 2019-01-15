@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86dd39734b2f2d4fd82f6845f60be588cac2c95b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c125c4e1c413fd974ee80fd7f06c8c9f69f33b8d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812829"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257031"
 ---
 # <a name="accessing-the-soap-api"></a>Acessando a API SOAP
   O serviço Web Serviço de Relatório usa o SOAP sobre HTTP e age como uma interface de comunicações entre programas cliente e o servidor de relatório. O serviço Web oferece dois pontos de extremidade - um para a execução de relatórios e outro para o gerenciamento de relatórios - e consiste em métodos e em um conjunto de objetos de tipo complexo que podem ser usados para o acesso da funcionalidade completa do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para chamar o serviço, referencie a WSDL (Reporting Services Web Services Description Language).  
@@ -55,7 +55,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|O nome da pasta que contém o serviço Web XML. Configurado durante a instalação.|  
 |*\<endpoint name>.asmx*|O nome do ponto de extremidade do serviço web.|  
   
- Para saber mais sobre o formato WSDL, veja a especificação de WSDL feita pelo W3C (World Wide Web Consortium) em https://www.w3.org/TR/wsdl.  
+ Para saber mais sobre o formato WSDL, veja a especificação de WSDL feita pelo W3C (World Wide Web Consortium) em http://www.w3.org/TR/wsdl.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

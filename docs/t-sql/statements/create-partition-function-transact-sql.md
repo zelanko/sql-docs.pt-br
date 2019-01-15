@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191007"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132126"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Especifica o número de valores fornecidos por *boundary_value*, não excedendo 14.999. O número de partições criadas é igual a *n* + 1. Os valores não precisam ser listados em ordem. Se os valores não estiverem em ordem, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] os classifica, cria a função e retorna um aviso de que os valores não foram fornecidos em ordem. O Mecanismo de Banco de Dados retorna um erro se *n* inclui um valor duplicado.  
   
  **LEFT** | RIGHT  
- Especifica a qual lado de cada intervalo de valor de limite, esquerdo ou direito, o *boundary_value* [ **,***...n* ] pertence, quando valores de intervalo são classificados pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] em ordem ascendente da esquerda para a direita. Se não for especificado, LEFT será o padrão.  
+ Especifica a qual lado de cada intervalo de valor de limite, esquerdo ou direito, o *boundary_value* [ **,**_...n_ ] pertence quando valores de intervalo são classificados pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] em ordem crescente da esquerda para a direita. Se não for especificado, LEFT será o padrão.  
   
 ## <a name="remarks"></a>Remarks  
  O escopo de uma função de partição é limitado ao banco de dados em que é criado. No banco de dados, as funções das partições residem em um namespace separado das outras funções.  
@@ -106,8 +106,8 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |---------------|-------|-------|-------|-------|  
 |**Valores**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Criando uma função de partição RANGE RIGHT em uma coluna int  
- A função de partição a seguir usa os mesmos valores para *boundary_value* [ **,***...n* ] do exemplo anterior, com exceção de que ela especifica RANGE RIGHT.  
+### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>b. Criando uma função de partição RANGE RIGHT em uma coluna int  
+ A função de partição a seguir usa os mesmos valores para *boundary_value* [ **,**_...n_ ] que o do exemplo anterior, com exceção de que ela especifica RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

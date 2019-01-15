@@ -29,12 +29,12 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ee5082535620d05c96b505b1920b8036d92f5e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843094"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124776"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ AS PARTITION partition_function_name
  ALL  
  Especifica que todas as partições são mapeadas para o grupo de arquivos fornecido no *file_group_name* ou para o grupo de arquivos primário se **[** PRIMARY **]** é especificado. Se ALL for especificado, somente um *file_group_name* poderá ser especificado.  
   
- *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
  Especifica os nomes dos grupos de arquivos que contém as partições especificadas por *partition_function_name*. *file_group_name* já deve existir no banco de dados.  
   
- Se **[** PRIMARY **]** for especificado, a partição será armazenada no grupo de arquivos primário. Se ALL for especificado, somente um *file_group_name* poderá ser especificado. As partições são atribuídas a grupos de arquivos, começando com a partição 1, na ordem em que os grupos de arquivos são listados em [**,***...n*]. O mesmo *file_group_name* pode ser especificado mais de uma vez em [**,***...n*]. Se *n* não for suficiente para conter o número de partições especificado em *partition_function_name*, CREATE PARTITION SCHEME falhará com um erro.  
+ Se **[** PRIMARY **]** for especificado, a partição será armazenada no grupo de arquivos primário. Se ALL for especificado, somente um *file_group_name* poderá ser especificado. As partições são atribuídas a grupos de arquivos, começando com a partição 1, na ordem em que os grupos de arquivos são listados em [**,**_...n_]. O mesmo *file_group_name* pode ser especificado mais de uma vez em [**,**_...n_]. Se *n* não for suficiente para conter o número de partições especificado em *partition_function_name*, CREATE PARTITION SCHEME falhará com um erro.  
   
  Se o *partition_function_name* gerar menos partições que grupos de arquivos, o primeiro grupo de arquivos não atribuído será marcado como NEXT USED e uma mensagem informativa será exibida, nomeando o grupo de arquivos NEXT USED. Se ALL for especificado, o único *file_group_name* manterá sua propriedade NEXT USED para esse *partition_function_name*. O grupo de arquivos NEXT USED receberá uma partição adicional se uma for criada em uma instrução ALTER PARTITION FUNCTION. Para criar grupos de arquivos não atribuídos adicionais para conter novas partições, use ALTER PARTITION SCHEME.  
   
- Ao especificar o grupo de arquivos primário em *file_group_name* [ 1 **,***...n*], PRIMARY deverá ser delimitado, como em **[** PRIMARY**]**, porque é uma palavra-chave.  
+ Ao especificar o grupo de arquivos primário em *file_group_name* [ 1 **,**_...n_], PRIMARY deverá ser delimitado, como em **[** PRIMARY **]**, porque é uma palavra-chave.  
   
  Para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], há suporte somente para PRIMARY. Veja o exemplo E abaixo. 
   
@@ -107,7 +107,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 |**Partição**|1|2|3|4|  
 |**Valores**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Criando um esquema de partição que mapeia várias partições para o mesmo grupo de arquivos  
+### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>b. Criando um esquema de partição que mapeia várias partições para o mesmo grupo de arquivos  
  Se todas as partições forem mapeadas para o mesmo grupo de arquivos, use a palavra-chave ALL. Porém, se várias, mas nem todas as partições forem mapeadas para o mesmo grupo de arquivos, o nome do grupo de arquivos deverá ser repetido, como mostrado no exemplo a seguir.  
   
 ```  
