@@ -1,37 +1,35 @@
 ---
-title: DSN Conexão cadeia de caracteres e palavras-chave e atributos usados no Driver ODBC para SQL Server | Microsoft Docs
+title: Palavras-chave para o driver ODBC – SQL Server de cadeia de caracteres de conexão e DSN | Microsoft Docs
 ms.custom: ''
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+ms.reviewer: MightyPen
 ms.author: v-jizho2
+author: karinazhou
 manager: craigg
-ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512852"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306233"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos e palavras-chave da cadeia de conexão e DSN
 
 Esta página lista as palavras-chave para cadeias de caracteres de conexão e DSNs e atributos de conexão para SQLSetConnectAttr e SQLGetConnectAttr, disponível no Driver ODBC para SQL Server.
 
-
-
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Palavras-chave de cadeia de caracteres de Conexão/DSN e atributos de Conexão com suporte
 
-A tabela a seguir lista as palavras-chave disponíveis e os atributos para cada plataforma (l: Linux; M: Mac; Gravação: Windows). Clique na palavra-chave ou o atributo para obter mais detalhes.
+A tabela a seguir lista as palavras-chave disponíveis e os atributos para cada plataforma (l: Linux; M: Mac ; W: Windows: Clique na palavra-chave ou o atributo para obter mais detalhes.
 
-| Palavras-chave da cadeia de conexão/DSN | Atributo de conexão | Plataforma | 
+| Palavras-chave da cadeia de conexão/DSN | Atributo de conexão | Plataforma |
 |-|-|-|
 | [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Endereço](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) |  [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
+| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ApplicationIntent](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_APPLICATION_INTENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssapplicationintent) | LMW |
 | [AttachDBFileName](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ATTACHDBFILENAME](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssattachdbfilename) | LMW |
@@ -67,7 +65,7 @@ A tabela a seguir lista as palavras-chave disponíveis e os atributos para cada 
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | L |
 | [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | L |
-| [transparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | LMW |
+| [TransparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | LMW |
 | [Trusted_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_INTEGRATED_SECURITY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssintegratedsecurity) | LMW |
 | [TrustServerCertificate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRUST_SERVER_CERTIFICATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstrustservercertificate) | LMW |
 | [UID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -103,7 +101,7 @@ A tabela a seguir lista as palavras-chave disponíveis e os atributos para cada 
 | | [SQL_COPT_SS_BROWSE_SERVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseserver) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREDATA](dsn-connection-string-attribute.md#sqlcoptsscekeystoredata) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sqlcoptsscekeystoreprovider) | LMW |
-| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md#sqlcoptssclientconnectionid) | LMW |
+| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | LMW |
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | L |
@@ -147,7 +145,7 @@ Controla o uso de conexões de Fallback do SQL Server. Este não é mais suporta
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>Novas palavras-chave de cadeia de caracteres de Conexão e os atributos de Conexão
 
-###  <a name="authentication---sqlcoptssauthentication"></a>Autenticação - SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sqlcoptssauthentication"></a>Autenticação – SQL_COPT_SS_AUTHENTICATION
 
 Define o modo de autenticação a ser usado ao conectar-se ao SQL Server. Ver [usando o Azure Active Directory](using-azure-active-directory.md) para obter mais informações.
 
@@ -163,24 +161,24 @@ Define o modo de autenticação a ser usado ao conectar-se ao SQL Server. Ver [u
 > [!NOTE]
 > Ao usar `Authentication` palavra-chave ou atributo, especificar explicitamente `Encrypt` definir como o valor desejado na cadeia de caracteres de conexão / DSN / atributo de conexão. Consulte a [usando Conexão String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) para obter detalhes.
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption – SQL_COPT_SS_COLUMN_ENCRYPTION
 
 Controla a criptografia transparente de coluna (Always Encrypted). Ver [usando o sempre criptografado ODBC ()](using-always-encrypted-with-the-odbc-driver.md) para obter mais informações.
 
 | Valor de palavra-chave | Valor do atributo | Descrição |
 |-|-|-|
 |Habilitado|SQL_CE_ENABLED|Habilita o Always Encrypted.|
-|Desabilitado|SQL_CE_DISABLED|(Padrão) Desabilita o Always Encrypted.|
+|Desabilitado|SQL_CE_ENABLED|(Padrão) Desabilita o Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Permite descriptografia apenas (resultados e valores de retorno).|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution – SQL_COPT_SS_TNIR
 
 Tentativas do recurso de resolução de IP de rede transparente, que interage com MultiSubnetFailover para permitir uma reconexão mais rápida de controles. Ver [usando resolução de IP de rede transparente](using-transparent-network-ip-resolution.md) para obter mais informações.
 
 | Valor de palavra-chave | Valor do atributo| Descrição |
 |-|-|-|
 |Sim|SQL_IS_ON|(Padrão) Habilita a resolução IP de rede transparente.|
-|não|SQL_IS_OFF|Desativa a resolução IP de rede transparente.|
+|Não|SQL_IS_OFF|Desativa a resolução IP de rede transparente.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
@@ -188,7 +186,7 @@ Controla o uso de SET FMTONLY para metadados quando está se conectando ao SQL S
 
 | Valor de palavra-chave | Descrição |
 |-|-|
-|não|(Padrão) Use sp_describe_first_result_set para metadados, se disponível. |
+|Não|(Padrão) Use sp_describe_first_result_set para metadados, se disponível. |
 |Sim| Use SET FMTONLY para metadados. |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN

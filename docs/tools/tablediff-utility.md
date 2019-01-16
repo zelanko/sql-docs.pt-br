@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fdb89ebbfebe6ea8e47857347428cb27d4d41530
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293142"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128506"
 ---
 # <a name="tablediff-utility"></a>utilitário tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,58 +81,58 @@ tablediff
  [ **-?** ]  
  Retorna a lista de parâmetros com suporte.  
   
- **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
- É o nome do servidor de origem. Especifique *source_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *source_server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
+ É o nome do servidor de origem. Especifique *source_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique _source_server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-sourcedatabase** *source_database*  
+ **-sourcedatabase** _source_database_  
  É o nome do banco de dados de origem.  
   
- **-sourcetable** *source_table_name*  
+ **-sourcetable** _source_table_name_  
  É o nome da tabela de origem que está sendo verificada.  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema** _source_schema_name_  
  O proprietário de esquema da tabela de origem. Por padrão, supõe-se que o proprietário de tabela seja dbo.  
   
- **-sourcepassword** *source_password*  
+ **-sourcepassword** _source_password_  
  É a senha para o logon usada para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
   
- **-sourceuser** *source_login*  
+ **-sourceuser** _source_login_  
  É o logon usado para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se *source_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor de origem. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  A tabela de origem é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- É o nome do servidor de destino. Especifique *destination_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *destination_server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
+ É o nome do servidor de destino. Especifique *destination_server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique _destination_server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-destinationdatabase** *subscription_database*  
+ **-destinationdatabase** _subscription_database_  
  É o nome do banco de dados de destino.  
   
- **-destinationtable** *destination_table*  
+ **-destinationtable** _destination_table_  
  É o nome da tabela de destino.  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema** _destination_schema_name_  
  O proprietário de esquema da tabela de destino. Por padrão, supõe-se que o proprietário de tabela seja dbo.  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword** _destination_password_  
  É a senha para o logon usada para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
   
- **-destinationuser** *destination_login*  
+ **-destinationuser** _destination_login_  
  É o logon usado para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se *destination_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  A tabela de destino é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
   
- **-b** *large_object_bytes*  
+ **-b** _large_object_bytes_  
  É o número de bytes a comparar para colunas do tipo de dados de objeto grande, que inclui: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. *large_object_bytes* segue o padrão do tamanho da coluna. Os dados acima de *large_object_bytes* não serão comparados.  
   
- **-bf**  *number_of_statements*  
+ **-bf**  _number_of_statements_  
  É o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] a serem gravadas no arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] atual quando a opção **-f** é usada. Quando o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] exceder *number_of_statements*, um arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] novo será criado.  
   
  **-c**  
@@ -141,28 +141,28 @@ tablediff
  **- dt**  
  Descarte a tabela de resultado especificada por *table_name*, se a tabela já existir.  
   
- **-et** *table_name*  
+ **-et** _table_name_  
  Especifica o nome da tabela de resultado a ser criada. Se essa tabela já existir, **-DT** deverá ser usado ou ocorrerá falha na operação.  
   
  **-f** [ *file_name* ]  
  Gera um script [!INCLUDE[tsql](../includes/tsql-md.md)] para trazer a tabela ao servidor de destino em convergência com a tabela no servidor de origem. Pode-se optar por especificar um nome e caminho para o arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] gerado. Se *file_name* não for especificado, o arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] será gerado no diretório no qual o utilitário é executado.  
   
- **-o** *output_file_name*  
+ **-o** _output_file_name_  
  É o nome e caminho completo do arquivo de saída.  
   
  **-q**  
  Executa uma comparação rápida comparando apenas contagens de linha e esquema.  
   
- **-rc** *number_of_retries*  
+ **-rc** _number_of_retries_  
  Número de vezes que o utilitário repete uma operação com falha.  
   
- **-ri**  *retry_interval*  
+ **-ri**  _retry_interval_  
  Intervalo, em segundos, a esperar entre repetições.  
   
  **-strict**  
  Esquema de destino e origem são comparados de forma rigorosa.  
   
- **-t** *connection_timeouts*  
+ **-t** _connection_timeouts_  
  Define o período de tempo limite da conexão, em segundos, para conexões para o servidor de origem e servidor de destino.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -174,7 +174,7 @@ tablediff
 |**2**|Diferenças de tabela|  
   
 ## <a name="remarks"></a>Remarks  
- O utilitário **tablediff** não pode ser usado com servidores não[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ O utilitário **tablediff** não pode ser usado com servidores não [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Não há suporte para tabelas com colunas de tipo de dados **sql_variant** .  
   

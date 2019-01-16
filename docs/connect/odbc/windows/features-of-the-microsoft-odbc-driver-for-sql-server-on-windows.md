@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: db5c3e2e8265e88d49025ffd65894623fc5c5f85
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536638"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202235"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Recursos do Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ Para garantir que os aplicativos permaneçam conectados a um Banco de Dados SQL 
 
 Na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, o `-y0` opção obter `sqlcmd.exe` causou a saída seja truncada em 1 MB se a largura da exibição era 0.
   
-Começando com o ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], não há nenhum limite à quantidade de dados recuperados em uma única coluna quando `-y0` é especificado. O `sqlcmd.exe` agora envia colunas como fluxos de até 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] máximo para o tipo de dados).  
+Começando com o ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], não há nenhum limite à quantidade de dados recuperados em uma única coluna quando `-y0` é especificado. O `sqlcmd.exe` agora transmite as colunas como fluxos de até 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] máximo para o tipo de dados).  
   
 Outra diferença é que especificar ambos `-h` e `-y0` agora produz um erro relatando que as opções são incompatíveis. `-h`, que especifica o número de linhas a imprimir entre cabeçalhos de coluna e nunca foi compatível com `-y0`, foi ignorado, embora nenhum cabeçalho tenha sido impresso.
   

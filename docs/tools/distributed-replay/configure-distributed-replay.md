@@ -11,12 +11,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5253fc1b7ace718fc2d83cadd9fca944b4898c7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125556"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "52506225"
   
 |Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o servidor de teste)|`<Server>`|Especifica o nome do servidor e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão.|*server_name*[\\*instance_name*]<br /><br /> Você não pode usar "`localhost`" ou "`.`" para representar o host local.|Não, se o nome do servidor já tiver sido especificado usando o parâmetro **-s***target server* com a opção **replay** da ferramenta de administração.|  
+|Instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o servidor de teste)|`<Server>`|Especifica o nome do servidor e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão.|*server_name*[\\*instance_name*]<br /><br /> Você não pode usar "`localhost`" ou "`.`" para representar o host local.|Não, se o nome do servidor já tiver sido especificado usando o parâmetro **-s**_target server_ com a opção **replay** da ferramenta de administração.|  
 |Modo de sequenciamento|`<SequencingMode>`|Especifica o modo usado para o agendamento de eventos.|`synchronization` &#124; `stress`|Nenhum. Por padrão, o valor é `stress`.|  
 |Granularidade de escala de tensão|`<StressScaleGranularity>`|Especifica se deveriam ser dimensionadas todas as conexões no Identificador de Perfil de Serviço (SPID) junto (SPID) ou independentemente (Conexão) sob modo de tensão.|SPID &#124; Conexão|Sim. Por padrão, o valor é `SPID`.|  
 |Escala de tempo de conexão|`<ConnectTimeScale>`|É usada para dimensionar o tempo de conexão em modo de estresse.|Um inteiro entre `1` e `100`.|Nenhum. Por padrão, o valor é `100`.|  
@@ -167,8 +167,8 @@ ms.locfileid: "52506225"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possível problema durante a execução com a sincronização de modo de sequenciamento
  Você pode encontrar um sintoma em que a funcionalidade de reprodução parece "parada", ou eventos de repetições muito lentamente. Esse fenômeno pode ocorrer se o rastreamento está sendo reproduzido se baseia em dados de e/ou eventos que não existem no banco de dados restaurado do destino. 
- 
-Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instrução WAITFOR receber do Service Broker. Ao usar o modo de sequenciamento de sincronização, os lotes são reproduzidos em série. Se uma inserção ocorrer no banco de dados de origem após o backup do banco de dados, mas antes da captura de reprodução de rastreamento é iniciado, o recebimento de WAITFOR emitido durante a repetição talvez precise aguardar durante todo o WAITFOR. Eventos definidos para ser reproduzido depois de receber o WAITFOR será paralisado. Isso pode resultar no contador de monitor de desempenho de solicitações em lote/s para a queda de destino do banco de dados de reprodução para zero até que o WAITFOR é concluída. 
+ 
+ Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instrução WAITFOR receber do Service Broker. Ao usar o modo de sequenciamento de sincronização, os lotes são reproduzidos em série. Se uma inserção ocorrer no banco de dados de origem após o backup do banco de dados, mas antes da captura de reprodução de rastreamento é iniciado, o recebimento de WAITFOR emitido durante a repetição talvez precise aguardar durante todo o WAITFOR. Eventos definidos para ser reproduzido depois de receber o WAITFOR será paralisado. Isso pode resultar no contador de monitor de desempenho de solicitações em lote/s para a queda de destino do banco de dados de reprodução para zero até que o WAITFOR é concluída. 
  
  Se você precisar usar o modo de sincronização e desejos para evitar esse comportamento, faça o seguinte:
  
@@ -186,6 +186,6 @@ Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instruç�
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Fórum do SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Uso do Distributed Replay para teste de carga do SQL Server – Parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Uso do Distributed Replay para teste de carga do SQL Server – Parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

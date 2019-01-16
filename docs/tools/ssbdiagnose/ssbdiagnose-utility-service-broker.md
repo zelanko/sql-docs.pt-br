@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541319"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590540"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,22 +115,22 @@ ssbdiagnose
   
  A configuração padrão é **AVISO**.  
   
- **-IGNORE** *error_id*  
+ **-IGNORE** _error_id_  
  Especifica que os erros ou as mensagens com a *error_id* especificada não serão incluídos em relatórios. Você pode especificar **-IGNORE** várias vezes para suprimir IDs de mensagens múltiplas.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Especifica as informações de conexão base usadas por **ssbdiagnose** quando opções de conexão não estão incluídas em uma cláusula específica. A informações de conexão atribuídas em uma cláusula específica substituem as informações de **baseconnectionoption** . Essa operação é executada separadamente para cada parâmetro. Por exemplo, se **-S** e **-d** estiverem especificados no **baseconnetionoptions**, e somente **-d** estiver especificado no **toconnetionoptions**, o **ssbdiagnose** usará -S do **baseconnetionoptions** e -d do **toconnetionoptions**.  
   
  **CONFIGURATION**  
  Solicita um relatório de erros de configuração entre um par de serviços [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou para um único serviço.  
   
- **FROM SERVICE** *service_name*  
+ **FROM SERVICE** _service_name_  
  Especifica o serviço que inicia as conversas.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  Especifica as informações necessárias para se conectar ao banco de dados que contém o serviço iniciador. Se **fromconnectionoptions** não for especificado, o **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions** para se conectar ao banco de dados do iniciador. Se **fromconnectionoptions** for especificado, essa opção deverá incluir o banco de dados que contém o serviço iniciador. Se **fromconnectionoptions** não for especificado, o **baseconnectionoptions** deverá especificar o banco de dados do iniciador.  
   
- **TO SERVICE** *service_name*[, *broker_id* ]  
+ **TO SERVICE** _service_name_[, *broker_id* ]  
  Especifica o serviço que é o destino das conversas.  
   
  *service_name*: especifica o nome do serviço de destino.  
@@ -143,26 +143,26 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Especifica as informações necessárias para se conectar ao banco de dados que contém o serviço de destino. Se **toconnectionoptions** não for especificado, o **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions** para se conectar ao banco de dados de destino.  
   
  **MIRROR**  
  Especifica que o serviço [!INCLUDE[ssSB](../../includes/sssb-md.md)] associado é hospedado em um banco de dados espelhado. **ssbdiagnose** verifica se a rota para o serviço é uma rota espelhada, em que MIRROR_ADDRESS foi especificado em CREATE ROUTE.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  Especifica as informações necessárias para se conectar ao banco de dados espelho. Se **mirrorconnectionoptions** não for especificado, o **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions** para se conectar ao banco de dados de espelho.  
   
- **ON CONTRACT** *contract_name*  
+ **ON CONTRACT** _contract_name_  
  Solicita que **ssbdiagnose** verifique apenas as configurações que usam o contrato especificado. Se ON CONTRACT não for especificado, **ssbdiagnose** relatará o contrato denominado DEFAULT.  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Solicita verificação se o diálogo está configurado corretamente para o nível especificado de criptografia:  
   
- **ON**: sem configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
+ **LIGADO**: configuração padrão. A segurança de diálogo total está configurada. Certificados foram implantados nos dois lados do diálogo, uma associação de serviço remoto está presente e a instrução GRANT SEND do serviço de destino especificou o usuário iniciador.  
   
- **OFF**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
+ **DESLIGADO**: nenhuma segurança de diálogo está configurada. Nenhum certificado foi implantado, nenhuma associação de serviço remoto foi criada e a instrução GRANT SEND do serviço iniciador especificou a função **public** .  
   
- **ANONYMOUS**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
+ **ANÔNIMO**: a segurança de diálogo anônima está configurada. Um certificado foi implantado, a associação de serviço remoto especificou a cláusula anônima e a instrução GRANT SEND do serviço de destino especificou a função **public** .  
   
  **RUNTIME**  
  Solicita um relatório de problemas que causam erros de tempo de execução para uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Se nem **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** monitorará todas as conversas em todos os bancos de dados especificados nas opções de conexão. Se **-NEW** ou **-ID** forem especificadas, o **ssbdiagnose** criará uma lista de IDs especificadas nos parâmetros.  
@@ -201,10 +201,10 @@ WHERE database_id = DB_ID();
   
  Identificadores de conversa são relatados na coluna **conversation_id** das exibições de catálogo **sys.conversation_endpoints** .  
   
- **-TIMEOUT** *timeout_interval*  
+ **-TIMEOUT** _timeout_interval_  
  Especifica o número de segundos para a execução de um relatório **RUNTIME** . Se **-TIMEOUT** não for especificado, o relatório de tempo de execução será executado indefinidamente. **-TIMEOUT** é usado somente em relatórios de **RUNTIME** , não relatórios de **CONFIGURATION** . Use ctrl + C para sair de **ssbdiagnose** if **-TIMEOUT** não foi especificado ou para encerrar um relatório de tempo de execução antes de o intervalo**-** limite expirar. *timeout_interval* deve ser um número entre 1 e 2.147.483.647.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  Especifica as informações de conexão para os bancos de dados que contêm os serviços associados aos elementos de conversa sendo monitorados. Se todos os serviços estiverem no mesmo banco de dados, você terá de especificar apenas uma cláusula **CONNECT TO** . Se os serviços estiverem em bancos de dados separados, você deverá fornecer uma cláusula **CONNECT TO** para cada banco de dados. Se **runtimeconnectionoptions** não for especificado, **ssbdiagnose** usará as informações de conexão de **baseconnectionoptions**.  
   
  **-E**  
@@ -216,14 +216,14 @@ WHERE database_id = DB_ID();
   
  Se a opção **-E** for usada com as opções **-U** ou **-P**, uma mensagem de erro será gerada.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Abra uma conexão de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a ID de logon especificada. O logon deve ser membro da função de servidor fixa **sysadmin**.  
   
  Se **-E** ou **-U** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDUSER. Se SQLCMDUSER também não for definido, **ssbdiagnose** tentará se conectar usando o modo de Autenticação do Windows com base na conta do Windows do usuário que está executando **ssbdiagnose**.  
   
  Se a opção **-U** for usada junto com **-E** , uma mensagem de erro será gerada. Se a opção **-U** for seguida de mais de um argumento, uma mensagem de erro será gerada e o programa será encerrado.  
   
- **-P** *password*  
+ **-P** _password_  
  Especifica a senha para a ID de logon **-U** . Senhas diferenciam maiúsculas e minúsculas. Se a opção **-U** for usada e **-P** não, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDPASSWORD. Se SQLCMDPASSWORD também não for definido, **ssbdiagnose** solicitará uma senha ao usuário.  
   
 > [!IMPORTANT]  
@@ -242,15 +242,15 @@ WHERE database_id = DB_ID();
   
  Se a opção **-P** for seguida por mais de um argumento, uma mensagem de erro será gerada.  
   
- **-S** *server_name*[\\*instance_name*]  
+ **-S** _server_name_[\\*instance_name*]  
  Especifica a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contém os serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] a serem analisados.  
   
  Especifica *server_name* para conexão com a instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] naquele servidor. Especifica _server\_name_**\\**_instance\_name_ para conectar-se a uma instância nomeada do [!INCLUDE[ssDE](../../includes/ssde-md.md)] nesse servidor. Se **-S** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDSERVER. Se SQLCMDSERVER também não for definido, **ssbdiagnose** se conectará à instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no computador local.  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  Especifica o banco de dados que contém os serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] a serem analisados. Se o banco de dados não existir, uma mensagem de erro será gerada. Se **-d** não for especificado, o padrão será o banco de dados especificado na propriedade default-database para o seu logon.  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  Especifica o número de segundos que devem decorrer antes que o tempo limite de uma tentativa de conexão com um servidor seja alcançada. Se **-l** não for especificado, **ssbdiagnose** usará o valor definido para a variável de ambiente SQLCMDLOGINTIMEOUT. Se SQLCMDLOGINTIMEOUT também não for definida, o tempo limite padrão será de trinta segundos. O tempo limite do logon deve ser um número entre 0 e 65534. Se o valor fornecido não for numérico ou não estiver nesse intervalo, **ssbdiagnose** vai gerar uma mensagem de erro. Um valor de 0 especifica o tempo limite como infinito.  
   
  **-?**  
@@ -331,7 +331,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Verificando a configuração de dois serviços em computadores separados que não usam logon  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Verificando a configuração de dois serviços em computadores separados que não usam logon  
  O exemplo a seguir mostra como solicitar um relatório de configuração quando os serviços iniciador e de destino estão em computadores separados, mas podem ser acessados com o uso do mesmo logon de Autenticação do Windows.  
   
 ```  

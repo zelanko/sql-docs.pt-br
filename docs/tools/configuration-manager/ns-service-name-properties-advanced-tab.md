@@ -12,15 +12,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 86cafa8d0eddb0e1c729d091fda974b901ebc49d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7454fb16f69045b791c9ae8a2b2156ab1894f988
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690204"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590870"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>Propriedades do NS$&lt;nome do serviço&gt; (guia Avançado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  O [!INCLUDE[ssNS](../../includes/ssns-md.md)] é implementado como um serviço nomeado no formato **NS$*<nome_configurado_pelo_usuário>*. Se existirem propriedades personalizadas definidas, elas serão exibidas nessa guia, junto com seus valores. Essa guia não pode ter nenhuma propriedade listada.  
+  [!INCLUDE[ssNS](../../includes/ssns-md.md)] é implementado como um serviço nomeado no formato **NS$**_<user_configured name>_. Se existirem propriedades personalizadas definidas, elas serão exibidas nessa guia, junto com seus valores. Essa guia não pode ter nenhuma propriedade listada.  
   
   

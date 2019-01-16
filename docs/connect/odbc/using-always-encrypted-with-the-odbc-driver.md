@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506828"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226683"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ Este exemplo insere uma linha na tabela Pacientes. Observe o seguinte:
 
 - Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros associados (consulte [Função SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas SSN ou BirthDate fossem passados como literais inseridos na instrução de consulta, a consulta falharia, pois o driver não tentará criptografar ou processar os literais em consultas. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
 
-- O tipo SQL do parâmetro inserido na coluna SSN é definido como SQL_CHAR, que mapeia para o **char** tipo de dados do SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se o tipo do parâmetro foi definido como SQL_WCHAR, que mapeia para **nchar**, a consulta falharia, como Always Encrypted não suporta conversões de lado do servidor de valores nchar criptografados em valores criptografados char. Ver [referência do programador de ODBC – tipos de dados do apêndice d:](https://msdn.microsoft.com/library/ms713607.aspx) para obter informações sobre os mapeamentos de tipo de dados.
+- O tipo SQL do parâmetro inserido na coluna SSN é definido como SQL_CHAR, que mapeia para o **char** tipo de dados do SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se o tipo do parâmetro foi definido como SQL_WCHAR, que mapeia para **nchar**, a consulta falharia, como Always Encrypted não suporta conversões de lado do servidor de valores nchar criptografados em valores criptografados char. Consulte [referência do programador de ODBC – apêndice d: Tipos de dados](https://msdn.microsoft.com/library/ms713607.aspx) para obter informações sobre os mapeamentos de tipo de dados.
 
 ```
     SQL_DATE_STRUCT date;
@@ -270,7 +270,7 @@ O `SQLSetPos` API permite que um aplicativo atualizar linhas em um conjunto de r
 
 Para atenuar esse comportamento, use o `SQL_COLUMN_IGNORE` sinalizador para ignorar colunas que não serão atualizadas como parte da `SQLBulkOperations` e ao usar `SQLSetPos` para cursor com base em atualizações.  Todas as colunas que não estão sendo modificadas diretamente pelo aplicativo devem ser ignoradas, tanto para desempenho e para evitar o truncamento de colunas que são associados a um buffer *menores* além do tamanho real (DB). Para obter mais informações, consulte [referência de função SQLSetPos](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx).
 
-#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults & SQLDescribeCol
+#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults e SQLDescribeCol
 
 Programas de aplicativo podem chamar [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) para retornar metadados sobre colunas em instruções preparadas.  Quando o Always Encrypted estiver habilitado, chamando `SQLMoreResults` *antes de* chamando `SQLDescribeCol` faz com que o [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) para ser chamado, que não retorna corretamente o texto não criptografado metadados de colunas criptografadas. Para evitar esse problema, chame `SQLDescribeCol` em instruções preparadas *antes de* chamando `SQLMoreResults`.
 
@@ -286,7 +286,7 @@ Esta seção descreve as otimizações de desempenho internas no ODBC Driver for
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controle das viagens de ida e volta para recuperar metadados dos parâmetros de consulta
 
-Se o Always Encrypted estiver habilitado para uma conexão, o driver por padrão chamará [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. Esse procedimento armazenado analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e nesse caso, retorna as informações relacionadas à criptografia para cada parâmetro para permitir que o driver criptografá-los. O comportamento acima garante um alto nível de transparência para o aplicativo cliente: O aplicativo (e o desenvolvedor do aplicativo) não precisam estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam a colunas criptografadas são passados para o driver nos parâmetros.
+Se o Always Encrypted estiver habilitado para uma conexão, o driver por padrão chamará [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. Esse procedimento armazenado analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e nesse caso, retorna as informações relacionadas à criptografia para cada parâmetro para permitir que o driver criptografá-los. O comportamento acima garante um alto nível de transparência para o aplicativo cliente: O aplicativo (e o desenvolvedor do aplicativo) não precisa estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam às colunas criptografadas sejam passados para o driver nos parâmetros.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Por instrução Always Encrypted comportamento
 
@@ -380,7 +380,7 @@ Para permitir que o driver usar CMKs armazenadas no AKV para criptografia de col
 
 As cadeias de conexão a seguir mostram como autenticar no Azure Key Vault com os dois tipos de credencial:
 
-**ClientID/segredo**:
+**ClientID/Segredo**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
@@ -538,7 +538,7 @@ Não é possível direcionar as colunas **money** criptografado ou **smallmoney*
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>Cópia em massa de colunas criptografadas
 
-O uso das [funções de Cópia em Massa do SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) e do utilitário **bcp** tem suporte com o Always Encrypted, após a implantação do ODBC Driver 17 for SQL Server. Tanto o texto não criptografado (criptografado na inserção e descriptografado na recuperação) como o texto cifrado (textual transferido) podem ser inseridos e recuperados usando as APIs de cópia em massa (bcp_*) e o utilitário **bcp**.
+O uso das [funções de Cópia em Massa do SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) e do utilitário **bcp** tem suporte com o Always Encrypted, após a implantação do ODBC Driver 17 for SQL Server. O texto não criptografado (criptografado na inserção e descriptografado na recuperação) e o texto cifrado (transmitido textualmente) podem ser inseridos e recuperados por meio das APIs de cópia em massa (bcp_&#42;) e o utilitário **bcp**.
 
 - Para recuperar texto cifrado no formulário varbinary(max) (por exemplo, para carregamento em massa em um banco de dados diferente), conecte-se sem a opção `ColumnEncryption` (ou defina-a como `Disabled`) e execute uma operação BCP OUT.
 
@@ -546,7 +546,7 @@ O uso das [funções de Cópia em Massa do SQL](../../relational-databases/nativ
 
 - Para inserir texto cifrado no formulário varbinary(max) (por exemplo, como recuperado acima), defina a opção `BCPMODIFYENCRYPTED` como TRUE e execute uma operação BCP IN. Para descriptografar os dados resultantes, verifique se a CEK da coluna do destino é a mesma da qual o texto cifrado foi originalmente obtido.
 
-Ao usar o **bcp** utilitário: para controlar o `ColumnEncryption` configuração, use a opção -D e especifique um DSN que contém o valor desejado. Para inserir texto cifrado, verifique se o `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` configuração do usuário está habilitada.
+Ao usar o **bcp** utilitário: Para controlar o `ColumnEncryption` configuração, use a opção -D e especifique um DSN que contém o valor desejado. Para inserir texto cifrado, verifique se o `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` configuração do usuário está habilitada.
 
 A tabela a seguir fornece um resumo das ações ao operar em uma coluna criptografada:
 

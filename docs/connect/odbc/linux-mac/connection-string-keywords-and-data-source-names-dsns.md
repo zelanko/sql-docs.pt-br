@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c07b0bb4659f9b1b05573bf952842486f9ec72e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420447"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125836"
 ---
 # <a name="connecting-to-sql-server"></a>Conectar-se ao SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ Este tópico discute como você pode criar uma conexão com um banco de dados [!
 Ver [DSN e palavras-chave de cadeia de caracteres de Conexão e atributos](../../../connect/odbc/dsn-connection-string-attribute.md) para todas as palavras-chave de cadeia de caracteres de conexão e atributos que têm suportados no Linux e Mac
 
 > [!IMPORTANT]  
-> Ao se conectar a um banco de dados que use o espelhamento de banco de dados (tem um parceiro de failover), não especifique o nome do banco de dados na cadeia de conexão. Em vez disso, envie um comando **use** *database_name* para se conectar ao banco de dados antes de executar suas consultas.  
+> Ao se conectar a um banco de dados que use o espelhamento de banco de dados (tem um parceiro de failover), não especifique o nome do banco de dados na cadeia de conexão. Em vez disso, envie um comando **use** _database_name_ para se conectar ao banco de dados antes de executar suas consultas.  
   
 O valor passado para o **Driver** palavra-chave pode ser um dos seguintes:  
   
@@ -53,15 +53,15 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-Opcionalmente, você pode especificar o protocolo e a porta para se conectar ao servidor. Por exemplo, **Server = tcp:***nome_do_servidor***, 12345**. Observe que é o único protocolo com suporte pelos drivers de Linux e macOS `tcp`.
+Opcionalmente, você pode especificar o protocolo e a porta para se conectar ao servidor. Por exemplo, **Server = tcp:**_servername_**, 12345**. Observe que é o único protocolo com suporte pelos drivers de Linux e macOS `tcp`.
 
 Para se conectar a uma instância nomeada em uma porta estática, use <b>Server=</b>*servername*,**port_number**. Não há suporte para se conectar a uma porta dinâmica.  
 
 Como alternativa, você pode adicionar as informações de DSN a um arquivo de modelo e executar o comando a seguir para adicioná-lo a `~/.odbc.ini`:
- - **Odbcinst -i -s -f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 Você pode verificar se o driver está funcionando usando `isql` testar a conexão, ou você pode usar este comando:
- - **master.INFORMATION_SCHEMA.TABLES BCP out outfile -S <server> - U <name> - P <password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Usando o protocolo SSL (Secure Sockets Layer)  
 Você pode usar o protocolo SSL para criptografar conexões com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O SSL protege nomes de usuário e senhas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na rede. O SSL também verifica a identidade do servidor para proteger contra ataques “man-in-the-middle” (MITM).  
@@ -72,7 +72,7 @@ Para obter mais informações, consulte [criptografando conexões com o SQL Serv
 
 Independentemente das configurações para **Encrypt** e **TrustServerCertificate**, as credenciais de logon do servidor (nome de usuário e senha) sempre são criptografadas. A tabela a seguir mostra o efeito das configurações de **Encrypt** e **TrustServerCertificate** .  
 
-||**TrustServerCertificate = não**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|  
 |**Encrypt=yes**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em um Nome Comum da Entidade (CN) ou o Nome Alternativo da Entidade (SAN) em um certificado SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão. Subject Common Name|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  

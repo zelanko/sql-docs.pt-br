@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 31e71f63e1cb06fdc38af291668f32552e5659b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538910"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589990"
 ---
 # <a name="osql-utility"></a>Utilitário osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,10 +70,10 @@ osql
 > [!NOTE]  
 >  Devido à natureza da transmissão em redes, o **osql** pode não receber a tempo uma resposta de todos os servidores. Assim, a lista de servidores retornada pode variar para cada invocação dessa opção.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  É a identificação de logon do usuário. IDs de logon diferenciam maiúsculas de minúsculas.  
   
- **-P** *password*  
+ **-P** _password_  
  É uma senha especificada pelo usuário. Se a opção **-P** não for usada, o **osql** solicitará a senha. Se a opção **-P** for usada ao término do prompt de comando sem uma senha, **osql** usará a senha padrão (NULL).  
   
 > [!IMPORTANT]  
@@ -96,31 +96,31 @@ C:\>osql
  **-E**  
  Usa uma conexão confiável em vez de pedir uma senha.  
   
- **-S** _server\_nome_[ **\\** _instância\_nome_]  
+ **-S** _server\_name_[ **\\**_instance\_name_]  
  Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifica _server\_name_**\\**_instance\_name_ para conectar-se a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
   
- **-H** *wksta_name*  
+ **-H** _wksta_name_  
  É um nome de estação de trabalho. O nome de estação de trabalho é armazenado em **sysprocesses.hostname** e exibido por **sp_who**. Se essa opção não for especificada, o nome do computador atual será presumido.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  Emite uma instrução USE *db_name* quando **osql**é iniciado.  
   
- **-l** *time_out*  
+ **-l** _time_out_  
  Especifica o número de segundos antes de um logon do **osql** expirar. O tempo limite padrão de logon do **osql** é de oito segundos.  
   
- **-t** *time_out*  
+ **-t** _time_out_  
  Especifica o número de segundos antes de um comando expirar. Se não for especificado um valor de *time_out* , os comandos não vão atingir o tempo limite.  
   
- **-h** *headers*  
- Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deve haver nenhum espaço entre o parâmetro e a configuração (**-h-1**, não **-h -1**).  
+ **-h** _headers_  
+ Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deverá haver nenhum espaço entre o parâmetro e a configuração (**-h-1**, não **-h -1**).  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  Especifica o caractere do separador de colunas que, por padrão, é um espaço em branco. Para usar um caractere com um significado especial para o sistema operacional como, por exemplo, | ; & < >), coloque-o entre aspas duplas (").  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  Permite ao usuário definir a largura da tela de saída. O padrão é 80 caracteres. Quando uma linha de saída alcança sua largura de tela máxima, ela é quebrada em várias linhas.  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  Permite solicitar um pacote de tamanho diferente. Os valores válidos para *packet_size* são 512 a 65.535. O valor padrão **osql** é o padrão do servidor. Um tamanho de pacote maior pode aumentar o desempenho na execução de scripts maiores, em que a quantidade de instruções SQL entre comandos GO é substancial. [!INCLUDE[msCoName](../includes/msconame-md.md)] indicam que 8192 geralmente é a configuração mais rápida para operações de cópia em massa. Um tamanho de pacote maior pode ser solicitado, mas o **osql** assumirá como padrão o padrão do servidor se a solicitação não puder ser atendida.  
   
  **-e**  
@@ -129,16 +129,16 @@ C:\>osql
  **-I**  
  Ativa a opção de conexão QUOTED_IDENTIFIER.  
   
- **-D** *data_source_name*  
+ **-D** _data_source_name_  
  Conecta-se a uma fonte de dados ODBC que é definida usando o driver ODBC do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A conexão **osql** usa as opções especificadas na fonte de dados.  
   
 > [!NOTE]  
 >  Essa opção não trabalha com fontes de dados definidas para outros drivers.  
   
- **-c** *cmd_end*  
+ **-c** _cmd_end_  
  Especifica o terminador de comando. Por padrão, comandos são encerrados e enviados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se GO for inserido sozinho em uma linha. Quando você redefinir o terminador de comando, não use palavras reservadas do [!INCLUDE[tsql](../includes/tsql-md.md)] nem caracteres que tenham significado especial para o sistema operacional, sejam ou não precedidos por uma barra invertida.  
   
- **-q "** *query* **"**  
+ **-q "** _query_ **"**  
  Executa uma consulta quando o **osql** é iniciado, mas não encerra o **osql** quando a consulta é concluída. (Observe que a instrução de consulta não deve incluir a instrução GO). Se você emitir uma consulta de um arquivo em lote, use %variáveis ou %variáveis% de ambiente. Por exemplo:  
   
 ```  
@@ -148,22 +148,22 @@ osql -E -q "select name, object_id from %table%"
   
  Coloque a consulta entre aspas duplas e qualquer coisa incorporada na consulta entre aspas simples.  
   
- **-Q"** *query* **"**  
+ **-Q"** _query_ **"**  
  Executa uma consulta e imediatamente encerra o **osql**. Coloque a consulta entre aspas duplas e qualquer coisa incorporada na consulta entre aspas simples.  
   
  **-n**  
  Remove a numeração e o símbolo de prompt (>) das linhas de entrada.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  Personaliza a exibição de mensagens de erro. São exibidos o número da mensagem, o estado e o nível de erros com o nível de severidade especificado ou superior. Nada é exibido para erros de níveis abaixo do nível especificado. Use **-1** para especificar que todos os cabeçalhos retornem com mensagens, até mesmo mensagens informativas. Se **-1**for usado, não deverá haver espaço entre o parâmetro e a configuração (**-m-1**, não **-m -1**).  
   
  **-r** { **0**| **1**}  
  Redireciona a saída da mensagem para a tela (**stderr**). Se você não especificar um parâmetro ou especificar **0**, serão redirecionadas somente mensagens de erro com nível de severidade 11 ou superior. Se você especificar **1**, serão redirecionadas todas as saídas da mensagem, incluindo “print”.  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  Identifica o arquivo que contém um lote de instruções SQL ou procedimentos armazenados. O operador de comparação menor que (**\<**) pode ser usado no lugar de **-i**.  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  Identifica o arquivo que recebe a saída do **osql**. O operador de comparação maior que (**>**) pode ser usado no lugar de **-o**.  
   
  Se *input_file* não for Unicode e **-u** não for especificado, *output_file* será armazenado no formato OEM. Se *input_file* for Unicode ou **-u** for especificado, *output_file* será armazenado em formato Unicode.  
