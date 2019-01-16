@@ -33,12 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cefdb89d4b8c36747f8fce6824f51b8dbb11e095
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 22d521b86e1129547c925d3958af67af6003109c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673975"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256201"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemplos do XML Bulk Load (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ End Function
 2.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como SampleSchema.xml. Para este arquivo, adicione o seguinte esquema XSD:  
   
     ```xml  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
        <xsd:element name="ROOT" sql:is-constant="1" >  
          <xsd:complexType>  
@@ -201,7 +201,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Carregando dados XML em massa em várias tabelas  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>b. Carregando dados XML em massa em várias tabelas  
  Neste exemplo, o documento XML consiste as  **\<cliente >** e  **\<Order >** elementos.  
   
 ```xml  
@@ -229,14 +229,14 @@ End Function
   
  Bulk Este exemplo carrega os dados XML em duas tabelas, **Cust** e **CustOrder**:  
   
--   Cust (CustomerID, CompanyName, cidade)  
+-   Cust(CustomerID, CompanyName, City)  
   
 -   CustOrder (OrderID, CustomerID)  
   
  O seguinte esquema XSD define a exibição XML dessas tabelas. O esquema Especifica a relação de pai-filho entre o  **\<cliente >** e  **\<Order >** elementos.  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -338,7 +338,7 @@ End Function
  Por exemplo, considere este esquema XSD:  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -458,7 +458,7 @@ OrderDetail (OrderID, ProductID)
   
  Neste caso, o XML Bulk Load identifica a relação de chave primária/chave estrangeira entre as tabelas. O Bulk Load primeiro insere registros nas tabelas com a chave primária e, em seguida, propaga o valor de identidade gerado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para as tabelas com colunas de chave estrangeira. No exemplo a seguir, o XML Bulk Load insere dados nas tabelas nesta ordem:  
   
-1.  Product  
+1.  Produto  
   
 2.  Ord  
   
@@ -490,7 +490,7 @@ OrderDetail (OrderID, ProductID)
 2.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como SampleSchema.xml. Adicione este esquema XSD a este arquivo.  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
        <xsd:appinfo>  
@@ -657,7 +657,7 @@ Set objBL = Nothing
  O seguinte esquema de mapeamento XSD fornece as informações necessárias para criar a tabela:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="ROOT" sql:is-constant="true" >  
   <xsd:complexType>  
@@ -815,7 +815,7 @@ End Sub
  Considere este esquema XSD:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -990,7 +990,7 @@ set objBL=Nothing
 2.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como SampleSchema.xml. Adicione o seguinte esquema XSD ao arquivo:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1045,7 +1045,7 @@ set objBL=Nothing
      Este é o esquema atualizado:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1134,7 +1134,7 @@ End Sub
 2.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como SampleSchema.xml. Adicione o seguinte esquema XSD ao arquivo:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  
@@ -1251,7 +1251,7 @@ End Sub
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
@@ -1293,7 +1293,7 @@ End Sub
             <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
                   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
                   xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-                  xmlns:html="https://www.w3.org/1999/xhtml"   
+                  xmlns:html="http://www.w3.org/1999/xhtml"   
                   xmlns="">  
                 <p1:Summary>  
                     <html:p>Our top-of-the-line competition mountain bike.   

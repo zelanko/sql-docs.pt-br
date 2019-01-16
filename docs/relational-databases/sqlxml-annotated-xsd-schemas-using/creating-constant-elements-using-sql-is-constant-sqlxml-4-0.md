@@ -1,7 +1,7 @@
 ---
 title: 'Criando elementos constantes usando sql: for-constant (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f749e5c37742ac4e52a9cf0fc9dcb417d07aede0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfc7504807754227de489b03f845ddbd2ad5d61b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545426"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256931"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Criando elementos constantes usando sql:is-constant (SQLXML 4.0)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Para especificar um elemento constante-ou seja, um elemento no esquema XSD que não é mapeado para nenhuma tabela de banco de dados ou coluna-você pode usar o **sql: constante é** anotação. Essa anotação usa um valor Booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false. O **sql: constante é** anotação pode ser especificada em um elemento que não tem nenhum atributo. Se ela for especificada em um elemento com o valor true (ou 1), esse elemento não será mapeado para o banco de dados, mas ainda aparecerá no documento XML.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "52545426"
  Embora  **\<CustomerOrders >** não é mapeado para nenhuma tabela de banco de dados ou coluna, ele ainda aparece no XML resultante como um elemento de contêiner que contém o  **\<Order >** elementos filho.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

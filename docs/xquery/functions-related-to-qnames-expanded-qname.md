@@ -1,5 +1,5 @@
 ---
-title: Expanded-QName (XQuery) | Microsoft Docs
+title: expanded-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501900"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256891"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funções Relacionadas a QNames – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Não é oferecido suporte à conversão do tipo xs:QName em qualquer outro tipo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Por isso, o **expanded-QName()** função não pode ser usada na construção XML. Por exemplo, quando você estiver construindo um nó, como `<e> expanded-QName(...) </e>`, o valor precisa ser não digitado. Isso exigiria que você convertesse o valor de tipo xs:QName retornado por `expanded-QName()` para xdt:untypedAtomic. Porém, não é oferecido suporte para isso. Em um exemplo posterior neste tópico é oferecida uma solução.  
   
--   Você pode modificar ou comparar os valores de tipo QName existentes. Por exemplo, `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` compara o valor do elemento <`e`>, com o QName retornado pela **expanded-QName()** função.  
+-   Você pode modificar ou comparar os valores de tipo QName existentes. Por exemplo, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compara o valor do elemento <`e`>, com o QName retornado pela **expanded-QName()** função.  
   
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
@@ -70,8 +70,8 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -- go  
 -- Create XML schema collection  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"   
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="QNameXSD"   
       xmlns:xqo="QNameXSD" elementFormDefault="qualified">  
       <element name="Root" type="xqo:rootType" />  
@@ -143,7 +143,7 @@ go
 -- DROP XML SCHEMA COLLECTION SC  
 -- go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="QName" nillable="true"/>  
 </schema>'  
 go  
@@ -162,7 +162,7 @@ FROM T
   
 ```  
 update T SET xmlCol.modify('  
-insert <root>{expanded-QName("https://ns","someLocalName")}</root> as last into / ')  
+insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into / ')  
 go  
 ```  
   
@@ -174,7 +174,7 @@ insert <root xsi:nil="true"/> as last into / ')
 go  
 -- now replace the nil value with another QName.  
 update T SET xmlCol.modify('  
-replace value of /root[last()] with expanded-QName("https://ns","someLocalName") ')  
+replace value of /root[last()] with expanded-QName("http://ns","someLocalName") ')  
 go  
  -- verify   
 SELECT * FROM T  
@@ -185,7 +185,7 @@ go
   
  `<root xmlns:a="https://someURI">a:b</root>`  
   
- `<root xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:p1="https://ns">p1:someLocalName</root>`  
+ `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
  Você pode comparar o valor QName, como mostrado na consulta a seguir. A consulta retorna apenas o <`root`> elementos cujos valores correspondem ao QName de tipo de valor retornado pela **expanded-QName()** função.  
   
@@ -193,7 +193,7 @@ go
 SELECT xmlCol.query('  
     for $i in /root  
     return  
-       if ($i eq expanded-QName("https://ns","someLocalName") ) then  
+       if ($i eq expanded-QName("http://ns","someLocalName") ) then  
           $i  
        else  
           ()')  

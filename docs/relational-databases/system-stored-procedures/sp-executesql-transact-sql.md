@@ -20,15 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4561ff563bf04322c290571cf9df3a94f8faf5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2018d96233a1dea6f4b2d7cfa612f19df878610f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668305"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300023"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o SQL Docs sumário!](https://aka.ms/sqldocsurvey)
 
   Executa uma instrução ou lote [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser reutilizado muitas vezes ou que foi criado dinamicamente. A instrução ou lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] pode conter parâmetros inseridos.  
   
@@ -50,7 +53,7 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ \@stmt =] *instrução*  
+ [ \@stmt= ] *statement*  
  É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. \@stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** for válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -58,10 +61,10 @@ sp_executesql [ @stmt = ] statement
   
  Cada parâmetro incluído em \@stmt deve ter uma entrada correspondente em ambos os \@lista de valores de lista de definições de parâmetro params e o parâmetro.  
   
- [ \@params =] N'\@*parameter_name * * data_type* [,... *n* ] '  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos em \@stmt. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado em \@stmtmust ser definido em \@params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na \@stmt não contiverem parâmetros, \@params não é necessária. O valor padrão para este parâmetro é NULL.  
   
- [ \@param1 =] '*value1*'  
+ [ \@param1= ] '*value1*'  
  É um valor para o primeiro parâmetro definido na cadeia de caracteres de parâmetro. O valor pode ser uma constante Unicode ou uma variável Unicode. Deve haver um valor de parâmetro fornecido para cada parâmetro incluído em \@stmt. Os valores não são necessários quando o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote em \@stmt não tem nenhum parâmetro.  
   
  [ OUT | OUTPUT ]  
@@ -151,7 +154,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-### <a name="b-executing-a-dynamically-built-string"></a>B. Executando uma cadeia de caracteres dinamicamente construída  
+### <a name="b-executing-a-dynamically-built-string"></a>b. Executando uma cadeia de caracteres dinamicamente construída  
  O exemplo a seguir mostra o uso de `sp_executesql` para executar uma cadeia de caracteres dinamicamente construída. O exemplo de procedimento armazenado é usado para inserir dados em um conjunto de tabelas que são usadas para particionar dados de vendas em um ano. Há uma tabela para cada mês do ano com o seguinte formato:  
   
 ```  

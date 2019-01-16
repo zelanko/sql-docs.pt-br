@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab60a5cae291c307b0717b2d90409e26b835327f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e247e2bf49c9fcf0c6eb211bd9c83b6444118f17
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675295"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256641"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretação de anotação – sql:relationship e Regra de ordenação de chave
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51675295"
  Considere o seguinte esquema XSD, no qual a relação um-para-muitos entre  **\<cliente >** e  **\<Order >** é de elementos (um cliente pode fazer muitos pedidos) especificado usando o  **\<SQL: Relationship >** elemento:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"<>   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -118,7 +118,7 @@ ms.locfileid: "51675295"
     set objBL=Nothing  
     ```  
   
-     O resultado é que o XML Bulk Load insere um valor NULL na coluna de chave estrangeira CustomerID da tabela CustOrder. Se você revisar os dados de exemplo do XML para que o  **\<CustomerID >** elemento filho seja exibido antes do  **\<ordem >** elemento filho, você obterá o resultado esperado: carregamento em massa de XML Insere o valor de chave estrangeiro especificado na coluna.  
+     O resultado é que o XML Bulk Load insere um valor NULL na coluna de chave estrangeira CustomerID da tabela CustOrder. Se você revisar os dados de exemplo do XML para que o  **\<CustomerID >** elemento filho seja exibido antes do  **\<Order >** elemento filho, você obterá o resultado esperado: O XML Bulk Load insere o valor de chave estrangeiro especificado na coluna.  
   
  Este é o esquema XDR equivalente:  
   

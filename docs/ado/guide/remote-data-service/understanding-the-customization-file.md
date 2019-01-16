@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31d486f24d9c06926462be856d9102a9a457bb7b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558713"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256381"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização é formado por colchetes (**[]**) que contém um tipo e o parâmetro. Os tipos de quatro seção são indicados por cadeias de caracteres literais **conectar-se**, **sql**, **userlist**, ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador especificado pelo usuário ou nada.  
@@ -42,7 +42,7 @@ identifier
   
  Os cabeçalhos de seção tem as seguintes partes.  
   
-|Parte|Description|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |**connect**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de conexão.|  
 |**sql**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
@@ -55,7 +55,7 @@ identifier
   
  Uma seção específica é usada nas seguintes circunstâncias:  
   
--   Um **conectar-se** seção é usada se a parte do valor do cliente se conectar a palavra-chave de cadeia de caracteres, "**fonte de dados = * * * valor*", corresponde a um **conectar** identificador de seção *.*  
+-   Um **conectar-se** seção é usada se a parte do valor do cliente se conectar a palavra-chave de cadeia de caracteres, "**fonte de dados =**_valor_", corresponde a um **conectar** Identificador de seção *.*  
   
 -   Uma **sql** seção será usada se a cadeia de caracteres de comando do cliente contém uma cadeia de caracteres que corresponde a um **sql** identificador de seção.  
   

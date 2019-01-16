@@ -17,12 +17,12 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c85930cf8296ac6589e0c7b768c28f298ee31296
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672255"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256701"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Referência de linguagem Xquery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,18 +59,18 @@ WHERE ProductModelID=7
   
  A tabela a seguir lista os tópicos relacionados que podem ajudar a entender a implementação da XQuery no [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Explica o suporte para o **xml**tipo de dados no [!INCLUDE[ssDE](../includes/ssde-md.md)] e os métodos que você pode usar em relação a esse tipo de dados. O **xml** formulários de dados XQuery de entrada de modelo em que as expressões XQuery são executadas de tipo de dados.|  
 |[Coleções de esquemas XML &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|Descreve quais podem ser os tipos das instâncias XML armazenadas em um banco de dados. Isso significa que você pode associar uma coleção de esquemas XML com o **xml** coluna de tipo. Todas as instâncias armazenadas na coluna são validadas e verificadas quanto ao tipo em relação ao esquema na coleção e fornecem a informação de tipo para a XQuery.|  
 |||  
   
 > [!NOTE]  
->  A organização dessa seção é baseada na especificação de working draft da XQuery da World Wide Web Consortium (W3C). Alguns dos diagramas fornecidos nesta seção foram obtidos nessa especificação. Esta seção compara a implementação XQuery da Microsoft com a especificação da W3C, descreve as diferenças entre a XQuery da Microsoft e da W3C e indica quais recursos da W3C não têm suporte. A especificação W3C está disponível em [ https://www.w3.org/TR/2004/WD-xquery-20040723 ](https://go.microsoft.com/fwlink/?LinkId=48846).  
+>  A organização dessa seção é baseada na especificação de working draft da XQuery da World Wide Web Consortium (W3C). Alguns dos diagramas fornecidos nesta seção foram obtidos nessa especificação. Esta seção compara a implementação XQuery da Microsoft com a especificação da W3C, descreve as diferenças entre a XQuery da Microsoft e da W3C e indica quais recursos da W3C não têm suporte. A especificação W3C está disponível em [ http://www.w3.org/TR/2004/WD-xquery-20040723 ](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Fundamentos de XQuery](../xquery/xquery-basics.md)|Fornece uma visão geral básica dos conceitos da XQuery, além da avaliação de expressão (contexto estático e dinâmico), atomização, valor booliano efetivo, sistema de tipo XQuery, correspondência de tipo de sequência e tratamento de erros.|  
 |[Expressões XQuery](../xquery/xquery-expressions.md)|Descreve expressões primárias da XQuery, expressões de caminho, expressões de sequência, comparações aritméticas e expressões lógicas, construção da XQuery, expressão FLWOR, expressões quantificadas e condicionais e várias expressões em tipos de sequência.|  

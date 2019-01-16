@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534742"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254541"
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os seguintes namespaces de quatro.  
@@ -29,11 +29,11 @@ O formato de persistência XML no ADO usa os seguintes namespaces de quatro.
 |Prefixo|Descrição|  
 |------------|-----------------|  
 |s|Refere-se ao namespace "XML-Data", que contém os elementos e atributos que definem o esquema do conjunto de registros atual.|  
-|DT|Refere-se a especificação de definições de tipo de dados.|  
+|dt|Refere-se a especificação de definições de tipo de dados.|  
 |rs|Refere-se aos elementos de recipiente de namespace e atributos específicos para as propriedades do conjunto de registros ADO e atributos.|  
 |z|Refere-se ao esquema do conjunto de linhas atual.|  
   
- Um cliente não deve adicionar suas próprias marcas para esses namespaces, conforme definido pela especificação. Por exemplo, um cliente não deve definir um namespace como "urn: schemas-microsoft-com:rowset" e, em seguida, escrever algo como "rs: MyOwnTag." Para obter mais informações sobre namespaces, consulte a [Namespaces W3C na recomendação XML](https://www.w3.org/TR/REC-xml-names/).  
+ Um cliente não deve adicionar suas próprias marcas para esses namespaces, conforme definido pela especificação. Por exemplo, um cliente não deve definir um namespace como "urn: schemas-microsoft-com:rowset" e, em seguida, escrever algo como "rs: MyOwnTag." Para obter mais informações sobre namespaces, consulte a [Namespaces W3C na recomendação XML](http://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  A ID para a marca de esquema deve ser "RowsetSchema", e o namespace usado para consultar o esquema do conjunto de linhas atual deve apontar para "#RowsetSchema".  

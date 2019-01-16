@@ -16,12 +16,12 @@ ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ac4969b514fdcbb394ebb85334664f71e5d15e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d265f405bdebac9a44461ca3b262935eaaba25bd
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661795"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254471"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funções em Valores da Cadeia de Caracteres – lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. Pesquisar uma cadeia de caracteres específica  
+### <a name="b-search-for-a-specific-character-string"></a>b. Pesquisar uma cadeia de caracteres específica  
  Este exemplo mostra como usar a função lower-case para executar uma pesquisa sem diferenciação de maiúsculas e minúsculas.  
   
 ```  
@@ -95,7 +95,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
   
  `Performance-enhancing options include the innovative HL Frame,`  
   
@@ -111,7 +111,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
   
  `Adventure Works Cycles professional race team, it has a extremely light`  
   

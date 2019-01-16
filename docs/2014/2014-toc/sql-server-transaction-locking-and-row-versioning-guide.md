@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd65d3335c7eb57c69f4fe6a37042376efc71bf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375588"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300603"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações do SQL Server
   Em um banco de dados, o gerenciamento incorreto de transações normalmente leva a problemas de contenção e de desempenho em sistemas com muitos usuários. À medida que o número de usuários que acessam os dados aumenta, torna-se importante ter aplicativos que utilizem as transações de maneira eficaz. Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente.  
@@ -48,7 +48,7 @@ ms.locfileid: "53375588"
  Modificações feitas por transações simultâneas devem ser isoladas das modificações feitas por qualquer outra transação simultânea. Uma transação reconhece os dados no estado em que estavam antes de outra transação simultânea tê-los modificado ou reconhece os dados depois que a segunda transação tiver sido concluída, mas não reconhece um estado intermediário. Isso é chamado serializabilidade porque resulta na capacidade de recarregar os dados iniciais e reexecutar uma série de transações de modo que os dados obtidos estejam no mesmo estado em que estavam depois que as transações originais foram executadas.  
   
  Durabilidade  
- Depois que uma transação totalmente durável tiver sido concluída, seus efeitos ficam permanentemente no sistema. As modificações persistem até mesmo no caso de uma queda do sistema. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]e, posteriormente, habilitar transações duráveis atrasadas. As transações duráveis atrasadas são confirmadas antes do registro de log de transação ser persistente no disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
+ Depois que uma transação totalmente durável tiver sido concluída, seus efeitos ficam permanentemente no sistema. As modificações persistem até mesmo no caso de uma queda do sistema. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e posteriores habilitam transações duráveis atrasadas. As transações duráveis atrasadas são confirmadas antes do registro de log de transação ser persistente no disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
   
  Os programadores SQL são responsáveis por iniciar e terminar transações em pontos que imponham a consistência lógica dos dados. O programador deve definir a sequência de modificações de dados que deixem os dados em um estado consistente em relação às regras comerciais da organização. O programador inclui essas instruções de modificação em uma única transação de modo que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] possa aplicar a integridade física da transação.  
   
@@ -152,7 +152,7 @@ GO
   
  No exemplo a seguir, a terceira instrução `INSERT` gera um erro de duplicação de chave primária em tempo de execução. As primeiras duas instruções `INSERT` têm êxito e são confirmadas; portanto, elas permanecem depois do erro em tempo de execução.  
   
-```  
+```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  

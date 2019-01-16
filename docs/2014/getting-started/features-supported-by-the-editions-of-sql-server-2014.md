@@ -17,17 +17,21 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357998"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300583"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Recursos compatíveis com as edições do SQL Server 2014
-  Esse tópico fornece detalhes dos recursos que têm suporte na diferentes edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **Observação:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível em uma edição de avaliação por um período de avaliação de 180 dias. Para obter mais informações, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o SQL Docs sumário!](https://aka.ms/sqldocsurvey)
+
+  Esse tópico fornece detalhes dos recursos que têm suporte na diferentes edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **Observação:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível em uma edição de avaliação por um período de avaliação de 180 dias. Para obter mais informações, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
 > **OBSERVAÇÃO:** Para saber quais recursos têm suporte pelas edições Evaluation e Developer, consulte o conjunto de recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
   

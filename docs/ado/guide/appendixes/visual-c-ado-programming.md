@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997588"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257041"
 ---
 # <a name="visual-c-ado-programming"></a>Programação ADO do Visual C++
 A referência de API ADO descreve a funcionalidade do ADO API (API) usando uma sintaxe semelhante para o Microsoft Visual Basic. Embora o público-alvo é todos os usuários, programadores ADO empregam diversas linguagens como Visual Basic, Visual C++ (com e sem o **#import** diretiva) e Visual J++ (com o pacote de classe do ADO/WFC).  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  Por exemplo, o **comando** objeto **ActiveConnection** propriedade é declarada com uma sintaxe alternativa para **obter**_ActiveConnection_e **PutRef**_ActiveConnection_. O **PutRef**-sintaxe é uma boa opção porque, na prática, você geralmente desejará colocar um aberto **Conexão** objeto (ou seja, uma **Conexão** ponteiro de objeto) neste propriedade. Por outro lado, o **conjunto de registros** objeto tem **obter**-, **colocar**-, e **PutRef**_ActiveConnection_operações, mas nenhuma sintaxe alternativa.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>A propriedade do Item, o método GetItem e coleções  
+
  ADO define várias coleções, incluindo **campos**, **parâmetros**, **propriedades**, e **erros**. No Visual C++, o **GetItem (_índice_)** método retorna um membro da coleção. *Índice* é um **Variant**, o valor que é um índice numérico do membro na coleção, ou uma cadeia de caracteres que contém o nome do membro.  
   
  O **__declspec(property...)**  diretiva de compilador declara o **Item** a propriedade como uma sintaxe alternativa para cada coleção do fundamental **obter GetItem ()** método. A sintaxe alternativa usa colchetes e é semelhante a uma referência de matriz. Em geral, as duas formas a seguinte aparência:  

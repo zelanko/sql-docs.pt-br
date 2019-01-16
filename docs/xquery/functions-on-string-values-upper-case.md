@@ -16,12 +16,12 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0d5699c86030cbae6f8f6776b1df9fe1463eb7c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9d20e638fbbedfe1985ac66ee1cfd336fa291196
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661816"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254480"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funções em Valores da Cadeia de Caracteres – upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DECLARE @x xml = N'abcDEF!@4';
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. Pesquisar uma cadeia de caracteres específica  
+### <a name="b-search-for-a-specific-character-string"></a>b. Pesquisar uma cadeia de caracteres específica  
  Este exemplo mostra como usar a função upper-case para executar uma pesquisa sem diferenciação de maiúsculas e minúsculas.  
   
 ```  
@@ -91,7 +91,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
   
  `Performance-enhancing options include the innovative HL Frame,`  
   
@@ -107,7 +107,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
   
  `Adventure Works Cycles professional race team, it has a extremely light`  
   

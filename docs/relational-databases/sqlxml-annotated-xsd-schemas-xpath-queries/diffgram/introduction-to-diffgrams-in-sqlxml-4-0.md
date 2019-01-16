@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 567c4b6054623fad160dc17378e2a4a680fc4c8e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12746eec96373e5d5a66206081408fbe2d0d3544
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669505"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255821"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introdução a DiffGrams em SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51669505"
 <diffgr:diffgram   
          xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  
          xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"  
-         xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
    <DataInstance>  
       ...  
    </DataInstance>  
@@ -74,7 +74,7 @@ ms.locfileid: "51669505"
 ## <a name="understanding-the-diffgram-processing-logic"></a>Compreendendo a lógica de processamento de DiffGram  
  A lógica de processamento de DiffGram usa regras específicas para determinar se uma operação é de inserção, atualização ou exclusão. Essas regras são descritas na tabela a seguir.  
   
-|Operação|Description|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Insert|Um DiffGram indica uma operação de inserção quando um elemento aparece na  **\<DataInstance >** bloco, mas não em correspondente  **\<antes >** bloco e o **diffgr: HasChanges** atributo é especificado (**diffgr: HasChanges = inserido**) no elemento. Nesse caso, DiffGram insere a instância do registro que é especificada na  **\<DataInstance >** bloco no banco de dados.<br /><br /> Se o **diffgr: HasChanges** atributo não for especificado, o elemento é ignorado pela lógica de processamento e nenhuma inserção é executada. Para obter exemplos de funcionamento, consulte [exemplos de DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).|  
 |Update|O DiffGram indica uma operação de atualização quando há um elemento na \<antes de > para o qual há um elemento correspondente no bloco do  **\<DataInstance >** bloco (ou seja, os dois elementos têm um **diffgr:ID="customer4** atributo com o mesmo valor) e o **diffgr: HasChanges** atributo é especificado com o valor **modificado** no elemento no  **\<DataInstance >** bloco.<br /><br /> Se o **diffgr: HasChanges** atributo não for especificado no elemento de  **\<DataInstance >** bloco, um erro será retornado pela lógica de processamento. Para obter exemplos de funcionamento, consulte [exemplos de DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentID** é especificado na  **\<antes >** bloquear, a relação de pai-filho dos elementos que são especificados pelo **parentID** são usados em Determinando a ordem na qual os registros são atualizados.|  

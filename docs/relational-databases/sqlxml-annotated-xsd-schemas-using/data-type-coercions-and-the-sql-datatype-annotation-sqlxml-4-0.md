@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7ebacf5f60b8decf10a4030884544ba7abe776d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7deb5fc8da17c597b22cb4e2e3e689191de2533b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662705"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255911"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "51662705"
  Este exemplo mostra como um XSD **data** tipo que é especificado usando o **xsd: Type** atributo no esquema afeta o documento XML resultante. O esquema fornece uma exibição XML da tabela Sales.SalesOrderHeader no banco de dados AdventureWorks.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader">  
      <xsd:complexType>  
@@ -192,7 +192,7 @@ ms.locfileid: "51662705"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Especificando o tipo de dados de SQL usando sql:datatype  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>b. Especificando o tipo de dados de SQL usando sql:datatype  
  Para obter um exemplo funcional, consulte o exemplo G em [exemplos de carregamento em massa XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). Nesse exemplo, um valor de GUID que inclui "{" e "}" é carregado em massa. Especifica o esquema neste exemplo **SQL: DataType** para identificar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados como **uniqueidentifier**. Esse exemplo ilustra quando **SQL: DataType** deve ser especificado no esquema.  
   
   

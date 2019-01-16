@@ -18,12 +18,12 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 470543f0016a01d10f6fff06383216ff984649fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e7c73e33a1f19acb2158ced848c220b2b7af447
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656286"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254151"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequência e QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ WHERE ProductModelID=7;
   
 ```  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <step1> Step 1 description goes here </step1>  
@@ -135,19 +135,19 @@ WHERE ProductModelID=7;
   
 |Prefixo|URI|  
 |------------|---------|  
-|xs|https://www.w3.org/2001/XMLSchema|  
-|xsi|https://www.w3.org/2001/XMLSchema-instance|  
-|xdt|https://www.w3.org/2004/07/xpath-datatypes|  
-|fn|https://www.w3.org/2004/07/xpath-functions|  
+|xs|http://www.w3.org/2001/XMLSchema|  
+|xsi|http://www.w3.org/2001/XMLSchema-instance|  
+|xdt|http://www.w3.org/2004/07/xpath-datatypes|  
+|fn|http://www.w3.org/2004/07/xpath-functions|  
 |(nenhum prefixo)|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`https://www.w3.org/XML/1998/namespace`|  
+|xml|`http://www.w3.org/XML/1998/namespace`|  
 |(nenhum prefixo)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  Cada banco de dados que você cria tem o **sys** coleção de esquemas XML. Ele reserva esses esquemas para que eles possam ser acessados de qualquer coleção de esquemas XML criadas pelo usuário.  
   
 > [!NOTE]  
->  Esta implementação não oferece suporte a `local` prefixo conforme descrito na especificação do XQuery em https://www.w3.org/2004/07/xquery-local-functions.  
+>  Esta implementação não oferece suporte a `local` prefixo conforme descrito na especificação do XQuery em http://www.w3.org/2004/07/xquery-local-functions.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fundamentos de XQuery](../xquery/xquery-basics.md)  

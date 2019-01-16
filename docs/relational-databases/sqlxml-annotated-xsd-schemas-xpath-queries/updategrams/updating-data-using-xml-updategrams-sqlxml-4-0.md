@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674155"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256591"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "51674155"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Atualizando vários registros usando o atributo updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Atualizando vários registros usando o atributo updg:id  
  Neste exemplo, o diagrama de atualização executa duas atualizações na tabela HumanResources.Shift no banco de dados do AdventureWorks:  
   
 -   Ele altera o nome do turno do dia original que inicia às 7h00 do "Dia" até a "Madrugada".  
@@ -269,7 +269,7 @@ ms.locfileid: "51674155"
  Tem o seguinte esquema de mapeamento XSD  **\<cliente >**,  **\<Order >**, e  **\<OD >** elementos que mapeiam para o Tabelas Sales. Customer, Sales. SalesOrderHeader e SalesOrderDetail no banco de dados.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "51674155"
  O esquema de mapeamento XSD a seguir fornece uma exibição XML das tabelas usando o  **\<Student >**,  **\<curso >**, e  **\<registro >** elementos. O **IDREFS** atributos no esquema de mapeamento especificam a relação entre esses elementos. O **StudentIDList** atributo as  **\<curso >** elemento é um **IDREFS** atributo de tipo que se refere à coluna StudentID na tabela Enrollment. Da mesma forma, o **EnrolledIn** atributo as  **\<aluno >** elemento é um **IDREFS** atributo de tipo que se refere à coluna CourseID na inscrição tabela.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

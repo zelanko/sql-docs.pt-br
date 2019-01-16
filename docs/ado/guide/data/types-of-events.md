@@ -17,26 +17,26 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 461b9ea2196fed61587b1a9e20cc21feced258da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535048"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254861"
 ---
 # <a name="types-of-events"></a>Tipos de eventos
 Há dois tipos básicos de eventos. "Será eventos," que é chamado antes do início de uma operação, geralmente incluem "Será" em seus nomes - por exemplo, **eventos WillChangeRecordset** ou **WillConnect**. Eventos que são chamados após um evento foi concluído normalmente incluem "Concluído" em seus nomes - por exemplo, **RecordChangeComplete** ou **eventos ConnectComplete**. Existem exceções - como **InfoMessage** - mas eles ocorrem após a operação associada foi concluída.  
   
 ## <a name="will-events"></a>Será eventos  
- Manipuladores de eventos chamado antes do início da operação de oferece a você a oportunidade de examinar ou modificar os parâmetros da operação e, em seguida, cancelar a operação ou permitir que ela seja concluída. Essas rotinas de manipulador de eventos geralmente têm nomes no formato **serão*evento * * *.  
+ Manipuladores de eventos chamado antes do início da operação de oferece a você a oportunidade de examinar ou modificar os parâmetros da operação e, em seguida, cancelar a operação ou permitir que ela seja concluída. Essas rotinas de manipulador de eventos geralmente têm nomes no formato <strong>serão*evento*</strong>.  
   
 ## <a name="complete-events"></a>Eventos de conclusão  
- Chamado após a conclusão de uma operação de manipuladores de eventos podem notificar o aplicativo que concluiu uma operação. Um manipulador de eventos desse tipo também é notificado quando um manipulador de eventos será cancela uma operação pendente. Essas rotinas de manipulador de eventos geralmente têm nomes no formato ***evento * concluir**.  
+ Chamado após a conclusão de uma operação de manipuladores de eventos podem notificar o aplicativo que concluiu uma operação. Um manipulador de eventos desse tipo também é notificado quando um manipulador de eventos será cancela uma operação pendente. Essas rotinas de manipulador de eventos geralmente têm nomes no formato  <strong>*evento*concluir</strong>.  
   
  Será e eventos de conclusão normalmente são usados em pares.  
   
 ## <a name="other-events"></a>Outros eventos  
- Os manipuladores de eventos - ou seja, os eventos cujos nomes não estão no formato **serão * evento*** ou ***evento * concluir** -são chamados somente depois que uma operação é concluída. Esses eventos são **Disconnect**, **EndOfRecordset**, e **InfoMessage**.  
+ Os manipuladores de eventos - ou seja, os eventos cujos nomes não estão no formato <strong>serão*evento*</strong>  ou  <strong>*evento*concluir</strong> -são chamados somente após uma operação é concluída. Esses eventos são **Disconnect**, **EndOfRecordset**, e **InfoMessage**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

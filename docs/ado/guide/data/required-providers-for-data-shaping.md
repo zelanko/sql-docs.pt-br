@@ -14,19 +14,19 @@ ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 482139f8aa3dc42bbd17593b58fcc8510f1fc9a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7edd3b3cacd097380b5d14ad55ed115ff93cf072
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713834"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255701"
 ---
 # <a name="required-providers-for-data-shaping"></a>Provedores necessários para data shaping
 Formatação de dados normalmente requer que dois provedores. O provedor de serviço [Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornece os dados de modelagem de funcionalidade e um provedor de dados, como o provedor OLE DB para SQL Server, fornece linhas de dados para popular o moldado [conjunto de registros ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  O nome do provedor de serviços (MSDataShape) pode ser especificado como o valor da [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto [provedor](../../../ado/reference/ado-api/provider-property-ado.md) propriedade ou a palavra-chave de cadeia de conexão "Provider = MSDataShape;".  
   
- O nome do provedor de dados pode ser especificado como o valor do **provedor de dados** propriedade dinâmica, que é adicionada para o **Conexão** objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção por a Data Shaping Service para OLE DB ou a palavra-chave de cadeia de conexão "**provedor de dados = * * * provedor*".  
+ O nome do provedor de dados pode ser especificado como o valor do **provedor de dados** propriedade dinâmica, que é adicionada para o **Conexão** objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção por a Data Shaping Service para OLE DB ou a palavra-chave de cadeia de conexão "**provedor de dados =**_provedor_".  
   
  Nenhum provedor de dados é necessária se o **conjunto de registros** não é preenchida (por exemplo, como em um fabricadas **Recordset** onde as colunas são criadas com a nova palavra-chave). Nesse caso, especifique "**provedor de dados =** none;".  
   

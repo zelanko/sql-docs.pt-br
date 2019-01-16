@@ -24,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668656"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254781"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery é uma linguagem com rigidez de tipos para esquemas digitados, e uma linguagem fraca em tipos para dados não digitados. Os tipos predefinidos de XQuery incluem o seguinte:  
   
--   Tipos internos de esquema XML na **https://www.w3.org/2001/XMLSchema** namespace.  
+-   Tipos internos de esquema XML na **http://www.w3.org/2001/XMLSchema** namespace.  
   
--   Tipos definidos na **https://www.w3.org/2004/07/xpath-datatypes** namespace.  
+-   Tipos definidos na **http://www.w3.org/2004/07/xpath-datatypes** namespace.  
   
  Este tópico também descreve o seguinte:  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
  Essas informações digitadas são fornecidas pela coleção de esquemas XML associada à coluna.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Tipos definidos no namespace XPath Data Types  
- Os tipos definidos na **https://www.w3.org/2004/07/xpath-datatypes** namespace têm um prefixo predefinido de **xdt**. O seguinte se aplica a esses tipos:  
+ Os tipos definidos na **http://www.w3.org/2004/07/xpath-datatypes** namespace têm um prefixo predefinido de **xdt**. O seguinte se aplica a esses tipos:  
   
 -   Você não pode usar esses tipos ao criar uma coleção de esquemas XML. Esses tipos são usados no sistema de tipos XQuery e são usados para [XQuery e digitação estática](../xquery/xquery-and-static-typing.md). Você pode converter os tipos atômicos, por exemplo, **XDT: untypedatomic**, no **xdt** namespace.  
   
@@ -110,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  

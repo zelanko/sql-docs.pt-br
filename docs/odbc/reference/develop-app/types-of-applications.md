@@ -17,18 +17,18 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541914"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255791"
 ---
 # <a name="types-of-applications"></a>Tipos de aplicativos
 Aplicativos ODBC podem ser classificados da seguinte maneira:  
   
 -   **Puro ODBC 2.**  
-     ***x* aplicativo** aplicativo de 32 bits que:  
+     **_x_ aplicativo** aplicativo de 32 bits que:  
   
     -   Chamadas ODBC 2. *x* funções (incluindo a função ODBC 1.0 **SQLSetParam**). Eles incluem 1 do ODBC. *x* aplicativos que foram adaptados para 32 bits.  
   
@@ -37,10 +37,10 @@ Aplicativos ODBC podem ser classificados da seguinte maneira:
     -   Não foi recompilado com cabeçalhos de ODBC 3.5.  
   
 -   **Puro ODBC 2.**  
-     ***x* aplicativo recompilado** um puro do ODBC 2. *x* aplicativo foi recompilado usando os arquivos de cabeçalho ODBC 3.5, definindo ODBCVER = 0x0250.  
+     **_x_ aplicativo recompilado** um puro do ODBC 2. *x* aplicativo foi recompilado usando os arquivos de cabeçalho ODBC 3.5, definindo ODBCVER = 0x0250.  
   
 -   **Puro ODBC 2.**  
-     ***x* aplicativo Unicode** um puro do ODBC 2. *x* recompilado aplicativo que é compatível com Unicode e usa o tipo de dados SQL_WCHAR.  
+     **_x_ aplicativo Unicode** um puro do ODBC 2. *x* recompilado aplicativo que é compatível com Unicode e usa o tipo de dados SQL_WCHAR.  
   
 -   **Grupo aberto pura e ISO**-**compatível com aplicativos de ODBC** aplicativo de 32 bits que:  
   

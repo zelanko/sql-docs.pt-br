@@ -11,14 +11,17 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 77e818109424b5f0d9dea3b495da4e927c506366
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160534"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299233"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Guia de início rápido: Executar o SQL Server na nuvem
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o SQL Docs sumário!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -29,7 +32,7 @@ Neste início rápido, você instalará o SQL Server no Red Hat Enterprise Linux
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Criar um AMI Linux com pelo menos 2 GB de memória do marketplace 
-    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Conectar-se para o AMI com ssh
@@ -55,7 +58,7 @@ Neste início rápido, você instalará o SQL Server no Red Hat Enterprise Linux
     
 ## <a name="google-cloud-platform"></a>Plataforma de nuvem do Google
 1.  Criar uma imagem do Linux com pelo menos 2 GB de memória do que o iniciador de nuvem 
-    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Conectar-se para a imagem com ssh

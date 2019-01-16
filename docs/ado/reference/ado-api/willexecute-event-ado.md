@@ -17,12 +17,12 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623484"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255499"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 O **WillExecute** evento é chamado antes de um comando pendente é executado em uma conexão.  
@@ -65,7 +65,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** permite que você examine e modifique os parâmetros de execução pendente. Esse evento pode retornar uma solicitação que o comando pendente a ser cancelada.  
   
 > [!NOTE]
->  Se original da fonte para um **comando** é um fluxo especificado pelo [propriedade CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propriedade, uma nova cadeia de caracteres para a atribuição a **WillExecute * * * fonte* parâmetro altera a origem do **comando**. O **CommandStream** propriedade será limpa e o [propriedade CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade será atualizada com a nova fonte. O fluxo original especificado pelo **CommandStream** será liberado e não pode ser acessado.  
+>  Se original da fonte para um **comando** é um fluxo especificadas pelo [propriedade CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propriedade, atribuir uma nova cadeia de caracteres para o **WillExecute** _Código-fonte_ parâmetro altera a origem do **comando**. O **CommandStream** propriedade será limpa e o [propriedade CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade será atualizada com a nova fonte. O fluxo original especificado pelo **CommandStream** será liberado e não pode ser acessado.  
   
  Se o dialeto da nova cadeia de caracteres de origem é diferente da configuração original do [propriedade Dialect](../../../ado/reference/ado-api/dialect-property.md) propriedade (que correspondessem ao **CommandStream**), o dialeto correto deve ser especificado definindo o **dialeto** propriedade do objeto de comando referenciada por *pCommand*.  
   

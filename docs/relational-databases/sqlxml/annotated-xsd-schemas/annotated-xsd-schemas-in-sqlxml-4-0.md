@@ -1,7 +1,7 @@
 ---
 title: Esquemas XSD no SQLXML 4.0 anotados | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 961f4af715f8639a67ff6a6ea03cf63d52e1c086
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662305"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255631"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Esquemas XSD anotados em SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "51662305"
 ## <a name="other-resources"></a>Outros recursos  
  Você pode encontrar mais informações sobre as linguagens XSD (XML Schema Definition), XPath (XML Path) e XSLT (Linguagem XSL Transformations) nos seguintes sites:  
   
--   Esquema XML parte 0: Primer, W3C recomendação (https://www.w3.org/TR/xmlschema-0/)  
+-   Esquema XML parte 0: Instruções elementares, W3C (recomendação http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Estruturas, o W3C recomendação (https://www.w3.org/TR/xmlschema-1/)  
+-   Esquema XML parte 1: Estruturas, W3C (recomendação http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2: Datatypes, W3C recomendação (https://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2: Datatypes, W3C recomendação (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL (de transformações (XSLT) (https://www.w3.org/TR/xslt)  
+-   XSL (de transformações (XSLT) (http://www.w3.org/TR/xslt)  
   
   

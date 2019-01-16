@@ -1,6 +1,6 @@
 ---
 title: Propriedades de memória do Analysis Services | Microsoft Docs
-ms.date: 10/03/2018
+ms.date: 01/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071993"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327852"
 ---
 # <a name="memory-properties"></a>Propriedades de memória
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,7 +58,14 @@ As propriedades a seguir se aplicam aos modos tabulares e multidimensionais, a m
  Especifica um limite de memória depois do qual a instância finaliza sessões de usuário ativas agressivamente para reduzir o uso da memória. Todas as sessões finalizadas receberão um erro sobre o que está sendo cancelada por pressão de memória. O valor padrão, 0 (zero), significa que **HardMemoryLimit** será definido como um valor entre **TotalMemoryLimit** e a memória física total do sistema; se a memória física do sistema for maior que o espaço de endereço virtual do processo, o espaço de endereço virtual será usado para calcular **HardMemoryLimit**.  
 
 **QueryMemoryLimit**   
-Somente Azure Analysis Services. Uma propriedade avançada para controlar a quantidade de memória pode ser usado pelos resultados temporários durante uma consulta. Aplica-se somente a medidas DAX e consultas. Consultas MDX em servidores de modo Multidimensional não usam esse limite. Ele não leva em conta para alocações de memória geral usadas pela consulta. Especificado em porcentagem. O valor padrão 0 indica que nenhum limite é especificado.
+Somente Azure Analysis Services. Uma propriedade avançada para controlar a quantidade de memória pode ser usado pelos resultados temporários durante uma consulta. Aplica-se somente a medidas DAX e consultas. Ele não leva em conta para alocações de memória geral usadas pela consulta. O valor padrão especificado em porcentagem, é determinado pelo seu plano. 
+
+|Plano  |Padrão  |
+|---------|---------|
+|D1     |   80      |
+|Todos os outros planos     |    20     |
+
+Essa propriedade pode ser alterada. Definir um valor de 0 significa sem limite é especificado.
 
  **VirtualMemoryLimit**  
   Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

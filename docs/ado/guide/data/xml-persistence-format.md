@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211005"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255681"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistência XML
 ADO usa codificação UTF-8 para o fluxo XML que ele persiste.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  O esquema mostra as declarações de namespaces, a seção do esquema e a seção de dados. A seção do esquema contém definições de linha, CódigoDaTransportadora, CompanyName e telefone.  
   
- Definições de esquema estão em conformidade com o [especificação W3C XML-Data](https://www.w3.org/TR/1998/NOTE-XML-data/) e pode ser totalmente validada (embora a validação não ocorrerá no Internet Explorer 5). Dados XML são, atualmente, o formato de esquema com suporte apenas para persistência de conjunto de registros.  
+ Definições de esquema estão em conformidade com o [especificação W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e pode ser totalmente validada (embora a validação não ocorrerá no Internet Explorer 5). Dados XML são, atualmente, o formato de esquema com suporte apenas para persistência de conjunto de registros.  
   
  A seção de dados tem três linhas que contém informações sobre Shippers (transportadores). Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas o \<: dados do rs > marcas devem estar presentes. Sem dados, você poderia escrever a forma abreviada de marca simplesmente \<: dados do rs / >. Qualquer marca prefixada com "rs" indica que ele está no namespace definido pelo urn: schemas-microsoft-com:rowset.  
   

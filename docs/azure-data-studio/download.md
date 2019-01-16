@@ -11,16 +11,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143056"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298713"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixe e instale o Azure Data Studio
 
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o SQL Docs sumário!](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)] pode ser executado no Windows, macOS e Linux.
+
 
 Baixe e instale a versão mais recente, o *versão de janeiro*:
 
@@ -186,15 +190,15 @@ Se você quiser mover suas configurações personalizadas, os atalhos de teclado
 
 1. Abra as configurações clicando a engrenagem no canto inferior esquerdo e clicando em **configurações.**
 
-   ![Abrir configurações](./media/download/open-settings.png)
+   ![open-settings](./media/download/open-settings.png)
 
 2. Clique com botão direito na guia **as configurações de usuário** na parte superior e clique em **Revelar no Explorer**
 
-   ![Revelar no explorer](./media/download/reveal-in-explorer.png)
+   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
 
 3. Copie todos os arquivos nessa pasta e salve em uma forma fácil de encontrar o local em sua unidade local, como sua pasta Documentos.
 
-   ![configurações de cópia](./media/download/copy-settings.png)
+   ![copy-settings](./media/download/copy-settings.png)
 
 4. Na nova versão do Azure Data Studio, siga as etapas 1 e 2, em seguida, para a etapa 3 cole o conteúdo salvo na pasta. Manualmente, você pode copiar sobre as configurações, associações de teclas ou trechos de código em seus respectivos locais.
 

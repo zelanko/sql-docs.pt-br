@@ -19,12 +19,12 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e9f4aa4cf1ab8694947411f5565250c6544d92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659105"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256231"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +47,19 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  É o GUID do tipo de coletor. *collector_type_uid* está **uniqueidentifier** e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
   
- [ @name =] '*nome*'  
+ [ @name = ] '*name*'  
  É o nome do tipo de coletor. *nome da* está **sysname** e deve ser especificado.  
   
- [ @parameter_schema =] '*parameter_schema*'  
+ [ @parameter_schema = ] '*parameter_schema*'  
  É o esquema XML deste tipo de coletor. *parameter_schema* está **xml** com um padrão NULL.  
   
- [ @parameter_formatter =] '*parameter_formatter*'  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
  É o modelo a ser usado para transformar o XML para uso na página de propriedades do conjunto de coleta. *parameter_formatter* está **xml** com um padrão NULL.  
   
- [@collection_package_id =] *collection_package_id*  
+ [@collection_package_id = ] *collection_package_id*  
  É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* está **uniqueidentifer** e é necessária.  
   
  [@upload_package_id = ] *upload_package_id*  
@@ -79,7 +79,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

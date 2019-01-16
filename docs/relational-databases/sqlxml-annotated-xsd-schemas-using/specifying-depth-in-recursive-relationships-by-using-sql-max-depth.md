@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675135"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256121"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificando a profundidade em relações recursivas usando sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Para gerar esse resultado, você pode usar o esquema XSD a seguir e especificar uma consulta XPath para ele. Descreve o esquema de um  **\<Emp >** elemento do tipo EmployeeType, consistindo de um  **\<Emp >** elemento filho do mesmo tipo, EmployeeType. Essa é uma relação recursiva (o elemento e seu ancestral são do mesmo tipo). Além disso, o esquema usa uma  **\<SQL: Relationship >** para descrever a relação pai-filho entre o supervisor e o supervisionado. Observe que, neste  **\<SQL: Relationship >**, Emp é o pai e a tabela filho.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -149,7 +149,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Este é o resultado:  
+ Esse é o resultado:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Este é o esquema revisado:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>Anotação sql:max-depth  
  Em um esquema que consiste em relações recursivas, a profundidade de recursão deve ser especificada explicitamente no esquema. Isso é necessário para gerar, com êxito, a consulta FOR XML EXPLICIT correspondente que retorna os resultados solicitados.  
   
- Use o **SQL: max-profundidade** anotação no esquema para especificar a profundidade de recursão em uma relação recursiva que é descrita no esquema. O valor da **SQL: max-profundidade** anotação é um inteiro positivo (1 a 50) que indica o número de recursões: um valor de 1 para a recursão no elemento para o qual o **SQL: max-profundidade** anotação é especificado; um valor de 2 para a recursão no nível de elemento no qual **SQL: max-profundidade** for especificado; e assim por diante.  
+ Use o **SQL: max-profundidade** anotação no esquema para especificar a profundidade de recursão em uma relação recursiva que é descrita no esquema. O valor de **SQL: max-profundidade** anotação é um inteiro positivo (1 a 50) que indica o número de recursões:  Um valor de 1 para a recursão no elemento para o qual o **SQL: max-profundidade** anotação é especificada; um valor de 2 para a recursão no nível de elemento no qual **SQL: max-profundidade** for especificado ; e assim por diante.  
   
 > [!NOTE]  
 >  Na implementação subjacente, uma consulta XPath que é especificada em um esquema de mapeamento é convertida em uma consulta SELECT ... FOR XML EXPLICIT. Essa consulta requer que você especifique uma profundidade finita de recursão. Quanto maior o valor especificado para **SQL: max-profundidade**, quanto maior a consulta FOR XML EXPLICIT que será gerado. Isso poderá pode tornar mais lenta a recuperação.  
@@ -249,7 +249,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-b"></a>Exemplo B  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>Exemplo C  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>Exemplo D  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

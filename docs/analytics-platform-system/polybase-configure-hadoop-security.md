@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df7e0492c73d213efb08c1bfb25a2c87e2550374
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c916fef2b70333c2d5bc89fec5c86d61482cdba7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700284"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256431"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuração e segurança do PolyBase para Hadoop
 
@@ -120,7 +120,7 @@ Observe que adicionamos a propriedade mapreduce.application.classpath. No CDH 5.
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="https://www.w3.org/2001/XInclude">
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
    <property>
      <name>mapred.min.split.size</name>
        <value>1073741824</value>
@@ -168,13 +168,13 @@ Para se conectar a um Hadoop protegido por Kerberos cluster usando MIT KDC as se
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|Especifique o nome de host do KDC. Por exemplo: kerberos.your-realm.com.|  
    |2|core-site.xml|polybase.kerberos.realm|Especifique o realm do Kerberos. Por exemplo: YOUR-REALM.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: KERBEROS<br></br>**Observação de segurança:** KERBEROS deve ser escrito em letras maiúsculas. Se for escrito em letras minúsculas, talvez ele não seja ativado.|   
+   |3|core-site.xml|hadoop.security.authentication|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: KERBEROS<br></br>**Observação de segurança:** KERBEROS deve ser escrito em letras maiusculas. Se for escrito em letras minúsculas, talvez ele não seja ativado.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: mapred/_HOST@YOUR-REALM.COM|  
    |6|mapred-site.xml|mapreduce.jobhistory.address|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: 10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: yarn/_HOST@YOUR-REALM.COM|  
 
-**Core-site. XML**
+**core-site.xml**
 ```xml
 <property>
   <name>polybase.kerberos.realm</name>
@@ -190,7 +190,7 @@ Para se conectar a um Hadoop protegido por Kerberos cluster usando MIT KDC as se
 </property>
 ```
 
-**HDFS-site. XML**
+**hdfs-site.xml**
 ```xml
 <property>
   <name>dfs.namenode.kerberos.principal</name>
@@ -223,7 +223,7 @@ Para se conectar a um Hadoop protegido por Kerberos cluster usando MIT KDC as se
 ## <a id="encryptionzone"></a> Configuração da zona de criptografia do Hadoop
 Se você estiver usando o Hadoop zona de criptografia modificar core-site. XML e hdfs-site. XML da seguinte maneira. Forneça o endereço ip em que o serviço KMS está em execução com o número da porta correspondente. A porta padrão do KMS no CDH é 16000.
 
-**Core-site. XML**
+**core-site.xml**
 ```xml
 <property>
   <name>hadoop.security.key.provider.path</name>
@@ -231,7 +231,7 @@ Se você estiver usando o Hadoop zona de criptografia modificar core-site. XML e
 </property>
 ```
 
-**HDFS-site. XML**
+**hdfs-site.xml**
 ```xml
 <property>
   <name>dfs.encryption.key.provider.uri</name>
