@@ -69,7 +69,7 @@ ms.locfileid: "52507468"
 ### <a name="identification-of-words"></a>Identificação de palavras  
  Primeiro, a transformação Extração de Termos identifica palavras executando as seguintes tarefas:  
   
--   Separando o texto em palavras usando espaços, quebras de linha e outros delimitadores vocabulares da língua inglesa. Por exemplo, sinais de pontuação tais como *?* e *** são caracteres delimitadores de palavras.  
+-   Separando o texto em palavras usando espaços, quebras de linha e outros delimitadores vocabulares da língua inglesa. Por exemplo, sinais de pontuação tais como *?* e *:* são caracteres delimitadores de palavras.  
   
 -   Preservando palavras que estão conectadas por hífens ou sublinhadas. Por exemplo, as palavras *protegido por cópia* e *somente leitura* permanecem como uma palavra simples.  
   
