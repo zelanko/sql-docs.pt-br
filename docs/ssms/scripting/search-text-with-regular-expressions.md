@@ -7,8 +7,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,25 +17,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538781"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53329026"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+
+As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
-#### <a name="to-find-using-regular-expressions"></a>Para fazer localização usando expressões regulares  
+## <a name="find-using-regular-expressions"></a>Localizar usando expressões regulares  
   
-1.  Para habilitar o uso de expressões regulares no campo **Localizar** durante operações de **Localização Rápida**, **Localizar nos Arquivos**, **Substituição Rápida**ou **Substituir nos Arquivos** , selecione a opção **Usar** em **Opções de Localização**e escolha **Expressões Regulares**.  
+1.  Para habilitar o uso de expressões regulares no campo **Localizar** durante as operações **QuickFind**, **FindinFiles**, **Substituição Rápida** ou **Substituir em Arquivos**, selecione a opção **Usar** em **Opções de Localização** e escolha **Expressões regulares**.  
   
 2.  O botão triangular **Lista de Referências** próximo ao campo **Localizar** torna-se disponível. Clique no botão para exibir uma lista das expressões regulares usadas frequentemente. Quando você seleciona qualquer item do Construtor de Expressões, o item é inserido na cadeia de caracteres **Localizar** .  
   
 > [!NOTE]  
->  Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir**a notação de chaves {} é usada para expressões marcadas. Então a expressão "zo {1}" corresponde a todas as ocorrências de "zo" seguidas pela marca 1, como em "Alonzo1" e "Gonzo1". Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Então a expressão "zo{1}" corresponde a todas as ocorrências de "z" seguidas exatamente por um “o”, como em "zone" e não "zoo".  
+> Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir**a notação de chaves {} é usada para expressões marcadas. Então a expressão "zo {1}" corresponde a todas as ocorrências de "zo" seguidas pela marca 1, como em "Alonzo1" e "Gonzo1". Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Então a expressão "zo{1}" corresponde a todas as ocorrências de "z" seguidas exatamente por um “o”, como em "zone" e não "zoo".  
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "52538781"
 |----------------|------------|-----------------|  
 |Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
-|Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 correspondem a qualquer sequência de 4 dígitos.|  
+|Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 corresponde a qualquer sequência de quatro dígitos.|  
 |Agrupamento|()|Agrupa uma subexpressão.|  
 |Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir** , indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir** , \0 insere o texto inteiro correspondente.|  
 |Campo justificado à direita|\\(w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
@@ -137,5 +136,3 @@ ms.locfileid: "52538781"
 ## <a name="see-also"></a>Consulte Também  
  [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
  [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

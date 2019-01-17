@@ -1,6 +1,7 @@
 ---
-title: Executar um failover manual planejado de um grupo de disponibilidade (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Executar um failover manual planejado de um grupo de disponibilidade
+description: Este tópico descreve como executar um failover manual planejado de um grupo de disponibilidade Always On.
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854054"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212155"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Executar um failover manual planejado de um grupo de disponibilidade (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Executar um failover manual planejado de um grupo de disponibilidade Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico descreve como fazer um failover manual sem perda de dados (um *failover manual planejado*) em um grupo de disponibilidade AlwaysOn usando o[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Um failover manual planejado, como qualquer failover de grupo de disponibilidade AlwaysOn, faz a transição de uma réplica secundária para a função primária. Paralelamente, o failover faz a transição da réplica primária antiga para a função secundária.  
   
@@ -107,7 +108,7 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
     -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [Obter ajuda do SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Acompanhamento: após fazer failover manual de um grupo de disponibilidade 
+##  <a name="FollowUp"></a> Acompanhamento: depois de fazer failover manual de um grupo de disponibilidade 
  Se você tiver feito failover fora do [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] do grupo de disponibilidade, ajuste os votos de quorum dos nós de clustering de failover do Windows Server para refletir a nova configuração do grupo de disponibilidade. Para obter mais informações, veja [WSFC &#40;Clustering de Failover do Windows Server &#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

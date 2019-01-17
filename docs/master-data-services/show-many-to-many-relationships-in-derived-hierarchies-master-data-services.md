@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05fc6068b221bfd21ffdfd0e6f8fff850bab179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755564"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797128"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47755564"
   
  Na captura de tela acima, observe que a entidade **Employee** aparece sob **Níveis Atuais** no meio como o único nível. A Hierarquia Derivada **Visualização** à direita simplesmente mostra uma lista de todos os membros da entidade **Employee** . A seção **Níveis Disponíveis** à esquerda mostra quais níveis podem ser adicionados no nível superior atual (**Funcionário**). A maioria deles são DBAs (atributos baseados em domínio) na entidade **Funcionário** , incluindo o DBA **Departamento** .  
   
- A partir do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], há um novo tipo de nível que modela as relações M2M, por exemplo: **Classe (mapeado por meio de ClassRegistration.Student)**. O nome do nível é mais detalhado do que os outros de modo a refletir as informações extras necessárias para descrever inequivocamente a relação de mapeamento. Arraste e solte esse nível no nível **Employee** na seção **Níveis Atuais** :  
+ No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em diante, há um novo tipo de nível que modela as relações M2M, por exemplo: **Classe (mapeada por meio de ClassRegistration.Student)**. O nome do nível é mais detalhado do que os outros de modo a refletir as informações extras necessárias para descrever inequivocamente a relação de mapeamento. Arraste e solte esse nível no nível **Employee** na seção **Níveis Atuais** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -84,7 +83,7 @@ Como mostra a imagem a seguir, o nome do nível que modela essa relação é ![m
 Para obter instruções sobre como implantar o modelo de exemplo Cliente e outros modelos de exemplo incluídos no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Implantando dados e modelos de exemplo](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
 ## <a name="one-many-relationship"></a>Relação um para muitos  
- Um membro de uma HD pode ser o pai de vários membros filho, mas, em geral, ele não pode ter mais de um pai (para ver as exceções, consulte [Segurança do membro](#bkmk_member_security)). Por exemplo, suponha que há duas entidades: Employee e Department, em que cada funcionário pertence a um único departamento. Essa relação é modelada adicionando à entidade Employee um DBA (atributo baseado em domínio) que faz referência à entidade Department:  
+ Um membro de uma HD pode ser o pai de vários membros filho, mas, em geral, ele não pode ter mais de um pai (para ver as exceções, consulte [Segurança do membro](#bkmk_member_security)). Por exemplo, suponha que haja duas entidades: Employee e Department, em que cada funcionário pertence a um único departamento. Essa relação é modelada adicionando à entidade Employee um DBA (atributo baseado em domínio) que faz referência à entidade Department:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   

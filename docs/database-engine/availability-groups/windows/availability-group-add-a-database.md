@@ -1,6 +1,7 @@
 ---
-title: Adicionar um banco de dados a um grupo de disponibilidade (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Adicionar um banco de dados a um grupo de disponibilidade
+description: 'Adicione um banco de dados a um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,46 +15,41 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8e63b4561c56f5d930856758afa464f85a9ab40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857111"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214657"
 ---
-# <a name="availability-group---add-a-database"></a>Grupo de disponibilidade – adicionar um banco de dados
+# <a name="add-a-database-to-an-always-on-availability-group"></a>Adicione um banco de dados a um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como adicionar um banco de dados a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Antes de começar:**  
   
-     [Pré-requisitos e restrições](#Prerequisites)  
-  
-     [Permissões](#Permissions)  
-  
+     [Pré-requisitos e restrições](#Prerequisites)    
+     [Permissões](#Permissions)    
 -   **Para adicionar um banco de dados a um grupo de disponibilidade usando:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+     [SQL Server Management Studio](#SSMSProcedure)    
+     [Transact-SQL](#TsqlProcedure)    
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos e restrições  
+## <a name="prerequisites-and-restrictions"></a>Pré-requisitos e restrições  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
   
 -   O banco de dados deve residir na instância do servidor que hospeda a réplica primária e atender aos pré-requisitos e restrições para bancos de dados de disponibilidade. Para obter mais informações, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Segurança  
+##  <a name="Security"></a> Segurança  
   
-###  <a name="Permissions"></a> Permissões  
+##  <a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- **Para adicionar um banco de dados a um grupo de disponibilidade**  
+##  <a name="SSMSProcedure"></a> Usar o SQL Server Management Studio  
+
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
   
@@ -73,11 +69,10 @@ ms.locfileid: "47857111"
   
          Depois que você usar a caixa de diálogo **Propriedades do Grupo de Disponibilidade** para adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- **Para adicionar um banco de dados a um grupo de disponibilidade**  
+##  <a name="TsqlProcedure"></a> Usar o Transact-SQL  
+
   
-1.  Conecte-se à instância de servidor que hospeda a instância do servidor que hospeda a réplica primária.  
-  
+1.  Conecte-se à instância de servidor que hospeda a instância do servidor que hospeda a réplica primária.    
 2.  Use a instrução [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , da seguinte maneira:  
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
@@ -95,8 +90,8 @@ ms.locfileid: "47857111"
   
 3.  Depois que você adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
- **Para adicionar um banco de dados a um grupo de disponibilidade**  
+##  <a name="PowerShellProcedure"></a> Usar o PowerShell  
+
   
 1.  Altere o diretório (**cd**) para a instância de servidor que hospeda a réplica primária.  
   

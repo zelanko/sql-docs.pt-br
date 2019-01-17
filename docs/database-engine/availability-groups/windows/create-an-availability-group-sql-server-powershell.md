@@ -1,6 +1,7 @@
 ---
-title: Criar um grupo de disponibilidade (SQL Server PowerShell) | Microsoft Docs
-ms.custom: ''
+title: Criar um grupo de disponibilidade usando o PowerShell
+description: Etapas para criação de um grupo de disponibilidade Always On usando o PowerShell.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52b7ef84afca33d899cf74fafa7f6f7bd4dd34ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600686"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209975"
 ---
-# <a name="create-an-availability-group-sql-server-powershell"></a>Criar um Grupo de disponibilidade (SQL Server PowerShell)
+# <a name="create-an-always-on-availability-group-using-powershell"></a>Criar um grupo de disponibilidade Always On usando o PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Esse tópico descreve como usar os cmdlets do PowerShell para criar e configurar um grupo de disponibilidade AlwaysOn usando o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "51600686"
   
      [Para configurar e usar o provedor do SQL Server PowerShell](#PsProviderLinks)  
   
--   **Para criar e configurar um grupo de disponibilidade com:**  [Usando o PowerShell para criar e configurar um grupo de disponibilidade](#PowerShellProcedure)  
+-   **Para criar e configurar um grupo de disponibilidade usando:**  [Usando o PowerShell para criar e configurar um grupo de disponibilidade](#PowerShellProcedure)  
   
 -   **Exemplos:**  [Usando o PowerShell para criar um grupo de disponibilidade](#ExampleConfigureGroup)  
   
@@ -64,7 +65,7 @@ ms.locfileid: "51600686"
   
 |Tarefa|Cmdlets do PowerShell (se disponíveis) ou instrução Transact-SQL|Local de execução da tarefa**\***|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
-|Criar ponto de extremidade de espelhamento de banco de dados (uma vez por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|**New-SqlHadrEndPoint**|Executar em cada instância de servidor que não tem ponto de extremidade de espelhamento de banco de dados.<br /><br /> Observação: para alterar um ponto de extremidade de espelhamento de banco de dados existente, use **Set-SqlHadrEndpoint**.|  
+|Criar ponto de extremidade de espelhamento de banco de dados (uma vez por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|**New-SqlHadrEndPoint**|Executar em cada instância de servidor que não tem ponto de extremidade de espelhamento de banco de dados.<br /><br /> Observação: Para alterar um ponto de extremidade de espelhamento de banco de dados existente, use **Set-SqlHadrEndpoint**.|  
 |Criar grupo de disponibilidade|Primeiro, use o cmdlet **New-SqlAvailabilityReplica** com o parâmetro **-AsTemplate** para criar um objeto da réplica de disponibilidade na memória para cada uma das duas réplicas de disponibilidade que você pretende incluir no grupo de disponibilidade.<br /><br /> Em seguida, crie o grupo de disponibilidade usando o cmdlet **New-SqlAvailabilityGroup** e referenciando os objetos da réplica de disponibilidade.|Execute na instância de servidor que deve hospedar a réplica primária inicial.|  
 |Unir a réplica secundária ao grupo de disponibilidade|**Join-SqlAvailabilityGroup**|Execute em cada instância de servidor que hospeda uma réplica secundária.|  
 |Preparar os banco de dados secundários|**Backup-SqlDatabase** e **Restore-SqlDatabase**|Crie backups na instância de servidor que hospeda a réplica primária.<br /><br /> Restaure backups em cada instância de servidor que hospeda uma réplica secundária usando o parâmetro de restauração **NoRecovery** . Se os caminhos dos arquivos forem diferentes nos computadores que hospedam a réplica primária e a réplica secundária de destino, use também o parâmetro de restauração **RelocateFile** .|  
@@ -105,7 +106,7 @@ ms.locfileid: "51600686"
 > [!NOTE]  
 >  Se as contas de serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das instâncias do servidor forem executadas em diferentes contas de usuário de domínio, em cada instância do servidor, crie um logon para a outra instância do servidor e conceda a permissão CONNECT a esse logon para o ponto de extremidade de espelhamento do banco de dados local.  
   
-##  <a name="ExampleConfigureGroup"></a> Exemplo: usando o PowerShell para criar um grupo de disponibilidade  
+##  <a name="ExampleConfigureGroup"></a> Exemplo: Usando o PowerShell para criar um grupo de disponibilidade  
  O exemplo doe PowerShell a seguir cria e configura um grupo de disponibilidade simples denominado `MyAG` com duas réplicas de disponibilidade e um banco de dados de disponibilidade. O exemplo:  
   
 1.  Faz backup do `MyDatabase` e de seu log de transações.  
@@ -236,19 +237,19 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Blogs:**  
   
-     [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
   
      [Configurando o AlwaysOn com o SQL Server PowerShell](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/configuring-alwayson-with-sql-server-powershell/)  
   
-     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series, Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Série do Always On, codinome "Denali" do Microsoft SQL Server, parte 1: apresentando a próxima geração de solução de alta disponibilidade)  
   
-     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 2: Criando uma solução de alta disponibilidade de missão crítica usando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series, Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Série do Always On de codinome "Denali" do Microsoft SQL Server, parte 2: criando uma solução de alta disponibilidade crítica usando Always On)  
   
 -   **Whitepapers:**  
   

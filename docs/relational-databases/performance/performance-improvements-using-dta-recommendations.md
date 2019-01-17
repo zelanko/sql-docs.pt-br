@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545359"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369978"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Melhorias de desempenho usando recomendações do DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Para demonstrar os benefícios das recomendações do DTA no desempenho da carga
   
   1. **Somente columnstore**: crie apenas índices columnstore para todas as tabelas sem usar o DTA. 
   2. **DTA (somente rowstore)**: execute o DTA com a opção para recomendar índices somente rowstore.
-  3. **DTA (rowstore + columnstore)**: execute o DTA com a opção para recomendar índices columnstore e rowstore.  
+  3. **DTA (rowstore + columnstore)**: Execute o DTA com a opção de recomendar índices columnstore e rowstore.  
    
 Em cada caso, depois implementamos os índices recomendados. Relatamos o Tempo de CPU (em milissegundos) com a média calculada em várias execuções da consulta ou da carga de trabalho. A figura abaixo plota o tempo de CPU em milissegundos para cargas de trabalho entre dois bancos de dados de cliente diferentes. Observe que o eixo Y (Tempo de CPU) usa uma escala logarítmica.   
 

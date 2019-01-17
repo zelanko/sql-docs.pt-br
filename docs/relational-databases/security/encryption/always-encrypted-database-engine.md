@@ -17,19 +17,19 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675125"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203035"
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- O Always Encrypted é um recurso criado para proteger dados confidenciais, como números de cartão de crédito ou de identificação nacional (por exemplo, números de previdência social dos EUA), armazenados em bancos de dados do [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Always Encrypted permite que os clientes criptografem os dados confidenciais em aplicativos de cliente e nunca revelem as chaves de criptografia para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, o Sempre Criptografado fornece uma separação entre aqueles que possuem os dados (e podem exibi-lo) e aqueles que gerenciam os dados (mas que não devem ter acesso). Ao garantir que os administradores de banco de dados local, operadores de banco de dados em nuvem ou outros usuários com altos privilégios, mas não autorizados, não possam acessar os dados criptografados, o Sempre Criptografado permite que os clientes armazenem dados confidenciais com segurança fora de seu controle direto. Isso permite que as organizações criptografem dados em repouso e em uso para armazenamento no Azure, a fim de habilitar a delegação de administração de banco de dados local para terceiros, ou para reduzir os requisitos de espaço livre de segurança para sua própria equipe de DBA.  
+ O Always Encrypted é um recurso criado para proteger dados confidenciais, como números de cartão de crédito ou de identificação nacional (por exemplo, números de previdência social dos EUA), armazenados em bancos de dados do [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Always Encrypted permite que os clientes criptografem os dados confidenciais em aplicativos cliente e nunca revelem as chaves de criptografia para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, o Sempre Criptografado fornece uma separação entre aqueles que possuem os dados (e podem exibi-lo) e aqueles que gerenciam os dados (mas que não devem ter acesso). Ao garantir que os administradores de banco de dados local, operadores de banco de dados em nuvem ou outros usuários com altos privilégios, mas não autorizados, não possam acessar os dados criptografados, o Sempre Criptografado permite que os clientes armazenem dados confidenciais com segurança fora de seu controle direto. Isso permite que as organizações criptografem dados em repouso e em uso para armazenamento no Azure, a fim de habilitar a delegação de administração de banco de dados local para terceiros, ou para reduzir os requisitos de espaço livre de segurança para sua própria equipe de DBA.  
   
  O Sempre Criptografado torna a criptografia transparente para os aplicativos. Um driver habilitado para Sempre criptografado instalado no computador cliente realiza isso automaticamente criptografando e descriptografando dados confidenciais no aplicativo cliente. O driver criptografa as colunas de dados confidenciais antes de passar os dados para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]e reconfigura automaticamente as consultas para que a semântica do aplicativo seja preservada. Da mesma forma, o driver descriptografa de modo transparente os dados armazenados em colunas de banco de dados criptografado que estão contidos nos resultados da consulta.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "51675125"
  Um cliente tem um aplicativo cliente e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ambos sendo executados localmente na empresa. O cliente deseja contratar um fornecedor externo para administrar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para proteger os dados confidenciais armazenados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o cliente usa o Sempre Criptografado para garantir a separação de tarefas entre os administradores de banco de dados e os administradores de aplicativos. O cliente armazena valores de texto não criptografado de chaves do Sempre Criptografado em um repositório de chaves confiável que o aplicativo cliente pode acessar. Os administradores do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não têm acesso às chaves e, portanto, não são capazes de descriptografar dados confidenciais armazenados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Cliente local com dados no Azure  
- Um cliente tem um aplicativo local na empresa. O aplicativo opera com dados confidenciais armazenados em um banco de dados hospedado no Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em execução em uma máquina virtual no Microsoft Azure). O cliente usa o Always Encrypted e armazena as chaves do Always Encrypted em um repositório de chaves confiável hospedado localmente, a fim de garantir que os administradores de nuvem da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] não tenham acesso a dados confidenciais.  
+ Um cliente tem um aplicativo local na empresa. O aplicativo opera em dados confidenciais armazenados em um banco de dados hospedado no Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em execução em uma máquina virtual no Microsoft Azure). O cliente usa o Always Encrypted e armazena as chaves do Always Encrypted em um repositório de chaves confiável hospedado localmente, a fim de garantir que os administradores de nuvem da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] não tenham acesso a dados confidenciais.  
   
 ### <a name="client-and-data-in-azure"></a>Cliente e dados no Azure  
  Um cliente tem um aplicativo cliente, hospedado no Microsoft Azure (por exemplo, em uma função de trabalho ou uma função web), que opera em dados confidenciais armazenados em um banco de dados hospedado no Azure (Banco de Dados SQL ou SQL Server em execução em uma máquina virtual no Microsoft Azure). Embora o Always Encrypted não forneça isolamento completo dos dados dos administradores de nuvem, como ambos os dados e chaves ficam expostos para os administradores da nuvem da plataforma de hospedagem da camada do cliente, o cliente ainda se beneficia com a redução da área de superfície de ataque à segurança (os dados são Always Encrypted no banco de dados).  
@@ -104,10 +104,10 @@ Para obter detalhes sobre os algoritmos de criptografia Always Encrypted, consul
 
 |Tarefa|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Provisionamento de chaves mestras de coluna, chaves de criptografia de coluna e chaves de criptografia de coluna criptografada com suas chaves mestras de coluna correspondentes.|Sim|Sim|não|
+|Provisionamento de chaves mestras de coluna, chaves de criptografia de coluna e chaves de criptografia de coluna criptografada com suas chaves mestras de coluna correspondentes.|Sim|Sim|Não|
 |Criação de metadados de chave no banco de dados.|Sim|Sim|Sim|
 |Criando novas tabelas com colunas criptografadas|Sim|Sim|Sim|
-|Criptografar os dados existentes nas colunas do banco de dados selecionado|Sim|Sim|não|
+|Criptografar os dados existentes nas colunas do banco de dados selecionado|Sim|Sim|Não|
 
 > [!NOTE]
 > Lembre-se de executar as ferramentas de provisionamento de chaves ou de criptografia de dados em um ambiente seguro e em um computador diferente daquele que hospeda o banco de dados. Caso contrário, dados confidenciais ou as chaves podem vazar no ambiente de servidor, reduzindo os benefícios de usar o Always Encrypted.  

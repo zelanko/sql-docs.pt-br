@@ -1,6 +1,7 @@
 ---
-title: Modos de disponibilidade (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Diferenças entre os modos de disponibilidade de um grupo de disponibilidade
+description: Uma descrição dos diferentes modos de disponibilidade de um Grupo de Disponibilidade AlwaysOn.
+ms.custom: seodec18
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544036"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53206365"
 ---
-# <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidade (grupos de disponibilidade AlwaysOn)
+# <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Diferenças entre os modos de disponibilidade de um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   No [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o *modo de disponibilidade* é uma propriedade de réplica que determina se uma determinada réplica de disponibilidade pode ser executada em modo de confirmação síncrona. Para cada réplica de disponibilidade, o modo de disponibilidade deve ser configurado para o modo de confirmação síncrona, modo de confirmação assíncrona ou modo somente configuração.  Se a réplica primária for configurada para o *modo de confirmação assíncrona*, ela não aguardará qualquer réplica secundária gravar registros de log de transação de entrada no disco (para *proteger o log*). Se uma determinada réplica secundária for configurada para modo de confirmação assíncrona, a réplica primária não aguardará que essa réplica secundária proteja o log. Se a réplica primária e uma determinada réplica secundária forem ambas configuradas para *modo de confirmação síncrona*, a réplica primária aguardará que a réplica secundária confirme que protegeu o log (a menos que a réplica secundária não execute ping na réplica primária dentro do *período do tempo limite de sessão*dela). 
@@ -32,18 +33,6 @@ ms.locfileid: "52544036"
 
 > [!NOTE]  
 >  Se período do tempo limite de sessão primário for excedido por uma réplica secundária, a réplica primária deslocará temporariamente em modo de confirmação assíncrona para a réplica secundária. Quando a réplica secundária se reconecta com a réplica primária, elas retomam o modo de confirmação síncrona.  
-  
- **Neste tópico:**  
-  
--   [Modos de disponibilidade com suporte](#SupportedAvModes)  
-  
--   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
-  
--   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> Modos de disponibilidade com suporte  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é compatível com três modos de disponibilidade: modo de confirmação assíncrona, modo de confirmação síncrona e apenas configuração da seguinte maneira:  
@@ -68,8 +57,8 @@ ms.locfileid: "52544036"
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 e 03|04|Sim|  
 |02|01|01 e 03|04|Sim|  
-|03||01 e 02|04|não|  
-|04|||01, 02 e 03|não|  
+|03||01 e 02|04|Não|  
+|04|||01, 02 e 03|Não|  
   
  Normalmente, o Nó 04 como uma réplica de confirmação assíncrona é implantado em um site de recuperação de desastre. A permanência dos Nós 01, 02 e 03 no modo de confirmação assíncrona depois do failover no Nó 04 impede a degradação de desempenho potencial em seu grupo de disponibilidade devido à alta latência da rede entre os dois sites.  
   
@@ -185,7 +174,7 @@ Para obter mais informações sobre como investigar a latência de restauração
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: O blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

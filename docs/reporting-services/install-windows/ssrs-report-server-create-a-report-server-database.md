@@ -1,17 +1,19 @@
 ---
 title: Criar um banco de dados de servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.date: 10/24/2018
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.custom: seodec18
+ms.date: 12/12/2018
+ms.openlocfilehash: a893b213b5678fa1c5cea7f4735da239bdf01048
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712217"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328736"
 ---
 # <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório
 
@@ -23,49 +25,51 @@ ms.locfileid: "52712217"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Modo do SharePoint** inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e os nomes de bancos de dados por padrão incluem uma interface gráfica de usuário que representa o aplicativo de serviço. A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do SharePoint:
 
--   ReportingService_90a9f37075544f22953c4a62e4a9f370  
+- ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
--   ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
+- ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
   
--   ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
+- ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
   
 > [!IMPORTANT]  
->  Não grave aplicativos que executem consultas em relação ao banco de dados do servidor de relatório. O banco de dados do servidor de relatório não é um esquema público. A estrutura da tabela pode ser alterada de uma versão para a próxima. Se você gravar um aplicativo que requeira acesso ao banco de dados do servidor de relatório, sempre use as APIs do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para acessar o banco de dados do servidor de relatório.  
->   
->  A exceção a isto são as exibições do log de execução. Para obter mais informações, veja [ExecutionLog do Servidor de Relatório e a exibição do ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
+> Não grave aplicativos que executem consultas em relação ao banco de dados do servidor de relatório. O banco de dados do servidor de relatório não é um esquema público. A estrutura da tabela pode ser alterada de uma versão para a próxima. Se você gravar um aplicativo que requeira acesso ao banco de dados do servidor de relatório, sempre use as APIs do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para acessar o banco de dados do servidor de relatório.  
+> A exceção a isto são as exibições do log de execução. Para obter mais informações, veja [ExecutionLog do Servidor de Relatório e a exibição do ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
-## <a name="ways-to-create-the-report-server-database"></a>Maneiras para criar o banco de dados do servidor de relatório  
- **Modo Nativo:** você pode criar o banco de dados do servidor de relatório do modo Nativo das seguintes maneiras:  
+## <a name="ways-to-create-the-report-server-database"></a>Maneiras para criar o banco de dados do servidor de relatório
+
+ **Modo nativo:** você pode criar o banco de dados do servidor de relatório do modo Nativo das seguintes maneiras:  
   
--   Automaticamente: use o Assistente para Configuração do SQL Server, se você escolher a opção de instalação de configuração padrão. No Assistente de Instalação do SQL Server, é a opção **Instalar e configurar** na página Opções de Instalação do Servidor de Relatório. Caso escolha a opção **Instalar somente** , você deverá usar o Reporting Services Configuration Manager para criar o banco de dados.  
+- Automaticamente: use o Assistente de instalação do SQL Server se você escolher a opção de instalação de configuração padrão. No Assistente de Instalação do SQL Server, é a opção **Instalar e configurar** na página Opções de Instalação do Servidor de Relatório. Caso escolha a opção **Instalar somente** , você deverá usar o Reporting Services Configuration Manager para criar o banco de dados.  
   
--   Manualmente: use a ferramenta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Você deve criar manualmente o banco de dados do servidor de relatório se você estiver usando um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedar o banco de dados. Para obter mais informações, veja [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+- Manualmente: use o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager. Você deve criar manualmente o banco de dados do servidor de relatório se você estiver usando um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedar o banco de dados. Para obter mais informações, consulte [Criar um banco de dados de servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- **Modo do SharePoint:** a página de opções de Instalação do Servidor de Relatório apenas tem uma opção **Instalar somente** para o modo do SharePoint. Esta opção instala todos os arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A próxima etapa é criar pelo menos um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de uma das seguintes maneiras:  
+ **Modo do SharePoint:** a página Opções de Instalação do Servidor de Relatório tem apenas uma opção para o modo do SharePoint, **Somente Instalar**. Esta opção instala todos os arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A próxima etapa é criar pelo menos um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de uma das seguintes maneiras:  
   
--   Use a Administração Central do SharePoint para criar um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, confira a seção "Aplicativo de serviço" de [Etapa 3: Criar um aplicativo de serviço do Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+- Use a Administração Central do SharePoint para criar um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, confira a seção "Aplicativo de serviço" da [Etapa 3: Criar um aplicativo de serviço do Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
--   Use os cmdlets do PowerShell do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar um aplicativo de serviço e os bancos de dados do servidor de relatório. Para obter mais informações, confira a amostra da criação de aplicativos de serviço no tópico [Cmdlets do PowerShell para Modo do SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+- Use os cmdlets do PowerShell do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar um aplicativo de serviço e os bancos de dados do servidor de relatório. Para obter mais informações, confira a amostra da criação de aplicativos de serviço no tópico [Cmdlets do PowerShell para Modo do SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## <a name="database-server-version-requirements"></a>Requisitos de versão do servidor de banco de dados  
+## <a name="database-server-version-requirements"></a>Requisitos de versão do servidor de banco de dados
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado para hospedar os bancos de dados de servidor de relatório. A instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode ser local ou remota. Veja a seguir as versões com suporte do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que podem ser usadas para hospedar os bancos de dados do servidor de relatório:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
  A criação do banco de dados do servidor de relatório em um computador remoto requer que você configure a conexão para usar uma conta de usuário de domínio ou uma conta de serviço que tenha acesso à rede. Se você optar por usar uma instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere cuidadosamente quais credenciais o servidor de relatório deve usar para conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
->  O Servidor de Relatório e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório podem estar em domínios diferentes. Para implantação na Internet, é uma prática comum usar um servidor que esteja atrás de um firewall. Se estiver configurando um servidor de relatório para acesso à Internet, use as credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está atrás do firewall e use IPSEC para proteger a conexão.  
+> O Servidor de Relatório e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório podem estar em domínios diferentes. Para implantação na Internet, é uma prática comum usar um servidor que esteja atrás de um firewall. Se estiver configurando um servidor de relatório para acesso à Internet, use as credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está atrás do firewall e use IPSEC para proteger a conexão.  
   
-## <a name="database-server-edition-requirements"></a>Requisitos de edição do servidor de banco de dados  
+## <a name="database-server-edition-requirements"></a>Requisitos de edição do servidor de banco de dados
+
  Ao criar um banco de dados de servidor de relatório, esteja ciente de que nem todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se usadas para hospedar o banco de dados. Para obter mais informações, confira [Requisitos das edições do servidor de banco de dados do servidor de relatório](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) em [Recursos do Reporting Services compatíveis com as edições do SQL Server 2017](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Próximas etapas

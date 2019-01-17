@@ -1,7 +1,7 @@
 ---
-title: Eventos estendidos | Microsoft Docs
+title: Eventos Estendidos – SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/23/2016
+ms.date: 12/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,24 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 972e420f75db790321bc8c8eee595f1932e4f451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662415"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531042"
 ---
 # <a name="extended-events"></a>Eventos estendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Os Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm uma arquitetura altamente escalonável e configurável que permite aos usuários coletar o máximo ou o mínimo de informações, conforme necessário, para solucionar ou identificar um problema.  
 
-Você pode encontrar mais informações sobre os Eventos Estendidos em:
+Você pode encontrar mais informações sobre Eventos Estendidos em [Início Rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-- [Início Rápido: Eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- Blogs: [SQL Server Extended Events](https://blogs.msdn.com/b/extended_events/)
 
-  
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Benefícios de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa poucos recursos de desempenho. Os Eventos Estendidos fornecem duas interfaces gráficas do usuário (**Assistente de Nova Sessão** e **Nova Sessão**) para criar, modificar, exibir e analisar os dados da sessão.  
   

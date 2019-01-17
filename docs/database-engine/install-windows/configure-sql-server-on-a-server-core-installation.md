@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409043"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209060"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar o SQL Server em uma instalação do Server Core
 
@@ -40,7 +40,7 @@ Para obter mais informações sobre como configurar e gerenciar remotamente uma 
   
 - [Instalar funções de servidor e recursos em um servidor Windows Server 2012 R2 do Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Gerenciando uma instalação do Server Core: Visão geral](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Gerenciando uma instalação Server Core: Visão geral](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Administrando uma instalação do Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -120,7 +120,7 @@ Estas etapas devem ser realizadas em um computador que executa a edição de cli
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager salva suas alterações. Em seguida, você deve reiniciar manualmente o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso permite escolher a hora de reinicialização mais adequada de acordo com as necessidades da sua empresa. Quando o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado, AlwaysOn será habilitado e a propriedade de servidor IsHadrEnabled será definida como 1.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Você deve ter direitos de usuário apropriados ou deve ter a devida autoridade delegada no computador de destino para se conectar a esse computador.  
 > -   O nome do computador gerenciado aparece entre parênteses ao lado de Gerenciamento do Computador na árvore de console.  
   
@@ -226,7 +226,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Usar ferramentas de solução de problemas  
  É possível usar o [Utilitário SQLdiag](../../tools/sqldiag-utility.md) para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O SQLdiag foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Suporte Técnico da Microsoft.  
   
- Você pode iniciar o utilitário no prompt de comando do administrador no Server Core, usando a sintaxe especificada no artigo: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Inicie o utilitário no prompt de comando do administrador no Server Core, usando a sintaxe especificada no artigo: [Utilitário SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalar o SQL Server no Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

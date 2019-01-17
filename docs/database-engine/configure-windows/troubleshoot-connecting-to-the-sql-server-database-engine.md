@@ -14,27 +14,27 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410903"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531071"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Esta é uma lista extensa de técnicas de solução de problemas a serem usadas quando você não conseguir se conectar ao Mecanismo de Banco de Dados do SQL Server. Essas etapas não estão na ordem dos problemas mais prováveis, que você provavelmente já tentou. Essas etapas estão na ordem dos problemas mais básicos para os mais complexos. Essas etapas presumem que você está se conectando ao SQL Server de outro computador usando o protocolo TCP/IP, que é a situação mais comum. Essas etapas foram escritas para SQL Server 2016 com o SQL Server e os aplicativos clientes em execução no Windows 10, porém as etapas geralmente se aplicam a outras versões do SQL Server e outros sistemas operacionais com apenas ligeiras modificações.
 
-Essas instruções são especialmente úteis ao solucionar o erro "**Conectar ao Servidor**" erro, que pode ser o Erro Número: 11001 (ou 53), Severidade: 20, Estado: 0, bem como mensagens de erro como:
+Estas instruções são especialmente úteis ao realizar a solução de problemas do erro "**Conectar-se ao Servidor**", que pode ser o Número do Erro: 11001 (ou 53), gravidade: 20, Estado: 0 e mensagens de erro como:
 
 *   “Ocorreu um erro relacionado à rede ou específico da instância ao estabelecer uma conexão com o SQL Server. O servidor não foi localizado ou não estava acessível. Verifique se o nome de instância está correto e se o SQL Server está configurado para permitir conexões remotas. " 
 
-*   "(provedor: Provedor de Pipes Nomeados, erro: 40 – não foi possível abrir uma conexão com o SQL Server) (Microsoft SQL Server, erro: 53)" ou "(provedor: Provedor TCP, erro: 0 - Nenhum host desse tipo é conhecido.) (Microsoft SQL Server, Erro: 11001) " 
+*   "(provedor: Provedor de Pipes Nomeados, erro: 40 – Não foi possível abrir uma conexão com o SQL Server) (Microsoft SQL Server, Erro: 53)" ou "(provedor: Provedor TCP, erro: 0 – Nenhum host desse tipo é conhecido.) (Microsoft SQL Server, Erro: 11001)" 
 
 Esse erro geralmente significa que o computador do SQL Server não pode ser encontrado ou o número da porta TCP é desconhecido, não é o número de porta correto ou está bloqueado por um firewall.
 
->  [!TIP]
+> [!TIP]
 >  Uma página interativa de solução de problemas está disponível nos Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] em [Resolvendo erros de conectividade com o SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server).
 
 ### <a name="not-included"></a>Não incluído
@@ -64,8 +64,8 @@ Primeiro você deve coletar informações básicas sobre o mecanismo de banco de
     2.  No Visualizador de Log, clique no botão **Filtro** na barra de ferramentas. Na caixa **Mensagem contém o texto** , digite **o servidor está escutando em**, clique em **Aplicar filtro**e em **OK**.
     3.  Uma mensagem semelhante a **O servidor está escutando em [“any” \<ipv4> 1433]** deve estar listada. Esta mensagem indica que esta instância do SQL Server está escutando em todos os endereços IP deste computador (para IP versão 4) e está escutando a porta TCP 1433. (A porta TCP 1433 geralmente é usada pelo Mecanismo de Banco de Dados. Somente uma instância do SQL Server pode usar uma porta, portanto, se houver mais de uma instância do SQL Server instalado, algumas instâncias devem usar outros números de porta.) Anote o número da porta usado pela instância do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] à qual você está tentando se conectar. 
 
-    >    [!NOTE] 
-    >    O endereço IP 127.0.0.1 provavelmente está listado. Ele é chamado de endereço de adaptador de loopback e só pode ser conectado de processos no mesmo computador. Pode ser útil para solucionar problemas, mas você não pode usá-lo para se conectar de outro computador.
+    > [!NOTE] 
+    > O endereço IP 127.0.0.1 provavelmente está listado. Ele é chamado de endereço de adaptador de loopback e só pode ser conectado de processos no mesmo computador. Pode ser útil para solucionar problemas, mas você não pode usá-lo para se conectar de outro computador.
 
 ## <a name="enable-protocols"></a>Habilitar Protocolos
 
@@ -98,20 +98,20 @@ Antes de solucionar um problema de conexão de outro computador, primeiro teste 
 |Instância padrão|O nome do computador|ACCNT27|
 |Instância nomeada|O nome do computador\instância|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  Ao se conectar a um SQL Server de um aplicativo cliente no mesmo computador, é usado o protocolo de memória compartilhada. A memória compartilhada é um tipo de pipe, por isso às vezes são encontrados erros relacionados a pipes.
 
 Se você receber um erro neste ponto, deverá resolvê-lo antes de continuar. Há muitas possibilidades que podem representar um problema. Seu logon pode não estar autorizado a se conectar. O banco de dados padrão pode estar ausente.
 
->    [!NOTE] 
+> [!NOTE]
 >    Algumas mensagens de erro passadas para o cliente intencionalmente não fornecem informações suficientes para solucionar o problema. Esse é um recurso de segurança para evitar o fornecimento de informações sobre o SQL Server a um invasor. Para exibir as informações completas sobre o erro, examine o log de erros do SQL Server. Os detalhes são fornecidos abaixo. Se você estiver recebendo o erro **18456 Logon falhou para usuário**, o tópico dos Manuais Online [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contém informações adicionais sobre códigos de erro. E o blog de Aaron Bertrand tem uma lista abrangente dos códigos de erro em [Solucionando o erro 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Você pode exibir o log de erros com o SSMS (se puder se conectar), na seção Gerenciamento do Pesquisador de Objetos. Caso contrário, você pode exibir o log de erros com o programa do Bloco de Notas do Windows. O local padrão varia de acordo com a versão e pode ser alterado durante a instalação. O local padrão do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] é `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Se você puder se conectar usando memória compartilhada, teste a conexão usando TCP. Você pode forçar uma conexão TCP especificando **tcp:** antes do nome. Por exemplo:
 
 |Conectando a:|Tipo:|Exemplo:|
 |-----------------|---------------|-----------------|
-|Instância padrão|tcp: o nome do computador|tcp:ACCNT27|
-|Instância nomeada|tcp: o nome do computador/instância|tcp:ACCNT27\PAYROLL|
+|Instância padrão|tcp: O nome do computador|tcp:ACCNT27|
+|Instância nomeada|tcp: O nome do computador/nome da instância|tcp:ACCNT27\PAYROLL|
   
 Se você puder se conectar à memória compartilhada, mas não ao TCP, você deve corrigir o problema do TCP. O problema mais provável é que o TCP não está habilitado. Para habilitar o TCP, consulte as etapas para **Habilitar protocolos** acima.
 
@@ -144,7 +144,7 @@ Ambos os problemas são relacionados ao serviço de Navegador do SQL Server, que
   * Iniciar o serviço de Navegador do SQL Server. Volte para a seção **Coletando informações sobre a instância do SQL Server**, seção 1.d.
   * O serviço de Navegador do SQL Server está sendo bloqueada pelo firewall. Abra a porta UDP 1434 no firewall. Volte para a seção **Abrir uma porta no Firewall**. (Verifique se você está abrindo uma porta UDP, não uma porta TCP. Elas são diferentes.)
   * As informações da porta UDP 1434 estão sendo bloqueadas por um roteador. A comunicação UDP (protocolo UDP) não foi projetada para passar por roteadores. Isso impede que a rede seja preenchida por tráfego de baixa prioridade. É possível configurar o roteador para encaminhar tráfego UDP ou você pode optar por sempre fornecer o número da porta ao conectar.
-  * Se o computador cliente estiver usando o Windows 7 ou o Windows Server 2008 (ou um sistema operacional mais recente), o tráfego UDP pode ser descartado pelo sistema operacional do cliente porque a resposta do servidor é retornada de um endereço IP diferente daquele foi consultado. Esse é um bloqueio do recurso de segurança "mapeamento de origem flexível". Para obter mais informações, consulte a seção **Vários endereços IP do servidor** do tópico dos Manuais Online [Solução de problemas: tempo limite excedido](https://msdn.microsoft.com/library/ms190181.aspx). Este é um artigo do SQL Server 2008 R2, mas as entidades ainda se aplicam. É possível configurar o cliente para usar o endereço IP correto ou você pode optar por sempre fornecer o número da porta ao conectar.
+  * Se o computador cliente estiver usando o Windows 7 ou o Windows Server 2008 (ou um sistema operacional mais recente), o tráfego UDP pode ser descartado pelo sistema operacional do cliente porque a resposta do servidor é retornada de um endereço IP diferente daquele foi consultado. Esse é um bloqueio do recurso de segurança "mapeamento de origem flexível". Para obter mais informações, confira a seção **Vários endereços IP do servidor** do tópico dos Manuais Online [Solução de problemas: tempo limite esgotado](https://msdn.microsoft.com/library/ms190181.aspx). Este é um artigo do SQL Server 2008 R2, mas as entidades ainda se aplicam. É possível configurar o cliente para usar o endereço IP correto ou você pode optar por sempre fornecer o número da porta ao conectar.
      
 3. Depois que você se conectar usando o endereço IP (ou o endereço IP e o nome de instância para uma instância nomeada), tente conectar usando o nome do computador (ou o nome do computador e o nome de instância para uma instância nomeada). Coloque `tcp:` na frente do nome do computador para forçar uma conexão TCP/IP. Por exemplo, para a instância padrão em um computador chamada `ACCNT27`, use `tcp:ACCNT27` . Para uma instância nomeada chamada `PAYROLL`no computador em questão, use `tcp:ACCNT27\PAYROLL` . Se você puder se conectar usando o endereço IP, mas não usando o nome do computador, isso significa que ocorreu um problema de resolução de nome. Volte para a seção **Testar conectividade TCP/IP**, a seção 4.
 

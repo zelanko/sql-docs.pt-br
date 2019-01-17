@@ -1,7 +1,7 @@
 ---
 title: Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403551"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53329006"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) 
 
@@ -144,8 +144,8 @@ Remove a descrição de arquivo lógico de uma instância do [!INCLUDE[ssNoVersi
 *logical_file_name*  
 É o nome lógico usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao referenciar o arquivo.  
   
-> [!WARNING]  
-> A remoção de um arquivo de banco de dados que tem backups de `FILE_SNAPSHOT` associados a ele terá êxito, mas os instantâneos associados não serão excluídos para evitar a anulação dos backups que referenciam o arquivo de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> [!WARNING]
+> A remoção de um arquivo de banco de dados que tem backups de `FILE_SNAPSHOT` associados a ele terá êxito, mas os instantâneos associados não serão excluídos para evitar a anulação dos backups que referenciam o arquivo de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Especifica o arquivo que deve ser modificado. Apenas uma propriedade \<filespec> pode ser alterada por vez. NAME sempre deve ser especificado em \<filespec> para identificar o arquivo a ser modificado. Se SIZE for especificado, o novo tamanho deverá ser maior que o tamanho do arquivo atual.  
@@ -294,7 +294,7 @@ Especifica que o grupo de arquivos armazena BLOBs (objetos binários grandes) FI
   
 CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Especifica que o grupo de arquivos armazena dados com otimização de memória no sistema de arquivos. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Apenas um grupo de arquivos `MEMORY_OPTIMIZED_DATA` é permitido por banco de dados. Para criar tabelas com otimização de memória, o grupo de arquivos não pode estar vazio. Deve haver pelo menos um arquivo. *filegroup_name* se refere a um caminho. O caminho até a última pasta deve existir e a última pasta não deve existir.  
  
@@ -316,13 +316,13 @@ NAME = *new_filegroup_name*
 Altera o nome do grupo de arquivos para o *new_filegroup_name*.  
   
 AUTOGROW_SINGLE_FILE  
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Quando um arquivo no grupo de arquivos atinge o limite de aumento automático, apenas esse arquivo aumenta. Esse é o padrão.  
   
 AUTOGROW_ALL_FILES  
 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Quando um arquivo no grupo de arquivos atingir o limite de crescimento automático, todos os arquivos no grupo de arquivos crescerão. 
 
@@ -341,15 +341,15 @@ Como um banco de dados somente leitura não permite modificações de dados:
 - Não é possível reduzir o banco de dados.  
 - Não ocorrem bloqueios em bancos de dados somente leitura. Isso pode acelerar o desempenho das consultas.  
   
-> [!NOTE]  
+> [!NOTE]
 > A palavra-chave `READONLY` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READONLY` em novos projetos de desenvolvimento e planeje modificar os aplicativos que utilizam `READONLY` atualmente. Em vez disso, use `READ_ONLY` .  
   
 READ_WRITE | READWRITE  
 Especifica que o grupo é READ_WRITE. As atualizações são habilitadas para os objetos no grupo de arquivos. Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 > A palavra-chave `READWRITE` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente usam `READWRITE` para usar `READ_WRITE` em seu lugar.  
-  
+> 
 > [!TIP]
 > O status dessas opções pode ser determinado examinando a coluna **is_read_only** na exibição do catálogo **sys.databases** ou a propriedade **Updateability** da função `DATABASEPROPERTYEX`.  
   
@@ -887,13 +887,13 @@ Como um banco de dados somente leitura não permite modificações de dados:
 - Não é possível reduzir o banco de dados.  
 - Não ocorrem bloqueios em bancos de dados somente leitura. Isso pode acelerar o desempenho das consultas.  
   
-> [!NOTE]  
+> [!NOTE]
 >  A palavra-chave READONLY será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar READONLY em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam atualmente. Em vez disso, use READ_ONLY.  
   
 READ_WRITE | READWRITE  
 Especifica que o grupo é READ_WRITE. As atualizações são habilitadas para os objetos no grupo de arquivos. Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 >  A palavra-chave `READWRITE` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente usam `READWRITE` para usar `READ_WRITE` em seu lugar.  
   
 O status dessas opções pode ser determinado examinando a coluna **is_read_only** na exibição do catálogo **sys.databases** ou a propriedade **Updateability** da função `DATABASEPROPERTYEX`.  
@@ -1092,5 +1092,6 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[O grupo de arquivos com otimização de memória](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+[O grupo de arquivos com otimização de memória](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 
+::: moniker-end

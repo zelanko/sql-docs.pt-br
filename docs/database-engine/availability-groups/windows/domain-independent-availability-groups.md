@@ -1,6 +1,7 @@
 ---
-title: Grupos de disponibilidade independentes de domínio (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Criar um grupo de disponibilidade independente de domínio
+description: Etapas para criação de um grupo de disponibilidade que usa um Cluster do Grupo de Trabalho. Isso permite que o SQL Server 2016 (e posterior) implante um grupo de disponibilidade Always On em um WSFC que não exige o Active Directory Domain Services e, portanto, não exige que cada servidor faça parte do mesmo domínio.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415073"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211905"
 ---
-# <a name="domain-independent-availability-groups"></a>Grupos de disponibilidade independentes de domínio
+# <a name="create-a-domain-independent-availability-group"></a>Criar um grupo de disponibilidade independente de domínio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Os AGs (Grupos de Disponibilidade) AlwaysOn exigem um WSFC (cluster de failover do Windows Server) subjacente. A implantação de um WSFC por meio do Windows Server 2012 R2 sempre exigiu que os servidores que fazem parte de um WSFC, também conhecidos como nós, sejam ingressados no mesmo domínio. Para obter mais informações sobre o AD DS (Active Directory Domain Services), consulte [aqui](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).

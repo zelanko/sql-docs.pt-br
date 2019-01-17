@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 884474e5fd76700805125bbf0cf2f8c8238c0878
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 150fb267cac6f8ff02ab983d6e76744354e31c9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703214"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207535"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ DROP DATABASE database_name [;]
 >  A remoção de um banco de dados que tem backups de FILE_SNAPSHOT associados a ele terá êxito, mas os arquivos de banco de dados que têm instantâneos associados não serão excluídos, para evitar a anulação dos backups que referenciam esses arquivos de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- O descarte de um instantâneo de banco de dados o exclui de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos físicos esparsos do Sistema de Arquivos NTFS utilizados pelo instantâneo. Para obter informações sobre como usar arquivos esparsos por instantâneos de banco de dados, consulte [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). O cancelamento de um instantâneo do banco de dados limpa o cache de plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+ O descarte de um instantâneo de banco de dados o exclui de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos físicos esparsos do Sistema de Arquivos NTFS utilizados pelo instantâneo. Para obter informações sobre como usar arquivos esparsos por instantâneos de banco de dados, consulte [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). O cancelamento de um instantâneo do banco de dados limpa o cache de plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
 ## <a name="interoperability"></a>Interoperabilidade  
   
@@ -89,7 +89,7 @@ DROP DATABASE database_name [;]
  Se o banco de dados estiver envolvido em envio de logs, remova o envio do log antes de cancelá-lo. Para obter mais informações, consulte [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Os [bancos de dados do sistema](../../relational-databases/databases/system-databases.md) não podem ser removidos.  
   
  Uma instrução DROP DATABASE deve ser executada no modo de confirmação automática e não é permitida uma transação explícita ou implícita. O modo de confirmação automática é o modo padrão de gerenciamento de transações.  
@@ -134,7 +134,7 @@ DROP DATABASE database_name [;]
 DROP DATABASE Sales;  
 ```  
   
-### <a name="b-dropping-multiple-databases"></a>B. Removendo vários bancos de dados  
+### <a name="b-dropping-multiple-databases"></a>b. Removendo vários bancos de dados  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

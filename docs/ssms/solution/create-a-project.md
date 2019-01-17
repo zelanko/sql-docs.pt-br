@@ -7,27 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd6c508700e22a7ef999e3511610093230e7b613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327996"
 ---
 # <a name="create-a-project"></a>Criar um projeto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Você pode criar um ou mais projetos dentro de uma solução existente.  
   
-### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>Para criar um novo projeto e adicioná-lo a uma solução  
+## <a name="create-a-new-project-and-add-it-to-a-solution"></a>Criar um projeto e adicioná-lo a uma solução  
   
 1.  No Gerenciador de Soluções, selecione a solução.  
   
@@ -96,9 +93,10 @@ Você pode criar um ou mais projetos dentro de uma solução existente.
   
 4.  Clique em **OK**.  
   
-Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão para pastas de projeto de script é: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
+Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão das pastas do projeto de script é: C:\Documents and Settings\\*username*\Meus Documentos\SQL Server Management Studio\Projetos\\.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
+
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Adicionar um projeto existente a uma solução](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Adicionar novos itens a um projeto](../../ssms/solution/add-new-items-to-a-project.md)  
@@ -106,4 +104,3 @@ Você pode definir um nome para o projeto de script, mas os nomes de pastas são
 [Alterar o local padrão dos projetos](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Remover ou excluir um item ou projeto](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Excluir uma solução](../../ssms/solution/delete-a-solution.md)  
-  

@@ -20,12 +20,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f20b2f1b29c6ba175237e2e4f47cb5cf6fa0a610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066bd086fcbe9b69cc49821651302cd2102cd671
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771824"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214085"
 ---
 # <a name="full-database-backups-sql-server"></a>Backups de bancos de dados completos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47771824"
   
  ![Mostra a exposição da perda de trabalho entre backups de banco de dados](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Mostra a exposição da perda de trabalho entre backups de banco de dados")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  O exemplo a seguir mostra como criar um backup de banco de dados completo usando WITH FORMAT para substituir qualquer backup existente e criar um novo conjunto de mídias.  
   
 ```  
@@ -70,7 +70,7 @@ GO
   
  Para obter informações sobre como criar backups de logs, veja [Backups do log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  O exemplo a seguir mostra como criar um backup de banco de dados completo usando WITH FORMAT para substituir qualquer backup existente e criar um novo conjunto de mídias. Assim, o exemplo faz o backup do log de transações. Em uma situação da vida real, você teria de executar uma série de backups regulares de log. Para esse exemplo, o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] deve ser definido para usar o modelo de recuperação completa.  
   
 ```  

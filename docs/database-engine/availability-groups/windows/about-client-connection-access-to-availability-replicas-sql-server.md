@@ -1,6 +1,7 @@
 ---
-title: Sobre o acesso de conexão de cliente a réplicas de disponibilidade (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Tipos de conexões de cliente com as réplicas em um grupo de disponibilidade
+description: Saiba mais sobre os diferentes tipos de conexões que os clientes podem fazer com a réplica primária ou secundária de um grupo de disponibilidade Always On no SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602666"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206485"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Sobre Acesso de conexão de cliente a réplicas de disponibilidade (SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Tipos de conexões de cliente com as réplicas em um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Em um grupo de disponibilidade AlwaysOn, você pode configurar uma ou mais réplicas de disponibilidade para permitir conexões somente leitura quando elas estiverem sendo executadas na função secundária (ou seja, executando como uma réplica secundária). Você também pode configurar cada réplica de disponibilidade para permitir ou excluir conexões somente leitura quando ela estiver sendo executada na função primária (ou seja, em execução como uma réplica primária).  
   
@@ -34,18 +35,6 @@ ms.locfileid: "51602666"
   
 > [!NOTE]  
 >  Para obter informações sobre o ouvinte do grupo de disponibilidade, que manipula as solicitações de conexão do cliente, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
-  
- **Neste tópico:**  
-  
--   [Tipos de acesso de conexão com suporte da função secundária](#ConnectAccessForSecondary)  
-  
--   [Tipos de acesso de conexão com suporte da função primária](#ConnectAccessForPrimary)  
-  
--   [Como a configuração de acesso de conectividade afeta a conectividade de clientes](#HowConnectionAccessAffectsConnectivity)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> Tipos de acesso de conexão com suporte da função secundária  
  A função secundária dá suporte a três alternativas para conexões de cliente, da seguinte maneira:  
@@ -121,7 +110,7 @@ ms.locfileid: "51602666"
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

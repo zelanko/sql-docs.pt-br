@@ -1,6 +1,7 @@
 ---
-title: Tempo limite de verificação de integridade de concessão do Grupo de Disponibilidade do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Mecânica do tempo limite de verificação da integridade, da concessão e do grupo de disponibilidade
+description: Mecânica e diretrizes para os tempos de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn.
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393979"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209075"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Mecânica e diretrizes de tempos limite de concessão, de cluster e de verificação de integridade 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mecânica e diretrizes para os tempos limite de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn 
 
 Diferenças em configurações de hardware, de software e de cluster, assim como diferentes requisitos de aplicativo para tempo de atividade e desempenho exigem uma configuração específica para valores de tempo limite de concessão, de cluster e de verificação de integridade. Determinados aplicativos e cargas de trabalho exigem um monitoramento mais agressivo para limitar o tempo de inatividade após falhas de disco rígido. Outros exigem mais tolerância para problemas de rede transitórios e espera de alto uso de recursos e permitem failovers mais lentos. 
 
@@ -80,7 +81,7 @@ O nível de condição de falha do grupo de disponibilidade altera as condiçõe
 | 2: OnServerUnresponsive | Se nenhum dado for recebido do `sp_server_diagnostics` para o HealthCheckTimeout
 | 3: OnCriticalServerError | (Padrão) Se o componente do sistema relatar um erro
 | 4: OnModerateServerError | Se o componente do recurso relatar um erro 
-| 5:  OnAnyQualifiedFailureConitions |  Se o componente de processamento de consulta relatar um erro
+| 5:  OnAnyQualifiedFailureConditions |  Se o componente de processamento de consulta relatar um erro
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>Atualizando os valores do cluster e de tempo limite Always On 
 
@@ -128,7 +129,7 @@ O mecanismo de concessão é controlado por um único valor específico para cad
    
 ### <a name="health-check-values"></a>Valores de verificação de integridade 
 
-Dois valores controlam a verificação de integridade Always On: FailureConditionLevel e HealthCheckTimeout. O FailureConditionLevel indica o nível de tolerância para condições de falha específicas relatadas por `sp_server_diagnostics`, e o HealthCheckTimeout configura o tempo que a DLL de recurso pode prosseguir sem receber uma atualização de `sp_server_diagnostics`. O intervalo de atualização para `sp_server_diagnostics` é sempre HealthCheckTimeout/3. 
+Dois valores controlam a verificação de integridade do Always On: FailureConditionLevel e HealthCheckTimeout. O FailureConditionLevel indica o nível de tolerância para condições de falha específicas relatadas por `sp_server_diagnostics`, e o HealthCheckTimeout configura o tempo que a DLL de recurso pode prosseguir sem receber uma atualização de `sp_server_diagnostics`. O intervalo de atualização para `sp_server_diagnostics` é sempre HealthCheckTimeout/3. 
 
 Para configurar o nível de condição de failover, use a opção `FAILURE_CONDITION_LEVEL = <n>` da instrução `CREATE` ou `ALTER` `AVAILABILITY GROUP`, em que `<n>` é um inteiro entre 1 e 5. O comando a seguir define o nível de condição de falha como 1 para o grupo de disponibilidade 'AG1': 
 
@@ -155,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## <a name="see-also"></a>Consulte Também    
 
-[Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

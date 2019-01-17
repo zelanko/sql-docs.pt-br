@@ -1,6 +1,7 @@
 ---
-title: Configurar um grupo de disponibilidade para transações distribuídas | Microsoft Docs
-ms.custom: ''
+title: Configurar transações distribuídas para um grupo de disponibilidade
+description: 'Descreve como configurar transações distribuídas para bancos de dados dentro de um grupo de disponibilidade Always On. '
+ms.custom: seodec18
 ms.date: 05/22/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513677"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215665"
 ---
-# <a name="configure-availability-group-for-distributed-transactions"></a>Configurar um grupo de disponibilidade para transações distribuídas
+# <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurar transações distribuídas para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] dá suporte a todas as transações distribuídas, incluindo bancos de dados em um grupo de disponibilidade. Este artigo explica como configurar um grupo de disponibilidade para transações distribuídas  
@@ -186,10 +187,10 @@ Para obter mais informações sobre como resolver transações incertas, consult
 
 [Transações distribuídas](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
-[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+[Grupos de disponibilidade Always On: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transações – grupos de disponibilidade Always On e Espelhamento de Banco de Dados](transactions-always-on-availability-and-database-mirroring.md)  
 
 [Dando suporte a transações XA](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[Como funciona: Sessão/SPID (-2) para transações do DTC](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[Como funciona: Sessão/SPID (-2) para transações DTC](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

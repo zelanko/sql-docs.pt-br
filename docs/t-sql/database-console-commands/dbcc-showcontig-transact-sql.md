@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510715"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213845"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ A tabela a seguir descreve as informações do conjunto de resultados.
 |**Méd. de Páginas por extensão**|Número de páginas por extensão na cadeia de páginas.|  
 |**Densidade da verificação [melhor contagem: contagem real]**|É uma porcentagem. É a taxa de **Melhor Contagem** para **Contagem Real**. Esse valor será 100 se tudo for contíguo; se ele for menor que 100, isso indicará que existe alguma fragmentação.<br /><br /> **Melhor Contagem** será o número ideal de alterações de extensão se tudo estiver vinculado de forma contígua. **Contagem Real** é o número real de alterações de extensão.|  
 |**Fragmentação da verificação lógica**|Porcentagem de páginas com problema retornadas da verificação de páginas de folha de um índice. Esse número não é relevante para heaps. Uma página fora de ordem é aquela cuja próxima página física alocada ao índice não é a página apontada pelo ponteiro de próxima págin*a* na página de folha atual.|  
-|**Fragmentação da verificação de extensão**|Porcentagem de extensões com problemas na verificação de páginas de folha de um índice. Esse número não é relevante para heaps. Uma extensão com problema é aquela para a qual a extensão que contém a página atual de um índice não é fisicamente a próxima extensão depois da extensão que contém a página anterior de um índice.<br /><br /> Observação: esse número é insignificante quando o índice abrange vários arquivos.|  
+|**Fragmentação da verificação de extensão**|Porcentagem de extensões com problemas na verificação de páginas de folha de um índice. Esse número não é relevante para heaps. Uma extensão com problema é aquela para a qual a extensão que contém a página atual de um índice não é fisicamente a próxima extensão depois da extensão que contém a página anterior de um índice.<br /><br /> Observação: Esse número não tem sentido quando o índice se estende a vários arquivos.|  
 |**Méd. de Bytes livres por página**|Número médio de bytes livres em páginas verificadas. Quanto maior o número, mais vazias ficarão as páginas. Números inferiores serão melhores se o índice não tiver muitas inserções aleatórias. Esse número também é afetado pelo tamanho da linha; uma linha grande pode gerar um número maior.|  
 |**Méd. de Densidade de página (completa)**|Densidade média da página, como uma porcentagem. Esse valor leva em consideração o tamanho de linha. Por isso, o valor é uma indicação mais precisa de quão cheias estão as páginas. Quanto maior a porcentagem, melhor.|  
   
@@ -132,7 +132,7 @@ Quando TABLERESULTS é especificado, DBCC SHOWCONTIG retorna as seguintes coluna
 |**BestCount**|Será o número ideal de alterações de extensão se tudo for vinculado contiguamente.|  
 |**ActualCount**|É o número real de alterações de extensão.|  
 |**LogicalFragmentation**|Porcentagem de páginas com problema retornadas da verificação de páginas de folha de um índice. Esse número não é relevante para heaps. Uma página fora de ordem é aquela cuja próxima página física alocada ao índice não é a página apontada pelo ponteiro de próxima págin*a* na página de folha atual.|  
-|**ExtentFragmentation**|Porcentagem de extensões com problemas na verificação de páginas de folha de um índice. Esse número não é relevante para heaps. Uma extensão com problema é aquela para a qual a extensão que contém a página atual de um índice não é fisicamente a próxima extensão depois da extensão que contém a página anterior de um índice.<br /><br /> Observação: esse número é insignificante quando o índice abrange vários arquivos.|  
+|**ExtentFragmentation**|Porcentagem de extensões com problemas na verificação de páginas de folha de um índice. Esse número não é relevante para heaps. Uma extensão com problema é aquela para a qual a extensão que contém a página atual de um índice não é fisicamente a próxima extensão depois da extensão que contém a página anterior de um índice.<br /><br /> Observação: Esse número não tem sentido quando o índice se estende a vários arquivos.|  
   
 Quando WITH TABLERESULTS e FAST forem especificados, o conjunto de resultados será o mesmo de quando WITH TABLERESULTS for especificado, exceto que as seguintes colunas terão valores nulos:
 

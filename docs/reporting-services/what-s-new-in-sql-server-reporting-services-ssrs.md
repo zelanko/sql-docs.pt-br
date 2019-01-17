@@ -1,18 +1,18 @@
 ---
 title: Novidades do Reporting Services (SSRS) | Microsoft Docs
-ms.date: 09/06/2018
+ms.date: 12/11/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 1b6844ad30aa426d1df71727becc6e6cfa3071d5
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712397"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432469"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
@@ -31,7 +31,7 @@ Para baixar o SQL Server 2017 Reporting Services, acesse o **[Centro de Download
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>Versão prévia do SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)]O Reporting Services não está disponível para CTP 2.1. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] O Reporting Services não está disponível para o CTP 2.2. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -130,17 +130,17 @@ Para obter mais informações, consulte:
 
 **Relatórios paginados modernos:** desenvolva relatórios paginados modernos perfeitos com estilos novos e modernos para gráficos, medidores, mapas e outras visualizações de dados.
   
-**Gráficos de mapa de árvore e explosão solar:** aprimore seus relatórios com gráficos de mapa de árvore ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e explosão solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), excelentes maneiras de exibir dados hierárquicos. Para saber mais, confira [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Gráficos Explosão Solar e Mapa de Árvore:** aprimore seus relatórios com gráficos de mapa de árvore ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e explosão solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), excelentes maneiras de exibir dados hierárquicos. Para saber mais, confira [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Inserção de relatório:** agora você pode incorporar relatórios móveis e paginados a outras páginas da Web e aplicativos usando um iframe juntamente com os parâmetros da URL.  
+**Inserção de relatório:** agora você pode inserir relatórios móveis e paginados a outras páginas da Web e aplicativos usando um iframe juntamente com os parâmetros da URL.  
 
-**Fixar itens de relatórios a um Painel do Power BI:** Ao exibir um relatório no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], você pode selecionar itens de relatório e fixá-los a um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Os itens que você pode fixar são gráficos, painéis de medidores, mapas e imagens. Você pode selecionar **(1)** o grupo que contém o painel que você quer fixar, **(2)** selecionar o painel no qual você quer fixar o item e **(3)** selecionar a frequência com que você quer que o bloco seja atualizado no painel.   ![observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") A atualização é gerenciada pelas assinaturas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, depois que o item é fixado, você pode editar a assinatura e configurar outro agendamento de atualização.  
+**Fixar Itens de Relatório a um Painel do Power BI:** Ao exibir um relatório no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], você pode selecionar itens de relatório e fixá-los a um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].   Os itens que você pode fixar são gráficos, painéis de medidores, mapas e imagens. Você pode selecionar **(1)** o grupo que contém o painel que você quer fixar, **(2)** selecionar o painel no qual você quer fixar o item e **(3)** selecionar a frequência com que você quer que o bloco seja atualizado no painel.   ![observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") A atualização é gerenciada pelas assinaturas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, depois que o item é fixado, você pode editar a assinatura e configurar outro agendamento de atualização.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
  Para obter mais informações, consulte [Integração do Servidor de Relatórios do Power BI &#40;Gerenciador de Configurações&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [Fixar itens do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
- **Renderização e exportação do PowerPoint:** o formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+ **Renderização e Exportação do PowerPoint:** O formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -152,7 +152,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  Para saber mais, confira [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
  
- **PDF substitui o ActiveX para Impressão Remota:** A experiência de impressão do ActiveX da barra de ferramentas do visualizador de relatórios foi substituída por uma experiência moderna baseada em PDF que funciona na matriz dos navegadores com suporte, incluindo o Microsoft Edge. Não é mais necessário baixar os controles do ActiveX! Dependendo do navegador que você usa e dos aplicativos e serviços de visualização de PDF que você tenha instalados, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abrirá um diálogo de impressão para imprimir o seu relatório ou solicitará que você baixe um arquivo .PDF do seu relatório.  Como administrador, você ainda pode desabilitar impressão do lado do cliente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
+ **O PDF substitui o ActiveX para impressões remotas:** A experiência de impressão do ActiveX da barra de ferramentas do visualizador de relatórios foi substituída por uma experiência moderna baseada em PDF que funciona na matriz dos navegadores com suporte, incluindo o Microsoft Edge. Não é mais necessário baixar os controles do ActiveX! Dependendo do navegador que você usa e dos aplicativos e serviços de visualização de PDF que você tenha instalados, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abrirá um diálogo de impressão para imprimir o seu relatório ou solicitará que você baixe um arquivo .PDF do seu relatório.  Como administrador, você ainda pode desabilitar impressão do lado do cliente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -166,18 +166,18 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**Credenciais compartilhadas para assinaturas de compartilhamento de arquivos**. Agora existem dois fluxos de trabalho com as assinaturas de compartimento de arquivos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Novidades desta versão, o administrador do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode configurar uma conta única de compartilhamento de arquivo, que é usada para várias assinaturas. A conta de compartilhamento de arquivo é configurada no gerenciador de configuração do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Especificar uma conta de compartilhamento de arquivo**e, em seguida, na página de configuração da assinatura, os usuários selecionam **Usar uma conta de compartilhamento de arquivo**.<br /><br /> Configure assinaturas individuais com credenciais específicas para o compartilhamento de arquivos de destino.<br /><br /> Você também pode combinar as duas abordagens e fazer com que algumas assinaturas de compartilhamento de arquivos usem a conta de compartilhamento de arquivos central, enquanto outras assinaturas usam credenciais específicas.|nativo|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- A nova versão do SSDT inclui os modelos de projeto para o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistente de Projeto do Servidor de Relatório e Projeto do Servidor de Relatório. Para saber mais sobre como baixar o SSDT, veja [Ferramentas de Dados do SQL Server para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+ A nova versão do SSDT inclui os modelos de projeto para [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistente de Projeto do Servidor de Relatório e Projeto do Servidor de Relatório. Para saber mais sobre como baixar o SSDT, veja [Ferramentas de Dados do SQL Server para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Aprimoramentos do Construtor de Relatórios
 
-**Nova interface de usuário do Construtor de Relatórios:** a principal interface de usuário do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] agora tem uma aparência moderna com elementos de interface do usuário simplificados.  
+**Nova Interface do Usuário do Construtor de Relatórios:** A principal interface de usuário do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] agora tem uma aparência moderna com elementos de interface do usuário simplificados.  
   
 |||  
 |-|-|  
 |Nova|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Painel de parâmetros personalizado:** agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.   Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Painel de Parâmetros Personalizados:** Agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.   Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
  ![Lista de parâmetros no painel Dados de Relatório e no painel de parâmetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parâmetros no painel Dados de Relatório e no painel de parâmetros")  
 

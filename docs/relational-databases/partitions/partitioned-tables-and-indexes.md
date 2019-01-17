@@ -13,16 +13,16 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], about partitioned indexes
 - index partitions
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5cac151a3c3192c03f915c95eb0ac228ad2d8c05
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662416"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414171"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ Desse modo, o otimizador de consulta pode processar a junção mais rapidamente,
 -   [Estratégias de tabelas e índices particionados usando o SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [Como implementar uma janela deslizante automática](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
 -   [Carregamento em massa em uma tabela particionada](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Projeto REAL: ciclo de vida de dados -- particionamento](https://technet.microsoft.com/library/cc966424.aspx)    
+-   [Projeto REAL: Ciclo de Vida de Dados – Particionamento](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](https://msdn.microsoft.com/library/ms345599.aspx)    
 -   [10 principais práticas recomendadas para a criação de um Data Warehouse relacional em grande escala](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   

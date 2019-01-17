@@ -1,6 +1,7 @@
 ---
-title: Pré-requisitos da migração do envio de logs para Grupos de Disponibilidade AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Pré-requisitos para converter o envio de logs para grupos de disponibilidade
+description: Uma descrição dos pré-requisitos necessários para converter o envio de logs em um grupo de disponibilidade Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606916"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214717"
 ---
-# <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Pré-requisitos da migração do envio de logs para Grupos de Disponibilidade AlwaysOn
+# <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>Pré-requisitos para converter o envio de logs para grupos de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Esse tópico descreve os pré-requisitos para converter um banco de dados primário para envio de logs junto com um ou mais de seus bancos de dados secundários para um banco de dados primário AlwaysOn e bancos de dados secundários.  
@@ -68,7 +69,7 @@ ms.locfileid: "51606916"
   
  **Para obter mais informações, consulte:**  
   
- [Convertendo uma configuração para envio de logs para Grupo de Disponibilidade](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (um blog do SQL Server)  
+ [Convertendo uma configuração de envio de logs para grupo de disponibilidade](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (um blog do SQL Server)  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Envio de logs**  
@@ -99,13 +100,13 @@ ms.locfileid: "51606916"
   
      [Adicione um banco de dados primário de envio de logs e bancos de dados secundários a um grupo de disponibilidade existente](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
   
-     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepapers:**  
   
-     [Guia de migração: Migrando para grupos de disponibilidade AlwaysOn de implantações anteriores que combinam espelhamento de banco de dados e envio de logs](https://msdn.microsoft.com/library/jj635217)  
+     [Guia de migração: migrando para Grupos de Disponibilidade Always On de implantações anteriores que combinam espelhamento de banco de dados e envio de logs](https://msdn.microsoft.com/library/jj635217)  
   
      [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   

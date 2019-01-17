@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504509"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266077"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -322,8 +322,8 @@ Várias melhorias dão suporte aos recursos descritos nas outras seções deste 
 - Oito novas propriedades foram adicionadas a [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md): InstanceDefaultDataPath, InstanceDefaultLogPath, ProductBuild, ProductBuildType, ProductMajorVersion, ProductMinorVersion, ProductUpdateLevel e ProductUpdateReference.
 - O limite de tamanho de entrada de 8.000 bytes para a função [HASHBYTES &#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md) foi removido.
 - Novas funções de cadeia de caracteres [STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) e [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md) foram adicionadas.
-- Opções de expansão automática: o sinalizador de rastreamento 1117 foi substituído pelas opções AUTOGROW_SINGLE_FILE e AUTOGROW_ALL_FILES de ALTER DATABASE, e o sinalizador de rastreamento 1117 passou a não ter nenhum efeito. Para obter mais informações, veja [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) e a nova coluna is_autogrow_all_files de [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
-- Alocação de extensões mistas: para bancos de dados do usuário, a alocação padrão para as 8 primeiras páginas de um objeto deixará de usar extensões de página mistas e passará a usar extensões uniformes. O sinalizador de rastreamento 1118 foi substituído pela opção SET MIXED_PAGE_ALLOCATION de ALTER DATABASE, e o sinalizador de rastreamento 1118 passou a não ter nenhum efeito. Para obter mais informações, veja [Opções de ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) e a nova coluna `is_mixed_page_allocation_on` de [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+- Opções de aumento automático: o sinalizador de rastreamento 1117 foi substituído pelas opções AUTOGROW_SINGLE_FILE e AUTOGROW_ALL_FILES de ALTER DATABASE e o sinalizador de rastreamento 1117 não tem nenhum efeito. Para obter mais informações, veja [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) e a nova coluna is_autogrow_all_files de [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
+- Alocação de extensões mistas: para bancos de dados de usuário, a alocação padrão das oito primeiras páginas de um objeto deixará de usar extensões de página mistas e passará a usar extensões uniformes. O sinalizador de rastreamento 1118 foi substituído pela opção SET MIXED_PAGE_ALLOCATION de ALTER DATABASE, e o sinalizador de rastreamento 1118 passou a não ter nenhum efeito. Para obter mais informações, veja [Opções de ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) e a nova coluna `is_mixed_page_allocation_on` de [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>Melhorias do Transact-SQL para módulos compilados de modo nativo
 
@@ -438,10 +438,8 @@ A propagação direta permite que uma réplica secundária seja propagada automa
 Baixar o [SSMS (SQL Server Management Studio) mais recente](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dá suporte à ADAL (Active Directory Authentication Library), que está em desenvolvimento para conexão com o Microsoft Azure. Isso substitui a autenticação baseada em certificado, usada no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
-- A instalação[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige a instalação do .NET 4.6 como um pré-requisito. O .NET 4.6 será instalado automaticamente pela instalação quando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for instalado.
 - Uma nova opção de grade de resultados da consulta dá suporte a manter o Retorno de Carro/Alimentação de Linha (caracteres de nova linha) ao copiar ou salvar o texto da grade de resultados. Defina-a no menu Ferramentas/Opções.
 - O SQL Server Management Tools não é mais instalado por meio da árvore de recursos principal; para obter detalhes, veja [Instalar o SQL Server Management Tools com o SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- A instalação[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige a instalação do .NET 4.6.1 como um pré-requisito. O .NET 4.6.1 será instalado automaticamente pela instalação quando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for instalado.
 
 ### <a name="upgrade-advisor"></a>Supervisor de Atualização
 O Supervisor de Atualização do SQL Server 2016 Preview é uma ferramenta autônoma que permite aos usuários de versões anteriores executar um conjunto de regras de atualização em seu banco de dados do SQL Server para identificar alterações de comportamento, alterações mais recentes e recursos preteridos, bem como fornecer ajuda com a adoção de novos recursos, como o Stretch Database.

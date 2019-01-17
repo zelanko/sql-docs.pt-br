@@ -1,23 +1,25 @@
 ---
 title: Exportando para o Microsoft Word (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: A extensão de renderização do Word renderiza relatórios paginados para o formato  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). O formato é o Office Open XML.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393329"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202415"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
-  A extensão de renderização do Word renderiza relatórios paginados para o formato  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). O formato é o Office Open XML.  
+  A extensão de renderização do Word renderiza relatórios paginados para o formato do Microsoft Word (.docx). O formato é o Office Open XML.  
   
  O tipo de conteúdo dos arquivos gerados por este renderizador é **application/vnd.openxmlformats-officedocument.wordprocessingml.document** e a extensão de arquivo é .docx.  
   
@@ -53,7 +55,7 @@ ms.locfileid: "52393329"
   
 |Propriedades do Elemento de Relatório|Descrição|  
 |-------------------------------|-----------------|  
-|Título do Relatório (título do relatório)|Título|  
+|Título do Relatório (título do relatório)|Title|  
 |Autor do Relatório|Autor|  
 |Descrição do Relatório|Comentários|  
   
@@ -70,9 +72,9 @@ ms.locfileid: "52393329"
   
  Isto ocorre porque o renderizador do Word analisa o relatório em busca de campos relacionados à paginação como **PageNumber** e **TotalPages** , e trata somente de referências simples, não chamadas para uma função. Neste caso, a expressão chama a função **ToString** . As duas expressões a seguir são equivalentes e ambas renderizam corretamente quando você visualiza o relatório no Construtor de Relatórios ou no Designer de Relatórios, ou quando renderiza o relatório publicado em um portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou em uma biblioteca do SharePoint. Porém, o renderizador do Word analisa somente a segunda expressão com êxito e renderiza os números de página corretos.  
   
--   **Expressão complexa:**  a expressão é `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expressão complexa:**  A expressão é `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expressão com Sequências de texto:** Texto, **Vendas Comuns**e expressão,  `=Avg(Fields!YTDPurchase.Value, "Sales)`e texto, **Número de Página**e expressão `=Globals!PageNumber`  
+-   **Expressão com Execuções de Texto:** Texto, **Média de Vendas** e a expressão, `=Avg(Fields!YTDPurchase.Value, "Sales)`, e o texto, **Número da Página** e a expressão `=Globals!PageNumber`  
   
  Para evitar esse problema, use várias sequências de texto em vez de uma expressão complexa quando usar expressões em rodapés e cabeçalhos. As duas expressões a seguir são equivalentes. A primeira é uma expressão complexa, e a segunda usa sequências de texto. O renderizador de Word analisa somente a segunda expressão com êxito.  
   

@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 414c9650a1ae933e6e472ab09a26e6d26ae503fd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 98e06e3199d4ce8750a4a5956aec6d97c141b33b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49947399"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214248"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar o PolyBase para acessar dados externos no SQL Server
 
@@ -33,13 +33,13 @@ Primeiro baixe e instale o driver ODBC da fonte de dados à qual você deseja se
 
 ![Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-  > **IMPORTANTE:**
-  >
-  > Para melhorar o desempenho da consulta verifique se o pooling de conexão do driver está habilitado. Isso pode ser feito em "Administrador da Fonte de Dados ODBC".
-
+> **IMPORTANTE**
+> 
+> Para melhorar o desempenho da consulta verifique se o pooling de conexão do driver está habilitado. Isso pode ser feito em "Administrador da Fonte de Dados ODBC".
+> 
 > **Observação**
 > 
->O nome do driver (exemplo circulado acima) precisará ser especificado quando a fonte de dados externa for criada (Etapa 3 abaixo).
+> O nome do driver (exemplo circulado acima) precisará ser especificado quando a fonte de dados externa for criada (Etapa 3 abaixo).
 
 ## <a name="create-an-external-table"></a>Criar uma tabela externa
 
@@ -114,7 +114,7 @@ Estes objetos serão criados nesta seção:
      );
       ```
 
-1. **Opcional:** criar estatísticas em uma tabela externa.
+1. **Opcional:** Crie estatísticas em uma tabela externa.
 
     É recomendável criar estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações, a fim de ter o desempenho de consulta ideal.
 

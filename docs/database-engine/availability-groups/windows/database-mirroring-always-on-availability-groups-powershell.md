@@ -1,6 +1,7 @@
 ---
-title: Espelhamento de Banco de Dados – Grupos de Disponibilidade AlwaysOn – PowerShell | Microsoft Docs
-ms.custom: ''
+title: Criar um ponto de extremidade de espelhamento de banco de dados para um grupo de disponibilidade usando o PowerShell
+description: Descreve como criar um ponto de extremidade de espelhamento de banco de dados para um Grupo de Disponibilidade AlwaysOn usando o PowerShell.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 857fe97c4ef19456c4ce755857702bfd19ff8bd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634094"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206375"
 ---
-# <a name="database-mirroring---always-on-availability-groups--powershell"></a>Espelhamento de Banco de Dados – Grupos de Disponibilidade AlwaysOn – PowerShell
+# <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Criar um ponto de extremidade de espelhamento de banco de dados para um grupo de disponibilidade usando o PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como criar um ponto de extremidade de espelhamento de banco de dados para uso do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o PowerShell.  

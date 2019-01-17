@@ -1,9 +1,11 @@
 ---
-title: 'Tutorial: Como localizar e iniciar as ferramentas do Reporting Services (SSRS) | Microsoft Docs'
-ms.date: 05/30/2017
+title: 'Tutorial: Como localizar e iniciar as Ferramentas do SSRS (Reporting Services) | Microsoft Docs'
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
+description: Este tutorial apresenta as ferramentas usadas para configurar um servidor de relatório, gerenciar o conteúdo e as operações do servidor de relatório, bem como criar e publicar relatórios paginados e móveis do Reporting Services.
+ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, tutorials
@@ -18,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2937ca969b7a277710b8040481d61c68a12e096f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711297"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206215"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Como localizar e iniciar as ferramentas do Reporting Services (SSRS)
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Como localizar e iniciar as Ferramentas do SSRS (Reporting Services)
 
   Este tutorial apresenta as ferramentas usadas para configurar um servidor de relatório, gerenciar o conteúdo e as operações do servidor de relatório e criar e publicar relatórios paginados e móveis do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se você já está familiarizado com as ferramentas, pode passar para outros tutoriais para aprender habilidades para usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para ver outros tutoriais, consulte [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
@@ -40,7 +42,7 @@ ms.locfileid: "52711297"
 -   Gerenciar as chaves de criptografia.  
 -   Configurar o processamento autônomo de relatório e a entrega por email.  
   
- **Instalação:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado quando você instala o modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Instalar o servidor de relatórios no modo nativo do Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+**Instalação:** O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado quando você instala o Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, consulte [Instalar o servidor de relatórios no modo nativo do Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Para iniciar o Gerenciador de Configuração do Reporting Services  
   
@@ -66,12 +68,12 @@ ms.locfileid: "52711297"
   
      ![Ferramenta de configuração do Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Ferramenta de configuração do Reporting Services")  
   
- **Próximas etapas:** [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) e [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+ **Próximas etapas:** [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) e [Gerenciador de Configurações do Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="web-portal-native-mode"></a>Portal da Web (modo nativo)  
  Use o [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) para definir permissões, gerenciar assinaturas e agendas e trabalhar com relatórios. Você também pode usar o Portal da Web para exibir relatórios.  
   
- **Instalação:** o Portal da Web é instalado quando você instala o Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : [Instalar o servidor de relatórios de modo nativo do Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **Instalação:** O portal da Web é instalado quando você instala o Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]: [Instalar o servidor de relatórios de modo nativo do Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  Antes de poder abrir o Portal da Web, é necessário ter permissões suficientes (inicialmente, somente os membros do grupo Administradores local têm permissões que fornecem acesso aos recursos do Portal da Web). O Portal da Web fornece diferentes páginas e opções que dependem das atribuições de função do usuário atual. Os usuários que não têm nenhuma permissão obterão uma página em branco. Os usuários com permissões para exibir relatórios obterão links nos quais podem clicar para abrir os relatórios. Para saber mais sobre permissões, consulte [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
@@ -107,7 +109,7 @@ ms.locfileid: "52711297"
 5.  Clique em **Conectar**. Você pode expandir o nó de raiz para definir propriedades de servidor, modificar definições de função ou desativar recursos de servidor de relatório.  
   
 ##  <a name="bkmk_ssdt"></a> Ferramenta de Dados do SQL Server com Designer de Relatórios e Assistente de Relatórios  
- Você tem a opção de duas ferramentas diferentes para a criação de relatórios paginados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : Report Designer e [Construtor de Relatório](#bkmk_report_builder).  
+ Você tem a opção de duas ferramentas diferentes para criar relatórios paginados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    Designer de Relatórios e [Construtor de Relatórios](#bkmk_report_builder).  
   
  O Designer de Relatórios está disponível em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio. A superfície de design do Designer de Relatórios inclui janelas tabuladas, assistentes e menus usados para acessar recursos de criação de relatórios. A ferramenta do designer de relatórios torna-se disponível quando você escolhe um modelo de Projeto do Report Server ou um Assistente do Report Server em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para saber mais, consulte [Reporting Services no SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
@@ -132,7 +134,9 @@ Baixar o [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
  Para iniciar seu primeiro relatório, consulte [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Para obter mais informações sobre os designers de consulta que podem ser usados no Designer de Relatórios, consulte [Ferramentas de Design da Consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- O [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) é um aplicativo autônomo que você pode usar para criar relatórios paginados fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode personalizar e atualizar todos os relatórios existentes, quer tenham sido criados no Designer de Relatórios ou em versões anteriores do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
+ O [Construtor de Relatórios no SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) é um aplicativo autônomo que você pode usar para criar relatórios paginados fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode personalizar e atualizar todos os relatórios existentes, quer tenham sido criados no Designer de Relatórios ou em versões anteriores do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Instale-o por meio do portal da Web do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft. 
+
+Quando seu relatório paginado estiver pronto, publique-o em um servidor de relatório ou [salve-o no serviço do Power BI](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service). 
   
  [Baixe o Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkID=219138) do Centro de Download da Microsoft.  
   
@@ -151,7 +155,7 @@ Baixar o [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é aberto e você pode criar ou abrir um relatório paginado.  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- Use o [Publicador de Relatórios Móveis do SQL Server](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) para criar relatórios móveis que você pode exibir no portal da Web do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e em dispositivos móveis, como iPads e iPhones.   Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
+ Use o [Publicador de Relatórios Móveis do SQL Server](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) para criar relatórios móveis que você pode exibir no portal da Web do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e em dispositivos móveis, como iPads e iPhones.   Você pode instalá-lo do portal da Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Centro de Download da Microsoft.  
   
  [Baixar Publicador de Relatórios Móveis do SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) do Centro de Download da Microsoft.  
   

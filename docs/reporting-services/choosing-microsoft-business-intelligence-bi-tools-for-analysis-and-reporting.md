@@ -1,21 +1,23 @@
 ---
-title: Escolhendo ferramentas de BI (Business Intelligence) da Microsoft para análise e relatório | Microsoft Docs
-ms.date: 09/12/2016
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.technology: reporting-services
-ms.topic: conceptual
-ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
+title: Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95806dd597798b5a8a629d8b49d8502fff4de9ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.reviewer: ''
+ms.prod: reporting-services, sql-server
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.topic: conceptual
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: ced31ec75b4a2c803a2fb6b62256bf4d5e5d3bc7
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399169"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552918"
 ---
-# <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Escolhendo ferramentas de BI (Business Intelligence) da Microsoft para análise e relatório
+# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
+
 Escolher a ferramenta de business intelligence correta pode ser muito complicado. Saiba mais sobre as diferentes ofertas da Microsoft e encontre a que atende melhor às suas necessidades.
 
 A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão de relatórios para as ferramentas BI da Microsoft mais adequadas para cargas de trabalho. Para obter mais informações sobre de um produto, clique no link do produto na tabela.  
@@ -24,15 +26,15 @@ A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão
   
 |Cargas de trabalho|Usuário|||Ferramentas de BI|||  
 |---------------|----------|-|-|--------------|-|-|  
-|||Excel|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
+|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**BI de autoatendimento**|Analista/usuário final||||||  
 |Descubra facilmente, e acesse dados públicos e corporativos||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Catálogo de Dados do Azure](https://azure.microsoft.com/services/data-catalog/)||  
 |Crie modelos de dados avançados||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|Execute análise de previsão de autoatendimento||||||[Suplementos de Data Mining para Excel](https://msdn.microsoft.com/library/dn282385.aspx) (com suporte para Excel 2016)|  
+|Execute análise de previsão de autoatendimento||||||[Suplementos de Mineração de Dados para Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |Visualize e explore dados||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Mapas 3D](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|Faça perguntas usando a consulta de linguagem natural|||||[P & R](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à exibição de arquivos de < 10 MB)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(usando os aplicativos do Power BI para dispositivos móveis)|  
-|Colabore e compartilhe|||[Sites do SharePoint](https://go.microsoft.com/fwlink/?LinkId=391849)|[Sites da equipe do SharePoint](https://go.microsoft.com/fwlink/?LinkId=391850)|||  
+|Faça perguntas usando a consulta de linguagem natural|||||[P & R](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
+|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização de arquivos <10 MB)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (dá suporte à visualização de <250 MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Aplicativo móvel do Power BI em dispositivos iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Aplicativo móvel do Power BI em dispositivos Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Aplicativo móvel do Power BI para Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|Colabore e compartilhe|||[Sites do SharePoint](https://docs.microsoft.com/sharepoint/getting-started)|[Sites da equipe do SharePoint](https://go.microsoft.com/fwlink/?LinkId=391850)|[Sites do Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**BI corporativo**|Profissional de TI||||||  
 |Crie modelos corporativos multidimensionais e tabulares||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Crie visualizações de dados ad-hoc|||[Power View para SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
@@ -40,9 +42,7 @@ A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão
 |Crie relatórios operacionais||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Crie relatórios personalizados e inseridos|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Análise avançada**|Cientista de dados||||||  
-|Execute análise de previsão de autoatendimento||||||[Suplementos de Data Mining para Excel](https://msdn.microsoft.com/library/dn282385.aspx) (com suporte para Excel 2016)|  
+|Execute análise de previsão de autoatendimento||||||[Suplementos de Mineração de Dados para Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |Use os algoritmos de mineração de dados||||||[Mineração de dados no Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
- *O Reporting Services tem vários recursos que dão suporte à entrega de relatórios paginados modernos.  
-  
-  
+ *O Reporting Services tem vários recursos que dão suporte para a entrega de relatórios operacionais e relatórios personalizados, como a entrega de relatórios paginados modernos.

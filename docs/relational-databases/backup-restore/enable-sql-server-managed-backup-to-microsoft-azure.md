@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7ef52db1ccafaeaf9539974032da3622b23838c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672795"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787088"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar o backup gerenciado do SQL Server no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51672795"
   
 #### <a name="create-the-azure-blob-container"></a>Criar o contêiner de blob do Azure  
   
-1.  **Inscrever-se no Azure:** se você já tiver uma assinatura do Azure, vá para a próxima etapa. Caso contrário, você pode começar com uma [avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/) ou explorar as [opções de compra](https://azure.microsoft.com/pricing/purchase-options/).  
+1.  **Inscrever-se no Azure:** Se você já tiver uma assinatura do Azure, vá para a próxima etapa. Caso contrário, você pode começar com uma [avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/) ou explorar as [opções de compra](https://azure.microsoft.com/pricing/purchase-options/).  
   
-2.  **Criar uma conta de armazenamento do Azure:** se você já tiver uma conta de armazenamento, vá para a próxima etapa. Caso contrário, você pode usar o [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/) ou o Azure PowerShell para criar a conta de armazenamento. O comando `New-AzureStorageAccount` a seguir cria uma conta de armazenamento chamada `managedbackupstorage` na região Leste dos EUA.  
+2.  **Criar uma conta de armazenamento do Azure:** Se você já tiver uma conta de armazenamento, vá para a próxima etapa. Caso contrário, você pode usar o [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/) ou o Azure PowerShell para criar a conta de armazenamento. O comando `New-AzureStorageAccount` a seguir cria uma conta de armazenamento chamada `managedbackupstorage` na região Leste dos EUA.  
   
     ```powershell  
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
@@ -41,19 +41,27 @@ ms.locfileid: "51672795"
   
      Para saber mais sobre contas de armazenamento, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
-3.  **Criar um contêiner de blob para os arquivos de backup:** você pode criar um contêiner de blob no Portal de Gerenciamento do Azure ou com o Azure PowerShell. O comando `New-AzureStorageContainer` a seguir cria um contêiner de blob chamado `backupcontainer` na conta de armazenamento `managedbackupstorage` .  
+3.  **Criar um contêiner de blobs para os arquivos de backup:** Crie um contêiner de blobs no Portal de Gerenciamento do Azure ou com o Azure PowerShell. O comando `New-AzureStorageContainer` a seguir cria um contêiner de blob chamado `backupcontainer` na conta de armazenamento `managedbackupstorage` .  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **Gerar uma SAS (Assinatura de Acesso Compartilhado):** para acessar o contêiner, é necessário criar uma SAS. Isso pode ser feito em algumas ferramentas, código e no Azure PowerShell. O comando `New-AzureStorageContainerSASToken` a seguir cria um token SAS para o contêiner de blob `backupcontainer` que expira em um ano.  
+4.  **Gerar uma SAS (Assinatura de Acesso Compartilhado):** Para acessar o contêiner, é necessário criar uma SAS. Isso pode ser feito em algumas ferramentas, código e no Azure PowerShell. O comando `New-AzureStorageContainerSASToken` a seguir cria um token SAS para o contêiner de blob `backupcontainer` que expira em um ano.  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
+    No caso do AzureRM, use o seguinte comando:
+       ```powershell
+    Connect-AzureRmAccount
+    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+   ```  
   
      A saída desse comando conterá a URL para o contêiner e o token SAS. A seguir, é mostrado um exemplo:  
   
@@ -68,11 +76,11 @@ ms.locfileid: "51672795"
     |**URL do Contêiner:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**Token SAS:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO SQL. Para saber mais sobre SAS, confira [Assinaturas de Acesso Compartilhado, parte 1: noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+     Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO SQL. Para obter mais informações sobre a SAS, confira [Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-1.  **Criar uma Credencial do SQL para a URL SAS:** use o token SAS para criar uma Credencial do SQL para a URL do contêiner de blob. No SQL Server Management Studio, use a seguinte consulta Transact-SQL a fim de criar a credencial para a URL de seu contêiner de blob, com base no exemplo a seguir:  
+1.  **Criar uma Credencial do SQL para a URL SAS:** Use o token SAS para criar uma Credencial do SQL para a URL do contêiner de blobs. No SQL Server Management Studio, use a seguinte consulta Transact-SQL a fim de criar a credencial para a URL de seu contêiner de blob, com base no exemplo a seguir:  
   
     ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
@@ -80,11 +88,11 @@ ms.locfileid: "51672795"
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
     ```  
   
-2.  **Verificar se o serviço SQL Server Agent foi iniciado e está em execução:** inicie o SQL Server Agent se ele não estiver em execução.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Server Agent para ser executado automaticamente, a fim de assegurar que as operações de backup ocorrerão regularmente.  
+2.  **Garantir que o serviço SQL Server Agent foi iniciado e está em execução:** Inicie o SQL Server Agent se ele não estiver em execução.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Server Agent para ser executado automaticamente, a fim de assegurar que as operações de backup ocorrerão regularmente.  
   
-3.  **Determinar o período de retenção:** determina o período de retenção dos arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30.  
+3.  **Determinar o período de retenção:** Determine o período de retenção para os arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30.  
   
-4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** inicie o SQL Server Management Studio e conecte-se à instância de destino do SQL Server. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, da URL do contêiner e do período de retenção, de acordo com seus requisitos:  
+4.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie o SQL Server Management Studio e conecte-se à instância e destino do SQL Server. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, da URL do contêiner e do período de retenção, de acordo com seus requisitos:  
   
     > [!IMPORTANT]  
     >  Para habilitar o backup gerenciado no nível da instância, especifique `NULL` ou para o parâmetro `database_name` .  
@@ -102,7 +110,7 @@ ms.locfileid: "51672795"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado no banco de dados que você especificou. Podem ser necessários até 15 minutos para que as operações de backup no banco de dados comecem a ser executadas.  
   
-5.  **Examinar a configuração padrão do Evento Estendido:** examine as configurações do Evento Estendido executando a instrução Transact-SQL a seguir.  
+5.  **Examinar a Configuração Padrão do Evento Estendido:** Examine as configurações do evento estendido executando a instrução Transact-SQL a seguir.  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -114,9 +122,9 @@ ms.locfileid: "51672795"
   
     1.  Configure o Database Mail se ele ainda não estiver habilitado na instância. Para obter mais informações, consulte [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
-    2.  Configure o SQL Server Agent Notification para usar o Database Mail. Para saber mais, confira [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Configure o SQL Server Agent Notification para usar o Database Mail. Para obter mais informações, consulte [Configurar o SQL Server Agent Mail para usar o Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Habilitar notificações por email para receber erros e avisos de backup:** na janela da consulta, execute as seguintes instruções Transact-SQL:  
+    3.  **Habilitar notificações por email para receber avisos e erros de backup:** Na janela de consulta, execute as seguintes instruções Transact-SQL:  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -125,9 +133,9 @@ ms.locfileid: "51672795"
   
         ```  
   
-7.  **Exibir arquivos de backup na Conta de Armazenamento do Microsoft Azure:** conecte-se à conta de armazenamento no SQL Server Management Studio ou no Portal de Gerenciamento do Azure. Você verá os arquivos de backup no contêiner especificado. Observe que você poderá ver um banco de dados e um backup de log após 5 minutos da habilitação do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados.  
+7.  **Exibir arquivos de backup na Conta de Armazenamento do Microsoft Azure:** Conecte-se à conta de armazenamento do SQL Server Management Studio ou do Portal de Gerenciamento do Azure. Você verá os arquivos de backup no contêiner especificado. Observe que você poderá ver um banco de dados e um backup de log após 5 minutos da habilitação do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados.  
   
-8.  **Monitorar o status de integridade:**  é possível monitorar por meio das notificações por email que você configurou antes ou monitorar ativamente os eventos registrados. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
+8.  **Monitorar o Status de Integridade:**  Realize o monitoramento por meio das notificações por email configuradas anteriormente ou monitore de forma ativa os eventos registrados em log. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
   
     ```  
     --  view all admin events  

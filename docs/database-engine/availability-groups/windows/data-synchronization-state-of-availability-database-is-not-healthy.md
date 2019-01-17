@@ -1,6 +1,7 @@
 ---
-title: O estado de sincronização de dados do banco de dados de disponibilidade não está íntegro | Microsoft Docs
-ms.custom: ''
+title: O estado de sincronização de dados do banco de dados de disponibilidade não é íntegro
+description: Identifique as possíveis causas de o estado de sincronização de dados do banco de dados em um Grupo de Disponibilidade AlwaysOn não estar íntegro.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 5b2e45fd29967a89bb468eae32bcb393fff07b24
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2ea871bce7c35f9b6f5341a281d066087c33519b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603416"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203385"
 ---
-# <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>O estado de sincronização de dados do banco de dados de disponibilidade não é íntegro
+# <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>O estado de sincronização de dados do banco de dados de disponibilidade não está íntegro em um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introdução  

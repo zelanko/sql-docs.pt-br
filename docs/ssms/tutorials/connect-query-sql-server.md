@@ -11,14 +11,14 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970378"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328586"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
 
 > [!div class="nextstepaction"]
 > [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -66,12 +66,12 @@ Se você não tiver acesso a uma instância do SQL Server, selecione sua platafo
 ### <a name="examples-of-successful-connections"></a>Exemplos de conexões bem-sucedidas
 Para verificar se a conexão do SQL Server foi bem-sucedida, expanda e explore os objetos no **Pesquisador de Objetos**. Esses objetos serão diferentes dependendo do tipo de servidor com o qual você está conectado. 
 
-- Conectando a um SQL Server local – nesse caso NODE5\SQL2016ST: ![Como se conectar a um servidor local](media/connect-query-sql-server/connect-on-prem.png)
+- Conectando-se a um SQL Server local – neste caso, ao NODE5\SQL2016ST: ![Conectando-se a um servidor local](media/connect-query-sql-server/connect-on-prem.png)
 
-- Conectando ao banco de dados SQL do Azure – nesse caso msftestserver.database.windows.net: ![Como se conectar a um banco de dados SQL do Azure](media/connect-query-sql-server/connect-sql-azure.png)
+- Conectando-se ao banco de dados SQL do Azure – neste caso, ao msftestserver.database.windows.net: ![Conectando-se a um banco de dados SQL do Azure](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > Neste tutorial, você usava a *autenticação do Windows* para se conectar ao SQL Server local, mas não há suporte para esse método para o banco de dados SQL do Azure. Como tal, essa imagem mostra o uso da autenticação do SQL para se conectar ao banco de dados SQL do Azure. Para obter mais informações, veja [Autenticação do SQL local](../../relational-databases/security/choose-an-authentication-mode.md) e [Autenticação do SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
+  > Neste tutorial, você já usou a *Autenticação do Windows* para conectar-se ao SQL Server local, mas esse método não é compatível com o banco de dados SQL do Azure. Como tal, essa imagem mostra o uso da autenticação do SQL para se conectar ao banco de dados SQL do Azure. Para obter mais informações, confira [Autenticação local do SQL](../../relational-databases/security/choose-an-authentication-mode.md) e [Autenticação do SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## <a name="create-a-database"></a>Criar um banco de dados
 Crie um banco de dados chamado TutorialDB fazendo o seguinte: 

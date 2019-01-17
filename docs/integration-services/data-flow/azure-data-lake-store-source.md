@@ -14,19 +14,19 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b36adb786bc346f426cc28aeb9960158003cafd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5ec780327f12a4d81063c155aa5d3666b004ea6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856454"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210136"
 ---
 # <a name="azure-data-lake-store-source"></a>Fonte do Azure Data Lake Store
-  O componente de **Fonte do Azure Data Lake Store** permite que um pacote SSIS leia dados de um Azure Data Lake Store. Os formatos de arquivo com suporte são texto e Avro.
+  O componente de **Fonte do Azure Data Lake Store** permite que um pacote SSIS leia dados de um Azure Data Lake Store. Os formatos de arquivo compatíveis são: Texto e Avro.
   
  A **Origem do Azure Data Lake Store** é um componente do [SSIS (SQL Server Integration Services) Feature Pack para o Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
->   [!NOTE]
+> [!NOTE]
 > Para garantir que o Gerenciador de conexões do Azure Data Lake Store e os componentes que o utilizam, isto é, a Fonte do Azure Data Lake Store e o Destino do Azure Data Lake Store, possam se conectar aos serviços, verifique se você baixou a versão mais recente do Azure Feature Pack [aqui](https://www.microsoft.com/download/details.aspx?id=49492). 
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Configure o Fonte do Azure Data Lake Store

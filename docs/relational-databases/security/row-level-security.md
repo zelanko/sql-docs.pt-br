@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409893"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210426"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52409893"
   
  O acesso aos dados no nível de linha em uma tabela é restrito por um predicado de segurança definido como uma função com valor de tabela embutida. A função é então invocada e imposta por uma política de segurança. Para predicados de filtro, não há nenhuma indicação ao aplicativo de que as linhas tenham sido filtradas no conjunto de resultados; se todas as linhas forem filtradas, um conjunto de null será retornado. Para predicados de bloqueio, todas as operações que violem o predicado falharão com um erro.  
   
- Os predicados de filtro são aplicados durante a leitura de dados da tabela base e ela afeta todas as operações get: **SELECT**, **DELETE** (ou seja, o usuário não pode excluir linhas filtradas) e **UPDATE** (ou seja, o usuário não pode atualizar as linhas filtradas, embora seja possível atualizar as linhas de modo que sejam filtradas posteriormente). Os predicados de bloqueio afetam todas as operações de gravação.  
+ Predicados de filtro são aplicados durante a leitura de dados da tabela base e afetam todas as operações get: **SELECT**, **DELETE** (o usuário não pode excluir linhas filtradas), e **UPDATE** (o usuário não pode atualizar linhas filtradas, embora seja possível atualizar linhas de forma que elas sejam filtradas posteriormente). Os predicados de bloqueio afetam todas as operações de gravação.  
   
 -   Os predicados AFTER INSERT e AFTER UPDATE podem impedir que os usuários atualizem linhas para valores que violem o predicado.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52409893"
   
 -   Os predicados de bloqueio para UPDATE são divididos em operações distintas para BEFORE e AFTER. Consequentemente, não é possível, por exemplo, impedir os usuários de atualizar uma linha para ter um valor maior que o atual. Se esse tipo de lógica for necessário, você deverá usar gatilhos com as tabelas intermediárias DELETED e INSERTED para fazer referência a valores novos e antigos juntos.  
   
--   O otimizador não verificará um predicado de bloqueio AFTER UPDATE se nenhuma das colunas usadas pela função de predicado tiver sido alterada. Por exemplo, Alice não deve poder alterar um salário para acima de 100.000, mas deve poder alterar o endereço de um funcionário cujo salário já seja superior a 100.000 (porque isso já viola o predicado).  
+-   O otimizador não verificará um predicado de bloqueio AFTER UPDATE se nenhuma das colunas usadas pela função de predicado tiver sido alterada. Por exemplo: Alice não deve conseguir alterar um salário para acima de 100.000, mas deve conseguir alterar o endereço de um funcionário cujo salário já seja superior a 100.000 (porque isso já viola o predicado).  
   
 -   Nenhuma mudança foi feita nas APIs em massa, incluindo BULK INSERT. Isso significa que os predicados de bloqueio AFTER INSERT serão aplicados às operações de inserção em massa, assim como seriam em operações de inserção regular.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "52409893"
   
 -   Evite usar junções de tabelas em excesso em funções de predicado, para maximizar o desempenho.  
   
- Evite a lógica de predicado que depende de [opções SET](../../t-sql/statements/set-statements-transact-sql.md)específicas da sessão: embora seja improvável que elas sejam usadas em aplicações práticas, as funções de predicado cuja lógica depende de determinadas opções **SET** específicas da sessão poderão perder informações se os usuários conseguirem executar consultas arbitrárias. Por exemplo, uma função de predicado que implicitamente converte uma cadeia de caracteres em **datetime** poderia filtrar linhas diferentes com base na opção **SET DATEFORMAT** da sessão atual. Em geral, as funções de predicado devem obedecer as regras a seguir:  
+ Evite a lógica de predicado que dependa de [opções SET](../../t-sql/statements/set-statements-transact-sql.md) específicas da sessão: Embora seja improvável que elas sejam usadas em aplicações práticas, as funções de predicado cuja lógica depende de determinadas opções **SET** específicas da sessão podem perder informações se os usuários conseguem executar consultas arbitrárias. Por exemplo, uma função de predicado que implicitamente converte uma cadeia de caracteres em **datetime** poderia filtrar linhas diferentes com base na opção **SET DATEFORMAT** da sessão atual. Em geral, as funções de predicado devem obedecer as regras a seguir:  
   
 -   As funções de predicado não devem converter implicitamente cadeias de caracteres em **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**, ou vice-versa, pois essas conversões são afetadas pleas opções [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) e [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). Em vez disso, use a função **CONVERT** e especifique explicitamente o parâmetro de estilo.  
   
@@ -142,10 +142,10 @@ ms.locfileid: "52409893"
 -   As funções de predicado não devem comparar cadeias de caracteres concatenadas com **NULL**, pois esse comportamento é afetado pela opção [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
    
   
-##  <a name="SecNote"></a> Observação de segurança: ataques de canal lateral  
- **Gerenciador de políticas de segurança mal-intencionado:** é importante observar que um gerenciador de políticas de segurança mal-intencionado com permissões suficientes para criar uma política de segurança sobre uma coluna confidencial e que tenha permissão para criar ou alterar funções com valor de tabela embutida poderá pactuar com outro usuário que tenha permissões de seleção em uma tabela para realizar a exfiltração de dados pela criação maliciosa de funções com valor de tabela embutida, concebidas para usar ataques de canal lateral com o objetivo de inferir dados. Esses ataques exigiriam a colusão (ou excesso de permissões concedidas a um usuário mal-intencionado) e provavelmente demandariam várias iterações de modificação da política (exigindo permissão para remover o predicado, para que pudessem então quebrar a associação do esquema), modificando as funções com valor de tabela embutida e repetidamente executando instruções de seleção na tabela de destino. É altamente recomendável limitar as permissões conforme necessário e monitorar quaisquer atividades suspeitas, como mudança constante de políticas e funções com valor de tabela embutida relacionadas com a segurança de nível de linha.  
+##  <a name="SecNote"></a> Observação de segurança: Ataques de canal lateral  
+ **Gerente de política de segurança mal-intencionado:** É importante observar que um gerente de política de segurança mal-intencionado, com permissões suficientes para criar uma política de segurança na parte superior de uma coluna confidencial, tendo permissão para criar ou alterar funções embutidas com valor de tabela, poderá conspirar com outro usuário que tenha permissões SELECT em uma tabela para realizar a exportação de dados, pela criação mal-intencionada de funções embutidas com valor de tabela, projetadas para usar ataques de temporização para inferir dados. Esses ataques exigiriam a colusão (ou excesso de permissões concedidas a um usuário mal-intencionado) e provavelmente demandariam várias iterações de modificação da política (exigindo permissão para remover o predicado, para que pudessem então quebrar a associação do esquema), modificando as funções com valor de tabela embutida e repetidamente executando instruções de seleção na tabela de destino. É altamente recomendável limitar as permissões conforme necessário e monitorar quaisquer atividades suspeitas, como mudança constante de políticas e funções com valor de tabela embutida relacionadas com a segurança de nível de linha.  
   
- **Consultas cuidadosamente concebidas:** é possível causar vazamento de informações pelo uso de consultas concebidas cuidadosamente. Por exemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiria que um usuário mal-intencionado soubesse que o salário de John Doe é US$ 100.000. Mesmo que haja um predicado de segurança em vigor para impedir que um usuário mal-intencionado consulte diretamente o salário de outras pessoas, o usuário pode determinar quando a consulta retorna uma exceção de divisão por zero.  
+ **Consultas cuidadosamente elaboradas:** É possível causar vazamento de informações pelo uso de consultas concebidas cuidadosamente. Por exemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiria que um usuário mal-intencionado soubesse que o salário de John Doe é US$ 100.000. Mesmo que haja um predicado de segurança em vigor para impedir que um usuário mal-intencionado consulte diretamente o salário de outras pessoas, o usuário pode determinar quando a consulta retorna uma exceção de divisão por zero.  
    
   
 ##  <a name="Limitations"></a> Compatibilidade entre recursos  
@@ -165,7 +165,7 @@ ms.locfileid: "52409893"
   
 -   **Controle de Alterações** O Controle de Alterações pode deixar vazar a chave primária de linhas que deve ser filtrada para usuários com as permissões **SELECT** e **VIEW CHANGE TRACKING** . Os valores de dados reais não vazam; apenas o fato de que a coluna A foi atualizada/inserida/excluída para a linha com a chave primária B. Isso será um problema se a chave primária contiver um elemento confidencial, como um Número de Seguro Social. No entanto, na prática, esse **CHANGETABLE** é quase sempre unido à tabela original para obtenção de dados mais recentes.  
   
--   **Pesquisa de Texto Completo** Uma queda no desempenho é esperada em consultas que usam as funções de Pesquisa de Texto Completo e Pesquisa Semântica devido a uma junção extra apresentada para aplicar a segurança em nível de linha e evitar a perda das chaves primárias de linhas que devem ser filtradas: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
+-   **Pesquisa de Texto Completo** Um impacto no desempenho é esperado em consultas que usam as funções de Pesquisa de Texto Completo e Pesquisa Semântica, devido a uma junção extra introduzida para aplicar a Segurança em Nível de Linha e evitar a perda das chaves primárias de linhas que devem ser filtradas: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
 -   **Índices Columnstore** A RLS é compatível com índices columnstore clusterizados e não clusterizados. No entanto, como a segurança no nível de linha se aplica a uma função, é possível que o otimizador possa modificar o plano de consulta, de modo que ele não use o modo de lote.  
   

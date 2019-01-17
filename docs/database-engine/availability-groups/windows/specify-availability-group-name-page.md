@@ -1,6 +1,7 @@
 ---
-title: Página Especificar Opções do Grupo de Disponibilidade (Assistente de Novo Grupo de Disponibilidade/Assistente para Adicionar Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: Página Especificar Opções do Grupo de Disponibilidade (Assistente de Grupo de Disponibilidade) – SQL Server | Microsoft Docs
+ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c68b1d85be8dd4e5533a1aca16348fd1ee66bf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec4f98310707922abfe32a1fbd771d71da777907
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699950"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203550"
 ---
-# <a name="specify-availability-group-options-page"></a>Página Especificar Opções do Grupo de Disponibilidade
+# <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Página Especificar Opções do Grupo de Disponibilidade de um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve as opções da página **Especificar nome de grupo de disponibilidade** . Este tópico é usado pelo [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e pelo [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

@@ -14,12 +14,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e85c73beea1db9b3db7032492321556bb17253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db497d157ac6b48591fccb42c0eb6fd9dc34779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818747"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208925"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistência ao usuário no SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ O **Conteúdo** e o **Índice** fornecem funcionalidade e uma interface já fami
   
     Armazena indicadores de tópico de usuário para facilitar o acesso posterior.  
   
-Ajuda na Ajuda (Ajuda do Gerenciador de Documentos[!INCLUDE[msCoName](../includes/msconame_md.md)] ) vincula os usuários à documentação sobre o Visualizador da Ajuda, mas os tópicos estão em uma coleção separada dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter informações sobre o Visualizador da Ajuda, selecione **Ajuda na Ajuda** no menu Ajuda dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+Ajuda na Ajuda (Ajuda do Gerenciador de Documentos do [!INCLUDE[msCoName](../includes/msconame_md.md)]) direciona os usuários à documentação sobre o visualizador da Ajuda, mas os tópicos estão em uma coleção separada nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter informações sobre o Visualizador da Ajuda, selecione **Ajuda na Ajuda** no menu Ajuda dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e Comunidades do SQL Server  
 A Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também fornece modos para os usuários entrarem em contato com o MSDN Online e com as comunidades relacionadas ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]na Web para obtenção de informações. Você pode:  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543504"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205575"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Observe que o operador Hash Match não tem suporte para agregação. Desse modo, todas as agregações em procedimentos armazenados compilados nativamente usam o operador Stream Aggregate, mesmo se o plano para a mesma consulta no [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado usar o operador Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Junções e estatísticas de coluna  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém estatísticas sobre valores nas colunas de chave do índice para ajudar a fazer uma estimativa do custo de determinadas operações, como buscas de índice e verificação de índice. (O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também cria estatísticas em colunas de chave não indexadas se você criá-las explicitamente ou se o otimizador de consulta criá-los em resposta a uma consulta com um predicado.) A principal métrica na estimativa de custo é o número de linhas processadas por um único operador. Observe que para tabelas baseadas em disco, o número de páginas acessadas por um operador específico é significativo na estimativa de custo. No entanto, como a contagem de páginas não é importante para tabelas com otimização de memória (sempre será zero), este documento se concentra na contagem de linhas. A estimativa é iniciada com os operadores de verificação e busca de índice no plano e depois é estendida para incluir os outros operadores, como o de junção. O número estimado de linhas a serem processadas por um operador de junção é baseado na estimativa dos operadores subjacentes de índice, busca e verificação. Para obter acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória, você pode observar o plano de execução real ver a diferença entre as contagens de linhas estimadas e reais dos operadores no plano.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém estatísticas sobre valores nas colunas de chave do índice para ajudar a fazer uma estimativa do custo de determinadas operações, como buscas de índice e verificação de índice. (O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também criará estatísticas em colunas de chave não índice se você criá-las explicitamente ou se o otimizador de consulta criá-los em resposta a uma consulta com um predicado.) A principal métrica na estimativa de custo é o número de linhas processadas por um único operador. Observe que para tabelas baseadas em disco, o número de páginas acessadas por um operador específico é significativo na estimativa de custo. No entanto, como a contagem de páginas não é importante para tabelas com otimização de memória (sempre será zero), este documento se concentra na contagem de linhas. A estimativa é iniciada com os operadores de verificação e busca de índice no plano e depois é estendida para incluir os outros operadores, como o de junção. O número estimado de linhas a serem processadas por um operador de junção é baseado na estimativa dos operadores subjacentes de índice, busca e verificação. Para obter acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória, você pode observar o plano de execução real ver a diferença entre as contagens de linhas estimadas e reais dos operadores no plano.  
   
  Para o exemplo na figura 1:  
   

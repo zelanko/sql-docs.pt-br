@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2466e5b1cff9efb055d348a7e72729fa5208156
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661325"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213705"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "51661325"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. A permissões que são concedidas às funções de servidor fixas (exceto **público**) não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
   
- Você pode adicionar entidades de segurança no nível do servidor (logons do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , contas do Windows e grupos do Windows) em funções de nível de servidor. Cada membro de uma função de servidor fixa pode adicionar outros logons a essa mesma função. Os membros de funções de servidor definidas pelo usuário não podem acrescentar outras entidades de segurança de servidor à função.  
->  [!NOTE]
+ Você pode adicionar entidades de segurança no nível do servidor (logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], contas do Windows e grupos do Windows) em funções no nível do servidor. Cada membro de uma função de servidor fixa pode adicionar outros logons a essa mesma função. Os membros de funções de servidor definidas pelo usuário não podem acrescentar outras entidades de segurança de servidor à função.  
+> [!NOTE]
 >  Permissões no nível do servidor não estão disponíveis no Banco de Dados SQL ou no SQL Data Warehouse. Para obter mais informações sobre o Banco de Dados SQL, consulte [Controlando e concedendo acesso ao banco de dados.](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)
   
 ## <a name="fixed-server-level-roles"></a>Funções fixas de nível de servidor  
@@ -51,7 +51,7 @@ ms.locfileid: "51661325"
 |------------------------------|-----------------|  
 |**sysadmin**|Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no servidor.|  
 |**serveradmin**|Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.|  
-|**securityadmin**|Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem ter as permissões de nível de servidor `GRANT`, `DENY` e `REVOKE`. Eles também podem ter permissões de nível de banco de dados `GRANT`, `DENY` e `REVOKE` se tiverem acesso ao banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** a capacidade de conceder acesso ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e de configurar permissões de usuário permitem que o administrador de segurança atribua a maioria das permissões de servidor. A função **securityadmin** deve ser tratada como equivalente à função **sysadmin** .|  
+|**securityadmin**|Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem ter as permissões de nível de servidor `GRANT`, `DENY` e `REVOKE`. Eles também podem ter permissões de nível de banco de dados `GRANT`, `DENY` e `REVOKE` se tiverem acesso ao banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** A capacidade de conceder acesso ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e de configurar permissões de usuário permite que o administrador de segurança atribua a maioria das permissões de servidor. A função **securityadmin** deve ser tratada como equivalente à função **sysadmin** .|  
 |**processadmin**|Os membros da função de servidor fixa **processadmin** podem encerrar os processos em execução em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**setupadmin**|Os membros da função de servidor fixa **setupadmin** podem adicionar e remover servidores vinculados usando instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (A associação **sysadmin** é necessária ao usar o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
 |**bulkadmin**|Os membros da função de servidor fixa **bulkadmin** podem executar a instrução `BULK INSERT`.|  

@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSTASK.F1
@@ -15,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808458"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarefa do Azure Data Lake Analytics
 
@@ -42,7 +41,7 @@ Use a página **Geral** para configurar a tarefa e fornecer o script U-SQL que a
 
 ### <a name="u-sql-configuration"></a>Configuração do U-SQL
 
-A configuração de U-SQL tem duas configurações: **SourceType** e as opções dinâmicas com base no valor de **SourceType**. 
+A configuração do U-SQL tem duas configurações: **SourceType** e opções dinâmicas com base no valor de **SourceType**. 
 
 **SourceType** especifica a origem do script U-SQL. O script será enviado a uma conta do Azure Data Lake Analytics durante a execução do pacote do SSIS. As opções para essa propriedade são:
 
@@ -64,28 +63,28 @@ A configuração de U-SQL tem duas configurações: **SourceType** e as opções
 ### <a name="job-configuration"></a>Configuração do trabalho
 A configuração de trabalho especifica as propriedades de envio do trabalho de U-SQL.
 
-- **AzureDataLakeAnalyticsConnection:** Especifica a conta do Data Lake Analytics em que o script U-SQL é enviado. Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione <**Nova conexão**>. Para obter informações relacionadas, confira [Gerenciador de Conexões do Azure Data Lake Analytics](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
+- **AzureDataLakeAnalyticsConnection:** Especifica a conta do Data Lake Analytics na qual o script U-SQL é enviado. Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione <**Nova conexão**>. Para obter informações relacionadas, confira [Gerenciador de Conexões do Azure Data Lake Analytics](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
 
-- **JobName:** especifica o nome do trabalho U-SQL. 
-- **AnalyticsUnits:** especifica a contagem de unidades de análise do trabalho U-SQL.
-- **Priority:** especifica a prioridade do trabalho U-SQL. Defina com um valor de 0 a 1000. Quanto menor o número, maior a prioridade.
-- **RuntimeVersion:** especifica a versão de tempo de execução do Data Lake Analytics do trabalho U-SQL. Ele é definido como "padrão" por padrão. Normalmente, você não precisa alterar essa propriedade.
-- **Synchronous:** um valor booliano que especifica se a tarefa deve aguardar a conclusão do trabalho ou não. Se o valor for definido como true, a tarefa será marcada como **sucesso** após a conclusão do trabalho. Se o valor for definido como false, a tarefa será marcada como **sucesso** após o trabalho passar pela fase de preparação.
+- **JobName:** Especifica o nome do trabalho do U-SQL. 
+- **AnalyticsUnits:** Especifica a contagem de unidades de análise do trabalho do U-SQL.
+- **Priority:** Especifica a prioridade do trabalho do U-SQL. Defina com um valor de 0 a 1000. Quanto menor o número, maior a prioridade.
+- **RuntimeVersion:** Especifica a versão de tempo de execução do Data Lake Analytics do trabalho do U-SQL. Ele é definido como "padrão" por padrão. Normalmente, você não precisa alterar essa propriedade.
+- **Synchronous:** Um valor booliano especifica se a tarefa deve aguardar a conclusão do trabalho ou não. Se o valor for definido como true, a tarefa será marcada como **sucesso** após a conclusão do trabalho. Se o valor for definido como false, a tarefa será marcada como **sucesso** após o trabalho passar pela fase de preparação.
 
   |Valor|Descrição|
   |-----------|-----------------|
   |True|O resultado da tarefa baseia-se no resultado de execução do trabalho U-SQL. Trabalho bem-sucedido > tarefa bem-sucedida. Falha do trabalho > falha na tarefa. Falha ou sucesso da tarefa > a tarefa é concluída.|
   |Falso|O resultado da tarefa baseia-se no resultado de envio e preparação do trabalho U-SQL. Envio do trabalho bem-sucedido e fase de preparação realizada > tarefa bem-sucedida. Falha no envio do trabalho ou reprovação do trabalho na fase de preparação > falha na tarefa. Falha ou sucesso da tarefa > a tarefa é concluída.|
 
-- **TimeOut:** especifica um tempo limite em segundos para a execução do trabalho. Se o trabalho atingir o tempo limite, será cancelado e marcado como com falha. A propriedade não estará disponível se **Synchronous** for definido como falso.
+- **TimeOut:** Especifica um tempo limite, em segundos, para a execução do trabalho. Se o trabalho atingir o tempo limite, será cancelado e marcado como com falha. A propriedade não estará disponível se **Synchronous** for definido como falso.
 
 ## <a name="parameter-mapping-page-configuration"></a>Configuração de página de mapeamento de parâmetro
 
 Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor de Tarefa do Azure Data Lake Analytics** para mapear variáveis para parâmetros (variáveis de U-SQL) no script U-SQL.
 
-- **Nome da Variável:** Depois de adicionar um mapeamento de parâmetros selecionando **Adicionar**, selecione um sistema ou variável definida pelo usuário na lista. Como alternativa, você pode selecionar <**Nova variável...** > para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**. Para obter informações relacionadas, confira [Variáveis do &#40;SSIS&#41; Integration Services](../../integration-services/integration-services-ssis-variables.md).  
+- **Nome da Variável:** Depois de adicionar um mapeamento de parâmetros selecionando **Adicionar**, selecione um sistema ou uma variável definida pelo usuário na lista. Como alternativa, você pode selecionar <**Nova variável...** > para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**. Para obter informações relacionadas, confira [Variáveis do &#40;SSIS&#41; Integration Services](../../integration-services/integration-services-ssis-variables.md).  
 
-- **Nome do Parâmetro:** forneça um nome de parâmetro/variável no script U-SQL. Verifique se o nome do parâmetro começa com o sinal \@, como \@Param1. 
+- **Nome do Parâmetro:** Forneça um nome de parâmetro/variável no script U-SQL. Verifique se o nome do parâmetro começa com o sinal \@, como \@Param1. 
 
 Aqui está um exemplo de como passar parâmetros para o script U-SQL.
 
@@ -121,8 +120,8 @@ No exemplo de script acima, os caminhos de entrada e saída são definidos em pa
 
 |Nome da variável|Nome do parâmetro|
 |-------------|--------------|
-|Usuário: Variável1|\@in|
-|Usuário: Variável2|\@out| 
+|Usuário: Variable1|\@in|
+|Usuário: Variable2|\@out| 
 
 ## <a name="expression-page-configuration"></a>Configuração de página de expressão
 

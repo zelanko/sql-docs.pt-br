@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530349"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306273"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "52530349"
   
  Esta dica de consulta desabilita o uso direto de exibições indexadas e índices em exibições indexadas no plano de consulta.  
   
- A exibição indexada só não será expandida se a exibição for referenciada diretamente na parte SELECT da consulta e se WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) for especificado. Para obter mais informações sobre a dica de consulta WITH (NOEXPAND), confira [FROM](../../t-sql/queries/from-transact-sql.md).  
+ A exibição indexada só não será expandida se a exibição for referenciada diretamente na parte SELECT da consulta e se WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) for especificado. Para obter mais informações sobre a dica de consulta NOEXPAND, confira [Usando NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
  Apenas as exibições na parte SELECT das instruções, inclusive aquelas nas instruções INSERT, UPDATE, MERGE e DELETE são afetadas pela dica.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "52530349"
    > [!NOTE]
    > A dica QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n não substitui a configuração de estimativa de cardinalidade padrão ou herdada, se ela é forçada pela configuração do escopo do banco de dados, pelo sinalizador de rastreamento ou por outra dica de consulta, como QUERYTRACEON.   
    > Essa dica só afeta o comportamento do otimizador de consulta. Ele não afeta outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode depender do [nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), como a disponibilidade de determinados recursos de banco de dados.  
-   > Para saber mais sobre essa dica, confira [Opção do Desenvolvedor: modelo de Execução de Consulta de Dicas](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
+   > Para saber mais sobre essa dica, confira [Escolha do desenvolvedor: dicas do modelo de execução de consulta](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
  Permite a criação de perfil leve para a consulta. Quando uma consulta que contém essa nova dica é concluída, um novo Evento Estendido, query_plan_profile, é disparado. Esse evento estendido expõe as estatísticas de execução e o plano de execução real XML semelhante ao evento estendido query_post_execution_showplan, mas apenas para consultas que contêm a nova dica. **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
@@ -296,7 +296,7 @@ ms.locfileid: "52530349"
   > Se você habilitar a coleta de evento estendido query_post_execution_showplan, isso adicionará a infraestrutura de criação de perfil padrão a cada consulta que esteja sendo executada no servidor e, portanto, poderá afetar o desempenho geral do servidor.      
   > Se você habilitar a coleção do evento estendido *query_thread_profile* para usar infraestrutura de criação de perfil leve, isso resultará em muito menos sobrecarga de desempenho, mas ainda afetará o desempenho geral do servidor.       
   > Se você habilitar o evento estendido de query_plan_profile, isso só habilitará a infraestrutura de criação de perfil leve para uma consulta executada com QUERY_PLAN_PROFILE, portanto, não afetará outras cargas de trabalho no servidor. Use essa dica para criar o perfil de uma consulta específica sem afetar outras partes da carga de trabalho do servidor.
-  > Para saber mais sobre a criação de perfil leve, confira [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+  > Para saber mais sobre a criação de perfil leve, confira [Infraestrutura de criação de perfil de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 A lista de todos os nomes de USE HINT compatíveis pode ser consultada usando a exibição de gerenciamento dinâmico [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 
@@ -359,7 +359,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>B. Usando OPTIMIZE FOR  
+### <a name="b-using-optimize-for"></a>b. Usando OPTIMIZE FOR  
  O exemplo a seguir instrui o otimizador de consulta a usar o valor `'Seattle'` para a variável local `@city_name` e a usar dados estatísticos para determinar o valor da variável local `@postal_code` ao otimizar a consulta. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

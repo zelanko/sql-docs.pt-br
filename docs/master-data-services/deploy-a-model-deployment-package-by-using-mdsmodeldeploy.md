@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398191"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823690"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implantar um pacote de implantação de modelo usando MDSModelDeploy
 
@@ -49,7 +48,7 @@ ms.locfileid: "52398191"
   
 1.  Determine se você está implantando um novo modelo, um clone de um modelo ou atualizando um modelo clonado previamente. Para obter mais informações, consulte [Opções de implantação de modelo &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md).  
   
-2.  Abra um Administrador: Prompt de comando e navegue para MDSModelDeploy.exe.  
+2.  Abra um Prompt de Comando de Administrador: e procure MDSModelDeploy.exe.  
   
     -   Se o MDS estiver instalado na local padrão, a ferramenta estará disponível em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration  
   
@@ -98,7 +97,7 @@ ms.locfileid: "52398191"
   
  **Observações:**  
   
--   Se uma exibição de assinatura no pacote tiver o mesmo nome que uma exibição de assinatura em um modelo existente, este aviso será exibido: **Exibição da assinatura do implantador renomeada** e a exibição será criada como *modelname.subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
+-   Se uma exibição de assinatura no pacote tiver o mesmo nome de uma exibição de assinatura em um modelo existente, este aviso será exibido: **Exibição da assinatura do implantador renomeada** e a exibição é criada como *modelname.subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
   
 -   O processo de implantação tem quatro etapas:  
   

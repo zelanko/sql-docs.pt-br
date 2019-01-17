@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535544"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553208"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
   O catálogo do **SSISDB** é o ponto central para trabalhar com os projetos do SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -412,7 +412,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
     ```  
   
-3.  Faça backup do banco de dados do SSISDB usando a caixa de diálogo **Backup de Banco de Dados** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Como fazer backup de um banco de dados (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Faça backup do banco de dados do SSISDB usando a caixa de diálogo **Backup de Banco de Dados** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, confira [Como executar backup de um banco de dados (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Gere o script de CREATE LOGIN para ##MS_SSISServerCleanupJobLogin## realizando o procedimento a seguir. Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -436,7 +436,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 ### <a name="to-restore-the-ssis-database"></a>Para restaurar o banco de dados SSIS  
   
-1.  Se você estiver restaurando o banco de dados SSISDB para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o catálogo do SSISDB nunca foi criado, habilite o clr (Common Language Runtime) executando o procedimento armazenado sp_configure. Para obter mais informações, veja [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opção clr habilitado](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Se você estiver restaurando o banco de dados SSISDB para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que o catálogo do SSISDB nunca foi criado, habilite o CLR (Common Language Runtime) executando o procedimento armazenado `sp_configure`. Para obter mais informações, veja [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opção clr habilitado](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 2.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o servidor local e expanda **Catálogos do Integration Services**.  
   
-3.  Clique com o botão direito do mouse em **SSISDB**e selecione **Atualização do Banco de Dados** para iniciar o Assistente de Atualização do SSISDB.  
+3.  Clique com o botão direito do mouse em **SSISDB**e selecione **Atualização do Banco de Dados** para iniciar o Assistente de Atualização do SSISDB. Ou inicie o Assistente de Atualização do SSISDB executando `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` com permissões elevadas no servidor local.
   
-     ![Iniciar o assistente de atualização do SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Iniciar o assistente de atualização do SSISDB")  
-  
+     ![Iniciar o assistente de atualização do SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  Na página **Selecionar Instância** , escolha uma instância do SQL Server no servidor local.  
   
     > [!IMPORTANT]  
@@ -598,7 +598,7 @@ Execute as etapas de pré-requisito a seguir antes de habilitar o suporte do Alw
 > -   Você deve habilitar o **suporte do SSIS para Always On** *depois* de adicionar o SSISDB a um Grupo de Disponibilidade Always On.  
 
 > [!NOTE]
-> Para obter mais informações sobre esse procedimento, confira o seguinte passo a passo com capturas de tela adicionais fornecidas pelo MVP da Plataforma de Dados Marcos Freccia: [Adicionar o SSISDB a um Grupo de Disponibilidade para o SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> Para obter mais informações sobre esse procedimento, confira o seguinte passo a passo com capturas de tela adicionais fornecidas pelo MVP da Plataforma de Dados Marcos Freccia: [Adicionar SSISDB ao AG do SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> Etapa 1: Criar o catálogo do Integration Services  
   
@@ -655,9 +655,9 @@ Se a opção **Habilitar suporte do Always On** no menu de contexto parecer esta
   
 3.  Atualize o banco de dados do SSISDB no **nó primário**. No**Pesquisador de Objetos** do SQL Server Management Studio, expanda **Catálogos do Integration Services**, clique com o botão direito do mouse em **SSISDB**e selecione **Atualização do Banco de Dados**. Siga as instruções do **Assistente de Atualização do SSISDB** para atualizar o banco de dados. Inicie o **Assistente de Atualização do SSISDB** localmente no **nó primário**.  
   
-4.  Siga as instruções em [Etapa 2: Adicionar o SSISDB a um Grupo de Disponibilidade Always On](#Step2) para adicionar o SSISDB a um grupo de disponibilidade.  
+4.  Siga as instruções descritas na [Etapa 2: Adicionar o SSISDB a um grupo de disponibilidade Always On](#Step2) para adicionar o SSISDB de volta um grupo de disponibilidade.  
   
-5.  Siga as instruções em [Etapa 3: Habilitar o suporte do SSIS para o Always On](#Step3).  
+5.  Siga as instruções descritas na [Etapa 3: Habilitar o suporte do SSIS para o Always On](#Step3).  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   

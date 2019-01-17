@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204725"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui ferramentas e assistentes que simplificam a implantação de pacotes do computador de desenvolvimento para o servidor de produção ou para outros computadores.  
@@ -55,7 +55,7 @@ ms.locfileid: "51639063"
 ## <a name="package-configurations"></a>Configurações do Pacote
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece configurações de pacote que podem ser usadas para atualizar os valores das propriedades em tempo de execução.  
   
-> **OBSERVAÇÃO:** as configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
+> **OBSERVAÇÃO:** As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
  Uma configuração é um par propriedade/valor que você adiciona a um pacote concluído. Normalmente, você cria uma definição de propriedades do pacote nos objetos do pacote durante o desenvolvimento do pacote e, depois, adiciona as configurações ao pacote. Quando o pacote é executado, obtém os novos valores da propriedade da configuração. Por exemplo, ao usar uma configuração, você pode alterar a cadeia de caracteres de conexão de um gerenciador de conexões ou atualizar o valor de uma variável.  
   
@@ -176,15 +176,15 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
   
  **OBSERVAÇÕES:**
->Você também pode acessar o **Organizador de Configurações de Pacote** clicando no botão de reticências ao lado da propriedade **Configuração** . A propriedade Configuração aparece na janela de propriedades para o pacote.  
-  
->As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
-  
->Na caixa de diálogo **Organizador de Configurações do Pacote** , você pode habilitar pacotes para usar configurações, adicionar e excluir configurações e definir a ordem de preferência para carregar as configurações. 
- 
->Quando as configurações de pacote são carregadas na ordem preferencial, elas são carregadas da parte superior da lista mostrada na caixa de diálogo **Organizador de Configurações do Pacote** até a parte inferior da lista. Porém, no tempo de execução, talvez as configurações do pacote não sejam carregadas na ordem preferencial. Em particular, as configurações do pacote pai são carregadas depois das configurações de outros tipos.  
-  
->Se várias configurações definirem a mesma propriedade de objeto, o valor carregado por último será usado no tempo de execução.  
+> Você também pode acessar o **Organizador de Configurações de Pacote** clicando no botão de reticências ao lado da propriedade **Configuração** . A propriedade Configuração aparece na janela de propriedades para o pacote.  
+> 
+> As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
+> 
+> Na caixa de diálogo **Organizador de Configurações do Pacote** , você pode habilitar pacotes para usar configurações, adicionar e excluir configurações e definir a ordem de preferência para carregar as configurações. 
+> 
+> Quando as configurações de pacote são carregadas na ordem preferencial, elas são carregadas da parte superior da lista mostrada na caixa de diálogo **Organizador de Configurações do Pacote** até a parte inferior da lista. Porém, no tempo de execução, talvez as configurações do pacote não sejam carregadas na ordem preferencial. Em particular, as configurações do pacote pai são carregadas depois das configurações de outros tipos.  
+> 
+> Se várias configurações definirem a mesma propriedade de objeto, o valor carregado por último será usado no tempo de execução.  
   
  Na caixa de diálogo **Organizador de Configurações do Pacote** , você executa o Assistente de Configuração de Pacotes, que o guia através de etapas para criar uma configuração. Para executar o Assistente de Configuração de Pacotes, adicione uma nova configuração na caixa de diálogo **Organizador de Configurações do Pacote** ou edite uma existente. Nas páginas do assistente, você escolhe o tipo de configuração, escolhe se quer acessar a configuração diretamente ou usar variáveis de ambiente, e seleciona as propriedades a serem salvas na configuração.  
   
@@ -212,7 +212,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Depois que o assistente terminar, a nova configuração é adicionada à lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-> **OBERVAÇÃO:** a última página do Assistente de Configuração de Pacote, Concluindo o Assistente, lista as propriedades de destino da configuração. Se quiser atualizar as propriedades enquanto estiver executando pacotes usando o utilitário prompt de comando **dtexec** , você poderá gerar as cadeias de caracteres que representam os caminhos de propriedade executando o Assistente de Configuração de Pacotes e, então, copiá-las e colá-las na janela do prompt de comando para usar com a opção definida de **dtexec.**  
+> **OBSERVAÇÃO:** A última página do Assistente de Configuração de Pacote, Concluindo o Assistente, lista as propriedades de destino da configuração. Se quiser atualizar as propriedades enquanto estiver executando pacotes usando o utilitário prompt de comando **dtexec**, você poderá gerar as cadeias de caracteres que representam os caminhos de propriedade executando o Assistente de Configuração de Pacotes e, então, copiá-las e colá-las na janela do prompt de comando para usar com a opção definida de **dtexec.**  
   
  A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
@@ -242,7 +242,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 8.  Na página Selecionar Propriedades a Serem Exportadas, selecione as propriedades dos objetos do pacote a serem incluídas na configuração. Se o tipo de configuração oferecer suporte somente a uma propriedade, o título dessa página de assistente será Selecionar Propriedade de Destino. Para obter mais informações, consulte [Referência da interface do usuário do Assistente de Configuração de Pacotes](../../integration-services/packages/package-configuration-wizard-ui-reference.md).  
   
-    > **OBSERVAÇÃO:** somente os tipos de configuração **Arquivo de Configuração XML** e **SQL Server** dão suporte à inclusão de várias propriedades em uma configuração.  
+    > **OBSERVAÇÃO:** Somente os tipos de configuração **Arquivo de Configuração XML** e **SQL Server** dão suporte à inclusão de várias propriedades em uma configuração.  
   
 9. Na página Concluindo o Assistente, digite o nome da configuração e clique em **Concluir**.  
   
@@ -253,11 +253,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>Organizador de Configurações do Pacote
   Use a caixa de diálogo **Organizador de Configurações do Pacote** para habilitar configurações de pacote, visualizar uma lista de configurações para o pacote atual e para definir a ordem de preferência para carregar as configurações.  
   
-> **OBSERVAÇÃO:** as configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
+> **OBSERVAÇÃO:** As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
   
  Se várias configurações atualizarem a mesma propriedade, valores de configurações listadas na parte inferior da lista de configurações substituirão os valores das configurações na parte superior da lista. O último valor carregado na propriedade é o valor usado quando o pacote executar. Além disso, se o pacote usar uma combinação de configuração direta, como um arquivo de configuração XML, e uma configuração indireta, como uma variável de ambiente, a configuração indireta que aponta para o local da configuração direta deve estar na parte superior da lista.  
   
-> **OBSERVAÇÃO:** quando as configurações de pacote são carregadas na ordem preferencial, elas são carregadas da parte superior da lista mostrada na caixa de diálogo **Organizador de Configurações do Pacote** até a parte inferior da lista. Porém, no tempo de execução, talvez as configurações do pacote não sejam carregadas na ordem preferencial. Em particular, Configurações do Pacote Pai são carregadas depois das configurações de outros tipos.  
+> **OBSERVAÇÃO:** Quando as configurações de pacote são carregadas na ordem preferencial, elas são carregadas da parte superior da lista mostrada na caixa de diálogo **Organizador de Configurações do Pacote** até a parte inferior da lista. Porém, no tempo de execução, talvez as configurações do pacote não sejam carregadas na ordem preferencial. Em particular, Configurações do Pacote Pai são carregadas depois das configurações de outros tipos.  
   
  Configurações de Pacote atualizam os valores das propriedades de objetos de pacote em tempo de execução. Quando um pacote é carregado, os valores das configurações substituem os valores que foram definidos quando o pacote foi desenvolvido. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a diferentes tipos de configuração. Por exemplo, é possível usar um arquivo XML que pode ter várias configurações, ou uma variável de ambiente que contenha uma única configuração. Para obter mais informações, consulte [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
@@ -295,7 +295,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>Referência da interface do usuário do Assistente de Configuração de Pacotes
   Use o **Assistente de Configuração de Pacotes** para criar configurações que atualizem as propriedades de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e seus respectivos objetos em tempo de execução. Esse assistente é executado quando você adiciona uma nova configuração ou modifica uma existente na caixa de diálogo **Organizador de Configurações do Pacote** . Para abrir a caixa de diálogo **Organizador de Configurações do Pacote** , selecione **Configurações de Pacote** no menu **SSIS** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Criar configurações de pacote](../../integration-services/packages/create-package-configurations.md).  
   
-> **OBSERVAÇÃO:** as configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **OBSERVAÇÃO:** As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  As seções a seguir descrevem as páginas do Assistente.  
   
@@ -587,7 +587,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Arquivo de configuração**  
  Edite o conteúdo de um arquivo de configuração selecionando o arquivo na lista.  
   
- **Related Topics:** [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)  
+ **Tópicos relacionados:** [Criar configurações de pacote](../../integration-services/packages/create-package-configurations.md)  
   
  **Caminho**  
  Exiba o caminho da propriedade a ser configurada.  
@@ -682,7 +682,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Para selecionar a pasta na caixa de diálogo **Pacote do SSIS** , clique em procurar (...). Entretanto, a caixa de diálogo não fornece uma maneira para selecionar a pasta padrão. Se desejar usar a pasta padrão, digite "/" na caixa de texto.  
   
 > [!NOTE]  
->  Se o caminho do pacote não for válido, a seguinte mensagem de erro será exibida: "Um ou mais argumentos são inválidos".  
+>  Se você não inserir um caminho de pacote válido, a seguinte mensagem de erro será exibida: "Um ou mais argumentos são inválidos."  
   
  **Depender do armazenamento do servidor para criptografia**  
  Selecione esta opção para usar os recursos do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para ajudar a manter a segurança dos pacotes.  

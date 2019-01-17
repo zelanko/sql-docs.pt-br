@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533546"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210525"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Para tabelas e índices columnstore, qualquer tabela e índice columnstore sempr
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Usando a compactação columnstore e de arquivamento columnstore  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
   
 ### <a name="basics"></a>Noções básicas  
  As tabelas e os índices columnstore são sempre armazenados com a compactação columnstore. Você pode reduzir ainda mais o tamanho dos dados de columnstore configurando um compactação adicional denominada compactação de arquivamento.  Para executar a compactação de arquivamento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa o algoritmo de compactação XPRESS da Microsoft nos dados. Adicione ou remova a compactação de arquivamento usando os seguintes tipos de compactação de dados:  
@@ -169,7 +169,7 @@ O procedimento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../
      Descartar um índice clusterizado OFFLINE é uma operação rápida porque apenas os níveis superiores dos índices clusterizados são removidos. Quando um índice clusterizado é descartado ONLINE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve recriar o heap duas vezes, uma para a etapa 1 e outra para a etapa 2.  
   
 ## <a name="how-compression-affects-replication"></a>Como a compactação afeta a replicação 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
 Ao usar a compactação de dados com replicação, esteja atento às seguintes considerações:  
 -   Quando o Agente de Instantâneo gera o script de esquema inicial, o novo esquema usa as mesmas configurações de compactação para a tabela e seus índices. A compactação não pode ser habilitada apenas na tabela e não no índice.  
 -   Para replicação transacional, a opção de esquema de artigo determina quais objetos e propriedades dependentes devem ser incluídos no script. Para obter mais informações, veja [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
@@ -187,7 +187,7 @@ A tabela a seguir mostra as configurações de replicação que controlam a comp
 |Para compactar a tabela no Assinante, se todas as partições forem compactadas no Publicador, mas não replicar o esquema de partição.|Falso|True|Verifica se todas as partições estão habilitadas para compactação.<br /><br /> Gera scripts para a compactação em nível de tabela.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Como a compactação afeta outros componentes do SQL Server 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  A compactação ocorre no mecanismo de armazenamento e os dados são apresentados à maioria dos outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado não compactado. Isso limita os efeitos da compactação nos outros componentes para:  
 -   Operações de importação e exportação em massa  

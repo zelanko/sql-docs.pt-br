@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702954"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755078"
 ---
 # <a name="create-an-entity-master-data-services"></a>Criar uma entidade (Master Data Services)
 
@@ -54,9 +53,9 @@ ms.locfileid: "47702954"
      Se você não preencher este campo, será usado o nome da entidade.  
   
     > [!TIP]  
-    >  Use o nome do modelo como parte do nome da tabela de preparo, por exemplo, *Modelname_Entityname*. Isto facilita a localização das tabelas no banco de dados. Para obter mais informações sobre as tabelas de preparo, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
-    > [!TIP]  
-    >  Se a nomenclatura padrão para tabelas de preparo for usada, o MDS acrescentará automaticamente identificadores (por exemplo, " 1", " 2") aos nomes de tabelas de preparo se existir uma entidade com o mesmo nome em outro modelo.
+    >  Use o nome do modelo como parte do nome da tabela de preparo, por exemplo, *Modelname_Entityname*. Isto facilita a localização das tabelas no banco de dados. Para obter mais informações sobre as tabelas de preparo, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    > [!TIP]
+    > Se a nomenclatura padrão para tabelas de preparo for usada, o MDS acrescentará automaticamente identificadores (por exemplo, " 1", " 2") aos nomes de tabelas de preparo se existir uma entidade com o mesmo nome em outro modelo.
   
 7.  No campo **Tipo de Log de Transações** , escolha o tipo de log de transações na lista suspensa.  
   

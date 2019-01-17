@@ -12,16 +12,16 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406683"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380877"
 ---
 # <a name="view-statistics-properties"></a>Exibir propriedades de estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "52406683"
      Exibe o nome do objeto de banco de dados onde as estatísticas são armazenadas.  
   
      **Estatísticas para INDEXstatistics_name**  
-     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Estas propriedades são divididas em três seções: Cabeçalho de Estatísticas, Vetor de Densidade e Histograma.  
+     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Essas propriedades são divididas em três seções: Cabeçalho de Estatísticas, Vetor de Densidade e Histograma.  
   
      As informações a seguir descrevem as colunas retornadas no conjunto de resultados do Cabeçalho de Estatísticas.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "52406683"
      As informações a seguir descrevem as colunas retornadas no conjunto de resultados do Vetor de Densidade.  
   
      **Toda Densidade**  
-     A densidade é 1 / *valores distintos*. Os resultados exibem a densidade de cada prefixo de colunas no objeto de estatísticas, uma linha por densidade. Um valor distinto é uma lista distinta dos valores de coluna por linha e por prefixo de colunas. Por exemplo, se o objeto de estatísticas contiver colunas de chave (A, B, C), os resultados reportarão a densidade de listas distintas de valores em cada um desses prefixos de colunas: (A), (A,B) e (A, B, C). Com o uso do prefixo (A, B, C), cada uma dessas listas é uma lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Com o uso do prefixo (A, B) os mesmos valores de colunas têm estas listas de valores distintos: (3, 5), (4, 4) e (4, 5).  
+     A densidade é 1 / *valores distintos*. Os resultados exibem a densidade de cada prefixo de colunas no objeto de estatísticas, uma linha por densidade. Um valor distinto é uma lista distinta dos valores de coluna por linha e por prefixo de colunas. Por exemplo, se o objeto de estatísticas contiver colunas de chave (A, B, C), os resultados reportarão a densidade de listas distintas de valores em cada um desses prefixos de colunas: (A), (A, B) e (A, B, C). Usando o prefixo (A, B, C), cada uma dessas listas é uma lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Usando o prefixo (A, B) os mesmos valores de coluna têm estas listas de valores distintos: (3, 5), (4, 4) e (4, 5).  
   
      **Comprimento Médio**  
      O comprimento médio, em bytes, para armazenar uma lista dos valores das colunas para o prefixo da coluna. Por exemplo, se os valores na lista (3, 5, 6) exigirem cada um 4 bytes, o comprimento será de 12 bytes.  
@@ -135,7 +135,7 @@ ms.locfileid: "52406683"
   
 7.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Para exibir propriedades de estatísticas  
   

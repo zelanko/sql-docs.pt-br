@@ -2,19 +2,19 @@
 title: Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 description: Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586309"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380657"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 Este artigo aborda a metodologia e os scripts usados para obter informações sobre o **desempenho de consultas que usam exibições**. A finalidade desses scripts é fornecer indicadores de uso e desempenho das diferentes exibições encontradas em um banco de dados. 
@@ -194,10 +194,4 @@ GO
 ```
 
 ## <a name="see-also"></a>Confira também
-[Exibições e funções de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Vídeo – SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
-[DMVs for Performance Tuning (DMVs para ajuste de desempenho) (Slide e demonstração – SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
-[SQL Server Tuning in capsule form (Ajuste do SQL Server em formato de cápsula) (filme – SQL Saturday Parma)](https://vimeo.com/200980883)    
-[SQL Server Tuning in a nutshell (Ajuste do SQL Server em poucas palavras) (slides e demonstração – SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
-[Ajuste de desempenho com exibições de gerenciamento dinâmico do SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
-[Os tipos de espera mais proeminentes do SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   
+[Exibições e funções de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

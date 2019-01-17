@@ -1,6 +1,7 @@
 ---
-title: Eventos estendidos de Grupos de Disponibilidade Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Configurar eventos estendidos para grupos de disponibilidade
+description: O SQL Server define eventos estendidos que são específicos aos Grupos de Disponibilidade AlwaysOn. Você pode monitorar esses eventos estendidos em uma sessão para ajudar no diagnóstico da causa raiz ao solucionar problemas de um grupo de disponibilidade.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,16 +11,16 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413193"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207565"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Eventos estendidos de Grupos de Disponibilidade Always On
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurar eventos estendidos para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O SQL Server define os eventos estendidos que são específicos para Grupos de Disponibilidade Always On. Você pode monitorar esses eventos estendidos em uma sessão para ajudar no diagnóstico da causa raiz ao solucionar problemas de um grupo de disponibilidade. Você pode exibir os eventos estendidos do grupo de disponibilidade usando a seguinte consulta:  
+  O SQL Server define eventos estendidos que são específicos aos Grupos de Disponibilidade AlwaysOn. Você pode monitorar esses eventos estendidos em uma sessão para ajudar no diagnóstico da causa raiz ao solucionar problemas de um grupo de disponibilidade. Você pode exibir os eventos estendidos do grupo de disponibilidade usando a seguinte consulta:  
   
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
@@ -80,7 +81,7 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480): alteração de função de réplica de banco de dados](#BKMK_error_reported_1480)  
+ [error_reported (1480): Alteração da função de réplica de banco de dados](#BKMK_error_reported_1480)  
   
 ###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
  Ocorre quando o estado de uma réplica de disponibilidade foi alterado. A criação de um grupo de disponibilidade ou a junção de uma réplica de disponibilidade pode disparar esse evento. É útil para o diagnóstico de failover automático com falha. Ele também pode ser usado para rastrear as etapas de failover.  
@@ -301,8 +302,8 @@ GO
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|A ID do grupo de disponibilidade.|  
 |availability_group_name|unicode_string|O nome do grupo de disponibilidade.|  
-|ddl_action|alwayson_ddl_action|Indica o tipo de ação DDL: CREATE, ALTER or DROP.|  
-|ddl_phase|ddl_opcode|Indica a fase da operação DDL: INÍCIO, CONFIRMAÇÃO ou REVERSÃO.|  
+|ddl_action|alwayson_ddl_action|Indica o tipo de ação DDL: CREATE, ALTER ou DROP.|  
+|ddl_phase|ddl_opcode|Indica a fase da operação DDL: BEGIN, COMMIT ou ROLLBACK.|  
 |de|unicode_string|O texto da instrução que foi executada.|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
@@ -348,14 +349,14 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): alteração de função de réplica de banco de dados  
+###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): Alteração da função de réplica de banco de dados  
  Esse evento error_reported filtrado ocorre de forma assíncrona depois da alteração de uma função de réplica de disponibilidade. Ele indica qual banco de dados de disponibilidade falha ao alterar sua função esperada durante o processo de failover.  
   
 #### <a name="event-information"></a>Informações de evento  
   
 |coluna|Descrição|  
 |------------|-----------------|  
-|Nome|error_reported<br /><br /> Erro número 1480: o banco de dados REPLICATION_TYPE_MSG "DATABASE_NAME" está mudando de função, de "OLD_ROLE" para "NEW_ROLE" devido a REASON_MSG|  
+|Nome|error_reported<br /><br /> Erro número 1480: O banco de dados REPLICATION_TYPE_MSG "DATABASE_NAME" está alterando funções de "OLD_ROLE" para "NEW_ROLE" devido a REASON_MSG|  
 |Categoria|erros|  
 |Canal|Admin|  
   

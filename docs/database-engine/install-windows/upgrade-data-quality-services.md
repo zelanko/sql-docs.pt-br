@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601927"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208826"
 ---
 # <a name="upgrade-data-quality-services"></a>Atualizar o Data Quality Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "51601927"
 
 Este artigo fornece informações sobre como fazer upgrade da instalação existente do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS (Data Quality Services). Como parte do upgrade do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, você também deverá fazer upgrade do esquema de bancos de dados do DQS.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Você deve fazer backup de seus bancos de dados do DQS antes de atualizar o DQS para impedir qualquer perda de dados acidental durante a atualização do esquema. Para obter informações sobre como fazer backup de bancos de dados DQS, veja [Fazendo backup e restaurando banco de dados do DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Conecte-se ao [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server usando a versão atual ou uma versão anterior do Data Quality Client ou a [Transformação de Limpeza DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) no Integration Services para executar suas tarefas de qualidade de dados.  
 > -   Depois de fazer upgrade do Data Quality Services e do Master Data Services, uma versão anterior do Suplemento Master Data Services para Excel deixará de funcionar. Você pode baixar a versão [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] do suplemento Master Data Services para Excel [aqui](https://go.microsoft.com/fwlink/?LinkID=506665).  

@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191066"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210775"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52191066"
 
 Essas funções convertem uma expressão de um tipo de dados em outro.  
 
-**Exemplo:** alterar o tipo de dados de entrada
+**Exemplo:** Alterar o tipo de dados de entrada
 
 **Converter**
 ```sql  
@@ -103,7 +103,7 @@ Retorna a *expression* convertida em *data_type*.
 ## <a name="date-and-time-styles"></a>Estilos de data e hora  
 Para uma *expression* de tipo de dados de data ou hora, *style* pode ter um dos valores mostrados na tabela a seguir. Outros valores são processados como 0. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os únicos estilos compatíveis, ao converter dos tipos de data e hora em **datetimeoffset**, são 0 ou 1. Todos os outros estilos de conversão retornam erro 9809.
   
->  [!NOTE]  
+> [!NOTE]
 >  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao formato de data, em estilo árabe, com o algoritmo kuwaitiano.
   
 |Sem século (yy) (<sup>1</sup>)|Com século (aaaa)|Standard|Entrada/saída (<sup>3</sup>)|  
@@ -125,8 +125,8 @@ Para uma *expression* de tipo de dados de data ou hora, *style* pode ter um dos 
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** ou **120** (<sup>2</sup>)|ODBC canônico|aaaa-mm-dd hh:mi:ss(24h)|  
 |-|**21** ou **121** (<sup>2</sup>)|ODBC canônico (com milissegundos) padrão para hora, data, datetime2 e datetimeoffset|aaaa-mm-dd hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-ddThh:mi:ss.mmm (sem espaços)<br /><br /> Observação: para um valor de milissegundos (mmm) igual a 0, o valor da fração decimal de milissegundo não será exibido. Por exemplo, o valor '2012-11-07T18:26:20.000 é exibido como '2012-11-07T18:26:20'.|  
-|-|**127**(<sup>6, 7</sup>)|ISO8601 com fuso horário Z.|aaaa-mm-ddThh:mi:ss.mmmZ (sem espaços)<br /><br /> Observação: para um valor de milissegundos (mmm) igual a 0, o valor decimal de milissegundo não será exibido. Por exemplo, o valor '2012-11-07T18:26:20.000 é exibido como '2012-11-07T18:26:20'.|  
+|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-ddThh:mi:ss.mmm (sem espaços)<br /><br /> Observação: Para um valor de milissegundos (mmm) igual a 0, o valor da fração decimal de milissegundo não será exibido. Por exemplo, o valor '2012-11-07T18:26:20.000 é exibido como '2012-11-07T18:26:20'.|  
+|-|**127**(<sup>6, 7</sup>)|ISO8601 com fuso horário Z.|aaaa-mm-ddThh:mi:ss.mmmZ (sem espaços)<br /><br /> Observação: Para um valor de milissegundos (mmm) igual a 0, o valor decimal de milissegundo não será exibido. Por exemplo, o valor '2012-11-07T18:26:20.000 é exibido como '2012-11-07T18:26:20'.|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|Islâmico (<sup>5</sup>)|dd mmm aaaa hh:mi:ss:mmmAM<br /><br /> Neste estilo, **mon** representa uma representação Unicode islâmico de vários tokens do nome completo do mês. Esse valor não é renderizado corretamente em uma instalação em inglês dos EUA padrão do SSMS.|  
 |-|**131** (<sup>2</sup>)|Islâmico (<sup>5</sup>)|dd/mm/aaaa hh:mi:ss:mmmAM|  
   
@@ -167,7 +167,7 @@ Para uma **expression** de **money** ou *smallmoney*, *style* pode ter um dos va
   
 |Valor|Saída|  
 |---|---|
-|**0** (padrão)|Nenhuma vírgula a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal<br /><br />Exemplo: 4235,98.|  
+|**0** (padrão)|Nenhuma vírgula a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal<br /><br />Exemplo: 4.235,98.|  
 |**1**|Vírgulas a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal<br /><br />Exemplo: 3.510,92.|  
 |**2**|Nenhuma vírgula a cada três dígitos à esquerda do ponto decimal e quatro dígitos à direita do ponto decimal<br /><br />Exemplo: 4.235,9819.|  
 |**126**|Equivalente ao estilo 2, ao converter em char(n) ou varchar(n)|  
@@ -177,7 +177,7 @@ Para uma **expression** *xml*, *style* pode ter um dos valores mostrados na tabe
   
 |Valor|Saída|  
 |---|---|
-|**0** (padrão)|Use o comportamento de análise padrão que descarta o espaço em branco insignificante e não permite um subconjunto de DTD interno.<br /><br />**Observação:** ao fazer a conversão no tipo de dados **xml**, o espaço em branco insignificante do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é tratado de maneira diferente do XML 1.0. Para obter mais informações, consulte [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
+|**0** (padrão)|Use o comportamento de análise padrão que descarta o espaço em branco insignificante e não permite um subconjunto de DTD interno.<br /><br />**Observação:** Ao fazer a conversão no tipo de dados **xml**, o espaço em branco insignificante do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é tratado de maneira diferente do XML 1.0. Para obter mais informações, consulte [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Preserva espaço em branco insignificante. Essa configuração de estilo define o tratamento padrão de **xml:space** para que ele corresponda ao comportamento de **xml:space="preserve"**.|  
 |**2**|Habilita o processamento de subconjunto de DTD interno limitado.<br /><br /> Se for habilitado, o servidor poderá usar as informações a seguir fornecidas em um subconjunto de DTD interno, para executar operações de análise de não validação.<br /><br />   - Os padrões de atributos são aplicados<br />   - As referências a entidades internas são resolvidas e expandidas<br />   - A correção sintática do modelo de conteúdo DTD é verificada<br /><br /> O analisador ignora subconjuntos de DTD externos. Além disso, ele não avalia a declaração XML para ver se o atributo **standalone** tem um valor **sim** ou **não**. Em vez disso, ele analisa a instância XML como um documento autônomo.|  
 |**3**|Preserva o espaço em branco insignificante e habilita o processamento de subconjunto de DTD interno limitado.|  
@@ -368,7 +368,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>B. Usando CAST com operadores aritméticos  
+### <a name="b-using-cast-with-arithmetic-operators"></a>b. Usando CAST com operadores aritméticos  
 Este exemplo calcula uma computação de coluna única (`Computed`) dividindo as vendas totais acumuladas no ano (`SalesYTD`) pelo percentual de comissão (`CommissionPCT`). Esse valor é arredondado para o próximo número inteiro e, em seguida, é convertido em um tipo de dados `int`.
   
 ```sql

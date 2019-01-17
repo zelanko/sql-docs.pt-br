@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734604"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216055"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Este artigo descreve como determinar quem tem permissões para vários objetos no Mecanismo de Banco de Dados do SQL Server. O SQL Server implementa dois sistemas de permissão para o mecanismo de banco de dados. Um sistema mais antigo de funções fixas tem permissões pré-configuradas. Está disponível, a partir do SQL Server 2005, um sistema mais flexível e preciso. (As informações neste artigo se aplicam ao SQL Server, a partir do 2005. Alguns tipos de permissões não estão disponíveis em algumas versões do SQL Server.)
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * As permissões efetivas são a agregação dos dois sistemas de permissão. 
 >  * Uma negação de permissões substitui uma concessão de permissões. 
 >  * Se um usuário é um membro da função de servidor fixa sysadmin, permissões não são verificadas e, portanto, negações não são impostas. 
@@ -51,24 +51,24 @@ Este artigo descreve como determinar quem tem permissões para vários objetos n
 ## <a name="older-fixed-role-permission-system"></a>Sistema de permissão de função fixa anterior
 
 As funções de servidor fixas e as funções de banco de dados fixas têm permissões pré-configuradas que não podem ser alteradas. Para determinar quem é um membro de uma função de servidor fixa, execute a consulta a seguir:    
->  [!NOTE] 
+> [!NOTE]
 >  Não se aplica ao Banco de Dados SQL ou ao SQL Data Warehouse, em que a permissão de nível de servidor não está disponível. A coluna `is_fixed_role` de `sys.server_principals` foi adicionada no SQL Server 2012. Ela não é necessária para versões anteriores do SQL Server.  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * Todos os logons e os usuários são membros das funções públicas e não podem ser removidos. 
->  * Essa consulta verifica tabelas no banco de dados mestre, mas ela pode ser executada em qualquer banco de dados do produto local. 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-Para determinar quem é membro de uma função de banco de dados fixa, execute a consulta a seguir em cada banco de dados.
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ Lembre-se de que um usuário do Windows pode ser membro de mais de um grupo do W
 ### <a name="server-permissions"></a>Permissões de servidor
 
 A consulta a seguir retorna uma lista das permissões concedidas ou negadas no nível do servidor. Essa consulta pode ser executada no banco de dados mestre.   
->  [!NOTE] 
+> [!NOTE]
 >  As permissões de nível de servidor não podem ser concedidas ou consultadas no Banco de Dados SQL ou o SQL Data Warehouse.   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>Permissões de banco de dados
+### Database Permissions
 
-A consulta a seguir retorna uma lista das permissões concedidas ou negadas no nível do banco de dados. Essa consulta pode ser executada em cada banco de dados.   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
@@ -156,6 +156,6 @@ Para obter os detalhes da sintaxe, consulte [HAS_PERMS_BY_NAME](../../../t-sql/f
 
 ## <a name="see-also"></a>Consulte Também:
 
-[Guia de introdução às permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Tutorial: introdução ao Mecanismo de Banco de Dados](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[Guia de Introdução às permissões do mecanismo de banco de dados](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
+[Tutorial: Introdução ao Mecanismo de Banco de Dados](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

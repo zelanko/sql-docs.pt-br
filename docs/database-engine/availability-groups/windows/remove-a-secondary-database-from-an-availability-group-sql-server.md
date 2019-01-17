@@ -1,6 +1,7 @@
 ---
-title: Remover um banco de dados secundário de um grupo de disponibilidade (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Remover um banco de dados secundário de um grupo de disponibilidade
+description: Etapas para remoção de um banco de dados secundário de um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f08d9b924f8bfd223490694de0f6160f5f9962
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632674"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213545"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Remover um banco de dados primário de um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "47632674"
   
 6.  Na caixa de diálogo **Remover Banco de Dados do Grupo de Disponibilidade** , para remover todos os bancos de dados listados, clique em **OK**. Se você não desejar remover todos os bancos de dados listados, clique em **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para remover um banco de dados secundário de um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica secundária.  

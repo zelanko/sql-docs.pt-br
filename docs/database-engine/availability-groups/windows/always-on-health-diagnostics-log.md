@@ -1,6 +1,7 @@
 ---
-title: Log de diagnóstico de integridade de Grupos de Disponibilidade Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Logs de diagnóstico de integridade de DLL de recurso do SQL Server para grupos de disponibilidade
+description: Descreve como a DLL de recurso do SQL Server monitora a integridade do Grupo de Disponibilidade AlwaysOn.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404992"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207755"
 ---
-# <a name="always-on-availability-groups-health-diagnostics-log"></a>Log de diagnóstico de integridade de Grupos de Disponibilidade Always On
+# <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Logs de diagnóstico de integridade de DLL de recurso do SQL Server para grupos de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para monitorar a integridade da réplica de disponibilidade primária, a DLL de recurso do SQL Server executada pelo WSFC (Cluster de Failover do Windows Server) usa um procedimento armazenado na instância do SQL Server chamada [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).  
   
@@ -25,7 +26,7 @@ ms.locfileid: "52404992"
   
  **Usar os logs de diagnóstico do cluster de failover do SQL Server**
  
- Todos os diagnósticos de integridade que as DLLs de recurso do SQL Server recebem de sp_server_diagnostics são salvas automaticamente no diretório de Log padrão da instância do SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Esses logs são conhecidos como logs SQLDIAG e são salvos no formato de arquivo XEL (eventos estendidos). Esses arquivos do diretório de log do SQL Server têm o seguinte formato: \<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel. Ao examinar os logs SQLDIAG, você poderá determinar a causa raiz dos eventos de falha ou failover de recurso do grupo de disponibilidade.  
+ Todos os diagnósticos de integridade que as DLLs de recurso do SQL Server recebem de sp_server_diagnostics são salvas automaticamente no diretório de Log padrão da instância do SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Esses logs são conhecidos como logs SQLDIAG e são salvos no formato de arquivo XEL (eventos estendidos). Esses arquivos do diretório Log do SQL Server têm o seguinte formato: \<NOMEDOHOST>_\<NOMEDAINSTÂNCIA>_SQLDIAG_X_XXXXXXXXX.xel. Ao examinar os logs SQLDIAG, você poderá determinar a causa raiz dos eventos de falha ou failover de recurso do grupo de disponibilidade.  
   
  Para exibir um log SQLDIAG, arraste o arquivo .xel até o SQL Server Management Studio.  
   

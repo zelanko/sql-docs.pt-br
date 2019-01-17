@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711197"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372478"
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52711197"
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
- Para obter uma descrição detalhada do cenário, veja o blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Repositório de Consultas: uma caixa preta de dados para seu banco de dados).  
+ Para obter uma descrição detalhada do cenário, veja o blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Repositório de Consultas: um gravador de dados de voo para seu banco de dados).  
   
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificar e ajustar as principais consultas de consumo  
  Embora a carga de trabalho possa gerar milhares de consultas, no geral, apenas algumas delas usam de fato a maioria dos recursos do sistema e, portanto, exigem sua atenção. Entre as consultas que mais consomem recursos, normalmente, você encontrará aquelas que são regredidas ou que podem ser aprimoradas com ajuste adicional.  

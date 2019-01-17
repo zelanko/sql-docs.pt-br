@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516638"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209095"
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "52516638"
 ##  <a name="Background"></a> Plano de fundo  
  Um logon é uma entidade de segurança ou uma entidade que pode ser autenticada por um sistema seguro. Usuários precisam de um logon para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você pode criar um logon com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows) ou pode criar um logon que não esteja baseado em uma entidade de segurança do Windows (como um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
-> **OBSERVAÇÃO:** para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve usar a autenticação de modo misto. Para obter mais informações, veja [Escolher um modo de autenticação](../../../relational-databases/security/choose-an-authentication-mode.md).  
+> **OBSERVAÇÃO:** Para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve usar a autenticação de modo misto. Para obter mais informações, veja [Escolher um modo de autenticação](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
  Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. Permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, a permissão **CREATE ENDPOINT** ) podem ser concedidas a um logon.  
   
-> **OBSERVAÇÃO:** quando um logon se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a identidade é validada no banco de dados mestre. Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no nível do banco de dados. Quando você usa usuários de banco de dados independente, não é necessário um logon. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **OBSERVAÇÃO:** Quando um logon se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a identidade é validada no banco de dados mestre. Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no nível do banco de dados. Quando você usa usuários de banco de dados independente, não é necessário um logon. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Segurança  
 
@@ -62,7 +62,7 @@ ms.locfileid: "52516638"
   
      Se você clicar em **Pesquisar...**:  
   
-    1.  Em **Selecionar este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecione qualquer opção a seguir ou todas elas: **Entidades de segurança internas**, **Grupos** e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
+    1.  Em **Selecionar este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecione uma ou todas as seguintes opções: **Entidades de segurança internas**, **Grupos** e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
   
     2.  Em **Desta localização**, clique em **Localizações...** para abrir a caixa de diálogo **Localizações** e selecione um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52516638"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Logon – Novo** também oferece opções de quadro páginas adicionais: **Funções de Servidor**, **Mapeamento de Usuário**, **Protegíveis** e **Status**.  
+ A caixa de diálogo **Logon – Novo** também oferece opções em quatro páginas adicionais: **Funções de Servidor**, **Mapeamento de Usuário**, **Protegíveis** e **Status**.  
   
 ### <a name="server-roles"></a>Funções de Servidor  
  A página **Funções de Servidor** lista todas as funções possíveis que podem ser atribuídas ao novo logon. As seguintes opções estão disponíveis:  
@@ -165,15 +165,15 @@ ms.locfileid: "52516638"
   
 1.  Clique em **Pesquisar**.  
   
-2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...**, **Todos os objetos dos tipos...** ou **O server**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...**, **Todos os objetos dos tipos...** ou **O servidor**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **OBSERVAÇÃO:** a seleção de **The server**_server\_name_ preenche automaticamente a grade superior com todos os objetos protegíveis desses servidores.  
+    > **OBSERVAÇÃO:** A seleção de **O servidor**_server\_name_ preenche automaticamente a grade superior com todos os objetos protegíveis desses servidores.  
   
 3.  Se você selecionar **Objetos específicos...**:  
   
     1.  Na caixa de diálogo **Selecionar Objetos**, em **Selecionar estes tipos de objeto**, clique em **Tipos de Objeto...**.  
   
-    2.  Na caixa de diálogo **Selecionar Tipos de Objeto** , selecione qualquer um destes tipos de objeto ou todos: **Pontos de Extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade**e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Na caixa de diálogo **Selecionar Tipos de Objeto**, selecione um ou todos os seguintes tipos de objeto: **Pontos de extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  Em **Inserir os nomes de objeto a serem selecionados (exemplos)**, clique em **Procurar...**.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "52516638"
   
     5.  Na caixa de diálogo **Selecionar Objetos** , clique em **OK**.  
   
-4.  Se você selecionar **Todos os objetos dos tipos....**, na caixa de diálogo **Selecionar Tipos de Objeto**, selecione qualquer um destes tipos de objeto ou todos eles: **Pontos de Extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se você selecionar **Todos os objetos dos tipos...**, na caixa de diálogo **Selecionar Tipos de Objeto**, selecione um ou todos os seguintes tipos de objeto: **Pontos de extremidade**, **Logons**, **Servidores**, **Grupos de Disponibilidade** e **Funções de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nome**  
  O nome de cada entidade ou protegível que é adicionado à grade.  

@@ -1,6 +1,7 @@
 ---
-title: Página Inserir Senhas (Assistente para Adicionar Réplica) | Microsoft Docs
-ms.custom: ''
+title: Página Inserir senhas (Assistente para adicionar réplica) para grupos de disponibilidade
+description: Uma descrição das propriedades encontradas na 'página Inserir senha' do Assistente para adicionar réplica no SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11b171ef067bd5abdc29d306421b956792f1a55b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7472049d96abf98f55dcc90486012b33ba13ba66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790574"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215037"
 ---
-# <a name="enter-passwords-page-add-replica-wizard"></a>Página Inserir Senhas (Assistente para Adicionar Réplica)
+# <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Página Inserir senhas (Assistente para adicionar réplica) para grupos de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico da ajuda descreve as opções da página **Inserir Senhas** . Este tópico aplica-se ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

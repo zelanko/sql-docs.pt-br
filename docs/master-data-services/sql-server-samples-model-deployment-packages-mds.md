@@ -1,12 +1,11 @@
 ---
-title: 'Exemplos de SQL Server: Pacotes de implantação de modelo (MDS) | Microsoft Docs'
+title: 'Exemplos do SQL Server: MDS (Pacotes de Implantação de Modelo) | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - master data services
@@ -15,14 +14,14 @@ ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5b07e836d2e1f23f89c6dc992a080b8ab0e85fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db84b03b315d9345056cad9653729415b5dcfccf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843154"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205815"
 ---
-# <a name="sql-server-examples-model-deployment-packages-mds"></a>Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)
+# <a name="sql-server-examples-model-deployment-packages-mds"></a>Exemplos do SQL Server: MDS (Pacotes de Implantação de Modelo)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -30,26 +29,26 @@ ms.locfileid: "47843154"
   
  Para obter instruções sobre como implantar os pacotes de modelo de exemplo, consulte [Implantando dados e modelos de exemplo](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Implante os pacotes de modelo de exemplo usando a [ferramenta MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-> [!IMPORTANT]  
->  **Atualizações de amostra no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
->   
+> [!IMPORTANT]
+>  **Atualizações de amostras no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+> 
 >  Os pacotes de exemplo foram atualizados para dar suporte às novas funcionalidades a seguir.  
->   
+> 
 >  -   Mostre relações muitos-para-muitos.  
->   
+> 
 >      Para obter mais informações, consulte [Relação M2M no modelo de exemplo](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md#M2MSample).  
-
+> 
 > -   Restringir valores permitidos para atributos baseados em domínio.  
->   
+> 
 >      Para obter mais informações, consulte [Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
 > -   Exige aprovação para alterações de entidade.  
->   
+> 
 >      Para obter mais informações, consulte [Aprovação necessária &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md).  
 > -   Usar operadores Not e Else em regras de negócio  
->   
+> 
 >      Para obter mais informações, consulte [Exemplos de regras de negócio](../master-data-services/business-rule-examples-master-data-services.md).  
 > -   Implementar um índice personalizado  
->   
+> 
 >      Para obter mais informações, consulte [Índice personalizado #40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
 

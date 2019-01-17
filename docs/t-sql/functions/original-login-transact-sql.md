@@ -22,15 +22,15 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a4b22ca8bec9f12778cae94d31de77c9cbe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789134"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951588"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o nome do logon que se conectou à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar essa função para retornar a identidade do logon original em sessões nas quais há muitas alternâncias de contexto explícitas ou implícitas.  
   
@@ -48,11 +48,13 @@ ORIGINAL_LOGIN( )
   
 ## <a name="remarks"></a>Remarks  
  Essa função pode ser útil ao examinar a identidade do contexto de conexão original. Enquanto funções como [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) e [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) retornam o contexto de execução atual, ORIGINAL_LOGIN retorna a identidade do logon que se conectou primeiro à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na sessão.  
-  
- Retorna NULL no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ 
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir alterna o contexto de execução da sessão atual do chamador das instruções para `login1`. As funções `SUSER_SNAME` e `ORIGINAL_LOGIN` são usadas para retornar o usuário da sessão atual (o usuário para quem o contexto foi alternado) e a conta de logon original.  
+ O exemplo a seguir alterna o contexto de execução da sessão atual do chamador das instruções para `login1`. As funções `SUSER_SNAME` e `ORIGINAL_LOGIN` são usadas para retornar o usuário da sessão atual (o usuário para quem o contexto foi alternado) e a conta de logon original. 
+ 
+  >[!NOTE]
+  > Embora haja suporte para a função ORIGINAL_LOGIN no Banco de Dados SQL do Azure, o script a seguir falhará porque não há suporte para *Executar como LOGON* no Banco de Dados SQL do Azure. 
   
 ```  
 USE AdventureWorks2012;  

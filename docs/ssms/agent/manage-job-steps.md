@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699065"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211585"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Ao usar um programa executável ou um comando de sistema operacional como etapa 
   
 -   O código de saída do processo retornado, se o comando teve êxito.  
   
--   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. No caso de um programa externo, é o nome do programa e os argumentos para o programa; por exemplo: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. Para um programa externo, esse é o nome do programa e os argumentos para o programa, por exemplo: **C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > É necessário fornecer o caminho completo para o executável, caso este não esteja localizado em um diretório especificado no caminho de sistema ou no caminho para o usuário em cujo nome a etapa de trabalho é executada.  
@@ -112,7 +112,7 @@ O subsistema PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ## <a name="activex-scripting-job-steps"></a>Etapas de trabalho de scripts ActiveX  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > A etapa de trabalho de script ActiveX será removida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma futura versão do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
   
 Ao criar uma etapa de trabalho de scripts ActiveX, você deve:  

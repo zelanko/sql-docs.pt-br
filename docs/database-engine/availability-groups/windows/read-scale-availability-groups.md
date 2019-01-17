@@ -1,6 +1,7 @@
 ---
-title: Grupos de disponibilidade de escala de leitura | Microsoft Docs
-ms.custom: ''
+title: Usar a escala de leitura com grupos de disponibilidade
+description: 'Uma descrição de como obter a escala de leitura ao usar Grupos de Disponibilidade AlwaysOn. '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622395"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203835"
 ---
-# <a name="read-scale-availability-groups"></a>Grupos de disponibilidade de escala de leitura
+# <a name="use-read-scale-with-always-on-availability-groups"></a>Usar a escala de leitura com Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Um grupo de disponibilidade é uma solução abrangente que oferece funcionalidades de alta disponibilidade para o SQL Server, além de soluções integradas de dimensionamento. Em um aplicativo de banco de dados típico, vários clientes executam diversos tipos de cargas de trabalho. Às vezes, pode ocorrer o desenvolvimento de gargalos devido às restrições de recursos. Você pode liberar recursos e obter uma taxa de transferência maior para a carga de trabalho OLTP. Você também pode fornecer melhor desempenho e escala em cargas de trabalho somente leitura. Aproveite a tecnologia de replicação mais rápida para o SQL Server e crie um grupo de bancos de dados replicados para descarregar cargas de trabalho de relatórios e de análises para réplicas somente leitura.

@@ -23,19 +23,19 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c4843f3085b409ef1c34096e040c92be8cd8c744
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9c8bd601dfd3c30422004326b631847b48ef8303
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696624"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212105"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Fornece estatísticas de uso do espaço do log de transações para todos os bancos de dados. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],ele também pode ser usado para redefinir as estatísticas de espera e de trava.
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -109,7 +109,7 @@ msdb           3.99219      17.0132            0
 AdventureWorks 19.554688    17.748701          0  
 ```  
   
-### <a name="b-resetting-wait-statistics"></a>B. Redefinindo estatísticas de espera  
+### <a name="b-resetting-wait-statistics"></a>b. Redefinindo estatísticas de espera  
 O exemplo a seguir zera as estatísticas de espera da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ```sql  

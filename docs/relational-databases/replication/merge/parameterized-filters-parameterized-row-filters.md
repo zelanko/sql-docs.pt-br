@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605154"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215147"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros com parâmetros – Filtros de linha com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47605154"
  Para definir ou modificar um filtro de linha com parâmetros, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Como funcionam os filtros com parâmetros  
- Um filtro de linha com parâmetros usa uma cláusula WHERE para selecionar os dados apropriados a serem publicados. Em vez de especificar um valor literal na cláusula (como faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: SUSER_SNAME() e HOST_NAME(). Funções definidas pelo usuário também podem ser usadas, mas devem incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, ou avaliar uma dessas funções de sistema (como `MyUDF(SUSER_SNAME()`). Se uma função definida pelo usuário incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, você não pode passar parâmetros para a função.  
+ Um filtro de linha com parâmetros usa uma cláusula WHERE para selecionar os dados apropriados a serem publicados. Em vez de especificar um valor literal na cláusula (como você faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: SUSER_SNAME() e HOST_NAME(). Funções definidas pelo usuário também podem ser usadas, mas devem incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, ou avaliar uma dessas funções de sistema (como `MyUDF(SUSER_SNAME()`). Se uma função definida pelo usuário incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, você não pode passar parâmetros para a função.  
   
  As funções de sistema SUSER_SNAME() e HOST_NAME() não são específicas para replicação de mesclagem, mas são usadas para por replicação de mesclagem para filtragem com parâmetros:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47605154"
  O valor retornado pela função do sistema é comparado a uma coluna que você especifica na tabela que está filtrando, e os dados apropriados são baixados para o Assinante. Essa comparação é feita quando a assinatura é inicializada (de modo que apenas os dados apropriados estejam contidos no instantâneo inicial) e a cada vez que a assinatura é sincronizada. Por padrão, se uma alteração no Publicador fizer com que uma linha seja removida de uma partição, a linha será excluída do Assinante (esse comportamento é controlado com o uso do parâmetro **@allow_partition_realignment** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
 > [!NOTE]  
->  Quando são feitas comparações para filtros com parâmetros, o agrupamento de banco de dados sempre é usado. Por exemplo, se o agrupamento de banco de dados não diferencia maiúsculas e minúsculas, mas o agrupamento de tabela ou coluna o faz, a comparação não diferenciará maiúsculas e minúsculas.  
+>  Quando são feitas comparações para filtros com parâmetros, a ordenação de banco de dados sempre é usada. Por exemplo, se a ordenação de banco de dados não diferencia maiúsculas e minúsculas, mas a ordenação de tabela ou coluna o faz, a comparação não diferenciará maiúsculas e minúsculas.  
   
 ### <a name="filtering-with-susersname"></a>Filtrando com SUSER_SNAME()  
  Considere a **Tabela de Funcionários** no banco de dados de exemplo [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] . Essa tabela inclui a coluna **LoginID**, que contém o login para cada funcionário na forma '*domain\login*'. Para filtrar essa tabela de modo que os funcionários recebam só os dados relacionados a eles, especifique uma cláusula de filtro de:  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Por exemplo, a funcionária Pamela Ansman-Wolfe recebeu uma identificação de funcionário 280. Especifique o valor da identificação de funcionário (280 em nosso exemplo) para o valor HOST_NAME() ao criar uma assinatura para essa funcionária. Quando o Agente de Mesclagem faz a conexão com o Publicador, ele compara o valor retornado por HOST_NAME() com os valores na tabela e baixa apenas a linha que contém um valor 280 na coluna **EmployeeID** .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  A função HOST_NAME() retorna um valor **nchar** , e por isso você deve usar CONVERT se a coluna na cláusula de filtro for de tipo de dados numéricos, como no exemplo acima. Por razões de desempenho, recomendamos não aplicar funções a nomes de colunas em cláusulas de filtro de linha com parâmetros, tais como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. Em vez disso, recomendamos usar a abordagem mostrada no exemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Essa cláusula pode ser usada para o parâmetro **@subset_filterclause** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), mas ela geralmente não pode ser usada no Assistente de Nova Publicação (o assistente executa a cláusula de filtro para validá-la, o que não acontece por que o nome do computador não poder ser convertido em um **int**). Se você usar o Assistente de Nova Publicação, recomendamos especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` no assistente e usar [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) para alterar a cláusula para `EmployeeID = CONVERT(int,HOST_NAME())` antes de criar um instantâneo para a publicação.  
   
  **Para substituir o valor HOST_NAME()**  

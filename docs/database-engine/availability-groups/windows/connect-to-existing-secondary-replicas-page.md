@@ -1,6 +1,7 @@
 ---
-title: Página Conectar-se às Réplicas Secundárias Existentes | Microsoft Docs
-ms.custom: ''
+title: Página 'Conectar-se às Réplicas Secundárias Existentes' dos grupos de disponibilidade
+description: Uma descrição das várias opções encontradas na página 'Conectar-se às Réplicas Secundárias Existentes' do 'assistente de Grupo de Disponibilidade' no SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753974"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211225"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>Página Conectar a Réplicas Secundárias Existentes
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Página Conectar-se às Réplicas Secundárias Existentes – Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve as opções da página **Conectar a Réplicas Secundárias Existentes** . Este tópico é usado por [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

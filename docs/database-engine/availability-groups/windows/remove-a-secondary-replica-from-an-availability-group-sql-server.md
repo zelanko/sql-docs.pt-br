@@ -1,6 +1,7 @@
 ---
-title: Remover uma réplica secundária de um grupo de disponibilidade (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Remover uma réplica secundária de um grupo de disponibilidade
+description: 'Etapas para remoção de uma réplica secundária de um Grupo de Disponibilidade AlwaysOn usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd512bf8174fea192cc6448c959c308798d65868
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bacb15ea7932cdbe533ee9c4a3ff1be4a65ef9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622064"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201915"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Remover uma réplica secundária de um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "47622064"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Acompanhamento:**  [depois de remover uma réplica secundária](#PostBestPractices)  
+-   **Acompanhamento:**  [Após a remoção de uma réplica secundária](#PostBestPractices)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Esta tarefa tem suporte apenas na réplica primária.  
   
@@ -80,7 +81,7 @@ ms.locfileid: "47622064"
   
 6.  Na caixa de diálogo **Remover Réplicas Secundárias do Grupo de Disponibilidade** , para remover todas as réplicas secundárias listadas, clique em **OK**. Se você não desejar remover todas as réplicas listadas, clique em **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para remover uma réplica secundária**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
@@ -118,7 +119,7 @@ ms.locfileid: "47622064"
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> Acompanhamento: depois de remover uma réplica secundária  
+##  <a name="PostBestPractices"></a> Acompanhamento: Após a remoção de uma réplica secundária  
  Se você especificar uma réplica que não esteja disponível atualmente, quando a réplica for colocada online, descobrirá que foi removida.  
   
  A remoção de uma réplica faz com que ela pare de receber dados. Depois que uma réplica secundária confirmar que foi removida do repositório global, a réplica removerá as configurações de grupo de disponibilidade de seus bancos de dados, que permanecem na instância do servidor local no estado RECOVERING.  

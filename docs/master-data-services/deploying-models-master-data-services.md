@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
@@ -15,12 +14,12 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: df83c7a4fd4e7a335a3ac51aa047ccc09429ced7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca46c6709614184c094bb7d8457f542b734d375d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636315"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783228"
 ---
 # <a name="deploying-models-master-data-services"></a>Implantando modelos (Master Data Services)
 
@@ -29,16 +28,16 @@ ms.locfileid: "47636315"
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um pacote é um arquivo XML que contém uma estrutura de modelo implantável, e opcionalmente, dados do modelo. Use pacotes modelo para mover cópias de modelos de um ambiente MDS para outro, ou crie novos modelos em seu ambiente MDS existente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **Ferramenta MDSModelDeploy** é compatível com versões anteriores com os pacotes criados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou superior.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **ferramenta MDSModelDeploy** é compatível com versões anteriores com os pacotes criados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou superior.  
   
 ## <a name="tools-for-deploying-models"></a>Ferramentas para implantar modelos  
  Para trabalhar com pacotes de modelo, você pode usar uma das três ferramentas, dependendo de suas necessidades.  
   
--   **Ferramenta MDSModelDeploy**: para criar e implantar objetos de modelo e dados, use a ferramenta MDSModelDeploy.exe. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **Ferramenta MDSModelDeploy**: Para criar e implantar objetos de modelo e dados, use a ferramenta MDSModelDeploy.exe. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
--   **Assistente para Implantação de Modelo**: para criar e implantar pacotes somente da estrutura de modelo, use o assistente no aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Você não pode usar esse assistente para implantar dados.  
+-   **Assistente de Implantação de Modelo**: Para criar e implantar pacotes somente da estrutura de modelo, use o assistente no aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Você não pode usar esse assistente para implantar dados.  
   
--   **Editor de Pacote de Modelo**: para editar um pacote de modelo, use o ModelPackageEditor.exe, que inicia o assistente do Editor de Pacote de Modelo. Use esse assistente para editar um pacote criado pela ferramenta MDSModelDeploy ou pelo assistente de Implantação de Modelo. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **Editor de Pacote de Modelo**: Para editar um pacote de modelo, use o ModelPackageEditor.exe, que inicia o assistente do Editor de Pacote de Modelo. Use esse assistente para editar um pacote criado pela ferramenta MDSModelDeploy ou pelo assistente de Implantação de Modelo. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  Você pode usar a ferramenta MDSModelDeploy para criar um novo modelo, criar um clone de um modelo ou atualizar um modelo existente e seus dados. Se você usar a ferramenta MDSModelDeploy para atualizar um modelo existente e seus dados, e o pacote não contiver uma entidade, um atributo ou um membro que exista no modelo de destino, MDSModelDeploy não excluirá a entidade, o atributo ou o membro do modelo.  

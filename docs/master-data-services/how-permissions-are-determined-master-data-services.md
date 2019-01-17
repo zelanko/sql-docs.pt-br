@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
@@ -14,12 +13,12 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627823a32f630d0d243a6a2babb5e6e2a98d40be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a940035172195b86499262bef52ca319ebefd137
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834224"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747438"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Como as permissões são determinadas (Master Data Services)
 
@@ -40,7 +39,7 @@ ms.locfileid: "47834224"
   
  ![mds_conc_security_no_overlap](../master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Etapa 1: permissões de atributo efetivas são determinadas.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Etapa 1: As permissões de atributo efetivas são determinadas.  
  A lista a seguir descreve como as permissões de atributo efetivas são determinadas:  
   
 -   As permissões atribuídas a objetos modelo determinam quais atributos um usuário pode acessar.  
@@ -55,7 +54,7 @@ ms.locfileid: "47834224"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Etapa 2: se permissões de membro de hierarquia forem atribuídas, as permissões de membro efetivas serão determinadas.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Etapa 2: Se as permissões de membro de hierarquia forem atribuídas, as permissões de membro efetivas serão determinadas.  
  A lista a seguir descreve como as permissões de membro da hierarquia efetivas são determinadas:  
   
 -   As permissões atribuídas a nós da hierarquia determinam quais membros um usuário pode acessar.  
@@ -70,7 +69,7 @@ ms.locfileid: "47834224"
   
  ![mds_conc_inheritance_hierarchy](../master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Etapa 3: a interseção de permissões de atributo e de membro é determinada.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Etapa 3: A interseção das permissões de atributo e de membro é determinada.  
  Se as permissões de atributo efetivas forem diferentes das permissões de membro efetivas, as permissões deverão ser determinadas para cada valor de atributo individual. Para obter mais informações, consulte [Sobrepondo permissões de modelo e membro &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Permissões atribuídas a vários grupos  

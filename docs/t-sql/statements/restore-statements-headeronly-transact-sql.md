@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413783"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207785"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -84,10 +84,10 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para cada backup em um determinado dispositivo, o servidor envia uma linha de informações de cabeçalho com as seguintes colunas:  
   
-> [!NOTE]  
+> [!NOTE]
 >  RESTORE HEADERONLY examina todos os conjuntos de backup na mídia. Por esse motivo, a produção desse conjunto de resultados quando se utilizam unidades de fita de alta capacidade pode levar algum tempo. Para dar uma olhada rápida na mídia sem obter informações sobre cada conjunto de backup, use RESTORE LABELONLY ou especifique FILE **=** *backup_set_file_number*.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Devido à natureza do Formato de Fita do [!INCLUDE[msCoName](../../includes/msconame-md.md)], é possível que os conjuntos de backup de outros programas de software ocupem o espaço na mesma mídia dos conjuntos de backup do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O conjunto de resultados retornado por RESTORE HEADERONLY inclui uma linha para cada um desses conjuntos de backup.  
   
 |Nome da coluna|Tipo de dados|Descrição dos conjuntos de backup do SQL Server|  
@@ -121,7 +121,7 @@ FROM <backup_device>
 |**SoftwareVersionMinor**|**int**|Número de versão secundário do servidor que criou o conjunto de backup.|  
 |**SoftwareVersionBuild**|**int**|Número de versão do servidor que criou o conjunto de backup.|  
 |**MachineName**|**nvarchar(128)**|Nome do computador que realizou a operação de backup.|  
-|**Sinalizadores**|**int**|Significados dos bits dos sinalizadores individuais se definidos como **1**:<br /><br /> **1** = O backup de log contém operações bulk-logged.<br /><br /> **2** = Backup de instantâneo.<br /><br /> **4** = O banco de dados era somente leitura quando foi copiado em backup.<br /><br /> **8** = O banco de dados estava em modo de usuário único quando foi copiado em backup.<br /><br /> **16** = O backup contém somas de verificação de backup.<br /><br /> **32** = O banco de dados foi danificado durante seu backup, mas foi solicitada a continuação da operação, apesar dos erros.<br /><br /> **64** = Backup da parte final do log.<br /><br /> **128** = Backup da parte final do log com metadados incompletos.<br /><br /> **256** = Backup da parte final do log com NORECOVERY.<br /><br /> **Importante:** recomendamos que, em vez de **Sinalizadores**, você use colunas boolianas individuais (listadas abaixo que começam com **HasBulkLoggedData** e terminam com **IsCopyOnly**).|  
+|**Sinalizadores**|**int**|Significados dos bits dos sinalizadores individuais se definidos como **1**:<br /><br /> **1** = O backup de log contém operações bulk-logged.<br /><br /> **2** = Backup de instantâneo.<br /><br /> **4** = O banco de dados era somente leitura quando foi copiado em backup.<br /><br /> **8** = O banco de dados estava em modo de usuário único quando foi copiado em backup.<br /><br /> **16** = O backup contém somas de verificação de backup.<br /><br /> **32** = O banco de dados foi danificado durante seu backup, mas foi solicitada a continuação da operação, apesar dos erros.<br /><br /> **64** = Backup da parte final do log.<br /><br /> **128** = Backup da parte final do log com metadados incompletos.<br /><br /> **256** = Backup da parte final do log com NORECOVERY.<br /><br /> **Importante:** Recomendamos que, em vez de **Sinalizadores**, você use colunas boolianas individuais (listadas abaixo começando com **HasBulkLoggedData** e terminando com **IsCopyOnly**).|  
 |**BindingID**|**uniqueidentifier**|ID de associação do banco de dados. Isso corresponde a **sys.database_recovery_status****database_guid**. Quando o banco de dados é restaurado, um valor novo é atribuído. Consulte também **FamilyGUID** (abaixo).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID do ponto de bifurcação da recuperação final. Essa coluna corresponde a **last_recovery_fork_guid** na tabela [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).<br /><br /> Em backups de dados, **RecoveryForkID** é igual a **FirstRecoveryForkID**.|  
 |**Ordenação**|**nvarchar(128)**|Ordenação usada pelo banco de dados.|  
@@ -147,7 +147,7 @@ FROM <backup_device>
 |**containment**|**tinyint** não NULL|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica o status de contenção do banco de dados.<br /><br /> 0 = a contenção do banco de dados está desativada<br /><br /> 1 = o banco de dados está em contenção parcial|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> O algoritmo de criptografia usado para criptografar o backup. NO_Encryption indica que o backup não foi criptografado. Quando não for possível determinar o valor correto, o valor deve ser NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> A impressão digital do criptografador que pode ser usada para localizar o certificado ou chave assimétrica no banco de dados. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
-|**EncryptorType**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> O tipo de criptografador usado: certificado ou chave assimétrica. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
+|**EncryptorType**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> Tipo de criptografador usado: Certificate ou Asymmetric Key. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
   
 > [!NOTE]  
 >  Se as senhas forem definidas para os conjuntos de backup, RESTORE HEADERONLY mostrará informações completas apenas para o conjunto de backup cuja senha corresponda à opção PASSWORD especificada do comando. RESTORE HEADERONLY também mostra informações completas de conjuntos de backup desprotegidos. A coluna **BackupName** dos outros conjuntos de backup protegidos por senha na mídia é definida como '***Protegida por Senha\*\*\*', e todas as outras colunas são NULL.  

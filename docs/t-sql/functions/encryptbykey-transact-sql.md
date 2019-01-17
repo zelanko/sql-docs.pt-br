@@ -21,12 +21,12 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f146b9aed0e8d5cf94e2028c83d7eb751202c309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265957"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  O uso das funções de criptografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a configuração ANSI_PADDING OFF pode provocar perda de dados devido a conversões implícitas. Para obter mais informações sobre ANSI_PADDING, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
- A funcionalidade ilustrada nos exemplos a seguir se baseia em chaves e certificados criados em [Como criptografar uma coluna de dados](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ A funcionalidade ilustrada nos exemplos a seguir baseia-se em chaves e certificados criados em [Como: criptografar uma coluna de dados](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Criptografando uma cadeia de caracteres com uma chave simétrica  
  O exemplo a seguir adiciona uma coluna à tabela `Employee` e, em seguida, criptografa o valor do número de Social Security que é armazenado na coluna `NationalIDNumber`.  
@@ -128,7 +128,7 @@ GO
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   

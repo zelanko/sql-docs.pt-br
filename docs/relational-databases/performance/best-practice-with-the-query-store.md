@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712108"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328966"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ Os parâmetros padrão são bons o bastante para iniciar, mas você deve monitor
   
  Aqui estão as diretrizes a seguir para definir valores de parâmetro:  
   
- **Tamanho Máximo (MB):** especifica o limite para o espaço de dados que o Repositório de Consultas admitirá em seu banco de dados. Essa é a configuração mais importante, que afeta diretamente o modo de operação do Repositório de Consultas.  
+ **Tamanho máximo (MB):** Especifica o limite do espaço de dados que o Repositório de Consultas usará no banco de dados. Essa é a configuração mais importante, que afeta diretamente o modo de operação do Repositório de Consultas.  
   
  Conforme o Repositório de Consultas coleta consultas, planos de execução e estatísticas, seu tamanho no banco de dados cresce até esse limite ser atingido. Quando isso acontece, o Repositório de Consultas automaticamente altera o modo de operação para somente leitura e para de coletar novos dados, o que significa que a análise de desempenho não é mais precisa.  
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Intervalo de liberação de dados:** define a frequência em segundos para manter as estatísticas de tempo de execução coletadas em disco (o padrão é 900 segundos, ou seja, 15 minutos). Considere usar um valor mais alto se a carga de trabalho não gerar um grande número de planos e consultas diferentes ou se você puder aguardar mais tempo para manter os dados antes do desligamento de um banco de dados. 
+ **Intervalo de liberação de dados:** define a frequência em segundos para manter as estatísticas de tempo de execução coletadas no disco (o padrão é 900 segundos, ou seja, 15 minutos). Considere usar um valor mais alto se a carga de trabalho não gerar um grande número de planos e consultas diferentes ou se você puder aguardar mais tempo para manter os dados antes do desligamento de um banco de dados. 
  
 > [!NOTE]
 > O uso do sinalizador de rastreamento 7745 impedirá que os dados do Repositório de Consultas sejam gravados em disco em caso de um failover ou comando de desligamento. Confira a seção [Usar sinalizadores de rastreamento em servidores críticos para melhorar a recuperação de desastre](#Recovery) para obter mais detalhes.
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Intervalo de Coleta de Estatísticas:** define o nível de granularidade da estatística de tempo de execução coletada (o padrão é de 60 minutos). Considere usar o valor mais baixo se você precisar de granularidade mais fina ou menos tempo para detectar e mitigar os problemas, mas tenha em mente que isso afetará diretamente o tamanho dos dados do Repositório de Consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir um valor diferente para o Intervalo de Coleta de Estatísticas:  
+ **Intervalo de coleta de estatísticas:** define o nível de granularidade da estatística de tempo de execução coletada (o padrão é 60 minutos). Considere usar o valor mais baixo se você precisar de granularidade mais fina ou menos tempo para detectar e mitigar os problemas, mas tenha em mente que isso afetará diretamente o tamanho dos dados do Repositório de Consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir um valor diferente para o Intervalo de Coleta de Estatísticas:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Limite de Consulta Obsoleto (Dias):** política de limpeza com base em tempo que controla o período de retenção de estatísticas de tempo de execução persistentes e consultas inativas.  
+ **Limite de consulta obsoleta (dias):** política de limpeza com base em tempo que controla o período de retenção de estatísticas de tempo de execução persistentes e de consultas inativas.  
 Por padrão, o Repositório de Consultas está configurado para manter os dados por 30 dias, o que pode ser desnecessariamente longo para seu cenário.  
   
  Evite manter dados históricos que você não planeja usar. Isso reduzirá as alterações para o status somente leitura. O tamanho dos dados do Repositório de Consultas, bem como o tempo para detectar e reduzir o problema, serão mais previsíveis. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o script a seguir para configurar a política de limpeza com base em tempo:  
@@ -99,7 +99,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **Modo de Limpeza com Base no Tamanho:** especifica se a limpeza automática de dados ocorrerá quando o tamanho dos dados no Repositório de Consultas se aproximar do limite.  
+ **Modo de limpeza com base em tamanho:** especifica se a limpeza automática de dados ocorrerá quando o tamanho dos dados do Repositório de Consultas se aproximar do limite.  
   
  É altamente recomendável ativar limpeza com base no tamanho para certificar-se de que o repositório de consultas seja sempre executado no modo de leitura-gravação e colete sempre os dados mais recentes.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
- **Modo de Captura do Repositório de Consultas:** Especifica a política de captura de consultas para o repositório de consultas.  
+ **Modo de captura do Repositório de Consultas:** Especifica a política de captura de consulta do Repositório de Consultas.  
   
 -   **All** – captura todas as consultas. Essa é a opção padrão.  
   
@@ -156,10 +156,10 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
 |Consultas com maior consumo de recursos|Escolha uma métrica de execução de seu interesse e identifique as consultas que tinham os valores mais extremos em um intervalo de tempo fornecido. <br />Use esse modo de exibição para concentrar sua atenção nas consultas mais relevantes, as que apresentam o maior impacto no consumo de recursos do banco de dados.|  
 |Consultas com planos forçados|Listas de planos forçados anteriormente usando o Repositório de Consultas. <br />Use esta exibição para acessar rapidamente todos os planos forçados no momento.|  
 |Consultas com alta variação|Analise consultas com alta variação de execução relacionadas a qualquer dimensão disponível, como Duração, Tempo de CPU, E/S e Uso de memória no intervalo de tempo desejado.<br />Use esta exibição para identificar consultas com desempenho amplamente variável que possam afetar a experiência do usuário em seus aplicativos.|  
-|Estatísticas de Espera da Consulta|Analise as categorias de espera que são mais ativas em um banco de dados e quais consultas mais contribuem para a categoria de espera selecionada.<br />Use esta exibição para analisar as estatísticas de espera e identifique as consultas que podem afetar a experiência do usuário em seus aplicativos.<br /><br />**Aplica-se a:** Começando com [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|Estatísticas de Espera da Consulta|Analise as categorias de espera que são mais ativas em um banco de dados e quais consultas mais contribuem para a categoria de espera selecionada.<br />Use esta exibição para analisar as estatísticas de espera e identifique as consultas que podem afetar a experiência do usuário em seus aplicativos.<br /><br />**Aplica-se a:** Começando pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Consultas rastreadas|Acompanhe a execução das consultas mais importantes em tempo real. Normalmente, você usa este modo de exibição quando você tem consultas com planos forçados e você deseja certificar-se de que o desempenho de consultas é estável.|
   
-> [!TIP]  
+> [!TIP]
 > Para obter uma descrição detalhada como usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar as consultas com maior consumo de recursos e corrigir as que regrediram devido à alteração de uma opção de plano, confira [Repositório de Consultas @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Ao identificar uma consulta com desempenho abaixo do ideal, sua ação dependerá da natureza do problema.  
@@ -168,7 +168,7 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > O gráfico acima pode conter formas diferentes para planos de consulta específicos, com os seguintes significados para cada status possível:<br />  
 > |Forma|Significado|  
 > |-------------------|-------------|

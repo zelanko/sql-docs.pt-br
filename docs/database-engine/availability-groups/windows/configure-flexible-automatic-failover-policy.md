@@ -1,6 +1,7 @@
 ---
-title: Configurar a política de failover automático flexível | Microsoft Docs
-ms.custom: ''
+title: Configurar uma política de failover automático flexível para um grupo de disponibilidade
+description: Descreve como configurar uma política de failover flexível para um Grupo de Disponibilidade AlwaysOn usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505833"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208555"
 ---
-# <a name="configure-flexible-automatic-failover-policy"></a>Configurar a política de failover automático flexível
+# <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurar uma política de failover automático flexível para um Grupo de Disponibilidade AlwaysOn
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -68,7 +69,7 @@ ms.locfileid: "52505833"
 |Para configurar a política de failover flexível para um novo grupo de disponibilidade|Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
 |Para modificar a política de um grupo de disponibilidade existente|Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para configurar a política de failover flexível**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  

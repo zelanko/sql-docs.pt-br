@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
@@ -15,12 +14,12 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4bcd5917c6215fc263283fb5d66269fab6645fb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703144"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779198"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Criar um atributo de link (Master Data Services)
 
@@ -55,13 +54,13 @@ ms.locfileid: "51703144"
   
  Quando você clica em um atributo, as seguintes informações são exibidas.  
   
--   **Criado Por**: o nome do usuário que criou o atributo.  
+-   **Criado por**: O nome do usuário que criou o atributo.  
   
--   **Em**: a data e hora em que o atributo foi criado.  
+-   **Em**: A data e a hora em que o atributo foi criado.  
   
 -   **Atualizado Por**: o nome do usuário que atualizou o atributo pela última vez.  
   
--   **Em**: a data e hora em que o atributo foi atualizado pela última vez.  
+-   **Em**: A data e a hora em que o atributo foi atualizado pela última vez.  
   
 ### <a name="to-create-a-link-attribute"></a>Para criar um atributo de link  
   

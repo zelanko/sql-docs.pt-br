@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535759"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207085"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52535759"
   
      Definir que os agentes executem continuamente, em vez de criar agendamentos frequentes (como a cada minuto), melhora o desempenho da replicação, eliminando as interrupções do agente. Quando você define que o Distribution Agent execute continuamente, as alterações são propagadas com uma baixa latência para os demais servidores conectados na topologia. Para obter mais informações, consulte:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendamentos de sincronização](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendas de sincronização](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parâmetros do Distribution Agent e do Log Reader Agent  
 Parâmetros de perfil de agente geralmente são ajustados para aumentar a produtividade do Leitor de Log e do Agente de Distribuição com sistemas OLTP de alto tráfego. 
@@ -142,11 +142,11 @@ Este exemplo resulta em um estado no qual nenhuma sessão está executando seus 
 
 Você pode observar as seguintes tendências dos contadores de desempenho do Agente de Distribuição durante esse período de tempo limite de consulta: 
 
-- O valor do contador de desempenho **Dist: Delivered Cmds/sec** é sempre 0.
-- O valor do contador de desempenho **Dist: Delivered Trans/sec** é sempre 0.
-- O contador de desempenho **Dist: Delivery Latency** reporta um aumento no valor até que o deadlock do thread seja resolvido.
+- O valor do contador de desempenho **Dist: Cmds entregues/s** é sempre 0.
+- O valor do contador de desempenho **Dist: Trans entregues/s** é sempre 0.
+- O contador de desempenho **Dist: Latência de Entrega** relata um aumento no valor até que o deadlock do thread seja resolvido.
 
-O tópico "Agente de Distribuição de Replicação" nos Manuais Online do SQL Server contém a seguinte descrição do parâmetro *SubscriptionStreams*: "Se uma das conexões não for executada nem for confirmada, todas as conexões anularão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha."
+O tópico "Agente de Distribuição de Replicação" nos Manuais Online do SQL Server contém a seguinte descrição do parâmetro *SubscriptionStreams*: "Se uma das conexões falhar ao ser executada ou confirmada, todas as conexões anularão o lote atual e o agente usará um único fluxo para repetir os lotes com falha."
 
 O Agente de Distribuição usa uma sessão para repetir o lote que não pôde ser aplicado. Depois que o Agente de Distribuição aplicar com êxito o lote, ele retomará o uso de várias sessões sem reiniciar.
 
@@ -156,7 +156,7 @@ O Agente de Distribuição usa uma sessão para repetir o lote que não pôde se
 A confirmação de um conjunto de transações tem uma sobrecarga fixa. Ao confirmar um número maior de transações com menor frequência, a sobrecarga será espalhada em um volume de dados maior.  Aumentar CommitBatchSize (até 200) pode melhorar o desempenho, conforme mais transações são confirmadas para o assinante. Porém, o benefício em aumentar esse parâmetro é anulado, pois, o custo para aplicar alterações é retido por outros fatores, como o E/S máximo do disco que contém o log. Além disso, existe uma compensação a ser considerada: qualquer falha que faz com que o Distribution Agent se reinicie deverá ser revertida e reaplicar um grande número de transações. Para as redes não confiáveis, um valor inferior pode resultar em menos falhas e em um número menor de transações a serem revertidas e reaplicadas em caso de falha.  
   
 
-##<a name="see-more"></a>Ver mais
+## <a name="see-more"></a>Ver mais
   
 [Trabalhar com perfis do Agente de Replicação](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

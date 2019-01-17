@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05d19b94f22187e699999642fe79fbcd08c2548a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545721"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749959"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -52,7 +52,7 @@ Você pode importar dados do Excel ou exportar dados para ele com o SSIS usando 
 
 Antes de poder importar dados do Excel ou exportá-los para o Excel com o SSIS, talvez seja necessário baixar os componentes de conectividade para o Excel, se você ainda não os tiver instalado. Os componentes de conectividade do Excel não são instalados por padrão.
 
-Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [Redistribuível de 2016 do Mecanismo de Banco de Dados do Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920). A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
+Baixe a última versão dos componentes de conectividade para o Excel aqui: [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920). A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
 
 ### <a name="notes-about-the-download-and-installation"></a>Observações sobre o download e a instalação
 
@@ -64,7 +64,7 @@ Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    Se você tiver problemas para instalar o redistribuível de 2016, instale o redistribuível do 2010, em vez disto aqui: [Redistribuível do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
+    Caso tenha problemas para instalar o pacote redistribuível de 2016, instale o pacote redistribuível de 2010 aqui: [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
 
 ## <a name="specify-excel"></a>Especifique o Excel como a fonte de dados
 

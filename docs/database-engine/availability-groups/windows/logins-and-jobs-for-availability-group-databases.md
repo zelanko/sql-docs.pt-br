@@ -1,6 +1,7 @@
 ---
-title: Logons e trabalhos dos bancos de dados do grupo de disponibilidade | Microsoft Docs
-ms.custom: ''
+title: Gerenciar logons para trabalhos usando bancos de dados em um grupo de disponibilidade
+description: Uma descrição de como gerenciar logons para trabalhos que usam bancos de dados participantes de um grupo de disponibilidade Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc06c22b36022cb62b99123111871a6adf3a96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 25684c696bf55948fc5106d0e906b14e5dba0410
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545281"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208875"
 ---
-# <a name="logins-and-jobs-for-availability-group-databases"></a>Logons e trabalhos dos bancos de dados do grupo de disponibilidade
+# <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Gerenciar logons para trabalhos usando bancos de dados em um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Você deve manter o mesmo conjunto de logons de usuários e trabalhos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent rotineiramente em todo banco de dados primário de um grupo de disponibilidade AlwaysOn e nos bancos de dados secundários correspondentes. Os logons e trabalhos devem ser reproduzidos em toda instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospede uma réplica de disponibilidade para o grupo de disponibilidade.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "52545281"
   
      As instâncias de servidor que hospedam as réplicas de disponibilidade de um grupo de disponibilidade podem ser configuradas de maneira diferente, com diferentes letras de unidade de fita ou algo assim. Os trabalhos de cada réplica de disponibilidade devem permitir essas diferenças.  
   
-     Observe que os trabalhos de backup podem usar a função [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) para identificar se a réplica local é a preferencial para backups, de acordo com as preferências de backup do grupo de disponibilidade. Os trabalhos de backup criados usando o [Assistente de Plano de Manutenção](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) nativamente usam essa função. Para outros trabalhos de backup, recomendamos o uso dessa função como condição em seus trabalhos de backup, de forma que eles sejam executados apenas na réplica preferencial. Para obter mais informações, consulte [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Observe que os trabalhos de backup podem usar a função [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) para identificar se a réplica local é a preferencial para backups, de acordo com as preferências de backup do grupo de disponibilidade. Os trabalhos de backup criados usando o [Assistente de Plano de Manutenção](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) nativamente usam essa função. Para outros trabalhos de backup, recomendamos o uso dessa função como condição em seus trabalhos de backup, de forma que eles sejam executados apenas na réplica preferencial. Para obter mais informações, confira [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Logons**  
   

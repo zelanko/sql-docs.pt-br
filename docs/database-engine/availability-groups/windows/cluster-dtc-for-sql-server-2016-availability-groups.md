@@ -1,6 +1,7 @@
 ---
-title: Cluster DTC para grupos de disponibilidade do SQL Server 2016 | Microsoft Docs
-ms.custom: ''
+title: Como agrupar em cluster o serviço DTC para um grupo de disponibilidade
+description: 'Descreve os requisitos e as etapas para agrupar em cluster o serviço DTC (Coordenador de Transações Distribuídas) da Microsoft de um grupo de disponibilidade Always On. '
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601376"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203305"
 ---
-# <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Cluster DTC para Grupos de Disponibilidade do SQL Server 2016
+# <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Como agrupar em cluster o serviço DTC de um grupo de disponibilidade Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -41,7 +42,7 @@ Este tópico descreve os requisitos e as etapas para agrupar em cluster o servi�
 Depois de criar o recurso de grupo de disponibilidade, crie um recurso DTC clusterizado e adicione-o ao grupo de disponibilidade.  Um exemplo de script pode ser visto em [Criar DTC clusterizado para um Grupo de Disponibilidade AlwaysOn](../../../database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md).
 
 
-## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Lista de verificação: Pós-configurações de recurso DTC clusterizados
+## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Lista de verificação: Pós-configurações de recurso DTC clusterizado
 ||Tarefa|Referência|  
 |------|-----------------|----------|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Habilite o acesso à rede com segurança para o recurso DTC clusterizado.|[Habilitar o acesso à rede com segurança para o MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
@@ -66,4 +67,4 @@ Depois de criar o recurso de grupo de disponibilidade, crie um recurso DTC clust
 
 [Suporte do DTC no SQL Server 2016 em grupos de disponibilidade](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[Link externo: configurar o DTC para uma instância clusterizada do SQL Server com o Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[Link externo: Configurar o DTC para uma instância clusterizada do SQL Server com o Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6810231163d1674893e55624f333cd023bd95c47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b0c36e72558423b91a6adb8c8ae11e942c301446
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666185"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205665"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ ms.locfileid: "51666185"
   
  Esses são ilustrados nos exemplos a seguir.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumere os namespaces XML em uma coleção de esquema XML  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumerar os namespaces XML em uma coleção de esquemas XML  
  Use a consulta a seguir para a coleção de esquema XML "myCollection":  
   
 ```  
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemplo: Enumere o conteúdo de uma coleção de esquema XML  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemplo: Enumerar o conteúdo de uma coleção de esquemas XML  
  A instrução a seguir enumera o conteúdo da coleção de esquema XML "myCollection" dentro do esquema relacional dbo.  
   
 ```  
@@ -192,8 +192,8 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Esquemas XML individuais dentro da coleção podem ser obtidos como instâncias de tipo de dados **xml** especificando o namespace de destino como o terceiro argumento para **XML_SCHEMA_NAMESPACE()**. Isso é mostrado no exemplo a seguir.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Produza um esquema especificado de uma coleção de esquema XML  
- A instrução a seguir produz o esquema XML com o namespace de destino "https://www.microsoft.com/books" da coleção de esquemas XML "myCollection" dentro do esquema relacional dbo.  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Gerar um esquema especificado com base em uma coleção de esquemas XML  
+ A instrução a seguir produz o esquema XML com o namespace de destino "<https://www.microsoft.com/books>" da coleção de esquemas XML "myCollection" dentro do esquema relacional dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

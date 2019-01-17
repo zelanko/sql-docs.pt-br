@@ -1,6 +1,8 @@
 ---
-title: 'Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Geral) | Microsoft Docs'
-ms.custom: ''
+title: 'Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Geral)'
+titleSuffix: SQL Server
+description: Uma descrição das várias propriedades encontradas na página 'Geral' do assistente de 'Novo Grupo de Disponibilidade' no SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +14,14 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098bc8bf6746acdec41aecc9533b21bc0b49e095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1acbcb925b2b98cdc81bf3f745ebaa9b79edbf55
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689994"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208515"
 ---
-# <a name="availability-group-properties-new-availability-group-general-page"></a>Propriedades do Grupo de Disponibilidade: Novo Grupo de Disponibilidade (página geral)
+# <a name="availability-group-properties-new-availability-group-general-page"></a>Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico se aplica à guia **Geral** da caixa de diálogo **Novo Grupo de Disponibilidade** e da caixa de diálogo **Propriedades do Grupo de Disponibilidade** .  A caixa de diálogo **Novo Grupo de Disponibilidade** permite criar um novo grupo de disponibilidade sem usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. A caixa de diálogo **Propriedades do Grupo de Disponibilidade** permite exibir e alterar a configuração de um grupo de disponibilidade existente.  
   

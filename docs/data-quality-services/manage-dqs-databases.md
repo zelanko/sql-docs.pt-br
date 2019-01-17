@@ -11,12 +11,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a96184600b2601fcb75159b4a76c2255deacb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6133e753364cda914bda7106f74d42cc5d48b781
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617096"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210135"
 ---
 # <a name="manage-dqs-databases"></a>Gerenciar bancos de dados do DQS
 
@@ -25,7 +25,7 @@ ms.locfileid: "52617096"
   Esta seção fornece informações sobre as atividades de gerenciamento de banco de dados que podem ser executadas nos bancos de dados DQS como backup/restauração ou anexar/desanexar.  
   
 ##  <a name="BackupRestore"></a> Backup e restauração dos bancos de dados do DQS  
- O backup e a restauração de bancos de dados do SQL Server são operações comuns que administradores de banco de dados executam para impedir a perda de dados em caso de desastre, recuperando dados dos bancos de dados de backup. O[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] é implementado basicamente por dois bancos de dados do SQL Server: DQS_MAIN e DQS_PROJECTS. Os procedimentos de backup e restauração dos bancos de dados [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) são semelhante a qualquer outro banco de dados do SQL Server. Há três desafios associados com backup e restauração dos bancos de dados DQS:  
+ O backup e a restauração de bancos de dados do SQL Server são operações comuns que administradores de banco de dados executam para impedir a perda de dados em caso de desastre, recuperando dados dos bancos de dados de backup. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] é implementado basicamente por dois bancos de dados do SQL Server: DQS_MAIN e DQS_PROJECTS. Os procedimentos de backup e restauração dos bancos de dados [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) são semelhante a qualquer outro banco de dados do SQL Server. Há três desafios associados com backup e restauração dos bancos de dados DQS:  
   
 -   As operações de backup e restauração dos bancos de dados DQS devem estar sincronizadas. Caso contrário, o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] restaurado não será funcional.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52617096"
   
 -   O modelo de recuperação padrão do banco de dados DQS é definido como **Simples**. No modelo de recuperação Simples, as transações são registradas minimamente, e o truncamento de log acontece automaticamente depois que a transação é concluída para liberar espaço no log de transação (arquivo .ldf). Para obter informações detalhadas sobre o modelo de recuperação simples, consulte [Backups completos de banco de dados &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   No modelo de recuperação Simples, quando os registros de log permanecem ativos por muito tempo, (por exemplo, uma transação longa e demorada), o truncamento de log pode ser atrasado e, portanto, pode resultar no preenchimento do log de transação. Além disso, o truncamento do log não reduz o tamanho do arquivo de log físico (arquivo .ldf). Para reduzir o tamanho de um arquivo de log físico, você precisará reduzir o arquivo de log. Para obter informações sobre a solução de problemas do log de transações, consulte [O Log de transações &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou o artigo do Suporte da Microsoft em [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Você deve executar regularmente um backup completo ou diferencial dos bancos de dados DQS e deve fazer backup do log de transação assim como realizar a recuperação pontual de dados. Para obter mais informações, consulte [Backups completos de banco de dados &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Fazer backup de um log de transações &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   

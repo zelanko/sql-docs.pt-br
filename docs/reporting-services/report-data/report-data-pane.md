@@ -1,30 +1,28 @@
 ---
-title: Painel de dados do relatório | Microsoft Docs
-ms.date: 03/01/2017
+title: painel Dados do Relatório
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-f1_keywords:
-- "10039"
-- sql13.rtp.rptdesigner.reportdata.f1
-- "10435"
-helpviewer_keywords:
-- Report Data pane
-ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 03fb902cc4150ef9ab0eed9774a3c67fe427de6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 603229e289c7a5902a7c68b106f079136b249ea0
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611514"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553028"
 ---
-# <a name="report-data-pane"></a>painel Dados do Relatório
+# <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Painel Relatório de Dados no SSRS (SQL Server Reporting Services)
+
   Use o painel **Dados do Relatório** para exibir os parâmetros, as fontes de dados, os conjuntos de dados, as coleções de campos e as imagens definidos atualmente no relatório. O painel de Dados do Relatório mostra uma exibição hierárquica dos itens que representam dados no relatório. Os nós de nível superior representam campos, parâmetros, imagens e referências de fontes de dados internos. Expanda cada nó para exibir os itens de dados. Por exemplo, ao expandir um nó da fonte de dados, os conjuntos de dados definidos para essa fonte de dados são exibidos. Quando você expande um conjunto de dados, a coleção de campos correspondente é exibida. Arraste os itens para a superfície de design de relatório para vincular os dados aos itens de relatório na página de relatório.  
   
-## <a name="options"></a>Opções  
+## <a name="options"></a>Opções
+
  **Campos internos**  
  Representa campos fornecidos pelo Reporting Services que são comumente usados em um relatório, como nome do relatório ou número da página. Para obter mais informações, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -40,8 +38,7 @@ ms.locfileid: "47611514"
  **Conjunto de dados**  
  Representa um único conjunto de dados. Um conjunto de dados é o nó pai da coleção de campos especificados pela consulta e que inclui todos os campos calculados. O Reporting Services oferece suporte aos designers de consulta para ajudar a especificar uma consulta. Para obter mais informações, consulte [Conjuntos de dados de relatórios &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) e [Ferramentas de Design de Consultas &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Painel Agrupamento](../../reporting-services/tools/grouping-pane.md)  
-  
-  
+## <a name="next-steps"></a>Próximas etapas
+
+ - [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+ - [Painel Agrupamento](../../reporting-services/tools/grouping-pane.md)

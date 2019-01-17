@@ -20,16 +20,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7ddca2a5f33e26cb60a9e45068fcaacc10a294
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 302ad4ce50e3e1bd1b63bd734dcdc4e88cb83fdc
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506575"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380727"
 ---
 # <a name="statistics"></a>Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ Para criar o histograma, o otimizador de consulta classifica os valores de colun
 Mais detalhadamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria o **histograma** com base no conjunto classificado de valores de coluna em três etapas:
 
 - **Inicialização do histograma**: na primeira etapa, uma sequência de valores que começa no início do conjunto classificado é processada e até 200 valores de *range_high_key*, *equal_rows*, *range_rows* e *distinct_range_rows* são coletados (*range_rows* e *distinct_range_rows* são sempre zero durante essa etapa). A primeira etapa termina quando toda a entrada foi esgotada ou quando 200 valores foram encontrados. 
-- **Examinar com a mesclagem de bucket**: cada valor adicional da coluna inicial da chave de estatísticas é processado na segunda etapa, na ordem classificada; cada valor sucessivo é adicionado ao último intervalo ou um novo intervalo no final é criado (isso é possível porque os valores de entrada são classificados). Se um novo intervalo for criado, um par dos intervalos vizinhos existentes será recolhido em um único intervalo. Esse par de intervalos é selecionado para minimizar a perda de informações. Esse método usa um algoritmo de *diferença máxima* para minimizar o número de etapas no histograma enquanto maximiza a diferença entre os valores de limite. O número de etapas após o recolhimento dos intervalos permanece 200 durante esta etapa.
+- **Examinar com a mesclagem de bucket**: cada valor adicional da coluna inicial da chave de estatísticas é processado na segunda etapa, na ordem classificada; cada valor sucessivo é adicionado ao último intervalo ou um novo intervalo no final é criado (isso é possível porque os valores de entrada são classificados). Se um novo intervalo for criado, um par dos intervalos vizinhos existentes será recolhido em um único intervalo. Esse par de intervalos é selecionado para minimizar a perda de informações. Esse método usa um algoritmo de *diferença máxima* para minimizar o número de etapas no histograma enquanto maximiza a diferença entre os valores de limite. O número de etapas após o recolhimento dos intervalos permanece em 200 durante toda esta etapa.
 - **Consolidação do histograma**: na terceira etapa, mais intervalos podem ser recolhidos se uma quantidade significativa de informações não é perdida. O número de etapas do histograma pode ser menor do que o número de valores distintos, até mesmo para colunas com menos de 200 pontos de limite. Portanto, mesmo se a coluna tiver mais de 200 valores exclusivos, o histograma poderá ter menos de 200 etapas. Para uma coluna que consiste apenas em valores exclusivos, o histograma consolidado terá um mínimo de três etapas.
 
 > [!NOTE]
@@ -200,7 +200,7 @@ Neste exemplo, o objeto de estatísticas `LastFirst` apresenta densidades para o
 ### <a name="query-selects-from-a-subset-of-data"></a>A consulta faz seleções em um subconjunto de dados  
 Quando o otimizador de consulta cria estatísticas para colunas únicas e índices, as estatísticas são criadas para os valores em todas as linhas. Quando as consultas fazem seleções em um subconjunto de linhas e esse subconjunto tem uma distribuição de dados exclusiva, as estatísticas filtradas podem aprimorar os planos de consulta. É possível criar estatísticas filtradas usando a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a cláusula [WHERE](../../t-sql/queries/where-transact-sql.md) para definir a expressão de predicado de filtro.  
   
-Por exemplo, usando o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto da tabela `Production.Product` pertence a uma das quatro categorias da tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
+Por exemplo, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto na tabela `Production.Product` pertence a uma das quatro categorias na tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
   
 Usando Bicicletas como um exemplo, as estatísticas filtradas em todos os pesos de bicicleta fornecerão estatísticas mais precisas ao otimizador de consulta e podem melhorar a qualidade do plano de consulta comparadas com as estatísticas de tabela completa ou estatísticas inexistentes na coluna Peso. A coluna de peso das bicicletas é uma boa candidata para estatísticas filtradas, mas não necessariamente para um índice filtrado se o número de pesquisas de peso for relativamente pequeno. O ganho de desempenho que um índice filtrado oferece às pesquisas pode não compensar os custos adicionais com a manutenção e o custo de armazenamento exigidos para adicionar um índice filtrado ao banco de dados.  
   

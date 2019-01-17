@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d2029680262934370479ef2c4ec81792a821f1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700340"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359658"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,9 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  O comportamento de READ COMMITTED depende da configuração da opção de banco de dados READ_COMMITTED_SNAPSHOT:  
   
--   Se READ_COMMITTED_SNAPSHOT estiver definido como OFF (o padrão), o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará bloqueios compartilhados para impedir que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. O tipo de bloqueio compartilhado determina quando ele será liberado. Os bloqueios de linha são liberados antes que a próxima linha seja processada. Os bloqueios de página são liberados quando a próxima página é lida e bloqueios de tabela são liberados quando a instrução é finalizada.  
+-   Se READ_COMMITTED_SNAPSHOT estiver definido como OFF (o padrão no SQL Server), o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará bloqueios compartilhados para impedir que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. O tipo de bloqueio compartilhado determina quando ele será liberado. Os bloqueios de linha são liberados antes que a próxima linha seja processada. Os bloqueios de página são liberados quando a próxima página é lida e bloqueios de tabela são liberados quando a instrução é finalizada.  
   
--   Se READ_COMMITTED_SNAPSHOT estiver definido como ON, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o controle de versão de linhas para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações.
+-   Se READ_COMMITTED_SNAPSHOT estiver definido como ON (o padrão no Banco de Dados SQL do Azure), o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o controle de versão de linhas para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados como estavam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações.
 
 > [!IMPORTANT]  
 > Escolhendo um nível de isolamento da transação não afeta os bloqueios obtidos para proteger as modificações de dados. Uma transação sempre obtém um bloqueio exclusivo em quaisquer dados que modifica e mantém tal bloqueio até que a transação seja concluída, sem considerar o conjunto de níveis de isolamento para a transação em questão. Além disso, uma atualização feita no nível de isolamento READ_COMMITTED usa bloqueios de atualização nas linhas de dados selecionadas, enquanto uma atualização feita no nível de isolamento SNAPSHOT usa versões de linha para selecionar as linhas a serem atualizadas. Para operações de leitura, níveis de isolamento da transação definem principalmente o nível de proteção dos efeitos das modificações feitas por outras transações. Confira o [Guia de controle de versão de linha e bloqueio de transação](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obter mais informações.

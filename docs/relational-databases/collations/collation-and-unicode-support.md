@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661715"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206435"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -121,7 +121,7 @@ Uma localidade é um conjunto de informações associadas a um local ou a uma cu
  A ordem de classificação especifica como os valores de dados são classificados. Isso afeta os resultados da comparação de dados. Os dados são classificados com o uso de ordenações e podem ser otimizados com o uso de índices.    
     
 ##  <a name="Unicode_Defn"></a> Suporte de Unicode    
-O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres. Se você armazenar dados de caractere que refletem vários idiomas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de dados Unicode (UTF-16) (**nchar**, **nvarchar** e **ntext**) em vez de tipos de dados não Unicode (**char**, **varchar** e **text**). Como alternativa, começando com o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se uma ordenação habilitada para UTF-8 (\_UTF8) for usada, tipos de dados que eram não Unicode (**char** e **varchar**) se tornarão tipos de dados Unicode (UTF-8). 
+O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres. Se você armazenar dados de caractere que refletem vários idiomas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de dados Unicode (UTF-16) (**nchar**, **nvarchar** e **ntext**) em vez de tipos de dados não Unicode (**char**, **varchar** e **text**). Como alternativa, começando com o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se uma ordenação habilitada para UTF-8 (\_UTF8) for usada, tipos de dados que eram não Unicode (**char** e **varchar**) se tornarão tipos de dados Unicode (UTF-8). 
 
 > [!NOTE]
 > O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] não altera o comportamento de tipos de dados Unicode existentes anteriormente (UTF-16) (**nchar**, **nvarchar** e **ntext**).   

@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518299"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209205"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Atualizar Power Pivot para SharePoint
 
@@ -121,7 +121,7 @@ ms.locfileid: "52518299"
         > [!IMPORTANT]  
         >  A primeira ação, **Atualizar Solução de Farm**, sempre deve ser processada primeiro. Ela registra os cmdlets PowerShell que são usados para configurar o servidor. Se você obtiver um erro nessa ação, não continue. Em vez disso, use as informações fornecidas pelo erro para diagnosticar e resolver o problema antes de processar ações adicionais na lista de tarefas.  
   
-    7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: “**Todos os parâmetros da configuração sinalizados como válidos na ferramenta serão aplicados ao farm do SharePoint. Deseja continuar?**”.  
+    7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "**Todas as definições de configuração sinalizadas como válidas na ferramenta serão aplicadas ao farm do SharePoint. Deseja continuar?**”.  
   
     8.  Clique em **Sim** para continuar.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "52518299"
   
     3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções**e clique em **OK** para continuar.  
   
-    4.  O seguinte aviso é exibido: “As pastas de trabalho no Painel de Gerenciamento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] estão prestes a ser atualizadas para a versão mais recente. Quaisquer atualizações feitas nas pastas de trabalho existentes serão perdidas. Deseja continuar?”  
+    4.  O seguinte aviso é exibido: "As pastas de trabalho no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] estão prestes a ser atualizadas para a última versão. Quaisquer atualizações feitas nas pastas de trabalho existentes serão perdidas. Deseja continuar?"  
   
          Esse aviso refere-se às pastas de trabalho no Painel de Gerenciamento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que relatam a atividade de atualização de dados. Se você tiver personalizado essas pastas de trabalho, quaisquer alterações feitas nessas pastas de trabalho serão perdidas quando os arquivos existentes forem substituídos por versões mais recentes.  
   
@@ -197,13 +197,13 @@ ms.locfileid: "52518299"
         > [!IMPORTANT]  
         >  A primeira ação, **Atualizar Solução de Farm**, sempre deve ser processada primeiro. Ela registra os cmdlets PowerShell que são usados para configurar o servidor. Se você obtiver um erro nessa ação, não continue. Em vez disso, use as informações fornecidas pelo erro para diagnosticar e resolver o problema antes de processar ações adicionais na lista de tarefas.  
   
-    8.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: “Todos os parâmetros da configuração sinalizados como válidos na ferramenta serão aplicados ao farm do SharePoint. Deseja continuar?”  
+    8.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "Todas as definições de configuração sinalizadas como válidas na ferramenta serão aplicadas ao farm do SharePoint. Deseja continuar?"  
   
     9. Clique em **Sim** para continuar.  
   
     10. A atualização de soluções e recursos no farm pode levar vários minutos para ser concluída. Durante esse tempo, as solicitações de conexão a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] apresentarão falha com erros, como “Não é possível atualizar os dados” ou “Erro ao tentar executar a ação solicitada. Tente novamente.” Depois que a atualização for concluída, o servidor ficará disponível e esses erros não ocorrerão mais.  
   
-8.  **Repita o processo** para cada serviço ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) do SQL Server Analysis Services no farm: 1) Executar a instalação do SQL Server 2) Executar a ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+8.  **Repita o processo** para cada serviço do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) no farm: 1) Execute a configuração do SQL Server 2) Execute a ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
 9. Verifique se a atualização teve êxito executando as etapas pós-atualização e verificando a versão dos servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Para obter mais informações, consulte [Tarefas de verificação pós-atualização](#verify) neste artigo e a seção a seguir.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "52518299"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Reveja as implantações existentes para obter as seguintes informações: **Tipo** é Retração ou Implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+    2.  Reveja as implantações existentes em busca das seguintes informações: **Tipo** é Retração ou Implantação; **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
     3.  Para implantações ou retrações relacionadas a soluções [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copie o valor do GUID de **JobId** e cole-o no seguinte comando (use os comandos Marcar, Copiar e Colar no menu Editar do Shell para copiar o GUID):  
   
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
  Verifique a **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é a versão 13.0.\<major build>.\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Verificar a versão do serviço Windows do Analysis Services  
- Se você só atualizou alguns dos servidores do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em um farm do SharePoint 2010, a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em servidores não atualizados será mais antiga do que a versão esperada no farm. Você precisará atualizar todos os seus servidores para a mesma versão para que eles sejam utilizáveis. Use um dos métodos a seguir para verificar a versão do serviço Windows ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) do SQL Server Analysis Services em cada computador.  
+ Se você só atualizou alguns dos servidores do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em um farm do SharePoint 2010, a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em servidores não atualizados será mais antiga do que a versão esperada no farm. Você precisará atualizar todos os seus servidores para a mesma versão para que eles sejam utilizáveis. Use um dos métodos a seguir para verificar a versão do serviço Windows do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) em cada computador.  
   
  **Explorador de Arquivos do Windows**:  
   

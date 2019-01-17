@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791748"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
 Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensina os conceitos de assinaturas controladas por dados, apresentando um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivos. 
@@ -32,7 +32,7 @@ Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensi
  Este tutorial divide-se em três lições:  
  Lição | Comentários
  ------- | --------------
- [Lição 1: Criar um banco de dados do assinante de exemplo](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Nesta lição, você aprenderá a criar um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] local de tabela que contém informações do assinante. as informações de Números do Pedido a serem usadas para filtragem e formatos de arquivo de saída.
+ [Lição 1: Criar um banco de dados do assinante de exemplo](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Nesta lição, você aprenderá a criar um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] local de tabela que contém informações do assinante. as informações de Números da Order a serem usadas para filtragem e formatos de arquivo de saída.
 [Lição 2: Configurar propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |Nesta lição, você aprenderá a configurar uma fonte de dados do relatório para que o relatório possa ser executado de forma autônoma em um agendamento. O processamento autônomo exige credenciais armazenadas. Você também modificará o conjunto de dados de relatório para incluir um parâmetro que é fornecido pelos dados do assinante. Esse parâmetro é usado para filtrar os dados de relatório com base no número do pedido.
  [Lição 3: Definir uma assinatura controlada por dados](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Nessa lição, você aprenderá a criar uma assinatura controlada por dados. Esta lição o guia por cada página do Assistente de Assinatura Controlada por Dados.
 
@@ -70,7 +70,7 @@ Para usar este tutorial, seu computador deve ter os seguintes itens instalados:
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   
-**Tempo estimado para concluir o tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
+**Tempo estimado para conclusão do tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  

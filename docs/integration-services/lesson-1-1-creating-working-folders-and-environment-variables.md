@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 1: criando pastas de trabalho e variáveis de ambiente | Microsoft Docs'
+title: 'Etapa 1: Criando pastas de trabalho e variáveis de ambiente | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ffaef2277d5e6e902078a75fca75df7c6400106
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd0ab995803c9582f91f5a9a732838736ac526
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719236"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207675"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lição 1-1 – criar pastas de trabalho e variáveis de ambiente
 Nesta tarefa, você criará a pasta de trabalho (C:\DeploymentTutorial) e as novas variáveis de ambiente do sistema (`DataTransfer` e `LoadXMLData`), que serão usadas em tarefas posteriores do tutorial.  
   
 A pasta de trabalho está na raiz da unidade C. Se você precisar usar uma unidade ou um local diferente, poderá fazer isso. Porém, será necessário anotar esse local e usá-lo sempre que o tutorial se referir ao local da pasta de trabalho DeploymentTutorial.  
   
-Em uma lição posterior, você implantará os pacotes salvos no sistema de arquivos na tabela sysssispackages no banco de dados msdb do[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O ideal seria implantar os pacotes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador diferente. Se isso não for possível, você ainda poderá aprender muito fazendo esse tutorial para implantar os pacotes em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que estiver no computador local. As variáveis de ambiente usadas nos computadores local e de destino têm os mesmos nomes de variável, mas são armazenados valores diferentes nas variáveis. Por exemplo, no computador local, o valor da variável do ambiente `DataTransfer` se refere à pasta C:\DeploymentTutorial, enquanto que no computador de destino a variável do ambiente `DataTransfer` se refere à pasta C:\DeploymentTutorialInstall.  
+Em uma lição posterior, você implantará os pacotes salvos no sistema de arquivos na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O ideal seria implantar os pacotes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador diferente. Se isso não for possível, você ainda poderá aprender muito fazendo esse tutorial para implantar os pacotes em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que estiver no computador local. As variáveis de ambiente usadas nos computadores local e de destino têm os mesmos nomes de variável, mas são armazenados valores diferentes nas variáveis. Por exemplo, no computador local, o valor da variável do ambiente `DataTransfer` se refere à pasta C:\DeploymentTutorial, enquanto que no computador de destino a variável do ambiente `DataTransfer` se refere à pasta C:\DeploymentTutorialInstall.  
   
 Se você planejar fazer a implantação no computador local, precisará criar apenas um conjunto de variáveis de ambiente; porém, precisará atualizar o valor das variáveis de ambiente para um valor apropriado antes de fazer a implantação local.  
   

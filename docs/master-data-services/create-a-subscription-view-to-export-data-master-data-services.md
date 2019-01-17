@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e50b94464d252431d153c9d68247cbff410b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597045"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754668"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Criar uma exibição de assinatura para exportar dados (Master Data Services)
 
@@ -82,13 +81,13 @@ ms.locfileid: "47597045"
   
  Quando você clica em uma exibição, as informações a seguir são exibidas.  
   
--   **Criada Por**: o nome do usuário que criou a exibição.  
+-   **Criado por**: O nome do usuário que criou a exibição.  
   
--   **Em**: obtém a data e a hora em que a exibição foi criada.  
+-   **Em**: A data e a hora em que a exibição foi criada.  
   
--   **Atualizada Por**: o nome do usuário que atualizou a exibição pela última vez.  
+-   **Atualizado por**: O nome do usuário que atualizou a exibição pela última vez.  
   
--   **Em**: obtém a data e a hora em que a exibição foi atualizada pela última vez.  
+-   **Em**: A data e a hora em que a exibição foi atualizada pela última vez.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   

@@ -1,6 +1,7 @@
 ---
-title: A réplica de disponibilidade está desconectada | Microsoft Docs
-ms.custom: ''
+title: A réplica de disponibilidade está desconectada em um grupo de disponibilidade
+description: Identifique as possíveis causas de uma réplica estar desconectada em um Grupo de Disponibilidade AlwaysOn.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d070f183fbe5b09016af950cfad9e6da60e90c6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9f699a5f23998d5891ccbfe56ce0a3f31b12e0cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605736"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207375"
 ---
-# <a name="availability-replica-is-disconnected"></a>A réplica de disponibilidade está desconectada
+# <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>A réplica de disponibilidade está desconectada em um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introdução  

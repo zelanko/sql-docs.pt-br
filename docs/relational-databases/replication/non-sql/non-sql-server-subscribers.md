@@ -21,17 +21,17 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f8d06d55c31698629fed1521f54eaca8521d9d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc0ce16aabdf9ea1bfdafce6f6c06cce7aa181b3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710374"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203145"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Os seguintes Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem assinar as publicações de instantâneo e transacionais usando assinaturas push. As assinaturas oferecem suporte para as duas versões mais recentes de cada banco de dados listadas usando a mais recente versão do provedor OLE DB listado.  
+Os Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a seguir podem assinar publicações transacionais e de instantâneo usando assinaturas push. As assinaturas oferecem suporte para as duas versões mais recentes de cada banco de dados listadas usando a mais recente versão do provedor OLE DB listado.  
   
  A replicação heterogênea para assinantes que não são do SQL Server foi preterida. A publicação Oracle foi preterida. Para mover dados, crie soluções usando a captura de dados de alterações e o [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -60,7 +60,7 @@ Informações sobre versão do Oracle:
 Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, consulte [Assinantes Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Considerações para Assinantes não SQL Server  
- Lembre-se das seguintes considerações ao replicar Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ Lembre-se das seguintes considerações durante a replicação para Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 ### <a name="general-considerations"></a>Considerações gerais  
   
@@ -82,11 +82,11 @@ Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, 
   
 -   Se o Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver executando em uma plataforma de 64 bits, você deverá usar a versão de 64 bits do provedor OLE DB apropriado.  
   
--   A replicação move dados em formato Unicode independentemente do agrupamento e das páginas de código usadas no Publicador e no Assinante. É recomendado que você escolha um agrupamento/página de código compatível ao replicar entre Publicadores e Assinantes.  
+-   A replicação move dados em formato Unicode independentemente da ordenação e das páginas de código usadas no Publicador e no Assinante. É recomendado que você escolha uma ordenação/página de código compatível ao replicar entre Publicadores e Assinantes.  
   
 -   Se um artigo for adicionado ou excluído de uma publicação, assinaturas para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem ser reinicializadas.  
   
--   As únicas restrições que oferecem suporte para todos os Assinantes não -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são: NULL e NOT NULL. As restrições de chave primária são replicadas como índices exclusivos.  
+-   As únicas restrições compatíveis para todos os Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são: NULL e NOT NULL. As restrições de chave primária são replicadas como índices exclusivos.  
   
 -   O valor NULL é tratado de forma diferente por bancos de dados diferentes, o que afeta como um valor em branco, uma cadeia de caracteres vazia e um NULL são representados. Isto, por sua vez, afeta o comportamento de valores inseridos em colunas com restrições exclusivas definidas. Por exemplo, o Oracle permite valores múltiplos de NULL em uma coluna que é considerada exclusiva, enquanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite apenas um único valor NULL em uma coluna exclusiva.  
   

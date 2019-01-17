@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398770"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748828"
 ---
 # <a name="create-a-model-master-data-services"></a>Criar um modelo (Master Data Services)
 
@@ -57,21 +56,21 @@ ms.locfileid: "52398770"
   
  Para cada modelo criado, uma linha com oito colunas é adicionada à grade. As oito colunas são:  
   
--   **Status**: o status do modelo. Quando você clica no botão **Salvar modelo**, a imagem ![Atualizando](../master-data-services/media/mds-model-status-updating.png "Atualizando") é exibida, indicando que o modelo está sendo atualizando. Se houver erros ao criar ou editar um modelo, a imagem ![Erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
+-   **Status**: O status do modelo. Quando você clica no botão **Salvar modelo**, a imagem ![Atualizando](../master-data-services/media/mds-model-status-updating.png "Atualizando") é exibida, indicando que o modelo está sendo atualizando. Se houver erros ao criar ou editar um modelo, a imagem ![Erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
   
--   **Nome**: o nome do modelo.  
+-   **Nome**: O nome do modelo.  
   
 -   **Descrição**: A descrição do modelo.  
   
--   **Dias de Retenção de Log**: O número de dias pelos quais o log é retido para o modelo.  
+-   **Dias de Retenção de Log**: O número de dias durante os quais o log é retido para o modelo.  
   
--   **Criado Por**: o nome do usuário que criou o modelo.  
+-   **Criado por**: O nome do usuário que criou o modelo.  
   
--   **Data e Hora da Criação**: a data e hora em que o modelo foi criado.  
+-   **Data e Hora da Criação**: A data e a hora em que o modelo foi criado.  
   
--   **Atualizado Por**: o nome de usuário do usuário que atualizou o modelo pela última vez.  
+-   **Atualizado por**: O nome do usuário que atualizou o modelo pela última vez.  
   
--   **Data e Hora da Atualização**: a data e hora em que o modelo foi atualizado.  
+-   **Data e Hora da Atualização**: A data e a hora em que o modelo foi atualizado pela última vez.  
   
 ## <a name="next-steps"></a>Next Steps  
   

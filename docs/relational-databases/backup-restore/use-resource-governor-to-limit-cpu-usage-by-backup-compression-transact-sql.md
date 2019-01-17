@@ -17,12 +17,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210535"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47649354"
 ##  <a name="setup_login_and_user"></a> Configurando um logon e um usuário para operações de baixa prioridade  
  O cenário deste tópico requer um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um usuário de baixa prioridade. O nome do usuário será usado para classificar sessões que executam no logon e roteá-las as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU.  
   
- O procedimento a seguir descreve as etapas para configuração de um logon e de um usuário para esse fim, seguido por um exemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] , "Exemplo A: Configurando um logon e um usuário (Transact-SQL)".  
+ O seguinte procedimento descreve as etapas para configuração de um logon e um usuário para essa finalidade, seguido por um exemplo do [!INCLUDE[tsql](../../includes/tsql-md.md)], "Exemplo A: Configurando um logon e um usuário (Transact-SQL)".  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Para configurar um logon e um usuário de banco de dados para classificar sessões  
   
@@ -186,7 +186,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemplo B: Configurando o Administrador de Recursos (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemplo B: Configurando o Resource Governor (Transact-SQL)  
  O exemplo a seguir executa as seguintes etapas em uma única transação:  
   
 1.  Cria o pool de recursos `pMAX_CPU_PERCENT_20` .  
@@ -200,7 +200,7 @@ GO
  Após confirmar a transação, o exemplo aplica as alterações da configuração nas instruções ALTER WORKLOAD GROUP ou ATER RESOURCE POOL.  
   
 > [!IMPORTANT]  
->  O exemplo a seguir usa o nome de usuário de exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criado no "Exemplo A: Configurando um logon e um usuário (Transact-SQL)", *domain_name*`\MAX_CPU`. Substitua-os pelo nome do usuário do logon que será usado para criar backups compactados de baixa prioridade.  
+>  O seguinte exemplo usa o nome de usuário de exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criado no "Exemplo A: Configurando um logon e um usuário (Transact-SQL)", *domain_name*`\MAX_CPU`. Substitua-os pelo nome do usuário do logon que será usado para criar backups compactados de baixa prioridade.  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -282,6 +282,6 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar e testar uma função de classificação definida pelo usuário](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+ [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: b1960771504184706bf21e9746a4fa3c784aad3b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712487"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212415"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Trabalhando com KPIs no Reporting Services
 
@@ -58,11 +58,11 @@ Você pode atribuir valores estáticos ou usar dados de um conjunto de dados com
 |Status|Valor numérico usado para determinar a cor do bloco do KPI. Os valores válidos são 1 (verde), 0 (âmbar) e -1 (vermelho).|  
 |Conjunto de tendências|Valores numéricos separados por vírgula usados para visualizações de gráfico. Pode ser definido também como a coluna de um conjunto de dados com valores que representam a tendência.|  
   
-> **Aviso**: embora você possa usar o valor textual para o campo **Status** em tempo de design, use o valor numérico quando atualizar um conjunto de dados. Se atualizar um conjunto de dados com o valor textual em vez do valor numérico, ele pode corromper os KPIs no servidor.  
-  
+> **Aviso**: embora seja possível o valor textual para o campo **Status** no tempo de design, use o valor numérico ao atualizar um conjunto de dados. Se atualizar um conjunto de dados com o valor textual em vez do valor numérico, ele pode corromper os KPIs no servidor.  
+> 
 > **Observação**: os campos **Valor**, **Meta** e **Status** só podem escolher um valor na primeira linha do resultado de um conjunto de dados. No entanto, o campo **Conjunto de tendências** pode escolher a coluna que reflete a tendência.  
   
-Para usar os dados de conjunto de dados compartilhado, faça o seguinte:  
+Para usar os dados de conjunto de dados compartilhado, faça o seguinte.  
   
 1.  Mude a caixa suspensa de campos de **Definido manualmente**ou **Não definido**para **Campo de conjunto de dados**.  
   
@@ -88,7 +88,7 @@ Para usar os dados de conjunto de dados compartilhado, faça o seguinte:
   
 ## <a name="removing-a-kpi"></a>Removendo um KPI  
   
-Para remover um KPI, você pode fazer o seguinte:  
+Para remover um KPI, você pode fazer o seguinte.  
   
 1.  Selecione as **reticências (...)** do KPI que deseja remover. Escolha **Gerenciar**.  
   

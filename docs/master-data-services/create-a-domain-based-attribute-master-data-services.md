@@ -5,8 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1752fd6736ef8900c22054dfa8f7ec6799d981fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685914"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759208"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Criar um atributo baseado em domínio (Master Data Services)
 
@@ -55,13 +54,13 @@ ms.locfileid: "47685914"
   
  Quando você clica em um atributo, as seguintes informações são exibidas.  
   
--   **Criado Por**: o nome do usuário que criou o atributo.  
+-   **Criado por**: O nome do usuário que criou o atributo.  
   
--   **Em**: a data e hora em que o atributo foi criado.  
+-   **Em**: A data e a hora em que o atributo foi criado.  
   
 -   **Atualizado Por**: o nome do usuário que atualizou o atributo pela última vez.  
   
--   **Em**: a data e hora em que o atributo foi atualizado pela última vez.  
+-   **Em**: A data e a hora em que o atributo foi atualizado pela última vez.  
   
 ### <a name="to-create-a-domain-based-attribute"></a>Para criar um atributo baseado em domínio  
   

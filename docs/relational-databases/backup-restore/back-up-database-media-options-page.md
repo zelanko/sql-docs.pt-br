@@ -14,12 +14,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecfa60f4b28d72e20d6f6b112d4739be793daaa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e29fe0deaaba673136ee1e1f135e61a8f2b402e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657254"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212085"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup de Banco de Dados (página Opções de Mídia)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47657254"
  **Fazer backup da parte final do log e deixar o banco de dados no estado de restauração**  
  Faça o backup da parte final do log e deixe o banco de dados em um estado de restauração. Essa opção cria um *backup da parte final do log*, que faz o backup de logs que ainda não tiveram seus backups executados (o log ativo), normalmente, em preparação para a restauração de um banco de dados. O banco de dados ficará indisponível para usuários até que seja completamente restaurado.  
   
- A seleção dessa opção equivale à especificação de WITH NO_TRUNCATE, NORECOVERY em uma instrução [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obter mais informações, veja [Backups da parte final do log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+ Esta opção equivale à especificação de WITH NO_TRUNCATE, NORECOVERY em uma instrução [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obter mais informações, veja [Backups da parte final do log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 ### <a name="tape-drive"></a>Unidade de fita  
  As opções do painel **Unidade de fita** controlam o gerenciamento de fita durante a operação de backup. Essas opções serão habilitadas apenas se **Fita** tiver sido selecionada no painel **Destino** da página [Geral](../../relational-databases/backup-restore/back-up-database-general-page.md) da caixa de diálogo **Fazer Backup de Banco de Dados**.  

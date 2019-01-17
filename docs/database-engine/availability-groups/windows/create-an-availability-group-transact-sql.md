@@ -1,6 +1,7 @@
 ---
-title: Criar um grupo de disponibilidade (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Criar um grupo de disponibilidade usando o T-SQL (Transact-SQL)
+description: 'Etapas para criar um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL). '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44944c4dcc4c3f4b8cc45ee6f3ba57863316b9de
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512498"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213015"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>Criar um grupo de disponibilidade (Transact-SQL)
+# <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Criar um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e configurar um grupo de disponibilidade em instâncias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] no qual o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é habilitado. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
   
@@ -34,9 +35,9 @@ ms.locfileid: "52512498"
   
      [Resumo de tarefas e instruções Transact-SQL correspondentes](#SummaryTsqlStatements)  
   
--   **Para criar e configurar um grupo de disponibilidade, usando:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para criar e configurar um grupo de disponibilidade usando:**  [Transact-SQL](#TsqlProcedure)  
   
--   **Exemplo:**  [Configurando um Grupo de Disponibilidade que usa a Autenticação do Windows](#ExampleConfigAGWinAuth)  
+-   **Exemplo:**  [configurando um grupo de disponibilidade que usa a autenticação do Windows](#ExampleConfigAGWinAuth)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -73,7 +74,7 @@ ms.locfileid: "52512498"
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL para criar e configurar um grupo de disponibilidade  
   
 > [!NOTE]  
->  Para obter um procedimento de configuração de exemplo que contém exemplos de código de cada uma dessas instruções do [!INCLUDE[tsql](../../../includes/tsql-md.md)] , veja [Exemplo: configurando um grupo de disponibilidade que usa a Autenticação do Windows](#ExampleConfigAGWinAuth).  
+>  Para obter um procedimento de configuração de exemplo que contém exemplos de código de cada uma dessas instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)], confira [Exemplo: configurando um grupo de disponibilidade que usa a autenticação do Windows](#ExampleConfigAGWinAuth).  
   
 1.  Conecte-se à instância de servidor que deve hospedar a réplica primária.  
   
@@ -81,11 +82,11 @@ ms.locfileid: "52512498"
   
 3.  Una a nova réplica secundária ao grupo de disponibilidade. Para obter mais informações, veja [Unir uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  Para cada banco de dados do grupo de disponibilidade, crie um banco de dados secundário restaurando backups recentes do banco de dados primário, usando RESTORE WITH NORECOVERY. Para obter mais informações, veja [Exemplo: configurando um grupo de disponibilidade usando a Autenticação do Windows (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md), começando pela etapa que restaura o backup do banco de dados.  
+4.  Para cada banco de dados do grupo de disponibilidade, crie um banco de dados secundário restaurando backups recentes do banco de dados primário, usando RESTORE WITH NORECOVERY. Para obter mais informações, confira [Exemplo: configurando um grupo de disponibilidade usando a Autenticação do Windows (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md), começando pela etapa que restaura o backup do banco de dados.  
   
 5.  Una cada novo banco de dados secundário ao grupo de disponibilidade. Para obter mais informações, veja [Unir uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Exemplo: configurando um grupo de disponibilidade que usa a Autenticação do Windows  
+##  <a name="ExampleConfigAGWinAuth"></a> Exemplo: Configurando um Grupo de Disponibilidade que usa a Autenticação do Windows  
  Esse exemplo cria um procedimento de configuração [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de exemplo que usa o [!INCLUDE[tsql](../../../includes/tsql-md.md)] para configurar pontos de extremidade de espelhamento de banco de dados que usam a Autenticação do Windows e para criar e configurar um grupo de disponibilidade e seus bancos de dados secundários.  
   
  Esse exemplo contém as seguintes seções:  
@@ -527,17 +528,17 @@ GO
   
 -   **Blogs:**  
   
-     [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
   
-     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series, Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Série do Always On, codinome "Denali" do Microsoft SQL Server, parte 1: apresentando a próxima geração de solução de alta disponibilidade)  
   
-     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 2: Criando uma solução de alta disponibilidade de missão crítica usando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series, Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Série do Always On de codinome "Denali" do Microsoft SQL Server, parte 2: criando uma solução de alta disponibilidade crítica usando Always On)  
   
 -   **Whitepapers:**  
   

@@ -5,19 +5,18 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764598"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novidades no MDS (Master Data Services)
 
@@ -82,7 +81,7 @@ ms.locfileid: "52392336"
   
  Agora um usuário pode receber explicitamente a permissão Administrador no nível de modelo. Isso significa que se, mais tarde, o usuário receber permissões na subárvore do modelo, como no nível de entidade, ele não perderá essa permissão Administrador.  
   
- Nesta versão do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], estamos fornecendo mais níveis de permissões, apresentando estas novas permissões: Ler, Criar, Atualizar e Excluir. Por exemplo, um usuário que tenha somente a permissão Atualizar agora pode atualizar os dados mestre sem criar ou excluir os dados. Quando você concede a um usuário a permissão Criar, Atualizar ou Excluir, o usuário recebe automaticamente a permissão Ler. Você também pode combinar as permissões Ler, Criar, Atualizar e Excluir.  
+ Nesta versão do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], estamos fornecendo mais níveis de permissões, apresentando as seguintes novas permissões: Ler, Criar, Atualizar e Excluir. Por exemplo, um usuário que tenha somente a permissão Atualizar agora pode atualizar os dados mestre sem criar ou excluir os dados. Quando você concede a um usuário a permissão Criar, Atualizar ou Excluir, o usuário recebe automaticamente a permissão Ler. Você também pode combinar as permissões Ler, Criar, Atualizar e Excluir.  
   
  Quando você atualiza para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], as permissões antigas são convertidas em novas permissões, conforme mostrado na tabela a seguir.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "52392336"
 |O usuário que instala originalmente o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tem a permissão Administrador do Servidor.|O usuário tem a permissão da função Superusuário|  
 |O usuário tem permissões Atualizar no nível de modelo e nenhuma permissão na subárvore do modelo e, portanto, é implicitamente um administrador de modelo.|O usuário tem permissões Administrador explícitas no nível de modelo.|  
 |O usuário tem permissões Somente leitura.|O usuário tem permissões Acesso de leitura.|  
-|O usuário tem permissões Atualizar.|O usuário tem as quatro permissões de acesso: Criar, Atualizar, Excluir e Ler.|  
+|O usuário tem permissões Atualizar.|O usuário tem todas as quatro permissões de acesso: Criar, Atualizar, Excluir e Ler.|  
 |O usuário tem permissões Negar.|O usuário tem permissões Negar.|  
   
  Para saber mais sobre permissões, veja [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -229,7 +228,7 @@ ms.locfileid: "52392336"
    
  **Exemplo de pacotes de implantação de modelo atualizado**  
   
- Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para saber mais, veja [Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para obter mais informações, confira [Amostras do SQL Server: MDS (Pacotes de Implantação de Modelo)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos de Master Data Services e Data Quality Services suportados pelas edições do SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  

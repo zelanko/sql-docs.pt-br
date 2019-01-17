@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83905f449377f02eef8098ff8afdcbf4618ce80f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b487a507dac6a7492f45b2f3dd32df2291bb56cc
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670725"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886681"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>Usar OPENJSON com um esquema explícito (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ WITH ( k1 int,
   
 |k1|k2|col3|col4|col5|array_element|  
 |--------|--------|----------|----------|----------|--------------------|  
-|11|*NULL*|"texto"|*NULL*|*NULL*|{"k1": 11, "k2": nulo, "k3": "texto"}|  
+|11|*NULL*|"texto"|*NULL*|*NULL*|{"k1": 11, "k2": null, "k3": "text"}|  
 |21|"texto2"|*NULL*|"texto4"|{ "dados": "texto4" }|{"k1": verdadeiro, "k2": "texto2", "k4": { "dados": "texto4" } }|  
 |31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31, "k2": 32 }|  
-|41|*NULL*|*NULL*|false|{ "dados": falso }|{"k1": 41, "k2": nulo,       "k4": { "dados": falso }    }|  
+|41|*NULL*|*NULL*|false|{ "dados": falso }|{"k1": 41, "k2": null,       "k4": { "data": false }    }|  
   
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>Exemplo – Carregar o objeto JSON em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  O exemplo a seguir carrega um objeto JSON inteiro em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -88,10 +88,6 @@ DECLARE @json NVARCHAR(MAX) = '{
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Saiba mais sobre JSON no SQL Server e no Banco de Dados SQL do Azure  
   
-### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
-  
-Para ver soluções específicas, casos de uso e recomendações, consulte as [postagens no blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre o suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure.  
-
 ### <a name="microsoft-videos"></a>Vídeos da Microsoft
 
 Para obter uma introdução visual ao suporte interno para JSON no SQL Server e no Banco de Dados SQL do Azure, consulte os seguintes vídeos:

@@ -17,18 +17,21 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4229a8ddbd899ea8709cdc537f2d9383f9043179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ec5e67b6a2f593f2869cf72fa2983305e084f8d
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697513"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414151"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Carregando a saída de um pacote local
   Aplicativos cliente podem ler a saída de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando a saída é salva em destinos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou quando a saída é salva em um destino de arquivo simples por meio das classes no namespace **System.IO**. Entretanto, um aplicativo cliente também consegue ler a saída de um pacote diretamente da memória, sem precisar de uma etapa intermediária para manter os dados. A resposta para essa solução é o namespace **Microsoft.SqlServer.Dts.DtsClient**, que contém implementações especializadas das interfaces **IDbConnection**, **IDbCommand** e **IDbDataParameter** do namespace **System.Data**. O assembly Microsoft.SqlServer.Dts.DtsClient.dll é instalado por padrão em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
-  
+
+> [!IMPORTANT]
+> O procedimento descrito neste artigo, que usa a biblioteca `DtsClient`, funciona apenas para pacotes implantados com o modelo de implantação de pacote (ou seja, com a opção `/SQL`, `/DTS` ou `/File`). Esse procedimento não funciona para pacotes implantados com o modelo de implantação do servidor (ou seja, com a opção `/ISServer`). Para consumir a saída de um pacote local implantado com o modelo de implantação do servidor (ou seja, com a opção `/ISServer`), use o [Destino do Streaming de Dados](../data-flow/data-streaming-destination.md), em vez do procedimento descrito neste artigo.
+
 > [!NOTE]  
->  O procedimento descrito neste tópico exige que a propriedade DelayValidation da tarefa Fluxo de Dados e de qualquer objeto pai seja definida com seu valor padrão **False**.  
+> O procedimento descrito neste tópico exige que a propriedade DelayValidation da tarefa Fluxo de Dados e de qualquer objeto pai seja definida com seu valor padrão **False**.
   
 ## <a name="description"></a>Descrição  
  Esse procedimento demonstra como desenvolver um aplicativo cliente em código gerenciado que carrega a saída de um pacote com um destino do DataReader diretamente da memória. As etapas resumidas aqui são demonstradas no código de exemplo que segue.  

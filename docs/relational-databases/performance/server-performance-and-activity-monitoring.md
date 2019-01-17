@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], monitoring system
 - Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6bca272809116f41a16ef033814fb354ffe46ce2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513674"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368518"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Monitoramento de desempenho e atividade de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52513674"
  
  -   [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)
  
- -   [Início Rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Início rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
  
  -   [Gerenciar sessões de evento no Pesquisador de Objetos](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
  
@@ -71,7 +71,7 @@ ms.locfileid: "52513674"
 > As próximas seções descrevem métodos de uso do Rastreamento do SQL e [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 > Rastreamento do SQL e [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] estão preteridos. O namespace *Microsoft.SqlServer.Management.Trace* que contém os objetos Trace e Replay do Microsoft SQL Server também foi preterido.   
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-> Em vez disso, use Eventos Estendidos. Para obter mais informações sobre [eventos estendidos](../../relational-databases/extended-events/extended-events.md), confira [Início rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Em vez disso, use Eventos Estendidos. Para obter mais informações sobre [Eventos Estendidos](../../relational-databases/extended-events/extended-events.md), confira [Início rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e no [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE] 
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para as cargas de trabalho do Analysis Services NÃO está preterido e o suporte a ele continuará.

@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418660"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212125"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52418660"
   
  Para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com o  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 e anteriores, você precisa baixar e instalar um hotfix para .NET 3.5 SP1. O hotfix adiciona suporte a Cliente SQL para os recursos do AG e suporte das propriedades da cadeia de conexão **ApplicationIntent** e **MultiSubnetFailover**. Se o Hotfix não estiver instalado em cada computador que hospeda um servidor de relatório, os usuários que tentarem visualizar relatórios verão uma mensagem de erro semelhante à seguinte, e a mensagem de erro será gravada no log de rastreamento do servidor de relatório:  
   
-> **Mensagem de erro:** "Palavra-chave sem suporte 'applicationintent'"  
+> **Mensagem de erro:** “Não há suporte para a palavra-chave 'applicationintent'"  
   
  A mensagem ocorre quando você inclui uma das propriedades do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] na cadeia de conexão do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , mas o servidor não reconhece a propriedade. A mensagem de erro destacada será vista quando você clicar no botão 'Testar Conexão' nas interfaces de usuário do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e quando você visualizar o relatório se os erros remotos estiverem habilitados nos servidores de relatórios.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "52418660"
   
  Dependendo de como seus relatórios são criados e publicados, isso determinará onde você editará a cadeia de conexão:  
   
--   **Modo nativo:** use o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] para fontes de dados compartilhadas e relatórios que já estão publicados em um servidor de relatório de modo nativo.  
+-   **Modo Nativo:** use o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] para fontes de dados e relatórios compartilhadas que já estejam publicados em um servidor de relatório de modo nativo.  
   
--   **Modo do SharePoint:** Use as páginas de configuração do SharePoint dentro das bibliotecas de documentos para relatórios que já estão publicados em um servidor do SharePoint.  
+-   **Modo do SharePoint:** use as páginas de configuração do SharePoint dentro das bibliotecas de documentos para relatórios que já estão publicados em um servidor do SharePoint.  
   
 -   **Design de relatórios:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando você está criando novos relatórios. Confira a seção 'Design de relatórios' neste tópico ou em mais informações.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52418660"
   
 -   Para obter mais informações sobre ouvintes do grupo de disponibilidade, veja [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Considerações:** as réplicas Secundárias normalmente experimentarão um atraso ao receber alterações de dados da réplica primária. Os fatores a seguir podem afetar a latência da atualização entre as réplicas primárias e secundárias:  
+ **Considerações:** as réplicas secundárias normalmente experimentarão um atraso ao receber alterações de dados da réplica primária. Os fatores a seguir podem afetar a latência da atualização entre as réplicas primárias e secundárias:  
   
 -   O número de réplicas secundárias. O atraso aumenta com cada réplica secundária adicionada à configuração.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "52418660"
   
 -   **Visualização local:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usam o .NET Framework 4.0 e dão suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Visualização de modo remoto ou de servidor:** se, depois de publicar relatórios no servidor de relatório ou usar a visualização no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], você vir um erro semelhante ao mostrado a seguir, isso será uma indicação de que você está visualizando relatórios no servidor de relatório e no Hotfix do .NET Framework 3.5 SP1 porque o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não foi instalado no servidor de relatório.  
+-   **Visualização do modo remoto ou de servidor:** se, depois de publicar relatórios no servidor de relatório ou usar a visualização no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], você vir um erro semelhante ao seguinte, isso será uma indicação de que você está visualizando relatórios no servidor de relatório e no Hotfix do .Net Framework 3.5 SP1 porque o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não foi instalado no servidor de relatório.  
   
-> **Mensagem de erro:** "Palavra-chave sem suporte 'applicationintent'"  
+> **Mensagem de erro:** “Não há suporte para a palavra-chave 'applicationintent'"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Bancos de dados do servidor de relatório e grupos de disponibilidade  
  O Reporting Services e o Servidor de Relatórios do Power BI oferece suporte limitado para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com bancos de dados do servidor de relatório. Os bancos de dados do servidor de relatórios podem ser configurados no AG para fazer parte de uma réplica; porém, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não usará automaticamente uma réplica diferente para os bancos de dados do servidor de relatório quando um failover ocorrer. Não há suporte para o uso de MultiSubnetFailover com os bancos de dados do servidor de relatório.  
@@ -144,9 +144,9 @@ ms.locfileid: "52418660"
   
  O modo nativo não dá suporte nem usa os bancos de dados de alertas e recursos relacionados. Configure os servidores de relatório de modo nativo no Configuration Manager do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para o modo do SharePoint, configure o nome do banco de dados de aplicativo de serviço para ser o nome do "ponto de acesso para cliente" que você criou como parte da configuração do SharePoint. Para obter mais informações sobre como configurar o SharePoint com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Configurar e gerenciar grupos de disponibilidade do SQL Server para o SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)).  
   
-> [!NOTE]  
->  Os servidores de relatórios do modo do SharePoint usam um processo de sincronização entre os bancos de dados de aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e os bancos de dados de conteúdo do SharePoint. É importante manter os bancos de dados do servidor de relatório e os bancos de dados de conteúdo juntos. Configure-os nos mesmos grupos de disponibilidade para que eles realizem failover e recuperação como um conjunto. Considere o cenário a seguir.  
->   
+> [!NOTE]
+>  Os servidores de relatórios do modo do SharePoint usam um processo de sincronização entre os bancos de dados de aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e os bancos de dados de conteúdo do SharePoint. É importante manter os bancos de dados do servidor de relatório e os bancos de dados de conteúdo juntos. Configure-os nos mesmos grupos de disponibilidade para que eles realizem failover e recuperação como um conjunto. Considere o cenário a seguir:  
+> 
 >  -   Você restaura ou realiza failover para uma cópia do banco de dados de conteúdo que não tenha recebido as mesmas atualizações recentes que o banco de dados do servidor de relatório recebeu.  
 > -   O processo de sincronização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] detectará diferenças entre a lista de itens no banco de dados de conteúdo e os bancos de dados do servidor de relatório.  
 > -   O processo de sincronização excluirá ou atualizará itens no banco de dados de conteúdo.  
@@ -160,7 +160,7 @@ ms.locfileid: "52418660"
   
 -   **Réplicas secundárias:** crie uma ou mais réplicas secundárias. A abordagem comum para copiar os bancos de dados da réplica primária para a réplica secundária é restaurar os bancos de dados para cada réplica secundária usando 'RESTORE WITH NORECOVERY'. Para obter mais informações sobre como criar réplicas secundárias e verificar se a sincronização de dados está funcionando, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
--   **Credenciais de Servidor de relatório:** você precisa criar as credenciais de servidor de relatório apropriados nas réplicas secundárias que você criou na réplica primária. As etapas exatas dependem de que tipo de autenticação você está usando em seu ambiente do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]; conta de serviço do Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], conta de usuário do Windows ou autenticação do SQL Server. Para obter mais informações, veja [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   **Credenciais do servidor de relatório:** você precisa criar as credenciais de servidor de relatório apropriadas nas réplicas secundárias, tal qual você criou na réplica primária. As etapas exatas dependem de que tipo de autenticação você está usando em seu ambiente do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]; conta de serviço do Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], conta de usuário do Windows ou autenticação do SQL Server. Para obter mais informações, veja [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
 -   Atualize a conexão de banco de dados para usar o Nome DNS do Ouvinte. para os servidores de relatórios do modo de nativo, altere o **Nome do Banco de Dados do Servidor de Relatório** no gerenciador de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para o modo do SharePoint, altere o **Nome do servidor de banco de dados** para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   

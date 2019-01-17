@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571435"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748476"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ As páginas IAM são alocadas conforme exigido para cada unidade de alocação e
  
 Páginas IAM vinculadas em uma unidade de cadeia por alocação. Uma página IAM tem um cabeçalho que indica a extensão inicial do intervalo de extensões mapeado pela página IAM. A página IAM também tem um bitmap grande no qual cada bit representa uma extensão. O primeiro bit no mapa representa a primeira extensão no intervalo, o segundo bit representa a segunda extensão, e assim por diante. Se um bit for 0, a extensão que ele representa não será alocada à unidade de alocação que possui IAM. Se o bit for 1, a extensão que ele representa será alocada à unidade de alocação que possui página IAM.
 
-Quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] precisar inserir uma linha nova e não houver espaço disponível na página atual, ele usará as páginas IAM e PFS para localizar uma página para alocação ou, para um heap ou uma página de Texto/Imagem, uma página com espaço suficiente para manter a linha. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa as páginas IAM para localizar as extensões alocadas à unidade de alocação. Para cada extensão, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pesquisa as páginas PFS para verificar se há uma página que possa ser usada. Cada página IAM e PFS abrange muitas páginas de dados, portanto, há poucas páginas IAM e PFS em um banco de dados. Isso significa que as páginas IAM e PFS geralmente estão na memória do pool de buffers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], portanto, elas podem ser pesquisadas rapidamente. Para índices, o ponto de inserção de uma linha nova é definido pela chave do índice. Nesse caso, não acontece o processo de pesquisa descrito anteriormente.
+Quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] precisar inserir uma linha nova e não houver espaço disponível na página atual, ele usará as páginas IAM e PFS para localizar uma página para alocação ou, para um heap ou uma página de Texto/Imagem, uma página com espaço suficiente para manter a linha. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa as páginas IAM para localizar as extensões alocadas à unidade de alocação. Para cada extensão, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pesquisa as páginas PFS para verificar se há uma página que possa ser usada. Cada página IAM e PFS abrange muitas páginas de dados, portanto, há poucas páginas IAM e PFS em um banco de dados. Isso significa que as páginas IAM e PFS geralmente estão na memória do pool de buffers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], portanto, elas podem ser pesquisadas rapidamente. Para índices, o ponto de inserção de uma nova linha é definido pela chave de índice, mas quando uma nova página é necessária, ocorre o processo descrito anteriormente.
 
 O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] só alocará uma extensão nova a uma unidade de alocação quando não conseguir encontrar uma página rapidamente em uma extensão existente com espaço suficiente para manter a linha que estiver sendo inserida. 
 

@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: adicionar uma tarefa de fluxo de dados ao pacote | Microsoft Docs'
+title: 'Etapa 4: Adicionando uma tarefa de fluxo de dados ao pacote | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5e73f8578c9ee9be1b30bd95722d9acd0a0e4ca
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e18408d3e96c6b03814beae37238bf52c5c192
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410546"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205895"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lição 1-4 – adicionar uma tarefa de fluxo de dados ao pacote
 Depois de criar os gerenciadores de conexões para os dados de origem e destino, a próxima tarefa é adicionar a tarefa Fluxo de Dados ao seu pacote. Essa tarefa encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, além de fornecer funcionalidade para transformar, limpar e modificar os dados à medida que são movidos. A tarefa Fluxo de Dados é onde a maioria do trabalho de um processo de extração, transformação e carregamento (ETL) acontece.  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa o fluxo de dados do fluxo de controle.  
   
 ### <a name="to-add-a-data-flow-task"></a>Adicionar uma tarefa Fluxo de Dados  

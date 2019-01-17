@@ -25,19 +25,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96f5318d1837043507a111d001309a980d3c3cc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f23352e40c7b068eb0341c97c5f86d1b6f07ad66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650665"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205885"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica o tamanho dos dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** e **image** retornados por uma instrução SELECT.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use **nvarchar(max)**, **varchar(max)** e **varbinary(max)** .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -54,7 +54,7 @@ SET TEXTSIZE { number }
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 e superior) e o Driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificam automaticamente `-1` (ilimitado) durante a conexão.  
   
- **Drivers anteriores ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (versão 9) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem TEXTSIZE automaticamente como 2147483647 durante a conexão.  
+ **Drivers anteriores ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e o Provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (versão 9) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automaticamente definem TEXTSIZE como 2147483647 durante a conexão.  
   
 ## <a name="remarks"></a>Remarks  
  A definição de SET TEXTSIZE afeta a função @@TEXTSIZE.  

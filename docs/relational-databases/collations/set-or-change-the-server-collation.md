@@ -1,9 +1,9 @@
 ---
-title: Definir ou alterar o agrupamento de servidor | Microsoft Docs
+title: Definir ou alterar a ordenação do servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/03/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,47 +13,61 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a251cfbd29cde861409e4f4e04d1dc0cd95bd37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
+ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664894"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52954390"
 ---
-# <a name="set-or-change-the-server-collation"></a>Definir ou alterar o agrupamento do servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O agrupamento do servidor atua como o agrupamento padrão de todos os bancos de dados do sistema instalados com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e também com quaisquer bancos de dados de usuário recém-criados. O agrupamento do servidor é especificado durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+# <a name="set-or-change-the-server-collation"></a>Definir ou alterar a ordenação do servidor
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  A ordenação do servidor atua como a ordenação padrão de todos os bancos de dados do sistema instalados com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e também com quaisquer bancos de dados de usuário recém-criados. Você deve escolher cuidadosamente a ordenação no nível do servidor porque ela afeta:
+ - Regras de classificação e comparação em `=`, `JOIN`, `ORDER BY` e em outros operadores que comparam dados textuais.
+ - Ordenação das colunas `CHAR`, `VARCHAR`, `NCHAR` e `NVARCHAR` em exibições do sistema e funções do sistema e dos objetos em TempDB (por exemplo, tabelas temporárias).
+ - Nomes das variáveis, dos cursores e dos rótulos de `GOTO`. As variáveis @pi e @PI são consideradas como variáveis diferentes se a ordenação no nível do servidor diferencia maiúsculas de minúsculas e consideradas como as mesmas variáveis se a ordenação no nível do servidor diferencia maiúsculas de minúsculas.
   
-## <a name="changing-the-server-collation"></a>Alterando o agrupamento do servidor  
- A alteração do agrupamento padrão para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser uma operação complexa e engloba as seguintes etapas:  
+## <a name="setting-the-server-collation-in-sql-server"></a>Definindo a ordenação do servidor no SQL Server
+
+  A ordenação do servidor é especificada durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A ordenação padrão no nível do servidor é **SQL_Latin1_General_CP1_CI_AS**. As ordenações somente Unicode não podem ser especificadas como a ordenação no nível do servidor. Para obter mais informações, consulte [Configuração do SQL Server – Ordenação](/sql/sql-server/install/server-configuration-collation.md).
   
--   Verifique se você tem todas as informações ou scripts necessários para recriar seus bancos de dados de usuário e todos os objetos neles.  
+## <a name="changing-the-server-collation-in-sql-server"></a>Alterando a ordenação do servidor no SQL Server
+
+ A alteração da ordenação padrão para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser uma operação complexa e engloba as seguintes etapas:  
   
--   Exporte todos os seus dados usando uma ferramenta como [bcp Utility](../../tools/bcp-utility.md). Para obter mais informações, consulte [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+- Verifique se você tem todas as informações ou scripts necessários para recriar seus bancos de dados de usuário e todos os objetos neles.  
   
--   Descarte todos os bancos de dados de usuário.  
+- Exporte todos os seus dados usando uma ferramenta como [bcp Utility](../../tools/bcp-utility.md). Para obter mais informações, consulte [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
--   Reconstrua o banco de dados mestre especificando o novo agrupamento na propriedade SQLCOLLATION do comando **setup** . Por exemplo:  
+- Descarte todos os bancos de dados de usuário.  
   
-    ```  
-    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
-    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]   
+- Reconstrua o banco de dados mestre especificando a nova ordenação na propriedade SQLCOLLATION do comando **setup** . Por exemplo:  
+  
+    ```sql  
+    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
+    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
     ```  
   
      Para obter mais informações, consulte [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md).  
   
--   Crie todos os bancos de dados e todos os objetos neles.  
+- Crie todos os bancos de dados e todos os objetos neles.  
   
--   Importe todos os dados.  
+- Importe todos os dados.  
   
 > [!NOTE]  
->  Em vez de alterar o agrupamento padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar um agrupamento para cada novo banco de dados que criar.  
+> Em vez de alterar a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar uma ordenação para cada novo banco de dados que criar.  
   
-## <a name="see-also"></a>Consulte Também  
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
- [Definir ou alterar o agrupamento de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md)   
- [Definir ou alterar o agrupamento de coluna](../../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Recompilar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md)  
-  
-  
+## <a name="setting-the-server-collation-in-managed-instance"></a>Definindo a ordenação do servidor na Instância Gerenciada
+
+A ordenação do servidor na Instância Gerenciada do SQL do Azure (Versão Prévia) pode ser especificada quando a instância é criada (atualmente apenas com o PowerShell). A ordenação padrão no nível do servidor é **SQL_Latin1_General_CP1_CI_AS**. As ordenações somente Unicode e UTF-8 novas não podem ser especificadas como ordenação em nível do servidor.
+Para obter um modelo de script que demonstra como definir a ordenação no nível do servidor na Instância Gerenciada do Banco de Dados SQL do Azure, confira [Definir a ordenação da Instância Gerenciada usando o modelo do Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). Se estiver migrando bancos de dados do SQL Server para a Instância Gerenciada, verifique a ordenação do servidor no SQL Server de origem usando a função `SERVERPROPERTY(N'Collation')` e crie uma Instância Gerenciada que corresponde à ordenação do SQL Server. A migração de um banco de dados do SQL Server para a Instância Gerenciada com ordenações no nível do servidor que não são correspondentes poderá causar vários erros inesperados nas consultas. Não é possível alterar a ordenação no nível do servidor na Instância Gerenciada existente.
+
+## <a name="see-also"></a>Consulte Também
+
+ [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [Definir ou alterar a ordenação de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md)   
+ [Definir ou alterar a ordenação de coluna](../../relational-databases/collations/set-or-change-the-column-collation.md)   
+ [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md)  
+ 

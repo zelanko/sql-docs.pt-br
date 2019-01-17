@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404511"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203875"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -247,11 +247,11 @@ TO \<backup_device> [ **,**...*n* ] Indica que o conjunto complementar de [dispo
 
 Especifica um dispositivo de backup lógico ou físico a ser usado para a operação de backup.  
   
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Aplica-se a:** SQL Server   
+{ *nome_dispositivo_lógico* | **@**_nome\_dispositivo\_lógico\_var_ } **Aplica-se a:** SQL Server   
 É o nome lógico do dispositivo de backup no qual o backup do banco de dados é feito. O nome lógico deve seguir as regras para identificadores. Se for fornecida como uma variável (@*logical_device_name_var*), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres (nome do dispositivo de backup lógico de @_logical\_device\_name\_var_**=**) ou como uma variável de qualquer tipo de dados de cadeia de caracteres, com exceção dos tipos de dados **ntext** ou **text**.  
   
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **Aplica-se a:** DISK, TAPE e URL aplicam-se ao SQL Server. 
-Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de Armazenamento de Blobs do Microsoft Azure. O formato da URL é usado para criar backups no serviço de armazenamento do Microsoft Azure. Para obter mais informações e exemplos, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obter um tutorial, consulte [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+{ DISK | TAPE | URL} **=** { **'**_nome\_dispositivo\_físico_**'** | **@**_nome\_dispositivo\_físico\_var_ | 'NUL' } **Aplica-se a:** DISK, TAPE e URL se aplicam ao SQL Server. 
+Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de Armazenamento de Blobs do Microsoft Azure. O formato da URL é usado para criar backups no serviço de armazenamento do Microsoft Azure. Para obter mais informações e exemplos, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obter um tutorial, confira [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
 > O dispositivo de disco NUL descartará todas as informações enviadas para ele e apenas deve ser usado para teste. Isso não se destina ao uso em produção.
@@ -259,7 +259,7 @@ Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de Armazen
 > [!IMPORTANT]  
 > Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], somente é possível fazer backup em um único dispositivo durante o backup em uma URL. Para fazer backup em vários dispositivos ao fazer backup em uma URL, é necessário usar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e usar tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
-**A URL aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**URL aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 Um dispositivo de disco não precisa existir antes de ser especificado em uma instrução BACKUP. Se o dispositivo físico existir e a opção INIT não estiver especificada na instrução BACKUP, o backup será anexado ao dispositivo.  
  
@@ -295,10 +295,10 @@ Para obter mais informações, consulte "Famílias de mídia em conjunto de míd
 Especifica opções a serem usadas com uma operação de backup.  
   
 CREDENTIAL  
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
 Usado somente durante a criação de um backup no serviço de Armazenamento de Blobs do Microsoft Azure.  
   
-FILE_SNAPSHOT **Aplica-se**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+FILE_SNAPSHOT **Aplica-se**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Usado para criar um instantâneo do Azure dos arquivos de banco de dados quando todos os arquivos de banco de dados do SQL Server são armazenados com o serviço de Armazenamento de Blobs do Azure. Para obter mais informações, consulte [Arquivos de dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Backup de Instantâneo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa instantâneos do Azure dos arquivos de banco de dados (arquivos de log e de dados) em um estado consistente. Um conjunto consistente de instantâneos do Azure compõem um backup e são registrados no arquivo de backup. A única diferença entre o `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` e o `BACKUP LOG TO URL WITH FILE_SNAPSHOT` é que o último também trunca o log de transações, ao contrário do primeiro. Com o Backup do Instantâneo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], após o backup completo inicial exigido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para estabelecer a cadeia de backup, somente um único backup de log de transações é necessário para restaurar um banco de dados para o ponto no tempo do backup de log de transações. Além disso, apenas dois backups de log de transações são necessários para restaurar um banco de dados para um ponto no tempo entre a hora dos dois backups de log de transações.  
     
@@ -771,7 +771,7 @@ Os problemas de propriedade e permissão no arquivo físico do dispositivo de ba
 Esta seção contém os seguintes exemplos:  
   
 - A. [Fazendo backup de um banco de dados completo](#backing_up_db)  
-- B. [Fazendo backup do banco de dados e do log](#backing_up_db_and_log)  
+- b. [Fazendo backup do banco de dados e do log](#backing_up_db_and_log)  
 - C. [Criando um backup completo de arquivos dos grupos de arquivos secundários](#full_file_backup)  
 - D. [Criando um backup diferencial de arquivos dos grupos de arquivos secundários](#differential_file_backup)  
 - E. [Criando e fazendo backup em um conjunto de mídias espelhado de uma única família](#create_single_family_mirrored_media_set)  
@@ -1249,7 +1249,7 @@ Se você cancelar um comando BACKUP, o [!INCLUDE[ssPDW](../../includes/sspdw-md.
   
 Os backups completos e os backups diferenciais são armazenados em diretórios separados. Não são impostas convenções de nomenclatura para especificar que um backup completo e um backup diferencial se pertencem. Controle isso usando suas próprias convenções de nomenclatura. Como alternativa, você pode controlar isso usando a opção WITH DESCRIPTION para adicionar uma descrição e, em seguida, usando a instrução RESTORE HEADERONLY para recuperar a descrição.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 Não é possível executar um backup diferencial do banco de dados mestre. Apenas os backups completos do banco de dados mestre são compatíveis.  
   
 Os arquivos de backup são armazenados em um formato adequado para a restauração do backup em um dispositivo do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] usando a instrução [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
@@ -1308,7 +1308,7 @@ Para criar um backup, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] precisa te
 EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';  
 ```  
   
-### <a name="b-remove-network-credentials-for-the-backup-location"></a>B. Remover as credenciais de rede do local de backup  
+### <a name="b-remove-network-credentials-for-the-backup-location"></a>b. Remover as credenciais de rede do local de backup  
 O exemplo a seguir mostra como remover as credenciais de um usuário de domínio do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ```sql  

@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cd332393a0d605f2ae0e519e6a449fe49bff3477
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420427"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215765"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  Tenta reparar todos os erros relatados. Esses reparos podem provocar alguma perda de dados.  
-    
+    
 > [!WARNING]
 > A opção REPAIR_ALLOW_DATA_LOSS é um recurso compatível, mas nem sempre é a melhor opção para colocar um banco de dados em um estado fisicamente consistente. Se for bem-sucedida, a opção REPAIR_ALLOW_DATA_LOSS poderá resultar em alguma perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. 
 >
@@ -125,7 +125,7 @@ ALL_ERRORMSGS
  Exibe todos os erros relatados por objeto. Todas as mensagens de erro são exibidas por padrão. Especificar ou omitir esta opção não têm nenhum efeito. As mensagens de erro são classificadas pela ID de objeto, exceto as mensagens geradas pelo [banco de dados tempdb](../../relational-databases/databases/tempdb-database.md).     
 
 EXTENDED_LOGICAL_CHECKS  
- Se o nível de compatibilidade for 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executará verificações de consistência lógica em uma exibição indexada, índices XML e índices espaciais, quando presentes.  
+ Se o nível de compatibilidade for 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executará verificações de consistência lógica em uma exibição indexada, em índices XML e em índices espaciais, quando presentes.  
  Para obter mais informações, confira *Executando verificações de consistência lógica em índices*, na seção [Comentários](#remarks) mais adiante neste tópico.  
     
 NO_INFOMSGS  
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  Faz com que DBCC CHECKDB obtenha bloqueios em vez de usar um instantâneo do banco de dados interno. Isso inclui um bloqueio exclusivo (X) de curto prazo no banco de dados. TABLOCK faz com que DBCC CHECKDB seja executado com mais rapidez em um banco de dados sob carga pesada, mas reduz a simultaneidade disponível no banco de dados durante sua execução.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK limita as verificações executadas, DBCC CHECKCATALOG não é executado no banco de dados e os dados do [!INCLUDE[ssSB](../../includes/sssb-md.md)] não são validados.
     
@@ -155,14 +155,14 @@ Este argumento sempre implica em NO_INFOMSGS e não é permitido com nenhuma das
 DATA_PURITY  
  Faz com que o DBCC CHECKDB verifique valores de colunas no banco de dados que não são válidos ou estão fora do intervalo. Por exemplo, o DBCC CHECKDB detecta colunas com valores de data e hora que são maiores ou menores do que o intervalo aceitável para o tipo de dados **datetime** ou **decimal** ou colunas de tipo de dados numérico aproximado com valores de escala ou de precisão que são inválidos.  
  Verificações de integridade de valor de coluna são habilitadas por padrão e não exigem a opção DATA_PURITY. Para bancos de dados atualizados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verificações de valores de colunas não são habilitadas por padrão até que o DBCC CHECKDB WITH DATA_PURITY tenha sido executado sem erros no banco de dados. Depois disso, DBCC CHECKDB verifica a integridade de valores de coluna por padrão. Para obter mais informações sobre como o CHECKDB pode ser afetado com a atualização de banco de dados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte a seção Comentários, posteriormente neste tópico.  
-    
+    
 > [!WARNING]
 > Se PHYSICAL_ONLY estiver especificado, não serão executadas verificações de integridade de colunas.
     
- Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações de como corrigir esses erros manualmente, confira o artigo 923247 da Base de Dados de Conhecimento: [Solucionando problemas de erros DBCC 2570 no SQL Server 2005 e em versões posteriores](https://support.microsoft.com/kb/923247).  
+ Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações sobre como corrigir esses erros manualmente, consulte o artigo 923247 da Base de Dados de Conhecimento: [Solução de problemas do erro 2570 do DBCC no SQL Server 2005 e em versões posteriores](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Substitui a opção de configuração **max degree of parallelism** de **sp_configure** da instrução. O MAXDOP pode exceder o valor configurado com sp_configure. Se MAXDOP exceder o valor configurado com o Resource Governor, o [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] usará o valor de MAXDOP do Resource Governor, descrito em [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Todas as regras semânticas usadas com a opção de configuração grau máximo de paralelismo são aplicáveis ao usar a dica de consulta MAXDOP. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
@@ -196,7 +196,7 @@ Essas verificações de consistência lógica comparam a tabela de índice inter
 DBCC CHECKDB usa um instantâneo do banco de dados interno para fornecer a consistência transacional necessária para executar essas verificações. Isso evita bloqueio e problemas de simultaneidade quando esses comandos são executados. Para obter mais informações, confira [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e a seção Uso de instantâneo de banco de dados interno do DBCC em [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). Se um instantâneo não puder ser criado, ou se a opção TABLOCK estiver especificada, DBCC CHECKDB irá adquirir bloqueios para obter a consistência necessária. Nesse caso, um bloqueio de banco de dados exclusivo é necessário para executar as verificações de alocação, e bloqueios de tabela compartilhados são necessários para executar as verificações de tabela.
 O DBCC CHECKDB falhará ao ser executado no mestre quando não for possível criar um instantâneo do banco de dados interno.
 A execução de DBCC CHECKDB no tempdb não executa nenhuma verificação de alocação nem de catálogo e precisa adquirir bloqueios de tabela compartilhada para executar verificações de tabela. Isso porque, por razões de desempenho, instantâneos do banco de dados não estão disponíveis em tempdb. Isso significa que não é possível obter a consistência transacional exigida.
-No Microsoft SQL Server 2012 ou uma versão anterior do SQL Server, você pode encontrar mensagens de erro ao executar o comando DBCC CHECKDB para um banco de dados que tenha seus arquivos localizados em um volume formatado pelo ReFS. Para obter mais informações, consulte o artigo da Base de Dados de Conhecimento 2974455: [Comportamento de DBCC CHECKDB quando o banco de dados do SQL Server está localizado em um volume do ReFS.](https://support.microsoft.com/kb/2974455)    
+No Microsoft SQL Server 2012 ou uma versão anterior do SQL Server, você pode encontrar mensagens de erro ao executar o comando DBCC CHECKDB para um banco de dados que tenha seus arquivos localizados em um volume formatado pelo ReFS. Para obter mais informações, confira o artigo 2974455 da base de dados de conhecimento: [Comportamento de DBCC CHECKDB quando o banco de dados do SQL Server está localizado em um volume ReFS.](https://support.microsoft.com/kb/2974455)    
     
 ## <a name="checking-and-repairing-filestream-data"></a>Verificando e reparando dados FILESTREAM    
 Quando FILESTREAM está habilitado para um banco de dados e uma tabela, é possível armazenar opcionalmente BLOBs (objetos binários grandes) **varbinary(max)** no sistema de arquivos. Ao usar DBCC CHECKDB em um banco de dados que armazena BLOBs no sistema de arquivos, DBCC verifica a consistência em nível de vinculação entre o sistema de arquivos e o banco de dados.
@@ -267,7 +267,7 @@ A execução do comando DBCC CHECKDB com a opção REPAIR_ALLOW_DATA_LOSS pode a
 -   Tabelas de metadados de replicação. Ações executadas pelo processo CHECKDB para reparar tabelas de metadados de replicação corrompidas exigeem a remoção e a reconfiguração da replicação.    
     
 Se você precisar executar o comando DBCC CHECKDB com a opção REPAIR_ALLOW_DATA_LOSS em um banco de dados de usuário ou de distribuição:
-1.  Feche o sistema para novas sessões: pare as atividades do banco de dados e de todos os outros bancos de dados da topologia da replicação e tente sincronizar todos os nós. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
+1.  Pare o sistema: Pare as atividades do banco de dados e de todos os outros bancos de dados da topologia da replicação e tente sincronizar todos os nós. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
 1.  Execute DBCC CHECKDB.    
 1.  Se o relatório do DBCC CHECKDB incluir reparos de qualquer tabela no banco de dados de distribuição ou de qualquer tabela de metadados de replicação em um banco de dados de usuário, remova e reconfigure a replicação. Para obter mais informações, consulte [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 1.  Se o relatório do DBCC CHECKDB incluir reparos de qualquer tabela replicada, execute validação de dados para determinar se existem diferenças entre os dados do banco de dados de publicação e de assinatura.    

@@ -37,12 +37,12 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713364"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306263"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,6 @@ ms.locfileid: "47713364"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,9 +126,9 @@ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]
 Com algumas exceções, há suporte para dicas de tabela na cláusula FROM somente quando elas são especificadas com a palavra-chave WITH. Dicas de tabela também devem ser especificadas com parênteses.  
   
 > [!IMPORTANT]  
->  A omissão da palavra-chave WITH é um recurso preterido: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> A omissão da palavra-chave WITH é um recurso preterido: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-As seguintes dicas de tabela são permitidas com e sem a palavra-chave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Quando essas dicas de tabela forem especificadas sem a palavra-chave WITH, as dicas deverão ser especificadas sozinhas. Por exemplo:  
+As seguintes dicas de tabelas são permitidas com ou sem a palavra-chave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Quando essas dicas de tabela forem especificadas sem a palavra-chave WITH, as dicas deverão ser especificadas sozinhas. Por exemplo:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -147,7 +146,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 >  A separação de dicas com espaços em vez de vírgulas não é mais um recurso aceito: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, consulte Comentários.  
+Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, confira [Usando NOEXPAND](#using-noexpand).  
   
 INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A alternativa INDEX = sintaxe especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
@@ -157,7 +156,7 @@ Se existir um índice clusterizado, INDEX(0) forçará uma verificação de índ
  Se forem usados vários índices em uma única lista de índices, as duplicatas serão ignoradas e os demais índices listados serão usados para recuperar as linhas da tabela. A ordem dos índices na dica de índice é importante. Uma dica de vários índices também impõe o uso de AND de índice e o otimizador de consulta aplicará tantas condições quantas forem possíveis em cada índice acessado. Se a coleção de índices com dica não incluir todas as colunas referidas pela consulta, uma busca será executada para recuperar as colunas restantes depois que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] recuperar todas as colunas indexadas.  
   
 > [!NOTE]  
->  Quando uma dica de índice que faz referência a vários índices for usada na tabela de fatos em uma junção em estrela, o otimizador ignorará a dica de índice e retornará uma mensagem de aviso. Além disso, o uso de OR de índice não é permitido em uma tabela com uma dica de índice especificada.  
+> Quando uma dica de índice que faz referência a vários índices for usada na tabela de fatos em uma junção em estrela, o otimizador ignorará a dica de índice e retornará uma mensagem de aviso. Além disso, o uso de OR de índice não é permitido em uma tabela com uma dica de índice especificada.  
   
  O número máximo de índices na dica de tabela é de 250 índices não clusterizados.  
   
@@ -167,9 +166,9 @@ KEEPIDENTITY
  Especifica que o valor, ou valores, de identidade no arquivo de dados importado deve ser usado para a coluna de identidade. Se KEPIDENTITY não estiver especificado, os valores de identidade dessa coluna serão verificados, mas não importados, e o otimizador de consulta atribuirá automaticamente os valores com base nos valores de semente e de incremento especificados durante a criação da tabela.  
   
 > [!IMPORTANT]  
->  Se o arquivo de dados não contiver valores para a coluna de identidade na tabela ou na exibição e a coluna de identidade não for a última coluna da tabela, a coluna de identidade deverá ser ignorada. Para obter mais informações, confira [Usar um arquivo de formato para ignorar um campo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Se uma coluna de identidade for ignorada com êxito, o otimizador de consulta atribuirá valores exclusivos automaticamente para a coluna de identidade nas linhas da tabela importada.  
+> Se o arquivo de dados não contiver valores para a coluna de identidade na tabela ou na exibição e a coluna de identidade não for a última coluna da tabela, a coluna de identidade deverá ser ignorada. Para obter mais informações, confira [Usar um arquivo de formato para ignorar um campo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Se uma coluna de identidade for ignorada com êxito, o otimizador de consulta atribuirá valores exclusivos automaticamente para a coluna de identidade nas linhas da tabela importada.  
   
-Para obter um exemplo que usa essa dica em uma instrução INSERT... SELECT * FROM OPENROWSET(BULK...), confira [Manter valores de identidade ao importar dados em massa &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+Para obter um exemplo que usa essa dica em uma `INSERT ... SELECT * FROM OPENROWSET(BULK...)` instrução, confira [Manter valores de identidade ao importar dados em massa &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
 Para obter informações de como verificar o valor de identidade de uma tabela, confira [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
@@ -221,9 +220,9 @@ Quando FORCESEEK for especificado com parâmetros de índice, as diretrizes e re
 -   Para índices particionados, a coluna de particionamento implicitamente adicionada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser especificada na dica FORCESEEK.  
   
 > [!CAUTION]  
-> A especificação de FORCESEEK com parâmetros limita o número de planos que podem ser considerados pelo otimizador mais do que a especificação de FORCESEEK sem parâmetros. Isso pode resultar em um erro "Não é possível gerar o plano" em mais casos. Em uma versão futura, as modificações internas no otimizador talvez permitam a consideração de mais planos.  
+> A especificação de FORCESEEK com parâmetros limita o número de planos que podem ser considerados pelo otimizador mais do que a especificação de FORCESEEK sem parâmetros. Isso pode causar um erro `Plan cannot be generated` em mais casos. Em uma versão futura, as modificações internas no otimizador de consulta poderão permitir que mais planos sejam considerados.  
   
-FORCESCAN **aplica-se a**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **aplica-se ao**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Especifica que o otimizador de consulta usará apenas uma operação de verificação de índice como o caminho de acesso na tabela ou exibição referenciada. A dica FORCESCAN pode ser útil em consultas nas quais o otimizador menospreza o número de linhas afetadas e escolhe uma operação de busca em vez de uma operação de verificação. Quando isso ocorre, a quantidade de memória concedida para a operação é muito baixa e o desempenho da consulta é afetado.  
   
 FORCESCAN pode ser especificado com ou sem uma dica INDEX. Quando combinado com uma dica de índice, (`INDEX = index_name, FORCESCAN`), o otimizador de consulta considera apenas os caminhos de acesso de verificação através do índice especificado ao acessar a tabela referenciada. FORCESCAN pode ser especificado com a dica de índice INDEX(0) para forçar uma operação de verificação de tabela na tabela base.  
@@ -408,7 +407,7 @@ No entanto, para que o otimizador considere exibições indexadas para correspon
   
  Além disso, a opção NUMERIC_ROUNDABORT deve ser definida como OFF.  
   
- Para forçar o otimizador a usar um índice para uma exibição indexada, especifique a opção NOEXPAND. Essa dica poderá ser usada apenas se a exibição também estiver nomeada na consulta. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma dica para forçar o uso de uma exibição indexada específica em uma consulta que não nomeie a exibição diretamente na cláusula FROM. No entanto, o otimizador de consulta considera o uso de exibições indexadas, mesmo que elas não sejam referenciadas diretamente na consulta.  
+ Para forçar o otimizador a usar um índice para uma exibição indexada, especifique a opção NOEXPAND. Essa dica poderá ser usada apenas se a exibição também estiver nomeada na consulta. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma dica para forçar o uso de uma exibição indexada específica em uma consulta que não nomeie a exibição diretamente na cláusula FROM. No entanto, o otimizador de consulta considera o uso de exibições indexadas, mesmo que elas não sejam referenciadas diretamente na consulta. O SQL Server apenas criará automaticamente as estatísticas em uma exibição indexada quando uma dica de tabela NOEXPAND for usada. A omissão dessa dica pode resultar em avisos de plano de execução sobre as estatísticas ausentes que não podem ser resolvidas com a criação manual de estatísticas. Durante a otimização da consulta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará as estatísticas de exibição que foram criadas automaticamente ou manualmente quando a consulta referenciar a exibição diretamente e a dica NOEXPAND for usada.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Usando uma dica de tabela como uma dica de consulta  
  As *dicas de tabela* também podem ser especificadas como dicas de consulta usando a cláusula OPTION (TABLE HINT). É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md). Para consultas ad hoc, especifique essas dicas apenas como dicas de tabela. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -429,7 +428,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Usando a dica FORCESEEK para especificar uma operação de busca de índice  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>b. Usando a dica FORCESEEK para especificar uma operação de busca de índice  
  O exemplo a seguir usa a dica FORCESEEK sem especificar um índice para forçar o otimizador de consulta a executar uma operação de busca de índice na tabela `Sales.SalesOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql

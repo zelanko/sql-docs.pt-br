@@ -5,8 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 keywords:
 - aprender sobre sql
@@ -14,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 96c174676d00e646191aa3620b2e0a884b44616b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809438"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Aprender sobre o SQL Server Master Data Services
 
@@ -37,7 +36,7 @@ ms.locfileid: "51695804"
 ## <a name="samples"></a>Exemplos  
 * Para saber mais sobre como é possível estruturar dados no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] usando modelos, entidades e hierarquias, experimente os modelos de exemplo incluídos quando você instala o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Para obter instruções sobre como implantar as amostras, consulte [Implantar dados e modelos de exemplo](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
-    Para obter informações sobre as atualizações do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] aos modelos de exemplo, consulte [Amostras do SQL Server: Pacotes de implantação de modelo](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+    Para obter informações sobre as atualizações do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] nos modelos de exemplo, confira [Amostras do SQL Server: Pacotes de Implantação de Modelo](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 * Para ver uma demonstração de como personalizar a maneira que os usuários interagem com o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], experimente as amostras de aplicativos de console em C# do MDS incluídos nas amostras do SQL Server. Você pode baixar as amostras do SQL Server como um arquivo .zip neste [repositório GitHub](https://github.com/Microsoft/sql-server-samples).  
   

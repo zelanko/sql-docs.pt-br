@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ecd021403e0b3c940cf028332cea033923dd840
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b02eadce149db42ffcf6229ae2cbbc47bc641f1b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614284"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202575"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -63,7 +63,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
  O argumento *fractions* depende do argumento *precision*. Por exemplo, se *precision* for 7, cada fração representará 100 nanosegundos; se *precision* for 3, cada fração representará um milissegundo. Se o valor de *precision* for zero, o valor de *fractions* também deverá ser zero; caso contrário, um erro será gerado.  
   
- Essa função pode ser remota para servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores. Ela não pode ser remota para servidores com versão anterior à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+ Essa função pode ser remota para servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores. Ela não pode ser remota para servidores com uma versão anterior à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -83,7 +83,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-example-with-fractions-of-a-second"></a>B. Exemplo simples com frações de um segundo  
+### <a name="b-example-with-fractions-of-a-second"></a>b. Exemplo simples com frações de um segundo  
  O seguinte exemplo demonstra o uso dos parâmetros *fractions* e *precision*:  
   
 1.  Quando *fractions* tem um valor igual a 5 e *precision* tem um valor igual a 1, o valor de *fractions* representa 5/10 de um segundo.  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
@@ -16,12 +15,12 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9c8e5c76ceffe53f2b2ee4dd759db748ae58f7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b337b716905523d78d3e49d60477c7b6f29f72f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765318"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Sobrepondo permissões de usuário e grupo (Serviços de Dados Mestre)
 
@@ -55,7 +54,7 @@ ms.locfileid: "47606584"
   
  O Grupo 2 tem a permissão **Leitura** para a entidade Produto.  
   
- Resultado: a permissão efetiva do usuário é **Atualizar** para a entidade Produto.  
+ Resultado: A permissão efetiva do usuário é **Atualizar** na entidade Product.  
   
 ## <a name="example-2"></a>Exemplo 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -68,7 +67,7 @@ ms.locfileid: "47606584"
   
  O Grupo 2 tem permissão **Negar** para a entidade Produto.  
   
- Resultado: a permissão efetiva do usuário é **Negar** para a entidade Produto.  
+ Resultado: A permissão efetiva do usuário é **Negar** na entidade Product.  
   
 ## <a name="example-3"></a>Exemplo 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -81,7 +80,7 @@ ms.locfileid: "47606584"
   
  O Grupo 2 tem permissão **Leitura** para um grupo de membros em um nó de hierarquia.  
   
- Resultado: a permissão efetiva do usuário é **Atualizar** para os membros.  
+ Resultado: A permissão efetiva do usuário é **Atualizar** nos membros.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   

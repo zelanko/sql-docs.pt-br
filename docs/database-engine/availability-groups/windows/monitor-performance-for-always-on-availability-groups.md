@@ -1,6 +1,7 @@
 ---
-title: Monitorar o desempenho de Grupos de Disponibilidade Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Monitorar o desempenho de grupos de disponibilidade
+description: Este artigo descreve o processo de sincronização, mostra como calcular algumas das principais métricas e fornece os links para alguns dos cenários comuns de solução de problemas de desempenho.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203345"
 ---
-# <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade Always On
+# <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O aspecto do desempenho de Grupos de Disponibilidade Always On é crucial para manter o SLA (Contrato de Nível de Serviço) dos seus bancos de dados de mais críticos. A compreensão de como os grupos de disponibilidade enviam logs para réplicas secundárias pode ajudá-lo a estimar o RTO (objetivo de tempo de recuperação) e o RPO (objetivo de ponto de recuperação) de sua implementação de disponibilidade e identificar gargalos no mau desempenho de grupos de disponibilidade ou réplicas. Este artigo descreve o processo de sincronização, mostra como calcular algumas das principais métricas e fornece os links para alguns dos cenários comuns de solução de problemas de desempenho.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "51601143"
   
  Além dos portões de controle de fluxo, há outro fator que pode impedir que as mensagens de log sejam enviadas. A sincronização das réplicas garante que as mensagens sejam enviadas e aplicadas na ordem do LSN (número de sequência de log). Antes do envio de uma mensagem de log, o LSN também é verificado em relação ao menor número LSN confirmado para verificar se ele é menor que um dos limites (dependendo do tipo de mensagem). Se a diferença entre os dois números LSN for maior do que o limite, as mensagens não serão enviadas. Depois que o intervalo estiver abaixo do limite novamente, as mensagens serão enviadas.  
   
- Dois contadores de desempenho úteis, [SQL Server:Availability Replica > controle de fluxo/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md) e [SQL Server:Availability Replica > tempo de controle de fluxo (ms/s)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), mostram, no último segundo, o número de vezes que o controle de fluxo foi ativado e quanto tempo foi gasto aguardando pelo controle de fluxo. Um tempo maior de espera pelo controle de fluxo significa um RPO maior. Para obter mais informações sobre os tipos de problemas que podem causar um tempo de espera alto no controle de fluxo, veja [Solução de problemas: o grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md).  
+ Dois contadores de desempenho úteis, [SQL Server:Availability Replica > controle de fluxo/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md) e [SQL Server:Availability Replica > tempo de controle de fluxo (ms/s)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), mostram, no último segundo, o número de vezes que o controle de fluxo foi ativado e quanto tempo foi gasto aguardando pelo controle de fluxo. Um tempo maior de espera pelo controle de fluxo significa um RPO maior. Para obter mais informações sobre os tipos de problemas que podem causar um tempo de espera alto no controle de fluxo, confira [Solução de problemas: O grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md).  
   
 ##  <a name="estimating-failover-time-rto"></a>Estimando o tempo de failover (RTO)  
  O RTO no seu SLA depende do tempo de failover da sua implementação Always On em um determinado momento, podendo ser expresso na seguinte fórmula:  
@@ -134,9 +135,9 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>Contadores de desempenho usados em fórmulas de RTO/RPO
 
-- **redo_queue_size** (KB) [*usado em RTO*]: o tamanho da fila de restauração é o tamanho dos logs de transação entre seus **last_received_lsn** e **last_redone_lsn**. **last_received_lsn** é a ID de bloco de log que identifica o ponto até o qual todos os blocos de log foram recebidos pela réplica secundária que hospeda este banco de dados secundário. **Last_redone_lsn** é o número de sequência de log real do último registro de log que foi desfeito no banco de dados secundário. Com base nesses dois valores, podemos encontrar IDs do bloco de log inicial (**last_received_lsn**) e do bloco de log final (**last_redone_lsn**). O espaço entre esses dois blocos de log pode então representar como os blocos de log de transação talvez ainda não tenham sido refeitos. Isso é medido em quilobytes (KB).
--  **redo_rate** (KB/s) [*usado no RTO*]: um valor cumulativo que representa, em um período de tempo decorrido, quanto do log de transações (KB) foi refeito no banco de dados secundário em quilobytes/segundo (KB/s). 
-- **last_commit_time** (datetime) [*usado no RPO*]: para o banco de dados primário, **last_commit_time** é a hora em que última transação foi confirmada. Para o banco de dados secundário, o **last_commit_time** é a hora de confirmação mais recente da transação no banco de dados primário, que também foi protegido com êxito no banco de dados secundário. Uma vez que esse valor na réplica secundária deve ser sincronizado com o mesmo valor na réplica primária, qualquer lacuna existente entre esses dois valores é a estimativa de perda de dados (RPO).  
+- **redo_queue_size** (KB) [*usado no RTO*]: O tamanho da fila de restauração é o tamanho dos logs de transação entre o **last_received_lsn** e o **last_redone_lsn**. **last_received_lsn** é a ID de bloco de log que identifica o ponto até o qual todos os blocos de log foram recebidos pela réplica secundária que hospeda este banco de dados secundário. **Last_redone_lsn** é o número de sequência de log real do último registro de log que foi desfeito no banco de dados secundário. Com base nesses dois valores, podemos encontrar IDs do bloco de log inicial (**last_received_lsn**) e do bloco de log final (**last_redone_lsn**). O espaço entre esses dois blocos de log pode então representar como os blocos de log de transação talvez ainda não tenham sido refeitos. Isso é medido em quilobytes (KB).
+-  **redo_rate** (KB/s) [*usado no RTO*]: Um valor cumulativo que representa, em um período de tempo decorrido, quanto do log de transações (KB) foi refeito no banco de dados secundário em quilobytes/segundo (KB/s). 
+- **last_commit_time** (Datetime) [*usado no RPO*]: Para o banco de dados primário, o **last_commit_time** é a hora em que última transação foi confirmada. Para o banco de dados secundário, o **last_commit_time** é a hora de confirmação mais recente da transação no banco de dados primário, que também foi protegido com êxito no banco de dados secundário. Uma vez que esse valor na réplica secundária deve ser sincronizado com o mesmo valor na réplica primária, qualquer lacuna existente entre esses dois valores é a estimativa de perda de dados (RPO).  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>Estimar o RTO e o RPO usando DMVs
 
@@ -328,7 +329,7 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Monitoramento de RTO e RPO  
- Esta seção demonstra como monitorar as métricas de RTO e RPO de seus grupos de disponibilidade. Esta demonstração é semelhante do tutorial de GUI fornecido em [O modelo de integridade do Always On, parte 2: estendendo o modelo de integridade](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ Esta seção demonstra como monitorar as métricas de RTO e RPO de seus grupos de disponibilidade. Esta demonstração é semelhante ao tutorial de GUI fornecido em [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (O modelo de integridade do Always On, parte 2: estendendo o modelo de integridade).  
   
  Os elementos do tempo de failover e os cálculos da possível perda de dados em [Estimando o tempo de failover (RTO)](#BKMK_RTO) e [Estimando o potencial de perda de dados (RPO)](#BKMK_RPO) são fornecidos convenientemente como métricas de desempenho na faceta de gerenciamento de política, **Estado da réplica de banco de dados** (veja [Exibir as facetas do gerenciamento baseado em políticas em um objeto do SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Você pode monitorar essas duas métricas de acordo com um agendamento e ser alertado quando as métricas excederem o RTO e RPO, respectivamente.  
   
@@ -416,11 +417,11 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
   
     -   Página **descrição**:  
   
-        -   **Categoria**: **Avisos de banco de dados de disponibilidade**  
+        -   **Categoria**: **Avisos do banco de dados de disponibilidade**  
   
              Essa configuração permite que os resultados da avaliação de política sejam exibidos no Painel Always On.  
   
-        -   **Descrição**: **A réplica atual tem um RTO que ultrapassa 10 minutos, considerando uma sobrecarga de 1 minuto para descoberta e failover. Você deve investigar problemas de desempenho na respectiva instância de servidor imediatamente.**  
+        -   **Descrição**: **A réplica atual tem um RTO que excede 10 minutos, considerando uma sobrecarga de 1 minuto para descoberta e failover. Você deve investigar problemas de desempenho na respectiva instância de servidor imediatamente.**  
   
         -   **Texto a ser exibido**: **RTO excedido!**  
   
@@ -442,7 +443,7 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
   
     -   Página **descrição**:  
   
-        -   **Categoria**: **Avisos de banco de dados de disponibilidade**  
+        -   **Categoria**: **Avisos do banco de dados de disponibilidade**  
   
         -   **Descrição**: **O banco de dados de disponibilidade excedeu o RPO de 1 hora. Você deve investigar problemas de desempenho nas réplicas de disponibilidade imediatamente.**  
   
@@ -459,7 +460,7 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
 |--------------|-----------------|  
 |[Solução de problemas: o grupo de disponibilidade excedeu o RTO](troubleshoot-availability-group-exceeded-rto.md)|Após um failover automático ou um failover manual planejado sem perda de dados, o tempo de failover excede o RTO. Ou, quando você calcula o tempo de failover de uma réplica secundária de confirmação síncrona (como um parceiro de failover automático), você descobre que ele excede o RTO.|  
 |[Solução de problemas: o grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md)|Depois de executar um failover manual forçado, a perda de dados é maior que o RPO. Ou, ao calcular a possível perda de dados de uma réplica secundária de confirmação assíncrona, você descobre que ela excede o RPO.|  
-|[Solução de problema: as alterações na réplica primária não são refletidas na réplica secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)|O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida.|  
+|[Solução de problemas: as alterações na réplica primária não são refletidas na réplica secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)|O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Eventos estendidos úteis  
  Os seguintes eventos estendidos são úteis ao solucionar problemas de réplicas no estado **Sincronizando**.  

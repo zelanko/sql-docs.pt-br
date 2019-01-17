@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd93fef0add8f773a1acac0635c13f59d8bd5cab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b85685dd15e6eb7dd2350bdeda5befb28959c281
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700964"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202795"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,9 +111,9 @@ A maioria dos exemplos de código na Referência do [!INCLUDE[tsql](../../includ
 Muitos exemplos de código incluem um prefixo em constantes de cadeia de caracteres Unicode com a letra **N**. Sem o prefixo **N**, a cadeia de caracteres é convertida na página de código padrão do banco de dados. Essa página de código padrão pode não reconhecer certos caracteres.  
   
 ## <a name="applies-to-references"></a>Referências de "Aplica-se a"  
-A referência [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui artigos relacionados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+A referência do [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui artigos relacionados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-Na parte superior de cada artigo, há uma seção indicando quais produtos se referem ao assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não estará disponível no produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O artigo **CREATE AVAILABILITY GROUP** indica que ele se aplica ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e não se aplica ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e nem ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+Na parte superior de cada artigo, há uma seção indicando quais produtos se referem ao assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não estará disponível no produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O artigo **CREATE AVAILABILITY GROUP** indica que ele se aplica ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), pois não se aplica ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e nem ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Em alguns casos, o assunto geral do artigo pode ser usado em um produto, mas não há suporte para todos os argumentos. Por exemplo, os usuários do banco de dados independente foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A instrução **CREATE USER** pode ser usada em qualquer produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, a sintaxe **WITH PASSWORD** não pode ser usada com versões anteriores. Nesse caso, seções **Aplica-se a** adicionais são inseridas em descrições de argumento apropriadas no corpo do artigo.  
   

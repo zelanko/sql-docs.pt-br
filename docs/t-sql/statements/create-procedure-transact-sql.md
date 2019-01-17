@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 845031e6002ef992b6f04b053bde9955896591fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512124"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202895"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>Argumentos
 OR ALTER  
- **Aplica-se a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
+ **Aplica-se ao**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante).  
   
  Altera o procedimento se ele já existe.
  
@@ -220,7 +220,7 @@ RECOMPILE
  Para instruir o [!INCLUDE[ssDE](../../includes/ssde-md.md)] a descartar planos de consultas individuais dentro de um procedimento, use a dica de consulta RECOMPILE na definição da consulta. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ENCRYPTION  
- **Aplica-se a**: SQL Server (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se ao**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o texto original da instrução CREATE PROCEDURE em um formato ofuscado. A saída do ofuscamento não é diretamente visível em quaisquer exibições de catálogo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os usuários que não tiverem nenhum acesso a tabelas do sistema ou arquivos de banco de dados não poderão recuperar o texto ofuscado. Entretanto, o texto está disponível para usuários privilegiados que podem acessar as tabelas do sistema na [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou acessar diretamente os arquivos de banco de dados. Além disso, os usuários que podem anexar um depurador ao processo de servidor também podem recuperar o procedimento descriptografado da memória em tempo de execução. Para obter mais informações sobre como acessar metadados do sistema, consulte [Configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -236,7 +236,7 @@ EXECUTE AS *clause*
  Para obter mais informações, veja [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 FOR REPLICATION  
- **Aplica-se a**: SQL Server (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se ao**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica que o procedimento é criado para replicação. Consequentemente, não pode ser executado no Assinante. Um procedimento criado com a opção FOR REPLICATION é usado como um filtro de procedimento e é executado somente durante a replicação. Os parâmetros não poderão ser declarados se FOR REPLICATION for especificado. FOR REPLICATION não pode ser especificado para procedimentos CLR. A opção RECOMPILE é ignorada para procedimentos criados com FOR REPLICATION.  
   
@@ -407,7 +407,7 @@ veja [Exemplos](#Examples) mais no final deste tópico para muitos outros exempl
 > [!NOTE]  
 >  SET ANSI_WARNINGS não é cumprido ao passar parâmetros em um procedimento, em uma função definida pelo usuário ou ao declarar e definir variáveis em uma instrução de lote. Por exemplo, se a variável for definida como **char**(3) e, em seguida, configurada com um valor maior que três caracteres, os dados serão truncados até o tamanho definido e a instrução INSERT ou UPDATE terá êxito.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  A instrução CREATE PROCEDURE não pode ser combinada com outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um único lote.  
   
  As instruções a seguir não podem ser usadas em qualquer lugar no corpo de um procedimento armazenado.  
@@ -455,7 +455,7 @@ GO
   
 |Nome de objeto do Monitor de Desempenho|Nome do Contador de Desempenho do Sistema|  
 |-------------------------------------|--------------------------------------|  
-|Objeto SQLServer: cache de planos|Taxa de Acertos do Cache|  
+|SQLServer: Objeto do Cache de Planos|Taxa de Acertos do Cache|  
 ||Páginas do Cache|  
 ||Contagens de Objetos do Cache*|  
   
@@ -532,7 +532,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>B. Retornando mais de um conjunto de resultados  
+#### <a name="b-returning-more-than-one-result-set"></a>b. Retornando mais de um conjunto de resultados  
  O procedimento a seguir retorna dois conjuntos de resultados.  
   
 ```sql  

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545448"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215382"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 
@@ -306,7 +306,7 @@ O status dessa opção pode ser determinado examinando-se a coluna is_auto_close
 > [!NOTE]  
 >  O espelhamento do banco de dados requer AUTO_CLOSE OFF.  
   
-Quando o banco de dados é definido como AUTOCLOSE = ON, uma operação que inicia o desligamento automático do banco de dados limpa o cache do plano da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e superior, para cada armazenamento em cache eliminado do cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+Quando o banco de dados é definido como AUTOCLOSE = ON, uma operação que inicia o desligamento automático do banco de dados limpa o cache do plano da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e superior, para cada armazenamento em cache limpo do cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
  
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }  
 ON  
@@ -510,7 +510,7 @@ EMERGENCY
 O banco de dados está marcado como READ_ONLY, o log está desabilitado e o acesso é limitado aos membros da função de servidor fixa sysadmin. EMERGENCY é usado principalmente para a solução de problemas. Por exemplo, um banco de dados marcado como suspeito devido a um arquivo de log corrompido pode ser definido com o estado EMERGENCY. Isso permite habilitar o acesso somente leitura do administrador do sistema ao banco de dados. Apenas membros da função de servidor fixa sysadmin podem definir um banco de dados com o estado EMERGENCY.  
   
 > [!NOTE]  
-> **Permissões:** a permissão ALTER DATABASE para o banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou emergência. A permissão ALTER ANY DATABASE no nível do servidor é necessária para mover um banco de dados de offline para online.  
+> **Permissões:** A permissão ALTER DATABASE para o banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou emergência. A permissão ALTER ANY DATABASE no nível do servidor é necessária para mover um banco de dados de offline para online.  
   
 O status dessa opção pode ser determinado examinando as colunas state e state_desc na exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou a propriedade Status da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Para obter mais informações, consulte [Database States](../../relational-databases/databases/database-states.md).  
   
@@ -668,7 +668,7 @@ Veja [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sq
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } controla se o banco de dados pode criar páginas iniciais usando uma extensão mista para as primeiras oito páginas de uma tabela ou índice.  
  
@@ -866,7 +866,7 @@ NEW_BROKER
 Especifica que o banco de dados deve receber um novo identificador do Broker. Como o banco de dados é considerado como um novo Service Broker, todas as conversas existentes nele são imediatamente removidas sem produzir mensagens de caixa de diálogo de término. Qualquer rota que referencia o antigo identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser recriada novamente com o novo identificador.  
   
 ERROR_BROKER_CONVERSATIONS  
-Especifica que a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Isso preserva o identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente para o banco de dados. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina todas as conversas no banco de dados com um erro. Isso permite que os aplicativos executem a limpeza regular das conversas existentes.  
+Especifica que a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Isso preserva o identificador [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente para o banco de dados. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina todas as conversas no banco de dados com um erro. Isso permite que os aplicativos executem a limpeza regular das conversas existentes.  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1037,7 +1037,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 As aspas duplas podem ser utilizadas para conter identificadores delimitados.  
   
-Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").  
+Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)] . Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").  
   
 OFF  
 Os identificadores não podem estar entre aspas e devem seguir todas as regras de identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Literais podem ser delimitados por aspas simples ou duplas.  
@@ -1119,21 +1119,21 @@ Nem todas as opções de banco de dados usam a cláusula WITH \<termination> ou 
 |\<db_user_access_option>|Sim|Sim|  
 |\<db_update_option>|Sim|Sim|  
 |\<delayed_durability_option>|Sim|Sim|  
-|\<external_access_option>|Sim|não|  
-|\<cursor_option>|Sim|não|  
-|\<auto_option>|Sim|não|  
-|\<sql_option>|Sim|não|  
-|\<recovery_option>|Sim|não|  
-|\<target_recovery_time_option>|não|Sim|  
-|\<database_mirroring_option>|não|não|  
-|ALLOW_SNAPSHOT_ISOLATION|não|não|  
-|READ_COMMITTED_SNAPSHOT|não|Sim|  
+|\<external_access_option>|Sim|Não|  
+|\<cursor_option>|Sim|Não|  
+|\<auto_option>|Sim|Não|  
+|\<sql_option>|Sim|Não|  
+|\<recovery_option>|Sim|Não|  
+|\<target_recovery_time_option>|Não|Sim|  
+|\<database_mirroring_option>|Não|Não|  
+|ALLOW_SNAPSHOT_ISOLATION|Não|Não|  
+|READ_COMMITTED_SNAPSHOT|Não|Sim|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sim|Sim|  
-|\<service_broker_option>|Sim|não|  
+|\<service_broker_option>|Sim|Não|  
 |DATE_CORRELATION_OPTIMIZATION|Sim|Sim|  
 |\<parameterization_option>|Sim|Sim|  
 |\<change_tracking_option>|Sim|Sim|  
-|\<db_encryption_option>|Sim|não|  
+|\<db_encryption_option>|Sim|Não|  
   
 O cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é limpo com a definição de uma das seguintes opções:  
   
@@ -1154,7 +1154,7 @@ O cache de procedimento também é liberado nos seguintes cenários.
 - Você restaura um backup de banco de dados.  
 -   Você desanexa um banco de dados.  
   
-A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -1234,7 +1234,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-O exemplo a seguir mostra como desabilitar o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+O exemplo a seguir mostra como desabilitar o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -1870,7 +1870,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 As aspas duplas podem ser utilizadas para conter identificadores delimitados.  
   
-Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").  
+Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)] . Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").  
   
 OFF  
 Os identificadores não podem estar entre aspas e devem seguir todas as regras de identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Literais podem ser delimitados por aspas simples ou duplas.  
@@ -1946,20 +1946,20 @@ Nem todas as opções de banco de dados usam a cláusula WITH \<termination> ou 
   
 |Categoria de opções|Pode ser especificado com outras opções|Pode usar a cláusula WITH \<termination>|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|Sim|não|  
+|\<auto_option>|Sim|Não|  
 |\<change_tracking_option>|Sim|Sim|  
-|\<cursor_option>|Sim|não|  
-|\<db_encryption_option>|Sim|não|  
+|\<cursor_option>|Sim|Não|  
+|\<db_encryption_option>|Sim|Não|  
 |\<db_update_option>|Sim|Sim|  
 |\<db_user_access_option>|Sim|Sim|  
 |\<delayed_durability_option>|Sim|Sim|  
 |\<parameterization_option>|Sim|Sim|  
-|ALLOW_SNAPSHOT_ISOLATION|não|não|  
-|READ_COMMITTED_SNAPSHOT|não|Sim|  
+|ALLOW_SNAPSHOT_ISOLATION|Não|Não|  
+|READ_COMMITTED_SNAPSHOT|Não|Sim|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sim|Sim|  
 |DATE_CORRELATION_OPTIMIZATION|Sim|Sim|  
-|\<sql_option>|Sim|não|  
-|\<target_recovery_time_option>|não|Sim|  
+|\<sql_option>|Sim|Não|  
+|\<target_recovery_time_option>|Não|Sim|  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -1981,7 +1981,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Habilitando o isolamento de instantâneo em um banco de dados  
 O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
@@ -2598,7 +2598,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 As aspas duplas podem ser utilizadas para conter identificadores delimitados.  
   
-Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").  
+Todas as cadeias de caracteres delimitadas por aspas duplas são interpretadas como identificadores de objeto. Os identificadores entre aspas não precisam seguir as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Eles podem ser palavras-chave e incluir caracteres geralmente não permitidos nos identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)] . Se o sinal de aspas simples (') fizer parte da cadeia de caracteres literal, ele poderá ser representado por aspas duplas (").  
   
 OFF  
 Os identificadores não podem estar entre aspas e devem seguir todas as regras de identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Literais podem ser delimitados por aspas simples ou duplas.  
@@ -2683,7 +2683,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Habilitando o isolamento de instantâneo em um banco de dados  
 O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  

@@ -1,24 +1,25 @@
 ---
 title: Criando uma identidade visual para o portal da Web | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: Neste artigo, você aprenderá a alterar a aparência do portal da Web criando uma identidade visual para o seu negócio por meio de um pacote de marcas. O pacote de marcas foi projetado para que você não precise de um conhecimento avançado de CSS (folha de estilos em cascata) para criá-lo.
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397697"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201036"
 ---
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Você pode alterar a aparência do portal da Web criando uma identidade visual para o seu negócio. Isso é feito por meio de um pacote de marca. O pacote de marca foi projetado para que você não precise de um conhecimento avançado de CSS (folha de estilos em cascata) para criá-lo.  
+Você pode alterar a aparência do portal da Web criando uma identidade visual para o seu negócio. Isso é feito por meio de um pacote de marca. O pacote de marcas foi projetado para que você não precise de um conhecimento avançado de CSS (folha de estilos em cascata) para criá-lo.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
@@ -239,5 +240,7 @@ Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote red
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## <a name="next-steps"></a>Próximas etapas
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

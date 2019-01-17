@@ -1,6 +1,7 @@
 ---
-title: Grupos de disponibilidade distribuídos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: O que são grupos de disponibilidade distribuídos
+description: Um grupo de disponibilidade distribuído é um tipo especial de grupo de disponibilidade que abrange dois grupos de disponibilidade separados. Os grupos de disponibilidade que fazem parte de um grupo de disponibilidade distribuído não precisam estar no mesmo local.
+ms.custom: seodec18
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534447"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53381027"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,9 @@ A única maneira de fazer com que a réplica primária do AG 2 aceite inserçõe
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Requisitos de versão e edição do SQL Server para grupos de disponibilidade distribuídos
 
-Atualmente, os grupos de disponibilidade distribuídos funcionam apenas com grupos de disponibilidade que são criados com a mesma versão principal do SQL Server. Por exemplo, todos os grupos de disponibilidade que fazem parte de um grupo de disponibilidade distribuído devem ser criados com o SQL Server 2016 atualmente. Como o recurso de grupos de disponibilidade distribuídos não existe no SQL Server 2012 ou 2014, os grupos de disponibilidade que foram criados com essas versões não podem fazer parte de grupos de disponibilidade distribuídos. 
+Grupos de disponibilidade distribuídos no SQL Server 2017 ou posterior podem combinar versões principais do SQL Server no mesmo grupo de disponibilidade distribuído. O AG que contém o primário de leitura/gravação pode ser de uma versão igual ou inferior a de outros AGs que participam do AG distribuído. Outros AGs podem ser de uma versão igual ou superior. Esse cenário é direcionado a cenários de atualização e migração. Por exemplo, se o AG que contém a réplica primária de leitura/gravação for SQL Server 2016, mas você quiser atualizar/migrar para o SQL Server 2017 ou posterior, o outro AG que participa do AG distribuído poderá ser configurado com o SQL Server 2017.
+
+Como o recurso de grupos de disponibilidade distribuídos não existe no SQL Server 2012 ou 2014, os grupos de disponibilidade que foram criados com essas versões não podem fazer parte de grupos de disponibilidade distribuídos. 
 
 > [!NOTE]
 > Grupos de disponibilidade distribuída não podem ser configurados com a Standard edition ou uma combinação da Standard e da Enterprise edition.
@@ -85,7 +88,7 @@ Os clusters WSFC individuais e seus grupos de disponibilidade correspondentes se
 * Um cluster WSFC é ingressado em um domínio e o outro cluster WSFC não é ingressado em um domínio.
 * Nenhum cluster WSFC é ingressado em um domínio.
 
-Quando ambos os clusters WSFC são ingressados no mesmo domínio (domínios não confiáveis), você não precisa executar nenhuma ação especial ao criar o grupo de disponibilidade distribuído. Para grupos de disponibilidade e clusters WSFC que não são ingressados no mesmo domínio, use certificados para fazer com que o grupo de disponibilidade distribuído funcione, semelhante ao modo como você poderia criar um grupo de disponibilidade para um grupo de disponibilidade independente de domínio. Para saber como configurar certificados para um grupo de disponibilidade distribuído, siga as etapas 3 a 13 em [Criar um grupo de disponibilidade independente de domínio](domain-independent-availability-groups.md#create-a-domain-independent-availability-group).
+Quando ambos os clusters WSFC são ingressados no mesmo domínio (domínios não confiáveis), você não precisa executar nenhuma ação especial ao criar o grupo de disponibilidade distribuído. Para grupos de disponibilidade e clusters WSFC que não são ingressados no mesmo domínio, use certificados para fazer com que o grupo de disponibilidade distribuído funcione, semelhante ao modo como você poderia criar um grupo de disponibilidade para um grupo de disponibilidade independente de domínio. Para saber como configurar certificados para um grupo de disponibilidade distribuído, siga as etapas 3 a 13 em [Criar um grupo de disponibilidade independente de domínio](domain-independent-availability-groups.md).
 
 Com um grupo de disponibilidade distribuído, as réplicas primárias de cada grupo de disponibilidade subjacente devem ter os certificados umas das outras. Se você já tiver pontos de extremidade que não usam certificados, reconfigure os pontos de extremidade usando [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) para refletir o uso de certificados.
 
@@ -138,7 +141,7 @@ Em outras palavras, uma réplica primária pode fazer parte de dois grupos de di
 
 ![Colocação em escala das leituras com grupos de disponibilidade distribuída](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-A figura a seguir mostra o AG 1 como a réplica primária para dois grupos de disponibilidade distribuídos diferentes: AG 1 Distribuído (composto por AG 1 e AG 2) e AG 2 Distribuído (composto por AG 1 e AG 3).
+A figura a seguir mostra o AG 1 como a réplica primária para dois grupos de disponibilidade distribuídos diferentes: AG 1 distribuído (composto por AG 1 e AG2) e AG 2 distribuído (composto por AG 1 e AG 3).
 
 
 ![Outra colocação em escala das leituras usando o exemplo de grupos de disponibilidade distribuída]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -229,7 +232,7 @@ INNER JOIN sys.availability_replicas AS ar
 GO
 ```
 
-Um exemplo de saída do segundo cluster WSFC que está participando de um grupo de disponibilidade distribuída é mostrado na figura a seguir. SPAG1 é composto de duas réplicas: DENNIS e JY. No entanto, o grupo de disponibilidade distribuída denominado SPDistAG tem os nomes dos dois grupos de disponibilidade participantes (SPAG1 e SPAG2) em vez dos nomes de instâncias, assim como acontece com um grupo de disponibilidade tradicional. 
+Um exemplo de saída do segundo cluster WSFC que está participando de um grupo de disponibilidade distribuída é mostrado na figura a seguir. SPAG1 é composto por duas réplicas: DENNIS e JY. No entanto, o grupo de disponibilidade distribuída denominado SPDistAG tem os nomes dos dois grupos de disponibilidade participantes (SPAG1 e SPAG2) em vez dos nomes de instâncias, assim como acontece com um grupo de disponibilidade tradicional. 
 
 ![Exemplo de saída da consulta anterior](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 

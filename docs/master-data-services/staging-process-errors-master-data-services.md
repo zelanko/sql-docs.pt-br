@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -14,12 +13,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395380"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766128"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "52395380"
 |210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "ROOT".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "MDMUNUSED".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210052|O MemberCode não pode ser desativado porque é usado como um valor de atributo baseado em domínio.|Quando **ImportType** = **3** ou **4**, o preparo falhará se o membro for usado como um valor de atributo para outros membros. Use **ImportType5** ou **6** para definir o valor como NULL ou altere os valores antes de executar o processo de preparo.|Folha<br /><br /> Consolidado|  
-|300002|O código de membro não é válido.|Relações: o código de membro pai ou filho não existe.<br /><br /> Folha ou Consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|300002|O código de membro não é válido.|Relações: O código de membro pai ou filho não existe.<br /><br /> Folha ou Consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |300004|O código de membro já existe.|**ImportType** = **1** e você usou um código de membro que já existe na entidade.|Folha<br /><br /> Consolidado|  
 |210011|Quando **RelationshipType** é **1**, o **ParentCode** não pode ser um membro folha.|Verifique se o valor de **ParentCode** é um código de membro consolidado.|Relação|  
 |210015|O código de membro existe várias vezes na tabela de preparo para uma hierarquia e um lote.|Para uma hierarquia explícita, você especificou o local do mesmo membro várias vezes no mesmo lote.|Relação|  

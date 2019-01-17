@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95bf478ba6bb44194f5713a16d0c87b067487551
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4c4ae12021930ba447c3cb01a9830907fb3153
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854616"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822910"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Criar e executar um relacionamento de sincronização de entidade (Master Data Services)
 
@@ -112,15 +111,15 @@ ms.locfileid: "47854616"
   
  Quando você clica em um índice, as informações a seguir são exibidas.  
   
--   **Erro da Última Tentativa**: mostra as informações de erro sobre a última tentativa de sincronização.  
+-   **Erro da Última Tentativa**: Mostra as informações de erro sobre a última tentativa de sincronização.  
   
--   **Criado Por**: o nome do usuário que criou a sincronização.  
+-   **Criado por**: O nome do usuário que criou a sincronização.  
   
--   **Em**: a data e a hora em que a sincronização foi criada.  
+-   **Em**: A data e a hora em que a sincronização foi criada.  
   
--   **Atualizado Por**: o nome do usuário que atualizou a sincronização pela última vez.  
+-   **Atualizado por**: O nome do usuário que atualizou a sincronização pela última vez.  
   
--   **Em**: a data e a hora em que a sincronização foi atualizada pela última vez.  
+-   **Em**: A data e a hora em que a sincronização foi atualizada pela última vez.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Editar e excluir uma relação de sincronização de entidade &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586289"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531061"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-UPDATE STATISTICS schema_name . ] table_name   
+UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
     [ WITH   
        {  
@@ -164,7 +164,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
 **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = *max_degree_of_parallelism*  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação estatística. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
@@ -186,7 +186,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="when-to-use-update-statistics"></a>Quando usar UPDATE STATISTICS  
  Para obter mais informações sobre quando usar `UPDATE STATISTICS`, confira [Estatísticas](../../relational-databases/statistics/statistics.md).  
 
-### <a name="limitations-and-restrictions"></a>Limitações e restrições  
+### <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 * Não há compatibilidade com a atualização de estatística em tabelas externas. Para atualizar as estatísticas em uma tabela externa, remova e recrie as estatísticas.  
 * A opção `MAXDOP` não é compatível com as opções `STATS_STREAM`, `ROWCOUNT` e `PAGECOUNT`.
 * A opção `MAXDOP` é limitada pela configuração `MAX_DOP` de grupo de carga de trabalho de Resource Governor, se usada.
@@ -242,7 +242,7 @@ UPDATE STATISTICS Sales.SalesOrderDetail;
 GO  
 ```  
   
-### <a name="b-update-the-statistics-for-an-index"></a>B. Atualizar as estatísticas de um índice  
+### <a name="b-update-the-statistics-for-an-index"></a>b. Atualizar as estatísticas de um índice  
  O exemplo a seguir atualiza as estatísticas do índice `AK_SalesOrderDetail_rowguid` da tabela `SalesOrderDetail`.  
   
 ```sql  

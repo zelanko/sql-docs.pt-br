@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f1fe0dc073063958af85019c7626d572b38810af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d67a43a1732ccbbecb7ffe3b6099acf315c86ecb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517974"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203105"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -180,7 +180,7 @@ O cache do plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssno
 |COLLATE|MODIFY FILEGROUP READ_ONLY|  
 |READ_ONLY|PAGE_VERIFY|  
   
-A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
 O cache de procedimento também é liberado nos seguintes cenários:  
   
@@ -240,7 +240,7 @@ Modify Name = Northwind ;
 GO  
 ```  
   
-### <a name="b-changing-the-collation-of-a-database"></a>B. Alterando a ordenação de um banco de dados  
+### <a name="b-changing-the-collation-of-a-database"></a>b. Alterando a ordenação de um banco de dados  
 O exemplo a seguir cria um banco de dados denominado `testdb` com a ordenação `SQL_Latin1_General_CP1_CI_A`S e, em seguida, altera a ordenação do banco de dados `testdb` para `COLLATE French_CI_AI`.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -433,7 +433,7 @@ Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em 
 |1024 GB|N/A|√|√|√|√ (D)|  
 |De 1024 GB até 4096 GB em incrementos de 256 GB*|N/A|N/A|N/A|N/A|√|√|  
   
-\* P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB sendo o tamanho padrão.  P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, MAXSIZE maior do que 1 TB está disponível no momento nas seguintes regiões: Leste dos EUA2, Oeste dos EUA, Gov. EUA – Virgínia, Europa Ocidental, Alemanha Central, Sudeste Asiático, Leste do Japão, Leste da Austrália, Canadá Central e Leste do Canadá. Para obter detalhes adicionais sobre limitações de recursos para o modelo com base em DTU, veja [Limites de recurso baseado em DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  
+\* P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB sendo o tamanho padrão.  P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, um MAXSIZE maior que 1 TB está atualmente disponível nas seguintes regiões: Leste dos EUA 2, Oeste dos EUA, US Gov – Virgínia, Europa Ocidental, Alemanha Central, Sudeste Asiático, Leste do Japão, Leste da Austrália, Canadá Central e Leste do Canadá. Para obter detalhes adicionais sobre limitações de recursos para o modelo com base em DTU, veja [Limites de recurso baseado em DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  
 
 O valor MAXSIZE do modelo baseado em DTU, se especificado, deve ser um valor válido exibido na tabela acima para a camada de serviço especificada.
  
@@ -556,9 +556,9 @@ Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-
   
 A instrução ALTER DATABASE deve ser executada em modo de confirmação automática (o modo padrão de administração de transações) e não deve ser permitida em uma transação explícita ou implícita.  
   
-A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
-O cache de procedimento também é liberado no seguinte cenário: você executa diversas consultas em um banco de dados que tem opções padrão. O banco de dados é removido.    
+O cache de procedimento também é liberado no seguinte cenário: Execute diversas consultas em um banco de dados que tem opções padrão. O banco de dados é removido.    
   
 ## <a name="viewing-database-information"></a>Exibindo informações do banco de dados  
 
@@ -583,7 +583,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Movendo um banco de dados para um pool elástico diferente  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>b. Movendo um banco de dados para um pool elástico diferente  
 
 Move um banco de dados existente para um pool chamado pool1:  
   
@@ -717,9 +717,9 @@ Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-
   
 A instrução ALTER DATABASE deve ser executada em modo de confirmação automática (o modo padrão de administração de transações) e não deve ser permitida em uma transação explícita ou implícita.  
   
-A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
-O cache de procedimento também é liberado no seguinte cenário: você executa diversas consultas em um banco de dados que tem opções padrão. O banco de dados é removido.    
+O cache de procedimento também é liberado no seguinte cenário: Execute diversas consultas em um banco de dados que tem opções padrão. O banco de dados é removido.    
   
 ## <a name="viewing-database-information"></a>Exibindo informações do banco de dados  
 
@@ -808,11 +808,11 @@ Renomeia o banco de dados com o nome especificado como *novo_nome_do_banco_de_da
 MAXSIZE  
 O padrão é 245.760 GB (240 TB).  
 
-**Aplica-se a:** nível de desempenho otimizado para elasticidade
+**Aplica-se a:** Nível de desempenho Otimizado para Elasticidade
 
 O tamanho máximo permitido para o banco de dados. O banco de dados não pode ultrapassar o MAXSIZE. 
 
-**Aplica-se a:** nível de desempenho otimizado para computação
+**Aplica-se a:** Nível de desempenho Otimizado para Computação
 
 O tamanho máximo permitido para dados de rowstore no banco de dados. Os dados armazenados em tabelas rowstore, um deltastore de um índice columstore ou um índice não clusterizado em um índice columnstore clusterizado não podem exceder o MAXSIZE.  Os dados compactados no formato columnstore não têm um limite de tamanho e não estão restritos pelo MAXSIZE. 
   
@@ -834,7 +834,7 @@ O SQL Data Warehouse é definido como COMPATIBILITY_LEVEL 130 e não pode ser al
   
 Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 Para executar ALTER DATABASE, o banco de dados deve estar online e não pode estar no estado em pausa.  
   
 A instrução ALTER DATABASE precisa ser executada no modo de confirmação automática, que é o modo padrão de gerenciamento de transações. Isso é definido nas configurações de conexão.  
@@ -853,7 +853,7 @@ ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;  
 ```  
   
-### <a name="b-change-max-size-for-the-database"></a>B. Alterar o tamanho máximo do banco de dados  
+### <a name="b-change-max-size-for-the-database"></a>b. Alterar o tamanho máximo do banco de dados  
   
 ```sql  
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );  
@@ -961,7 +961,7 @@ Se as estatísticas automáticas estiverem habilitadas e você tentar alterar as
 ## <a name="general-remarks"></a>Comentários gerais  
 Os valores de REPLICATED_SIZE, DISTRIBUTED_SIZE e LOG_SIZE podem ser maiores, iguais ou menores que os valores atuais do banco de dados.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 As operações de crescimento e redução são aproximadas. Os tamanhos reais resultantes podem variar em relação aos parâmetros de tamanho.  
   
 O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] não executa a instrução ALTER DATABASE como uma operação atômica. Se a instrução for anulada durante a execução, as alterações já feitas permanecerão.  
@@ -1031,7 +1031,7 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Alterando o armazenamento máximo para tabelas replicadas  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>b. Alterando o armazenamento máximo para tabelas replicadas  
 O exemplo a seguir define o limite de armazenamento de tabela replicada em 1 GB para o banco de dados `CustomerSales`. Este é o limite de armazenamento por nó de computação.  
   
 ```sql  

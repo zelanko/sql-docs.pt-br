@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021140"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205015"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
   As expressões são amplamente usadas em todos os relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. 
@@ -74,7 +74,7 @@ ms.locfileid: "50021140"
 ##  <a name="References"></a> Escrevendo expressões complexas  
  Expressões podem incluir referências a funções, operadores, constantes, campos, parâmetros, itens das coleções internas, e ao código personalizado interno ou assemblies personalizados.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Para desenvolver expressões complexas ou expressões que usam código personalizado ou assemblies personalizados, recomendamos o uso do Designer de Relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  A seguinte tabela lista os tipos de referências que podem ser incluídos em uma expressão:  

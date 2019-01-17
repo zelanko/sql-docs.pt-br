@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86215287683e9ff8ab3c7c01f410ff8b2fd0896
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8f096065d690044fdda42f71ebb0c423801b41bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031955"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212686"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
 
@@ -35,12 +35,12 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
   
  Problemas que normalmente ocorrem em virtude de alterações nas configurações de proteção estendida ou de parâmetros incorretamente configurados não são expostos com mensagens de erro óbvias nem com janelas de caixa de diálogo. Problemas relacionados à configuração e à compatibilidade de proteção estendida geram falhas de autenticação e erros nos logs de rastreamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Algumas tecnologias de acesso a dados podem não dar suporte à proteção estendida. Uma tecnologia de acesso a dados é usada para conexão às fontes de dados do SQL Server e ao banco de dados do catálogo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se uma tecnologia de acesso a dados não der suporte à proteção estendida, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] será afetado das seguintes maneiras:  
->   
+> 
 >  -   O SQL Server que executa o banco de dados de catálogo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não pode ter a proteção estendida ativada; caso contrário, o servidor de relatório não se conectará com sucesso ao banco de dados de catálogo e gerará erros de autenticação.  
 > -   Os servidores SQL Server usados como fontes de dados de relatórios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não podem ter a proteção estendida habilitada. Caso contrário, as tentativas do servidor de relatório de se conectar à fonte de dados de relatório falharão e gerarão erros de autenticação.  
->   
+> 
 >  A documentação de uma tecnologia de acesso a dados deve ter informações sobre suporte para proteção estendida.  
   
 ### <a name="upgrade"></a>UPGRADE  
@@ -112,8 +112,8 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Especifica o grau de imposição da proteção estendida. Os valores válidos são:<br /><br /> **Off**: padrão. Especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> **Allow** dá suporte à proteção estendida mas não a exige.  Especifica:<br /><br /> - A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida. A maneira como a proteção é imposta é determinada pela configuração **RsWindowsExtendedProtectionScenario**<br /><br /> - A autenticação será permitida para aplicativos executados em sistemas operacionais que não dão suporte à proteção estendida.<br /><br /> **Require** especifica:<br /><br /> - A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não dão suporte para proteção estendida.|  
-|**RsWindowsExtendedProtectionScenario**|Especifica que formas de proteção estendida serão validadas: Associação de Canal, Associação de Serviço ou ambas. Os valores válidos são:<br /><br /> **Proxy**: padrão. Especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Any** especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Direct** especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: a configuração **RsWindowsExtendedProtectionScenario** será ignorada se **RsWindowsExtendedProtectionLevel** for definido como **OFF**.|  
+|**RSWindowsExtendedProtectionLevel**|Especifica o grau de imposição da proteção estendida. Os valores válidos são:<br /><br /> **Off**: Padrão. Especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> **Allow** dá suporte à proteção estendida mas não a exige.  Especifica:<br /><br /> - A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida. A maneira como a proteção é imposta é determinada pela configuração **RsWindowsExtendedProtectionScenario**<br /><br /> - A autenticação será permitida para aplicativos executados em sistemas operacionais que não dão suporte à proteção estendida.<br /><br /> **Require** especifica:<br /><br /> - A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não dão suporte para proteção estendida.|  
+|**RsWindowsExtendedProtectionScenario**|Especifica que formas de proteção estendida serão validadas: associação de canal, associação de serviço ou ambas. Os valores válidos são:<br /><br /> **Proxy**: Padrão. Especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Any** especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Direct** especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: a configuração **RsWindowsExtendedProtectionScenario** será ignorada se **RsWindowsExtendedProtectionLevel** estiver definido como **OFF**.|  
   
  Entradas de exemplo no arquivo de configuração **rsreportserver.config** :  
   
@@ -166,7 +166,7 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
 [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Visão geral sobre a Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Autenticação Integrada do Windows com Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft Security Advisory: Proteção estendida para autenticação](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Assistente de Segurança da Microsoft: proteção estendida para autenticação](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

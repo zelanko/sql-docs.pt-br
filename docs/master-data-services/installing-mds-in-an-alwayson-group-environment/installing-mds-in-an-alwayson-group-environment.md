@@ -11,19 +11,19 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395661"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215815"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-**Resumo:** este artigo descreve uma solução para Master Data Service (MDS) hospedado em uma configuração do grupo de disponibilidade AlwaysOn. Esse artigo descreve como instalar e configurar o SQL 2016 Master Data Services em um grupo de disponibilidade (AG) AlwaysOn do SQL 2016. O objetivo principal dessa solução é melhorar a alta disponibilidade e recuperação de desastres de dados de back-end do MDS hospedados em um banco de dados SQL Server.
+**Resumo:** este artigo descreve uma solução do MDS (Master Data Services) hospedada em uma configuração de Grupo de Disponibilidade AlwaysOn. Esse artigo descreve como instalar e configurar o SQL 2016 Master Data Services em um grupo de disponibilidade (AG) AlwaysOn do SQL 2016. O objetivo principal dessa solução é melhorar a alta disponibilidade e recuperação de desastres de dados de back-end do MDS hospedados em um banco de dados SQL Server.
 
 ## <a name="introduction"></a>Introdução
 
@@ -156,8 +156,8 @@ Depois que o recurso de WSFC é instalado em todas as instâncias, você pode co
 7.  Na página **Resumo**, verifique se há alguma mensagem de erro ou aviso.
 
     Os erros devem ser corrigidos. No entanto, os avisos não podem ser um problema. Uma mensagem de aviso significa que "o item testado pode atender ao requisito, mas há algo que você deve verificar". Por exemplo, a Figura 7 mostra um aviso "validar latência de acesso ao disco", que pode ser devido ao disco estar ocupado com outras tarefas temporariamente e você pode ignorá-lo. Você deve verificar o documento online para cada um dos avisos e mensagens de erro para obter mais detalhes. Consulte a Figura 7.
- 
-![Assistente para Validar a Configuração, página Validando](media/Fig6_ValidationTests.png)
+ 
+    ![Assistente para Validar a Configuração, página Validando](media/Fig6_ValidationTests.png)
 
     Figura 6
 
@@ -187,7 +187,7 @@ Observações:
 
 -   O recurso WSFC pode não estar disponível em todas as edições do Windows Server. Certifique-se de que sua edição tenha esse recurso.
 
--   Certifique-se de que você tenha as permissões adequadas para configurar o WSFC no active directory. Se houver qualquer problema, consulte [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guia passo a passo do cluster de failover: configurar contas no Active Directory).
+-   Certifique-se de que você tenha as permissões adequadas para configurar o WSFC no active directory. Se houver algum problema, confira o [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guia passo a passo de cluster de failover: configurar contas no Active Directory).
 
 Para obter mais informações sobre o WSFC, consulte [Clusters de failover](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
 
@@ -305,21 +305,21 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
     Para cada réplica, defina as seguintes configurações **Confirmação Síncrona**, **Failover Automático** e **Secundária Legível**. Consulte a Figura
 17.
 
-    **Confirmação Síncrona**: isso garante que se uma transação for confirmada na réplica primária de um banco de dados, a transação também será confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
+    **Confirmação síncrona**: garante que se uma transação for confirmada na réplica primária de um banco de dados, ela também seja confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
 
     Normalmente, você deve habilitar confirmação síncrona apenas quando os dois nós estão no mesmo data center. Se eles estiverem em data centers diferentes, a confirmação síncrona poderá prejudicar o desempenho de banco de dados.
 
     Se essa caixa de seleção não estiver marcada, a confirmação assíncrona será usada.
 
-    **Failover Automático:** quando a réplica primária estiver inativa, o AG realizará o failover automaticamente para sua réplica secundária quando o failover automático for selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
+    **Failover automático:** quando a réplica primária estiver inativa, o AG fará failover automaticamente para sua réplica secundária quando o failover automático estiver selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
 
-    **Secundária Legível:** por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
+    **Secundária legível:** por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
 
 8.  Na página **Especificar Réplicas**, clique na guia **Ouvinte** e faça o seguinte. Consulte a Figura 18.
 
-    A.  Clique em **Criar um ouvinte de grupo de disponibilidade** para configurar um ouvinte de grupo de disponibilidade para a conexão de banco de dados MDS.
+    a.  Clique em **Criar um ouvinte de grupo de disponibilidade** para configurar um ouvinte de grupo de disponibilidade para a conexão de banco de dados MDS.
 
-    B.  Insira um **Nome DNS do ouvinte**, como MDSSQLServer.
+    b.  Insira um **Nome DNS do ouvinte**, como MDSSQLServer.
 
     c.  Insira a porta SQL padrão, 1433, na caixa de texto **Porta**.
 
@@ -358,7 +358,7 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
 3.  Clique em **Failover** para realizar um failover para uma réplica síncrona e uma réplica assíncrona. Isso é para verificar se o failover ocorre corretamente sem problemas.
 
- A configuração do AlwaysOn está concluída.
+ A configuração do AlwaysOn está concluída.
 
 Para obter mais informações sobre o Grupo de Disponibilidade AlwaysOn, consulte [Grupo de Disponibilidade AlwaysOn do SQL Server 2016](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

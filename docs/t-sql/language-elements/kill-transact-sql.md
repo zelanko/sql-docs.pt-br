@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eec14db312bb6fb2a8fb65bb51e396a4c1be3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be0bccac59c011fc36e8481029d9951cd36cad99
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836978"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205395"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 *UOW*  
-**Aplica-se a**: (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Identifica a ID da UOW (Unidade de Trabalho) de transações distribuídas. *UOW* é um GUID que pode ser obtido na coluna request_owner_guid da exibição de gerenciamento dinâmico sys.dm_tran_locks. *UOW* também pode ser obtido no log de erros ou por meio do monitor do MS DTC. Para obter mais informações sobre como monitorar transações distribuídas, consulte a documentação do MS DTC.  
   
@@ -122,9 +122,9 @@ Use @@SPID para exibir o valor de ID da sessão atual.
  O mesmo relatório de progresso pode ser obtido pela repetição da mesma instrução KILL *session ID*|*UOW* sem usar a opção WITH STATUSONLY. No entanto, isso não é recomendável. A repetição de uma instrução KILL *session ID* pode encerrar um novo processo se a reversão foi concluída e a ID da sessão foi reatribuída a uma nova tarefa antes que a nova instrução KILL seja executada. A especificação de WITH STATUSONLY impede que isso ocorra.  
   
 ## <a name="permissions"></a>Permissões  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** exige a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Requer a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** exige a permissão KILL DATABASE CONNECTION. O logon da entidade de segurança no nível do servidor tem a permissão KILL DATABASE CONNECTION.  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Exige a permissão KILL DATABASE CONNECTION. O logon da entidade de segurança no nível do servidor tem a permissão KILL DATABASE CONNECTION.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -136,7 +136,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>B. Usando ID de sessão KILL WITH STATUSONLY para obter um relatório de andamento  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>b. Usando ID de sessão KILL WITH STATUSONLY para obter um relatório de andamento  
  O exemplo a seguir gera um status do processo de reversão para o ID de sessão específico.  
   
 ```sql  

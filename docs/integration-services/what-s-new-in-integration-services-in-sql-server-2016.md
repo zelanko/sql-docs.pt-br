@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640193"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205835"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novidades do Integration Services no SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ O recurso de implantação de pacotes incremental permite que você implante um 
   
 -   A API do MOM (modelo do objeto de gerenciamento)  
   
- Para obter mais informações, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Para obter mais informações, confira [Implantar projetos e pacotes do SSIS (Integration Services)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Suporte para Always Encrypted no Catálogo do SSIS  
  O SSIS já dá suporte ao recurso Sempre Criptografado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte as postagens de blog a seguir.  
@@ -200,7 +200,7 @@ O recurso de implantação de pacotes incremental permite que você implante um 
  O novo nível de log **RuntimeLineage** no catálogo do SSIS coleta os dados necessários para rastrear informações de linhagem no fluxo de dados. Você pode analisar essas informações de linhagem para mapear o relacionamento de linhagem entre tarefas. ISVs e desenvolvedores podem compilar ferramentas de mapeamento de linhagem personalizadas com essas informações. 
 
 ####  <a name="CustomLogging"></a> Novo nível de log personalizado no catálogo do SSIS  
- Versões anteriores do catálogo do SSIS permitem que você escolha entre quatro níveis de log internos quando você executa um pacote: **Nenhum, Básico, Desempenho ou Detalhado**. O SQL Server 2016 adiciona o nível de log **RuntimeLineage**. Além disso, agora você pode criar e salvar vários níveis de log personalizados no catálogo do SSIS e escolher o nível de log para usar toda vez que você executar um pacote. Para cada nível de log personalizado, selecione apenas as estatísticas e eventos que você deseja capturar. Opcionalmente, inclua o contexto do evento para ver os valores de variáveis, cadeias de conexão e propriedades da tarefa. Para obter mais informações, consulte [Habilitar o log para a execução do pacote no servidor SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ As versões anteriores do catálogo do SSIS permitem que você escolha um entre quatro níveis de log internos durante a execução de um pacote: **Nenhum, Básico, Desempenho ou Detalhado**. O SQL Server 2016 adiciona o nível de log **RuntimeLineage**. Além disso, agora você pode criar e salvar vários níveis de log personalizados no catálogo do SSIS e escolher o nível de log para usar toda vez que você executar um pacote. Para cada nível de log personalizado, selecione apenas as estatísticas e eventos que você deseja capturar. Opcionalmente, inclua o contexto do evento para ver os valores de variáveis, cadeias de conexão e propriedades da tarefa. Para obter mais informações, consulte [Habilitar o log para a execução do pacote no servidor SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Nomes de coluna para erros no fluxo de dados  
  Quando você redireciona as linhas no fluxo de dados que contêm erros de saída de erro, a saída contém um identificador numérico para a coluna na qual o erro ocorreu, mas não mostra o nome da coluna. Agora, há várias maneiras de localizar ou exibir o nome da coluna na qual ocorreu o erro.  
@@ -213,7 +213,7 @@ O recurso de implantação de pacotes incremental permite que você implante um 
   
 -   No Componente de Script ou um componente de fluxo de dados personalizado, chame o novo método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> da interface IDTSComponentMetadata100.  
   
- Para obter mais informações sobre esse aprimoramento, consulte a seguinte postagem de blog pelo desenvolvedor do SSIS Bo Fan: [Aprimoramentos de coluna de erro para fluxo de dados do SSIS](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
+ Para obter mais informações sobre essa melhoria, confira a seguinte postagem no blog de Bo Fan, desenvolvedor do SSIS: [Melhorias na coluna de erro do fluxo de dados do SSIS](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
   
 > [!NOTE]  
 >  (Esse suporte foi expandido em versões subsequentes. Para obter mais informações, consulte [Suporte estendido para nomes de coluna de erro](#getidstring) e [Nova interface IDTSComponentMetaData130 na API](#CMD130).)  
@@ -326,7 +326,7 @@ A versão mais recente do Feature Pack do Azure inclui a tarefa de Upload do Azu
    
  ![Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto](../integration-services/media/targetserverversion2.png "Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > Se você desenvolver extensões personalizadas para SSIS, consulte [Suporte multiplataforma em seus componentes personalizados](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) e [Obter extensões personalizadas do SSIS para suporte em várias versões do SSDT 2015 para SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Melhor experiência de gerenciamento no SQL Server Management Studio

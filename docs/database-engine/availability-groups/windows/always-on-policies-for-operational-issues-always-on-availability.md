@@ -1,6 +1,7 @@
 ---
-title: Políticas AlwaysOn para problemas operacionais – disponibilidade AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Gerenciamento baseado em políticas para problemas operacionais com grupos de disponibilidade
+description: O modelo de integridade dos grupos de disponibilidade Always On avalia um conjunto de políticas predefinidas de PBM (gerenciamento baseado em políticas). Você pode usar essas políticas para visualizar a integridade de um grupo de disponibilidade e das réplicas e dos bancos de dados no SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,31 +14,18 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601671"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214165"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Políticas AlwaysOn para problemas operacionais – disponibilidade AlwaysOn
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gerenciamento baseado em políticas para problemas operacionais com grupos de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  O modelo de integridade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avalia um conjunto de políticas predefinidas de gerenciamento baseado em políticas (PBM). Você pode usar essas políticas para visualizar a integridade de um grupo de disponibilidade e suas réplicas de disponibilidade e bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  O modelo de integridade dos grupos de disponibilidade Always On avalia um conjunto de políticas predefinidas de PBM (gerenciamento baseado em políticas). Você pode usar essas políticas para visualizar a integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no SQL Server.  
   
- **Neste tópico:**  
-  
--   [Termos e definições](#TermsAndDefinitions)  
-  
--   [Políticas predefinidas e problemas](#Always OnPBM)  
-  
--   [Painel AlwaysOn](#Dashboard)  
-  
--   [Estendendo o modelo de integridade AlwaysOn](#ExtendHealthModel)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Termos e definições  
  Políticas predefinidas AlwaysOn  
@@ -78,7 +66,7 @@ ms.locfileid: "51601671"
 |Estado de junção do banco de dados de disponibilidade|[O banco de dados secundário não está unido](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Aviso|Banco de dados de disponibilidade|  
 |Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[O estado de sincronização de dados do banco de dados de disponibilidade não é íntegro](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|Banco de dados de disponibilidade|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** Para as políticas AlwaysOn, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, não modifique os nomes das categorias AlwaysOn.  
   
 ##  <a name="Dashboard"></a> Painel AlwaysOn  
@@ -99,7 +87,7 @@ ms.locfileid: "51601671"
 ##  <a name="ExtendHealthModel"></a> Estendendo o modelo de integridade AlwaysOn  
  Estender o modelo de integridade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é simplesmente uma questão de criar suas próprias políticas definidas pelo usuário e colocá-las em certas categorias com base no tipo de objeto que você está monitorando.  Depois que você alterar algumas configurações, o painel AlwaysOn avaliará automaticamente suas próprias políticas definidas pelo usuário, assim como as políticas predefinidas AlwaysOn.  
   
- Uma política definida pelo usuário pode usar qualquer uma das facetas de PBM disponíveis, inclusive as usadas pelas políticas predefinidas AlwaysOn (veja [Políticas predefinidas e problemas](#Always OnPBM), acima neste tópico). A faceta do Servidor fornece as seguintes propriedades para monitorar a integridade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : (**IsHadrEnabled** e **HadrManagerStatus**). A faceta do Servidor também fornece às propriedades as políticas a seguir para monitorar a configuração do cluster WSFC: **ClusterQuorumType**e **ClusterQuorumState**.  
+ Uma política definida pelo usuário pode usar qualquer uma das facetas de PBM disponíveis, inclusive as usadas pelas políticas predefinidas AlwaysOn (veja [Políticas predefinidas e problemas](#Always OnPBM), acima neste tópico). A faceta do servidor fornece as seguintes propriedades para o monitoramento de integridade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (**IsHadrEnabled** e **HadrManagerStatus**). A faceta do servidor também fornece às propriedades as políticas a seguir para monitorar a configuração do cluster WSFC: **ClusterQuorumType** e **ClusterQuorumState**.  
   
  Para obter mais informações, veja [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (O modelo de integridade AlwaysOn Parte 2 – Arquitetura do modelo de integridade) (um blog da equipe AlwaysOn do SQL Server).  
   

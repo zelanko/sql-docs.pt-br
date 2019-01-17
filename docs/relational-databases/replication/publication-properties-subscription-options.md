@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847005"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213125"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47847005"
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se deve haver permissão para que os arquivos de backup sejam usados para inicializar assinaturas. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Permitir Assinantes não SQL Server**  
- Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a Assinantes não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Definir essa opção como **Verdadeiro** define outras propriedades de publicação para dar suporte a Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação é compatível com não assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A definição dessa opção como **True** define outras propriedades da publicação como compatíveis com não assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformação de dados  
  **Permitir transformações de dados**  
@@ -117,7 +117,7 @@ ms.locfileid: "47847005"
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a sincronização deve ser otimizada calculando com antecedência quais linhas de dados pertencem a quais partições. Essa configuração assumira **Verdadeiro** como padrão, se a publicação atender aos critérios de partições pré-calculadas. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
  **Otimizar sincronização**  
- Determina se o processamento de mesclagem deve ser otimizado armazenando metadados adicional em cada Assinante. Essa otimização foi substituída por partições pré-computadas; a opção **Otimizar sincronização** só será relevante se **Pré- calcular partições** for definida como **Falso**. Para obter mais informações, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Determina se o processamento de mesclagem deve ser otimizado armazenando metadados adicional em cada Assinante. Essa otimização foi substituída por partições pré-computadas; a opção **Otimizar sincronização** só será relevante se **Pré- calcular partições** for definida como **Falso**. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ### <a name="merge-processes"></a>Processos de mesclagem  
  **Limitar processos simultâneos**  

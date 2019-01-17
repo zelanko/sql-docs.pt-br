@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0bf6e2b9a678d1406e2b9beb8cdda09d3ef704e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523295"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209920"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -197,7 +197,7 @@ CREATE STATISTICS statistics_name
 **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 MAXDOP = *max_degree_of_parallelism*  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação estatística. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
@@ -236,7 +236,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="referencing-dependencies-for-filtered-statistics"></a>Referenciando dependências de estatísticas filtradas  
  A exibição do catálogo [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) controla cada coluna no predicado de estatísticas filtradas como uma dependência de referência. Avalie as operações realizadas nas colunas da tabela antes de criar estatísticas filtradas, pois não será possível remover, renomear ou alterar a definição de uma coluna da tabela que esteja definida em um predicado de estatísticas filtradas.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 * Não há compatibilidade com a atualização de estatística em tabelas externas. Para atualizar as estatísticas em uma tabela externa, remova e recrie as estatísticas.  
 * Você pode listar até 64 colunas por objeto de estatísticas.
 * A opção MAXDOP não é compatível com as opções STATS_STREAM, ROWCOUNT e PAGECOUNT.
@@ -255,7 +255,7 @@ CREATE STATISTICS ContactMail1
     WITH SAMPLE 5 PERCENT;  
 ```  
   
-### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. Usando CREATE STATISTICS com FULLSCAN e NORECOMPUTE  
+### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>b. Usando CREATE STATISTICS com FULLSCAN e NORECOMPUTE  
  O exemplo a seguir cria a estatística `ContactMail2` de todas as linhas das colunas `BusinessEntityID` e `EmailPromotion` da tabela `Contact` e desabilita o recálculo de estatísticas.  
   
 ```sql  
@@ -290,11 +290,11 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Usando CREATE STATISTICS com FULLSCAN e PERSIST_SAMPLE_PERCENT  
  O exemplo a seguir cria estatísticas `ContactMail2` para todas as linhas nas colunas `BusinessEntityID` e `EmailPromotion` da tabela `Contact` e define um percentual de amostragem de 100 por cento de todas as atualizações subsequentes que não especificam explicitamente um percentual de amostragem.  
-  
+  
 ```sql  
 CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
 ### Examples using AdventureWorksDW database. 

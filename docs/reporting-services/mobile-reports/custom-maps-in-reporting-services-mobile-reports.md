@@ -1,19 +1,21 @@
 ---
 title: Mapas personalizados em relatórios móveis do Reporting Services | Microsoft Docs
-ms.date: 03/30/2017
+description: Saiba mais sobre os mapas geográficos no Publicador de Relatórios Móveis do SQL Server, definidos em um formato conhecido como shapefiles ESRI.
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3786fcf92c767905c6295dffc8a24e7a86d2cbe
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813939"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212075"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados nos relatórios móveis do Reporting Services
 Os mapas geográficos no Publicador de Relatórios Móveis do SQL Server são definidos em um formato conhecido como *ESRI shapefiles*.  
@@ -24,8 +26,8 @@ Criado inicialmente por uma empresa privada, esse é agora um formato semiaberto
 - Um arquivo .DBF para metadados  
   
 Os nomes dos arquivos de base devem corresponder (por exemplo, *canada.shp* e *canada.dbf*). Os metadados devem incluir o campo *NAME* com o valor do nome da forma correspondente (chave) a ser usado ao preencher o mapa com os dados.  
-  
-> **Observação**: os dois arquivos de mapa juntos, o SHP e DBF, não podem ser maiores do que 512 KB. Se os arquivos de mapa forem muito grandes, use uma ferramenta como [https://mapshaper.org/](https://mapshaper.org/) para reduzir seu tamanho.  
+
+Os dois arquivos de mapa juntos, o SHP e DBF, não podem ter mais de 512 KB. Se os arquivos de mapa forem muito grandes, use uma ferramenta como [https://mapshaper.org/](https://mapshaper.org/) para reduzir seu tamanho.  
   
 Consulte como [Adicionar mapas personalizados a relatórios móveis](../../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md).  
   
@@ -41,16 +43,12 @@ Criar e editar shapefiles é um processo complexo que está além do escopo dest
 - ArcGIS: [https://www.arcgis.com/](https://www.arcgis.com/)  
 - Plug-in MAPublisher para Adobe Illustrator: [https://www.avenza.com/mapublisher](https://www.avenza.com/mapublisher)  
 - QuantumGIS (gratuito): [https://www.qgis.org/](https://www.qgis.org/)  
-- Manco ShapeFile Editor: [https://www.mancosoftware.com/ShapeFileEditor](https://www.mancosoftware.com/ShapeFileEditor)  
-  
+
 ## <a name="existing-shapefiles"></a>Shapefiles existentes  
   
-Muitos shapefiles existentes podem ser baixados da Web, de sites como estes:  
-  
-- Diva-GIS: [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data)  
-- OpenStreetMap: [https://openstreetmapdata.com/data](https://openstreetmapdata.com/data)  
-  
-### <a name="see-also"></a>Confira também  
+Muitos shapefiles existentes podem ser baixados da Web, de sites como Diva-GIS: [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data).  
+
+## <a name="see-also"></a>Confira também  
 - [Mapas nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   

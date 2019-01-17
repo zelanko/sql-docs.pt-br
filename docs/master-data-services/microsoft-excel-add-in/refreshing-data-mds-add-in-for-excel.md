@@ -11,12 +11,12 @@ ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8fe62a659dce3f672f298c55b7d4308e682c3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac71cce5f8a4fad04ea006c8ea96f0decae9c93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814014"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215775"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Atualizando dados (suplemento MDS para Excel)
 
@@ -39,7 +39,7 @@ ms.locfileid: "47814014"
   
 -   Se um valor de atributo tiver sido alterado no repositório do MDS, o valor será atualizado na planilha com o valor do repositório do MDS. A cor de célula não mudará.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   Na planilha ativa, se houver dados não gerenciados nas linhas abaixo dos dados gerenciados no MDS, os dados não gerenciados poderão ser substituídos. Isso ocorre quando você atualiza a planilha e novas linhas de dados gerenciados no MDS, que substituem os dados não gerenciados, são adicionadas.  
 > -   Ao atualizar, os comentários das células gerenciadas no MDS são excluídos.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47814014"
   
 -   [Conexões &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [Visão geral: Exportando dados para o Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Visão geral: exportando dados para o Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Suplemento do Master Data Services para Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   

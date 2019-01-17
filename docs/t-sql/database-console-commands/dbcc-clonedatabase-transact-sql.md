@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: fe1fef76dd083d5b464bd2021aebb0e74e695543
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51acbbb1bac63084a26abb68f461880df1409578
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703914"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204805"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -206,14 +206,14 @@ As mensagens a seguir são um exemplo de como as mensagens são registradas no l
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. Criação de um clone de um banco de dados que inclui esquema, estatísticas e repositório de consultas 
-O exemplo a seguir cria um clone do banco de dados AdventureWorks que inclui esquema, estatísticas e dados do repositório de consultas ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versões posteriores)
+O exemplo a seguir cria um clone do banco de dados AdventureWorks que inclui um esquema, estatísticas e dados do repositório de consultas ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versões posteriores)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
 GO 
 ```  
   
-### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. Criação de um clone somente de esquema de banco de dados sem estatísticas 
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>b. Criação de um clone somente de esquema de banco de dados sem estatísticas 
 O exemplo a seguir cria um clone do banco de dados AdventureWorks que não inclui estatísticas ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 e versões posteriores)
 
 ```sql  

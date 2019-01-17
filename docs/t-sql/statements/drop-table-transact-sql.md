@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6d1a10da586bedb0356bd0fd6eab2ababe03a4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c0bb145c668022c310a159455a77c9065635c99d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703604"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201518"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
  O Banco de Dados SQL do Windows Azure oferece suporte ao formato de nome de três partes database_name.[schema_name].object_name quando o database_name é o banco de dados atual ou o database_name é tempdb e o object_name começa com #. O Banco de Dados SQL do Windows Azure não oferece suporte a nomes de quatro partes.  
   
  *IF EXISTS*  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Remove condicionalmente a tabela somente se ela já existe.  
   
@@ -114,7 +114,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 DROP TABLE ProductVendor1 ;  
 ```  
   
-### <a name="b-dropping-a-table-in-another-database"></a>B. Descartando uma tabela em outro banco de dados  
+### <a name="b-dropping-a-table-in-another-database"></a>b. Descartando uma tabela em outro banco de dados  
  O exemplo a seguir descarta a tabela `SalesPerson2` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. O exemplo pode ser executado a partir de qualquer banco de dados na instância do servidor.  
   
 ```  
@@ -142,7 +142,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. Descartando uma tabela usando IF EXISTS  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  O exemplo a seguir cria uma tabela chamada T1. Em seguida, a segunda instrução remove a tabela. A terceira instrução não realiza nenhuma ação porque a tabela já foi excluída, porém, não causa um erro.  
   

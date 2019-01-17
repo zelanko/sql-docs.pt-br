@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18dbf43f2305e9991d6fe37615f572e1dc464fda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edf6642557510b61b19766766250ee2869bf512f
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529524"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553008"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>Lição 1-1 – criar um novo projeto do Integration Services
 A primeira etapa na criação de um pacote em [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Esse projeto inclui modelos para objetos – fontes de dados, exibições de fontes de dados e pacotes – usados em uma solução de transformação.  
@@ -26,7 +26,7 @@ Os pacotes que serão criados neste tutorial do [!INCLUDE[ssISnoversion](../incl
 > [!NOTE]  
 > Este tutorial requer o Microsoft SQL Server Data Tools.  
 >   
-> Para obter mais informações sobre como instalar o SQL Server Data Tools, consulte [Download do SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
+> Para obter mais informações sobre como instalar o SQL Server Data Tools, consulte [Download do SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Para criar um novo projeto Integration Services  
   
@@ -47,5 +47,5 @@ Os pacotes que serão criados neste tutorial do [!INCLUDE[ssISnoversion](../incl
 7.  Na barra de ferramentas do **Gerenciador de Soluções** , clique com o botão direito do mouse em **Package.dtsx**, clique em **Renomear**e renomeie o pacote padrão como **Lesson 1.dtsx**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 2: adicionando e configurando um gerenciador de conexões de arquivo simples](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+[Etapa 2: Adicionando e configurando um gerenciador de conexões de arquivo simples](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

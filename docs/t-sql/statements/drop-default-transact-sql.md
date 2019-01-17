@@ -19,19 +19,19 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1872a3a1cdcdbe112ead08b4bef1fc680ef90338
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703724"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210776"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove um ou mais padrões definidos pelo usuário do banco de dados atual.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  DROP DEFAULT será removido na próxima versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use DROP DEFAULT em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente a utilizam. Em vez disso, use as definições padrão que você pode criar com a palavra-chave DEFAULT de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -84,7 +84,7 @@ DROP DEFAULT IF EXISTS datedflt;
 GO  
 ```  
   
-### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. Descartando um padrão associado a uma coluna  
+### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>b. Descartando um padrão associado a uma coluna  
  O exemplo a seguir desassocia o padrão associado à coluna `EmergencyContactPhone` da tabela `Contact` e descarta o padrão chamado `phonedflt`.  
   
 ```  

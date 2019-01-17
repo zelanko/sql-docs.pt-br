@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.openlocfilehash: f2b1ef643fe1d19b0df1ed4efd3b4802789006eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206185"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Argumentos
 *OR ALTER*  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Altera condicionalmente a função somente se ela já existe. 
  
@@ -345,7 +345,7 @@ Se *type_schema_name* não for especificado, o [!INCLUDE[ssDE](../../includes/ss
  ORDER (\<order_clause>) Especifica a ordem na qual os resultados são retornados da função com valor de tabela. Para obter mais informações, consulte a seção, "[Usando a ordem de classificação em função com valor de tabela CLR](#using-sort-order-in-clr-table-valued-functions)", mais adiante neste tópico.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Especifica o assembly e o método ao qual o nome da função criado deve referir-se.  
   
@@ -373,7 +373,7 @@ Um exemplo típico, para MyFood.DLL, onde todos os tipos estão no namespace MyF
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.  
   
  \< clr_table_type_definition > ( { *column_name**data_type* } [ ,...*n* ] )    
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Define os tipos de dados de tabela para uma função CLR. A declaração de tabela inclui somente nomes de colunas e tipos de dados. A tabela sempre é colocada no grupo de arquivos primário.  
   
@@ -397,7 +397,7 @@ Um exemplo típico, para MyFood.DLL, onde todos os tipos estão no namespace MyF
  Especifica que a função terá uma ou mais das opções a seguir.  
   
  ENCRYPTION  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  Indica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] converterá o texto original da instrução CREATE FUNCTION em um formato ofuscado. A saída do ofuscamento não é diretamente visível em nenhuma exibição do catálogo. Os usuários que não tiverem nenhum acesso a tabelas do sistema ou arquivos de banco de dados não poderão recuperar o texto ofuscado. Entretanto, o texto estará disponível para usuários privilegiados que podem acessar as tabelas do sistema na [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou acessar diretamente os arquivos do banco de dados. Além disso, os usuários que podem anexar um depurador ao processo de servidor também podem recuperar o procedimento original da memória em tempo de execução. Para obter mais informações sobre como acessar metadados do sistema, consulte [Configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -614,7 +614,7 @@ Para obter mais informações, consulte [Indexes on Computed Columns](../../rela
   
  Semelhante a invocações de um procedimento armazenado ou em lotes, o procedimento armazenado estendido será executado no contexto da conta de segurança do Windows sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução. O proprietário do procedimento armazenado deve considerar isso ao fornecer permissão EXECUTE para usuários no procedimento.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Funções definidas pelo usuário não podem ser usadas para executar ações que modificam o estado do banco de dados.  
   
  As funções definidas pelo usuário não podem conter uma cláusula `OUTPUT INTO` que tenha uma tabela como seu destino.  
@@ -713,7 +713,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>B. Criando uma função com valor de tabela embutida  
+### <a name="b-creating-an-inline-table-valued-function"></a>b. Criando uma função com valor de tabela embutida  
  O exemplo a seguir retorna uma função com valor de tabela embutida no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Ela retorna três colunas `ProductID`, `Name` e a agregação dos totais acumulados no ano por loja como `YTD Total` para cada produto vendido para a loja.  
   
 ```sql  
@@ -790,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. Criando uma função CLR  
  O exemplo cria a função CLR `len_s`. Antes que a função seja criada, o assembly `SurrogateStringFunction.dll` é registrado no banco de dados local.  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

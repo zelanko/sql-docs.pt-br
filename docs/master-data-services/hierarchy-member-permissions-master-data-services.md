@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -15,12 +14,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78688e6aa3053ef46f0cd46ca82a06aabe672a77
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702474"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817909"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permissões de membro de hierarquia (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "51702474"
   
 |Permissão|Descrição|  
 |----------------|-----------------|  
-|**leitura**|Os membros são exibidos.<br /><br /> <br /><br /> Observação: se você atribuir apenas a permissão **Leitura** a **Raiz**, os membros sob **Raiz** serão somente leitura; porém, em hierarquias explícitas e coleções, o usuário poderá mover os membros para **Raiz** e adicionar novos membros a **Raiz**.|  
+|**leitura**|Os membros são exibidos.<br /><br /> <br /><br /> Observação: Se você atribuir apenas a permissão **Leitura** a **Raiz**, os membros de **Raiz** serão somente leitura; porém, em hierarquias e coleções explícitas, o usuário poderá mover os membros para **Raiz** e adicionar novos membros a **Raiz**.|  
 |**Criar**|A permissão Criar não está disponível na permissão de membro da hierarquia.|  
 |**Update (atualizar)**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
 |**Delete (excluir)**|Os membros são exibidos e o usuário pode excluí-los.|  

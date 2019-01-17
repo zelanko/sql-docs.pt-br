@@ -13,24 +13,24 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 876e6cc23bd5b4063c977de44af05c2e43ee002d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672835"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588940"
 ---
 # <a name="monitor-data-tier-applications"></a>Monitorar aplicativos da camada de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Um DAC (aplicativo da camada de dados) pode ser monitorado no **Gerenciador do Utilitário** e no **Pesquisador de Objetos** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), junto com exibições e tabelas do sistema. Além disso, todos os objetos no banco de dados contidos no DAC podem ser monitorados usando técnicas padrão de monitoração de banco de dados e [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="before-you-begin"></a>Antes de começar  
- Se você implantar um DAC em uma instância gerenciada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], as informações sobre o DAC implantado serão incorporadas no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. Você pode exibir informações de integridade básicas sobre o DAC usando o Gerenciador do Utilitário [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Gerenciador do Utilitário**.  
+ Se você implantar um DAC em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], as informações sobre o DAC implantado serão incorporadas no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. Você pode exibir informações de integridade básicas sobre o DAC usando o Gerenciador do Utilitário [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Gerenciador do Utilitário**.  
   
  O **Pesquisador de Objetos** do SSMS exibe informações básicas de configuração sobre cada DAC implantado em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], independentemente de a instância ser ou não gerenciada no Utilitário do SQL Server. Além disso, o banco de dados associado a um DAC implantado pode ser monitorado usando os mesmos procedimentos de monitoramento de qualquer banco de dados.  
   
 ## <a name="using-the-sql-server-utility"></a>Usando o Utilitário do SQL Server  
- A página de detalhes **Aplicativos da Camada de Dados Implantados** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** displays a dashboard that reports the resource utilization of all DACs that have been deployed to managed instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O painel da parte superior da página de detalhes lista cada DAC implantado com indicadores visuais que mostram se a sua utilização de CPU e recursos de arquivo está fora das políticas definidas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Se você selecionar qualquer DAC na exibição de lista, serão exibidos detalhes adicionais em guias no painel inferior da página. Para obter mais informações sobre as informações apresentadas na página de detalhes, veja [Detalhes do aplicativo da camada de dados implantado &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ A página de detalhes **Aplicativos da Camada de Dados Implantados** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Gerenciador do Utilitário** exibe um painel que relata a utilização de recursos de todos os DACs implantados para instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O painel da parte superior da página de detalhes lista cada DAC implantado com indicadores visuais que mostram se a sua utilização de CPU e recursos de arquivo está fora das políticas definidas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Se você selecionar qualquer DAC na exibição de lista, serão exibidos detalhes adicionais em guias no painel inferior da página. Para obter mais informações sobre as informações apresentadas na página de detalhes, veja [Detalhes do aplicativo da camada de dados implantado &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Depois de usar a página de detalhes **Aplicativos da Camada de Dados Implantados** para identificar rapidamente os DACs que estão subutilizados ou exigindo recursos de hardware demais, você poderá fazer planos para resolver qualquer problema. Vários DACs que não estão utilizando os recursos de hardware atuais completamente poderiam ser consolidados em um único servidor, liberando alguns servidores para outros usos. Se um DAC estiver exigindo recursos demais do servidor atual, o DAC pode ser movido para um servidor maior ou é possível acrescentar recursos ao servidor atual.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51672835"
  As informações na página de detalhes **Aplicativos da Camada de Dados Implantados** é resultado dos dados no data warehouse de gerenciamento do utilitário, cujo padrão é coletar dados a cada 15 minutos. O intervalo também pode ser personalizado usando a página de detalhes **Administração do Utilitário** .  
   
 ## <a name="using-object-explorer"></a>Usando o Pesquisador de Objetos  
- O **Pesquisador de Objetos** do SSMS exibe informações básicas de configuração sobre cada DAC implantado em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Isto inclui tanto as instâncias gerenciadas que foram inscritas no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quanto as instâncias autônomas que não podem ser exibidas no **Gerenciador do Utilitário**.  
+ O **Pesquisador de Objetos** do SSMS exibe informações básicas de configuração sobre cada DAC implantado em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Isso inclui tanto as instâncias inscritas no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quanto as instâncias autônomas que não podem ser exibidas no **Gerenciador do Utilitário**.  
   
  Para exibir os detalhes de um DAC implantado em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   

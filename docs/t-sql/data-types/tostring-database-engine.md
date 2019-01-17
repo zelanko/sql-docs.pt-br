@@ -18,12 +18,12 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb9dd19e957d97e4e74a8d121892a180342aa997
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7501cabbbf4f4270f482f90da10018256ebb9808
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702304"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209685"
 ---
 # <a name="tostring-database-engine"></a>ToString (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ OrgNode   Node
 ...  
 ```  
   
-### <a name="b-converting-transact-sql-values-without-a-table"></a>B. Convertendo valores Transact-SQL sem uma tabela  
+### <a name="b-converting-transact-sql-values-without-a-table"></a>b. Convertendo valores Transact-SQL sem uma tabela  
 O exemplo de código a seguir usa `ToString` para converter um valor **hierarchyid** em uma cadeia de caracteres e `Parse` para converter um valor de cadeia de caracteres em uma **hierarchyid**.
   
 ```sql

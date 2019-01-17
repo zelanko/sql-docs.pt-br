@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410853"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202655"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +188,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ### <a name="useful-transact-sql-statements"></a>Instruções Transact-SQL úteis  
  As instruções a seguir retornam informações úteis sobre as permissões.  
   
- Para retornar as permissões explícitas concedidas ou negadas em um banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute a seguinte instrução no banco de dados.  
+ Para retornar as permissões explícitas concedidas ou negadas em um banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute a instrução a seguir no banco de dados.  
   
 ```sql  
 SELECT   
@@ -203,7 +203,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- Para retornar os membros das funções de servidor (apenas[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), execute a seguinte instrução.  
+ Para retornar os membros das funções de servidor (apenas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), execute a instrução a seguir.  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
@@ -215,7 +215,7 @@ JOIN sys.server_principals AS sRole
 ```  
   
  
- Para retornar os membros das funções de banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute a seguinte instrução no banco de dados.  
+ Para retornar os membros das funções de banco de dados ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute a instrução a seguir no banco de dados.  
   
 ```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
@@ -229,11 +229,11 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  Para conferir mais tópicos introdutórios, consulte:  
   
--   [Tutorial: introdução ao Mecanismo de Banco de Dados](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Criando um banco de dados &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [Tutorial: Introdução ao Mecanismo de Banco de Dados](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Criando um banco de dados &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [Tutorial: Gravando instruções Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [Tutorial: Escrevendo instruções Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

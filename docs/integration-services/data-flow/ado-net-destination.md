@@ -19,12 +19,12 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a462e54379a5a916d6b302f99ef6f44d2148399a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640003"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209085"
 ---
 # <a name="ado-net-destination"></a>Destino do ADO NET
   O destino ADO NET carrega dados em uma variedade de bancos de dados compatíveis com o [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que utilizam uma tabela ou exibição de banco de dados. Você tem a opção de carregar esses dados em uma tabela ou exibição existente ou de criar uma nova tabela e carregar os dados nessa tabela.  
@@ -96,14 +96,14 @@ ms.locfileid: "51640003"
   
  Se você selecionar **Usar a inserção em massa quando disponível**e definir a opção **Erro** como **Redirecionar a linha**, o lote de dados que o destino redireciona à saída de erro poderá incluir linhas válidas. Para obter mais informações sobre o tratamento de erro em operações em massa, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md). Para obter mais informações sobre a opção **Erro** , consulte [Editor de Destino ADO NET &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Se uma tabela de origem do SQL Server ou do Sybase incluir uma coluna de identidade, utilize as tarefas Executar SQL para habilitar IDENTITY_INSERT antes do destino ADO NET e desabilitá-lo novamente depois. (A propriedade da coluna de identidade especifica um valor incremental para a coluna. A instrução SET IDENTITY_INSERT permite inserir valores explícitos da tabela de origem na coluna de identidade na tabela de destino.)  
->   
+> 
 >   Para executar com êxito as instruções SET IDENTITY_INSERT e o carregamento de dados, você precisa fazer o descrito a seguir.  
 >       1. Use o mesmo gerenciador de conexões ADO.NET para as tarefas Executar SQL e para o destino ADO NET.  
 >       2. No gerenciador de conexões, defina as propriedades **RetainSameConnection** e **MultipleActiveResultSets** como True.  
 >       3. No destino ADO.NET, defina a propriedade **UseBulkInsertWhenPossible** como False.   
->
+> 
 >  Para obter mais informações, consulte [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) e [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
@@ -154,7 +154,7 @@ ms.locfileid: "51640003"
  **Erro**  
  Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Tópicos Relacionados:** [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Tópicos relacionados:** [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Não usado.  

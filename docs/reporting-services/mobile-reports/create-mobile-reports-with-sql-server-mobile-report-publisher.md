@@ -1,20 +1,21 @@
 ---
 title: Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server | Microsoft Docs
 description: Saiba mais sobre os relatórios móveis do Reporting Services para dispositivos móveis, conectados a dados locais, com uma variedade de visualizações de dados.
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710857"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213055"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server
 Saiba mais sobre relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , otimizados para dispositivos móveis e conectados a dados locais, com uma variedade de visualizações de dados. 
@@ -35,10 +36,10 @@ Com [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], você pod
 Esses artigos ajudarão você a começar.
 -  Baixar o [Publicador de Relatórios Móveis do Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Criar um relatório móvel do Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [Instruções passo a passo de ponta a ponta: criar relatórios móveis e KPIs no SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan)  
-- [Primeiro o design, ou primeiro os dados](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): decida se você quer criar seu relatório com dados simulados primeiro, ou começar com seus próprios dados.  
-- [Dados de relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): use os dados de conjuntos de dados compartilhados ou prepare os dados de pastas de trabalho do Excel para usar em seus relatórios móveis.
-- [Como funciona a atualização de dados em KPIs e relatórios móveis no Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan): leia sobre como configurar o cache para conjuntos de dados compartilhados para controlar com que frequência o dados são atualizados e acelerar o desempenho do relatório.
+-  [Passo a passo de ponta a ponta: Crie relatórios móveis e KPIs no SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog do Christopher Finlan)  
+- [Começar pelo design ou pelos dados](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): decida se deseja criar o relatório primeiro usando dados simulados ou começar com seus próprios dados.  
+- [Dados para relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): use os dados de conjuntos de dados compartilhados ou prepare os dados de pastas de trabalho do Excel a serem usados em seus relatórios móveis.
+- [Como a atualização de dados funciona em relatórios móveis e KPIs no Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog do Christopher Finlan): leia sobre como configurar o cache para conjuntos de dados compartilhados para controlar com que frequência o dados são atualizados e acelerar o desempenho do relatório.
 - [Visualizações em relatórios móveis](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Medidores em relatórios móveis](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [Mapas em relatórios móveis](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
@@ -46,9 +47,8 @@ Esses artigos ajudarão você a começar.
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Relatórios móveis do SSRS em aplicativos móveis do Power BI
 
--  Exibir [KPIs e relatórios móveis do Reporting Services no aplicativo móvel do iOS](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
--  Exibir [KPIs e relatórios móveis do Reporting Services no aplicativo do Power BI para dispositivos Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
--  Exibir [KPIs e relatórios móveis do Reporting Services no aplicativo do Power BI para dispositivos Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  Exiba [KPIs e relatórios móveis do Reporting Services](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) nos aplicativos móveis do Power BI para iOS e Android
+-  Exiba [KPIs e relatórios móveis do Reporting Services](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) no aplicativo do Power BI para dispositivos Windows 10   
 
 ## <a name="see-also"></a>Consulte Também  
   

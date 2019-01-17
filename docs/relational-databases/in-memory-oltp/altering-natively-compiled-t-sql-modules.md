@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f541e52838f94a94904dc2fa42cba44bdc1c97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92ff4159d8584a6670b60dd7c0d9c0b890c8df09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746824"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204565"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é possível executar operações `ALTER` em procedimentos armazenados compilados nativamente e outros módulos do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados nativamente, como UDFs escalares e gatilhos usando a instrução `ALTER`.  
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], é possível executar operações `ALTER` em procedimentos armazenados compilados nativamente e em outros módulos do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados nativamente, como UDFs escalares e gatilhos, usando a instrução `ALTER`.  
   
 Ao executar `ALTER` em um módulo do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado nativamente, o módulo é recompilado usando uma nova definição. Enquanto a recompilação estiver em andamento, a versão antiga do módulo continuará disponível para execução. Uma vez concluída a compilação, as execuções de módulo serão descarregadas e a nova versão do módulo será instalada. Ao alterar um módulo do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado nativamente, é possível modificar as opções a seguir.  
   

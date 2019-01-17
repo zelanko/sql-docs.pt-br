@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503408"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207300"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,17 +120,17 @@ Para habilitar a versão prévia pública dos comentários de concessão de mem�
 
 A atividade de comentários de concessão de memória de modo de linha ficará visível por meio do XEvent **memory_grant_updated_by_feedback**. 
 
-Começando com os comentários de concessão de memória em modo de linha, dois novos atributos de plano de consulta serão mostrados para planos pós-execução reais: ***IsMemoryGrantFeedbackAdjusted*** e ***LastRequestedMemory***, que são adicionados ao elemento XML de plano de consulta *MemoryGrantInfo*. 
+Começando com comentários de concessão de memória no modo de linha, serão exibidos dois novos atributos de plano de consulta para planos de pós-execução reais: ***IsMemoryGrantFeedbackAdjusted*** e ***LastRequestedMemory***, que foram adicionados ao elemento XML *MemoryGrantInfo* do plano de consulta. 
 
 *LastRequestedMemory* mostra a memória concedida em quilobytes (KB) na execução de consulta anterior. O atributo *IsMemoryGrantFeedbackAdjusted* permite que você verifique o estado dos comentários de concessão de memória para a instrução dentro de um plano de execução de consulta real. Os valores apresentados nesse atributo são os seguintes:
 
 | Valor de IsMemoryGrantFeedbackAdjusted | Descrição |
 |---|---|
-| Não: primeira execução | Os comentários de concessão de memória não ajustam a memória para a primeira compilação e execução associada.  |
-| Não: concessão precisa | Se não houver despejo no disco, e a instrução usar pelo menos 50% da memória concedida, os comentários de concessão de memória não serão acionados. |
-| Não: comentários desabilitados | Se os comentários de concessão de memória forem acionados continuamente e flutuarem entre as operações de aumento de memória e redução de memória, desabilitaremos os comentários de concessão de memória para a instrução. |
-| Sim: ajuste | Os comentários de concessão de memória foram aplicados e podem ser ainda mais ajustados para a próxima execução. |
-| Sim: estável | Os comentários de concessão de memória foram aplicados e a memória concedida está estável, ou seja, o que foi concedido para a execução anterior é o mesmo que foi concedido para a execução atual. |
+| Não: Primeira execução | Os comentários de concessão de memória não ajustam a memória para a primeira compilação e execução associada.  |
+| Não: Concessão precisa | Se não houver despejo no disco, e a instrução usar pelo menos 50% da memória concedida, os comentários de concessão de memória não serão acionados. |
+| Não: Comentários desabilitados | Se os comentários de concessão de memória forem acionados continuamente e flutuarem entre as operações de aumento de memória e redução de memória, desabilitaremos os comentários de concessão de memória para a instrução. |
+| Sim: Ajuste | Os comentários de concessão de memória foram aplicados e podem ser ainda mais ajustados para a próxima execução. |
+| Sim: Stable | Os comentários de concessão de memória foram aplicados e a memória concedida está estável, ou seja, o que foi concedido para a execução anterior é o mesmo que foi concedido para a execução atual. |
 
 > [!NOTE]
 > Os atributos do plano de comentários de concessão de memória do modo de linha da versão prévia pública estão visíveis nos planos de execução de consulta gráfica do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nas versões 17.9 e superiores. 
@@ -171,7 +171,7 @@ A consulta a seguir é usada para ilustrar um exemplo de Junção Adaptável:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -190,7 +190,7 @@ No plano, vemos o seguinte:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 A consulta retorna uma linha. Habilitando as Estatísticas de consultas dinâmicas, podemos ver o plano a seguir:

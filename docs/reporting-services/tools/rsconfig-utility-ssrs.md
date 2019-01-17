@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525351"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213655"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
   O utilitário **rsconfig.exe** criptografa e armazena conexão e valores de conta no arquivo RSReportServer.config. Valores criptografados incluem informações de conexão de banco de dados do servidor de relatório e valores de conta usados para processamento de relatório autônomo.  
@@ -92,7 +92,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>Especificando uma conta interna  
- Este exemplo mostra como configurar um servidor de relatório para usar uma conta interna na conexão com um banco de dados do servidor de relatório local. Observe que **-u** não é usado. Exemplos de valores de conta interna com suporte incluem NT AUTHORITY\SYSTEM para Sistema Local e NT AUTHORITY\NETWORKSERVICE para Serviço de Rede (somente[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ).  
+ Este exemplo mostra como configurar um servidor de relatório para usar uma conta interna na conexão com um banco de dados do servidor de relatório local. Observe que **-u** não é usado. Exemplos de valores de conta interna compatíveis incluem NT AUTHORITY\SYSTEM para Sistema Local e NT AUTHORITY\NETWORKSERVICE para Serviço de Rede (somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ).  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  

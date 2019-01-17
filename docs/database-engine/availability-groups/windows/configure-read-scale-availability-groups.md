@@ -1,6 +1,7 @@
 ---
-title: Configurar um grupo de disponibilidade do SQL Server de escala de leitura no Windows | Microsoft Docs
-description: ''
+title: Configurar uma escala de leitura para um grupo de disponibilidade
+description: Configure o Grupo de Disponibilidade AlwaysOn para cargas de trabalho de escala de leitura no Windows.
+ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -9,14 +10,14 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 334b594e6ad83af65f6b6536dd8157d421767b52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4338f5fc90012fd5fb0882575032eb375c206c1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757094"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207725"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-windows"></a>Configurar um grupo de disponibilidade do SQL Server de escala de leitura no Windows
+# <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configurar a escala de leitura para um Grupo de Disponibilidade AlwaysOn
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

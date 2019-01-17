@@ -1,25 +1,26 @@
 ---
-title: Portal da Web (Modo Nativo do SSRS) | Microsoft Docs
-ms.date: 07/02/2017
+title: O portal da Web de um servidor de relatório (modo nativo do SSRS) | Microsoft Docs
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
+ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711217"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53010287"
 ---
-# <a name="web-portal-ssrs-native-mode"></a>Portal da Web (Modo Nativo do SSRS)
+# <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>O portal da Web de um servidor de relatório (modo nativo do SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-O portal da Web do Reporting Services é uma experiência baseada na Web que permite exibir relatórios, relatórios móveis e KPIs, bem como navegar por meio de elementos que estão em sua instância do servidor de relatório. Você também pode usar o portal da Web para administrar uma única instância do servidor de relatório.
+O portal da Web de um servidor de relatório do Reporting Services é uma experiência baseada na Web. No portal, você pode exibir relatórios, relatórios móveis e KPIs e navegar por elementos na instância do servidor de relatório. Você também pode usar o portal da Web para administrar uma única instância do servidor de relatório.
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
@@ -27,24 +28,15 @@ O portal da Web do Reporting Services é uma experiência baseada na Web que per
 
 Você pode utilizar o portal da Web para executar as seguintes tarefas:
 
-- Exibir, pesquisar, imprimir e assinar relatórios.
-
+- Exibir, pesquisar, imprimir e assinar os relatórios.
 - Criar, proteger e manter a hierarquia de pastas para organizar itens no servidor.
-
 - Configure a segurança baseada em função que determina o acesso a itens e operações.
-
 - Configurar propriedades de execução de relatório, histórico de relatórios e parâmetros de relatório.
-
 - Criar agendas compartilhadas e fontes de dados compartilhadas para tornar as agendas e as conexões de fonte de dados mais gerenciáveis.
-
 - Criar assinaturas controladas por dados que distribuem relatórios para uma grande lista de destinatários.
-
-- Criar relatórios vinculados para reutilizar e realocar um relatório existente de diferentes maneiras.
-
+- Criar relatórios vinculados para reutilizar e redefinir o propósito de um relatório existente de diferentes maneiras.
 - Baixar ferramentas comuns, como o Construtor de Relatórios e o Publicador de Relatórios Móveis.
-
 - [Criar KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
-
 - Enviar comentários ou fazer solicitações de recursos.
 
 Você pode usar o portal da Web para navegar pelas pastas do servidor de relatório ou pesquisar relatórios específicos. É possível exibir um relatório, suas propriedades gerais e cópias antigas do relatório que são capturadas no histórico de relatórios. Dependendo de suas permissões, você também pode assinar relatórios para serem entregues em uma caixa de entrada de email ou pasta compartilhada no sistema de arquivos.
@@ -63,13 +55,13 @@ Em uma nova instalação, somente os administradores locais têm permissões suf
 
 ## <a name="start-and-use-the-web-portal"></a>Iniciar e usar o portal da Web
 
-O portal da Web é um aplicativo Web que você abre digitando a URL do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] na barra de endereços em uma janela do navegador. Ao iniciar o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], as páginas, os links e as opções exibidas variam com base nas permissões que você tem no servidor de relatório. Para executar uma tarefa, você deve estar atribuído a uma função que inclua a tarefa.  Um usuário que é atribuído a uma função que possui permissões totais tem acesso ao conjunto completo de menus e páginas de aplicativo disponíveis para gerenciar um servidor de relatório. Um usuário atribuído a uma função que possui permissões totais para exibir e executar relatórios vê apenas os menus e páginas que oferecem suporte a essas atividades. Cada usuário pode ter diferentes atribuições de função para diferentes servidores de relatório ou mesmo para diversos relatórios e pastas armazenados em um único servidor de relatório.
+O portal da Web é um aplicativo Web que você abre digitando a URL do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] na barra de endereços em uma janela do navegador. Quando você iniciar o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], as páginas, os links e as opções exibidas variarão de acordo com as permissões que você tem no servidor de relatório. Para executar uma tarefa, você deve estar atribuído a uma função que inclua a tarefa.  Um usuário que é atribuído a uma função que possui permissões totais tem acesso ao conjunto completo de menus e páginas de aplicativo disponíveis para gerenciar um servidor de relatório. Um usuário atribuído a uma função que possui permissões totais para exibir e executar relatórios vê apenas os menus e páginas que oferecem suporte a essas atividades. Cada usuário pode ter diferentes atribuições de função para diferentes servidores de relatório ou mesmo para diversos relatórios e pastas armazenados em um único servidor de relatório.
 
 Para saber mais sobre funções, confira [Concedendo permissões em um servidor de relatório no modo nativo](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
 ### <a name="start-the-web-portal"></a>Para iniciar o portal da Web
 
-Para iniciar o portal da Web em um navegador, faça o seguinte:
+Para iniciar o portal da Web em um navegador, siga estas etapas:
 
 1. Abra o navegador da Web. Para obter uma lista de navegadores da Web compatíveis, confira [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)(Planejando o suporte ao navegador do Reporting Services).
 
@@ -100,15 +92,15 @@ Você pode controlar o que é exibido selecionando **Exibir** no canto superior 
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Relatórios do Power BI Desktop e pastas de trabalho do Excel
 
-É possível carregar, organizar e gerenciar permissões para relatórios do Power BI Desktop e pastas de trabalho do Excel. Eles serão agrupados juntas no portal da Web.
+Carregue, organize e gerencie permissões para relatórios do Power BI Desktop e pastas de trabalho do Excel. Eles serão agrupados juntas no portal da Web.
 
 ![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
-Os arquivos são armazenados no Reporting Services, semelhante a outros arquivos de recurso. Selecionar um desses itens os baixará localmente no desktop. Você pode salvar as alterações feitas ao carregá-las no servidor de relatório.
+Os arquivos são armazenados no Reporting Services, semelhante a outros arquivos de recurso. Selecionar um desses itens os baixará localmente no desktop. Salve as alterações feitas quando recarregá-las no servidor de relatório.
 
 ## <a name="search-for-items"></a>Pesquisar itens
 
-Você pode inserir uma equipe de pesquisa e verá tudo que pode ser acessado. Os resultados são categorizados em KPIs, relatórios, conjuntos de dados e outros itens. Desse modo, você pode interagir com os resultados e adicioná-los aos seus favoritos.
+Insira um termo de pesquisa e veja tudo o que você pode acessar. Os resultados são categorizados em KPIs, relatórios, conjuntos de dados e outros itens. Desse modo, você pode interagir com os resultados e adicioná-los aos seus favoritos.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 

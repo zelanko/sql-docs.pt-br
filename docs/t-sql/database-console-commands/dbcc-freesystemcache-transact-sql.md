@@ -25,12 +25,12 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: bbf1a69df5326f12511976d079289195c97c4f57
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 4656a02f268987db7375e8211aec5a275379ea00
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641069"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209725"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ DBCC FREESYSTEMCACHE
  Suprime todas as mensagens informativas.  
   
 ## <a name="remarks"></a>Remarks  
-A execução de DBCC FREESYSTEMCACHE limpa o cache de planos para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+A execução de DBCC FREESYSTEMCACHE limpa o cache de planos para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
-DBCC FREESYSTEMCACHE retorna: "execução do DBCC concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
+DBCC FREESYSTEMCACHE retorna: "A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
   
 ## <a name="permissions"></a>Permissões  
 Exige a permissão ALTER SERVER STATE no servidor.
@@ -78,7 +78,7 @@ O exemplo a seguir ilustra como limpar caches que são específicos de pool de r
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>B. Removendo entradas de seus respectivos caches quando elas não são mais utilizadas.  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>b. Removendo entradas de seus respectivos caches quando elas não são mais utilizadas.  
 O exemplo seguinte usa a cláusula MARK_IN_USE_FOR_REMOVAL para remover entradas de todos os caches atuais quando elas não são mais utilizadas.
   
 ```sql

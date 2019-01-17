@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a9d14601c7fad616d4d5e2d5420adcea458b11fb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697184"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206245"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ALL_ERRORMSGS
  Exibe um número ilimitado de erros. Todas as mensagens de erro são exibidas por padrão. Especificar ou omitir esta opção não têm nenhum efeito.  
     
 EXTENDED_LOGICAL_CHECKS  
- Se o nível de compatibilidade for 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executará verificações de consistência lógica em uma exibição indexada, índices XML e índices espaciais, quando presentes.  
+ Se o nível de compatibilidade é 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executa verificações de consistência lógica em uma exibição indexada, índices XML e índices espaciais, quando presentes.  
  Para obter mais informações, confira *Executando verificações de consistência lógica em índices* na seção [Comentários](#remarks) mais adiante neste tópico.  
     
 NO_INFOMSGS  
@@ -120,11 +120,11 @@ O uso da opção PHYSICAL_ONLY pode provocar um tempo de execução muito mais c
 DATA_PURITY  
  Faz com que o DBCC CHECKTABLE verifique valores de colunas na tabela que não são válidos ou estão fora do intervalo. Por exemplo, o DBCC CHECKDB detecta colunas com valores de data e hora que são maiores ou menores do que o intervalo aceitável para o tipo de dados **datetime** ou **decimal** ou colunas de tipo de dados numérico aproximado com valores de escala ou de precisão que não são válidos.  
  Verificações de integridade de valor de coluna são habilitadas por padrão e não exigem a opção DATA_PURITY. Para bancos de dados atualizados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível usar DBCC CHECKTABLE WITH DATA_PURITY para localizar e corrigir erros em uma tabela específica. No entanto verificações de valores de colunas na tabela não são habilitadas por padrão até que o DBCC CHECKDB WITH DATA_PURITY tenha sido executado sem erros no banco de dados. Depois disto, por padrão, DBCC CHECKDB e DBCC CHECKTABLE verificam a integridade de valores de colunas.  
- Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações de como corrigir esses erros manualmente, confira o artigo 923247 da Base de Dados de Conhecimento: [Solucionando problemas de erros DBCC 2570 no SQL Server 2005 e em versões posteriores](https://support.microsoft.com/kb/923247).  
+ Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações sobre como corrigir esses erros manualmente, consulte o artigo 923247 da Base de Dados de Conhecimento: [Solução de problemas do erro 2570 do DBCC no SQL Server 2005 e versões posteriores](https://support.microsoft.com/kb/923247).  
  Se PHYSICAL_ONLY estiver especificado, não serão executadas verificações de integridade de colunas.  
     
 MAXDOP  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
  
  Substitui a opção de configuração **max degree of parallelism** de **sp_configure** da instrução. O MAXDOP pode exceder o valor configurado com sp_configure. Se MAXDOP exceder o valor configurado com o Resource Governor, o Mecanismo de Banco de Dados usará o valor de MAXDOP do Resource Governor, descrito em ALTER WORKLOAD GROUP (Transact-SQL). Todas as regras semânticas usadas com a opção de configuração grau máximo de paralelismo são aplicáveis ao usar a dica de consulta MAXDOP. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     
@@ -230,7 +230,7 @@ DBCC CHECKTABLE ('HumanResources.Employee');
 GO    
 ```    
     
-### <a name="b-performing-a-low-overhead-check-of-the-table"></a>B. Executando uma verificação de sobrecarga baixa da tabela    
+### <a name="b-performing-a-low-overhead-check-of-the-table"></a>b. Executando uma verificação de sobrecarga baixa da tabela    
  O exemplo a seguir executa uma verificação de sobrecarga baixa da tabela `Employee` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].    
     
 ```sql    

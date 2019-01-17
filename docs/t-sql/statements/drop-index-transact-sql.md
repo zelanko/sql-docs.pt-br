@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 833775d4ab032724eb76f80ed51b2548d29bd875
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701744"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206225"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51701744"
   
  A instrução DROP INDEX não se aplica a índices criados definindo as restrições PRIMARY KEY ou UNIQUE. Para remover a restrição e o índice correspondente, use [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) com a cláusula DROP CONSTRAINT.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  A sintaxe definida em `<drop_backward_compatible_index>` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar essa sintaxe em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que usam atualmente o recurso. Em vez disso, use a sintaxe especificada em `<drop_relational_or_xml_index>`. Índices XML não podem ser descartados usando sintaxe compatível com versões anteriores.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -202,7 +202,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  Especifica o local padrão para a tabela resultante.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
@@ -221,7 +221,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  Especifica o local padrão para os dados FILESTREAM.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
@@ -238,7 +238,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  Algumas vezes, os índices são descartados e recriados para reorganizar ou reconstruir o índice, como para aplicar um novo fator de preenchimento ou para reorganizar dados após um carregamento em massa. Para fazer isso, é mais eficiente usar [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), principalmente para índices clusterizados. ALTER INDEX REBUILD tem otimizações para evitar a sobrecarga da reconstrução de índices não clusterizados.  
   
 ## <a name="using-options-with-drop-index"></a>Usando opções com DROP INDEX  
- É possível definir as seguintes opções de índice ao remover um índice clusterizado: MAXDOP, ONLINE e MOVE TO.  
+ Você pode definir as seguintes opções de índice ao remover um índice clusterizado: MAXDOP, ONLINE e MOVE TO.  
   
  Use MOVE TO para descartar o índice clusterizado e mover a tabela resultante para outro grupo de arquivos ou esquema de partição em uma única transação.  
   
@@ -284,7 +284,7 @@ DROP INDEX IX_ProductVendor_BusinessEntityID
 GO  
 ```  
   
-### <a name="b-dropping-multiple-indexes"></a>B. Descartando vários índices  
+### <a name="b-dropping-multiple-indexes"></a>b. Descartando vários índices  
  O exemplo a seguir exclui dois índices em uma única transação no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
