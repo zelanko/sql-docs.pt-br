@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208555"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126576"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurar uma política de failover automático flexível para um Grupo de Disponibilidade AlwaysOn
 
@@ -113,7 +113,7 @@ ms.locfileid: "53208555"
   
 2.  Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet **New-SqlAvailabilityGroup** . Ao modificar uma réplica de disponibilidade existente, use o cmdlet **Set-SqlAvailabilityGroup** .  
   
-    -   Para definir o nível de condição de failover, use o parâmetro **FailureConditionLevel***level*, em que *level* é um dos seguintes valores:  
+    -   Para definir o nível de condição de failover, use o parâmetro **FailureConditionLevel**_level_ , onde *level* é um dos seguintes valores:  
   
         |Valor|Nível|Automático é o failover iniciado em caso de...|  
         |-----------|-----------|-------------------------------------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "53208555"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Para definir o tempo limite de verificação de integridade, use o parâmetro **HealthCheckTimeout***n*, em que *n* é um inteiro de 15.000 milissegundos (15 segundos) a 4.294.967.295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
+    -   Para definir o tempo limite de verificação de integridade, use o parâmetro **HealthCheckTimeout**_n_ , em que *n* é um número inteiro de 15000 milissegundos (15 segundos) a 4294967295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
   
          Por exemplo, o comando a seguir altera o tempo limite de verificação de integridade de um grupo de disponibilidade existente, `AG1`, para 120.000 milissegundos (dois minutos).  
   

@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213125"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128007"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "53213125"
  Determina se um agente independente de outras publicações deste banco de dados deve ser usado. Essa opção é somente leitura; Ela é definida como **Verdadeiro** por padrão, para publicações criadas com o Assistente para Nova Publicação e não pode ser alterada depois que a publicação é criada. Para obter mais informações, consulte [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md) (Administração do agente de replicação).  
   
  **Instantâneo sempre disponível**  
- Determina se são criados arquivos de instantâneo cada vez que o Agente de Instantâneo é executado (requer **Agente de Distribuição Independente**). Essa opção é somente leitura; ela será definida como **Verdadeiro** se você selecionar **Criar um instantâneo imediatamente e mantê-lo disponível para inicializar assinaturas** na página **Agente de Instantâneo** do Assistente para Nova Publicação (o padrão). Para obter mais informações, consulte [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md) (Criar e aplicar o instantâneo).  
+ Determina se são criados arquivos de instantâneo cada vez que o Agente de Instantâneo é executado (requer **Agente de Distribuição Independente**). Essa opção é somente leitura; ela será definida como **Verdadeiro** se você selecionar **Criar um instantâneo imediatamente e mantê-lo disponível para inicializar assinaturas** na página **Agente de Instantâneo** do Assistente para Nova Publicação (o padrão). Para obter mais informações, consulte [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) (Criar e aplicar o instantâneo).  
   
  **Permitir inicialização com base nos arquivos de backup**  
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se deve haver permissão para que os arquivos de backup sejam usados para inicializar assinaturas. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  

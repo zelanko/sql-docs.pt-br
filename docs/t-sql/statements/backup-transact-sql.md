@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203875"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242279"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -367,7 +367,7 @@ Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 Especifica quando o conjunto de backup desse backup pode ser substituído. Se essas duas opções forem usadas, RETAINDAYS terá precedência sobre EXPIREDATE.  
   
 Se nenhuma opção for especificada, a data de expiração será determinada pela definição da configuração de **mediaretention**. Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -518,7 +518,7 @@ A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], não tem nenhum
   
 **Opções de monitoramento**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Exibe uma mensagem sempre que outro *percentual* for concluída e é usado para medir o progresso. Se *percentage* for omitido, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá uma mensagem após a conclusão de cada 10%.  
   
 A opção STATS informa a porcentagem concluída de acordo com o limite de relatório do próximo intervalo. Esse limite é aproximadamente a porcentagem especificada. Por exemplo, com STATS=10, se a quantidade concluída for 40%, a opção poderá exibir 43%. Para conjuntos de backup grandes, isso não é um problema, porque a porcentagem concluída muda muito lentamente entre chamadas de E/S concluídas.  
@@ -564,14 +564,14 @@ Essas opções são usadas apenas com `BACKUP LOG`.
 > [!NOTE]  
 > Se você não quiser fazer backups de log, use o modelo de recuperação simples. Para obter mais informações, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 Faz backup do final do log e deixa o banco de dados no estado de RESTORING. NORECOVERY é útil ao executar failover em um banco de dados secundário ou ao salvar o final do log antes de uma operação RESTORE.  
   
 Para executar um backup de log de melhor esforço que ignora o truncamento do log e, em seguida, coloca o banco de dados no estado RESTORING atomicamente, use as opções `NO_TRUNCATE` e `NORECOVERY` em conjunto.  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 Faz BACKUP do final do log e deixa o banco de dados em um estado STANDBY e somente leitura. A cláusula STANDBY grava dados em espera (executando reversão, mas com a opção de restaurações adicionais). O uso da opção STANDBY é equivalente a BACKUP LOG WITH NORECOVERY seguido por um RESTORE WITH STANDBY.  
   
@@ -1113,7 +1113,7 @@ Não tem nenhum efeito. Esta opção é aceita pela versão para compatibilidade
   
 **Opções de monitoramento**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Exibe uma mensagem sempre que outro *percentual* for concluída e é usado para medir o progresso. Se *percentage* for omitido, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá uma mensagem após a conclusão de cada 10%.  
   
 A opção STATS informa a porcentagem concluída de acordo com o limite de relatório do próximo intervalo. Esse limite é aproximadamente a porcentagem especificada. Por exemplo, com STATS=10, se a quantidade concluída for 40%, a opção poderá exibir 43%. Para conjuntos de backup grandes, isso não é um problema, porque a porcentagem concluída muda muito lentamente entre chamadas de E/S concluídas.  

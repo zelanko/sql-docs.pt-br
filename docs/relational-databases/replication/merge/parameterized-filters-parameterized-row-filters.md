@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215147"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127706"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros com parâmetros – Filtros de linha com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   Agente de Mesclagem: especifique um valor para o parâmetro **-Hostname** na linha de comando ou por meio de um perfil de agente. Para obter mais informações sobre o Agente de Mesclagem, consulte [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Para obter mais informações sobre perfis de agente, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>Inicializando uma assinatura para uma publicação com filtros com parâmetros  
- Quando são usados filtros de linha com parâmetros em publicações de mesclagem, a replicação inicializa cada assinatura com um instantâneo de duas partes. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Quando são usados filtros de linha com parâmetros em publicações de mesclagem, a replicação inicializa cada assinatura com um instantâneo de duas partes. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="using-the-appropriate-filtering-options"></a>Usando as opções de filtragem apropriadas  
  Há duas áreas-chaves sobre as quais você tem controle ao usar filtros com parâmetros:  
@@ -174,7 +174,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Os artigos podem estar presentes em apenas uma publicação; não podem ser republicados.  
   
--   A publicação deve permitir que os Assinantes iniciem o processo de instantâneo. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   A publicação deve permitir que os Assinantes iniciem o processo de instantâneo. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ##### <a name="additional-considerations-for-join-filters"></a>Considerações adicionais para filtros de junção  
   

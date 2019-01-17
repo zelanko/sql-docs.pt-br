@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ae569fa5f7a15435fc69f84fd4254c692e1eb1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205235"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126506"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "53205235"
   
     -   Para a IBM DB2, o banco de dados é especificado na propriedade **Catálogo Inicial** da cadeia de caracteres da conexão DB2, que pode ser digitada no campo **Opções de conexões adicionais** descrito mais adiante neste processo.  
   
-8.  Na página **Segurança do Agente de Distribuição**, clique no botão de propriedades (**...**) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Agente de Distribuição**.  
+8.  Na página **Segurança do Distribution Agent** , clique no botão de propriedades (**…**) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Distribution Agent** .  
   
 9. Na caixa de diálogo **Segurança do Distribution Agent** :  
   

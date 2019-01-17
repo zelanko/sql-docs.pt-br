@@ -17,12 +17,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa0b0edbc46917930975cbbe7cbc9b4067579b68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212015"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135816"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Configurar o acesso somente leitura a uma réplica secundária de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "53212015"
   
          SECONDARY_ROLE **(** ALLOW_CONNECTIONS **=** { NO | READ_ONLY | ALL } **)**  
   
-         onde  
+         onde:  
   
          Não  
          Nenhuma conexão direta é permitida para bancos de dados secundários desta réplica. Eles não estão disponíveis para acesso de leitura. Essa é a configuração padrão.  
@@ -159,7 +159,7 @@ GO
   
 2.  Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet **New-SqlAvailabilityReplica** . Ao modificar uma réplica de disponibilidade existente, use o cmdlet **Set-SqlAvailabilityReplica** . Os parâmetros relevantes são os seguintes:  
   
-    -   Para configurar o acesso de conexão para a função secundária, especifique o parâmetro **ConnectionModeInSecondaryRole***secondary_role_keyword*, em que *secondary_role_keyword* é igual a um dos seguintes valores:  
+    -   Para configurar o acesso de conexão para a função secundária, especifique o parâmetro **ConnectionModeInSecondaryRole**_secondary_role_keyword_ , em que *secondary_role_keyword* é igual a um dos seguintes valores:  
   
          **AllowNoConnections**  
          Nenhuma conexão direta é permitida com os bancos de dados na réplica secundária e os bancos de dados não estão disponíveis para acesso de leitura. Essa é a configuração padrão.  
@@ -170,7 +170,7 @@ GO
          **AllowAllConnections**  
          Todas as conexões são permitidas com os bancos de dados na réplica secundária para acesso somente leitura.  
   
-    -   Para configurar o acesso de conexão para a função primária, especifique o **ConnectionModeInPrimaryRole***primary_role_keyword*, em que *primary_role_keyword* é igual a um dos seguintes valores:  
+    -   Para configurar o acesso de conexão para a função primária, especifique o **ConnectionModeInPrimaryRole**_primary_role_keyword_, em que *primary_role_keyword* é igual a um dos seguintes valores:  
   
          **AllowReadWriteConnections**  
          Conexões em que a propriedade de conexão Application Intent é definida como ReadOnly não são permitidas. Quando a propriedade Application Intent está definida como ReadWrite ou não está definida, a conexão é permitida. Para obter mais informações sobre a propriedade de conexão Tentativa de Aplicativo, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
