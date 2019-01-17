@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512625"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979702"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ Se o usuário ficou órfão (o logon associado não existe mais) e ele não foi 
 ## <a name="using-with-no-revert"></a>Usando WITH NO REVERT  
  Quando a instrução EXECUTE AS inclui a cláusula opcional WITH NO REVERT, o contexto de execução de uma sessão não pode ser redefinido usando REVERT ou executando outra instrução EXECUTE AS. O contexto definido pela instrução permanece até que a sessão seja descartada.  
   
- Quando a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e for especificada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa o valor do cookie para @*varbinary_variabl*e. O contexto de execução definido por essa instrução poderá ser revertido somente para o contexto anterior se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o mesmo valor *@varbinary_variable*.  
+ Quando a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e for especificada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa o valor do cookie para @*varbinary_variable*. O contexto de execução definido por essa instrução poderá ser revertido somente para o contexto anterior se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o mesmo valor *@varbinary_variable*.  
   
  Essa opção é útil em um ambiente no qual um pool de conexão é usado. O pool de conexão é a manutenção de um grupo de conexões de banco de dados para reutilização por aplicativos em um servidor de aplicativos. Como o valor passado para *@varbinary_variable* é conhecido apenas pelo chamador da instrução EXECUTE AS (no caso, o aplicativo), o chamador pode garantir que o contexto de execução estabelecido não possa ser alterado por mais ninguém.  
   
@@ -184,8 +184,8 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>B. Usando a cláusula WITH COOKIE  
- O exemplo a seguir define o contexto de execução de uma sessão para determinado usuário e especifica a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e. A instrução `REVERT` deve especificar o valor passado para a variável `@cookie` na instrução `EXECUTE AS` para reverter com êxito o contexto de volta para o chamador. Para executar este exemplo, o logon `login1` e o usuário `user1` criados no exemplo A devem existir.  
+### <a name="b-using-the-with-cookie-clause"></a>b. Usando a cláusula WITH COOKIE  
+ O exemplo a seguir define o contexto de execução de uma sessão para determinado usuário e especifica a cláusula WITH NO REVERT COOKIE = @*varbinary_variable*. A instrução `REVERT` deve especificar o valor passado para a variável `@cookie` na instrução `EXECUTE AS` para reverter com êxito o contexto de volta para o chamador. Para executar este exemplo, o logon `login1` e o usuário `user1` criados no exemplo A devem existir.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

@@ -25,12 +25,12 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79873bcd39eb9f5b03871345d230215fcf3e3814
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d4a3d885eb4f0d40d95f937ba252625e9e07de5
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838204"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979882"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  Quando chamado sem um argumento, SUSER_SID retorna o SID do contexto de segurança atual. Quando chamado sem um argumento em um lote que alternou o contexto usando EXECUTE AS, SUSER_SID retorna o SID do contexto representado. Quando chamado de um contexto representado, SUSER_SID(ORIGINAL_LOGIN()) retorna o SID contexto original.  
   
- No caso de o agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o agrupamento do Windows serem diferentes, SUSER_SID poderá falhar quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Windows armazenarem o logon em um formato diferente. Por exemplo, se o computador do Windows TestComputer tiver o logon User e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenar o logon como TESTCOMPUTER\User, a pesquisa do logon TestComputer\User poderá não resolver o nome de logon corretamente. Para ignorar essa validação do nome de logon, use *Param2*. Agrupamentos diferentes são geralmente uma causa do erro 15401 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ No caso de a ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a ordenação do Windows serem diferentes, SUSER_SID poderá falhar quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Windows armazenarem o logon em um formato diferente. Por exemplo, se o computador do Windows TestComputer tiver o logon User e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenar o logon como TESTCOMPUTER\User, a pesquisa do logon TestComputer\User poderá não resolver o nome de logon corretamente. Para ignorar essa validação do nome de logon, use *Param2*. Ordenações diferentes são geralmente uma causa do erro 15401 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
@@ -78,7 +78,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>B. Usando SUSER_SID com um logon específico  
+### <a name="b-using-susersid-with-a-specific-login"></a>b. Usando SUSER_SID com um logon específico  
  O exemplo a seguir retorna o número de identificação de segurança para o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]

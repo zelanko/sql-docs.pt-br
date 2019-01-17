@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524588"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980312"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 Restaura backups do banco de dados SQL feitos usando o comando BACKUP. 
@@ -167,7 +167,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -342,7 +342,7 @@ RESTORE não é permitido em uma transação explícita ou implícita.
   
 A restauração de um banco de dados **mestre** danificado é executada por meio de um procedimento especial. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
-A restauração de um banco de dados limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+A restauração de um banco de dados limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
 Para restaurar um banco de dados de disponibilidade, primeiro restaure o banco de dados à instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em seguida, adicione o banco de dados ao grupo de disponibilidade.  
 
@@ -428,7 +428,7 @@ Todos os exemplos presumem que um backup de banco de dados completo foi executad
 Os exemplos de RESTORE incluem o seguinte:  
   
 - A. [Restaurando um banco de dados completo](#restoring_full_db)  
-- B. [Restaurando backups de banco de dados diferenciais e completos](#restoring_full_n_differential_db_backups)  
+- b. [Restaurando backups de banco de dados diferenciais e completos](#restoring_full_n_differential_db_backups)  
 - C. [Restaurando um banco de dados usando a sintaxe RESTART](#restoring_db_using_RESTART)  
 - D. [Restaurando um banco de dados e movendo arquivos](#restoring_db_n_move_files)  
 - E. [Copiando um banco de dados usando BACKUP e RESTORE](#copying_db_using_bnr)  
@@ -939,7 +939,7 @@ Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós
   
 Após a redistribuição, cada nó de Computação conterá menos dados reais e mais espaço livre do que cada nó de Computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado for maior do que o necessário, use [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw) para reduzir os tamanhos de arquivos de banco de dados.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 Para essas limitações e restrições, o dispositivo de origem é o dispositivo por meio do qual o backup do banco de dados foi criado e o dispositivo de destino é o dispositivo no qual o banco de dados será restaurado.  
   
 - A restauração de um banco de dados não recompila as estatísticas automaticamente.  
@@ -960,7 +960,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="b-restore-a-full-and-differential-backup"></a>B. Restaurar um backup completo e diferencial  
+### <a name="b-restore-a-full-and-differential-backup"></a>b. Restaurar um backup completo e diferencial  
 O exemplo a seguir restaura um backup completo e, em seguida, um backup diferencial para o banco de dados SalesInvoices2013  
   
 O backup completo do banco de dados é restaurado do backup completo que está armazenado no diretório '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Se a restauração for concluída com êxito, o backup diferencial será restaurado no banco de dados SalesInvoices2013.  O backup diferencial é armazenado no diretório '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'.  

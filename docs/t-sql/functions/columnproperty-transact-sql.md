@@ -20,12 +20,12 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5acd726764c2b672287af418f088963a4a5acef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711884"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980542"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Para o argumento *id*, o argumento *propriedade* especifica o tipo de informaç�
 |Valor|Descrição|Valor retornado|  
 |---|---|---|
 |**AllowsNull**|Permite valores nulos.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
-|**ColumnId**|Valor de ID da coluna que corresponde a **sys.columns.column_id**.|ID da coluna<br /><br /> **Observação:** ao consultar várias colunas, podem aparecer intervalos na sequência de valores de ID da coluna.|  
+|**ColumnId**|Valor de ID da coluna que corresponde a **sys.columns.column_id**.|ID da coluna<br /><br /> **Observação:** Ao consultar várias colunas, podem aparecer intervalos na sequência de valores de ID da coluna.|  
 |**FullTextTypeColumn**|A TYPE COLUMN na tabela contendo as informações de tipo de documento da *coluna*.|ID de TYPE COLUMN de texto completo da expressão de nome de coluna passada como segundo parâmetro dessa função.|  
 |**GeneratedAlwaysType**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.generated_always_type**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não é gerado sempre<br /><br /> 1: gerado sempre no início da linha<br /><br /> 2: gerado sempre no fim da linha|  
 |**IsColumnSet**|A coluna é um conjunto de colunas. Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
@@ -61,7 +61,7 @@ Para o argumento *id*, o argumento *propriedade* especifica o tipo de informaç�
 |**IsCursorType**|O parâmetro de procedimento é do tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsDeterministic**|A coluna é determinística. Essa propriedade só se aplica a colunas computadas e colunas de exibição.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida. Não é uma coluna computada nem uma coluna de exibição.|  
 |**IsFulltextIndexed**|A coluna está registrada para indexação de texto completo.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
-|**IsHidden**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.is_hidden**|**Aplica-se a**: do [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não oculto<br /><br /> 1: oculto|  
+|**IsHidden**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.is_hidden**|**Aplica-se a**: do [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não oculto<br /><br /> 1: Hidden|  
 |**IsIdentity**|A coluna usa a propriedade IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsIdNotForRepl**|A coluna verifica a configuração de IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsIndexable**|A coluna pode ser indexada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
@@ -74,8 +74,8 @@ Para o argumento *id*, o argumento *propriedade* especifica o tipo de informaç�
 |**Precisão**|Comprimento do tipo de dados da coluna ou parâmetro.|Comprimento do tipo de dados de coluna especificado<br /><br /> -1: **xml** ou tipos de valor grande<br /><br /> NULL = entrada inválida.|  
 |**Escala**|Escala para o tipo de dados de parâmetro ou coluna.|O valor de escala<br /><br /> NULL = entrada inválida.|  
 |**StatisticalSemantics**|A coluna está habilitada para indexação semântica.|1: TRUE<br /><br /> 0: FALSE|  
-|**SystemDataAccess**|A coluna é derivada de uma função que acessa dados nos catálogos do sistema ou tabelas do sistema virtuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade só se aplica a colunas computadas e colunas de exibições.|1 = TRUE (indica acesso somente leitura.)<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
-|**UserDataAccess**|A coluna é derivada de uma função que acessa dados em tabelas de usuário, incluindo exibições e tabelas temporárias, armazenadas na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade só se aplica a colunas computadas e colunas de exibições.|1 = TRUE (indica acesso somente leitura.)<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
+|**SystemDataAccess**|A coluna é derivada de uma função que acessa dados nos catálogos do sistema ou tabelas do sistema virtuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade só se aplica a colunas computadas e colunas de exibições.|1: TRUE (indica acesso somente leitura.)<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
+|**UserDataAccess**|A coluna é derivada de uma função que acessa dados em tabelas de usuário, incluindo exibições e tabelas temporárias, armazenadas na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade só se aplica a colunas computadas e colunas de exibições.|1: TRUE (indica acesso somente leitura.)<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**UsesAnsiTrim**|ANSI_PADDING foi definido como ON no momento da criação da tabela. Essa propriedade aplica-se apenas a colunas ou parâmetros do tipo **char** ou **varchar**.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
   
 ## <a name="return-types"></a>Tipos de retorno

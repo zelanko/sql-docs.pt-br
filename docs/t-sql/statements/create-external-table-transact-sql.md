@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402811"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980532"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -255,8 +255,8 @@ Os arquivos de motivo e os arquivos de dados têm o queryID associado à instru�
  Observe que o logon que cria a fonte de dados externa deve ter a permissão de leitura e gravação na fonte de dados externa, localizada no Hadoop ou no Armazenamento de Blobs do Azure.  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  A permissão ALTER ANY EXTERNAL DATA SOURCE concede a qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa e, portanto, isso também concede a capacidade de acessar todas as credenciais no escopo do banco de dados no banco de dados. Essa permissão precisa ser considerada como altamente privilegiada e, portanto, ser concedida somente para entidades de segurança confiáveis no sistema.
 
 ## <a name="error-handling"></a>Tratamento de erros  
@@ -271,7 +271,7 @@ Os arquivos de motivo e os arquivos de dados têm o queryID associado à instru�
   
  Você pode criar várias tabelas externas que referenciam as mesmas fontes de dados externas ou fontes diferentes.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  No CTP2, a funcionalidade de exportação, ou seja, o armazenamento permanente de dados do SQL na fonte de dados externa não é compatível. Essa funcionalidade estará disponível no CTP3.  
   
  Como os dados de uma tabela externa residem fora do dispositivo, eles não estão sob o controle do PolyBase e podem ser alterados ou removidos a qualquer momento por um processo externo. Por isso, não há garantia de que os resultados da consulta em uma tabela externa sejam determinísticos. A mesma consulta pode retornar resultados diferentes a cada vez que ela é executada em uma tabela externa. Da mesma forma, uma consulta pode falhar se os dados externos são removidos ou realocados.  
@@ -283,7 +283,7 @@ Os arquivos de motivo e os arquivos de dados têm o queryID associado à instru�
 -   CREATE TABLE e DROP TABLE  
   
 -   CREATE STATISTICS e DROP STATISTICS  
-Observação: CREATE e DROP STATISTICS não são permitidas em tabelas externas no Banco de Dados SQL do Azure. 
+Observação: Não há suporte para CREATE e DROP STATISTICS em tabelas externas no Banco de Dados SQL do Azure. 
   
 -   CREATE VIEW e DROP VIEW  
   
@@ -341,7 +341,7 @@ WITH (
   
 ```  
   
-### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Crie uma tabela externa com os dados no formato RCFile.  
+### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>b. Crie uma tabela externa com os dados no formato RCFile.  
  Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados como RCFiles. Ele define uma fonte de dados externa *mydatasource_rc* e um formato de arquivo externo *myfileformat_rc*. Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  

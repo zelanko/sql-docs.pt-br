@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f99cba0597faad9da7250097f1ca8e866bd00e21
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560423"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591050"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "51560423"
   
      [Segurança](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para reverter um banco de dados para um instantâneo do banco de dados usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  Não há suporte para a reversão nas seguintes condições:  
   
 -   Há vários instantâneos do banco de dados. Para reverter, deve haver apenas um instantâneo para o banco de dados para o qual você planeja reverter.  
@@ -101,7 +101,7 @@ ms.locfileid: "51560423"
   
      Uma operação de reversão requer permissões RESTORE DATABASE no banco de dados de origem. Para reverter o banco de dados, use a seguinte instrução Transact-SQL:  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      Em que *database_name* é o banco de dados de origem e *database_snapshot_name* é o nome do instantâneo para o qual você deseja reverter o banco de dados. Observe que nessa instrução, você deve especificar um nome de instantâneo em vez de um dispositivo de backup.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "51560423"
   
 -   A. [Revertendo um instantâneo no banco de dados AdventureWorks](#Reverting_AW)  
   
--   B. [Revertendo um instantâneo no banco de dados Sales](#Reverting_Sales)  
+-   b. [Revertendo um instantâneo no banco de dados Sales](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Revertendo um instantâneo no banco de dados AdventureWorks  
  Este exemplo presume que existe apenas um instantâneo atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por obter o exemplo que cria o instantâneo para o qual o banco de dados é revertido, veja [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  

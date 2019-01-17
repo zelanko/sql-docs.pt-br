@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158905"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997568"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158905"
 |**Backup/Restore Throughput/sec**|Taxa de transferência de leitura/gravação para operações de backup e restauração de um banco de dados por segundo. Por exemplo, você pode medir como o desempenho da operação de backup do banco de dados é alterado quando mais dispositivos de backup são usados em paralelo ou quando dispositivos mais rápidos são usados. A taxa de transferência de uma operação de backup ou restauração de banco de dados permite determinar o progresso e desempenho de suas operações de backup e restaurações.|  
 |**Bulk Copy Rows/sec**|Número de linhas copiadas em massa por segundo.|  
 |**Taxa de Transferência de Cópia em Massa/s**|Quantidade de dados copiados em massa (em quilobytes) por segundo.|  
-|**Confirmar entradas da tabela**|O tamanho da parte na memória da tabela de confirmação do banco de dados. Para obter mais informações, veja [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Confirmar entradas da tabela**|O tamanho (contagem de linhas) da parte na memória da tabela de confirmação do banco de dados. Para obter mais informações, veja [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Tamanho de Arquivo(s) de Dados (KB)**|Tamanho cumulativo (em quilobytes) de todos os arquivos de dados no banco de dados que inclui qualquer crescimento automático. Por exemplo, o monitoramento deste contador é útil para determinar o tamanho correto do **tempdb**.|  
 |**DBCC Logical Scan Bytes/sec**|Número de bytes de verificação de leitura lógica por segundo para DBCC (comandos de console de banco de dados).|  
 |**Hora da Confirmação do Grupo/s**|Tempo de parada do grupo (em microssegundos) por segundo.|

@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533025"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980332"
 ---
 # <a name="date-transact-sql"></a>data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +51,9 @@ Define uma data no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Precisão|Um dia|  
 |Valor padrão|1900-01-01<br /><br /> Esse valor é usado para a parte de data acrescentada para conversão implícita de **time** em **datetime2** ou **datetimeoffset**.|  
 |Calendário|Gregoriano|  
-|Precisão de segundo fracionário definida pelo usuário|não|  
-|Preservação e reconhecimento de deslocamento de fuso horário|não|  
-|Reconhecimento de horário de verão|não|  
+|Precisão de segundo fracionário definida pelo usuário|Não|  
+|Preservação e reconhecimento de deslocamento de fuso horário|Não|  
+|Reconhecimento de horário de verão|Não|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>Formatos de literais de cadeia de caracteres compatíveis com date
 A tabela a seguir mostra os formatos de literais de cadeia de caracteres válidos para o tipo de dados **date**.
@@ -83,7 +83,7 @@ A tabela a seguir mostra os formatos de literais de cadeia de caracteres válido
 |aaaa-mm-ddTZD|Suporte específico para utilização com XML/SOAP.<br /><br /> TZD é o designador de fuso horário (Z ou + hh: mm ou -hh:mm):<br /><br /> -   hh:mm representa o deslocamento de fuso horário. hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br />-   MM são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.<br />– + (mais) ou - (menos) é o sinal obrigatório do deslocamento de fuso horário. Ele indica que o deslocamento de fuso horário é adicionado ou subtraído do UTC (Tempo Universal Coordenado) para se obter a hora local. O intervalo válido de deslocamento de fuso horário vai de -14: 00 a +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformidade com o ANSI e ISO 8601  
-**date** é compatível com a definição do padrão ANSI SQL do calendário Gregoriano: "NOTA 85 – Tipos de dados date e time aceitarão que datas no formato Gregoriano sejam armazenadas no intervalo de data 0001-01-01 CE a 9999-12-31 CE."
+**date** está em conformidade com a definição padrão ANSI SQL do calendário Gregoriano: "NOTA 85 – Tipos de dados date e time aceitarão que datas no formato Gregoriano sejam armazenadas no intervalo de dados 0001-01-01 CE até 9999-12-31 CE".
   
 O formato padrão de literais de cadeia de caracteres que é usado para clientes de nível inferior,é compatível com o formato padrão SQL que é definido como AAAA-MM-DD. Este formato é o mesmo da definição ISO 8601 para DATE.
   
@@ -106,7 +106,7 @@ Ao fazer a conversão em tipos de dados de data e hora, o [!INCLUDE[ssNoVersion]
 ### <a name="converting-date-to-other-date-and-time-types"></a>Convertendo date em outros tipos de data e hora
 A tabela a seguir descreve o que ocorre quando um tipo de dados **date** é convertido em outros tipos de dados de data e hora.
   
-Quando a conversão é para **time(n)**, a conversão falha e a mensagem de erro 206 é gerada: "Conflito no tipo de operando: a data é incompatível com a hora".
+Quando a conversão é para **time(n)**, a conversão falha e mensagem de erro 206 é gerada: "Conflito no tipo de operando: a data é incompatível com a hora".
   
 Se a conversão é feita em **datetime**, a data é copiada. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime`.
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Quando a conversão é feita em uma **smalldatetime**, o valor de **date**está no intervalo de uma [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00.000. Quando o valor de **date** está fora do intervalo de um valor de **smalldatetime**, a mensagem de erro 242 é gerada: "A conversão de um tipo de dados date em um tipo de dados smalldatetime resultou em um valor fora do intervalo". Além disso, o valor de **smalldatetime** é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
+Quando a conversão é feita em uma **smalldatetime**, o valor de **date**está no intervalo de uma [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00.000. Quando o valor **date** está fora do intervalo de um valor **smalldatetime**, a mensagem de erro 242 é gerada: "A conversão de um tipo de dados de data para um tipo de dados smalldatetime resulta em um valor fora do intervalo"; e o valor **smalldatetime** é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  

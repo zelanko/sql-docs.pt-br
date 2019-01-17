@@ -18,12 +18,12 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0479fc0d6af9a3bcfe66261713ad7115b61f985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5021b710d780c5f6f35221099f41fc993c492c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841764"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979752"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47841764"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
  Esse método gera uma **ArgumentException** se a instância contém uma borda oposta.  
@@ -71,7 +71,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.351 47.656, -122.341 47.656, -
 SELECT @g.STUnion(@h).ToString();  
 ```  
   
-### <a name="b-producing-a-fullglobe-result"></a>B. Produzindo um resultado de FullGlobe  
+### <a name="b-producing-a-fullglobe-result"></a>b. Produzindo um resultado de FullGlobe  
  O exemplo a seguir gera um `FullGlobe` quando `STUnion()` combina duas instâncias de `Polygon`.  
   
 ```
@@ -80,7 +80,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>C. Produzindo um orifício triagonal de uma união de um CurvePolygon e um orifício triagonal.  
+### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-triagonal-hole"></a>C. Produzindo um espaço trigonal de uma união de um CurvePolygon e um espaço trigonal.  
  O exemplo a seguir gera um orifício triagonal da união de um `CurvePolygon` com uma instância de `Polygon`.  
   
 ```

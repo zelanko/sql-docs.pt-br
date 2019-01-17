@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617246"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732023"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +59,7 @@ Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLU
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v1
 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 até [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a sobrecarga de desempenho para coletar informações sobre planos de execução foi reduzida com a introdução da criação de perfil leve. Ao contrário da criação de perfil padrão, a criação de perfil leve não coleta informações de tempo de execução de CPU. No entanto, a criação de perfil leve ainda coleta informações de uso de E/S e de contagem de linhas.
 
@@ -82,7 +89,7 @@ Ao executar uma sessão de eventos estendidos que usa o evento *query_thread_pro
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v2
 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 até o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 inclui uma versão revisada da criação de perfil leve com sobrecarga mínima. A criação de perfil leve também pode ser habilitada globalmente usando o [sinalizador de rastreamento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para as versões mencionadas acima em *Aplica-se a*. Um novo DMF [DM exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) é introduzido para retornar o plano de execução de consulta para as solicitações em trânsito.
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v3
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] inclui uma versão revisada recentemente da criação de perfil leve coletando informações de contagem de linha de todas as execuções. A criação de perfil leve é habilitada por padrão em [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e o sinalizador de rastreamento 7412 não tem nenhum efeito.
 
@@ -133,4 +140,4 @@ Para obter mais informações sobre a sobrecarga de desempenho da criação de p
  [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)      
- [Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar)

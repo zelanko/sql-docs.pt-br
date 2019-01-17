@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020459"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596817"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
 ##  <a name="KnownIssues"></a> Solução de problemas do assistente  
  **O assistente do Stretch Database falhou.**  
- Se Stretch Database ainda tiver sido habilitado no nível do servidor, e você executar o assistente sem as permissões de administrador do sistema, o assistente falhará. Peça ao administrador do sistema para habilitar o Stretch Database na instância do servidor local e, depois, execute o assistente novamente. Para obter mais informações, consulte [Pré-requisito: permissão para habilitar o Stretch Database no servidor](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Se Stretch Database ainda tiver sido habilitado no nível do servidor, e você executar o assistente sem as permissões de administrador do sistema, o assistente falhará. Peça ao administrador do sistema para habilitar o Stretch Database na instância do servidor local e, depois, execute o assistente novamente. Para obter mais informações, confira [Pré-requisito: permissão para habilitar o Stretch Database no servidor.](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Habilite outras tabelas para o Stretch Database. Monitore a migração dos dados e gerencie os bancos de dados e tabelas habilitados para o Stretch.  

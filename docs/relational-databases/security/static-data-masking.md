@@ -8,15 +8,15 @@ ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: egranet
-ms.author: esgranet
+ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539114"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980452"
 ---
 # <a name="static-data-masking"></a>Máscara de Dados Estáticos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ Veja abaixo um guia passo a passo para executar a Máscara de Dados Estáticos.
 6. A Máscara de Dados Estáticos criará uma pasta na pasta **Documentos** do usuário chamada Máscara de Dados Estáticos e inserirá arquivos de log nela. Os arquivos de log podem ser úteis para fins de depuração. O nome do arquivo de log é indicado na parte inferior da janela de configuração. 
   
  
-7. (Apenas SQL Server) Se você operar uma Máscara de Dados Estáticos em um banco de dados local, ela executará uma operação de backup/restauração. Na **Etapa 2: clonar localização do arquivo .BAK**, forneça a localização no servidor em que o arquivo de backup será armazenado. 
+7. (Apenas SQL Server) Se você operar uma Máscara de Dados Estáticos em um banco de dados local, ela executará uma operação de backup/restauração. Na **Etapa 2: Clonar localização do arquivo .BAK**, forneça a localização no servidor em que o arquivo de backup será armazenado. 
 
 ## <a name="masking-functions"></a>Funções de mascaramento
 

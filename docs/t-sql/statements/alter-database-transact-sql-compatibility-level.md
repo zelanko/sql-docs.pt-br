@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699661"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980072"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > Se você quiser aproveitar o nível de compatibilidade do banco de dados 140 para seu banco de dados geral, mas tiver motivo para preferir o modelo de **estimativa de cardinalidade** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], mapeando para o nível de compatibilidade do banco de dados 110, veja [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) e, em especial, sua palavra-chave `LEGACY_CARDINALITY_ESTIMATION = ON`.
 >  
-> Para obter detalhes sobre como avaliar as diferenças de desempenho das consultas mais importantes, entre dois níveis de compatibilidade no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consulte [Melhor desempenho de consultas com o nível de compatibilidade 130 no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Observe que este artigo se refere ao nível de compatibilidade 130 e ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas a mesma metodologia se aplica à migração para o nível 140 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Para obter detalhes sobre como avaliar as diferenças de desempenho das consultas mais importantes, entre dois níveis de compatibilidade no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consulte [Melhor desempenho de consultas com o nível de compatibilidade 130 no Banco de Dados SQL do Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Observe que este artigo se refere ao nível de compatibilidade 130 e ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas a mesma metodologia se aplica à migração para o nível 140 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Execute a consulta a seguir para determinar a versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] à qual você está conectado.  
   
@@ -255,7 +255,7 @@ As correções que estavam sob o sinalizador de rastreamento 4199 em versões an
 |As opções SET requeridas para um método xQuery não são validadas quando o método é contido em uma exibição ou função com valor de tabela embutida.|As opções SET requeridas para um método xQuery são validadas quando o método é contido em uma exibição ou função com valor de tabela embutida. Um erro ocorrerá se as opções SET do método forem definidas incorretamente.|Baixa|  
 |Os valores do atributo XML que contém caracteres de final de linha (retorno de carro e alimentação de linha) não são normalizados de acordo com o padrão XML. Isto é, ambos os caracteres são retornados, em vez de um único caractere de alimentação de linha.|Os valores do atributo XML que contém caracteres de final de linha (retorno de carro e alimentação de linha) são normalizados de acordo com o padrão XML. Isto é, todas as quebras de linha em entidades externas de análise (incluindo a entidade do documento) são normalizadas na entrada pela tradução da sequência de dois caracteres #xD #xA e de qualquer #xD que não seja seguido por #xA em um único caractere #xA.<br /><br /> Aplicativos que usam atributos para transportar valores da cadeia de caracteres que contêm caracteres de final de linha não receberão de volta estes caracteres, já que eles foram submetidos. Para evitar o processo de normalização, use as entidades de caractere numérico XML para codificar todos os caracteres de final de linha.|Baixa|  
 |As propriedades `ROWGUIDCOL` e `IDENTITY` da coluna podem ser nomeadas incorretamente como uma restrição. Por exemplo, a instrução `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` executa, mas o nome da restrição não é preservado e não fica acessível ao usuário.|As propriedades `ROWGUIDCOL` e `IDENTITY` da coluna não podem ser nomeadas como uma restrição. O erro 156 é retornado.|Baixa|  
-|A atualização de colunas usando atribuição bidirecional, como `UPDATE T1 SET @v = column_name = <expression>`, pode produzir resultados inesperados porque o valor de tempo de vida da variável pode ser usado em outras cláusulas, como nas cláusulas `WHER`E e `ON`, durante a execução da instrução, em vez do valor inicial da instrução. Isto pode causar a alteração imprevisível dos significados dos predicados em uma base por linha.<br /><br /> Este comportamento só é aplicável quando o nível de compatibilidade é definido em 90.|A atualização de colunas usando uma atribuição bidirecional gera resultados esperados porque só o valor inicial da instrução é acessado durante a execução da instrução.|Baixa|  
+|A atualização de colunas usando atribuição bidirecional, como `UPDATE T1 SET @v = column_name = <expression>`, pode produzir resultados inesperados porque o valor de tempo de vida da variável pode ser usado em outras cláusulas, como nas cláusulas `WHERE` e `ON`, durante a execução da instrução, em vez do valor inicial da instrução. Isto pode causar a alteração imprevisível dos significados dos predicados em uma base por linha.<br /><br /> Este comportamento só é aplicável quando o nível de compatibilidade é definido em 90.|A atualização de colunas usando uma atribuição bidirecional gera resultados esperados porque só o valor inicial da instrução é acessado durante a execução da instrução.|Baixa|  
 |Veja o exemplo E na seção Exemplos abaixo.|Veja o exemplo F na seção Exemplos abaixo.|Baixa|  
 |A função ODBC {fn CONVERT()} usa o formato de data padrão do idioma. Em alguns idiomas, o formato padrão é YDM, o que pode resultar em erros de conversão quando CONVERT() é combinado com outras funções, como `{fn CURDATE()}`, que espera um formato YMD.|A função ODBC `{fn CONVERT()}` usa o estilo 121 (um formato YMD independente de linguagem) ao converter os tipos de dados ODBC SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP.|Baixa|  
 |Datetime intrínseco, como DATEPART, não exige que os valores de entrada de cadeia de caracteres sejam literais válidas de datetime. Por exemplo, `SELECT DATEPART (year, '2007/05-30')` é compilado com êxito.|Partes intrínsecas de datetime, como `DATEPART`, exigem que os valores de entrada de cadeia de caracteres sejam literais de datetime válidos. Erro 241 é retornado quando um datetime literal inválido é usado.|Baixa|  
@@ -301,7 +301,7 @@ FROM sys.databases
 WHERE name = db_name();  
 ```  
   
-### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>B. Ignorando a instrução SET LANGUAGE, exceto no nível de compatibilidade 120  
+### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>b. Ignorando a instrução SET LANGUAGE, exceto no nível de compatibilidade 120  
  A consulta a seguir ignora a instrução SET LANGUAGE, exceto no nível de compatibilidade 120.  
   
 ```sql  

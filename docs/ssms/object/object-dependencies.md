@@ -13,12 +13,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bdda5d95544df6b7cd7cc4108c3bd21dc8f50d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779154"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591530"
 ---
 # <a name="object-dependencies"></a>Dependências de objeto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ As **Dependências entre objetos (página Avançado)** do objeto atual lista os 
 Use esta caixa de diálogo para entender as dependências antes de alterar ou excluir o objeto selecionado.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
-**Objetos que dependem de** *<selected object>*  
+**Objetos que dependem do** _\<objeto selecionado>_  
 Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e que dependem do objeto selecionado.  
   
-**Objetos dos quais** *<selected object>* **depende**  
+**Objetos dos quais** _\<o objeto selecionado>_ **depende**  
 Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e dos quais depende o objeto selecionado.  
   
 **Dependências**  

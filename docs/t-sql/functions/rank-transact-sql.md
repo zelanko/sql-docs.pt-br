@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537a2da418940ef267305078f0375d6c51716677
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: fcd61180cde6b346351230f39b3503f2ecb51298
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970337"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980132"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +102,7 @@ ProductID   Name                   LocationID   Quantity Rank
  (10 row(s) affected)  
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classificando todas as linhas em um conjunto de resultados  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Classificando todas as linhas em um conjunto de resultados  
  O exemplo a seguir retorna os dez primeiros funcionários classificados pelo salário. Como uma cláusula de PARTITION BY não foi especificada, a função RANK foi aplicada a todas as linhas no conjunto de resultados.  
   
 ```  
@@ -135,7 +135,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C. Classificando linhas dentro de uma partição  
+### <a name="c-ranking-rows-within-a-partition"></a>C: Classificando linhas dentro de uma partição  
  O exemplo a seguir classifica os representantes de vendas em cada região de vendas de acordo com seu total de vendas. O conjunto de linhas é particionado por `SalesTerritoryGroup` e ordenado por `SalesAmountQuota`.  
   
 ```  

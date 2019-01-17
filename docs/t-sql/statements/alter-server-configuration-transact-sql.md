@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545618"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980092"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ SQLDUMPEREDUMPFLAGS
  O valor do tempo limite em milissegundos para o utilitário SQLDumper gerar um despejo no caso de uma falha do SQL Server. O valor padrão é 0, o que indica que não há nenhum tempo limite para a conclusão do despejo. Para obter mais informações, veja o [artigo da Base de Dados de Conhecimento sobre o utilitário do SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- As condições sob as quais a instância do cluster de failover do SQL Server deve apresentar uma falha ou reiniciar. O valor padrão é 3, o que indica que o recurso do SQL Server apresentará failover ou reiniciará em erros críticos do servidor. Para obter mais informações sobre este e outros níveis de condição de falha, veja [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ As condições sob as quais a instância do cluster de failover do SQL Server deve realizar um failover ou reiniciar. O valor padrão é 3, o que indica que o recurso do SQL Server apresentará failover ou reiniciará em erros críticos do servidor. Para obter mais informações sobre este e outros níveis de condição de falha, veja [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  O valor do tempo limite de quanto tempo a DLL de recursos do Mecanismo de Banco de Dados do SQL Server deve aguardar por informações de integridade do servidor antes de considerar a instância do SQL Server como sem resposta. O valor de tempo limite é expresso em milissegundos. O padrão é 60000 milissegundos (60 segundos).  
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  Para identificar o cluster de destino, especifique um dos seguintes valores:  
   
  *cluster_windows*  
- O nome netwirj de um WSFC. Você pode especificar o nome curto ou o nome de domínio completo. Para localizar o endereço IP de destino de um nome curto, ALTER SERVER CONFIGURATION usa a resolução DNS. Em algumas situações, um nome curto pode causar confusão, e DNS pode retornar o endereço IP errado. Portanto, é recomendável especificar o nome de domínio completo.  
+ O nome de rede de um WSFC. Você pode especificar o nome curto ou o nome de domínio completo. Para localizar o endereço IP de destino de um nome curto, ALTER SERVER CONFIGURATION usa a resolução DNS. Em algumas situações, um nome curto pode causar confusão, e DNS pode retornar o endereço IP errado. Portanto, é recomendável especificar o nome de domínio completo.  
   
   > [!NOTE] 
   > Não há suporte para uma migração entre clusters usando essa configuração. Para executar uma migração entre clusters, use um grupo de disponibilidade distribuído ou algum outro método, como o envio de logs. 
@@ -237,19 +237,19 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  Desabilita o particionamento automático de software de nós de hardware NUMA grandes em nós NUMA menores. Alterar o valor de execução requer a reinicialização do mecanismo de banco de dados.  
 
-> [!WARNING]  
+> [!WARNING]
 > Há problemas conhecidos com o comportamento da instrução ALTER SERVER CONFIGURATION com a opção SOFT NUMA temporário e o SQL Server Agent.  Esta é a sequência recomendada de operações:  
 > 1) Pare a instância do SQL Server Agent.  
-> 2) Execute sua opção LTER SERVER CONFGURATION SOFT NUMA.  
+> 2) Execute sua opção LTER SERVER CONFIGURATION SOFT NUMA.  
 > 3) Reinicie a instância do SQL Server.  
 > 4) Inicie a instância do SQL Server Agent.  
   
-**Mais informações:** se uma ALTER SERVER CONFIGURATION com o comando SET SOFTNUMA for executada antes que o serviço SQL Server seja reiniciado, quando o serviço SQL Server Agent for interrompido, ele será executado um comando RECONFIGURE de T-SQL, que reverterá as configurações de SOFTNUMA de volta ao que eram antes de ALTER SERVER CONFIGURATION. 
+**Mais Informações:** se uma ALTER SERVER CONFIGURATION com o comando SET SOFTNUMA for executada antes que o serviço SQL Server seja reiniciado, quando o serviço SQL Server Agent for interrompido, ele será executado um comando RECONFIGURE de T-SQL, que reverterá as configurações de SOFTNUMA de volta ao que eram antes de ALTER SERVER CONFIGURATION. 
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Esta instrução não requer uma reinicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que explicitamente indicado de outra forma. No caso de uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma reinicialização do recurso de cluster do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é necessária.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Essa instrução não oferece suporte a gatilhos DDL.  
   
 ## <a name="permissions"></a>Permissões  
@@ -272,10 +272,10 @@ SQLDUMPEREDUMPFLAGS
 ###  <a name="Affinity"></a> Configurando a afinidade do processo  
  Os exemplos desta seção mostram como definir a afinidade do processo para CPUs e nós NUMA. Os exemplos presumem que o servidor contém 256 CPUs que são organizadas em quatro grupos de 16 nós NUMA cada um. Não são atribuídos threads a nenhum nó NUMA ou CPU.  
   
--   Grupo 0: nós NUMA 0 a 3, CPUs 0 a 63  
--   Grupo 1: nós NUMA 4 a 7, CPUs 64 a 127  
--   Grupo 2: nós NUMA 8 a 12, CPUs 128 a 191  
--   Grupo 3: nós NUMA 13 a 16, CPUs 192 a 255  
+-   Grupo 0: Nós NUMA 0 a 3, CPUs 0 a 63  
+-   Grupo 1: Nós NUMA 4 a 7, CPUs 64 a 127  
+-   Grupo 2: Nós NUMA 8 a 12, CPUs 128 a 191  
+-   Grupo 3: Nós NUMA 13 a 16, CPUs 192 a 255  
   
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Configurando a afinidade para todas as CPUs nos grupos 0 e 2  
  O exemplo a seguir define afinidade para todas as CPUs nos grupos 0 e 2.  
@@ -285,7 +285,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
   
-#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. Configurando a afinidade para todas as CPUs nos nós NUMA 0 e 7  
+#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>b. Configurando a afinidade para todas as CPUs nos nós NUMA 0 e 7  
  O exemplo a seguir define a afinidade de CPU para nós `0` e `7`.  
   
 ```  
@@ -329,7 +329,7 @@ SET PROCESS AFFINITY CPU=AUTO;
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-#### <a name="b-stopping-diagnostic-logging"></a>B. Interrompendo o log de diagnóstico  
+#### <a name="b-stopping-diagnostic-logging"></a>b. Interrompendo o log de diagnóstico  
  O exemplo a seguir interrompe o log de dados de diagnóstico.  
   
 ```  
@@ -387,7 +387,7 @@ SET BUFFER POOL EXTENSION ON
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
 ```  
   
-#### <a name="b-modifying-buffer-pool-extension-parameters"></a>B. Modificando parâmetros da extensão do pool de buffers  
+#### <a name="b-modifying-buffer-pool-extension-parameters"></a>b. Modificando parâmetros da extensão do pool de buffers  
  O exemplo a seguir modifica o tamanho de um arquivo de extensão do pool de buffers. A opção de extensão do pool de buffers deve ser desabilitada antes que qualquer parâmetro seja modificado.  
   
 ```  

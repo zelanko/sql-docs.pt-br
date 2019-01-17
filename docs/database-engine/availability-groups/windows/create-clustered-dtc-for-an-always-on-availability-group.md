@@ -1,6 +1,7 @@
 ---
-title: Criar DTC clusterizado para um Grupo de Disponibilidade AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Criar recurso DTC clusterizado para um grupo de disponibilidade
+description: Este tópico descreve uma configuração completa de um recurso DTC clusterizado para o Grupo de Disponibilidade AlwaysOn do SQL Server.
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396910"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069772"
 ---
-# <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Criar DTC clusterizado para um Grupo de Disponibilidade AlwaysOn
+# <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Criar recurso DTC clusterizado para um grupo de disponibilidade Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -42,7 +43,7 @@ O passo a passo usa scripts do PowerShell e T-SQL (Transact-SQL).  Muitos dos sc
   - Nome: `Cluster`
   - Nome da rede: `Cluster Network 1`
   - Nós: `SQLNODE1, SQLNODE2`
-  - Armazenamento compartilhado: `Cluster Disk 3` (pertence a `SQLNODE1`)
+  - Armazenamento compartilhado: `Cluster Disk 3` (pertencentes a `SQLNODE1`)
 - Detalhes do cluster (a ser criado):
   - Recurso de nome de rede: `DTCnet1`
   - Recurso de nome de rede do DTC: `DTC1`
@@ -320,21 +321,21 @@ GO
 ```
 
 > [!IMPORTANT]
-Não é possível habilitar o DTC em um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] existente.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aceitará a seguinte sintaxe para um Grupo de Disponibilidade existente:  
->
+> Não é possível habilitar o DTC em um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] existente.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aceitará a seguinte sintaxe para um Grupo de Disponibilidade existente:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->No entanto, na verdade, nenhuma alteração de configuração será feita.  É possível confirmar a configuração **dtc_support** com a seguinte consulta T-SQL:  
->
->Selecione o nome dtc_support em availability_groups  
->
->A única maneira de habilitar o suporte a DTC em um Grupo de Disponibilidade é criando um Grupo de Disponibilidade com o Transact-SQL.
+> SET (DTC_Support = Per_DB)  
+> 
+> No entanto, na verdade, nenhuma alteração de configuração será feita.  É possível confirmar a configuração **dtc_support** com a seguinte consulta T-SQL:  
+> 
+> Selecione o nome dtc_support em availability_groups  
+> 
+> A única maneira de habilitar o suporte a DTC em um Grupo de Disponibilidade é criando um Grupo de Disponibilidade com o Transact-SQL.
  
 ## <a name="ClusterDTC"></a>8.  Preparar recursos de cluster
 
-Esse script vai preparar os recursos dependentes do DTC: disco e IP.  O armazenamento compartilhado será adicionado ao Windows Cluster.  Os recursos de rede serão criados e o DTC será criado e transformado em um recurso para o Grupo de Disponibilidade.  Execute o Script do PowerShell a seguir no `SQLNODE1`.
+Esse script vai preparar os recursos dependentes do DTC: Disco e IP.  O armazenamento compartilhado será adicionado ao Windows Cluster.  Os recursos de rede serão criados e o DTC será criado e transformado em um recurso para o Grupo de Disponibilidade.  Execute o Script do PowerShell a seguir no `SQLNODE1`. Obrigado, [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/), pelo script!
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -587,4 +588,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> A instrução `USE AG1` deve ser executada para garantir que o contexto do banco de dados é definido como `AG1`.  Caso contrário, você receberá a seguinte mensagem de erro: "Contexto de transação em uso por outra sessão."
+> A instrução `USE AG1` deve ser executada para garantir que o contexto do banco de dados é definido como `AG1`.  Caso contrário, você receberá a seguinte mensagem de erro: "O contexto da transação está sendo usado por outra sessão."

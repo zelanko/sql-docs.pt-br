@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699794"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979512"
 ---
 # <a name="search-condition-transact-sql"></a>Critério de pesquisa (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -217,7 +217,7 @@ FROM Production.ProductPhoto
 WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;  
 ```  
   
-### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. Usando a sintaxe WHERE e LIKE com dados Unicode  
+### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>b. Usando a sintaxe WHERE e LIKE com dados Unicode  
  O exemplo a seguir usa a cláusula `WHERE` para recuperar o endereço para correspondência para qualquer empresa que esteja fora dos Estados Unidos  (`US`) e em uma cidade cujo nome comece com `Pa`.  
   
 ```  

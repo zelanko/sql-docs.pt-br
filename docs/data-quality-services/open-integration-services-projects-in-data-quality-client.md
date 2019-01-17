@@ -11,12 +11,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb91f7c7b570fb678e2b503ed1841c5d3b45dcae
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 23d86191b60cfe4dbcf6793b4765b51b7df66fc1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616277"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591650"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir projetos do Integration Services no cliente Data Quality
 
@@ -26,7 +26,7 @@ ms.locfileid: "52616277"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
   
 -   Somente projetos concluídos do Integration Services estão disponíveis na tela **Abrir projeto** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Os projetos que falharam ou que estão em execução não estão disponíveis na tela **Abrir projeto** .  
   
@@ -51,9 +51,9 @@ ms.locfileid: "52616277"
   
 3.  Na tela **Abrir projeto** , você pode identificar um projeto do Integration Services de uma destas formas:  
   
-    1.  **Nome do Projeto**: os projetos do Integration Services são listados com a seguinte terminologia de nomenclatura: "Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}". Sempre que você executa com êxito o mesmo pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um novo projeto é listado na tela **Abrir projeto** .  
+    1.  **Nome do Projeto**: projetos do Integration Services são listados com a seguinte terminologia de nomenclatura: "Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}." Sempre que você executa com êxito o mesmo pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um novo projeto é listado na tela **Abrir projeto** .  
   
-    2.  **Tipo de Projeto**: os projetos do Integration Services têm **SSIS** como o tipo de projeto na tela **Abrir projeto** .  
+    2.  **Tipo de Projeto**: os projetos do Integration Services têm **SSIS** como o tipo de projeto na tela **Abrir projeto**.  
   
      Selecione um projeto e clique em **Avançar**.  
   

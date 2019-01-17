@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394511"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980382"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**} também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se *filegroup* for especificado, o índice será armazenado no grupo de arquivos nomeado. Se **"** default **"** for especificado ou se ON não for especificado, o índice será armazenado no mesmo grupo de arquivos que a tabela. Se a restrição PRIMARY KEY ou UNIQUE criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos que o índice. Se CLUSTERED for especificado ou se a restrição de alguma outra forma criar um índice clusterizado e for especificado um *partition_scheme* diferente do *partition_scheme* ou do *filegroup* da definição da tabela ou vice-versa, somente a definição da restrição será preservada, as demais serão ignoradas.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Depois de criar uma tabela particionada, considere definir a opção LOCK_ESCALATION da tabela como AUTO. Isso pode melhorar a simultaneidade ao permitir que os bloqueios escalem para o nível da partição (HoBT) em vez da tabela. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  TEXTIMAGE_ON não será permitido se não houver ma coluna de valor grande na tabela. TEXTIMAGE_ON não poderá ser especificado se *partition_scheme* for especificado. Se **"** default **"** for especificado ou se TEXTIMAGE_ON não for especificado, as colunas de valores grandes serão armazenadas no grupo de arquivos padrão. O armazenamento de qualquer dado de coluna de valor grande especificado em CREATE TABLE não poderá ser alterado posteriormente.  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max), nvarchar(max), varbinary(max), xml e valores UDT grandes são armazenados diretamente na linha de dados, até um limite de 8.000 bytes, contanto que o valor caiba no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.
-TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afeta o momento em que os dados são armazenados na linha. Use tipos de valor grande sem a opção de linha de sp_tableoption para armazenar todo o valor LOB fora da linha. 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afeta o momento em que os dados são armazenados na linha. Use tipos de valor grande sem a opção de linha de sp_tableoption para armazenar todo o valor LOB fora da linha. 
+> 
+> 
+> [!NOTE]
 >  Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e deve ser delimitado, como em TEXTIMAGE_ON **"** default **"** ou TEXTIMAGE_ON **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  ON UPDATE CASCADE, SET NULL ou SET DEFAULT não poderá ser definido se um gatilho INSTEAD OF de ON UPDATE já existir na tabela que está sendo alterada.  
   
- Por exemplo, no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], a tabela **ProductVendor** tem uma relação referencial com a tabela **Vendor**: a chave estrangeira **ProductVendor.BusinessEntity** faz referência à chave primária **Vendor.BusinessEntityID**.  
+ Por exemplo, no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], a tabela **ProductVendor** tem uma relação referencial com a tabela **Vendor**: A chave estrangeira **ProductVendor.BusinessEntity** faz referência à chave primária **Vendor.BusinessEntityID**.  
   
  Se uma instrução UPDATE for executada em uma linha da tabela **Vendor** e uma ação ON UPDATE CASCADE for especificada para **ProductVendor.BusinessEntityID**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificará se há uma ou mais linhas dependentes na tabela **ProductVendor**. Se existir alguma, as linhas dependentes da tabela **ProductVendor** serão atualizadas, além da linha referenciada na tabela **Vendor**.  
   
@@ -793,7 +793,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  *partition_number_expression* pode ser especificado das seguintes maneiras:  
   
--   Forneça o número de uma partição, por exemplo: ON PARTITIONS (2).  
+-   Forneça o número da partição de uma partição, por exemplo: ON PARTITIONS (2).  
   
 -   Forneça os números de várias partições individuais separados por vírgulas, por exemplo: ON PARTITIONS (1, 5).  
   
@@ -928,9 +928,9 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A Instância Gerenciada do Banco de Dados SQL do Azure não oferece suporte a tabelas otimizadas de memória. 
+**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A Instância Gerenciada do Banco de Dados SQL do Azure não oferece suporte a tabelas otimizadas para memória. 
   
- O valor ON indica que a tabela é otimizada para memória. Tabelas com otimização de memória são parte do recurso de OLTP in-memory, que é usado para otimização de desempenho do processamento de transações. Para começar a usar o OLTP in-memory, consulte [Início rápido 1: tecnologias OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para obter informações mais detalhadas sobre as tabelas com otimização de memória, veja [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ O valor ON indica que a tabela é otimizada para memória. Tabelas com otimização de memória são parte do recurso de OLTP in-memory, que é usado para otimização de desempenho do processamento de transações. Para começar com o OLTP in-memory, confira [Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para obter informações mais detalhadas sobre as tabelas com otimização de memória, veja [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  O valor padrão OFF indica que a tabela é baseada em disco.  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
-Índices de coluna e tabela podem ser especificados como parte da instrução CREATE TABLE. Para obter detalhes sobre como adicionar e remover índices em tabelas com otimização de memória, consulte: [Alterar tabelas com otimização de memória](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+Índices de coluna e tabela podem ser especificados como parte da instrução CREATE TABLE. Para obter detalhes sobre como adicionar e remover índices em tabelas com otimização de memória, confira: [Alterando tabelas com otimização de memória](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1217,7 +1217,7 @@ SELECT * FROM tempdb.sys.database_files
  Para obter um relatório de uma tabela e suas colunas, use **sp_help** ou **sp_helpconstraint**. Para renomear uma tabela, use **sp_rename**. Para obter um relatório de exibições e procedimentos armazenados que dependem de uma tabela, use [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) e [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
 ## <a name="nullability-rules-within-a-table-definition"></a>Regras de nulidade em uma definição de tabela  
- A nulidade de uma coluna determina se ela permite valor nulo (NULL) como dados nessa coluna. NULL não é zero nem em branco: NULL significa que nenhuma entrada foi feita e nem um NULL explícito foi fornecido e, normalmente, implica que o valor é desconhecido ou não se aplica.  
+ A nulidade de uma coluna determina se ela permite valor nulo (NULL) como dados nessa coluna. NULL não é zero nem em branco: NULL significa que nenhuma entrada foi feita nem um NULL explícito foi fornecido e, normalmente, implica que o valor é desconhecido ou não se aplica.  
   
  Quando você usa CREATE TABLE ou ALTER TABLE para criar ou alterar uma tabela, as configurações de banco de dados e de sessão influenciam e, possivelmente, substituem a nulidade do tipo de dados que é usado em uma definição de coluna. Recomendamos que você sempre defina explicitamente uma coluna como NULL ou NOT NULL para colunas não computadas ou, se usar um tipo de dados definido pelo usuário, permita que a coluna use a nulidade padrão do tipo de dados. Colunas esparsas sempre têm que permitir NULL.  
   
@@ -1229,7 +1229,7 @@ SELECT * FROM tempdb.sys.database_files
 |tipo de dados CLR definido pelo usuário|A nulidade é determinada de acordo com a definição de coluna.|  
 |Tipo de dados fornecido pelo sistema|Se o tipo de dados fornecido pelo sistema tiver apenas uma opção, ele prevalece. Tipos de dados **timestamp** devem ser tipos de dados NOT NULL. Quando qualquer configuração de sessão é definida como ON com o uso de SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL é atribuído.  <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL é atribuído.<br /><br /> Quando qualquer configuração de banco de dados for configurada com o uso de ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL é atribuído.  <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL é atribuído.<br /><br /> Para exibir a configuração de banco de dados de ANSI_NULL_DEFAULT, use a exibição do catálogo **sys.databases**|  
   
- Quando nenhuma das opções ANSI_NULL_DFLT estiver definida para a sessão e o banco de dados estiver configurado com o padrão (ANSI_NULL_DEFAULT = OFF), o padrão de NOT NULL será atribuído.  
+ Quando nenhuma das opções ANSI_NULL_DFLT estiver definida para a sessão e o banco de dados estiver configurado com o padrão (ANSI_NULL_DEFAULT é OFF), o padrão de NOT NULL será atribuído.  
   
  Se a coluna for uma coluna computada, seu nulidade sempre será determinada automaticamente pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para descobrir a nulidade desse tipo de coluna, use a função COLUMNPROPERTY com a propriedade **AllowsNull**.  
   
@@ -1262,7 +1262,7 @@ CREATE TABLE dbo.Employee (EmployeeID int
 PRIMARY KEY CLUSTERED);  
 ```  
   
-### <a name="b-using-foreign-key-constraints"></a>B. Usando restrições FOREIGN KEY  
+### <a name="b-using-foreign-key-constraints"></a>b. Usando restrições FOREIGN KEY  
  Uma restrição FOREIGN KEY é usada para fazer referência a outra tabela. Chaves estrangeiras podem ser chaves de coluna única ou chaves de várias colunas. O próximo exemplo mostra uma restrição FOREIGN KEY de coluna única na tabela `SalesOrderHeader` que faz referência à tabela `SalesPerson`. Somente a cláusula REFERENCES é necessária para uma restrição FOREIGN KEY de coluna única.  
   
 ```sql  
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61b9d5633439ee9092246c0b4ce605b2523c2358
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2b1666c57bf13b8eba0f76c717ae585ddc0ae110
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535519"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979622"
 ---
 # <a name="enable-indexes-and-constraints"></a>Habilitar índices e restrições
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52535519"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Depois da reconstrução do índice, qualquer restrição que tiver sido desabilitada devido à desabilitação do índice deverá ser habilitada manualmente. As restrições PRIMARY KEY e UNIQUE são habilitadas reconstruindo o índice associado. Esse índice deve ser reconstruído (habilitado) antes de você poder habilitar restrições FOREIGN KEY que fazem referência à restrição PRIMARY KEY ou UNIQUE. Restrições FOREIGN KEY são habilitadas usando a instrução ALTER TABLE CHECK CONSTRAINT.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52535519"
   
  As seguintes informações estão disponíveis na caixa de diálogo **Recriar Índices** :  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Para habilitar um índice desabilitado usando ALTER INDEX  
   

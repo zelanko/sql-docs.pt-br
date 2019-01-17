@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dda58d512602c5d592078275106eefc7ca26ebda
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696396"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596887"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "51696396"
   
  Habilitar o Stretch Database em um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Stretch Database em um banco de dados também exige permissões CONTROL DATABASE.  
 
- >   [!NOTE]
- > Mais tarde, se você desabilitar o Stretch Database, lembre-se de que desabilitar uma tabela ou um banco de dados do Stretch Database não excluirá o objeto remoto. Se você quiser excluir a tabela remota ou o banco de dados remoto, descarte-o(a) usando o Portal de Gerenciamento do Azure. Os objetos remotos continuam incorrendo em custos do Azure até que você os exclua manualmente. 
+> [!NOTE]
+> Mais tarde, se você desabilitar o Stretch Database, lembre-se de que desabilitar uma tabela ou um banco de dados do Stretch Database não excluirá o objeto remoto. Se você quiser excluir a tabela remota ou o banco de dados remoto, descarte-o(a) usando o Portal de Gerenciamento do Azure. Os objetos remotos continuam incorrendo em custos do Azure até que você os exclua manualmente. 
  
 ## <a name="before-you-get-started"></a>Antes de começar  
   
@@ -42,7 +42,7 @@ ms.locfileid: "51696396"
   
 -   Ter as informações de conexão e o logon necessárias para criar um novo servidor do Azure ou para selecionar um servidor do Azure existente.  
   
-##  <a name="EnableTSQLServer"></a> Pré-requisito: habilitar Stretch Database no servidor  
+##  <a name="EnableTSQLServer"></a> Pré-requisito: Habilitar o Stretch Database no servidor  
  Para que seja possível habilitar o Stretch Database em um banco de dados ou em uma tabela, você precisa habilitá-lo no servidor local. Essa operação requer permissões sysadmin ou serveradmin.  
   
 -   Se você tiver as permissões administrativas necessárias, o assistente **Habilitar o Banco de Dados para Stretch** vai configurar o servidor para o Stretch.  

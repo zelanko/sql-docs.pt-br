@@ -18,19 +18,19 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4eb0d7865b71ba29ec00895e64574c0a188b3bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 933212da81784d7d186fc6ef7c0cdfaa4edab24b
+ms.sourcegitcommit: 7ead3a042d369315fc83a9ccc3d74f62e7b05bc0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795594"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012312"
 ---
 # <a name="operator-precedence-transact-sql"></a>Precedência dos operadores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Quando uma expressão complexa tiver vários operadores, A precedência de operador determina a sequência na qual as operações são executadas. A ordem de execução pode afetar o valor resultante significativamente.  
   
- Os níveis de precedência dos operadores são mostrados na tabela a seguir. Um operador em níveis superiores é avaliado antes de um operador em um nível inferior.  
+ Os níveis de precedência dos operadores são mostrados na tabela a seguir. Um operador em níveis superiores é avaliado antes de um operador em um nível mais baixo (na tabela a seguir, 1 é o nível mais alto e 8 é o nível mais baixo).
   
 |Nível|Operadores|  
 |-----------|---------------|  

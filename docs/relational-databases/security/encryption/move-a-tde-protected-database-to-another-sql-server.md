@@ -13,18 +13,18 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521109"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590260"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
    
-##  <a name="Restrictions"></a> Limitações e restrições  
+##  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica devem ser instalados no banco de dados **mestre** do servidor de destino, de forma que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa acessar os arquivos do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -165,7 +165,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
      Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo** . Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Status**  
-     Exibe um dos seguintes estados: **Pronto** ou **Não pronto**.  
+     Exibe um dos estados a seguir: **Pronto** ou **Não pronto**.  
   
      **Mensagem**  
      A coluna **Mensagem** pode exibir informações sobre o banco de dados, da seguinte forma:  
@@ -233,7 +233,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
      **Remover**  
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     **"** *<database_name>* **" detalhes do banco de dados**  
+     **"** _<database_name>_ **" detalhes do banco de dados**  
      Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (**...**).  
   
     > [!NOTE]  

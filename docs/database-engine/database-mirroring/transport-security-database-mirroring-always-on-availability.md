@@ -20,12 +20,12 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47986d4615a6cc9425c8547fecd9527731072d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19f3748634b86bcb4419f96a8abae36a72f20f88
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695684"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589210"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Segurança do transporte – espelhamento de banco de dados – disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47695684"
 ##  <a name="Authentication"></a> Autenticação  
  Autenticação é o processo de verificar se um usuário é quem o usuário diz ser. Conexões entre pontos de extremidade espelhamento de banco de dados requerem autenticação. Exigências de conexão de um parceiro ou testemunha, se existir, devem ser autenticadas.  
   
- O tipo de autenticação usado por uma instância do servidor para o espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é uma propriedade do ponto de extremidade do espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para pontos de extremidade do espelhamento de banco de dados: Autenticação do Windows (SSPI) e autenticação baseada em certificado.  
+ O tipo de autenticação usado por uma instância do servidor para o espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é uma propriedade do ponto de extremidade do espelhamento de banco de dados. Dois tipos de segurança do transporte estão disponíveis para os ponto de extremidade de espelhamento de banco de dados: A Autenticação do Windows (a interface SSPI) e autenticação baseada em certificado.  
   
 ### <a name="windows-authentication"></a>Autenticação do Windows  
  Sob autenticação do Windows, cada instância de servidor faz o logon para o outro lado usando as credenciais da conta de usuário do Windows sob o qual o processo está sendo executado. A Autenticação do Windows pode exigir configuração manual de contas de logon, como segue:  
@@ -52,15 +52,15 @@ ms.locfileid: "47695684"
   
 -   Se as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem executadas como serviços em diferentes contas de domínio (nos mesmos domínios ou em domínios confiáveis), o logon de cada conta deverá ser criado no **mestre** em cada uma das outras instâncias de servidor, e esse logon deverá receber permissões CONNECT no ponto de extremidade.  
   
--   Se as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem executadas como a conta de Serviço de Rede, o logon da conta de cada computador host (*DomainName***\\***ComputerName$*) deverá ser criado no **mestre** em cada um dos outros servidores e esse logon deverá receber permissões CONNECT no ponto de extremidade. Isso é porque uma instância de servidor em execução sob a conta de serviço de rede é autenticada usando a conta de domínio do computador host.  
+-   Se as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem executadas como conta de serviço de rede, o logon da conta de cada computador host(_DomainName_**\\**_ComputerName$_) deverá ser criado no **mestre** em cada um dos outros servidores e esse logon deverá receber permissões CONNECT no ponto de extremidade. Isso é porque uma instância de servidor em execução sob a conta de serviço de rede é autenticada usando a conta de domínio do computador host.  
   
 > [!NOTE]  
->  Para obter um exemplo de como configurar a sessão de espelhamento de banco de dados usando a Autenticação do Windows, consulte [Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Para obter um exemplo da configuração de uma sessão de espelhamento de banco de dados usando Autenticação do Windows, veja [. Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificados  
  Em algumas situações, como quando as instâncias de servidor não estão em domínios confiáveis ou quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver executando como um serviço local, a Autenticação do Windows é indisponível. Em tais casos, em vez de credenciais de usuário, são exigidos certificados para autenticar solicitações de conexão. O ponto de extremidade do espelhamento de cada instância de servidor deve ser configurado com seu próprio certificado localmente criado.  
   
- O método de criptografia é estabelecido quando o certificado é criado. Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre cuidadosamente os certificados que você usa.  
+ O método de criptografia é estabelecido quando o certificado é criado. Para obter mais informações, consulte [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre cuidadosamente os certificados que você usa.  
   
  Uma instância de servidor usa a chave privada de seu próprio certificado para estabelecer sua identidade ao configurar uma conexão. A instância de servidor que recebe a solicitação de conexão usa a chave pública do certificado do remetente para autenticar a identidade do remetente. Por exemplo, considere duas instâncias de servidor, Server_A e Server_B. Server_A usa sua chave privada para criptografar o cabeçalho da conexão antes de enviar uma solicitação de conexão a Server_B. Server_B usa a chave pública do certificado de Server_A para descriptografar o cabeçalho da conexão. Se o cabeçalho descriptografado estiver correto, Server_B saberá que o cabeçalho foi criptografado por Server_A, e a conexão é autenticada. Se o cabeçalho descriptografado estiver incorreto, Server_B saberá que a solicitação de conexão não é autêntica e recusará a conexão.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47695684"
   
 |Valor de ALGORITHM|Descrição|  
 |---------------------|-----------------|  
-|RC4|Especifica que o ponto de extremidade deve usar o algoritmo RC4. Esse é o padrão.<br /><br /> **\*\* Aviso \*\*** O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.|  
+|RC4|Especifica que o ponto de extremidade deve usar o algoritmo RC4. Esse é o padrão.<br /><br /> <strong>\*\* Aviso \*\*</strong> O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.|  
 |AES|Especifica que o ponto de extremidade deve usar o algoritmo AES.|  
 |AES RC4|Especifica que o dois pontos de extremidade negociarão por um algoritmo de criptografia com esse ponto de extremidade, dando preferência ao algoritmo AES.|  
 |RC4 AES|Especifica que o dois pontos de extremidade negociarão por um algoritmo de criptografia com esse ponto de extremidade, dando preferência ao algoritmo RC4.|  

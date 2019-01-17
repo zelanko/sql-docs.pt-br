@@ -30,12 +30,12 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29cdf6bcf1d79042b0469719341f823ba778dcdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761414"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979252"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ AS condition_expression
   
  Para obter um relatório sobre uma regra, use **sp_help**. Para exibir o texto de uma regra, execute **sp_helptext** com o nome da regra como o parâmetro. Para renomear uma regra, use **sp_rename**.  
   
- Uma regra deve ser removida com DROP RULE antes que uma nova com o mesmo nome seja criada, mas primeiro sua associação deve ser desfeita com **sp_unbindrule**. Para desassociar uma regra de uma coluna, use **sp_unbindrule**.  
+ Uma regra deve ser removida com DROP RULE antes que uma nova com o mesmo nome seja criada, e a regra deve ser desassociada usando **sp_unbindrule** antes de ser removida. Para desassociar uma regra de uma coluna, use **sp_unbindrule**.  
   
  Você pode associar uma nova regra a uma coluna ou tipo de dados sem desassociar a anterior; a nova regra substitui a anterior. As regras associadas a colunas sempre têm precedência a regras associadas a tipos de dados de alias. A associação de uma regra a uma coluna substitui a regra já associada ao tipo de dados de alias daquela coluna. Mas a associação de uma regra a um tipo de dados não substitui a regra associada à coluna daquele tipo de dados de alias. A tabela a seguir mostra a precedência em vigor quando as regras são associadas a colunas e a tipos de dados de alias nos quais já existem regras.  
   
@@ -109,7 +109,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>B. Criando uma regra com uma lista  
+### <a name="b-creating-a-rule-with-a-list"></a>b. Criando uma regra com uma lista  
  O exemplo a seguir cria uma regra que restringe os valores reais digitados na coluna ou colunas (às quais essa regra está associada) somente para aqueles listados na regra.  
   
 ```  

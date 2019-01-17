@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506409"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980002"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -158,7 +158,7 @@ Exemplo: `LOCATION = 'hdfs://10.10.10.10:8020'`
 Para o Armazenamento de Blobs do Azure com Hadoop, especifica o URI para conectar-se ao Armazenamento de Blobs do Azure.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb[s]: especifica o protocolo para o Armazenamento de Blobs do Azure. [s] é opcional e especifica uma conexão SSL segura. Os dados enviados do SQL Server são criptografados com segurança pelo protocolo SSL. É altamente recomendável usar 'wasbs' em vez de 'wasb'. Observe que o local pode usar asv[s] em vez de wasb[s]. A sintaxe de asv[s] foi preterida e será removida em uma versão futura.  
-contêiner: especifica o nome do contêiner de Armazenamento de Blobs do Azure. Para especificar o contêiner raiz de uma conta de armazenamento do domínio, use o nome de domínio em vez do nome do contêiner. Os contêineres raiz são somente leitura, portanto, os dados não podem ser gravados no contêiner.  
+container: especifica o nome do contêiner de Armazenamento de Blobs do Azure. Para especificar o contêiner raiz de uma conta de armazenamento do domínio, use o nome de domínio em vez do nome do contêiner. Os contêineres raiz são somente leitura, portanto, os dados não podem ser gravados no contêiner.  
 account_name: o FQDN (nome de domínio totalmente qualificado) da conta de Armazenamento do Azure.  
 Exemplo: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Para obter um tutorial passo a passo sobre o RDBMS, confira [Introdução às consultas entre bancos de dados (particionamento vertical)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Esse tipo é usado apenas para operações em massa, `LOCATION` precisa ser uma URL válida para o contêiner e o Armazenamento de Blobs do Azure. Não coloque **/**, nome de arquivo ou parâmetros de Assinatura de Acesso Compartilhado no final da URL de `LOCATION`. `CREADENTIAL` será necessário se o objeto de blob não é público. Por exemplo: 
+Esse tipo é usado apenas para operações em massa, `LOCATION` precisa ser uma URL válida para o contêiner e o Armazenamento de Blobs do Azure. Não coloque **/**, nome de arquivo ou parâmetros de Assinatura de Acesso Compartilhado no final da URL de `LOCATION`. `CREDENTIAL` será necessário se o objeto de blob não é público. Por exemplo: 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -321,7 +321,7 @@ Para o PolyBase, quando RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION for de
 
 Para garantir o sucesso das consultas do PolyBase no caso de failover do NameNode do Hadoop, considere usar um endereço IP virtual para o NameNode do cluster do Hadoop. Se você não usar um endereço IP virtual para o NameNode do Hadoop, no caso de um failover do NameNode do Hadoop, será necessário efetuar ALTER EXTERNAL DATA SOURCE no objeto para apontar para o novo local.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Todas as fontes de dados definidas no mesmo local do cluster do Hadoop precisam usar a mesma configuração de RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION. Se houver inconsistência, ocorrerá um erro de tempo de execução.  
   
  Se o cluster do Hadoop for configurado com um nome e a fonte de dados externa usar o endereço IP do local do cluster, o PolyBase ainda precisará ser capaz de resolver o nome do cluster quando a fonte de dados for usada. Para resolver o nome, você precisa habilitar um encaminhador de DNS.  
@@ -343,7 +343,7 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Criar uma fonte de dados externa para referenciar o Hadoop com pushdown habilitado  
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>b. Criar uma fonte de dados externa para referenciar o Hadoop com pushdown habilitado  
 Especifique a opção RESOURCE_MANAGER_LOCATION para habilitar o pushdown de computação para o Hadoop em consultas do PolyBase. Quando essa opção estiver habilitada, o PolyBase usará uma decisão baseada em custo para determinar se a computação da consulta deve ser enviada por push para o Hadoop ou se todos os dados devem ser movidos para processar a consulta no SQL Server.
   
 ```sql  
@@ -401,7 +401,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>Exemplos: Banco de Dados SQL do Azure
+## <a name="examples-azure-sql-database"></a>Exemplos: Banco de dados SQL do Azure
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Criar uma fonte de dados externa do gerenciador de mapa de fragmentos
 Para criar uma fonte de dados externa para referenciar um SHARD_MAP_MANAGER, especifique o nome do servidor lógico que hospeda o gerenciador de mapa de fragmentos no Banco de Dados SQL do Azure ou em banco de dados do SQL Server em uma máquina virtual do Azure.
@@ -442,7 +442,7 @@ WITH (
 );
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>Exemplos: SQL Data Warehouse do Azure
+## <a name="examples-azure-sql-data-warehouse"></a>Exemplos: Azure SQL Data Warehouse
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Criar uma fonte de dados externa para referenciar o Azure Data Lake Store
 A conectividade do Azure Data Lake Store baseia-se no URI do ADLS e na entidade de serviço do aplicativo do Azure Active Directory. A documentação para criar esse aplicativo pode ser encontrada em [Autenticação do Data Lake Store usando o Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
@@ -491,7 +491,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-bulk-operations"></a>Exemplos: operações em massa   
+## <a name="examples-bulk-operations"></a>Exemplos: Operações em Massa   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure.   
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Use a seguinte fonte de dados para operações em massa com [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). A credencial usada, deve ser criada usando `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de validade deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   

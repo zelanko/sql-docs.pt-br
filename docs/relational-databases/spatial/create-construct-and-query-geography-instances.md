@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 52b121f7b56032856d2c844c230b915069bf69ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660726"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980372"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Criar, construir e consultar instâncias de geografia
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "51660726"
 ###  <a name="gml"></a> Construindo uma instância de geografia de entrada de texto GML  
  O tipo de dados **geography** oferece um método que gera uma instância **geography** de GML, uma representação XML de uma instância **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
   
- Para obter mais informações sobre Geography Markup Language, veja a Especificação do OGC: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Para obter mais informações sobre Geography Markup Language, veja a especificação do OGC: [Especificações OGC, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **Para construir qualquer tipo de instância de geografia de entrada GML**  
  [GeomFromGML &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
@@ -232,41 +232,44 @@ ms.locfileid: "51660726"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a SRID padrão de 4326, que é mapeada para o sistema de referência espacial WGS 84 ao usar métodos nas instâncias **geography** . Se você usar dados de um sistema de referência espacial diferente de WGS 84 (ou SRID 4326), será necessário determinar o SRID específico de seus dados espaciais de geografia.  
   
 ##  <a name="examples"></a> Exemplos  
- Os exemplos a seguir mostram como adicionar e consultar dados de geografia.  
+Os exemplos a seguir mostram como adicionar e consultar dados de geografia.  
   
--   O primeiro exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geography` `GeogCol1`. Uma terceira coluna renderiza a coluna de `geography` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geography`e uma linha que contém uma instância de `Polygon` .  
+### <a name="example-a"></a>Exemplo A. 
+Este exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geography`, `GeogCol1`. Uma terceira coluna renderiza a coluna de `geography` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geography`e uma linha que contém uma instância de `Polygon` .  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeogCol1 geography,   
-        GeogCol2 AS GeogCol1.STAsText() );  
-    GO  
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeogCol1 geography,   
+    GeogCol2 AS GeogCol1.STAsText()
+   );  
+GO  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
-    GO  
-    ```  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
+GO  
+```  
   
--   O segundo exemplo usa o método `STIntersection()` para retornar os pontos onde as duas instâncias de `geography` inseridas anteriormente se cruzam.  
+### <a name="example-b"></a>Exemplo B.
+Este exemplo usa o método `STIntersection()` para retornar os pontos em que as duas instâncias de `geography` inseridas anteriormente se cruzam.  
   
-    ```  
-    DECLARE @geog1 geography;  
-    DECLARE @geog2 geography;  
-    DECLARE @result geography;  
+```sql  
+DECLARE @geog1 geography;  
+DECLARE @geog2 geography;  
+DECLARE @result geography;  
   
-    SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geog1.STIntersection(@geog2);  
-    SELECT @result.STAsText();  
-    ```  
+SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geog1.STIntersection(@geog2);  
+SELECT @result.STAsText();  
+```  
   
 ## <a name="see-also"></a>Consulte Também  
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

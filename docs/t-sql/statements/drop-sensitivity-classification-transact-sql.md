@@ -25,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 075615be9adac78aa59e6dfad1934fc4d7993bf3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 82bd6847bd50d8ba43795f56deab4a6f08cc29cc
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392981"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980102"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DESCARTAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## <a name="permissions"></a>Permissões  
 
-Requer a permissão ALTERAR QUALQUER CLASSIFICAÇÃO DE CONFIDENCIALIDADE. ALTERAR QUALQUER CLASSIFICAÇÃO DE CONFIDENCIALIDADE está implícita na permissão de banco de dados ALTERAR, ou pelo servidor de permissão SERVIDOR DE CONTROLE.
+Requer a permissão ALTERAR QUALQUER CLASSIFICAÇÃO DE CONFIDENCIALIDADE. A ALTER ANY SENSITIVITY CLASSIFICATION está implícita na permissão de banco de dados ALTER ou pelo servidor de permissão CONTROL SERVER.
 
 
 ## <a name="examples"></a>Exemplos  
@@ -79,7 +79,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price
 ```
 
-### <a name="b-dropping-classification-from-multiple-columns"></a>B. Descartar a classificação de várias colunas
+### <a name="b-dropping-classification-from-multiple-columns"></a>b. Descartar a classificação de várias colunas
 
 O exemplo a seguir remove a classificação das colunas `dbo.sales.price`, `dbo.sales.discount`, e `SalesLT.Customer.Phone`.  
 

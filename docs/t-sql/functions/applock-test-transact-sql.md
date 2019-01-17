@@ -22,12 +22,12 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ca73ac4f7283ac8bbcfb7490a9554ea49c9bcfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe1b71d95dd326eedbdf481c68a74d30c052c6f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749234"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980182"
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 O usuário, a função ou a função de aplicativo que pode receber permissões para objetos no banco de dados. Para chamar a função com êxito, o chamador da função deve ser membro de *database_principal*, dbo, ou a função de banco de dados fixa db_owner.
   
 **'** *resource_name* **'**  
-Um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir um nome do recurso exclusivo. O nome especificado passa internamente por hash, tornando-se um valor que o gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar internamente.  *resource_name* é **nvarchar(255)**, sem nenhum padrão. *resource_name* é comparado com binário comparado e diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.
+Um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir um nome do recurso exclusivo. O nome especificado passa internamente por hash, tornando-se um valor que o gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar internamente.  *resource_name* é **nvarchar(255)**, sem nenhum padrão. *resource_name* é comparado com binário comparado e diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação do banco de dados atual.
   
 **'** *lock_mode* **'**  
-O modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)**, sem nenhum valor padrão. *lock_mode* pode ter qualquer um destes valores: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+O modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)**, sem nenhum valor padrão. O *lock_mode* pode ter qualquer um destes valores: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
 O proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)** e o valor pode ser **Transaction** (o padrão) ou **Session**. Se o padrão ou **Transaction** for especificado explicitamente, APPLOCK_TEST deverá ser executado de uma transação.

@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a876ec35e7cd11b8ac127606bb2e4e7c2c6e2c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 16fa50a7e3dc6b6b2ee86dfcd79f0aa311d9071d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018211"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978873"
 ---
 # <a name="point"></a>Ponto
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,21 +32,24 @@ ms.locfileid: "51018211"
  O tipo de Ponto para o tipo de dados geometry representa um único local onde *X* representa a coordenada X do Ponto que é gerado e *Y* representa a coordenada de Y do Ponto que é gerado. *SRID* representa a ID de referência espacial da instância **geometry** que você deseja retornar.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma instância `geometry Point`que representa o ponto (3, 4) com um SRID de 0.  
+### <a name="example-a"></a>Exemplo A.
+O exemplo a seguir cria uma instância `geometry Point`que representa o ponto (3, 4) com um SRID de 0.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT (3 4)', 0);  
 ```  
   
- O próximo exemplo cria uma instância de `geometry``Point` que representa o ponto (3, 4) com um valor Z (elevação) de 7, um valor M (medida) de 2,5 e o SRID padrão de 0.  
+### <a name="example-b"></a>Exemplo B.
+O exemplo a seguir cria uma instância de `geometry``Point` que representa o ponto (3, 4) com um valor Z (elevação) de 7, um valor M (medida) de 2,5 e o SRID padrão de 0.  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- O exemplo final retorna os valores X, Y, Z e M para a instância `geometry``Point` .  
+### <a name="example-c"></a>Exemplo C.
+O exemplo a seguir retorna os valores X, Y, Z e M para a instância `geometry``Point`.  
   
 ```  
 SELECT @g.STX;  
@@ -55,7 +58,8 @@ SELECT @g.Z;
 SELECT @g.M;  
 ```  
   
- Podem ser especificados valores Z e M como NULL, conforme mostrado no exemplo a seguir.  
+### <a name="example-d"></a>Exemplo D.
+Podem ser especificados valores Z e M como NULL, conforme mostrado no exemplo a seguir.  
   
 ```  
 DECLARE @g geometry;  

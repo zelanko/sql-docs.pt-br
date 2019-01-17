@@ -3,27 +3,27 @@ title: Arquivos do include da documentação do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614754"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731953"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Arquivos do include do SQL Server para controle de versão e applies-to
 
-As referências na documentação podem ser facilmente modificadas sem alterar o texto real de artigos individuais usando arquivos do include no Markdown. Há três tipos de arquivos do include no universo de conteúdo do SQL: versão do SQL, applies-to e texto referencial. **Os includes da versão do SQL** são usados para indicar a versão do SQL em discussão, como o SQL Server 2016 ou 2017. Os **includes do applies-to** indica a quais serviços e produtos do SQL o documento se aplica, como o SQL Server em Linux ou no Banco de Dados SQL do Azure. Os **includes de texto referencial** não se enquadram nas outras duas categorias, como um include “Get Help”, uma lista de links que os clientes podem usar para obter ajuda com o SQL.
+As referências na documentação podem ser facilmente modificadas sem alterar o texto real de artigos individuais usando arquivos do include no Markdown. Há três tipos de arquivos de inclusão no mundo de conteúdo do SQL: versão do SQL, aplica-se-a e texto referencial. Os arquivos include da **versão do SQL Server** são usados para indicar a versão do SQL em discussão, como o SQL Server 2016 ou 2017. Os arquivos include **applies-to** indicam a quais serviços e produtos do SQL o documento se aplicam, como SQL Server em Linux ou Banco de Dados SQL do Azure. Os arquivos include de **texto referencial** não se enquadram nas outras duas categorias, como um include "Obter Ajuda", uma lista de links que os clientes podem usar para obter ajuda com o SQL Server.
 
-Este artigo se destina a ser usado como um ponto de referência para os primeiros dois tipos de includes. Você pode procurar a lista completa de arquivos do include no [repositório sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
+Este artigo se destina a ser usado como um ponto de referência para os primeiros dois tipos de arquivos include. Você pode procurar a lista completa de arquivos do include no [repositório sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
-## <a name="sql-server-version-includes"></a>Includes da versão do SQL Server
+## <a name="sql-server-version-include-files"></a>Arquivos include da versão do SQL Server
 
 Os criadores de conteúdo SQL frequentemente precisam incluir o nome do produto e a versão do SQL Server. Dessa forma, se houver alguma alteração no nome, o arquivo do include será atualizado em vez de atualizar manualmente o valor em cada artigo. Esses arquivos do include são usados como espaços reservados para nomes de produtos, mas não foram usados de forma consistente em toda a documentação do SQL. SQL Server vNext se refere à versão futura do SQL que ainda não tem um número de versão e é a exceção dessa regra.  
 
@@ -41,9 +41,9 @@ Os criadores de conteúdo SQL frequentemente precisam incluir o nome do produto 
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server (não específico à versão)
+## <a name="sql-server-applies-to-non-version-specific"></a>Applies-to do SQL Server (não específico de versão)
 
-Esses includes do applies-to omitem a versão do SQL Server.
+Esses arquivos include applies-to omitem a versão do SQL Server.
 
 | Nome do Arquivo| Exemplo de Markdown |image|
 | :-------------| :----------| :-------------------|
@@ -63,9 +63,9 @@ Esses includes do applies-to omitem a versão do SQL Server.
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server (específico à versão)
+## <a name="sql-server-applies-to-version-specific"></a>Applies-to do SQL Server (específico de versão)
 
-Esses includes do applies-to especificam a quais versões do SQL a documentação se aplica.
+Esses arquivos include applies-to especificam a quais versões do SQL a documentação se aplica.
 
  Nome do Arquivo| Exemplo de Markdown |image|
 | :-------------| :----------| :-------------------|
@@ -107,9 +107,9 @@ Esses includes do applies-to especificam a quais versões do SQL a documentaçã
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="analysis-services-applies-to"></a>Applies-to do Analysis Services
 
-Esses includes do applies-to são usados com a documentação do Analysis Services.
+Esses arquivos include applies-to são usados com a documentação do Analysis Services.
 
 | Nome do Arquivo| Exemplo de Markdown |image|
 | :-------------| :----------| :-------------------|
@@ -124,9 +124,9 @@ Esses includes do applies-to são usados com a documentação do Analysis Servic
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Reporting Services
+## <a name="reporting-services-applies-to"></a>Applies-to do Reporting Services
 
-Esses includes do applies-to são usados com a documentação do Reporting Services.
+Esses arquivos include applies-to são usados com a documentação do Reporting Services.
 
 | Nome do Arquivo| Exemplo de Markdown |image|
 | :-------------| :----------| :-------------------|

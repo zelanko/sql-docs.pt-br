@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072040"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979732"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -92,7 +92,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>Remarks  
 Use DBCC FREEPROCCACHE para limpar o cache do plano cuidadosamente. A limpeza do cache (plano) de procedimento faz com que todos os planos sejam removidos e as execuções de consulta de entrada compilarão um novo plano, em vez de reutilizar um plano anteriormente armazenado em cache. 
 
-Isso pode causar uma queda repentina e temporária no desempenho da consulta conforme o número de novas compilações aumenta. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+Isso pode causar uma queda repentina e temporária no desempenho da consulta conforme o número de novas compilações aumenta. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 As seguintes operações de reconfiguração também são limpas no cache de procedimento:
 -   contagem de bucket do cache de verificação de acesso  
@@ -113,7 +113,7 @@ As seguintes operações de reconfiguração também são limpas no cache de pro
 -   opções de usuário  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Quando a cláusula WITH NO_INFOMSGS não for especificada, DBCC FREEPROCCACHE retornará: "Execução do DBCC concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
+Quando a cláusula WITH NO_INFOMSGS não estiver especificada, DBCC FREEPROCCACHE retornará: "A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
   
 ## <a name="permissions"></a>Permissões  
 Aplica-se a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -171,7 +171,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Limpando todos os planos do cache do plano  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>b. Limpando todos os planos do cache do plano  
 O exemplo a seguir limpa todos os elementos do cache do plano. A cláusula WITH `NO_INFOMSGS` é especificada para impedir a exibição da mensagem informativa.
   
 ```sql  

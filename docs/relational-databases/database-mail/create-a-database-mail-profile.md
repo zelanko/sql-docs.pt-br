@@ -15,22 +15,22 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558723"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980442"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](database-mail-configuration-objects.md).
   
--   **Antes de começar:** [Pré-requisitos](#Prerequisites), , [Segurança](#Security)  
+-   **Antes de começar:** [Pré-requisitos](#Prerequisites), [Segurança](#Security)  
   
--   **Para criar um perfil privado do Database Mail usando:**  [Assistente para Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Para criar um perfil privado do Database Mail usando:**  [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Para criar um perfil público do Database Mail usando:**  [Assistente para Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Para criar um perfil público do Database Mail usando:**  [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558723"
   
 -   Na página **Gerenciar Perfis e Contas** , selecione a opção **Criar um novo perfil** e clique em **Avançar**.  
   
--   Na página **Novo Perfil** , especifique o nome do Perfil, a Descrição e adicione contas a serem incluídas no perfil; depois, clique em **Avançar**.  
+-   Na página **Novo Perfil**, especifique o nome do Perfil, a Descrição e adicione contas a serem incluídas no perfil; depois, clique em **Avançar**.  
   
 -   Na página **Concluir o Assistente** , examine as ações a serem executadas e clique em **Concluir** para concluir a criação de um novo perfil.  
   

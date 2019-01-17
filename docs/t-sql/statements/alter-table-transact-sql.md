@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 56dff4af5345359e5da37e4aae355f5c56b8228a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503649"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980472"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -733,7 +733,7 @@ Para obter mais informações, consulte [Como funcionam as operações de índic
   
  Especifica o local para onde mover as linhas de dados atualmente no nível folha do índice clusterizado. A tabela é movida para o novo local. Esta opção se aplica apenas a restrições que criam um índice clusterizado.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e deve ser delimitado, como em MOVE TO **"** default **"** ou MOVE TO **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 { CHECK | NOCHECK } CONSTRAINT  
@@ -897,7 +897,7 @@ Todas as opções se aplicam a uma tabela com um índice clusterizado. Se a tabe
  Habilita ou desabilita as restrições definidas pelo sistema em uma FileTable. Pode ser usado apenas com uma FileTable.  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILETABLE`.  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILETABLE`.  
   
  Especifica o nome do diretório de FileTable compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação do SQL. Pode ser usado apenas com uma FileTable.  
 ```    
@@ -1119,7 +1119,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO  
 ```  
   
-#### <a name="b-adding-a-column-with-a-constraint"></a>B. Adicionando uma coluna com uma restrição  
+#### <a name="b-adding-a-column-with-a-constraint"></a>b. Adicionando uma coluna com uma restrição  
  O exemplo a seguir adiciona uma nova coluna com uma restrição `UNIQUE`.  
   
 ```sql  
@@ -1345,7 +1345,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;  
 ```  
   
-#### <a name="b-dropping-constraints-and-columns"></a>B. Descartando restrições e colunas  
+#### <a name="b-dropping-constraints-and-columns"></a>b. Descartando restrições e colunas  
  O primeiro exemplo remove uma restrição `UNIQUE` de uma tabela. O segundo exemplo remove duas restrições e uma única coluna.  
   
 ```sql  
@@ -1421,7 +1421,7 @@ DROP TABLE dbo.doc_exy ;
 GO  
 ```  
   
-#### <a name="b-changing-the-size-of-a-column"></a>B. Alterando o tamanho de uma coluna  
+#### <a name="b-changing-the-size-of-a-column"></a>b. Alterando o tamanho de uma coluna  
  O exemplo a seguir aumenta o tamanho de uma coluna **varchar** e a precisão e escala de uma coluna **decimal**. Como essas colunas contêm dados, o tamanho da coluna só pode ser aumentado. Além disso, observe que `col_a` está definido como um índice exclusivo. O tamanho de `col_a` ainda pode ser aumentado, pois o tipo de dados é um **varchar** e o índice não é o resultado de uma restrição PRIMARY KEY.  
   
 ```sql  
@@ -1528,7 +1528,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
   
  Para obter exemplos de compactação de dados adicionais, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. Modificando uma tabela columnstore para alterar a compactação de arquivamento  
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>b. Modificando uma tabela columnstore para alterar a compactação de arquivamento  
  O exemplo a seguir compacta ainda mais uma partição de tabela columnstore aplicando um algoritmo de compactação adicional. Isso reduz a tabela para um tamanho menor, mas também aumenta o tempo necessário para armazenamento e recuperação. Isso pode ser útil para fins de arquivamento, ou em outras situações que exijam menos espaço e possam dispensar mais tempo para armazenamento e recuperação.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -1636,7 +1636,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;  
 ```  
   
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. Desabilitando e reabilitando um gatilho  
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>b. Desabilitando e reabilitando um gatilho  
  O exemplo a seguir usa a opção `DISABLE TRIGGER` de `ALTER TABLE` para desabilitar o gatilho e permitir uma inserção que normalmente violaria o gatilho. `ENABLE TRIGGER` é usado para reabilitar o gatilho.  
   
 ```sql  
@@ -1690,7 +1690,7 @@ REBUILD WITH
 ;  
 ```  
   
-#### <a name="b-online-alter-column"></a>B. Alteração online de coluna  
+#### <a name="b-online-alter-column"></a>b. Alteração online de coluna  
  O exemplo a seguir mostra como executar uma operação de alteração de coluna com a opção ONLINE.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -1730,7 +1730,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));  
 ```  
   
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. Migrar uma solução existente para usar o controle de versão do sistema  
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>b. Migrar uma solução existente para usar o controle de versão do sistema  
  O exemplo a seguir mostra como migrar para o controle de versão do sistema de uma solução que usa gatilhos para imitar simular o suporte temporal. O exemplo supõe que há uma solução existente que usa uma tabela `ProjectTask` e uma tabela `ProjectTaskHistory` para a solução existente, que usa as colunas `Changed Date` e `Revised Date` para seus períodos, que essas colunas de período não usam o datatype `datetime2` e se que a tabela `ProjectTask` tem uma chave primária definida.  
 
 ```sql  
@@ -1799,7 +1799,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';  
 ```  
   
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. Determinando os valores de limite para uma tabela particionada  
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>b. Determinando os valores de limite para uma tabela particionada  
  A consulta a seguir retorna os valores de limite para cada partição na tabela `FactResellerSales` .  
   
 ```sql  
@@ -1944,7 +1944,7 @@ WITH
 |4|Sim|'2006-01-01'<= OrderDate < '2007-01-01'|  
 |5|Sim|'2007-01-01' <= OrderDate|  
   
--   A partição 1 (tem dados): OrderDate < '2004-01-01'  
+-   Partição 1 (tem dados): OrderDate < '2004-01-01'  
 -   Partição 2 (tem dados): '2004-01-01' <= OrderDate < '2005-01-01'  
 -   Partição 3 (tem dados): '2005-01-01' <= OrderDate< '2006-01-01'  
 -   Partição 4 (tem dados): '2006-01-01'<= OrderDate < '2007-01-01'  
@@ -1987,7 +1987,7 @@ ALTER TABLE Orders SWITCH PARTITION 1 TO OrdersHistory PARTITION 1;
   
  Tabela `OrdersHistory`  
   
--   A partição 1 (tem dados): OrderDate < '2004-01-01'  
+-   Partição 1 (tem dados): OrderDate < '2004-01-01'  
 -   Partição 2 (vazia): '2004-01-01' <= OrderDate  
   
 Para limpar a tabela `Orders`, você pode remover a partição vazia mesclando partições 1 e 2 da seguinte maneira:  
@@ -2000,7 +2000,7 @@ ALTER TABLE Orders MERGE RANGE ('2004-01-01');
   
  Tabela `Orders`  
   
--   A partição 1 (tem dados): OrderDate < '2005-01-01'  
+-   Partição 1 (tem dados): OrderDate < '2005-01-01'  
 -   Partição 2 (tem dados): '2005-01-01' <= OrderDate< '2006-01-01'  
 -   Partição 3 (tem dados): '2006-01-01'<= OrderDate < '2007-01-01'  
 -   Partição 4 (tem dados): '2007-01-01' <= OrderDate  
@@ -2015,7 +2015,7 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
   
  Tabela `OrdersHistory`  
   
--   A partição 1 (tem dados): OrderDate < '2004-01-01'  
+-   Partição 1 (tem dados): OrderDate < '2004-01-01'  
 -   Partição 2 (vazia): '2004-01-01' < '2005-01-01'  
 -   Partição 3 (vazia): '2005-01-01' <= OrderDate  
   

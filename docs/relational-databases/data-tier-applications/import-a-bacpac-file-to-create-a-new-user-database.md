@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521238"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590680"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52521238"
 2.  A importação em massa copia os dados do arquivo de exportação.  
   
 ## <a name="sql-server-utility"></a>Utilitário do SQL Server  
- Se você importar um DAC para uma instância gerenciada do Mecanismo de Banco de Dados, o DAC importado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle do utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
+ Se você importar um DAC para uma instância do Mecanismo de Banco de Dados, o DAC importado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle do utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
   
 ## <a name="database-options-and-settings"></a>Opções e configurações de banco de dados  
  Por padrão, o banco de dados criado durante a importação terá todas as configurações padrão da instrução CREATE DATABASE; a única diferença é que a ordenação de banco de dados e o nível de compatibilidade são definidos como os valores estabelecidos no arquivo de exportação do DAC. Um arquivo de exportação do DAC usa os valores do banco de dados original.  
@@ -59,7 +59,7 @@ ms.locfileid: "52521238"
  Recomendamos que você não importe um arquivo de exportação do DAC de fontes desconhecidas ou não confiáveis. Esses arquivos podem conter código mal-intencionado que possivelmente executarão códigos Transact-SQL inesperados ou provocarão erros ao modificar o esquema. Antes de usar um arquivo de exportação de uma fonte desconhecida ou não confiável, desempacote o DAC e examine o código, como procedimentos armazenados e outro código definido pelo usuário. Para obter mais informações sobre como executar essas verificações, consulte [Validar um pacote de DAC](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Segurança  
- Para melhorar a segurança, os logons de Autenticação do SQL Server são armazenados em um arquivo de exportação do DAC sem nenhuma senha. Quando o arquivo é importado, o logon é criado como um logon desabilitado com uma senha gerada. Para habilitar os logons, faça logon usando um logon que tenha a permissão de ALTER ANY LOGIN e use ALTER LOGIN para habilitar o logon e atribuir uma nova senha que possa ser comunicada ao usuário. Isso não é necessário para logons de Autenticação do Windows porque suas senhas não são gerenciadas pelo SQL Server.  
+ Para melhorar a segurança, os logons de Autenticação do SQL Server são armazenados em um arquivo de exportação do DAC sem nenhuma senha. Quando o arquivo é importado, o logon é criado como um logon desabilitado com uma senha gerada. Para habilitar os logons, entre usando um logon que tenha a permissão de ALTER ANY LOGIN e use ALTER LOGIN para habilitar o logon e atribuir uma nova senha que possa ser comunicada ao usuário. Isso não é necessário para logons de Autenticação do Windows porque suas senhas não são gerenciadas pelo SQL Server.  
   
 ## <a name="permissions"></a>Permissões  
  Um DAC pode ser importado somente pelos membros das funções de servidor fixas **sysadmin** ou **serveradmin** , ou por logons que estejam na função de servidor fixa **dbcreator** e que tenham permissões ALTER ANY LOGIN. A conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamada **sa** também pode importar um DAC. A importação de um DAC com logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções loginmanager ou serveradmin. A importação de um DAC sem logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige a associação nas funções dbmanager ou serveradmin.  
@@ -101,9 +101,9 @@ ms.locfileid: "52521238"
   
 -   **Importar do disco local** – clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
--   **Importar do Azure** – importa um arquivo BACPAC de um contêiner do Microsoft Azure. É necessário se conectar a um contêiner do Microsoft Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. O arquivo temporário será criado no local especificado e permanecerá lá após a conclusão da operação.  
+-   **Importar do Azure** – importa um arquivo BACPAC de um contêiner do Microsoft Azure. É necessário se conectar a um contêiner do Microsoft Azure para validar esta opção. Observe que a opção Importar do Azure também exige que você especifique um diretório local para o arquivo temporário. O arquivo temporário será criado no local especificado e permanecerá lá após a conclusão da operação.  
   
-     Ao procurar o Azure, você poderá mudar entre contêineres em uma única conta. Você deve especificar um único arquivo .bacpac para continuar a operação de importação. Observe que você pode classificar colunas por **Nome**, **Tamanho**ou **Data da Modificação**.  
+     Ao procurar o Azure, você poderá mudar entre contêineres em uma única conta. Você deve especificar um único arquivo .bacpac para continuar a operação de importação. Você pode classificar colunas por **Nome**, **Tamanho** ou **Data da Modificação**.  
   
      Para continuar, especifique o arquivo .bacpac a ser importado e clique em **Abrir**.  
   
@@ -122,8 +122,8 @@ ms.locfileid: "52521238"
   
  **Para um Banco de Dados SQL do Azure:**  
   
- - **[Importar um arquivo BACPAC para criar um novo banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** fornece instruções passo a passo sobre como usar o portal do Azure, PowerShell, SSMS ou SqlPackage.  
- - Consulte **[Opções e desempenho do Banco de Dados SQL: Entender o que está disponível em cada camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** para obter uma visão detalhada das diferentes camadas de serviço.  
+ - **[Importar um arquivo BACPAC para criar um novo Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** fornece instruções passo a passo sobre como usar o portal do Azure, PowerShell, SSMS ou SqlPackage.  
+ - Consulte **[Opções e desempenho de Banco de Dados SQL: compreenda o que está disponível em cada camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** para uma visão detalhada de diferentes camadas de serviço.  
 
 ### <a name="validation-page"></a>Página de Validação  
  Use esta página para revisar os problemas que bloqueiam a operação. Para continuar, resolva os problemas de bloqueio e clique em **Executar Novamente a Validação** para verificar se a validação foi bem-sucedida.  

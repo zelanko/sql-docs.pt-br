@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7a09c5653fe89528c49ade19e044066acfb34cd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 55316e61b2690e56949e7fff3fe209e9b02fa0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403701"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979302"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52403701"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  STBuffer() calcula um buffer da mesma maneira que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), especificando *tolerance* = abs(distance) \* 0,001 e *relative* = **false**.  
@@ -63,7 +63,7 @@ ms.locfileid: "52403701"
   
  O limite de distância máximo permite que a construção do buffer seja a mais flexível possível.  
   
- O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que, tolerance = distance \* 0,001. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que tolerance = distância \* 0,001. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `LineString``geography`. Em seguida, usa `STBuffer()` para retornar a região dentro de 1 metro da instância.  

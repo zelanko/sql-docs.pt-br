@@ -18,15 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 93386da795d7e993c0d23c70625290cc8901d8bc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586249"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589970"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
 > [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -98,7 +98,7 @@ WHERE RTRIM(value) <> '';
   
 STRING_SPLIT retornará a cadeia de caracteres vazia se não houver nada entre o separador. A condição RTRIM(value) <> '' removerá tokens vazios.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Dividir uma cadeia de caracteres de valores separados por vírgula em uma coluna  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>b. Dividir uma cadeia de caracteres de valores separados por vírgula em uma coluna  
 A tabela Product tem uma coluna com uma lista separada por vírgula de marcas mostradas no seguinte exemplo:  
   
 |ProductId|Nome|Marcas|  
@@ -126,6 +126,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > A ordem da saída pode variar, uma vez que _não_ há garantia de que a ordem corresponda à ordem das subcadeias de caracteres na cadeia de entrada.
   
 ### <a name="c-aggregation-by-values"></a>C. Agregação por valores  
 Os usuários precisam criar um relatório que mostra o número de produtos por marca, ordenado pelo número de produtos, e filtrar apenas as marcas com mais de dois produtos.  
@@ -153,12 +156,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 Localize produtos com duas marcas especificadas (clothing e road):  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>E. Localizar linhas pela lista de valores  

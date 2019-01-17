@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697320"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589630"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@** *local_variable*  
+ **@** _local_variable_  
  É o nome de uma variável de qualquer tipo, exceto **cursor**, **text**, **ntext**, **image** ou **table**. Os nomes de variável devem começar com um sinal de arroba (**@**). Os nomes de variável devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  Especifica um método de um tipo de dados CLR definido pelo usuário. Para um método de instância (não estático), use um ponto (**.**). Para um método estático, use dois sinais de dois-pontos (**::**). Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  É um método de um tipo definido pelo usuário que obtém um ou mais argumentos para modificar o estado de uma instância de um tipo. Os métodos estáticos devem ser públicos.  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  É uma variável cujo tipo está localizado em um assembly. Para obter mais informações, consulte [Conceitos de programação da Integração CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -127,7 +127,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Especifica que a instrução SET contém uma declaração de um cursor.  
   
  SCROLL  
- Especifica que o cursor oferece o suporte para todas as opções de busca: FIRST, LAST, NEXT, PRIOR, RELATIVE e ABSOLUTE. SCROLL não pode ser especificado quando FAST_FORWARD também está especificado.  
+ Especifica que o cursor oferece suporte a todas as opções de busca: FIRST, LAST, NEXT, PRIOR, RELATIVE e ABSOLUTE. SCROLL não pode ser especificado quando FAST_FORWARD também está especificado.  
   
  FORWARD_ONLY  
  Especifica que o cursor oferece suporte somente para a opção FETCH NEXT. O cursor pode ser recuperado somente em uma direção, da primeira para a última linha. Quando FORWARD_ONLY está especificado sem as palavras-chave STATIC, KEYSET ou DYNAMIC, o cursor é implementado como DYNAMIC. Quando FORWARD_ONLY ou SCROLL não estiverem especificados, FORWARD_ONLY será o padrão; a não ser que as palavras-chave STATIC, KEYSET ou DYNAMIC estejam especificadas. Para os cursores STATIC, KEYSET e DYNAMIC, SCROLL é o padrão.  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  As variáveis podem ser usadas somente em expressões, não em nomes de objeto ou palavras-chave. Para construir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] dinâmicas, use EXECUTE.  
   
- As regras de sintaxe para SET **@***cursor_variable* não incluem as palavras-chave LOCAL e GLOBAL. Quando a sintaxe SET **@***cursor_variable* = CURSOR... é usada, o cursor é criado como GLOBAL ou LOCAL, dependendo da configuração padrão da opção de banco de dados do cursor local.  
+ As regras de sintaxe para SET**@**_cursor_variable_ não incluem as palavras-chave LOCAL e GLOBAL. Quando a sintaxe SET**@**_cursor_variable_ = CURSOR… é usada, o cursor é criado como GLOBAL ou LOCAL, dependendo da configuração padrão da opção de banco de dados do cursor local.  
   
  As variáveis de cursor sempre são locais, mesmo se fizerem referência a um cursor global. Quando uma variável de cursor faz referência a um cursor global, o cursor tem as duas referências, uma global e uma local. Para obter mais informações, veja o Exemplo C.  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Não use uma variável em uma instrução SELECT para concatenar valores (ou seja, para computar valores agregados). Resultados inesperados de consulta podem ocorrer. Isso ocorre porque todas as expressões na lista SELECT (incluindo atribuições) não têm garantia de serem executadas exatamente uma vez para cada linha de saída. Para obter mais informações, consulte o [este artigo da base de dados](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função public. Todos os usuários podem usar SET **@***local_variable*.  
+ Requer associação à função public. Todos os usuários podem usar SET **@**_local_variable_.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -203,7 +203,7 @@ SELECT @myvar;
 GO  
 ```  
   
-### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. Usando uma variável local que atribuiu um valor usando a instrução SET em uma instrução SELECT  
+### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>b. Usando uma variável local que atribuiu um valor usando a instrução SET em uma instrução SELECT  
  O exemplo a seguir cria uma variável local chamada `@state` e usa essa variável em uma instrução `SELECT` para localizar o nome e o sobrenome de todos os funcionários que moram no estado de `Oregon`.  
   
 ```  

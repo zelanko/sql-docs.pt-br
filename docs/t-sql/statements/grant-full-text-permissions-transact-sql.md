@@ -19,12 +19,12 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4222a9175e9c5ae1b813d87d67fcc8a34170249a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13cb528700007174c20c5c6881b64a9c4282f036
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714434"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589411"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>Permissões de texto completo GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_nome_do_catálogo_de_texto_completo_  
  Especifica o catálogo de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é obrigatório.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_nome_da_lista_de_palavras_irrelevantes_de_texto_completo_  
  Especifica a lista de palavras irrelevantes de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
@@ -142,7 +142,7 @@ GRANT CONTROL
     TO Ted ;  
 ```  
   
-### <a name="b-granting-permissions-to-a-stoplist"></a>B. Concedendo permissões a uma lista de palavras irrelevantes  
+### <a name="b-granting-permissions-to-a-stoplist"></a>b. Concedendo permissões a uma lista de palavras irrelevantes  
  O seguinte exemplo concede a `Mary` a permissão `VIEW DEFINITION` na lista de palavras irrelevantes de texto completo `ProductStoplist`.  
   
 ```  

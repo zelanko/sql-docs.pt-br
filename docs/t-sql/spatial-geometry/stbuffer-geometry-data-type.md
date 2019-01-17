@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702794"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979472"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  O `STBuffer()` calcula um buffer, como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), especificando *tolerance* = distance \* 0,001 e *relative* = **false**.  
@@ -67,7 +67,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
   
  Um buffer negativo remove todos os incluídos na distância especificada do limite da geometria.  
   
- O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que, tolerance = distance \* 0,001. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que tolerance = distância \* 0,001. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -79,7 +79,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Chamando STBuffer() com parameter_value < 0 em uma instância de Polygon  
+### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>b. Chamando STBuffer() com parameter_value < 0 em uma instância de Polygon  
  O exemplo a seguir retorna uma instância `Polygon` com um buffer negativo:  
   
 ```

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711497"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626395"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
@@ -105,7 +105,7 @@ Depois de habilitar o repositório de consultas, atualize a parte do banco de da
   
 ![Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS") ![Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS") 
   
-Selecione **Consultas Regredidas** para abrir o painel **Consultas Regredidas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Use as caixas suspensas na parte superior para filtrar consultas com base em diversos critérios: **Duração (ms)** (Padrão), Tempo de CPU (ms), Leituras Lógicas (KB), Gravações Lógicas (KB), Leituras Físicas (KB), Tempo do CLR (ms), DOP, Consumo de Memória (KB), Contagem de Linhas, Registro de Memória Usada (KB) Memória Usada pelo BD Temporário (KB) e o Tempo de Espera (ms).  
+Selecione **Consultas Regredidas** para abrir o painel **Consultas Regredidas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Use as caixas de listas suspensas na parte superior para filtrar consultas com base em vários critérios: **Duração (ms)** (Padrão), Tempo de CPU (ms), Leituras Lógicas, Gravações Lógicas (KB), Leituras Físicas (KB), Tempo CLR (ms), DOP, Consumo de Memória (KB), Contagem de Linhas, Memória de Log Usada (KB), Memória de BD Temporária Usada (KB) e Tempo de Espera (ms).  
 Selecione um plano para ver o plano de consulta gráfico. Há botões disponíveis para exibir a consulta de origem, para forçar e não forçar um plano de consulta, para alternar entre os formatos de grade e gráfico, para comparar os planos selecionados (se houver mais de um selecionado) e para atualizar a exibição.  
   
 ![Consultas Regredidas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas Regredidas do SQL Server 2016 no Pesquisador de Objetos do SSMS")  
@@ -239,7 +239,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```  
   
  > [!NOTE]
- > Não são permitidos valores arbitrários para `INTERVAL_LENGTH_MINUTES`. Use um dos seguintes: 1, 5, 10, 15, 30, 60 ou 1440 minutos.  
+ > Não são permitidos valores arbitrários para `INTERVAL_LENGTH_MINUTES`. Use um dos seguintes: 1, 5, 10, 15, 30, 60 ou 1.440 minutos.  
   
  O novo valor do intervalo é exposto por meio da exibição **sys.database_query_store_options** .  
   

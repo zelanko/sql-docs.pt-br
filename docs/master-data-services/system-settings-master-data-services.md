@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -15,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
+ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507280"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738112"
 ---
 # <a name="system-settings-master-data-services"></a>Configurações do sistema (Master Data Services)
 
@@ -78,7 +77,7 @@ ms.locfileid: "52507280"
 |**Registrar em log todas as transações de preparação**|**StagingTransactionLogging**|Aplica-se somente ao SQL Server 2008 R2. Determina se as transações serão registradas em log quando os registros de preparação forem carregados no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . O valor padrão é **Off** or **2**. Altere para **On** ou **1** para ativar o registro em log.|  
 |**Intervalo do lote de preparação**|**StagingBatchInterval**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número de segundos depois que você seleciona **Iniciar Lotes** para que seu lote seja processado. O valor padrão é **60** segundos (1 minuto).|  
   
- Para obter mais informações, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Para obter mais informações, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="Explorer"></a> Configurações do Gerenciador  
   
@@ -113,7 +112,7 @@ ms.locfileid: "52507280"
 |**URL do Master Data Manager para notificações**|**MDMRootURL**|A URL do aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que é usada no link em notificações por email; por exemplo, `https://constoso/mds`.|  
 |**Intervalo de emails de notificação**|**NotificationInterval**|A frequência, em segundos, de envio de emails de notificação. O valor padrão é **120** segundos (2 minutos).|  
 |**Número de notificações em um único email**|**NotificationsPerEmail**|O número máximo de problemas de validação que serão listados em um único email de notificação. Problemas adicionais, caso existam, não serão incluídos no email, mas estarão disponíveis no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Formato de email padrão**|**EmailFormat**|O formato de todas as notificações por email. O valor padrão é **HTML** or **1**. A configuração de banco de dados **2** indica **Texto**.<br /><br /> Observação: você pode substituir isso por um usuário individual no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], alterando e salvando o **Formato de email** na guia **Geral** do usuário.|  
+|**Formato de email padrão**|**EmailFormat**|O formato de todas as notificações por email. O valor padrão é **HTML** or **1**. A configuração de banco de dados **2** indica **Texto**.<br /><br /> Observação: Você pode substituir isso por um usuário individual no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], alterando e salvando o **Formato de email** na guia **Geral** do usuário.|  
 |**Expressão regular para endereço de email**|**EmailRegExPattern**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , a expressão regular usada para validar o endereço de email inserido na guia **Geral** do usuário. Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](https://go.microsoft.com/fwlink/?LinkId=164401) na biblioteca do MSDN.|  
 |**Conta do Database Mail**|**EmailProfilePrincipalAccount**|Exibe a conta do Database Mail a ser usada ao enviar notificações por email. O perfil padrão é **mds_email_user**.|  
 |**Perfil do Database Mail**|**DatabaseMailProfile**|O perfil do Database Mail a ser usado ao enviar notificações por email. O valor padrão é vazio.|  
@@ -129,6 +128,11 @@ ms.locfileid: "52507280"
 |Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , a frequência, em segundos, com que as permissões de usuário e grupo definidas na guia **Membros da Hierarquia** são aplicadas. O valor padrão é **3600** segundos (60 minutos).|  
+
+##  <a name="Performance"></a> Configurações de Desempenho  
+|Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
+|-----------------------------------|--------------------|-----------------|  
+|**Habilitar configuração de melhoria de desempenho**|**PerformanceImprovementEnable**|O padrão é habilitar essa configuração (**Definido como 1**), de modo que a página relacionada à permissão de carregar tenha um bom desempenho. Mas, nessa situação, criar/modificar entidades, atributos, usuários ou grupos terá um baixo desempenho. Para evitar isso, você pode desabilitar essa configuração (**Definido como 0**). Depois de alterar essa configuração. Você deve executar o comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" para que a exibição e os dados estejam corretos.|  
   
  Para obter mais informações, consulte [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

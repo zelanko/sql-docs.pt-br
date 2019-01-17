@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537778"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980412"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -184,13 +184,13 @@ ALTER INDEX { index_name | ALL }
   
 |Usando a palavra-chave ALL com esta operação|Falhará se a tabela tiver um ou mais|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice Columnstore: **aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|REBUILD WITH ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice columnstore: **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |REBUILD PARTITION = *partition_number*|Índice não particionado, índice XML, índice espacial ou índice desabilitado|  
 |REORGANIZE|Índices com ALLOW_PAGE_LOCKS definido como OFF|  
 |REORGANIZE PARTITION = *partition_number*|Índice não particionado, índice XML, índice espacial ou índice desabilitado|  
-|IGNORE_DUP_KEY = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice Columnstore: **aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
-|ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice Columnstore: **aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
-|RESUMABLE = ON  | Índices retomáveis não são compatíveis com a palavra-chave **All**. <br /><br /> **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
+|IGNORE_DUP_KEY = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice columnstore: **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice columnstore: **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|RESUMABLE = ON  | Índices retomáveis não são compatíveis com a palavra-chave **All**. <br /><br /> **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  Para obter mais informações sobre operações de índice que podem ser executadas online, consulte [Diretrizes para operações de índice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -218,7 +218,7 @@ ALTER INDEX { index_name | ALL }
 > [!NOTE]
 >  Ao recriar um índice XML primário, a tabela de usuário subjacente não estará disponível durante a operação de índice.  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Para índices columnstore, a operação de recompilação:  
   
@@ -232,7 +232,7 @@ ALTER INDEX { index_name | ALL }
   
 PARTITION  
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica que somente uma partição de um índice será recriada ou reorganizada. PARTITION não poderá ser especificado se *index_name* não for um índice particionado.  
   
@@ -243,13 +243,13 @@ PARTITION
   
  *partition_number*  
    
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  É o número de partição de um índice particionado que será reconstruído ou reorganizado. *partition_number* é uma expressão de constante que pode fazer referência a variáveis. Isso inclui variáveis de tipo definido pelo usuário ou funções e funções definidas pelo usuário, mas não é possível fazer referência a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number* deve existir ou a instrução falhará.  
   
  WITH **(**\<single_partition_rebuild_index_option>**)**  
    
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  SORT_IN_TEMPDB, MAXDOP e DATA_COMPRESSION são as opções que podem ser especificadas ao recriar uma única partição (PARTITION = *n*). Índices XML não podem ser especificados em uma única operação de recriação de partição.  
   
@@ -300,7 +300,7 @@ Para índices columnstore em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+ **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS fornece uma maneira de forçar os rowgroups delta OPEN ou CLOSED para o columnstore. Com essa opção, não é necessário recompilar o índice columnstore para esvaziar os rowgroups delta.  Isso, combinado a outros recursos de desfragmentação de remover e mesclar, faz com que não seja mais necessário recompilar o índice na maioria das situações.    
 
@@ -313,7 +313,7 @@ SET **(** \<set_index option> [ **,**... *n*] **)**
   
 PAD_INDEX = { ON | OFF }  
    
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica o preenchimento do índice. O padrão é OFF.  
   
@@ -327,7 +327,7 @@ PAD_INDEX = { ON | OFF }
   
 FILLFACTOR = *fillfactor*  
  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Especifica uma porcentagem que indica quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou alteração do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. O padrão é 0. Os valores de fator de preenchimento 0 e 100 são iguais em todos os aspectos.  
   
@@ -340,7 +340,7 @@ FILLFACTOR = *fillfactor*
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica se os resultados de classificação devem ser armazenados em **tempdb**. O padrão é OFF.  
   
@@ -396,7 +396,7 @@ FILLFACTOR = *fillfactor*
 -   Estatísticas criadas em tabelas internas.  
 -   Estatísticas criadas com índices espaciais ou índices XML.  
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  ONLINE **=** { ON | **OFF** } \<conforme se aplica a rebuild_index_option>  
  Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF.  
@@ -426,7 +426,7 @@ FILLFACTOR = *fillfactor*
 
 RESUMABLE **=** { ON | **OFF**}
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  Especifica se uma operação de índice online é retomável.
 
@@ -436,13 +436,13 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**] usado com **RESUMABLE = ON** (requer **ONLINE = ON**).
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Indica o tempo (um valor inteiro especificado em minutos) pelo qual um uma operação de índice online retomável é executada antes de ser colocada em pausa. 
 
 ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica se bloqueios de linha são permitidos. O padrão é ON.  
   
@@ -454,7 +454,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
   
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Especifica se bloqueios de página são permitidos. O padrão é ON.  
   
@@ -469,7 +469,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  MAXDOP **=** max_degree_of_parallelism  
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação do índice. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
@@ -516,13 +516,13 @@ O padrão é 0 minuto.
   
  COLUMNSTORE  
    
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE especifica a descompactação do índice ou partições especificadas compactadas com a opção COLUMNSTORE_ARCHIVE. Quando os dados forem restaurados, eles continuarão sendo compactados através da compactação columnstore usada em todos os índices columnstore.  
   
  COLUMNSTORE_ARCHIVE  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE_ARCHIVE compactará ainda mais a partição especificada para um tamanho menor. Isso pode ser usado para fins de arquivamento, ou em outras situações que exijam menos armazenamento e possam dispensar mais tempo para armazenamento e recuperação.  
   
@@ -530,13 +530,13 @@ O padrão é 0 minuto.
   
  ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
  Especifica as partições às quais se aplica a configuração DATA_COMPRESSION. Se o índice não for particionado, o argumento ON PARTITIONS irá gerar um erro. Se a cláusula ON PARTITIONS não for fornecida, a opção DATA_COMPRESSION será aplicada a todas as partições de um índice particionado.  
   
  \<partition_number_expression> pode ser especificado das seguintes maneiras:  
   
--   Forneça o número para uma partição, por exemplo: ON PARTITIONS (2).  
+-   Forneça o número de uma partição, por exemplo: ON PARTITIONS (2).  
   
 -   Forneça os números de várias partições individuais separados por vírgulas, por exemplo: ON PARTITIONS (1, 5).  
   
@@ -569,19 +569,19 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  WAIT_AT_LOW_PRIORITY usado com **ONLINE=ON** apenas.  
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Uma recriação de índice online precisa aguardar as operações de bloqueio nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recompilação do índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. Omitir a opção **WAIT AT LOW PRIORITY** é equivalente a WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutos, ABORT_AFTER_WAIT = NONE). Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *time* [**MINUTES**]  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  O tempo (um valor inteiro especificado em minutos) que a opção ou os bloqueios de recompilação de índice online deverão aguardar com baixa prioridade ao executar o comando DDL. Se a operação for bloqueada por **MAX_DURATION**, uma das ações de **ABORT_AFTER_WAIT** será executada. O tempo **MAX_DURATION** está sempre em minutos e a palavra **MINUTES** pode ser omitida.  
  
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Nenhuma  
  Continue aguardando o bloqueio com prioridade normal.  
@@ -594,33 +594,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Aplica-se a:** começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
+**Aplica-se ao**: A partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
 
 Retome uma operação de índice que seja esteja em pausa manualmente ou devido a uma falha.
 
 MAX_DURATION usado com **RESUMABLE=ON**
 
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 O tempo (um valor de inteiro especificado em minutos) pelo qual a operação de índice online é executada após ser retomada. Quando o tempo expirar, a operação retomável será colocada em pausa se ainda estiver em execução.
 
 WAIT_AT_LOW_PRIORITY usado com **RESUMABLE=ON** e **ONLINE = ON**.  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  Retomar uma recompilação de índice online após uma pausa precisa esperar as operações de bloqueio nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recompilação do índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. Omitir a opção **WAIT AT LOW PRIORITY** é equivalente a WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutos, ABORT_AFTER_WAIT = NONE). Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSE
  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
 Pause uma operação de recompilação de índice online retomável.
 
 ABORT
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
 Anule uma operação de índice em execução ou em pausa declarada como retomável. Você precisa executar explicitamente uma operação **ABORT** para terminar uma operação de recompilação de índice retomável. Falha ou pausar uma operação de índice retomável não termina sua execução; em vez disso, deixa a operação em um estado de pausa indefinido.
   
@@ -710,7 +710,7 @@ Todas as outras operações de índice online executadas ao mesmo tempo falham. 
 
 ### <a name="resumable-indexes"></a>Operações de índice retomáveis
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Online index rebuild é especificado como retomável usando a opção RESUMABLE=ON. 
 -  A opção RESUMABLE não persiste nos metadados para um determinado índice e se aplica somente à duração de uma instrução DDL atual. Portanto, a cláusula RESUMABLE = ON deve ser especificada explicitamente para habilitar a capacidade de retomada.
@@ -789,7 +789,7 @@ ALTER INDEX ALL ON table1 REBUILD;
 ALTER INDEX ALL ON dbo.table1 REBUILD;  
 ```
 
-## <a name="examples-columnstore-indexes"></a>Exemplos: índices Columnstore  
+## <a name="examples-columnstore-indexes"></a>Exemplos: Índices columnstore  
  Estes exemplos se aplicam a índices columnstore.  
   
 ### <a name="a-reorganize-demo"></a>A. Demonstração de REORGANIZE  
@@ -840,7 +840,6 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
@@ -871,7 +870,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Compactar rowgroups delta CLOSED para o columnstore  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>b. Compactar rowgroups delta CLOSED para o columnstore  
  Este exemplo usa a opção REORGANIZE para compactar cada rowgroup delta CLOSED para o columnstore como um rowgroup compactado.   Isso não é necessário, mas é útil quando o motor de tupla não está compactando rowgroups CLOSED com rapidez suficiente.  
   
 ```sql  
@@ -884,7 +883,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Compactar todos os rowgroups delta OPEN AND CLOSED para o columnstore  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+ **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  O comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compacta cada rowgroup delta OPEN e CLOSED para o columnstore como um rowgroup compactado. Isso esvazia o deltastore e força todas as linhas a serem compactadas no columnstore. Isso é útil principalmente depois de executar várias operações de inserção, já que essas operações armazenam as linhas em um ou mais rowgroups delta.  
   
@@ -914,7 +913,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 ```  
   
 ### <a name="e-rebuild-a-clustered-columnstore-index-offline"></a>E. Recompilar um índice columnstore clusterizado offline  
-Aplica-se a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
+Aplica-se a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
 > [!TIP]
 > Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], é recomendável usar ALTER INDEX REORGANIZE, em vez de ALTER INDEX REBUILD.  
@@ -953,7 +952,7 @@ SELECT * FROM sys.column_store_row_groups;
  Os resultados da instrução SELECT mostram que o rowgroup está COMPACTADO, o que significa que os segmentos de coluna do rowgroup agora estão compactados e armazenados no columnstore.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Recompilar uma partição de um índice columnstore clusterizado offline  
- **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
  Para recompilar uma partição de um índice columnstore clusterizado grande, use ALTER INDEX REBUILD com a opção de partição. Este exemplo recompila a partição 12. Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é recomendável substituir a REBUILD por REORGANIZE.  
   
@@ -997,7 +996,7 @@ WITH (DATA_COMPRESSION = COLUMNSTORE);
 GO  
 ```  
   
-## <a name="examples-rowstore-indexes"></a>Exemplos: índices Rowstore  
+## <a name="examples-rowstore-indexes"></a>Exemplos: Índices Rowstore  
   
 ### <a name="a-rebuilding-an-index"></a>A. Recriando um índice  
  O exemplo a seguir recompila um único índice na tabela `Employee` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -1006,10 +1005,10 @@ GO
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Recriando todos os índices de uma tabela e especificando opções  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>b. Recriando todos os índices de uma tabela e especificando opções  
  O exemplo a seguir especifica a palavra-chave ALL. Isso recompila todos os índices associados à tabela Production.Product no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Três opções são especificadas.  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1018,7 +1017,7 @@ REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON)
   
 O exemplo a seguir adiciona a opção ONLINE que inclui a opção de bloqueio de baixa prioridade e adiciona a opção de compactação de linha.  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1033,16 +1032,16 @@ REBUILD WITH
 ```  
   
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. Reorganizando um índice com a compactação LOB  
- O exemplo a seguir reorganiza um único índice clusterizado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Como o índice contém um tipo de dados LOB no nível folha, a instrução também compacta todas as páginas que contêm dados de objeto grande. Observe que não é necessário especificar a opção WITH (LOB_COMPACTION) porque o valor padrão é ON.  
+ O exemplo a seguir reorganiza um único índice clusterizado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Como o índice contém um tipo de dados LOB no nível folha, a instrução também compacta todas as páginas que contêm dados de objeto grande. Observe que não é necessário especificar a opção WITH (LOB_COMPACTION = ON) porque o valor padrão é ON.  
   
 ```sql  
-ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
+ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);  
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. Definindo opções em um índice  
  O exemplo a seguir define várias opções no índice `AK_SalesOrderHeader_SalesOrderNumber` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
@@ -1097,7 +1096,7 @@ GO
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. Recriando um índice particionado  
  O exemplo a seguir recompila uma única partição, número de partição `5`, do índice particionado `IX_TransactionHistory_TransactionDate` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A partição 5 é recriada online e os 10 minutos do tempo de espera para o bloqueio de baixa prioridade se aplica separadamente a cada bloqueio pela operação de recriação de índice. Se durante esse tempo o bloqueio não puder ser obtido para recriação de índice completo, a instrução da operação de recriação será anulada.  
   
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 -- Verify the partitioned indexes.  
@@ -1127,7 +1126,7 @@ Para obter exemplos de compactação de dados adicionais, consulte [Compactaçã
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Recompilação de índice online retomável
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  Os exemplos a seguir mostram como usar a recompilação de índice online de retomável. 
 

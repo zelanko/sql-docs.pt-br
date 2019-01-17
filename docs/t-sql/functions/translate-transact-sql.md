@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617427"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980112"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ Retorna uma expressão de caractere do mesmo tipo de dados que `inputString`, em
 
 `TRANSLATE` retornará um erro se as expressões *characters* e *translations* tiverem tamanhos diferentes. `TRANSLATE` retornará NULL se qualquer um dos argumentos for NULL.  
 
-O comportamento da função `TRANSLATE` é equivalente ao uso de várias funções [REPLACE](../../t-sql/functions/replace-transact-sql.md).
+O comportamento da função `TRANSLATE` é semelhante ao uso de várias funções [REPLACE](../../t-sql/functions/replace-transact-sql.md). `TRANSLATE` não, no entanto, substitui um caractere de mais de uma vez. Isso é diferente para várias funções `REPLACE`, já que o uso de cada uma substituiria todos os caracteres relevantes. 
+
 
 `TRANSLATE` sempre reconhece a ordenação SC.
 
@@ -97,7 +98,7 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. Converter pontos GeoJSON em WKT    
+###  <a name="b-convert-geojson-points-into-wkt"></a>b. Converter pontos GeoJSON em WKT    
 GeoJSON é um formato de codificação de uma variedade de estruturas de dados geográficos. Com a função `TRANSLATE`, os desenvolvedores podem converter com facilidade pontos GeoJSON no formato WKT e vice-versa. A seguinte consulta substitui chaves e colchetes na entrada por chaves normais:   
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
@@ -110,6 +111,20 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 |Ponto  |Coordenadas |  
 ---------|--------- |
 (137.4 72.3) |[137.4, 72.3] |
+
+
+### <a name="c-use-the-translate-function"></a>C. Use a função TRANSLATE
+
+```sql
+SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
+       REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
+```
+
+Os resultados são:
+
+| Traduzido | Substituído |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 
 ## <a name="see-also"></a>Consulte Também

@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 1b25f4ecde0a80aef19e94b2d1f1b572529bcfd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e4d5dbd9f7b419437481acb3306fc88a237fcc5d
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412683"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732063"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Server ou no Banco de Dados SQL do Azure com o SSIS (SQL Server Integration Services)
 
@@ -176,7 +175,7 @@ Parabéns! Você conseguiu usar o SQL Server Integration Services para carregar 
 
 - Saiba como depurar e solucionar problemas de pacotes diretamente no ambiente de design. Comece aqui: [Ferramentas de solução de problemas para desenvolvimento de pacotes][Troubleshooting Tools for Package Development].
 
-- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece aqui: [Implantação de projetos e pacotes][Deployment of Projects and Packages].
+- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece aqui: [Implantação de Projetos e Pacotes][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

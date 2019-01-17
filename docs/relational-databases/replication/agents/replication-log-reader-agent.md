@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c4d5921b96afa532b5aede49de83d949f555f0a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9a3d92e91ec16bf51566575c235271bf69bbd72a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409143"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590324"
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,25 +70,25 @@ logread [-?]
  **-?**  
  Exibe informações de uso.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
   
  **-Continuous**  
  Especifica se o agente tenta ou não sondar transações replicadas continuamente. Se especificado, o agente sondará as transações replicadas da origem em intervalos de sondagem, mesmo que não haja transações pendentes.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar os valores de argumentos que contêm caracteres arbitrários.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  É o nome de logon do Distribuidor.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  É a senha do Distribuidor.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -108,7 +108,7 @@ logread [-?]
  
  Para obter mais informações, consulte [Visão geral da segurança &#40;Replicação&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
- **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
+ **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Especifica o caminho e o nome do arquivo de configuração XML de eventos estendidos. O arquivo de configuração de eventos estendidos permite configurar sessões e habilitar eventos para acompanhamento.  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
@@ -120,27 +120,27 @@ logread [-?]
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
 |**2**|Insira novos registros de histórico, a menos que o registro seja para coisas como mensagens ociosas ou mensagens de trabalho de execução longa; em tal caso, atualize os registros anteriores.|  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  É o número de segundos antes que o thread de histórico verifique se alguma das conexões existentes está esperando por uma resposta do servidor. Esse valor pode ser diminuído para evitar que o agente de verificação marque o Agente de Leitor de Log como suspeito ao executar um lote de execução longa. O padrão é 300 segundos.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  É o número de segundos antes que o logon expire. O padrão é 15 segundos.  
   
- **-LogScanThreshold** *scan_threshold*  
+ **-LogScanThreshold** _scan_threshold_  
  Somente para uso interno.  
   
- **-MaxCmdsInTran** *number_of_commands*  
+ **-MaxCmdsInTran** _number_of_commands_  
  Especifica o número máximo de instruções agrupadas em uma transação à medida que o Log Reader grava comandos no banco de dados de distribuição. O uso desse parâmetro permite que o Agente de Leitor de Log e o Agente de Distribuição divida grandes transações (consistindo em muitos comandos) no Publicador em várias transações menores quando aplicadas no Assinante. A especificação desse parâmetro pode reduzir a contenção no Distribuidor e pode reduzir a latência entre o Publicador e o Assinante. Como a transação original é aplicada em unidades menores, o Assinante pode acessar linhas de uma transação lógica de Publicador antes do fim da transação original, O padrão é **0**, que preserva os limites de transação do Publicador.  
   
-> [!NOTE]  
->  Esse parâmetro é ignorado para publicações que não são do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte a seção que "Configurando o trabalho de conjunto das transações" em [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
+> [!NOTE]
+>  Esse parâmetro é ignorado para publicações que não são do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte a seção que "Configurando o trabalho de conjunto das transações" em [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
   
- **-MessageInterval** *message_interval*  
+ **-MessageInterval** _message_interval_  
  É o intervalo de tempo usado para registro de histórico. Um evento de histórico é registrado quando o valor **MessageInterval** é alcançado depois que o ultimo evento de histórico é registrado.  
   
  Se não houver nenhuma transação replicada disponível na origem, o agente informará uma mensagem de não transação ao Distributor. Essa opção especifica quanto tempo o agente espera antes de informar outro mensagem de não transação. O agente sempre informa uma mensagem de não transação quando detecta que não há transações disponíveis na origem após transações replicadas de processamento anterior. O padrão é 60 segundos.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
@@ -156,34 +156,34 @@ logread [-?]
   
  Os valores 2-4 são úteis na depuração.  
   
- **-PacketSize** *packet_size*  
+ **-PacketSize** _packet_size_  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  
   
- **-PollingInterval** *intervalo_de_sondagem*  
+ **-PollingInterval** _intervalo_de_sondagem_  
  É a frequência, em segundos, que o log é consultado para transações replicadas. O padrão é 5 segundos.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Especifica o modo de segurança do Publicador. Um valor de **0** indica Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (padrão), e um valor de **1** indica Modo de Autenticação do Windows.  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  É o nome de logon do Publicador.  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  É a senha do Publicador.  
   
- **-QueryTimeOut** *tempo_limite_da_consulta_em_segundos*  
+ **-QueryTimeOut** _tempo_limite_da_consulta_em_segundos_  
  É o número de segundos antes que a consulta expire. O padrão é 1800 segundos.  
   
- **-ReadBatchSize** *number_of_transactions*  
+ **-ReadBatchSize** _number_of_transactions_  
  É o número máximo de transações lidas de um log de transações do banco de dados de publicação por ciclo de processamento, com um padrão de 500. O agente continuará lendo transações em lotes até que todas as transações tenham sido lidas do log. Esse parâmetro não tem suporte para Publicadores Oracle.  
   
- **-ReadBatchThreshold** *number_of_commands*  
+ **-ReadBatchThreshold** _number_of_commands_  
  É o número de comandos de replicação a serem lidos no log de transações, antes de ser emitido para o Assinante pelo Agente de Distribuição. O padrão é 0. Se o parâmetro não for especificado, o Agente de Leitor de Log lerá até a parte final do log ou até o número especificado em **-ReadBatchSize** (número de transações).  
   
  **-RecoverFromDataErrors**  

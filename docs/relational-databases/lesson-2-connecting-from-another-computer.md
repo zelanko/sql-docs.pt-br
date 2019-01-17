@@ -11,14 +11,14 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520520"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589230"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: Conectando de outro computador
+# <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conectando de outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
   
@@ -56,7 +56,7 @@ Se você planejar conectar-se ao [!INCLUDE[ssDE](../includes/ssde-md.md)] de out
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**e clique em **Protocolos para** *<InstanceName>*.  
+2.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**e clique em **Protocolos para** _<InstanceName>_.  
   
     A instância padrão (uma instância sem nome) é listada como **MSSQLSERVER**. Se você instalou uma instância nomeada, o nome fornecido será listado. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] é instalado como **SQLEXPRESS**, a menos que o nome seja alterado durante a instalação.  
   
@@ -139,6 +139,6 @@ Para usar o Navegador do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 Isso conclui esse breve tutorial em conectividade básica.  
   
 ## <a name="return-to-tutorials-portal"></a>Retorne ao portal Tutoriais  
-[Tutorial: introdução ao Mecanismo de Banco de Dados](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Tutorial: Introdução ao Mecanismo de Banco de Dados](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

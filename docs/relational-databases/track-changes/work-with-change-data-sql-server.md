@@ -1,6 +1,6 @@
 ---
 title: Trabalhar com os dados de alteração (SQL Server) | Microsoft Docs
-ms.date: 03/03/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c55ff97602a2c56a54523c68b5ef76a832888676
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405231"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991889"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabalhar com dados de alterações (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Os dados de alteração ficam disponíveis para consumidores de Change Data Capture através das TVFs (funções com valor de tabela). Todas as consultas dessas funções exigem dois parâmetros para definir o intervalo de LSNs (números de sequência de log) qualificados para serem considerados no desenvolvimento do conjunto de dados retornado. Tanto o valor superior quanto o valor inferior do LSN indica que o limite do intervalo é considerado ao ser incluído no intervalo.  
   
  Muitas funções são fornecidas para ajudar a determinar os valores LSN apropriados para serem usados em uma consulta a uma TVF. A função [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) retorna o menor LSN associado a um intervalo de validade da instância de captura. O intervalo de validade é o intervalo de tempo durante o qual os dados de alteração ficam disponíveis para as instâncias de captura. A função [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) retorna o maior LSN no intervalo de validade. As funções [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) e [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) estão disponíveis para ajudar a colocar valores LSN em uma linha do tempo convencional. Como a captura de dados de alteração usa intervalos fechados, algumas vezes é necessário gerar o próximo valor LSN em uma sequência para garantir que as alterações não serão duplicadas em janelas de consulta consecutivas. As funções [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) e [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) são úteis quando é necessário um ajuste incremental em um valor LSN.  
@@ -73,7 +73,7 @@ ms.locfileid: "52405231"
     > [!NOTE]  
     >  Esta opção só terá suporte se a tabela de origem tiver uma chave primária definida ou se o parâmetro @index_name tiver sido usado para identificar um índice exclusivo.  
   
-     A função **netchanges** retorna uma alteração por linha modificada da tabela de origem. Se forem registradas mais de uma alteração para a linha durante o intervalo especificado, os valores da coluna refletirão o conteúdo final da linha. Para identificar corretamente a operação necessária para atualizar o ambiente de destino, a TVF deverá considerar tanto a operação inicial na linha durante o intervalo quanto a operação final na linha. Quando a opção de filtro de linha “all” for especificado, as operações retornadas por uma consulta **net changes** serão insert, delete ou update (novos valores). Esta opção sempre retorna a máscara de atualização como nula, pois há um custo associado ao cálculo de uma máscara de agregação. Caso queira uma máscara de agregação que reflita todas as alterações em uma linha, use a opção 'all with mask'. Se o processamento downstream não exigir que inserções e atualizações sejam diferenciadas, use a opção 'all with merge'. Nesse caso, a operação aceitará somente dois valores: 1 para exclusão e 5 para uma operação que pode ser uma inserção ou uma atualização. Esta opção elimina o processamento adicional necessário para determinar se a operação derivada deveria ser uma inserção ou uma atualização e pode melhorar o desempenho da consulta quando essa diferenciação não é necessária.  
+     A função **netchanges** retorna uma alteração por linha modificada da tabela de origem. Se forem registradas mais de uma alteração para a linha durante o intervalo especificado, os valores da coluna refletirão o conteúdo final da linha. Para identificar corretamente a operação necessária para atualizar o ambiente de destino, a TVF deverá considerar tanto a operação inicial na linha durante o intervalo quanto a operação final na linha. Quando a opção de filtro de linha “all” for especificado, as operações retornadas por uma consulta **net changes** serão insert, delete ou update (novos valores). Esta opção sempre retorna a máscara de atualização como nula, pois há um custo associado ao cálculo de uma máscara de agregação. Caso queira uma máscara de agregação que reflita todas as alterações em uma linha, use a opção 'all with mask'. Se o processamento downstream não exigir que inserções e atualizações sejam diferenciadas, use a opção 'all with merge'. Nesse caso, o valor da operação só vai levar dois valores: 1 para excluir e 5 para uma operação que pode ser uma inserção ou uma atualização. Esta opção elimina o processamento adicional necessário para determinar se a operação derivada deveria ser uma inserção ou uma atualização e pode melhorar o desempenho da consulta quando essa diferenciação não é necessária.  
   
  A máscara de atualização retornada de uma função de consulta é uma representação compacta que identifica todas as colunas que foram alteradas em uma linha de dados de alteração. Normalmente, essas informações são necessárias apenas para um pequeno subconjunto de colunas capturadas. Há funções disponíveis para ajudar a extrair informações da máscara em uma forma que seja mais diretamente utilizável por aplicativos. A função [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) retorna a posição ordinal de uma coluna nomeada relativa a uma dada instância de captura, ao passo que a função [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) retorna a paridade do bit da máscara fornecida com base no ordinal passado na chamada de função. Juntas, essas duas funções permitem que as informações da coluna atualizada sejam extraídas de maneira eficaz e retornadas com a solicitação de dados de alteração. Consulte o modelo Enumerar Alterações Delta Usando All With Mask para ver uma demonstração de como estas funções são utilizadas.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52405231"
   
  O nome da função usada para incluir a consulta de todas as alterações é fn_all_changes_ seguido pelo nome da instância de captura. O prefixo usado para o wrapper de alterações delta é fn_net_changes_. Ambas as funções usam três argumentos, assim como suas TVFs associadas do Change Data Capture. No entanto, o intervalo de consulta para os wrappers é vinculado por dois valores de data e hora, e não por dois valores LSN. O parâmetro @row_filter_option para os dois conjuntos de funções é o mesmo.  
   
- As funções de wrapper geradas dão suporte à seguinte convenção para percorrer sistematicamente a linha do tempo da alteração de captura de dados: espera-se que o parâmetro @end_time do intervalo anterior seja usado como o parâmetro @start_time do intervalo subsequente. A função de wrapper mapeia os valores de data e hora para valores LSN e assegura que nenhum dado seja perdido ou repetido se esta convenção for seguida.  
+ As funções de wrapper geradas dão suporte à seguinte convenção para percorrer sistematicamente a linha de tempo de captura de dados de alterações: Espera-se que o parâmetro @end_time do intervalo anterior seja usado como o parâmetro @start_time do intervalo subsequente. A função de wrapper mapeia os valores de data e hora para valores LSN e assegura que nenhum dado seja perdido ou repetido se esta convenção for seguida.  
   
  Os wrappers podem ser gerados para dar suporte a um limite superior fechado e a um limite superior aberto na janela de consulta especificada. Ou seja, o chamador pode especificar se as entradas que têm uma hora de confirmação igual ao limite superior do intervalo de extração devem ser incluídas no intervalo. Por padrão, o limite superior é incluído.  
   

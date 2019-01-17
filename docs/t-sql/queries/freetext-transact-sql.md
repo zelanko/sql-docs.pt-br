@@ -22,12 +22,12 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8638b820959174c872f731f9f418b03e241389ed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ffd987e0b695fdc0976706e4b6689a9e60527893
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699714"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991879"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51699714"
 > [!NOTE]  
 >  Para obter informações sobre os formatos de pesquisas de texto completo compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Consulta com a pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +74,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* é **nvarchar**. Uma conversão implícita acontece quando outro tipo de dados de caractere é usado como entrada. Os tipos de dados de cadeia de caracteres grande nvarchar(max) e varchar(max) não podem ser usados. No exemplo a seguir, a variável `@SearchWord`, que está definida como `varchar(30)`, causa uma conversão implícita no predicado `FREETEXT`.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -88,7 +88,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Como a "detecção de parâmetro" não funciona na conversão, use **nvarchar** para melhorar o desempenho. No exemplo, declare `@SearchWord` como `nvarchar(30)`.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -105,7 +105,7 @@ WHERE FREETEXT(Description, @SearchWord);
  LANGUAGE *language_term*  
  É o idioma cujos recursos serão usados para quebra de palavras, lematização e dicionário de sinônimos e remoção de palavras irrelevantes (stop words) como parte da consulta. Esse parâmetro é opcional e pode ser especificado como uma cadeia de caracteres, um inteiro ou um valor hexadecimal que corresponda ao LCID (identificador de localidade) de um idioma. Se *language_term* for especificado, o idioma que ele representa será aplicado a todos os elementos do critério de pesquisa. Se nenhum valor for especificado, o idioma de texto completo da coluna será usado.  
   
- Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificar *LANGUAGE**language_term* pode aumentar a probabilidade de uma boa correspondência.  
+ Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificar LANGUAGE *language_term* pode aumentar a probabilidade de uma boa correspondência.  
   
  Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna **alias** na exibição de compatibilidade [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
   
@@ -134,7 +134,7 @@ Consultas de texto completo que usam FREETEXT são menos precisas que consultas 
 ### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. Usando FREETEXT para pesquisar palavras que contêm valores de caracteres especificados  
  As pesquisas de exemplo a seguir para todos os documentos que contêm as palavras relacionadas a componentes vitais, de segurança.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Title  
@@ -143,10 +143,10 @@ WHERE FREETEXT (Document, 'vital safety components' );
 GO  
 ```  
   
-### <a name="b-using-freetext-with-variables"></a>B. Usando FREETEXT com variáveis  
+### <a name="b-using-freetext-with-variables"></a>b. Usando FREETEXT com variáveis  
  O exemplo a seguir usa uma variável em vez de um termo de pesquisa específico.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30);  

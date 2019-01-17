@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523549"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046576"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -55,7 +55,7 @@ Como alternativa, você pode instalar o SSMS em outro computador.
 >[!NOTE]
 >O computador do HGS não deve ser ingressado em um domínio antes de você começar.
 
-## <a name="step-1-configure-the-hgs-computer"></a>Etapa 1: configurar o computador do HGS
+## <a name="step-1-configure-the-hgs-computer"></a>Etapa 1: Configurar o computador do HGS
 
 Nesta etapa, você configurará o computador do HGS para executar o Serviço Guardião de Host, que dá suporte ao atestado de chave host.
 
@@ -87,7 +87,7 @@ Nesta etapa, você configurará o computador do HGS para executar o Serviço Gua
 >[!NOTE]
 >Como alternativa, se quiser se referir ao computador do HGS por um nome DNS, você pode configurar um encaminhador de seus servidores DNS corporativos para o novo controlador de domínio do HGS.  
 
-## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Etapa 2: configurar o computador do SQL Server como um host protegido
+## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Etapa 2: Configurar o computador do SQL Server como um host protegido
 Nesta etapa, você configurará o computador do SQL Server como um host protegido registrado com HGS usando atestado de chave host.
 >[!NOTE]
 >O atestado de chave host só é recomendado para uso em ambientes de teste. Você deve usar o atestado de TPM para ambientes de produção.
@@ -122,7 +122,8 @@ Nesta etapa, você configurará o computador do SQL Server como um host protegid
 7. No computador do SQL Server, execute o seguinte comando em um console do Windows PowerShell com privilégios elevados para indicar ao computador do SQL Server o local em que atestar. Verifique se você especificou o endereço IP ou o nome DNS do seu computador do HGS. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 O resultado do comando acima deve mostrar que AttestationStatus = Passed.
@@ -133,7 +134,7 @@ Um erro UnauthorizedHost indica que a chave pública não foi registrada com o s
 
 Se todo o resto falhar, execute Clear-HgsClientHostKey e repita as etapas 4 a 7.
 
-## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Etapa 3: habilitar o Always Encrypted com enclaves seguros no SQL Server
+## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Etapa 3: Habilitar o Always Encrypted com enclaves seguros no SQL Server
 
 Nesta etapa, você habilitará a funcionalidade de Always Encrypted usando enclaves na instância do SQL Server.
 
@@ -169,7 +170,7 @@ Nesta etapa, você habilitará a funcionalidade de Always Encrypted usando encla
     > [!NOTE]
     > Cálculos avançados são desabilitados por padrão no [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)]. Eles precisam ser habilitados usando a instrução acima após cada reinicialização de sua instância do SQL Server.
 
-## <a name="step-4-create-a-sample-database"></a>Etapa 4: criar banco de dados de exemplo
+## <a name="step-4-create-a-sample-database"></a>Etapa 4: Criar banco de dados de exemplo
 Nesta etapa você criará um banco de dados com alguns dados de exemplo, os quais você criptografará mais tarde.
 
 1. Conecte-se à instância do SQL Server usando o SSMS.
@@ -221,7 +222,7 @@ Nesta etapa você criará um banco de dados com alguns dados de exemplo, os quai
     GO
     ```
 
-## <a name="step-5-provision-enclave-enabled-keys"></a>Etapa 5: provisionar chaves habilitadas para enclave
+## <a name="step-5-provision-enclave-enabled-keys"></a>Etapa 5: Provisionar chaves habilitadas para enclave
 
 Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografia de coluna que permitirão cálculos de enclave.
 
@@ -229,7 +230,7 @@ Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografi
 2. No **Pesquisador de Objetos**, expanda o banco de dados e navegue até **Segurança** > **Chaves Always Encrypted**.
 3. Provisione uma nova chave mestra da coluna habilitada para enclave:
     1. Clique com o botão direito do mouse em **Chaves Always Encrypted** e selecione **Nova chave mestra da coluna...**.
-    2. Selecione o nome de sua chave mestra da coluna: CMK1.
+    2. Selecione o nome da chave mestra da coluna: CMK1.
     3. Certifique-se de selecionar **Repositório de certificados do Windows (usuário atual ou computador local)** ou **Azure Key Vault**.
     4. Selecione **Permitir computações de enclave**.
     5. Se tiver selecionado o Azure Key Vault, entre no Azure e selecione seu cofre de chaves. Para obter mais informações sobre como criar um cofre de chaves para Always Encrypted, veja [Gerenciar cofres de chaves do portal do Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
@@ -289,7 +290,7 @@ Nesta etapa, você criptografará os dados armazenados nas colunas SSN e Salári
     SELECT * FROM [dbo].[Employees]
     ```
 
-## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Etapa 7: executar consultas avançadas em colunas criptografadas
+## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Etapa 7: Executar consultas avançadas em colunas criptografadas
 
 Agora você pode executar consultas avançadas nas colunas criptografadas. Algum processamento de consulta será executado dentro de seu enclave do lado do servidor. 
 

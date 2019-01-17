@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: daaaa615a778314556f9684800bdc2a56cd7a5ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524321"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980142"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Especifica uma permissão que pode ser revogada em um grupo de disponibilidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Especifica o grupo de disponibilidade no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
   
  { FROM | TO } \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual a permissão está sendo revogada.  
@@ -114,7 +114,7 @@ REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Revogando a permissão TAKE OWNERSHIP com CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>b. Revogando a permissão TAKE OWNERSHIP com CASCADE  
  O exemplo a seguir revoga a permissão `TAKE OWNERSHIP` no grupo de disponibilidade `MyAg` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuário `PKomosinski` e de todas as entidades de segurança às quais o `PKomosinski` concedeu TAKE OWNERSHIP em MyAg.  
   
 ```  

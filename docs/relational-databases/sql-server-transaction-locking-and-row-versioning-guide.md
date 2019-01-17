@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511775"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980552"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52511775"
   
 -   Recursos de bloqueio que preservam o isolamento da transação.  
   
--   Recursos de log garantem a durabilidade da transação. Para transações completamente duráveis, o registro de log é protegido no disco antes da confirmação das transações. Assim, mesmo se o hardware do servidor, o sistema operacional ou a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] falharem, a instância usa os logs da transação ao reinicializar para reverter automaticamente qualquer transação incompleta até o ponto da falha do sistema. As transações duráveis atrasadas confirmar antes que o registro de log de transação é protegido no disco. Essas transações podem ser perdidas se houver uma falha do sistema antes de o registro de log ser protegido no disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
+-   Recursos de log garantem a durabilidade da transação. Para transações completamente duráveis, o registro de log é protegido no disco antes da confirmação das transações. Assim, mesmo se o hardware do servidor, o sistema operacional ou a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] falhar, a instância usará os logs de transações ao reinicializar para reverter automaticamente qualquer transação incompleta até o ponto da falha do sistema. As transações duráveis atrasadas confirmar antes que o registro de log de transação é protegido no disco. Essas transações podem ser perdidas se houver uma falha do sistema antes de o registro de log ser protegido no disco. Para obter mais informações sobre durabilidade de transações atrasadas, consulte o tópico [Durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
   
 -   Recursos de administração de transação que impõem a atomicidade e a consistência da transação. Depois que uma transação tiver sido iniciada, ela deve ser concluída com êxito (confirmada) ou o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] desfará todas as modificações de dados feitas desde que a transação foi iniciada. Essa operação é denominada de reversão da transação porque retorna os dados ao estado anterior a essas alterações.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52511775"
  O modo de confirmação automática é o modo padrão de gerenciamento de transações do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Toda instrução [!INCLUDE[tsql](../includes/tsql-md.md)] é confirmada ou revertida quando concluída. Se uma instrução for concluída com sucesso, será confirmada; se encontrar qualquer erro, será revertida. Uma conexão para uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] opera em modo de confirmação automática sempre que esse modo padrão não for substituído por transações explícitas ou implícitas. O modo de confirmação automática também é o modo padrão para ADO, OLE DB, ODBC e DB-Library.  
   
  **Transações Implícitas**  
- Quando uma conexão operar em modo de transação implícita, a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] iniciará automaticamente uma nova transação depois que a transação atual for confirmada ou revertida. Você não faz nada para determinar o início de uma transação; apenas confirma ou reverte cada uma das transações. O modo de transação implícita gera uma cadeia contínua de transações. Defina o modo de transação implícito como ativado por uma função de API ou pela instrução [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON.  
+ Quando uma conexão operar em modo de transação implícita, a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] iniciará automaticamente uma nova transação depois que a transação atual for confirmada ou revertida. Você não faz nada para determinar o início de uma transação; apenas confirma ou reverte cada uma das transações. O modo de transação implícita gera uma cadeia contínua de transações. Defina o modo de transação implícito como ativado por uma função de API ou pela instrução [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON.  Esse modo também é conhecido como Autocommit OFF, confira [Método setAutoCommit no JDBC](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md) 
   
  Após a configuração do modo de transação implícita em uma conexão, a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] iniciará automaticamente a transação ao executar pela primeira vez cada uma destas instruções:  
   
@@ -284,24 +284,24 @@ GO
 |Leitura não confirmada|O nível de isolamento mais baixo, no qual as transações só estão isoladas o bastante para assegurar que dados corrompidos fisicamente não são sejam lidos. Nesse nível, são permitidas leituras sujas, para que uma transação tenha acesso às alterações ainda não confirmadas de outras transações.|  
 |Leitura confirmada|Permite que uma transação leia dados lidos anteriormente (não modificados) por outra transação, sem esperar pela conclusão da primeira transação. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém bloqueios de gravação (adquiridos em dados selecionados) até o término da transação, mas os bloqueios de leitura são liberados assim que a operação SELECT é efetuada. Esse é o nível padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|  
 |Leitura repetida|O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados até o término da transação. Contudo, poderão ocorrer leituras fantasmas, pois os bloqueios de intervalo não são gerenciados.|  
-|Serializável|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** pode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
+|Serializável|O nível mais alto, no qual as transações estão completamente isoladas umas das outras. O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mantém os bloqueios de gravação e leitura adquiridos em dados selecionados para que sejam liberados ao final da transação. Os bloqueios de intervalo são adquiridos quando uma operação SELECT usa uma cláusula WHERE em intervalo, sobretudo para evitar leituras fantasmas.<br /><br /> **Observação:** Pode haver falha em operações e transações DDL em tabelas replicadas quando o nível de isolamento serializável é solicitado. Isso ocorre porque as consultas de replicação usam dicas que podem ser incompatíveis com o nível de isolamento serializável.|  
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também oferece suporte a dois níveis adicionais de isolamento da transação que usam controle de versão de linha. O primeiro consiste em uma implementação nova de isolamento de leitura confirmada e o segundo consiste em um nível de isolamento da transação novo, instantâneo.  
   
 |Nível de isolamento do controle de versão de linha|Definição|  
 |------------------------------------|----------------|  
 |Instantâneo de leitura confirmada|Quando a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON, o isolamento de leitura confirmada usará o controle de versão de linha para fornecer consistência de leitura no nível da instrução. Operações de leitura só requerem bloqueios de nível de tabela SCH-S e nenhum bloqueio de página ou linha. Ou seja, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa o controle de versão de linha para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações. Uma função definida pelo usuário pode retornar dados confirmados depois do horário de início da instrução que contém que o UDF.<br /><br /> Quando a opção de banco de dados `READ_COMMITTED_SNAPSHOT` estiver configurada como OFF, que é a configuração padrão, o isolamento de leitura confirmada usará os bloqueios compartilhados para evitar que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. Ambas as implementações satisfazem a definição de ISO de isolamento de leitura confirmada.|  
-|Instantâneo|O nível de isolamento do instantâneo usa controle de versão de linha para fornecer consistência de leitura em nível de transação. Operações de leitura não requerem bloqueios de página ou linha; apenas bloqueios de tabela SCH-S são necessários. Ao ler linhas modificadas por outra transação, elas recuperam a versão da linha que existia na inicialização da transação. Você apenas pode usar o isolamento de instantâneo em relação a um banco de dados quando a opção `ALLOW_SNAPSHOT_ISOLATION` de banco de dados estiver definida como ON. Por padrão, essa opção é definida como OFF para bancos de dados de usuários.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não tem suporte para controle de versão de metadados. Por isso, há restrições nas operações de DDL que podem ser executadas em uma transação explícita que está sendo executada sob isolamento do instantâneo. As instruções de DDL a seguir não são permitidas sob isolamento do instantâneo depois de uma instrução BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou qualquer instrução CRL (Common Language Runtime) DDL. Essas instruções são permitidas quando você está usando isolamento do instantâneo em transações implícitas. Uma transação implícita, por definição, é uma instrução única que torna possível impor semânticas de isolamento do instantâneo, até mesmo com instruções DDL. Violações desse princípio podem causar o erro 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|Instantâneo|O nível de isolamento do instantâneo usa controle de versão de linha para fornecer consistência de leitura em nível de transação. Operações de leitura não requerem bloqueios de página ou linha; apenas bloqueios de tabela SCH-S são necessários. Ao ler linhas modificadas por outra transação, elas recuperam a versão da linha que existia na inicialização da transação. Você apenas pode usar o isolamento de instantâneo em relação a um banco de dados quando a opção `ALLOW_SNAPSHOT_ISOLATION` de banco de dados estiver definida como ON. Por padrão, essa opção é definida como OFF para bancos de dados de usuários.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não tem suporte para controle de versão de metadados. Por isso, há restrições nas operações de DDL que podem ser executadas em uma transação explícita que está sendo executada sob isolamento do instantâneo. As instruções DDL a seguir não são permitidas sob o isolamento de instantâneo após uma instrução BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou qualquer instrução DDL do CLR (common language runtime). Essas instruções são permitidas quando você está usando isolamento do instantâneo em transações implícitas. Uma transação implícita, por definição, é uma instrução única que torna possível impor semânticas de isolamento do instantâneo, até mesmo com instruções DDL. Violações desse princípio podem causar o erro 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  A tabela a seguir mostra os efeitos colaterais de simultaneidade habilitados por níveis de isolamento diferentes.  
   
 |Nível de isolamento|Leitura suja|Leitura não repetível|Fantasma|  
 |---------------------|----------------|------------------------|-------------|  
 |**Leitura não confirmada**|Sim|Sim|Sim|  
-|**Leitura confirmada**|não|Sim|Sim|  
-|**Leitura repetível**|não|não|Sim|  
-|**Instantâneo**|não|não|não|  
-|**Serializável**|não|não|não|  
+|**Leitura confirmada**|Não|Sim|Sim|  
+|**Leitura repetível**|Não|Não|Sim|  
+|**Instantâneo**|Não|Não|Não|  
+|**Serializável**|Não|Não|Não|  
   
  Para obter mais informações sobre os tipos específicos de controle de versão de linha ou bloqueio controlado pelos níveis de isolamento de transação, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -369,7 +369,7 @@ GO
 |Atualização (U)|Usado em recursos que podem ser atualizados. Evita uma forma comum de deadlock que ocorre quando várias sessões estão lendo, bloqueando e potencialmente atualizando recursos mais tarde.|  
 |Exclusivo (X)|Usado para operações de modificação de dados, como `INSERT`, `UPDATE` ou `DELETE`. Assegura que várias atualizações não sejam realizadas no mesmo recurso ao mesmo tempo.|  
 |Intencional|Usado para estabelecer uma hierarquia de bloqueio. Os tipos de bloqueios intencionais são: intencional compartilhado (IS), intencional exclusivo (IX) e compartilhado com intenção exclusiva (SIX).|  
-|Esquema|Usado quando uma operação dependente do esquema de uma tabela está em execução. Os tipos de bloqueios de esquema são: modificação de esquema (Sch-M) e estabilidade de esquema (Sch-S).|  
+|esquema|Usado quando uma operação dependente do esquema de uma tabela está em execução. Os tipos de bloqueios de esquema são: modificação de esquema (Sch-M) e estabilidade de esquema (Sch-S).|  
 |Atualização em massa (BU).|Usado ao copiar dados em massa em uma tabela com a dica `TABLOCK` especificada.|  
 |Intervalo de chave|Protege o intervalo de leitura de linhas lido por uma consulta ao usar o nível de isolamento da transação serializável. Assegura que outras transações não possam inserir linhas que se qualifiquem para consultas da transação serializável se as consultas forem executadas novamente.|  
   
@@ -434,12 +434,12 @@ GO
 ||Modo concedido existente||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**Modo solicitado**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Tentativa compartilhada (IS)**|Sim|Sim|Sim|Sim|Sim|não|  
-|**Compartilhado (S)**|Sim|Sim|Sim|não|não|não|  
-|**Atualização (U)**|Sim|Sim|não|não|não|não|  
-|**IX (intensão exclusiva)**|Sim|não|não|Sim|não|não|  
-|**SIX (compartilhado com intenção exclusiva)**|Sim|não|não|não|não|não|  
-|**Exclusivo (X)**|não|não|não|não|não|não|  
+|**Tentativa compartilhada (IS)**|Sim|Sim|Sim|Sim|Sim|Não|  
+|**Compartilhado (S)**|Sim|Sim|Sim|Não|Não|Não|  
+|**Atualização (U)**|Sim|Sim|Não|Não|Não|Não|  
+|**IX (intensão exclusiva)**|Sim|Não|Não|Sim|Não|Não|  
+|**SIX (compartilhado com intenção exclusiva)**|Sim|Não|Não|Não|Não|Não|  
+|**Exclusivo (X)**|Não|Não|Não|Não|Não|Não|  
   
 > [!NOTE]  
 > Um bloqueio intencional exclusivo (IX) é compatível com um modo de bloqueio IX porque IX significa que a intenção é atualizar somente algumas linhas em vez de todas. Outras transações que tentarem ler ou atualizar algumas das linhas também são permitidas, exceto se não forem as mesmas linhas que estejam sendo atualizadas por outras transações. Além disso, se duas transações tentarem atualizar a mesma linha, ambas receberão um bloqueio IX no nível de tabela e página. No entanto, uma transação receberá um bloqueio X no nível de linha. A outra transação deve aguardar até que o bloqueio de nível de linha seja removido.  
@@ -477,13 +477,13 @@ GO
 ||Modo concedido existente|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Modo solicitado**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Compartilhado (S)**|Sim|Sim|não|Sim|Sim|Sim|não|  
-|**Atualização (U)**|Sim|não|não|Sim|não|Sim|não|  
-|**Exclusivo (X)**|não|não|não|não|não|Sim|não|  
-|**RangeS-S**|Sim|Sim|não|Sim|Sim|não|não|  
-|**RangeS-U**|Sim|não|não|Sim|não|não|não|  
-|**RangeI-N**|Sim|Sim|Sim|não|não|Sim|não|  
-|**RangeX-X**|não|não|não|não|não|não|não|  
+|**Compartilhado (S)**|Sim|Sim|Não|Sim|Sim|Sim|Não|  
+|**Atualização (U)**|Sim|Não|Não|Sim|Não|Sim|Não|  
+|**Exclusivo (X)**|Não|Não|Não|Não|Não|Sim|Não|  
+|**RangeS-S**|Sim|Sim|Não|Sim|Sim|Não|Não|  
+|**RangeS-U**|Sim|Não|Não|Sim|Não|Não|Não|  
+|**RangeI-N**|Sim|Sim|Sim|Não|Não|Sim|Não|  
+|**RangeX-X**|Não|Não|Não|Não|Não|Não|Não|  
   
 #### <a name="lock_conversion"></a> Bloqueios de conversão  
  Os bloqueios de conversão são criados quando um bloqueio de intervalo de chave se sobrepuser a outro bloqueio.  
@@ -585,7 +585,7 @@ INSERT mytable VALUES ('Dan');
 -   A transação A agora solicita um bloqueio exclusivo na linha 2 e é bloqueado até que a transação B termine e libere o bloqueio compartilhado que tem na linha 2.  
 -   A transação B agora solicita um bloqueio exclusivo na linha 1 e é bloqueado até que a transação A termine e libere o bloqueio compartilhado que tem na linha 1.  
   
- A transação A não pode terminar até que a transação B termine, mas a transação B está bloqueada pela transação A. Essa condição é também chamada de dependência cíclica: a transação A tem uma dependência da transação B, e a transação B fecha o círculo tendo uma dependência da transação A.  
+ A transação A não pode concluir até que a transação B seja concluída, mas a transação B está bloqueada pela transação A. Essa condição também é chamada de dependência cíclica: A transação A tem uma dependência da transação B e a transação B fecha o círculo tendo uma dependência da transação A.  
   
  Ambas as transações em um deadlock esperarão indefinidamente, a menos que o deadlock seja quebrado por um processo externo. O monitor de deadlock [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verifica periodicamente as tarefas que estão em um deadlock. Se o monitor detectar uma dependência cíclica, ele escolhe uma das tarefas como vítima e termina sua transação com um erro. Isso permite que a outra tarefa complete sua transação. O aplicativo com a transação que terminou com um erro pode repetir a transação, a qual normalmente é concluída depois que a outra transação em deadlock é encerrada.  
   
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Trabalhando com leituras confirmadas com o controle de versão de linha  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Trabalhando com leituras confirmadas com o controle de versão de linha  
  Neste exemplo, uma transação de leitura confirmada que usa o controle de versão de linha é executada ao mesmo tempo que outra transação. A transação de leitura confirmada se comporta diferentemente de uma transação de instantâneo. Como uma transação de instantâneo, a transação de leitura confirmada lerá controles de versão de linhas, mesmo após a outra transação ter modificado os dados. Entretanto, diferentemente de uma transação de instantâneo, a transação de leitura confirmada:  
   
 -   Lerá os dados modificados depois que a outra transação confirmar as mudanças de dados.  
@@ -1803,7 +1803,7 @@ GO
  As sessões associadas podem ser usadas para desenvolver aplicativos de três camadas nos quais a lógica empresarial está incorporada em programas separados que trabalham cooperativamente em uma única transação empresarial. Esses programas devem ser codificados para coordenar seu acesso cuidadosamente a um banco de dados. Como as duas sessões compartilham os mesmos bloqueios, os dois programas não devem tentar modificar os mesmos dados ao mesmo tempo. Em qualquer point-in-time, apenas uma sessão pode trabalhar como parte da transação; não pode haver execução paralela. A transação pode ser alternada apenas entre sessões em pontos bem definidos, como quando todas as instruções DML forem concluídas e seus resultados forem recuperados.  
   
 ### <a name="coding-efficient-transactions"></a>Codificando transações eficientes  
- É importante manter as transações tão curtas quanto possível. Quando uma transação é iniciada, um DBMS (Sistema de administração de banco de dados), deve manter muitos recursos, até o término da transação, para proteger as propriedades (ACID) de atomicidade, consistência, isolamento e durabilidade da transação. Se os dados forem modificados, as linhas modificadas devem ser protegidas com bloqueios exclusivos que evitem a leitura das linhas por qualquer outra transação, e os bloqueios exclusivos devem ser mantidos até que a transação seja confirmada ou revertida. Dependendo das configurações de nível de isolamento da transação, as instruções `SELECT` podem obter bloqueios que devem ser mantidos até a transação ser confirmada ou revertida. Especialmente em sistemas com muitos usuários, as transações devem ser mantidas tão curtas quanto possível para reduzir a contenção de bloqueios de recursos em conexões simultâneas. Transações longas e ineficazes podem não causar problemas com um número pequeno de usuários, mas são intoleráveis em um sistema com milhares de usuários. A partir do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], há suporte para transações duráveis atrasadas. As transações duráveis atrasadas não garantem a durabilidade. Consulte o tópico [Durabilidade da Transação](../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
+ É importante manter as transações tão curtas quanto possível. Quando uma transação é iniciada, um DBMS (Sistema de administração de banco de dados), deve manter muitos recursos, até o término da transação, para proteger as propriedades (ACID) de atomicidade, consistência, isolamento e durabilidade da transação. Se os dados forem modificados, as linhas modificadas devem ser protegidas com bloqueios exclusivos que evitem a leitura das linhas por qualquer outra transação, e os bloqueios exclusivos devem ser mantidos até que a transação seja confirmada ou revertida. Dependendo das configurações de nível de isolamento da transação, as instruções `SELECT` podem obter bloqueios que devem ser mantidos até a transação ser confirmada ou revertida. Especialmente em sistemas com muitos usuários, as transações devem ser mantidas tão curtas quanto possível para reduzir a contenção de bloqueios de recursos em conexões simultâneas. Transações longas e ineficazes podem não causar problemas com um número pequeno de usuários, mas são intoleráveis em um sistema com milhares de usuários. Começando com o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], há compatibilidade com transações duráveis atrasadas. As transações duráveis atrasadas não garantem a durabilidade. Consulte o tópico [Durabilidade da Transação](../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
   
 #### <a name="guidelines"></a> Codificando diretrizes  
  Estas são diretrizes para codificar transações eficazes:  

@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39fc8df8126858b6114297a1c8bfb75bd5340850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311e6ee0e470aa01933967c648c0f8e5c3ac503e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668094"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979420"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ ProductID   Name                               LocationID Quantity Rank
   
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classificando todas as linhas em um conjunto de resultados  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Classificando todas as linhas em um conjunto de resultados  
 Este exemplo retorna os dez primeiros funcionários classificados pelos respectivos salários. Devido à instrução `SELECT` não ter especificado uma cláusula `PARTITION BY`, a função `DENSE_RANK` foi aplicada a todas as linhas do conjunto de resultados.  
   
 ```  

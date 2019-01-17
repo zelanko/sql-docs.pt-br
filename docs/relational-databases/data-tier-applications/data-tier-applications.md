@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525717"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591470"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Um aplicativo da camada de dados (DAC) é uma entidade de gerenciamento de banco de dados lógico que define todos os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assim como tabelas, exibições e objetos de instância, inclusive logons, associados do banco de dados do usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
   
  Um BACPAC é um artefato relacionado que encapsula o esquema de banco de dados e também os dados armazenados no banco de dados.  
@@ -109,7 +109,7 @@ ms.locfileid: "52525717"
   
 -   **IMPORT** – o usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
   
- Estes recursos têm suporte nas ferramentas de gerenciamento de banco de dados: SQL Server Management Studio, Portal do Azure e API DACFx.  
+ Ambas as funcionalidades são compatíveis com as ferramentas de gerenciamento de banco de dados: SQL Server Management Studio, portal do Azure e API do DACFx.  
   
 ## <a name="permissions"></a>Permissões  
  Você deve ser membro da função **dbmanager** ou ter permissões **CREATE DATABASE** atribuídas para criar um banco de dados, incluindo criar um banco de dados implantando um pacote de DAC. Você deve ser um membro da função **dbmanager** ou ter permissões **DROP DATABASE** atribuídas para remover um banco de dados.  

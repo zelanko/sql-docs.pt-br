@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525200"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979642"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurar o SQL Server para enviar comentários à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
     
     Nome da RegEntry = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
     
     {InstanceID} refere-se ao tipo de instância e à instância, como nos exemplos a seguir:
 
@@ -91,18 +91,18 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
     
     Nome da RegEntry = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
 
 > [!NOTE]
 > {Versão Principal} refere-se à versão do SQL Server, por exemplo, 140 para o SQL Server 2017
 
-- Para o SQL Server Management Studio:
+- Para o SQL Server Management Studio 17:
   
-    Subchave = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    Nome da RegEntry = CustomerFeedback
+    RegEntry name = UserFeedbackOptIn
 
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
 
     Além disso, o SSMS 17.x baseia-se no shell do Visual Studio 2015, e a instalação do Visual Studio permite comentários do cliente por padrão.  
 
@@ -114,6 +114,13 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
 
     A política de grupo baseada em registros nessas sub-chaves de registro é cumprida pela coleta de dados de uso do SQL Server 2017.
 
+- Para o SQL Server Management Studio 18:
+    
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    RegEntry name = UserFeedbackOptIn
+
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Definir as sub-chaves de registro para a coleta de despejo de memória
 
 Semelhante ao comportamento em uma versão anterior do SQL Server, os clientes do SQL Server 2017 Enterprise podem definir as configurações de Política de Grupo para aceitar ou recusar a coleta de despejo de memória. Isso é feito com a configuração de uma política baseada no registro. As configurações e sub-chaves de registro relevantes são as seguintes: 
@@ -124,7 +131,7 @@ Semelhante ao comportamento em uma versão anterior do SQL Server, os clientes d
 
     Nome da RegEntry = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
  
     {InstanceID} refere-se ao tipo de instância e à instância, como nos exemplos a seguir: 
 
@@ -139,7 +146,7 @@ Semelhante ao comportamento em uma versão anterior do SQL Server, os clientes d
 
     Nome da RegEntry = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
 
 > [!NOTE]
 > {Versão Principal} refere-se à versão do SQL Server. Por exemplo, "140" refere-se ao SQL Server 2017.

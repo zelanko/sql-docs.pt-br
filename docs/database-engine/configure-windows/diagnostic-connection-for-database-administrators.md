@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514701"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589391"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52514701"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esforça-se o máximo para o êxito de uma conexão DAC, mas pode falhar em situações extremas.  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="connecting-with-dac"></a>Conectando com DAC  
  Por padrão, a conexão só é permitida de um cliente executando no servidor. As conexões de rede apenas são permitidas se forem configuradas com o procedimento armazenado sp_configure com a [opção de conexões admin remotas](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
@@ -93,7 +93,7 @@ ms.locfileid: "52514701"
   
  A porta DAC é atribuída dinamicamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a inicialização. Ao conectar-se à instância padrão, o DAC evita usar uma solicitação do Protocolo de Resolução (SSRP) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao serviço SQL Server Browser. Primeiro ele se conecta usando a porta TCP 1434. Se isso falhar, ele faz uma chamada ao SSRP para obter a porta. Se o navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver escutando as solicitações de SSRP, a solicitação de conexão retornará um erro. Consulte o log de erros para localizar o número da porta que o DAC está escutando. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for configurado para aceitar conexões de administração remotas, o DAC deverá ser iniciado com um número de porta explícito:  
   
- **sqlcmd -S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:**_\<server>,\<port>_  
   
  O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lista o número da porta para o DAC, que, por padrão, é 1434. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para aceitar apenas conexões DAC locais, conecte usando o adaptador de loopback com o seguinte comando:  
   

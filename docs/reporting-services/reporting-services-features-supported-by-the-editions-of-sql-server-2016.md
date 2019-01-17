@@ -1,19 +1,18 @@
 ---
-title: Recursos do Reporting Services com suporte nas edições do SQL Server | Microsoft Docs
-ms.date: 11/01/2018
+title: Recursos do Reporting Services com suporte nas edições do SQL Server
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad0d24d2674b092d82615f8674a0a5a378fbc7a2
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.date: 11/01/2018
+ms.openlocfilehash: 37dec44c539db86f8f0d239fffe0ca28699f2799
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350530"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645325"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server"></a>Recursos do Reporting Services com suporte nas edições do SQL Server
 
@@ -22,11 +21,11 @@ ms.locfileid: "51350530"
 Esse tópico apresenta detalhes dos recursos do Reporting Services que têm suporte nas diferentes edições do SQL Server. A edição Evaluation do SQL Server está disponível por um período de avaliação de 180 dias.  
   
  Para obter as notas sobre a versão do SQL Server mais recentes, confira [Notas sobre a versão do SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). Para obter as últimas informações sobre as novidades, consulte [Novidades no SSRS (Reporting Services)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
-    
+
  **Experimentar o SQL Server 2017**    
-    
- > [![Baixar o SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Baixar o SQL Server 2017 do Centro de Avaliação](https://go.microsoft.com/fwlink/?LinkID=829477)**    
-    
+
+> [![Baixar o SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Baixar o SQL Server 2017 do Centro de Avaliação](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+>
 > ![Máquina Virtual do Azure pequena](../analysis-services/media/azure-virtual-machine-small.png) **[Criar uma Máquina Virtual com o SQL Server 2017 já instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Para saber quais recursos têm suporte nas edições Evaluation e Developer, confira a coluna SQL Server Enterprise Edition.
@@ -44,8 +43,8 @@ Para saber quais recursos têm suporte nas edições Evaluation e Developer, con
 |Segurança baseada em função|Sim|Sim|Sim|Sim|Sim|  
 |Exportar para Excel, Power Point, Word, PDF e imagens|Sim|Sim|Sim|Sim|Sim|  
 |Gráficos e medidores aprimorados|Sim|Sim|Sim|Sim|Sim|  
-|Fixar itens de relatório em [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]painéis|Sim|Sim|Sim|Sim|Sim|  
-|Autenticação personalizada|Sim|Sim|Sim|Sim|Sim|  
+|Fixar itens de relatório a painéis [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]|Sim|Sim|Sim|Sim|Sim|  
+|Autenticação personalizada|Sim|Sim|Sim||Sim|  
 |Relatar como feeds de dados|Sim|Sim|Sim|Sim|Sim|  
 |Suporte a modelo|Sim|Sim|Sim||Sim|  
 |Criar funções personalizadas para segurança baseada em função|Sim|Sim|||Sim|  
@@ -63,8 +62,7 @@ Para saber quais recursos têm suporte nas edições Evaluation e Developer, con
 |Alerta<sup>2</sup> (SSRS 2016) |Sim||||Sim|  
 | Power View<sup>2</sup> (SSRS 2016) |Sim||||Sim| 
 |Comentários<sup>3</sup> |Sim|Sim|Sim|Sim|Sim|  
- 
-  
+
  <sup>1</sup> Para obter mais informações sobre as fontes de dados com suporte no SSRS (SQL Server Reporting Services), confira [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> Exige o Reporting Services 2016 no modo do SharePoint. Para obter mais informações, veja [Instalar o Reporting Services no modo do SharePoint](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Do Reporting Services 2017 em diante, a integração do Reporting Services com o SharePoint não está mais disponível. 
@@ -74,7 +72,7 @@ Para saber quais recursos têm suporte nas edições Evaluation e Developer, con
 > [!NOTE]
 > SQL Server Express com Tools e SQL Server Express não dão suporte a SQL Server Reporting Services.
   
-## <a name="report-server-database-server-edition-requirements"></a>Requisitos das edições do servidor de banco de dados do servidor de relatório  
+## <a name="report-server-database-server-edition-requirements"></a>Requisitos das edições do servidor de banco de dados do servidor de relatório
  Na criação de um banco de dados de servidor de relatório, nem todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem ser usadas para hospedar o banco de dados. A tabela a seguir mostra quais edições do [!INCLUDE[ssDE](../includes/ssde-md.md)] podem ser usadas para edições específicas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 |Para esta edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Use esta edição da instância do Mecanismo de Banco de Dados para hospedar o banco de dados|  
@@ -95,9 +93,9 @@ Para saber quais recursos têm suporte nas edições Evaluation e Developer, con
 |Aplicativos do Power BI para dispositivos móveis (iOS, Windows 10, Android) (.rsmobile)|Sim||||Sim|  
   
 > [!NOTE]  
-> 1.  A tabela acima identifica as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessárias para habilitar essas ferramentas cliente; no entanto, essas ferramentas podem acessar os dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] é o único ponto de criação de relatórios móveis. Conecte-se a um servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para acessar fontes de dados e criar relatórios. Em seguida, publique-os no servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para que outras pessoas da organização possam acessá-los, no servidor ou em dispositivos móveis. Você também pode usar o [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] autônomo com fontes de dados locais  
-> 3.  Se estiver usando o  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] local, o [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] na nuvem ou ambos como sua solução de entrega de relatórios, você precisará apenas de um aplicativo móvel para acessar painéis e relatórios móveis em dispositivos móveis. Os aplicativos [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] estão disponíveis para download nas lojas de aplicativos do Windows, iOS ou Android.  
+> 1. A tabela acima identifica as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessárias para habilitar essas ferramentas cliente; no entanto, essas ferramentas podem acessar os dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+> 2. [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] é o único ponto de criação de relatórios móveis. Conecte-se a um servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para acessar fontes de dados e criar relatórios. Em seguida, publique-os no servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para que outras pessoas da organização possam acessá-los, no servidor ou em dispositivos móveis. Você também pode usar o [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] autônomo com fontes de dados locais  
+> 3. Se estiver usando o  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] local, o [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] na nuvem ou ambos como sua solução de entrega de relatórios, você precisará apenas de um aplicativo móvel para acessar painéis e relatórios móveis em dispositivos móveis. Os aplicativos [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] estão disponíveis para download nas lojas de aplicativos do Windows, iOS ou Android.  
 
 ## <a name="next-steps"></a>Próximas etapas
 

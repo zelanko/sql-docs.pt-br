@@ -18,12 +18,12 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1dd1617ff0bcdd30782b5c7890f60aa30258f1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec055010a1769a8a5595ae17f4b3ea1d00c5d26d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700944"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979922"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Retorna um objeto geométrico que representa a união de todos os valores de pon
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  O parâmetro *tolerância* precisa ser maior que zero. Se *tolerância* <= 0, uma `System.ArgumentOutOfRangeException` será gerada.  

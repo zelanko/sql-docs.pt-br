@@ -22,12 +22,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 864377bee6ee587e95321338d0c1a46f5c7523e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742974"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591750"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "47742974"
 |DATABASE_CHANGE_GROUP|Esse evento é gerado quando um banco de dados é criado, alterado ou descartado. Esse evento é gerado sempre que um banco de dados é criado, alterado ou descartado. Equivalente a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados. Equivalente à classe de evento Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Esse evento é gerado para relatar mensagens de auditoria relacionadas à segurança de transporte de espelhamento de banco de dados. Equivalente a [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que objetos de banco de dados, como tipo de mensagem, assembly, contrato, são acessados. Ele é gerado para qualquer acesso a qualquer banco de dados. Observação: potencialmente, isso poderia gerar registros de auditoria grandes.<br /><br /> Equivalente a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Esse evento é gerado quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas. Ele é gerado sempre que um objeto de banco de dados é criado, alterado ou descartado. Observação: isso poderia gerar volumes muito grandes de registros de auditoria.<br /><br /> Equivalente a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que objetos de banco de dados, como tipo de mensagem, assembly, contrato, são acessados. Ele é gerado para qualquer acesso a qualquer banco de dados. Observação: Isso poderia gerar potencialmente grandes registros de auditoria.<br /><br /> Equivalente a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Esse evento é gerado quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas. Ele é gerado sempre que um objeto de banco de dados é criado, alterado ou descartado. Observação: Isso poderia gerar volumes muito grandes de registros de auditoria.<br /><br /> Equivalente a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Esse evento é gerado quando há uma alteração de proprietário para objetos dentro do escopo do banco de dados. Ele é gerado para qualquer alteração de propriedade de objeto em qualquer banco de dados no servidor. Equivalente a [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Esse evento é gerado quando GRANT, REVOKE ou DENY é emitido para objetos de banco de dados, como assemblies e esquemas. Ele é gerado para qualquer alteração de permissão de objeto em qualquer banco de dados no servidor. Equivalente a [Audit Database Object GDR Event Class](../../../relational-databases/event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Esse evento é gerado quando ocorrem operações em um banco de dados, como um ponto de verificação ou uma notificação de consulta de assinatura. Esse evento é gerado em qualquer operação de banco de dados em qualquer banco de dados. Equivalente a [Audit Database Operation Event Class](../../../relational-databases/event-classes/audit-database-operation-event-class.md).|  
@@ -122,6 +122,9 @@ ms.locfileid: "47742974"
  Grupos de ações no nível do servidor abrangem ações em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, qualquer verificação de acesso de objeto de esquema em qualquer banco de dados será gravada se o grupo de ação apropriado for adicionado a uma especificação de auditoria de servidor. Em uma especificação de auditoria de banco de dados, somente acessos de objeto de esquema são registrados no banco de dados.  
   
  Ações no nível do servidor não permitem filtragem detalhada em ações no nível de banco de dados. Uma auditoria no nível do banco de dados, como auditoria de ações SELECT na tabela Clientes para logons no grupo Funcionário é necessária para implementar filtragem de ação detalhada. Não inclua objetos do escopo de servidor, como as exibições do sistema, em uma especificação de auditoria de banco de dados do usuário.  
+
+ > [!NOTE]
+ > Devido à sobrecarga envolvida em habilitar auditoria no nível da transação, do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 em diante, a auditoria no nível da transação é desabilitada por padrão, a menos que você tenha Conformidade de Critérios Comuns habilitada.  Se Conformidade de Critérios Comuns estiver desabilitada, você ainda poderá adicionar uma ação de TRANSACTION_GROUP a uma especificação de auditoria, mas ela coletará de fato nenhuma ação da transação.  Se você quiser configurar quaisquer ações de auditoria do TRANSACTION_GROUP, habilite a infraestrutura de auditoria no nível da transação habilitando a Conformidade de Critérios Comuns do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 e posteriores em diante.  Observe que, no [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], a auditoria no nível da transação também pode ser desabilitada e com o sinalizador de rastreamento 3427 do SP1 CU2 em diante.
   
 ## <a name="database-level-audit-action-groups"></a>Grupos de ação de auditoria no nível de banco de dados  
  Grupos de ação de auditoria no nível de banco de dados são ações semelhantes às classes de evento Security Audit Event do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações sobre classes de evento, consulte [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  

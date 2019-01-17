@@ -21,22 +21,22 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ff691e764392c65a49dc5527f8a44f8d036ac59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1ede86329f0082bac1927ca0c75fc64d6116a56
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853284"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591710"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plano de execução e alocação de buffer
   Antes da execução, a tarefa de fluxo de dados examina seus componentes e gera um plano de execução para cada sequência de componentes. Essa seção fornece detalhes sobre o plano de execução, como visualizá-lo e como buffers de entrada e saída são alocados com base no plano de execução.  
   
 ## <a name="understanding-the-execution-plan"></a>Compreendendo o plano de execução  
- Um plano de execução contém threads de origem e threads de trabalho, e cada thread contém listas de trabalho que especificam listas de trabalho de saída para threads de origem ou listas de trabalho de entrada e saída para threads de trabalho. Os threads de origem em um plano de execução representam os componentes de origem no fluxo de dados e são identificados no plano de execução por *SourceThread**n*, em que *n* é o número com base em zero do thread de origem.  
+ Um plano de execução contém threads de origem e threads de trabalho, e cada thread contém listas de trabalho que especificam listas de trabalho de saída para threads de origem ou listas de trabalho de entrada e saída para threads de trabalho. Os threads de origem em um plano de execução representam os componentes de origem no fluxo de dados e são identificados no plano de execução por *SourceThreadn*, em que *n* é o número com base em zero do thread de origem.  
   
  Cada thread de origem cria um buffer, define um ouvinte e chama o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> no componente de origem. É nesse ponto que a execução é iniciada e dados são gerados, pois o componente de origem começa a adicionar linhas aos buffers de saída fornecidos pela tarefa de fluxo de dados. Depois do início da execução dos threads de origem, o balanço do trabalho é distribuído entre os threads de trabalho.  
   
- Um thread de trabalho pode conter listas de trabalho de entrada e saída e é identificado no plano de execução como *WorkThread**n*, em que *n* é o número com base em zero do thread de trabalho. Esses threads contêm listas de trabalho de saída quando o gráfico contém um componente com saídas assíncronas.  
+ Um thread de trabalho pode conter listas de trabalho de entrada e saída e é identificado no plano de execução como *WorkThreadn*, em que *n* é o número com base em zero do thread de trabalho. Esses threads contêm listas de trabalho de saída quando o gráfico contém um componente com saídas assíncronas.  
   
  O exemplo de plano de execução a seguir representa um fluxo de dados que contém um componente de origem conectado a uma transformação com uma saída assíncrona conectada a um componente de destino. Nesse exemplo, o WorkThread0 contém uma lista de trabalho de saída porque o componente de transformação possui uma saída assíncrona.  
   

@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970517"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980012"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50970517"
 
 Realiza operações de inserção, atualização ou exclusão em uma tabela de destino com base nos resultados da junção com a tabela de origem. Por exemplo, você pode sincronizar duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela.  
   
- **Dica de desempenho:** o comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir, ou atualizando a linha se ela corresponder. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, desempenho e escalabilidade aprimorados podem ser obtidos com as instruções INSERT, UPDATE e DELETE básicas. Por exemplo:  
+ **Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir, ou atualizando a linha se ela corresponder. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, desempenho e escalabilidade aprimorados podem ser obtidos com as instruções INSERT, UPDATE e DELETE básicas. Por exemplo:  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -251,7 +251,7 @@ SET
  Especifica o nome ou a identificação de um ou mais índices em uma tabela de destino para a execução de uma junção implícita com a tabela de origem. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<output_clause>  
- Retorna uma linha para cada linha de *target_table* que é atualizada, inserida ou excluída, sem nenhuma ordem específica. **$action** pode ser especificada na cláusula output. **$action** é uma coluna do tipo **nvarchar(10)** que retorna um dos três valores de cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação executada na linha. Para obter mais informações sobre os argumentos dessa cláusula, veja [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Retorna uma linha para cada linha de *target_table* que é atualizada, inserida ou excluída, sem nenhuma ordem específica. **$action** pode ser especificada na cláusula output. **$action** é uma coluna do tipo **nvarchar(10)** que retorna um dos três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi executada na linha. Para obter mais informações sobre os argumentos dessa cláusula, veja [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  Especifica que dicas do otimizador são usadas para personalizar o modo como o Mecanismo de Banco de Dados processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Usando MERGE para executar operações INSERT e UPDATE em uma tabela em uma única instrução  
  Um cenário comum é atualizar uma ou mais colunas em uma tabela, se uma linha correspondente existir, ou inserir os dados como uma nova linha, se uma linha correspondente não existir. Isto normalmente é feito transmitindo parâmetros para um procedimento armazenado que contém as instruções UPDATE e INSERT apropriadas. Com a instrução MERGE, você pode executar as duas tarefas em uma única instrução. O exemplo a seguir mostra um procedimento armazenado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que contém as instruções INSERT e UPDATE. Em seguida, o procedimento é modificado para executar as operações equivalentes usando uma única instrução MERGE.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -386,10 +386,10 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Usando MERGE para executar as operações UPDATE e DELETE em uma tabela em uma única instrução  
+### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Usando MERGE para executar as operações UPDATE e DELETE em uma tabela em uma única instrução  
  O exemplo a seguir usa MERGE para atualizar diariamente a tabela `ProductInventory` no banco de dados de exemplo da [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em pedidos processados na tabela `SalesOrderDetail`. A coluna `Quantity` da tabela `ProductInventory` foi atualizada subtraindo o número de pedidos colocados a cada dia para cada produto na tabela `SalesOrderDetail`. Se o número de pedidos de um produto reduzir o nível de estoque de um produto para 0 ou menos, a linha desse produto será excluída da tabela `ProductInventory`.  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -416,7 +416,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Usando MERGE para executar as operações UPDATE e INSERT em uma tabela de destino usando uma tabela de origem derivada  
  O exemplo a seguir usa MERGE para modificar a tabela `SalesReason` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] atualizando ou inserindo linhas. Quando o valor de `NewName` na tabela de origem corresponde a um valor na coluna `Name` da tabela de destino (`SalesReason`), a coluna `ReasonType` é atualizada na tabela de destino. Quando o valor de `NewName` não corresponde, a linha de origem é inserida na tabela de destino. A tabela de origem é uma tabela derivada que usa o construtor de valor de tabela do [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar várias linhas para a tabela de origem. Para obter mais informações sobre como usar o construtor de valor de tabela em uma tabela derivada, veja [Construtor de valor de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). O exemplo também mostra como armazenar os resultados da cláusula OUTPUT em uma variável de tabela e resumir os resultados da instrução MERGE executando uma operação de seleção simples que retorna a contagem de linhas inseridas e atualizadas.  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -440,7 +440,7 @@ GROUP BY Change;
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Inserindo os resultados da instrução MERGE em outra tabela  
  O exemplo a seguir captura dados retornados da cláusula OUTPUT de uma instrução MERGE e insere esses dados em outra tabela. A instrução MERGE atualiza diariamente a coluna `Quantity` da tabela `ProductInventory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em pedidos processados na tabela `SalesOrderDetail`. O exemplo captura as linhas atualizadas e as insere em outra tabela que é usada para rastrear as alterações do estoque.  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  

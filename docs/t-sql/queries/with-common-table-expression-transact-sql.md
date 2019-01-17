@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970968"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979992"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE
  *CTE_query_definition*  
  Especifica uma instrução SELECT cujo conjunto de resultados popula a expressão de tabela comum. A instrução SELECT de *CTE_query_definition* deve atender aos mesmos requisitos da criação de uma exibição, com a exceção de que uma CTE não pode definir outra CTE. Para obter mais informações, consulte a seção Comentários e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se mais de uma *CTE_query_definition* for definida, as definições da consulta deverão ser unidas por um destes operadores de conjunto: UNION ALL, UNION, EXCEPT ou INTERSECT.  
+ Se mais de uma *CTE_query_definition* for definida, as definições de consulta poderão ser unidas por um destes dois conjuntos de operadores: UNION ALL, UNION, EXCEPT ou INTERSECT.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -104,7 +104,7 @@ Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE
   
 -   A definição da CTE recursiva deve conter pelo menos duas definições de consulta de CTE, um membro de ancoragem e um membro recursivo. É possível definir vários membros de ancoragem e membros recursivos; entretanto, todas as definições de consulta de membro de ancoragem devem ser colocadas antes da primeira definição de membro recursivo. Todas as definições de consulta de CTE são membros de ancoragem, a menos que façam referência à própria CTE.  
   
--   Os membros de ancoragem devem ser combinados por um destes operadores de conjunto: UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL é o único operador de conjunto permitido entre o último membro de ancoragem e o primeiro membro recursivo e ao combinar vários membros recursivos.  
+-   Membros de ancoragem devem ser combinados por um destes operadores de conjunto: UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL é o único operador de conjunto permitido entre o último membro de ancoragem e o primeiro membro recursivo e ao combinar vários membros recursivos.  
   
 -   O número de colunas nos membros de ancoragem e recursivos deve ser o mesmo.  
   
@@ -202,7 +202,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. Usando uma expressão de tabela comum para limitar contagens e médias de relatório  
+### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>b. Usando uma expressão de tabela comum para limitar contagens e médias de relatório  
  O exemplo a seguir mostra o número médio de pedidos de vendas de todos os anos dos representantes de vendas.  
   
 ```  

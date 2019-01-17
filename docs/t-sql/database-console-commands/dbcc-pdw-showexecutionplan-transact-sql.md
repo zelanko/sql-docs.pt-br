@@ -12,12 +12,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 532a19a4fca82e200b9499672cf48f736cfd3f4b
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d69a9393c990c16357287ac31433780c3b7e27a4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226318"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979832"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. Sintaxe básica do DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>b. Sintaxe básica do DBCC PDW_SHOWEXECUTIONPLAN  
  A consulta que está em uma execução muito longa está executando uma operação de plano de consulta do DMS ou uma operação de plano de consulta do SQL.  
   
 Se a consulta estiver executando uma operação de plano de consulta do DMS, use a consulta a seguir para recuperar uma lista de IDs de nó e de IDs de sessão para as etapas que não estão completas.
@@ -89,7 +89,7 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-Com base nos resultados da consulta anterior, use sql_spid e pdw_node_id como parâmetros para DBCC PDW_SHOWEXEUCTIONPLAN. Por exemplo, o comando a seguir mostra o plano de execução para pdw_node_id 201001 e sql_spid 375.
+Com base nos resultados da consulta anterior, use sql_spid e pdw_node_id como parâmetros para DBCC PDW_SHOWEXECUTIONPLAN. Por exemplo, o comando a seguir mostra o plano de execução para pdw_node_id 201001 e sql_spid 375.
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  

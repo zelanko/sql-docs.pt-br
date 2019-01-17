@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536130"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626340"
 ---
 # <a name="sql-injection"></a>Injeção SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52536130"
   
  O script a seguir mostra uma injeção SQL simples. O script cria uma consulta SQL concatenando cadeias de caracteres codificadas com uma cadeia de caracteres inserida pelo usuário:  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +40,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  O usuário é solicitado a inserir o nome de uma cidade. Se ele inserir `Redmond`, a consulta criada pelo script terá a seguinte aparência:  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  No entanto, suponha que o usuário insira o seguinte:  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
  Nesse caso, a seguinte consulta é gerada pelo script:  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -86,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Nunca concatene entrada de usuário que não seja validada. A concatenação de cadeia de caracteres é o ponto principal de entrada de injeção de script.  
   
--   Não aceite as seguintes cadeias de caracteres em campos dos quais nomes de arquivos podem ser construídos: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
+-   Não aceite as seguintes cadeias de caracteres nos campos dos quais os nomes de arquivo podem ser criados: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
   
  Sempre que puder, rejeite entrada que contenha os caracteres a seguir.  
   
@@ -101,7 +101,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 ### <a name="use-type-safe-sql-parameters"></a>Use parâmetros SQL de tipo seguro  
  A coleção **Parameters** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece verificação de tipo e validação de tamanho. Se você usar a coleção **Parameters** , a entrada será tratada como um valor literal e não como código executável. Um benefício adicional de usar a coleção **Parameters** é que você pode impor verificações de tipo e tamanho. Valores fora do intervalo irão disparar uma exceção. O seguinte fragmento de código mostra o uso da coleção **Parameters** :  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +114,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>Use entrada com parâmetros com procedimentos armazenados  
  Os procedimentos armazenados poderão ser suscetíveis a injeção SQL se usarem entrada não filtrada. Por exemplo, o código seguinte é vulnerável:  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +125,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>Use coleção de parâmetros com SQL dinâmico  
  Se você não puder usar procedimentos armazenados, ainda poderá usar parâmetros, como mostrado no exemplo de código a seguir.  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +136,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>Filtrando a entrada  
  A filtragem de entrada também pode ser útil para proteger contra injeção de SQL, removendo caracteres de escape. Porém, por causa do número grande de caracteres que podem causar problemas, essa não é uma defesa confiável. O exemplo a seguir procura o delimitador de cadeia de caracteres.  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +146,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>Cláusulas LIKE  
  Observe que se você estiver usando uma cláusula `LIKE` , os caracteres curinga ainda deverão ter escape:  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +155,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>Revisando código para injeção SQL  
  É necessário examinar todo o código que chama `EXECUTE`, `EXEC`ou `sp_executesql`. Você pode usar consultas semelhantes à que segue para ajudá-lo a identificar procedimentos que contenham essas instruções. Essa consulta verifica se existem 1, 2, 3 ou 4 espaços após as palavras `EXECUTE` ou `EXEC`.  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -179,12 +179,12 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
   
  Quando você usa essa técnica, uma instrução SET pode ser examinada como segue:  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +192,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>Injeção habilitada por truncamento de dados  
  Qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] dinâmico atribuído a uma variável será truncado se for maior do que o buffer alocado para aquela variável. Um invasor que é capaz de impor truncamento de instrução ao passar cadeias de caracteres longas inesperadamente para um procedimento armazenado pode manipular o resultado. Por exemplo, o procedimento armazenado criado pelo script a seguir é vulnerável a injeção habilitada por truncamento.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +222,7 @@ GO
   
  Ao passar 154 caracteres para um buffer de 128 caracteres, um invasor pode definir uma nova senha para sa sem conhecer a senha antiga.  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +232,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>Truncamento quando QUOTENAME(@variable, '''') e REPLACE() são usados  
  Cadeias de caracteres retornadas por QUOTENAME() e REPLACE() serão silenciosamente truncadas se ultrapassarem o espaço alocado. O procedimento armazenado criado nos exemplos a seguir mostram o que pode acontecer.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +269,13 @@ GO
   
  Portanto, a instrução a seguir definirá as senhas de todos os usuários como o valor passado no código anterior  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  Você pode impor truncamento de cadeia de caracteres excedendo o espaço do buffer alocado ao usar REPLACE(). O procedimento armazenado criado nos exemplos a seguir mostram o que pode acontecer.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +314,7 @@ GO
   
  O cálculo seguinte cobre todos os casos:  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +323,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>Truncamento quando QUOTENAME(@variable, ']') é usado  
  Pode ocorrer truncamento quando o nome de um protegível do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é passado a instruções que usam a forma `QUOTENAME(@variable, ']')`. O exemplo a seguir mostra a isso.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  

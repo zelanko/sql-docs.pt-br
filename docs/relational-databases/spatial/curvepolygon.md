@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658833"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980152"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CurvePolygon** é uma superfície topologicamente fechada definida por um anel delimitador exterior e zero ou mais anéis interiores  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o subtipo **CurvePolygon** , baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+> Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o subtipo **CurvePolygon** , baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Os critérios a seguir definem os atributos de uma instância **CurvePolygon** :  
   
@@ -46,11 +46,11 @@ ms.locfileid: "51658833"
 3.  O ponto inicial e o ponto de extremidade têm as mesmas coordenadas de X e Y.  
   
     > [!NOTE]  
-    >  Os valores de Z e M são ignorados.  
+    > Os valores de Z e M são ignorados.  
   
- O exemplo a seguir mostra instâncias **CurvePolygon** aceitas.  
+O exemplo a seguir mostra instâncias **CurvePolygon** aceitas.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +58,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` é aceito, embora os pontos inicial e de extremidade tenham valores de Z diferentes, pois esses valores são ignorados. `@g5` é aceito, embora a instância de tipo **geography** não seja válida.  
+`@g3` é aceito, embora os pontos inicial e de extremidade tenham valores de Z diferentes, pois esses valores são ignorados. `@g5` é aceito, embora a instância de tipo **geography** não seja válida.  
   
- Os exemplos a seguir geram um `System.FormatException`.  
+Os exemplos a seguir geram um `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` não é aceito porque os pontos inicial e de extremidade não têm o mesmo valor de Y. `@g2` não é aceito porque o anel não contém pontos suficientes.  
+`@g1` não é aceito porque os pontos inicial e de extremidade não têm o mesmo valor de Y. `@g2` não é aceito porque o anel não contém pontos suficientes.  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Para que uma instância **CurvePolygon** seja válida, os anéis exterior e interior devem atender aos seguintes critérios:  
+Para que uma instância **CurvePolygon** seja válida, os anéis exterior e interior devem atender aos seguintes critérios:  
   
 1.  Eles podem tocar apenas em pontos tangentes únicos.  
-  
 2.  Eles não podem se cruzar.  
-  
 3.  Cada anel deve conter pelo menos quatro pontos.  
-  
 4.  Cada anel deve ser um tipo de curva aceitável.  
   
- As instâncias**CurvePolygon** também deverão atender a critérios específicos se fouem tipos de dados **geometry** ou **geography** .  
+As instâncias**CurvePolygon** também deverão atender a critérios específicos se fouem tipos de dados **geometry** ou **geography** .  
   
 #### <a name="geometry-data-type"></a>Tipo de dados geometry  
- Uma instância **geometryCurvePolygon** válida deve ter os seguintes atributos:  
+Uma instância **geometryCurvePolygon** válida deve ter os seguintes atributos:  
   
 1.  Todos os anéis interiores devem estar dentro do anel exterior.  
-  
 2.  Pode ter vários anéis interiores, mas um anel interior não pode conter outro anel interior.  
-  
 3.  Nenhum anel pode cruzar com outro anel ou com si próprio.  
-  
 4.  Os anéis podem tocar apenas pontos tangentes únicos (o número de pontos onde os anéis tocam deve ser finito).  
-  
 5.  O interior do polígono deve estar conectado.  
   
- O exemplo a seguir mostra uma instância **geometryCurvePolygon** válida.  
+O exemplo a seguir mostra uma instância **geometryCurvePolygon** válida.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- As instâncias CurvePolygon têm as mesmas regras de validade que as instâncias Polygon, com exceção de que as instâncias CurvePolygon podem aceitar os novos tipos de segmento de arco circular. Para obter mais exemplos de instâncias válidas ou não válidas, consulte [Polygon](../../relational-databases/spatial/polygon.md).  
+As instâncias CurvePolygon têm as mesmas regras de validade que as instâncias Polygon, com exceção de que as instâncias CurvePolygon podem aceitar os novos tipos de segmento de arco circular. Para obter mais exemplos de instâncias válidas ou não válidas, consulte [Polygon](../../relational-databases/spatial/polygon.md).  
   
 #### <a name="geography-data-type"></a>Tipo de dados geography  
- Uma instância **geographyCurvePolygon** válida deve ter os seguintes atributos:  
+Uma instância **geographyCurvePolygon** válida deve ter os seguintes atributos:  
   
 1.  O interior do polígono é conectado usando a regra do lado esquerdo.  
-  
 2.  Nenhum anel pode cruzar com outro anel ou com si próprio.  
-  
 3.  Os anéis podem tocar apenas pontos tangentes únicos (o número de pontos onde os anéis tocam deve ser finito).  
-  
 4.  O interior do polígono deve estar conectado.  
   
- O exemplo a seguir mostra uma instância CurvePolygon de geography válida.  
+O exemplo a seguir mostra uma instância CurvePolygon de geography válida.  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -133,7 +123,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Declarando e criando uma instância geométrica com um CurvePolygon na mesma instrução  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Declarando e criando uma instância geométrica com um CurvePolygon na mesma instrução  
  Este snippet de código mostra como declarar e iniciar uma instância de geometry com um **CurvePolygon** na mesma instrução:  
   
 ```sql  
@@ -182,7 +172,7 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- Tanto o @g1 quanto o @g2 usam o mesmo anel delimitador exterior: um círculo com um raio de 5 e ambos usam um quadrado para um anel interior.  Entretanto, a instância @g1 é válida, mas a instância @g2 é inválida.  A razão pela qual @g2 é inválida é que o anel interior divide o espaço interno limitado pelo anel exterior em quatro regiões separadas.  O desenho a seguir mostra o que ocorreu:  
+ Tanto o `@g1` quanto o `@g2` usam o mesmo anel delimitador exterior: um círculo com um raio de 5 e ambos usam um quadrado para um anel interior.  Entretanto, a instância `@g1` é válida, mas a instância `@g2` é inválida. A razão pela qual @g2 é inválida é que o anel interior divide o espaço interno limitado pelo anel exterior em quatro regiões separadas. O desenho a seguir mostra o que ocorreu:  
   
 ## <a name="see-also"></a>Consulte Também  
  [Polygon](../../relational-databases/spatial/polygon.md)   

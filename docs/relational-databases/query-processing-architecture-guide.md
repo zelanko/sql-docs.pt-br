@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542519"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591880"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ Os exemplos a seguir ilustram quais planos de execução são removidos do cache
 * Um plano de execução é referenciado frequentemente para que seu custo nunca seja zerado. O plano permanece no cache de planos e não é removido a menos que haja pressão de memória e o custo atual seja zero.
 * Um plano de execução ad hoc é inserido e não é referenciado novamente até que haja pressão de memória. Como os planos ad hoc são inicializados com um custo atual igual a zero, quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examina o plano de execução, ele vê o custo atual igual a zero e remove o plano do cache de planos. O plano de execução ad hoc permanece no cache de planos com um custo atual igual a zero quando não há pressão de memória.
 
-Para remover manualmente um único plano ou todos os planos do cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+Para remover manualmente um único plano ou todos os planos do cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). Começando pelo [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` para limpar o cache (plano) de procedimento para o banco de dados no escopo.
 
 ### <a name="recompiling-execution-plans"></a>Recompilando planos de execução
 
@@ -572,7 +572,7 @@ Além disso, as cláusulas de consulta a seguir não são parametrizadas. Observ
 A parametrização ocorre no nível das instruções Transact-SQL individuais. Em outras palavras, são parametrizadas instruções individuais em lote. Após a compilação, uma consulta parametrizada é executada no contexto do lote em que foi enviado originalmente. Se um plano de execução de uma consulta for armazenado em cache, você poderá determinar se a consulta foi parametrizada referenciando a coluna sql da exibição de gerenciamento dinâmico sys.syscacheobjects. Se uma consulta for parametrizada, os nomes e tipos de dados de parâmetros serão exibidos antes do texto do lote enviado nessa coluna, como (\@1 tinyint).
 
 > [!NOTE]
-> Os nomes de parâmetro são arbitrários. Os usuários ou os aplicativos não devem confiar em uma ordem de nomenclatura específica. Além disso, os seguintes itens podem ser alterados entre as versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e as atualizações do service pack: nomes de parâmetro, opção de literais com parâmetros e espaçamento no texto com parâmetros.
+> Os nomes de parâmetro são arbitrários. Os usuários ou os aplicativos não devem confiar em uma ordem de nomenclatura específica. Além disso, o seguinte pode ser alterados entre versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e atualizações do Service Pack: Nomes de parâmetro, a opção de literais com parâmetros e o espaçamento no texto com parâmetros.
 
 #### <a name="data-types-of-parameters"></a>Tipos de dados de parâmetros
 

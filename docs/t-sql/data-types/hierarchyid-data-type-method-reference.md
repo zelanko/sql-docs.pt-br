@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702944"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980022"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>referência de método do tipo de dados hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Podem ser usadas colunas do tipo **hierarchyid** em qualquer tabela replicada. O
   
 ### <a name="one-directional-replication"></a>Replicação unidirecional
 Replicação unidirecional inclui replicação de instantâneo, replicação transacional e replicação de mesclagem, nas quais não são feitas alterações no Assinante. O modo de funcionamento das colunas **hierachyid** com a replicação unidirecional depende da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executada pelo Assinante.
--   Um Publicador do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pode replicar colunas **hierachyid** para um Assinante do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem considerações especiais.  
+-   Um Editor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pode replicar colunas **hierachyid** para um Assinante do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem considerações especiais.  
 -   Um Publicador do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve converter colunas **hierarchyid** para replicá-las para um Assinante que executa o [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssEW](../../includes/ssew-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dão suporte às colunas **hierarchyid**. Ainda que esteja usando uma dessas versões, você poderá replicar dados para um Assinante. Para tanto, você deve definir uma opção de esquema ou o nível de compatibilidade de publicação (para replicação de mesclagem) a que a coluna pode ser convertida para um tipo de dados compatível.  
   
 Em ambos os cenários há suporte a filtragem de colunas. Isso inclui a filtragem de colunas **hierarchyid**. Há suporte para a filtragem de linha, desde que o filtro não inclua uma coluna **hierarchyid**.

@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c35eed3e73a80a2fcaf060e094c31938d0692414
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 511be25daa32daa1a8d80707043280171f76edbc
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697224"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980212"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ Para obter detalhes, confira [Comentários gerais](https://msdn.microsoft.com/li
 
 <a name="limitations-bk"></a>
 
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 O SQL Data Warehouse do Azure ainda não é compatível com as estatísticas de criação automática nem de atualização automática.  Para obter o melhor desempenho nas consultas, é importante criar estatísticas em todas as colunas de todas as tabelas depois de executar CTAS e depois que ocorrerem alterações significativas nos dados. Para obter mais informações, veja [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) não tem efeito em CTAS. Para obter um comportamento semelhante, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
@@ -228,7 +228,7 @@ DROP TABLE FactInternetSales_old;
 
 <a name="ctas-change-column-attributes-bk"></a>
 
-### <a name="b-use-ctas-to-change-column-attributes"></a>B. Usar CTAS para alterar atributos de coluna 
+### <a name="b-use-ctas-to-change-column-attributes"></a>b. Usar CTAS para alterar atributos de coluna 
 Aplica-se a: SQL Data Warehouse do Azure e Parallel Data Warehouse
 
 Este exemplo usa CTAS para alterar os tipos de dados, a nulidade e a ordenação para várias colunas na tabela DimCustomer2.  
@@ -663,7 +663,7 @@ WHERE NOT EXISTS
 ;
 
 RENAME OBJECT dbo.[DimProduct]          TO [DimProduct_old];
-RENAME OBJECT dbo.[DimpProduct_upsert]  TO [DimProduct];
+RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Sobre o Change Data Capture (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402737"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991869"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Os registros do Change Data Capture inserem, atualizam e excluem atividades aplicadas a uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele também disponibiliza os detalhes das mudanças em um formato relacional facilmente utilizável. As informações de coluna e os metadados exigidos para a aplicação de alterações em um ambiente de destino são capturados para as linhas modificadas e armazenados nas tabelas de alteração que espelham a estrutura da coluna das tabelas de origem rastreadas. As funções avaliadas da tabela são fornecidas para permitir acesso sistemático aos dados de alteração pelos consumidores.  
   
  Um bom exemplo de um consumidor de dados visado por esta tecnologia é uma extração, transformação e aplicativo de carregamento (ETL). Um aplicativo ETL carrega incrementalmente dados de alteração das tabelas de origem de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um data warehouse ou data mart. Embora a representação das tabelas de fonte dentro do data warehouse deva refletir as alterações nessas tabelas de origem, uma tecnologia ponta-a-ponta que atualize uma réplica da origem não é apropriada. Em vez disso, é necessário um fluxo seguro de dados de alteração, estruturado de forma que consumidores possam aplicá-lo às representações dos dados de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a captura de dados de alterações fornece essa tecnologia.  
