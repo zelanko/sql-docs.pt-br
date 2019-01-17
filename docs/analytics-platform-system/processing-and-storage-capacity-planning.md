@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7188ace65e31d92cc5acfdc684457b219836d2d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527797"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361566"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidade de processamento e armazenamento no Analytics Platform System
 Seus requisitos de negócios determinam o número de unidades de escala de dados e o tamanho dos discos de nó de computação que você precisa em seu dispositivo do Analytics Platform System (APS). Use esses cálculos de processamento e armazenamento para orientar sua capacidade de compra e decisões de planejamento.  
@@ -85,14 +85,14 @@ Esta tabela estima que você pode carregar e armazenar até 6 petabytes de dados
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
-|HPE|3 TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
+|HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
 |DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
-|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
-|DELL|3 TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4,320 TB|  
+|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8,640 TB|   
   
 Explicação:  
   
--   **Tamanho da unidade** é 1, 2 ou 3 TB para cada fornecedor de Hardware.  
+-   **Tamanho da unidade** é 1, 2 ou 4 TB para cada fornecedor de Hardware.  
   
 -   **Armazenamento de dados físicos por nó de computação** = (tamanho da unidade) * (16 discos por nó de computação). Os discos espelhados não são incluídos, pois são para redundância.  
   
