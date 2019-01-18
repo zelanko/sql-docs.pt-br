@@ -3,19 +3,20 @@ title: Instale o SQL Server Machine Learning Services (no banco de dados) no Win
 description: R no SQL Server ou Python em etapas de instalação do SQL Server para serviços de aprendizado de máquina SQL Server 2017 no Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645345"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372696"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalar serviços no Windows de aprendizado de máquina do SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A partir do SQL Server 2017, R e Python dão suporte para análise no banco de dados é fornecido em **serviços do SQL Server Machine Learning**, o sucessor [SQL Server R Services](../r/sql-server-r-services.md) introduzido no SQL Server 2016. Bibliotecas de função estão disponíveis em R e Python e executar como script externo em uma instância do mecanismo de banco de dados. 
@@ -201,6 +202,13 @@ Use as etapas a seguir para verificar se todos os componentes usados para inicia
     | hello |
     |----|
     | 1|
+
+
+<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
+Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
+due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
+I will inform HeidiSteen  [GeneMi, 2019/01/17]
+-->
 
 
 > [!NOTE]

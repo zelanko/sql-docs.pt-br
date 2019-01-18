@@ -5,17 +5,17 @@ description: Saiba como instalar as ferramentas usadas com clusters de big data 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 54ea67e8b85d4e9a1a8cdbe4b40cf1bb9c3f1062
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241597"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372637"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar ferramentas do SQL Server 2019 big data
 
@@ -38,7 +38,14 @@ A tabela a seguir lista as ferramentas de cluster de big data comuns e como inst
 | **sqlcmd** | Para alguns scripts | Ferramenta de linha de comando herdada para consultar o SQL Server ([saber](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | Para alguns scripts | Ferramenta de linha de comando para transferir dados com URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: pacote de instalação do curl |
 
-<sup>1</sup> você deve usar kubectl versão 1,10 ou posterior. Além disso, a versão do Kubectl deve ser mais ou menos de uma versão secundária do seu cluster Kubernetes. Se você quiser instalar uma versão específica no cliente kubectl, consulte [instalar kubectl binário por meio de rotação](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (no Windows 10, use cmd.exe e não o Windows PowerShell para executar a rotação).
+<sup>1</sup> você deve usar kubectl versão 1,10 ou posterior. Além disso, a versão do kubectl deve ser mais ou menos de uma versão secundária do seu cluster Kubernetes. Se você quiser instalar uma versão específica no cliente kubectl, consulte [instalar kubectl binário por meio de rotação](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (no Windows 10, use cmd.exe e não o Windows PowerShell para executar a rotação). 
+
+> [!TIP]
+> Para usar o kubectl com um cluster implantado anteriormente no serviço de Kubernetes do Azure (AKS), você deve definir o contexto do cluster com o seguinte comando da CLI do Azure:
+>
+>    ```azurecli
+>    az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>
+>    ```
 
 <sup>2</sup> você deve estar usando a CLI do Azure versão 2.0.4 ou posterior. Executar `az --version` para localizar a versão, se necessário.
 
@@ -49,7 +56,7 @@ A tabela a seguir lista as ferramentas de cluster de big data comuns e como inst
 A tabela anterior fornece todas as ferramentas comuns que são usadas com clusters de big data. Quais ferramentas são necessárias depende do seu cenário. Mas, em geral, as seguintes ferramentas são mais importantes para gerenciar, conectar-se a e consultar o cluster:
 
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **Extensão do SQL Server de 2019**
 
