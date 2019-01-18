@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e526bbe9191aa83cedd45c2115b3cb4b54a937d2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207085"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136076"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ O Log Reader Agent e o Distribution Agent dão suporte ao tamanho dos lotes para
 O parâmetro **-PollingInterval** especifica com que frequência o log de transações de um banco de dados publicado é consultado sobre transações a serem replicadas. O padrão é 5 segundos. Se reduzir esse valor, o log é sondado com mais frequentemente, o que pode resultar em uma menor latência na entrega de transações de um banco de dados de publicação, para o banco de dados de distribuição. Porém, você deve equilibrar a necessidade por uma latência menor com uma carga maior no servidor, devido a uma sondagem mais frequente.   
   
 #### <a name="maxcmdsintran"></a>MaxCmdsInTran
-- Para resolver gargalos esporádicos e acidentais, use o parâmetro **-MaxCmdsInTran** do Agente de Leitor de Log.  
+- Para resolver gargalos esporádicos e acidentais, use o parâmetro **–MaxCmdsInTran** para o Agente de Leitor de Log.  
   
-O parâmetro **-MaxCmdsInTran** especifica o número máximo de instruções agrupadas em uma transação à medida que o Leitor de Log grava comandos no banco de dados de distribuição. O uso desse parâmetro permite que o Log Reader Agent e o Distribution Agent dividam transações volumosas (consistindo em muitos comandos) no Publicador em várias transações menores, ao aplicar os comandos no Assinante. A especificação desse parâmetro pode reduzir a contenção no Distribuidor e pode reduzir a latência entre o Publicador e o Assinante. Como a transação original é aplicada em unidades menores, o Assinante pode acessar linhas de uma transação lógica de Publicador antes do fim da transação original, O padrão é **0**, que preserva os limites de transação do Publicador. Esse parâmetro não se aplica aos Editores Oracle.  
+O parâmetro **–MaxCmdsInTran** especifica o número máximo de instruções agrupadas em uma transação à medida que o Log Reader grava comandos no banco de dados de distribuição. O uso desse parâmetro permite que o Log Reader Agent e o Distribution Agent dividam transações volumosas (consistindo em muitos comandos) no Publicador em várias transações menores, ao aplicar os comandos no Assinante. A especificação desse parâmetro pode reduzir a contenção no Distribuidor e pode reduzir a latência entre o Publicador e o Assinante. Como a transação original é aplicada em unidades menores, o Assinante pode acessar linhas de uma transação lógica de Publicador antes do fim da transação original, O padrão é **0**, que preserva os limites de transação do Publicador. Esse parâmetro não se aplica aos Editores Oracle.  
   
    > [!WARNING]  
    >  O**MaxCmdsInTran** não foi criado para estar sempre ativado. Ele existe para solucionar casos em que alguém acidentalmente realizou um número grande de operações DML em uma única transação (causando atraso na distribuição de comandos até que a transação inteira esteja no banco de dados de distribuição, os bloqueios sejam mantidos etc.). Se você rotineiramente enfrentar essa situação, examine seus aplicativos e descubra maneiras de reduzir o tamanho da transação.  
@@ -112,9 +112,9 @@ O parâmetro **-MaxCmdsInTran** especifica o número máximo de instruções agr
 ### <a name="distribution-agent"></a>Agente de Distribuição
 
 #### <a name="subscriptionstreams"></a>SubscriptionStreams
-- Aumente o parâmetro **-SubscriptionStreams** do Agente de Distribuição.  
+- Aumente o parâmetro **–SubscriptionStreams** para o Agente de Distribuição.  
   
-O parâmetro **-SubscriptionStreams** pode melhorar significativamente a taxa de transferência da replicação de agregação. Ele permite várias conexões a um Assinante para aplicar lotes de alterações em paralelo, mantendo presentes, ao mesmo tempo, várias características transacionais, quando for usar um thread único. Se uma das conexões falhar na execução ou na confirmação, todas as conexões abortarão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha. Antes de concluir a fase de repetição pode haver inconsistências transacionais temporárias no Assinante. Depois que os lotes com falha são confirmados com êxito, o Assinante é levado de volta a um estado de consistência transacional.  
+O parâmetro **–SubscriptionStreams** pode melhorar significativamente a taxa de transferência da replicação de agregação. Ele permite várias conexões a um Assinante para aplicar lotes de alterações em paralelo, mantendo presentes, ao mesmo tempo, várias características transacionais, quando for usar um thread único. Se uma das conexões falhar na execução ou na confirmação, todas as conexões abortarão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha. Antes de concluir a fase de repetição pode haver inconsistências transacionais temporárias no Assinante. Depois que os lotes com falha são confirmados com êxito, o Assinante é levado de volta a um estado de consistência transacional.  
   
 Um valor para esse parâmetro de agente pode ser especificado usando o **@subscriptionstreams** de [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
 
