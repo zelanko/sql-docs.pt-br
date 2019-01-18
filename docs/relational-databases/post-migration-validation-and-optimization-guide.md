@@ -1,6 +1,6 @@
 ---
 title: Validação pós-migração e guia de otimização | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213615"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206362"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A etapa pós-migração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é crucial para reconciliar a precisão e a integridade dos dados, bem como descobrir problemas de desempenho com a carga de trabalho.
 
-# <a name="common-performance-scenarios"></a>Cenários comuns de desempenho 
+## <a name="common-performance-scenarios"></a>Cenários comuns de desempenho
+
 Abaixo estão alguns dos cenários comuns de desempenho encontrados após a migração para a plataforma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e como resolvê-los. Isso inclui cenários que são específicos para migração de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versões mais antigas para versões mais recentes), bem como migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a> Regressões de consulta devido a alteração em versão da CE
- 
+
 **Aplica-se a:** migração de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Ao migrar de versões mais antigas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ou mais recente e atualizar o [nível de compatibilidade do banco de dados](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) para o mais recente disponível, uma carga de trabalho poderá ser exposta ao risco de regressão de desempenho.
@@ -126,6 +128,7 @@ Funções com valor de tabela retornam um tipo de dados de tabela que pode ser u
 > Como a tabela de saída de um MSTVF (função com valor de tabela de várias instruções) não é criada no tempo de compilação, o Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conta com heurística e não estatísticas reais, para determinar as estimativas de linha. Mesmo se os índices forem adicionados às tabelas, isso não vai ajudar. Para MSTVFs, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa uma estimativa fixa de 1 para o número de linhas esperado a ser retornado por um MSTVF (a partir do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], essa estimativa é fixa em 100 linhas).
 
 ### <a name="steps-to-resolve"></a>Etapas para resolver
+
 1.  Se a TVF de várias instruções tiver somente uma instrução, converta-a em TVF embutida.
 
     ```sql
@@ -142,7 +145,8 @@ Funções com valor de tabela retornam um tipo de dados de tabela que pode ser u
     RETURN
     END
     ```
-    Para 
+
+    O exemplo de formato em linha é exibido a seguir.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ Funções com valor de tabela retornam um tipo de dados de tabela que pode ser u
 
 2.  Se for mais complexa, considere usar os resultados intermediários armazenados em tabelas com otimização de memória ou tabelas temporárias.
 
-##  <a name="Additional_Reading"></a> Leitura adicional  
+##  <a name="Additional_Reading"></a> Leitura adicional
+
  [Melhor prática com o Repositório de Consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Funções definidas pelo usuário](../relational-databases/user-defined-functions/user-defined-functions.md)  

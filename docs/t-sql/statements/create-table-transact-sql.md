@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980382"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300563"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Cria uma nova tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -981,7 +981,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Prefixe os nomes de tabelas temporárias locais usando um único sinal numérico (#*table_name*) e prefixe os nomes de tabelas temporárias globais com dois sinais numéricos (##*table_name*).  
   
- As instruções SQL fazem referência à tabela temporária usando o valor especificado para *table_name* na instrução CREATE TABLE, por exemplo####:  
+ As instruções SQL fazem referência à tabela temporária usando o valor especificado para *table_name* na instrução CREATE TABLE, por exemplo:  
   
 ```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  Se mais de uma tabela temporária for criada em um procedimento armazenado ou lote, elas devem ter nomes diferentes.  
+ 
+ Se você incluir um *schema_name* quando criar ou acessar uma tabela temporária, ele será ignorado.  Todas as tabelas temporárias são criadas no esquema dbo.
   
  Se uma tabela temporária local for criada em um procedimento armazenado ou aplicativo que pode ser executado ao mesmo tempo por vários usuários, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser capaz de distinguir as tabelas criadas por usuários distintos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] faz isso acrescentando internamente um sufixo numérico a cada nome de tabela temporária local. O nome completo de uma tabela temporária como ele foi armazenado na tabela **sysobjects** em **tempdb** é composto pelo nome da tabela especificado na instrução CREATE TABLE e o sufixo numérico gerado pelo sistema. Para permitir o sufixo, o *table_name* especificado para um nome temporário local não pode exceder 116 caracteres.  
   

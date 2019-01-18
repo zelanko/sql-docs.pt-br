@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d04f3383409e51be48498853068c93b2d1a66725
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209075"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211087"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mecânica e diretrizes para os tempos limite de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn 
 
@@ -46,7 +46,7 @@ Ao contrário de outros mecanismos de failover, a instância do SQL Server desem
 
 O mecanismo de concessão impõe a sincronização entre o SQL Server e o Cluster de Failover do Windows Server. Quando um comando de failover é emitido, o serviço de cluster faz uma chamada offline para a DLL de recurso da réplica primária atual. A DLL de recurso tenta primeiro colocar o grupo de disponibilidade offline usando um procedimento armazenado. Se esse procedimento armazenado falhar ou atingir o tempo limite, a falha será relatada de volta para o serviço de cluster, que emitirá um comando de encerramento. O encerramento tenta novamente executar o mesmo procedimento armazenado, mas, desta vez, o cluster não aguarda a DLL de recurso relatar êxito ou falha antes de colocar o grupo de disponibilidade online em uma nova réplica. Se a segunda chamada de procedimento falhar, então o host do recurso precisará contar com o mecanismo de concessão para colocar a instância offline. Quando a DLL de recurso for chamada para colocar o grupo de disponibilidade offline, a DLL de recurso sinalizará o evento de interrupção da concessão, ativando o thread de trabalho de concessão do SQL Server para colocar o grupo de disponibilidade offline. Mesmo se esse evento de interrupção não for sinalizado, a concessão expirará e a réplica fará a transição para o estado de resolução. 
 
-A concessão é sobretudo um mecanismo de sincronização entre a instância primária e o cluster, mas também pode criar condições de falha onde não houve necessidade de fazer failover. Por exemplo, alta utilização da CPU, condições de memória insuficiente, falha do processo SQL em responder ao gerar um despejo de memória, travamento de todo o sistema ou pressão do tempdb pode enfraquecer o thread de trabalho de concessão, impedindo a renovação da concessão da instância do SQL e provocando um failover. 
+A concessão é sobretudo um mecanismo de sincronização entre a instância primária e o cluster, mas também pode criar condições de falha onde não houve necessidade de fazer failover. Por exemplo, alta utilização da CPU, condições de memória insuficiente, falha do processo SQL em responder ao gerar um despejo de memória, travamento de todo o sistema, cluster (WSFC) ficando offline por perda de quorum ou pressão do tempdb pode enfraquecer o thread de trabalho de concessão, impedindo a renovação da concessão da instância do SQL e provocando um failover. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Diretrizes para valores de tempo limite de cluster 
 

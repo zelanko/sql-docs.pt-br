@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328966"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143466"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> Evite renomear bancos de dados se você tiver consultas com Planos Forçados  
 
- Planos de execução fazem referência a objetos usando nomes de três partes `database.schema.object`.   
+Planos de execução fazem referência a objetos usando nomes de três partes `database.schema.object`.   
 
 Se você renomear um banco de dados, a imposição de plano falhará, causando recompilação em todas as execuções de consulta subsequentes.  
 
-##  <a name="Recovery"></a> Use sinalizadores de rastreamento em servidores de missão crítica para melhorar a recuperação de desastre
+##  <a name="Recovery"></a> Usar sinalizadores de rastreamento em servidores essenciais
  
-Os sinalizadores de rastreamento global 7745 e 7752 podem ser usados para melhorar o desempenho do Repositório de Consultas durante cenários de recuperação de desastres e alta disponibilidade. Para obter mais informações, consulte [Sinalizadores de rastreamento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+Os sinalizadores de rastreamento globais 7745 e 7752 podem ser usados para melhorar a disponibilidade dos bancos de dados usando o Repositório de Consultas. Confira mais informações em [Sinalizadores de Rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Repositório de Consultas grava dados em disco antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa ser desligado.
+-  O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Repositório de Consultas grava dados em disco antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa ser desligado. Isso significa que os dados de Repositório de Consultas que foram coletados, mas ainda não foram mantidos no disco serão perdidos. 
   
-O sinalizador de rastreamento 7752 habilita o carregamento assíncrono do Repositório de Consultas e também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute consultas antes que o Repositório de Consultas seja totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
+-  O sinalizador de rastreamento 7752 permite o carregamento assíncrono do Repositório de Consultas. Isso permite que um banco de dados seja colocado online e que consultas a sejam executadas antes do Repositório de Consultas ser totalmente recuperado. O comportamento padrão é fazer o carregamento assíncrono do Repositório de Consultas. O comportamento padrão impede a execução de consultas antes da recuperação do Repositório de Consultas, mas também impede que consultas sejam perdidas na coleta de dados.
 
 > [!IMPORTANT]
 > Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho em tempo real no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](https://support.microsoft.com/help/4340759) assim que possível. 

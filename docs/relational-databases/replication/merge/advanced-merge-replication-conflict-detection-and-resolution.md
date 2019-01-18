@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206345"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130566"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicação de mesclagem avançada – detecção e resolução de conflito
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Quando o Publicador e o Assinante estão conectados e ocorre a sincronização, o Agente de Mesclagem detecta se há algum conflito. Se forem detectados conflitos, o Agente de Mesclagem usará o resolvedor de conflitos (especificado quando um artigo é adicionado à publicação) para determinar quais dados serão aceitos e propagados para outros sites.  
+
+ A replicação de mesclagem oferece uma variedade de métodos para detectar e resolver conflitos. Com relação à maioria dos aplicativos, o método padrão é apropriado.  
+  
+-   Se um conflito ocorrer entre um Publicador e um Assinante, a alteração do Publicador é mantida e a alteração do Assinante é descartada.   
+-   Se ocorrer um conflito entre dois Assinantes que usam assinaturas de cliente (tipo padrão para assinaturas pull), a alteração do primeiro Assinante para sincronizar com o Publicador é mantida, e a alteração do segundo Assinante é descartada. Para obter informações sobre como especificar assinatura de cliente e servidor, consulte [Especificar um tipo de assinatura de mesclagem e prioridade de resolução de conflitos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).   
+-   Em caso de conflito entre dois Assinantes que usam assinaturas de servidor (tipo padrão para assinaturas push), a alteração do Assinante com o maior valor da prioridade será mantida, e a alteração do segundo Assinante será descartada. Se os valores de prioridade forem iguais, a alteração do primeiro Assinante a sincronizar com o Publicador será mantida.  
   
 > [!NOTE]  
 >  Embora o Assinante esteja sincronizado com o Publicador, os conflitos ocorrem normalmente entre as atualizações que são feitas em diferentes Assinantes, em vez de atualizações sendo feitas no Assinante e no Publicador.  
   
- O comportamento da detecção e resolução de conflitos depende das seguintes opções, descritas neste tópico:  
-  
--   Especificação de controle em nível de coluna; controle em nível de linha ou controle em nível de registro lógico.  
-  
+ O comportamento da detecção e resolução de conflitos depende das seguintes opções, descritas neste tópico:    
+-   Especificação de controle em nível de coluna; controle em nível de linha ou controle em nível de registro lógico.    
 -   Especificação do mecanismo padrão de resolução, com base na prioridade, ou especificação de um resolvedor de artigo. Um resolvedor de artigo pode ser:  
   
-    -   Um *manipulador de lógica de negócios* escrito em código gerenciado.  
-  
-    -   Um *resolvedor personalizado*com base em COM.  
-  
+    -   Um *manipulador de lógica de negócios* escrito em código gerenciado.   
+    -   Um *resolvedor personalizado*com base em COM.    
     -   Um resolvedor com base em COM fornecido pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
      Se o mecanismo de resolução padrão for usado, o comportamento será determinado posteriormente pelo tipo de assinatura usada: de cliente ou servidor.  
@@ -51,18 +53,32 @@ ms.locfileid: "53206345"
 ## <a name="conflict-detection"></a>Detecção de conflito  
  Se uma alteração de dados se qualifica ou não como conflito vai depender do tipo de controle de conflitos definido para o artigo:  
   
--   Quando o controle em nível de coluna for selecionado, ele será considerado conflito se as alterações forem feitas na mesma coluna, na mesma linha, em mais de um nó de replicação.  
-  
--   Caso o controle em nível de linha seja selecionado, será considerado conflito se as alterações forem feitas em todas as colunas, na  mesma linha e em mais de um nó de replicação (não é necessário que as colunas afetadas nas linhas correspondentes sejam as mesmas).  
-  
+-   Quando o controle em nível de coluna for selecionado, ele será considerado conflito se as alterações forem feitas na mesma coluna, na mesma linha, em mais de um nó de replicação.    
+-   Caso o controle em nível de linha seja selecionado, será considerado conflito se as alterações forem feitas em todas as colunas, na  mesma linha e em mais de um nó de replicação (não é necessário que as colunas afetadas nas linhas correspondentes sejam as mesmas).    
 -   Caso o controle em nível de registro lógico seja selecionado, será considerado conflito se as alterações forem feitas em todas as linhas, no mesmo registro lógico e em mais de um nó de replicação (as colunas afetadas nas linhas correspondentes não precisam ser as mesmas).  
   
  Para obter mais informações, consulte [Detectando e resolvendo conflitos em registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Para especificar o nível de controle e resolução de conflitos para um artigo, consulte [especificar o nível de resolução e de rastreamento de conflito para artigos de mesclagem](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Para especificar o acompanhamento de conflito e o nível de resolução para um artigo, confira [Especificar as propriedades de replicação de mesclagem](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-resolution"></a>Resolução de conflitos  
  Após a detecção de um conflito, o Agente de Mesclagem inicia o resolvedor do conflito selecionado e usa o resolvedor para determinar o vencedor do conflito. A linha vencedora é aplicada ao Publicador e ao Assinante, e os dados da linha perdedora são gravados em uma tabela de conflitos. Os conflitos estão resolvidos imediatamente após a execução do resolvedor, a menor que se opte por resolver conflitos de forma interativa.  
+
+Resolver conflitos de replicação de mesclagem [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando o Publicador e o Assinante estão conectados e ocorre a sincronização, o Agente de Mesclagem detecta se há algum conflito. Se houver conflitos detectados, o Agente de Mesclagem utiliza um resolvedor de conflitos para determinar quais dados serão aceitos e propagados para outros sites.  
+  
+> [!NOTE]  
+>  Embora o Assinante esteja sincronizado com o Publicador, os conflitos ocorrem normalmente entre as atualizações feitas em diferentes Assinantes, em lugar de atualizações feitas no Assinante e no Publicador.  
+  
+ A replicação de mesclagem oferece uma variedade de métodos para detectar e resolver conflitos. Com relação à maioria dos aplicativos, o método padrão é apropriado.  
+  
+-   Se um conflito ocorrer entre um Publicador e um Assinante, a alteração do Publicador é mantida e a alteração do Assinante é descartada.  
+  
+-   Se ocorrer um conflito entre dois Assinantes que usam assinaturas de cliente (tipo padrão para assinaturas pull), a alteração do primeiro Assinante para sincronizar com o Publicador é mantida, e a alteração do segundo Assinante é descartada. Para obter informações sobre como especificar assinatura de cliente e servidor, consulte [Especificar um tipo de assinatura de mesclagem e prioridade de resolução de conflitos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
+  
+-   Em caso de conflito entre dois Assinantes que usam assinaturas de servidor (tipo padrão para assinaturas push), a alteração do Assinante com o maior valor da prioridade será mantida, e a alteração do segundo Assinante será descartada. Se os valores de prioridade forem iguais, a alteração do primeiro Assinante a sincronizar com o Publicador será mantida.  
+  
+ Para obter mais informações sobre a detecção de conflito e resolução para replicação de mesclagem, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="resolver-types"></a>Tipos de resolvedores  
  Na replicação de mesclagem, a resolução de conflitos ocorre no âmbito do artigo. Com relação às publicações compostas de vários artigos, pode haver diferentes resolvedores de conflitos servindo diferentes artigos ou um único resolvedor de conflitos servindo um artigo, vários artigos ou todos os artigos contidos em uma publicação.  

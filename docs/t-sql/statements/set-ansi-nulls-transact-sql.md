@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2d84c426bddf4a896a3be1f79ea85e3b718fd4e
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 798a31bacecc45a22510a121847e9e20423d4b3d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069762"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143308"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54069762"
   Especifica o comportamento compatível ISO dos operadores de comparação Igual a (=) e Diferente de (<>) quando usados com valores nulos na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.
+> Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,20 +83,20 @@ SET ANSI_NULLS ON afetará uma comparação somente se um dos operandos dessa co
   
 Para que um script funcione conforme pretendido, independentemente da opção de banco de dados ANSI_NULLS ou da configuração de SET ANSI_NULLS, use IS NULL e IS NOT NULL nas comparações que possam conter valores nulos.  
   
-SET ANSI_NULLS deve ser definido como ON para executar consultas distribuídas.  
+ANSI_NULLS deve ser definido como ON para executar consultas distribuídas.  
   
-SET ANSI_NULLS também deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou exibições indexadas. Se SET ANSI_NULLS estiver OFF, haverá falha em qualquer instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou exibições indexadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um erro que lista todas as opções de SET que violam os valores necessários. Além disso, ao executar uma instrução SELECT, se SET ANSI_NULLS for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignorará os valores de índice nas exibições ou colunas computadas e resolverá a operação selecionada como se não houvesse tais índices nas tabelas ou exibições.  
+ANSI_NULLS também deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou exibições indexadas. Se SET ANSI_NULLS estiver OFF, haverá falha em qualquer instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou exibições indexadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um erro que lista todas as opções de SET que violam os valores necessários. Além disso, ao executar uma instrução SELECT, se SET ANSI_NULLS for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignorará os valores de índice nas exibições ou colunas computadas e resolverá a operação selecionada como se não houvesse tais índices nas tabelas ou exibições.  
   
 > [!NOTE]  
 > ANSI_NULLS é uma das sete opções SET que devem ser definidas como valores requeridos ao lidar com índices em colunas computadas ou exibições indexadas. As opções `ANSI_PADDING`, `ANSI_WARNINGS`, `ARITHABORT`, `QUOTED_IDENTIFIER` e `CONCAT_NULL_YIELDS_NULL` também devem ser definidas como ON e `NUMERIC_ROUNDABORT` deve ser definida como OFF.  
   
  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e o Provedor OLE DB Provider do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_NULLS como ON durante a conexão. Essa configuração pode ser definida nas fontes de dados ODBC, nos atributos de conexão ODBC ou nas propriedades de conexão OLE DB definidos no aplicativo antes de conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão para SET ANSI_NULLS é OFF.  
   
- Quando SET ANSI_DEFAULTS é ON, SET ANSI_NULLS está habilitado.  
+Quando ANSI_DEFAULTS é ON, ANSI_NULLS está habilitado.  
   
- A configuração de ANSI_NULLS é definida durante a execução ou em tempo de execução e não no momento da análise.  
+A configuração de ANSI_NULLS é definida no momento da execução, e não no momento da análise.  
   
- Para exibir a configuração atual dessa configuração, execute a seguinte consulta:
+Para exibir a configuração atual dessa configuração, execute a seguinte consulta:
   
 ```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -105,7 +105,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ```  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função public.  
+ Requer associação à função **pública** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa os operadores de comparação Igual a (`=`) e Diferente de (`<>`) para fazer comparações com valores `NULL` e não nulos em uma tabela. O exemplo também mostra que `IS NULL` não é afetado pela configuração de `SET ANSI_NULLS`.  
@@ -132,9 +132,12 @@ WHERE a <> @varname;
 SELECT a   
 FROM t1   
 WHERE a IS NULL;  
-GO  
-  
--- SET ANSI_NULLS to ON and test.  
+GO 
+```
+
+Agora defina ANSI_NULLS como ON e teste.
+
+```sql
 PRINT 'Testing ANSI_NULLS ON';  
 SET ANSI_NULLS ON;  
 GO  
@@ -153,8 +156,11 @@ SELECT a
 FROM t1   
 WHERE a IS NULL;  
 GO  
-  
--- SET ANSI_NULLS to OFF and test.  
+```
+
+Agora defina ANSI_NULLS como OFF e teste.  
+
+```sql
 PRINT 'Testing SET ANSI_NULLS OFF';  
 SET ANSI_NULLS OFF;  
 GO  

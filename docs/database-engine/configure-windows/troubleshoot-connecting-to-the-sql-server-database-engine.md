@@ -14,15 +14,19 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531071"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300463"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Esta é uma lista extensa de técnicas de solução de problemas a serem usadas quando você não conseguir se conectar ao Mecanismo de Banco de Dados do SQL Server. Essas etapas não estão na ordem dos problemas mais prováveis, que você provavelmente já tentou. Essas etapas estão na ordem dos problemas mais básicos para os mais complexos. Essas etapas presumem que você está se conectando ao SQL Server de outro computador usando o protocolo TCP/IP, que é a situação mais comum. Essas etapas foram escritas para SQL Server 2016 com o SQL Server e os aplicativos clientes em execução no Windows 10, porém as etapas geralmente se aplicam a outras versões do SQL Server e outros sistemas operacionais com apenas ligeiras modificações.
 

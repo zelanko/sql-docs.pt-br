@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214165"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226553"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gerenciamento baseado em políticas para problemas operacionais com grupos de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214165"
 ##  <a name="Always OnPBM"></a> Políticas predefinidas e problemas  
  A tabela a seguir resume as políticas predefinidas.  
   
-|Nome de política|Problema|Categoria**\***|Faceta|  
+|Nome de política|Problema|Categoria **&#42;**|Faceta|  
 |-----------------|-----------|--------------------|-----------|  
 |Estado do cluster WSFC|[O serviço de cluster WSFC está offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Crítico|Instância do SQL Server|  
 |Estado Online do Grupo de Disponibilidade|[O grupo de disponibilidade está offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Crítico|grupo de disponibilidade|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214165"
 |Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[O estado de sincronização de dados do banco de dados de disponibilidade não é íntegro](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|Banco de dados de disponibilidade|  
   
 > [!IMPORTANT]
->  **\*** Para as políticas AlwaysOn, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, não modifique os nomes das categorias AlwaysOn.  
+>  **&#42;** Para políticas Always On, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, não modifique os nomes das categorias AlwaysOn.  
   
 ##  <a name="Dashboard"></a> Painel AlwaysOn  
  O Painel AlwaysOn apresenta uma visão geral da integridade de um grupo de disponibilidade. O Painel AlwaysOn inclui os seguintes recursos:  

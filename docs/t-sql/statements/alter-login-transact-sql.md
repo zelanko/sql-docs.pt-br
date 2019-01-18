@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 757d06003da83e2506e2912f0f5e7cd6a03a3e52
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215585"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211107"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -203,28 +203,35 @@ Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessários pa
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
-### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon  
+### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon  
  O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>C. Alterar a senha de um logon quando conectado como o logon 
+ Se você estiver tentando alterar a senha do logon ao qual está conectado no momento e não tiver a permissão `ALTER ANY LOGIN`, especifique a opção `OLD_PASSWORD`.    
   
-### <a name="c-changing-the-name-of-a-login"></a>C. Alterando o nome de um logon  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>D. Alterando o nome de um logon  
  O exemplo seguinte altera o nome de logon `Mary5` para `John2`.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>D. Mapeando um logon para uma credencial  
+### <a name="e-mapping-a-login-to-a-credential"></a>E. Mapeando um logon para uma credencial  
  O exemplo seguinte mapeia o logon `John2` para a credencial `Custodian04`.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>E. Mapeando um logon para uma credencial de Gerenciamento Extensível de Chaves  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>F. Mapeando um logon para uma credencial de Gerenciamento Extensível de Chaves  
  O exemplo seguinte mapeia o logon `Mary5` para a credencial de EKM `EKMProvider1`.  
   
   
@@ -361,7 +368,7 @@ Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira q
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
-### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon  
+### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon  
  O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.  
   
 ```sql  
@@ -621,7 +628,7 @@ Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira q
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
-### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon  
+### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon  
  O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.  
   
 ```sql  
@@ -787,7 +794,7 @@ Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira q
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
-### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon  
+### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon  
  O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.  
   
 ```sql  
@@ -987,7 +994,7 @@ Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira q
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
-### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon  
+### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon  
  O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.  
   
 ```sql  
