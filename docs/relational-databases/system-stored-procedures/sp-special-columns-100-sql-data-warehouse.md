@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 205d731e262514c0782cad09af6bf36d24b25bc5
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: fdebe91359fbe9d7c9ef7aaadc38ba096427f651
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254412"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395388"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -52,16 +52,16 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *proprietário* não for especificado e o usuário atual não possuir uma tabela especificada *nome*, esse procedimento procurará uma tabela especificada *nome* pelo banco de dados de propriedade proprietário. Se a tabela existir, suas colunas serão retornadas.  
   
- [ @qualifier=] '*qualificador*'  
+ [ @qualifier=] '*qualifier*'  
  É o nome do qualificador da tabela. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [ @col_type=] '*col_type*'  
  É o tipo da coluna. *col_type* está **char (** 1 **)**, com um padrão de R. o tipo R retorna a coluna ou conjunto ideal de colunas que, pela recuperação de valores da coluna ou colunas, permite que qualquer linha especificada tabela a ser identificado exclusivamente. A coluna pode ser uma pseudocoluna especificamente projetada para esta finalidade ou a coluna ou colunas de qualquer índice exclusivo da tabela. O tipo V retorna a coluna ou as colunas da tabela especificada, se houver, que são automaticamente atualizadas pela fonte de dados quando qualquer valor na linha é atualizado por qualquer transação.  
   
- [ @scope=] '*escopo*'  
+ [ @scope=] '*scope*'  
  É o escopo mínimo necessário de ROWID. *escopo* está **char (** 1 **)**, com um padrão T. o escopo C Especifica que a ROWID é válida somente quando posicionada nessa linha. O escopo T especifica que a ROWID é válida para a transação.  
   
- [ @nullable=] '*anulável*'  
+ [ @nullable=] '*nullable*'  
  Indica se as colunas especiais podem aceitar um valor nulo. *anulável* está **char (** 1 **)**, com um padrão U. o Especifica colunas especiais que não permitem valores nulos. U especifica colunas que permitem valor parcialmente nulo.  
   
  [ @ODBCVer=] '*ODBCVer*'  
@@ -72,7 +72,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Escopo real da ID da linha. Pode ser 0, 1 ou 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sempre retorna 0. Esse campo sempre retorna um valor.<br /><br /> 0 = SQL_SCOPE_CURROW. A ID da linha tem a garantia de ser válida somente quando posicionada nessa linha. Uma nova seleção posterior que utilize a ID da linha talvez não retorne uma linha se a linha foi atualizada ou excluída por outra transação.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. A ID da linha tem a garantia de ser válida durante a transação atual.<br /><br /> 2 = SQL_SCOPE_SESSION. A ID da linha tem a garantia de ser válida durante a sessão (dentro dos limites da transação).|  
 |COLUMN_NAME|**sysname**|Nome da coluna para cada coluna do *tabela*retornado. Esse campo sempre retorna um valor.|  
