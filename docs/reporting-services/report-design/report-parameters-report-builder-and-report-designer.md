@@ -1,9 +1,11 @@
 ---
 title: Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios) | Microsoft Docs
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: Este tópico descreve os usos comuns dos parâmetros de relatório do Reporting Services, as propriedades que você pode definir e muito mais.
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032075"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215017"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], modo nativo e modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
+
   Este tópico descreve os usos comuns dos parâmetros de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , as propriedades que você pode definir e muito mais. Parâmetros de relatório o habilitam a controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório. Você pode usar parâmetros de relatório em relatórios paginados criados no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e no Designer de Relatórios e, também, em relatórios móveis criados no [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Leia mais sobre os [Conceitos de parâmetros de relatório](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]Modo do SharePoint e Modo Nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
-  
- Para tentar adicionar um parâmetro a um relatório, consulte [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+ 
+Para tentar adicionar um parâmetro a um relatório por conta própria, confira [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Usos comuns para parâmetros  
  Estas são as formas mais comuns de usar parâmetros.  
   
- **Controle Paginado e Dados do Relatório Móvel**  
+**Controle Paginado e Dados do Relatório Móvel**  
   
 -   Filtre dados de relatório paginado na fonte de dados escrevendo consultas de conjunto de dados que contenham variáveis.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032075"
   
 -   Habilite os usuários a especificar valores para personalizar os dados em um relatório paginado. Por exemplo, forneça dois parâmetros para a data de início e data de término em dados de vendas.  
   
- **Conectar-se a relatórios relacionados**  
+**Conectar-se a relatórios relacionados**  
   
 -   Utilize parâmetros para relacionar relatórios principais a relatórios detalhados, a sub-relatórios e a relatórios vinculados. Ao criar um conjunto de relatórios, geralmente você pode criar cada relatório para responder a determinadas questões. Cada relatório pode fornecer uma exibição diferente ou um nível diferente de detalhes das informações relacionadas. Para fornecer um conjunto de relatórios inter-relacionados, crie parâmetros para os dados relacionados nos relatórios de destino.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032075"
   
 -   Personalize conjuntos de parâmetros para vários usuários. Crie dois relatórios vinculados com base em um relatório de vendas no servidor de relatório. Um relatório vinculado usa valores de parâmetro predefinidos para vendedores e o outro usa valores de parâmetro predefinidos para gerentes de vendas. Os dois relatórios usam a mesma definição de relatório.  
   
- **Variar apresentação do relatório**  
+**Variar apresentação do relatório**  
   
 -   Enviar comandos a um servidor de relatório por meio de uma solicitação de URL, para personalizar a renderização de um relatório. Para obter mais informações, consulte [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) e [Passar um parâmetro de relatório em uma URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032075"
   
  Para obter mais informações, consulte [Consulta de conjuntos de dados](#bkmk_Dataset_Parameters) neste tópico.  
   
- **Criar um parâmetro manualmente**  
+**Criar um parâmetro manualmente**  
   
- Crie um parâmetro manualmente a partir do painel de Dados do Relatório. É possível configurar os parâmetros de relatório de forma que um usuário possa inserir valores interativamente para ajudar a personalizar o conteúdo ou a aparência de um relatório. Você também pode configurar parâmetros de relatório de forma que um usuário não possa alterar os valores pré-configurados.  
+Crie um parâmetro manualmente a partir do painel de Dados do Relatório. É possível configurar os parâmetros de relatório de forma que um usuário possa inserir valores interativamente para ajudar a personalizar o conteúdo ou a aparência de um relatório. Você também pode configurar parâmetros de relatório de forma que um usuário não possa alterar os valores pré-configurados.  
   
 > [!NOTE]  
 >  Como os parâmetros são gerenciados independentemente no servidor, a republicação de um relatório principal com novas configurações de parâmetros não substituirá as configurações de parâmetros existentes no relatório.  
@@ -211,30 +212,9 @@ ms.locfileid: "50032075"
 >  Se um parâmetro de relatório não estiver associado a um parâmetro de conjunto de dados e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão ou uma URL no valor de parâmetro e renderizar o relatório em Excel ou HTML. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
 >   
 >  Para reduzir o risco de execução acidental de scripts mal-intencionados, só abra relatórios renderizados de fontes confiáveis. Para obter mais informações sobre como proteger relatórios, consulte [Protegendo Relatórios e Recursos](../../reporting-services/security/secure-reports-and-resources.md).  
-  
-##  <a name="bkmk_How_To_Topics"></a> Tópicos de instruções  
- Esta seção lista procedimentos que mostram, passo a passo, como trabalhar com parâmetros e filtros.  
-  
--   [Adicionar, alterar ou excluir um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [Adicionar, alterar ou excluir valores padrão para um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Adicionar parâmetros em cascata a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [Adicionar um sub-relatório e parâmetros &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
 
 ##  <a name="bkmk_Related_Topics"></a> Seções relacionadas  
- [Configurando parâmetros de relatório SSRS (teste)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
-  
+
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Conceitos de parâmetros de relatório](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  

@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526615"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202875"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a dois modelos de implantação, o modelo de implantação de projeto e o modelo de implantação de pacote herdado. O modelo de implantação de projeto permite que você implante seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -76,7 +76,7 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
 
 Se você alterar a conta de serviço do SSIS do padrão, precisará conceder permissões adicionais para a conta de serviço não padrão antes de implantar pacotes com êxito. Se a conta de serviço não padrão não tiver as permissões necessárias, você poderá ver a mensagem de erro a seguir.
 
-*Erro do .NET Framework durante a execução da rotina definida pelo usuário ou da agregação “deploy_project_internal”: System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório.*
+*Ocorreu um erro do .NET Framework durante a execução da agregação ou da rotina definida pelo usuário "deploy_project_internal": System.ComponentModel.Win32Exception: O cliente não tem um privilégio obrigatório.*
 
 Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir o erro, execute as etapas a seguir.
 
@@ -90,7 +90,7 @@ Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir
 8.  Clique em **OK** duas vezes e, em seguida, feche o console **Serviços de Componentes**.
 
 Para obter mais informações sobre o erro descrito nesta seção e sobre as permissões necessárias para a conta de serviço do SSIS, consulte a postagem no blog a seguir.  
-[System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+[System.ComponentModel.Win32Exception: O cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
@@ -102,7 +102,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
 1.  Criar um catálogo do SSISDB se ainda não tiver criado. Para obter mais informações, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
-2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, consulte as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert).  
+2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, confira as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert)  
   
     -   Se você criou o projeto no [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] ou posterior, por padrão, o projeto usa o modelo de implantação de projeto.  
   
@@ -123,7 +123,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
      Para obter mais informações sobre a atualização de pacotes, consulte [Atualizar pacotes do Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) e [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte as instruções abaixo: [Para implantar um projeto no Servidor do Integration Services](#deploy).  
+3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, confira as instruções abaixo: [Para implantar um projeto no Servidor do Integration Services](#deploy).  
   
 4.  (Opcional) Crie um ambiente para o projeto implantado. 
   
@@ -273,7 +273,7 @@ static void Main()
   
 2.  Se o projeto e todos os pacotes passarem no teste de compatibilidade, clique em **OK** para converter o pacote.  
   
-> **OBSERVAÇÃO:** para converter um projeto no modelo de implantação de projeto, use o **Assistente de Conversão de Projeto do Integration Services**. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> **OBSERVAÇÃO:** Para converter um projeto no modelo de implantação de projeto, use o **Assistente de Conversão de Projeto do Integration Services**. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Assistente de Implantação do Integration Services
   O **Assistente de Implantação do Integration Services** dá suporte a dois modelos de implantação:
@@ -284,7 +284,7 @@ static void Main()
  
  O **modelo de Implantação do Pacote** permite implantar pacotes que você atualizou no Catálogo do SSIS sem precisar implantar o projeto todo. 
  
- > **OBSERVAÇÃO:** a implantação padrão do Assistente é o modelo de Implantação do Projeto.  
+ > **OBSERVAÇÃO:** A implantação padrão do Assistente é o modelo de Implantação do Projeto.  
   
 ### <a name="launch-the-wizard"></a>Iniciar o assistente
 Inicie o assistente:
@@ -293,9 +293,9 @@ Inicie o assistente:
 
 **OR**
 
- - Pesquisando o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: "C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTS\Binn". 
+ - Pesquise o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: "C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
- > **OBSERVAÇÃO:** se a página **Introdução** for exibida, clique em **Avançar** para mudar para a página **Selecionar Fonte** . 
+ > **OBSERVAÇÃO:** Se a página **Introdução** for exibida, clique em **Avançar** de modo a alternar para a página **Selecionar Origem** . 
  
  As configurações nessa página são diferentes para cada modelo de implantação. Siga as etapas na seção [Project Deployment Model](#ProjectModel) ou na seção [Package Deployment Model](#PackageModel) de acordo com o modelo selecionado nessa página.  
   
@@ -409,13 +409,13 @@ Inicie o assistente:
   
  Você também pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para implantar o projeto e executar os pacotes. Para obter mais informações, consulte os tópicos na seção **Consulte também** .  
   
-> [!TIP]  
+> [!TIP]
 >  Você pode facilmente gerar as instruções Transact-SQL para os procedimentos armazenados listados no procedimento abaixo, com exceção de catalog.deploy_project, fazendo o seguinte:  
->   
+> 
 >  1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó **Catálogos do Integration Services** no Pesquisador de Objetos e navegue até o pacote que deseja executar.  
 > 2.  Clique com o botão direito do mouse no pacote e clique em **Executar**.  
 > 3.  Conforme necessário, defina valores de parâmetros, propriedades do gerenciador de conexões e opções na guia **Avançado** , como nível de log.  
->   
+> 
 >      Para obter mais informações sobre os níveis de log, veja [Habilitar o log para a execução do pacote no servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Antes de clicar em **OK** para executar o pacote, clique em **Script**. O Transact-SQL é exibido em uma janela do Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
