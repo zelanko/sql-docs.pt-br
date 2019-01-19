@@ -400,7 +400,7 @@ items:
         - name: Criar e gerenciar partições no banco de dados de workspace
           href: ./tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
         - name: Processar partições no banco de dados de workspace
-          href: ./tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md
+          href: ./tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md
       - name: perspectivas
         href: ./tabular-models/perspectives-ssas-tabular.md
         items:
@@ -1523,9 +1523,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Eventos de rastreamento
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: ee7868cfee9c8f087ffd43959ccfa7f30b643b7e
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: b226bb92d106c31c54f37feeaedc2070393f835f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785997"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405806"
