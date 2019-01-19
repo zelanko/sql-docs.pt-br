@@ -4,18 +4,18 @@ description: Este artigo descreve como instalar os serviços SQL Server Machine 
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15a1a411672303fc8556927bcaf218052758744d
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553248"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397655"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Instalar o SQL Server de 2019 serviços de Machine Learning (R, Python, Java) no Linux
 
@@ -77,7 +77,7 @@ Para cada conjunto de específicas do sistema operacional de instruções de ins
 
 ## <a name="prerequisites"></a>Prerequisites
 
-+ A versão do Linux deve ser [suportados pelo SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), em execução no local ou em um contêiner do Docker. As versões com suporte incluem:
++ A versão do Linux deve ser [suportados pelo SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), mas não inclui o mecanismo do Docker. As versões com suporte incluem:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -167,17 +167,17 @@ Em um dispositivo conectado à internet, os pacotes são baixados e instalados i
 
 | Nome do pacote | Aplica-se a | Descrição |
 |--------------|----------|-------------|
-|MSSQL-server-extensibilidade  | Todos | Estrutura de extensibilidade usada para executar código R, Python ou Java. |
-|MSSQL-server-extensibilidade-java | Java | Extensão de Java para o carregamento de um ambiente de execução do Java. Não há bibliotecas adicionais ou pacotes para Java. |
-| Microsoft openmpi  | Python, R | Interface usada pelas bibliotecas de Revo * para paralelização no Linux de transmissão de mensagens. |
-| MSSQL-mlservices-python | Python | Distribuição do código-fonte aberto do Anaconda e Python. |
-|MSSQL-mlservices mlm py  | Python | *Instalação completa*. Fornece modelos para análise de sentimento de texto e personalização de imagem revoscalepy, microsoftml, pré-treinados.| 
-|MSSQL-mlservices pacotes py  | Python | *Instalação mínima*. Fornece revoscalepy e microsoftml. <br/>Exclui modelos previamente treinados. | 
-| [Microsoft-r-abrir *](#mro) | R | Distribuição de software livre do R, composto por três pacotes. |
-|MSSQL-mlservices-mlm-r  | R | *Instalação completa*. Fornece modelos para análise de sentimento de texto e personalização de imagem RevoScaleR, MicrosoftML, sqlRUtils, olapR, pré-treinados.| 
-|MSSQL-mlservices pacotes r  | R | *Instalação mínima*. Fornece o RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Exclui modelos previamente treinados. | 
-|MSSQL-mlservices mml py  | Somente CTP 2.1 2.0 | Obsoleto no CTP 2.2 devido à consolidação de pacote do Python em mssql-mslservices-python. Fornece revoscalepy. Exclui o microsoftml e modelos previamente treinados.| 
-|MSSQL-mlservices-mml-r  | Somente CTP 2.1 2.0 | Obsoleto no CTP 2.2 devido à consolidação de pacote de R em mssql-mslservices-python. Fornece o RevoScaleR, sqlRUtils, olapR. Exclui modelos previamente treinados e MicrosoftML.  |
+|mssql-server-extensibility  | Todos | Estrutura de extensibilidade usada para executar código R, Python ou Java. |
+|mssql-server-extensibility-java | Java | Extensão de Java para o carregamento de um ambiente de execução do Java. Não há bibliotecas adicionais ou pacotes para Java. |
+| microsoft-openmpi  | Python, R | Interface usada pelas bibliotecas de Revo * para paralelização no Linux de transmissão de mensagens. |
+| mssql-mlservices-python | Python | Distribuição do código-fonte aberto do Anaconda e Python. |
+|mssql-mlservices-mlm-py  | Python | *Instalação completa*. Fornece modelos para análise de sentimento de texto e personalização de imagem revoscalepy, microsoftml, pré-treinados.| 
+|mssql-mlservices-packages-py  | Python | *Instalação mínima*. Fornece revoscalepy e microsoftml. <br/>Exclui modelos previamente treinados. | 
+| [microsoft-r-open*](#mro) | R | Distribuição de software livre do R, composto por três pacotes. |
+|mssql-mlservices-mlm-r  | R | *Instalação completa*. Fornece modelos para análise de sentimento de texto e personalização de imagem RevoScaleR, MicrosoftML, sqlRUtils, olapR, pré-treinados.| 
+|mssql-mlservices-packages-r  | R | *Instalação mínima*. Fornece o RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Exclui modelos previamente treinados. | 
+|mssql-mlservices-mml-py  | Somente CTP 2.1 2.0 | Obsoleto no CTP 2.2 devido à consolidação de pacote do Python em mssql-mslservices-python. Fornece revoscalepy. Exclui o microsoftml e modelos previamente treinados.| 
+|mssql-mlservices-mml-r  | Somente CTP 2.1 2.0 | Obsoleto no CTP 2.2 devido à consolidação de pacote de R em mssql-mslservices-python. Fornece o RevoScaleR, sqlRUtils, olapR. Exclui modelos previamente treinados e MicrosoftML.  |
 
 <a name="RHEL"></a>
 

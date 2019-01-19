@@ -5,17 +5,17 @@ description: Este tutorial demonstra como carregar dados de exemplo em um cluste
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a89b1bec266f590d6e96365436fe5339b9152f92
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 207d2d01278d96456bcec44814efe76fdae70fdf
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241468"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397505"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de big data do SQL Server de 2019
 
@@ -29,7 +29,7 @@ Este tutorial explica como usar um script para carregar dados de exemplo em um c
 - [Um cluster de big data implantados](deployment-guidance.md)
 - [Ferramentas de big data](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **sqlcmd**
    - **curl**
 
@@ -62,11 +62,11 @@ As etapas a seguir descrevem como usar um cliente do Windows para carregar os da
 
    | Parâmetro | Descrição |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | O nome fornecido para seu cluster de big data. |
-   | &LT; SQL_MASTER_IP &GT; | O endereço IP da sua instância do mestre. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | A senha de SA para a instância mestre. |
-   | &LT; KNOX_IP &GT; | O endereço IP do Gateway de HDFS/Spark. |
-   | &LT; KNOX_PASSWORD &GT; | A senha para o Gateway HDFS/Spark. |
+   | <CLUSTER_NAMESPACE> | O nome fornecido para seu cluster de big data. |
+   | <SQL_MASTER_IP> | O endereço IP da sua instância do mestre. |
+   | <SQL_MASTER_SA_PASSWORD> | A senha de SA para a instância mestre. |
+   | <KNOX_IP> | O endereço IP do Gateway de HDFS/Spark. |
+   | <KNOX_PASSWORD> | A senha para o Gateway HDFS/Spark. |
 
    > [!TIP]
    > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-cluster-name>` e examine os endereços de IP externo para a instância mestre (**ponto de extremidade de mestre de pool**) e Knox (**serviço-segurança-lb** ou **serviço-segurança-nodeport**).
@@ -98,11 +98,11 @@ As etapas a seguir descrevem como usar um cliente Linux para carregar os dados d
 
    | Parâmetro | Descrição |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | O nome fornecido para seu cluster de big data. |
-   | &LT; SQL_MASTER_IP &GT; | O endereço IP da sua instância do mestre. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | A senha de SA para a instância mestre. |
-   | &LT; KNOX_IP &GT; | O endereço IP do Gateway de HDFS/Spark. |
-   | &LT; KNOX_PASSWORD &GT; | A senha para o Gateway HDFS/Spark. |
+   | <CLUSTER_NAMESPACE> | O nome fornecido para seu cluster de big data. |
+   | <SQL_MASTER_IP> | O endereço IP da sua instância do mestre. |
+   | <SQL_MASTER_SA_PASSWORD> | A senha de SA para a instância mestre. |
+   | <KNOX_IP> | O endereço IP do Gateway de HDFS/Spark. |
+   | <KNOX_PASSWORD> | A senha para o Gateway HDFS/Spark. |
 
    > [!TIP]
    > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-cluster-name>` e examine os endereços de IP externo para a instância mestre (**ponto de extremidade de mestre de pool**) e Knox (**serviço-segurança-lb** ou **serviço-segurança-nodeport**).
@@ -110,7 +110,7 @@ As etapas a seguir descrevem como usar um cliente Linux para carregar os dados d
 1. Execute o script de inicialização.
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## <a name="next-steps"></a>Próximas etapas

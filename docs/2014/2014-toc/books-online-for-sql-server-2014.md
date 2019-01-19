@@ -19,20 +19,22 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353909"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397555"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Manuais online do SQL Server 2014
+
   Bem-vindo ao [!INCLUDE[msCoName](../includes/msconame-md.md)]® Manuais Online para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Os Manuais Online contêm as descrições de tarefa e documentação de referência que descrevem como executar o gerenciamento de dados e o trabalho de business intelligence usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Experimente:**  
  ![Máquina Virtual pequena do Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
   
 ## <a name="sql-server-technologies"></a>Tecnologias do SQL Server  
+
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclui várias tecnologias de gerenciamento de dados e análise. Clique nos links na tabela a seguir para localizar o recurso, a tarefa e a documentação de referência para cada tecnologia.  
   
 |||  
@@ -46,6 +48,7 @@ ms.locfileid: "53353909"
 |![Ícone do Reporting Services](media/reportingservices.gif "ícone do Reporting Services")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> O Reporting Services fornece às corporações a funcionalidade de relatórios online possibilitando criar relatórios que se conectam a conteúdos de várias fontes de dados, permite também, publicar os relatórios em diversos formatos e além disso centralizar o gerenciamento de segurança e de assinaturas.|  
   
 ## <a name="sql-server-information-on-the-web"></a>Informações do SQL Server na Web  
+
  A [!INCLUDE[msCoName](../includes/msconame-md.md)] publica informações adicionais sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em vários sites.  
   
  **Sites do SQL Server**  
@@ -54,7 +57,7 @@ ms.locfileid: "53353909"
   
 -   [Central de Recursos do SQL Server](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [TechCenter do SQL Server](https://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
 -   [SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
@@ -63,6 +66,7 @@ ms.locfileid: "53353909"
 -   [XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>Consulte também  
+
  [Ajuda do SQL Server Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

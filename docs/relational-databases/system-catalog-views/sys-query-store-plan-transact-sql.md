@@ -1,5 +1,5 @@
 ---
-title: query_store_plan (Transact-SQL) | Microsoft Docs
+title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710767"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397605"
 ---
-# <a name="sysquerystoreplan-transact-sql"></a>query_store_plan (Transact-SQL)
+# <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contém informações sobre cada plano de execução associado a uma consulta.  
@@ -57,7 +57,14 @@ ms.locfileid: "52710767"
 |**last_execution_time**|**datetimeoffset**|Último tempo de execução refere-se para a última hora de término do/plano de consulta.|  
 |**avg_compile_duration**|**float**|Planeje as estatísticas de compilação.|  
 |**last_compile_duration**|**bigint**|Planeje as estatísticas de compilação.|  
-  
+|**plan_forcing_type**|**int**|Tipo de imposição de plano.<br /><br />
+0: Nenhuma<br /><br />
+1: MANUAL<br /><br />
+2: AUTO | | **plan_forcing_type_desc**|**nvarchar(60)**| Descrição de plan_forcing_type texto.<br /><br />
+NENHUM: Nenhuma imposição de plano<br /><br />
+MANUAL: Plano forçado pelo usuário<br /><br />
+AUTOMÁTICO: Plano forçado pelo ajuste automático |
+
 ## <a name="plan-forcing-limitations"></a>Limitações de imposição de plano
 O Repositório de Consultas tem um mecanismo para forçar o otimizador de consulta a usar um determinado plano de execução. No entanto, existem algumas limitações que podem impedir que um plano seja forçado. 
 
