@@ -13,15 +13,15 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe732d1647acbfdf70dacaddfc4eea3eca479d8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd519c9cafb1358f21af30d2c9ea0522e47768b7
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094796"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405736"
 ---
-# <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Criar e gerenciar partições no banco de dados de espaço de trabalho (SSAS tabular)
-  As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de ou em paralelo com outras partições. As partições podem melhorar a escalabilidade e a gerenciabilidade de bancos de dados grandes. Por padrão, cada tabela tem uma partição que inclui todas as colunas. As tarefas neste tópico descrevem como criar e gerenciar partições no banco de dados de espaço de trabalho modelo usando a caixa de diálogo **Gerenciador de Partições** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+# <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Criar e gerenciar partições no banco de dados de workspace (SSAS tabular)
+  As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de ou em paralelo com outras partições. As partições podem melhorar a escalabilidade e a gerenciabilidade de bancos de dados grandes. Por padrão, cada tabela tem uma partição que inclui todas as colunas. As tarefas neste tópico descrevem como criar e gerenciar partições no banco de dados de workspace modelo usando a caixa de diálogo **Gerenciador de Partições** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Depois que um modelo for implantado em outra instância do Analysis Services, os administradores de banco de dados podem criar e gerenciar partições no modelo (implantado) usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Criar e gerenciar partições de modelos tabulares &#40;SSAS tabular&#41;](partitions-ssas-tabular.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48094796"
 -   [Para excluir uma partição](#bkmk_delete)  
   
 > [!NOTE]  
->  Você não pode mesclar partições no banco de dados de espaço de trabalho modelo usando a caixa de diálogo Gerenciador de Partições. As partições só podem ser mescladas em um modelo implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+>  Você não pode mesclar partições no banco de dados de workspace modelo usando a caixa de diálogo Gerenciador de Partições. As partições só podem ser mescladas em um modelo implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="tasks"></a>Tarefas  
  Para criar e gerenciar partições, você usará a caixa de diálogo **Gerenciador de Partições** . Para exibir a caixa de diálogo **Gerenciador de Partições** , no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Tabela** e clique em **Partições**.  
@@ -70,7 +70,7 @@ ms.locfileid: "48094796"
 2.  Na lista **Partições** , selecione a partição que você deseja excluir e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40;Tabular do SSAS&#41;](partitions-ssas-tabular.md)   
- [Processar partições no banco de dados de espaço de trabalho &#40;Tabular do SSAS&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)   
+ [Processar partições no banco de dados de espaço de trabalho &#40;Tabular do SSAS&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

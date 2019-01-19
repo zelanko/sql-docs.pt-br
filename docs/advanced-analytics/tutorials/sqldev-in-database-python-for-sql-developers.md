@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596677"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405616"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Tutorial: Análise de Python no banco de dados para desenvolvedores do SQL
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados do Python para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Neste tutorial para programadores SQL, saiba mais sobre a integração do Python criando e implantando uma solução usando de aprendizado de máquina baseada em Python uma [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) banco de dados no SQL Server. 
+Neste tutorial para programadores SQL, saiba mais sobre a integração do Python criando e implantando uma solução usando de aprendizado de máquina baseada em Python uma [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) banco de dados no SQL Server. Você usará o T-SQL, SQL Server Management Studio e uma instância do mecanismo de banco de dados com [serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) e suporte à linguagem Python.
 
-Este tutorial apresenta funções Python usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem a exploração de dados, criar e treinar um modelo de classificação binária e a implantação de modelo. Você usará os dados de exemplo do táxi de Nova York e Limosine comissão e o modelo que você irá criar prevê se uma corrida é provavelmente resultará em uma dica com base na hora do dia, distância percorreu e coleta local. Todo o código Python usado neste tutorial é encapsulado em procedimentos armazenados que você criar e executar no Management Studio.
+Este tutorial apresenta funções Python usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem a exploração de dados, criar e treinar um modelo de classificação binária e a implantação de modelo. Você usará os dados de exemplo do táxi de Nova York e Limosine comissão e o modelo que você irá criar prevê se uma corrida é provavelmente resultará em uma dica com base na hora do dia, distância percorreu e coleta local. 
+
+Todo o código Python usado neste tutorial é encapsulado em procedimentos armazenados que você criar e executar no Management Studio.
 
 > [!NOTE]
 > Este tutorial está disponível em R e Python. Para a versão do R, consulte [no banco de dados do analytics para os desenvolvedores do R](sqldev-in-database-r-for-sql-developers.md).

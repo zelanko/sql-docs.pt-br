@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776378"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405667"
 ---
 # <a name="use-the-eventdata-function"></a>Usar a função EVENTDATA
   As informações sobre um evento que aciona um disparador DDL são capturadas por meio da função EVENTDATA. Essa função retorna um valor `xml`. O esquema XML contém informações sobre o seguinte:  
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  Para retornar dados de evento, recomenda-se usar o método `value()` de XQuery, em vez do método `query()`. O método `query()` retorna instâncias XML e CR/LF (retorno de carro e alimentação de linha) com escape de E comercial na saída, enquanto que o método `value()` processa instâncias CR/LF invisíveis na saída.  
   
- Um exemplo similar de disparador DDL é fornecido com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obter o exemplo, localize a pasta Gatilhos de Banco de Dados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta pasta está localizada na pasta **Programação** do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Clique com o botão direito do mouse em **ddlDatabseTriggerLog** e selecione **Script de Gatilho de Banco de Dados como**. Por padrão, o gatilho DDL **ddlDatabseTriggerLog** está desabilitado.  
+ Um exemplo similar de disparador DDL é fornecido com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obter o exemplo, localize a pasta Gatilhos de Banco de Dados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta pasta está localizada na pasta **Programação** do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Clique com botão direito **ddlDatabaseTriggerLog** e selecione **Script de gatilho de banco de dados como**. Por padrão, o gatilho DDL **ddlDatabaseTriggerLog** está desabilitado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Eventos DDL](../triggers/ddl-events.md)   

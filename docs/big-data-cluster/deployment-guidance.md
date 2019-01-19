@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242137"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405816"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -53,7 +53,7 @@ Você pode optar por implantar Kubernetes em qualquer uma das três maneiras:
 
 Antes de implantar o cluster de big data do SQL Server 2019, primeiramente [instalar as ferramentas de big data](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **Extensão do SQL Server de 2019**
 
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 Atualmente, a única maneira de atualizar um cluster de big data para uma nova versão é remover e recriar o cluster manualmente. Cada versão tem uma versão exclusiva do **mssqlctl** que não é compatível com a versão anterior. Além disso, se tiver um cluster mais antigo baixar uma imagem em um novo nó, a imagem mais recente não ficará compatível com as imagens mais antigas no cluster. Para atualizar para a versão mais recente, use as seguintes etapas:
 
-1. Antes de excluir o cluster antigo, fazer backup dos dados na instância mestre do SQL Server e no HDFS. Para a instância mestre do SQL Server, você pode usar [SQL Server backup e restauração](data-ingestion-restore-databse.md). Para o HDFS, você [pode copiar os dados com **curl**](data-ingestion-curl.md).
+1. Antes de excluir o cluster antigo, fazer backup dos dados na instância mestre do SQL Server e no HDFS. Para a instância mestre do SQL Server, você pode usar [SQL Server backup e restauração](data-ingestion-restore-database.md). Para o HDFS, você [pode copiar os dados com **curl**](data-ingestion-curl.md).
 
 1. Excluir o cluster antigo com o `mssqlctl delete cluster` comando.
 
@@ -310,10 +310,10 @@ Para monitorar ou solucionar problemas de uma implantação, use **kubectl** par
 
    | Serviço | Descrição |
    |---|---|
-   | **ponto de extremidade de mestre de pool** | Fornece acesso para a instância mestre.<br/>(**EXTERNAL-IP, 31433** e o **SA** usuário) |
-   | **serviço mssql-controlador lb**<br/>**serviço mssql-controlador nodeport** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
-   | **serviço de proxy de lb**<br/>**serviço de proxy de nodeport** | Fornece acesso para o [Portal de administração de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777/portal)|
-   | **serviço de segurança de lb**<br/>**serviço de segurança de nodeport** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
+   | **endpoint-master-pool** | Fornece acesso para a instância mestre.<br/>(**EXTERNAL-IP, 31433** e o **SA** usuário) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Fornece acesso para o [Portal de administração de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
 
    > [!NOTE]
    > Os nomes de serviço podem variar dependendo do seu ambiente de Kubernetes. Ao implantar no serviço de Kubernetes do Azure (AKS), os nomes de serviço terminam com **-lb**. Para implantações minikube e kubeadm, os nomes de serviço terminam com **nodeport -**.

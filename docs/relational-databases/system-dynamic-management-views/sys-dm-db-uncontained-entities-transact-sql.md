@@ -19,12 +19,12 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40235280563039493bdd174de1c314809a424336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694084"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405606"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47694084"
 |**Nome da coluna**|**Tipo**|**Descrição**|  
 |*class*|**int**|1 = Objeto ou coluna (inclui módulos, XPs, exibições, sinônimos e tabelas).<br /><br /> 4 = Entidade do Banco de Dados<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (Índice de Texto Completo)<br /><br /> 12 = Gatilho DDL do Banco de Dados<br /><br /> 19 = Rota<br /><br /> 30 = Especificação de Auditoria|  
 |*class_desc*|**nvarchar(120)**|Descrição da classe da entidade. Uma das opções a seguir para corresponder à classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|ID da entidade.<br /><br /> Se *classe* = 1, então o object_id<br /><br /> Se *classe* = 4, então principal_id.<br /><br /> Se *classe* = 5 e, em seguida, assembly_id.<br /><br /> Se *classe* = 6 e, em seguida, user_type_id.<br /><br /> Se *classe* = 7, em seguida, index_id.<br /><br /> Se *classe* = 12, então o object_id.<br /><br /> Se *classe* = 19, route_id.<br /><br /> Se *classe* = 30 e, em seguida, sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|ID da entidade.<br /><br /> Se *classe* = 1, então o object_id<br /><br /> Se *classe* = 4, então principal_id.<br /><br /> Se *classe* = 5 e, em seguida, assembly_id.<br /><br /> Se *classe* = 6 e, em seguida, user_type_id.<br /><br /> Se *classe* = 7, em seguida, index_id.<br /><br /> Se *classe* = 12, então o object_id.<br /><br /> Se *classe* = 19, route_id.<br /><br /> Se *classe* = 30 e, em seguida, sys. database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**int**|Se a classe for um módulo, retornará o número da linha no qual o uso não contido está localizado.  Caso contrário, o valor será nulo.|  
 |*statement_ offset_begin*|**int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição inicial onde uso não contido começa. Caso contrário, o valor de retorno será nulo.|  
 |*statement_ offset_end*|**int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição final do uso não contido. Um valor de -1 indica o fim do módulo. Caso contrário, o valor de retorno será nulo.|  
