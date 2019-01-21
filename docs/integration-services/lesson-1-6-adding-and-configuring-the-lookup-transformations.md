@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 6: Adicionando e configurando a transformação Pesquisa | Microsoft Docs'
+title: 'Etapa 6: Adicionar e configurar as transformações de Pesquisa | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,36 +11,37 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8356a7ff8ee0cdb0e55bcd313a01a8ce1fe045ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765564"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143372"
 ---
-# <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lição 1-6 – adicionar e configurar as transformações de pesquisa
-Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
+# <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lição 1-6: Adicionar e configurar as transformações de Pesquisa
+
+Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, você define as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados de origem do conjunto de dados de referência.  
   
 > [!NOTE]  
-> Você também pode configurar a transformação Pesquisa para conectar-se a um cache que contém o conjunto de dados de referência. Para obter mais informações, consulte [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md).  
+> Você também pode configurar a transformação Pesquisa para conectar-se a um cache que contém o conjunto de dados de referência. Para obter mais informações, confira [transformação de Pesquisa](../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-Para este tutorial, você irá adicionar e configurar os dois componentes de transformações Pesquisa a seguir para o pacote:  
+Nesta tarefa, você adiciona e configura os dois componentes de transformações Pesquisa a seguir para o pacote:  
   
--   Uma transformação para executar uma pesquisa de valores na coluna **CurrencyKey** da tabela de dimensões **DimCurrency** baseada nos valores da coluna **CurrencyID** correspondentes do arquivo simples.  
+-   Uma transformação que executa uma pesquisa de valores na coluna **CurrencyKey** da tabela de dimensões **DimCurrency** baseada nos valores da coluna **CurrencyID** correspondentes do arquivo simples.  
   
--   Uma transformação para executar uma pesquisa de valores na coluna **DateKey** da tabela de dimensões **DimDate** baseada nos valores da coluna **CurrencyDate** correspondentes do arquivo simples.  
+-   Uma transformação que executa uma pesquisa de valores na coluna **DateKey** da tabela de dimensões **DimDate** baseada nos valores da coluna **CurrencyDate** correspondentes do arquivo simples.  
   
 Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conexões OLE DB que você criou anteriormente.  
   
-### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>Para adicionar e configurar a transformação Código de Moeda da Pesquisa  
+## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>Adicionar e configurar a transformação Pesquisar Chave de Moeda  
   
-1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum**e arraste **Pesquisa** para a superfície de design da guia **Fluxo de Dados** . Coloque Pesquisa diretamente abaixo da fonte **Extrair Dados de Exemplo de Moeda** .  
+1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum**e arraste **Pesquisa** para a superfície de design da guia **Fluxo de Dados** . Coloque **Pesquisa** diretamente abaixo da fonte **Extrair Dados de Exemplo de Moeda**.  
   
-2.  Clique na fonte de arquivo simples **Extrair Dados de Exemplo de Moeda** e arraste a seta azul para a transformação **Pesquisa** recém-adicionada, para poder conectar assim os dois componentes.  
+2.  Selecione a fonte de arquivo simples **Extrair Dados de Exemplo de Moeda** e arraste a seta azul para a transformação **Pesquisa** recém-adicionada, para poder conectar assim os dois componentes.  
   
-3.  Na superfície de design de **Fluxo de Dados** , clique em **Pesquisa** na transformação **Pesquisa** e altere o nome para **Pesquisa de Código de Moeda**.  
+3.  Na superfície de design de **Fluxo de Dados**, selecione **Pesquisa** na transformação **Pesquisa** e altere o nome para **Pesquisar Chave de Moeda**.  
   
-4.  Clique duas vezes na transformação **Chave de Moeda de Pesquisa** para exibir o Editor de Transformação Pesquisa.  
+4.  Clique duas vezes na transformação **Pesquisar Chave de Moeda** para exibir o **Editor de Transformação Pesquisa**.  
   
 5.  Na página **Geral** , faça as seguintes seleções:  
   
@@ -52,7 +53,7 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
     1.  Na caixa de diálogo **Gerenciador de Conexões OLE DB** , verifique se **localhost.AdventureWorksDW2012** está exibido.  
   
-    2.  Selecione **Usar os resultados de uma consulta SQL**e digite ou copie a seguinte instrução SQL:  
+    2.  Selecione **Usar resultados de uma consulta SQL** e insira ou cole a seguinte instrução SQL:  
   
         ```sql
         SELECT * FROM [dbo].[DimCurrency]
@@ -61,6 +62,7 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
             'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
             'MXN', 'SAR', 'USD', 'VEB')
         ```  
+    3.  Selecione **Visualizar** para verificar os resultados da consulta.
   
 7.  Na página **Colunas** , faça as seguintes seleções:  
   
@@ -68,21 +70,21 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
     2.  Na lista **Colunas de Pesquisa Disponíveis** , marque a caixa de seleção à esquerda de **CurrencyKey**.  
   
-8.  Clique em **OK** para retornar à superfície de design **Fluxo de Dados** .  
+8.  Selecione **OK** para retornar à superfície de design **Fluxo de Dados**.  
   
-9. Clique com o botão direito do mouse na transformação Chave de Moeda de Pesquisa e clique em **Propriedades**.  
+9. Clique com o botão direito do mouse na transformação Pesquisar Chave de Moeda e selecione **Propriedades**.  
   
-10. Na janela Propriedades, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)** e se a propriedade **DefaultCodePage** está definida como **1252**.  
+10. Na janela **Propriedades**, verifique se a propriedade **LocaleID** é **Inglês (Estados Unidos)** e se a propriedade **DefaultCodePage** é **1252**.  
   
-### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Para adicionar e configurar a transformação Pesquisa de Chave de Data  
+## <a name="add-and-configure-the-lookup-date-key-transformation"></a>Adicionar e configurar a transformação Pesquisar Código de Data  
   
-1.  Na **Caixa de Ferramentas do SSIS**, arraste **Pesquisa** até a superfície de design **Fluxo de Dados** . Coloque Pesquisa diretamente abaixo da transformação **Pesquisa de Códigos de Moeda** .  
+1.  Na **Caixa de Ferramentas do SSIS**, arraste **Pesquisa** até a superfície de design **Fluxo de Dados** . Coloque essa **Pesquisa** diretamente abaixo da transformação **Pesquisar Chave de Moeda**.  
   
-2.  Clique na transformação **Pesquisa de Código de Moeda** e depois arraste a seta verde para a transformação **Pesquisa** recém-adicionada para conectar os dois componentes.  
+2.  Selecione a transformação **Pesquisar Chave de Moeda** e depois arraste a seta azul para a nova transformação **Pesquisa** para conectar os dois componentes.  
   
-3.  Na caixa de diálogo **Seleção de Saída e Entrada** , clique em **Saída de Correspondência de Pesquisa** na caixa de listagem **Saída** e clique em **OK**.  
+3.  Na caixa de diálogo **Seleção de Entrada e Saída**, selecione **Saída de Correspondência de Pesquisa** na caixa de listagem **Saída** e selecione **OK**.  
   
-4.  Na superfície de design **Fluxo de Dados** , clique em **Pesquisa** na transformação **Pesquisa** recém-adicionada e altere o nome para **Pesquisa de Códigos de Data**.  
+4.  Na superfície de design **Fluxo de Dados**, selecione o nome **Pesquisa** na transformação **Pesquisa** recém-adicionada e altere o nome para **Pesquisar Código de Data**.  
   
 5.  Clique duas vezes na transformação **Chave de Data de Pesquisa** .  
   
@@ -90,9 +92,9 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
 7.  Na página **Conexão** , faça as seguintes seleções:  
   
-    1.  Na caixa de diálogo **Gerenciador de conexões OLE DB** , verifique se **localhost.AdventureWorksDW2012** é exibido.  
+    1.  Na caixa de diálogo **Gerenciador de conexões OLE DB**, verifique se **localhost.AdventureWorksDW2012** é exibido.  
   
-    2.  Na caixa **Usar uma tabela ou exibição** , digite ou selecione **[dbo].[DimDate]**.  
+    2.  Na caixa **Usar uma tabela ou exibição**, insira ou selecione **[dbo].[DimDate]**.  
   
 8.  Na página **Colunas** , faça as seguintes seleções:  
   
@@ -102,17 +104,17 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
 9. Na página **Avançado** , examine as opções de cache.  
   
-10. Clique em **OK** para retornar à superfície de design **Fluxo de Dados** .  
+10. Selecione **OK** para retornar à superfície de design **Fluxo de Dados**.  
   
-11. Clique com o botão direito do mouse na transformação Chave de Data de Pesquisa e clique em **Propriedades**.  
+11. Clique com o botão direito do mouse na transformação **Chave de Data de Pesquisa** e selecione **Propriedades**.
   
-12. Na janela Propriedades, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)** e se a propriedade **DefaultCodePage** está definida como **1252**.  
+12. Na janela **Propriedades**, verifique se a propriedade **LocaleID** é **Inglês (Estados Unidos)** e se a propriedade **DefaultCodePage** é **1252**.  
   
-## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 7: Adicionando e configurando o destino OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+## <a name="go-to-next-task"></a>Ir para a próxima tarefa
+[Etapa 7: Adicionar e configurar o destino OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>Confira também  
+[Transformação de Pesquisa](../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
   

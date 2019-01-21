@@ -15,16 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600886"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300363"
 ---
 # <a name="install-sql-server"></a>Instalar o SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
+
  
  A partir do [!INCLUDE[sssql15](../../includes/sssql15-md.md)], o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] só está disponível como um aplicativo de 64 bits. Aqui estão os detalhes importantes sobre como obter o SQL Server e como instalá-lo.
 
@@ -34,7 +37,7 @@ ms.locfileid: "51600886"
  
 *  **Requisitos**: antes de instalar, separe algum tempo para examinar os requisitos de instalação, as verificações de configuração do sistema e as considerações sobre segurança em [Planejamento de uma Instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) 
 
-* **Processo**: consulte [Instalação para SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md) para obter instruções completas sobre o processo de instalação
+* **Processo**: veja [Instalação para SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md) para obter instruções completas sobre o processo de instalação
 
 * **Exemplos de bancos de dados e exemplo de código**: 
     * Eles não são instalados como parte da instalação do SQL Server por padrão 

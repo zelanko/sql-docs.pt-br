@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516025"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143576"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 Você usa as configurações de projeto de banco de dados para controlar aspectos do seu banco de dados, depuração e configurações de compilação. Essas configurações caem nas seguintes categorias.  
@@ -170,8 +170,7 @@ A página de propriedades **Compilação SQLCLR** contém configurações avanç
   
 2.  Se o objeto for escrito em VB, você poderá primeiro escolher VB na lista suspensa **Linguagem** e clicar no botão **Avançado** . As descrições para as opções do VB podem ser localizadas em [Caixa de diálogo Configurações de Compilador Avançadas (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
-Para saber mais, confira [Compilar propriedades de configuração](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
-  
+
 ## <a name="bkmk_build"></a>Compilação  
 É possível escolher uma configuração de compilação para cada projeto de banco de dados de sua solução. Por padrão, há uma única configuração, mas você pode adicionar configurações personalizadas. Você pode optar por fazer isso, por exemplo, se desejar uma configuração personalizada na qual você sempre exclui e recria o banco de dados. Em soluções que contém diferentes tipos de projeto, você pode criar uma configuração de solução personalizada que contenha uma configuração de compilação específica para cada projeto.  
   
@@ -195,7 +194,7 @@ As configurações da tabela a seguir aplicam-se às configurações de compila�
 |---------|-----------------|---------------|  
 |Caminho de saída da compilação|bin\Debug\|Especifica onde a saída da compilação será gerada quando você compilar ou implantar o projeto de banco de dados. Se especificar um caminho relativo, você deverá especificá-lo como relativo ao caminho do projeto do banco de dados. Se o caminho não existir, ele será criado.|  
 |Nome do arquivo de saída da compilação|*DatabaseProjectName*|Especifica o nome que você deseja dar à saída gerada ao compilar o projeto do banco de dados.|  
-|Tratar avisos Transact\-SQL como erros|não|Especifica se um aviso Transact\-SQL deve fazer com que o processo de compilação e implantação seja cancelado. Se essa caixa de seleção estiver desmarcada, os avisos serão exibidos, mas o processo de compilação e implantação continuará. Essa configuração é específica ao projeto, não ao usuário, e é armazenada no arquivo .sqlproj.|  
+|Tratar avisos Transact\-SQL como erros|Não|Especifica se um aviso Transact\-SQL deve fazer com que o processo de compilação e implantação seja cancelado. Se essa caixa de seleção estiver desmarcada, os avisos serão exibidos, mas o processo de compilação e implantação continuará. Essa configuração é específica ao projeto, não ao usuário, e é armazenada no arquivo .sqlproj.|  
 |Suprimir avisos Transact\-SQL|Em branco|Especifica uma lista de números de avisos, delimitados por vírgula ou ponto e vírgula, que identificam os avisos suprimidos.<br /><br />Os avisos suprimidos não são exibidos na janela **Lista de Erros** e não afetam o êxito da compilação, mesmo se você marcar a caixa de seleção **Tratar avisos Transact\-SQL como erros**.|  
   
 ## <a name="bkmk_sqlcmd_variables"></a>Variáveis SQLCMD  
@@ -222,11 +221,11 @@ Além disso, a publicação de linha de comando permite que você substitua esse
 |Iniciar Ação|None|Especifica um script ou um programa externo para execução quando você depura seu projeto.|  
 |Cadeia de Conexão de Destino|Fonte de Dados=(localdb)\\*SolutionName*;Catálogo Inicial=*DatabaseProjectName*;Segurança Integrada=True;Pooling=False;Tempo Limite de Conexão=30|Especifica as informações de conexão do servidor de banco de dados de destino para a configuração da compilação especificada. A cadeia de conexão padrão é em relação a uma instância e banco de dados LocalDB do SQL Server criados localmente.|  
 |Implantar propriedades do banco de dados|Sim|Especifica se as configurações de DatabaseProperties.DatabaseProperties são implantadas ou atualizadas quando você compila ou implanta o projeto de banco de dados.|  
-|Sempre recriar banco de dados|não|Especifica se o banco de dados será cancelado e recriado em vez da execução de uma atualização incremental. Você pode selecionar essa caixa de seleção se desejar executar testes de unidade de banco de dados em uma implantação limpa do banco de dados, por exemplo. Se a caixa de seleção for limpa, o banco de dados existente será atualizado, em vez de ser removido e recriado.|  
+|Sempre recriar banco de dados|Não|Especifica se o banco de dados será cancelado e recriado em vez da execução de uma atualização incremental. Você pode selecionar essa caixa de seleção se desejar executar testes de unidade de banco de dados em uma implantação limpa do banco de dados, por exemplo. Se a caixa de seleção for limpa, o banco de dados existente será atualizado, em vez de ser removido e recriado.|  
 |Bloquear implantação incremental se puder ocorrer perda de dados|sim|Especifica se a implantação será interrompida se uma atualização provocar perda de dados. Se essa caixa de seleção for selecionada, as alterações que criariam a perda de dados farão com que a implantação seja interrompida com um erro, o que impede que os dados sejam perdidos. Por exemplo, a implantação seria interrompida se uma coluna `varchar(50)` fosse alterada para `varchar(30)`.<br /><br />**OBSERVAÇÃO:** A implantação será bloqueada apenas se as tabelas onde a perda de dados pode ocorrer contiverem dados. A implantação continuará se nenhum dado for perdido.|  
 |REMOVER objetos no destino, mas não no projeto|não|Especifica se os objetos que estão no banco de dados de destino, mas não no projeto do banco de dados devem ser removidos como parte do script de implantação. É possível excluir alguns arquivos de seu projeto para removê-los temporariamente de seu script de compilação. No entanto, você pode deixar as versões existentes desses objetos no banco de dados de destino. Essa caixa de seleção não terá nenhum efeito se a caixa de seleção **Sempre recriar banco de dados** estiver selecionada, pois o banco de dados será removido.|  
-|No usar instruções ALTER ASSEMBLY para atualizar tipos CLR|não|Especifica se as instruções ALTER ASSEMBLY são usadas para atualizar tipos CLR (Common Language Runtime) ou se o objeto que instancia o tipo CLR será removido e recriado quando você implantar alterações.|  
-|Avançado...|não|Botão de comando que permite especificar opções que controlam os eventos e o comportamento da implantação.|  
+|No usar instruções ALTER ASSEMBLY para atualizar tipos CLR|Não|Especifica se as instruções ALTER ASSEMBLY são usadas para atualizar tipos CLR (Common Language Runtime) ou se o objeto que instancia o tipo CLR será removido e recriado quando você implantar alterações.|  
+|Avançado...|Não|Botão de comando que permite especificar opções que controlam os eventos e o comportamento da implantação.|  
   
 ## <a name="bkmk_ref_paths"></a>Caminhos de Referência  
 É possível usar esta página para definir as variáveis do servidor e do banco de dados que estão associadas a uma referência entre bancos de dados. Além disso, você pode especificar os valores dessas variáveis. Para obter mais informações, consulte [Usando referências em projetos de banco de dados](https://msdn.microsoft.com/library/bb386242.aspx).  

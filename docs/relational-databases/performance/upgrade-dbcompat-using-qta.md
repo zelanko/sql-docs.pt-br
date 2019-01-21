@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509942"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257091"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Atualizando bancos de dados usando o Assistente de Ajuste de Consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,10 +98,10 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
 
        ![Nova janela de configurações de atualização do banco de dados](../../relational-databases/performance/media/qta-new-session-settings.png "Nova janela de configurações de atualização do banco de dados")
 
-        > [!IMPORTANT]
-        > O *Tamanho Máximo* proposto é um valor arbitrário que pode ser adequado para uma carga de trabalho com tempo curto.   
-        > No entanto, saiba que pode não ser suficiente manter informações sobre as cargas de trabalho de linha de base e após a atualização do banco de dados para cargas de trabalho muito intensivas, ou seja, quando muitos planos diferentes podem ser gerados.   
-        > Se você puder prever que isso ocorrerá, insira um valor mais alto que seja apropriado.
+       > [!IMPORTANT]
+       > O *Tamanho Máximo* proposto é um valor arbitrário que pode ser adequado para uma carga de trabalho com tempo curto.   
+       > No entanto, saiba que pode não ser suficiente manter informações sobre as cargas de trabalho de linha de base e após a atualização do banco de dados para cargas de trabalho muito intensivas, ou seja, quando muitos planos diferentes podem ser gerados.   
+       > Se você puder prever que isso ocorrerá, insira um valor mais alto que seja apropriado.
 
 4.  A janela **Ajuste** conclui a configuração da sessão e instrui sobre as próximas etapas para abrir e prosseguir com a sessão. Após a conclusão, clique em **Concluir**.
 
@@ -123,7 +123,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
     -  **Nome da Sessão**: nome gerado pelo sistema composto do nome de banco de dados, da data e da hora de criação da sessão.
     -  **Status**: status da sessão (Ativa ou Fechada).
     -  **Descrição**: gerada pelo sistema composta pelo nível de compatibilidade do banco de dados de destino selecionado pelo usuário e o número de dias da carga de trabalho do ciclo comercial.
-    -  **Hora de Início**: data e hora de quando a sessão foi criada.
+    -  **Hora de início**: a data e a hora em que a sessão foi criada.
 
     ![Página de gerenciamento da sessão do QTA](../../relational-databases/performance/media/qta-session-management.png "Página de gerenciamento da sessão do QTA")
 
@@ -163,9 +163,9 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
         -  **ID da Consulta** 
         -  **Texto da Consulta**: instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser expandida clicando no botão **...**.
         -  **Execuções**: exibe o número de execuções dessa consulta para a coleta da carga de trabalho inteira.
-        -  **Métrica de linha de base**: a métrica selecionada (Duração ou CpuTime) em ms para a coleta de dados de linha de base antes da atualização de compatibilidade do banco de dados.
-        -  **Métrica observada**: a métrica selecionada (Duração ou CpuTime) em ms para a coleta de dados após a atualização de compatibilidade do banco de dados.
-        -  **% de alteração**: alteração percentual da métrica selecionada entre o estado anterior e posterior de atualização de compatibilidade do banco de dados. Um número negativo representa o valor da regressão medida para a consulta.
+        -  **Métrica de Linha de Base**: a métrica selecionada (Duração ou CpuTime) em ms para a coleta de dados de linha de base antes da atualização de compatibilidade do banco de dados.
+        -  **Métrica Observada**: a métrica selecionada (Duração ou CpuTime) em ms para a coleta de dados após a atualização de compatibilidade do banco de dados.
+        -  **% de Alteração**: alteração percentual da métrica selecionada entre o estado anterior e posterior de atualização de compatibilidade do banco de dados. Um número negativo representa o valor da regressão medida para a consulta.
         -  **Ajustável**: *True* ou *False* dependendo da qualificação da consulta para experimentação.
 
 4.  **Exibir análise** permite selecionar quais consultas devem ser experimentadas e encontrar oportunidades de otimização. O valor **Consultas a serem mostradas** torna-se o escopo das consultas qualificadas para experimentação. Depois que as consultas desejadas forem verificadas, clique em **Avançar** para começar a experimentação.  
@@ -185,11 +185,11 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
     -  **ID da Consulta** 
     -  **Texto da Consulta**: instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser expandida clicando no botão **...**.
     -  **Status**: exibe o estado atual de experimentação para a consulta.
-    -  **Métrica de linha de base**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta executada na **Subetapa 3 da Etapa 2**, que representa a consulta regredida após a atualização de compatibilidade do banco de dados.
-    -  **Métrica observada**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta após a experimentação, para uma otimização suficientemente boa.
-    -  **% de alteração**: a alteração percentual da métrica selecionada entre o estado de experimentação anterior o posterior, que representa o valor da melhoria medida para a consulta com a otimização proposta.
-    -  **Opção de consulta**: link para a dica proposta que melhora a métrica de execução de consulta.
-    -  **Pode implantar**: *True* ou *False*, dependendo se a otimização de consulta proposta pode ser implantada como um guia de plano.
+    -  **Métrica de Linha de Base**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta executada na **Subetapa 3 da Etapa 2**, que representa a consulta regredida após a atualização de compatibilidade do banco de dados.
+    -  **Métrica Observada**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta após a experimentação, para uma otimização suficientemente boa.
+    -  **% de Alteração**: a alteração percentual da métrica selecionada entre o estado de experimentação anterior o posterior, que representa o valor da melhoria medida para a consulta com a otimização proposta.
+    -  **Opção de Consulta**: link para a dica proposta que melhora a métrica de execução de consulta.
+    -  **Pode Implantar**: *True* ou *False*, dependendo se a otimização de consulta proposta pode ser implantada como um guia de plano.
 
     ![Etapa 4 do QTA](../../relational-databases/performance/media/qta-step4.png "Etapa 4 do QTA")
 

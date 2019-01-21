@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668415"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124606"
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
 
@@ -37,7 +37,7 @@ ms.locfileid: "51668415"
     - Um assinante de uma publicação de mesclagem pode ser todas as versões iguais ou anteriores à versão do publicador com suporte, de acordo com o ciclo de vida de suporte das versões.  
  
 O caminho de atualização para o SQL Server é diferente dependendo do padrão de implantação. O SQL Server oferece dois caminhos de atualização em geral:
-- Lado a lado: implantar um ambiente paralelo e mover bancos de dados juntamente com os objetos de nível de instância associada, como logons, trabalhos, etc. para o novo ambiente. 
+- Lado a lado: Implantar um ambiente paralelo e mover bancos de dados juntamente com os objetos de nível de instância associada, como logons, trabalhos, etc. para o novo ambiente. 
 - Atualização in-loco: permitir que a mídia de instalação do SQL Server atualize a instalação do SQL Server existente, substituindo os bits do SQL Server e atualizando os objetos de banco de dados. Para ambientes que executam Grupos de Disponibilidade AlwaysOn ou Instâncias do Cluster de Failover, uma atualização in-loco é combinada com uma [atualização sem interrupção](choose-a-database-engine-upgrade-method.md#rolling-upgrade) para minimizar o tempo de inatividade. 
 
 Uma abordagem comum que tem sido adotada para atualizações lado a lado de topologias de replicação é mover os pares publicador-assinante em partes para o novo ambiente lado a lado em vez de uma movimentação de toda a topologia. Essa abordagem em fases ajuda a controlar o tempo de inatividade e a minimizar o impacto a uma determinada medida para o negócio dependente de replicação.  
@@ -132,9 +132,9 @@ Se estiver planejando atualizar a instância do SQL Server para o SQL 2016 (ou s
  Para assegurar que as configurações de replicação sejam mantidas na restauração do backup de um banco de dados replicado de uma versão anterior, restaure para um servidor e um banco de dados que tenham os mesmos nomes que o servidor e o banco de dados dos quais foi obtido o backup.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administração &#40;Replicação&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)  
+ [Perguntas Frequentes sobre Administração de Replicação](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilidade com versões anteriores de replicação](../../relational-databases/replication/replication-backward-compatibility.md)   
- [Novidades &#40;Replicação&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Atualizando uma topologia de replicação para o SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

@@ -13,12 +13,12 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3927c6b23a475e023e340a37f56c7be96160c900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3baf0d6e6b7e2519cf1a9c5d3d36477390799c9a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717384"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124766"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurar a opção de configuração de servidor max text repl size
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47717384"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Essa opção se aplica à replicação transacional e ao Change Data Capture. Quando um servidor é configurado para replicação transacional e Change Data Capture, o valor especificado se aplica a ambos recursos. Essa opção é ignorada pela replicação de instantâneo e replicação de mesclagem.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47717384"
   
 3.  Em **Diversos**, altere a opção **Tamanho Máximo da Replicação de Texto** para o valor desejado.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>Para configurar a opção max text repl size  
   
@@ -91,7 +91,7 @@ GO
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

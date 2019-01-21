@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: becdad9b10bb5632ecefe96bcef2fa9e7ebaf29e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30b7c524a47459354f6e42e734fbbe4c8faec4ea
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530402"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256991"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 4.  Clique com o botão direito do mouse no log de erros que você deseja exibir e selecione **Exibir Log do Agente**.  
   
-    As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log – ***nome_do_servidor*:  
+    As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log -**_nome_do_servidor_:  
   
     **Carregar Log**  
     Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  

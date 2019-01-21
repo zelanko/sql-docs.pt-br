@@ -1,7 +1,7 @@
 ---
 title: Criar e aplicar o instantâneo inicial | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,71 +14,79 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657545"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135606"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Criar e aplicar o instantâneo inicial
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como criar e aplicar o instantâneo inicial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Publicações de mesclagem que usam filtros com parâmetros exigem um instantâneo de duas partes. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+Este tópico descreve como criar e aplicar o instantâneo inicial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Publicações de mesclagem que usam filtros com parâmetros exigem um instantâneo de duas partes. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  Instantâneos são gerados pelo Agente de Instantâneo depois que uma publicação for criada. Eles podem ser gerados:  
   
- **Neste tópico**  
+-   Imediatamente. Por padrão, um instantâneo para uma publicação de mesclagem é gerado imediatamente depois que a publicação seja criada no Assistente para Nova Publicação.    
+-   Em um momento agendado. Especifique um agendamento na página **Agente de Instantâneo** do Assistente para Nova Publicação ou ao usar procedimentos armazenados no RMO (Replication Management Object).    
+-   Manualmente Execute o Agente de Instantâneo no prompt de comando ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre a execução de agentes, consulte [Conceitos dos executáveis do Replication Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) ou [Iniciar e interromper um Agente de Replicação &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   **Para criar e aplicar o instantâneo inicial, usando:**  
+Para replicação de mesclagem, é gerado um instantâneo toda vez que o Agente de Instantâneo é executado. Para replicação transacional, a geração de instantâneo depende da configuração da propriedade de publicação de **immediate_sync**. Se a propriedade estiver definida como TRUE (padrão ao usar o Assistente para Nova Publicação), um instantâneo é gerado toda vez que o Agente de Instantâneo for executado e pode ser aplicado ao Assinante a qualquer momento. Se a propriedade estiver definida como FALSE (padrão ao usar **sp_addpublication**), o instantâneo só é gerado se uma assinatura nova for adicionada desde a última execução do Agente de Instantâneo; Assinantes devem esperar que o Agente de Instantâneo termine antes de poder sincronizar-se.  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+Por padrão, quando são gerados instantâneos, eles são salvados na pasta de instantâneo padrão localizada no Distribuidor. Você também pode salvar os arquivos de instantâneo em mídia removível, como discos removíveis, CD-ROMs ou em locais diferentes da pasta padrão do instantâneo. Adicionalmente, você poderá comprimir os arquivos para que sejam mais fáceis de armazenar e transferir, e executar os scripts antes ou depois de o instantâneo ser aplicado ao Assinante. Para obter mais informações sobre essas opções, consulte [Snapshot Options](../../relational-databases/replication/snapshot-options.md).  
   
-     [Transact-SQL](#TsqlProcedure)  
+Se o instantâneo for uma publicação de mesclagem que usa filtros com parâmetros, o instantâneo será criado usando um processo de duas partes. Primeiro é criado um instantâneo do esquema que contém os scripts de replicação e o esquema dos objetos publicados, mas não os dados. Cada assinatura é então inicializada com um instantâneo que inclui os scripts e o esquema copiados do instantâneo do esquema e os dados pertencentes à partição de assinatura. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-     [RMO (Replication Management Objects)](#RMOProcedure)  
+Se o instantâneo for criado no Publicador e armazenado em um local padrão ou local alternativo de instantâneo, este poderá ser transferido ao Assinante e aplicado. O Agente de Distribuição (para replicação transacional ou de instantâneo) ou Agente de Mesclagem (para replicação de mesclagem) transferem o instantâneo e aplica o esquema e arquivos de dados ao banco de dados da assinatura no Assinante durante a sincronização inicial. Por padrão, a sincronização inicial acontecerá imediatamente depois que uma assinatura seja criada se você usar o Assistente para Nova Assinatura. Este comportamento é controlado pela opção **Inicializar Quando** na página **Inicializar Assinaturas** do assistente. Quando os instantâneos forem criados após a assinatura ser inicializada, eles não serão aplicados ao Assinante, a menos que a assinatura esteja marcada para reinicialização. Para obter mais informações, consulte [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Por padrão, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent está sendo executado, um instantâneo é gerado imediatamente pelo Agente de Instantâneo depois que a publicação seja criada com o Assistente para Nova Publicação. Por padrão, isso é então aplicado pelo Distribution Agent (para replicações transacionais e instantâneas) ou o Merge Agent (para assinaturas de mesclagem) para todas as assinaturas. Um instantâneo também pode ser gerado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e o Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+Após o Agente de Distribuição ou Agente de Mesclagem aplicar o instantâneo inicial, o agente propaga atualizações subsequentes e outras modificações de dados. Quando instantâneos são distribuídos e aplicados a Assinantes, só esses Assinantes que estão à espera de instantâneos iniciais ou novos são afetados. Outros Assinantes daquela publicação (aqueles que já estejam recebendo inserções, atualizações, exclusões ou outras modificações aos dados publicados) não serão afetados.  
+
+Para exibir ou modificar o local padrão de pasta de instantâneo, consulte  
   
-#### <a name="to-create-a-snapshot-in-management-studio"></a>Para criar um instantâneo no Management Studio  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Modificar opções de instantâneo](../../relational-databases/replication/snapshot-options.md)  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
+-   Programação de Replicação e programação de RMO: [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)  
+
+## <a name="default-snapshot-location"></a>Localização do instantâneo padrão
+
+ Especifique o local de instantâneo padrão na página **Pasta de Instantâneo** do Assistente para Configurar Distribuição. Para obter mais informações sobre como usar o assistente, consulte [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md). Se você criar uma publicação em um servidor que não esteja configurada como Distributor, especifique um local de instantâneo padrão na página **Pasta de Instantâneo** do Assistente para Novas Publicações. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
+ Modifique o local do instantâneo padrão na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**. Para obter mais informações, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Defina a pasta de instantâneo para cada publicação na caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  Clique com o botão direito do mouse na publicação para a qual você quer criar um instantâneo e, então, clique em **Exibir Status do Snapshot Agent**.  
+### <a name="modify-the-default-snapshot-location"></a>Modificar a localização do instantâneo padrão  
   
-4.  Na caixa de diálogo **Exibir Status do Snapshot Agent – \<Publicação>**, clique em **Iniciar**.  
+1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique no botão de propriedades (**…**) para o Publicador para o qual você deseja alterar o local do instantâneo padrão.  
   
+2.  Na caixa de diálogo **Propriedades do Publicador – \<Publisher>**, digite um valor para a propriedade **Pasta de Instantâneo Padrão**.  
+  
+    > [!NOTE]  
+    >  O Snapshot Agent deve ter permissões de gravação para o diretório que você especificar, e o Distribution Agent ou Merge Agent devem ter permissões de leitura. Se as assinaturas pull forem usadas, será necessário especificar um diretório compartilhado como um caminho UNC, como \\\computername\snapshot. Para obter mais informações, consulte [Proteger a pasta de instantâneos](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+## <a name="create-snapshot"></a>Criar instantâneo
+Por padrão, se o SQL Server Agent estiver sendo executado, um instantâneo será gerado imediatamente pelo Agente de Instantâneo depois que a publicação seja criada com o Assistente para Nova Publicação. Por padrão, isso é então aplicado pelo Distribution Agent (para replicações transacionais e instantâneas) ou o Merge Agent (para assinaturas de mesclagem) para todas as assinaturas. Um instantâneo também pode ser gerado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e o Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+
+### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.    
+2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .    
+3.  Clique com o botão direito do mouse na publicação para a qual você quer criar um instantâneo e, então, clique em **Exibir Status do Snapshot Agent**.    
+4.  Na caixa de diálogo **Exibir Status do Snapshot Agent – \<Publicação>**, clique em **Iniciar**.    
  Quando Snapshot Agent terminar de gerar o instantâneo, uma mensagem será exibida, tal como "[100%] Um instantâneo de 17 artigo(s) foi gerado."  
   
-#### <a name="to-create-a-snapshot-in-replication-monitor"></a>Para criar um instantâneo no Replication Monitor  
+### <a name="in-replication-monitor"></a>No Replication Monitor  
   
-1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo e, depois, expanda um Publicador.  
-  
-2.  Clique com o botão direito do mouse na publicação para a qual você quer gerar um instantâneo e, então, clique em **Gerar Instantâneo**.  
-  
+1.  No Replication Monitor, expanda um Grupo do publicador no painel esquerdo e, depois, expanda um Publicador.    
+2.  Clique com o botão direito do mouse na publicação para a qual você quer gerar um instantâneo e, então, clique em **Gerar Instantâneo**.    
 3.  Para exibir o status do Snapshot Agent, clique na guia **Agentes** . Para obter informações mais detalhadas, clique com o botão direito do mouse no Snapshot Agent na grade e, então, clique em **Exibir Detalhes**.  
-  
-#### <a name="to-apply-a-snapshot"></a>Para aplicar um instantâneo  
-  
-1.  Depois que um instantâneo for gerado, ele é aplicado pela sincronização da assinatura com o Distribution Agent ou Merge Agent:  
-  
-    -   Se o agente é definido para ser executado continuamente (o padrão para replicação transacional), o instantâneo é automaticamente aplicado após ser gerado.  
-  
-    -   Se o agente tiver execução agendada, o instantâneo será aplicado na próxima execução agendada do agente.  
-  
-    -   Se o agente tiver execução sob demanda, o instantâneo será aplicado na próxima vez que você executar o agente.  
-  
-     Para obter mais informações sobre assinaturas de sincronização, consulte [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
-  
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- Instantâneos iniciais podem ser criados de forma programada criando e executando um trabalho do Agente de Instantâneo ou executando o arquivo executável do Agente de Instantâneo de um arquivo em lote. Depois da geração de um instantâneo inicial, ele é transferido para e aplicado no Assinante quando a assinatura é sincronizada pela primeira vez. Se o Agente de Instantâneo for executado de um prompt de comando ou um arquivo em lote, será preciso executar novamente o agente sempre que o instantâneo existente se tornar inválido.  
+
+## <a name="using-transact-sql"></a>Usando Transact-SQL
+Instantâneos iniciais podem ser criados de forma programada criando e executando um trabalho do Agente de Instantâneo ou executando o arquivo executável do Agente de Instantâneo de um arquivo em lote. Depois da geração de um instantâneo inicial, ele é transferido para e aplicado no Assinante quando a assinatura é sincronizada pela primeira vez. Se o Agente de Instantâneo for executado de um prompt de comando ou um arquivo em lote, será preciso executar novamente o agente sempre que o instantâneo existente se tornar inválido.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
-  
-#### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>Para criar e executar um trabalho do Snapshot Agent a fim de gerar o instantâneo inicial  
-  
-1.  Crie uma publicação de instantâneo, transacional ou de mesclagem. Para obter mais informações, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+
+1.  Crie uma publicação de instantâneo, transacional ou de mesclagem. Para obter mais informações, consulte [Criar uma assinatura](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique **@publication** e os seguintes parâmetros:  
   
@@ -97,36 +105,38 @@ ms.locfileid: "51657545"
   
 4.  No Publicador do banco de dados de publicação, execute [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), especificando o valor de **@publication** da etapa 1.  
   
-#### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>Para executar o Snapshot Agent para gerar o instantâneo inicial.  
+## <a name="apply-a-snapshot"></a>Aplicar um instantâneo  
+
+### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
   
-1.  Crie uma publicação de instantâneo, transacional ou de mesclagem. Para obter mais informações, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Depois que um instantâneo for gerado, ele é aplicado pela sincronização da assinatura com o Distribution Agent ou Merge Agent:   
+    -   Se o agente é definido para ser executado continuamente (o padrão para replicação transacional), o instantâneo é automaticamente aplicado após ser gerado.   
+    -   Se o agente tiver execução agendada, o instantâneo será aplicado na próxima execução agendada do agente.    
+    -   Se o agente tiver execução sob demanda, o instantâneo será aplicado na próxima vez que você executar o agente.  
+  
+     Para obter mais informações sobre assinaturas de sincronização, consulte [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+  
+###   <a name="use-transact-sql"></a>Usar o Transact-SQL  
+ 
+1.  Crie uma publicação de instantâneo, transacional ou de mesclagem. Para obter mais informações, consulte [Criar uma assinatura](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Adicione artigos à publicação. Para obter mais informações, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
 3.  Do prompt de comando ou em um arquivo em lote, inicie o [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) executando **snapshot.exe**, especificando os seguintes argumentos de linha de comando:  
   
     -   **-Publication**  
-  
     -   **-Publisher**  
-  
-    -   **-Distributor**  
-  
-    -   **-PublisherDB**  
-  
+    -   **-Distributor**   
+    -   **-PublisherDB**   
     -   **-ReplicationType**  
   
      Se você estiver usando Autenticação do SQL Server, deve-se também especificar os seguintes argumentos:  
   
-    -   **-DistributorLogin**  
-  
-    -   **-DistributorPassword**  
-  
-    -   **-DistributorSecurityMode** = **0**  
-  
-    -   **-PublisherLogin**  
-  
-    -   **-PublisherPassword**  
-  
+    -   **-DistributorLogin**    
+    -   **-DistributorPassword**   
+    -   **-DistributorSecurityMode** = **0**    
+    -   **-PublisherLogin**    
+    -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** = **0**  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
@@ -249,7 +259,6 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
- [Criar e aplicar o instantâneo](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Inicializar uma assinatura com um instantâneo](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

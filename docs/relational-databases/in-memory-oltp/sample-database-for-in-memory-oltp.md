@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712477"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226693"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712477"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP in-memory, confira a seguinte postagem no blog: [Considerações de Hardware para o OLTP in-memory no SQL Server 2014](blog-hardware-in-memory-oltp.md)
+-   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP in-memory, confira a seguinte postagem no blog: [Considerações sobre hardware para OLTP in-memory no SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalando a amostra do Na Memória OLTP baseada no AdventureWorks  
  Siga estas etapas para instalar o exemplo:  
@@ -148,7 +148,7 @@ ms.locfileid: "52712477"
   
 -   *Colunas computadas* - as colunas computadas SalesOrderNumber e TotalDue são omitidas, pois o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não oferece suporte a colunas computadas em tabelas com otimização de memória. A nova exibição Sales.vSalesOrderHeader_extended_inmem reflete as colunas SalesOrderNumber e TotalDue. Por disso, você pode usar essa exibição se essas colunas são necessárias.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.
 
   
@@ -313,7 +313,7 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  Etapas da instalação:  
   
-1.  Baixe e execute o pacote de instalação do x64 para os utilitários do RML na seguinte página: [Baixar RML (Report Markup Language) para o SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  Baixe e execute o pacote de instalação do x64 para os utilitários do RML na página a seguir: [Baixar RML (Report Markup Language) para SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
 
 2.  Se houver uma caixa de diálogo indicando que alguns arquivos estão em uso, clique em "Continuar"  
   
@@ -387,7 +387,7 @@ END
  As instruções abaixo e as medidas de usam uma carga de trabalho que insere 10 milhões de pedidos de vendas. Para obter instruções para executar uma carga de trabalho reduzida que insere 1 milhão de pedidos de vendas, consulte as instruções em 'In-Memory OLTP\readme.txt' que faz parte do arquivo SQLServer2016CTP3Samples.zip.  
   
 ##### <a name="memory-optimized-tables"></a>Tabelas com otimização de memória  
- Começaremos executando a carga de trabalho em tabelas com otimização de memória. O comando a seguir abre 100 threads, cada um executado para 5.000 iterações.  Cada iteração insere 20 pedidos de vendas em transações separadas. Há 20 inserções por iteração para compensar o fato de que o banco de dados é usado para gerar os dados a serem inseridos. Isso gera um total de 20 * 5.000 \* 100 = 10.000.000 inserções de pedidos de vendas.  
+ Começaremos executando a carga de trabalho em tabelas com otimização de memória. O comando a seguir abre 100 threads, cada um executado para 5.000 iterações.  Cada iteração insere 20 pedidos de vendas em transações separadas. Há 20 inserções por iteração para compensar o fato de que o banco de dados é usado para gerar os dados a serem inseridos. Isso gera um total de 20 \* 5.000 \* 100 = 10.000.000 inserções de pedidos de vendas.  
   
  Abra o Prompt Cmd RML e execute o seguinte comando:  
   
@@ -434,13 +434,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes com execução lenta  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
--   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com OLTP in-memory provavelmente será menor que duas vezes. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
+-   Número de transações simultâneas: Ao executar a carga de trabalho em um único thread, o ganho de desempenho com OLTP in-memory provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
   
--   Número baixo de núcleos disponíveis para o SQL Server: isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
+-   Número baixo de núcleos disponíveis para o SQL Server: Isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
   
     -   Sintoma: se há alta utilização da CPU ao executar a carga de trabalho em tabelas baseadas em disco, isso significa não há muita contenção, apontando para uma falta de simultaneidade.  
   
--   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com OLTP in-memory, se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
+-   Velocidade da unidade de log: Se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com OLTP in-memory, se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um gargalo de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
@@ -496,7 +496,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Como você pode observar, as tabelas são bem pequenas: SalesOrderHeader_inmem tem cerca de 7MB e SalesOrderDetail_inmem mede cerca de 15MB.  
+ Como você pode ver, as tabelas são pequenas: o SalesOrderHeader_inmem possui cerca de 7 MB e o SalesOrderDetail_inmem possui cerca de 15 MB.  
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   

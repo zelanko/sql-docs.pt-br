@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfe135d53fafa22df7d967f495a7bcfd87dbb2f7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609235"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299973"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   As variáveis são declaradas no corpo de um lote ou procedimento com a instrução DECLARE e valores são atribuídos com uma instrução SET ou SELECT. As variáveis de cursor podem ser declaradas com essa instrução e usadas com outras instruções relacionadas ao cursor. Depois da declaração, todas as variáveis são inicializadas como NULL, a menos que um valor seja fornecido como parte da declaração.  
   
@@ -122,9 +125,9 @@ Define o tipo de dados **table**. A declaração de tabela inclui definições d
  É uma expressão que define o valor de uma coluna computada. Essa coluna é computada a partir de uma expressão que usa outras colunas na mesma tabela. Por exemplo, uma coluna computada pode ter a definição **cost** AS **price \* qty**. A expressão pode ser o nome de uma coluna não computada, constante, função interna, variável ou qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma subconsulta ou uma função definida pelo usuário. A expressão não pode fazer referência a um tipo de dados CLR definido pelo usuário.  
   
  [ COLLATE *collation_name*]  
- Especifica o agrupamento da coluna. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL e é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuído o agrupamento do tipo de dados definido pelo usuário (se a coluna for de um tipo de dados definido pelo usuário) ou o agrupamento do banco de dados atual.  
+ Especifica a ordenação da coluna. *collation_name* pode ser um nome de ordenação do Windows ou um nome de ordenação SQL e é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário (se a coluna for de um tipo de dados definido pelo usuário) ou a ordenação do banco de dados atual.  
   
- Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &#40;Transact-SQL &#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
  Especifica o valor fornecido para a coluna quando um valor não for fornecido explicitamente durante uma inserção. As definições de DEFAULT podem ser aplicadas a qualquer coluna, com exceção das definidas como **timestamp** ou das colunas com a propriedade IDENTITY. As definições DEFAULT serão removidas quando a tabela for descartada. Somente um valor constante, como uma cadeia de caracteres, uma função de sistema, como SYSTEM_USER() ou NULL pode ser usado como padrão. Para manter a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um nome de restrição pode ser atribuído a um DEFAULT.  
@@ -224,7 +227,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 (3 row(s) affected)
 ```  
   
-### <a name="b-using-declare-with-two-variables"></a>B. Usando DECLARE com duas variáveis  
+### <a name="b-using-declare-with-two-variables"></a>b. Usando DECLARE com duas variáveis  
  O exemplo a seguir recupera os nomes de representantes de vendas do [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] localizados no território de vendas norte-americano que venderam pelo menos US$ 2.000.000 durante o ano.  
   
 ```  

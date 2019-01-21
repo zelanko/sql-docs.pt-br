@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124096"
 ---
 # <a name="expressions-transact-sql"></a>Expressões (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,8 +89,8 @@ ms.locfileid: "52511925"
 |[ _table_name_**.** ]|É o nome ou alias de uma tabela.|  
 |*column*|É o nome de uma coluna. Somente o nome da coluna é permitido em uma expressão.|  
 |*variable*|É o nome de uma variável ou parâmetro. Para obter mais informações, consulte [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** *expressão* **)**|É qualquer expressão válida conforme definido neste tópico. Os parênteses são operadores de agrupamento que verificam se todos os operadores na expressão entre parênteses são avaliados antes de a expressão resultante ser combinada com outra.|  
-|**(** *scalar_subquery* **)**|É uma subconsulta que retorna um valor. Por exemplo:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _expressão_ **)**|É qualquer expressão válida conforme definido neste tópico. Os parênteses são operadores de agrupamento que verificam se todos os operadores na expressão entre parênteses são avaliados antes de a expressão resultante ser combinada com outra.|  
+|**(** _scalar_subquery_ **)**|É uma subconsulta que retorna um valor. Por exemplo:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Os operadores unários podem ser aplicados somente a expressões que avaliam qualquer um dos tipos de dados da categoria de tipo de dados numérico. É um operador que tem somente um operando numérico:<br /><br /> + indica um número positivo.<br /><br /> - indica um número negativo.<br /><br /> ~ indica o operador de complemento.|  
 |{ *binary_operator* }|É um operador que define a maneira como duas expressões são combinadas para produzir um único resultado. *binary_operator* pode ser um operador aritmético, o operador de atribuição (=), um operador bit a bit, um operador de comparação, um operador lógico, o operador de concatenação de cadeia de caracteres (+) ou um operador unário. Para obter mais informações sobre operadores, confira [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|É qualquer função de classificação [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obter mais informações, confira [Funções de classificação &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
@@ -118,7 +118,7 @@ ms.locfileid: "52511925"
   
  A ordenação de qualquer expressão avaliada como uma cadeia de caracteres é definida seguindo as regras de precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- Em uma linguagem de programação como C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], uma expressão sempre é avaliada como um único resultado. As expressões em uma lista de seleção [!INCLUDE[tsql](../../includes/tsql-md.md)] seguem uma variação nessa regra: a expressão é avaliada individualmente para cada linha no conjunto de resultados. Uma única expressão pode ter um valor diferente em cada linha do conjunto de resultados, mas cada linha tem apenas um valor para a expressão. Por exemplo, na seguinte instrução `SELECT`, as referências a `ProductID` e ao termo `1+2` na lista de seleção são expressões:  
+ Em uma linguagem de programação como C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], uma expressão sempre é avaliada como um único resultado. Expressões em uma lista selecionada [!INCLUDE[tsql](../../includes/tsql-md.md)] seguem uma variação nesta regra: A expressão é avaliada individualmente para cada linha no conjunto de resultados. Uma única expressão pode ter um valor diferente em cada linha do conjunto de resultados, mas cada linha tem apenas um valor para a expressão. Por exemplo, na seguinte instrução `SELECT`, as referências a `ProductID` e ao termo `1+2` na lista de seleção são expressões:  
   
 ```  
 USE AdventureWorks2012;  

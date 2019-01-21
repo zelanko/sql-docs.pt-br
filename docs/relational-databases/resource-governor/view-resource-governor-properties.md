@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 94ec8e822bc0b3419f772c0e7fac9a93f89dbde1
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: a1262a35450963851e3091d783aaea8bb8dface0
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380578"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100421"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "53380578"
  Habilite ou desabilite o Administrador de Recursos selecionando ou desmarcando a caixa de seleção.  
   
  **Pools de recursos**  
- Crie ou altere a configuração do pool de recursos e do pool de recursos externo usando a grade fornecida. Essa grade é populada com informações para os pools predefinidos internos e padrão. Selecione um pool com o qual trabalhar clicando na primeira coluna na linha do pool. Para criar um novo pool de recursos, clique na linha antecedida pelo asterisco (**\***).  
+ Crie ou altere a configuração do pool de recursos e do pool de recursos externo usando a grade fornecida. Essa grade é populada com informações para os pools predefinidos internos e padrão. Selecione um pool com o qual trabalhar clicando na primeira coluna na linha do pool. Para criar um novo pool de recursos, clique na linha antecedida pelo asterisco (**&#42;**).  
   
  **Nome**  
  Especifique o nome do pool de recursos.  
@@ -91,7 +91,7 @@ ms.locfileid: "53380578"
  Para obter mais informações, consulte [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) e [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
  **Grupos de cargas de trabalho para o pool de recursos**  
- Crie ou altere a configuração do grupo de carga de trabalho usando a grade fornecida. Essa grade é populada com informações para os grupos predefinidos internos e padrão. Selecione um grupo com a qual trabalhar clicando na primeira coluna na linha para o pool. Para criar um novo grupo de carga de trabalho, clique na linha antecedida pelo asterisco (**\***).  
+ Crie ou altere a configuração do grupo de carga de trabalho usando a grade fornecida. Essa grade é populada com informações para os grupos predefinidos internos e padrão. Selecione um grupo com a qual trabalhar clicando na primeira coluna na linha para o pool. Para criar um novo grupo de carga de trabalho, clique na linha antecedida pelo asterisco (**&#42;**).  
   
  **Nome**  
  Especifique o nome do grupo de carga de trabalho.  

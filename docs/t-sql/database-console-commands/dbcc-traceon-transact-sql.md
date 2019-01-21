@@ -21,12 +21,12 @@ ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 8ae88c08604236c74915275c3b7edb515697d8ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5faae18ce730182218886cf46c711d16344cfd88
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652865"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125866"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Suprime todas as mensagens informativas.
 ## <a name="remarks"></a>Remarks  
 Em um servidor de produção, para evitar comportamento imprevisível, recomendamos que você habilite sinalizadores de rastreamento no servidor usando somente um dos seguintes métodos:
 -   Use a opção de inicialização de linha de comando **-T** do Sqlservr.exe. Essa é a prática mais recomendada, porque assegura que todas as instruções sejam executadas com o sinalizador de rastreamento habilitado. Isso inclui comandos em scripts de inicialização. Para obter mais informações, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
--   Use DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** somente enquanto usuários ou aplicativos não estiverem executando instruções simultaneamente no sistema.  
+-   Use DBCC TRACEON **(**_trace#_ [**,** ...*.n*]**,-1)** somente enquanto usuários ou aplicativos não estiverem executando instruções simultaneamente no sistema.  
 
 Sinalizadores de rastreamento são usados para personalizar certas características que controlam o modo operacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinalizadores de rastreamento, depois de habilitados, permanecem assim no servidor até que sejam desabilitados executando uma instrução DBCC TRACEOFF. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há dois tipos de sinalizadores de rastreamento: sessão e global. Os sinalizadores de rastreamento de sessão são ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor. Para determinar o status dos sinalizadores de rastreamento, use DBCC TRACESTATUS. Para desabilitar sinalizadores de rastreamento, use DBCC TRACEOFF.
   

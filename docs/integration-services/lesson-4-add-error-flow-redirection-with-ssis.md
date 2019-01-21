@@ -1,7 +1,7 @@
 ---
 title: 'Lição 4: Adicionar o redirecionamento de fluxo de erro com o SSIS | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,42 +11,45 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94a34901743b462ea4fd8a4f36d381b789c360f2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 43c841010b70599803c71fd6307cfb68464b7265
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637873"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210997"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lição 4: Adicionar o redirecionamento de fluxo de erro com o SSIS
-Para tratar erros que podem ocorrer no processo de transformação, o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece a capacidade de decidir, em termos de componente e coluna, como tratar dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  
+
+Para tratar erros que podem ocorrer no processo de transformação, o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite que você decida por componente e por coluna como tratar dados que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não pode transformar. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou causar falha no componente. Por padrão, os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. O componente com falha, por sua vez, faz com que o pacote falhe o processamento seja interrompido.  
   
-Em vez de permitir que as falhas interrompam a execução do pacote, é bom configurar e tratar erros de processamento em potencial conforme ocorrem dentro da transformação. Como você pode escolher ignorar as falhas para garantir que seu pacote seja executado com êxito, frequentemente é melhor redirecionar a linha com falhas para outro caminho de processamento, em que os dados e o erro podem ser persistentes, examinados e reprocessados posteriormente.  
+Em vez de permitir que as falhas interrompam a execução do pacote, você pode configurar e tratar possíveis erros de processamento potenciais conforme eles ocorrem. Uma opção é ignorar as falhas por completo de modo que seu pacote sempre seja executado com êxito. Você também pode redirecionar a linha com falha para outro caminho de processamento em que os dados e os erros possam ser mantidos, examinados ou reprocessados.  
   
-Nesta lição, você aprenderá a criar uma cópia do pacote desenvolvido em [Lição 3: Adicionar o log com o SSIS](../integration-services/lesson-3-add-logging-with-ssis.md). Ao trabalhar com este pacote novo, você criará uma versão corrompida de um dos arquivos de dados de exemplo. O arquivo corrompido forçará a ocorrência de um erro de processamento quando você executar o pacote.  
+Nesta lição, você cria uma cópia do pacote desenvolvido em [Lição 3: Adicionar o registro em log com o SSIS](../integration-services/lesson-3-add-logging-with-ssis.md). Ao trabalhar com este pacote novo, você cria uma versão corrompida de um dos arquivos de dados de exemplo. O arquivo corrompido levará à ocorrência de um erro de processamento quando você executar o pacote.  
   
-Para tratar os dados de erro, você adicionará e configurará um destino de Arquivo Simples que gravará qualquer linha que não localize um valor de pesquisa na transformação Pesquisa de Códigos de Moeda em um arquivo.  
+Para lidar com os dados de erro, você pode adicionar e configurar um destino de arquivo simples que grava linhas com falha em um arquivo de erro. 
   
-Antes que os dados de erro sejam gravados em um arquivo, você incluirá um componente Script que utiliza script para obter as descrições de erro. Você reconfigurará, então, a transformação Pesquisa de Códigos de Moeda para redirecionar qualquer dado que não possa ser processado para a transformação Script.  
+Antes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gravar dados de erros no arquivo, você inclui um componente de Script que obtém as descrições de erro. Você então reconfigura então a transformação Pesquisar Chave de Moeda para redirecionar qualquer dado que não possa ser processado para a transformação Script.  
   
-> [!IMPORTANT]  
-> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, [Reporting Services Product Samples on CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910)(Amostras de produto do Reporting Services no CodePlex)  
-  
-## <a name="tasks-in-lesson"></a>Tarefas da lição  
+## <a name="prerequisites"></a>Prerequisites
+
+> [!NOTE]
+> Se você ainda não fez isso, confira a [Lição 1 Pré-requisitos](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+ 
+## <a name="lesson-task"></a>Tarefa da lição
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote da Lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Etapa 1: Copiar o pacote da Lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Etapa 2: Criando um arquivo corrompido](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+-   [Etapa 2: Criar um arquivo corrompido](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Etapa 3: Adicionando redirecionamento de fluxo de erro](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [Etapa 3: Adicionar redirecionamento de fluxo de erro](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Etapa 4: Adicionando um destino de arquivo simples](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Etapa 4: Adicionar um destino de Arquivo Simples](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Etapa 5: Testando o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Etapa 5: Testar o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
-[Etapa 1: Copiando o pacote da Lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[Etapa 1: Copiar o pacote da Lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   

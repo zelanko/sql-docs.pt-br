@@ -15,12 +15,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: acd6c8da6560b0daed5eb1f029c71619b2e5d0fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502586"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126346"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Visão geral do Monitor de Espelhamento de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52502586"
   
  Para cada banco de dados registrado, as seguintes informações serão exibidas:  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<nome_do_banco_de_dados>*  
  O nome de um banco de dados espelho registrado no Monitor de Espelhamento de Banco de Dados.  
@@ -66,9 +66,9 @@ ms.locfileid: "52502586"
  *<SERVIDOR_PRINCIPAL>*  
  O nome do parceiro que atualmente é a principal instância do servidor. O nome está no seguinte formato:  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
   
- em que *<SYSTEM_NAME>* é o nome do sistema no qual a instância do servidor reside. Para uma instância de servidor não padrão, o nome da instância também é exibido: *<SYSTEM_NAME>***\\***<instance_name>*.  
+ em que *<SYSTEM_NAME>* é o nome do sistema no qual a instância do servidor reside. Para uma instância de servidor não padrão, o nome da instância também é exibido: _<SYSTEM_NAME>_**\\**_<instance_name>_.  
   
  *<SERVIDOR_ESPELHO>*  
  O nome do parceiro que é atualmente a instância do servidor espelho. O formato é o mesmo do servidor principal.  
@@ -83,7 +83,7 @@ ms.locfileid: "52502586"
   
  O administrador de sistemas pode visualizar a configuração de avisos atual do banco de dados, selecionando a página com guias **Avisos** . A partir deste ponto, o administrador pode iniciar a caixa de diálogo **Definir Limites de Aviso** para habilitar e configurar um ou mais limites de aviso.  
   
- Na faixa acima das guias, o painel de detalhes exibe a última vez em que o monitor atualizou as informações de status, como **Última atualização:***\<date>**\<time>*. Geralmente, o Monitor de Espelhamento de Banco de Dados recupera as informações de status a partir das instâncias de servidor principal e espelho em horários diferentes. O horário mais antigo dessas duas atualizações é exibido.  
+ Na faixa acima das guias, o painel de detalhes exibe a última vez em que o monitor atualizou as informações de status, como **Última atualização**_\<date>\<time>_. Geralmente, o Monitor de Espelhamento de Banco de Dados recupera as informações de status a partir das instâncias de servidor principal e espelho em horários diferentes. O horário mais antigo dessas duas atualizações é exibido.  
   
 ## <a name="action-menu"></a>Menu Ação  
  O menu **Ação** contém sempre os seguintes comandos:  

@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821934"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135996"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar um resolvedor de artigo de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como especificar um resolvedor de artigo de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+
   
- **Neste tópico**  
-  
--   **Antes de começar:**  
-  
-     [Recomendações](#Recommendations)  
-  
--   **Para especificar um resolvedor de artigo de mesclagem usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a>Recomendações  
   
 -   A replicação de mesclagem permite os seguintes tipos de resolvedores de artigo:  
   
@@ -77,7 +64,7 @@ ms.locfileid: "47821934"
   
 7.  Repita este processo para cada artigo que requer um resolvedor.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Para registrar um resolvedor de conflitos personalizado  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821934"
     > [!NOTE]  
     >  O local de instalação padrão do executável Merge Agent é [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>Para especificar um resolvedor personalizado ao definir um artigo de mesclagem  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>Especificar um resolvedor personalizado ao definir um artigo de mesclagem  
   
 1.  Se você planeja usar um resolvedor de conflitos personalizado, crie e registre o resolvedor usando o procedimento acima.  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821934"
   
 3.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique o nome do resolvedor da etapa 2 para **@article_resolver** e qualquer entrada necessária para o resolvedor personalizado usando o parâmetro **@resolver_info** . Para os resolvedores personalizados baseados em procedimentos armazenados, o **@resolver_info** é o nome do procedimento armazenado. Para obter mais informações sobre a entrada necessária para os resolvedores fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consulte [Resolvedores baseados em COM da Microsoft](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Para especificar ou alterar um resolvedor personalizado para um artigo de mesclagem existente  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Especificar ou alterar um resolvedor personalizado para um artigo de mesclagem existente  
   
 1.  Para determinar se um resolvedor personalizado foi definido para um artigo ou para obter o nome do resolvedor, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Se houver um resolvedor personalizado definido para o artigo, seu nome será exibido no campo **article_resolver** . Qualquer entrada fornecida ao resolvedor será exibida no campo **resolver_info** do conjunto de resultados.  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821934"
   
 4.  Para alterar qualquer entrada necessária para o resolvedor personalizado, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) novamente. Especifique um valor de **resolver_info** para **@property** e qualquer entrada necessária para o resolvedor personalizado para **@value**. Para os resolvedores personalizados baseados em procedimentos armazenados, o **@resolver_info** é o nome do procedimento armazenado. Para obter mais informações sobre as entradas requeridas, consulte [Resolvedores baseados em COM da Microsoft](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>Para cancelar o registro de um resolvedor de conflitos personalizado  
+## <a name="unregister-a-custom-conflict-resolver"></a>Cancelar o registro de um resolvedor de conflitos personalizado  
   
 1.  No Publicador, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) e anote o nome do resolvedor personalizado a ser removido no campo **valor** do conjunto de resultados.  
   
@@ -146,7 +133,7 @@ ms.locfileid: "47821934"
  [!code-sql[HowTo#sp_changemerge_resolver](../../../relational-databases/replication/codesnippet/tsql/specify-a-merge-article-_2.sql)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecção e resolução de conflito de replicação de mesclagem avançada](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

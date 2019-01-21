@@ -35,15 +35,18 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adb6c91dfdbec4bc9e09d83f2adbf0aba6dab998
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531728"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300253"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Procura correspondências precisas ou difusas (menos precisas) para palavras e frases únicas, palavras em uma certa distância entre si ou correspondências ponderadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS é um predicado usado na [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de uma instrução SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em colunas indexadas de texto completo que contêm tipos de dados baseados em caractere.  
   
@@ -384,7 +387,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Usando CONTAINS e a frase com \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>b. Usando CONTAINS e a frase com \<simple_term>  
  O exemplo a seguir retorna todos os produtos contendo a expressão `Mountain` ou `Road`.  
   
 ```sql  

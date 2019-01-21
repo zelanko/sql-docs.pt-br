@@ -1,5 +1,5 @@
 ---
-title: 'Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL | Microsoft Docs'
+title: 'Início rápido 1: Tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/05/2017"
 ms.prod: sql
@@ -12,15 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31a4e59da5f3555f79ac6fe6b82fa2d03721a81b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21d42cb015227b06021878e37b4c1b94bd96a446
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519447"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300393"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Pesquisa de áreas iniciais em OLTP in-memory
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   
 Este artigo é para o desenvolvedor que está com pressa para aprender os fundamentos dos recursos de desempenho do OLTP in-memory do Microsoft SQL Server e do Banco de Dados SQL do Azure.  
@@ -93,12 +96,12 @@ Uma sequência de postagens de blog excelente explica elegantemente os índices 
 
 1. [Análise operacional em tempo real usando a tecnologia in-memory](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
 2. [Análise operacional em tempo real – Visão geral do NCCI (índice columnstore não clusterizado)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [Análise operacional em tempo real: exemplo simples usando NCCI (índice columnstore não clusterizado) no SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [Análise operacional em tempo real: operações DML e NCCI (índice columnstore não clusterizado) no SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [Análise operacional em tempo real: NCCI (índice columnstore não clusterizado) filtrado](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [Análise operacional em tempo real: opção de atraso na compactação para NCCI (índice columnstore não clusterizado)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [Análise operacional em tempo real: opção de atraso na compactação com NCCI e desempenho](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [Análise operacional em tempo real: tabelas com otimização de memória e índice columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+3. [Análise Operacional em Tempo Real: Exemplo simples usando NCCI (índice columnstore não clusterizado) no SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
+4. [Análise Operacional em Tempo Real: Operações DML e NCCI (índice columnstore não clusterizado) no SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
+5. [Análise Operacional em Tempo Real: NCCI (índice columnstore não clusterizado) filtrado](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
+6. [Análise Operacional em Tempo Real: Opção de atraso de compactação para NCCI (índice columnstore não clusterizado)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
+7. [Análise Operacional em Tempo Real: Opção de Atraso de Compactação com NCCI e o desempenho](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
+8. [Análise Operacional em Tempo Real: Tabelas com otimização de memória e índice columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
 
 #### <a name="defragment-a-columnstore-index"></a>Desfragmentar um índice columnstore
 
@@ -107,9 +110,9 @@ Uma sequência de postagens de blog excelente explica elegantemente os índices 
 
 #### <a name="bulk-importation-of-data"></a>Importação em massa de dados
 
-1. [Repositório de colunas clusterizado: carregamento em massa](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Índice columnstore clusterizado: otimizações de carregamento de dados – log mínimo](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [Índice columnstore clusterizado: otimização de carregamento de dados – importação paralela em massa](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+1. [Repositório de coluna clusterizada: carregamento em massa](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
+2. [índice columnstore clusterizado: Otimizações de carregamento de dados – registro em log mínimo](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+3. [Índice columnstore clusterizado: Otimização de carregamento de dados – importação em massa paralela](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
 
@@ -217,7 +220,7 @@ No Banco de Dados SQL do Azure, você não precisa, e não pode, criar um GRUPO 
 
 O exemplo de script T-SQL a seguir habilita um banco de dados para OLTP in-memory e define todas as configurações recomendadas. Ele funciona com o SQL Server e o Banco de Dados SQL do Azure: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
 
-Observe que nem todos os recursos do SQL Server têm o suporte para os bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA. Para obter mais detalhes sobre as limitações, consulte [Recursos do SQL Server sem suporte no OLTP in-memory](unsupported-sql-server-features-for-in-memory-oltp.md)
+Observe que nem todos os recursos do SQL Server têm o suporte para os bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA. Para obter detalhes sobre as limitações, confira: [Recursos do SQL Server sem suporte para OLTP na Memória](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -372,7 +375,7 @@ As subseções a seguir descrevem brevemente como os recursos do OLTP in-memory 
 - Quando várias versões de uma linha são criadas para uma tabela baseada em disco, as versões de linha são armazenadas temporariamente no tempdb.  
   
   
-**Menos registros em log:** as versões anteriores e posteriores das linhas atualizadas são mantidas na tabela com otimização de memória. O par de linhas fornece grande parte das informações que tradicionalmente são gravadas no arquivo de log. Isso permite que o sistema grave menos informações, e com menos frequência, no log. No entanto, a integridade transacional é garantida.  
+**Menos registro em log:** as versões anteriores e posteriores das linhas atualizadas são mantidas na tabela com otimização de memória. O par de linhas fornece grande parte das informações que tradicionalmente são gravadas no arquivo de log. Isso permite que o sistema grave menos informações, e com menos frequência, no log. No entanto, a integridade transacional é garantida.  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -405,7 +408,7 @@ O restante desta seção lista algumas das principais considerações sobre plan
 - [Tamanho da tabela e da linha em tabelas com otimização de memória](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Dividir a tabela grande em partes:** uma forma de atender à demanda de muita memória ativa é dividir a tabela grande em partes na memória, que armazenam as linhas de dados *ativas recentes* em relação às outras partes do disco que armazenam as linhas *herdadas inativas* (como pedidos de venda que foram totalmente enviados e concluídos). Esse particionamento é um processo manual de design e implementação. Consulte:  
+**Particionar sua tabela grande:** uma forma de atender à demanda de muita memória ativa é dividir a tabela grande em partes na memória, que armazenam as linhas de dados *ativas recentes* em relação às outras partes do disco que armazenam as linhas *herdadas frias* (como pedidos de venda que foram totalmente enviados e concluídos). Esse particionamento é um processo manual de design e implementação. Consulte:  
   
 - [Particionamento de nível de aplicativo](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Padrão de aplicativo para particionamento de tabelas com otimização de memória](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -495,7 +498,7 @@ O seguinte artigo e seus artigos filho no sumário, explicam os detalhes sobre p
   
 ## <a name="related-links"></a>Links relacionados  
   
-- Artigo inicial: [OLTP in-memory &#40;otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Artigo inicial: [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Aqui estão os artigos que oferecem o código para demonstrar os ganhos de desempenho que você pode obter usando OLTP in-memory:  
   

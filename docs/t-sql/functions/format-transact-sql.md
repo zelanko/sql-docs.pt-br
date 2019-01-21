@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703094"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299593"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 
 Retorna um valor formatado com o formato e a cultura opcional especificados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use a função FORMAT para formatação com reconhecimento de localidade de valores de data/hora e número como cadeias de caracteres. Para conversões de tipos de dados gerais, use CAST ou CONVERT.  
@@ -76,11 +76,11 @@ FORMAT ( value, format [, culture ] )
   
 |Categoria|Tipo|Tipo .NET|  
 |--------------|----------|---------------|  
-|Numérico|bigint|Int64|  
+|Numérico|BIGINT|Int64|  
 |Numérico|INT|Int32|  
 |Numérico|SMALLINT|Int16|  
 |Numérico|TINYINT|Byte|  
-|Numérico|decimal|SqlDecimal|  
+|Numérico|Decimal|SqlDecimal|  
 |Numérico|NUMERIC|SqlDecimal|  
 |Numérico|FLOAT|Double|  
 |Numérico|REAL|Single|  
@@ -127,7 +127,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT com cadeias de caracteres de formatação personalizadas  
+### <a name="b-format-with-custom-formatting-strings"></a>b. FORMAT com cadeias de caracteres de formatação personalizadas  
  O exemplo a seguir mostra os valores numéricos da formatação especificando um formato personalizado. O exemplo supõe que a data atual é 27 de setembro de 2012. Para obter mais informações sobre esses e outros formatos personalizados, veja [Cadeias de caracteres de formato numérico personalizado](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  

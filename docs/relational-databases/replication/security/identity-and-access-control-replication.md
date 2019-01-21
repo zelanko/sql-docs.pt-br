@@ -1,7 +1,7 @@
 ---
 title: Identidade e controle de acesso (Replicação) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50e746f05ba3d38a99aa8ccd1c783aec9be87f40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836521"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135976"
 ---
 # <a name="identity-and-access-control-replication"></a>Identidade e controle de acesso (Replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47836521"
   
 -   Segurança do agente  
   
-     O modelo de segurança do agente de replicação permite um controle refinado das contas nas quais os agentes de replicação executam e efetuam conexões. Para obter informações detalhadas sobre o modelo de segurança do agente, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md). Para mais informações sobre como definir logons e senhas para os agentes, consulte [Gerenciar logons e senhas na Replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+     O modelo de segurança do agente de replicação permite um controle refinado das contas nas quais os agentes de replicação executam e efetuam conexões. Para obter informações detalhadas sobre o modelo de segurança do agente, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md). 
   
 -   Funções de administração  
   
@@ -47,10 +47,13 @@ ms.locfileid: "47836521"
  Ao definir um artigo, você pode publicar apenas as colunas que são necessárias para a publicação e omitir as desnecessárias ou aquelas que contêm dados confidenciais. Por exemplo, quando publicar a tabela **Customer** do banco de dados Adventure Works para os representantes de vendas em atuação na área, você pode omitir a coluna **AnnualSales** , que talvez seja importante apenas para os executivos da empresa.  
   
  A filtragem de dados publicados restringe o acesso aos dados e permite que você especifique os dados disponíveis no Assistente. Por exemplo, você pode filtrar a tabela **Customer** para que os parceiros da corporação recebam apenas as informações sobre os clientes cuja coluna **ShareInfo** tenha um valor de "sim." Para a replicação de mesclagem, haverá considerações de segurança se você usar um filtro com parâmetros que inclua HOST_NAME(). Para obter mais detalhes, consulte a seção "Filtragem com HOST_NAME ()" em [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+
+## <a name="manage-logins-and-passwords-in-replication"></a>Gerenciar logons e senhas na replicação
+Ao configurar a replicação, especifique os logons e as senhas para agentes de replicação. Depois de configurar a replicação, você pode alterar os logons e as senhas. Para obter mais informações, consulte [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). Se você alterar a senha de uma conta usada por um agente de replicação, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
- [Visão geral da segurança &#40;Replicação&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
- [Ameaça e mitigação de vulnerabilidade &#40;Replicação&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
+ [Mitigação de ameaça e vulnerabilidade &#40;replicação&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Modelo de segurança do agente de replicação](../../../relational-databases/replication/security/replication-agent-security-model.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: criar e executar um teste de unidade do SQL Server | Microsoft Docs'
+title: 'Passo a passo: Criar e executar um teste de unidade do SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540931"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143586"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e Executar um Teste de Unidade do SQL Server
 Neste passo a passo, você criará um teste de unidade do SQL Server que verifica o comportamento de vários procedimentos armazenados. Os testes de unidade do SQL Server são criados para facilitar a identificação de falhas no código que podem resultar em comportamento incorreto do aplicativo. Você pode executar testes de unidade do SQL Server e teste de aplicativo como parte de um pacote automatizado de testes.  
@@ -274,7 +274,7 @@ Por padrão, quando você pressiona F5, implanta (ou publica) o banco de dados e
   
 2.  Clique com o botão direito do mouse em um dos procedimentos armazenados e clique em **Criar Testes de Unidade** para exibir a caixa de diálogo **Criar Testes de Unidade**.  
   
-3.  Marque as caixas de seleção para todos os cinco procedimentos armazenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**e **Sales.uspShowOrderDetails**.  
+3.  Marque as caixas de seleção para todos os cinco procedimentos armazenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** e **Sales.uspShowOrderDetails**.  
   
 4.  Na lista suspensa **Projeto**, selecione **Criar um novo projeto de teste do Visual C#**.  
   
@@ -723,7 +723,7 @@ Os testes presumem que o banco de dados começa em um estado limpo. Você criar�
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Aprovado|  
     |Sales_uspShowOrderDetailsTest|Aprovado|  
-    |Sales_uspFillOrderTest|Falha com o erro a seguir: "Falha na condição ScalarValueCondition (scalarValueCondition2): ResultSet 1 Linha 1 Coluna 1: valores não correspondentes, '-100' real '100' esperado." Esse erro ocorre porque a definição do procedimento armazenado contém um erro secundário.|  
+    |Sales_uspFillOrderTest|Falha na execução com o seguinte erro: "Falha da condição ScalarValueCondition (scalarValueCondition2): ResultSet 1, linha 1, coluna 1: os valores não correspondem, real: '-100' esperado: '100'. " Esse erro ocorre porque a definição do procedimento armazenado contém um erro secundário.|  
   
     Em seguida, você corrigirá o erro e executará o teste novamente.  
   
@@ -950,7 +950,7 @@ Para criar e verificar um teste negativo, execute as seguintes tarefas:
   
     O teste apresentará falha e o seguinte erro será exibido:  
   
-    **Test method TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest threw exception: System.Data.SqlClient.SqlException: você só pode cancelar os pedidos abertos.**  
+    **Exceção do método de teste TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest gerada: System.Data.SqlClient.SqlException: Você só pode cancelar pedidos em aberto.**  
   
     Em seguida, modifique o código para indicar que a exceção é esperada.  
   
@@ -968,7 +968,7 @@ Para criar e verificar um teste negativo, execute as seguintes tarefas:
     Você especifica que espera ver uma exceção específica. Se desejar, você pode especificar um número de erro. Se você não adicionar esse atributo, o teste de unidade apresentará falha e uma mensagem aparecerá na janela Resultados do Teste.  
   
     > [!IMPORTANT]  
-    > Atualmente, o Visual Studio 2012 não oferece suporte ao atributo ExpectedSqlException. Para obter informações para solucionar isso, consulte [Não foi possível executar o teste de unidade de banco de dados com "Falha esperada"](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Atualmente, o Visual Studio 2012 não oferece suporte ao atributo ExpectedSqlException. Para obter informações para solucionar isso, consulte [Não foi possível executar o teste de unidade de banco de dados com "Falha esperada"](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  No menu Arquivo, clique em Salvar SqlServerUnitTests1.cs.  
   
@@ -990,6 +990,6 @@ Após estabelecer uma linha de base, você poderá criar e modificar objetos de 
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Como criar um teste de unidade do SQL Server vazio](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[Como configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Como: Criar um teste de unidade do SQL Server vazio](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[Como: configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

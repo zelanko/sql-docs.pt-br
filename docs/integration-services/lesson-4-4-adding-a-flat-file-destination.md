@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 4: adicionar um destino de arquivo simples | Microsoft Docs'
+title: 'Etapa 4: Adicionar um destino de Arquivo Simples | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,56 +11,57 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ed5aa9aab3e53288f2cc482f87b32048d45a56b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b59967b631475fc0f7eb7737fac65022fc18973
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842784"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211017"
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Lição 4-4 – adicionar um destino de arquivo simples
-A saída de erro da transformação Pesquisa de Códigos de Moeda redireciona para a transformação Script todas as linhas de dados que falharam na operação de pesquisa. Para aprimorar as informações sobre os erros que ocorreram, a transformação Script executa um script que adquire a descrição de erros.  
+# <a name="lesson-4-4-add-a-flat-file-destination"></a>Lição 4-4: Adicionar um destino de Arquivo Simples
+
+A saída de erro da transformação Pesquisar Chave de Moeda redireciona todas as linhas de dados que falharam na pesquisa para a operação de transformação de Script. Para fornecer mais informações sobre os erros que ocorreram, a transformação Script executa um script que contém a descrição de cada erro.  
   
-Nessa tarefa, você salvará todas essas informações sobre as linhas com falha em um arquivo delimitado, para processamento posterior. Para salvar as linhas com falha, você deve adicionar e configurar um gerenciador de conexões de arquivo simples para o arquivo de texto que conterá os dados de erro e um arquivo simples de destino. Ao definir propriedades no gerenciador de conexões de arquivo simples que o arquivo simples usa, você pode especificar como o destino do arquivo simples formata e escreve o arquivo de texto. Para obter mais informações, consulte [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) e [Flat File Destination](../integration-services/data-flow/flat-file-destination.md).  
+Nesta tarefa, você salva todas essas informações sobre as linhas com falha em um arquivo de texto delimitado, para processamento posterior. Para salvar as linhas com falha, adicione e configure um gerenciador de conexões de arquivo simples para o arquivo de texto que contém os dados de erro e um arquivo simples de destino. Ao definir propriedades no gerenciador de conexões de arquivo simples que o arquivo simples usa, você pode especificar como o destino do arquivo simples formata e escreve o arquivo de texto. Para obter mais informações, confira [Gerenciador de conexões de Arquivo Simples](../integration-services/connection-manager/flat-file-connection-manager.md) e [Destino de Arquivo Simples](../integration-services/data-flow/flat-file-destination.md).  
   
-### <a name="to-add-and-configure-a-flat-file-destination"></a>Para adicionar e configurar um destino de arquivo simples  
+## <a name="add-and-configure-a-flat-file-destination"></a>Adicionar e configurar um destino de arquivo simples  
   
-1.  Clique na guia **Fluxo de Dados** .  
+1.  Selecione a guia **Fluxo de Dados**.  
   
-2.  Na **Caixa de Ferramentas do SSIS**, expanda **Outros**e arraste **Destino de Arquivo Simples** para a superfície de design de fluxo de dados. Coloque **Destino de Arquivo Simples** diretamente embaixo da transformação **Obter Descrição do Erro** .  
+2.  Na **Caixa de Ferramentas do SSIS**, expanda **Outros Destinos** e arraste **Destino de Arquivo Simples** para a superfície de design de fluxo de dados. Coloque **Destino de Arquivo Simples** diretamente embaixo da transformação **Obter Descrição do Erro** .  
   
-3.  Clique na transformação **Obter Descrição do Erro** e arraste a seta verde sobre o novo **Destino de Arquivo Simples**.  
+3.  Selecione a transformação **Obter Descrição do Erro** e arraste a seta azul sobre o novo **Destino de Arquivo Simples**.  
   
-4.  Na superfície de design de **Fluxo de Dados** , clique em **Destino de Arquivo Simples** , na recém-adicionada transformação **Destino de Arquivo Simples** , e altere o nome para **Linhas com Falha**.  
+4.  Na superfície de design de **Fluxo de Dados**, selecione o nome **Destino de Arquivo Simples** na nova transformação **Destino de Arquivo Simples** e altere o nome para **Linhas com Falha**.  
   
-5.  Clique com o botão direito do mouse na transformação **Linhas com Falha** , clique em **Editar**e, no **Editor de Destino de Arquivo Simples**, clique em **Novo**.  
+5.  Clique com o botão direito do mouse na transformação **Linhas com Falha**, selecione **Editar** e, no **Editor de Destino de Arquivo Simples**, selecione **Novo**.  
   
-6.  Na caixa de diálogo **Formato de Arquivo Simples** , verifique se **Delimitado** está selecionado e depois clique em **OK**.  
+6.  Na caixa de diálogo **Formato de Arquivo Simples**, verifique se **Delimitado** está selecionado e depois selecione **OK**.  
   
-7.  No **Editor do Gerenciador de Conexões de Arquivos Simples**, no tipo de caixa **Nome do Gerenciador de Conexões** digite **Dados do Erro**.  
+7.  No **Editor do Gerenciador de Conexões de Arquivo Simples**, no tipo de caixa **Nome do Gerenciador de Conexões** insira *Dados do Erro*.  
   
-8.  Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , clique em **Procurar**e localize a pasta em que o arquivo será armazenado.  
+8.  Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**, selecione **Procurar** e localize a pasta em que o arquivo será armazenado.  
   
-9. Na caixa de diálogo **Abrir** , para tipo de **Nome do arquivo**, digite **ErrorOutput.txt**e depois clique em **Abrir**.  
+9. Na caixa de diálogo **Abrir**, para **Nome do arquivo**, insira *ErrorOutput.txt* e selecione **Abrir**.  
   
-10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , verifique se a caixa **Localidade** contém Inglês (Estados Unidos) e **Página de código** contém 1252 (ANSI – Latim I).  
+10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**, verifique se **Localidade** é **Inglês (Estados Unidos)** e se **Página de código** é **1252 (ANSI-Latino I)**.  
   
-11. No painel de opções, clique em **Colunas**.  
+11. No painel de opções, selecione **Colunas**.  
   
-    Observe que, além das colunas do arquivo de dados de origem, três colunas novas estão presentes: ErrorCode, ErrorColumn e ErrorDescription. Essas colunas são geradas pela saída de erro da transformação Pesquisa de Códigos de Moeda e pelo script na transformação Obter Descrição do Erro e podem ser usadas para diagnosticar a causa da linha com falha.  
+    Além das colunas do arquivo de dados de origem, há três colunas novas: ErrorCode, ErrorColumn e ErrorDescription. Essas colunas são a saída de erro da transformação Pesquisar Chave de Moeda e o script na transformação Obter Descrição do Erro. Você pode usar essas colunas para solucionar problemas e detectar a causa da linha com falha.  
   
-12. Clique em **OK**.  
+12. Escolha **OK**.  
   
 13. No **Editor de Destino de Arquivo Simples**, desmarque a caixa de seleção **Substituir dados no arquivo** .  
   
-    Ao desmarcar essa caixa de seleção, os erros sobre as execuções de vários pacotes serão mantidos.  
+    Desmarcar essa caixa de seleção persiste os erros em várias execuções de pacote acrescentando a saída de erro de cada nova execução.
   
-14. No **Editor de Destino de Arquivo Simples**, clique em **Mapeamentos** para verificar se todas as colunas estão corretas. Como alternativa, você pode renomear as colunas no destino.  
+14. No **Editor de Destino de Arquivo Simples**, selecione **Mapeamentos** para verificar se todas as colunas estão corretas. Como alternativa, você pode renomear as colunas no destino.  
   
-15. Clique em **OK**.  
+15. Escolha **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
-[Etapa 5: Testando o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Ir para a próxima tarefa
+[Etapa 5: Testar o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   
   

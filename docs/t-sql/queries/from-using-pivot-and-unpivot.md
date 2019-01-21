@@ -25,15 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905767"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299473"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM – usando PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Você pode usar os operadores relacionais `PIVOT` e `UNPIVOT` para alterar uma expressão com valor de tabela para outra tabela. `PIVOT` transforma uma expressão com valor de tabela ao transformar os valores exclusivos de uma coluna na expressão em várias colunas na saída, além de executar agregações nos locais necessários dos valores de coluna remanescentes que precisam estar na saída final. `UNPIVOT` executa a operação oposta à PIVOT, transformando as colunas de uma expressão com valor de tabela em valores de coluna.  
   

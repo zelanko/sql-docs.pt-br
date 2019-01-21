@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881cb75b8f58bb20c8418fe18aaab6499b58e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612574"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125266"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47612574"
   
  **Para definir a opção sync with backup**  
   
--   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Habilitar backups coordenados para a replicação transacional &#40;Programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Habilitar backups coordenados para a replicação transacional &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restaurando bancos de dados envolvidos em replicação  
  É possível restaurar todos os bancos de dados em uma topologia de replicação se backups recentes estiverem disponíveis e as etapas adequadas forem seguidas. As etapas de restauração para o banco de dados de publicação dependem do tipo de replicação e das opções que foram usadas; entretanto, as etapas de restauração para todos os outros bancos de dados independem de tipo e opções.  
@@ -93,7 +93,7 @@ ms.locfileid: "47612574"
   
  A restauração dos bancos de dados **msdb** e **mestre** , que também são tratados nesta seção, é a mesma para todos os quatro tipos.  
   
-#### <a name="publication-database-snapshot-replication"></a>Banco de dados de publicação: replicação de instantâneo  
+#### <a name="publication-database-snapshot-replication"></a>Banco de Dados de Publicação: Replicação de instantâneo  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47612574"
   
      Para obter mais informações sobre como remover a replicação, consulte [sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Banco de dados de publicação: replicação transacional somente para leitura  
+#### <a name="publication-database-read-only-transactional-replication"></a>Banco de Dados de Publicação: Replicação transacional somente leitura  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47612574"
   
          Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Para obter mais informações sobre como verificar comandos, consulte [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Para obter mais informações sobre como verificar comandos, confira [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas usando o Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Remova a configuração de replicação do Publicador, Distribuidor e Assinantes e, em seguida, recrie a configuração. Ao recriar as assinaturas, especifique que o Assinante já tem os dados. A restauração está concluída.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47612574"
   
          Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Para obter mais informações sobre como verificar comandos, consulte [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Para obter mais informações sobre como verificar comandos, confira [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas usando o Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Use o [tablediff utility](../../../tools/tablediff-utility.md) ou outra ferramenta para sincronizar manualmente o Publicador com o Assinante. Isso permitirá a recuperação dos dados do banco de dados de assinatura que não estavam contidos no backup de banco de dados de publicação. Vá para a etapa c.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "47612574"
   
          Para obter mais informações sobre como especificar que o Assinante já tem os dados, consulte [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Banco de dados de publicação: Replicação transacional com assinaturas de atualização  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Banco de Dados de Publicação: Replicação transacional com assinaturas de atualização  
   
 1.  Restaure o último backup de banco de dados do banco de dados de publicação. Vá para a etapa 2.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47612574"
   
      Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-     Para obter mais informações sobre como verificar comandos, consulte [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Para obter mais informações sobre como verificar comandos, confira [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação do Transact-SQL de replicação&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas usando o Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Se você estiver usando assinaturas de atualização em fila, conecte a cada Assinante e exclua todas as linhas da tabela [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) no banco de dados de assinatura. Vá para a etapa 4.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47612574"
   
          Para obter mais informações sobre como especificar que o Assinante já tem os dados, consulte [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Banco de dados de publicação: replicação transacional ponto a ponto  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Banco de Dados de Publicação: Peer-to-Peer Transactional Replication  
  Nas etapas seguintes, os bancos de dados de publicação **A**, **B**e **C** estão em uma topologia de replicação transacional ponto a ponto. Os bancos de dados **A** e **C** estão online e funcionando corretamente; o banco de dados **B** é o banco de dados a ser restaurado. O processo aqui descrito, especialmente as etapas 7,10 e 11, são muito similares ao processo requerido para adicionar um nó a uma topologia ponto a ponto. O modo mais direto para executar essas etapas é por meio do Assistente para Configurar Topologia Ponto a Ponto, mas você também pode usar procedimentos armazenados.  
   
 1.  Execute os Agentes de Distribuição para sincronizar as assinaturas nos bancos de dados **A** e **C**. Vá para a etapa 2.  
@@ -287,7 +287,7 @@ ms.locfileid: "47612574"
   
     2.  Marque todas as publicações para validação. Reinicialize quaisquer assinaturas com falha de validação. A recuperação está concluída.  
   
-         Para obter mais informações sobre validação, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+         Para obter mais informações sobre validação, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>Banco de dados msdb (Distribuidor)  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47612574"
   
 4.  Marque todas as publicações para validação. Reinicialize quaisquer assinaturas com falha de validação. A recuperação está concluída.  
   
-     Para obter mais informações sobre validação, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     Para obter mais informações sobre validação, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Para mais informações sobre reinicialização, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>Banco de dados mestre (Distribuidor)  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47612574"
   
 2.  Restaure o último backup de banco de dados de assinatura. Vá para a etapa 3.  
   
-3.  Se o banco de dados de assinatura só contiver assinaturas push, vá para etapa 4. Se o banco de dados de assinatura contiver qualquer assinatura pull, faça as perguntas a seguir: As informações de assinatura são atuais? O banco de dados inclui todas as tabelas e opções que foram definidas na hora da falha? Se sim, vá para a etapa 4. Se não, reinicialize a assinatura. A recuperação está concluída.  
+3.  Se o banco de dados de assinatura só contiver assinaturas push, vá para etapa 4. Se o banco de dados de assinatura contiver qualquer assinatura pull, faça as seguintes perguntas: As informações de assinatura estão atualizadas? O banco de dados inclui todas as tabelas e opções que foram definidas na hora da falha? Se sim, vá para a etapa 4. Se não, reinicialize a assinatura. A recuperação está concluída.  
   
 4.  Para sincronizar o Assinante, execute o Distribution Agent. A recuperação está concluída.  
   

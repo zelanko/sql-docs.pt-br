@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394140"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257051"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012
 
@@ -46,7 +46,7 @@ A estratégia de migração adequada depende de determinados parâmetros da topo
 
 |                                   | Exige todos os objetos de servidor e VNNS | Exige todos os objetos de servidor e VNNS | Não exige objetos de servidor/VNNS\* | Não exige objetos de servidor/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***Grupos de Disponibilidade? (S/N)***                  | ***S***                              | ***N***                                                            | ***S***    | ***N***    |
+| **_Grupos de Disponibilidade? (S/N)_**                  | **_S_**                              | **_N_**                                                            | **_S_**    | **_N_**    |
 | **O cluster usa somente FCI do SQL**         | [Cenário 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Cenário 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Cenário 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Cenário 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **O cluster usa instâncias autônomas** | [Cenário 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Cenário 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Cenário 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Cenário 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Excluindo nomes do ouvinte do Grupo de Disponibilidade
@@ -242,7 +242,7 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **Ponto de extremidade** de **espelhamento** de **banco de dados**
+-   **Ponto de extremidade de espelhamento de banco de dados**
 
     De uma perspectiva do SQL, o ponto de extremidade de espelhamento de banco de dados será migrado para a nova instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto com as tabelas do sistema. Antes da migração, verifique se as regras apropriadas estão aplicadas em firewalls e se nenhum outro processo está escutando na mesma porta.
 
@@ -256,17 +256,17 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
 ### <a name="replication"></a>Replicação
 
--   **Distribuidores,** **publicadores** **e assinantes** **remotos**
+-   **Distribuidores, publicadores e assinantes remotos**
 
     A relação entre um distribuidor e um publicador depende apenas do VNN dos computadores que hospedam os dois, que será resolvido corretamente no novo computador. Os trabalhos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent também serão migrados corretamente com as tabelas do sistema, de modo que os vários agentes de replicação possam continuar a execução como de costume. É necessário que, antes da migração, todas as contas do Windows que executam o próprio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent ou qualquer trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent tenham as mesmas permissões no ambiente de destino. A comunicação com o publicador e os assinantes será executada como de costume.
 
--   **Pasta** **do instantâneo**
+-   **Pasta do instantâneo**
 
     Antes da migração, é necessário que todos os compartilhamentos de rede usados pelos recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sejam acessíveis pelos computadores no ambiente de destino com as mesmas permissões do ambiente original. Você precisará garantir que isso ocorra antes da migração.
 
 ### <a name="service-broker"></a>Service Broker
 
--   **Ponto de extremidade** do **Service** **Broker**
+-   **Ponto de extremidade do Service Broker**
 
     De uma perspectiva do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], não há nenhuma preocupação com o ponto de extremidade. Antes da migração, você precisará garantir que nenhum processo já esteja escutando na mesma porta e que nenhuma regra de firewall esteja bloqueando essa porta ou que exista uma regra de firewall permitindo especificamente a porta.
 
@@ -278,7 +278,7 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
     As rotas dependem do nome da rede virtual do destino, que será resolvido corretamente para os computadores corretos no novo ambiente para os nomes dos computadores e os nomes da rede da FCI do SQL. Qualquer outro VNN referenciado também deverá ser redirecionado para o novo computador.
 
--   **Associações** **de serviço** **remoto**
+-   **Associações de serviço remoto**
 
     As associações de serviço remoto funcionarão conforme esperado após a migração, já que qualquer usuário que usa a associação de serviço remoto será migrado corretamente.
 
@@ -288,7 +288,7 @@ A migração de um cluster que usa Grupos de Disponibilidade com réplicas autô
 
     Os trabalhos serão migrados corretamente junto com os bancos de dados do sistema. Qualquer usuário que executa um trabalho do SQL Agent ou o próprio SQL Agent terá as mesmas permissões no computador de destino, conforme especificado nos pré-requisitos.
 
--   **Alertas e** **operadores**
+-   **Alertas e operadores**
 
     Os alertas e operadores serão migrados corretamente com os bancos de dados do sistema.
 

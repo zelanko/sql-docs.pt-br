@@ -1,7 +1,7 @@
 ---
 title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 150f5f4ee5b15f31cdc793001874e3c1e7a9f9e3
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979942"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100701"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "53979942"
 ```  
 CREATE SERVER AUDIT audit_name  
 {  
-    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL}  
+    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR }  
     [ WITH ( <audit_options> [ , ...n ] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -75,11 +75,10 @@ CREATE SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL  
- Determina o local do destino da auditoria. As opções são um arquivo binário, o log do Aplicativo do Windows ou o log de Segurança do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá gravar no log de segurança do Windows se não forem definidas configurações adicionais no Windows. Para obter mais informações, veja [Gravar eventos de auditoria do SQL Server no log de segurança](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
+ TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } Determina a localização do destino da auditoria. As opções são um arquivo binário, o log do Aplicativo do Windows ou o log de Segurança do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá gravar no log de segurança do Windows se não forem definidas configurações adicionais no Windows. Para obter mais informações, veja [Gravar eventos de auditoria do SQL Server no log de segurança](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
-> Na Instância Gerenciada do Banco de Dados SQL do Azure, a auditoria do SQL funciona no nível de servidor e armazena arquivos `.xel` no Armazenamento de Blobs do Azure.
+> Na Instância Gerenciada do Banco de Dados SQL do Azure, a Auditoria do SQL funciona no nível do servidor. Os locais só podem ser `URL` ou `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  O caminho do log de auditoria. O nome do arquivo é gerado com base no nome da auditoria e no GUID da auditoria.  

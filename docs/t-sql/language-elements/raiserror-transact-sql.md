@@ -30,15 +30,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0875e5013e2a5f12468d99414ff94252ac66453a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502856"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300293"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Gera uma mensagem de erro e inicia o processamento de erros da sessão. RAISERROR pode referenciar uma mensagem de erro definida pelo usuário na exibição do catálogo sys.messages ou criar uma mensagem dinamicamente. A mensagem é retornada como uma mensagem de erro de servidor ao aplicativo de chamada ou a um bloco CATCH de um constructo TRY...CATCH. Em vez disso, os novos aplicativos devem usar [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
@@ -249,7 +252,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. Criando uma mensagem ad hoc em sys.messages  
+### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>b. Criando uma mensagem ad hoc em sys.messages  
  O exemplo a seguir mostra como gerar uma mensagem armazenada na exibição do catálogo sys.messages. A mensagem foi adicionada à exibição do catálogo sys.messages usando o procedimento armazenado do sistema `sp_addmessage` como o número de mensagem `50005`.  
   
 ```  

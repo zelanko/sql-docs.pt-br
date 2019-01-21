@@ -1,7 +1,7 @@
 ---
 title: Configurar o Always Encrypted com enclaves seguros | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534769"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206402"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurar o Always Encrypted com enclaves seguros
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 O [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md) estende o recurso [Always Encrypted](always-encrypted-database-engine.md) existente para habilitar funcionalidades mais avançadas em dados confidenciais mantendo a confidencialidade desses dados.
@@ -26,14 +27,14 @@ O [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md) estende 
 Para configurar o Always Encrypted com enclaves seguros, use o fluxo de trabalho a seguir:
 
 1. Configurar o atestado do HGS (Serviço Guardião de Host).
-2. Instalar o [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] no computador com SQL Server.
+2. Instale o [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] no computador com SQL Server.
 3. Instalar as ferramentas no computador cliente/de desenvolvimento.
 4. Configurar o tipo de enclave em sua instância do SQL Server.
 5. Provisionar chaves habilitadas para enclave.
 6. Criptografar colunas que contêm dados confidenciais.
 
->[!NOTE]
->Para ver um tutorial passo a passo sobre como configurar um ambiente de teste e experimentar a funcionalidade do Always Encrypted com enclaves seguros no SSMS, confira [Tutorial: introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+> [!NOTE]
+> Para obter um tutorial passo a passo sobre como configurar um ambiente de teste e experimentar a funcionalidade do Always Encrypted com enclaves seguras no SSMS, confira [Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Configurar seu ambiente
 
@@ -45,7 +46,7 @@ O computador que executa o SQL Server precisa do sistema operacional e da versã
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] ou posterior
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ou posterior
 
 *Windows*:
 
@@ -134,7 +135,7 @@ Abra o computador cliente/de desenvolvimento:
    ```
 
     > [!NOTE]
-    > Cálculos avançados são desabilitados por padrão no [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. Eles precisam ser habilitados usando a instrução acima após cada reinicialização de sua instância do SQL Server.
+    > Cálculos avançados são desabilitados por padrão no [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]. Eles precisam ser habilitados usando a instrução acima após cada reinicialização de sua instância do SQL Server.
 
 ## <a name="provision-enclave-enabled-keys"></a>Provisionar chaves habilitadas para enclave
 
@@ -217,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 No computador do cliente/de desenvolvimento, abra o ISE do Windows PowerShell e execute o seguinte script.
 
-**Etapa 1: provisionar uma chave mestra da coluna no Azure Key Vault**
+**Etapa 1: Provisionar uma chave mestra da coluna no Azure Key Vault**
 
 Isso também pode ser feito usando o portal do Azure. Para obter detalhes, consulte [Gerenciar os cofres de chaves do portal do Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
 
@@ -249,7 +250,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resource
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**Etapa 2: criar metadados da chave mestra da coluna no banco de dados, criar uma chave de criptografia da coluna e criar metadados da chave de criptografia da coluna no banco de dados**
+**Etapa 2: Criar metadados da chave mestra da coluna no banco de dados, criar uma chave de criptografia da coluna e criar metadados da chave de criptografia da coluna no banco de dados**
 
 
 ```powershell
@@ -514,7 +515,7 @@ Estas são as três abordagens para habilitar enclaves para colunas existentes:
   - Introduz sobrecarga de gerenciamento de chaves – você precisará criar uma nova chave mestra da coluna e torná-la disponível para aplicativos que consultam as colunas afetadas.  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Opção 2: esta abordagem envolve duas etapas: 1) girar a chave mestra da coluna (como na Opção 1) e 2) criptografar novamente um subconjunto de colunas criptografadas de forma determinística usando criptografia aleatória, a fim de habilitar cálculos avançados para essas colunas.
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Opção 2: Essa abordagem envolve duas etapas: 1) girar a chave mestra da coluna (como na Opção 1) e 2) criptografar novamente um subconjunto de colunas criptografadas de forma determinística usando criptografia aleatória, a fim de habilitar cálculos avançados para essas colunas.
   
 - Prós:
   - criptografa novamente os dados no local e, portanto, é um método recomendado para habilitar consultas avançadas para colunas criptografadas de forma determinística que contêm grandes quantidades de dados. Observe que a etapa 1 desbloqueia a criptografia no local para as colunas que usam a criptografia determinística e, portanto, a etapa 2 pode ser executada no local.
@@ -860,7 +861,7 @@ Além disso, seu aplicativo precisa seguir diretrizes comuns que se aplicam a ap
 Para obter detalhes sobre como desenvolver aplicativos do .NET Framework usando o Always Encrypted, consulte os seguintes artigos:
 
 - [Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL e armazenar chaves de criptografia no Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted: Proteger dados confidenciais no Banco de Dados SQL e armazenar chaves de criptografia no Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>Exemplo
 

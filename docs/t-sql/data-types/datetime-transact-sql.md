@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e75c6040a74f58ae0c6fb8e340a61a8a90332de
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6485ebf0eea1565a13e53a0aa7746a724352c35e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970667"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300193"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Define uma data combinada com uma hora do dia que inclui frações de segundos e se baseia em um período de 24 horas.
   
@@ -57,9 +57,9 @@ Define uma data combinada com uma hora do dia que inclui frações de segundos e
 |Precisão|Os valores são arredondados em incrementos de .000, .003 ou .007 segundos.|  
 |Valor padrão|1900-01-01 00:00:00|  
 |Calendário|Gregoriano (não inclui o intervalo completo de anos.)|  
-|Precisão de segundo fracionário definida pelo usuário|não|  
-|Preservação e reconhecimento de deslocamento de fuso horário|não|  
-|Reconhecimento de horário de verão|não|  
+|Precisão de segundo fracionário definida pelo usuário|Não|  
+|Preservação e reconhecimento de deslocamento de fuso horário|Não|  
+|Reconhecimento de horário de verão|Não|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>Formatos de literais de cadeia de caracteres com suporte para datetime  
 As tabelas a seguir listam os formatos de literais de cadeia de caracteres com suporte para **datetime**. Exceto para ODBC, os literais de cadeia de caracteres **datetime** estão entre aspas simples ('), por exemplo, 'string_literaL'. Se o ambiente não for **us_english**, os literais de cadeia de caracteres deverão estar no formato N'string_literaL'.

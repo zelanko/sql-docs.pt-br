@@ -15,12 +15,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfb463245cc649d010ce6ce97b49170ec37ac9e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 057d3f820ac0f580a6109d5b5c04ea43e8eabd9c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729594"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129706"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Validar informações de partição para um assinante de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47729594"
  Quando o Agente de Mesclagem valida uma partição, além de validar a partição comparando aos valores retornados por todas as funções usadas em expressões de filtragem, o agente também verifica se o instantâneo foi gerado antes das mudanças que o invalidem, como operações de limpeza de metadados ou mudanças de esquema. Se um instantâneo é muito antigo, o Agente de Mesclagem retornará um erro e você precisará gerar novamente um instantâneo particionado para esse Assinante, baseado em um instantâneo regular atual.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administração &#40;Replicação&#41;](../../relational-databases/replication/administration/administration-replication.md)   
- [Melhores práticas para a administração de replicação](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+ [Perguntas Frequentes sobre Administração de Replicação](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [Validar os dados replicados](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validar os dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

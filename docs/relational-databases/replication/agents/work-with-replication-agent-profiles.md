@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536428"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135436"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52536428"
   
     -   Exclua um perfil  
   
--   **Acompanhamento:**  [Depois de alterar parâmetros do agente](#FollowUp)  
+-   **Acompanhamento:**  [depois de alterar parâmetros de agente](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52536428"
   
 1.  Se a caixa de diálogo **Perfis do Agente** exibir perfis para mais de um agente, selecione um agente.  
   
-2.  Clique no botão de propriedades (**…**) ao lado de um perfil.  
+2.  Clique no botão de propriedades (**…**) ao lado do perfil.  
   
 3.  Exiba os parâmetros e valores na caixa de diálogo **Propriedades do Perfil \<ProfileName>**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52536428"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 ###  <a name="Create_tsql"></a> Para criar um perfil novo de agente  
   

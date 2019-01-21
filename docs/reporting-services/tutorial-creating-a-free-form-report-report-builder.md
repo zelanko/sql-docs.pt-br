@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021920"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143486"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Criando um Relatório de Formato Livre (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado que atua como um boletim informativo. Cada página exibe um texto estático, visuais de resumo e dados de vendas de exemplo detalhados.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -48,11 +48,11 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Nova** > **Fonte de Dados**.  
   
-2.  Na caixa **Nome** , digite: **ListDataSource**  
+2.  Na caixa **Nome**, digite: **ListDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, na caixa **Cadeia de conexão**, digite: **Fonte de Dados = \<servername>**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de Dados = \<nomedoservidor>**  
   
     **\<servername>**, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
   
@@ -64,7 +64,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Novo** > **Conjunto de Dados**.  
   
-2.  Na caixa **Nome** , digite: **ListDataset**.  
+2.  Na caixa **Nome**, digite: **ListDataset**.  
   
 3.  Clique em **Usar um conjunto de dados inserido em meu relatório**e verifique se a fonte de dados é **ListDataSource**.  
   
@@ -199,7 +199,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
 2.  Na guia **Inserir** > **Caixa de Texto**. Clique no canto superior esquerdo da lista, dentro do retângulo que você adicionou anteriormente, e arraste para criar a caixa de texto com 9,76 centímetros de largura e 12,70 centímetros de altura.  
   
-3.  Com o cursor na caixa de texto, digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
+3.  Com o cursor na caixa de texto e digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
   
     ![Adicionar texto do cabeçalho do boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "Adicionar texto do cabeçalho do boletim informativo")  
   
@@ -215,7 +215,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
     *  **20 pt**.
     *  **Tomate**.  
   
-9. Coloque o cursor abaixo do texto que você digitou na etapa 3 e digite: **Hello** com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa.  
+9. Posicione o cursor abaixo do texto que você digitou na etapa 3 e digite: **Olá** com um espaço após a palavra para separar o texto e o campo que você adicionará na próxima etapa.  
  
 10. Arraste o campo `[FullName]` de ListDataSet no painel Dados do Relatório até a caixa de texto, coloque-o após “Hello”, e digite uma vírgula (,).  
    
@@ -244,7 +244,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
       *  **10 pt**.
       *  **Black**.  
  
-20. Coloque o cursor dentro da caixa de texto, abaixo do texto sem sentido e digite: **Parabéns pelo seu total de vendas de**, com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa. 
+20. Coloque o cursor dentro da caixa de texto, abaixo do texto sem sentido, e digite: **Parabéns pelo seu total de vendas de**, com um espaço após a palavra para separar o texto e o campo que será adicionado na próxima etapa. 
   
 21. Arraste o campo Sales até a caixa de texto, coloque-o depois do texto que você digitou na etapa anterior e digite um ponto de exclamação (!).  
 
@@ -405,7 +405,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo.  
    
-10. Selecione o título do gráfico e digite: **Quantidades Vendidas do Produto**.  
+10. Selecione o título e o tipo do gráfico: **Quantidades Vendidas do Produto**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
@@ -444,7 +444,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo, abaixo do gráfico de pizza.  
    
-10. Selecione o título do gráfico e digite: **Vendas de Produtos**.  
+10. Selecione o título e o tipo do gráfico: **Vendas do Produto**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
@@ -458,7 +458,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Selecione o eixo do gráfico e, na guia *Início** > **Número** > **Moeda**.
+12. Selecione o eixo do gráfico e, na guia **Página Inicial** > **Número** > **Moeda**.
 
 13. Selecione **Diminuir Decimal** duas vezes para que o número mostre apenas dólares, sem centavos.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Para verificar se os gráficos estão dentro do retângulo  

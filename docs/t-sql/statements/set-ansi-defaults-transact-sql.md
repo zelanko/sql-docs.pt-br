@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36902b633219f60d8f76a45e7d8e2fd2ccfdb129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 871d79c805451e1710dbc400914d2dace01c7eea
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804234"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143436"
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -51,9 +51,9 @@ SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>Remarks  
- SET ANSI_DEFAULTS é uma configuração do lado do servidor que o cliente não modifica. O cliente gerencia suas próprias configurações. Por padrão, essas configurações são o oposto da configuração de servidor. Os usuários não devem modificar a configuração de servidor. Para alterar o comportamento do cliente, os usuários devem usar SQL_COPT_SS_PRESERVE_CURSORS. Para obter mais informações, veja [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ANSI_DEFAULTS é uma configuração do lado do servidor que o cliente não modifica. O cliente gerencia suas próprias configurações. Por padrão, essas configurações são o oposto da configuração de servidor. Os usuários não devem modificar a configuração de servidor. Para alterar o comportamento do cliente, os usuários devem usar SQL_COPT_SS_PRESERVE_CURSORS. Para obter mais informações, veja [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
- Quando ativada (ON), esta opção habilita as seguintes configurações ISO:  
+Quando ativada (ON), esta opção habilita as seguintes configurações ISO:  
   
 |||  
 |-|-|  
@@ -62,13 +62,13 @@ SET ANSI_DEFAULTS ON
 |SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
 |SET ANSI_WARNINGS||  
   
- Juntas, essas opções SET padrão ISO definem o ambiente de processamento de consulta para a duração da sessão de trabalho do usuário, um disparador em execução ou um procedimento armazenado. Entretanto, essas opções SET não incluem todas as opções exigidas para estar de acordo com padrão ISO.  
+Juntas, essas opções SET padrão ISO definem o ambiente de processamento de consulta para a duração da sessão de trabalho do usuário, um disparador em execução ou um procedimento armazenado. Entretanto, essas opções SET não incluem todas as opções exigidas para estar de acordo com padrão ISO.  
   
- Ao trabalhar com índices em colunas computadas e exibições indexadas, quatro desses padrões (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS e QUOTED_IDENTIFIER) devem ser definidos como ON. Esses padrões estão entre as sete opções SET que devem ser atribuídas aos valores necessários para criar e alterar índices em colunas computadas e exibições indexadas. As outras opções de SET são ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) e NUMERIC_ROUNDABORT (OFF). Para obter mais informações sobre as configurações da opção SET com exibições indexadas e índices em colunas computadas, veja "Considerações sobre o uso das instruções SET" em [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+Ao trabalhar com índices em colunas computadas e exibições indexadas, quatro desses padrões (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS e QUOTED_IDENTIFIER) devem ser definidos como ON. Esses padrões estão entre as sete opções SET que devem ser atribuídas aos valores necessários para criar e alterar índices em colunas computadas e exibições indexadas. As outras opções de SET são ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) e NUMERIC_ROUNDABORT (OFF). Para obter mais informações sobre as configurações da opção SET necessárias com exibições indexadas e índices em colunas computadas, confira [Considerações sobre o uso das instruções SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
   
- O driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC e o Provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_DEFAULTS como ON na conexão. O driver e Provedor definem CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS como OFF. As configurações OFF para SET CURSOR_CLOSE_ON_COMMIT e SET IMPLICIT_TRANSACTIONS podem ser definidas nas fontes de dados ODBC, nos atributos de conexão ODBC ou nas propriedades de conexão OLE DB do aplicativo antes de conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão para SET ANSI_DEFAULTS é OFF para conexões de aplicativos DB-Library.  
+O driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC e o Provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_DEFAULTS como ON na conexão. O driver e Provedor definem CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS como OFF. As configurações OFF para CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS podem ser definidas nas fontes de dados ODBC, nos atributos de conexão ODBC ou nas propriedades de conexão OLE DB do aplicativo antes de conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão para ANSI_DEFAULTS é OFF para conexões de aplicativos DB-Library.  
   
- Quando SET ANSI_DEFAULTS é gerado, SET QUOTED_IDENTIFIER é definido no momento da análise, e as seguintes opções são definidas em tempo de execução:  
+Quando SET ANSI_DEFAULTS é gerado, QUOTED_IDENTIFIER é definido no momento da análise e as seguintes opções são definidas em tempo de execução:  
   
 |||  
 |-|-|  
@@ -77,18 +77,20 @@ SET ANSI_DEFAULTS ON
 |SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** .  
+Requer associação à função **pública** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir define `SET ANSI_DEFAULTS ON` e usa a instrução `DBCC USEROPTIONS` para exibir as configurações que são afetadas.  
+O exemplo a seguir define ANSI_DEFAULTS como ON e usa a instrução `DBCC USEROPTIONS` para exibir as configurações que são afetadas.  
   
-```  
+```sql  
 -- SET ANSI_DEFAULTS ON.  
 SET ANSI_DEFAULTS ON;  
 GO  
+
 -- Display the current settings.  
 DBCC USEROPTIONS;  
-GO  
+GO 
+
 -- SET ANSI_DEFAULTS OFF.  
 SET ANSI_DEFAULTS OFF;  
 GO  

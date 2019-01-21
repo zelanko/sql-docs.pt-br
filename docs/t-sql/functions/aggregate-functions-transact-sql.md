@@ -19,15 +19,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d0fa6a0ee5b63d098e0feb4a6ace368e145dd57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59bc8e558e5dc3d7e5aa09bb597e69a1be14ab79
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831224"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299773"
 ---
 # <a name="aggregate-functions-transact-sql"></a>Funções de agregação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Uma função de agregação executa um cálculo em um conjunto de valores e retorna um único valor. Com exceção de `COUNT`, as funções de agregação ignoram valores nulos. As funções de agregação frequentemente são usadas com a cláusula GROUP BY da instrução SELECT.
   

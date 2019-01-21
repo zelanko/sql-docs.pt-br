@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 9: testar o pacote de tutoriais da Lição 1 | Microsoft Docs'
+title: 'Etapa 9: Testar o pacote de tutoriais da Lição 1 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,28 +11,30 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: dde0ffe53ab5763230cafa752d687ab42d3a60c5
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629539"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143216"
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Lição 1-9 – testar o pacote de tutoriais da Lição 1
-Nesta lição, você executou as seguintes tarefas:  
+# <a name="lesson-1-9-test-the-lesson-1-package"></a>Lição 1-9: Testar o pacote da Lição 1
+
+Neste tutorial, você executou as seguintes tarefas:  
   
 -   Criou um novo projeto do [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
--   Configurou os gerenciadores de conexões que o pacote precisa para estabelecer conexão com os dados de origem e de destino.  
+-   Configurou os gerenciadores de conexões para o pacote para estabelecer conexão com os dados de origem e de destino.  
   
 -   Adicionou um fluxo de dados que usa os dados de uma origem de arquivo simples, desenvolve as transformações Pesquisa necessárias sobre os dados e configura os dados para o destino.  
   
-Seu pacote está completo agora! Está na hora de testá-lo.  
+Seu pacote agora está concluído e pronto para testar!
   
-## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
-Antes de testar o pacote, é recomendável verificar se os fluxos de controle e de dados do pacote da Lição 1 contêm os objetos mostrados nos diagramas a seguir.  
+## <a name="check-the-package-components"></a>Verificar os componentes de pacote
   
-**Fluxo de Controle**  
+Antes de testar o pacote, verifique se os fluxos de controle e de dados do pacote da Lição 1 contêm os objetos mostrados nos diagramas a seguir.  
+  
+**Fluxo de Controle** 
   
 ![Fluxo de controle no pacote](../integration-services/media/task9lesson1control.gif "Fluxo de controle no pacote")  
   
@@ -40,18 +42,18 @@ Antes de testar o pacote, é recomendável verificar se os fluxos de controle e 
   
 ![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "Fluxo de dados no pacote")  
   
-### <a name="to-run-the-lesson-1-tutorial-package"></a>Para executar o pacote de tutorial da Lição 1  
+## <a name="run-the-lesson-1-package"></a>Executar o pacote da Lição 1  
   
-1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
+1.  No menu **Depurar**, selecione **Iniciar Depuração**.  
   
-    O pacote será executado, resultando na adição bem-sucedida de 1097 linhas à tabela de fatos **NewFactCurrencyRate** em **AdventureWorksDW2012**.  
+    O pacote é executado, resultando na adição bem-sucedida de 1.097 linhas à tabela de fatos **NewFactCurrencyRate** em **AdventureWorksDW2012**. Para verificar esse resultado, selecione a guia **Fluxo de Dados**.
   
-2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
+2.  Terminada a execução do pacote, no menu **Depurar**, selecione **Parar Depuração**.  
   
-## <a name="next-lesson"></a>Próxima lição  
-[Lição 2: Adicionando um loop com o SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+## <a name="go-to-next-lesson"></a>Vá para a próxima lição
+[Lição 2: Adicionar looping com o SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
 [Execução de projetos e pacotes](packages/run-integration-services-ssis-packages.md) 
   
   

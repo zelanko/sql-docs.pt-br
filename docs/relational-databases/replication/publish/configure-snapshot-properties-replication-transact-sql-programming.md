@@ -15,12 +15,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62bef7f28b04c03c15d32da5097420ca1345a2d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623430"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134206"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurar propriedades de instantâneo (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,14 +30,10 @@ ms.locfileid: "47623430"
   
 1.  No Publicador, execute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique um nome de publicação para **@publication**, um valor de **snapshot** ou **continuous** para **@repl_freq**, e um ou mais dos seguintes parâmetros relacionados a instantâneo.  
   
-    -   **@alt_snapshot_folder** - especifique um caminho se o instantâneo para essa publicação for acessado daquele local em vez de ou além da pasta padrão de instantâneo.  
-  
-    -   **@compress_snapshot** - especifique um valor de **verdadeiro** se os arquivos de instantâneo na pasta de instantâneo alternativa forem compactados no formato de arquivo CAB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
-  
-    -   **@pre_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.  
-  
-    -   **@post_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.  
-  
+    -   **@alt_snapshot_folder** - especifique um caminho se o instantâneo para essa publicação for acessado daquele local em vez de ou além da pasta padrão de instantâneo.    
+    -   **@compress_snapshot** - especifique um valor de **verdadeiro** se os arquivos de instantâneo na pasta de instantâneo alternativa forem compactados no formato de arquivo CAB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .    
+    -   **@pre_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.    
+    -   **@post_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.    
     -   **@snapshot_in_defaultfolder** - especifique um valor de **falso** se o instantâneo só estiver disponível em um local não padrão.  
   
      Para obter mais informações sobre como criar publicações, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
@@ -46,14 +42,10 @@ ms.locfileid: "47623430"
   
 1.  No Publicador, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique um nome de publicação para **@publication**, um valor de **snapshot** ou **continuous** para **@repl_freq**, e um ou mais dos seguintes parâmetros relacionados a instantâneo.  
   
-    -   **@alt_snapshot_folder** - especifique um caminho se o instantâneo para essa publicação for acessado daquele local em vez de ou além da pasta padrão de instantâneo.  
-  
-    -   **@compress_snapshot** - especifique um valor de **verdadeiro** se os arquivos de instantâneo na pasta de instantâneo alternativa forem compactados em formato de arquivo CAB.  
-  
-    -   **@pre_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.  
-  
-    -   **@post_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.  
-  
+    -   **@alt_snapshot_folder** - especifique um caminho se o instantâneo para essa publicação for acessado daquele local em vez de ou além da pasta padrão de instantâneo.    
+    -   **@compress_snapshot** - especifique um valor de **verdadeiro** se os arquivos de instantâneo na pasta de instantâneo alternativa forem compactados em formato de arquivo CAB.   
+    -   **@pre_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.    
+    -   **@post_snapshot_script** - especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.    
     -   **@snapshot_in_defaultfolder** - especifique um valor de **falso** se o instantâneo só estiver disponível em um local não padrão.  
   
 2.  Para obter mais informações sobre como criar publicações, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
@@ -62,14 +54,10 @@ ms.locfileid: "47623430"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique um valor **1** para **@force_invalidate_snapshot** e um dos valores a seguir para **@property**:  
   
-    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value**.  
-  
-    -   **compress_snapshot** - especifique também um valor de **verdadeiro** ou **falso** para **@value** para indicar se arquivos de instantâneo na pasta de instantâneo alternativa são compactados no formato de arquivo CAB.  
-  
-    -   **pre_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.  
-  
-    -   **post_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.  
-  
+    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value**.    
+    -   **compress_snapshot** - especifique também um valor de **verdadeiro** ou **falso** para **@value** para indicar se arquivos de instantâneo na pasta de instantâneo alternativa são compactados no formato de arquivo CAB.    
+    -   **pre_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.    
+    -   **post_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.    
     -   **@snapshot_in_defaultfolder** - especifique também um valor de **verdadeiro** ou **falso** para indicar se o instantâneo está disponível apenas em um local não padrão.  
   
 2.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md). Especifique **@publication** e um ou mais dos parâmetros de credencial de segurança ou programação que estão sendo alterados.  
@@ -83,14 +71,10 @@ ms.locfileid: "47623430"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique um valor **1** para **@force_invalidate_snapshot** e um dos valores a seguir para **@property**:  
   
-    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value**.  
-  
-    -   **compress_snapshot** - especifique também um valor de **verdadeiro** ou **falso** para **@value** para indicar se arquivos de instantâneo na pasta de instantâneo alternativa são compactados no formato de arquivo CAB.  
-  
-    -   **pre_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.  
-  
-    -   **post_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.  
-  
+    -   **alt_snapshot_folder** - também especifique um caminho novo para a pasta de instantâneo alternativa para **@value**.    
+    -   **compress_snapshot** - especifique também um valor de **verdadeiro** ou **falso** para **@value** para indicar se arquivos de instantâneo na pasta de instantâneo alternativa são compactados no formato de arquivo CAB.    
+    -   **pre_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização antes que o instantâneo inicial seja aplicado.    
+    -   **post_snapshot_script** - também para **@value** especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.    
     -   **@snapshot_in_defaultfolder** - especifique também um valor de **verdadeiro** ou **falso** para indicar se o instantâneo está disponível apenas em um local não padrão.  
   
 2.  Execute o [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) no prompt de comando ou inicie o trabalho do Agente de Instantâneo para gerar um instantâneo novo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
@@ -101,11 +85,10 @@ ms.locfileid: "47623430"
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../relational-databases/replication/codesnippet/tsql/configure-snapshot-prope_1.sql)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Locais da pasta de instantâneos alternativos](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
- [Instantâneos compactados](../../../relational-databases/replication/compressed-snapshots.md)   
- [Executar scripts antes e depois da aplicação do instantâneo](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [Modificar opções de instantâneo](../../../relational-databases/replication/snapshot-options.md)   
+ [Executar scripts antes e depois da aplicação do instantâneo](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Transferir instantâneos pelo FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
+ [Transferir instantâneos pelo FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)   
  [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)  
   
   

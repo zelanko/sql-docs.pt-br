@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 4: testar o pacote de tutoriais da Lição 2 | Microsoft Docs'
+title: 'Etapa 4: Testar o pacote de tutoriais da Lição 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,23 +11,22 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629509"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143196"
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lição 2-4 – testar o pacote de tutoriais da Lição 2
-Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples agora configurado, o pacote da Lição 2 pode iterar através da coleção de 14 arquivos simples na pasta Dados de Exemplo. Cada vez que um nome de arquivo é encontrado e corresponde aos critérios de nome de arquivo especificado, o contêiner Loop Foreach popula a variável definida pelo usuário com o nome do arquivo. Essa variável, por sua vez, atualiza a propriedade ConnectionString do gerenciador de conexões de Arquivo Simples, e uma conexão é criada para o novo arquivo simples. O contêiner Loop Foreach, então, executa a tarefa de fluxo de dados não modificados em relação aos dados no novo arquivo simples, antes de se conectar ao próximo arquivo na pasta.  
-  
-Use o procedimento a seguir para testar a nova funcionalidade de loop que você adicionou ao seu pacote.  
+# <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lição 2-4: Testar o pacote de tutorial da Lição 2
+
+Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples agora configurado, o pacote da Lição 2 pode iterar pelos 14 arquivos simples na pasta Dados de Exemplo. Cada vez que um nome de arquivo corresponde aos critérios especificados, o contêiner Loop Foreach preenche a variável definida pelo usuário com o nome do arquivo. Essa variável, por sua vez, atualiza a propriedade ConnectionString do gerenciador de conexões de Arquivo Simples, que se conecta àquele arquivo simples. O contêiner Foreach Loop então executa a tarefa de fluxo de dados não modificada com relação aos dados nesse arquivo simples.  
   
 > [!NOTE]  
-> Se você tiver executado o pacote da lição 1, precisará excluir os registros de dbo.NewFactCurrencyRate no AdventureWorksDW2012 antes de executar o pacote dessa lição ou o pacote falhará com erros que indicam uma violação de restrição de chave primária. Você receberá os mesmos erros se executar o pacote selecionando Depurar/Iniciar Depuração (ou pressione F5) porque as lições 1 e 2 serão executadas. A lição 2 tentará inserir os registros já inseridos na lição 1.  
+> Se você tiver executado o pacote da Lição 1, precisará excluir os registros da tabela dbo.NewFactCurrencyRate no banco de dados AdventureWorksDW2012 antes de executar o pacote desta lição. A Lição 2 tenta inserir registros já inseridos na Lição 1, o que causa um erro.  
   
-## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
-Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados do pacote da Lição 2 contêm os objetos mostrados nos diagramas a seguir. O fluxo de dados deve ser idêntico ao fluxo de dados na Lição 1.  
+## <a name="check-the-package-layout"></a>Verificar o layout do pacote  
+Antes de testar o pacote, verifique se os fluxos de controle e de dados do pacote da Lição 2 contêm os objetos mostrados nos diagramas a seguir. O fluxo de dados da Lição do 2 é igual ao da Lição 1.  
   
 **Fluxo de Controle**  
   
@@ -37,19 +36,19 @@ Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados 
   
 ![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "Fluxo de dados no pacote")  
   
-### <a name="to-test-the-lesson-2-tutorial-package"></a>Para testar o pacote de tutorial da Lição 2  
+## <a name="test-the-lesson-2-tutorial-package"></a>Testar o pacote de tutorial da Lição 2  
   
-1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Lesson 2.dtsx** e clique em **Executar Pacote**.  
+1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Lesson 2.dtsx** e selecione **Executar Pacote**.  
   
-    O pacote será executado. Você pode verificar o status de cada loop na janela Saída ou clicando na guia **Progresso** . Por exemplo, você pode ver que foram adicionadas 1097 linhas à tabela de destino do arquivo Currency_VEB.txt.  
+    O pacote é executado. Você pode verificar o status de cada loop na janela de **Saída** ou selecionando a guia **Progresso**. Por exemplo, você pode ver que foram adicionadas 1.097 linhas à tabela de destino do arquivo Currency_VEB.txt.  
   
-2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
+2.  Terminada a execução do pacote, no menu **Depurar**, selecione **Parar Depuração**.  
   
-## <a name="next-lesson"></a>Próxima lição  
-[Lição 5: Adicionar configurações do pacote SSIS ao modelo de implantação de pacotes](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+## <a name="go-to-next-lesson"></a>Vá para a próxima lição  
+[Lição 3: Adicionar o log com o SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Execução de projetos e pacotes](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+## <a name="see-also"></a>Confira também  
+[Execução de projetos e pacotes](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   

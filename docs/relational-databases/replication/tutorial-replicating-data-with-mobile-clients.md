@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545538"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130716"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configurar a replicação entre um servidor e clientes móveis (mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Neste tutorial, você aprenderá a:
 > * Sincronizar a assinatura com a publicação de mesclagem.
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tutorial é destinado a usuários familiarizados com operações fundamentais de bancos de dados, mas que têm pouca experiência com replicação. Antes de iniciar este tutorial, é necessário concluir o [Tutorial: Preparar o SQL Server para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Este tutorial é destinado a usuários familiarizados com operações fundamentais de bancos de dados, mas que têm pouca experiência com replicação. Antes de iniciar este tutorial, você deve concluir o [Tutorial: Preparar o SQL Server para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server Management Studio) e um banco de dados do AdventureWorks: 
   
@@ -251,7 +251,7 @@ Nesta seção, você adicionará uma assinatura à publicação de mesclagem cri
 Para obter mais informações, consulte:  
 - [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Instantâneos para publicações de mesclagem com filtros com parâmetro](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Instantâneos para publicações de mesclagem com filtros com parâmetro](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>Sincronizar a assinatura com a publicação de mesclagem
 

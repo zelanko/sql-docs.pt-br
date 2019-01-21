@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128346"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 A Replicação transacional é uma boa solução ao problema de movimentação de dados entre servidores que estão continuamente conectados. Como usar o Assistente de Replicação, você pode configurar e administrar uma topologia de replicação com facilidade. 
 
@@ -39,7 +39,7 @@ Neste tutorial, você aprenderá a:
   
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tutorial é destinado a usuários que estão familiarizados com operações básicas de banco de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, é necessário concluir o [Tutorial: Preparar o SQL Server para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Este tutorial é destinado a usuários que estão familiarizados com operações básicas de banco de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, você deve concluir o [Tutorial: Preparar o SQL Server para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server Management Studio) e um banco de dados do AdventureWorks:  
   
@@ -226,7 +226,7 @@ Nesta seção, você usará os tokens de rastreamento para verificar se as alter
   
    A. Selecione a guia **Tokens de Rastreamento**.  
    B. Selecione **Inserir Rastreamento**.    
-   c. Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou determinado ponto.
+   c. Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou determinado ponto.
 
    ![Informações para o token de rastreamento](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 

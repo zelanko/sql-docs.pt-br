@@ -11,18 +11,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 794aafa32cd2c7cc8d10dfb568bb82fda0c56331
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 77acf33ae4cdc4626f5467f136d8fb96b5ba96ed
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215814"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299543"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Há várias maneiras de importar dados de arquivos do Excel para o SQL Server ou para o Banco de Dados SQL do Azure. Alguns métodos permitem que você importe dados em uma única etapa diretamente de arquivos do Excel; outros métodos requerem que você exporte os dados do Excel como texto antes de importá-los. Este artigo resume os métodos usados com frequência e fornece links para informações mais detalhadas.
 
@@ -226,7 +226,7 @@ Conforme descrito anteriormente na seção [Pré-requisito](#prereq), você deve
 
 Para obter mais informações sobre o Assistente de cópia, veja os tópicos a seguir:
 -   [Assistente de cópia do data factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
--   [Tutorial: Criar um pipeline com Atividade de cópia usando o Assistente de cópia do data factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+-   [Tutorial: Criar um pipeline com Atividade de cópia usando o Assistente de cópia do Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="adf"></a> Azure Data Factory
 Se você estiver familiarizado com o Azure Data Factory e não quiser executar o Assistente de cópia, crie um pipeline com uma atividade de cópia que copia do arquivo de texto para o SQL Server ou para o Banco de Dados SQL do Azure.
@@ -240,7 +240,7 @@ Para obter mais informações sobre como usar essas fontes e coletores do Data F
 
 Para aprender a copiar dados com o Azure Data Factory, veja os tópicos a seguir:
 -   [Mover dados usando a Atividade de cópia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
--   [Tutorial: Criar um pipeline com Atividade de cópia usando o Portal do Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+-   [Tutorial: Criar um pipeline com Atividade de cópia usando o portal do Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="see-also"></a>Consulte Também
 [Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)](../../integration-services/load-data-to-from-excel-with-ssis.md)

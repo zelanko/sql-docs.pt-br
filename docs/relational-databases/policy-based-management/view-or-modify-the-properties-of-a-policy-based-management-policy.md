@@ -14,12 +14,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e1d7799abc3a930e72a9040c537e99fe7641a641
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf3bb62c4008b870c50c230a6140fff2a6b8b802
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505898"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254502"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52505898"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>Para exibir as propriedades de todas as políticas em um objeto  
   
-1.  Em Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, objeto de servidor, banco de dados ou objeto de banco de dados, aponte para **Políticas** e selecione **Exibir**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Exibir políticas – ***nome_do_objeto*, confira [Caixa de diálogo Exibir Políticas](../../relational-databases/policy-based-management/view-policies-dialog-box.md).  
+1.  Em Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, objeto de servidor, banco de dados ou objeto de banco de dados, aponte para **Políticas** e selecione **Exibir**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Exibir políticas-**_nome_do_objeto_, confira [Caixa de diálogo Exibir Políticas](../../relational-databases/policy-based-management/view-policies-dialog-box.md).  
   
 2.  Quando terminar, clique em **Fechar**.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "52505898"
   
 4.  Clique no sinal de adição para expandir a pasta **Políticas** .  
   
-5.  Clique com o botão direito do mouse na política que você deseja exibir ou modificar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Política –***nome_da_política*, confira [Caixa de diálogo Criar Política ou Abrir Política, página Geral](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) e [Caixa de diálogo Criar Política ou Abrir Política, página Descrição](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Clique com o botão direito do mouse na política que você deseja exibir ou modificar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Política -**_nome_da_política_, confira [Caixa de diálogo Criar Política ou Abrir Política, página Geral](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) e [Caixa de diálogo Criar Política ou Abrir Política, página Descrição](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-view-a-policys-properties"></a>Para exibir as propriedades de uma política  
   

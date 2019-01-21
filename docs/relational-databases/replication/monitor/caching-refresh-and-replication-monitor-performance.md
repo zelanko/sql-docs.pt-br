@@ -17,12 +17,12 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f11bd1d26e363628a80ed2cd673e4acda7476526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa70f42c2ea5602bf549a4d5596bff2c8bbff66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852844"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123876"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Cache, atualização e desempenho do Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "47852844"
   
  A atualização do cache é controlada por um trabalho do Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o **Atualizador de monitoração de replicação para distribuição**. O trabalho é executado continuamente, mas a agenda para a atualização de cache é baseada na espera de certo tempo após a atualização anterior:  
   
--   Se houver alterações de histórico de agente desde que o cache foi criado por último, o tempo de espera será no mínimo de 4 segundos ou o tempo levado para criar o cache anterior.  
+-   Se tiverem ocorrido alterações de histórico de agente desde que o cache foi criado pela última vez, o tempo de espera será de pelo menos: 4 segundos; ou a quantidade de tempo necessária para criar o cache anterior.  
   
--   Se não houver alterações de histórico de agente desde a última criação do cache (podem ter havido outras alterações), o tempo de espera será no máximo de 30 segundos ou o tempo levado para criar o cache anterior.  
+-   Se não tiver ocorrido nenhuma alteração de histórico do agente desde que o cache foi criado pela última vez (pode ter havido outras alterações), o tempo de espera será de no máximo: 30 segundos; ou a quantidade de tempo necessária para criar o cache anterior.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Atualizando a interface de usuário do Replication Monitor  
  A interface de usuário do Replication Monitor pode ser atualizada das formas a seguir:  
@@ -56,6 +56,6 @@ ms.locfileid: "47852844"
   
 ## <a name="see-also"></a>Consulte Também  
  [Executar trabalhos de manutenção de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -13,18 +13,18 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb5a872b713571c544a03039010aa3dbdc4aa1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adbece38622571eecc0e3bcb00c8f69f022919b6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639944"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135596"
 ---
 # <a name="replication-monitor-main-page"></a>Replication Monitor, página principal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O Replication Monitor permite controlar o status e o desempenho de publicações e assinaturas em uma topologia de replicação. Os tópicos a seguir fornecem mais informações:  
   
--   Para obter uma visão geral do Replication Monitor, consulte [Replicação de monitoramento](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   Para obter uma visão geral do Replication Monitor, consulte [Replicação de monitoramento](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   O painel esquerdo do Replication Monitor focaliza os Publicadores e os grupos de Publicadores. Adicione um ou mais Publicadores ao Replication Monitor para exibir informações de publicação e assinatura. Para obter mais informações, veja [Adicionar e remover Publicadores do Replication Monitor](../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
@@ -32,15 +32,7 @@ ms.locfileid: "47639944"
   
     -   [Atualizar dados no Replication Monitor](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Exibir informações e executar tarefas para uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Exibir informações e realizar tarefas para uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Exibir informações e realizar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [Exibir Informações e Executar Tarefas usando o Replication Monitor;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
     -   [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
@@ -50,6 +42,6 @@ ms.locfileid: "47639944"
   
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

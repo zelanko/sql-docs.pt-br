@@ -14,12 +14,12 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2b8c22d597f3f3115fa0630db524eb0909f499a
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 37c5c0d4793087e4cbdfd5f0a6e38197582068ef
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128456"
 ---
 # <a name="create-a-trace-transact-sql"></a>Criar um rastreamento (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51571055"
      **sp_trace_setevent** e **sp_trace_setfilter** só podem ser executados em rastreamentos existentes que estejam parados.  
   
     > [!IMPORTANT]  
-    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler (**sp_trace_* xx***) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler (<strong>sp_trace_*xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir demonstra a criação de um rastreamento usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ele está em três partes: criação do rastreamento, população do arquivo de rastreamento e interrupção do rastreamento. Personalize o rastreamento adicionando os eventos que deseja rastrear. Para obter a lista de eventos e colunas, veja [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  

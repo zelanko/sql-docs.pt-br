@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 2: criar um arquivo corrompido | Microsoft Docs'
+title: 'Etapa 2: Criar um arquivo corrompido | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,58 +11,53 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b77bcdee3a2382bef57d6b8c2ceb791da983d399
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d81ac7d0a5c7a42a2292bab7ca5beffa464d02d7
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637563"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211007"
 ---
-# <a name="lesson-4-2---creating-a-corrupted-file"></a>Lição 4-2 – criar um arquivo corrompido
-Para demonstrar a configuração e o tratamento de erros de transformação, você terá que criar um arquivo simples de amostra que no processamento causa a falha de um componente.  
+# <a name="lesson-4-2-create-a-corrupted-file"></a>Lição 4-2: Criar um arquivo corrompido
+
+Para demonstrar a configuração e o tratamento de erros de transformação, você precisa criar um arquivo simples de amostra que no processamento causa a falha de um componente.  
   
-Nesta tarefa, você criará uma cópia de um arquivo simples de amostra existente. Você deverá então abrir o arquivo no Bloco de Notas e editar a coluna **CurrencyID** para certificar-se de que não produzirá uma correspondência durante a pesquisa de transformações. Quando o arquivo novo for processado, a falha na pesquisa irá causar a falha da transformação Pesquisa de Códigos de Moeda e criará, portanto, uma falha no resto do pacote. Depois de criar o arquivo de amostra corrompido, você executará o pacote para exibir a falha do pacote.  
+Nesta tarefa, você cria uma cópia de um arquivo simples de amostra existente. Em seguida, abra o arquivo no bloco de notas e edite a coluna **CurrencyID** para conter um valor errado, que falha na pesquisa. Quando o arquivo corrompido for processado, a falha na pesquisa causará a falha da transformação Pesquisa de Códigos de Moeda e criará, portanto, uma falha no resto do pacote. Depois de criar o arquivo de amostra corrompido, você executa o pacote para exibir a falha do pacote.  
   
-### <a name="to-create-a-corrupted-sample-flat-file"></a>Para criar um arquivo simples de amostra corrompido  
+## <a name="create-a-corrupted-sample-flat-file"></a>Criar um arquivo simples de amostra corrompido  
   
-1.  No Bloco de Notas ou em qualquer outro editor de texto, abra o arquivo Currency_VEB.txt.  
-  
-    Os dados de exemplo estão incluídos nos pacotes de lição do SSIS. Para baixar os dados de exemplo e os pacotes de lição, faça o seguinte.  
-  
-    1.  Navegue até [Exemplos de produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
-  
-    2.  Clique na guia **DOWNLOADS** .  
-  
-    3.  Clique no arquivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
+1.  No Bloco de Notas ou em qualquer outro editor de texto, abra o arquivo **Currency_VEB.txt**.  
   
 2.  Use o recurso de localizar e substituir do editor de texto para encontrar todas as instâncias de **VEB** e substituí-los por **BAD**.  
   
 3.  Na mesma pasta dos outros arquivos de dados de exemplo, salve o arquivo modificado como **Currency_BAD.txt**.  
   
-    > [!IMPORTANT]  
-    > Verifique se **Currency_BAD.txt** foi salvo na mesma pasta que os outros arquivos de dados de exemplo.  
+    > [!NOTE]  
+    > Lembre-se de salvar **Currency_BAD.txt** na mesma pasta que os outros arquivos de dados de exemplo.  
   
 4.  Feche seu editor de texto.  
   
-### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>Para verificar se um erro acontecerá durante o tempo de execução  
+## <a name="verify-that-an-error-occurs-during-run-time"></a>Verificar se ocorre um erro durante o tempo de execução  
   
-1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
+1.  No menu **Depurar**, selecione **Iniciar Depuração**.  
   
-    Na terceira repetição do fluxo de dados, uma transformação Pesquisa de Códigos de Moeda tenta processar o arquivo Currency_BAD.txt e a transformação irá falhar. O fracasso da transformação fará o pacote inteiro falhar.  
+    Na terceira repetição do fluxo de dados, uma transformação Pesquisa de Códigos de Moeda tenta processar o arquivo **Currency_BAD.txt** e a transformação falha. A falha da transformação faz todo o pacote falhar.  
   
-2.  No menu **Depurar** , clique em **Parar Depuração**.  
+2.  No menu **Depurar**, selecione **Interromper Depuração**.  
   
-3.  Na superfície de design, clique na guia **Resultados da Execução** .  
+3.  Na superfície de design, selecione a guia **Resultados da Execução**.  
   
 4.  Procure no log e verifique se o seguinte erro sem-tratamento ocorreu:  
   
-    `[Lookup Currency Key[27]] Error: Row yielded no match during lookup.`  
+    ```
+    [Lookup Currency Key[27]] Error: Row yielded no match during lookup.
+    ```
   
     > [!NOTE]  
     > O número 27 é a ID do componente. Esse valor é atribuído quando você cria o fluxo de dados, ou seja, o valor do seu pacote pode ser diferente.  
   
-## <a name="next-steps"></a>Next Steps  
-[Etapa 3: Adicionando redirecionamento de fluxo de erro](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+## <a name="go-to-next-task"></a>Ir para a próxima tarefa  
+[Etapa 3: Adicionar redirecionamento de fluxo de erro](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   
   

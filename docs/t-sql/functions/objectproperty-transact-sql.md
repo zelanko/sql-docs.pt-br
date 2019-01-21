@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd3811f05891f7a270e059a7d36296f9d9ab3eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638714"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100891"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,22 +107,23 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Qualquer objeto no escopo do esquema|Regra associada.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Função|Função de valor escalar.<br /><br /> 1 = Função de valor escalar<br /><br /> 0 = Função com valor não escalar|  
 |IsSchemaBound|Função, exibição|Uma função associada a esquema ou exibição criada usando SCHEMABINDING.<br /><br /> 1 = Associada a esquema<br /><br /> 0 = Não associada a esquema.|  
-|IsSystemTable|Table|Tabela do sistema.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Table|Tabela do sistema.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|O SQL Server pode verificar as propriedades de determinismo e precisão do objeto.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table|Tabela.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Função|Função com valor de tabela.<br /><br /> 1 = Função com valor de tabela<br /><br /> 0 = Função sem valor de tabela|  
 |IsTrigger|Qualquer objeto no escopo do esquema|Gatilho.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Qualquer objeto no escopo do esquema|Restrição UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|Tabela definida pelo usuário.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Exibição|Exibição.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Qualquer objeto no escopo do esquema|Proprietário do objeto.<br /><br /> **Observação:** o proprietário do esquema não é necessariamente o proprietário do objeto. Por exemplo, objetos filho (aqueles em que *parent_object_id* é nonnull) sempre retornarão a mesma ID do proprietário como o pai.<br /><br /> Não nula = A ID de usuário do banco de dados do proprietário do objeto.|  
+|OwnerId|Qualquer objeto no escopo do esquema|Proprietário do objeto.<br /><br /> **Observação:**  O proprietário do esquema não é necessariamente o proprietário do objeto. Por exemplo, objetos filho (aqueles em que *parent_object_id* é nonnull) sempre retornarão a mesma ID do proprietário como o pai.<br /><br /> Não nula = A ID de usuário do banco de dados do proprietário do objeto.|  
 |TableDeleteTrigger|Table|A tabela tem um gatilho DELETE.<br /><br /> >1 = ID do primeiro gatilho com o tipo especificado.|  
 |TableDeleteTriggerCount|Table|A tabela tem o número especificado de gatilhos DELETE.<br /><br /> >0 = O número de gatilhos DELETE.|  
 |TableFullTextMergeStatus|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Se uma tabela que tem um índice de texto completo está atualmente em mesclagem.<br /><br /> 0 = A tabela não tem um índice de texto completo ou o índice de texto completo não está sendo mesclado.<br /><br /> 1 = O índice de texto completo está em mesclagem.|  
 |TableFullTextBackgroundUpdateIndexOn|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> A tabela tem índice de atualização em segundo plano de texto completo (controle de alteração automática) habilitado.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID do catálogo de texto completo no qual residem os dados do índice de texto completo para a tabela.<br /><br /> Diferente de zero = ID de catálogo de texto completo associado ao índice exclusivo que identifica as linhas em uma tabela indexada de texto completo.<br /><br /> 0 = A tabela não tem um índice de texto completo.|  
 |TableFulltextChangeTrackingOn|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O controle de alterações de texto completo da tabela está habilitado.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas processadas desde o início da indexação de texto completo. Em uma tabela que está sendo indexada para pesquisa de texto completo, todas as colunas de uma linha são consideradas parte de um documento a ser indexado.<br /><br /> 0 = Nenhum rastreamento ativo ou indexação de texto completo está concluído.<br /><br /> > 0 = um dos seguintes (A ou B): A) O número de documentos processados pelas operações de inserção ou atualização desde o início da população de controle de alterações Completa, Incremental ou Manual. B) O número de linhas processadas pelas operações de inserção ou atualização desde que o controle de alterações com população de índice de atualização em segundo plano foi habilitado, o esquema de índice de texto completo alterado, o catálogo de texto completo recriado ou a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciada, e assim por diante.<br /><br /> NULL = A tabela não tem um índice de texto completo.<br /><br /> Essa propriedade não monitora nem conta linhas excluídas.|  
-|TableFulltextFailCount|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas que a Pesquisa de Texto Completo não indexou.<br /><br /> 0 = A população foi concluída.<br /><br /> > 0 = um dos seguintes (A ou B): A) O número de documentos que não foram indexados desde o início da população de controle de alterações Completa, Incremental ou Atualização Manual. B) Para o controle de alterações com índice de atualização em segundo plano, o número de linhas que não foram indexadas desde o início ou reinício da população. Isso pode ter sido causado por uma alteração de esquema, recriação do catálogo, reinicialização de servidor, etc.<br /><br /> NULL = A tabela não tem um índice de texto completo.|  
+|TableFulltextDocsProcessed|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas processadas desde o início da indexação de texto completo. Em uma tabela que está sendo indexada para pesquisa de texto completo, todas as colunas de uma linha são consideradas parte de um documento a ser indexado.<br /><br /> 0 = Nenhum rastreamento ativo ou indexação de texto completo está concluído.<br /><br /> > 0 = um dos seguintes (A ou B): A) O número de documentos processados pelas operações de inserção ou atualização desde o início do preenchimento de controle de alterações Completo, Incremental ou Manual. B) O número de linhas processadas pelas operações de inserção ou atualização desde que o controle de alterações com população de índice de atualização em segundo plano foi habilitado, o esquema de índice de texto completo alterado, o catálogo de texto completo recriado ou a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciada, e assim por diante.<br /><br /> NULL = A tabela não tem um índice de texto completo.<br /><br /> Essa propriedade não monitora nem conta linhas excluídas.|  
+|TableFulltextFailCount|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas que a Pesquisa de Texto Completo não indexou.<br /><br /> 0 = A população foi concluída.<br /><br /> > 0 = um dos seguintes (A ou B): A) O número de documentos que não foram indexados desde o início do preenchimento de controle de alterações de Atualização Completo, Incremental ou Manual. B) Para o controle de alterações com índice de atualização em segundo plano, o número de linhas que não foram indexadas desde o início ou reinício da população. Isso pode ter sido causado por uma alteração de esquema, recriação do catálogo, reinicialização de servidor, etc.<br /><br /> NULL = A tabela não tem um índice de texto completo.|  
 |TableFulltextItemCount|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de linhas que foram indexadas com texto completo com êxito.|  
 |TableFulltextKeyColumn|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID da coluna associada ao índice exclusivo de coluna única que participa da definição do índice de texto completo.<br /><br /> 0 = A tabela não tem um índice de texto completo.|  
 |TableFulltextPendingChanges|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de entradas de controle de alterações pendentes a serem processadas.<br /><br /> 0 = o controle de alterações não está habilitado.<br /><br /> NULL = A tabela não tem um índice de texto completo.|  
@@ -199,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Verificando se uma função definida pelo usuário de valor escalar é determinística  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Verificando se uma função definida pelo usuário de valor escalar é determinística  
  O exemplo a seguir testa se a função `ufnGetProductDealerPrice` de valor escalar definida pelo usuário, que retorna um valor de **money** é determinística.  
   
 ```  

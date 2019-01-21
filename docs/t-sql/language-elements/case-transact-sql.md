@@ -22,18 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce7020eb7270ffb24f1926c165a71e8db33774e0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf5737166a8613cbf20df5b6c48a720c4d366a64
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400719"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299675"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Avalia uma lista de condições e retorna uma das várias expressões de resultado possíveis.  
   
@@ -162,7 +162,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. Usando uma instrução SELECT com uma expressão CASE pesquisada  
+### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>b. Usando uma instrução SELECT com uma expressão CASE pesquisada  
  Dentro de uma instrução `SELECT`, a expressão `CASE` pesquisada é permitida para valores a serem substituídos no conjunto de resultados com base nos valores de comparação. O exemplo a seguir exibe o preço da lista como um comentário de texto com base na faixa de preços de um produto.  
   
 ```  

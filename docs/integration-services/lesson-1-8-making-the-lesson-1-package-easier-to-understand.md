@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender | Microsoft Docs'
+title: 'Etapa 8: Anotar e formatar o pacote da Lição 1 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,48 +11,51 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5890cf61593d894daf7539d324922bfcf0d8651
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806044"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143626"
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Lição 1-8 – tornando o pacote da Lição 1 mais fácil de compreender
-Agora que você concluiu a configuração do pacote da Lição 1, é uma boa ideia verificar o layout do pacote. Se as formas dos layouts de controle e dos fluxos de dados são de tamanhos aleatórias ou se as formas não estão alinhadas ou agrupadas, a funcionalidade de pacote pode ser mais difícil de ser entendida.  
+# <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lição 1-8: Anotar e formatar o pacote da Lição 1 
+
+Agora que você concluiu a configuração do pacote da Lição 1, é uma boa hora para organizar o layout do pacote. Se as formas em layouts de fluxo de controle e de dados forem de tamanhos diferentes ou não estiverem dispostas uniformemente, poderá ser mais difícil entender o pacote.  
   
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem recursos que facilitam e agilizam a formatação do layout do pacote. Os recursos de formatação incluem a capacidade de criar formas do mesmo tamanho, alinhar formas e manipular o espaçamento horizontal e vertical entre os espaçamentos.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools fornece ferramentas para formatar facilmente o layout do pacote. Os recursos de formatação incluem a capacidade de criar formas do mesmo tamanho, alinhar formas e alterar o espaçamento horizontal e vertical entre os espaçamentos.  
   
 Outro modo para melhorar a compreensão de funcionalidade de pacote é adicionar anotações que descrevem a funcionalidade do pacote.  
   
-Nesta tarefa, você utilizará os recursos de formatação nas ferramentas de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para melhorar o layout do fluxo de dados e também adicionar uma anotação ao fluxo de dados.  
+Nesta tarefa, você usa os recursos de formatação nas ferramentas de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para melhorar o layout do fluxo de dados e também adicionar uma anotação.  
   
-### <a name="to-format-the-layout-of-the-data-flow"></a>Para formatar o layout do fluxo de dados  
+## <a name="format-the-layout-of-the-data-flow"></a>Formatar o layout do fluxo de dados  
   
-1.  Se o pacote da Lição 1 ainda não estiver aberto, no Gerenciador de Soluções, clique duas vezes em Lição 1.dtsx.  
+1.  Se o pacote da Lição 1 ainda não estiver aberto, clique duas vezes em **Lição 1.dtsx** no **Gerenciador de Soluções**.  
   
-2.  Clique na guia **Fluxo de Dados** .  
+2.  Selecione a guia **Fluxo de Dados**.  
   
-3.  Posicione o cursor na parte superior e à direita da transformação Extrair Moeda de Exemplo e clique e arraste o cursor por todos os componentes do fluxo de dados.  
+3.  Para selecionar todos os componentes de fluxo de dados ao mesmo tempo, use **Editar** > **Selecionar Tudo**.
   
-4.  No menu **Formatar** , aponte para **Igualar Tamanho**e clique em **Ambos**.  
+4.  No menu **Formato**, selecione **Igualar Tamanho** e, em seguida, selecione **Ambos**.  
   
-5.  Com os objetos de fluxo de dados selecionados, no menu **Formatar** , aponte para **Alinhar**e clique em **À esquerda**.  
+5.  Com os objetos de fluxo de dados selecionados, no menu **Formato**, selecione **Alinhar** e, em seguida, **Centros**.  
+
+6.  Com os objetos de fluxo de dados selecionados, no menu **Formato**, aponte para **Espaçamento Vertical** e, em seguida, selecione **Igualar**.  
   
-### <a name="to-add-an-annotation-to-the-data-flow"></a>Para adicionar uma anotação ao fluxo de dados  
+## <a name="add-an-annotation-to-the-data-flow"></a>Adicionar uma anotação ao fluxo de dados  
   
-1.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design do fluxo de dados e clique em **Adicionar Anotação**.  
+1.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design do fluxo de dados e selecione **Adicionar Anotação**.  
   
-2.  Digite ou cole o texto a seguir na caixa de anotação.  
+2.  Insira ou cole o texto a seguir na caixa de anotação.  
   
-    **O fluxo de dados extrai os dados de um arquivo, pesquisa valores na coluna CurrencyKey da tabela DimCurrency e na coluna DateKey da tabela DimDate, além de gravar os dados na tabela NewFactCurrencyRate.**  
+        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
   
-    Para usar a quebra de linhas no texto da caixa de anotação, posicione o cursor no local em que deseja começar uma nova linha e pressione a tecla Enter.  
+    Para encapsular o texto na caixa de anotação, posicione o cursor no local em que deseja começar uma nova linha e pressione **Enter**.  
   
-    Se você não inserir um texto na caixa de anotação, essa caixa desaparecerá ao clicar fora dela.  
+    Se você não adicionar texto à caixa de anotação, essa caixa desaparecerá quando você clicar fora dela.  
   
-## <a name="next-steps"></a>Next Steps  
-[Etapa 9: Testando o pacote de tutorial da Lição 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Ir para a próxima tarefa
+[Etapa 9: Testar o pacote da Lição 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

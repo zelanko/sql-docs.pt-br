@@ -31,15 +31,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 326b2dd3eed9db3f6ca71cc276fc68314092c181
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698094"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299223"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Marca o ponto inicial de uma transação local explícita. As transações explícitas começam com a instrução BEGIN TRANSACTION e terminam com a instrução COMMIT ou ROLLBACK.  
 
@@ -67,17 +70,17 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argumentos  
  *transaction_name*  
- **Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
+ **APLICA-SE A:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
  
  É o nome atribuído à transação. O *transaction_name* precisa estar em conformidade com as regras para identificadores, mas identificadores com mais de 32 caracteres não são permitidos. Somente use nomes de transação no par externo de instruções aninhadas BEGIN ...COMMIT ou BEGIN...ROLLBACK. *transaction_name* sempre diferencia maiúsculas de minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiúsculas de minúsculas.  
   
  @*tran_name_variable*  
- **Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
+ **APLICA-SE A:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
  
  É o nome de uma variável definida pelo usuário que contém um nome de transação válido. A variável precisa ser declarada com o tipo de dados **char**, **varchar**, **nchar** ou **nvarchar**. Se mais de 32 caracteres forem transmitidos à variável, apenas os primeiros 32 caracteres serão usados, os demais serão truncados.  
   
  WITH MARK [ '*description*' ]  
-**Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
+**APLICA-SE A:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
 
 Especifica que a transação é marcada no log. *description* é uma cadeia de caracteres que descreve a marca. Uma *description* com mais de 128 caracteres será truncada em 128 caracteres antes de ser armazenada na tabela msdb.dbo.logmarkhistory.  
   
@@ -134,7 +137,7 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- "Server: Msg 3920, Level 16, State 1, Line 3"  
+ "Servidor: Msg 3920, Nível 16, Estado 1, Linha 3"  
   
  “A opção WITH MARK é aplicável somente ao primeiro BEGIN TRAN WITH MARK."  
   
@@ -146,7 +149,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Usando uma transação explícita
-**Aplica-se a:** SQL Server (começando com o 2008), Banco de Dados SQL do Azure, SQL Data Warehouse do Azure, Parallel Data Warehouse
+**APLICA-SE A:** SQL Server (começando com o 2008), Banco de Dados SQL do Azure, SQL Data Warehouse do Azure, Parallel Data Warehouse
 
 Este exemplo usa o AdventureWorks. 
 
@@ -157,8 +160,8 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>B. Revertendo uma transação
-**Aplica-se a:** SQL Server (começando com o 2008), Banco de Dados SQL do Azure, SQL Data Warehouse do Azure, Parallel Data Warehouse
+### <a name="b-rolling-back-a-transaction"></a>b. Revertendo uma transação
+**APLICA-SE A:** SQL Server (começando com o 2008), Banco de Dados SQL do Azure, SQL Data Warehouse do Azure, Parallel Data Warehouse
 
 O exemplo a seguir mostra o efeito da reversão de uma transação. Neste exemplo, a instrução ROLLBACK reverterá a instrução INSERT, mas a tabela criada ainda continuará a existir.
 
@@ -173,7 +176,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. Nomeando uma transação 
-**Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
+**APLICA-SE A:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
 
 O exemplo a seguir mostra como nomear uma transação.  
   
@@ -191,7 +194,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. Marcando uma transação  
-**Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
+**APLICA-SE A:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
 
 O exemplo a seguir mostra como marcar uma transação. A transação `CandidateDelete` é marcada.  
   

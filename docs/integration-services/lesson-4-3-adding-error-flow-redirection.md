@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 3: Adicionando redirecionamento de fluxo de erro | Microsoft Docs'
+title: 'Etapa 3: Adicionar redirecionamento de fluxo de erro | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,49 +11,48 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 0f5d292a7fa1f4097de300fc1f7e8c1a579f541a
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302879"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211057"
 ---
-# <a name="lesson-4-3---adding-error-flow-redirection"></a>Lição 4-3 – adicionar redirecionamento de fluxo de erro
-Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
+# <a name="lesson-4-3-add-error-flow-redirection"></a>Lição 4-3: Adicionar redirecionamento de fluxo de erro
+
+Na tarefa anterior, a transformação Pesquisar Chave de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido, o que produz um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
   
-Em vez de permitir a falha da transformação, você pode configurar o componente para redirecionar a linha com falha para outro caminho de processamento usando a saída de erro. O uso de um caminho de tratamento separado de erro permite que você faça várias coisas. Por exemplo, você pode tentar limpar os dados e depois reprocessar a linha com falha. Também é possível salvar a linha com falha junto com informações de erro adicionais para verificação e reprocessamento posteriores.  
+Em vez de permitir a falha da transformação, você pode configurar o componente para redirecionar a linha com falha para outro caminho de processamento usando a saída de erro. Usar um caminho de processamento de erros separado oferece mais opções. Por exemplo, você pode limpar os dados e depois reprocessar a linha com falha. Também é possível salvar a linha com falha junto com suas informações de erro para verificação e reprocessamento posteriores.  
   
-Nesta tarefa, você configurará a transformação Pesquisa de Códigos de Moeda para redirecionar linhas com falha para a saída de erro. Na ramificação de erro do fluxo de dados, essas filas serão gravadas em um arquivo.  
+Nesta tarefa, você configura a transformação Pesquisar Chave de Moeda para redirecionar linhas com falha para a saída de erro. No branch de erro do fluxo de dados, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] grava essas linhas em um arquivo.  
   
-Por padrão as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , **ErrorCode** e **ErrorColumn**, só contêm códigos numéricos que representam um número de erro e a ID da coluna na qual o erro aconteceu. Esses valores numéricos podem ter uso limitado sem a descrição de erro correspondente.  
+Por padrão as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], **ErrorCode** e **ErrorColumn**, só contêm um código de erro numérico e a ID da coluna na qual o erro ocorreu. Nesta tarefa, antes de o pacote gravar linhas com falha no arquivo, você usa um componente de Script para acessar a API [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e obter uma descrição do erro.  
   
-Para aumentar a utilidade da saída de erro, antes de o pacote gravar as linhas com falha no arquivo, você usará um componente Script para acessar a API do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e obter uma descrição do erro.  
-  
-## <a name="to-configure-an-error-output"></a>Para configurar uma saída de erro  
+## <a name="configure-an-error-output"></a>Configurar uma saída de erro  
   
 1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum**e arraste o **Componente Script** para a superfície de design da guia **Fluxo de Dados** . Coloque **Script** à direita da transformação **Pesquisa de Códigos de Moeda** .  
   
-2.  Na caixa de diálogo **Selecionar Tipo de Componente do Script** , clique em **Transformação**e clique em **OK**.  
+2.  Na caixa de diálogo **Selecionar Tipo de Componente do Script**, selecione **Transformação** e selecione **OK**.  
   
-3.  Clique na transformação **Pesquisa de Códigos de Moeda** e depois arraste a seta vermelha sobre a transformação **Scripts** adicionada recentemente para conectar os dois componentes.  
+3.  Para conectar os dois componentes, selecione a transformação **Pesquisar Chave de Moeda** e depois arraste a seta vermelha para a nova transformação **Script**.  
   
-    A seta vermelha representa a saída de erro da transformação **Pesquisa de Códigos de Moeda** . Usando a seta vermelha para conectar a transformação ao componente Script, você pode redirecionar qualquer erro de processamento ao componente Script, que então processará os erros e os enviará ao destino.  
+    A seta vermelha representa a saída de erro da transformação **Pesquisa de Códigos de Moeda** . Usando a seta vermelha para conectar a transformação ao componente Script, você redireciona qualquer erro de processamento ao componente Script, que processará os erros e os enviará ao destino.  
   
-4.  Na caixa de diálogo **Configurar Saída de Erro** , na coluna **Erro** , selecione **Redirecionar linha**e, em seguida, clique em **OK**.  
+4.  Na caixa de diálogo **Configurar Saída de Erro**, na coluna **Erro**, selecione **Redirecionar linha** e, em seguida, selecione **OK**.  
   
-5.  Na superfície de design **Fluxo de Dados** , clique em **Componente Script** , no **ScriptComponent**recém-adicionado e altere o nome para **Obter Descrição do Erro**.  
+5.  Na superfície de design **Fluxo de Dados**, selecione o nome **Componente Script** no novo **ScriptComponent** e altere o nome para **Obter Descrição do Erro**.  
   
 6.  Clique duas vezes na transformação **Obter Descrição do Erro** .  
   
 7.  Na caixa de diálogo **Editor de Transformação Scripts** , na página **Colunas de Entrada** , selecione a coluna **ErrorCode** .  
   
-8.  Na página **Entradas e Saídas** , expanda **Saída 0**, clique em **Colunas de Saída**e clique em **Adicionar Coluna**.  
+8.  Na página **Entradas e Saídas**, expanda **Saída 0**, selecione **Colunas de Saída** e selecione **Adicionar Coluna**.  
   
-9. Na propriedade **Name** , digite **ErrorDescription** e defina a propriedade **DataType** como **Cadeia de caracteres Unicode [DT_WSTR]**.  
+9. Na propriedade **Name**, insira *ErrorDescription* e defina a propriedade **DataType** como **Cadeia de caracteres Unicode [DT_WSTR]**.  
   
-10. Na página **Script**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos).**  
+10. Na página **Script**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)**.
   
-11. Clique em **Editar Script** para abrir o VSTA ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications). No método **Input0_ProcessInputRow** , digite ou cole o código a seguir.  
+11. Selecione **Editar Script** para abrir o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications). No método **Input0_ProcessInputRow**, insira ou cole o código a seguir:  
   
     [Visual Basic]  
   
@@ -68,7 +67,7 @@ Para aumentar a utilidade da saída de erro, antes de o pacote gravar as linhas 
     Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
     ```  
   
-    A sub-rotina concluída se parecerá com o código a seguir.  
+    A sub-rotina concluída se parece com o código a seguir:  
   
     [Visual Basic]  
   
@@ -92,12 +91,12 @@ Para aumentar a utilidade da saída de erro, antes de o pacote gravar as linhas 
         }  
     ```  
   
-12. No menu **Compilar** , clique em **Compilar solução** para criar o script, salvar suas alterações e fechar o VSTA.  
+12. No menu **Compilar**, selecione **Compilar solução** para criar o script e salvar suas alterações, então feche o VSTA.  
   
-13. Clique em **OK** para fechar a caixa de diálogo **Editor de Transformação Scripts** .  
+13. Selecione **OK** para fechar a caixa de diálogo **Editor de Transformação Scripts**.  
   
-## <a name="next-steps"></a>Next Steps  
-[Etapa 4: Adicionando um destino de arquivo simples](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+## <a name="go-to-next-task"></a>Ir para a próxima tarefa
+[Etapa 4: Adicionar um destino de Arquivo Simples](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   
   

@@ -1,7 +1,7 @@
 ---
 title: Replicação do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 249fedd79398097fffbffae3afc5effb275dd6c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fe7764673cb09622aa7525c6b2c27d905fdadd6f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407273"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124736"
 ---
 # <a name="sql-server-replication"></a>Replicação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,113 @@ ms.locfileid: "52407273"
 
  Como alternativa à replicação, você pode sincronizar bancos de dados por meio do Microsoft Sync Framework. O Sync Framework inclui componentes e uma API intuitiva e flexível que facilitam a sincronização entre os bancos de dados SQL Server, SQL Server Express, SQL Server Compact e SQL Azure. O Sync Framework também incluir classes que podem ser adaptadas para sincronização entre um banco de dados do SQL Server e qualquer outro banco de dados que seja compatível com o ADO.NET. Para obter a documentação detalhada dos componentes de sincronização de banco de dados do Sync Framework, consulte [Sincronizando bancos de dados](https://go.microsoft.com/fwlink/?LinkId=209079). Para obter uma visão geral do Sync Framework, consulte a [Central do desenvolvedor do Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=209078). Para obter uma comparação entre o Sync Framework e Replicação de Mesclagem, consulte [Visão geral da sincronização de bancos de dados](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
- **Procurar por área**  
- - [Novidades](../../relational-databases/replication/what-s-new-replication.md)  
- - [Compatibilidade com versões anteriores](../../relational-databases/replication/replication-backward-compatibility.md)  
- - [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)  
- - [Referência técnica](../../relational-databases/replication/technical-reference-replication.md)  
+
+## <a name="whats-new"></a>Novidades 
+- O SQL Server 2017 não incorporou novos recursos significativos para Replicação do SQL Server. 
+- O SQL Server 2016 não incorporou novos recursos significativos para Replicação do SQL Server. 
+
+Para informações de compatibilidade com versões anteriores, confira [Compatibilidade de replicação com versões anteriores](replication-backward-compatibility.md) 
+
+
+ ## <a name="replication-security"></a>Segurança de replicação
+  
+-   [Exibir e modificar configurações de segurança de replicação](security/view-and-modify-replication-security-settings.md)  
+-   [Gerenciar logons na lista de acesso à publicação](security/manage-logins-in-the-publication-access-list.md)  
+  
+## <a name="publishing-and-distribution"></a>Publicação e Distribuição  
+  
+-   [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)   
+-   [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
+-   [Desabilitar a publicação e a distribuição](disable-publishing-and-distribution.md)  
+  
+## <a name="publications-and-articles"></a>Publicações e Artigos 
+  
+-   [Create a Publication](publish/create-a-publication.md)    
+-   [Defina um Artigo](publish/define-an-article.md)   
+-   [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
+-   [Exibir e modificar as propriedades do artigo](publish/view-and-modify-article-properties.md)    
+-   [Excluir uma publicação](publish/delete-a-publication.md)   
+-   [Excluir um artigo](publish/delete-an-article.md)    
+-   [Criar uma publicação de um Banco de Dados Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Definir o período de validade da assinatura](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [Especificar opções de esquema](publish/specify-schema-options.md)  
+-   [Replicar alterações de esquema](publish/replicate-schema-changes.md)    
+-   [Gerenciar colunas de identidade](publish/manage-identity-columns.md)   
+-   [Definir o nível de compatibilidade para publicações de mesclagem](publish/set-the-compatibility-level-for-merge-publications.md)  
+  
+### <a name="snapshot-options"></a>Opções de instantâneo  
+  
+-   [Configurar Propriedades de Instantâneo](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [Entregar um instantâneo pelo FTP](publish/deliver-a-snapshot-through-ftp.md) 
+  
+### <a name="filter-data"></a>Filtrar Dados  
+  
+-   [Definir e modificar um filtro de colunas](publish/define-and-modify-a-column-filter.md)    
+-   [Definir e modificar um filtro de linha estático](publish/define-and-modify-a-static-row-filter.md)    
+-   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Otimizar filtros de linha com parâmetros](publish/optimize-parameterized-row-filters.md)    
+-   [Definir e modificar um filtro de junção entre artigos de mesclagem](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
+  
+### <a name="transactional-replication-options"></a>Opções de replicação transacional  
+  
+-   [Definir o método de propagação de alterações de dados para artigos transacionais](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
+-   [Habilitar atualização de assinaturas para publicações transacionais](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+  
+### <a name="merge-replication-options"></a>Opções de replicação de mesclagem  
+  
+-   [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [Especificar propriedades de Replicação de Mesclagem](merge/specify-merge-replication-properties.md)    
+-   [Especificar um resolvedor de artigo de mesclagem](publish/specify-a-merge-article-resolver.md)    
+
+  
+## <a name="manage-subscriptions"></a>Gerenciar assinaturas  
+  
+-   [Criar uma assinatura pull](create-a-pull-subscription.md)    
+-   [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)    
+-   [Excluir uma assinatura pull](delete-a-pull-subscription.md)    
+-   [Criar uma assinatura push](create-a-push-subscription.md)   
+-   [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   
+-   [Excluir uma assinatura push](delete-a-push-subscription.md)   
+-   [Especificar agendas de sincronização](specify-synchronization-schedules.md)    
+-   [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [Criar uma assinatura para um assinante não SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
+  
+## <a name="synchronize-subscriptions"></a>Sincronizar Assinaturas  
+  
+-   [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md)   
+-   [Criar um instantâneo para uma publicação de mesclagem com filtros parametrizados](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Inicializar uma assinatura transacional de um backup &#40;Programação de Transact-SQL de Replicação&#41;](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [Inicializar uma assinatura manualmente](initialize-a-subscription-manually.md)    
+-   [Sincronizar uma assinatura pull](synchronize-a-pull-subscription.md)    
+-   [Sincronizar uma assinatura push](synchronize-a-push-subscription.md)   
+-   [Reinicializar uma assinatura](reinitialize-a-subscription.md)    
+-   [Executar scripts durante a sincronização &#40;Programação Transact-SQL de Replicação&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [Depurar um manipulador de lógica de negócios &#40;Programação de Replicação&#41;](debug-a-business-logic-handler-replication-programming.md)    
+-   [Controlar o comportamento de gatilhos e restrições durante a sincronização &#40;Programação de Transact-SQL de Replicação&#41;](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
+-   [Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+  
+## <a name="administration"></a>Administração 
+  
+-   [Trabalhar com perfis do Agente de Replicação](agents/work-with-replication-agent-profiles.md)   
+-   [Validar dados no assinante](validate-data-at-the-subscriber.md)    
+-   [Gerenciar partições para uma publicação de mesclagem com filtros parametrizados](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Carregar dados em massa em tabelas em uma publicação de mesclagem &#40;programação Transact-SQL de replicação&#41;](bulk-load-data-into-tables-in-a-merge-publication.md)    
+-   [Limpar metadados de mesclagem &#40;programação Transact-SQL de replicação&#41;](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
+-   [Executar uma atualização fictícia para um artigo de mesclagem &#40;programação Transact-SQL de replicação&#41;](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
+-   [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Habilitar backups coordenados para a replicação transacional &#40;programação Transact-SQL de replicação&#41;](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
+-   [Fechar para novas sessões uma topologia de replicação &#40;programação Transact-SQL de replicação&#41;](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
+-   [Configurar o trabalho do conjunto de transações para um Publicador Oracle &#40;programação Transact-SQL de replicação&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+-   [Atualizar scripts de replicação &#40;programação Transact-SQL de replicação&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+  
+## <a name="monitor"></a>Monitor
+  
+-   [Permitir que não administradores usem o Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md)    
+-   [Monitorar programaticamente a replicação](monitor/programmatically-monitor-replication.md)    
+-   [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](view-conflict-information-for-merge-publications.md) 
+-   [Medir a latência e validar as conexões para a replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

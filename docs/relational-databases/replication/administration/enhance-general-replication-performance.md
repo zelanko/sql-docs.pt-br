@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539195"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134358"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52539195"
   
     -   Para replicação de mesclagem, pode ser mais eficiente usar manipuladores de lógica de negócios. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Se gatilhos forem usados para manter a integridade referencial nas tabelas publicadas para replicação de mesclagem, especifique a ordem de processamento das tabelas para reduzir o número de repetições necessárias para o Merge Agent. Para obter mais informações, consulte [Especificar a ordem de processamento dos artigos de mesclagem](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+     Se gatilhos forem usados para manter a integridade referencial nas tabelas publicadas para replicação de mesclagem, especifique a ordem de processamento das tabelas para reduzir o número de repetições necessárias para o Merge Agent. Para obter mais informações, confira [Especificar opções de replicação de mesclagem](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 -   Limite o uso de tipos de dados LOB (objetos grandes).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539195"
   
      Quando grandes quantidades de alterações precisarem ser enviadas aos Assinantes, reinicializá-los com um novo instantâneo pode ser mais rápido que usar a replicação para mover as alterações individuais. Para obter mais informações, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Para replicação transacional, o Replication Monitor exibe na guia **Comandos Não Distribuídos** as informações sobre: o número de transações no banco de dados de distribuição que ainda não foi distribuídas ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, consulte [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md) [Exibir informações e executar tarefas para os agentes associados a uma assinatura (Replication Monitor)].  
+     Para replicação transacional, o Replication Monitor exibe na guia **Comandos Não Distribuídos** as informações sobre: o número de transações no banco de dados de distribuição que ainda não foi distribuídas ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considerações de instantâneo  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539195"
   
      Os arquivos de instantâneo compactados na pasta de instantâneo alternativo podem reduzir os requisitos de armazenamento em disco, e facilitar a transferência de arquivos de instantâneo em mídia removível.  
   
-     Os instantâneos compactados podem, em alguns casos, melhorar o desempenho da transferência de arquivos de instantâneo pela rede. No entanto, a compactação de instantâneos exige processamento adicional por parte do Snapshot Agent ao gerar os arquivos de instantâneo, e por parte do Distribution Agent ou Merge Agent ao aplicar os arquivos de instantâneo. Em alguns casos, isso pode reduzir a velocidade da geração de instantâneos e aumentar o tempo para se aplicar um instantâneo. Além disso, instantâneos compactados não podem ser retomados no caso de uma falha de rede; consequentemente, não são apropriados para redes não confiáveis. Considere essa possibilidade cuidadosamente ao usar instantâneos compactados por uma rede. Para obter mais informações, consulte [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) e [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md).  
-  
+     Os instantâneos compactados podem, em alguns casos, melhorar o desempenho da transferência de arquivos de instantâneo pela rede. No entanto, a compactação de instantâneos exige processamento adicional por parte do Snapshot Agent ao gerar os arquivos de instantâneo, e por parte do Distribution Agent ou Merge Agent ao aplicar os arquivos de instantâneo. Em alguns casos, isso pode reduzir a velocidade da geração de instantâneos e aumentar o tempo para se aplicar um instantâneo. Além disso, instantâneos compactados não podem ser retomados no caso de uma falha de rede; consequentemente, não são apropriados para redes não confiáveis. Considere essa possibilidade cuidadosamente ao usar instantâneos compactados por uma rede. Para obter mais informações, confira [Modificar opções de instantâneo](../../../relational-databases/replication/snapshot-options.md). 
 -   Considere inicializar uma assinatura manualmente.  
   
      Em alguns cenários, como os que envolvem grandes bancos de dados iniciais, é preferível inicializar uma assinatura usando um método diferente do que usando um instantâneo. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -154,11 +153,11 @@ ms.locfileid: "52539195"
   
 -   Reduza os níveis detalhados de agentes de replicação, exceto durante o teste inicial, a monitoração e a depuração.  
   
-     Reduza os parâmetros **-HistoryVerboseLevel** e **-OutputVerboseLevel** dos Agentes de Distribuição ou dos Agentes de Mesclagem. Isso reduz o número de linhas novas inseridas para controlar o histórico de agente e saída. Em vez disso, as mensagens de histórico anteriores com o mesmo status são atualizadas para as novas informações de histórico. Aumente os níveis detalhados de teste, monitoração e depuração, de forma a obter o máximo possível de informações sobre a atividade do agente.  
+     Reduza os parâmetros **–HistoryVerboseLevel** e **–OutputVerboseLevel** dos Agentes de Distribuição ou dos Agentes de Mesclagem. Isso reduz o número de linhas novas inseridas para controlar o histórico de agente e saída. Em vez disso, as mensagens de histórico anteriores com o mesmo status são atualizadas para as novas informações de histórico. Aumente os níveis detalhados de teste, monitoração e depuração, de forma a obter o máximo possível de informações sobre a atividade do agente.  
   
--   Use o parâmetro **-MaxBCPThreads** do Agente de Instantâneo, do Agente de Mesclagem e do Agente de Distribuição (o número de threads especificado não deve exceder o número de processadores no computador). Esse parâmetro especifica o número de operações de cópia em massa que podem ser executadas em paralelo quando o instantâneo é criado e aplicado.  
+-   Use o parâmetro **–MaxBCPThreads** do Agente de Instantâneo, Agente de Mesclagem e Agente de Distribuição (o número de threads especificado não deve exceder o número de processadores no computador). Esse parâmetro especifica o número de operações de cópia em massa que podem ser executadas em paralelo quando o instantâneo é criado e aplicado.  
   
--   Use o parâmetro **-UseInprocLoader** do Agente de Distribuição e do Agente de Mesclagem (esse parâmetro não poderá ser usado se as tabelas publicadas incluírem colunas XML). Esse parâmetro faz o agente usar o comando BULK INSERT quando o instantâneo for aplicado.  
+-   Use o parâmetro **–UseInprocLoader** do Agente de Distribuição e do Agente de Mesclagem (esse parâmetro não pode ser usado se as tabelas publicadas incluírem colunas XML). Esse parâmetro faz o agente usar o comando BULK INSERT quando o instantâneo for aplicado.  
   
  Os parâmetros de agente podem ser especificados em perfis de agente e na linha de comando. Para obter mais informações, consulte:  
   

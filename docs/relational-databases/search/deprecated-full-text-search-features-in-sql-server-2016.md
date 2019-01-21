@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbab8cc4eb36d81c0aa6f1ff40c2f498157257f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e43c8f3fb6be391bcead0c2671d73d46d5d2b261
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525944"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226503"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Recursos de pesquisa de texto completo preteridos no SQL Server 2016
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,6 +57,6 @@ Monitore seu uso de recursos preteridos usando o contador de desempenho do objet
 |Opção sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Nenhum.|sp_detach_db @keepfulltextindexfile|226|  
 |Os valores da ação sp_fulltext_service: resource_usage não têm nenhuma função.|None|sp_fulltext_service @action=resource_usage|200|  
   
- *O objeto **SQL Server:Deprecated Features** não monitora ocorrências do *grupo de arquivos* CREATE FULLTEXT CATLOG ON FILEGROUP.  
+ &#42;O objeto **SQL Server:Deprecated Features** não monitora ocorrências do *grupo de arquivos* CREATE FULLTEXT CATLOG ON FILEGROUP.  
   
   

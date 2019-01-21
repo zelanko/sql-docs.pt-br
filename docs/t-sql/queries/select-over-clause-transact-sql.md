@@ -26,15 +26,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526387"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299423"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT – Cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Determina o particionamento e a ordenação de um conjunto de linhas antes da aplicação da função de janela associada. Isto é, a cláusula OVER defines uma janela ou conjunto de linhas especificado pelo usuário em um conjunto de resultados de consulta. Uma função de janela computa um valor para cada linha na janela. Você pode usar a cláusula OVER com funções para computar valores agregados como médias móveis, agregações cumulativas, somas acumuladas ou os primeiros N resultados por grupo.  
   
@@ -180,7 +183,7 @@ Se ROWS/RANGE for especificado e \<window frame preceding> for usado para \<wind
 > [!NOTE]
 > Se ORDER BY não for especificado, toda a partição será usada para um quadro de janela. Isso só se aplica a funções que não requerem a cláusula ORDER BY. Se ROWS/RANGE não for especificado, mas ORDER BY for especificado, RANGE UNBOUNDED PRECEDING AND CURRENT ROW é usado como padrão para quadro de janela. Isso só se aplica a funções que podem aceitar a especificação de ROWS/RANGE opcional. Por exemplo, as funções de classificação não podem aceitar ROWS/RANGE, portanto, esse quadro de janela não é aplicado, mesmo que ORDER BY esteja presente e ROWS/RANGE não.  
     
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  A cláusula OVER não pode ser usada com a função de agregação CHECKSUM.  
   
  RANGE não pode ser usado com \<unsigned value specification> PRECEDING ou \<unsigned value specification> FOLLOWING.  
@@ -229,7 +232,7 @@ GO
  8               Tsoflias                1421810.9242          98055
  ```  
   
-### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Usando a cláusula OVER com funções de agregação  
+### <a name="b-using-the-over-clause-with-aggregate-functions"></a>b. Usando a cláusula OVER com funções de agregação  
  O exemplo a seguir usa a cláusula `OVER` com funções de agregação sobre todas as linhas retornadas pela consulta. Neste exemplo, o uso da cláusula `OVER` é mais eficiente que o uso de subconsultas para derivar os valores agregados.  
   
 ```sql  

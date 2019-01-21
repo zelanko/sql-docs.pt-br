@@ -2,7 +2,7 @@
 title: Solução de problemas do SSIS (SQL Server Integration Services) Scale Out | Microsoft Docs
 description: Este artigo descreve como solucionar problemas comuns com o SSIS Scale Out
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732484"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206322"
 ---
 # <a name="troubleshoot-scale-out"></a>Solução de problemas do Scale Out
 
@@ -38,7 +38,7 @@ Para investigar os sintomas que você encontrar, siga as etapas abaixo uma a uma
 
     No SSMS, no Pesquisador de Objetos, clique com o botão direito do mouse em **SSISDB** e verifique se o **recurso Scale Out está habilitado**.
 
-    ![O Scale Out está habilitado](media\isenabled.PNG)
+    ![O Scale Out está habilitado](media/isenabled.PNG)
 
     Se o valor da propriedade for False, habilite o Scale Out chamando o procedimento armazenado `[catalog].[enable_scaleout]`.
 
@@ -62,7 +62,7 @@ Verifique as mensagens de erro no log do serviço do Trabalho do Scale Out em `\
 
 ### <a name="symptoms"></a>Sintomas
 
-*“System.ServiceModel.EndpointNotFoundException: não houve nenhuma escuta do ponto de extremidade em https://*[MachineName]:[Port]*/ClusterManagement/ que pudesse aceitar a mensagem.”*
+*"System.ServiceModel.EndpointNotFoundException: Não havia nenhum ponto de extremidade escutando em https://*[NomeDoComputador]:[Porta]*/ClusterManagement/ que pudesse aceitar a mensagem. "*
 
 ### <a name="solution"></a>Solução
 
@@ -77,11 +77,11 @@ Verifique as mensagens de erro no log do serviço do Trabalho do Scale Out em `\
 ## <a name="could-not-establish-trust-relationship"></a>Não foi possível estabelecer a relação de confiança
 
 ### <a name="symptoms"></a>Sintomas
-*“System.ServiceModel.Security.SecurityNegotiationException: não foi possível estabelecer a relação de confiança para o canal seguro SSL/TLS com a autoridade '[Machine Name]:[Port]'.”*
+*""System.ServiceModel.Security.SecurityNegotiationException: Não foi possível estabelecer a relação de confiança para o canal seguro de SSL/TLS com autoridade '[Nome do Computador]:[Porta]'. "*
 
-*“System.Net.WebException: a conexão subjacente estava fechada: não foi possível estabelecer a relação de confiança para o canal seguro SSL/TLS.”*
+*"System.Net.WebException: A conexão subjacente estava fechada: Não foi possível estabelecer relação de confiança para o canal seguro SSL/TLS."*
 
-*“System.Security.Authentication.AuthenticationException: o certificado remoto é inválido de acordo com o procedimento de validação.”*
+*"System.Security.Authentication.AuthenticationException: O certificado remoto é inválido de acordo com o procedimento de validação."*
 
 ### <a name="solution"></a>Solução
 1.  Instale o certificado do Mestre do Scale Out no repositório de certificados Raiz do computador local no nó de Trabalho do Scale Out, caso o certificado ainda não esteja instalado e reinicie o serviço Trabalho do Scale Out.
@@ -97,9 +97,9 @@ Verifique as mensagens de erro no log do serviço do Trabalho do Scale Out em `\
 
 ### <a name="symptoms"></a>Sintomas
 
-*“System.ServiceModel.Security.SecurityNegotiationException: não foi possível estabelecer um canal seguro para SSL/TLS com a autoridade '[Machine Name]:[Port]'.”*
+*"System.ServiceModel.Security.SecurityNegotiationException: Não foi possível estabelecer um canal seguro para SSL/TLS com autoridade '[Nome do Computador]:[Porta]'."*
 
-*“System.Net.WebException: a solicitação foi anulada: não foi possível criar um canal seguro SSL/TLS.”*
+*"System.Net.WebException: A solicitação foi anulada: Não foi possível criar um canal seguro SSL/TLS."*
 
 ### <a name="solution"></a>Solução
 Verifique se a conta que executa o serviço Trabalho do Scale Out tem acesso ao certificado do Trabalho do Scale Out executando o seguinte comando:
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Sintomas
 
-*“System.ServiceModel.Security.MessageSecurityException: a solicitação HTTP foi proibida com o esquema de autenticação de cliente 'Anonymous'.”*
+*"System.ServiceModel.Security.MessageSecurityException: A solicitação HTTP foi proibida com o esquema de autenticação cliente 'Anônimo'."*
 
-*“System.Net.WebException: o servidor remoto retornou um erro: (403) Proibido.”*
+*"System.Net.WebException: O servidor remoto retornou um erro: (403) Proibido."*
 
 ### <a name="solution"></a>Solução
 1.  Instale o certificado do Trabalho do Scale Out no repositório de certificados Raiz do computador local no nó Mestre do Scale Out, caso o certificado ainda não esteja instalado e reinicie o serviço Trabalho do Scale Out.
@@ -135,7 +135,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Tipo de valor: **REG_DWORD** 
 
-    Dados do valor: **0 (False)**
+    Dados do valor: **0 (Falso)**
 
 4.  Se não for possível limpar todos os certificados não autoassinados, conforme descrito na etapa 2, defina o valor da chave do Registro a seguir como 2.
 
@@ -154,7 +154,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Sintomas
 
-*“System.ServiceModel.CommunicationException: erro ao fazer a solicitação HTTP para https://[Machine Name]:[Port]/ClusterManagement/. Isso pode ser devido ao fato de que o certificado do servidor não está configurado corretamente com HTTP.SYS no caso HTTPS. Isso também pode ser causado por uma incompatibilidade da associação de segurança entre o cliente e o servidor.”*
+*"System.ServiceModel.CommunicationException: Ocorreu um erro ao fazer a solicitação HTTP para https://[Nome do Computador]:[Porta]/ClusterManagement/. Isso pode ser devido ao fato de que o certificado do servidor não está configurado corretamente com HTTP.SYS no caso HTTPS. Isso também pode ser causado por uma incompatibilidade da associação de segurança entre o cliente e o servidor.”*
 
 ### <a name="solution"></a>Solução
 1.  Verifique se o certificado do Mestre do Scale Out está associado à porta no ponto de extremidade mestre corretamente do nó mestre executando o seguinte comando:
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações, consulte os seguintes artigos sobre como configurar o SSIS Scale Out:
 -   [Introdução ao SSIS (Integration Services) Scale Out em um único computador](get-started-with-ssis-scale-out-onebox.md)
--   [Passo a passo: Configurar o SSIS (Integration Services) Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [Passo a passo: Configurar SSIS (Integration Services) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

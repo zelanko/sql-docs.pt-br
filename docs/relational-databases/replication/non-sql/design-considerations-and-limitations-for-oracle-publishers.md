@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748744"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125849"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerações de design e limitações para Publicadores Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47748744"
   
  Considere também os seguintes problemas:  
   
--   A Oracle e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL diferentemente: a Oracle permite várias linhas com valores nulos para colunas que permitem o NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
+-   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL de modo diferente: a Oracle permite várias linhas com valores nulos para colunas que permitem o NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
   
 -   Ao testar exclusividade, espaços em branco em um campo são ignorados por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mas não pelo Oracle.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47748744"
   
 -   Assinantes de publicações do Oracle não podem ser inicializados automaticamente de um backup.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte para dois tipos de validação: binária e de contagem de linhas. Publicadores Oracle oferecem suporte para validação de contagem de linhas. Para obter mais informações, consulte [Validar os dados replicados](../../../relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte para dois tipos de validação: binária e de contagem de linhas. Publicadores Oracle oferecem suporte para validação de contagem de linhas. Para obter mais informações, consulte [Validar os dados replicados](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 -   O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece dois formatos de instantâneo: modo de bcp nativo e modo de caractere. Publicadores Oracle oferecem suporte para instantâneos de modo de caractere.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "47748744"
   
     -   Você não pode alterar o parâmetro **@job_login** por meio de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), mas a senha pode ser alterada.  
   
- Para mais informações sobre segurança de replicação, consulte [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md).  
+ Para obter mais informações sobre a segurança de replicação, confira [Exibir e modificar configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Considerações administrativas sobre Publicadores Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   

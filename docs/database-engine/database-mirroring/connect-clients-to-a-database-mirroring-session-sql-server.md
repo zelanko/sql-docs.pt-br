@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534678"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131846"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo de servidor  
  A cadeia de conexão deve conter um atributo **Server** que forneça o nome do parceiro inicial que deverá identificar a instância do servidor principal atual.  
   
- A forma mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[**\\***<SQL_Server_instance_name>*]. Por exemplo:  
+ A forma mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[**\\**_<SQL_Server_instance_name>_]. Por exemplo:  
   
  `Server=Partner_A;`  
   
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|**Failover_Partner**|  
 |ADO ( ActiveX Data Object)|**Failover Partner**|  
   
- A forma mais simples de identificar a instância do servidor é pelo seu nome do sistema, *<server_name>*[**\\***<SQL_Server_instance_name>*].  
+ A forma mais simples de identificar a instância do servidor é pelo seu nome do sistema, *<server_name>*[**\\**_<SQL_Server_instance_name>_].  
   
  Como alternativa, o endereço IP e número da porta podem ser fornecidos no atributo **Failover Partner** . Se a tentativa de conexão inicial falhar durante a primeira conexão com o banco de dados, a tentativa para se conectar ao parceiro de failover não precisará depender do DNS e do SQL Server Browser. Quando uma conexão é estabelecida, o nome do parceiro de failover será sobrescrito com o nome do parceiro de failover, assim, se um failover acontecer, as conexões redirecionadas necessitarão do DNS e do SQL Server Browser.  
   
@@ -169,7 +169,7 @@ Server=123.34.45.56,4724;
   
  O tempo de retentar é calculado usando a seguinte fórmula:  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  Onde *PreviousRetryTime* é inicialmente 0.  
   
@@ -177,10 +177,10 @@ Server=123.34.45.56,4724;
   
 |Arredondamento|Cálculo de*RetryTime* |Tempo de nova tentativa por tentativa|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 segundos|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 segundos|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 segundos|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 segundos|  
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
+|2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
+|3|2,4 **+(** 0,08 **&#42;** 15 **)**|3,6 segundos|  
+|4|3,6 **+(** 0,08 **&#42;** 15 **)**|4,8 segundos|  
   
  A figura a seguir ilustra esses tempos de nova tentativa em tentativas de conexão sucessivas, todas elas com tempos limite esgotados.  
   

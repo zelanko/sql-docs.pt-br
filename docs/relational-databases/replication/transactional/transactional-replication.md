@@ -14,12 +14,12 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791164"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129456"
 ---
 # <a name="transactional-replication"></a>Replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,5 +72,15 @@ ms.locfileid: "47791164"
   
 ##  <a name="DistributionAgent"></a> Agente de Distribuição  
  O Distribution Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. O agente move as transações do banco de dados de distribuição para o Assinante. Se uma assinatura estiver marcada para validação, o Agente de Distribuição também verificará se os dados do Publicador e do Assinante coincidem.  
+
+## <a name="publication-types"></a>Tipos de publicação 
+Replicação transacional oferece três tipos de publicação:  
+  
+|Tipo de Publicação|Descrição|  
+|----------------------|-----------------|  
+|Publicação Transacional padrão|Apropriada para topologias em que todos os dados do Assinante são do modo somente leitura (a replicação transacional não impõe isto no Assinante).<br /><br /> As publicações transacionais padrão são criadas por padrão ao usar Transact-SQL ou RMO (Replication Management Objects). Ao usar o Assistente para Nova Publicação, elas são criadas selecionando **Publicação Transacional** na página **Tipo de Publicação** .<br /><br /> Para obter mais informações sobre como criar publicações, veja [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Publicação transacional com assinaturas atualizáveis|As características deste tipo de publicação são:<br /><br /> – Cada localização tem dados idênticos, com um Editor e um Assinante. <br /> – É possível atualizar linhas no Assinante<br /> -Esta topologia é melhor adequada para ambientes de servidor que requerem alta disponibilidade e escalabilidade de leitura.<br /><br />Para obter mais informações, confira [Inscrições Atualizáveis](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topologia ponto a ponto|As características deste tipo de publicação são:<br /> – Cada localização tem dados idênticos e atua tanto como Editor quanto como Assinante.<br /> – A mesma linha pode ser alterada apenas em uma localização de cada vez.<br /> – Dá suporte para [detecção de conflitos](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />– Esta topologia é melhor adequada para ambientes de servidor que requerem alta disponibilidade e escalabilidade de leitura.<br /><br />Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Replicação transacional bidirecional|As características deste tipo de publicação são:<br />A replicação bidirecional é semelhante à replicação ponto a ponto, no entanto, não fornece resolução de conflitos. Além disso, a replicação bidirecional está limitada a dois servidores. <br /><br /> Para obter mais informações, confira [Replicação Transacional Bidirecional](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

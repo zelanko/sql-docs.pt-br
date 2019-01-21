@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs'
+title: 'Tutorial: SSMS (SQL Server Management Studio) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970537"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299393"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriais do SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 O tutorial SQL Server Management Studio (SSMS) apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
   
@@ -47,24 +47,24 @@ O melhor modo de se familiarizar com o SSMS é praticando. Esses tutoriais ajuda
 Os tutoriais abordarão o seguinte: 
 
   
-- [Tutorial: conectar e consultar o SQL Server usando o SSMS](connect-query-sql-server.md)
+- [Tutorial: Conectar-se ao SQL Server e consultá-lo usando SSMS](connect-query-sql-server.md)
 
     Neste tutorial, você aprenderá como se conectar à Instância do SQL Server. Você também aprenderá alguns comandos básicos do T-SQL (Transact-SQL) para criar e consultar um novo banco de dados. 
 
-- [Tutorial: gerando scripts de objetos no SSMS](scripting-ssms.md)
+- [Tutorial: Objetos de script no SSMS](scripting-ssms.md)
 
     Neste tutorial, você aprenderá a gerar scripts de vários objetos no SSMS, incluindo bancos de dados e consultas. 
 
-- [Tutorial: usando modelos no SSMS](templates-ssms.md)
+- [Tutorial: Usar modelos no SSMS](templates-ssms.md)
    
     Neste tutorial, você aprenderá como trabalhar com os Modelos predefinidos no SSMS. Os modelos são um recurso pouco conhecido que armazenam diversos snippets de código Transact-SQL para várias tarefas de administração de banco de dados. 
 
-- [Tutorial: configuração do SSMS](ssms-configuration.md)
+- [Tutorial: Configuração do SSMS](ssms-configuration.md)
 
     Neste tutorial, você aprenderá os conceitos básicos de como configurar o ambiente do SSMS, como a alterar o layout do ambiente. Este tutorial também explica quais são os diferentes componentes do SSMS. 
   
 
-- [Tutorial: mais dicas e truques para usar o SSMS](ssms-tricks.md)
+- [Tutorial: Mais dicas e truques para usar o SSMS](ssms-tricks.md)
 
     Neste tutorial, você aprenderá mais dicas e truques para usar o SSMS. Este tutorial inclui o seguinte:
     - Comentar e remover marca de comentário do texto
@@ -81,7 +81,7 @@ Para que você possa usar o tutorial, os itens a seguir devem estar instalados:
 
   -   Instale a versão mais recente do [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-A primeira seção ensina a criar um banco de dados, mas outros bancos de dados de exemplo podem ser encontrados aqui: [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). As instruções para restaurar bancos de dados no SSMS podem ser encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+A primeira seção ensina a criar um banco de dados, mas outros bancos de dados de exemplo podem ser encontrados aqui: [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). As instruções para restaurar os bancos de dados no SSMS podem ser encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   

@@ -18,12 +18,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e20f280df7054596f357c4864ef95177ca3e9cf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749577"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135467"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47749577"
   
 2.  Clique na guia **Avisos** . Para exibir mais informações sobre as opções nessa guia, clique em **Ajuda** na barra de menus.  
   
-3.  Habilite um aviso selecionando a caixa de seleção apropriada: **Avise se uma assinatura for expirar dentro do limite** ou **Avise se a latência exceder o limite**.  
+3.  Habilite um aviso selecionando a caixa de seleção apropriada: **Avisar se uma assinatura for expirar dentro do limite** ou **Avisar se a latência exceder o limite**.  
   
 4.  Defina um limite para os avisos na coluna **Limite** . Por exemplo, ao selecionar **Avise se a latência exceder o limite** na etapa 3, é possível selecionar uma latência de **60 segundos** na coluna **Limite** .  
   
@@ -164,6 +164,6 @@ ms.locfileid: "47749577"
 5.  Clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

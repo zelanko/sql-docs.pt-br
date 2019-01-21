@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 5: Adicionando e configurando a fonte de arquivo simples | Microsoft Docs'
+title: 'Etapa 5: Adicionar e configurar a fonte de Arquivo Simples | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,44 +11,44 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3417579b121d4680b18cfd896bb3ddd676eca920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a02f4e9a2d27ea827f312ee47b80d93635baa29
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600444"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143236"
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Lição 1-5 – adicionar e configurar a fonte de arquivo simples
-Nesta tarefa, você irá adicionar e configurar uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de arquivo simples para especificar o formato e a estrutura dos dados que serão extraídos do arquivo simples por um processo de transformação. Uma fonte de arquivo simples pode ser configurada para extrair dados de uma única fonte de arquivo simples usando a definição de formato de arquivo fornecida pelo gerenciador de conexões do arquivo simples.  
+# <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lição 1-5: Adicionar e configurar a fonte de Arquivo Simples
+Nesta tarefa, você adiciona e configura uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de Arquivo Simples. Esses metadados especificam o formato e a estrutura dos dados a serem extraídos do arquivo simples por um processo de transformação. A fonte de Arquivo Simples extrai dados de um único arquivo simples, usando as definições de formato no gerenciador de conexões de Arquivo Simples.  
   
-Para este tutorial, você irá configurar a fonte de arquivo simples para usar o gerenciador de conexões **Dados da Fonte de Arquivo Simples de Exemplo** criada anteriormente.  
+Para esta tarefa, configure a fonte de arquivo simples para usar o gerenciador de conexões **Dados de Origem de Arquivo Simples de Exemplo** criada anteriormente.  
   
-### <a name="to-add-a-flat-file-source-component"></a>Para adicionar um componente Fonte de Arquivo Simples  
+## <a name="add-a-flat-file-source-component"></a>Adicionar um componente de fonte de Arquivo Simples  
   
-1.  Abra o designer **Fluxo de Dados** clicando duas vezes na tarefa de fluxo de dados **Extrair Dados de Moeda de Exemplo** ou clicando na **guia Fluxo de Dados**.  
+1.  Para abrir o designer de **Fluxo de Dados**, seja clicando duas vezes na tarefa de fluxo de dados **Extrair Dados de Moeda de Exemplo** ou clicando na guia **Fluxo de Dados**.  
   
 2.  Na **Caixa de Ferramentas do SSIS**, expanda **Outras Fontes**e arraste uma **Fonte de Arquivo Simples** até a superfície de design da guia **Fluxo de Dados** .  
   
-3.  Na superfície de design **Fluxo de Dados** , clique com o botão direito do mouse na **Fonte de Arquivo Simples**recém-adicionada, clique em **Renomear**e altere o nome para **Extrair Dados de Moeda de Exemplo**.  
+3.  Na superfície de design **Fluxo de Dados**, clique com o botão direito do mouse na **Fonte de Arquivo Simples** recém-adicionada, selecione **Renomear**e altere o nome para **Extrair Dados de Moeda de Exemplo**.  
   
-4.  Clique duas vezes na Fonte de Arquivo Simples para abrir a caixa de diálogo Editor da Fonte de Arquivo Simples.  
+4.  Clique duas vezes na Fonte de Arquivo Simples para abrir a caixa de diálogo **Editor da Fonte de Arquivo Simples**.  
   
-5.  Na caixa **Gerenciador de conexões de arquivo simples** , selecione **Dados de Exemplo da Fonte de Arquivo Simples**.  
+5.  No campo **Gerenciador de conexões de arquivo simples**, selecione **Dados de Origem de Arquivo Simples de Exemplo**.  
   
-6.  Clique em **Colunas** e verifique se os nomes das colunas estão corretos.  
+6.  Selecione **Colunas** e verifique se os nomes das colunas estão corretos.  
   
-7.  Clique em **OK**.  
+7.  Escolha **OK**.  
   
-8.  Clique com o botão direito do mouse na fonte de Arquivo Simples e clique em **Propriedades**.  
+8.  Clique com o botão direito do mouse na fonte de Arquivo Simples e selecione **Propriedades**.  
   
-9. Na janela Propriedades, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)**.  
+9. Na janela **Propriedades**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)**.  
   
-## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 6: Adicionando e configurando a transformação Pesquisa](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+## <a name="go-to-next-task"></a>Ir para a próxima tarefa
+[Etapa 6: Adicionar e configurar as transformações de Pesquisa](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Consulte Também  
-[Fonte de Arquivo Simples](../integration-services/data-flow/flat-file-source.md)  
-[Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
+## <a name="see-also"></a>Confira também  
+[Origem de Arquivo Simples](../integration-services/data-flow/flat-file-source.md)  
+[Gerenciador de Conexões de Arquivos Simples](../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
   

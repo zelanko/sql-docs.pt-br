@@ -15,15 +15,15 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4272379809eabde398a6b50c54d39c7139419d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 47876b387c06c1ba65e6a1a04fcbcee616097166
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535024"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241838"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backups da parte final do log (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52535024"
   
  Um *backup da parte final do log* captura qualquer registro de log que ainda não foi submetido a backup (a *parte final do log*) para impedir a perda de trabalho e manter a cadeia de logs intacta. Para que você possa recuperar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até seu momento determinado mais recente, você deve fazer backup da parte final do log de transações. O backup da parte final do log será o último backup de interesse no plano de recuperação do banco de dados.  
   
-> **OBSERVAÇÃO:** nem todos os cenários de restauração exigem um backup da parte final do log. Você não precisará de um backup da parte final do log se o ponto de recuperação estiver em um backup de log anterior. Além disso, um backup da parte final do log será desnecessário se você estiver movendo ou substituindo um banco de dados e não precisar restaurá-lo para um momento determinado após o seu backup mais recente.  
+> **OBSERVAÇÃO:** Nem todos os cenários de restauração exigem um backup da parte final do log. Você não precisará de um backup da parte final do log se o ponto de recuperação estiver em um backup de log anterior. Além disso, um backup da parte final do log será desnecessário se você estiver movendo ou substituindo um banco de dados e não precisar restaurá-lo para um momento determinado após o seu backup mais recente.  
   
    ##  <a name="TailLogScenarios"></a> Cenários que exigem um backup da parte final do log  
  É recomendável fazer um backup da parte final do log nos seguintes cenários:  

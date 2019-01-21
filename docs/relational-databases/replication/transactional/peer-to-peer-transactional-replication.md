@@ -17,12 +17,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58fa9cf55a0ef120266c0398734fc6671402634c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785244"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129306"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Ponto a ponto – Replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47785244"
  A replicação ponto a ponto inclui a opção de ativar a detecção de conflito por uma topologia ponto a ponto. Essa opção ajuda a evitar os problemas causados por conflitos não detectados, inclusive o comportamento inconsistente do aplicativo e as atualizações perdidas. Ao ativar essa opção, por padrão uma alteração de conflito é tratada como erro crítico que causa a falha do Distribution Agent. No evento de um conflito, a topologia é mantida em um estado inconsistente até que o conflito seja resolvido manualmente e os dados sejam tornados consistentes em toda a topologia. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  Para evitar inconsistência potencial de dados, certifique-se de evitar conflitos em uma topologia ponto a ponto, mesmo com a detecção de conflitos ativada. Para assegurar que as operações de gravação de uma linha particular sejam realizadas em um único nó, os aplicativos que acessam e alteram dados devem realizar operações de partição, inserção, atualização e exclusão. Esse particionamento assegurará que as modificações de uma determinada linha originária de um nó sejam sincronizadas com todos os outros nós da topologia antes que a linha seja modificada por um outro nó. Se um aplicativo requerer detecção de conflito e recursos de resolução sofisticados, use a replicação de mesclagem. Para obter mais informações, consulte [Mesclar a replicação](../../../relational-databases/replication/merge/merge-replication.md) e [Detectar e resolver conflitos na replicação de mesclagem](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Para evitar inconsistência potencial de dados, certifique-se de evitar conflitos em uma topologia ponto a ponto, mesmo com a detecção de conflitos ativada. Para assegurar que as operações de gravação de uma linha particular sejam realizadas em um único nó, os aplicativos que acessam e alteram dados devem realizar operações de partição, inserção, atualização e exclusão. Esse particionamento assegurará que as modificações de uma determinada linha originária de um nó sejam sincronizadas com todos os outros nós da topologia antes que a linha seja modificada por um outro nó. Se um aplicativo requerer detecção de conflito e recursos de resolução sofisticados, use a replicação de mesclagem. Para obter mais informações, consulte [Mesclar a replicação](../../../relational-databases/replication/merge/merge-replication.md) e [Detectar e resolver conflitos na replicação de mesclagem](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="peer-to-peer-topologies"></a>Topologias ponto a ponto  
  Os cenários a seguir ilustram usos típicos para replicação ponto a ponto.  
@@ -159,7 +159,7 @@ ms.locfileid: "47785244"
   
 ||Somente pares do SQL Server 2005 ou combinação de pares do SQL Server 2005 com o SQL Server 2008 e superior|Somente pares do SQL Server 2005 ou combinação de pares do SQL Server 2005 com o SQL Server 2008 e superior|Pares do SQL2008 e superior|Pares do SQL2008 e superior|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Adicionando um nó à topologia|2 nós na topologia completa: sem pausas necessárias. Use `sync_type = 'initialize with backup'`.|Mais de 2 nós: pausas necessárias.|`sync_type = 'replication support only'`: pausas necessárias.|`sync_type = 'initialize with backup'` e `'initialize from lsn'`: sem pausas necessárias.|  
+|Adicionando um nó à topologia|2 nós na topologia completa: Nenhuma pausa necessária. Use `sync_type = 'initialize with backup'`.|Mais de 2 nós: Pausa necessária.|`sync_type = 'replication support only'`: Pausa necessária.|`sync_type = 'initialize with backup'` e `'initialize from lsn'`: Nenhuma pausa necessária.|  
   
  As alterações do esquema de topologia (adicionar ou remover um artigo) precisam ser desativadas. Para obter mais informações, consulte [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -169,9 +169,9 @@ ms.locfileid: "47785244"
   
  As alterações de Esquema de Artigo (adicionar/remover coluna) nunca requerem desativação.  
   
--   Adicionar artigo: para adicionar um artigo a uma configuração existente, é necessário desativar o sistema, executar a instrução CREATE TABLE e carregar os dados iniciais em cada nó na topologia e adicionar o novo artigo em cada nó na topologia.  
+-   Adicionando artigo: para adicionar um artigo a uma configuração existente, é necessário desativar o sistema, executar a instrução CREATE TABLE e carregar os dados iniciais em cada nó na topologia e adicionar o novo artigo em cada nó na topologia.  
   
--   Removendo um artigo: se quisermos um estado consistente em todos os nós, precisamos confirmar a topologia  
+-   Removendo um artigo: se quisermos um estado consistente em todos os nós, precisaremos confirmar a topologia  
   
  Para obter mais informações, consulte [Fechar uma topologia de replicação para novas sessões &#40;programação de Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) e [Administrar uma topologia ponto a ponto &#40;programação de Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -182,6 +182,6 @@ ms.locfileid: "47785244"
 ## <a name="see-also"></a>Consulte Também  
  [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Tipos de publicação para a Replicação Transacional](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [Replicação transacional](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   

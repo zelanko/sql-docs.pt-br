@@ -17,15 +17,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de03858d60e5a8ad21232b2f13d17b880f106ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761984"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242259"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47761984"
   
  Além disso, nem todos os erros de página precisam de restauração. Pode ocorrer um problema nos dados armazenados em cache, como um índice secundário, que pode ser resolvido pelo recálculo dos dados. Por exemplo, se o administrador de banco de dados cancela um índice secundário e o recria, os dados corrompidos, embora fixos, não são indicados como tal na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) .  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   A restauração de página se aplica a bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam os modelos de recuperação completa ou bulk-logged. Só há suporte para restauração de página para grupos de arquivos de leitura/gravação.  
   
@@ -136,8 +136,8 @@ ms.locfileid: "47761984"
     |Cabeçalho|Valores|  
     |------------|------------|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Componente**|O componente com backup: **Banco de Dados**, **Arquivo** ou **\<blank>** (para logs de transações).|  
-    |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
+    |**Componente**|O componente de backup: **Banco de Dados**, **Arquivo** ou **\<em branco>** (para logs de transação).|  
+    |**Tipo**|O tipo de backup realizado: **Total**, **Diferencial** ou **Log de Transações**.|  
     |**Servidor**|O nome da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Posição**|A posição do conjunto de backup no volume.|  
@@ -166,7 +166,7 @@ ms.locfileid: "47761984"
   
 7.  Para restaurar as páginas listadas na grade de páginas, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Para especificar uma página em uma instrução RESTORE DATABASE, você precisará da ID do arquivo que contém a página e da ID da página. A sintaxe necessária é a seguinte:  
   
  `RESTORE DATABASE <database_name>`  

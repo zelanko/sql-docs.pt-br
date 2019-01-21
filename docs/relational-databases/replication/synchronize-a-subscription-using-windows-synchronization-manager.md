@@ -14,18 +14,18 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20ebb8bc0658b7d31388d6f514102fba8db4a8e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634304"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131896"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O Gerenciador de Sincronização[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows só poderá ser usado para sincronizar assinaturas para publicações do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução no mesmo computador que o Gerenciador de Sincronização (ele também pode ser usado para sincronizar arquivos offline e páginas da Web). Para usar o Gerenciador de Sincronização:  
   
-1.  Habilite a sincronização de assinatura pull com o Gerenciador de Sincronização do Windows na caixa de diálogo **Propriedades de Assinatura – \<Subscriber>: \<SubscriptionDatabase>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+1.  Habilite a sincronização de assinatura pull com o Gerenciador de Sincronização do Windows na caixa de diálogo **Propriedades de Assinatura – \<Assinante>: \<SubscriptionDatabase>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 2.  Acesse o Gerenciador de Sincronização através do menu **Iniciar** no Windows.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47634304"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Para habilitar a sincronização de assinaturas pull com o Gerenciador de Sincronização do Windows  
   
-1.  Na página **Geral** da caixa de diálogo **Propriedades de Assinatura – \<Subscriber>: \<SubscriptionDatabase>**, selecione um valor de **Habilitar** para a opção **Usar Gerenciador de Sincronização do Windows**.  
+1.  Na página **Geral** da caixa de diálogo **Propriedades da Assinatura – \<Assinante>: \<SubscriptionDatabase>**, selecione um valor de **Habilitar** para a opção **Usar Gerenciador de Sincronização do Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47634304"
   
 ### <a name="to-use-the-interactive-resolver"></a>Para usar o Resolvedor Interativo  
   
-1.  Habilite o artigo e assinatura a usarem a resolução interativa. Para obter mais informações, consulte [Especificar a resolução interativa de conflitos para artigos de mesclagem](../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Habilite o artigo e assinatura a usarem a resolução interativa. Para obter mais informações, confira [propriedades de Especificar Replicação de Mesclagem](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 2.  Após o início da sincronização da assinatura no Gerenciador de Sincronização, o Resolvedor Interativo será iniciado automaticamente se a resolução interativa de conflitos estiver habilitada e se houver conflitos em um ou mais artigos. O Resolvedor Interativo exibe um conflito de cada vez, com uma sugestão de resolução para cada conflito (com base no resolvedor especificado quando a publicação e a assinatura foram criadas).  
   

@@ -22,18 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fae417c2078be09ebe87a4d816c829fa61831bb6
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2992aa204320379866c32e02ac2a57c68b59be40
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970897"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299183"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Numera a saída de um conjunto de resultados. Mais especificamente, retorna o número sequencial de uma linha em uma partição de um conjunto de resultados, começando em 1 na primeira linha de cada partição. 
   
@@ -135,7 +135,7 @@ FROM sys.databases WHERE database_id < 5;
 |3 |tempdb |SIMPLE |
 
 
-### <a name="b-returning-the-row-number-for-salespeople"></a>B. Retornando o número de linha para vendedores  
+### <a name="b-returning-the-row-number-for-salespeople"></a>b. Retornando o número de linha para vendedores  
  O exemplo a seguir calcula um número de linha para os vendedores da [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] com base em sua classificação de vendas no ano até a data.  
   
 ```sql  

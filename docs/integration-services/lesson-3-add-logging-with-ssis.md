@@ -1,7 +1,7 @@
 ---
-title: 'Lição 3: adicionar um loop com o SSIS | Microsoft Docs'
+title: 'Lição 3: Adicionar um loop com o SSIS | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,17 +11,18 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 981c573c05b299a1022ac6615dae5de0036c3571
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 790738d3c66d4b973d2f6934e89caa77af6ffde0
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638153"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142996"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Lição 3: Adicionar o log com o SSIS
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui recursos de log que permitem solucionar problemas e monitorar a execução do pacote fornecendo um rastreamento de eventos de tarefa e contêiner. Os recursos de log são flexíveis, e podem ser habilitados no nível do pacote ou em tarefas individuais e contêineres dentro do pacote. Você pode selecionar quais eventos quer você anotar, e criar múltiplos logs vários em um único pacote.  
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui recursos de log que permitem solucionar problemas e monitorar a execução do pacote fornecendo um rastreamento de eventos de tarefa e contêiner. Os recursos de registro em log são flexíveis. Você pode habilitar o log no nível do pacote ou em tarefas ou contêineres individuais dentro do pacote. Você seleciona quais eventos deseja anotar e cria vários logs com relação a um único pacote.  
   
-O log é fornecido por um provedor de log. Cada provedor de log pode gravar informações de log em diferentes formatos e tipos de destino. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece os seguintes provedores de log:  
+Os provedores de log de criam os logs. Cada provedor de log pode gravar informações de log em diferentes formatos e tipos de destino. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece os seguintes provedores de log:  
   
 -   Arquivo de texto  
   
@@ -33,22 +34,20 @@ O log é fornecido por um provedor de log. Cada provedor de log pode gravar info
   
 -   Arquivo XML  
   
-Nesta lição, você aprenderá a criar uma cópia do pacote criado em [Lição 2: Adicionando loop com o SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Trabalhando com este novo pacote, você irá adicionar e então configurar o log para monitorar eventos específicos durante a execução de pacote. Se você não tiver completado nenhuma das anteriores lições, poderá também copiar o pacote da Lição 2 terminada, que está inclusa no tutorial.  
-  
-> [!IMPORTANT]  
-> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Reporting Services Product Samples on CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910) (Amostras de produto do Reporting Services no CodePlex)  
-  
+Nesta lição, você criar uma cópia do pacote que criou em [Lição 2: Adicionar looping com o SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Trabalhando com este novo pacote, você vai adicionar e então configurar o log para monitorar eventos específicos durante a execução de pacote. Se você não tiver completado nenhuma das anteriores lições, poderá também copiar o pacote da Lição 2 terminada, que está inclusa no tutorial.  
+
+> [!NOTE]
+> Se você ainda não fez isso, confira a [Lição 1 Pré-requisitos](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote da Lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [Etapa 1: Copiar o pacote da Lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Etapa 2: Adicionando e configurando registro em log](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
+-   [Etapa 2: Adicionar e configurar o registro em log](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Etapa 3: Testando o pacote de tutorial da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Etapa 3: Testar o pacote da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
-[Etapa 1: Copiando o pacote da Lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
-  
-  
+[Etapa 1: Copiar o pacote da Lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   

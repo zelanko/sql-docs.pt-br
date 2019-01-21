@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131646"
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "52504055"
 > [!IMPORTANT]  
 >  Para especificar as informações de conexão, use o procedimento armazenado [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Você também pode usar a página **Logon para Assinaturas Atualizáveis** do Assistente para Nova Assinatura, chamada **sp_link_publication**. Em certas condições, esse procedimento armazenado pode falhar se o Assinante estiver executando o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1(SP1) ou versão posterior e o Publicador estiver executando uma versão anterior. Se o procedimento armazenado falhar nesse cenário, atualize o Publicador para o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 ou posterior.  
   
- Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+ Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_**_\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
+>  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_***\<HexadecimalNumber>* para a conta configurada em cada Assinante.  
   
 ## <a name="queued-updating-subscriptions"></a>Assinaturas de atualização em fila  
  Quando você configurar assinatura de atualização em fila, há duas áreas a considerar relacionadas a segurança:  
@@ -73,11 +73,11 @@ ms.locfileid: "52504055"
     > [!IMPORTANT]  
     >  Use a Autenticação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões com os Assinantes e especifique uma conta diferente para a conexão com cada Assinante. Se usar uma assinatura pull, a replicação sempre define a conexão a ser usada com a Autenticação do Windows (em assinaturas pull, a replicação não pode acessar metadados no Assinante com a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). Nesse caso, altere a conexão para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depois que a assinatura for configurada.  
   
-     Para obter mais informações, consulte Como criar uma assinatura de atualização a uma publicação transacional (SQL Server Management Studio) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Para obter mais informações, confira Como criar uma assinatura de atualização a uma publicação transacional (SQL Server Management Studio) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

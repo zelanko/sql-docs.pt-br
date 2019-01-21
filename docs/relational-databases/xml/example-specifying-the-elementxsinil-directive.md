@@ -13,14 +13,14 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d8a45b8142a9788ea1aae5bc81193c8a7a3120f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 050681b0b215d8dc8625bf6a4480d47c50c89b55
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660315"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256581"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>Exemplo: Especificando a diretiva ELEMENTXSINIL
+# <a name="example-specifying-the-elementxsinil-directive"></a>Exemplo: especificando a diretiva ELEMENTXSINIL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Quando você especifica a política ELEMENT para recuperar o XML centrado em elemento, se a coluna tiver um valor NULL, o elemento correspondente não será gerado pelo modo EXPLICIT. Opcionalmente, é possível especificar a diretiva ELEMENTXSINIL para solicitar o elemento gerador de valores NULL em que o atributo **xsi:nil** está definido com o valor TRUE.  
   
@@ -61,7 +61,7 @@ FOR XML EXPLICIT;
   
  Este é o resultado parcial:  
   
- `<Employee xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `EmpID="1" AddressID="249">`  
   

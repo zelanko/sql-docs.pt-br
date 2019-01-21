@@ -1,6 +1,6 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207775"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300173"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se baseia em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, operações locais ou na nuvem e sistemas operacionais. Este artigo resume o que há de novo para o SQL Server 2019. Para obter mais informações e ver os problemas conhecidos, consulte as [Notas sobre a versão do SQL Server 2019](sql-server-ver15-release-notes.md).
 
@@ -39,7 +42,7 @@ A versão prévia do CTP (Community Technology Preview) 2.2 é a última versão
 
 ## <a name="previous-ctps"></a>CTPs anteriores
 
-Versões anteriores de CTP adicionaram ou aprimoraram os recursos a seguir para o [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+Versões anteriores de CTP adicionaram ou aprimoraram os recursos a seguir para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 - [Clusters de Big Data](#bigdatacluster) 
   - Implantar um cluster de Big Data com contêineres SQL e Spark Linux no Kubernetes (CTP 2.0)

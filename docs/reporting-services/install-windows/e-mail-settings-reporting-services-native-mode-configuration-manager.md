@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020390"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226563"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configurações de email - Modo Nativo do Reporting Services (Gerenciador de Configurações)
 O Reporting Services inclui uma extensão de entrega de email, para que você possa distribuir relatórios por email. Dependendo de como você definir a assinatura de email, uma entrega pode consistir em uma notificação, um link, um anexo ou um relatório inserido. A extensão de entrega de email funciona com sua tecnologia de servidor de email existente. O servidor de email deve ser um encaminhador ou servidor SMTP. O servidor de relatório se conecta a um servidor SMTP por meio de bibliotecas (cdosys.dll) de CDO (Collaboration Data Objects) que são fornecidas pelo sistema operacional.
@@ -109,7 +109,7 @@ O exemplo a seguir ilustra as configurações no arquivo RSreportserver.config p
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opções de configuração para a definição do campo Para: em uma mensagem
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opções de configuração para a configuração Para: Campo em uma mensagem
 As assinaturas definidas pelo usuário que forem criadas de acordo com as permissões concedidas pela tarefa Gerenciar assinaturas individuais contêm um nome de usuário predefinido que tem como base a conta de usuário do domínio. Quando o usuário cria a assinatura, o nome do destinatário no campo **Para:** é endereçado a si mesmo, usando a conta do usuário do domínio da pessoa que está criando a assinatura.
 
 Se você estiver usando um servidor ou encaminhador SMTP que use contas de email diferentes da conta de usuário do domínio, a entrega do relatório falhará quando o servidor SMTP tentar entregar o relatório para esse usuário.
@@ -183,7 +183,7 @@ A conexão entre o servidor de relatório e um encaminhador ou servidor SMTP loc
 
 3. Selecione o servidor no qual será instalado o IIS (Servidor de Informações da Internet) e selecione **Avançar**.
 
-4. Selecione **Avançar** na página *Funções de Servidor**.
+4. Selecione **Avançar** na página *Funções de Servidor*.
      
 5. Na página *Recursos* , selecione **Servidor SMTP** e **Avançar**.
 

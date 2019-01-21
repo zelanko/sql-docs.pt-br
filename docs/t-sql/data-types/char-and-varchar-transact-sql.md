@@ -25,18 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698810"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299383"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Tipos de dados de caractere que sejam de comprimento fixo, **char** ou de comprimento variável, **varchar**. A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando uma ordenação habilitada por UTF-8 é usada, esses tipos de dados armazenam o intervalo completo de dados de caractere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usam a codificação de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Se uma ordenação não UTF-8 for especificada, esses tipos de dados armazenarão apenas um subconjunto de caracteres compatíveis com a página de código correspondente dessa ordenação.
   
@@ -52,7 +52,7 @@ Os objetos que usam **char** ou **varchar** são atribuídos à ordenação padr
 
 As codificações multibyte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluem:
 -   Conjuntos de caracteres de byte duplo (DBCS) para alguns idiomas do Leste Asiático que usam páginas de código 936 e 950 (chinês), 932 (japonês) ou 949 (coreano).
--   UTF-8 com página de código 65001. **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir do[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+-   UTF-8 com página de código 65001. **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
 
 Se você tiver sites compatíveis com vários idiomas:
 - A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], considere o uso de uma ordenação habilitada para UTF-8 para dar suporte a Unicode e minimizar os problemas de conversão de caracteres. 
@@ -96,7 +96,7 @@ SELECT DATALENGTH(@myVariable), DATALENGTH(@myNextVariable);
 GO  
 ```  
   
-### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. Mostrando o valor padrão de n quando varchar é usado com CAST e CONVERT.  
+### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>b. Mostrando o valor padrão de n quando varchar é usado com CAST e CONVERT.  
 O exemplo a seguir mostra que o valor padrão de *n* é 30 quando os tipos de dados `char` ou `varchar` são usados com as funções `CAST` e `CONVERT`.
   
 ```sql

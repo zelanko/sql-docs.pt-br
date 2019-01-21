@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400389"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143456"
 ---
 # <a name="import-into-a-database-project"></a>Importar para um projeto de banco de dados
 Você pode usar Importar para popular um projeto com novos objetos de um banco de dados dinâmico ou um .dacpac, ou para atualizar objetos existentes no seu projeto com uma nova definição de um script. Há algumas diferenças de comportamento que devem ser observadas entre esses três caminhos, que são descritas a seguir.  
@@ -31,13 +31,13 @@ Você pode usar Importar para popular um projeto com novos objetos de um banco d
   
 **Seções neste tópico**  
   
-[Importar fonte: banco de dados ou aplicativo da camada de dados (*.dacpac)](#bkmk_import_source_db)  
+[Origem da Importação: Banco de dados ou aplicativo da camada de dados (*.dacpac)](#bkmk_import_source_db)  
   
-[Importar fonte: script (*.sql)](#bkmk_import_source_script)  
+[Origem da Importação: Script (*.sql)](#bkmk_import_source_script)  
   
 [Importar objetos criptografados](#bkmk_import_encrypted)  
   
-## <a name="bkmk_import_source_db"></a>Importar fonte: banco de dados ou aplicativo da camada de dados (*.dacpac)  
+## <a name="bkmk_import_source_db"></a>Origem da Importação: Banco de dados ou aplicativo da camada de dados (*.dacpac)  
 A capacidade de importar o esquema de um banco de dados ou um arquivo .dacpac somente estará disponível se não houver objetos de esquema já definidos no projeto. Isso não inclui RefactorLogs ou scripts de pré/pós-implantação.  
   
 Durante a importação, as definições de objeto serão colocadas em scripts nos arquivos de projeto usando os padrões organizacionais do SSDT para novos objetos: novos arquivos para objetos de nível superior, filhos hierárquicos definidos no mesmo arquivo como o pai, restrições de tabela/coluna definidas de modo embutido quando possível. Para obter a visibilidade e o controle mais direcionados para cada objeto, use Comparação de Esquemas, em vez de Importar.  
@@ -48,7 +48,7 @@ Se a fonte de importação contiver Scripts Pré e Pós-Implantação, RefactorL
   
 ![Pasta Ignorados na Importação do SSDT](../ssdt/media/ssdt-ignoredonimport.gif "Pasta Ignorados na Importação do SSDT")  
   
-## <a name="bkmk_import_source_script"></a>Importar fonte: script (*.sql)  
+## <a name="bkmk_import_source_script"></a>Origem da Importação: Script (*.sql)  
 Todos os objetos da fonte de importação que ainda *não* existirem no projeto serão adicionados e todos os objetos na fonte de importação que *já* existirem no projeto substituirão a definição de objeto no projeto.  
   
 > [!NOTE]  
@@ -59,8 +59,7 @@ Todos os objetos da fonte de importação que ainda *não* existirem no projeto 
   
 O processo Importar do Script não incluirá scripts Pré/Pós-Implantação, variáveis SQLCMD ou arquivos RefactorLog. Esses e qualquer outra construção sem suporte que seja detectada na importação serão colocados em um arquivo **ScriptsIgnoredOnImport.sql** em uma pasta **Scripts** no seu projeto.  
   
-Para saber mais, confira o fórum da equipe do SSDT em [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>Importar objetos criptografados  
 Ao importar objetos criptografados para um projeto de banco de dados, nem sempre será possível recuperar todo o corpo da definição de objeto do servidor. Assim, o comportamento de importação poderá ser diferente ao lidar com essa classe de objetos.  
   

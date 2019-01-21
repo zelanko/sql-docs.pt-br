@@ -22,18 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf82d7899558349bd28e73f19f648d2f66323bdd
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: c20122b1beaca348ccf405064143ef43af4e400b
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971007"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299583"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Essa função pesquisa uma expressão de caractere dentro de uma segunda expressão de caractere, retornando a posição inicial da primeira expressão, se localizada.
   
@@ -94,7 +94,7 @@ GO
 48            
 ```  
   
-### <a name="b-searching-from-a-specific-position"></a>B. Pesquisando em uma posição específica  
+### <a name="b-searching-from-a-specific-position"></a>b. Pesquisando em uma posição específica  
 Este exemplo usa o parâmetro *start_location* opcional para iniciar a pesquisa para `vital` no quinto caractere da variável de valor de cadeia de caracteres pesquisada `@document`.
   
 ```sql

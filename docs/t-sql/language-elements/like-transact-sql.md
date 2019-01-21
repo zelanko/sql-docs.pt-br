@@ -32,15 +32,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05489fa8c36f037ecde7d15f1e1109299bbec7f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625084"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299983"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=. Se qualquer um dos argumentos não for do tipo de dados de cadeia de caracteres, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o converterá no tipo de dados de cadeia de caracteres, se possível.  
   
@@ -71,7 +74,7 @@ match_expression [ NOT ] LIKE pattern
 |------------------------|-----------------|-------------|  
 |%|Qualquer cadeia de zero ou mais caracteres.|WHERE title LIKE '%computer%' localiza todos os títulos de livro com a palavra 'computer' em qualquer lugar no título do livro.|  
 |_ (sublinhado)|Qualquer caractere único.|WHERE au_fname LIKE '_ean' localiza todos os nomes de quatro letras que terminam com ean (Dean, Sean e assim por diante).|  
-|[ ]|Qualquer caractere único no intervalo ([a-f]) ou conjunto ([abcdef]) especificado.|WHERE au_lname LIKE '[C-P]arsen' localiza os sobrenomes de autores que terminem com arsen e que comecem com qualquer caractere único entre C e P, por exemplo, Carsen, Larsen, Karsen e assim por diante. Em pesquisas de intervalo, os caracteres incluídos no intervalo podem variar de acordo com as regras de classificação do agrupamento.|  
+|[ ]|Qualquer caractere único no intervalo ([a-f]) ou conjunto ([abcdef]) especificado.|WHERE au_lname LIKE '[C-P]arsen' localiza os sobrenomes de autores que terminem com arsen e que comecem com qualquer caractere único entre C e P, por exemplo, Carsen, Larsen, Karsen e assim por diante. Em pesquisas de intervalo, os caracteres incluídos no intervalo podem variar de acordo com as regras de classificação da ordenação.|  
 |[^]|Qualquer caractere único que não esteja no intervalo (^[a-f]) ou conjunto ([^abcdef]) especificado.|WHERE au_lname LIKE 'de[^l]%' localiza todos os sobrenomes de autor que comecem com de e a letra seguinte não seja l.|  
   
  *escape_character*  
@@ -122,17 +125,17 @@ EXEC FindEmployee @EmpLName = 'Barb';
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- FirstName      LastName            City
+ FirstName      LastName            City
  ----------     -------------------- --------------- 
  Angela         Barbariol            Snohomish
  David          Barber               Snohomish
  (2 row(s) affected)  
- ``` 
+ ``` 
  
-## <a name="pattern-matching-by-using-like"></a>Correspondência de padrão com o uso de LIKE  
- LIKE oferece suporte à correspondência de padrão ASCII e à correspondência de padrão Unicode. Quando todos os argumentos (*match_expression*, *pattern* e *escape_character*, se presente) são tipos de dados de caractere ASCII, a correspondência de padrões ASCII é executada. Se algum dos argumentos for do tipo de dados Unicode, todos os argumentos serão convertidos em Unicode e será executada a correspondência de padrão Unicode. Ao usar dados Unicode (tipos de dados **nchar** ou **nvarchar**) com LIKE, os espaços em branco à direita são significativos; entretanto, para dados não Unicode, os espaços em branco à direita não são significativos. LIKE Unicode é compatível com o padrão ISO. LIKE ASCII é compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## Pattern Matching by Using LIKE  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- A seguir é apresentada uma série de exemplos que mostram as diferenças em linhas retornadas entre a correspondência de padrão LIKE ASCII e Unicode.  
+ The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -158,7 +161,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
 ```  
   
 > [!NOTE]  
->  As comparações de LIKE são afetadas por agrupamento. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+>  As comparações de LIKE são afetadas por ordenação. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 ## <a name="using-the--wildcard-character"></a>Usando o caractere curinga %  
  Se o símbolo LIKE '5%' for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] procurará o número 5 seguido por qualquer cadeia de zero ou mais caracteres.  
@@ -197,7 +200,7 @@ GO
   
  Se não houver caractere depois de um caractere de escape no padrão de LIKE, o padrão não será válido e LIKE retornará FALSE. Se o caractere após um caractere de escape não for um caractere curinga, o caractere de escape será descartado e o caractere após ele será tratado como um caractere normal no padrão. Isso inclui os caracteres curinga de sinal de por cento (%), sublinhado (_) e colchete esquerdo ([) quando eles estiverem incluídos entre colchetes duplos ([ ]). Além disso, dentro dos caracteres de colchete duplo ([ ]), os caracteres de escape podem ser usados e o acento circunflexo (^), o hífen (-) e o colchete direito (]) podem seguir o caractere de escape.  
   
- 0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em LIKE.  
+ 0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em LIKE.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -219,7 +222,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -233,10 +236,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
+ ``` 
  
-### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Usando NOT LIKE com o caractere curinga %  
- O exemplo a seguir localiza todos os números de telefone na tabela `PersonPhone` que têm códigos de área diferentes de `415`.  
+### B. Using NOT LIKE with the % wildcard character  
+ The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -253,7 +256,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -263,11 +266,11 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
-```  
+(8 row(s) affected)  
+```  
 
-### <a name="c-using-the-escape-clause"></a>C. Usando a cláusula ESCAPE  
- O exemplo a seguir usa a cláusula `ESCAPE` e o caractere de escape para localizar a cadeia de caracteres exata `10-15%` na coluna `c1` da tabela `mytbl2`.  
+### C. Using the ESCAPE clause  
+ The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
   
 ```sql
 USE tempdb;  

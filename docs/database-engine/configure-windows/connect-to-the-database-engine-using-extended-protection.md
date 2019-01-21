@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133206"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52395349"
   
 1.  No menu **Iniciar** , escolha **Todos os Programas**, aponte para **Microsoft SQL Server** e clique em **SQL Server Configuration Manager**.  
   
-2.  Expanda **Configuração de Rede do SQL Server**e clique com o botão direito do mouse em **Protocolos do** *\<* InstanceName*>* e clique em **Propriedades**.  
+2.  Expanda **Configuração de Rede do SQL Server** e clique com o botão direito do mouse em **Protocolos para** _\<_NomeDaInstância*>* e em **Propriedades**.  
   
 3.  Para associação de canal e associação de serviço, na guia **Avançado** , defina a **Proteção Estendida** com a configuração apropriada.  
   

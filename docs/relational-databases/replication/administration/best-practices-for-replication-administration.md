@@ -14,16 +14,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791c9fc5b7a411a094d6fedc8aa16290baeea234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763344"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130326"
 ---
 # <a name="best-practices-for-replication-administration"></a>Práticas recomendadas para administração de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para familiarizar-se com as questões e problemas mais comuns: [Perguntas frequentes para administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere a leitura do tópico de perguntas frequentes para se familiarizar com as questões e problemas mais comuns: [Perguntas frequentes para os administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  É útil dividir as diretrizes de prática recomendada em duas áreas:  
   
@@ -114,16 +114,16 @@ ms.locfileid: "47763344"
 ## <a name="monitor-the-replication-topology"></a>Monitore a topologia de replicação  
  Depois que a topologia de replicação estiver funcionando e os limites e alertas tiverem sido configurados, recomenda-se monitorar regularmente a replicação. Monitorar uma topologia de replicação é um aspecto importante na implantação da replicação. Já que a atividade de replicação é distribuída, é essencial controlar sua atividade e o status em todos os computadores envolvidos na replicação. As seguintes ferramentas podem ser usadas para monitorar a replicação:  
   
--   O Replication Monitor é a ferramenta mais importante para a monitoração da replicação, permitindo monitorar a saúde geral de uma topologia de replicação. Para obter mais informações, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   O Replication Monitor é a ferramenta mais importante para a monitoração da replicação, permitindo monitorar a saúde geral de uma topologia de replicação. Para obter mais informações, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
--   O[!INCLUDE[tsql](../../../includes/tsql-md.md)] e o RMO (Replication Management Objects) fornecem interfaces para monitorar replicação. Para obter mais informações, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   O[!INCLUDE[tsql](../../../includes/tsql-md.md)] e o RMO (Replication Management Objects) fornecem interfaces para monitorar replicação. Para obter mais informações, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   O Monitor do Sistema também pode ser útil para monitorar o desempenho da replicação. Para obter mais informações, consulte [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="validate-data-periodically"></a>Valide os dados periodicamente  
  A validação não é requerida pela replicação, mas é recomendada a execução da validação periódica para a replicação transacional e a replicação de mesclagem. A validação permite verificar que os dados no Assinante correspondem aos dados no Publicador. Uma validação bem-sucedida indica que naquele point-in-time todas as alterações do Publicador foram replicadas no Assinante (e do Assinante no Publicador, se houver suporte para atualizações no Assinante) e que os dois bancos de dados estão em sincronia.  
   
- É recomendado que a validação seja executada de acordo com a agenda de backup do banco de dados de publicação. Por exemplo, se o banco de dados de publicação tem um backup completo uma vez por semana, a validação poderia ser executada uma vez por semana após o backup ser completado. Para obter mais informações, consulte [Validar os dados replicados](../../../relational-databases/replication/validate-replicated-data.md).  
+ É recomendado que a validação seja executada de acordo com a agenda de backup do banco de dados de publicação. Por exemplo, se o banco de dados de publicação tem um backup completo uma vez por semana, a validação poderia ser executada uma vez por semana após o backup ser completado. Para obter mais informações, consulte [Validar os dados replicados](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Use perfis de agente para alterar os parâmetros de agente, se necessário  
  Os perfis de agente fornecem um método conveniente de definir parâmetros do agente de replicação. Os parâmetros podem também ser especificados na linha de comando do agente, mas é normalmente mais apropriado usar um perfil predefinido de agente ou criar um novo perfil se for necessário alterar o valor do parâmetro. Por exemplo, se estiver usando uma replicação de mesclagem e o Assinante mudar de uma conexão de banda larga para uma conexão discada, considere usar o perfil **vínculo lento** para o Agente de Mesclagem; esse perfil usa um conjunto de parâmetros que são mais adequados para vínculos de comunicações mais lentas. Para saber mais, confira [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -150,6 +150,6 @@ ms.locfileid: "47763344"
  Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administração &#40;Replicação&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+ [Perguntas Frequentes sobre Administração de Replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
   

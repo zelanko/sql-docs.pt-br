@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016 | Microsoft Docs'
+title: 'Tutorial: Usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/07/2016
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,14 +15,15 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 1af4926f367b79c7e4cc9117042d0b21e4f47b77
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302839"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206343"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Bem-vindo ao tutorial “Trabalhando com o SQL Server 2016 no serviço de Armazenamento de Blobs do Microsoft Azure”. Este tutorial o ajudará a entender como usar o serviço de armazenamento de Blobs do Microsoft Azure para arquivos de dados e backups do SQL Server.  
   
@@ -30,7 +31,8 @@ O suporte da integração do SQL Server no serviço de armazenamento de Blobs do
 
 Este tutorial mostra como trabalhar com arquivos de dados do SQL Server no serviço de Armazenamento de Blobs do Microsoft Azure em várias seções. Cada seção é centrada em uma tarefa específica e as seções devem ser concluídas na sequência. Primeiro, você aprenderá a criar um novo contêiner no armazenamento de Blobs com uma política de acesso armazenado e uma assinatura de acesso compartilhado. Em seguida, você aprenderá a criar uma credencial do SQL Server para integrar o SQL Server com o Armazenamento de Blobs do Azure. Em seguida, você vai fazer backup de um banco de dados no armazenamento de Blobs e restaurá-lo em uma máquina virtual do Azure. Depois, você vai usar o backup de log de transações de instantâneo de arquivo do SQL Server 2016 para restaurá-lo em um ponto específico e em um novo banco de dados. Por fim, o tutorial demonstrará o uso dos procedimentos armazenados e funções do sistema de metadados para ajudá-lo a entender e trabalhar com backups de instantâneo de arquivo.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites
+
 Para concluir este tutorial, você deve estar familiarizado com os conceitos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a sintaxe do T-SQL. Para usar este tutorial, você precisa de uma conta de Armazenamento do Azure, o SSMS (SQL Server Management Studio), acesso a uma instância local do SQL Server, acesso a uma VM (máquina virtual) do Azure que execute o SQL Server 2016 e um banco de dados AdventureWorks2016. Além disso, a conta de usuário usada para emitir os comandos BACKUP e RESTORE deve estar na função de banco de dados **db_backupoperator** com as permissões **Alterar qualquer credencial**. 
 
 - Obtenha uma [conta do Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuita.
@@ -42,6 +44,7 @@ Para concluir este tutorial, você deve estar familiarizado com os conceitos de 
 - Atribua a conta de usuário à função [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e conceda permissões para [Alterar qualquer credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 – Criar uma política de acesso armazenado e um armazenamento de acesso compartilhado
+
 Nesta seção, você usará um script do [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) para criar uma assinatura de acesso compartilhado em um contêiner de Blobs do Azure usando uma política de acesso armazenado.  
   
 > [!NOTE]  
@@ -129,6 +132,7 @@ Para criar uma política no contêiner e gerar uma chave SAS (Assinatura de Aces
 
 
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2 – Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado
+
 Nesta seção, você aprenderá a criar uma credencial para armazenar as informações de segurança que serão usadas pelo SQL Server para gravar e ler o contêiner do Azure criado na etapa anterior.  
   
 Uma credencial do SQL Server é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. A credencial armazena o caminho de URI do contêiner de armazenamento e a assinatura de acesso compartilhado desse contêiner.  
@@ -169,6 +173,7 @@ Para criar uma credencial do SQL Server, siga estas etapas:
 7.  Repita as etapas 5 e 6 para todas as outras instâncias do SQL Server às quais você quer conceder acesso ao contêiner do Azure.  
 
 ## <a name="3---database-backup-to-url"></a>3 – Backup de banco de dados em URL
+
 Nesta seção, você fará backup do banco de dados AdventureWorks2016 na sua instância local do SQL Server 2016 no contêiner do Azure criado na [Seção 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
@@ -200,6 +205,7 @@ Para fazer backup de um banco de dados no armazenamento de Blobs, siga estas eta
 
 
 ## <a name="4----restore-database-to-virtual-machine-from-url"></a>4 – Restaurar o banco de dados na máquina virtual por meio da URL
+
 Nesta seção, você restaurará o banco de dados AdventureWorks2016 na instância do SQL Server 2016 na máquina virtual do Azure.
   
 > [!NOTE]  
@@ -235,7 +241,8 @@ Para restaurar o banco de dados AdventureWorks2016 do Armazenamento de Blobs do 
   
    ![Arquivos de dados dentro do contêiner no Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# <a name="5---backup-database-using-file-snapshot-backup"></a>5 – Fazer backup do banco de dados usando o backup de instantâneo de arquivo
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5 – Fazer backup do banco de dados usando o backup de instantâneo de arquivo
+
 Nesta seção, você fará backup do banco de dados AdventureWorks2016 na máquina virtual do Azure usando o backup de instantâneo de arquivo para executar um backup quase instantâneo usando instantâneos do Azure. Para obter mais informações sobre backups de instantâneo, veja [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 Para fazer backup do banco de dados AdventureWorks2016 usando o backup de instantâneo de arquivo, siga estas etapas:  
@@ -275,6 +282,7 @@ Para fazer backup do banco de dados AdventureWorks2016 usando o backup de instan
     ![Backup de instantâneo no Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6 – Gerar log de atividade e de backup usando o backup de instantâneo de arquivo
+
 Nesta seção, você gerará atividade no banco de dados AdventureWorks2016 e criará periodicamente backups de log de transações usando backups de instantâneo de arquivo. Para obter mais informações sobre como usar backups de instantâneo de arquivo, veja [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Para gerar atividade no banco de dados AdventureWorks2016 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo, siga estas etapas:  
@@ -340,6 +348,7 @@ Para gerar atividade no banco de dados AdventureWorks2016 e criar periodicamente
     ![Vários instantâneos no Contêiner do Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7 – Restaurar um banco de dados para um momento determinado
+
 Nesta seção, você aprenderá a restaurar o banco de dados AdventureWorks2016 para um ponto específico entre dois backups de log de transações.  
   
 Com backups tradicionais, para realizar a restauração pontual, você precisaria usar o backup do banco de dados completo, talvez um backup diferencial, e todos os arquivos de log de transações incluindo e logo após o ponto específico para o qual você quer restaurar. Com os backups de instantâneo de arquivo, você só precisa de dois arquivos de backup de log de transações adjacentes que fornecem as metas que enquadram o tempo para o qual você quer restaurar. Você só precisa dois conjuntos de backup de instantâneo de arquivo de log, pois cada backup de log cria um instantâneo de arquivo de cada arquivo de banco de dados (cada arquivo de dados e o arquivo de log).  
@@ -378,6 +387,7 @@ Para restaurar um banco de dados para um ponto específico por meio de conjuntos
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8 – Restaurar como um novo banco de dados por meio do backup de log de transações
+
 Nesta seção, você aprenderá a restaurar o banco de dados AdventureWorks2016 como um novo banco de dados por meio de um backup de log de transações de instantâneo de arquivo.  
   
 Nesse cenário, você realiza uma restauração de uma instância do SQL Server em outra máquina virtual para fins de análise de negócios e relatório. A restauração em uma instância diferente em outra máquina virtual descarrega a carga de trabalho em uma máquina virtual dedicada e dimensionada para essa finalidade, removendo os requisitos de recursos do sistema transacional.  
@@ -411,6 +421,7 @@ Para restaurar um banco de dados em um novo banco de dados por meio de um backup
     ![Contêiner do Azure mostrando os arquivos de log e de dados para o novo banco de dados](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9–Gerenciar conjuntos de backup e backups de instantâneo de arquivo
+
 Nesta seção, você excluirá um conjunto de backup usando o procedimento armazenado do sistema [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md). Esse procedimento armazenado do sistema exclui o arquivo de backup e o arquivo de instantâneo em cada arquivo de banco de dados associado a esse conjunto de backup.  
   
 > [!NOTE]  
@@ -440,6 +451,7 @@ Para excluir um conjunto de backup de instantâneo de arquivo, siga estas etapas
     ![Painel de resultados mostrando dois instantâneos de arquivo excluídos](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10–Remover recursos
+
 Depois de concluir este tutorial, e para conservar recursos, exclua o grupo de recursos criado neste tutorial. 
 
 Para excluir o grupo de recursos, execute o seguinte código do powershell:
@@ -463,11 +475,12 @@ Para excluir o grupo de recursos, execute o seguinte código do powershell:
 
 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
+
 [Arquivos de dados do SQL Server no Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
-[Backup do SQL Server em URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[Assinaturas de Acesso Compartilhado, parte 1: noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Backup do SQL Server para URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
+[Assinaturas de Acesso Compartilhado, Parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Definir ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Obter ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx)

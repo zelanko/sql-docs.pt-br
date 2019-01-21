@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596215"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124576"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47596215"
   
      Nessa parte, você define a carga útil que tem suporte no ponto de extremidade. A carga útil pode ser uma de vários tipos com suporte: [!INCLUDE[tsql](../../includes/tsql-md.md)], agente de serviços, espelhamento de banco de dados. Nesta parte, você inclui também informações específicas de linguagem.  
   
-> **OBSERVAÇÃO:** serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **OBSERVAÇÃO:** Serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Os argumentos a seguir se aplicam apenas à opção protocolo TCP.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Especifica o número da porta de escuta para conexões pelo protocolo TCP/IP service broker. Por convenção, 4022 é usado, mas qualquer número entre 1024 e 32767 é válido.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Especifica o endereço IP de escuta do ponto de extremidade. O padrão é ALL. Isso significa que o ouvinte aceitará uma conexão em qualquer endereço IP válido.  
   
  Se você configurar o espelhamento de banco de dados com um endereço IP, em vez de um nome de domínio totalmente qualificado (`ALTER DATABASE SET PARTNER = partner_IP_address` ou `ALTER DATABASE SET WITNESS = witness_IP_address`), especifique `LISTENER_IP =IP_address`, em vez de `LISTENER_IP=ALL`, ao criar pontos de extremidade de espelhamento.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Descarta mensagens para serviços localizados em outro lugar. Esse é o padrão.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  Especifica a quantidade máxima de armazenamento em megabytes a ser alocada para ser usada no ponto de extremidade ao armazenar mensagens a serem encaminhadas.  
   
  **Opções de DATABASE_MIRRORING**  

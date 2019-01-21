@@ -40,25 +40,25 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505142"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127656"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  
+-   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
   
--   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
+-   **Para configurar o Database Mail usando:**  [Assistente de Configuração do Database Mail](#DBWizard), [Usando Modelos](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Use a opção **DatabaseMail XPs** para habilitar o Database Mail neste servidor. Para obter mais informações, confira o tópico de referência [Opção Database Mail XPs de configuração de servidor](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  A habilitação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker em qualquer banco de dados exige um bloqueio de banco de dados. Se o Service Broker tiver sido desabilitado no **msdb**, para habilitar o Database Mail primeiro interrompa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que o Service Broker possa obter o bloqueio necessário.  
   
 ###  <a name="Security"></a> Segurança  
@@ -116,7 +116,7 @@ ms.locfileid: "52505142"
  Use a página **Selecionar Tarefa de Configuração** para indicar qual tarefa você concluirá sempre que usar o assistente. Se você mudar de ideia antes de concluir o assistente, use o botão **Voltar** para voltar para essa página e selecionar outra tarefa.  
   
 > [!NOTE]  
->  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
+>  Se o Database Mail não tiver sido habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
   
  **Instalar Database Mail executando as seguintes tarefas**  
  Execute todas as tarefas exigidas para instalar o Database Mail pela primeira vez. Essa opção inclui todas as outras três opções.  
@@ -155,7 +155,7 @@ ms.locfileid: "52505142"
  Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
   
  **Nome do servidor**  
- Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.***<sua_empresa>***.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
+ Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.**_<your_company>_**.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
   
  **Número da porta**  
  Digite o número da porta do servidor SMTP para a conta. A maioria dos servidores SMTP usa a porta 25.  
@@ -420,7 +420,7 @@ ms.locfileid: "52505142"
  [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use a página **Enviar Email de Teste de***<nome_da_instância>* para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
+ Use a página **Enviar Email de Teste de**_<instance_name>_ para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
   
  **Perfil do Database Mail**  
  Selecione um perfil da lista do Database Mail. Esse é um campo obrigatório. Se nenhum perfil for mostrado, não há nenhum perfil ou você não tem permissão para um perfil. Use o **Assistente para Configuração do Database Mail** para criar e configurar perfis. Se nenhum perfil for listado, use o Assistente para Configuração do Database Mail para criar um perfil para seu uso.  

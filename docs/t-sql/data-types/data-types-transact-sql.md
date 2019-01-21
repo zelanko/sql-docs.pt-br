@@ -18,18 +18,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71c0f046ad2f831cdff7136bd92059fd4a24bfce
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2b86774b2245f8cfd505921045b5d9426d08b41f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970427"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300343"
 ---
 # <a name="data-types-transact-sql"></a>Tipos de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ajude a aprimorar os documentos do SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cada coluna, variável local, expressão e parâmetro tem um tipo de dados relacionado. O tipo de dados é um atributo que especifica o tipo de dados que o objeto pode manter: dados inteiros, dados de caractere, dados monetários, data e hora, cadeiasx de caracteres binárias etc.
   
@@ -37,7 +37,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece um conjunto 
   
 Quando duas expressões que possuem diferentes tipos de dados, ordenações, precisão, escala ou comprimento são combinadas por um operador, as características do resultado são determinadas pelo seguinte:
 -   O tipo de dados do resultado é determinado pela aplicação das regras de precedência de tipos de dados em relação aos tipos de dados de expressões de entrada. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
--   A ordenação do resultado é determinada pelas regras de precedência de ordenação quando o tipo de dados do resultado é **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext**. Para obter mais informações, consulte [Precedência de ordenação &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+-   A ordenação do resultado é determinada pelas regras de precedência de ordenação quando o tipo de dados do resultado é **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext**. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
 -   A precisão, a escala e o tamanho do resultado dependem da precisão, da escala e do tamanho das expressões de entrada. Para obter mais informações, consulte [Precisão, escala e comprimento &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece sinônimos de tipo de dados para compatibilidade com ISO. Para obter mais informações, consulte [Sinônimos de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).

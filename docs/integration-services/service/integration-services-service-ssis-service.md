@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67ab5eafeda0ca4c01d21b0fc2379ee7b9efc60d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cac8d0132d5b59d8840071254f9f71a84d2e89ed
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392419"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256521"
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
   Os tópicos desta seção discutem o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um serviço do Windows para gerenciamento de pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Este serviço não é exigido para criar, salvar e executar pacotes do Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dá suporte ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "52392419"
   
  Você pode instalar apenas uma única instância do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador. O serviço não é específico de uma determinada instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Você se conecta ao serviço usando o nome do computador no qual ele está sendo executado.  
   
- Você pode gerenciar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando um dos seguintes snap-ins do MMC (Console de Gerenciamento Microsoft): SQL Server Configuration Manager ou Serviços. Antes que você possa gerenciar pacotes em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é preciso se certificar que o serviço foi iniciado.  
+ Você pode gerenciar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando um dos seguintes snap-ins do MMC (Console de Gerenciamento Microsoft): SQL Server Configuration Manager ou Services. Antes que você possa gerenciar pacotes em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é preciso se certificar que o serviço foi iniciado.  
   
  Por padrão, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado para gerenciar pacotes no banco de dados msdb de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que é instalada ao mesmo tempo em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não for instalada ao mesmo tempo, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será configurado para gerenciar pacotes no banco de dados msdb de uma instância local padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para gerenciar pacotes que estão armazenados em uma instância nomeada ou remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou em várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)], é preciso modificar o arquivo de configuração para o serviço.
   
@@ -160,6 +160,28 @@ ms.locfileid: "52392419"
   
 8.  Reinicie o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
 
+### <a name="event-logged-when-permissions-are-missing"></a>Evento registrado em log quando permissões estão ausentes
+
+Se a conta de serviço do SQL Server Agent não tiver o DCOM de Integration Services **[Permissões para Inicialização e Ativação]**, o evento a seguir será adicionado aos logs de eventos do sistema quando o SQL Server Agent executar os trabalhos do pacote do SSIS:
+
+```
+Log Name: System
+Source: **Microsoft-Windows-DistributedCOM**
+Date: 1/9/2019 5:42:13 PM
+Event ID: **10016**
+Task Category: None
+Level: Error
+Keywords: Classic
+User: NT SERVICE\SQLSERVERAGENT
+Computer: testmachine
+Description:
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+and APPID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
+
 ## <a name="configure-the-service"></a>Configurar o serviço
  
 Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o processo de instalação cria e instala o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Este arquivo de configuração contém as seguintes configurações:  
@@ -187,7 +209,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +254,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  

@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629017"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226523"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,52 +56,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *sequence_name*  
- Especifica o nome exclusivo pelo qual a sequência é conhecida no banco de dados. O tipo é **sysname**.  
+*sequence_name*  
+Especifica o nome exclusivo pelo qual a sequência é conhecida no banco de dados. O tipo é **sysname**.  
   
- [ built_in_integer_type | user-defined_integer_type  
- Uma sequência pode ser definida como qualquer tipo de inteiro. Os seguintes tipos são permitidos:  
+[ built_in_integer_type | user-defined_integer_type  
+Uma sequência pode ser definida como qualquer tipo de inteiro. Os seguintes tipos são permitidos:  
   
 -   **tinyint** – intervalo de 0 a 255  
-  
 -   **smallint** – intervalo de -32.768 a 32.767  
-  
 -   **int** – intervalo de -2.147.483.648 a 2.147.483.647  
-  
 -   **bigint** – intervalo 9.223.372.036.854.775.808 a 9.223.372.036.854.775.807  
-  
 -   **decimal** e **numeric** com uma escala de 0.  
-  
 -   Qualquer tipo de dados definido pelo usuário (tipo de alias) que seja baseado em um dos tipos permitidos.  
   
- Se nenhum tipo de dados for fornecido, o tipo de dados **bigint** será usado como o padrão.  
+Se nenhum tipo de dados for fornecido, o tipo de dados **bigint** será usado como o padrão.  
   
- START WITH \<constant>  
- O primeiro valor retornado pelo objeto de sequência. O valor **START** deve ser menor ou igual ao valor máximo e maior ou igual ao valor mínimo do objeto de sequência. O valor de início padrão para um novo objeto de sequência é o valor mínimo para um objeto de sequência e o valor máximo de um objeto de sequência decrescente.  
+START WITH \<constant>  
+O primeiro valor retornado pelo objeto de sequência. O valor **START** deve ser menor ou igual ao valor máximo e maior ou igual ao valor mínimo do objeto de sequência. O valor de início padrão para um novo objeto de sequência é o valor mínimo para um objeto de sequência e o valor máximo de um objeto de sequência decrescente.  
   
- INCREMENT BY \<constant>  
- O valor usado para incrementar (ou decrementar, se negativo) o valor do objeto de sequência para cada chamada da função **NEXT VALUE FOR**. Se o incremento for um valor negativo, o objeto de sequência será decrescente, caso contrário, será crescente. O incremento não pode ser 0. O incremento padrão para um novo objeto de sequência é 1.  
+INCREMENT BY \<constant>  
+O valor usado para incrementar (ou decrementar, se negativo) o valor do objeto de sequência para cada chamada da função **NEXT VALUE FOR**. Se o incremento for um valor negativo, o objeto de sequência será decrescente, caso contrário, será crescente. O incremento não pode ser 0. O incremento padrão para um novo objeto de sequência é 1.  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- Especifica os limites do objeto de sequência. O valor mínimo padrão de um novo objeto de sequência é o valor mínimo do tipo de dados do objeto de sequência. É zero para o tipo de dados **tinyint** e um número negativo para todos os outros tipos de dados.  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+Especifica os limites do objeto de sequência. O valor mínimo padrão de um novo objeto de sequência é o valor mínimo do tipo de dados do objeto de sequência. É zero para o tipo de dados **tinyint** e um número negativo para todos os outros tipos de dados.  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- Especifica os limites do objeto de sequência. O valor máximo padrão para um novo objeto de sequência é o valor máximo do tipo de dados do objeto de sequência.  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+Especifica os limites do objeto de sequência. O valor máximo padrão para um novo objeto de sequência é o valor máximo do tipo de dados do objeto de sequência.  
   
- [ CYCLE | **NO CYCLE** ]  
- Propriedade que especifica se o objeto de sequência deve reiniciar do valor mínimo (ou máximo para objetos de sequência decrescente) ou deve lançar uma exceção quando seu valor mínimo ou máximo é excedido. A opção de ciclo padrão para novos objetos de sequência é NO CYCLE.  
+[ CYCLE | **NO CYCLE** ]  
+Propriedade que especifica se o objeto de sequência deve reiniciar do valor mínimo (ou máximo para objetos de sequência decrescente) ou deve lançar uma exceção quando seu valor mínimo ou máximo é excedido. A opção de ciclo padrão para novos objetos de sequência é NO CYCLE.  
   
- Observe que o ciclo é reiniciado a partir do valor mínimo ou máximo, não do valor inicial.  
+> [!NOTE]
+> Clicar em SEQUENCE reinicia do valor mínimo ou máximo, não do valor inicial.  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- Aumenta o desempenho de aplicativos que usam objetos de sequência por meio da minimização do número de E/S de disco necessárias para gerar números de sequência. Padrões para o CACHE.  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+Aumenta o desempenho de aplicativos que usam objetos de sequência por meio da minimização do número de E/S de disco necessárias para gerar números de sequência. Padrões para o CACHE.  
   
- Por exemplo, se um tamanho de cache de 50 for escolhido, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não manterá 50 valores individuais em cache. Somente permanecem em cache o valor atual e o número de valores restantes no cache. Isso significa que a quantidade de memória necessária para armazenar o cache sempre é duas instâncias do tipo de dados do objeto de sequência.  
+Por exemplo, se um tamanho de cache de 50 for escolhido, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não manterá 50 valores individuais em cache. Somente permanecem em cache o valor atual e o número de valores restantes no cache. Isso significa que a quantidade de memória necessária para armazenar o cache sempre é duas instâncias do tipo de dados do objeto de sequência.  
   
 > [!NOTE]  
->  Se a opção de cache for habilitada sem a especificação de um tamanho de cache, o Mecanismo de Banco de Dados selecionará um tamanho. Porém, os usuários não devem confiar que a seleção será consistente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode alterar o método de cálculo do tamanho do cache sem aviso prévio.  
+> Se a opção de cache for habilitada sem a especificação de um tamanho de cache, o Mecanismo de Banco de Dados selecionará um tamanho. Porém, os usuários não devem confiar que a seleção será consistente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode alterar o método de cálculo do tamanho do cache sem aviso prévio.  
   
- Quando criado com a opção **CACHE**, um desligamento inesperado (uma falta de energia, por exemplo) pode acarretar a perda dos números de sequência restantes no cache.  
+Quando criado com a opção **CACHE**, um desligamento inesperado (uma falta de energia, por exemplo) pode acarretar a perda dos números de sequência restantes no cache.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Os números de sequência são gerados fora do escopo da transação atual. Eles serão consumidos se a transação que usa o número de sequência for confirmada ou revertida.  
@@ -167,7 +163,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  O exemplo a seguir concede ao usuário permissão AdventureWorks\Larry criar sequências no esquema de teste.  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -185,7 +181,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Para criar o esquema de Teste, execute a instrução a seguir.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -193,17 +189,17 @@ GO
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Criando uma sequência que aumenta em 1  
  No exemplo a seguir, Thierry cria uma sequência chamada CountBy1, que aumenta em incrementos de um cada vez que é utilizada.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
 GO  
 ```  
   
-### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. Criando uma sequência que diminui em 1  
+### <a name="b-creating-a-sequence-that-decreases-by-1"></a>b. Criando uma sequência que diminui em 1  
  O exemplo a seguir inicia em 0 e conta em decrementos negativos de um cada vez que é usada.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -213,7 +209,7 @@ GO
 ### <a name="c-creating-a-sequence-that-increases-by-5"></a>C. Criando uma sequência que aumenta em 5  
  O exemplo a seguir cria uma sequência que aumenta em incrementos de 5 cada vez que é utilizada.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
@@ -223,7 +219,7 @@ GO
 ### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. Criando uma sequência que começa com um número designado  
  Depois de importar uma tabela, Thierry percebe que o número de ID mais alto usado é 24.328. Thierry precisa de uma sequência que gerará números que comecem em 24.329. O código a seguir cria uma sequência que inicia com 24.329 e incrementos de 1.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
@@ -233,13 +229,13 @@ GO
 ### <a name="e-creating-a-sequence-using-default-values"></a>E. Criando uma sequência usando valores padrão  
  O exemplo a seguir cria uma sequência que usa os valores padrão.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  Execute a instrução a seguir para exibir as propriedades da sequência.  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -258,15 +254,15 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Criando uma sequência com um tipo de dados específico  
  O exemplo a seguir cria uma sequência usando o tipo de dados **smallint**, com um intervalo de -32.768 a 32.767.  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. Criando uma sequência com todos os argumentos  
  O exemplo a seguir cria uma sequência chamada DecSeq usando o tipo de dados **decimal**, com um intervalo de 0 a 255. A sequência começa com 125 e é incrementada em 25 sempre que um número é gerado. Como a sequência é configurada para executar um ciclo quando o valor excede o valor máximo de 200, a sequência é reiniciada no valor mínimo de 100.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -280,7 +276,7 @@ CREATE SEQUENCE Test.DecSeq
   
  Execute a instrução a seguir para visualizar o primeiro valor; a opção `START WITH` de 125.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -290,7 +286,7 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  Execute o código a seguir para confirmar o tamanho do cache e visualizar o valor atual.  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  

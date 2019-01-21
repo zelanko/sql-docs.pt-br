@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c65bb6348afa4d095971b5833f26e8e33dd5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666756"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298603"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Avalia os argumentos na ordem e retorna o valor atual da primeira expressão que não é avaliada como `NULL` inicialmente. Por exemplo, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` retorna o terceiro valor porque esse é o primeiro valor que não é nulo. 
   
@@ -125,7 +128,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>B. Executando um exemplo complexo  
+### <a name="b-running-a-complex-example"></a>b. Executando um exemplo complexo  
  No exemplo a seguir, a tabela `wages` inclui três colunas que contêm informações sobre o salário anual dos funcionários: valor por hora, salário e comissão. No entanto, um funcionário recebe apenas um tipo de pagamento. Para determinar o valor total pago a todos os funcionários, use a função `COALESCE` para receber apenas o valor não nulo encontrado em `hourly_wage`, `salary` e `commission`.  
   
 ```sql  
@@ -220,7 +223,7 @@ FROM Products ;
   
  Observe que na primeira linha, o valor de `FirstNotNull` é `PN1278`, não `Socks, Mens`. Isso ocorre porque a coluna `Name` não foi especificada como um parâmetro para `COALESCE` no exemplo.  
   
-### <a name="d-complex-example"></a>D. Exemplo complexo  
+### <a name="d-complex-example"></a>D: Exemplo complexo  
  O exemplo a seguir usa `COALESCE` para comparar os valores em três colunas e retornar apenas o valor não nulo encontrado nas colunas.  
   
 ```sql  

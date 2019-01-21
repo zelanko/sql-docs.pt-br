@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535278"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136066"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "52535278"
   
      Atualizar o Assinante para o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou para uma versão posterior atualiza o Merge Agent usado pelas assinaturas do Assinante. Para se beneficiar dos muitos recursos e otimizações de desempenho, é necessário o Merge Agent do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou de uma versão posterior.  
   
--   Se uma assinatura for sincronizada em uma conexão rápida e as alterações forem enviadas do Editor e do Assinante, use o parâmetro **–ParallelUploadDownload** para o Agente de Mesclagem.  
+-   Se uma assinatura for sincronizada em uma conexão rápida e as alterações forem enviadas do Publicador e do assinante, use o parâmetro **–ParallelUploadDownload** para o Agente de Mesclagem.  
   
      O[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um novo parâmetro no Agente de Mesclagem: **–ParallelUploadDownload**. Definir esse parâmetro permite ao Merge Agent processar em paralelo as mudanças carregadas no Publicador e as baixadas no Assinante. É útil em ambientes com grandes volumes e largura de banda de rede alta. Os parâmetros de agente podem ser especificados em perfis de agente e na linha de comando. Para obter mais informações, consulte:  
   
@@ -136,16 +136,16 @@ ms.locfileid: "52535278"
   
 -   Gere os instantâneos previamente e/ou permita que os Assinantes solicitem a geração e a aplicação de instantâneos, na primeira vez que fizerem a sincronização.  
   
-     Use uma, ou ambas as opções, para fornecer instantâneos para publicações que usam filtros com parâmetros. Se você não especificar uma dessas opções, as assinaturas serão inicializadas usando uma série de instruções SELECT e INSERT, ao invés de usar o utilitário **bcp** , esse processo é muito mais lento. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Use uma, ou ambas as opções, para fornecer instantâneos para publicações que usam filtros com parâmetros. Se você não especificar uma dessas opções, as assinaturas serão inicializadas usando uma série de instruções SELECT e INSERT, ao invés de usar o utilitário **bcp** , esse processo é muito mais lento. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>Considerações sobre manutenção e monitoramento  
   
 -   Esporadicamente, indexe novamente as tabelas do sistema de replicação de mesclagem.  
   
-     Como parte da manutenção da replicação de mesclagem, verifique esporadicamente o crescimento das tabelas do sistema associadas à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**e **MSmerge_past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte da manutenção para replicação de mesclagem, verifique ocasionalmente o crescimento das tabelas do sistema associado à replicação de mesclagem: **MSmerge_contents**, **MSmerge_genhistory** e **MSmerge_tombstone**, **MSmerge_current_partition_mappings** e **MSmerge_past_partition_mappings**. Periodicamente, indexe novamente essas tabelas. Para obter mais informações, veja [Reorganizar e recriar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Monitore o desempenho de sincronização usando a guia **Histórico de Sincronização** no Replication Monitor.  
   
-     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para mais informações sobre como exibir estatísticas detalhadas, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, confira [Exibir informações e executar tarefas usando o Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   
