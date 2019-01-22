@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507387"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326637"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Propriedade)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  Apenas uma coluna de identidade pode ser criada por tabela.  
   
- Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Configurar seed ou increment como um valor diferente de 1 resulta no seguinte erro: o uso de valores seed e increment diferentes de 1 não é compatível com tabelas com otimização de memória.  
+ Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Definir a semente ou o incremento para um valor diferente de 1 resulta no seguinte erro: Não há suporte para o uso de valores de semente e incremento diferentes de 1 com tabelas com otimização de memória.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -110,7 +110,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. Usando sintaxe genérica para localizar intervalos em valores de identidade  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>b. Usando sintaxe genérica para localizar intervalos em valores de identidade  
  O exemplo a seguir mostra a sintaxe genérica para localizar intervalos em valores de identidade quando os dados são removidos.  
   
 > [!NOTE]  
