@@ -124,7 +124,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Armênio (Armênia)|Cyrillic_General_100_|Não disponível|  
 |Assamês (Índia)|Assamese_100_ <sup>1</sup>|Não disponível|  
 |Bashkir (Rússia)|Bashkir_100_|Não disponível|  
-|Basco (País Basco)|Latin1_General_100_|Não disponível|  
+|Basco (Basco)|Latin1_General_100_|Não disponível|  
 |Bengali (Bangladesh)|Bengali_100_<sup>1</sup>|Não disponível|  
 |Bengali (India)|Bengali_100_<sup>1</sup>|Não disponível|  
 |Bósnio (Bósnia e Herzegovina, Cirílico)|Bosnian_Cyrillic_100_|Não disponível|  
@@ -140,7 +140,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Inglês (Malásia)|Latin1_General_100_|Não disponível|  
 |Inglês (Cingapura)|Latin1_General_100_|Não disponível|  
 |Filipino (Filipinas)|Latin1_General_100_|Não disponível|  
-|Frisão (Holanda)|Frisian_100_|Não disponível|  
+|Frisão (Países Baixos)|Frisian_100_|Não disponível|  
 |Georgiano (Geórgia)|Cyrillic_General_100_|Não disponível|  
 |Groenlandês (Groenlândia)|Danish_Greenlandic_100_|Não disponível|  
 |Gujarati (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
@@ -171,7 +171,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Norueguês, (Bokmål, Noruega)|Norwegian_100_|Não disponível|  
 |Norueguês (Nynorsk, Noruega)|Norwegian_100_|Não disponível|  
 |occitânico (França)|French_100_|Não disponível|  
-|Oriá (Índia)|Indic_General_100_<sup>1</sup>|Não disponível|  
+|Odia (Índia)|Indic_General_100_<sup>1</sup>|Não disponível|  
 |Pashto (Afeganistão)|Pashto_100_<sup>1</sup>|Não disponível|  
 |Persa (Irã)|Persian_100_|Não disponível|  
 |panjabi (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
@@ -221,7 +221,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
   
  <sup>1</sup>Agrupamentos do Windows somente em Unicode podem ser aplicados apenas a dados nos níveis de coluna ou de expressão. Eles não podem ser usados como agrupamentos de banco de dados ou de servidor.  
   
- <sup>2</sup>Como o agrupamento de chinês (Taiwan), chinês (Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.  
+ <sup>2</sup>Como o agrupamento de chinês (Taiwan), chinês (RAE de Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   

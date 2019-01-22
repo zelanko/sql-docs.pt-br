@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420697"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361666"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Referência da API do Always Encrypted para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,11 +37,12 @@ ms.locfileid: "52420697"
 |Nova palavra-chave de cadeia de conexão:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled habilita a funcionalidade Always Encrypted na conexão e columnEncryptionSetting=Disabled a desabilita. Os valores aceitos são Enabled/Disabled. O padrão é Disabled.|  
 |Novos métodos:<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|Permite que você defina/atualize/remova uma lista de caminhos de chave confiáveis para um servidor de banco de dados. Se, durante o processamento de uma consulta de aplicativo, o driver receber um caminho de chave que não esteja na lista, a consulta falhará. Essa propriedade fornece proteção adicional contra ataques de segurança que envolvem o envio de um SQL Server comprometido fornecendo caminhos de chave falsos, que podem levar à perda das credenciais do repositório de chaves.|  
 |Novo método:<br /><br /> `public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|Retorna uma lista de caminhos confiáveis de chave para um servidor de banco de dados.|  
-|Novo método:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Permite que você registre os provedores de repositório de chaves personalizado. É um dicionário que mapeia nomes de provedor de repositório de chaves para implementações do provedor de repositório de chaves.<br /><br /> Para usar o repositório de chaves da JVM, você precisa criar uma instância de um objeto SQLServerColumnEncryptionJVMKeyStoreProvider com credenciais do repositório de chaves da JVM e registrá-lo com o driver. O nome desse provedor precisa ser ‘MSSQL_JVM_KEYSTORE’.<br /><br /> Para usar o armazenamento do Azure Key Vault, você precisa instanciar um objeto de SQLServerColumnEncryptionAzureKeyStoreProvider e registrá-lo com o driver. O nome para este provedor deve ser 'AZURE_KEY_VAULT'.|
+|Novo método:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Permite que você registre os provedores de repositório de chaves personalizado. É um dicionário que mapeia nomes de provedor de repositório de chaves para implementações do provedor de repositório de chaves.<br /><br /> Para usar o repositório de chaves da JVM, você precisa criar uma instância de um objeto SQLServerColumnEncryptionJVMKeyStoreProvider com credenciais do repositório de chaves da JVM e registrá-lo com o driver. O nome desse provedor deve ser "MSSQL_JVM_KEYSTORE".<br /><br /> Para usar o armazenamento do Azure Key Vault, você precisa instanciar um objeto de SQLServerColumnEncryptionAzureKeyStoreProvider e registrá-lo com o driver. O nome para este provedor deve ser 'AZURE_KEY_VAULT'.|
 |`public final boolean getSendTimeAsDatetime()`|Retorna a configuração da propriedade de conexão sendTimeAsDatetime.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifica a configuração da propriedade de conexão sendTimeAsDatetime.|
 
  **Classe SQLServerConnectionPoolProxy**
+ 
 |Nome|Descrição|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | Retorna a configuração da propriedade de conexão sendTimeAsDatetime.|
@@ -74,8 +75,8 @@ ms.locfileid: "52420697"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Descriptografa o valor criptografado especificado de uma coluna da chave de criptografia. O valor criptografado deve ser criptografado usando o certificado com o caminho da chave especificado e o algoritmo especificado.<br /><br /> **O formato do caminho da chave deve ser um dos seguintes:**<br /><br /> Impressão digital: < certificate_thumbprint ><br /><br /> Alias: < certificate_alias ><br /><br /> (Substitui SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (cadeia de caracteres, cadeia de caracteres, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Criptografa uma chave de criptografia de coluna usando o certificado com o caminho da chave especificado e o algoritmo especificado.<br /><br /> **O formato do caminho da chave deve ser um dos seguintes:**<br /><br /> Impressão digital: < certificate_thumbprint ><br /><br /> Alias: < certificate_alias ><br /><br /> (Substitui SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (cadeia de caracteres, cadeia de caracteres, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Descriptografa o valor criptografado especificado de uma coluna da chave de criptografia. O valor criptografado deve ser criptografado usando o certificado com o caminho da chave especificado e o algoritmo especificado.<br /><br /> **O formato do caminho da chave deve ser um dos seguintes:**<br /><br /> Impressão digital: < certificate_thumbprint ><br /><br /> Alias: < certificate_alias ><br /><br /> (Substitui SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Criptografa uma chave de criptografia de coluna usando o certificado com o caminho da chave especificado e o algoritmo especificado.<br /><br /> **O formato do caminho da chave deve ser um dos seguintes:**<br /><br /> Impressão digital: < certificate_thumbprint ><br /><br /> Alias: < certificate_alias ><br /><br /> (Substitui SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Define o nome deste provedor de repositório de chaves.|
 |`public String getName ()`|Obtém o nome deste provedor de repositório de chaves.|
   
@@ -93,8 +94,8 @@ ms.locfileid: "52420697"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes uma chave de criptografia de coluna criptografada (CEK). Essa descriptografia é realizada por um algoritmo de criptografia RSA que usa a chave assimétrica especificada pelo caminho da chave mestra.<br />(Substitui SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (cadeia de caracteres, cadeia de caracteres, Byte[]).) |  
-| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Criptografa uma chave de criptografia de coluna, fornecendo a chave mestra da coluna especificada para o algoritmo especificado.<br />(Substitui SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (cadeia de caracteres, cadeia de caracteres, Byte[]).) |  
+| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes uma chave de criptografia de coluna criptografada (CEK). Essa descriptografia é realizada por um algoritmo de criptografia RSA que usa a chave assimétrica especificada pelo caminho da chave mestra.<br />(Substitui SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).) |  
+| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Criptografa uma chave de criptografia de coluna, fornecendo a chave mestra da coluna especificada para o algoritmo especificado.<br />(Substitui SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).) |  
 |`public void setName (String name)`|Define o nome deste provedor de repositório de chaves.|
 |`public String getName ()`|Obtém o nome deste provedor de repositório de chaves.|  
   
@@ -152,6 +153,7 @@ ms.locfileid: "52420697"
 
   
 Novos tipos no **microsoft.sql.Types** classe
+
 |Nome|Descrição|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Usar esses tipos como tipos SQL de destino ao enviar valores de parâmetro **criptografado** datetime, smalldatetime, money, smallmoney, colunas uniqueidentifier usando `setObject()/updateObject()` métodos da API.|  

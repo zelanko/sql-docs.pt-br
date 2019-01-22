@@ -25,7 +25,7 @@ O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma p
 [![Baixar do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [Baixar a versão do SQL Server 2017, agosto de 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
-> Além das alterações abaixo, atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a última versão de CU, consulte [Atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu).
+> Além das alterações abaixo, atualizações cumulativas são liberadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a última versão da atualização cumulativa, consulte [Atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu).
 
 ## <a name="sql-server-2017-database-engine"></a>Mecanismo de Banco de Dados do SQL Server 2017
 

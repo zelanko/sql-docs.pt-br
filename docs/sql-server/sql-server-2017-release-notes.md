@@ -23,7 +23,7 @@ ms.locfileid: "51703764"
 Este tópico descreve as limitações e os problemas com o SQL Server 2017. Para obter informações relacionadas, consulte:
 - [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notas de versão do SQL Server no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [Atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu) para obter informações sobre a última versão de CU (atualização cumulativa)
+- [Atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu) para obter informações sobre a última versão de atualização cumulativa
 
 **Experimente o SQL Server!**
 - [![Baixar no Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Baixar o SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)

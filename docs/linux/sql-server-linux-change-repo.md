@@ -33,7 +33,7 @@ Quando você instala o SQL Server no Linux, você deve configurar um repositóri
 |---|---|---|
 | **Visualização (2017)** | **mssql-server** | Repositório do SQL Server 2017 CTP e RC (Descontinuado). |
 | **Visualização (2019)** | **MSSQL-server-visualização** | Visualização do SQL Server 2019 e repositório RC. |
-| **CU** | **mssql-server-2017** | Repositório do SQL Server 2017 atualização cumulativa (AC). |
+| **AC** | **mssql-server-2017** | Repositório do SQL Server 2017 atualização cumulativa (AC). |
 | **GDR** | **mssql-server-2017-gdr** | Repositório do SQL Server 2017 GDR somente para atualizações críticas. |
 
 ## <a id="cuversusgdr"></a> Atualização cumulativa versus GDR
