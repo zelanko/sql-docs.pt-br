@@ -1,7 +1,7 @@
 ---
 title: Configuração de protocolo de rede padrão do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 197b694f0ff68b459bff7517bbf5701a0452d48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f98a6e019790e7bc4e102a400c6f28f53c344e92
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622084"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419612"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuração de protocolo de rede padrão do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +32,16 @@ Use o nó Configuração de Rede do [!INCLUDE[ssNoVersion_md](../../includes/ssn
 
 A tabela a seguir descreve a configuração após a instalação.
 
-Edição | Nova instalação versus instalação anterior está presente | Memória compartilhada | TCP/IP    | Pipes nomeados
+|Edição | Nova instalação versus instalação anterior está presente | Memória compartilhada | TCP/IP | Pipes nomeados|
 | -------- | -- | -- | -- | --  |  
-Enterprise  | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
-Standard    | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
-Web | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
-Desenvolvedor   | Nova instalação  | Habilitado   | Desabilitado  | Desabilitado para conexões de rede.
-Evaluation  | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
-SQL Server Express  | Nova instalação  | Habilitado   | Desabilitado  | Desabilitado para conexões de rede.
-Todas as edições    | A instalação anterior está presente, mas não está sendo atualizada.   | Igual à nova instalação  | Igual à nova instalação  | Igual à nova instalação
-Todas as edições    | UPGRADE   | Habilitado   | As configurações da instalação anterior são preservadas.    | As configurações da instalação anterior são preservadas.
+|Enterprise | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
+|Standard | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
+|Web | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
+|Desenvolvedor | Nova instalação | Habilitado | Desabilitado | Desabilitado para conexões de rede.|
+|Evaluation | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
+|SQL Server Express | Nova instalação | Habilitado | Desabilitado | Desabilitado para conexões de rede.|
+|Todas as edições | A instalação anterior está presente, mas não está sendo atualizada. | Igual à nova instalação | Igual à nova instalação | Igual à nova instalação|
+|Todas as edições | UPGRADE | Habilitado | As configurações da instalação anterior são preservadas. | As configurações da instalação anterior são preservadas.|
 
 
 >[!NOTE]

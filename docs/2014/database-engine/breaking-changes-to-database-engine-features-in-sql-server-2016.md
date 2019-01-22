@@ -1,7 +1,7 @@
 ---
 title: Recursos no SQL Server 2014 do mecanismo de alterações significativas ao banco de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375268"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420201"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações em recursos do Mecanismo de Banco de Dados que causam interrupção no SQL Server 2014
   Este tópico descreve as alterações recentes na [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -42,7 +42,6 @@ ms.locfileid: "53375268"
 |ALTER TABLE|A instrução ALTER TABLE permite apenas nomes de tabela de duas partes (schema.object). Especificar um nome de tabela usando os formatos a seguir agora falhará em tempo de compilação com o erro 117:<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> As versões anteriores que especificam que o formato server.database.schema.table retornaram o erro 4902. A especificação do formato .database.schema.table ou do formato ..schema.table foi bem-sucedida. Para resolver o problema, remova o uso de um prefixo de 4 partes.|  
 |Navegando em metadados|Consultar uma exibição usando FOR BROWSE ou SET NO_BROWSETABLE ON agora retorna os metadados da exibição, não os metadados do objeto subjacente. Esse comportamento agora corresponde a outros métodos de navegação em metadados.|  
 |SOUNDEX|No nível de compatibilidade de banco de dados 110, a função SOUNDEX implementa novas regras que podem fazer com que os valores computados pela função sejam diferentes dos valores computados sob os níveis de compatibilidade anteriores. Após a atualização para o nível de compatibilidade 110, talvez seja necessário recriar os índices, os heaps ou as restrições CHECK que usam a função SOUNDEX. Para obter mais informações, consulte [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
- para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
 |Mensagem de contagem de linhas para instruções DML com falha|Em [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssDE](../includes/ssde-md.md)] enviará consistentemente o token TDS DONE com RowCount: 0 para clientes quando uma instrução DML falhar. Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], um valor incorreto de -1 é enviado ao cliente quando a instrução DML que falha está contida em um bloco TRY-CATCH é parametrizada automaticamente pelo [!INCLUDE[ssDE](../includes/ssde-md.md)] ou o bloco TRY-CATCH não está no mesmo nível da instrução que falhou. Por exemplo, se um bloco TRY-CATCH chamar um procedimento armazenado e uma instrução DML no procedimento falhar, o cliente receberá incorretamente um valor -1.<br /><br /> Os aplicativos que confiarem nesse comportamento incorreto falharão.|  
 |SERVERPROPERTY ('edição')|Edição instalada do produto da instância do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Use o valor dessa propriedade para determinar os recursos e os limites, como o número máximo de CPUs que têm suporte do produto instalado.<br /><br /> Com base na edição instalada do Enterprise, isso poderá retornar 'Enterprise Edition' ou ' Enterprise Edition: Licenciamento baseado em núcleo '. As edições Enterprise são diferenciadas com base na capacidade de computação máxima por uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre limites de capacidade de computação na [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|O `CREATE LOGIN WITH PASSWORD = '` *senha* `' HASHED` opção não pode ser usada com os hashes criados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 ou anterior.|  
@@ -146,13 +145,13 @@ ms.locfileid: "53375268"
 #### <a name="affected-xquery-functions-and-operators"></a>Funções e operadores XQuery afetados  
  Agora, as seguintes funções e operadores XQuery manipulam pares substitutos UTF-16 corretamente no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]:  
   
--   **Fn: string-comprimento**. No entanto, se um par alternativo inválido ou parcial for passado como um argumento, o comportamento de **comprimento de cadeia de caracteres** é indefinido.  
+-   **fn:string-length**. No entanto, se um par alternativo inválido ou parcial for passado como um argumento, o comportamento de **comprimento de cadeia de caracteres** é indefinido.  
   
--   **Fn: substring**.  
+-   **fn:substring**.  
   
--   **Fn: contém**. No entanto, se um par substituto parcial for passado como um valor **contém** podem retornar resultados inesperados, pois pode encontrar o par substituto parcial contido no par substituto bem formado.  
+-   **fn:contains**. No entanto, se um par substituto parcial for passado como um valor **contém** podem retornar resultados inesperados, pois pode encontrar o par substituto parcial contido no par substituto bem formado.  
   
--   **Fn: concat**. No entanto, se um par substituto parcial for passado como um valor **concat** pode produzir pares substitutos incorretos ou parciais.  
+-   **fn:concat**. No entanto, se um par substituto parcial for passado como um valor **concat** pode produzir pares substitutos incorretos ou parciais.  
   
 -   Operadores de comparação e o **Ordenar por** cláusula. Operadores de comparação incluem +, \<, >, \<=, > =, `eq`, `lt`, `gt`, `le`, e `ge`.  
   
@@ -179,9 +178,9 @@ ms.locfileid: "53375268"
   
  As seguintes funções e operadores demonstram o novo comportamento descrito acima somente quando o nível de compatibilidade é 110 ou superior:  
   
--   **Fn: contém**.  
+-   **fn:contains**.  
   
--   **Fn: concat**.  
+-   **fn:concat**.  
   
 -   operadores de comparação e **Ordenar por** cláusula  
   
@@ -189,9 +188,9 @@ ms.locfileid: "53375268"
   
  As funções a seguir demonstram o novo comportamento descrito acima somente quando o URI do namespace padrão corresponde ao namespace na recomendação final, ou seja, [ http://www.w3.org/2005/xpath-functions ](http://www.w3.org/2005/xpath-functions). Quando o nível de compatibilidade é 110 ou superior, por padrão, o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] associa o namespace da função padrão a esse namespace. No entanto, essas funções demonstram o novo comportamento quando esse namespace é usado, independentemente do nível de compatibilidade.  
   
--   **Fn: string-comprimento**  
+-   **fn:string-length**  
   
--   **Fn: substring**  
+-   **fn:substring**  
   
 ##  <a name="KJKatmai"></a> Alterações recentes no SQL Server 2008/SQL Server 2008 R2  
  Esta seção contém as últimas alterações introduzidas no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nenhuma alteração foi introduzida no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  

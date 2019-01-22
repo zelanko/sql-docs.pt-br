@@ -6,28 +6,28 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01585c399d648bbc72d7d2811d24b2558b947bff
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e95415c689fda43c2a9d118713c96d0a1d531904
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400599"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419991"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
+
 Descreve como os dados de backup e restauração funcionam para o Parallel Data Warehouse (PDW). Operações de backup e restauração são usadas para recuperação de desastres. Backup e restauração também podem ser usados para copiar um banco de dados de um dispositivo para outro dispositivo.  
     
-## <a name="BackupRestoreBasics"></a>Noções básicas sobre backup e restauração  
+## <a name="BackupRestoreBasics"></a>Noções básicas sobre backup e restauração
+
 Um PDW *backup do banco de dados* é uma cópia de um banco de dados do dispositivo, armazenado em um formato para que possa ser usado para restaurar o banco de dados original em um dispositivo.  
   
 Um backup de banco de dados PDW é criado com o [BACKUP do banco de dados](../t-sql/statements/backup-database-parallel-data-warehouse.md) instrução t-sql e formatada para uso com o [RESTAURAR banco de dados](../t-sql/statements/restore-database-parallel-data-warehouse.md) instrução; não é utilizável para qualquer outra finalidade. O backup só pode ser restaurado em um dispositivo com o mesmo número ou um número maior de nós de computação.  
   
 <!-- MISSING LINKS
-
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
-
 -->
   
 PDW usa tecnologia de backup do SQL Server para fazer backup e restaurar bancos de dados do dispositivo. Opções de backup do SQL Server são pré-configurados para usar a compactação de backup. Não é possível definir as opções de backup, como compactação, soma de verificação, tamanho de bloco e contagem de buffer.  
@@ -36,7 +36,8 @@ Backups de banco de dados são armazenados em um ou mais servidores de backup, q
   
 Backups são armazenados no servidor de backup como um conjunto de arquivos no sistema de arquivos do Windows. Um backup de banco de dados PDW só pode ser restaurado para o PDW. No entanto, você pode arquivar backups de banco de dados do servidor de backup para outro local, usando processos padrão da backup de arquivo do Windows. Para obter mais informações sobre servidores de backup, consulte [adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Tipos de backup do banco de dados  
+## <a name="BackupTypes"></a>Tipos de backup do banco de dados
+
 Há dois tipos de dados que precisam de backup: bancos de dados de usuário e bancos de dados do sistema (por exemplo, o banco de dados mestre). PDW não fazer backup de log de transações.  
   
 Um backup de banco de dados completo é um backup de um banco de dados inteiro do PDW. Isso é o tipo de backup padrão. Um backup completo de um banco de dados de usuário inclui usuários de banco de dados e funções de banco de dados. Um backup do mestre inclui logons.  
@@ -49,7 +50,8 @@ Um backup diferencial só há suporte para bancos de dados do usuário. Um backu
   
 Para fazer backup de todo dispositivo, você precisará executar um backup de todos os bancos de dados de usuário e um backup do banco de dados mestre.  
   
-## <a name="BackupProc"></a>Processo de backup do banco de dados  
+## <a name="BackupProc"></a>Processo de backup do banco de dados
+
 O diagrama a seguir mostra o fluxo de dados durante um backup de banco de dados.  
   
 ![O processo de backup PDW](media/backup-process.png "processo de backup do PDW")  
@@ -82,14 +84,16 @@ O processo de backup funciona da seguinte maneira:
   
     -   Você não pode alterar o nome do backup antes de executar uma restauração. O nome do diretório de backup deve corresponder ao nome do nome original do backup. O nome original do backup está localizado no arquivo de backup dentro do diretório de backup. Para restaurar um banco de dados para um nome diferente, você pode especificar o novo nome no comando restore. Por exemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Modos de restauração de banco de dados  
+## <a name="RestoreModes"></a>Modos de restauração de banco de dados
+
 Uma restauração de banco de dados completo recria o banco de dados do PDW, usando os dados no backup do banco de dados. A restauração de banco de dados é realizada pela primeira vez, restaurando um backup completo e, em seguida, opcionalmente, restaurando um backup diferencial. A restauração de banco de dados inclui os usuários de banco de dados e funções de banco de dados.  
   
 Uma restauração somente de cabeçalho retorna as informações de cabeçalho para um banco de dados. Ele não restaura dados para o dispositivo.  
   
 Uma restauração de dispositivo é uma restauração do dispositivo inteiro. Isso inclui a restauração de banco de dados mestre e de todos os bancos de dados do usuário.  
   
-## <a name="RestoreProc"></a>Processo de restauração  
+## <a name="RestoreProc"></a>Processo de restauração
+
 O diagrama a seguir mostra o fluxo de dados durante uma restauração de banco de dados.  
   
 ![Processo de restauração](media/restore-process.png "processo de restauração")  
@@ -126,11 +130,12 @@ Após a redistribuição, cada nó de computação conterá menos dados reais e 
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa de restauração e backup|Description|  
+|Tarefa de restauração e backup|Descrição|  
 |---------------------------|---------------|  
 |Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup ](acquire-and-configure-backup-server.md)|  
 |Fazer backup de um banco de dados.|[BANCO DE DADOS DE BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restaure um banco de dados.|[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Restaure um banco de dados.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 

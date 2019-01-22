@@ -1,7 +1,7 @@
 ---
 title: Importar documentos JSON para o SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: douglasl
 ms.technology: ''
@@ -11,26 +11,28 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 7e208541a49b654874b815c8bf9b4d214db69717
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886921"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419831"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON para o SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Este tópico descreve como importar arquivos JSON para o SQL Server. No momento, há muitos documentos JSON armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores que geram informações são armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>Importar um documento JSON em uma única coluna
+
 **OPENROWSET(BULK)** é uma função com valor de tabela que pode ler dados de qualquer arquivo na unidade local ou rede, se o SQL Server tiver acesso de leitura para esse local. Ela retorna uma tabela com uma única coluna com o conteúdo do arquivo. Há várias opções que podem ser usadas com a função OPENROWSET(BULK), como separadores. Mas, no caso mais simples, você pode simplesmente carregar todo o conteúdo de um arquivo como um valor de texto. (Esse valor grande único é conhecido como um objeto grande de caractere único ou SINGLE_CLOB.) 
 
 Aqui está um exemplo da função **OPENROWSET(BULK)** que lê o conteúdo de um arquivo JSON e retorna para o usuário como um único valor:
 
 ```sql
 SELECT BulkColumn
- FROM OPENROWSET (BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j
+ FROM OPENROWSET (BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j;
 ```
 
 OPENJSON(BULK) lê o conteúdo do arquivo e o retorna em `BulkColumn`.
@@ -51,6 +53,7 @@ SELECT BulkColumn
 Depois de carregar o conteúdo do arquivo JSON, você pode salvar o texto JSON em uma tabela.
 
 ## <a name="import-multiple-json-documents"></a>Importar vários documentos JSON
+
 Use a mesma abordagem para carregar um conjunto de arquivos JSON do sistema de arquivos para variáveis locais um por vez. Suponha que os arquivos são nomeados como `book<index>.json`.
   
 ```sql
@@ -68,7 +71,9 @@ END
 ```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Importar documentos JSON do Azure File Storage
+
 Também é possível usar OPENROWSET(BULK) conforme descrito acima para ler os arquivos JSON de outros locais de arquivos que o SQL Server pode acessar. Por exemplo, o Azure File Storage dá suporte ao protocolo SMB. Como resultado, você pode mapear uma unidade virtual local para o compartilhamento de armazenamento do Azure File usando o seguinte procedimento:
+
 1.  Crie uma conta de armazenamento do arquivo (por exemplo, `mystorage`), um compartilhamento de arquivo (por exemplo, `sharejson`) e uma pasta no Azure File Storage usando o portal do Azure ou o Azure PowerShell.
 2.  Carregar alguns arquivos JSON no compartilhamento de armazenamento de arquivos.
 3.  Crie uma regra de firewall de saída no Firewall do Windows no computador que permite a porta 445. Observe que o seu provedor de serviços de Internet pode bloquear essa porta. Se você receber um erro DNS (erro 53) na etapa seguinte,então você não abriu a porta 445 ou seu ISP está bloqueando a porta.
@@ -122,9 +127,11 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analisar documentos JSON em linhas e colunas
+
 Em vez de ler um arquivo JSON inteiro como um único valor, pode ser útil analisá-lo e retornar os livros no arquivo e suas propriedades em linhas e colunas. Este exemplo usa um arquivo JSON [deste site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) que contém uma lista de livros.
 
 ### <a name="example-1"></a>Exemplo 1
+
 No exemplo mais simples, você pode carregar apenas a lista inteira do arquivo. 
 
 ```sql
@@ -134,6 +141,7 @@ SELECT value
 ```
 
 ### <a name="example-2"></a>Exemplo 2
+
 OPENROWSET lê um valor de texto simples do arquivo, retorna-o como uma BulkColumn e passa para a função OPENJSON. O OPENJSON percorre a matriz de objetos JSON da matriz BulkColumn e retorna um livro em cada linha formatado como JSON:
 
 ```json
@@ -144,6 +152,7 @@ OPENROWSET lê um valor de texto simples do arquivo, retorna-o como uma BulkColu
 ```
 
 ### <a name="example-3"></a>Exemplo 3
+
 A função OPENJSON pode analisar o conteúdo do JSON e transformá-lo em uma tabela ou em um conjunto de resultados. O exemplo a seguir carrega o conteúdo, analisa o JSON carregado e retorna os cinco campos como colunas:
 
 ```sql
@@ -156,12 +165,12 @@ SELECT book.*
 
 Neste exemplo, OPENROWSET(BULK) lê o conteúdo do arquivo e passa esse conteúdo para a função OPENJSON com um esquema definido para a saída. O OPENJSON corresponde a propriedades em objetos JSON usando nomes de coluna. Por exemplo, a propriedade `price` é retornada como uma coluna `price` e convertida para o tipo de dados float. Estes são os resultados:
 
-|ID|Nome|price|pages_i|Autor
+|ID|Nome|price|pages_i|Autor|
 |---|---|---|---|---|
-978-0641723445|O ladrão de raios|12,5|384|Rick Riordan| 
-978-1423103349|O mar de monstros|6,49|304|Rick Riordan| 
-978-1857995879|O mundo de Sofia: Os filósofos gregos|3.07|64|Jostein Gaarder| 
-978-1933988177|Lucene em ação, Second Edition|30,5|475|Michael McCandless|
+|978-0641723445|O ladrão de raios|12,5|384|Rick Riordan| 
+|978-1423103349|O mar de monstros|6,49|304|Rick Riordan| 
+|978-1857995879|O mundo de Sofia: Os filósofos gregos|3.07|64|Jostein Gaarder| 
+|978-1933988177|Lucene em ação, Second Edition|30,5|475|Michael McCandless|
 ||||||
 
 Agora você pode retornar esta tabela ao usuário ou carregar os dados em outra tabela.
@@ -179,5 +188,6 @@ Para obter uma introdução visual ao suporte interno para JSON no SQL Server e 
 -   [JSON é uma ponte entre o NoSQL e mundos relacionais](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>Consulte Também
+
 [Converter dados JSON em linhas e colunas com OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6a1c422dd7ae2c190f844b70c5a780c0390f86e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812282"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327907"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Assinando um procedimento armazenado com um BLOB assinado  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>b. Assinando um procedimento armazenado com um BLOB assinado  
  O exemplo a seguir cria um novo banco de dados e cria um certificado para uso no exemplo. O exemplo cria e assina um procedimento armazenado simples e recupera o BLOB de assinatura de `sys.crypt_properties`. A assinatura é então descartada e adicionada novamente. O exemplo assina o procedimento usando a sintaxe WITH SIGNATURE.  
   
 ```  

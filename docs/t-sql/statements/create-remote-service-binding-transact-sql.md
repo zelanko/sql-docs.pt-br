@@ -35,15 +35,15 @@ helpviewer_keywords:
 - conversation security [Service Broker]
 - remote service bindings [Service Broker], creating
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 53b43fece12144b60a4d6b0cfcd0918997e55613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00726a70cc40548f3c75b786a9fa2b601ec9dd57
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710504"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326367"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser ;  
 ```  
   
-### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. Criando uma associação de serviço remoto que usa autenticação anônima  
+### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>b. Criando uma associação de serviço remoto que usa autenticação anônima  
  O exemplo a seguir cria uma associação para o serviço `//Adventure-Works.com/services/AccountsPayable`. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa o certificado de propriedade da entidade de banco de dados `APUser` para trocar a chave de criptografia de sessão com o serviço remoto. O agente não faz autenticação no serviço remoto. No banco de dados que hospeda o serviço remoto, as mensagens são entregues como o usuário **guest**.  
   
 ```  

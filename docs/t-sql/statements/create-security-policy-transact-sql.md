@@ -23,15 +23,15 @@ helpviewer_keywords:
 - CREATE SECURITY POLICY statement
 - Row-Level Security
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01417c90e5583b8b2276f05ec92347758689d284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532480"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326077"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate]([CustomerId])
 ON [dbo].[Customer];  
 ```  
   
-### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. Criação de uma política que afeta várias tabelas  
+### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>b. Criação de uma política que afeta várias tabelas  
  A sintaxe a seguir cria uma política de segurança com três predicados de filtro em três tabelas diferentes e habilita a política de segurança.  
   
 ```  

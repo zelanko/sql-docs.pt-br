@@ -1,7 +1,7 @@
 ---
 title: Função SQLSetDescField | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8704d28fb8ae39cf7d8f6bb595c884b70a6721a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204155"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420231"
 ---
 # <a name="sqlsetdescfield-function"></a>Função SQLSetDescField
+
 **Conformidade com**  
  Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53204155"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```cpp  
 SQLRETURN SQLSetDescField(  
      SQLHDESC      DescriptorHandle,  
      SQLSMALLINT   RecNumber,  
@@ -144,7 +144,7 @@ SQLRETURN SQLSetDescField(
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|DESCARTAR: R APD: R IRD: R IPD: R|DESCARTAR: SQL_DESC_ALLOC_AUTO para implícita ou SQL_DESC_ALLOC_USER para explícita<br /><br /> APD: SQL_DESC_ALLOC_AUTO para implícita ou SQL_DESC_ALLOC_USER para explícita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: APD [1]: [1] IRD: Não utilizado IPD: Não usado|  
-|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|DESCARTAR: R/W APD: R/W IRD: R/W IPD: R/W|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Ptr nulo IPD: Ptr nulo|  
+|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|DESCARTAR: R/W APD: R/W IRD: R/W IPD: R/W|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Ptr nulo IPD: Ptr nulo|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Não utilizado IPD: Não usado|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: Não usado<br /><br /> IPD: Não usado|  
 SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD 0: 0 IRD: D IPD: 0|  
@@ -159,26 +159,26 @@ SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: AP
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
-|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: 1!D [1]|  
+|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: D[1]|  
 |SQL_DESC_CATALOG_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
-|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: SQL_C_ APD DO PADRÃO: SQL_C_ IRD DO PADRÃO: D IPD: ND|  
+|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: SQL_C_ DEFAULT APD: SQL_C_ DEFAULT IRD: D IPD: ND|  
 |SQL_DESC_DATA_PTR|SQLPOINTER|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Não utilizado IPD: Não utilizado de [2]|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
-SQL_DESC_DISPLAY_SIZE|SQLLEN|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
-|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: 1!D [1]|  
+|SQL_DESC_DISPLAY_SIZE|SQLLEN|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
+|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: D[1]|  
 |SQL_DESC_INDICATOR_PTR|SQLLEN *|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Não utilizado IPD: Não usado|  
 |SQL_DESC_LABEL|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_LENGTH|SQLULEN|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
 |SQL_DESC_LITERAL_PREFIX|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
-|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: 1!D [1]|  
+|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: D[1]|  
 |SQL_DESC_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
 |SQL_DESC_NULLABLE|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
 |SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
-SQL_DESC_OCTET_LENGTH|SQLLEN|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH|SQLLEN|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
 |SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Não utilizado IPD: Não usado|  
-|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: Não utilizado IPD: R/W|DESCARTAR: APD não utilizado: Não utilizado IRD: Não utilizado IPD: 1!D = SQL_PARAM_INPUT|  
+|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: Não utilizado IPD: R/W|DESCARTAR: APD não utilizado: Não utilizado IRD: Não utilizado IPD: D=SQL_PARAM_INPUT|  
 |SQL_DESC_PRECISION|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
 |SQL_DESC_ROWVER|SQLSMALLINT|DESCARTAR: Não usado<br /><br /> APD: Não usado<br /><br /> IRD: R<br /><br /> IPD: R|DESCARTAR: Não usado<br /><br /> APD: Não usado<br /><br /> IRD: ND<br /><br /> IPD: ND|  
 |SQL_DESC_SCALE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
@@ -186,9 +186,9 @@ SQL_DESC_OCTET_LENGTH|SQLLEN|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: 
 |SQL_DESC_SEARCHABLE|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_TABLE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
 |SQL_DESC_TYPE|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
-SQL_DESC_TYPE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: 1!D [1]|  
+|SQL_DESC_TYPE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: D[1]|  
 |SQL_DESC_UNNAMED|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R/W|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
-|SQL_DESC_UNSIGNED|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: 1!D [1]|  
+|SQL_DESC_UNSIGNED|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: R|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: D[1]|  
 |SQL_DESC_UPDATABLE|SQLSMALLINT|DESCARTAR: APD não utilizado: Não utilizado IRD: R IPD: Não usado|DESCARTAR: APD não utilizado: Não utilizado IRD: D IPD: Não usado|  
   
  [1] esses campos são definidos somente quando o IPD é preenchida automaticamente pelo driver. Se não estiver, eles são indefinidos. Se um aplicativo tenta definir esses campos, SQLSTATE HY091 (identificador de campo de descritor inválido) será retornado.  
@@ -368,32 +368,32 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|DESCARTAR: APD não utilizado: Não utilizado IRD: 
 |--------------------|------------------------------|  
 |SQL_TYPE_DATE/SQL_C_TYPE_DATE|SQL_CODE_DATE|  
 |SQL_TYPE_TIME/SQL_C_TYPE_TIME|SQL_CODE_TIME|  
-|SQL_TYPE_TIMESTAMP / SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
+|SQL_TYPE_TIMESTAMP/ SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
   
  Este campo pode ser definido para os tipos de dados de intervalo listados na tabela a seguir.  
   
 |Tipo de intervalo|DATETIME_INTERVAL_CODE|  
 |-------------------|------------------------------|  
-|SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
-|SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
-|SQL_INTERVAL_DAY_TO_MINUTE / SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
-|SQL_INTERVAL_DAY_TO_SECOND / SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
-|SQL_INTERVAL_HOUR / SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-QL_INTERVAL_HOUR_TO_MINUTE / SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
-|SQL_INTERVAL_HOUR_TO_SECOND / SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
-|SQL_INTERVAL_MINUTE / SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
-|SQL_INTERVAL_MINUTE_TO_SECOND / SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
-|SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
-|SQL_INTERVAL_YEAR / SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
-|SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
+|SQL_INTERVAL_DAY/ SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY_TO_HOUR/ SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
+|SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
+|SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_HOUR/ SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
+|SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_SECOND/ SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
+|SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
+|SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
+|SQL_INTERVAL_MONTH/ SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
+|SQL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
+|SQL_INTERVAL_YEAR_TO_MONTH/ SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
  Para obter mais informações sobre os intervalos de dados e esse campo, consulte [Data Type Identifiers and Descriptors](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md).  
   
  **SQL_DESC_DATETIME_INTERVAL_PRECISION [All]**  
  Este campo de registro de sqlinteger que contém contém o intervalo de precisão inicial se o campo SQL_DESC_TYPE for SQL_INTERVAL. Quando o campo SQL_DESC_DATETIME_INTERVAL_CODE é definido como um tipo de dados de intervalo, esse campo é definido como o intervalo padrão de precisão inicial.  
   
- **Colunas de SQL_DESC_DISPLAY_SIZE [IRDs]**  
+ **SQL_DESC_DISPLAY_SIZE [IRDs]**  
  Este campo de registro sqlinteger que contém somente leitura contém o número máximo de caracteres necessários para exibir os dados da coluna.  
   
  **SQL_DESC_FIXED_PREC_SCALE [descritores de implementação]**  
@@ -506,7 +506,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |------------------------------|---------------------------------|  
 |SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR, SQL_C_VARCHAR|SQL_DESC_LENGTH é definido como 1. SQL_DESC_PRECISION é definido como 0.|  
 |SQL_DATETIME|Quando SQL_DESC_DATETIME_INTERVAL_CODE é definido como SQL_CODE_DATE ou SQL_CODE_TIME, SQL_DESC_PRECISION é definido como 0. Quando ela é definida como SQL_DESC_TIMESTAMP, SQL_DESC_PRECISION é definido como 6.|  
-|SQL_C_NUMERIC SQL_DECIMAL, SQL_NUMERIC,|SQL_DESC_SCALE é definido como 0. SQL_DESC_PRECISION é definido como a precisão definido pela implementação para o tipo de dados respectivo.<br /><br /> Consulte [SQL to c: Numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md) para obter informações sobre como associar manualmente um valor SQL_C_NUMERIC.|  
+|SQL_DECIMAL, SQL_NUMERIC, SQL_C_NUMERIC|SQL_DESC_SCALE é definido como 0. SQL_DESC_PRECISION é definido como a precisão definido pela implementação para o tipo de dados respectivo.<br /><br /> Consulte [SQL to c: Numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md) para obter informações sobre como associar manualmente um valor SQL_C_NUMERIC.|  
 |SQL_FLOAT, SQL_C_FLOAT|SQL_DESC_PRECISION está definida como a precisão padrão definido pela implementação para SQL_FLOAT.|  
 |SQL_INTERVAL|Quando SQL_DESC_DATETIME_INTERVAL_CODE é definida como um tipo de dados de intervalo, SQL_DESC_DATETIME_INTERVAL_PRECISION é definido como 2 (o padrão à esquerda precisão de intervalo). Quando o intervalo tem um componente de segundos, SQL_DESC_PRECISION é definido como 6 (o padrão intervalo precisão de segundos).|  
   

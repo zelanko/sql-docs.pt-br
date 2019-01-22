@@ -1,7 +1,7 @@
 ---
 title: Representação de relação (tabela) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,17 +12,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058896"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420151"
 ---
 # <a name="relationship-representation-tabular"></a>Representação de relação (de tabela)
   Uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados.  
   
- Ver [Relationship Representation (Tabular)](relationship-representation-tabular.md) para obter uma explicação detalhada sobre como criar e manipular a representação de relação.  
+ Consulte [Relationship Representation (Tabular)](relationship-representation-tabular.md) para obter uma explicação detalhada sobre como criar e manipular a representação de relações.  
   
 ## <a name="relationship-representation"></a>Representação de relação  
  Em modelos de tabela, podem ser definidas várias relações entre duas tabelas. Quando são definidas várias relações entre duas tabelas, somente uma pode ser definida como a relação padrão para o modelo e é chamada de relação Ativa; todas as outras relações são chamadas de Inativas.  
@@ -32,8 +32,7 @@ ms.locfileid: "48058896"
   
  Os snippets de códigos a seguir mostram como criar uma relação em modelos de tabela, como ativar uma relação e como definir uma chave primária em uma tabela (além de "RowNumber"). Para criar uma relação ativa, uma chave primária precisa ser definida na tabela de chave primária - PKTableName - da relação (o lado um da relação). O exemplo mostrado aqui cria a chave primária no PKColumnName se nenhuma chave primária tiver sido definida nesta coluna. Podem ser criadas relações inativas sem a necessidade de ter uma chave primária na coluna de chave primária.  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

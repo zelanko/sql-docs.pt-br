@@ -1,7 +1,7 @@
 ---
 title: Metadados (Master Data Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185006"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419882"
 ---
 # <a name="metadata-master-data-services"></a>Metadados (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], metadados definidos pelo usuário são informações usadas para descrever objetos de modelo. Por exemplo, você pode acompanhar os proprietários de um modelo ou entidade específicos ou acompanhar os sistemas de origem que fornecem dados a uma entidade.  
@@ -33,7 +33,7 @@ ms.locfileid: "48185006"
 ## <a name="metadata-entities"></a>Entidades de metadados  
  O modelo Metadados inclui cinco entidades, cada uma representando um tipo de objeto de modelo de dados mestres que oferece suporte a metadados definidos pelo usuário. Por exemplo, o **definição de metadados de modelo** entidade contém membros que representam modelos e o **definição de metadados de atributo** entidade tem membros que representam todos os atributos em todos os modelos.  
   
- Para definir metadados para um objeto de modelo, popule um destes atributos de membro. Por exemplo, nos **definição de metadados de entidade** entidade, você pode preencher o atributo de descrição do membro preço com o texto: **o preço do produto quando vendido a um cliente**.  
+ Para definir metadados para um objeto de modelo, popule um destes atributos de membro. Por exemplo, nos **definição de metadados de entidade** entidade, você pode preencher o atributo de descrição do membro preço com o texto: **O preço do produto quando vendido a um cliente**.  
   
  Os membros do modelo Metadados são atualizados automaticamente sempre que objetos de modelo que oferecem suporte a metadados definidos pelo usuário são adicionados ou excluídos.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48185006"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Adicionar metadados a um objeto de modelo.|[Adicionar metadados &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54f2add3bd85250d94e82d13e9e1b3ddcef61a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629174"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327392"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Revogando a permissão CONTROL em um usuário a partir de outro usuário  
- O exemplo a seguir revoga a permissão `CONTROL` no usuário `Wanida` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir do usuário `RolandX`.  
+ O exemplo a seguir revoga a permissão `CONTROL` no usuário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `Wanida` a partir do usuário `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -168,8 +168,8 @@ REVOKE CONTROL ON USER::Wanida FROM RolandX;
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. Revogando a permissão VIEW DEFINITION em uma função de um usuário para o qual foi concedida a permissão WITH GRANT OPTION  
- O exemplo a seguir revoga a permissão `VIEW DEFINITION` na função `SammamishParking` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir do usuário de banco de dados `JinghaoLiu`. A opção `CASCADE` é especificada porque ao usuário `JinghaoLiu` foi concedida a permissão `VIEW DEFINITION` `WITH GRANT OPTION`.  
+### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>b. Revogando a permissão VIEW DEFINITION em uma função de um usuário para o qual foi concedida a permissão WITH GRANT OPTION  
+ O exemplo a seguir revoga a permissão `VIEW DEFINITION` na função [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `SammamishParking` a partir do usuário de banco de dados `JinghaoLiu`. A opção `CASCADE` é especificada porque ao usuário `JinghaoLiu` foi concedida a permissão `VIEW DEFINITION``WITH GRANT OPTION`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revogando a permissão PERSONATE em um usuário de uma função de aplicativo  
- O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo `AccountsPayable17` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `AccountsPayable17`.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

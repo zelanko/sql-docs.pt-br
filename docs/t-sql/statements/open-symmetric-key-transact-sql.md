@@ -16,15 +16,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b5fbd7c16e5150c9d547699c26038e435f1e96c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749575"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327587"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +82,9 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ## <a name="permissions"></a>Permissões  
  O chamador deve ter alguma permissão na chave, e a permissão VIEW DEFINITION não deve ter sido negada a ele na chave. Os requisitos adicionais variam, dependendo do mecanismo de descriptografia:  
   
--   DECRYPTION BY CERTIFICATE: permissão CONTROL no certificado e conhecimento da senha que criptografa sua chave privada.  
+-   DECRYPTION BY CERTIFICATE: permissão CONTROL no certificado e conhecimento da senha que criptografa a chave privada.  
   
--   DECRYPTION BY ASYMMETRIC KEY: permissão CONTROL na chave assimétrica e conhecimento da senha que criptografa sua chave privada.  
+-   DECRYPTION BY ASYMMETRIC KEY: permissão CONTROL na chave assimétrica e conhecimento da senha que criptografa a chave privada.  
   
 -   DECRYPTION BY PASSWORD: conhecimento de uma das senhas usadas para criptografar a chave simétrica.  
   
@@ -100,7 +100,7 @@ OPEN SYMMETRIC KEY SymKeyMarketing3
 GO  
 ```  
   
-### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. Abrindo uma chave simétrica com o uso de outra chave simétrica  
+### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>b. Abrindo uma chave simétrica com o uso de outra chave simétrica  
  O exemplo seguinte abre a chave simétrica `MarketingKey11` e a descriptografa usando a chave simétrica `HarnpadoungsatayaSE3`.  
   
 ```  

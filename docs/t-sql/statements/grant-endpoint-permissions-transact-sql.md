@@ -15,15 +15,15 @@ helpviewer_keywords:
 - GRANT statement, endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5e33f7df043083a205754ee78b6b1ce67131d59d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0e655ac992946cfe08a8ef63c7b6b8de3f8fef45
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508894"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326447"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Concedendo a permissão TAKE OWNERSHIP com GRANT OPTION  
+### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>b. Concedendo a permissão TAKE OWNERSHIP com GRANT OPTION  
  O exemplo a seguir concede a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` para o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` com `GRANT OPTION`.  
   
 ```  

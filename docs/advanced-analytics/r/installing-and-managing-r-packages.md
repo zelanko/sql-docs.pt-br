@@ -3,17 +3,17 @@ title: Bibliotecas de pacote de R e Python - serviços de Machine Learning do SQ
 description: Pacotes de R e Python instalados pelo SQL Server R Services, Microsoft R Server, serviços do Machine Learning (no banco de dados) e Machine Learning Server (autônomo)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 01/19/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 907932911ef522383678774f596772904f687dc2
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432324"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419851"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Pacotes de R padrão e Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ Este artigo lista os pacotes de R e Python instalados com o SQL Server e onde en
 
 Pacotes R são instalados com [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) e [serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) quando você seleciona o recurso do R durante a instalação. 
 
-Packages         | 2016 | 2017 | Descrição |
+|Packages         | 2016 | 2017 | Descrição |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Usado para contextos de computação remota, streaming, a execução paralela de funções de rx para importação de dados e transformação, modelagem, visualização e análise. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Usado para a inclusão de script R em procedimentos armazenados. |
@@ -53,7 +53,7 @@ A tabela a seguir resume as versões do R fornecidas pelo MRO usando a instalaç
 |Versão             | Versão do R       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 Nunca manualmente, você deve substituir a versão do R instalado pela instalação do SQL Server com as versões mais recentes na web. Pacotes de R da Microsoft se baseiam em versões específicas de R. modificar sua instalação pode desestabilizar.
 
@@ -89,9 +89,9 @@ Caminhos de arquivo também incluem os nomes de instância. O SQL Server instala
 
 |Versão e idioma  | Caminho padrão|
 |----------------------|------------|
-| SQL Server 2016 |Mssql13 SQL do C:\Program Files\Microsoft. MSSQLSERVER\R_SERVICES\library|
-| SQL Server 2017 com R|Server\MSSQL14 SQL do C:\Program Files\Microsoft. MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 com o Python |Server\MSSQL14 SQL do C:\Program Files\Microsoft. Pacotes de MSSQLSERVER\PYTHON_SERVICES\Lib\site |
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2017 com R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 com o Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>Caminho de arquivo para instalações autônomas de servidores

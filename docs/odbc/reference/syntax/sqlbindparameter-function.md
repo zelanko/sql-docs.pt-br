@@ -1,7 +1,7 @@
 ---
 title: Função SQLBindParameter | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d318b73feaec0cfb48548b05ba6d7c06a697c6ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79f340d95cf1cd15b176069458347b2bea97055c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503524"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420211"
 ---
 # <a name="sqlbindparameter-function"></a>Função SQLBindParameter
+
 **Conformidade com**  
  Versão introduzida: Conformidade com padrões 2.0 ODBC: ODBC  
   
@@ -39,8 +40,7 @@ ms.locfileid: "52503524"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```cpp  
 SQLRETURN SQLBindParameter(  
       SQLHSTMT        StatementHandle,  
       SQLUSMALLINT    ParameterNumber,  
@@ -52,9 +52,10 @@ SQLRETURN SQLBindParameter(
       SQLPOINTER      ParameterValuePtr,  
       SQLLEN          BufferLength,  
       SQLLEN *        StrLen_or_IndPtr);  
-```  
+```
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
  *StatementHandle*  
  [Entrada] Identificador de instrução.  
   
@@ -89,12 +90,14 @@ SQLRETURN SQLBindParameter(
  *StrLen_or_IndPtr*  
  [Entrada adiada] Um ponteiro para um buffer para o comprimento do parâmetro. Para obter mais informações, consulte "*StrLen_or_IndPtr* argumento" em "Comentários".  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retorna
+
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnóstico
+
  Quando **SQLBindParameter** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLBindParameter** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
-  
+
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
@@ -116,7 +119,8 @@ SQLRETURN SQLBindParameter(
 |HYT01|Tempo limite da Conexão expirado|O período de tempo limite de conexão expirado antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver não oferece suporte a essa função|O driver em (DM) associado a *StatementHandle* não suporta a função.|  
   
-## <a name="comments"></a>Comentários  
+## <a name="comments"></a>Comentários
+
  Um aplicativo chama **SQLBindParameter** para associar cada marcador de parâmetro em uma instrução SQL. Associações permanecem em vigor até que o aplicativo chame **SQLBindParameter** mais uma vez, chama **SQLFreeStmt** com a opção SQL_RESET_PARAMS ou chamadas **SQLSetDescField** para Defina o campo de cabeçalho de APD SQL_DESC_COUNT como 0.  
   
  Para obter mais informações sobre parâmetros, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md). Para obter mais informações sobre marcadores de parâmetro e tipos de dados de parâmetro, consulte [tipos de dados do parâmetro](../../../odbc/reference/appendixes/parameter-data-types.md) e [marcadores de parâmetro](../../../odbc/reference/appendixes/parameter-markers.md) no Apêndice c: Gramática SQL.  
@@ -159,13 +163,14 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT|Ignorado na entrada.|Buffer de saída associado|*ParameterValuePtr* é o endereço do buffer de saída.|  
 |SQL_PARAM_OUTPUT_STREAM|Ignorado na entrada.|Saída transmitidos|*ParameterValuePtr* pode ser qualquer valor de ponteiro, que será retornado por **SQLParamData** conforme definido pelo usuário de token cujo valor foi passado com *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Entrada em partes e o buffer de saída associado|*ParameterValuePtr* é o endereço do buffer de saída, também será retornado por **SQLParamData** conforme definido pelo usuário de token cujo valor foi passado com *ParameterValuePtr*.|  
-|SQL_PARAM_INPUT_OUTPUT|Não SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Buffer vinculado e o buffer de saída associado de entrada|*ParameterValuePtr* é o endereço do buffer de entrada/saída compartilhado.|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Entrada em partes e em fluxo de saída|*ParameterValuePtr* pode ser qualquer valor de ponteiro não nulo, o que será retornado por **SQLParamData** conforme definido pelo usuário de token cujo valor foi passado com *ParameterValuePtr* para entrada e de saída.|  
+|SQL_PARAM_INPUT_OUTPUT|Não SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Buffer vinculado e o buffer de saída associado de entrada|*ParameterValuePtr* é o endereço do buffer de entrada/saída compartilhado.|
+|SQL_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Entrada em partes e em fluxo de saída|*ParameterValuePtr* pode ser qualquer valor de ponteiro não nulo, o que será retornado por **SQLParamData** conforme definido pelo usuário de token cujo valor foi passado com *ParameterValuePtr* para entrada e de saída.|  
   
 > [!NOTE]  
 >  O driver deve decidir quais tipos SQL são permitidos quando um aplicativo associar uma saída ou parâmetro de entrada e saída, conforme transmitido. O Gerenciador de driver não gerará um erro para um tipo SQL inválido.  
   
-## <a name="valuetype-argument"></a>Argumento ValueType  
+## <a name="valuetype-argument"></a>Argumento ValueType
+
  O *ValueType* argumento especifica o tipo de dados de C do parâmetro. Esse argumento define os campos SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE de APD. Isso deve ser um dos valores a [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seção de apêndice d: Tipos de dados.  
   
  Se o *ValueType* argumento é um dos tipos de dados de intervalo, o campo SQL_DESC_TYPE das *ParameterNumber* registro de APD é definido como SQL_INTERVAL, o campo SQL_DESC_CONCISE_TYPE de APD é definido como o tipo de dados de intervalo concisos e o campo SQL_DESC_DATETIME_INTERVAL_CODE do *ParameterNumber* registro é definido como um subcódigo para o tipo de dados de intervalo específico. (Consulte [apêndice d: Tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).) O intervalo padrão à esquerda (2) de precisão e a precisão de segundos de intervalo padrão (6), conforme definido nos campos SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION de APD, respectivamente, são usados para os dados. Se a precisão padrão não for apropriada, o aplicativo deve definir explicitamente o campo do descritor por uma chamada para **SQLSetDescField** ou **SQLSetDescRec**.  
@@ -180,7 +185,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Para obter mais informações, consulte [tipos de dados C padrão](../../../odbc/reference/appendixes/default-c-data-types.md), [Convertendo dados de C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md), e [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) no Apêndice d: Tipos de dados.  
   
-## <a name="parametertype-argument"></a>Argumento ParameterType  
+## <a name="parametertype-argument"></a>Argumento ParameterType
+
  Isso deve ser um dos valores listados na [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md) seção de apêndice d: Tipos de dados, ou ele deve ser um valor específico do driver. Esse argumento define os campos SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE do IPD.  
   
  Se o *ParameterType* argumento é um dos identificadores de data e hora, o campo SQL_DESC_TYPE do IPD é definido como SQL_DATETIME, o campo SQL_DESC_CONCISE_TYPE do IPD é definido como o tipo de dados SQL concisa de data e hora e o SQL_DESC_ Campo DATETIME_INTERVAL_CODE é definido como o valor de subcódigo de datetime apropriado.  
@@ -191,7 +197,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Para obter informações sobre como os dados são convertidos, consulte [conversão de dados do C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) e [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) no Apêndice d: Tipos de dados.  
   
-## <a name="columnsize-argument"></a>ColumnSize argumento  
+## <a name="columnsize-argument"></a>ColumnSize argumento
+
  O *ColumnSize* argumento especifica o tamanho da coluna ou expressão que corresponde ao marcador de parâmetro, o comprimento de dados ou ambos. Esse argumento define diferentes campos do IPD, dependendo do tipo de dados SQL (a *ParameterType* argumento). As seguintes regras se aplicam a esse mapeamento:  
   
 -   Se *ParameterType* é SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou um dos concisa SQL datetime ou intervalo de tipos de dados, o campo SQL_DESC_LENGTH do IPD for definido como o valor da  *ColumnSize*. (Para obter mais informações, consulte o [tamanho da coluna, dígitos decimais, o comprimento do octeto de transferência e o tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) seção no Apêndice d: Tipos de dados).  
@@ -202,10 +209,12 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Para obter mais informações, consulte "Passando valores de parâmetro" e SQL_DATA_AT_EXEC em "*StrLen_or_IndPtr* argumento."  
   
-## <a name="decimaldigits-argument"></a>Argumento DecimalDigits  
+## <a name="decimaldigits-argument"></a>Argumento DecimalDigits
+
  Se *ParameterType* é SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP, SQL_INTERVAL_SECOND, SQL_INTERVAL_DAY_TO_SECOND, SQL_INTERVAL_HOUR_TO_SECOND ou SQL_INTERVAL_MINUTE_TO_SECOND, o campo SQL_DESC_PRECISION do IPD está definido para *DecimalDigits*. Se *ParameterType* é SQL_NUMERIC ou SQL_DECIMAL, o campo SQL_DESC_SCALE do IPD é definido como *DecimalDigits*. Para todos os outros tipos de dados, o *DecimalDigits* argumento será ignorado.  
   
-## <a name="parametervalueptr-argument"></a>Argumento ParameterValuePtr  
+## <a name="parametervalueptr-argument"></a>Argumento ParameterValuePtr
+
  O *ParameterValuePtr* argumento aponta para um buffer que, quando **SQLExecute** ou **SQLExecDirect** é chamado, que contém os dados reais para o parâmetro. Os dados devem estar no formato especificado pelo *ValueType* argumento. Esse argumento define o campo SQL_DESC_DATA_PTR APD. Um aplicativo pode definir a *ParameterValuePtr* argumento para um ponteiro nulo, contanto que  *\*StrLen_or_IndPtr* é SQL_NULL_DATA ou SQL_DATA_AT_EXEC. (Isso se aplica somente a entrada ou entrada/saída de parâmetros.)  
   
  Se \* *StrLen_or_IndPtr* é o resultado do SQL_LEN_DATA_AT_EXEC (*comprimento*) macro ou SQL_DATA_AT_EXEC, em seguida, *ParameterValuePtr* é um valor de ponteiro definido pelo aplicativo que está associado com o parâmetro. Ele é retornado para o aplicativo por meio **SQLParamData**. Por exemplo, *ParameterValuePtr* pode ser um token diferente de zero, como um número de parâmetro, um ponteiro para dados ou um ponteiro para uma estrutura que o aplicativo usado para associar parâmetros de entrada. No entanto, observe que, se o parâmetro é um parâmetro de entrada/saída *ParameterValuePtr* deve ser um ponteiro para um buffer em que o valor de saída será armazenado. Se o valor do atributo de instrução SQL_ATTR_PARAMSET_SIZE for maior que 1, o aplicativo pode usar o valor apontado pelo atributo da instrução SQL_ATTR_PARAMS_PROCESSED_PTR junto com o *ParameterValuePtr* argumento. Por exemplo, *ParameterValuePtr* pode apontar para uma matriz de valores e o aplicativo pode usar o valor apontado por SQL_ATTR_PARAMS_PROCESSED_PTR para recuperar o valor correto da matriz. Para obter mais informações, consulte "Passando valores de parâmetro" nesta seção.  
@@ -214,7 +223,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Se o valor do atributo de instrução SQL_ATTR_PARAMSET_SIZE for maior que 1, *ParameterValuePtr* aponta para uma matriz. Uma única instrução SQL processa a matriz completa de valores de entrada para um parâmetro de entrada ou entrada/saída e retorna uma matriz de valores de saída para uma entrada/saída ou parâmetro de saída.  
   
-## <a name="bufferlength-argument"></a>Argumento BufferLength  
+## <a name="bufferlength-argument"></a>Argumento BufferLength
+
  Para caracteres e dados binários de C, o *BufferLength* argumento especifica o comprimento do \* *ParameterValuePtr* buffer (se ele for um único elemento) ou o comprimento de um elemento em que o \* *ParameterValuePtr* (se o valor do atributo de instrução SQL_ATTR_PARAMSET_SIZE for maior que 1) da matriz. Esse argumento define o campo de registro SQL_DESC_OCTET_LENGTH de APD. Se o aplicativo especificar vários valores, *BufferLength* é usado para determinar o local de valores no **ParameterValuePtr* de matriz, tanto na entrada quanto na saída. Para parâmetros de entrada/saída e saídos, ele é usado para determinar se deseja truncar os dados de caracteres e binários C na saída:  
   
 -   Para dados de caracteres C, se o número de bytes disponíveis para retornar for maior que ou igual a *BufferLength*, os dados no \* *ParameterValuePtr* será truncado para  *BufferLength* menos o comprimento de um caractere de finalização null e é terminada em nulo pelo driver.  
@@ -231,7 +241,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
 > [!NOTE]  
 >  Na **SQLSetParam**, a maneira na qual um aplicativo especifica o comprimento do **ParameterValuePtr* do buffer para que o driver pode retornar o caractere ou dados binários e a maneira na qual um aplicativo envia um matriz de caracteres ou valores de parâmetro binário para o driver, são definidos pelo driver.  
   
-## <a name="strlenorindptr-argument"></a>Argumento StrLen_or_IndPtr  
+## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr Argument
+
  O *StrLen_or_IndPtr* argumento aponta para um buffer que, quando **SQLExecute** ou **SQLExecDirect** é chamado, contém um dos seguintes. (Este argumento define os campos de registro SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_INDICATOR_PTR dos ponteiros de parâmetro de aplicativo).  
   
 -   O comprimento do valor do parâmetro armazenado no **ParameterValuePtr*. Isso é ignorado, exceto caracteres ou dados binários de C.  
@@ -257,7 +268,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Se o valor do atributo de instrução SQL_ATTR_PARAMSET_SIZE for maior que 1, *StrLen_or_IndPtr* aponta para uma matriz de valores SQLLEN. Eles podem ser qualquer um dos valores listados anteriormente nesta seção e são processados com uma única instrução SQL.  
   
-## <a name="passing-parameter-values"></a>Transmitindo valores de parâmetro  
+## <a name="passing-parameter-values"></a>Transmitindo valores de parâmetro
+
  Um aplicativo pode passar o valor para um parâmetro ou nos \* *ParameterValuePtr* buffer ou com uma ou mais chamadas para **SQLPutData**. Parâmetros cujos dados são passados com **SQLPutData** são conhecidos como *dados em execução* parâmetros. Esses são normalmente usados para enviar dados para parâmetros SQL_LONGVARBINARY e SQL_LONGVARCHAR e podem ser combinados com outros parâmetros.  
   
  Para passar valores de parâmetro, um aplicativo executa a seguinte sequência de etapas:  
@@ -295,12 +307,14 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Se o aplicativo chamar **SQLCancel** enquanto o driver ainda precisa de dados para parâmetros de dados em execução, o driver cancela a execução de instrução, o aplicativo, em seguida, pode chamar **SQLExecute** ou  **SQLExecDirect** novamente.  
   
-## <a name="retrieving-streamed-output-parameters"></a>Recuperando parâmetros de saída em fluxo  
+## <a name="retrieving-streamed-output-parameters"></a>Recuperando parâmetros de saída em fluxo
+
  Quando um aplicativo define *InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM ou SQL_PARAM_OUTPUT_STREAM, o valor do parâmetro de saída deve ser recuperado por um ou mais chamadas para **SQLGetData**. Quando o driver tem um valor de parâmetro de saída em fluxo para retornar para o aplicativo, ele retornará SQL_PARAM_DATA_AVAILABLE em resposta a uma chamada para as funções a seguir: **SQLMoreResults**, **SQLExecute**, e **SQLExecDirect**. Um aplicativo chama **SQLParamData** para determinar qual valor de parâmetro está disponível.  
   
  Para obter mais informações sobre parâmetros de saída transmitidos e SQL_PARAM_DATA_AVAILABLE, consulte [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
-## <a name="using-arrays-of-parameters"></a>Usar matrizes de parâmetros  
+## <a name="using-arrays-of-parameters"></a>Usar matrizes de parâmetros
+
  Quando um aplicativo prepara uma instrução com marcadores de parâmetro e passa uma matriz de parâmetros, há duas maneiras diferentes, que pode ser executado. Uma maneira é para o driver contar com os recursos de processamento de matriz de back-end, nesse caso toda a instrução com a matriz de parâmetros será tratado como uma unidade atômica. Oracle é um exemplo de uma fonte de dados que dá suporte a recursos de processamento de matriz. Outra maneira de implementar esse recurso é para o driver gerar um lote de instruções SQL, uma instrução SQL para cada conjunto de parâmetros na matriz de parâmetros e executar o lote. Matrizes de parâmetros não podem ser usados com um **atualização WHERE CURRENT OF** instrução.  
   
  Quando uma matriz de parâmetros é processada, contagens de linha/conjuntos de resultados individuais (um para cada conjunto de parâmetros) podem estar disponíveis ou contagens de linhas/conjuntos de resultados podem ser acumuladas em uma. Opção o SQL_PARAM_ARRAY_ROW_COUNTS **SQLGetInfo** indica se as contagens de linha estão disponíveis para cada conjunto de parâmetros (SQL_PARC_BATCH) ou contagem de apenas uma linha está disponível (SQL_PARC_NO_BATCH).  
@@ -315,7 +329,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  O que ocorre quando uma matriz de parâmetros está associada e uma **atualização WHERE CURRENT OF** instrução é executada é definido pelo driver.  
   
-## <a name="column-wise-parameter-binding"></a>A associação de parâmetros  
+## <a name="column-wise-parameter-binding"></a>A associação de parâmetros
+
  Em que a associação por coluna, o aplicativo associa parâmetros separados e matrizes de comprimento/indicador para cada parâmetro.  
   
  Para usar a associação por coluna, o aplicativo primeiro define o atributo da instrução SQL_ATTR_PARAM_BIND_TYPE como SQL_PARAM_BIND_BY_COLUMN. (Esse é o padrão). Para cada coluna a ser associado, o aplicativo executa as seguintes etapas:  
@@ -341,7 +356,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Para obter mais informações sobre como essas informações são usadas, consulte "ParameterValuePtr Argument" em "Comentários", nesta seção. Para obter mais informações sobre a associação de parâmetros, consulte [matrizes de parâmetros de associação](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md).  
   
-## <a name="row-wise-parameter-binding"></a>A associação de parâmetros  
+## <a name="row-wise-parameter-binding"></a>A associação de parâmetros
+
  Na associação por linha, o aplicativo define uma estrutura que contém os buffers de parâmetro e comprimento/indicador para cada parâmetro a ser associado.  
   
  Para usar a associação por linha, o aplicativo executa as seguintes etapas:  
@@ -367,7 +383,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Para obter mais informações sobre como essas informações são usadas, consulte "*ParameterValuePtr* argumento," mais adiante nesta seção. Para obter mais informações sobre associação de linha de parâmetros, consulte a [matrizes de parâmetros de associação](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md).  
   
-## <a name="error-information"></a>Informações de erro  
+## <a name="error-information"></a>Informações de erro
+
  Se um driver não implementa matrizes de parâmetros como lotes (a opção SQL_PARAM_ARRAY_ROW_COUNTS é igual a SQL_PARC_NO_BATCH), situações de erro são tratadas como se uma instrução foi executada. Se o driver implementa a matrizes de parâmetros como lotes, um aplicativo pode usar o campo de cabeçalho SQL_DESC_ARRAY_STATUS_PTR do IPD para determinar qual parâmetro de uma instrução SQL ou qual parâmetro em uma matriz de parâmetros causou  **SQLExecDirect** ou **SQLExecute** para retornar um erro. Este campo contém informações de status para cada linha de valores de parâmetro. Se o campo indica que ocorreu um erro, os campos na estrutura de dados de diagnóstico indicará o número de linhas e de parâmetro do parâmetro que falharam. O número de elementos na matriz será definido pelo campo de cabeçalho SQL_DESC_ARRAY_SIZE no APD, que pode ser definido pelo atributo de instrução SQL_ATTR_PARAMSET_SIZE.  
   
 > [!NOTE]  
@@ -388,7 +405,8 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Quando **SQLExecute** ou **SQLExecDirect** retorna antes de concluir o processamento de todos os conjuntos de parâmetro em uma matriz de parâmetros, como quando SQL_ERROR ou SQL_NEED_DATA é retornado, a matriz de status contém status para esses parâmetros que já foram processados. O local apontado pelo campo SQL_DESC_ROWS_PROCESSED_PTR no IPD contém o número de linha na matriz de parâmetro que causou o código de erro SQL_ERROR ou SQL_NEED_DATA. Quando uma matriz de parâmetros é enviada para uma instrução SELECT, a disponibilidade de matriz de valores de status é definido pelo driver; eles podem estar disponíveis após a instrução foi executada ou como resultado conjuntos são buscados.  
   
-## <a name="ignoring-a-set-of-parameters"></a>Ignorando um conjunto de parâmetros  
+## <a name="ignoring-a-set-of-parameters"></a>Ignorando um conjunto de parâmetros
+
  O campo SQL_DESC_ARRAY_STATUS_PTR de APD (conforme definido pelo atributo de instrução SQL_ATTR_PARAM_STATUS_PTR) pode ser usado para indicar que um conjunto de parâmetros associados em uma instrução SQL deve ser ignorado. Para direcionar o driver para ignorar uma ou mais conjuntos de parâmetros durante a execução, um aplicativo deve seguir estas etapas:  
   
 1.  Chame **SQLSetDescField** para definir o campo de cabeçalho SQL_DESC_ARRAY_STATUS_PTR de APD para apontar para uma matriz de valores SQLUSMALLINT para conter as informações de status. Este campo também pode ser definido chamando **SQLSetStmtAttr** com um *atributo* de SQL_ATTR_PARAM_OPERATION_PTR, que permite que um aplicativo definir o campo sem obter um identificador do descritor.  
@@ -413,21 +431,24 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Um aplicativo pode definir o campo SQL_DESC_ARRAY_STATUS_PTR no APD para apontar para a mesma matriz como que é apontado pelo campo SQL_DESC_ARRAY_STATUS_PTR do IRD. Isso é útil ao associar parâmetros para dados de linha. Em seguida, podem ser ignorados parâmetros de acordo com o status dos dados da linha. Além de SQL_PARAM_IGNORE, os códigos a seguir fazem com que um parâmetro em uma instrução SQL a serem ignorados: SQL_ROW_DELETED, SQL_ROW_UPDATED e SQL_ROW_ERROR. Além de SQL_PARAM_PROCEED, os códigos a seguir fazem com que uma instrução SQL continuar: SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO e SQL_ROW_ADDED.  
   
-## <a name="rebinding-parameters"></a>Nova associação de parâmetros  
+## <a name="rebinding-parameters"></a>Nova associação de parâmetros
+
  Um aplicativo pode executar qualquer uma das duas operações para alterar uma associação:  
   
 -   Chame **SQLBindParameter** para especificar uma nova associação para uma coluna que já está associada. O driver substituirá a associação antiga pela nova.  
   
 -   Especifique um deslocamento a ser adicionada para o endereço do buffer que foi especificado pela associação chamada para **SQLBindParameter**. Para obter mais informações, consulte a próxima seção, "Reassociação com deslocamentos".  
   
-## <a name="rebinding-with-offsets"></a>Reassociação com deslocamentos  
+## <a name="rebinding-with-offsets"></a>Reassociação com deslocamentos
+
  Nova associação de parâmetros é especialmente útil quando um aplicativo tem uma configuração de área de buffer que pode conter muitos parâmetros, mas uma chamada para **SQLExecDirect** ou **SQLExecute** usa apenas alguns dos parâmetros. O espaço restante na área de buffer pode ser usado para o próximo conjunto de parâmetros, modificando a associação existente por um deslocamento.  
   
  O campo de cabeçalho SQL_DESC_BIND_OFFSET_PTR no APD aponta para o deslocamento de associação. Se o campo não for nulo, o driver cancelará o ponteiro e, se nenhum dos valores nos campos SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR for um ponteiro nulo, adiciona o valor cancelado a esses campos no descritor registros em tempo de execução. Os novos valores de ponteiro são usados quando as instruções SQL são executadas. O deslocamento permanece válido após reassociação. Como SQL_DESC_BIND_OFFSET_PTR é um ponteiro para o deslocamento, em vez do deslocamento em si, um aplicativo pode alterar o deslocamento diretamente, sem a necessidade de chamar [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) ou [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md) para Altere o campo do descritor. O ponteiro é definido como null por padrão. O campo SQL_DESC_BIND_OFFSET_PTR da descartar pode ser definido por uma chamada para [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) ou por uma chamada para [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)com um *fAttribute* de SQL_ATTR_PARAM_BIND_ OFFSET_PTR.  
   
  O deslocamento de associação sempre é adicionado diretamente para os valores nos campos SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR. Se o deslocamento for alterado para um valor diferente, o novo valor é adicionado diretamente ao valor em cada campo de descritor. O novo deslocamento não é adicionado à soma do valor do campo e qualquer deslocamento anterior.  
   
-## <a name="descriptors"></a>Descritores  
+## <a name="descriptors"></a>Descritores
+
  Como um parâmetro está associado é determinado pelos campos de APDs e IPDs. Os argumentos na **SQLBindParameter** são usadas para definir esses campos de descritor. Os campos também podem ser definidos **SQLSetDescField** funções, embora **SQLBindParameter** é mais eficiente usar porque o aplicativo não precisa obter um identificador do descritor para chamar **SQLBindParameter**.  
   
 > [!CAUTION]  
@@ -467,12 +488,13 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Se a chamada para **SQLBindParameter** falhar, o conteúdo dos campos de descritor que ele definiria no APD são indefinidos e o campo SQL_DESC_COUNT de APD permanece inalterado. Além disso, os campos SQL_DESC_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE e SQL_DESC_TYPE do registro apropriado no IPD são indefinidos e o campo SQL_DESC_COUNT do IPD é alterado.  
   
-## <a name="conversion-of-calls-to-and-from-sqlsetparam"></a>Conversão de chamadas de e para SQLSetParam  
+## <a name="conversion-of-calls-to-and-from-sqlsetparam"></a>Conversão de chamadas de e para SQLSetParam
+
  Quando um aplicativo ODBC 1.0 chama **SQLSetParam** em um ODBC 3. *x* driver, o ODBC 3. *x* Gerenciador de Driver mapeia a chamada, conforme mostrado na tabela a seguir.  
   
 |Chamada pelo aplicativo de ODBC 1.0|Chamada para o ODBC 3. *x* driver|  
 |----------------------------------|-------------------------------|  
-|SQLSetParam (StatementHandle, ParameterNumber, ValueType, ParameterType, LengthPrecision, ParameterScale, ParameterValuePtr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, *ColumnSize*, *DecimalDigits*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX,      StrLen_or_IndPtr);|  
+|SQLSetParam(      StatementHandle,      ParameterNumber,      ValueType,      ParameterType,      LengthPrecision,      ParameterScale,      ParameterValuePtr,      StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, *ColumnSize*, *DecimalDigits*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX,      StrLen_or_IndPtr);|  
   
 ## <a name="code-example"></a>Exemplo de código  
  O exemplo a seguir, um aplicativo prepara uma instrução SQL para inserir dados na tabela ORDERS. Para cada parâmetro na instrução, o aplicativo chama **SQLBindParameter** para especificar o tipo de dados ODBC C e o tipo de dados SQL do parâmetro e para associar um buffer para cada parâmetro. Para cada linha de dados, o aplicativo atribui valores de dados para cada parâmetro e chama **SQLExecute** para executar a instrução.  
@@ -481,7 +503,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) ou SQL_DATA_AT_EXEC|Ent
   
  Para obter mais exemplos de código, consulte [função SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [função SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md), [função SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md), e [função SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp
 // SQLBindParameter_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  
@@ -526,10 +548,11 @@ int main() {
 }  
 ```  
   
-## <a name="code-example"></a>Exemplo de código  
+## <a name="code-example"></a>Exemplo de código
+
  No exemplo a seguir, um aplicativo executa um procedimento armazenado do SQL Server usando um parâmetro nomeado.  
   
-```  
+```cpp
 // SQLBindParameter_Function_2.cpp  
 // compile with: ODBC32.lib  
 // sample assumes the following stored procedure:  
@@ -585,7 +608,8 @@ int main() {
 |Especificando vários valores de parâmetro|[Função SQLParamOptions](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |Enviar dados de parâmetro em tempo de execução|[Função SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
+
  [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

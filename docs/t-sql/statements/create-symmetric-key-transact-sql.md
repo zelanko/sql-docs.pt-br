@@ -20,15 +20,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d2d54483e85e92915182593140ca74bf8e872991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849515"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326497"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ ENCRYPTION BY CERTIFICATE Shipping04;
 GO  
 ```  
   
-### <a name="b-creating-a-temporary-symmetric-key"></a>B. Criando uma chave simétrica temporária  
+### <a name="b-creating-a-temporary-symmetric-key"></a>b. Criando uma chave simétrica temporária  
  O exemplo seguinte cria uma chave simétrica temporária chamada `#MarketingXXV` na frase secreta: `The square of the hypotenuse is equal to the sum of the squares of the sides`. A chave é fornecida com um GUID gerado na cadeia de caracteres `Pythagoras` e criptografado com o certificado `Marketing25`.  
   
 ```  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839524"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326757"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>B. Removendo um valor de chave de criptografia de coluna  
+### <a name="b-dropping-a-column-encryption-key-value"></a>b. Removendo um valor de chave de criptografia de coluna  
  O exemplo a seguir altera uma chave de criptografia de coluna chamada `MyCEK` removendo um valor.  
   
 ```  

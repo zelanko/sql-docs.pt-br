@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397605"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419786"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397605"
   Contém informações sobre cada plano de execução associado a uma consulta.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Chave primária.|  
 |**query_id**|**bigint**|Chave estrangeira. Ingressa [query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|ID do grupo de plano. Consultas de cursor normalmente exigem vários (popular e buscar) planos. Preencher e planos de busca que são compilados juntos estão no mesmo grupo.<br /><br /> 0 significa que o plano não está em um grupo.|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397605"
 |**last_execution_time**|**datetimeoffset**|Último tempo de execução refere-se para a última hora de término do/plano de consulta.|  
 |**avg_compile_duration**|**float**|Planeje as estatísticas de compilação.|  
 |**last_compile_duration**|**bigint**|Planeje as estatísticas de compilação.|  
-|**plan_forcing_type**|**int**|Tipo de imposição de plano.<br /><br />
-0: Nenhuma<br /><br />
-1: MANUAL<br /><br />
-2: AUTO | | **plan_forcing_type_desc**|**nvarchar(60)**| Descrição de plan_forcing_type texto.<br /><br />
-NENHUM: Nenhuma imposição de plano<br /><br />
-MANUAL: Plano forçado pelo usuário<br /><br />
-AUTOMÁTICO: Plano forçado pelo ajuste automático |
+|**plan_forcing_type**|**int**|Tipo de imposição de plano.<br /><br />0: Nenhuma<br /><br />1: MANUAL<br /><br />2: AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Descrição de plan_forcing_type texto.<br /><br />NENHUM: Nenhuma imposição de plano<br /><br />MANUAL: Plano forçado pelo usuário<br /><br />AUTOMÁTICO: Plano forçado pelo ajuste automático|  
 
 ## <a name="plan-forcing-limitations"></a>Limitações de imposição de plano
 O Repositório de Consultas tem um mecanismo para forçar o otimizador de consulta a usar um determinado plano de execução. No entanto, existem algumas limitações que podem impedir que um plano seja forçado. 
