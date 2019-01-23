@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520687"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327837"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenção &amp; solução de problemas do Conector do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "52520687"
   
  Eis o modo como isso seria feito para TDE:  
   
--   **No PowerShell:** crie uma chave assimétrica (com um nome diferente da sua chave assimétrica de TDE atual) no Cofre de Chaves.  
+-   **No PowerShell:** crie uma chave assimétrica (com um nome diferente da sua chave assimétrica de TDE atual) no Key Vault.  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou sqlcmd.exe:** Use as instruções a seguir, conforme mostrado na etapa 3, seção 3.  
+-   **Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou sqlcmd.exe:** use as instruções a seguir, conforme mostrado na etapa 3, seção 3.  
   
      Importe a nova chave assimétrica.  
   
@@ -152,7 +152,7 @@ Resumindo, estas são as etapas:
 * Conceder permissões para a entidade de serviço do SQL Server usar esse novo cofre.  
 * Modificar a credencial do SQL Server usada pelo Mecanismo de Banco de Dados para refletir o nome do novo cofre (se necessário).  
   
-Backups de chaves podem ser restaurados em regiões do Azure, desde que eles permaneçam na mesma região geográfica ou nuvem nacional: EUA, Canadá, Japão, Austrália, Índia, APAC, Europa, Brasil, China, Governo dos EUA ou Alemanha.  
+Os backups de chaves podem ser restaurados em todas as regiões do Azure, contanto que permaneçam na mesma região geográfica ou nuvem nacional: Alemanha, APAC, Austrália, Brasil, Canadá, China, EUA, Europa, Governo dos EUA, Índia ou Japão.  
   
   
 ##  <a name="AppendixB"></a> B. Perguntas frequentes  

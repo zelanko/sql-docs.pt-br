@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509378"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327777"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  Especifica o segredo necessário para a autenticação de saída.  
   
- Quando a credencial é usada para acessar o Azure Key Vault, o argumento **SECRET** de **CREATE CREDENTIAL** exige que a *\<Client ID>* (sem hifens) e o *\<Secret>* de uma **Entidade de Serviço** no Azure Active Directory sejam passados juntos sem um espaço entre eles. Veja o exemplo C a seguir. Quando a credencial usa uma assinatura de acesso compartilhado, o **SECRET** é o token de assinatura de acesso compartilhado. Veja o exemplo D abaixo.  Para obter informações sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure, consulte [Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ Quando a credencial é usada para acessar o Azure Key Vault, o argumento **SECRET** de **CREATE CREDENTIAL** exige que a *\<Client ID>* (sem hifens) e o *\<Secret>* de uma **Entidade de Serviço** no Azure Active Directory sejam passados juntos sem um espaço entre eles. Veja o exemplo C a seguir. Quando a credencial usa uma assinatura de acesso compartilhado, o **SECRET** é o token de assinatura de acesso compartilhado. Veja o exemplo D abaixo.  Confira informações sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure na [Lição 1: criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  Especifica o nome de um *Provedor de EKM (Gerenciamento Extensível de Chaves)*. Para obter mais informações sobre o Gerenciamento de Chaves, consulte [EKM &#40;Gerenciamento Extensível de Chaves&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
@@ -96,7 +96,7 @@ CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',
 GO  
 ```  
   
-### <a name="b-creating-a-credential-for-ekm"></a>B. Criando uma credencial para o EKM  
+### <a name="b-creating-a-credential-for-ekm"></a>b. Criando uma credencial para o EKM  
  O exemplo a seguir usa uma conta já criada chamada `User1OnEKM` em um módulo de EKM por meio das ferramentas de gerenciamento de EKM, com um tipo de conta e uma senha básicos. A conta **sysadmin** no servidor cria uma credencial usada para se conectar à conta da EKM e atribui essa credencial à conta `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Criando uma credencial usando um token SAS  
  **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS.  Para obter um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, em seguida, criar uma credencial usando a assinatura de acesso compartilhado, consulte [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS.  Veja um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, depois, criar uma credencial usando a assinatura de acesso compartilhado no [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  O argumento **CREDENTIAL NAME** exige que o nome corresponda ao caminho do contêiner, comece com https e não contenha uma barra "/" à direita. O argumento **IDENTITY** exige o nome, *SHARED ACCESS SIGNATURE*. O argumento **SECRET** exige o token de assinatura de acesso compartilhado.  
@@ -167,7 +167,7 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Lição 2: Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [Lição 2: criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Assinaturas de Acesso Compartilhado](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

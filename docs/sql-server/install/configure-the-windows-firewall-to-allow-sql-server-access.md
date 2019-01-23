@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300063"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395431"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,6 +102,8 @@ Defina as configurações do Firewall do Windows com o **Console de Gerenciament
     -   [Como usar o contexto de "netsh advfirewall firewall" em vez do contexto "netsh firewall" para controlar o comportamento do Firewall do Windows no Windows Server 2008 e no Windows Vista](https://support.microsoft.com/kb/947709)  
   
     -   [Comando "netsh firewall" juntamente com o parâmetro "perfil = all" não configura o perfil público em um computador com Windows Vista](https://support.microsoft.com/kb/947213)  
+    
+- **Para Linux**: no Linux, também é necessário abrir as portas associadas aos serviços que você precisa acessar. Distribuições diferentes do Linux e firewalls diferentes têm seus próprios procedimentos. Confira dois exemplos em [SQL Server no Red Hat](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions) e [SQL Server no SUSE](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions). 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Portas usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  As tabelas a seguir podem ajudar a identificar as portas que são usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

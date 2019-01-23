@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6d16f2c11effaeddbbe5981f5cf6055186ceb8e
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609740"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405666"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Usar o Assistente de Tabela Externa com arquivos CSV
 
@@ -39,7 +39,7 @@ Clique em Avançar para prosseguir para a próxima etapa do assistente que defin
 
 ## <a name="select-destination-database"></a>Selecionar Banco de Dados de Destino
 
-Nesta etapa, você deverá escolher o banco de dados de destino em que deseja virtualizar os dados. O campo de lista suspensa conterá todos os bancos de dados aceitáveis na instância do SQL Master especificada na tela anterior. Aqui você também pode nomear a nova tabela externa e ver o esquema que ela vai usar.
+Nesta etapa, você escolherá o banco de dados de destino no qual deseja virtualizar os dados. O campo de lista suspensa conterá todos os bancos de dados aceitáveis na instância do SQL Master especificada na tela anterior. Aqui você também pode nomear a nova tabela externa e ver o esquema que ela vai usar.
 
 ![Criar uma chave mestra de banco de dados](media/data-virtualization/csv-select-destination.png)
 

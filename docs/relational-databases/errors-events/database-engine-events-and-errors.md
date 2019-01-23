@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a424f6fa95a7b295722750f9bb68db9ef30d66a4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257241"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405876"
 ---
 # <a name="database-engine-errors"></a>Erros do Mecanismo de Banco de Dados
 
@@ -927,7 +927,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1846    |   16  |   Não  |   Não é possível localizar o componente Gravador VSS (Cópia de Sombra de Volume) do SQL para o banco de dados '%ls' ao criar o instantâneo do VSS recuperado automaticamente para verificação DBCC online.  |
 |   1847    |   16  |   Não  |   A versão atual do sistema operacional não dá suporte a instantâneos do Serviço de Cópias de Sombra de Volume (VSS) recuperados automaticamente.  |
 |   1848    |   16  |   Não  |   Falha no Serviço de Cópias de Sombra de Volume (VSS) ao criar um instantâneo recuperado automaticamente do banco de dados '%ls' para verificação DBCC online.   |
-|   1849    |   16  |   Não  |   Falha de CREATE DATABASE porque grupos de arquivos de FILESTREAM foram declarados e ALLOW_SNAPSHOT_ISOLATION ou READ_COMMITTED_SNAPSHOT está definido como ON no banco de dados modelo. Defina ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT como OFF no banco de dados modelo ou crie o banco de dados sem declarar nenhum grupo de arquivos FILESTREAM, defina ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT como OFF no novo banco de dados e use ALTER DATABSE para adicionar grupos de arquivos e arquivos FILESTREAM.    |
+|   1849    |   16  |   Não  |   Falha de CREATE DATABASE porque grupos de arquivos de FILESTREAM foram declarados e ALLOW_SNAPSHOT_ISOLATION ou READ_COMMITTED_SNAPSHOT está definido como ON no banco de dados modelo. Defina ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT como OFF no banco de dados modelo ou crie o banco de dados sem declarar grupos de arquivos FILESTREAM, defina ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT como OFF no novo banco de dados e use ALTER DATABSE para adicionar grupos de arquivos e arquivos FILESTREAM.   |
 |   1901    |   16  |   Não  |   Não é possível criar índices ou estatísticas '%.*ls' na exibição '%.* ls' porque a coluna de chave '%.*ls' é imprecisa, computada e não persistente. Considere remover a referência à coluna no índice da exibição ou na chave de estatísticas ou alterar a coluna para ficar precisa. Se a coluna for computada em tabela base, considere torná-la PERSISTED naquela tabela. |
 |   1902    |   16  |   Não  |   Não é possível criar mais de um índice clusterizado em %S_MSG '%.*ls'. Descarte o índice clusterizado '%.* ls' existente antes de criar outro.   |
 |   [1904](mssqlserver-1904-database-engine-error.md)   |   16  |   Não  |   A %S_MSG '%.*ls' na tabela '%.* ls' tem %d nomes de coluna na lista de chaves %S_MSG. O limite máximo para lista de colunas de chaves de índice ou de estatísticas é de %d.    |

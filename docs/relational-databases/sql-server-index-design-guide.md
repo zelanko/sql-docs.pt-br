@@ -1,7 +1,7 @@
 ---
 title: Guia de arquitetura e design de índices do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712697"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420181"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ Use essas exibições de metadados para ver os atributos de índices. Mais infor
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -824,7 +824,7 @@ Posteriormente, quando as versões mais antigas não forem mais necessárias, um
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Arquitetura de índice não clusterizado na memória
 
-Índices não clusterizados na memória são implementados com uma estrutura de dados chamada Árvore Bw, originalmente concebida e descrita pela Microsoft Research em 2011. Uma Árvore Bw é uma variação livre de bloqueios e travas de uma Árvore B. Para obter mais detalhes, consulte [A Árvore Bw: uma árvore B para novas plataformas de hardware](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+Índices não clusterizados na memória são implementados com uma estrutura de dados chamada Árvore Bw, originalmente concebida e descrita pela Microsoft Research em 2011. Uma Árvore Bw é uma variação livre de bloqueios e travas de uma Árvore B. Veja mais detalhes em [A Árvore BW: uma árvore B para novas plataformas de hardware](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
 Em um nível muito alto, a Árvore BW pode ser interpretada como um mapa de páginas organizadas por ID de página (PidMap), um recurso para alocar e reutilizar IDs de página (PidAlloc) e um conjunto de páginas vinculadas no mapa de páginas umas às outras. Esses três subcomponentes de alto nível formam a estrutura básica interna de uma Árvore Bw.
 
@@ -869,9 +869,9 @@ Na imagem abaixo, suponha que uma operação `DELETE` excluirá o valor de chave
 
 ![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Mesclando páginas")
 
-**Etapa 1:** uma página delta que representa o valor de chave 10 (triângulo azul) é criada e seu ponteiro na página não folha Pp1 é definido como a nova página delta. Além disso, uma página especial delta de mesclagem (triângulo verde) é criada e é vinculada para apontar para a página delta. Neste estágio, nenhuma das páginas (página delta e página delta de mesclagem) é visível para transação simultânea. Em uma única etapa atômica, o ponteiro para a página nível Folha P1 na Tabela de Mapeamento de Página é atualizado para apontar para a página delta de mesclagem. Após essa etapa, a entrada do valor de chave 10 em Pp1 agora apontará para a página delta de mesclagem. 
+**Etapa 1:** uma página delta que representa o valor da chave 10 (triângulo azul) é criada e seu ponteiro na página não folha Pp1 é definido como a nova página delta. Além disso, uma página especial delta de mesclagem (triângulo verde) é criada e é vinculada para apontar para a página delta. Neste estágio, nenhuma das páginas (página delta e página delta de mesclagem) é visível para transação simultânea. Em uma única etapa atômica, o ponteiro para a página nível Folha P1 na Tabela de Mapeamento de Página é atualizado para apontar para a página delta de mesclagem. Após essa etapa, a entrada do valor de chave 10 em Pp1 agora apontará para a página delta de mesclagem. 
 
-**Etapa 2:** a linha que representa o valor de chave 7 na página não folha Pp1 precisa ser removida e a entrada do valor de chave 10 atualizada para apontar para P1. Para fazer isso, uma nova página não folha Pp2 é alocada e todas as linhas de Pp1 são copiadas, exceto a linha que representa o valor de chave 7; em seguida, a linha do valor de chave 10 é atualizada para apontar para a página P1. Depois que isso é feito, em uma única etapa atômica, a entrada da Tabela de Mapeamento de Página que aponta para Pp1 é atualizada para apontar para Pp2. Pp1 não é mais acessível. 
+**Etapa 2:** a linha que representa o valor da chave 7 na página não folha Pp1 precisa ser removida e a entrada do valor da chave 10 atualizada para apontar para P1. Para fazer isso, uma nova página não folha Pp2 é alocada e todas as linhas de Pp1 são copiadas, exceto a linha que representa o valor de chave 7; em seguida, a linha do valor de chave 10 é atualizada para apontar para a página P1. Depois que isso é feito, em uma única etapa atômica, a entrada da Tabela de Mapeamento de Página que aponta para Pp1 é atualizada para apontar para Pp2. Pp1 não é mais acessível. 
 
 **Etapa 3:** as páginas de nível folha P2 e P1 são mescladas e as páginas delta, removidas. Para fazer isso, uma nova página P3 é alocada e as linhas de P2 e P1 são mescladas e as alterações da página delta são incluídas no novo P3. Em seguida, em uma única etapa atômica, a entrada da Tabela de Mapeamento de Página que aponta para a página P1 é atualizada para apontar para a página P3. 
 

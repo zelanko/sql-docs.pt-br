@@ -11,14 +11,14 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: fc9923cdc27594c37e8f89390f0cb4906f3478f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11a429ef4dec41fa316831ae38a76e4a7998d558
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758944"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326127"
 ---
-# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure
 Este tutorial mostra como implantar um projeto do SSIS (SQL Server Integration Services) no Catálogo do SSIS no Banco de Dados SQL do Azure, executar um pacote no Azure-SSIS Integration Runtime e monitorar o pacote em execução.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -206,13 +206,13 @@ Para obter mais informações, consulte [Monitorar o Azure-SSIS Integration Runt
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Obter metadados sobre o Azure-SSIS Integration Runtime
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Obter o status do Azure-SSIS Integration Runtime
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

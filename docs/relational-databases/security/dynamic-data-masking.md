@@ -11,19 +11,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4df60da8f70eaddd0aeea28d7bb498a8273e1486
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543955"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317776"
 ---
 # <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ![Mascaramento de dados dinâmicos](../../relational-databases/security/media/dynamic-data-masking.png)
 
-O DDM (mascaramento de dados dinâmicos) limita a exposição de dados confidenciais mascarando-os para usuários sem privilégios. Ele pode ser usado para simplificar bastante o design e a codificação de segurança em seu aplicativo.  
+O DDM (Máscara de Dados Dinâmicos) limita a exposição de dados confidenciais aplicando uma máscara para usuários sem privilégios. Ele pode ser usado para simplificar bastante o design e a codificação de segurança em seu aplicativo.  
 
 O mascaramento de dados dinâmicos ajuda a impedir o acesso não autorizado a dados confidenciais, permitindo que os clientes especifiquem a quantidade de dados confidenciais a revelar, com impacto mínimo sobre a camada de aplicativo. O DDM pode ser configurado no banco de dados para ocultar dados confidenciais no conjunto de resultados de uma consulta em relação aos campos do banco de dados designados, sendo que os dados no banco de dados não são alterados. O mascaramento de dados dinâmicos é fácil de usar com aplicativos existentes, já que as regras de mascaramento são aplicadas nos resultados da consulta. Muitos aplicativos podem mascarar dados confidenciais sem modificar consultas existentes.
 
@@ -76,7 +76,7 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Não é possível definir uma regra de mascaramento para os seguintes tipos de coluna:  
   
 -   Colunas criptografadas (Sempre Criptografadas)  
@@ -94,7 +94,7 @@ WHERE is_masked = 1;
  A adição de uma máscara de dados dinâmicos é implementada como uma alteração de esquema na tabela subjacente e, portanto, não pode ser realizada em uma coluna com dependências. Para contornar essa restrição, você pode primeiro remover a dependência e adicionar a máscara de dados dinâmicos e, em seguida, recriar a dependência. Por exemplo, se a dependência ocorre devido a um índice dependente nessa coluna, você poderá remover o índice, adicionar a máscara e, em seguida, recriar o índice dependente.
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Observação de segurança: ignorar o mascaramento usa técnicas de inferência ou força bruta
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Observação de segurança: ignorar a máscara usando técnicas de inferência ou força bruta
 
 O Mascaramento de dados dinâmicos foi projetado para simplificar o desenvolvimento de aplicativos, limitando a exposição de dados em um conjunto de consultas predefinidas usadas pelo aplicativo. Embora o Mascaramento de dados dinâmicos também possa ser útil para evitar a exposição acidental de dados confidenciais ao acessar diretamente um banco de dados de produção, é importante observar que usuários sem privilégios com permissões de consulta ad hoc podem aplicar técnicas para acessar os dados reais. Se houver a necessidade de conceder esse acesso ad hoc, a Auditoria deve ser usada para monitorar todas as atividades do banco de dados e reduzir esse cenário.
  

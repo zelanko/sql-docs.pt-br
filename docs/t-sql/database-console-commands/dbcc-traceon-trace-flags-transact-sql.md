@@ -1,7 +1,7 @@
 ---
 title: Sinalizadores de rastreamento (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206462"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361686"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – sinalizadores de rastreamento (Transact-SQL)
 
@@ -145,6 +145,7 @@ A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis
 |**9488**|<a name="9488"></a>Define a estimativa fixa das funções com valor de tabela para o padrão 1 (correspondente ao padrão do modelo de estimativa de cardinalidade do otimizador de consulta do [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e das versões anteriores), ao usar o modelo de estimativa de cardinalidade do otimizador de consulta nas versões [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />**Escopo**: global, sessão ou consulta|
 |**9495**|Desabilita o paralelismo durante a inserção para operações INSERT...SELECT e aplica-se às tabelas de usuário e temporárias. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/3180087)<br /><br />**Escopo**: global ou sessão| 
 |**9567**|Habilita a compactação do fluxo de dados para Grupos de Disponibilidade AlwaysOn durante a propagação automática. A compactação pode reduzir significativamente o tempo de transferência durante a propagação automática e aumentar a carga no processador. Para obter mais informações, confira [Inicializar automaticamente o Grupo de Disponibilidade AlwaysOn](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) e [Ajustar a compactação do grupo de disponibilidade](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Escopo**: global ou sessão|
+|**9571**|Desabilita a propagação automática de grupos de disponibilidade para o caminho do banco de dados padrão. Saiba mais em [Layout de Disco](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md).<br /><br />**Escopo**: global ou sessão| 
 |**9591**|Desabilita a compactação do bloco de logs em Grupos de Disponibilidade AlwaysOn. A compactação do bloco de log sé o comportamento padrão usado com réplicas síncronas e assíncronas no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a compactação é usada somente com a réplica assíncrona. <br /><br />**Escopo**: global ou sessão|
 |**9592**|Habilita a compactação do fluxo de logs para grupos de disponibilidade síncronos. Este recurso está desabilitado por padrão em grupos de disponibilidade síncronos, pois a compactação adiciona latência. Para obter mais informações, veja [Ajustar a compactação do grupo de disponibilidade](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Escopo**: global ou sessão| 
 |**9929**|Reduz os arquivos de ponto de verificação na memória para 1 MB. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/3147012).<br /><br />**Escopo**: apenas global|  

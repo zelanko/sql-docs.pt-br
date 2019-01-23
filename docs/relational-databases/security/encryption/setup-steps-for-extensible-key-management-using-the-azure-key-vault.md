@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522919"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327347"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Versão do SQL Server  |Link de instalação redistribuível
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>Parte II: Criar um cofre de chaves e a chave  
+## <a name="part-ii-create-a-key-vault-and-key"></a>Parte II: criar um cofre de chaves e uma chave  
  O cofre de chaves e a chave criados aqui serão usados pelo Mecanismo de Banco de Dados do SQL Server para proteção de chave de criptografia.  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ Versão do SQL Server  |Link de instalação redistribuível
      Instale e inicie a [versão mais recente do Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 ou superior). Entrar na conta do Azure com o seguinte comando:  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      A instrução retorna:  
@@ -83,14 +83,14 @@ Versão do SQL Server  |Link de instalação redistribuível
     ```  
   
     > [!NOTE]  
-    >  Se você tiver várias assinaturas e desejar especificar uma para usar para o cofre, use `Get-AzureRmSubscription` para ver as assinaturas e `Select-AzureRmSubscription` para escolher a assinatura correta. Caso contrário, o PowerShell selecionará um para você por padrão.  
+    >  Se você tiver várias assinaturas e desejar especificar uma para usar para o cofre, use `Get-AzSubscription` para ver as assinaturas e `Select-AzSubscription` para escolher a assinatura correta. Caso contrário, o PowerShell selecionará um para você por padrão.  
   
 2.  **Criar um novo grupo de recursos**  
   
      Todos os recursos do Azure criados por meio do Azure Resource Manager devem estar contidos em grupos de recursos. Crie um grupo de recursos para hospedar o cofre de chaves. Este exemplo usa o `ContosoDevRG`. Escolha seu próprio grupo de recursos **exclusivo** e o nome do cofre de chaves, levando em conta que todos os nomes de cofre de chaves são globalmente exclusivos.  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      A instrução retorna:  
@@ -109,10 +109,10 @@ Versão do SQL Server  |Link de instalação redistribuível
   
 3.  **Criar um cofre de chaves**  
   
-     O cmdlet `New-AzureRmKeyVault` requer um nome de grupo de recursos, um nome de cofre de chaves e uma localização geográfica. Por exemplo, para um cofre de chaves chamado `ContosoDevKeyVault`, digite:  
+     O cmdlet `New-AzKeyVault` requer um nome de grupo de recursos, um nome de cofre de chaves e uma localização geográfica. Por exemplo, para um cofre de chaves chamado `ContosoDevKeyVault`, digite:  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,20 +152,20 @@ Versão do SQL Server  |Link de instalação redistribuível
     > [!IMPORTANT]  
     >  A entidade de serviço do Azure Active Directory deve ter, pelo menos, as permissões `get`, `wrapKey` e `unwrapKey` para o cofre de chaves.  
   
-     Conforme mostrado abaixo, use a **ID do Cliente** da Parte I para o parâmetro `ServicePrincipalName` . O `Set-AzureRmKeyVaultAccessPolicy` será executado silenciosamente sem saída se for executado com êxito.  
+     Conforme mostrado abaixo, use a **ID do Cliente** da Parte I para o parâmetro `ServicePrincipalName` . O `Set-AzKeyVaultAccessPolicy` será executado silenciosamente sem saída se for executado com êxito.  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Chamar o cmdlet `Get-AzureRmKeyVault` para confirmar as permissões. Na saída da instrução em 'Políticas de Acesso', você verá o nome do aplicativo AAD listado como outro locatário que tem acesso a este cofre de chaves.  
+     Chamar o cmdlet `Get-AzKeyVault` para confirmar as permissões. Na saída da instrução em 'Políticas de Acesso', você verá o nome do aplicativo AAD listado como outro locatário que tem acesso a este cofre de chaves.  
   
        
 5.  **Gerar uma chave assimétrica no cofre de chaves**  
   
-     Há duas maneiras de gerar uma chave no Cofre de Chaves do Azure: 1) importar uma chave existente ou 2) criar uma nova chave.  
+     Há duas maneiras de gerar uma chave no Azure Key Vault: 1) Importar uma chave existente ou 2) criar uma nova chave.  
                   
       > [!NOTE]
         >  O SQL Server dá suporte apenas a chaves RSA de 2.048 bits.
@@ -185,9 +185,9 @@ Versão do SQL Server  |Link de instalação redistribuível
     ### <a name="types-of-keys"></a>Tipos de chaves:
     Há dois tipos de chaves que você pode gerar no Azure Key Vault que funcionarão com o SQL Server. Ambas são chaves RSA de 2.048 bits assimétricas.  
   
-    -   **Protegido por software:** processado no software e criptografado em repouso. Operações em chaves protegidas por software ocorrem nas Máquinas Virtuais do Azure. Recomendado para as chaves que não são usadas em uma implantação de produção.  
+    -   **Protegido por software:** Processado no software e criptografado em repouso. Operações em chaves protegidas por software ocorrem nas Máquinas Virtuais do Azure. Recomendado para as chaves que não são usadas em uma implantação de produção.  
   
-    -   **Protegido por HSM:** criado e protegido por um HSM (módulo de segurança de hardware) para segurança adicional. Custa cerca de US$ 1 por versão de chave.  
+    -   **Protegido por HSM:** Criado e protegido por um HSM (módulo de segurança de hardware) para proporcionar mais segurança. Custa cerca de US$ 1 por versão de chave.  
   
         > [!IMPORTANT]  
         >  O Conector do SQL Server exige que o nome da chave use somente os caracteres "a-z", "A-Z", "0-9" e "-", com um limite de 26 caracteres.   

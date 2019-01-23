@@ -19,15 +19,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - logins [SQL Server], denying access
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6435471a8913135ecc59388c6b5de559d7ab3582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804294"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361597"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Permissões de principal do servidor DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DENY permission [ ,...n ] }
  *permission*  
  Especifica uma permissão que pode ser negada em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- LOGIN **::** *SQL_Server_login*  
+ LOGON **::** *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
  SERVER ROLE **::** *server_role*  
@@ -125,7 +125,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Negando a permissão VIEW DEFINITION com CASCADE  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>b. Negando a permissão VIEW DEFINITION com CASCADE  
  O exemplo a seguir nega a permissão `VIEW DEFINITION` no logon `EricKurjan` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o logon `RMeyyappan` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A opção `CASCADE` indica que a permissão `VIEW DEFINITION` em `EricKurjan` também será negada a principais aos quais `RMeyyappan` concedeu essa permissão.  
   
 ```  

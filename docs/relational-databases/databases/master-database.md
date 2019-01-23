@@ -14,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558633"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405856"
 ---
 # <a name="master-database"></a>Banco de dados mestre
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,34 +49,34 @@ A tabela a seguir mostra o valor padrão de cada opção de banco de dados no ba
 
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|não|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Não|  
 |ANSI_NULL_DEFAULT|OFF|Sim|  
 |ANSI_NULLS|OFF|Sim|  
 |ANSI_PADDING|OFF|Sim|  
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
-|AUTO_CLOSE|OFF|não|  
+|AUTO_CLOSE|OFF|Não|  
 |AUTO_CREATE_STATISTICS|ON|Sim|  
-|AUTO_SHRINK|OFF|não|  
+|AUTO_SHRINK|OFF|Não|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|não|  
+|CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> não<br /><br /> não|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Não<br /><br /> Não|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|não|  
-|ENCRYPTION|OFF|não|  
-|MIXED_PAGE_ALLOCATION|ON|não|  
+|DB_CHAINING|ON|Não|  
+|ENCRYPTION|OFF|Não|  
+|MIXED_PAGE_ALLOCATION|ON|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
-|READ_COMMITTED_SNAPSHOT|OFF|não|  
+|READ_COMMITTED_SNAPSHOT|OFF|Não|  
 |RECOVERY|SIMPLE|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
-|Opções do Service Broker|DISABLE_BROKER|não|  
+|Opções do Service Broker|DISABLE_BROKER|Não|  
 |TRUSTWORTHY|OFF|Sim|  
   
 Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  

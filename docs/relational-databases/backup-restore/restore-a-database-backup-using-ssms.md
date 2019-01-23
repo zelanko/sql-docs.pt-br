@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302899"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317806"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Para restaurar um banco de dados criptografado, você precisa ter acesso ao cert
     
 Se você restaurar um banco de dados de versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse banco de dados será atualizado automaticamente para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Isso impede que o banco de dados seja usado com uma versão anterior da [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. No entanto, isso se relaciona com a atualização dos metadados e não afeta o [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da definição da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas e a recriação será até dez vezes mais demorada.     
+Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da definição da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados que serão indexados, a importação poderá demorar várias horas, e a recompilação será até dez vezes mais demorada.     
     
 Quando a opção de atualização for definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
@@ -71,7 +71,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
         -   Caixa de diálogo**Selecionar dispositivos de backup**   
         
             **Tipo de mídia de backup**  
-         Selecione um tipo de mídia na lista suspensa **Tipo de mídia de backup** .  Observação: a opção **Fita** só aparecerá se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparecerá se houver, no mínimo, um dispositivo de backup.
+         Selecione um tipo de mídia na lista suspensa **Tipo de mídia de backup** .  Observação: A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.
 
             **Adicionar**  
             Dependendo do tipo de mídia selecionado no campo **Tipo de mídia de backup** , clicar em **Adicionar** abre uma das caixas de diálogo a seguir. (Se a lista na caixa de listagem **Mídia de backup** estiver cheia, o botão **Adicionar** não estará disponível.)
@@ -94,7 +94,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
              Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .    
     
-         Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.    
+         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.    
     
          > [!NOTE]
          > Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.    
@@ -142,10 +142,10 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o
 4.  Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
 5.  Clique em **OK** para retornar à página **Geral** .
 6.  Clique em **Opções** no painel **Selecionar uma página** .
-7.  Na seção **Opções de restauração**, marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
+7.  Na seção **Opções de restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
 
     > [!NOTE]
-    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: o conjunto de backup mantém um backup de um banco de dados diferente do banco de dados “`Sales`” existente. (Microsoft.SqlServer.SmoExtended)”
+    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: "System.Data.SqlClient.SqlError: O conjunto de backup contém um backup de um banco de dados diferente do banco de dados "`Sales`" existente. (Microsoft.SqlServer.SmoExtended)”
 
 8.  Na seção **Backup da parte final do log**, desmarque a opção **Fazer backup da parte final do log antes da restauração**.
 
@@ -154,10 +154,10 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o
 
     Essa opção não está disponível em bancos de dados no modelo de recuperação SIMPLES.
 
-9.  Na seção **Conexões de servidor**, marque a opção **Fechar conexões existentes com o banco de dados de destino**.
+9.  Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
 
     > [!NOTE]
-    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: não foi possível obter acesso exclusivo, pois o banco de dados está em uso”. (Microsoft.SqlServer.SmoExtended)”
+    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: "System.Data.SqlClient.SqlError: Não foi possível obter acesso exclusivo porque o banco de dados está sendo usado. (Microsoft.SqlServer.SmoExtended)”
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -180,7 +180,7 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e cria um nov
 
     > [!NOTE]
     > Se você receber a seguinte mensagem de erro:      
-    > "System.Data.SqlClient.SqlError: não foi feito backup do final do log do banco de dados "`Sales`". Use `BACKUP LOG WITH NORECOVERY` para fazer backup do log se ele contiver trabalho que você não deseja perder. Use a cláusula `WITH REPLACE` ou `WITH STOPAT` da instrução `RESTORE` para simplesmente substituir o conteúdo do log. (Microsoft.SqlServer.SmoExtended)”.      
+    > "System.Data.SqlClient.SqlError: O backup da parte final do log do banco de dados "`Sales`" não foi feito. Use `BACKUP LOG WITH NORECOVERY` para fazer backup do log se ele contiver trabalho que você não deseja perder. Use a cláusula `WITH REPLACE` ou `WITH STOPAT` da instrução `RESTORE` para simplesmente substituir o conteúdo do log. (Microsoft.SqlServer.SmoExtended)”.      
     > Em seguida, é provável que você não inseriu o novo nome do banco de dados da Etapa 6 acima. Normalmente a restauração evita a substituição acidental de um banco de dados por um banco de dados diferente. Se o banco de dados especificado em uma instrução `RESTORE` já existir no servidor atual e a GUID de família do banco de dados especificado for diferente da GUID de família do banco de dados registrado no conjunto de backup, o banco de dados não será restaurado. Essa é uma proteção importante.
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Restaurar backups anteriores de disco em um ponto específico

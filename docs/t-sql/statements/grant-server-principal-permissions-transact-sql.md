@@ -19,15 +19,15 @@ helpviewer_keywords:
 - logins [SQL Server], granting access
 - granting permissions [SQL Server], impersonation
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 19cccc7c8199e3cdfc425cf8269c363549ad69de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781404"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326590"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>Permissões de entidade de segurança do servidor GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ] }
  *permission*  
  Especifica uma permissão que pode ser concedida em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- LOGIN **::** *SQL_Server_login*  
+ LOGON **::** *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório.  
   
  SERVER ROLE **::** *server_role*  
@@ -119,7 +119,7 @@ GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. Concedendo a permissão VIEW DEFINITION com GRANT OPTION  
+### <a name="b-granting-view-definition-permission-with-grant-option"></a>b. Concedendo a permissão VIEW DEFINITION com GRANT OPTION  
  O exemplo a seguir concede `VIEW DEFINITION` no logon `EricKurjan` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao logon `RMeyyappan` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com `GRANT OPTION`.  
   
 ```  

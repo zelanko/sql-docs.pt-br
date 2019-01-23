@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534758"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326417"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Criar e armazenar chaves mestras de coluna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,16 +120,16 @@ O exemplo a seguir cria um novo Cofre de Chaves do Azure e uma chave e, em segui
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure subscription ID>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
-$azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
@@ -145,7 +145,7 @@ Para provisionar as chaves de criptografia de coluna protegidas com uma chave me
 
 #### <a name="using-powershell"></a>Usando o PowerShell
 
-Para permitir que usuários e aplicativos acessem as chaves reais no Cofre de Chaves do Azure, é necessário definir a política de acesso do cofre ([Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)):
+Para permitir que usuários e aplicativos acessem as chaves reais no Azure Key Vault, é necessário definir a política de acesso do cofre ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -154,9 +154,9 @@ $userPrincipalName = "<user to grant access to>"
 $clientId = "<client Id>"
 
 # grant users permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
 # grant applications permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
 ```
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>Criando chaves mestras de coluna em módulos de segurança de hardware usando o CNG
@@ -207,7 +207,7 @@ Confira a documentação do HSM e do KSP para saber como configurar o KSP em um 
 
 Uma chave mestra de coluna do Sempre Criptografado pode ser armazenada em um repositório de chaves que implementa a CAPI (Cryptography API). Normalmente, um repositório desse tipo é um HSM (módulo de segurança de hardware) – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia. Tradicionalmente, os HSMs são fornecidos na forma de um cartão plug-in ou um dispositivo externo que é anexado diretamente a um computador (HSMs locais) ou a um servidor de rede.
 
-Para disponibilizar um HSM para aplicativos em determinado computador, um CSP (Provedor de Serviços de Criptografia), que implementa a CAPI, deve ser instalado e configurado no computador. Um driver de cliente do Sempre Criptografado (um provedor de repositórios de chaves mestras de coluna no driver), usa o CSP para criptografar e descriptografar as chaves de criptografia de coluna, protegidas com a chave mestra de coluna armazenada no repositório de chaves. Observação: a CAPI é uma API herdada e preterida. Se um KSP estiver disponível para o HSM, será recomendável usá-lo, em vez de um CSP ou uma CAPI.
+Para disponibilizar um HSM para aplicativos em determinado computador, um CSP (Provedor de Serviços de Criptografia), que implementa a CAPI, deve ser instalado e configurado no computador. Um driver de cliente do Sempre Criptografado (um provedor de repositórios de chaves mestras de coluna no driver), usa o CSP para criptografar e descriptografar as chaves de criptografia de coluna, protegidas com a chave mestra de coluna armazenada no repositório de chaves. Observação: A CAPI é uma API herdada e preterida. Se um KSP estiver disponível para o HSM, será recomendável usá-lo, em vez de um CSP ou uma CAPI.
 
 Um CSP deve dar suporte ao algoritmo RSA para ser usado com o Sempre Criptografado.
 

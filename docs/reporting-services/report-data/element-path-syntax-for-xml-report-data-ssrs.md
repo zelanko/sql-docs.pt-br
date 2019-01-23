@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: ffa45f4eb7fdd8d989810dcdea6cfab0cd4cb4cc
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813799"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420191"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o **ElementPath** XML da **Consulta** XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
@@ -90,14 +90,14 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Quando o caminho do elemento está vazio, a consulta usa o caminho do elemento padrão: o primeiro caminho para uma coleção de nós folha. No primeiro exemplo, deixar o caminho do elemento vazio é equivalente a especificar o caminho do elemento /Clientes/Cliente/Pedidos/Pedido. Todos os valores e atributos do nó ao longo do caminho são retornados no conjunto de resultados, e os nomes de nós e de atributos são exibidos como campos do conjunto de dados.  
   
- **Exemplo nº 1**: *vazio*  
+ **Exemplo 1**: *Vazio*  
   
 |Order|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https\://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https\://www.adventure-works.com|  
   
  **Exemplo nº 2**: `Customers {}/Customer`  
   

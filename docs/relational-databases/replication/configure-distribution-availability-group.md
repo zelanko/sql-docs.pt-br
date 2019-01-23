@@ -1,7 +1,7 @@
 ---
 title: Configurar o banco de dados de distribuição do SQL Server no grupo de disponibilidade | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126446"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372685"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On
 
@@ -34,7 +34,9 @@ Este artigo explica como configurar um banco de dados de distribuição de repli
 O SQL Server 2017 CU6 e o SQL Server 2016 SP2-CU3 introduzem o suporte para o banco de dados de distribuição de replicação em um AG por meio dos seguintes mecanismos:
 
 - O AG do banco de dados de distribuição deve ter um ouvinte. Quando o publicador adiciona o distribuidor, ele usa o nome de ouvinte como o nome do distribuidor.
-- Os trabalhos de replicação são criados com o nome do ouvinte como o nome do distribuidor.
+- Os trabalhos de replicação são criados com o nome do ouvinte como o nome do distribuidor. Os trabalhos de instantâneo de replicação, leitor de log e agente de distribuição (assinatura push) criados no servidor de distribuição são criados em todas as réplicas secundárias do AG para o Banco de Dados de Distribuição.
+ >[!NOTE]
+ >Trabalhos do agente de distribuição para assinaturas pull são criados no servidor do assinante e não no servidor de distribuição. 
 - Um novo trabalho monitora o estado (primário ou secundário no AG) dos bancos de dados de distribuição e desabilita ou habilita os trabalhos de replicação com base no estado dos bancos de dados de distribuição.
 
 Depois que um banco de dados de distribuição no AG for configurado com base nas etapas descritas abaixo, os trabalhos de tempo de execução e de configuração da replicação poderão ser executados corretamente antes e após o failover do AG do banco de dados de distribuição.

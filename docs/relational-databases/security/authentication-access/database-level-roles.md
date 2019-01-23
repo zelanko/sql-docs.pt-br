@@ -1,7 +1,7 @@
 ---
 title: Funções de nível de banco de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780824"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420091"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Para gerenciar facilmente as permissões em seus bancos de dados, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece várias *funções* , que são entidades de segurança que agrupam outras entidades. Elas são como ***grupos*** no sistema operacional [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. As funções de nível de banco de dados são permitidas em todo banco de dados em seus escopos de permissões.  
@@ -92,11 +93,11 @@ Essas funções de banco de dados existem somente no banco de dados mestre virtu
 
 |Nome da função|Descrição|  
 |--------------------|-----------------|
-**dbmanager** | Pode criar e excluir bancos de dados. Um membro da função dbmanager que cria um banco de dados se torna o proprietário desse banco de dados, o que permite ao usuário se conectar ao banco de dados como o usuário dbo. O usuário dbo tem todas as permissões de banco de dados no banco de dados. Os membros da função dbmanager necessariamente não tem permissão para acessar bancos de dados que eles não possuem.
-**loginmanager** | Pode criar e excluir logons no banco de dados mestre virtual.  
+|**dbmanager** | Pode criar e excluir bancos de dados. Um membro da função dbmanager que cria um banco de dados se torna o proprietário desse banco de dados, o que permite ao usuário se conectar ao banco de dados como o usuário dbo. O usuário dbo tem todas as permissões de banco de dados no banco de dados. Os membros da função dbmanager necessariamente não tem permissão para acessar bancos de dados que eles não possuem.|
+|**loginmanager** | Pode criar e excluir logons no banco de dados mestre virtual.|
 
 > [!NOTE]
-> A entidade de segurança em nível de servidor e o Administrador do Azure Active Directory (se estiver configurado) têm todas as permissões no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sem precisar ser membros das funções. Para obter mais informações, consulte [Autenticação e autorização do Banco de Dados SQL: Concedendo o acesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> A entidade de segurança em nível de servidor e o Administrador do Azure Active Directory (se estiver configurado) têm todas as permissões no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sem precisar ser membros das funções. Saiba mais em [Autenticação e autorização do Banco de Dados SQL: concessão de acesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Funções msdb  
  O banco de dados msdb contém as funções com finalidade especial que são mostradas na tabela a seguir.  
@@ -114,7 +115,7 @@ Essas funções de banco de dados existem somente no banco de dados mestre virtu
 
 ## <a name="working-with-r-services"></a>Trabalhando com serviços de R  
 
-**Aplica-se a:** SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**Aplica-se a:** SQL Server a partir do [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 Quando o R Services está instalado, as funções adicionais de banco de dados ficam disponíveis para gerenciar pacotes. Para obter mais informações, consulte [Gerenciamento de pacotes de R para o SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 

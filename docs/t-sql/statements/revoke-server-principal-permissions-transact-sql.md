@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logins [SQL Server], revoking
 - REVOKE statement, logins
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2fbc40b5efc4bdab813e36f384fc7914b156f72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661275"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326067"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>Permissões do principal do servidor REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  *permission*  
  Especifica uma permissão que pode ser revogada em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- LOGIN **::** *SQL_Server_login*  
+ LOGON **::** *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo revogada. O qualificador de escopo (**::**) é obrigatório.  
   
  SERVER ROLE **::** *server_role*  
@@ -122,7 +122,7 @@ REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. Revogando a permissão VIEW DEFINITION com CASCADE  
+### <a name="b-revoking-view-definition-permission-with-cascade"></a>b. Revogando a permissão VIEW DEFINITION com CASCADE  
  O exemplo a seguir revoga a permissão `VIEW DEFINITION` do logon `EricKurjan` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do logon `RMeyyappan` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A opção `CASCADE` indica que a permissão `VIEW DEFINITION` em `EricKurjan` também será revogada a partir dos principais aos quais `RMeyyappan` concedeu essa permissão.  
   
 ```  
