@@ -1,57 +1,76 @@
-- name: Soluções de alta disponibilidade
-  href: high-availability-solutions-sql-server.md
-- name: 'Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados)'
-  href: automatic-page-repair-availability-groups-database-mirroring.md
-- name: Administração de logons e trabalhos depois de troca de funções
-  href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-- name: Solução de problemas de usuários órfãos
-  href: troubleshoot-orphaned-users-sql-server.md
-- name: Instalação do cluster de failover
-  href: install/sql-server-failover-cluster-installation.md
-- name: WSFC (Windows Server Failover Clustering) com o SQL Server
+- name: Visão geral
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
   items:
-    - name: Configuração de modos de quorum WSFC e votação
-      href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+    - name: Instâncias do cluster de failover do AlwaysOn
+      href: windows/always-on-failover-cluster-instances-sql-server.md
+- name: Como fazer
+  items:
+    - name: Implantação
       items:
-        - name: Exibir configurações de NodeWeight de quorum de cluster
-          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: Antes da instalação
+          href: install/before-installing-failover-clustering.md
+        - name: Instalação
+          href: install/sql-server-failover-cluster-installation.md
+        - name: Criar um cluster
+          href: install/create-a-new-sql-server-failover-cluster-setup.md
+        - name: Instalar as ferramentas de cliente em um cluster de failover
+          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+        - name: Adicionar ou remover nós
+          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+        - name: Remover um cluster de failover
+          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: Atualizar uma instância de cluster de failover
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: Atualizar uma instância de cluster de failover do SQL Server
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+            - name: Atualizar uma instância de cluster de failover do SQL Server (Windows Server 2008/2008 R2/2012)
+              href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+    - name: Configuração
+      items:
+        - name: Renomear um cluster de failover
+          href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: Adicionar dependências a um recurso do SQL Server
+          href: windows/add-dependencies-to-a-sql-server-resource.md
         - name: Definir configurações de NodeWeight de quorum de cluster
           href: windows/configure-cluster-quorum-nodeweight-settings.md
-    - name: Recuperação de desastres WSFC por meio de quorum forçado
-      href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-      items:
-        - name: Forçar um cluster WSFC para iniciar sem um quorum
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-    - name: Clustering de várias sub-redes do SQL Server
-      href: windows/sql-server-multi-subnet-clustering-sql-server.md
-    - name: Diagnóstico e solução de problemas do cluster de failover
-      href: windows/failover-cluster-troubleshooting.md
-- name: Instâncias do cluster de failover do AlwaysOn
-  href: windows/always-on-failover-cluster-instances-sql-server.md
-  items:
-    - name: Política de failover para instâncias de cluster de failover
-      href: windows/failover-policy-for-failover-cluster-instances.md
-      items:
+        - name: Alterar o endereço IP de uma instância do cluster de failover
+          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
         - name: Definir configurações da propriedade HealthCheckTimeout
           href: windows/configure-healthchecktimeout-property-settings.md
         - name: Definir as configurações da propriedade FailureConditionLevel
           href: windows/configure-failureconditionlevel-property-settings.md
+    - name: Administração
+      items:
+        - name: Exibir configurações de NodeWeight de quorum de cluster
+          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: Recuperação de desastres WSFC por meio de quorum forçado
+          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+        - name: Forçar um cluster WSFC para iniciar sem um quorum
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: Diagnóstico e solução de problemas do cluster de failover
+          href: windows/failover-cluster-troubleshooting.md
+        - name: Solução de problemas de usuários órfãos
+          href: troubleshoot-orphaned-users-sql-server.md
         - name: Exibir e ler o log de diagnóstico da instância do cluster de failover
           href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-    - name: Administração e manutenção da instância de cluster de failover
-      href: windows/failover-cluster-instance-administration-and-maintenance.md
-      items:
-        - name: Adicionar dependências a um recurso do SQL Server
-          href: windows/add-dependencies-to-a-sql-server-resource.md
+        - name: Administração e manutenção da instância de cluster de failover
+          href: windows/failover-cluster-instance-administration-and-maintenance.md
         - name: Recuperar-se de uma falha na instância do cluster de failover
           href: windows/recover-from-failover-cluster-instance-failure.md
-        - name: Alterar o endereço IP de uma instância do cluster de failover
-          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-    - name: Atualizar uma instância de cluster de failover do SQL Server
-      href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+- name: Conceitos
+  items:
+    - name: Configuração
       items:
-        - name: Atualizar uma instância de cluster de failover do SQL Server (instalação)
-          href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-        - name: Atualizar uma instância de cluster de failover do SQL Server (Windows Server 2008/2008 R2/2012)
-          href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+        - name: Configuração de modos de quorum WSFC e votação
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+        - name: Clustering de várias sub-redes do SQL Server
+          href: windows/sql-server-multi-subnet-clustering-sql-server.md
+        - name: Política de failover para instâncias de cluster de failover
+          href: windows/failover-policy-for-failover-cluster-instances.md
+    - name: Administração
+      items:
+        - name: Reparo automático de página
+          href: automatic-page-repair-availability-groups-database-mirroring.md
+        - name: Administração de logons e trabalhos depois de troca de funções
+          href: management-of-logins-and-jobs-after-role-switching-sql-server.md

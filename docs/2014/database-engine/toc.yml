@@ -34,14 +34,25 @@
           href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
         - name: Alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
           href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+- name: Continuidade de negócios
+  href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
+  items:
+    - name: Grupos de Disponibilidade AlwaysOn
+      href: availability-groups/windows/toc.yml
+    - name: Instância de Cluster de Failover
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: Espelhamento de banco de dados
+      href: database-mirroring/toc.yml
+    - name: Envio de logs +
+      href: log-shipping/toc.yml
 - name: Recursos e tarefas do Mecanismo de Banco de Dados
   href: database-engine-features-and-tasks.md
 - name: Instâncias do mecanismo de banco de dados (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
     - name: Configurar instâncias do Mecanismo de Banco de Dados +
-      href: configure-windows/configure-database-engine-instances-sql-server.md
-    - name: Suporte a agrupamentos e a Unicode +
+      href: configure-windows/toc.yml
+    - name: Suporte a ordenações e a Unicode +
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: Servidores vinculados (Mecanismo de Banco de Dados)
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -123,12 +134,6 @@
       items:
         - name: Abrir o Monitor de Atividade (SQL Server Management Studio)
           href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
-- name: Grupos de disponibilidade Always On +
-  href: availability-groups/windows/always-on-availability-groups-sql-server.md
-- name: O ponto de extremidade de espelhamento de banco de dados +
-  href: database-mirroring/the-database-mirroring-endpoint-sql-server.md
-- name: Sobre o envio de log +
-  href: log-shipping/about-log-shipping-sql-server.md
 - name: Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: Referência técnica
