@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d2e7e8805b97c37893f558c0083849f5ed333e0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c9c494ab580d94f82587041c5c28ec60e2481e98
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710977"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838023"
 ---
 # <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "52710977"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_interval_id**|**bigint**|Chave primária.|  
-|**start_time**|**datetimeoffset**|Hora de início do intervalo.|  
-|**end_time**|**datetimeoffset**|Hora de término do intervalo.|  
-|**comment**|**nvarchar(32)**|Sempre NULL.|  
+|**runtime_stats_interval_id**|**bigint**|Chave primária.|
+|**start_time**|**datetimeoffset**|Hora de início do intervalo.|
+|**end_time**|**datetimeoffset**|Hora de término do intervalo.|
+|**comment**|**nvarchar(32)**|Sempre NULL.|
   
 ## <a name="permissions"></a>Permissões  
  Requer o **VIEW DATABASE STATE** permissão.  
