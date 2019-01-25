@@ -1,152 +1,159 @@
+items:
 - name: Visão geral
   href: database-mirroring-sql-server.md
   items:
-    - name: 'Pré-requisitos, restrições e recomendações para espelhamento de banco de dados'
-      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
-    - name: Estados de espelhamento
-      href: mirroring-states-sql-server.md
-    - name: Modos de operação de espelhamento de banco de dados
-      href: database-mirroring-operating-modes.md
-    - name: Testemunha de espelhamento de banco de dados
-      href: database-mirroring-witness.md
+  - name: Pré-requisitos, restrições e recomendações para espelhamento de banco de dados
+    href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+  - name: Estados de espelhamento
+    href: mirroring-states-sql-server.md
+  - name: Modos de operação de espelhamento de banco de dados
+    href: database-mirroring-operating-modes.md
+  - name: Testemunha de espelhamento de banco de dados
+    href: database-mirroring-witness.md
 - name: Como fazer
   items:
-    - name: Configuração
+  - name: Configuração
+    items:
+    - name: Implantação
       items:
-        - name: Implantação
-          items:
-            - name: Configurar o espelhamento de banco de dados
-              href: setting-up-database-mirroring-sql-server.md
-            - name: Preparar um banco de dados espelho para espelhamento
-              href: prepare-a-mirror-database-for-mirroring-sql-server.md
-            - name: Configurar um banco de dados espelho criptografado
-              href: set-up-an-encrypted-mirror-database.md
-            - name: Configurar um banco de dados espelho para usar a propriedade confiável
-              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
-            - name: Especificar um endereço de rede do servidor
-              href: specify-a-server-network-address-database-mirroring.md
-            - name: Estabelecer uma sessão de espelhamento de banco de dados
-              href: establish-database-mirroring-session-windows-authentication.md
-              items:
-                - name: 'Exemplo: configurar o espelhamento de banco de dados usando a autenticação do Windows (Transact-SQL)'
-                  href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-                - name: 'Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)'
-                  href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
-            - name: Atualização de Instâncias Espelhadas
-              href: upgrading-mirrored-instances.md
-            - name: Remover o espelhamento de banco de dados
-              href: remove-database-mirroring-sql-server.md
-        - name: Witness (testemunha)
-          items:
-            - name: Adicionar uma testemunha usando a autenticação do Windows
-              href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
-            - name: Adicionar ou substitui uma testemunha
-              href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
-            - name: Remover a testemunha
-              href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
-    - name: Administração
+      - name: Configurar o espelhamento de banco de dados
+        href: setting-up-database-mirroring-sql-server.md
+      - name: Preparar um banco de dados espelho para espelhamento
+        href: prepare-a-mirror-database-for-mirroring-sql-server.md
+      - name: Configurar um banco de dados espelho criptografado
+        href: set-up-an-encrypted-mirror-database.md
+      - name: Configurar um banco de dados espelho para usar a propriedade confiável
+        href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+      - name: Especificar um endereço de rede do servidor
+        href: specify-a-server-network-address-database-mirroring.md
+      - name: Estabelecer uma sessão de espelhamento de banco de dados
+        href: establish-database-mirroring-session-windows-authentication.md
+        items:
+        - name: 'Exemplo: configurar o espelhamento de banco de dados usando a autenticação do Windows (Transact-SQL)'
+          href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
+        - name: 'Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)'
+          href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
+      - name: Atualização de Instâncias Espelhadas
+        href: upgrading-mirrored-instances.md
+      - name: Remover o espelhamento de banco de dados
+        href: remove-database-mirroring-sql-server.md
+    - name: Witness (testemunha)
       items:
-        - name: Exibir o estado de um banco de dados espelhado
-          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
-        - name: Pausar ou retomar o espelhamento de banco de dados
-          href: pause-or-resume-a-database-mirroring-session-sql-server.md
-        - name: Conectar clientes
-          href: connect-clients-to-a-database-mirroring-session-sql-server.md
-        - name: Usar os limites de aviso e alertas em métricas de desempenho de espelhamento
-          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-        - name: Alterar segurança de transação
-          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
-        - name: Estimar a interrupção durante a troca de função
-          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
-        - name: Failover manual (T-SQL)
-          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
-        - name: Failover manual (SSMS)
-          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
-        - name: Forçar o failover do serviço
-          href: force-service-in-a-database-mirroring-session-transact-sql.md
-        - name: Solução de problemas de configuração de espelhamento de banco de dados
-          href: troubleshoot-database-mirroring-configuration-sql-server.md
-    - name: Segurança
+      - name: Adicionar uma testemunha usando a autenticação do Windows
+        href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+      - name: Adicionar ou substitui uma testemunha
+        href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+      - name: Remover a testemunha
+        href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+  - name: Administração
+    items:
+    - name: Exibir o estado de um banco de dados espelhado
+      href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+    - name: Pausar ou retomar o espelhamento de banco de dados
+      href: pause-or-resume-a-database-mirroring-session-sql-server.md
+    - name: Conectar clientes
+      href: connect-clients-to-a-database-mirroring-session-sql-server.md
+    - name: Usar os limites de aviso e alertas em métricas de desempenho de espelhamento
+      href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+    - name: Alterar segurança de transação
+      href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+    - name: Estimar a interrupção durante a troca de função
+      href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+    - name: Failover manual (T-SQL)
+      href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+    - name: Failover manual (SSMS)
+      href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+    - name: Forçar o failover do serviço
+      href: force-service-in-a-database-mirroring-session-transact-sql.md
+    - name: Solução de problemas de configuração de espelhamento de banco de dados
+      href: troubleshoot-database-mirroring-configuration-sql-server.md
+  - name: Segurança
+    items:
+    - name: Configurar contas de logon para espelhamento de banco de dados ou para grupos de disponibilidade AlwaysOn
+      href: set-up-login-accounts-database-mirroring-always-on-availability.md
+    - name: Criar um ponto de extremidade para autenticação do Windows
+      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+    - name: Permitir o acesso à rede em um ponto de extremidade
+      href: database-mirroring-allow-network-access-windows-authentication.md
+    - name: Usar certificados para um ponto de extremidade
+      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
       items:
-        - name: Configurar contas de logon para espelhamento de banco de dados ou para grupos de disponibilidade AlwaysOn
-          href: set-up-login-accounts-database-mirroring-always-on-availability.md
-        - name: Criar um ponto de extremidade para autenticação do Windows
-          href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
-        - name: Permitir o acesso à rede em um ponto de extremidade
-          href: database-mirroring-allow-network-access-windows-authentication.md
-        - name: Usar certificados para um ponto de extremidade
-          href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
-          items:
-            - name: Usar certificados para conexões de saída
-              href: database-mirroring-use-certificates-for-outbound-connections.md
-            - name: Usar certificados para conexões de entrada
-              href: database-mirroring-use-certificates-for-inbound-connections.md
+      - name: Usar certificados para conexões de saída
+        href: database-mirroring-use-certificates-for-outbound-connections.md
+      - name: Usar certificados para conexões de entrada
+        href: database-mirroring-use-certificates-for-inbound-connections.md
 - name: Conceitos
   items:
-    - name: Interoperabilidade e coexistência
-      href: database-mirroring-interoperability-and-coexistence-sql-server.md
-      items:
-        - name: Espelhamento de banco de dados e instâncias de cluster de failover do SQL Server
-          href: database-mirroring-and-sql-server-failover-cluster-instances.md
-        - name: Espelhamento de banco de dados e envio de logs
-          href: database-mirroring-and-log-shipping-sql-server.md
-        - name: Espelhamento de banco de dados e catálogos de texto completo
-          href: database-mirroring-and-full-text-catalogs-sql-server.md
-        - name: Espelhamento de banco de dados e instantâneos de banco de dados
-          href: database-mirroring-and-database-snapshots-sql-server.md
-        - name: Espelhamento e replicação de banco de dados
-          href: database-mirroring-and-replication-sql-server.md
-    - name: Administração
-      items:
-        - name: Monitorando o espelhamento de banco de dados
-          href: monitoring-database-mirroring-sql-server.md
-        - name: Troca de função
-          href: role-switching-during-a-database-mirroring-session-sql-server.md
-        - name: 'Quorum: como uma testemunha afeta a disponibilidade do banco de dados'
-          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
-        - name: Testemunha de espelhamento de banco de dados
-          href: database-mirroring-witness.md
-        - name: Causa possível de falhas
-          href: possible-failures-during-database-mirroring.md
-        - name: Pausar e retomar o espelhamento de banco de dados
-          href: pausing-and-resuming-database-mirroring-sql-server.md
-        - name: Removendo o espelhamento de banco de dados
-          href: removing-database-mirroring-sql-server.md
-    - name: Segurança
-      items:
-        - name: Pontos de extremidade
-          href: the-database-mirroring-endpoint-sql-server.md
-        - name: Segurança de transporte
-          href: transport-security-database-mirroring-always-on-availability.md
+  - name: Interoperabilidade e coexistência
+    href: database-mirroring-interoperability-and-coexistence-sql-server.md
+    items:
+    - name: Espelhamento de banco de dados e instâncias de cluster de failover do SQL Server
+      href: database-mirroring-and-sql-server-failover-cluster-instances.md
+    - name: Espelhamento de banco de dados e envio de logs
+      href: database-mirroring-and-log-shipping-sql-server.md
+    - name: Espelhamento de banco de dados e catálogos de texto completo
+      href: database-mirroring-and-full-text-catalogs-sql-server.md
+    - name: Espelhamento de banco de dados e instantâneos de banco de dados
+      href: database-mirroring-and-database-snapshots-sql-server.md
+    - name: Espelhamento e replicação de banco de dados
+      href: database-mirroring-and-replication-sql-server.md
+  - name: Administração
+    items:
+    - name: Monitorando o espelhamento de banco de dados
+      href: monitoring-database-mirroring-sql-server.md
+    - name: Troca de função
+      href: role-switching-during-a-database-mirroring-session-sql-server.md
+    - name: 'Quorum: como uma testemunha afeta a disponibilidade do banco de dados'
+      href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+    - name: Testemunha de espelhamento de banco de dados
+      href: database-mirroring-witness.md
+    - name: Causa possível de falhas
+      href: possible-failures-during-database-mirroring.md
+    - name: Pausar e retomar o espelhamento de banco de dados
+      href: pausing-and-resuming-database-mirroring-sql-server.md
+    - name: Removendo o espelhamento de banco de dados
+      href: removing-database-mirroring-sql-server.md
+  - name: Segurança
+    items:
+    - name: Pontos de extremidade
+      href: the-database-mirroring-endpoint-sql-server.md
+    - name: Segurança de transporte
+      href: transport-security-database-mirroring-always-on-availability.md
 - name: Referência
   items:
-    - name: Assistente de segurança de espelhamento de banco de dados
-      href: start-the-configuring-database-mirroring-security-wizard.md
-      items:
-        - name: Incluir servidor testemunha
-          href: include-witness-server-configure-database-mirroring-security-wizard.md
-        - name: Escolher servidores a serem configurados
-          href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
-        - name: Instância do servidor principal
-          href: principal-server-instance-configure-database-mirroring-security-wizard.md
-        - name: Instância do servidor espelho
-          href: mirror-server-instance-configure-database-mirroring-security-wizard.md
-        - name: Instância do servidor testemunha
-          href: witness-server-instance-configure-database-mirroring-security-wizard.md
-        - name: Contas de serviço
-          href: service-accounts-configure-database-mirroring-security-wizard.md
-    - name: Monitor de Espelhamento de Banco de Dados
-      href: start-database-mirroring-monitor-sql-server-management-studio.md
-      items:
-        - name: Visão geral do Monitor de Espelhamento de Banco de Dados
-          href: database-mirroring-monitor-overview.md
-        - name: Registrar banco de dados espelho
-          href: register-mirrored-database.md
-        - name: Página Status de Espelhamento de Banco de Dados
-          href: database-mirroring-monitor-status-page.md
-        - name: Histórico do espelhamento de banco de dados
-          href: database-mirroring-history.md
-        - name: Página Avisos de Espelhamento de Banco de Dados
-          href: database-mirroring-monitor-warnings-page.md
-        - name: Configurar limites de aviso
-          href: set-warning-thresholds.md
+  - name: Assistente de segurança de espelhamento de banco de dados
+    href: start-the-configuring-database-mirroring-security-wizard.md
+    items:
+    - name: Incluir servidor testemunha
+      href: include-witness-server-configure-database-mirroring-security-wizard.md
+    - name: Escolher servidores a serem configurados
+      href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+    - name: Instância do servidor principal
+      href: principal-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Instância do servidor espelho
+      href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Instância do servidor testemunha
+      href: witness-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Contas de serviço
+      href: service-accounts-configure-database-mirroring-security-wizard.md
+  - name: Monitor de Espelhamento de Banco de Dados
+    href: start-database-mirroring-monitor-sql-server-management-studio.md
+    items:
+    - name: Visão geral do Monitor de Espelhamento de Banco de Dados
+      href: database-mirroring-monitor-overview.md
+    - name: Registrar banco de dados espelho
+      href: register-mirrored-database.md
+    - name: Página Status de Espelhamento de Banco de Dados
+      href: database-mirroring-monitor-status-page.md
+    - name: Histórico do espelhamento de banco de dados
+      href: database-mirroring-history.md
+    - name: Página Avisos de Espelhamento de Banco de Dados
+      href: database-mirroring-monitor-warnings-page.md
+    - name: Configurar limites de aviso
+      href: set-warning-thresholds.md
+ms.openlocfilehash: f2734702c74cfb8e8caca54b9800981e314c30a2
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457639"
