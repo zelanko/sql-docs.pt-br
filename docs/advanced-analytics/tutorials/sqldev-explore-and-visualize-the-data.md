@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405776"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898991"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lição 1: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
 
-Nesta lição, você vai examinar os dados de exemplo e, em seguida, gerar algumas plotagens usando [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) partir [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) e genérica [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) função em r de base. Essas funções do R já estão incluídas no [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+Nesta etapa, você vai examinar os dados de exemplo e, em seguida, gerar algumas plotagens usando [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) partir [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) e genérica [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) função em r de base. Essas funções do R já estão incluídas no [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 Um objetivo importante desta lição mostra como chamar funções R do [!INCLUDE[tsql](../../includes/tsql-md.md)] em procedimentos armazenados e salvar os resultados em formatos de arquivo do aplicativo:
 

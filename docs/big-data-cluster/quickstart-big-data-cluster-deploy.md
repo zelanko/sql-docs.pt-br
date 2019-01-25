@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241697"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898981"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guia de início rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -33,7 +33,7 @@ A implantação de cluster de big data padrão usada aqui consiste em duas inst�
 - Uma assinatura do Azure.
 - [Ferramentas de big data](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
    - **CLI do Azure**
@@ -85,7 +85,7 @@ Use as etapas a seguir para executar o script de implantação. Esse script cria
    | **Usuário do controlador** | Nome de usuário para o usuário controlador (padrão: **admin**). |
 
    > [!IMPORTANT]
-   > Cada declaração de volume persistente no cluster exige um disco anexado. Atualmente, o cluster de big data requer declarações de volume persistente 21. Ao escolher um tamanho de máquina virtual do Azure e o número de nós, certifique-se de que o número total de discos que podem ser anexados em todos os nós é maior que ou igual a 21. Por exemplo, o [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamanho da máquina dá suporte a 16 discos conectados, portanto, três nós significa que os discos de 48 podem ser anexados.
+   > O padrão **Standard_L4s** tamanho da máquina pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de máquina diferente, certifique-se de que o número total de discos que podem ser anexados em todos os nós do cluster é maior que ou igual a 21. Cada declaração de volume persistente no cluster exige um disco anexado. Atualmente, o cluster de big data requer declarações de volume persistente 21. Por exemplo, o [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamanho da máquina dá suporte a 16 discos conectados, portanto, três nós significa que os discos de 48 podem ser anexados.
 
    > [!NOTE]
    > O `sa` conta é um administrador do sistema na instância mestre do SQL Server que é criada durante a instalação. Depois de criar a implantação, o `MSSQL_SA_PASSWORD` variável de ambiente é detectável executando `echo $MSSQL_SA_PASSWORD` no contêiner de instância principal. Para fins de segurança, altere sua `sa` senha na instância mestre após a implantação. Para obter mais informações, consulte [alterar a senha SA](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -236,6 +236,8 @@ az group delete -n <resource group name>
 ```
 
 ## <a name="next-steps"></a>Próximas etapas
+
+O script de implantação configurado o serviço Kubernetes do Azure e também implantado um cluster de big data do SQL Server de 2019. Você também pode optar por personalizar as futuras implantações por meio de instalações manuais. Para saber mais sobre como grandes dados clusters são implantados, bem como como personalizar as implantações, consulte [clusters de como implantar grandes de dados do SQL Server em Kubernetes](deployment-guidance.md).
 
 Agora que o cluster de big data do SQL Server é implantado, você pode carregar dados de exemplo e explore os tutoriais:
 

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 2c9cce03a5a2255353702fd99b8efb6e3e598ad5
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405596"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898971"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados de R para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,4 +65,4 @@ Este tutorial presume familiaridade com operações de banco de dados básico, c
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Configurar o banco de dados de táxi de NYC](demo-data-nyctaxi-in-sql.md)
+> [Explorar e visualizar dados usando funções de R em procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)

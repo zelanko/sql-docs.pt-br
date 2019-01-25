@@ -1,7 +1,7 @@
 ---
 title: Guia de controle de versão de linha e bloqueio de transações do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/14/2017
+ms.date: 01/24/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdf45eb189f7fc25d7f3ad8fac411395ae1078ed
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 09c39fdb8cdb811efecbf84d41ce8778f022001a
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397685"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880559"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações do SQL Server
 
@@ -152,7 +152,7 @@ CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
 INSERT INTO TestBatch VALUES (2, 'bbb');  
-INSERT INTO TestBatch VALUSE (3, 'ccc');  -- Syntax error.  
+INSERT INTO TestBatch VALUES (3, 'ccc');  -- Syntax error.  
 GO  
 SELECT * FROM TestBatch;  -- Returns no rows.  
 GO  

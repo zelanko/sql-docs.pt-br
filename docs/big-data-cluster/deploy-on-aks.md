@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241237"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898921"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configurar o serviço Kubernetes do Azure para implantações de cluster (versão prévia) do SQL Server 2019 big data
 
@@ -26,7 +26,7 @@ AKS torna simples a criar, configurar e gerenciar um cluster de máquinas virtua
 Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI do Azure. Se você não tiver uma assinatura do Azure, crie uma conta gratuita, antes de começar.
 
 > [!TIP] 
-> Para um script de python de exemplo que implanta o cluster de big data do AKS e o SQL Server, consulte [implantar um cluster de big data no serviço de Kubernetes do Azure (AKS) do SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+> Para um script de python de exemplo que implanta o cluster de big data do AKS e o SQL Server, consulte [guia de início rápido: Implantar o SQL Server no serviço de Kubernetes do Azure (AKS) de cluster de big data](quickstart-big-data-cluster-deploy.md).
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -106,6 +106,6 @@ Um grupo de recursos do Azure é um grupo lógico no qual Azure recursos são im
 
 ## <a name="next-steps"></a>Próximas etapas
 
-As etapas neste artigo configurado um cluster Kubernetes no AKS. A próxima etapa é implantar o SQL Server 2019 grandes dados ao cluster.
+As etapas neste artigo configurado um cluster Kubernetes no AKS. A próxima etapa é implantar o SQL Server 2019 grandes dados ao cluster. Para obter mais informações sobre como implantar clusters de big data, consulte o artigo a seguir:
 
-[Guia de início rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)](quickstart-big-data-cluster-deploy.md)
+[Como implantar clusters de grandes dados do SQL Server no Kubernetes](deployment-guidance.md)
