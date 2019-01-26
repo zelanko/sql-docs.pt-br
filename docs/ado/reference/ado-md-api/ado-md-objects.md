@@ -14,19 +14,20 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b0aed3c63b1303e4d8743ea441348c351be822
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828704"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044909"
 ---
 # <a name="ado-md-objects"></a>Objetos do ADO MD
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Representa um posicional ou eixo do filtro de um conjunto de células que contêm membros selecionados de uma ou mais dimensões.|  
 |[Catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contém multidimensional informações de esquema (ou seja, cubos e subjacente dimensões, hierarquias, níveis e membros) específicas para um provedor de dados multidimensional (MDP).|  
-|[célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção das coordenadas do eixo, contido em um conjunto de células.|  
+|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção das coordenadas do eixo, contido em um conjunto de células.|  
 |[Conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros conjuntos de células.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Representa um cubo de um esquema multidimensional, que contém um conjunto de dimensões relacionadas.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Representa uma das dimensões de um cubo multidimensional, que contém uma ou mais hierarquias de membros.|  
@@ -37,7 +38,7 @@ ms.locfileid: "47828704"
   
  Além disso, o **catálogo** objeto está conectado a um ADO **Conexão** objeto, que é incluído com a biblioteca do ADO padrão:  
   
-|Object|Description|  
+|Object|Descrição|  
 |------------|-----------------|  
 |[Conexão](../../../ado/reference/ado-api/connection-object-ado.md)|Representa uma conexão aberta com uma fonte de dados.|  
   

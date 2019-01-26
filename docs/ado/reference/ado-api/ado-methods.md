@@ -14,14 +14,15 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530238"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044752"
 ---
 # <a name="ado-methods"></a>Métodos ADO
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Cria um novo registro para um atualizável **Recordset** objeto.|  
@@ -40,7 +41,7 @@ ms.locfileid: "52530238"
 |[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|Cria um novo **parâmetro** objeto que tem as propriedades especificadas.|  
 |[Delete (coleção de parâmetros ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Exclui um objeto a partir de **parâmetros** coleção.|  
 |[Excluir (coleção de campos ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Exclui um objeto a partir de **campos** coleção.|  
-|[Delete (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Exclui o registro atual ou um grupo de registros.|  
+|[Delete (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Exclui o registro atual ou um grupo de registros.|  
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Exclui um arquivo ou diretório e todos os seus subdiretórios.|  
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na **CommandText** propriedade.|  
 |[Execute (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Executa a consulta especificada, instrução SQL, procedimento armazenado ou texto específico do provedor.|  
@@ -67,7 +68,7 @@ ms.locfileid: "52530238"
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lê um número especificado de caracteres de um texto **Stream** objeto.|  
 |[Atualizar](../../../ado/reference/ado-api/refresh-method-ado.md)|Atualiza os objetos em uma coleção para refletir objetos disponíveis do e específicos ao provedor.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Atualiza os dados em um **Recordset** objeto executar novamente a consulta na qual o objeto se baseia.|  
-|[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Atualiza os dados no atual **conjunto de registros** objeto, ou **campos** coleção de um **registro** objeto do banco de dados subjacente.|  
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Atualiza os dados no atual **conjunto de registros** objeto, ou **campos** coleção de um **registro** objeto do banco de dados subjacente.|  
 |[Salvar](../../../ado/reference/ado-api/save-method.md)|Salva o **conjunto de registros** em um arquivo ou **Stream** objeto.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Salva o conteúdo binário de um **Stream** para um arquivo.|  
 |[Busca](../../../ado/reference/ado-api/seek-method.md)|Pesquisa o índice de um **Recordset** para localizar rapidamente a linha que corresponde aos valores especificados e altera a posição da linha atual para aquela linha.|  

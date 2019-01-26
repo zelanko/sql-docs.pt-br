@@ -14,21 +14,22 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637224"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044660"
 ---
 # <a name="adox-properties"></a>Propriedades ADOX
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica o ADO **Conexão** do objeto ao qual pertence o catálogo.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Descreve as características da coluna.|  
-|[Em cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se o índice é clusterizado.|  
+|[Clusterizado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se o índice é clusterizado.|  
 |[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Especifica o ADO **comando** objeto que pode ser usado para criar ou executar o procedimento.|  
-|[Contagem](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica a data em que o objeto foi criado.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica a data em que o objeto foi modificado pela última vez.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica o tamanho máximo indicado da coluna.|  

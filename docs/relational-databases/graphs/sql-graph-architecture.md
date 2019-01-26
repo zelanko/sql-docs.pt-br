@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300183"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044542"
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura de grafo do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ As seguintes funções internas são adicionadas. Eles ajudarão os usuários ex
 Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas no SQL Server e banco de dados SQL, que permitem criar e consultar objetos de grafo. As extensões de linguagem de consulta ajudam a consulta e percorrer o gráfico usando a sintaxe de arte ASCII.
  
 ### <a name="data-definition-language-ddl-statements"></a>Instruções de Definition Language (DDL) de dados
+
 |Tarefa   |Artigo relacionado  |Observações
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Agora é estendida para dar suporte à criação de uma tabela como nó ou borda como. Observe que uma tabela de borda pode ou não ter todos os atributos definidos pelo usuário.  |
@@ -145,6 +146,7 @@ Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Instruções de manipulação DML (linguagem) de dados
+
 |Tarefa   |Artigo relacionado  |Observações
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserindo em uma tabela de nó não é diferente de inserção em uma tabela relacional. Os valores para `$node_id` coluna é gerada automaticamente. Tentando inserir um valor em `$node_id` ou `$edge_id` coluna resultará em erro. Os usuários devem fornecer valores para `$from_id` e `$to_id` colunas durante a inserção em uma tabela de borda. `$from_id` e `$to_id` são o `$node_id` valores de nós que um determinado edge se conecta.  |
@@ -154,6 +156,7 @@ Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas
 
 
 ### <a name="query-statements"></a>Instruções de consulta
+
 |Tarefa   |Artigo relacionado  |Observações
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nós e bordas são armazenadas como tabelas internamente, portanto, a maioria das operações com suporte em uma tabela no SQL Server ou banco de dados SQL têm suporte nas tabelas de nó e de borda  |

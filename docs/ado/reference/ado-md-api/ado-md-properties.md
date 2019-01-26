@@ -14,23 +14,24 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696925"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044768"
 ---
 # <a name="ado-md-properties"></a>Propriedades do ADO MD
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica para qual ADO **Conexão** o conjunto de células atual do objeto ou catálogo ao qual pertence atualmente.|  
-|[Legenda](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica o texto da legenda a ser usado ao exibir uma **nível** ou **membro** objeto.|  
+|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica o texto da legenda a ser usado ao exibir uma **nível** ou **membro** objeto.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica o número de membros para os quais o atual **membro** objeto é o pai em uma hierarquia.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Retorna uma coleção de **membros** para o qual atual **membro** é o pai na hierarquia.|  
-|[Contagem](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[Profundidade](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica o número de níveis entre o **nível** e a raiz de nível de hierarquia.|  
-|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Retorna uma explicação de texto do objeto atual.|  
+|[Descrição](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Retorna uma explicação de texto do objeto atual.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica o número de dimensões em um eixo.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica se há filhos logo após o membro do eixo.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indica informações de filtro para o conjunto de células atual.|  
@@ -38,7 +39,7 @@ ms.locfileid: "47696925"
 |[Item](../../../ado/reference/ado-api/item-property-ado.md)|Retorna um membro específico de uma coleção por nome ou número ordinal.|  
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Indica a exibição formatada do valor de uma célula.|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Indica o número de níveis entre a raiz da hierarquia e um membro.|  
-|[Nome do nível](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indica o nome do nível de membro.|  
+|[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indica o nome do nível de membro.|  
 |[Nome](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Indica o nome de um objeto.|  
 |[Ordinal (célula)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Identifica exclusivamente uma célula por sua posição dentro de um conjunto de células.|  
 |[Ordinal (posição)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica exclusivamente uma posição ao longo do eixo.|  

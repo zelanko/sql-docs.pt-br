@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 26e93209e2cbd9809d607f90c7eff4da32d2cd98
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030480"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045025"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Painéis no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -84,16 +84,17 @@ Exemplo de configuração de submenu Insight detalhes
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |propriedade|Tipo|value|Valor padrão|descrição|comment|
 |:---|:---|:---|:---|:---|:---|
 |detalhes|objeto JSON|||propriedade obrigatória para definir as definições de detalhes de informações dentro de sua estrutura||
 |queryFile|cadeia de caracteres|||o caminho do arquivo de consulta do insight detalhes sql e o nome do arquivo relativo ao local do Package. JSON||
 |Rótulo|objeto JSON|||propriedade obrigatória para definir cada item de linha na exibição de lista de resumo|no futuro, o nome dessa propriedade para alterar, como 'summaryList'|
-|Ícone|cadeia de caracteres|||Indique o nome do ícone a ser renderizado para cada item de exibição de lista de resumo.|lista (tbd) dos ícones com suporte será documentada|
+|icon|cadeia de caracteres|||Indique o nome do ícone a ser renderizado para cada item de exibição de lista de resumo.|lista (tbd) dos ícones com suporte será documentada|
 |column|cadeia de caracteres|||Indique o nome da primeira coluna na exibição de lista de resumo do conjunto de resultados de consulta|no futuro o nome dessa propriedade será alterado para um nome mais intuitivo|
 |value|cadeia de caracteres|||Indique o nome da segunda coluna na exibição de lista de resumo do conjunto de resultados de consulta. O valor desta coluna é usado para verificar condições e definir a cor para cada ponto de cor de itens de exibição lista de resumo|no futuro, o nome dessa propriedade será alterado para algo mais intuitiva|
 |Condição|objeto JSON|||Define o valor da coluna a verificação de condição e determinar a cor para cada item de exibição de lista de resumo||
-|if|cadeia de caracteres|sempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operador de seleção de condição|no futuro, o nome da propriedade será alterado para operador|
+|if|cadeia de caracteres|always, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operador de seleção de condição|no futuro, o nome da propriedade será alterado para operador|
 |equals|cadeia de caracteres|||valor de verificação de condição|no futuro o nome da propriedade será alterado para 'value'|
 
 ## <a name="insight-actions"></a>Ações de Insight

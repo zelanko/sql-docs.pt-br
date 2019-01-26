@@ -16,19 +16,20 @@ ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd6188de21c40b1edb5a365724451b44189e462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821304"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044413"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Configurar opções programaticamente para drivers de Arquivo de texto
-|Opção|Description|Método|  
+
+|Opção|Descrição|Método|  
 |------------|-----------------|------------|  
 |Nome da Fonte de Dados|Um nome que identifica a fonte de dados, como folha de pagamento ou pessoal.|Para definir essa opção dinamicamente, use o **DSN** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Definir o formato|Exibe a **definir o formato de texto** caixa de diálogo e permite que você especifique o esquema para tabelas individuais no diretório de fonte de dados.|Essa opção não pode ser definida dinamicamente por uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Description|Uma descrição opcional dos dados na fonte de dados; Por exemplo, "data de contratação, histórico de salário e análise atual de todos os funcionários."|Para definir essa opção dinamicamente, use o **descrição** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Descrição|Uma descrição opcional dos dados na fonte de dados; Por exemplo, "data de contratação, histórico de salário e análise atual de todos os funcionários."|Para definir essa opção dinamicamente, use o **descrição** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Diretório|Seleciona o diretório de destino.|Para definir essa opção dinamicamente, use o **DEFAULTDIR** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Lista de extensões|Lista as extensões de nome de arquivo dos arquivos de texto na fonte de dados. Quando o driver de texto é usado, um arquivo sem extensão é criado quando a instrução CREATE TABLE for executada com um nome que não tiver uma extensão. Outros drivers de criar um arquivo com uma extensão padrão quando nenhuma extensão é fornecido. Para criar um arquivo com uma extensão. txt, a extensão deve ser incluída no nome. Para exibir arquivos sem extensões na **definir o formato de texto** caixa de diálogo, "*." deve ser adicionado à lista de extensões.|Para definir essa opção dinamicamente, use o **extensões** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Somente Leitura|Designa o banco de dados como somente leitura.|Para definir essa opção dinamicamente, use o **READONLY** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  

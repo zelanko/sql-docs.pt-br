@@ -13,14 +13,15 @@ ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d946178453e3db317c92031a34e2a345e9060a8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48dc5dff83e942b894548d44e3673c19ca0746c5
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809614"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044869"
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption (Drivers de banco de dados de área de trabalho)
+
 |*fOption*|Comentários|  
 |---------------|--------------|  
 |SQL_ASYNC_ENABLE|Não há suporte para o processamento assíncrono. O fOption SQL_ASYNC_ENABLE retornará SQLSTATE S1C00 (o Driver não funciona).|  

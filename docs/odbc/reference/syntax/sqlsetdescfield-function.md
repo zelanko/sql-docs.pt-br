@@ -20,12 +20,12 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420231"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044353"
 ---
 # <a name="sqlsetdescfield-function"></a>Função SQLSetDescField
 
@@ -147,7 +147,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|DESCARTAR: R/W APD: R/W IRD: R/W IPD: R/W|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Ptr nulo IPD: Ptr nulo|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: Ptr nulo APD: Ptr nulo IRD: Não utilizado IPD: Não usado|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|DESCARTAR: R/W APD: R/W IRD: Não utilizado IPD: Não usado|DESCARTAR: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: Não usado<br /><br /> IPD: Não usado|  
-SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD 0: 0 IRD: D IPD: 0|  
+|SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: APD 0: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|DESCARTAR: APD não utilizado: Não utilizado IRD: R/W IPD: R/W|DESCARTAR: APD não utilizado: Não utilizado IRD: Ptr nulo IPD: Ptr nulo|  
   
  [1] esses campos são definidos somente quando o IPD é preenchida automaticamente pelo driver. Se não estiver, eles são indefinidos. Se um aplicativo tenta definir esses campos, SQLSTATE HY091 (identificador de campo de descritor inválido) será retornado.  
