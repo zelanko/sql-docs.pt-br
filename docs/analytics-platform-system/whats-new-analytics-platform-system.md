@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626350"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044703"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
 Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.3"></a>
-## <a name="aps-cu73"></a>CU7.3 DE APS
+## <a name="aps-cu73"></a>APS CU7.3
 Data de lançamento - dezembro de 2018
 
 ### <a name="common-subexpression-elimination"></a>Eliminação de subexpressão comum
@@ -31,6 +31,7 @@ APS CU7.3 melhora o desempenho de consulta com eliminação de subexpressão com
 Lançamos uma nova versão dos conectores do Informatica para APS que funciona com o Informatica versão 10.2.0. Os novos conectores podem ser baixados em [site de download](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Versões com suporte
+
 | Versão APS | PowerCenter de Informatica | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
@@ -173,7 +174,7 @@ APS AU6 dá suporte a esses aprimoramentos de compatibilidade do T-SQL.  Esses e
 
 **Funções adicionais**
 
-- [NEWID)][]
+- [NEWID()][]
 - [RAND()][]
 
 ### <a name="polybasehadoop-enhancements"></a>Aprimoramentos do PolyBase/Hadoop
@@ -234,7 +235,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [CHECKSUM()]:/sql/t-sql/functions/checksum-transact-sql
 [BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
 [HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
-[NEWID)]:/sql/t-sql/functions/newid-transact-sql
+[NEWID()]:/sql/t-sql/functions/newid-transact-sql
 [RAND()]:/sql/t-sql/functions/rand-transact-sql
 
 
