@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a7ff5ba51b9fef1e65946da9d498e4ed95d618f2
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457509"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planejando uma instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,6 +77,6 @@ ms.locfileid: "51701914"
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [Antes de instalar o cluster de failover](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Fazer Upgrade do SQL Server Usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  

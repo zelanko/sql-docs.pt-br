@@ -13,12 +13,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4f26b5de16185f7c19601cd91a88e9bda23b895
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 094a5f631b6a1cb146e46a6c4f1170fc56ca63f2
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457579"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Fazer backup de bancos de dados habilitados para Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53596717"
  -   O Microsoft Azure automaticamente faz backup dos dados remotos que o Stretch Database migrou do SQL Server para o Azure.  
 
 > [!TIP]
-> O backup é apenas uma parte de uma solução de continuidade dos negócios e de alta disponibilidade. Para obter mais informações sobre a alta disponibilidade, consulte [Soluções de alta disponibilidade](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> O backup é apenas uma parte de uma solução de continuidade dos negócios e de alta disponibilidade. Para obter mais informações sobre a alta disponibilidade, consulte [Soluções de alta disponibilidade](../../database-engine/sql-server-business-continuity-dr.md).
    
 ## <a name="back-up-your-sql-server-data"></a>Fazer backup dos dados do SQL Server  
   

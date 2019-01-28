@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457629"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurar bancos de dados habilitados para Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596577"
   Para obter mais informações sobre backup, veja [Fazer backup de bancos de dados habilitados para Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> O backup é apenas uma parte de uma solução de continuidade dos negócios e de alta disponibilidade. Para obter mais informações sobre a alta disponibilidade, consulte [Soluções de alta disponibilidade](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> O backup é apenas uma parte de uma solução de continuidade dos negócios e de alta disponibilidade. Para obter mais informações sobre a alta disponibilidade, consulte [Soluções de alta disponibilidade](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## <a name="restore-your-sql-server-data"></a>Restaurar os dados do SQL Server
 Para se recuperar de falhas de hardware ou de corrupção, restaure o banco de dados SQL Server habilitado para Stretch por meio de um backup. Você pode continuar a usar os métodos de restauração do SQL Server que você utiliza atualmente. Para obter mais informações, veja [Visão geral da recuperação e restauração](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
