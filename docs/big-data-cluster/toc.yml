@@ -5,10 +5,28 @@ items:
     href: big-data-cluster-overview.md
   - name: Notas de versão
     href: big-data-cluster-release-notes.md
-- name: Guias de início rápido
+- name: Instalar
   items:
-  - name: Implantar o cluster de Big Data do SQL Server
-    href: quickstart-big-data-cluster-deploy.md
+  - name: Instalar ferramentas
+    items:
+    - name: Instalar ferramentas de Big Data
+      href: deploy-big-data-tools.md
+    - name: Instalar mssqlctl
+      href: deploy-install-mssqlctl.md
+  - name: Scripts de implantação
+    items:
+    - name: Serviço de Kubernetes do Azure
+      href: quickstart-big-data-cluster-deploy.md
+  - name: Diretrizes de implantação
+    items:
+    - name: Diretrizes de implantação
+      href: deployment-guidance.md
+    - name: Serviço de Kubernetes do Azure
+      href: deploy-on-aks.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+    - name: Minikube
+      href: deploy-on-minikube.md
 - name: Tutoriais
   items:
   - name: 1_Carregar dados de exemplo
@@ -41,24 +59,6 @@ items:
     href: concept-security.md
 - name: Guias de instruções
   items:
-  - name: Instalar
-    items:
-    - name: Implantar clusters de Big Data
-      items:
-      - name: Diretrizes de implantação
-        href: deployment-guidance.md
-      - name: Implantar o Minikube
-        href: deploy-on-minikube.md
-      - name: Implantar no AKS
-        href: deploy-on-aks.md
-      - name: Implantar com o Kubeadm
-        href: deploy-with-kubeadm.md
-    - name: Instalar ferramentas
-      items:
-      - name: Instalar ferramentas de Big Data
-        href: deploy-big-data-tools.md
-      - name: Instalar mssqlctl
-        href: deploy-install-mssqlctl.md
   - name: Virtualização de dados
     items:
     - name: Virtualizar dados relacionais
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Solicitar acesso aos clusters de Big Data
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d9229242d1c56e36c854ef8f7ecdd94145398b87
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405556"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898911"
