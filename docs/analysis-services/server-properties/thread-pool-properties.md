@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785957"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087865"
 ---
 # <a name="thread-pool-properties"></a>Propriedades de pool de threads
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
   
  Nós NUMA são ignorados. Haverá apenas um pool de threads do IOProcess, e todos os threads nesse pool de threads serão relacionados a todos os processadores lógicos. Por padrão (onde PerNumaNode=-1), essa é a configuração operacional se o computador tiver menos de 4 nós NUMA.  
   
- ![Numa, processador e thread correspondance de pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "correspondance de pool de Numa, processador e thread")  
+ ![Correspondência de numa, processador e pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, processador e pool de correspondência")  
   
  **Configurando PerNumaNode=1**  
   
  Os pools de threads do IOProcess são criados para cada nó NUMA. Ter pools de threads separados melhora o acesso coordenado a recursos locais, como o cache local em um nó NUMA.  
   
- ![Numa, processador e thread correspondance de pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "correspondance de pool de Numa, processador e thread")  
+ ![Correspondência de numa, processador e pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, processador e pool de correspondência")  
   
  **Configurando PerNumaNode=2**  
   
@@ -187,7 +187,7 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
   
  No exemplo a seguir, em um sistema que tem 4 nós NUMA e 32 processadores lógicos, definir **PerNumaNode** como 2 resultaria em 32 pools de threads do IOProcess. Os threads nos primeiros 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 0, mas com o processador ideal definido como 0, 1, 2, até 7. Os próximos 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 1, mas com o processador ideal definido como 8, 9, 10, até 15 e assim por diante.  
   
- ![Numa, processador e thread correspondance de pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "correspondance de pool de Numa, processador e thread")  
+ ![Correspondência de numa, processador e pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, processador e pool de correspondência")  
   
  Nesse nível de afinidade, o agendador sempre tenta usar primeiro o processador lógico ideal, dentro do nó NUMA preferencial. Se o processador lógico não estiver disponível, o agendador escolherá outro processador dentro do mesmo nó ou dentro do mesmo grupo de processador se nenhum outro thread estiver disponível. Para obter mais informações e exemplos, consulte [Parâmetros de configuração do Analysis Services 2012 (blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   

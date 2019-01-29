@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626326"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044323"
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626326"
   
 ## <a name="list-of-startup-options"></a>Lista de opções de inicialização  
 ### <a name="default-startup-options"></a>Opções de inicialização padrão  
+
 |Opções|Descrição|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|O caminho totalmente qualificado para o arquivo de banco de dados mestre (geralmente, C:\Arquivos de Programas\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Se você não fornecer essa opção, os parâmetros de registro existentes serão usados.|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626326"
 |**-l**  *master_log_path*|O caminho totalmente qualificado para o arquivo de log do banco de dados mestre (geralmente, C:\Arquivos de Programas\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Se você não especificar essa opção, serão usados os parâmetros de registro existentes.|  
   
 ### <a name="other-startup-options"></a>Outras opções de inicialização   
+
 |Opções |Descrição|   
 |---------------------------|-----------------|  
 |**-c**|Reduz o tempo de inicialização ao iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no prompt de comando. Normalmente, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inicia como um serviço chamando o Gerenciador de Controle de Serviços. Como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não é iniciado como um serviço quando o prompt de comando é iniciado, use **-c** para ignorar esta etapa.|  

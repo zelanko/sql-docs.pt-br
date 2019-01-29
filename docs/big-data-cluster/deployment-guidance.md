@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405816"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087855"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -256,10 +256,27 @@ Atualmente, a única maneira de atualizar um cluster de big data para uma nova v
     mssqlctl delete cluster <old-cluster-name>
    ```
 
-1. Instale a versão mais recente do **mssqlctl**.
+1. Desinstale as versões antigas do **mssqlctl**.
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > Você não deve instalar a nova versão do **mssqlctl** sem desinstalar as versões mais antigas primeiro.
+
+1. Instale a versão mais recente do **mssqlctl**. 
+   
+   **Windows:**
+
+   ```powershell
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   ```
+
+   **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
 
    > [!IMPORTANT]

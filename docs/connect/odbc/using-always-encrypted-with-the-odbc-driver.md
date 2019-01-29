@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226683"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044943"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -417,6 +417,7 @@ Definindo o `SQL_COPT_SS_CEKEYSTOREPROVIDER` atributo de conexão permite que um
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argumento | Descrição |
 |:---|:---|
 |`ConnectionHandle`|[Entrada] Identificador de Conexão. Deve ser um identificador de conexão válida, mas provedores carregados por meio do identificador de uma conexão são acessíveis de qualquer outro no mesmo processo.|
@@ -451,6 +452,7 @@ Introdução a este atributo de conexão permite que um aplicativo cliente para 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argumento | Descrição |
 |:---|:---|
 |`ConnectionHandle`|[Entrada] Identificador de Conexão. Deve ser um identificador de conexão válida, mas provedores carregados por meio do identificador de uma conexão são acessíveis de qualquer outro no mesmo processo.|
@@ -477,6 +479,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | Argumento | Descrição |
 |:---|:---|
 |`name`|[Entrada] Em conjunto, o nome do provedor para que os dados são enviados. Ignorado após Get. Cadeia de caracteres terminada em nulo, o caractere largo.|
@@ -489,6 +492,7 @@ Um `SQLSetConnectAttr` chamar usando o `SQL_COPT_SS_CEKEYSTOREDATA` atributo gra
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argumento | Descrição |
 |:---|:---|
 |`ConnectionHandle`| [Entrada] Identificador de Conexão. Deve ser um identificador de conexão válida, mas provedores carregados por meio do identificador de uma conexão são acessíveis de qualquer outro no mesmo processo.|
@@ -508,6 +512,7 @@ Uma chamada para `SQLGetConnectAttr` usando o `SQL_COPT_SS_CEKEYSTOREDATA` atrib
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argumento | Descrição |
 |:---|:---|
 |`ConnectionHandle`|[Entrada] Identificador de Conexão. Deve ser um identificador de conexão válida, mas provedores carregados por meio do identificador de uma conexão são acessíveis de qualquer outro no mesmo processo.|

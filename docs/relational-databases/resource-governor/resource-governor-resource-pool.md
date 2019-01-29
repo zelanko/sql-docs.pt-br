@@ -14,12 +14,12 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 37d6a896057085353d81e8c9acbd161a25014d51
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380947"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044343"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de recursos do Administrador de Recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,7 @@ A tabela a seguir ilustra alguns dos conceitos anteriores. A tabela mostra as co
 |padrão|0|100|30|30|O valor MAX efetivo é calculado como: min(100,100-(20+50)) = 30. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
 |Pool 1|20|100|50|30|O valor MAX efetivo é calculado como: min(100,100-50) = 50. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
 |Pool 2|50|70|70|20|O valor MAX efetivo é calculado como: min(70,100-20) = 70. O % compartilhado calculado é o MAX efetivo - MIN = 20.|  
+
 As fórmulas a seguir são usadas para calcular o MAX% efetivo e o percentual compartilhado na tabela acima:  
   
 -   Min(X,Y) significa o menor valor de X e Y.  

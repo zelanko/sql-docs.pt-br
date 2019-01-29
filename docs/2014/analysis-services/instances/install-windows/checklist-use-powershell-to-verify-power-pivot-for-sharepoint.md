@@ -11,12 +11,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2808f6f653ee25f240dbe400b76e018e5033676
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376648"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087785"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Lista de verificação: Use o PowerShell para verificar o PowerPivot para SharePoint
   Nenhuma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ou operação de recuperação será completa sem um teste de verificação rigoroso que confirme o funcionamento correto dos serviços e dos dados. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
@@ -33,7 +33,7 @@ ms.locfileid: "53376648"
   
 |||  
 |-|-|  
-|[Preparar o ambiente do PowerShell](#bkmk_prerequisites)<br /><br /> [Sintomas e ações recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Serviço Windows do Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService e PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Aplicativos de serviço e proxies do PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bancos de dados](#bkmk_databases)<br /><br /> [Recursos do SharePoint](#bkmk_features)<br /><br /> [Trabalhos de timer](#bkmk_timer_jobs)<br /><br /> [Regras de integridade](#bkmk_health_rules)<br /><br /> **(E)** [Logs do Windows e do ULS](#bkmk_logs)<br /><br /> [Provedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Regras de coleta de dados de integridade](#bkmk_health_collection)<br /><br /> [Soluções](#bkmk_solutions)<br /><br /> [Etapas de verificação manual](#bkmk_manual)<br /><br /> [Mais recursos](#bkmk_more_resources)<br /><br /> [Script completo do PowerShell](#bkmk_full_script)|![verificação de PowerShell do powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "verificação de powershell do powerpivot")|  
+|[Preparar o ambiente do PowerShell](#bkmk_prerequisites)<br /><br /> [Sintomas e ações recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Serviço Windows do Analysis Services](#bkmk_windows_service)<br /><br /> **(B)**  [PowerPivotSystemService e PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Aplicativos de serviço e proxies do PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bancos de dados](#bkmk_databases)<br /><br /> [Recursos do SharePoint](#bkmk_features)<br /><br /> [Trabalhos de timer](#bkmk_timer_jobs)<br /><br /> [Regras de integridade](#bkmk_health_rules)<br /><br /> **(E)** [Logs do Windows e do ULS](#bkmk_logs)<br /><br /> [Provedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Regras de coleta de dados de integridade](#bkmk_health_collection)<br /><br /> [Soluções](#bkmk_solutions)<br /><br /> [Etapas de verificação manual](#bkmk_manual)<br /><br /> [Mais recursos](#bkmk_more_resources)<br /><br /> [Script completo do PowerShell](#bkmk_full_script)|![verificação de PowerShell do powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "verificação de powershell do powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Preparar o ambiente do PowerShell  
  As etapas desta seção preparam o ambiente do PowerShell. As etapas podem não ser necessárias, dependendo de como o ambiente de script está configurado no momento.  
@@ -87,7 +87,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService e PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService e PowerPivotEngineService  
  Os scripts desta seção verificam os serviços de sistema do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Há um serviço de sistema para uma implantação do SharePoint 2013 e dois serviços para uma implantação do SharePoint 2010.  
   
  **PowerPivotSystemService**  
@@ -106,7 +106,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  **Ignore este script se** você estiver usando o SharePoint 2013. O PowerPivotEngineService não faz parte de uma implantação do SharePoint 2013. Se você executar o cmdlet Get-PowerPivot**Engine**Service no SharePoint 2013, receberá uma mensagem de erro semelhante à seguinte. Essa mensagem de erro será retornada mesmo se você tiver executado o comando Add-PSSnapin descrito na seção de pré-requisitos deste tópico.  
@@ -467,7 +467,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

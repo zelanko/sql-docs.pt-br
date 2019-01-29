@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645315"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147024"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalar o SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ No SQL Server 2017, a integração do R é oferecida em [serviços de Machine Le
 ## <a name="pre-install-checklist"></a>Lista de verificação de pré-instalação
 
 + Uma instância do mecanismo de banco de dados é necessária. Você não pode instalar apenas R, embora você possa adicioná-lo incrementalmente a uma instância existente.
+
++ Para continuidade de negócios [Availabilty grupos AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) têm suporte para R Services. Você precisa instalar o R Services e configurar pacotes, em cada nó.
 
 + Não instale o R Services em um cluster de failover. O mecanismo de segurança usado para isolar processos do R não é compatível com um ambiente de cluster de failover do Windows Server.
 

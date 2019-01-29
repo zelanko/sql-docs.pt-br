@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738112"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044482"
 ---
 # <a name="system-settings-master-data-services"></a>Configurações do sistema (Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738112"
 ||**SecurityMemberProcessInterval**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , a frequência, em segundos, com que as permissões de usuário e grupo definidas na guia **Membros da Hierarquia** são aplicadas. O valor padrão é **3600** segundos (60 minutos).|  
 
 ##  <a name="Performance"></a> Configurações de Desempenho  
+
 |Configuração do Gerenciador de Configuração|Configuração do sistema|Descrição|  
 |-----------------------------------|--------------------|-----------------|  
 |**Habilitar configuração de melhoria de desempenho**|**PerformanceImprovementEnable**|O padrão é habilitar essa configuração (**Definido como 1**), de modo que a página relacionada à permissão de carregar tenha um bom desempenho. Mas, nessa situação, criar/modificar entidades, atributos, usuários ou grupos terá um baixo desempenho. Para evitar isso, você pode desabilitar essa configuração (**Definido como 0**). Depois de alterar essa configuração. Você deve executar o comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" para que a exibição e os dados estejam corretos.|  

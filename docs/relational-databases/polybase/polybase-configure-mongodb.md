@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947581"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044492"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurar o PolyBase para acessar dados externos no MongoDB
 
@@ -95,7 +95,7 @@ Estes objetos serão criados nesta seção:
      );
      ```
 
-1. **Opcional:** criar estatísticas em uma tabela externa.
+1. **Opcional:** Crie estatísticas em uma tabela externa.
 
     É recomendável criar estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações, a fim de ter o desempenho de consulta ideal.
 
@@ -142,6 +142,7 @@ O endereço do objeto será nivelado conforme abaixo:
 * O campo aninhado restaurant.address.zipcode se torna restaurant.address_zipcode
 
 As classificações da matriz serão niveladas conforme abaixo:
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |Um |2|

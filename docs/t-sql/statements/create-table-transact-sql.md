@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300563"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838143"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -479,8 +479,6 @@ column_name <data_type>
   
  IDENTITY  
  Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece um valor incremental exclusivo para a coluna. Geralmente, as colunas de identidade são usadas com restrições PRIMARY KEY para servir como o identificador exclusivo de linha para a tabela. A propriedade IDENTITY pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)**. Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Devem ser especificados tanto o valor de semente como o de incremento ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
-  
- Em uma tabela com otimização de memória, o único valor permitido para *seed* e *increment* é 1; (1,1) é o padrão para *seed* e *increment*.  
   
  *seed*  
  É o valor usado para a primeira linha carregada na tabela.  

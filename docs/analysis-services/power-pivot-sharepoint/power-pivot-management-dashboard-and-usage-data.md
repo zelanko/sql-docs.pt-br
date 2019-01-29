@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419697"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087745"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento Power Pivot e dados de uso
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419697"
 ### <a name="change-the-current-service-application"></a>Altere o aplicativo de serviço atual.  
  Para alterar o aplicativo de serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] atual no painel de gerenciamento:  
   
-1.  Na parte superior do painel de gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], observe o nome do aplicativo de serviço atual; por exemplo, **Aplicativo de Serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Padrão**.  
+1.  Na parte superior a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] painel de gerenciamento, anote o nome do aplicativo de serviço atual, por exemplo **padrão [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] aplicativo de serviço**.  
   
 2.  No painel **Ações** , clique em **Listar aplicativos de serviço**.  
   

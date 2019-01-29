@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805712"
 ---
 # <a name="always-encrypted-wizard"></a>Assistente de Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ Use o **Assistente de Sempre Criptografado** para ajudar a proteger dados confid
  
  - **Permissões:** Para consultar colunas criptografadas e selecionar chaves usando este assistente, é necessário ter as permissões `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Para criar novas chaves, você também deve ter as permissões `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>Para abrir o Assistente de Sempre Criptografado  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>Para abrir o Assistente de Sempre Criptografado
  
  1.  Conecte-se ao seu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o componente do Pesquisador de objetos do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
  2.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Criptografar Colunas**.  
    
- ## <a name="column-selection-page"></a>Página de seleção de coluna  
+ ## <a name="column-selection-page"></a>Página de seleção de coluna
  - Localize uma tabela e uma coluna e selecione um tipo de criptografia (determinístico ou aleatório) e uma chave de criptografia para as colunas selecionadas. Para descriptografar uma coluna criptografada, selecione **Texto não criptografado**. Para girar uma chave de criptografia de coluna, selecione uma chave de criptografia diferente e o assistente descriptografará a coluna e criptografará novamente a coluna com a nova chave. (Há suporte no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a criptografia de tabelas temporais e na memória, mas ela não pode ser configurada por este assistente.)  
  
 ## <a name="master-key-configuration-page"></a>Página de configuração de chave mestra  

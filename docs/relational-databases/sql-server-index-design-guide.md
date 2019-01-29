@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420181"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880539"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -362,7 +362,7 @@ A ilustração a seguir mostra a estrutura de um índice não clusterizado em um
   
 -   Cubra a consulta.  
   
-     São obtidos ganhos de desempenho quando o índice contém todas as colunas da consulta (ou . O otimizador de consulta pode localizar todos os valores da coluna dentro do índice. Os dados de tabela ou de índice clusterizado não são acessados, o que resulta em menos operações de E/S. Use índice com [colunas incluídas](#Included_Columns) para adicionar colunas de cobertura, em vez de criar uma ampla chave de índice.  
+     São obtidos ganhos de desempenho quando o índice contém todas as colunas da consulta. O otimizador de consulta pode localizar todos os valores da coluna dentro do índice. Os dados de tabela ou de índice clusterizado não são acessados, o que resulta em menos operações de E/S. Use índice com [colunas incluídas](#Included_Columns) para adicionar colunas de cobertura, em vez de criar uma ampla chave de índice.  
   
      Se a tabela tiver um índice clusterizado, a coluna ou as colunas definidas no índice clusterizado serão anexadas automaticamente ao final de cada índice não clusterizado da tabela. Isso pode produzir uma consulta coberta sem especificar as colunas de índice clusterizado na definição do índice não clusterizado. Por exemplo, se uma tabela tiver um índice clusterizado na coluna `C`, um índice não clusterizado nas colunas `B` e `A` , terá como colunas de valores de chave `B`, `A`e `C`.  
       
