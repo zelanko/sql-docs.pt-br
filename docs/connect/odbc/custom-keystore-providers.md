@@ -11,12 +11,12 @@ ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: fa75def4572fa5d5b9b5eafaafde5d57bc21a81e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666654"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55047210"
 ---
 # <a name="custom-keystore-providers"></a>Provedores de repositório de chaves personalizado
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -83,7 +83,7 @@ typedef struct CEKeystoreProvider {
 
 |Nome do Campo|Descrição|
 |:--|:--|
-|`Name`|O nome do provedor de repositório de chaves. Ele não deve ser o mesmo que qualquer outro provedor de repositório de chaves carregado anteriormente pelo driver ou presente nessa biblioteca. Terminada em nulo, largo-cadeia de caracteres *.|
+|`Name`|O nome do provedor de repositório de chaves. Ele não deve ser o mesmo que qualquer outro provedor de repositório de chaves carregado anteriormente pelo driver ou presente nessa biblioteca. Cadeia de caracteres largos* terminada em nulo.|
 |`Init`|Função de inicialização. Se uma função de inicialização não for necessária, esse campo pode ser nulo.|
 |`Read`|Função read do provedor. Pode ser nulo se não é necessário.|
 |`Write`|Função de gravação do provedor. Obrigatório se a leitura não for nula. Pode ser nulo se não é necessário.|
@@ -140,8 +140,8 @@ Nome do espaço reservado para uma função definida pelo provedor de descriptog
 |:--|:--|
 |`ctx`|[Entrada] Contexto de operação.|
 |`onError`|[Entrada] Função de relatório de erros.|
-|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para a CMK referenciado pelo ECEK determinado. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar uma CMK manipulada por esse provedor.|
-|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o determinado ECEK. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
+|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para a CMK referenciado pelo ECEK determinado. Cadeia de caracteres largos* terminada em nulo. Isso serve para identificar uma CMK manipulada por esse provedor.|
+|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o determinado ECEK. Cadeia de caracteres largos* terminada em nulo. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
 |`ecek`|[Entrada] Ponteiro para o ECEK a ser descriptografado.|
 |`ecekLen`|[Entrada] Comprimento do ECEK.|
 |`cekOut`|[Saída] O provedor deverá alocar memória para o ECEK descriptografado e gravar seu endereço de ponteiro apontado por cekOut. Deve ser possível liberar este bloco de memória usando o [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou libere a função (Linux/Mac). Se nenhuma memória foi alocada devido a um erro ou caso contrário, o provedor deverá definir * cekOut como um ponteiro nulo.|
@@ -157,8 +157,8 @@ Nome do espaço reservado para uma função definida pelo provedor de criptograf
 |:--|:--|
 |`ctx`|[Entrada] Contexto de operação.|
 |`onError`|[Entrada] Função de relatório de erros.|
-|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para a CMK referenciado pelo ECEK determinado. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar uma CMK manipulada por esse provedor.|
-|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o determinado ECEK. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
+|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para a CMK referenciado pelo ECEK determinado. Cadeia de caracteres largos* terminada em nulo. Isso serve para identificar uma CMK manipulada por esse provedor.|
+|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o determinado ECEK. Cadeia de caracteres largos* terminada em nulo. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
 |`cek`|[Entrada] Ponteiro para a CEK sejam criptografados.|
 |`cekLen`|[Entrada] Comprimento da CEK.|
 |`ecekOut`|[Saída] O provedor deverá alocar memória para a CEK criptografada e gravar seu endereço de ponteiro apontado por ecekOut. Deve ser possível liberar este bloco de memória usando o [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou libere a função (Linux/Mac). Se nenhuma memória foi alocada devido a um erro ou caso contrário, o provedor deverá definir * ecekOut como um ponteiro nulo.|
@@ -187,7 +187,7 @@ O **onError** parâmetro aponta para uma função de relatório de erros, com o 
 |Argumento|Descrição|
 |:--|:--|
 |`ctx`|[Entrada] O contexto para relatar o erro.|
-|`msg`|[Entrada] A mensagem de erro para o relatório. Cadeia de caracteres larga terminada em nulo. Para permitir que as informações com parâmetros esteja presente, essa cadeia de caracteres pode conter as sequências de formatação de inserção no formato aceito pelo [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) função. Funcionalidade estendida pode ser especificada por esse parâmetro, conforme descrito abaixo.|
+|`msg`|[Entrada] A mensagem de erro para o relatório. Cadeia de caracteres largos terminada em nulo. Para permitir que as informações com parâmetros esteja presente, essa cadeia de caracteres pode conter as sequências de formatação de inserção no formato aceito pelo [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) função. Funcionalidade estendida pode ser especificada por esse parâmetro, conforme descrito abaixo.|
 |...|[Entrada] Parâmetros adicionais variadic para caber especificadores de formato na mensagem, conforme apropriado.|
 
 Para relatar quando ocorreu um erro, o provedor chamadas onError, fornecendo o parâmetro de contexto passado para a função de provedor, o driver e uma mensagem de erro com parâmetros adicionais opcionais a serem formatados nele. O provedor pode chamar essa função várias vezes para enviar várias mensagens de erro consecutivamente na invocação de uma função de provedor. Por exemplo:
@@ -223,6 +223,7 @@ void *dbcCtx;
 void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
+
 |Campo|Descrição|
 |:--|:--|
 |`envCtx`|Contexto do ambiente.|
