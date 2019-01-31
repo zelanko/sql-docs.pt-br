@@ -1,6 +1,6 @@
 ---
 title: Linguagem RDL (SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6ab16fccf8808aca17a64d0764c84295bc56f351
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813499"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044592"
 ---
 # <a name="report-definition-language-ssrs"></a>Linguagem RDL (SSRS)
   A linguagem RDL é uma representação XML de uma definição de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Uma definição de relatório contém informações de layout e recuperação de dados de um relatório. A linguagem RDL é composta por elementos XML que correspondem a uma gramática XML criada para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você pode adicionar suas próprias funções personalizadas para controlar valores de itens de relatório, estilos e formatação com o acesso a assemblies de código de arquivos de definição de relatório.  
@@ -41,7 +41,7 @@ ms.locfileid: "51813499"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Definição de esquema XML RDL  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é validado com o uso de um arquivo XML XSD (definição de esquema XML). O esquema define as regras para onde os elementos RDL podem ocorrer em um arquivo .rdl. Um elemento inclui seu tipo de dados e cardinalidade, isto é, o número de ocorrências que são permitidas. Um elemento pode ser simples ou complexo. Um elemento simples não tem elementos filhos ou atributos. Um elemento complexo tem filhos e, opcionalmente, atributos.  
   
- Por exemplo, o esquema inclui o elemento RDL **ReportParameters**, que é o tipo complexo **ReportParametersType**. Por convenção, um tipo complexo para um elemento é o nome do elemento seguido da palavra **Type**. Um elemento **ReportParameters** pode estar contido no elemento **Report** (um tipo complexo) e pode conter elementos **ReportParameter** . Um **ReportParameterType** é um tipo simples que pode ser somente um dos seguintes valores: **Boolean**, **DateTime**, **Integer**, **Float**ou **String**. Para obter mais informações sobre os tipos de dados de Esquema XML, consulte [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)(em inglês).  
+ Por exemplo, o esquema inclui o elemento RDL **ReportParameters**, que é o tipo complexo **ReportParametersType**. Por convenção, um tipo complexo para um elemento é o nome do elemento seguido da palavra **Type**. Um elemento **ReportParameters** pode estar contido no elemento **Report** (um tipo complexo) e pode conter elementos **ReportParameter** . Um **ReportParameterType** é um tipo simples que só pode ter um dos seguintes valores: **Boolean**, **DateTime**, **Integer**, **Float** ou **String**. Para obter mais informações sobre os tipos de dados de Esquema XML, veja [XML Schema Part 2: Datatypes Secon Edition](https://go.microsoft.com/fwlink/?linkid=4871) (Esquema XML Parte 2: tipos de dados, segunda edição).  
   
  O RDL XSD está disponível no arquivo ReportDefinition.xsd, localizado na pasta Extras no CD-ROM do produto. Ele também está disponível no servidor de relatório por meio da seguinte URL: `https://servername/reportserver/reportdefinition.xsd`.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51813499"
 |----------|-----------------|  
 |**Binary**|Uma propriedade com um valor binário codificado na base 64.|  
 |**Booliano**|Uma propriedade que define o valor do objeto como **true** ou **false** . A menos que seja especificado o contrário, o valor de um objeto Booliano opcional omitido é **False**.|  
-|**Data**|Uma propriedade com data ou valor de data/hora completamente especificados no formato de data ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
+|**Data**|Uma propriedade com data ou valor de data/hora completamente especificados no formato de data ISO8601: AAAA-MM-DD[THH:MM[:SS[.S]]].|  
 |**Enum**|Uma propriedade com um valor de texto de cadeia de caracteres que deve estar na lista de valores designados.|  
 |**Float**|Uma propriedade com um valor flutuante. O ponto (.) é usado como o separador decimal opcional.|  
 |**Integer**|Uma propriedade com um valor inteiro (int32).|  

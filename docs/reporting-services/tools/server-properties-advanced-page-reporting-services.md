@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.date: 01/15/2019
+ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805742"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
 
@@ -80,6 +80,28 @@ O valor do tempo limite de processamento do relatório padrão, em segundos, par
 **SystemSnapshotLimit**  
 O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, não haverá limite de instantâneo.  
 
+**AccessControlAllowCredentials**  
+Indica se a resposta à solicitação do cliente pode ser exposta quando o sinalizador “credentials” está definido como verdadeiro. O valor padrão é **false**.
+
+**AccessControlAllowHeaders** Uma lista de cabeçalhos separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia e especificar * permitirá todos os cabeçalhos.
+
+**AccessControlAllowMethods** Uma lista de métodos HTTP separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE) e especificar * permitirá todos os métodos.
+
+**AccessControlAllowOrigin** Uma lista de origens separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. O valor padrão é em branco, o que impede todas as solicitações, e especificar * permitirá todas as origens quando as credenciais não estiverem definidas; se as credenciais forem especificadas, uma lista explícita de origens deverá ser especificada.
+
+**AccessControlExposeHeaders** Uma lista de cabeçalhos separada por vírgula que o servidor exporá para os clientes. O valor padrão é vazio.
+
+**AccessControlMaxAge** Especifica o número de segundos durante os quais os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
+
+**AllowedResourceExtensionsForUpload** ***(somente Servidor de Relatórios do Power BI)*** Defina extensões de recursos que podem ser carregados para o servidor de relatório. Extensões para tipos de arquivo internos, como &ast;.rdl e &ast;.pbix não precisam ser incluídos. O padrão é "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx". 
+
+
+**EditSessionCacheLimit**  
+Especifica o número de entradas de cache de dados que podem estar ativas em uma sessão de edição de relatório. O número padrão é 5.  
+
+**EditSessionTimeout**  
+Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (duas horas).  
+
 **EnableIntegratedSecurity**  
 Determina se a segurança integrada do Windows tem suporte para conexões de fontes de dados de relatório. O padrão é **True**. Os valores válidos são os seguintes:
 
@@ -97,25 +119,6 @@ A desativação dessa opção reduz uma ameaça de que um usuário mal-intencion
 
 **EnableRemoteErrors**  
 Inclui informações de erro externo (por exemplo, informações de erros sobre fontes de dados de relatório) com as mensagens de erro retornadas aos usuários que solicitam relatórios de computadores remotos. Os valores válidos são **true** e **false**. O valor padrão é **false**. Para obter mais informações, consulte [Habilitar erros remotos &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
-
-**AccessControlAllowCredentials**  
-Indica se a resposta à solicitação do cliente pode ser exposta quando o sinalizador “credentials” está definido como verdadeiro. O valor padrão é **false**.
-
-**AccessControlAllowHeaders** Uma lista de cabeçalhos separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia e especificar * permitirá todos os cabeçalhos.
-
-**AccessControlAllowMethods** Uma lista de métodos HTTP separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE) e especificar * permitirá todos os métodos.
-
-**AccessControlAllowOrigin** Uma lista de origens separada por vírgula que o servidor permitirá quando um cliente fizer uma solicitação. O valor padrão é em branco, o que impede todas as solicitações, e especificar * permitirá todas as origens quando as credenciais não estiverem definidas; se as credenciais forem especificadas, uma lista explícita de origens deverá ser especificada.
-
-**AccessControlExposeHeaders** Uma lista de cabeçalhos separada por vírgula que o servidor exporá para os clientes. O valor padrão é vazio.
-
-**AccessControlMaxAge** Especifica o número de segundos durante os quais os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
-
-**EditSessionCacheLimit**  
-Especifica o número de entradas de cache de dados que podem estar ativas em uma sessão de edição de relatório. O número padrão é 5.  
-
-**EditSessionTimeout**  
-Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (duas horas).  
 
 **EnableCustomVisuals** ***(somente Servidor de Relatórios do Power BI)*** Para habilitar a exibição de visuais personalizados do Power BI. Os valores aceitos são verdadeiro/falso. *O padrão é True.*  
 
@@ -136,6 +139,8 @@ Especifica o número de segundos antes que o tempo limite de uma sessão de edi�
 **ScheduleRefreshTimeoutMinutes** ***(somente Servidor de Relatórios do Power BI)*** Defina o tempo limite para a atualização agendada. *O padrão é 120.*
 
 **ShowDownloadMenu** Habilita o menu de download das ferramentas de cliente. *O padrão é true.*
+
+**SupportedHyperlinkSchemes** ***(somente Servidor de Relatórios do Power BI)*** Define uma lista separada por vírgulas dos esquemas de URI que podem ser definidos em ações de Hiperlink que têm permissão para serem renderizadas ou "&ast;" para habilitar todos os esquemas de hiperlink. Por exemplo, definir "http,https" permitiria hiperlinks para "https://www. contoso.com", mas removeria hiperlinks para "mailto:bill@contoso.com" ou “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. O padrão é "&ast;".
 
 **TimeInitialDelaySeconds** Defina o quanto você deseja que o tempo inicial seja atrasado, em segundos. *O padrão é 60.*
 

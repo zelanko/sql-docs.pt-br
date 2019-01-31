@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6fd3c164b539c8c6fc2dcce24f8ea1ad479ddee6
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589290"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087685"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "53589290"
   
  
 ##  <a name="Provision"></a> Para instalar um certificado no servidor  
+
+>[!NOTE]
+>Consulte [Gerenciamento de certificado (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) para adicionar um certificado em um único servidor.
   
 1.  No menu **Iniciar** , clique em **Executar**e na caixa **Abrir** , digite **MMC** e clique em **OK**.  
   
@@ -69,6 +72,10 @@ ms.locfileid: "53589290"
   
 10. Complete o **Assistente para Importação de Certificados**, para adicionar um certificado ao computador e feche o console MMC. Para obter mais informações sobre como adicionar um certificado a um computador, consulte sua documentação do Windows.  
   
+## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>Para provisionar (instalar) um certificado em vários servidores
+
+Consulte [Gerenciamento de certificado (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) para adicionar um certificado entre vários servidores.
+
 ##  <a name="Export"></a> Para exportar o certificado de servidor  
   
 1.  No snap-in de **Certificados** , localize o certificado na pasta **Certificados** / **Pessoal** , clique com o botão direito do mouse em **Certificado**, aponte para **Todas as Tarefas**e clique em **Exportar**.  
@@ -89,15 +96,15 @@ ms.locfileid: "53589290"
 > [!NOTE]
 > Para garantir a conectividade segura entre o cliente e o servidor, configure o cliente para solicitar conexões criptografadas. Mais detalhes são explicados [mais adiante neste artigo](#client-request-encrypt-connect-23h).
 
-
-
 ### <a name="wildcard-certificates"></a>Certificados curinga  
 A partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dão suporte a certificados curinga. Outros clientes podem não dar suporte a certificados curinga. Para obter mais informações, consulte a documentação do cliente. O certificado curinga não pode ser selecionado usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Para usar um certificado curinga, é necessário editar a chave do Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e inserir a impressão digital do certificado, sem espaços, no valor **Certificado**.  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> Para configurar o cliente para solicitar conexões criptografadas  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> Para configurar o cliente para solicitar conexões criptografadas  
   
 1.  Copie o certificado original ou o arquivo de certificado exportado no computador cliente.  
   
@@ -107,7 +114,7 @@ A partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, o [!
   
 4.  Na página **Sinalizadores** , na caixa **Forçar criptografia de protocolo** , clique em **Sim**.  
   
-##  <a name="EncryptConnection"></a> Para criptografar uma conexão do SQL Server Management Studio  
+## <a name="EncryptConnection"></a> Para criptografar uma conexão do SQL Server Management Studio  
   
 1.  Na barra de ferramentas do Pesquisador de Objetos, clique em **Conectar**e clique em **Mecanismo de Banco de Dados**.  
   

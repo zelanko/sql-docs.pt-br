@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300543"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087905"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -314,7 +314,7 @@ Se não há um rótulo de *versão prévia 5* ou *versão prévia 6*, é a indic
   - Corrigida uma falha ao usar o Monitor de Atividade do Trabalho (com filtros)
 
 - **Suporte à Instância Gerenciada**
-  - Melhoria/aprimoramento no suporte para Instâncias Gerenciadas: opções sem suporte desabilitadas na interface do usuário e um conserto à opção Exibir Logs de Auditoria para lidar com o destino de auditoria da URL.
+  - Melhoria no suporte para Instâncias Gerenciadas: opções sem suporte desabilitadas na interface do usuário e uma correção na opção Exibir Logs de Auditoria para lidar com o destino de auditoria da URL.
   - O assistente "Gerar e Publicar scripts" executa scripts de cláusulas CREATE DATABASE sem suporte
   - As Estatísticas de Consulta ao Vivo foram desabilitadas para instâncias de CL
   - Propriedades de banco de dados -> Arquivos estava executando incorretamente scripts ALTER DB ADD FILE

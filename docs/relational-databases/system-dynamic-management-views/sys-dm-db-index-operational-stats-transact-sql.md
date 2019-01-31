@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514312"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428653"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,26 +53,26 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>Argumentos    
- *database_id* | NULO | 0 | PADRÃO    
+ *database_id* | NULL | 0 | DEFAULT    
  ID do banco de dados. *database_id* está **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, você também deverá especificar NULL para *object_id*, *index_id*, e *partition_number*.    
     
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificado.    
     
- *object_id* | NULO | 0 | PADRÃO    
+ *object_id* | NULL | 0 | DEFAULT    
  ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int**.    
     
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id*, você também deverá especificar NULL para *index_id* e *partition_number*.    
     
- *index_id* | 0 | NULO | -1 | PADRÃO    
+ *index_id* | 0 | NULL | -1 | DEFAULT    
  ID do índice. *index_id* está **int**. As entradas válidas são o número de identificação de um índice, 0 se *object_id* for um heap, NULL, -1 ou padrão. O padrão é -1, NULL, -1 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, você também deverá especificar NULL para *partition_number*.    
     
- *partition_number* | NULO | 0 | PADRÃO    
+ *partition_number* | NULL | 0 | DEFAULT    
  O número da partição no objeto. *partition_number* está **int**. As entradas válidas são o *partion_number* de um índice ou heap, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todas as partições do índice ou heap.    
@@ -85,9 +85,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID do banco de dados.|    
 |**object_id**|**int**|ID da tabela ou exibição.|    
-|**index_id**|**int**|ID do índice ou heap.<br /><br /> 0 = Heap|    
-|**hobt_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID do heap de dados ou conjunto de linhas de árvore B que rastreia dados internos para um índice columnstore.<br /><br /> NULO - isso não é um conjunto de linhas columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|Número de partição com base 1 no índice ou heap.|    
+|**index_id**|**int**|ID do índice ou heap.<br /><br /> 0 = Heap| 
+|**partition_number**|**int**|Número de partição com base 1 no índice ou heap.| 
+|**hobt_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID do heap de dados ou conjunto de linhas de árvore B que rastreia dados internos para um índice columnstore.<br /><br /> NULO - isso não é um conjunto de linhas columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Contagem cumulativa de inserções de nível folha.|    
 |**leaf_delete_count**|**bigint**|Contagem cumulativa de exclusões de nível folha. leaf_delete_count só é incrementado para registros excluídos não são marcados como fantasma pela primeira vez. Para registros excluídos são fantasma em primeiro lugar, **leaf_ghost_count** é incrementado em vez disso.|    
 |**leaf_update_count**|**bigint**|Contagem cumulativa de atualizações de nível folha.|    
@@ -152,7 +152,7 @@ sys.dm_db_index_operational_stats (
     
  Para identificar a contenção de bloqueio e trava, use estas colunas:    
     
--   **page_latch_wait_count** e **page_latch_wait_in_ms**    
+-   **page_latch_wait_count** and **page_latch_wait_in_ms**    
     
      Essas colunas indicam se há uma contenção de trava no índice ou heap e a importância da contenção.    
     
@@ -166,7 +166,7 @@ sys.dm_db_index_operational_stats (
     
  **Para analisar estatísticas de e/SS físicas em uma partição de índice ou heap**    
     
--   **page_io_latch_wait_count** e **page_io_latch_wait_in_ms**    
+-   **page_io_latch_wait_count** and **page_io_latch_wait_in_ms**    
     
      Essas colunas indicam se foram emitidas E/S físicas para trazer as páginas de índice ou heap para a memória e quantas E/S foram emitidas.    
     

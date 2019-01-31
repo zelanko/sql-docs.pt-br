@@ -11,17 +11,18 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9249cac94f2e066d0502e16e40656de4e8b8bdc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b7bf852fcebd390d3659fcd2bff53fa0446d0c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848314"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045049"
 ---
 # <a name="odata-source-properties"></a>Propriedades da origem do OData
 Ao clicar com o botão direito do mouse em **OData Source** no fluxo de dados e clicar em **Propriedades**, você verá as propriedades do componente de **OData Source** na janela **Propriedades**.  
 
 ## <a name="properties"></a>Propriedades 
+
 |Propriedade|Descrição|  
 |-|-|  
 |CollectionName|Nome da coleção que você deseja recuperar do serviço OData. A propriedade **CollectionName** é usada quando **UseResourcePath** é falso.<br /><br /> Esta propriedade pode ser definida via expressão, o que permite que você defina o valor em tempo de execução. No entanto, se os metadados da coleção não corresponderem aos metadados que existiam em tempo de design, um erro de validação ocorrerá, fazendo com que a execução do fluxo de dados falhe.|  

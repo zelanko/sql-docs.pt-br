@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524331"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044373"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524331"
 A instalação do SQL Server 2016 SP2 pode exigir a reinicialização após a instalação. Como melhor prática, é recomendável planejar e executar uma reinicialização após a instalação do SQL Server 2016 SP2.
 
 Melhorias de desempenho e escala no SQL Server 2016 SP2.
+
 |Recurso|Descrição|Mais informações|
 |   --- |   --- |   --- |
 |Procedimento de limpeza de banco de dados de distribuição aprimorado |   Uma distribuição muito grande de tabelas de banco de dados causou bloqueio e deadlock. Um procedimento de limpeza aprimorado tem como objetivo eliminar alguns desses cenários de bloqueio ou de deadlock. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
@@ -53,6 +54,7 @@ Melhorias de desempenho e escala no SQL Server 2016 SP2.
 |Melhoria da atualização automática de estatísticas para estatísticas incrementais |    Em determinados cenários, quando uma série de alterações de dados ocorre em várias partições de uma tabela de forma que o número total de alterações em estatísticas incrementais excede o limite de atualização automática, mas nenhuma das partições individuais excede o limite de atualização automática, a atualização de estatísticas pode ser atrasada até que muitas outras modificações ocorram na tabela. Esse comportamento é corrigido no sinalizador de rastreamento 11024.   |       |
 
 Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
+
 |Recurso |Descrição   |Mais informações   |
 |   --- |   --- |   --- |
 |Compatibilidade completa com controle DTC para bancos de dados em grupos de disponibilidade    |   No momento, não há suporte para as transações entre bancos de dados para bancos de dados que fazem parte de um grupo de disponibilidade no SQL Server 2016. Com o SQL Server 2016 SP2, introduzimos compatibilidade completa com transações distribuídas com bancos de dados de grupo de disponibilidade.   |       |
@@ -110,12 +112,12 @@ A tabela a seguir resume as principais melhorias fornecidas no SQL Server 2016 S
 |CREATE OR ALTER|Implante objetos, como procedimentos armazenados, disparadores, funções definidas pelo usuário e modos de exibição.|[Blog do Mecanismo de Banco de Dados do SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |Suporte a DROP TABLE para replicação|Suporte a DROP TABLE DDL para replicação a fim de permitir que os artigos de replicação sejam removidos.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Assinatura do driver Filestream RsFx|O driver Filestream RsFx é assinado e certificado usando o portal do Painel da Central do Desenvolvedor para Hardware do Windows (Portal de desenvolvimento) permitindo que o driver do Filestream RsFx para SQL Server 2016 SP1 seja instalado no Windows Server 2016/Windows 10 sem nenhum problema.|[Migrar cargas de trabalho do SAP para o SQL Server ficou 2,5 x mais rápido](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|LPIM para conta de serviço do SQL – identificação programática|Permite que os DBAs identifiquem programaticamente se o privilégio de LPIM (Bloquear páginas na memória) está em vigor no momento da inicialização do serviço.|[Escolha dos desenvolvedores: identificar programaticamente privilégios LPIM e IFI no SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|LPIM para conta de serviço do SQL – identificação programática|Permite que os DBAs identifiquem programaticamente se o privilégio de LPIM (Bloquear páginas na memória) está em vigor no momento da inicialização do serviço.|[Developers Choice: identificar programaticamente privilégios LPIM e IFI no SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |Limpeza do controle de alterações manual|O novo procedimento armazenado limpa a tabela interna de controle de alterações sob demanda.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |Alterações do INSERT..SELECT paralelo para tabelas temporárias locais|Novo INSERT paralelo em operações INSERT..SELECT.|[Equipe de consultoria do cliente do SQL Server](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
 |Showplan XML|Diagnóstico estendido, incluindo o aviso de concessão e memória máxima habilitada para uma consulta, sinalizadores de rastreamento habilitados e também resulta em outras informações de diagnóstico. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |Memória de classe de armazenamento|Aumente o processamento de transações usando a memória de classe de armazenamento no Windows Server 2016, resultando na capacidade de acelerar as horas de confirmação de transação por ordem de grandeza.|[Blog do Mecanismo de Banco de Dados do SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|Use a opção de consulta `OPTION(USE HINT('<option>'))` para alterar o comportamento do otimizador de consultas usando dicas de nível de consulta compatíveis. Diferentemente do QUERYTRACEON, a opção USE HINT não requer privilégios de administrador do sistema.|[Escolha dos desenvolvedores: dicas de consulta USE HINT](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|USE HINT|Use a opção de consulta `OPTION(USE HINT('<option>'))` para alterar o comportamento do otimizador de consultas usando dicas de nível de consulta compatíveis. Diferentemente do QUERYTRACEON, a opção USE HINT não requer privilégios de administrador do sistema.|[Developers Choice: Dicas de consulta USE HINT](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |Adições de XEvent|Novos recursos de diagnóstico de XEvents e Perfmon melhoram a solução de problemas de latência.|[Eventos estendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 Além disso, observe as seguintes correções:
@@ -141,7 +143,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 -   [Documentação do produto (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**Problema e impacto sobre o cliente:** a Microsoft identificou um problema que afeta os binários do Tempo de Execução Microsoft VC++ 2013 que são instalados como um pré-requisito pelo SQL Server 2016. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários do Tempo de Execução de VC não for instalada, o SQL Server 2016 poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server 2016, verifique se o computador precisa do patch descrito em [KB 3164398](https://support.microsoft.com/kb/3164398). O patch também é incluído no [CU1 (Pacote de Atualização Cumulativa 1) para o SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338). 
+**Problema e impacto ao cliente:** a Microsoft identificou um problema que afeta os binários do Tempo de Execução Microsoft VC++ 2013 que são instalados como um pré-requisito pelo SQL Server 2016. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários do Tempo de Execução de VC não for instalada, o SQL Server 2016 poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server 2016, verifique se o computador precisa do patch descrito em [KB 3164398](https://support.microsoft.com/kb/3164398). O patch também é incluído no [CU1 (Pacote de Atualização Cumulativa 1) para o SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338). 
 
 **Resolução:** use uma das seguintes soluções:
 
@@ -170,13 +172,13 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Problema com um caractere específico em um nome de banco de dados ou de tabela
 
-**Problema e impacto sobre o cliente:** a tentativa de habilitar o Stretch Database em um banco de dados ou uma tabela falha com um erro. O problema ocorre quando o nome do objeto inclui um caractere que é tratado como um caractere diferente quando convertido de letras minúsculas em maiúsculas. Um exemplo de um caractere que causa esse problema é o caractere “ƒ” (criado ao digitar ALT+159).
+**Problema e impacto ao cliente:** a tentativa de habilitar o Stretch Database em um banco de dados ou uma tabela falha com um erro. O problema ocorre quando o nome do objeto inclui um caractere que é tratado como um caractere diferente quando convertido de letras minúsculas em maiúsculas. Um exemplo de um caractere que causa esse problema é o caractere “ƒ” (criado ao digitar ALT+159).
 
 **Solução alternativa:** se você deseja habilitar o Stretch Database no banco de dados ou na tabela, a única opção é renomear o objeto e remover o caractere problemático.
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>Problema com um índice que usa a palavra-chave INCLUDE
 
-**Problema e impacto sobre o cliente:** a tentativa de habilitar o Stretch Database em uma tabela que contém um índice que usa a palavra-chave INCLUDE para incluir colunas adicionais no índice falha com um erro.
+**Problema e impacto ao cliente:** a tentativa de habilitar o Stretch Database em uma tabela que contém um índice que usa a palavra-chave INCLUDE para incluir colunas adicionais no índice falha com um erro.
 
 **Solução alternativa:** remova o índice que usa a palavra-chave INCLUDE, habilite o Stretch Database na tabela e recrie o índice. Se você fizer isso, lembre-se de seguir as práticas e políticas de manutenção de sua organização para garantir um impacto mínimo ou nenhum impacto sobre os usuários da tabela afetada.
 
@@ -184,9 +186,9 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problema com a limpeza automática de dados em edições que não sejam Enterprise e Developer
 
- **Problema e impacto sobre o cliente:** a limpeza automática de dados falha em edições que não sejam o Enterprise e o Developer. Consequentemente, se os dados não forem limpos manualmente o espaço usado pelo Repositório de Consultas aumentará ao longo do tempo até que seja atingido o limite configurado. Se não for atenuado, esse problema também preencherá o espaço em disco alocado para os logs de erros, pois cada tentativa de executar a limpeza produzirá um arquivo de despejo. O período de ativação da limpeza depende da frequência da carga de trabalho, não sendo mais longo do que 15 minutos.
+ **Problema e impacto ao cliente:** a limpeza automática de dados falha em edições que não sejam Enterprise e Developer. Consequentemente, se os dados não forem limpos manualmente o espaço usado pelo Repositório de Consultas aumentará ao longo do tempo até que seja atingido o limite configurado. Se não for atenuado, esse problema também preencherá o espaço em disco alocado para os logs de erros, pois cada tentativa de executar a limpeza produzirá um arquivo de despejo. O período de ativação da limpeza depende da frequência da carga de trabalho, não sendo mais longo do que 15 minutos.
 
- **Solução alternativa:** se você planeja usar o Repositório de Consultas em edições que não sejam o Enterprise e o Developer, será necessário desativar explicitamente as políticas de limpeza. Faça isto no SQL Server Management Studio (página Propriedades do banco de dados) ou por meio do script Transact-SQL:
+ **Solução alternativa:** se você planeja usar o Repositório de Consultas em edições que não sejam o Enterprise e o Developer, deve desligar explicitamente as políticas de limpeza. Faça isto no SQL Server Management Studio (página Propriedades do banco de dados) ou por meio do script Transact-SQL:
 
 ```ALTER DATABASE <database name> SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 0), SIZE_BASED_CLEANUP_MODE = OFF)```
 
@@ -204,7 +206,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 
 
 ###  <a name="bkmk_ga_docs"></a> Documentação do produto (GA) 
- **Problema e impacto sobre o cliente:** ainda não há uma versão da documentação do SQL Server 2016 disponível para download. Quando você usa o Gerenciador da Biblioteca da Ajuda para tentar **Instalar o conteúdo online**, a documentação do SQL Server 2012 e do SQL Server 2014 é exibida, mas não existem opções para a documentação do SQL Server 2016.    
+ **Problema e impacto ao cliente:** Uma versão para download da documentação do SQL Server 2016 ainda não está disponível. Quando você usa o Gerenciador da Biblioteca da Ajuda para tentar **Instalar o conteúdo online**, a documentação do SQL Server 2012 e do SQL Server 2014 é exibida, mas não existem opções para a documentação do SQL Server 2016.    
     
  **Solução alternativa:** use uma das seguintes soluções alternativas:    
     
@@ -216,7 +218,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 
  **Ajuda F1:** por design, quando você pressiona F1 no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], a versão online do artigo da Ajuda F1 é exibida no navegador. O problema está na ajuda baseada em navegador, mesmo quando você configurou e instalou a Ajuda local. 
 
-**Atualizando o conteúdo:** No SQL Server Management Studio e no Visual Studio, o aplicativo Help Viewer poderá congelar (parar de responder) durante o processo de adição da documentação. Para resolver esse problema, conclua as etapas a seguir. Para obter mais informações sobre esse problema, confira [O Visual Studio Help Viewer congela](https://msdn.microsoft.com/library/mt654096.aspx).    
+**Atualização do conteúdo:** No SQL Server Management Studio e no Visual Studio, o aplicativo Help Viewer poderá congelar (parar de responder) durante o processo de adição da documentação. Para resolver esse problema, conclua as etapas a seguir. Para obter mais informações sobre esse problema, confira [O Visual Studio Help Viewer congela](https://msdn.microsoft.com/library/mt654096.aspx).    
     
 * Abra o arquivo %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings no Bloco de Notas e altere a data no código a seguir para alguma data no futuro.
 

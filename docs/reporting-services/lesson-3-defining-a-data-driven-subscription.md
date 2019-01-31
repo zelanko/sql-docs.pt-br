@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457649"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lição 3: Definindo uma assinatura controlada por dados
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
   
 > [!NOTE]  
 > Antes de começar, verifique se o serviço **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** está em execução. Se não estiver, não será possível salvar a assinatura.  Um método de verificação é abrir o [Gerenciador de Configuração do SQL Server](../relational-databases/sql-server-configuration-manager.md).
-Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, consulte [Lição 2: modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, veja [Lição 2: Modificar as propriedades de fonte de dados de relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Iniciar o Assistente de Assinatura Controlada por Dados  
   
@@ -60,8 +60,9 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
 1. Selecione **Usando as seguintes credenciais**.
 2. Selecione **Nome de usuário e senha do Windows**.
 3.  Em **Nome de Usuário** e **Senha**, digite seu nome de usuário de domínio e senha. Inclua a conta de domínio e de usuário ao especificar **Nome de Usuário**.
-    > [!NOTE]  
-    > As credenciais usadas para a conexão com uma fonte de dados de assinante não são retransmitidas para o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Se você modificar a assinatura mais tarde, deverá digitar novamente a senha usada para a conexão com a fonte de dados.
+
+> [!NOTE]  
+> As credenciais usadas para a conexão com uma fonte de dados de assinante não são retransmitidas para o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Se você modificar a assinatura mais tarde, deverá digitar novamente a senha usada para a conexão com a fonte de dados.
 
 ## <a name="query"></a>Consulta      
 1.  Na caixa de consulta, digite a seguinte consulta:  
@@ -97,7 +98,7 @@ Quando a assinatura é executada, quatro arquivos de relatórios são entregues 
 ![Lista de arquivos criados pela assinatura](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Lista de arquivos criados pela assinatura")  
   
 A página de assinatura no portal da Web conterá a data da **Última Execução** e o **Status** da assinatura. 
-**Observação:** atualize a página depois que a assinatura for executada para ver as informações atualizadas.  
+**Observação:** Atualize a página depois que a assinatura for executada para consultar as informações atualizadas.  
     
 ![Resultados da assinatura no Gerenciador de Relatórios](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Resultados da assinatura no Gerenciador de Relatórios")  
   

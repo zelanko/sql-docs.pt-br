@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d92ef10b48115ddb26307a9d89260185d8d65b4a
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669015"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044522"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,6 +51,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
 
 ##  <a name="view"></a> Exibir as propriedades de um índice de texto completo
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Exibir as propriedades de um índice de texto completo com o Transact-SQL
+
 |Exibição de catálogo ou de gerenciamento dinâmico|Descrição|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Retorna uma linha para cada catálogo de texto completo para referência de índice de texto completo.|  
@@ -76,7 +77,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
     |----------|-----------------|  
     |**Geral**|Exibe as propriedades básicas do índice de texto completo. Isso inclui várias propriedades modificáveis e uma série de propriedades inalteráveis, como o nome do banco de dados, o nome da tabela e o nome da coluna de chave de texto completo. As propriedades modificáveis são:<br /><br /> **Lista de palavras irrelevantes de índice de texto completo**<br /><br /> **Indexação de texto completo habilitada**<br /><br /> **Controle de alterações**<br /><br /> **Lista de propriedades de pesquisa**<br /><br />Para obter mais informações, consulte [Propriedades do Índice de Texto Completo &#40;página Geral&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [Propriedades do Índice de Texto Completo &#40;página Colunas&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
-    |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Observação: depois que você sair da caixa de diálogo **Propriedades do Índice de Texto Completo** , qualquer agenda recém-criada será associada a um trabalho do SQL Server Agent (Iniciar População Incremental da Tabela em *database_name*.*table_name*).|  
+    |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Observação: Depois que você sair da caixa de diálogo **Propriedades do Índice de Texto Completo**, qualquer agenda recém-criada será associada a um trabalho do SQL Server Agent (Iniciar População Incremental da Tabela em *nome_do_banco_de_dados*.*nome_da_tabela*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para salvar quaisquer alterações e sair da caixa de diálogo **Propriedades do índice de texto completo**.  
   

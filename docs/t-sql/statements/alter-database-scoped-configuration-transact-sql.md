@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/02/2018
+ms.date: 01/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226593"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838113"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -73,6 +73,12 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -229,7 +235,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
 
-Permite habilitar ou desabilitar Comentários de concessão de memória de modo de linha no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 150 e superior. O recurso Comentários de concessão de memória de modo de linha faz parte do [processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) no SQL Server 2019.
+Permite habilitar ou desabilitar Comentários de concessão de memória de modo de linha no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. A memória do modo de linha concede a comentários um recurso que faz parte do [Processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) lançado no SQL Server 2017 (há suporte para o modo de linha no SQL Server 2019 e Banco de Dados SQL do Azure).
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Permite habilitar ou desabilitar Comentários de concessão de memória de modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. O recurso Comentários de concessão de memória de modo de lote faz parte do [processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) no SQL Server 2017.
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Permite habilitar ou desabilitar junções adaptáveis do modo de lote no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 140 e superior. Junções adaptáveis do modo de lote é um recurso que faz parte do [processamento de consulta adaptável](../../relational-databases/performance/adaptive-query-processing.md) no SQL Server 2017.
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+
+Permite habilitar ou desabilitar o modo de lote em rowstore no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. O modo de lote em rowstore é um recurso que faz parte da família de recursos de [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (o recurso está na versão prévia pública)
+
+Permite habilitar ou desabilitar a compilação adiada de variável de tabela no escopo do banco de dados, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Compilação adiada de variável de tabela é um recurso que faz parte da família de recursos [Processamento de consulta inteligente](../../relational-databases/performance/intelligent-query-processing.md).
 
 ## <a name="Permissions"></a> Permissões
 

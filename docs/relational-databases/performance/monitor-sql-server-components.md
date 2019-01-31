@@ -10,12 +10,12 @@ ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 59bca7e526dff250873cd7de2912b1b69f775bc9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bacf9a8a08008b23309d2d8c08b9310c491abf2a
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369298"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087675"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorar componentes do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ Segue, abaixo, uma descrição do processo da captura de dados de eventos e sua 
   
      Para a análise, os dados de eventos capturados são carregados no aplicativo que os capturou. 
      
-     Por exemplo, um rastreamento capturado do Evento Estendido pode ser recarregado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para exibição e análise. Para obter mais informações, consulte [Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
+     Por exemplo, um rastreamento capturado de Evento Estendido pode ser recarregado em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para exibição e análise. Para obter mais informações, consulte [Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
 
      Dados de rastreamento do SQL podem ser recarregados no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibição e análise. Para obter mais informações, veja [Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   

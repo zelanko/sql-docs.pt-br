@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 742c9a63388192bc0fb09a7b91a5a727c789ed3a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712795"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087586"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>Considerações sobre hardware para OLTP in-memory no SQL Server 2014
 
 O OLTP in-memory usa a memória e o disco de maneiras diferentes das tabelas baseadas em disco tradicionais. A melhoria de desempenho gerada pelo OLTP in-memory depende do hardware que você usa. Nesta postagem no blog, discutimos diversas considerações sobre hardware e fornecemos diretrizes gerais para o hardware a ser usado com o OLTP in-memory.
 
 > [!NOTE]
-> Este artigo foi publicado em um blog em 1º de agosto de 2013 pela equipe do Microsoft SQL Server 2014. A página da Web do blog será desativada e este artigo é uma reprodução aproximada do texto original. Os artigos de documentação que usaram o link para o blog agora direcionam para este artigo. Este artigo não está sendo atualizado. Este artigo pode ser excluído do Sumário.
+> Este artigo foi publicado em um blog em 1º de agosto de 2013 pela equipe do Microsoft SQL Server 2014. A página da Web do blog será desativada e este artigo é uma reprodução aproximada do texto original. Os artigos de documentação que usaram o link para o blog agora têm um link para este artigo. Este artigo não está sendo atualizado. Este artigo pode ser excluído do Sumário.
 > 
 > [OLTP in-memory do SQL Server](index.md)
 

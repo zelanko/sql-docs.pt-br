@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457669"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) Especifica as opções a serem usadas com a sessão de evento.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Especifica a quantidade máxima de memória a ser alocada à sessão para buffer de evento. O padrão é 4 MB. *size* é um número inteiro e pode ser um valor de KB (kilobyte) ou MB (megabyte).  
+ Especifica a quantidade máxima de memória a ser alocada à sessão para buffer de evento. O padrão é 4 MB. *size* é um número inteiro e pode ser um valor de KB (kilobyte) ou MB (megabyte). A quantidade máxima não pode exceder 2 GB (menos de 2048 MB). No entanto, não é recomendável usar valores de memória na faixa de GB.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Especifica o modo de retenção do evento para usar em tratamento de perda de evento.  

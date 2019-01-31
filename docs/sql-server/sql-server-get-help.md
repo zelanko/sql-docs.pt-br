@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205325"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087665"
 ---
 # <a name="sql-server-help-and-feedback"></a>Ajuda e comentários do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,9 @@ A [Voz do Usuário](https://feedback.azure.com/forums/908035-sql-server) também
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>Eu quero fazer sugestões sobre o SQL Server Management Studio
 A equipe do SSMS (SQL Server Management Studio) também monitora de perto a [Voz do Usuário](https://feedback.azure.com/forums/908035-sql-server) do SQL Server, portanto, se você tiver problemas para relatar ou sugestões para dar, a Voz do Usuário será o melhor lugar para fazer isso. 
+
+## <a name="i-want-to-make-a-suggestion-about-azure-data-studio"></a>Eu quero fazer uma sugestão sobre o Azure Data Studio
+A equipe do Azure Data Studio monitora de perto problemas e solicitações de recursos no [Azure Data Studio Github](https://github.com/microsoft/azuredatastudio/issues). Envie uma solicitação de recurso ou problema aqui e você poderá ver quando o recurso/problema será corrigido ou adicionado.
 
 ## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>Eu quero acessar a documentação técnica do SQL Server offline
 Se você deseja exibir a documentação do SQL Server em um sistema offline, há duas opções para fazer isso. Você pode criar um PDF sempre que estiver na documentação técnica do SQL Server ou pode baixar o conteúdo offline usando [Visualizador da Ajuda offline do SQL Server](sql-server-help-installation.md). 
@@ -68,20 +71,21 @@ Existem vários fóruns do MSDN que podem ajudá-lo com suas perguntas sobre o S
 - [SSAS (SQL Server Analysis Services)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Warehouse](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
 
-### <a name="developer-communities"></a>Comunidades de desenvolvedores
-Há algumas comunidades de desenvolvedores que podem ajudá-lo com seus problemas relativos ao SQL Server também. 
+### <a name="social-media-and-communities"></a>Mídia social e comunidades
+Há algumas comunidades de que podem ajudá-lo com seus problemas relativos ao SQL Server. 
 
 - [Estouro de pilha](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
-
-### <a name="social-media"></a>Mídia social
-Há alguns veículos de mídia social que também podem alcançar a equipe do SQL. 
-
 - [Reddit](https://www.reddit.com/r/SQLServer/)
+- [Obtenha ajuda da comunidade com a hashtag #sqlhelp no Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
+
+### <a name="updates-via-twitter"></a>Atualizações por meio do Twitter
+Há algumas contas do Twitter que fornecem atualizações sobre o SQL Server. 
+
 - [Twitter dos Documentos SQL](https://twitter.com/sqldocs)
 - [Twitter da Equipe do SQL Tiger](https://twitter.com/mssqltiger)
 - [Twitter do MashaMSFT](https://twitter.com/mashamsft)
-- [Twitter do MikeRayMSFT](https://twitter.com/mncray)
+
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>Quero contribuir com a documentação do SQL Server
 

@@ -1,7 +1,7 @@
 ---
-title: 'Etapa 4: implantar o pacote da Lição 6 | Microsoft Docs'
+title: 'Etapa 4: Implantar pacote da Lição 6 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,113 +11,109 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36028cceb24dc1dea804fe749aeaca9e9085fe2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 501161af0ea953b528bca174ba0c910b1bb3bd09
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857284"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880489"
 ---
-# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Lição 6-4 – implantar o pacote da Lição 6
-Implantar o pacote envolve a adição do pacote no catálogo de SSISDB nos Integration Services em uma instância do SQL Server. Nesta lição, você adicionará o pacote da Lição 6 no catálogo SSISDB, definirá o parâmetro e executará o pacote. Nesta lição você usará o SQL Server Management Studio para adicionar o pacote da Lição 6 ao catálogo SSISDB e implantará esse pacote. Depois de implantar o pacote, você modificará o parâmetro para apontar para um novo local e, em seguida, executará o pacote.  
+# <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lição 6-4: Implantar o pacote da Lição 6
+
+Implantar o pacote envolve a adição do pacote no catálogo de SSISDB no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em uma instância do SQL Server. Nesta lição, você adicionará o pacote da Lição 6 no catálogo SSISDB, definirá o novo parâmetro e executará o pacote. Nesta lição, você usará o SQL Server Management Studio para adicionar o pacote da Lição 6 ao catálogo SSISDB e implantará esse pacote. Depois de implantar o pacote, você modificará o parâmetro para apontar para um novo local e, em seguida, executará o pacote.   
+Nesta tarefa, você:  
+
+1. Adicionar o pacote ao catálogo de SSISDB no nó SSIS no SQL Server.  
   
-Nesta lição, você irá:  
+2. Implantar o pacote.  
   
--   Adicionar o pacote ao catálogo de SSISDB no nó SSIS no SQL Server.  
+3. Definir o valor de parâmetro do pacote.  
+
+4. Executar o pacote no SSMS.  
   
--   Implantar o pacote.  
+## <a name="locate-or-add-the-ssisdb-catalog"></a>Localiza ou adiciona o catálogo do SSISDB  
   
--   Definir o valor de parâmetro do pacote.  
+1.  Selecione **Iniciar** > **Todos os Programas** > **Microsoft SQL Server 2017** e, em seguida, selecione **SQL Management Studio**.  
   
--   Executar o pacote no SSMS.  
+2.  Na caixa de diálogo **Conectar-se ao Servidor**, verifique as configurações padrão e selecione **Conectar**. Para se conectar, o nome do **Servidor** deve ser o nome do computador em que o SQL Server está instalado. Se o **Mecanismo de Banco de Dados** for uma instância nomeada, o nome do **Servidor** deverá ser o nome da instância no formato *\<nome_do_computador>\\\<nome_da_instância>*. 
   
-### <a name="to-locate-or-add-the-ssisdb-catalog"></a>Para localizar ou adicionar o catálogo do SSISDB  
+3.  No **Pesquisador de Objetos**, expanda **Catálogos dos Integration Services**.  
   
-1.  Clique em Iniciar, aponte para Todos os programas, aponte para Microsoft SQL Server 2012 e, em seguida, clique em SQL Management Studio.  
+4.  Se não houver nenhum catálogo listado em **Catálogos dos Integration Services**, adicione o catálogo SSISDB.  
   
-2.  Na caixa de diálogo Conectar ao Servidor, verifique as configurações padrão e depois clique em Conectar. Para fazer a conexão, a caixa de diálogo Nome do servidor deve conter o nome do computador em que o SQL Server está instalado. Se o Mecanismo de Banco de Dados for uma instância nomeada, a caixa Nome do Servidor também deverá conter o nome da instância no formato <computer_name>\\<instance_name>.  
+5.  Para adicionar o catálogo do SSISDB, clique com o botão direito do mouse em **Catálogos dos Integration Services** e selecione **Criar Catálogo**.  
   
-3.  No Pesquisador de objetos, expanda Catálogos dos Integration Services.  
+6.  Na caixa de diálogo **Criar Catálogo**, selecione **Habilitar a integração do CLR**.  
   
-4.  Se não houver nenhum catálogo listado em Catálogos dos Integration Services, adicione o catálogo SSISDB.  
+7.  Na caixa **Senha**, digite uma senha e, em seguida, insira-a novamente na caixa **Redigite a senha**. 
   
-5.  Para adicionar o catálogo do SSISDB, clique com botão direito em Catálogos dos Integration Services e clique em Criar catálogo.  
+8.  Selecione **OK** para adicionar o catálogo SSISDB.  
   
-6.  Na caixa de diálogo Criar catálogo, selecione Habilitar a integração do CLR.  
+## <a name="add-the-package-to-the-ssisdb-catalog"></a>Adicionar o pacote ao catálogo SSISDB  
   
-7.  Digite uma nova senha na caixa Senha; então, digite-a novamente na caixa Confirmar senha. Certifique-se de lembrar a senha que você digitar.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em **SSISDB** e selecione **Criar Pasta**.  
   
-8.  Clique em OK para adicionar o catálogo SSISDB.  
+2.  Na caixa de diálogo **Criar Pasta**, insira Tutorial do SSIS na caixa de nome de pasta e selecione **OK**.  
   
-### <a name="to-add-the-package-to-the-ssisdb-catalog"></a>Para adicionar o pacote ao catálogo SSISDB  
+3.  Expanda a pasta **Tutorial do SSIS**, clique com o botão direito do mouse em **Projetos** e selecione **Importar Pacotes**.  
   
-1.  No Pesquisador de objetos, clique com o botão direito do mouse em SSISDB e clique em Criar pasta.  
+4.  Na página de **Introdução** do **Assistente de Conversão de Projeto do Integration Services**, selecione **Avançar**.  
   
-2.  Na caixa de diálogo Criar pasta, digite Tutorial do SSIS na caixa de nome de pasta e clique em OK.  
+5.  Na página **Localizar Pacotes**, verifique se o **Sistema de arquivos** está selecionado na lista de **Origem**; então, selecione **Procurar**.  
   
-3.  Expanda a pasta Tutorial do SSIS, clique com o botão direito do mouse em Projetos e clique em Importar pacotes.  
+6.  Na caixa de diálogo **Procurar Pasta**, navegue até a pasta que contém o projeto do Tutorial do SSIS e selecione **OK**.  
   
-4.  Na página de Introdução do Assistente de conversão de projeto do Integration Services, clique em Avançar.  
+7.  Selecione **Avançar**.  
   
-5.  Na página localizar pacotes, verifique se o sistema de arquivos está selecionado na lista de origem; então, clique em Procurar.  
+8.  Na página Selecionar Pacotes, você deve ver todos os seis pacotes do Tutorial do SSIS. Na lista **Pacotes**, selecione **Lesson 6.dtsx** e selecione **Avançar**.  
   
-6.  Na caixa de diálogo Procurar pasta, navegue até a pasta que contém o projeto do Tutorial do SSIS e clique em OK.  
+9. Na página **Selecionar Destino**, insira **Implantação do Tutorial do SSIS** na caixa **Nome do Projeto** e selecione **Avançar**.
+
+10. Selecione **Avançar** em cada uma das páginas restantes do assistente até chegar à página **Revisão**.  
   
-7.  Clique em Avançar.  
+11. Na página **Revisão**, selecione **Converter**.  
   
-8.  Na página Selecionar pacotes, você deve ver todos os seis pacotes do Tutorial do SSIS. Na lista de pacotes, selecione Lição 6.dtsx e clique em Avançar.  
-  
-9. Na página Selecionar destino, digite Implantação do tutorial do SSIS na caixa Nome do projeto e clique em Avançar.  
-  
-10. Clique em Avançar em cada uma das páginas restantes do assistente até chegar à página Revisão.  
-  
-11. Na página Revisão, clique em Converter.  
-  
-12. Quando a conversão for concluída, clique em Fechar.  
+12. Depois que a conversão for concluída, selecione **Fechar**.  
   
 Quando você fecha o Assistente de conversão de projeto do Integration Services, o SSIS exibe o Assistente de implantação do Integration Services. Você agora usará esse assistente para implantar o pacote da Lição 6.  
   
-1.  Na página de Introdução do Assistente de implantação do Integration Services, revise as etapas para implantação do projeto e clique em Avançar.  
+1.  Na página **Introdução** do **Assistente de Implantação do Integration Services**, examine as etapas para implantação do projeto e selecione **Avançar**.  
   
-2.  Na página Selecionar destino, verifique se o nome do servidor é a instância do SQL Server que contém o catálogo do SSISDB e o caminho mostra o Implantação do tutorial do SSIS; então, clique em Avançar.  
+2.  Na página **Selecionar Destino**, verifique se o nome do servidor é a instância do SQL Server que contém o catálogo do SSISDB e o caminho mostra **Implantação do tutorial do SSIS**; então, selecione **Avançar**.  
   
-3.  Na página Revisão, revise o resumo e clique em Implantar.  
+3.  Na página **Revisão**, examine o **Resumo** e selecione **Implantar**.  
   
-4.  Quando a implantação for concluída, clique em Fechar.  
+4.  Quando a implantação for concluída, selecione **Fechar**.  
   
-5.  No Pesquisador de objetos, clique com o botão direito do mouse em Catálogos do Integration Services e clique em Atualizar.  
+5.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em **Catálogos do Integration Services** e selecione **Atualizar**.  
   
-6.  Expanda Catálogos do Integration Services e então expanda SSISDB. Continue a expandir a árvore sob Tutorial do SSIS até ter expandido completamente o projeto. Você deve ver Lição 6.dtsx sob o nó Pacotes do nó Implantação do tutorial do SSIS.  
+6.  Expanda **Catálogos do Integration Services** e então expanda **SSISDB**. Continue a expandir a árvore sob **Tutorial do SSIS** até ter expandido completamente o projeto. Você deve ver **Lesson 6.dtsx** no nó **Pacotes** do nó **Implantação do Tutorial do SSIS**.  
   
-Para verificar se o pacote está concluído, clique com botão direito em Lição 6.dtsx e clique em Configurar. Na caixa de diálogo Configurar, selecione parâmetros e verifique se há uma entrada com a lição 6. dtsx como o contêiner, VarFolderName como o nome e o caminho para a pasta Novos dados de exemplo como o valor; então, clique em Fechar.  
+7.  Para verificar se o pacote está concluído, clique com o botão direito do mouse em **Lesson 6.dtsx** e clique em **Configurar**. Na caixa de diálogo **Configurar**, selecione **Parâmetros** e verifique se há uma entrada com **Lesson 6.dtsx** como o **Contêiner**, **VarFolderName** como o **Nome** e o caminho para **Novos Dados de Exemplo** como o valor e selecione **Fechar**.  
   
-Antes de continuar para criar uma nova pasta de dados de exemplo, nomeie-a Dados de exemplo Dois e copie três arquivos de exemplo originais quaisquer para essa pasta.  
+## <a name="create-and-populate-a-new-sample-data-folder"></a>Criar e popular uma nova pasta de dados de exemplo  
   
-### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Para criar e popular uma nova pasta de dados de exemplo  
+1.  No **Windows Explorer**, no nível da raiz da unidade (por exemplo, **C:\\**), crie uma pasta chamada **Dados de Exemplo Dois**.  
   
-1.  No Windows Explorer, no nível da raiz da unidade (por exemplo, C:\\), crie uma nova pasta chamada Dados de Exemplo Dois.  
+2.  Abra a pasta **Dados de Exemplo** em [Pré-requisitos da Lição 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites) e copie qualquer um dos três dos arquivos de exemplo.  
   
-2.  Abra a pasta C:\Program Files\Microsoft SQL Server\110\Samples\Integration Services\Tutorial\Criando Um Pacote ETL simples\Dados de Exemplo e, em seguida, copie dos três dos arquivos de exemplo contidos na pasta.  
+3.  Navegue até a pasta **Dados de Exemplo Dois** e cole os arquivos copiados.  
   
-3.  Na pasta Novos Dados de Exemplo, cole os arquivos copiados.  
+## <a name="change-the-package-parameter-to-point-to-the-new-sample-data"></a>Alterar o parâmetro de pacote para apontar para os novos dados de exemplo  
   
-### <a name="to-change-the-package-parameter-to-point-to-the-new-sample-data"></a>Para alterar o parâmetro de pacote para apontar para os novos dados de exemplo  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em **Lesson 6.dtsx** e selecione **Configurar**.  
   
-1.  No Pesquisador de objetos, clique com botão direito em Lição 6.dtsx e clique em Configurar.  
+2.  Na caixa de diálogo **Configurar**, altere o valor do parâmetro para o caminho **Dados de Exemplo Dois**, por exemplo, **C:\\Dados de Exemplo Dois**.  
   
-2.  Na caixa de diálogo Configurar, altere o valor do parâmetro para o caminho da pasta Dados de Exemplo Dois. Por exemplo, C:\Dados de Exemplo Dois se você colocou a nova pasta na raiz da unidade C.  
+3.  Selecione **OK** para fechar a caixa de diálogo **Configurar**.  
   
-3.  Clique em OK para fechar a caixa de diálogo Configurar.  
+## <a name="test-the-lesson-6-package-deployment"></a>Testar a implantação de pacote da Lição 6  
   
-### <a name="to-test-the-lesson-6-package-deployment"></a>Para testar a implantação de pacote da Lição 6  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em **Lesson 6.dtsx** e selecione **Executar**.  
   
-1.  No Pesquisador de objetos, clique com botão direito em Lição 6.dtsx e clique em Executar.  
+2.  Na caixa de diálogo **Executar Pacote**, selecione **OK**.  
   
-2.  Na caixa de diálogo Executar pacote, clique em OK.  
+3.  Na caixa de diálogo de mensagem, selecione **Sim** para abrir o **Relatório de Visão Geral**.  
   
-3.  Na caixa de diálogo de mensagem, clique em Sim para abrir o Relatório de visão geral.  
-  
-O Relatório de visão geral do pacote será exibido, mostrando o nome do pacote e um resumo do status. A seção Visão geral de execução mostra o resultado de cada tarefa no pacote, enquanto a seção Parâmetros usados mostra os nomes e valores de todos os parâmetros usados na execução do pacote, incluindo VarFolderName.  
-  
-  
+O **Relatório de Visão Geral** para o pacote exibe o nome do pacote e um resumo de status. A seção **Visão Geral da Execução** mostra o resultado de cada tarefa no pacote. A seção **Parâmetros Usados** mostra os nomes e valores de todos os parâmetros usados na execução do pacote, incluindo **VarFolderName**.  
   
