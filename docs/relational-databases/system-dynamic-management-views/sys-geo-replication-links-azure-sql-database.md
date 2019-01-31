@@ -1,7 +1,7 @@
 ---
 title: sys. geo_replication_links (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,54 +20,56 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6b37ca384c2d3402a3b9ec01a4b9d6ccbfb7d402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a74e98b3ab756ae67c02fc19eca834a95723d331
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610104"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420973"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Banco de Dados SQL do Azure)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada link de replicação entre bancos de dados primários e secundários em uma parceria de replicação geográfica. Essa exibição reside no banco de dados mestre lógico.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID do banco de dados atual no modo de exibição de sys. Databases.|  
 |start_date|**datetimeoffset**|Hora UTC em um datacenter regional do banco de dados SQL quando a replicação de banco de dados foi iniciada|  
 |modify_date|**datetimeoffset**|Hora do UTC no datacenter regional do banco de dados SQL quando a replicação geográfica do banco de dados foi concluída. O novo banco de dados está sincronizado com o banco de dados primário a partir desse momento. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
 |link_guid|**uniqueidentifier**|ID exclusiva do link de replicação geográfica.|  
-|partner_server|**sysname**|Nome do servidor lógico que contém o banco de dados replicado geograficamente.|  
-|partner_database|**sysname**|Nome do banco de dados com replicação geográfica no servidor lógico vinculado.|  
+|partner_server|**sysname**|Nome do servidor de banco de dados SQL que contém o banco de dados replicado geograficamente.|  
+|partner_database|**sysname**|Nome do banco de dados com replicação geográfica no servidor de banco de dados SQL vinculado.|  
 |replication_state|**tinyint**|O estado de replicação geográfica para esse banco de dados, um dos:.<br /><br /> 0 = pendente. A criação do banco de dados secundário ativo está agendada, mas as etapas de preparação necessárias ainda não foram concluídas.<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado, mas os dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário. Remover banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = recuperar o atraso. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |função|**tinyint**|Função de replicação geográfica, um dos:<br /><br /> 0 = primary. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo de secundário, um dos:<br /><br /> 0 = Não. O banco de dados secundário não está acessível até que o failover.<br /><br /> 1 = somente leitura. O banco de dados secundário é acessível somente para conexões de cliente com ApplicationIntent = ReadOnly.<br /><br /> 2 = Todos. O banco de dados secundário é acessível a qualquer conexão de cliente.|  
-|secondary_allow_connections desc|**nvarchar(256)**|não<br /><br /> Todos<br /><br /> Somente leitura|  
+|secondary_allow_connections _desc|**nvarchar(256)**|Não<br /><br /> Todos<br /><br /> Somente leitura|  
   
-## <a name="permissions"></a>Permissões  
- Essa exibição só está disponível na **mestre** banco de dados para o logon principal no nível do servidor.  
+## <a name="permissions"></a>Permissões
+
+Essa exibição só está disponível na **mestre** banco de dados para o logon principal no nível do servidor.  
   
-## <a name="example"></a>Exemplo  
- Mostra todos os bancos de dados com links de replicação geográfica.  
-  
-```  
-SELECT   
+## <a name="example"></a>Exemplo
+
+Mostra todos os bancos de dados com links de replicação geográfica.  
+
+```sql
+SELECT
      database_id  
    , start_date  
    , partner_server  
    , partner_database  
    , replication_state  
    , role_desc  
-   , secondary_allow_connections_desc   
+   , secondary_allow_connections_desc
 FROM sys.geo_replication_links;  
-```  
-  
-## <a name="see-also"></a>Consulte também  
+```
+
+## <a name="see-also"></a>Consulte também
+
  [ALTER DATABASE (Banco de Dados SQL do Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [DM geo_replication_link_status &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [DM operation_status &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
-  
-  

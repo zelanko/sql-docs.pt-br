@@ -1,7 +1,7 @@
 ---
 title: sys. bandwidth_usage (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,21 +22,23 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 046e9e651daeb2946538ff5ae269aaad27666fd0
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403711"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421303"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Banco de Dados SQL do Azure)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Observação: Isso se aplica somente ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
+> [!NOTE]
+> Isso se aplica somente ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.* *  
   
- Retorna informações sobre a largura de banda usada por cada banco de dados em um  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor lógico do V11**,. Cada linha retornada para um banco de dados determinado resume uma única direção e a classe de uso durante um período de uma hora.  
+ Retorna informações sobre a largura de banda usada por cada banco de dados em um  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de banco de dados V11**,. Cada linha retornada para um banco de dados determinado resume uma única direção e a classe de uso durante um período de uma hora.  
   
- **Isso foi substituído em uma [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor lógico V12.**  
+ **Isso foi substituído em uma [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].**  
   
  O **sys. bandwidth_usage** exibição contém as colunas a seguir.  
   
@@ -49,12 +51,14 @@ ms.locfileid: "52403711"
 |**time_period**|O período de tempo em que ocorreu o uso é o horário de pico ou OffPeak. The Peak time is based on the region in which the server was created. Por exemplo, se um servidor tiver sido criado na região "US_Northwest", o horário de pico será definido como estando entre 10h e 18h. PST.|  
 |**quantity**|A quantidade de largura de banda, em quilobytes (KBs), que foi usada.|  
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
+
  Essa exibição só está disponível na **mestre** banco de dados para o logon principal no nível do servidor.  
   
 ## <a name="remarks"></a>Comentários  
   
-### <a name="external-and-internal-classes"></a>Classes External e Internal  
+### <a name="external-and-internal-classes"></a>Classes External e Internal
+
  Para cada banco de dados usado em um determinado momento, o **sys. bandwidth_usage** exibição retorna linhas que mostram a classe e a direção do uso de largura de banda. O exemplo a seguir ilustra os dados que podem ser expostos para um banco de dados específico. Neste exemplo, a hora é 2012-04-21 17:00:00, que ocorre durante o horário de pico. O nome do banco de dados é Db1. Neste exemplo, **sys. bandwidth_usage** retornou uma linha para todas as quatro combinações Ingress e Egress das direções das classes External e Internal, da seguinte maneira:  
   
 |time|database_name|direction|class|time_period|quantity|  
@@ -64,10 +68,9 @@ ms.locfileid: "52403711"
 |2012-04-21 17:00:00|Db1|Entrada|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Internal|Peak|3525|  
   
-### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interpretando a direção de dados do [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]  
- Para [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)], os dados de uso de largura de banda são visíveis no banco de dados mestre lógico nos dois lados de uma relação de cópia contínua. Portanto, você deve interpretar os indicadores de direção ingress e egress sob a perspectiva do servidor lógico que você está consultando. Por exemplo, considere um fluxo de replicação que transfere 1 MB de dados do servidor de origem para o servidor de destino. Nesse caso, no servidor de origem, 1 MB é contado como total de dados enviados, e no servidor de destino, 1 MB é registrado como dados recebidos.  
+### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interpretando a direção de dados do [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]
+
+ Para [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)], os dados de uso de largura de banda são visíveis no banco de dados mestre lógico nos dois lados de uma relação de cópia contínua. Portanto, você deve interpretar a entrada e saída indicadores de direção da perspectiva de bancos de dados que você está consultando. Por exemplo, considere um fluxo de replicação que transfere 1 MB de dados do servidor de origem para o servidor de destino. Nesse caso, no servidor de origem, 1 MB é contado como total de dados enviados, e no servidor de destino, 1 MB é registrado como dados recebidos.  
   
 > [!NOTE]  
->  O volume de dados transferido vai do servidor de origem para o servidor de destino, na direção do fluxo de dados do usuário. No entanto, é necessário fazer alguma transferência de dados na outra direção.  
-  
-  
+> O volume de dados transferido vai do servidor de origem para o servidor de destino, na direção do fluxo de dados do usuário. No entanto, é necessário fazer alguma transferência de dados na outra direção.  

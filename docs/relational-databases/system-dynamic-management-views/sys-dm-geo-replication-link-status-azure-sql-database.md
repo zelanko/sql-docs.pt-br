@@ -1,7 +1,7 @@
 ---
 title: DM geo_replication_link_status (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/13/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94d5a2e924cfe4aa7625f6cfce40c5758eecb6a5
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396010"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421149"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Banco de Dados SQL do Azure)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada link de replicação entre bancos de dados primários e secundários em uma parceria de replicação geográfica. Isso inclui bancos de dados primários e secundários. Se houver mais de um link de replicação contínua para um determinado banco de dados primário, esta tabela contém uma linha para cada uma das relações. A exibição é criada em todos os bancos de dados, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
@@ -35,8 +36,8 @@ ms.locfileid: "52396010"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID exclusiva do link de replicação.|  
-|partner_server|**sysname**|Nome do servidor lógico que contém o banco de dados vinculado.|  
-|partner_database|**sysname**|Nome do banco de dados vinculado no servidor lógico vinculado.|  
+|partner_server|**sysname**|Nome do servidor de banco de dados SQL que contém o banco de dados vinculado.|  
+|partner_database|**sysname**|Nome do banco de dados vinculado no servidor do Banco de Dados SQL.|  
 |last_replication|**datetimeoffset**|O carimbo de hora da confirmação da última transação pelo secundário com base no relógio do banco de dados primário. Esse valor está disponível no banco de dados primário somente.|  
 |replication_lag_sec|**int**|Diferença de tempo em segundos entre o valor de last_replication e o carimbo de hora da confirmação da transação na réplica primária com base no relógio do banco de dados primário.  Esse valor está disponível no banco de dados primário somente.|  
 |replication_state|**tinyint**|O estado de replicação geográfica para esse banco de dados, um dos:.<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado, mas os dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário. Remover banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = recuperar o atraso. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.<br /><br /> 4 = Suspended. Isso não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
