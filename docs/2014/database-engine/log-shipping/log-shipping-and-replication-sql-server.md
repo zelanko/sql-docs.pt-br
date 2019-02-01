@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126997"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513866"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Replicação e envio de logs (SQL Server)
   O envio de logs envolve duas cópias de um único banco de dados que, normalmente, residem em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados primário. As atualizações feitas pelos clientes no banco de dados primário são propagadas por meio do envio de logs para a outra cópia do banco de dados, conhecida como banco de dados secundário. O envio de logs envolve a aplicação de um log de transações de todas as inserções, atualizações ou exclusões feitas no banco de dados primário para o banco de dados secundário.  
@@ -109,9 +109,9 @@ ms.locfileid: "54126997"
   
     -   Se a publicação não for filtrada, você deverá conseguir atualizar o banco de dados de publicação com uma sincronização com o Assinante mais atualizado.  
   
-    -   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura recebe os dados do cliente somente para uma única região: Centro-Norte, Leste, Sul e Oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados. Nesse caso, é recomendável reinicializar todas as assinaturas de forma que os dados no Publicador e nos Assinantes convirjam. Para obter mais informações, consulte [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura receba os dados do cliente somente de uma região: Norte, Leste, Sul e Oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados. Nesse caso, é recomendável reinicializar todas as assinaturas de forma que os dados no Publicador e nos Assinantes convirjam. Para obter mais informações, consulte [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a assinatura não poderá ser anônima; ela deverá ser a assinatura de um cliente ou de um servidor (referenciadas como assinaturas locais e assinaturas globais nas versões anteriores). Para obter mais informações, consulte [Sincronizar dados](../../relational-databases/replication/synchronize-data.md).  
+     Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a assinatura não poderá ser anônima; ela deverá ser a assinatura de um cliente ou de um servidor (referenciadas como assinaturas locais e assinaturas globais nas versões anteriores). Para obter mais informações, consulte [Sincronizar dados](../../relational-databases/replication/synchronize-data.md).   
   
 ## <a name="see-also"></a>Consulte também  
  [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)   

@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0061e96168f16d8a92ed47578c32a3b16bf57306
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241807"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513766"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Guia de início rápido: Script de Python de "Hello world" no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +89,7 @@ Entradas para esse procedimento armazenado incluem:
 
 **Resultados**
 
-| Olá, mundo |
+| Hello World |
 |-------------|
 | 1 |
 
@@ -98,4 +98,4 @@ Entradas para esse procedimento armazenado incluem:
 Agora que executar alguns scripts de Python simples, dar uma olhada nas estruturação de entradas e saídas.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Lidar com entradas e saídas](quickstart-python-run-using-t-sql.md)
+> [Guia de início rápido: Lidar com entradas e saídas](quickstart-python-inputs-and-outputs.md)
