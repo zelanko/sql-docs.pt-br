@@ -1,7 +1,7 @@
 ---
 title: sp_addrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610c4c6a5692496ff8bcf6bd2650557264f70862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659644"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652535"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,24 +38,16 @@ ms.locfileid: "47659644"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## <a name="arguments"></a>Argumentos  
- [ @rolename=] '*função*'  
+ [ @rolename= ] '*role*'  
  É o nome da função de banco de dados no banco de dados atual. *função* é um **sysname**, sem padrão.  
   
- [ @membername=] '*security_account*'  
+ [ @membername= ] '*security_account*'  
  É a conta de segurança que está sendo adicionada à função. *security_account* é um **sysname**, sem padrão. *security_account* pode ser um usuário de banco de dados, função de banco de dados, logon do Windows ou grupo do Windows.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -96,14 +88,14 @@ CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;
 GO  
 ```  
   
-### <a name="b-adding-a-database-user"></a>B. Adicionando um usuário de banco de dados  
+### <a name="b-adding-a-database-user"></a>b. Adicionando um usuário de banco de dados  
  O exemplo a seguir adiciona o usuário de banco de dados `Mary5` à função de banco de dados `Production` no banco de dados atual.  
   
 ```  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Adicionando um logon do Windows  
  O exemplo a seguir adiciona o logon `LoginMary` para o `AdventureWorks2008R2` banco de dados como usuário `UserMary`. O usuário `UserMary` então é adicionado à função `Production`.  

@@ -1,7 +1,7 @@
 ---
-title: DM hadr_cluster_members (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2017
+ms.date: 01/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71493b066385840d065ff51e1f202c547686f774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e19451a24d35e63fa84a17d409d19b5c9b02ccc3
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857104"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570719"
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "47857104"
  > [!TIP]
  > A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], essa exibição de gerenciamento dinâmico oferece suporte a Failover de instâncias de Cluster AlwaysOn além dos grupos de disponibilidade AlwaysOn.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|Nome do membro, que pode ser um nome de computador, uma letra de unidade ou um caminho de compartilhamento de arquivos.|  
-|**member_type**|**tinyint**|O tipo do membro, um dos seguintes:<br /><br /> 0 = Nó WSFC<br /><br /> 1 = Testemunha de disco<br /><br /> 2 = Testemunha de compartilhamento de arquivos|  
-|**member_type_desc**|**nvarchar(50)**|Descrição da **member_type**, um de:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
+|**member_type**|**tinyint**|O tipo do membro, um dos seguintes:<br /><br /> 0 = Nó WSFC<br /><br /> 1 = Testemunha de disco<br /><br /> 2 = Testemunha de compartilhamento de arquivos<br /><br /> 3 = testemunha de nuvem|  
+|**member_type_desc**|**nvarchar(50)**|Descrição da **member_type**, um de:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|O estado do membro, um dos seguintes:<br /><br /> 0 = Offline<br /><br /> 1 = Online|  
 |**member_state_desc**|**nvarchar(60)**|Descrição da **member_state**, um de:<br /><br /> UP<br /><br /> PARA BAIXO|  
-|**number_of_quorum_votes**|**tinyint**|Número de votos de quorum possuído por este membro de quorum. Para nenhuma maioria: quorums de somente disco, esse valor é padronizado como 0. Para outros tipos de quorum, este valor é padronizado como 1.|  
+|**number_of_quorum_votes**|**tinyint**|Número de votos de quorum possuído por este membro de quorum. Para nenhuma maioria: Quorums de somente disco, o valor padrão é 0. Para outros tipos de quorum, este valor é padronizado como 1.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
