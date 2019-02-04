@@ -1,117 +1,134 @@
-- name: Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure
+items:
+- name: Visão geral
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Protegendo o SQL Server
-  href: securing-sql-server.md
-- name: Entidades
-  href: authentication-access/principals-database-engine.md
   items:
-    - name: 'Tópicos de instruções sobre gerenciamento de logons, usuários e esquemas'
-      href: authentication-access/managing-logins-users-and-schemas-how-to-topics.md
-      items:
-        - name: Crie um logon
-          href: authentication-access/create-a-login.md
-        - name: Criar um usuário de banco de dados
-          href: authentication-access/create-a-database-user.md
-        - name: Criar um esquema de banco de dados
-          href: authentication-access/create-a-database-schema.md
-        - name: unir uma função
-          href: authentication-access/join-a-role.md
-        - name: Conceder uma permissão a uma entidade de segurança
-          href: authentication-access/grant-a-permission-to-a-principal.md
+  - name: Protegendo o SQL Server
+    href: securing-sql-server.md
+- name: Como fazer
+  items:
+  - name: Proteger o SQL Server
+    items:
+    - name: Configuração da área de superfície
+      href: surface-area-configuration.md
+  - name: Acesso por autenticação
+    items:
+    - name: Criar um logon
+      href: authentication-access/create-a-login.md
+    - name: Criar um usuário de banco de dados
+      href: authentication-access/create-a-database-user.md
+    - name: Criar um esquema de banco de dados
+      href: authentication-access/create-a-database-schema.md
+    - name: Unir uma função
+      href: authentication-access/join-a-role.md
+    - name: Conceder uma permissão a uma entidade de segurança
+      href: authentication-access/grant-a-permission-to-a-principal.md
+    - name: Criar uma função de servidor
+      href: authentication-access/create-a-server-role.md
+    - name: Criar uma função de aplicativo
+      href: authentication-access/create-an-application-role.md
+    - name: Criar credencial
+      href: authentication-access/create-a-credential.md
+  - name: Criptografia
+    items:
+    - name: Selecionar um algoritmo
+      href: encryption/choose-an-encryption-algorithm.md
+    - name: Habilitar a TDE usando EKM
+      href: encryption/enable-tde-on-sql-server-using-ekm.md
+    - name: Mover um banco de dados protegido por TDE para outro SQL Server
+      href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+    - name: EKM com Azure Key Vault
+      href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+    - name: Fazer backup da chave mestra de serviço
+      href: encryption/back-up-the-service-master-key.md
+    - name: Restaurar a chave mestra de serviço
+      href: encryption/restore-the-service-master-key.md
+    - name: Criar uma chave mestra de banco de dados
+      href: encryption/create-a-database-master-key.md
+    - name: Fazer backup da chave mestra do banco de dados
+      href: encryption/back-up-a-database-master-key.md
+    - name: Restaurar a chave mestra do banco de dados
+      href: encryption/restore-a-database-master-key.md
+    - name: Criar chaves simétricas idênticas em dois servidores
+      href: encryption/create-identical-symmetric-keys-on-two-servers.md
+    - name: Criptografar uma coluna de dados
+      href: encryption/encrypt-a-column-of-data.md
+  - name: Auditoria
+    items:
+    - name: Criar uma auditoria de servidor
+      href: auditing/create-a-server-audit-and-server-audit-specification.md
+    - name: Criar uma auditoria de banco de dados
+      href: auditing/create-a-server-audit-and-database-audit-specification.md
+    - name: Exibir um log de auditoria
+      href: auditing/view-a-sql-server-audit-log.md
+    - name: Gravar auditoria no log do Windows
+      href: auditing/write-sql-server-audit-events-to-the-security-log.md
+- name: Conceitos
+  items:
+  - name: Protegendo a propriedade intelectual do SQL Server
+    items:
+    - name: Propriedade de banco de dados TRUSTWORTHY
+      href: trustworthy-database-property.md
+    - name: Política de senha
+      href: password-policy.md
+    - name: Senhas fortes
+      href: strong-passwords.md
+    - name: Segurança em nível de linha
+      href: row-level-security.md
+    - name: Certificados e chaves assimétricas
+      href: sql-server-certificates-and-asymmetric-keys.md
+  - name: Acesso por autenticação
+    items:
+    - name: Entidades
+      href: authentication-access/principals-database-engine.md
     - name: Funções de nível de servidor
       href: authentication-access/server-level-roles.md
-      items:
-        - name: Criar uma função de servidor
-          href: authentication-access/create-a-server-role.md
     - name: Funções de nível de banco de dados
       href: authentication-access/database-level-roles.md
     - name: Funções de aplicativo
       href: authentication-access/application-roles.md
-      items:
-        - name: Criar uma função de aplicativo
-          href: authentication-access/create-an-application-role.md
-- name: Credenciais
-  href: authentication-access/credentials-database-engine.md
-  items:
-    - name: Create a Credential
-      href: authentication-access/create-a-credential.md
-- name: Protegíveis
-  href: securables.md
-- name: Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
-  href: contained-database-users-making-your-database-portable.md
-- name: Escolher um modo de autenticação
-  href: choose-an-authentication-mode.md
-- name: Configuração de visibilidade de metadados
-  href: metadata-visibility-configuration.md
-- name: Configuração da Área de Superfície
-  href: surface-area-configuration.md
-- name: Propriedade de banco de dados TRUSTWORTHY
-  href: trustworthy-database-property.md
-- name: Permissões
-  href: permissions-database-engine.md
-- name: Hierarquia de permissões
-  href: permissions-hierarchy-database-engine.md
-- name: Página Permissões ou Protegíveis
-  href: permissions-or-securables-page.md
-- name: Política de senha
-  href: password-policy.md
-- name: Senhas fortes
-  href: strong-passwords.md
-- name: Criptografia do SQL Server
-  href: encryption/sql-server-encryption.md
-  items:
+    - name: Credenciais
+      href: authentication-access/credentials-database-engine.md
+    - name: Protegíveis
+      href: securables.md
+    - name: Usuários de banco de dados independente
+      href: contained-database-users-making-your-database-portable.md
+    - name: Modo de autenticação
+      href: choose-an-authentication-mode.md
+    - name: Visibilidade de metadados
+      href: metadata-visibility-configuration.md
+    - name: Permissões
+      href: permissions-database-engine.md
+    - name: Hierarquia de permissões
+      href: permissions-hierarchy-database-engine.md
+  - name: Criptografia
+    href: encryption/sql-server-encryption.md
+    items:
     - name: Hierarquia de criptografia
       href: encryption/encryption-hierarchy.md
-    - name: Escolher um algoritmo de criptografia
-      href: encryption/choose-an-encryption-algorithm.md
+    - name: Chave mestra de serviço
+      href: encryption/service-master-key.md
+    - name: Chaves de criptografia do SQL Server e do banco de dados
+      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
     - name: Criptografia de Dados Transparente (TDE)
       href: encryption/transparent-data-encryption.md
-      items:
-        - name: Transparent Data Encryption com o Banco de Dados SQL do Azure
-          href: dbengine-transparent-data-encryption-with-azure-sql-database.md
-        - name: Mover um banco de dados protegido por TDE para outro SQL Server
-          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
-        - name: Habilitar a TDE usando EKM
-          href: encryption/enable-tde-on-sql-server-using-ekm.md
-    - name: Chaves de criptografia do SQL Server e banco de dados
-      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
-      items:
-        - name: SMK (chave mestra de serviço)
-          href: encryption/service-master-key.md
-        - name: Gerenciamento extensível de chaves (EKM)
-          href: encryption/extensible-key-management-ekm.md
-        - name: Gerenciamento extensível de chaves usando o Azure Key Vault
-          href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
-        - name: Fazer backup da chave mestra de serviço
-          href: encryption/back-up-the-service-master-key.md
-        - name: Restaurar a chave mestra de serviço
-          href: encryption/restore-the-service-master-key.md
-        - name: Criar uma chave mestra de banco de dados
-          href: encryption/create-a-database-master-key.md
-        - name: Fazer backup da chave mestra de um banco de dados
-          href: encryption/back-up-a-database-master-key.md
-        - name: Restaurar uma chave mestra de banco de dados
-          href: encryption/restore-a-database-master-key.md
-        - name: Criar chaves simétricas idênticas em dois servidores
-          href: encryption/create-identical-symmetric-keys-on-two-servers.md
-        - name: Criptografar uma coluna de dados
-          href: encryption/encrypt-a-column-of-data.md
-- name: Segurança em nível de linha
-  href: row-level-security.md
-- name: Certificados e chaves assimétricas do SQL Server
-  href: sql-server-certificates-and-asymmetric-keys.md
-- name: Auditoria do SQL Server (Mecanismo de Banco de Dados)
-  href: auditing/sql-server-audit-database-engine.md
-  items:
-    - name: Ações e grupos de ações de auditoria do SQL Server
+    - name: TDE com o Banco de Dados SQL do Azure
+      href: dbengine-transparent-data-encryption-with-azure-sql-database.md
+    - name: Gerenciamento extensível de chaves (EKM)
+      href: encryption/extensible-key-management-ekm.md
+  - name: Auditoria
+    href: auditing/sql-server-audit-database-engine.md
+    items:
+    - name: Ações e grupos de ação de auditoria
       href: auditing/sql-server-audit-action-groups-and-actions.md
-    - name: SQL Server Audit Records
+    - name: Registros de auditoria
       href: auditing/sql-server-audit-records.md
-    - name: Criar uma auditoria de servidor e uma especificação de auditoria de servidor
-      href: auditing/create-a-server-audit-and-server-audit-specification.md
-    - name: Create a Server Audit and Database Audit Specification
-      href: auditing/create-a-server-audit-and-database-audit-specification.md
-    - name: Exibir um log auditoria do SQL Server
-      href: auditing/view-a-sql-server-audit-log.md
-    - name: Gravar eventos de auditoria do SQL Server no log de segurança
-      href: auditing/write-sql-server-audit-events-to-the-security-log.md
+- name: Referência
+  items:
+  - name: Página Permissões ou Protegíveis
+    href: permissions-or-securables-page.md
+ms.openlocfilehash: 125988518d441b47c40fac72194bd2c1e1f6c7ea
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513826"
