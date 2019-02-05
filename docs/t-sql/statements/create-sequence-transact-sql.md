@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226523"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428643"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Quando criado com a opção **CACHE**, um desligamento inesperado (uma falta de 
   
 3.  O valor calculado é retornado à instrução de chamada.  
   
- **Opção CACHE quando o cache está esgotado**  
+**Opção CACHE quando o cache está esgotado**  
   
  O seguinte processo ocorre sempre que um objeto de sequência recebe uma solicitação para gerar o próximo valor para a opção **CACHE**, quando o cache está esgotado:  
   
@@ -139,7 +139,7 @@ Quando criado com a opção **CACHE**, um desligamento inesperado (uma falta de 
   
 3.  A linha da tabela do sistema para o objeto de sequência está bloqueada, e o valor calculado na etapa 2 (o último valor) é gravado na tabela do sistema. Um xevent de cache esgotado é disparado para notificar o usuário sobre o novo valor contínuo.  
   
- **Opção NO CACHE**  
+**Opção NO CACHE**  
   
  O processo a seguir ocorre sempre que um objeto de sequência recebe uma solicitação para gerar o próximo valor para a opção **NO CACHE**:  
   
