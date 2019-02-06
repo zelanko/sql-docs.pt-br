@@ -10,12 +10,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747958"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760069"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Configurando e habilitando configurações de pacote
   Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contenha definições de configuração para a propriedade `Directory` do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
@@ -43,7 +43,7 @@ ms.locfileid: "52747958"
   
 9. No **Editor de expressões de propriedade**, clique no **propriedade** relacionar e selecionar `Directory`.  
   
-10. Na caixa **Expressão**, clique no botão de reticências **(…)**.  
+10. No **expressão** , clique no botão de reticências **(...)** .  
   
 11. No **Construtor de Expressões**, expanda a pasta Variáveis e arraste a variável **User::varFolderName** até a caixa **Expressão** .  
   
@@ -87,13 +87,13 @@ ms.locfileid: "52747958"
   
 16. Clique em **Fechar**.  
   
-17. O assistente cria um arquivo de configuração, chamado Ssistutorial, que contém as definições de configuração para o v`alue` da variável que define o `Directory` propriedade do enumerador.  
+17. O assistente cria um arquivo de configuração, chamado SSISTutorial.dtsConfig, que contém as definições de configuração de `value` da variável que define a propriedade `Directory` do enumerador.  
   
     > [!NOTE]  
     >  Um arquivo de configuração geralmente contém informações complexas sobre as propriedades do pacote, mas, para este tutorial, a única informação de configuração deveria ser  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName]. Propriedades [valor]"ValueType ="String"\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</ Configuration >.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Para criar e popular uma nova pasta de dados de exemplo  
