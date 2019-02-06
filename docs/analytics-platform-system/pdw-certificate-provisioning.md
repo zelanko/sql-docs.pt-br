@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405091"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742116"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisionamento de certificado do PDW - Analytics Platform System
 O **provisionamento de certificado do PDW** página do Analytics Platform System **Configuration Manager** importa ou remove o certificado usado pela região PDW. Usando o, um certificado para criptografar conexões pode ajudar a comunicação segura para o nó de controle por meio de clientes do SQL Server, as ferramentas que usam os drivers do SQL Server PDW, o [Console de administração](monitor-the-appliance-by-using-the-admin-console.md), e carrega os serviços de integração.  
@@ -41,7 +41,10 @@ O caminho de certificação deve conter o nome de domínio totalmente qualificad
 Use o Analytics Platform System**Configuration Manager** para adicionar ou remover o certificado confiável. Diretamente usando a ferramenta de configuração de certificado Microsoft Windows HTTP Services (**winHttpCertCfg.exe**) gerenciar o certificado não tem suporte.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importar ou remover o certificado  
-As instruções a seguir mostram como importar ou remover o certificado do dispositivo.  
+As instruções a seguir mostram como importar ou remover o certificado do dispositivo.
+
+> [!WARNING]
+> Para renovar um certificado expirado, você deve remover o certificado existente antes de importar um novo.
   
 ### <a name="to-import-the-certificate"></a>Para importar o certificado  
   
