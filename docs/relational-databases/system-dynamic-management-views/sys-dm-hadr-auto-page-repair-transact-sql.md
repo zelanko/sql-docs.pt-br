@@ -1,7 +1,7 @@
 ---
 title: sys.dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 02/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be4bd3af61ef81c81dffc695ed3489c620b42903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d46e5ee0b350e7164c0dfec55666d4b6c8e34a7
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688224"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771322"
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47688224"
   
   A tabela a seguir define o significado das diversas colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados ao qual corresponde a linha.|  
 |**file_id**|**int**|ID do arquivo em que a página está localizada.|  
 |**page_id**|**bigint**|ID da página no arquivo.|  
 |**error_type**|**int**|O tipo de erro. Os valores podem ser:<br /><br /> **-** 1 = todos os erros de hardware 823<br /><br /> 1 = 824 erros que não seja uma soma de verificação inválida ou uma página interrompida (como uma ID de página inválida)<br /><br /> 2 = Soma de verificação inválida<br /><br /> 3 = Página interrompida|  
-|**page_status**|**int**|O status da tentativa de conserto da página:<br /><br /> 2 = Enfileirada para solicitação do parceiro.<br /><br /> 3 = Solicitação enviada ao parceiro.<br /><br /> 4 = Enfileirada para conserto de página automático (resposta recebida do parceiro).<br /><br /> 5 = Conserto de página automático efetuado com êxito; a página deve estar utilizável.<br /><br /> 6 = Irreparável. Isso indica que ocorreu um erro durante a tentativa do conserto da página, por exemplo, porque a página também está corrompida no parceiro, o parceiro está desconectado ou houve um problema de rede. Esse estado não é terminal; se o dano for encontrado novamente na página, a página será novamente solicitada ao parceiro.|  
+|**page_status**|**int**|O status da tentativa de conserto da página:<br /><br /> 2 = Enfileirada para solicitação do parceiro.<br /><br /> 3 = Solicitação enviada ao parceiro.<br /><br /> 4 = página foi reparada com êxito.<br /><br /> 5 = a página não pôde ser reparada durante a última tentativa / reparo automático de página tentará novamente a página ser reparada.|  
 |**modification_time**|**datetime**|Hora da última alteração no estado da página.|  
   
 ## <a name="security"></a>Segurança  
@@ -50,7 +50,7 @@ ms.locfileid: "47688224"
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Reparo automático de página &#40;Grupos de disponibilidade: espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparo automático de página &#40;Grupos de Disponibilidade: Espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
