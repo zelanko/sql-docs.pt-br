@@ -45,7 +45,7 @@ ms.locfileid: "54256981"
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Especificando sql:hide em um atributo  
  O esquema XSD deste exemplo consiste em um  **\<Person. Contact >** elemento com **ContactID**, **FirstName**, e **LastName** atributos.  
   
- O  **\<Person. Contact >** elemento é do tipo complexo e, portanto, mapeia para a tabela de mesmo nome (mapeamento padrão). Todos os atributos  **\<Person. Contact >** elemento são do tipo simples e mapeados para colunas com os mesmos nomes na Person.Contacttable banco de dados AdventureWorks. No esquema, o **SQL: Hide** anotação é especificada na **ContactID** atributo. Quando uma consulta XPath é especificada nesse esquema, o **ContactID** não é retornado no documento XML.  
+ O **\<Person. Contact >** elemento é do tipo complexo e, portanto, mapeia para a tabela de mesmo nome (mapeamento padrão). Todos os atributos  **\<Person. Contact >** elemento são do tipo simples e mapeados para colunas com os mesmos nomes na Person.Contacttable banco de dados AdventureWorks. No esquema, o **SQL: Hide** anotação é especificada na **ContactID** atributo. Quando uma consulta XPath é especificada nesse esquema, o **ContactID** não é retornado no documento XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
