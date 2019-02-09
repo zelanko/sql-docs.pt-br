@@ -4,19 +4,19 @@ description: Explore as diferentes formas de usar e interagir com o SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: e143ba46fd4c288367b3eb75c15b073ebfb9cf34
+ms.sourcegitcommit: 428b0d2951a785bc72f8dac9ac7cea7cda4dc059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100731"
+ms.lasthandoff: 02/09/2019
+ms.locfileid: "55972199"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -350,6 +350,62 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
+## <a id="tz"></a> Configurar o fuso horário
+
+Para executar o SQL Server em um contêiner do Linux com um fuso horário específico, configurar o **TZ** variável de ambiente. Para localizar o valor de fuso horário correto, execute as **tzselect** comando em um prompt de bash do Linux:
+
+```bash
+tzselect
+```
+
+Depois de selecionar o fuso horário, **tzselect** exibe uma saída semelhante à seguinte:
+
+```bash
+The following information has been given:
+
+        United States
+        Pacific
+
+Therefore TZ='America/Los_Angeles' will be used.
+```
+
+Você pode usar essas informações para definir a mesma variável de ambiente em seu contêiner do Linux. O exemplo a seguir mostra como executar o SQL Server em um contêiner no `Americas/Los_Angeles` fuso horário:
+
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+::: moniker-end
 
 ## <a id="tags"></a> Executar uma imagem de contêiner específica do SQL Server
 

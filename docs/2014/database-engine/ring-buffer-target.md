@@ -14,12 +14,12 @@ ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52dc4ba85ec3b65ddf3e1c703befd0ee32d78a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
+ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182536"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905651"
 ---
 # <a name="ring-buffer-target"></a>Destino de buffer de anel
   O destino de buffer de anel mantém brevemente dados de eventos na memória. Esse destino pode gerenciar eventos de uma das duas maneiras possíveis.  
@@ -30,11 +30,11 @@ ms.locfileid: "48182536"
   
  A tabela a seguir descreve as opções disponíveis para configurar o destino de buffer de anel.  
   
-|Opção|Valores permitidos|Description|  
+|Opção|Valores permitidos|Descrição|  
 |------------|--------------------|-----------------|  
-|max_memory|Qualquer inteiro de 32 bits. Esse valor é opcional.|A quantidade máxima de memória, em kilobytes (KB), para usar. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory.|  
+|max_memory|Qualquer inteiro de 32 bits. Esse valor é opcional.|A quantidade máxima de memória, em kilobytes (KB), para usar. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory. O valor máximo é 4194303 KB. Uma consideração cuidadosa deve ser feita antes de definir o tamanho do buffer de anel como limites no intervalo de GB, pois isso pode afetar outros consumidores de memória no SQL Server|  
 |max_event_limit|Qualquer inteiro de 32 bits. Esse valor é opcional.|O número máximo de eventos mantidos no ring_buffer. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory. Padrão = 1000.|  
-|occurrence_number|Um dos valores seguintes:<br /><br /> 0 (o padrão) = O evento mais antigo é descartado quando toda a memória alocada ao destino é usada.<br /><br /> Qualquer inteiro de 32 bits = O número de eventos de cada tipo a ser mantido antes de ser descartado em uma base FIFO por evento.<br /><br /> <br /><br /> Esse valor é opcional.|O modo FIFO a ser usado e, se definido com um valor maior que 0, o número preferencial de eventos de cada tipo a ser mantido no buffer.|
+|occurrence_number|Um dos valores seguintes:<br /><br /> 0 (o padrão) = O evento mais antigo é descartado quando toda a memória alocada ao destino é usada.<br /><br /> Qualquer inteiro de 32 bits = o número de eventos de cada tipo a ser mantido antes de ser descartado da base FIFO por evento.<br /><br /> <br /><br /> Esse valor é opcional.|O modo FIFO a ser usado e, se definido com um valor maior que 0, o número preferencial de eventos de cada tipo a ser mantido no buffer.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>Adicionando o destino a uma sessão  
@@ -77,7 +77,7 @@ WHERE xe.name = 'session_name'
 
 ## <a name="see-also"></a>Consulte também
 
-- [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)
+- [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)
 - [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql?view=sql-server-2016)
 - [ALTER EVENT SESSION &#40;Transact-SQL&#41;](https://docs.microsoft.com/sql/t-sql/statements/alter-event-session-transact-sql?view=sql-server-2016)
