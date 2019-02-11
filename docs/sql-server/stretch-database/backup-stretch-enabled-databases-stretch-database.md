@@ -7,18 +7,18 @@ ms.technology: backup-restore
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- Stretch Database, backing up
-- backups (Stretch Database)
+- Stretch Database, disabling
+- disabling Stretch Database
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 094a5f631b6a1cb146e46a6c4f1170fc56ca63f2
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: fe51a7b4091c3d52a51475f869086332e28ea953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457579"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038147"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Fazer backup de bancos de dados habilitados para Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
