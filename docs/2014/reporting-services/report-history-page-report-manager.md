@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033857"
 ---
 # <a name="report-history-page-report-manager"></a>Página Histórico de Relatório (Gerenciador de Relatórios)
   Use a página Histórico de Relatório para exibir instantâneos de relatório que são gerados e armazenados ao longo do tempo. Dependendo das opções definidas no servidor de relatório, o histórico do relatórios poderá conter somente os instantâneos mais recentes.  
@@ -56,7 +56,7 @@ ms.locfileid: "48053136"
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir ou excluir histórico de relatório &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Página de propriedades Opções de instantâneo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

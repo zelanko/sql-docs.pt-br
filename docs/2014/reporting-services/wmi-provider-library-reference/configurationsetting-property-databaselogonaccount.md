@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151946"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025057"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica a conta de logon que o servidor de relatório usa para se conectar ao banco de dados do servidor de relatório. Somente leitura.  
@@ -46,7 +46,7 @@ public string DatabaseLogonAccount;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Comentários  
- Os valores válidos para essa propriedade variará dependendo do valor da [DatabaseLogonType](configurationsetting-property-databaselogontype.md) propriedade.  
+ Valores válidos para esta propriedade variarão dependendo do valor da propriedade [DatabaseLogonType](configurationsetting-property-databaselogontype.md) .  
   
  Essa propriedade será ignorada se a [DatabaseLogonType](configurationsetting-property-databaselogontype.md) estiver definida como `2 (Service)`.  
   
@@ -54,6 +54,6 @@ public string DatabaseLogonAccount;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

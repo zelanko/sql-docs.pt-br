@@ -4,19 +4,19 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 84033f550894c29a895ad63e8ee62ce5ce6d461b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15d32c3f97791c6c87b95e431f02e4d75bf8da6f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506399"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026517"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -78,9 +78,9 @@ JSON_MODIFY faz o escape de todos os caracteres especiais no novo valor se o tip
 |Valor existente|O caminho existe|Modo incerto|Modo estrito|  
 |--------------------|-----------------|--------------|-----------------|  
 |Não NULL|Sim|Atualize o valor existente.|Atualize o valor existente.|  
-|Não NULL|não|Tente criar um novo par de chave/valor no caminho especificado.<br /><br /> Isso poderá falhar. Por exemplo, se você especificar o caminho `$.user.setting.theme`, JSON_MODIFY não inserirá a chave `theme`, caso os objetos `$.user` ou `$.user.settings` não existam ou caso as configurações sejam uma matriz ou um valor escalar.|Erro – INVALID_PROPERTY|  
+|Não NULL|Não|Tente criar um novo par de chave/valor no caminho especificado.<br /><br /> Isso poderá falhar. Por exemplo, se você especificar o caminho `$.user.setting.theme`, JSON_MODIFY não inserirá a chave `theme`, caso os objetos `$.user` ou `$.user.settings` não existam ou caso as configurações sejam uma matriz ou um valor escalar.|Erro – INVALID_PROPERTY|  
 |NULL|Sim|Exclua a propriedade existente.|Defina o valor existente como nulo.|  
-|NULL|não|Nenhuma ação. O primeiro argumento é retornado como o resultado.|Erro – INVALID_PROPERTY|  
+|NULL|Não|Nenhuma ação. O primeiro argumento é retornado como o resultado.|Erro – INVALID_PROPERTY|  
   
  No modo incerto, JSON_MODIFY tenta criar um novo par de chave/valor, mas em alguns casos, ele pode falhar.  
   

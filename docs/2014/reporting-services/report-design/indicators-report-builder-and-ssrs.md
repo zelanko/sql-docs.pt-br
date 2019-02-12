@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a6f13d8d76854c3fdf01dceeeb61c4d06f2a0e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142456"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024137"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Construtor de Relatórios e SSRS)
   Os indicadores são medidores mínimos que transmitem o estado de um único valor de dados em um relance. Os ícones que representam indicadores e os respectivos estados são simples e visualmente efetivos mesmo quando usados em tamanhos pequenos.  
@@ -44,7 +44,7 @@ ms.locfileid: "48142456"
   
  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece conjuntos de indicadores internos e ícones de indicador a serem usados no estado em que se encontram, mas você também pode personalizar ícones de indicador e conjuntos de indicadores individuais para atender às suas necessidades.  
   
- Para obter mais informações sobre como usar indicadores como KPIs, consulte [Tutorial: Adicionar um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para obter mais informações sobre como usar indicadores como KPIs, consulte [Tutorial: Adicionando um KPI ao relatório &#40;construtor de relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar indicadores separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -104,7 +104,7 @@ ms.locfileid: "48142456"
   
  Quando você adiciona um indicador a um relatório, ele é configurado para usar valores padrão. Em seguida, você pode alterar os valores para que o indicador descreva dados da maneira que desejar. Você pode alterar a aparência dos ícones de indicador, o modo como o indicador escolhe qual ícone usar e alterar os ícones usados por um conjunto de indicadores. Para obter mais informações, consulte [Alterar os ícones de indicadores e os conjuntos de indicadores &#40;Construtor de Relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
- Por padrão, indicadores são configurados para usar percentuais como a unidade de medida e detectar automaticamente os valores mínimo e máximo nos dados. Cada ícone no conjunto de indicadores tem um intervalo de percentuais. O número de intervalos de percentuais depende do número de ícones no ícone definido, mas os intervalos são do mesmo tamanho e sequenciais. Por exemplo, se o conjunto de ícones tiver cinco ícones, haverá cinco intervalos de percentuais, cada um com 20 por cento em tamanho. O primeiro inicia com 0 e termina com 20, o segundo inicia com 20 e termina com 40, e assim por diante. O indicador do relatório usa o ícone do conjunto de indicadores que tem um intervalo de percentuais dentro do qual está o valor de dados do indicador. Você pode alterar o intervalo de percentuais para cada ícone do conjunto. Os valores mínimo e máximo podem ser definidos explicitamente fornecendo um valor ou uma expressão. Se preferir, altere a unidade de medida para que seja um valor numérico. Nesse caso, você não especifica mínimo ou máximo para obter os dados. Em vez disso, você fornece apenas os valores de início e término para cada ícone usado pelo indicador. vPara obter mais informações, consulte [conjunto e configurar unidades de medida &#40;construtor de relatórios e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
+ Por padrão, indicadores são configurados para usar percentuais como a unidade de medida e detectar automaticamente os valores mínimo e máximo nos dados. Cada ícone no conjunto de indicadores tem um intervalo de percentuais. O número de intervalos de percentuais depende do número de ícones no ícone definido, mas os intervalos são do mesmo tamanho e sequenciais. Por exemplo, se o conjunto de ícones tiver cinco ícones, haverá cinco intervalos de percentuais, cada um com 20 por cento em tamanho. O primeiro inicia com 0 e termina com 20, o segundo inicia com 20 e termina com 40, e assim por diante. O indicador do relatório usa o ícone do conjunto de indicadores que tem um intervalo de percentuais dentro do qual está o valor de dados do indicador. Você pode alterar o intervalo de percentuais para cada ícone do conjunto. Os valores mínimo e máximo podem ser definidos explicitamente fornecendo um valor ou uma expressão. Se preferir, altere a unidade de medida para que seja um valor numérico. Nesse caso, você não especifica mínimo ou máximo para obter os dados. Em vez disso, você fornece apenas os valores de início e término para cada ícone usado pelo indicador. Para obter mais informações, consulte [Definir e configurar unidades de medida &#40;Construtor de Relatórios e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
  Os indicadores transmitem valores de dados sincronizando valores de dados de indicador dentro de um escopo especificado. Por padrão, o escopo é o contêiner pai do indicador, como a tabela ou matriz que contém o indicador. Você pode alterar a sincronização do indicador escolhendo um escopo diferente, de acordo com o layout do seu relatório. O indicador pode omitir a sincronização. Para obter mais informações, consulte [Definir o escopo da sincronização &#40;Construtor de Relatórios e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48142456"
 ##  <a name="SizingIndicatators"></a> Dimensionando indicadores para maximizar o impacto visual  
  Além de cor, direção e forma, você pode usar o tamanho para maximizar o impacto visual de indicadores. Imagine um relatório que use indicadores para mostrar a satisfação do cliente com os diferentes tipos de bicicletas. O ícone usado pelo indicador pode ser configurado para tamanhos diferentes, dependendo da satisfação do cliente. Quanto maior a satisfação, maior o ícone que aparecerá no relatório. A imagem a seguir mostra um relatório de vendas de bicicletas, e os tamanhos dos ícones refletem o valor das vendas.  
   
- Use expressões para definir dinamicamente o tamanho das estrelas com base nos valores de campo usados pelo indicador. Para obter mais informações, consulte [especificar o tamanho de um indicador usando uma expressão &#40;construtor de relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
+ Use expressões para definir dinamicamente o tamanho das estrelas com base nos valores de campo usados pelo indicador. Para obter mais informações, consulte [Especificar o tamanho de um indicador usando uma expressão &#40;Construtor de Relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
   
  Para saber mais sobre gravar e usar expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
@@ -188,22 +188,22 @@ ms.locfileid: "48142456"
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista os procedimentos que mostram como adicionar, alterar e excluir indicadores; como configurar e personalizar indicadores e como usar indicadores em medidores.  
   
--   [Adicionar ou excluir um indicador &#40;relatórios e SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [Adicionar ou excluir um indicador &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [Alterar os ícones de indicador e conjuntos de indicadores &#40;relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Alterar os ícones de indicadores e os conjuntos de indicadores &#40;Construtor de Relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Definir e configurar unidades de medida &#40;relatórios e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Definir e configurar unidades de medida &#40;Construtor de Relatórios e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Definir o escopo da sincronização &#40;relatórios e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Definir o escopo da sincronização &#40;Construtor de Relatórios e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Especifique o tamanho de um indicador usando uma expressão &#40;relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Especificar o tamanho de um indicador usando uma expressão &#40;Construtor de Relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [Incluir indicadores e medidores em um painel de medidor &#40;relatórios e SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [Incluir indicadores e medidores em um painel de medidores &#40;Construtor de Relatórios e SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>Consulte também  
- [Medidores &#40;relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Gráficos de &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

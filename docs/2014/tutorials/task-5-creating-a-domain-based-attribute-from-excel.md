@@ -1,27 +1,24 @@
 ---
-title: 'Tarefa 5: Criando um atributo baseado em domínio do Excel | Microsoft Docs'
+title: 'Tarefa 5: Criando um atributo baseado em domínio no Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146336"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031597"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarefa 5: Criando um atributo baseado em domínio no Excel
-  Nesta tarefa, você deve converter o **estado** atributo da **Supplier** entidade como um **atributo baseado em domínio**. Depois de configurar o atributo de estado para ser um baseado em domínio e publicá-lo no MDS, uma nova entidade chamada **estado** será criado no servidor MDS com todos os valores na coluna e o **estado** atributo das **Supplier** será preenchida com valores da entidade a **estado** entidade. Agora, o **fornecedores** modelo deverá ter duas entidades: **Supplier** e **estado** em que o **estado** atributo do  **Supplier** entidade é um atributo baseado em domínio que depende **estado** entidade.  
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarefa 5: Criando um atributo baseado em domínio com base no Excel
+  Nesta tarefa, você deve converter o **estado** atributo da **Supplier** entidade como um **atributo baseado em domínio**. Depois de configurar o atributo de estado para ser um baseado em domínio e publicá-lo no MDS, uma nova entidade chamada **estado** será criado no servidor MDS com todos os valores na coluna e o **estado** atributo das **Supplier** será preenchida com valores da entidade a **estado** entidade. Agora, o **fornecedores** modelo deverá ter duas entidades: **Supplier** e **estado** onde a **estado** atributo do **Supplier** entidade é um atributo baseado em domínio que depende de **estado** entidade.  
   
 1.  Alterne para **Excel** janela que tem **Cleansed and Matched Suppliers** abrir.  
   
@@ -44,6 +41,6 @@ ms.locfileid: "48146336"
      ![Excel - lista suspensa lista com os estados](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - lista suspensa lista com os estados")  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 6: Verificar se o atributo baseado em domínio foi criado usando o Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [Tarefa 6: Verifique se o atributo baseado em domínio é criado usando o Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

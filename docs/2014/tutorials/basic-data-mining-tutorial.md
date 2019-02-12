@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
@@ -14,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372898"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033677"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial de mineração de dados básico
   Bem-vindo ao Tutorial básico de mineração de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Fornece um ambiente integrado para criação de modelos de mineração de dados e fazer previsões. Neste tutorial, você concluirá um cenário para uma campanha de mala direta na qual usará o aprendizado automatizado para analisar e prever o comportamento de compra do cliente. O tutorial demonstra como usar três dos algoritmos de mineração de dados mais importantes: clustering, árvores de decisão, e Naive Bayes. Você também aprenderá como analisar os resultados usando os visualizadores de modelo de mineração, e como criar previsões e gráficos de precisão usando as ferramentas de mineração de dados incluídas no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A empresa fictícia, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], é usada para todos os exemplos.  

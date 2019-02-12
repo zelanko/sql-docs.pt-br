@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b40693cd426779f7878c1101fb57efa12ce4e6de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057256"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023887"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Método SetServiceState (WMI MSReportServer_ConfigurationSetting)
   Ativa e desativa o Servidor de Relatório do Windows e os serviços Web.  
@@ -44,13 +44,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Parâmetros  
  *EnableWindowsService*  
- Um `Boolean` valor que indica o estado do serviço Windows. Um valor de `true` inicia o Windows do servidor de relatório do serviço; um valor de `false` interrompe o serviço do Windows.  
+ Um valor `Boolean` que indica o estado do serviço do Windows. Um valor `true` inicia o serviço Servidor de Relatório do Windows; um valor `false` interrompe o serviço do Windows.  
   
  *EnableWebService*  
  Um `Boolean` valor que indica o estado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serviço Web. Um valor `true` inicia o serviço Web Servidor de Relatórios; um valor `false` interrompe o serviço Web.  
   
  *EnableReportManager*  
- Um `Boolean` valor que indica o estado desejado do Gerenciador de relatórios.  
+ Um valor `Boolean` que indica o estado desejado do Gerenciador de Relatórios.  
   
  *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
@@ -64,6 +64,6 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc0e052b49cbfbf2324850aced8bd4753ca7ee3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058166"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023527"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Explorando o modelo Naive Bayes (Tutorial de mineração de dados básico)
   O [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Naive Bayes fornece vários métodos para exibir a interação entre a compra de bicicletas e os atributos de entrada.  
@@ -25,7 +24,7 @@ ms.locfileid: "48058166"
   
  
   
-##  <a name="DependencyNetwork"></a> Rede de dependências  
+##  <a name="DependencyNetwork"></a> Rede de Dependências  
  O **rede de dependências** tab funciona da mesma maneira como o **rede de dependência** guia para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de árvore. Cada nó no visualizador representa um atributo e as linhas entre os nós representam as relações. No visualizador, você pode ver todos os atributos que afetam o estado do atributo de previsão, Comprador de Bicicletas.  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Para explorar o modelo na guia Rede de Dependências  
@@ -43,7 +42,7 @@ ms.locfileid: "48058166"
      À medida que você abaixa o controle deslizante, somente os atributos com o efeito maior sobre a coluna [Comprador de Bicicleta] permanecem. Ao ajustar o controle deslizante, você poderá descobrir que alguns dos atributos mais influentes são: o número de carros, distância do trabalho e número total de crianças.  
  
   
-##  <a name="AttributeProfiles"></a> Perfis de atributo  
+##  <a name="AttributeProfiles"></a> Perfis de Atributo  
  O **perfis de atributo** guia descreve como os diferentes estados dos atributos de entrada afetam o resultado do atributo previsível.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>Para explorar o modelo na guia Perfis de Atributo  
@@ -65,7 +64,7 @@ ms.locfileid: "48058166"
      O **legenda de mineração** exibe uma exibição mais detalhada.  
   
   
-##  <a name="AttributeCharacteristics"></a> Características do atributo  
+##  <a name="AttributeCharacteristics"></a> Características do Atributo  
  Com o **características do atributo** guia, você pode selecionar um atributo e valor para ver a frequência com que os valores para outros atributos são exibidos em casos o valor selecionado.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>Para explorar o modelo na guia Características do Atributo  
@@ -77,7 +76,7 @@ ms.locfileid: "48058166"
      No visualizador, você verá que clientes sem filhos em casa, com pequenas distâncias até o trabalho e que moram na região da América do Norte têm mais probabilidade de comprarem uma bicicleta.  
   
   
-##  <a name="AttributeDiscrimination"></a> Distinção de atributo  
+##  <a name="AttributeDiscrimination"></a> Distinção de Atributo  
  Com o **distinção de atributo** guia, você pode investigar o relacionamento entre dois valores discretos de compra de bicicleta e outros valores de atributo. Porque o `TM_NaiveBayes` modelo tem apenas dois estados, 1 e 0, não é necessário fazer qualquer alteração no visualizador.  
   
  No visualizador, você pode ver que as pessoas que não têm carro tendem a comprar bicicletas, e que as pessoas que têm dois carros tendem a não comprar bicicletas.  
@@ -90,7 +89,7 @@ ms.locfileid: "48058166"
 -   [Explorando o modelo de Clustering &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 5: Testando modelos &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Lição 5: Teste de modelos &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Tarefa anterior da lição  
  [Explorando o modelo de Clustering &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  

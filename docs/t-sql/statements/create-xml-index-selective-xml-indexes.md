@@ -10,15 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ad57508fcfdab112a5ebefc4badb9b65b232444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a50bb8e07966985e467ab595453cb9001fc7f74f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026247"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (índices XML seletivos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ## <a name="remarks"></a>Remarks  
  Pode haver vários índices XML seletivos secundários em cada coluna XML na tabela base.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Deve existir um índice XML seletivo em uma coluna XML para que índices XML seletivos secundários possam ser criados na coluna.  
   
 ## <a name="security"></a>Segurança  
