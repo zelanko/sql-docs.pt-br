@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e02a79570258fb15125094709a9fe5f3cf67bb7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d792081d7554aefe4684b5a2e491aac875de49d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153768"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038437"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Parâmetros
   Selecione **Parâmetros** na caixa de diálogo **Propriedades do Conjunto de Dados** para adicionar, alterar e excluir os parâmetros de consulta, incluindo os parâmetros de consulta que estabelecem vínculo com os parâmetros de relatório.  
   
  Sempre que a consulta é alterada na guia de consulta, o comando de consulta é analisado. Para cada parâmetro de consulta identificado, um parâmetro de relatório com um nome com diferenciação de maiúsculas e minúsculas idêntico é criado. Por padrão, o parâmetro de consulta é adicionado automaticamente à lista de parâmetros de consulta e vinculado ao parâmetro de relatório correspondente.  
   
- Se houver dependências dos valores padrão de um parâmetro de relatório ou de outro parâmetro de relatório que estiver vinculado ao parâmetro de consulta, a ordem dos parâmetros de relatório (conforme são exibidos na caixa de diálogo **Propriedades de Parâmetros de Relatório** ) será importante. Os últimos parâmetros de relatório da lista podem fazer referência aos primeiros parâmetros de relatório da lista. Para obter mais informações sobre parâmetros de relatório, consulte [parâmetros de relatório &#40;construtor de relatórios e Designer de relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Se houver dependências dos valores padrão de um parâmetro de relatório ou de outro parâmetro de relatório que estiver vinculado ao parâmetro de consulta, a ordem dos parâmetros de relatório (conforme são exibidos na caixa de diálogo **Propriedades de Parâmetros de Relatório** ) será importante. Os últimos parâmetros de relatório da lista podem fazer referência aos primeiros parâmetros de relatório da lista. Para obter mais informações sobre parâmetros de relatório, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="options"></a>Opções  
  **Adicionar**  
@@ -50,6 +50,6 @@ ms.locfileid: "48153768"
 ## <a name="see-also"></a>Consulte também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
- [Alterar a ordem de um parâmetro de relatório &#40;relatórios e SSRS&#41;](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+ [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   
