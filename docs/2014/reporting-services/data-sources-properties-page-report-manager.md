@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031977"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Página Propriedades de Fontes de Dados (Gerenciador de Relatórios)
   Use a página de propriedades de Fontes de Dados para definir como o relatório atual se conecta a uma fonte de dados externa. Você pode substituir as informações de conexão de fonte de dados publicadas originalmente com o relatório. Se várias fontes de dados forem usadas em um relatório, cada fonte de dados terá sua própria seção na página de propriedades. As fontes de dados são listadas na ordem em que foram definidas no relatório.  
@@ -67,17 +67,17 @@ ms.locfileid: "48192136"
  **Credenciais fornecidas pelo usuário que executa o relatório**  
  Cada usuário deve digitar um nome de usuário e uma senha para acessar a fonte de dados. Você pode definir o texto do prompt que solicita as credenciais do usuário. A cadeia de caracteres de texto padrão é "Digite um nome de usuário e uma senha para acessar a fonte de dados".  
   
- Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais que o usuário fornecer forem credenciais de Autenticação do Windows. Não selecione essa caixa de seleção se você estiver usando a autenticação de banco de dados (por exemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticação).  
+ Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais que o usuário fornecer forem credenciais de Autenticação do Windows. Não marque esta caixa de seleção se você estiver usando autenticação de banco de dados (por exemplo, Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
  **Credenciais armazenadas com segurança no servidor de relatório**  
  Armazene um nome de usuário criptografado e a senha no banco de dados do servidor de relatórios. Selecione essa opção para executar um relatório autônomo (por exemplo, relatórios iniciados por agendas ou eventos em vez de pela ação do usuário). Se você estiver usando segurança padrão, o nome de usuário deve ser uma conta de domínio do Windows. Especifique a conta neste formato: \<domínio >\\< nome de usuário\>. A conta especificada deve ter permissões locais de logon no computador que hospeda a fonte de dados usada pelo relatório.  
   
- Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais forem credenciais de Autenticação do Windows. Não selecione essa caixa de seleção se você estiver usando a autenticação de banco de dados (por exemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticação).  
+ Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais forem credenciais de Autenticação do Windows. Não marque esta caixa de seleção se você estiver usando autenticação de banco de dados (por exemplo, Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Selecione **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados** para permitir delegação de credenciais de banco de dados, mas somente se uma fonte de dados oferecer suporte a representação. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados, essa opção define a função SETUSER.  
+ Selecione **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados** para permitir delegação de credenciais de banco de dados, mas somente se uma fonte de dados oferecer suporte a representação. No caso de bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , essa opção define a função SETUSER.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]suporta apenas credenciais de conta do Windows. Portanto, selecione ambas as opções "Usam as credenciais do Windows ao conectar-se à fonte de dados" e "representar o usuário autenticado depois que foi feita uma conexão à fonte de dados" para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonte de dados.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]suporta apenas credenciais de conta do Windows. Portanto, selecione ambas as opções "Usar as credenciais do Windows ao conectar-se à fonte de dados" e "Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados" para uma fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Segurança integrada do Windows**  
  Use as credenciais do Windows do usuário atual para acessar a fonte de dados. Selecione essa opção quando as credenciais usadas para acessar a fonte de dados forem as mesmas que as usadas para fazer logon no domínio de rede. Essa opção funciona melhor quando a autenticação Kerberos está habilitada para seu domínio ou quando a fonte de dados está no mesmo computador que o servidor de relatórios. Se Kerberos não estiver habilitado, as credenciais do Windows poderão ser passadas para outro computador. Se forem necessárias conexões de computador adicionais, ocorrerá um erro em vez da exibição dos dados esperados.  

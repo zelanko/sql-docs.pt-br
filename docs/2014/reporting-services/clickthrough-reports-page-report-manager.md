@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220717"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010569"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página Relatórios de Clickthrough (Gerenciador de Relatórios)
   Um relatório de clickthrough é aquele que exibe dados relacionados quando você clica nos dados interativos contidos no relatório. Esses relatórios são gerados pelo servidor de relatórios com base nas informações contidas no modelo usado para criar o relatório. Se você não quiser usar os relatórios de clickthrough gerados pelo servidor de relatórios, você pode criar relatórios personalizados publicados em um servidor de relatórios e mapear até pontos de dados interativos definidos no modelo. Os relatórios personalizados devem ser criados no Construtor de Relatórios do mesmo modelo e depois publicados no servidor de relatórios. Para mapear relatórios personalizados para itens no modelo, use a página Relatórios de Clickthrough no Gerenciador de Relatórios.  
@@ -32,7 +32,7 @@ ms.locfileid: "48220717"
  Embora você possa selecionar qualquer relatório ao qual tenha acesso, selecione somente relatórios criados especificamente para o modelo que está sendo configurado.  
   
 > [!NOTE]  
->  Relatórios de Clickthrough não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Caso você não tenha certeza sobre qual edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sua organização está usando, contate o administrador do banco de dados.  
+>  Os relatórios de clickthrough não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Caso você não tenha certeza sobre qual edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sua organização está usando, contate o administrador do banco de dados.  
   
 ## <a name="navigation"></a>Navegação  
  Use o procedimento a seguir para navegar para este local na interface do usuário.  

@@ -12,14 +12,14 @@ f1_keywords:
 - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8da7ce8a8f967a702f169ed6519f7d187f42a8e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5782db21318108e9460217c200af79ea427cc4bf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091867"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028127"
 ---
 # <a name="row-visibility-dialog-box"></a>Caixa de diálogo Visibilidade da Linha
   Use a caixa de diálogo **Visibilidade da Linha** para mostrar ou ocultar a linha selecionada quando o relatório for executado pela primeira vez ou para usar outro item de relatório para alternar a visibilidade da linha.  
@@ -37,7 +37,7 @@ ms.locfileid: "48091867"
  **Mostrar ou ocultar com base em uma expressão**  
  Escolha esta opção para variar a visibilidade inicial usando uma expressão.  
   
- Digite uma expressão que é avaliada como uma `Boolean` valor de `True` para ocultar o item e `False` para mostrar o item. Clique no botão Expressão (**fx**) para editar a expressão.  
+ Digite uma expressão que seja avaliada como um valor `Boolean` `True` para ocultar o item e `False` para mostrar o item. Clique no botão Expressão (**fx**) para editar a expressão.  
   
  **Exibição pode ser alternada por este item de relatório**  
  Escolha esta opção para exibir uma imagem de alternância que permite que o usuário mostre ou oculte este item de relatório em um visualizador de relatórios HTML.  
@@ -47,7 +47,7 @@ ms.locfileid: "48091867"
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Imagens &#40;relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Ajuda F1 do Designer de Relatórios](tools/report-designer-f1-help.md)  
   
   

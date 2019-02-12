@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3b8dc70cf1502363585abd7f1be5de7c72c6256a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1c6854194122dbc4ab5e1781ea62de119f7a09e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062636"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029047"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Método ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Lista os endereços IP do computador do servidor de relatório.  
@@ -65,6 +65,6 @@ public void ListIPAddresses (out string[] IPAddress,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

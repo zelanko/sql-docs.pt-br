@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350102"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030608"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (construtor de relatórios)
   Neste tutorial, você pode praticar a formatação de texto de várias maneiras. Depois de configurar o relatório em branco com a fonte de dados e o conjunto de dados, é possível escolher e selecionar as etapas que você deseja explorar.  
@@ -71,11 +71,11 @@ ms.locfileid: "53350102"
   
 1.  No painel de dados do relatório, clique em **Nova**e em **Fonte de Dados**.  
   
-2.  No **nome** , digite: **TextDataSource**  
+2.  Na caixa **Nome**, digite: **TextDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de dados = \<servername >**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de Dados = \<nomedoservidor>**  
   
     > [!NOTE]  
     >  A expressão \<servername >, por exemplo, Report001, especifica um computador no qual uma instância do mecanismo de banco de dados do SQL Server está instalada. Este tutorial não precisa de dados específicos; ele só precisa de uma conexão com um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "53350102"
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
-3.  No **nome** , digite: **TextDataset.**  
+3.  Na caixa **Nome**, digite: **TextDataset.**  
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   

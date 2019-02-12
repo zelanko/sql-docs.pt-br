@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df7a2d38bf0c08349b570c0303c1f9951ebccce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 28c42910b72e36c046d5ef75c574b9c4506c006c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122356"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024097"
 ---
 # <a name="listinstalledsharepointversions-method-wmi"></a>Método ListInstalledSharePointVersions (WMI)
   Retorna um conjunto de tokens que representam as versões do Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] que estão instaladas no mesmo computador que o servidor de relatório.  
@@ -63,6 +63,6 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

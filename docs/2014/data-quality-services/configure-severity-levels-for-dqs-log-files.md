@@ -15,28 +15,28 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b4deba7e3aa788bf42be9fbd173a6b20844ac68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010579"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar níveis de severidade para arquivos de log do DQS
   Este tópico descreve como configurar níveis de severidade para várias atividades e módulos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Níveis de severidade definem a intensidade de eventos que ocorrem no DQS. Eventos DQS têm os seguintes níveis de severidade, na ordem decrescente de severidade:  
   
--   **Fatal**: Erros de tempo de execução críticas que podem causar resultados severos/inesperados.  
+-   **Fatal**: Erros críticos em tempo de execução que podem causar resultados graves/inesperados.  
   
--   **Erro**: Outros erros de tempo de execução.  
+-   **Erro**: Outros erros em tempo de execução.  
   
--   **Avisar**: Aviso sobre eventos que podem resultar em um erro.  
+-   **Aviso**: Avisos sobre eventos que podem resultar em um erro.  
   
--   **Informações de**: Informações sobre eventos em geral não são um erro ou aviso. Por exemplo, um processo de DQS foi iniciado.  
+-   **Informações**: Informações sobre eventos gerais que não são erros nem avisos. Por exemplo, um processo de DQS foi iniciado.  
   
--   **Depurar**: Informações detalhadas (detalhadas) sobre o evento.  
+-   **Depuração**: Informações detalhadas sobre o evento.  
   
  Ao configurar níveis de severidade para várias atividades e módulos do DQS, você está filtrando as informações a serem registradas e gravando no arquivo de log do DQS para a respectiva atividade ou módulo do DQS. Por exemplo, se você definir o nível de severidade de uma atividade do DQS como **Aviso**, apenas as mensagens de aviso e severidade mais alta (Erro e Fatal) associadas com a atividade do DQS serão registradas.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "53202375"
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Configuração**.  
   
-3.  Em seguida, clique na guia **Configurações de Log** . As seguintes atividades do DQS são listadas para o qual você pode selecionar um nível de severidade: **Gerenciamento de domínio**, **descoberta de Conhecimento**, **limpeza de projeto (ex.: RDS)**, **Política de Conciliação e Projeto de Correspondência** e **RDS**.  
+3.  Em seguida, clique na guia **Configurações de Log** . As seguintes atividades do DQS são listadas, para as quais você pode selecionar um nível de gravidade: **Gerenciamento de Domínio**, **Descoberta de Conhecimento**, **Limpeza de Projeto (por ex.: RDS)**, **Política de Conciliação e Projeto de Correspondência** e **RDS**.  
   
-4.  Para obter uma atividade do DQS, selecione o nível de severidade a ser registrado. Você pode selecionar uma entre as seguintes: **Fatal**, **erro**, **Avisar**, **informações**, e **depurar**. Por exemplo, se você deseja que apenas mensagens fatais sejam gravadas nos arquivos de log do DQS para a atividade de descoberta de base de dados de conhecimento, selecione **Fatal** na lista suspensa na atividade **Descoberta da Base de Dados de Conhecimento** .  
+4.  Para obter uma atividade do DQS, selecione o nível de severidade a ser registrado. Selecione uma opção entre as seguintes: **Fatal**, **Erro**, **Aviso**, **Informações** e **Depuração**. Por exemplo, se você deseja que apenas mensagens fatais sejam gravadas nos arquivos de log do DQS para a atividade de descoberta de base de dados de conhecimento, selecione **Fatal** na lista suspensa na atividade **Descoberta da Base de Dados de Conhecimento** .  
   
     > [!NOTE]  
     >  Por padrão, **Erro** é selecionado para cada uma das atividades. Isso implica que mensagens de erro e fatais sejam gravadas nos arquivos de log do DQS para cada atividade, por padrão.  
@@ -80,7 +80,7 @@ ms.locfileid: "53202375"
   
 2.  Na grade que aparece, selecione um nome do módulo da lista suspensa na coluna **Módulo** .  
   
-3.  Depois, selecione um nível de severidade para o módulo da lista suspensa na coluna **Severidade** . Você pode selecionar uma entre as seguintes: **Fatal**, **erro**, **Avisar**, **informações**, e **depurar**.  
+3.  Depois, selecione um nível de severidade para o módulo da lista suspensa na coluna **Severidade** . Selecione uma opção entre as seguintes: **Fatal**, **Erro**, **Aviso**, **Informações** e **Depuração**.  
   
      Por exemplo, na atividade de gerenciamento de domínio, você pode definir um nível de granularidade para a funcionalidade de definição de regra de domínio diferente da atividade de gerenciamento de domínio, selecionando o módulo **Microsoft.Ssdqs.DomainRules.Define** e um nível de severidade de log diferente. Da mesma forma, você pode definir um outro nível de granularidade para a funcionalidade de regra de domínio cruzado, selecionando o módulo **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** e um nível de severidade de log diferente.  
   

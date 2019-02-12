@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b554ec2044e95304c995a0dde7d67c444fa2dc05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166116"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009628"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Adicionar efeitos 3D a um gráfico (Construtor de Relatórios e SSRS)
   É possível usar efeitos tridimensionais (3D) para fornecer intensidade e adicionar impacto visual ao seu gráfico. Por exemplo, para enfatizar uma fatia específica de um gráfico de pizza destacada, você pode girar e alterar a perspectiva do gráfico de modo que as pessoas observem essa fatia primeiro. Quando efeitos 3D são aplicados ao gráfico, todas as cores de gradiente e estilos de hachurado são desabilitados.  
@@ -30,7 +30,7 @@ ms.locfileid: "48166116"
   
 2.  Em **Opções 3D**, selecione a opção **Habilitar 3D** .  
   
-3.  (Opcional) Em **Opções 3D**, é possível definir uma variedade de propriedades referentes às opções de ângulos e cena em 3D. Para obter mais informações sobre essas propriedades, consulte [3D, Bisel e outros efeitos em um gráfico de &#40;construtor de relatórios e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
+3.  (Opcional) Em **Opções 3D**, é possível definir uma variedade de propriedades referentes às opções de ângulos e cena em 3D. Para obter mais informações sobre essas propriedades, consulte [Efeitos 3D, bisel e outros efeitos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
   
 4.  Clique em **OK**.  
   
@@ -85,8 +85,8 @@ ms.locfileid: "48166116"
     4.  Para a propriedade **DrawingStyle** , especifique o valor do **Cilindro** .  
   
 ## <a name="see-also"></a>Consulte também  
- [3D, Bisel e outros efeitos em um gráfico &#40;relatórios e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [Efeitos 3D, bisel e outros efeitos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Gráficos de &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

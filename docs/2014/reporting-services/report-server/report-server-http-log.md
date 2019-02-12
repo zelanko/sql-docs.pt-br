@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b990f4a2dbf321b20d9d8e45ecf13b3ede47987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147866"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031367"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
@@ -55,32 +55,32 @@ ms.locfileid: "48147866"
 ```  
   
 ## <a name="log-file-fields"></a>Campos do arquivo de log  
- A tabela a seguir descreve os campos disponíveis no log. A lista de campos é configurável; Você pode especificar quais campos serão incluídos por meio de `HTTPTraceSwitches` definição de configuração. O **padrão** coluna Especifica se o campo será incluído no arquivo de log automaticamente se você não especificar `HTTPTraceSwitches`.  
+ A tabela a seguir descreve os campos disponíveis no log. A lista de campos pode ser configurada; é possível especificar quais campos devem ser incluídos com a configuração `HTTPTraceSwitches`. O **padrão** coluna Especifica se o campo será incluído no arquivo de log automaticamente se você não especificar `HTTPTraceSwitches`.  
   
-|Campo|Description|Padrão|  
+|Campo|Descrição|Padrão|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Esse valor é opcional. O valor padrão é ReportServerServiceHTTP_. Você pode especificar um valor diferente se desejar usar uma convenção de nomeação de arquivo diferente (por exemplo, para incluir o nome do servidor se estiver salvando arquivos de log em um local central).|Sim|  
-|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|não|  
-|data|A data em que a atividade ocorreu.|não|  
-|Hora|A hora em que a atividade ocorreu.|não|  
+|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|Não|  
+|data|A data em que a atividade ocorreu.|Não|  
+|Hora|A hora em que a atividade ocorreu.|Não|  
 |ClientIp|O endereço IP do cliente que acessa o servidor de relatório.|Sim|  
-|UserName|O nome do usuário que acessou o servidor de relatório.|não|  
-|ServerPort|O número da porta usada para a conexão.|não|  
-|Host|O conteúdo do cabeçalho do host.|não|  
+|UserName|O nome do usuário que acessou o servidor de relatório.|Não|  
+|ServerPort|O número da porta usada para a conexão.|Não|  
+|Host|O conteúdo do cabeçalho do host.|Não|  
 |Método|A ação ou método SOAP chamado do cliente.|Sim|  
 |UriStem|O recurso acessado.|Sim|  
-|UriQuery|A consulta usada para acessar o recurso.|não|  
+|UriQuery|A consulta usada para acessar o recurso.|Não|  
 |ProtocolStatus|O código de status HTTP.|Sim|  
-|BytesReceived|O número de bytes recebidos pelo servidor.|não|  
-|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|não|  
-|ProtocolVersion|A versão de protocolo usada pelo cliente.|não|  
-|UserAgent|O tipo de navegador usado pelo cliente.|não|  
-|CookieReceived|O conteúdo do cookie recebido pelo servidor.|não|  
-|CookieSent|O conteúdo do cookie enviado pelo servidor.|não|  
-|Referenciador|O site anterior visitado pelo cliente.|não|  
+|BytesReceived|O número de bytes recebidos pelo servidor.|Não|  
+|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|Não|  
+|ProtocolVersion|A versão de protocolo usada pelo cliente.|Não|  
+|UserAgent|O tipo de navegador usado pelo cliente.|Não|  
+|CookieReceived|O conteúdo do cookie recebido pelo servidor.|Não|  
+|CookieSent|O conteúdo do cookie enviado pelo servidor.|Não|  
+|Referenciador|O site anterior visitado pelo cliente.|Não|  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de rastreamento de serviço de servidor de relatório](report-server-service-trace-log.md)   
+ [Log de rastreamento do serviço Servidor de Relatório](report-server-service-trace-log.md)   
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

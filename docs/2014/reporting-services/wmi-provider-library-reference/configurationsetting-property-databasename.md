@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43203d1f9c3314ef195406bf78b53fa7ed7646a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f85011fa54227035ae312c9b424443667455840
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028716"
 ---
 # <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseName (WMI MSReportServer_ConfigurationSetting)
   Especifica o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório. Somente leitura.  
@@ -49,6 +49,6 @@ public string DatabaseName;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

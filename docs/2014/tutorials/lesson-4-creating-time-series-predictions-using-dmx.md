@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83aa949e71977971b69f93f0e04b0c74ff99a226
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024877"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lição 4: Criando previsões de série temporal usando DMX
-  Esta lição e a próxima lição, você irá usar extensões DMX (Data Mining) para criar tipos diferentes de previsões com base em modelos de série temporal que você criou na [lição 1: Criando um modelo de mineração de série temporal e a estrutura de mineração](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)e [lição 2: adicionando modelos de mineração para a estrutura de mineração de série temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
+  Esta lição e a próxima lição, você irá usar extensões DMX (Data Mining) para criar tipos diferentes de previsões com base em modelos de série temporal que você criou na [lição 1: Criando um modelo de mineração e a estrutura de mineração de série temporal](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) e [lição 2: Adicionando modelos de mineração para a estrutura de mineração de série temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Com um modelo de série temporal, você tem várias opções para fazer previsões:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48143886"
  REPLACE_MODEL_CASES  
  Use [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) com o argumento REPLACE_MODEL_CASES para substituir os dados originais por uma nova série de dados e, em seguida, criar previsões com base na aplicação dos padrões no modelo de mineração para os novos dados série.  
   
- Para obter um exemplo de como usar REPLACE_MODEL_CASES, consulte [lição 2: Criando um cenário de previsão de &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Para obter um exemplo de como usar REPLACE_MODEL_CASES, consulte [lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
  Você executará as seguintes tarefas nesta lição:  
@@ -145,11 +144,11 @@ WHERE [<criteria>]
  Na próxima lição, você criará uma consulta para fornecer novos dados ao modelo e comparar os resultados da previsão aos da previsão recém-criada.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Lição 5: Estendendo o modelo de série temporal](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Lição 5: Estendendo a série temporal de modelo](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
- [Latência &#40;DMX&#41;](/sql/dmx/lag-dmx)   
+ [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
  [Exemplos de consulta de modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   

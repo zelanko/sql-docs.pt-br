@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082746"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009679"
 ---
 # <a name="move-items-page-report-manager"></a>Página Mover Itens (Gerenciador de Relatórios)
   Use a página Mover Itens para mover um relatório, pasta ou outro item para um novo local no servidor de relatório. Você pode digitar o caminho do novo local ou usar uma exibição de árvore para procurar um novo local no namespace do servidor de relatório. Você só pode mover itens que tem permissão para mover e que estejam armazenados no servidor de relatório atual.  
@@ -66,7 +66,7 @@ ms.locfileid: "48082746"
 4.  Na barra de ferramentas de item, clique **Mover**.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Página Propriedades gerais, pastas &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Página Propriedades gerais, recursos do &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: efb68eefbaff0f984c38393c9bf863f0654716fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 341a5ca0a25729acbf38e961f714f13aedc0dfd4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162566"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031199"
 ---
 # <a name="upload-files-to-a-folder"></a>Carregar arquivos em uma pasta
   Você pode carregar arquivos do sistema de arquivos e armazená-los como itens gerenciados em um banco de dados do servidor de relatório. O que acontece quando o arquivo é carregado depende do tipo de arquivo.  

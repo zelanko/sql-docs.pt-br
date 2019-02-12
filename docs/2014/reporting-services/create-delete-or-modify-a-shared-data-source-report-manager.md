@@ -15,14 +15,14 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202877"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025867"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Criar, excluir ou modificar uma fonte de dados compartilhada (Gerenciador de Relatórios)
   Uma fonte de dados compartilhada especifica propriedades de conexão para uma fonte de dados. Se você tiver uma fonte de dados usada por um número grande de relatórios, modelos ou assinaturas controladas por dados, considere a criação de uma fonte de dados compartilhada para eliminar a sobrecarga em manter as mesmas informações de conexão em vários lugares.  
@@ -40,7 +40,7 @@ ms.locfileid: "48202877"
   
 3.  Clique em **Nova Fonte de Dados**. A página **Nova Fonte de Dados** será aberta.  
   
-4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : \@ & = +, $ / * \< > | " /.  
+4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : \@ & = + , $ / * \< > | " /.  
   
 5.  Como opção, digite uma descrição para oferecer aos usuários informações sobre a conexão. Essa descrição será exibida na página **Conteúdo** no Gerenciador de Relatórios.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48202877"
   
 7.  Em **Cadeia de conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. Recomendamos que você não especifique credenciais na cadeia de conexão.  
   
-     O exemplo a seguir ilustra uma cadeia de caracteres de conexão para se conectar ao local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados:  
+     O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] local:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -64,7 +64,7 @@ ms.locfileid: "48202877"
   
     -   Se a fonte de dados não usar credenciais (se a fonte de dados for um arquivo XML acessado pelo sistema de arquivos, por exemplo), clique em **Não são necessárias credenciais**. Você deve especificar esse tipo de credencial somente se ele for válido para a fonte de dados. Se você selecionar essa opção para uma fonte de dados que requer autenticação, a conexão falhará. Se essa opção for selecionada, certifique-se de configurar a conta de execução autônoma que permite que o servidor de relatório se conecte a outros computadores para recuperar dados ou arquivos quando as credenciais do usuário não estiverem disponíveis.  
   
-     Para obter mais informações sobre como configurar credenciais, consulte [especificar credenciais e informações de Conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para obter mais informações sobre a conta de execução autônoma, consulte [Configurar a conta de execução autônoma &#40; 	Gerenciador de Configurações do SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Para obter mais informações sobre como configurar as credenciais, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para obter mais informações sobre a conta de execução autônoma, consulte [Configurar a conta de execução autônoma &#40; 	Gerenciador de Configurações do SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 9. Clique no botão **Testar Conexão** para validar a configuração da fonte de dados.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48202877"
   
 ## <a name="see-also"></a>Consulte também  
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Gerenciar fontes de dados de relatório](report-data/manage-report-data-sources.md)   
- [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de relatórios&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

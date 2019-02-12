@@ -1,29 +1,28 @@
 ---
-title: 'Lição 2: Adicionando uma referência da Web | Microsoft Docs'
+title: 'Lição 2: Adicionar uma referência Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-author: craigg-msft
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102506"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031757"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Lição 2: Adicionando uma referência da Web
+# <a name="lesson-2-adding-a-web-reference"></a>Lição 2: Adicionar uma referência Web
   Descoberta de serviço Web é o processo pelo qual um cliente localiza um serviço Web e obtém a descrição desse serviço. O processo de descoberta de serviço Web no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] envolve questionar um site que segue um algoritmo predeterminado. O objetivo do processo é localizar a descrição do serviço, que é um documento XML que usa linguagem WSDL.  
   
  A descrição do serviço descreve quais serviços estão disponíveis e como interagir com eles. Sem uma descrição de serviço, é impossível interagir programaticamente com um serviço Web.  
   
- Seu aplicativo deve ter meios para se comunicar com o serviço Web e localizá-lo em tempo de execução. A adição de uma referência da Web ao projeto para o serviço Web faz isso por meio da geração de uma classe proxy que executa a interface com o serviço Web e fornece uma representação local desse serviço. Para obter mais informações, consulte "Como gerar um proxy de serviço Web XML" na documentação do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+ Seu aplicativo deve ter meios para se comunicar com o serviço Web e localizá-lo em tempo de execução. A adição de uma referência da Web ao projeto para o serviço Web faz isso por meio da geração de uma classe proxy que executa a interface com o serviço Web e fornece uma representação local desse serviço. Para obter mais informações, consulte "Como: Gerar um Proxy do serviço Web XML"no seu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentação.  
   
 ### <a name="to-add-a-web-reference"></a>Para adicionar uma referência da Web  
   

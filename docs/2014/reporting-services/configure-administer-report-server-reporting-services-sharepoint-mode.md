@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085616"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022883"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuração e administração de um servidor de relatórios (modo do SharePoint do Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é uma plataforma de relatório baseada em servidor que fornece uma ampla gama de ferramentas prontas para usar e serviços para ajudá-lo a criar, implantar e gerenciar relatórios para sua organização, além de recursos de programação que permitem estender e personalizar seu relatório funcionalidade. Você pode integrar seu ambiente de relatório com um produto do SharePoint para experimentar os benefícios de usar o ambiente de colaboração fornecidos por sites do SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é uma plataforma de relatório com base em servidor que fornece uma ampla gama de ferramentas e serviços prontos para uso, para ajudá-lo a criar, implantar e gerenciar relatórios para a sua organização, além de recursos de programação que lhe permitem estender e personalizar suas funções de relatório. Você pode integrar seu ambiente de relatório com um produto do SharePoint para experimentar os benefícios de usar o ambiente de colaboração fornecidos por sites do SharePoint.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  As seguintes seções vão ajudar a compreender conceitos, cenários de implantação, procedimentos e muito mais para integrar seu ambiente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com um produto ou tecnologia do SharePoint:  
