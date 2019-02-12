@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208386"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030127"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Página Nova Assinatura ou Editar Assinatura (Gerenciador de Relatórios)
   Use a página Nova Assinatura ou Editar Assinatura para criar uma nova assinatura ou editar uma assinatura existente para um relatório. As opções nessa página variam, dependendo de sua atribuição de função. Os usuários com permissões avançadas podem trabalhar com opções adicionais.  
   
- As assinaturas têm suporte para relatórios que podem ser executados de modo autônomo. O relatório deve, no mínimo, usar credenciais armazenadas ou nenhuma credencial. Se o relatório usar parâmetros, um valor padrão deverá ser especificado. As assinaturas poderão ficar inativas se você alterar as configurações de execução do relatório ou remover os valores padrão usados por propriedades de parâmetro. Para obter mais informações, consulte [crie e gerencie assinaturas de servidores de relatório de modo nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ As assinaturas têm suporte para relatórios que podem ser executados de modo autônomo. O relatório deve, no mínimo, usar credenciais armazenadas ou nenhuma credencial. Se o relatório usar parâmetros, um valor padrão deverá ser especificado. As assinaturas poderão ficar inativas se você alterar as configurações de execução do relatório ou remover os valores padrão usados por propriedades de parâmetro. Para saber mais, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
   
 > [!NOTE]  
 >  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48208386"
   
 3.  No menu suspenso, siga um destes procedimentos:  
   
-    -   Clique em **Gerenciar**. Esse procedimento abre a página de propriedades Geral do relatório. Em seguida, selecione a guia **Assinaturas** . Na barra de ferramentas, clique em **nova assinatura**, ou selecione uma assinatura existente e clique em **editar**.  
+    -   Clique em **Gerenciar**. Esse procedimento abre a página de propriedades Geral do relatório. Em seguida, selecione a guia **Assinaturas** . Na barra de ferramentas, clique em **Nova Assinatura**ou selecione uma assinatura existente e clique em **Editar**.  
   
     -   Clique em **Assinar**. Esse procedimento abre a página **Nova Assinatura** para o relatório.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48208386"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

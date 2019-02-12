@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0a71b4311dacf9ea08f12daff8b7610d8f6c49b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056436"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019029"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   Um gráfico de coluna exibe uma série como um conjunto de barras verticais agrupadas por categoria. Os gráficos de coluna são úteis para mostrar alterações de dados em um período de tempo ou para ilustrar comparações entre itens. O gráfico de coluna plano está bem relacionado ao gráfico de barras, que exibe séries como conjuntos de barras horizontais e o gráfico de coluna de intervalo, que exibe uma série como conjuntos de barras verticais com pontos de início e término variáveis. Para obter mais informações, consulte [Gráfico de barras &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md) e [Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
@@ -46,16 +46,16 @@ ms.locfileid: "48056436"
   
 -   Em um gráfico de colunas, você tem menos espaço para que sejam exibidos rótulos de eixo de categoria na horizontal. Se você não tiver mais rótulos de categoria, considere usar um gráfico de barras ou alterar o ângulo de rotação do rótulo.  
   
--   Você pode adicionar estilos de desenho especiais às barras individuais em um gráfico de colunas para aumentar seu impacto visual. Os estilos de desenho incluem entalhe, relevo, cilindro e claro para escuro. Esses efeitos são projetados para melhorar a aparência de seu gráfico 2D. Se estiver usando um gráfico 3D, os estilos de desenho ainda serão aplicados, mas podem não ter o mesmo efeito. Para obter mais informações sobre como adicionar um estilo de desenho a um gráfico de barras, consulte [adicionar bisel, alto-relevo e estilos de textura a um gráfico de &#40;construtor de relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+-   Você pode adicionar estilos de desenho especiais às barras individuais em um gráfico de colunas para aumentar seu impacto visual. Os estilos de desenho incluem entalhe, relevo, cilindro e claro para escuro. Esses efeitos são projetados para melhorar a aparência de seu gráfico 2D. Se estiver usando um gráfico 3D, os estilos de desenho ainda serão aplicados, mas podem não ter o mesmo efeito. Para obter mais informações sobre como adicionar um estilo de desenho a um gráfico de barras, consulte [Adicionar estilos de bisel, relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 -   Exclusivo para gráficos de colunas é a habilidade de mostrar seu gráfico como um histograma ou gráfico de Pareto. Para fazer isso, defina a propriedade ShowColumnAs como `Histogram` ou `Pareto` na janela Propriedades para `true`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [Gráficos de barras &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Gráficos de intervalos &#40;relatórios e SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um gráfico de barras ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
- [Pontos de dados em gráficos vazios e nulos &#40;relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [Gráficos de barras &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [Tutorial: Adicionar um gráfico de barras ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

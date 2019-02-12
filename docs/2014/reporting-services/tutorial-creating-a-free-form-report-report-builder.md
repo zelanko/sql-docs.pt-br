@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068986"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013747"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Criando um Relatório de Formato Livre (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de formulário livre do SSRS que se parece com uma carta de formulários. Você pode organizar itens de relatório para criar um formulário com caixas de texto, imagens e outras regiões de dados.  
   
  O relatório criado por você neste tutorial se baseia em dados de vendas de exemplo que estão incluídos no tutorial. O relatório agrupa informações por território e exibe o nome do gerente de vendas do território, bem como informações detalhadas e resumidas sobre as vendas. Você irá usar a região de dados da lista como a base do relatório de formato livre e, em seguida, adicionar um painel decorativo com uma imagem, um texto estático com dados inseridos, uma tabela para mostrar informações detalhadas e, opcionalmente, gráficos de pizza e de colunas para exibir informações resumidas.  
@@ -75,7 +75,7 @@ ms.locfileid: "48068986"
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, na caixa **Cadeia de conexão**, digite: **Fonte de Dados = \<servername>**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de Dados = \<nomedoservidor>**  
   
      \<ServerName >, por exemplo, Report001, especifica um computador no qual uma instância do mecanismo de banco de dados do SQL Server está instalada. Como os dados do relatório não são extraídos de um banco de dados do SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado para analisar a consulta.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "48068986"
   
 2.  Na guia **Inserir** da faixa de opções, clique em **Caixa de Texto**e, em seguida, arraste uma caixa de texto para o canto superior esquerdo da lista, mas dentro do retângulo adicionado por você anteriormente. Crie a caixa de texto com 7,62 centímetros de altura e 12,7 centímetros de largura.  
   
-3.  Posicione o cursor na parte superior da caixa de texto e, em seguida, digite: **Boletim informativo para** .  
+3.  Posicione o cursor na parte superior da caixa de texto e digite: **Boletim informativo para** .  
   
      ![Adicionar texto do cabeçalho do boletim informativo](../../2014/tutorials/media/tutorial-newsletterfor.png "Adicionar texto do cabeçalho do boletim informativo")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48068986"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Posicione o cursor abaixo do texto que você digitou na etapa 3 e digite: **Olá** .  
+9. Posicione o cursor abaixo do texto que você digitou na etapa 3 e digite: **Olá,** .  
   
     > [!NOTE]  
     >  Inclua o espaço extra após a palavra "Olá". O espaço separa o texto e o campo que você adicionará na próxima etapa.  
@@ -279,7 +279,7 @@ ms.locfileid: "48068986"
   
      ![Adicione o texto do boletim informativo](../../2014/tutorials/media/tutorial-newslettertext.png "adicionar texto do boletim informativo")  
   
-20. Posicione o cursor abaixo do texto que você colou na etapa 15 e, em seguida, digite: **Parabéns pelo total de vendas de** .  
+20. Posicione o cursor abaixo do texto que você colou na etapa 15 e digite: **Parabéns pelo total de vendas de** .  
   
     > [!NOTE]  
     >  Inclua o espaço extra após a palavra "de". O espaço separa o texto e o campo que você adicionará na próxima etapa.  
@@ -466,7 +466,7 @@ ms.locfileid: "48068986"
   
 10. Clique com o botão direito do mouse no título do gráfico e, em seguida, clique em **Propriedades do Título**.  
   
-11. Na caixa de diálogo **Propriedades do Título do Gráfico** , em Texto do título, digite: **Quantidades Vendidas do Produto**.  
+11. No **propriedades do título do gráfico** caixa de diálogo, no texto do título, digite: **Quantidades Vendidas do Produto**.  
   
 12. Clique na guia **Fonte** e, na lista **Tamanho** , em **10pt**.  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068986"
   
 10. Clique com o botão direito do mouse no título do gráfico e, em seguida, clique em **Propriedades do Título**.  
   
-11. Na caixa de diálogo **Propriedades do Título do Gráfico** , em Texto do título, digite: **Vendas do Produto**.  
+11. No **propriedades do título do gráfico** caixa de diálogo, no texto do título, digite: **Vendas do Produto**.  
   
 12. Clique na guia **Fonte** e, na lista **Tamanho** , clique em **10pt**e, em seguida, clique em **OK**.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068986"
   
 1.  Clique no retângulo que você adicionou anteriormente nesta lição.  
   
-     No painel Propriedades, o `Name` propriedade exibe o nome do retângulo.  
+     No painel Propriedades, a propriedade `Name` exibe o nome do retângulo.  
   
      ![Nome do retângulo](../../2014/tutorials/media/tutorial-rectanglename.png "nome do retângulo")  
   
