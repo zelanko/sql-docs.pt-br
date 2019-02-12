@@ -1,7 +1,7 @@
 ---
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 07/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71290c863f71894632d9092f3c51b2713d8d96f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 26d7b15318ccf171b8812449948ef0a04d17cfbd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696865"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039037"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,8 +53,8 @@ Define uma data combinada com uma hora do dia que se baseia em um período de 24
 |Valor padrão|1900-01-01 00:00:00|  
 |Calendário|Gregoriano|  
 |Precisão de segundo fracionário definida pelo usuário|Sim|  
-|Preservação e reconhecimento de deslocamento de fuso horário|não|  
-|Reconhecimento de horário de verão|não|  
+|Preservação e reconhecimento de deslocamento de fuso horário|Não|  
+|Reconhecimento de horário de verão|Não|  
   
 Para obter os metadados de tipo de dados, consulte [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) ou [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precisão e escala são variáveis para alguns tipos de data e data/hora. Para obter a precisão e escala de uma coluna, consulte [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) ou [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

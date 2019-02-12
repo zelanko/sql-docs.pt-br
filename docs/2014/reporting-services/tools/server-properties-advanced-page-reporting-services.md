@@ -1,7 +1,7 @@
 ---
 title: Propriedades do servidor (página Avançado) – Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 2016-10-18
+ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041577"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
   Use essa página para definir propriedades do sistema no servidor de relatórios. Há vários modos de definir propriedades do sistema. Essa ferramenta fornece uma interface gráfica do usuário para que você possa definir propriedades sem precisar gravar código.  
@@ -54,7 +54,7 @@ ms.locfileid: "49119863"
  Especifica o número máximo de dias que um parâmetro armazenado pode ser armazenado. Os valores válidos são de `-1`, `+1` até `2,147,483,647`. O valor padrão é `180` dias.  
   
  **StoredParametersThreshold**  
- Especifica o número máximo de valores de parâmetros que podem ser armazenados pelo servidor de relatório. Os valores válidos são de `-1`, `+1` até `2,147,483,647`. O valor padrão é `1500`.  
+ Especifica o número máximo de valores de parâmetro que pode ser armazenado pelo servidor de relatórios. Os valores válidos são de `-1`, `+1` até `2,147,483,647`. O valor padrão é `1500`.  
   
  **UseSessionCookies**  
  Indica se o servidor de relatório dever usar cookies de sessão ao se comunicar com navegadores clientes. O valor padrão é `true`.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3c4ccc300b260c6a0ee7d512756876015f57994f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123456"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014577"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Adicionar ou excluir um grupo em um gráfico (Construtor de Relatórios e SSRS)
   Clique na região de dados do gráfico para exibir o **dados do gráfico** painel. Crie grupos arrastando campos de conjuntos de dados para as áreas **Grupos de Categorias** e **Grupos de Séries** . Para adicionar grupos aninhados, adicione vários campos à área.  
@@ -57,6 +57,6 @@ ms.locfileid: "48123456"
 2.  Clique com o botão direito do mouse no grupo na área **Grupos de Categorias** ou **Grupos de Séries** e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos de &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   
