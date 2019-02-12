@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420647"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079462"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurar o acesso HTTP ao Analysis Services no IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "52420647"
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<unidade >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  O Gerenciador do IIS pode não ser capaz de se conectar ao Analysis Services na versão atual, se o banco de dados for um backup da anterior. Isso é causado por alterações no MSMDPUMP e deve ser resolvido, copiando o arquivo msmdpump. dll da versão anterior do trabalho.
   
 ##  <a name="bkmk_appPool"></a> Etapa 2: Criar um pool de aplicativos e um diretório virtual no IIS  
  Em seguida, crie um pool de aplicativos e um ponto de extremidade para a bomba.  
