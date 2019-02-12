@@ -18,19 +18,19 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee1644e34964a41a8e6ee97897bcce6a1783e536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8782f07e774d48c371a558fa6626ef09e372ab30
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743984"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513776"
 ---
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o nome de banco de dados especificado pelo usuário na cadeia de caracteres de conexão do banco de dados. Esse é o banco de dados especificado com o uso da opção **sqlcmd-d** (USE *database*) ou a expressão de fonte de dados ODBC (catálogo inicial =*databasename*).  
+  Retorna o nome de banco de dados especificado pelo usuário na cadeia de caracteres de conexão do banco de dados. Esse banco de dados é especificado usando a opção **sqlcmd-d** (*banco de dados* USE). Ele também pode ser especificado com a expressão de fonte de dados Open Database Connectivity (ODBC) (catálogo inicial =*databasename*).  
   
- Este banco de dados não é igual ao banco de dados do usuário padrão.  
+ Este banco de dados é diferente do banco de dados do usuário padrão.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,6 +47,6 @@ ORIGINAL_DB_NAME ()
 ## <a name="see-also"></a>Consulte Também  
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
  [Utilitário osql](../../tools/osql-utility.md)   
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   
