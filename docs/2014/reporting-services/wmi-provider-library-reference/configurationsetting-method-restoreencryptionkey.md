@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: acdd99c590f05fbe21777416dcd56234a6a797d0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6c8e1049ef87307aa4ddd6bb2c9c28824d62b31e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417437"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013327"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Reaplica a chave de criptografia especificada para o banco de dados do servidor de relatório.  

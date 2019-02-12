@@ -12,14 +12,14 @@ f1_keywords:
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62d20c36271bd6dd1bfa591edf606c3e295d1adb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 33849743e47ad910fad44938e7537d7b4be8624a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018178"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Caixa de diálogo Propriedades do Visor do Mapa, Geral
   Selecione **Geral** na caixa de diálogo **Propriedades do Visor do Mapa** para alterar o sistema de coordenadas, a projeção e as opções de limite.  
@@ -32,7 +32,7 @@ ms.locfileid: "48138619"
   
 -   **Geográfico** Escolha esta opção quando os dados do mapa estiverem em coordenadas de longitude e latitude, por exemplo, para locais de cidade.  
   
- **Projeção**  
+ **Projection**  
  Especifique o método a ser usado para coordenadas geográficas de projeto em uma superfície bidimensional. Escolha uma projeção compatível com os dados visualizados. As quatro propriedades espaciais afetadas pela projeção são área, forma, distância e direção. Para exibições da terra, uma boa escolha de projeção depende da exibição central, dos limites de mapa e do fator de zoom.  
   
  Cada uma das seguintes projeções preserva uma ou mais dessas propriedades espaciais:  

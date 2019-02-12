@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043247"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
   A extensão de renderização CSV (Comma-Separated Value) renderiza relatórios como uma representação mesclada dos dados de um relatório padronizado, em formato de texto simples que pode ser facilmente lido e que também permite a troca com vários aplicativos.  
   
- A extensão de renderização do CSV usa um delimitador de caracteres da cadeia de caracteres para separar campos e linhas, um delimitador configurável para ser um caractere diferente de uma vírgula. O arquivo resultante pode ser aberto em um programa de planilha como o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou pode ser utilizado como um formato de importação para outros programas. O relatório exportado torna-se um arquivo. csv e retorna um tipo MIME de `text/csv`.  
+ A extensão de renderização do CSV usa um delimitador de caracteres da cadeia de caracteres para separar campos e linhas, um delimitador configurável para ser um caractere diferente de uma vírgula. O arquivo resultante pode ser aberto em um programa de planilha como o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou pode ser utilizado como um formato de importação para outros programas. O relatório exportado torna-se um arquivo .csv e retorna um tipo MIME de `text/csv`.  
   
  Se você quiser trabalhar com dados relacionados a gráficos, barras de dados, minigráficos, medidores e indicadores no [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], exporte o relatório para um arquivo CSV e abra o arquivo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48225947"
   
 -   Linha  
   
--   image  
+-   Image  
   
 -   Retângulo  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48225947"
 |Minigráficos|Renderiza como um gráfico. Normalmente, um minigráfico não inclui hierarquias ou rótulos.|  
 |Medidor|Renderiza como um único registro com os valores mínimo e máximo da escala linear, valores de início e fim do intervalo e valor do ponteiro.|  
 |Indicador|Renderiza como um único registro com o nome do estado ativo, estados disponíveis e o valor de dados.|  
-|Mapeamento|Renderiza uma linha com os rótulos e os valores para cada membro do mapa de uma camada do mapa.<br /><br /> Se o mapa tiver várias camadas, os valores nas linhas variarão, dependendo do fato de as camadas do mapa usarem as mesmas regiões de dados do mapa ou regiões de dados do mapa diferentes. Se várias camadas do mapa usarem a mesma região de dados, as linhas conterão dados de todas as camadas.|  
+|Mapa|Renderiza uma linha com os rótulos e os valores para cada membro do mapa de uma camada do mapa.<br /><br /> Se o mapa tiver várias camadas, os valores nas linhas variarão, dependendo do fato de as camadas do mapa usarem as mesmas regiões de dados do mapa ou regiões de dados do mapa diferentes. Se várias camadas do mapa usarem a mesma região de dados, as linhas conterão dados de todas as camadas.|  
   
 ### <a name="hierarchical-and-grouped-data"></a>Dados hierárquicos e agrupados  
  Os dados hierárquicos e agrupados devem ser para ser mesclados para que possam ser representados no formato CSV.  
@@ -148,7 +148,7 @@ ms.locfileid: "48225947"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034817"
 ---
 # <a name="secure-folders"></a>Proteger pastas
   A segurança de pasta é a base para proteger todo o conteúdo em um servidor de relatório. Como a segurança é herdada em toda a estrutura de pastas, é possível designar seções grandes ou pequenas da hierarquia de pasta para permitir determinados tipos de acesso.  
@@ -37,7 +37,7 @@ ms.locfileid: "48182706"
   
 |Selecione esta tarefa|Para dar permissão para|  
 |----------------------|---------------------------|  
-|Exibir pastas|Exibir a hierarquia de pastas e as propriedades somente leitura que indicam quando a pasta foi criada e modificada.<br /><br /> Os usuários não podem exibir itens na pasta, a não ser que obtenham funções que também incluem as seguintes tarefas: “Exibir relatórios”, “Exibir modelos”, “Exibir recursos” e “Exibir fontes de dados”.|  
+|Exibir pastas|Exibir a hierarquia de pastas e as propriedades somente leitura que indicam quando a pasta foi criada e modificada.<br /><br /> Os usuários não podem exibir itens na pasta, a menos que eles são atribuídos às funções que também incluem as seguintes tarefas: "Exibir relatórios", "Exibir modelos", "Exibir recursos" e "Exibir fontes de dados".|  
 |Gerenciar pastas|Exibir propriedades de pasta, alterar o nome ou a descrição ou mover a pasta para outro local. Essa tarefa permite que os usuários criem pastas.|  
 |Gerenciar relatórios|Adicionar relatórios do sistema de arquivos a uma pasta e publicar relatórios do Designer de Relatórios no servidor de relatório.|  
 |Gerenciar fontes de dados|Adicionar novos itens de fontes de dados compartilhadas a uma pasta e alterar as fontes de dados compartilhadas existentes.|  

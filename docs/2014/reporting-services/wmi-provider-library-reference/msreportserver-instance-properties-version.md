@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d88725e0392d07784be7b558dc6cd18f03e458d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 800358195b5c9d76485626cd3d4b6ca981a2de2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158356"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038557"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Propriedade Version (WMI MSReportServer_Instance)
   Retorna a versão do servidor de relatório no formato Major.Minor.Build.Revision. Somente leitura.  
@@ -34,7 +34,7 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>Valor da propriedade  
- Um `string` que contém a versão do servidor de relatório.  
+ Uma `string` que contém a versão do servidor de relatório.  
   
 ## <a name="example-code"></a>Código de exemplo  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
@@ -43,6 +43,6 @@ public string Version;
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_Instance](msreportserver-instance-members.md)  
+ [Membros MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

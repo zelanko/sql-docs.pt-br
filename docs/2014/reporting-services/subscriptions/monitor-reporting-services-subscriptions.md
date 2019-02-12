@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506964"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015077"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  
@@ -79,7 +79,7 @@ ms.locfileid: "52506964"
   
  Esta é uma mensagem de erro de exemplo do arquivo de log de rastreamento, relacionada a assinaturas:  
   
--   biblioteca! WindowsService_7! b60! 05 / / 2014 20-22: 34:36:: i INFO: Inicializando EnableExecutionLogging como 'True' conforme especificado no servidor sistema properties.emailextension! WindowsService_7! b60! 05 / / 2014 20-22: 34:41:: e ERROR: **Erro ao enviar email**. Exceção: System.Net.Mail.SmtpException: O servidor SMTP requer uma conexão segura ou o cliente não foi autenticado. A resposta do servidor foi: 5.7.1 cliente não foi autenticado em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Inicializando EnableExecutionLogging como 'True' conforme especificado no servidor sistema properties.emailextension! WindowsService_7! b60! 05 / / 2014 20-22: 34:41:: e ERROR: **Erro ao enviar email**. Exceção: System.Net.Mail.SmtpException: O servidor SMTP requer uma conexão segura ou o cliente não foi autenticado. A resposta do servidor foi: 5.7.1 cliente não foi autenticado em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  O arquivo de log não informa se o relatório foi aberto ou se a entrega teve êxito realmente. Entrega bem-sucedida significa que não houve erros gerados pelo Processador de Agendamento e Entrega e que o servidor de relatório se conectou ao servidor de email. Se o email resultou em um erro de mensagem que não pode ser entregue na caixa de correio do usuário, essa informação não será incluída no arquivo de log. Para obter mais informações sobre arquivos de log, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   

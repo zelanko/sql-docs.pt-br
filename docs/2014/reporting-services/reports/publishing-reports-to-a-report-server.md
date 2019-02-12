@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3efdc60e34555aeb0cf706c7f8ab219fd64d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182566"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021563"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicando relatórios em um servidor de relatórios
   Depois que você criar e testar um relatório ou conjunto de relatórios, você pode usar os recursos internos de implantação no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar os relatórios em um servidor de relatório. Você pode publicar relatórios individuais ou um projeto do Servidor de Relatório. A publicação de um projeto do Servidor de Relatório é a forma mais fácil de publicar vários relatórios. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa o termo *implante*, em vez termo *publicar*. Os dois termos significam o mesmo.  
@@ -60,7 +60,7 @@ ms.locfileid: "48182566"
   
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Páginas de Propriedades do Projeto](../tools/project-property-pages-dialog-box.md)   
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Atualizar relatórios](../install-windows/upgrade-reports.md)  
   
   

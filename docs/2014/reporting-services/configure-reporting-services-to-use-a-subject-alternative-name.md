@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 90649f491fac7d867ebad0516d1ccea5fc41d4a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134166"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026757"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar o Reporting Services para usar um nome alternativo da entidade
   Este tópico explica como configurar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) para usar um SAN (Nome alternativo da entidade) modificando o arquivo rsreportserver.config e usando a ferramenta Netsh.exe.  
@@ -29,9 +29,9 @@ ms.locfileid: "48134166"
   
  Para usar um SAN, o certificado SSL deve estar registrado no servidor, assinado e ter a chave privada. Você não pode usar um certificado autoassinado  
   
- URLs em [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode ser configurado para usar um certificado SSL. Um certificado normalmente tem apenas um nome de entidade, o que permite apenas uma URL por sessão SSL (protocolo SSL). O SAN é um campo adicional no certificado que permite que um serviço SSL ouça e seja válido para muitas URLs e compartilhe a porta SSL com outros aplicativos. O SAN é semelhante ao seguinte: www.s2.com.  
+ Você pode configurar as URLs do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para usarem um certificado SSL. Um certificado normalmente tem apenas um nome de entidade, o que permite apenas uma URL por sessão SSL (protocolo SSL). O SAN é um campo adicional no certificado que permite que um serviço SSL ouça e seja válido para muitas URLs e compartilhe a porta SSL com outros aplicativos. O SAN é semelhante ao seguinte: www.s2.com.  
   
- Para obter mais informações sobre as configurações de SSL para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [configurar conexões SSL em um servidor de relatório do modo nativo](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Para obter mais informações sobre configurações SSL para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Configurar conexões SSL em um servidor de relatório do modo nativo](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar o SSRS para usar um nome alternativo da entidade para a URL do Web Service  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48134166"
   
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
- [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

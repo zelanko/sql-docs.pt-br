@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37a65dc6a237803822f2d3214e7209f60e89d6bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539637"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025347"
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
   Este tópico descreve como criar uma política correspondente em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você se prepara para o processo de correspondência no DQS executando a atividade Política de Correspondência dos dados de exemplo. Nesta atividade, você cria e testa uma ou mais regras de correspondência na política e depois publica a base de dados de conhecimento para tornar as regras de correspondência publicamente disponíveis para uso. Pode haver apenas uma política de correspondência em uma base de dados de conhecimento, mas essa política pode conter várias regras de correspondência.  
@@ -186,7 +186,7 @@ ms.locfileid: "52539637"
   
 9. Clique em **Cancelar** para terminar a atividade Política de Correspondência, perder seu trabalho e retornar à página inicial do DQS.  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de criar uma política de correspondência  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de criar uma política de correspondência  
  Depois de criar uma política de correspondência, você pode executar um projeto de correspondência a partir da base de dados de conhecimento que contém a política de correspondência. Para obter mais informações, consulte [Executar um projeto de correspondência](../../2014/data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Profiler and Results Tabs  

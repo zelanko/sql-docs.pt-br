@@ -2,10 +2,8 @@
 title: sys.dm_os_job_object (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -22,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6517ba1223f90aa95f475e050553e02af26f0dcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780414"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022197"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ Retorna uma única linha descrevendo a configuração do objeto de trabalho que 
 
 Um objeto de trabalho é uma construção Windows que implementa a governança de recursos de CPU, memória e e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](/windows/desktop/ProcThread/job-objects). 
   
-|Colunas|Tipo de Dados|Description|  
+|Colunas|Tipo de Dados|Descrição|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Especifica a parte de ciclos de processador que os threads do SQL Server podem usar durante cada intervalo de agendamento. O valor é relatado como um percentual de ciclos disponíveis dentro de um intervalo de agendamento do ciclo de 10000. Por exemplo, a valor 100 significa que os threads podem usar núcleos de CPU é sua capacidade total.|
 |cpu_affinity_mask|**bigint**|Uma máscara de bits que descreve quais processadores lógicos o processo do SQL Server pode usar dentro do grupo de processador. Por exemplo, cpu_affinity_mask 255 (1111 1111 em binário) significa que os primeiros oito processadores lógicos podem ser usados.|

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211936"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035297"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Explorando os modelos de cesta de compras (Tutorial de mineração de dados intermediário)
   Agora que você criou o `Association` modelo, você pode explorá-lo usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de associação na **Visualizador do modelo de mineração** guia do Designer de mineração de dados. Este tutorial orienta você a usar o visualizador para explorar relacionamentos entre itens. O visualizador ajuda você a ver rapidamente quais produtos tendem a aparecer juntos e a obter uma ideia geral dos padrões emergentes.  
   
- O [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de associação contém três guias: **regras**, **conjuntos de itens**, e **rede de dependências**. Como cada guia revela uma exibição ligeiramente diferente dos dados, quando estiver explorando o modelo, normalmente você alternará entre os painéis diferentes várias vezes à medida que for procurando por ideias.  
+ O [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de associação contém três guias: **As regras**, **conjuntos de itens**, e **rede de dependências**. Como cada guia revela uma exibição ligeiramente diferente dos dados, quando estiver explorando o modelo, normalmente você alternará entre os painéis diferentes várias vezes à medida que for procurando por ideias.  
   
 -   [Guia rede de dependências](#bkmk_DepNet)  
   
@@ -76,16 +75,16 @@ ms.locfileid: "48211936"
   
      Os rótulos de texto do gráfico são atualizados para mostrarem somente o nome do modelo.  
   
- [Voltar ao início](#bkmk_DepNet)  
+ [Voltar ao Início](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Itemsets"></a> Guia conjuntos de itens  
  Em seguida, você aprenderá mais sobre as regras e conjuntos de itens gerados pelo modelo para os produtos Pneu de Passeio e Tubo de Pneu de Passeio. O **conjuntos de itens** guia exibe três partes importantes de informações que se relacionam com os conjuntos de itens que o [!INCLUDE[msCoName](../includes/msconame-md.md)] descobre de algoritmo de associação:  
   
--   **Suporte:** o número de transações em que o conjunto de itens ocorre.  
+-   **Suporte a:** O número de transações em que o conjunto de itens ocorre.  
   
--   **Tamanho:** o número de itens no conjunto de itens.  
+-   **Tamanho:** O número de itens no conjunto de itens.  
   
--   **Itens:** uma lista de itens incluídos em cada conjunto de itens.  
+-   **Itens:** Uma lista de itens incluídos em cada conjunto de itens.  
   
  Dependendo como os parâmetros do algoritmo são definidos, o algoritmo poderia gerar muitos conjuntos de itens. Cada conjunto de itens retornado no visualizador representa as transações nas quais um item foi vendido. Usando os controles na parte superior do **conjuntos de itens** guia, você pode filtrar o visualizador para mostrar apenas os conjuntos de itens que contêm um tamanho de conjunto de itens e suporte mínimo especificado.  
   
@@ -133,18 +132,18 @@ ms.locfileid: "48211936"
   
      A lista de conjuntos de itens é atualizada para mostrar somente os conjuntos de itens com suporte de pelo menos 100.  
   
- [Voltar ao início](#bkmk_DepNet)  
+ [Voltar ao Início](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Rules"></a> Guia regras  
  O **regras** guia exibe as seguintes informações que estão relacionadas às regras que o algoritmo encontra.  
   
--   **Probabilidade:** as *probabilidade* de uma regra, definida como a probabilidade de item do lado direito dado o item do lado esquerdo.  
+-   **Probabilidade:** O *probabilidade* de uma regra, definida como a probabilidade de item do lado direito dado o item do lado esquerdo.  
   
--   **Importância:** uma medida da utilidade de uma regra. Um valor maior significa uma regra melhor.  
+-   **Importância:** Uma medida da utilidade de uma regra. Um valor maior significa uma regra melhor.  
   
      A importância é oferecida para ajudar você a medir a utilidade de uma regra, pois a probabilidade apresentada de forma isolada pode ser falsa. Por exemplo, se todas as transações contiverem uma garrafa d'água -- talvez a garrafa d'água seja adicionada a cada carrinho automaticamente como parte de uma promoção -- o modelo criaria uma regra prevendo que a garrafa d'água teria uma probabilidade 1. Baseada somente na probabilidade, essa regra é bastante precisa, mas não oferece informações úteis.  
   
--   **Regra:** a definição da regra. Para um modelo de cesta básica, uma regra descreve uma combinação específica de itens.  
+-   **Regra:** A definição da regra. Para um modelo de cesta básica, uma regra descreve uma combinação específica de itens.  
   
  Cada regra pode ser usada para prever a presença de um item em uma transação com base na presença de outros itens. Assim como na **conjuntos de itens** guia, você pode filtrar as regras de forma que apenas as regras mais interessantes sejam mostradas. Se você estiver trabalhando com um modelo de mineração que não tenha regras, talvez queira alterar os parâmetros do algoritmo para diminuir o limite de probabilidade para regras.  
   
@@ -170,7 +169,7 @@ ms.locfileid: "48211936"
   
      O **Detalhar** caixa de diálogo fornece um resumo da regra na parte superior do painel e uma lista de todos os casos que foram usados como dados de suporte para a regra.  
   
- [Voltar ao início](#bkmk_DepNet)  
+ [Voltar ao Início](#bkmk_DepNet)  
   
 ##  <a name="bkmk_ContentViewer"></a> Visualizador de árvore de conteúdo genérica  
  Esse visualizador pode ser usado em todos os modelos, independentemente do algoritmo ou do tipo de modelo. O **Microsoft genérico conteúdo Visualizador de árvore** está disponível a partir de **visualizador** lista suspensa.  
@@ -191,7 +190,7 @@ ms.locfileid: "48211936"
   
  Você também pode criar uma consulta de conteúdo para obter estatísticas detalhadas sobre as regras. Para obter mais informações sobre o conteúdo do modelo de mineração e como interpretá-lo, consulte [conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
- [Voltar ao início](#bkmk_DepNet)  
+ [Voltar ao Início](#bkmk_DepNet)  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Filtrando uma tabela aninhada em um modelo de mineração &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
@@ -199,7 +198,7 @@ ms.locfileid: "48211936"
 ## <a name="see-also"></a>Consulte também  
  [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
  [Lição 4: Criando um cenário de Clustering de sequências &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
- [Algoritmo associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Algoritmo Associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Referência técnica do algoritmo de associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   
   

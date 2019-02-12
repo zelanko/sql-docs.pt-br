@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19a5f34c95aa82c7002c301bc940345aa0f0940e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9a6538366883ea6feee2234b524a21d97110d177
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050186"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027927"
 ---
 # <a name="job-properties-management-studio"></a>Propriedades do Trabalho (Management Studio)
   Use a página **Propriedades do Trabalho** para exibir informações sobre um relatório ou uma assinatura em andamento antes de serem cancelados.  

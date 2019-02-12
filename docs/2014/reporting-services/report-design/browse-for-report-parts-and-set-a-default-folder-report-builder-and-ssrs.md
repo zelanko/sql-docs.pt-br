@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0162c6e640c13e743d3ad816e7fcb3286758f635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009578"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Procurar partes de relatório e definir uma pasta padrão (Construtor de Relatórios e SSRS)
   O modo mais fácil de criar um relatório é adicionar partes de relatório existentes, como tabelas e gráficos, ao relatório a partir da Galeria de Partes de Relatório. Quando você adiciona uma parte de relatório a seu relatório, também está adicionando tudo que ele deve ter para funcionar. Por exemplo, qualquer parte de relatório que exiba dados depende de um conjunto de dados, ou seja, uma consulta e uma conexão com uma fonte de dados. Depois que você adicionar a parte de relatório a seu relatório, poderá modificá-la tanto quanto necessário.  
@@ -65,9 +65,9 @@ ms.locfileid: "48222246"
   
 ## <a name="see-also"></a>Consulte também  
  [Verificar ou desativar atualizações &#40;relatórios e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Partes de relatório &#40;relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Publicar e republicar partes de relatório &#40;relatórios e SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Publicar e republicar partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

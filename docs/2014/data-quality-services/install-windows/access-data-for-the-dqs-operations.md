@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71ef931fc857841365919073cb470c725c3714e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030695"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019917"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
   Para usar seus dados de origem para operações do [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) e exportar seus dados processados, você pode adotar um destes procedimentos:  
@@ -40,13 +40,13 @@ ms.locfileid: "51030695"
   
 4.  Na caixa de diálogo **Propriedades de Logon** , clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-5.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_STAGING_DATA** e selecione as seguintes funções no painel **Associação à função de banco de dados para: DQS_STAGING_DATA** :  
+5.  No painel direito, marque a caixa de seleção sob o **mapa** coluna para o **DQS_STAGING_DATA** de banco de dados e, em seguida, selecione as seguintes funções no **associação de função para o banco de dados: DQS_STAGING_DATA** painel:  
   
-    -   **db_datareader**: ler dados de tabelas/exibições.  
+    -   **db_datareader**: Ler dados de tabelas/exibições.  
   
-    -   **db_datawriter**: adicionar, excluir ou alterar dados em tabelas.  
+    -   **db_datawriter**: Adicionar, excluir ou alterar dados em tabelas.  
   
-    -   **db_ddladmin**: criar, modificar ou excluir tabelas/exibições.  
+    -   **db_ddladmin**: Criar, modificar ou excluir tabelas/exibições.  
   
 6.  Na caixa de diálogo **Propriedades** , clique em **OK** para aplicar as alterações.  
   

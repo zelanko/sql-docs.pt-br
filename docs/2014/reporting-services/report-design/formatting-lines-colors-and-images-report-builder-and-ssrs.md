@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 345523929eddcefc072bc7f55be49fc5e26057d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192626"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028297"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite formatar linhas, cores, regiões de dados, imagens e outros itens de relatório.  
@@ -57,8 +57,8 @@ ms.locfileid: "48192626"
  Também é possível adicionar imagens como logotipos ao plano de fundo do relatório ou a um retângulo, caixa de texto, tabela, matriz, ou algumas partes de um gráfico, ou às seções do corpo e da página de um relatório. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatando números e datas &#40;relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Caixa de diálogo Preenchimento &#40;Construtor de Relatórios e SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

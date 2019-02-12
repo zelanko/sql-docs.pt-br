@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19434a73f39e0701479f754b5af5dbe9ab4d8030
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef44bd8ee92bb293aac06aa28b56dc23e8ca9602
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149086"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027917"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Armazenar dados criptografados do servidor de relatório (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  
@@ -37,13 +37,13 @@ ms.locfileid: "48149086"
   
 -   Credenciais armazenadas usadas por um servidor de relatório para conexão com fontes de dados externas que fornecem dados a um relatório.  
   
-     Esses valores são definidos ao configurar informações de fonte de dados para um relatório e, em seguida, são armazenados como valores criptografados em um banco de dados de servidor de relatório. O servidor de relatório usa uma chave simétrica para criptografar e decifrar esses dados. Para obter mais informações sobre credenciais armazenadas, consulte [especificar credenciais e informações de Conexão para fontes de dados do relatório](../../integration-services/connection-manager/data-sources.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+     Esses valores são definidos ao configurar informações de fonte de dados para um relatório e, em seguida, são armazenados como valores criptografados em um banco de dados de servidor de relatório. O servidor de relatório usa uma chave simétrica para criptografar e decifrar esses dados. Para obter mais informações sobre credenciais armazenadas, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Uma conta de usuário autônoma usada pelo servidor de relatório para conexão com outros computadores para recuperar arquivos de imagem externos ou dados externos usados em um relatório.  
   
      Essa conta é usada quando uma conexão com um computador remoto é necessária e não há nenhuma outra credencial disponível para efetuar a conexão. Essa conta é usada principalmente para oferecer suporte ao processamento de relatórios autônomos que não usam credenciais para acessar uma fonte de dados. Se você criar relatórios com base em fontes de dados que não exigem nem usam credenciais para acessar dados, será necessário configurar essa conta para o servidor de relatório a ser usado.  
   
-     Essa conta é necessária em determinadas circunstâncias e pode ser criada somente por meio da ferramenta Configuração do Reporting Services ou do **rsconfig**. Esse valor também é armazenado no arquivo rsreportserver.config. É necessário criar essa conta manualmente. Para obter mais informações sobre essa conta e como ela é usada, consulte [Configurar a conta de execução autônoma &#40; 	Gerenciador de Configurações do SSRS&#41;](configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Essa conta é necessária em determinadas circunstâncias e pode ser criada somente por meio da ferramenta Configuração do Reporting Services ou do **rsconfig**. Esse valor também é armazenado no arquivo rsreportserver.config. É necessário criar essa conta manualmente. Para obter mais informações sobre essa conta e como ela é usada, veja [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   A chave simétrica usada para criptografia.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48149086"
   
  Dados no banco de dados do servidor de relatório são criptografados por meio de uma chave simétrica. Há uma única chave simétrica para cada banco de dados de servidor de relatório. Essa chave simétrica é criptografada usando a chave pública de um par de chaves assimétricas gerado pelo Windows. A chave privada é mantida pela conta do serviço Servidor de Relatório do Windows.  
   
- Em uma implantação em expansão do servidor de relatório, na qual várias instâncias do servidor de relatório compartilham o mesmo banco de dados de servidor de relatório, uma única chave simétrica é usada por todos os nós do servidor de relatório. É necessário que cada nó tenha uma cópia da chave simétrica compartilhada. Uma cópia da chave simétrica é criada automaticamente para cada nó quando a implantação de extensão é configurada. Cada nó criptografa a sua cópia da chave simétrica usando uma chave pública de um par de chaves específico para a sua conta do serviço do Windows. Para saber mais sobre como a chave simétrica é criada para implantações escaláveis e de instância única, consulte [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Em uma implantação em expansão do servidor de relatório, na qual várias instâncias do servidor de relatório compartilham o mesmo banco de dados de servidor de relatório, uma única chave simétrica é usada por todos os nós do servidor de relatório. É necessário que cada nó tenha uma cópia da chave simétrica compartilhada. Uma cópia da chave simétrica é criada automaticamente para cada nó quando a implantação de extensão é configurada. Cada nó criptografa a sua cópia da chave simétrica usando uma chave pública de um par de chaves específico para a sua conta do serviço do Windows. Para saber mais sobre como a chave simétrica é criada para implantações de expansão e de instância única, veja [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 > [!NOTE]  
 >  Ao alterar a conta do serviço Servidor de Relatório do Windows, as chaves assimétricas podem se tornar inválidas, o que interromperá operações do servidor. Para evitar esse problema, use sempre a ferramenta Configuração do Reporting Services para modificar configurações da conta do serviço. Ao usar a ferramenta de configuração, as chaves são atualizadas automaticamente. Para obter mais informações, veja [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-the-report-server-service-account-ssrs-configuration-manager.md).  
@@ -63,9 +63,9 @@ ms.locfileid: "48149086"
  Um servidor de relatório armazena outros dados que não são criptografados, mas que podem conter informações confidenciais que você quer proteger. Mais especificamente, instantâneos do histórico do relatório e instantâneos de execução do relatório contêm resultados de consultas que podem incluir dados destinados a usuários autorizados. Se você estiver usando a funcionalidade de instantâneo para relatórios que contêm dados confidenciais, saiba que os usuários que podem abrir tabelas em um banco de dados de servidor de relatório talvez possam visualizar partes de um relatório armazenado ao inspecionar o conteúdo da tabela.  
   
 > [!NOTE]  
->  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte ao armazenamento em cache nem ao histórico de relatórios que usam parâmetros com base na identificação de segurança do usuário.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte ao armazenamento em cache nem histórico de relatórios que usam parâmetros com base na identificação de segurança do usuário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

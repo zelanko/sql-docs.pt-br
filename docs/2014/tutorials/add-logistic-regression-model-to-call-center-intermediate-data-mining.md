@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4afe3881d8e5eafaeffbd45aa7f64a514d8c70a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208196"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015507"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Adicionando um modelo de regressão logística à estrutura do call center (Tutorial de mineração de dados intermediário)
   Além de analisar os fatores que podem afetar as operações do call center, você também recebeu uma solicitação para fornecer algumas recomendações específicas sobre como melhorar a qualidade de serviço. Nesta tarefa, você usará a mesma estrutura de mineração que usou para criar o modelo exploratório e adicionar um modelo de mineração que será usado para criar previsões.  
@@ -70,6 +69,6 @@ ms.locfileid: "48208196"
  [Criando previsões para modelos de Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

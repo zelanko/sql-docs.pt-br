@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512048"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019687"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
   Este tópico descreve como executar a correspondência de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de correspondência identifica clusters de registros de correspondência com base em regras de correspondência na política de correspondência, designa um registro de cada cluster como o sobrevivente com base em uma regra de sobrevivência, e exporta os resultados. O DQS executa o processo de correspondência, também chamado de eliminação de duplicação, em um processo assistido por computador, mas você cria regras de correspondência interativamente e seleciona a regra de correspondência a partir de várias opções; assim, você controla o processo de correspondência.  
@@ -164,7 +164,7 @@ ms.locfileid: "52512048"
     > [!NOTE]  
     >  Se você concluiu um projeto de correspondência e o utilizou novamente, ele usará a base de dados de conhecimento existente quando ele foi publicado. Ele não usará as alterações feitas na base de dados de conhecimento desde a conclusão do projeto. Para usar essas alterações, ou para usar uma nova base de dados de conhecimento, você terá que criar um novo projeto de correspondência. Por outro lado, se ele já foi criado, mas não concluído, um projeto de correspondência, quaisquer alterações publicadas na política de correspondência serão usados se você executar a correspondência no projeto.  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de executar um projeto de correspondência  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de executar um projeto de correspondência  
  Depois executar uma projeto de correspondência, você pode alterar a política de correspondência na base de dados de conhecimento, e criar e executar outro projeto de correspondência com base na política de correspondência atualizada. Para obter mais informações, consulte [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Guias Criador de Perfil e Resultados  

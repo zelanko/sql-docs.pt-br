@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7559dd0e7766b601e525ed25885af34a84c98f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44a4bb146117dd12fedb8b897811100ebd951a32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065510"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026547"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório
   O SharePoint fornece recursos de segurança interna que você pode usar para acessar itens do servidor de relatório nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões de site e de lista aos usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o SharePoint e um servidor de relatório.  
@@ -28,7 +28,7 @@ ms.locfileid: "48065510"
 ## <a name="securable-items"></a>Itens protegíveis  
  As permissões definidas no site ou na biblioteca podem ser usadas para conceder acesso a itens do servidor de relatórios. Entretanto, se você quiser proteger itens individuais, pode definir permissões nos seguintes tipos de conteúdo:  
   
-|Tipo de arquivo|Description|  
+|Tipo de arquivo|Descrição|  
 |---------------|-----------------|  
 |.rdl|Um arquivo de definição de relatório que define o layout do relatório e os comandos usados para recuperar dados. Uma definição de relatório usa informações de conexão da fontes de dados para recuperar dados quando o relatório é processado. Se a definição do relatório determinar um relatório ad hoc criado no Construtor de Relatórios, o relatório fará par com um arquivo de modelo de relatório (.smdl) que define o escopo na exploração de dados do relatório renderizado.|  
 |.smdl|Um arquivo de modelo de relatório que descreve estruturas de dados e como elas se relacionam. Ele é usado para criar e executar relatórios do Construtor de Relatórios.|  
@@ -51,11 +51,11 @@ ms.locfileid: "48065510"
 |**Membros**|Contribuir|Os membros podem criar novos itens e publicar relatórios de itens e modelos usando ferramentas de criação em uma biblioteca do SharePoint.|Adicionar relatórios e outros itens a bibliotecas. Editar propriedades de itens para relatórios e outros documentos. Excluir relatórios e outros itens. Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados. Exibir versões anteriores de um documento, inclusive instantâneos em um histórico de relatórios (exige que o usuário tenha permissão de abrir o relatório para o qual foi criado o histórico de relatórios). Definir parâmetros em relatórios. Definir opções de processamento em um relatório. Gerar modelos de relatórios. Criar relatórios no Construtor de Relatórios. Criar e gerenciar fontes de dados compartilhados. Criar, alterar e excluir assinaturas de propriedade do usuário. Usar agendamentos compartilhados com assinatura. Criar e gerenciar versões de um documento, inclusive o histórico de relatórios. Baixar o arquivo de origem de uma definição de relatório ou de um modelo de relatório. Substituir uma definição de relatório, modelo de relatório, fonte de dados compartilhados ou recursos (preservando propriedades e permissões de itens).|  
 |**Visitantes** e **Visualizadores**|leitura|Os visitantes podem exibir relatórios|Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados.|  
   
- Se você não estiver usando os grupos internos e níveis de permissão, inclua permissões específicas para acessar recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [definir permissões para operações de servidor de relatório em um aplicativo Web do SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ Se você não estiver usando os grupos internos e níveis de permissão, inclua permissões específicas para acessar recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Concedendo permissões em itens do servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Comparar funções e tarefas no Reporting Services com permissões e grupos do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Conceder permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

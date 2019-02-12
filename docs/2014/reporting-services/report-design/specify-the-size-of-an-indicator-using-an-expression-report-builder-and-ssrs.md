@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5a7cd9ee7026dbc662d381a76ad66be2dbbb61d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a77a96d57a1ea9489697a415e96fb52165b8270f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014807"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Especificar o tamanho de um indicador usando uma expressão (Construtor de Relatórios e SSRS)
   Além de cor, direção e forma, você pode usar tamanho para maximizar o impacto visual de indicadores.  
@@ -30,7 +30,7 @@ ms.locfileid: "48206246"
   
  O painel **Propriedades** fornece acesso às propriedades da coleção IndicatorStates de um indicador. Você configura os ícones para terem tamanhos diferentes definindo a propriedade ScaleFactor dos membros da coleção IndicatorStates usando uma expressão. Para obter mais informações, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- A expressão usada neste procedimento também foi usada para gerar o relatório com tamanhos diferentes de indicadores, mostrada na [indicadores &#40;construtor de relatórios e SSRS&#41;](indicators-report-builder-and-ssrs.md).  
+ A expressão usada neste procedimento também foi usada para gerar o relatório com tamanhos diferentes de indicadores, mostrada em [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](indicators-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

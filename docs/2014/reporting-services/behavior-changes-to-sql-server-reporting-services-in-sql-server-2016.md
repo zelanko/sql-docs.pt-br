@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 377ab4922feb0024cef55926f4baa96745c81002
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033187"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Alterações de comportamento do SQL Server Reporting Services no SQL Server 2014
   Este tópico descreve as alterações no comportamento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. As mudanças de comportamento afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

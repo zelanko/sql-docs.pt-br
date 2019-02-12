@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4e9abf2254d9c9710e68df9b488321b4ae4c1b16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5c8f55dd0fa663d5516938e9ca39b5a6dc2caed9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132956"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014618"
 ---
 # <a name="removing-a-rendering-extension"></a>Removendo uma extensão de renderização
   Para remover uma [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensão de renderização, basta remover o `Extension` elemento para a sua extensão de renderização do arquivo rsreportserver. config, localizado em **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Nome da instância > \reporting** pasta. Se você criou entradas para um Designer de relatórios, bem como um servidor de relatório, remova os `Extension` elemento o [RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md) também. Após a remoção das informações de configuração, a extensão de renderização não estará mais disponível para o componente.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211006"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023727"
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
   Uma *atribuição de função* é uma política de segurança que determina se um usuário ou grupo pode acessar um item de servidor de relatório específico ou executar uma operação. Uma atribuição de função consiste em um único nome de conta de usuário ou grupo e em uma ou mais definições de função.  
@@ -51,7 +51,7 @@ ms.locfileid: "48211006"
   
  As atribuições de função em nível de sistema incluem uma ampla variedade de permissões, mas não incluem permissões que fazem parte de uma atribuição de função em nível de item. Em contraste com as permissões de sistema em um computador, as funções de sistema no servidor de relatório não concedem permissões de longo alcance que incluem o conjunto completo de todas as operações possíveis. Em vez disso, as atribuições de função no nível do sistema simplesmente são um conjunto de tarefas que afetam o site do servidor de relatório. As permissões que são concedidas através de atribuições de função de sistema determinam se os usuários podem exibir propriedades de aplicativo (como a imagem ou o título da home page), exibir ou gerenciar agendas compartilhadas ou usar o Construtor de Relatórios.  
   
- Para obter mais informações, consulte [conceder acesso de usuário para um servidor de relatório &#40;Gerenciador de relatórios&#41; ](grant-user-access-to-a-report-server.md) e [funções predefinidas](role-definitions-predefined-roles.md).  
+ Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md) e [Funções predefinidas](role-definitions-predefined-roles.md).  
   
 ## <a name="modifying-a-role-assignment"></a>Modificando atribuições de função  
  Você pode modificar uma atribuição de função a qualquer momento. Suas alterações entram em vigor quando você salva a atribuição de função. As sessões de usuário não são afetadas pelas alterações da atribuição de função. Se um usuário tiver um relatório aberto e você modificar uma atribuição de função para negar o acesso, o usuário pode continuar usando o relatório contanto que a sessão esteja ativa.  

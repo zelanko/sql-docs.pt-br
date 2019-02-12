@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119983"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009700"
 ---
 # <a name="report-server-web-service-endpoints"></a>Pontos de extremidade do serviço Web Servidor de Relatórios
   O serviço Web Servidor de Relatórios fornece vários pontos de extremidade para gerenciar um servidor de relatório como também executar relatórios e navegar neles.  
   
 ## <a name="the-management-endpoints"></a>Pontos de extremidade de gerenciamento  
- Existem três pontos de extremidade disponíveis para o gerenciamento de objetos em um servidor de relatório: <xref:ReportService2005>, <xref:ReportService2006> e <xref:ReportService2010>. O ponto de extremidade <xref:ReportService2005> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo nativo. O ponto de extremidade <xref:ReportService2006> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo integrado do SharePoint. O <xref:ReportService2010> ponto de extremidade mescla as funcionalidades <xref:ReportService2005> e <xref:ReportService2006> e pode gerenciar objetos em um servidor de relatório que são configurados para modo nativo ou modo integrado do SharePoint.  
+ Existem três pontos de extremidade disponíveis para o gerenciamento de objetos em um servidor de relatório: <xref:ReportService2005>, <xref:ReportService2006> e <xref:ReportService2010>. O ponto de extremidade <xref:ReportService2005> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo nativo. O ponto de extremidade <xref:ReportService2006> é usado para gerenciar objetos em um servidor de relatório que está configurado para o modo integrado do SharePoint. O ponto de extremidade <xref:ReportService2010> mescla as funcionalidades do <xref:ReportService2005> e do <xref:ReportService2006> e pode gerenciar objetos em um servidor de relatório configurado para modo integrado ou nativo do SharePoint.  
   
 > [!IMPORTANT]  
 >  Quando um servidor de relatório estiver configurado para o modo integrado do SharePoint, as APIs <xref:ReportService2005> retornarão um erro `rsOperationNotSupportedSharePointMode`. Se o servidor de relatório estiver configurado para o modo nativo, as APIs do <xref:ReportService2006> retornarão um erro `rsOperationNotSupportedNativeMode`. Da mesma forma, quando APIs específicas ao modo no <xref:ReportService2010> forem usadas em modos sem finalidade, as APIs retornarão os respectivos erros.  
@@ -65,9 +65,9 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>Pontos de extremidade de proxy do SharePoint  
  Quando um servidor de relatório for configurado para o modo integrado do SharePoint e o Suplemento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiver sido instalado, um conjunto de pontos de extremidade de proxy será instalado no servidor do SharePoint. Os pontos de extremidade de proxy são a API primária para desenvolver soluções de relatório quando um servidor de relatório é configurado para o modo integrado do SharePoint. Quando você estiver desenvolvendo soluções nos pontos de extremidade de proxy, o Suplemento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] gerenciará a troca de credenciais entre o SharePoint Server e o servidor de relatório no modo de autenticação de conta confiável. Quando você estiver desenvolvendo soluções nos pontos de extremidade do servidor de relatório, o aplicativo de chamada terá que gerenciar a troca de credencial no modo de autenticação de conta confiável. A tabela a seguir lista os pontos de extremidade que são instalados com o Suplemento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Ponto de extremidade de proxy|Description|  
+|Ponto de extremidade de proxy|Descrição|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Fornece as APIs para gerenciar um servidor de relatório que é configurado para o modo de integração do SharePoint. **Observação:** esse ponto de extremidade foi preterido no [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Fornece as APIs para gerenciar um servidor de relatório que é configurado para o modo de integração do SharePoint. **Observação:**  Esse ponto de extremidade foi preterido no [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Fornece as APIs para gerenciamento de um servidor de relatório configurado para o modo nativo ou o modo integrado do SharePoint.|  
 |<xref:ReportExecution2005>|Fornece as APIs para executar relatórios e navegar neles.|  
 |<xref:ReportServiceAuthentication>|Fornece as APIs para autenticar os usuários em um servidor de relatório quando o aplicativo Web do SharePoint é configurado para a Autenticação de Formulários.|  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019428"
 ---
 # <a name="contents-page-report-manager"></a>Página Conteúdo (Gerenciador de Relatórios)
   Use a página Conteúdo para exibir o conteúdo da pasta atual, selecionar os itens a serem exibidos ou navegar para outras pastas. Essa página abre quando você seleciona uma pasta. Ela é também a home page do Gerenciador de Relatórios.  
@@ -56,8 +56,8 @@ ms.locfileid: "48056246"
  Clique para realocar um item dentro da hierarquia de pasta. Antes de clicar em **Mover**, marque a caixa de seleção próximo a cada item que você deseja mover. Isso abre a página Mover Itens, onde você pode navegar pelas pastas para selecionar um local novo.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

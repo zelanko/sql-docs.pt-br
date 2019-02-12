@@ -3,7 +3,6 @@ title: Método value() (tipo de dados xml) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c44abf761d2576dd0e73c7c88fb9e52a823d25eb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697904"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021447"
 ---
 # <a name="value-method-xml-data-type"></a>Método de valor() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ SELECT @ProdID
   
  Embora exista apenas um atributo `ProductID` na instância XML, as regras de digitação estática exigem que você especifique explicitamente que a expressão de caminho retorne um singleton. Portanto, o `[1]` adicional é especificado ao término da expressão de caminho. Para obter mais informações sobre a tipagem estática, consulte [XQuery e tipagem estática](../../xquery/xquery-and-static-typing.md).  
   
-### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Usando o método de value() para recuperar um valor de uma coluna de tipo xml  
+### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>b. Usando o método de value() para recuperar um valor de uma coluna de tipo xml  
  A consulta a seguir é especificada em uma coluna de tipo **xml** (`CatalogDescription`) no banco de dados `AdventureWorks`. A consulta recupera valores de atributo `ProductModelID` de cada instância de XML armazenada na coluna.  
   
 ```  

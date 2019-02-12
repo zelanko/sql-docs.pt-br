@@ -2,10 +2,9 @@
 title: sys. database_usage (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - database_usage
@@ -22,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62942e939c1221b90b623db12c922f3dcc580c99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656735"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024897"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ ms.locfileid: "51656735"
   
  O **sys. database_usage** exibição contém as colunas a seguir.  
   
-|Nome da coluna|Description|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |time|A data em que os eventos de uso ocorreram.|  
-|sku|O tipo de camada de serviço para o banco de dados: **Web**, **Business**, **básica**, **padrão**, **Premium**|  
+|sku|O tipo de camada de serviço do banco de dados: **Web**, **negócios**, **básica**, **padrão**, **Premium**|  
 |quantity|O número máximo de bancos de dados de um tipo de SKU que existiu durante o dia.|  
   
 ## <a name="permissions"></a>Permissões  

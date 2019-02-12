@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082676"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025797"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lição 1: Criando a estrutura de mineração de Comprador de Bicicleta
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lição 1: Criando a estrutura de mineração de comprador de bicicleta
   Nesta lição, você criará uma estrutura de mineração que permite prever se um cliente potencial da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] irá adquirir uma bicicleta. Se você estiver familiarizado com estruturas de mineração e seus papéis na mineração de dados, consulte [estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  A estrutura de mineração de comprador de bicicleta que você criará nesta lição oferece suporte à adição de modelos de mineração com base nas [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algoritmo de árvores de decisão Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Em lições posteriores, você usará os modelos de mineração de clustering para explorar as várias maneiras nas quais os clientes podem ser agrupados e usará os modelos de mineração da árvore de decisão para prever se um cliente potencial comprará ou não uma bicicleta.  
@@ -95,7 +94,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Para criar uma nova consulta DMX no SQL Server Management Studio  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  No **conectar ao servidor** caixa de diálogo, para **tipo de servidor**, selecione **Analysis Services**. Na **nome do servidor**, digite `LocalHost`, ou digite o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
   
@@ -215,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  Na próxima lição, você adicionará modelos de mineração à estrutura que acaba de criar.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Adicionando modelos de mineração à estrutura de mineração de Comprador de Bicicleta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lição 2: Adicionando modelos de mineração à estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

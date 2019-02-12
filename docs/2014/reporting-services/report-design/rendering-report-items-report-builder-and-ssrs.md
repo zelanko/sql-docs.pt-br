@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017696"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Renderizando itens de relatório (Construtor de Relatórios e SSRS)
   O número, o tamanho e o local de itens de relatório afetam a maneira como os renderizadores paginam o corpo de relatório. A seguir uma descrição de como vários itens de relatório são renderizados.  
@@ -78,7 +78,7 @@ ms.locfileid: "48050886"
   
 -   Cabeçalhos de coluna e cabeçalhos de linha repetidos.  
   
-     Os cabeçalhos têm prioridade sobre os rodapés. Grupos repetidos internos têm prioridade sobre os grupos externos. Itens onde a `RepeatWith` propriedade é definida que estejam mais perto da região de dados de destino têm prioridade sobre os itens que estão mais longe da região de dados.  
+     Os cabeçalhos têm prioridade sobre os rodapés. Grupos repetidos internos têm prioridade sobre os grupos externos. Itens onde a propriedade `RepeatWith` é definida que estejam mais perto da região de dados de destino têm prioridade sobre os itens que estão mais longe da região de dados.  
   
 -   Itens de relatório pequenos, como caixas de texto ou retângulos, com uma propriedade KeepTogether explícita definida como `true`.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48050886"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

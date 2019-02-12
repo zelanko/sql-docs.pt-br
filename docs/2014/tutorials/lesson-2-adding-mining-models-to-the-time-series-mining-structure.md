@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461942"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022257"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de série temporal
-  Nesta lição, você adicionará um novo modelo de mineração à estrutura de mineração que você acabou de criar na [lição 1: Criando um modelo de mineração de série temporal e a estrutura de mineração](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lição 2: Adicionando modelos de mineração para a estrutura de mineração de série temporal
+  Nesta lição, você adicionará um novo modelo de mineração à estrutura de mineração que você acabou de criar no [lição 1: Criando um modelo de mineração e a estrutura de mineração de série temporal](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Instrução ALTER MINING STRUCTURE  
  Para adicionar um novo modelo de mineração a uma estrutura de mineração existente, use o [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instrução. O código na instrução pode ser dividido nas seguintes partes:  
@@ -219,7 +218,7 @@ WITH DRILLTHROUGH
  Na próxima lição, você processará todos os modelos e a estrutura de mineração.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Processando a estrutura e os modelos de série temporal](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Lição 3: A série de tempo de processamento estrutura e modelos](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

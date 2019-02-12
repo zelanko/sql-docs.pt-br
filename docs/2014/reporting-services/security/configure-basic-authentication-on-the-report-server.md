@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019327"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar autenticação básica no Servidor de Relatório
   Por padrão, o Reporting Services aceita solicitações que especificam a autenticação Negotiate e NTLM. Se a sua implantação inclui aplicativos cliente ou navegadores que usam autenticação Básica, adicione a autenticação Básica à lista de tipos suportados. Além disso, para usar o Construtor de Relatórios, você deve habilitar o acesso Anônimo aos arquivos do Construtor de Relatórios.  
@@ -41,7 +41,7 @@ ms.locfileid: "48071286"
   
      O arquivo está localizado em  *\<unidade >:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Localizar <`Authentication`>.  
+2.  Localize <`Authentication`>.  
   
 3.  Copie uma das estruturas XML a seguir que seja mais adequada para as suas necessidades. A primeira estrutura XML oferece espaços reservados para especificar todos os elementos, que estão descritos na próxima seção:  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48071286"
   
 4.  Cole-a nas entradas existentes para <`Authentication`>.  
   
-     Se você estiver usando vários tipos de autenticação, adicione apenas o `RSWindowsBasic` elemento, mas não exclua as entradas para `RSWindowsNegotiate`, `RSWindowsNTLM`, ou `RSWindowsKerberos`.  
+     Se estiver usando vários tipos de autenticação, adicione apenas o elemento `RSWindowsBasic`, mas não exclua as entradas de `RSWindowsNegotiate`, `RSWindowsNTLM` ou `RSWindowsKerberos`.  
   
-     Para fins de compatibilidade com o navegador Safari, não é possível configurar o servidor de relatório para usar diversos tipos de autenticação. Você deve especificar somente `RSWindowsBasic` e excluir as outras entradas.  
+     Para fins de compatibilidade com o navegador Safari, não é possível configurar o servidor de relatório para usar diversos tipos de autenticação. Você deve especificar somente `RSWindowsBasic` e excluir as demais entradas.  
   
      Observe que não é possível usar `Custom` com outros tipos de autenticação.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48071286"
   
 |Elemento|Obrigatório|Valores válidos|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sim<br /><br /> Se você não especificar um valor, será usado 3.|`2` = Logon de rede, indicado para servidores de alto desempenho na autenticação de senhas em texto sem formatação.<br /><br /> `3` = Logon texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário ao se conectar a outros servidores na rede. (Padrão)<br /><br /> Observação: valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Sim<br /><br /> Se você não especificar um valor, será usado 3.|`2` = Logon de rede, indicado para servidores de alto desempenho na autenticação de senhas em texto sem formatação.<br /><br /> `3` = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede. (Padrão)<br /><br /> Observação: Valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Opcional|Especifica uma partição de recursos que inclui recursos de autorização e autenticação usados para controlar o acesso a recursos protegidos da organização.|  
 |DefaultDomain|Opcional|Especifica o domínio usado pelo servidor para autenticar o usuário. Este valor é opcional, mas, caso seja omitido, o servidor de relatório usará o nome do computador como domínio. Se o computador for um membro de domínio, esse domínio será o padrão. Se você instalou o servidor de relatório em um controlador de domínio, o domínio usado será o que é controlado pelo computador.|  
   
@@ -136,17 +136,17 @@ ms.locfileid: "48071286"
     </configuration>  
     ```  
   
-     Modo de autenticação deve ser definido como `Windows` se você incluir um arquivo Web. config.  
+     O modo de autenticação deverá ser definido como `Windows` se você incluir um arquivo Web.config.  
   
      `Identity impersonate` pode ser `True` ou `False`.  
   
-    -   Defina-a como `False` se você não deseja que o ASP.NET leia o token de segurança. A solicitação será executada no contexto de segurança do serviço Servidor de Relatórios.  
+    -   Defina esse valor como `False` se não quiser que o ASP.NET leia o token de segurança. A solicitação será executada no contexto de segurança do serviço Servidor de Relatórios.  
   
-    -   Defina-a como `True` se você quiser que o ASP.NET leia o token de segurança da camada de host. Se você defini-lo como `True`, também deverá especificar `userName` e `password` para designar uma conta Anônima. As credenciais especificadas determinarão o contexto de segurança sob o qual a solicitação é emitida.  
+    -   Defina esse valor como `True` se quiser que o ASP.NET leia o token de segurança da camada de host. Se você defini-lo como `True`, também deverá especificar `userName` e `password` para designar uma conta Anônima. As credenciais especificadas determinarão o contexto de segurança sob o qual a solicitação é emitida.  
   
 5.  Salve o arquivo Web.config na pasta ReportBuilder\bin.  
   
-6.  Abra o arquivo rsreportserver. config, na seção de serviços, localize `IsReportManagerEnabled` e adicione a seguinte configuração abaixo dela:  
+6.  Abra o arquivo RSReportServer.config, na seção Serviços, localize `IsReportManagerEnabled` e adicione a seguinte configuração abaixo desse valor:  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -157,7 +157,7 @@ ms.locfileid: "48071286"
 8.  Reinicie o servidor de relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Domínios de aplicativo para aplicativos de servidor de relatório](../report-server/application-domains-for-report-server-applications.md)   
+ [Domínios do aplicativo para aplicativos do Servidor de Relatório](../report-server/application-domains-for-report-server-applications.md)   
  [Segurança e proteção do Reporting Services](reporting-services-security-and-protection.md)  
   
   

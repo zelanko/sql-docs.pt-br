@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078096"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042347"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propriedades Opções de Instantâneo (Gerenciador de Relatórios)
   Use a página de propriedades Opções de Instantâneo para agendar instantâneos de relatório a serem adicionados ao histórico de relatórios e para definir limites do número de instantâneos de relatórios armazenados nesse histórico.  
@@ -62,9 +62,9 @@ ms.locfileid: "48078096"
  Clique para salvar as alterações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Criar, modificar e excluir instantâneos no histórico de relatórios](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Criar, modificar e excluir instantâneos no histórico de relatório](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

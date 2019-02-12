@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d77a978ca0d1f8f1f175871d5acd6de0aa5c6e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019117"
 ---
 # <a name="set-report-processing-properties"></a>Definir propriedades de processamento de relatórios
   Propriedades de execução de relatório controlam como um relatório é processado. É necessário definir propriedades de execução individualmente para cada relatório.  
@@ -57,10 +57,10 @@ ms.locfileid: "48161726"
  Quando existir essa condição, o servidor de relatório desativará a assinatura na próxima vez em que a assinatura for agendada para execução. Abra a assinatura e salve-a a fim de reativá-la. Quando você abrir a assinatura, o servidor de relatórios atualizará os valores de parâmetros de assinatura para aqueles especificados para o relatório. Para obter mais informações sobre assinaturas, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir opções de processamento &#40;modo integrado do Reporting Services no SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Configurar propriedades de execução de um relatório &#40;Gerenciador de relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Configurar propriedades de execução de um relatório &#40;Gerenciador de Relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Conceitos do Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [Como adicionar um instantâneo ao histórico de relatórios](add-a-snapshot-to-report-history-report-manager.md)   
+ [Como: Adicionar um instantâneo ao histórico de relatórios](add-a-snapshot-to-report-history-report-manager.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

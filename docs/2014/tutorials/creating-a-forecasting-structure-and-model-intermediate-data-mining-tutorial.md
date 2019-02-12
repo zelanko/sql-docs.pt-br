@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5f55cbf6-0db4-4cb4-a0f5-e27441873d4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f762b6c561f96f8ced9f8fe977dceb3b9208d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048516"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015247"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de previsão (Tutorial de mineração de dados intermediário)
   Em seguida, você usará o Assistente de Mineração de Dados para criar uma nova estrutura e um novo modelo de mineração baseados na exibição da fonte de dados recém-criada. Nesta tarefa, você especificará que o modelo de mineração deverá usar o algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series.  
@@ -64,7 +63,7 @@ ms.locfileid: "48048516"
  [Modificando a estrutura de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Designer de mineração de dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Designer de Mineração de Dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

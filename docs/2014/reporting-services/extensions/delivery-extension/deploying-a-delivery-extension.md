@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a69f0a79ce10a17825490bd77e48a26d0d823af4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037457"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implantando uma extensão de entrega
   As extensões de entrega fornecem suas informações de configuração na forma de um arquivo de configuração XML. O arquivo XML é compatível com o esquema XML definido para extensões de entrega. As extensões de entrega oferecem infraestrutura para a definição e para a modificação do arquivo de configuração.  
@@ -35,11 +35,11 @@ ms.locfileid: "48184246"
   
  A tabela a seguir descreve os atributos para o elemento `Extension` para extensões de entrega.  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
-|`Name`|Um nome exclusivo para a extensão (por exemplo "Email do Servidor de Relatório" para a extensão de entrega de email ou "FileShare do Servidor de Relatório" para a extensão de entrega do compartilhamento de arquivo). O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do `Extension` elemento de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
+|`Name`|Um nome exclusivo para a extensão (por exemplo "Email do Servidor de Relatório" para a extensão de entrega de email ou "FileShare do Servidor de Relatório" para a extensão de entrega do compartilhamento de arquivo). O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento `Extension` de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
 |`Type`|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  
-|`Visible`|Um valor `false` indica que a extensão de entrega não deve ser visível nas interfaces do usuário. Se o atributo não for incluído, o valor padrão é `true`.|  
+|`Visible`|Um valor `false` indica que a extensão de entrega não deve ser visível nas interfaces do usuário. Se o atributo não for incluído, o valor padrão será `true`.|  
   
  Para obter mais informações sobre o arquivo RSReportServer.config, consulte [Arquivos de configuração do Reporting Services](../../report-server/reporting-services-configuration-files.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48184246"
   
 2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo rsreportserver. config está localizado em %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting directory. É necessário criar uma entrada no arquivo de configuração para o arquivo de assembly de extensão de entrega. Abra o arquivo de configuração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou um editor de texto simples, como o Bloco de notas.  
   
-3.  Localize o `Delivery` elemento no arquivo rsreportserver. config. Uma entrada para a sua extensão de entrega recém-criada deve ser feita no seguinte local:  
+3.  Localize o elemento `Delivery` no arquivo RSReportServer.config. Uma entrada para a sua extensão de entrega recém-criada deve ser feita no seguinte local:  
   
     ```  
     <Extensions>  
@@ -99,7 +99,7 @@ ms.locfileid: "48184246"
   
 2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo rsreportserver. config está localizado em %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting directory. É necessário criar uma entrada no arquivo de configuração para o arquivo de assembly de extensão de entrega. Você pode abrir o arquivo de configuração com o Visual Studio .NET ou um editor de texto simples, como o bloco de notas.  
   
-3.  Localize o `DeliveryUI` elemento no arquivo rsreportserver. config. Uma entrada para a sua extensão de entrega recém-criada deve ser feita no seguinte local:  
+3.  Localize o elemento `DeliveryUI` no arquivo RSReportServer.config. Uma entrada para a sua extensão de entrega recém-criada deve ser feita no seguinte local:  
   
     ```  
     <Extensions>  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 981db90ba9114b26b0581f9b1e3d62561c8b6939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7acfc09d226c3e352feae42e76d85f1dd8d1a531
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180616"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024167"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>Membros MSReportServer_ConfigurationSetting
   A classe MSReportServer_ConfigurationSetting contém as seguintes propriedades e métodos.  
@@ -55,8 +55,8 @@ ms.locfileid: "48180616"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|Obtém a propriedade do servidor SMTP do arquivo RSReportServer.config. Somente leitura.|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|Especifica a conta do usuário de logon que o servidor de relatório representa durante a execução de relatórios autônomos. Somente leitura.|  
 |[Versão](configurationsetting-property-version.md)|Retorna a versão do servidor de relatório.|  
-|[Propriedade VirtualDirectoryReportManager &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Retorna o diretório virtual para o aplicativo do gerenciador de relatórios.|  
-|[Propriedade VirtualDirectoryReportServer &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|Retorna o diretório virtual para o aplicativo do serviço Web Servidor de Relatórios.|  
+|[Propriedade VirtualDirectoryReportManager &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Retorna o diretório virtual para o aplicativo do gerenciador de relatórios.|  
+|[Propriedade VirtualDirectoryReportServer &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|Retorna o diretório virtual para o aplicativo do serviço Web Servidor de Relatórios.|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|Retorna a identidade sob a qual o serviço do Windows do servidor de relatório está sendo executado efetivamente. Somente leitura.|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|Retorna a identidade sob a qual o serviço do Windows do servidor de relatório foi configurada por último para executar. Somente leitura.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48180616"
 |||  
 |-|-|  
 |[BackupEncryptionKey](configurationsetting-method-backupencryptionkey.md)|Efetua backup da chave de criptografia para a instância. A chave de criptografia é armazenada criptografada com uma senha.|  
-|[Método CreateSSLCertificateBinding &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-createsslcertificatebinding.md)|Cria uma associação de Certificado SSL.|  
+|[Método CreateSSLCertificateBinding &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-createsslcertificatebinding.md)|Cria uma associação de Certificado SSL.|  
 |[DeleteEncryptedInformation](configurationsetting-method-deleteencryptedinformation.md)|Exclui as informações criptografadas do banco de dados do servidor de relatório.|  
 |[DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md)|Exclui as chaves de criptografia do banco de dados do servidor de relatório.|  
 |[GenerateDatabaseCreationScript](configurationsetting-method-generatedatabasecreationscript.md)|Gera um Script SQL que pode ser usado para criar o banco de dados do servidor de relatório.|  
@@ -75,16 +75,16 @@ ms.locfileid: "48180616"
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|Obtém o nome para exibição para uma determinada cadeia de caracteres da versão do banco de dados do servidor de relatório.|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|Inicializa a instância do servidor de relatório especificado.|  
 |[Método ListInstalledSharePointVersions &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Retorna um conjunto de tokens que representam as versões do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] que estão instaladas no mesmo computador que o servidor de relatório.|  
-|[Método ListIPAddresses &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-listipaddresses.md)|Lista endereços IP para o computador.|  
+|[Método ListIPAddresses &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|Lista endereços IP para o computador.|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|Retorna uma lista de instalações do servidor de relatório que estão presentes no banco de dados do servidor de relatório, independentemente de essas instalações terem acesso a informações seguras.|  
-|[Método ListReservedURLs &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-listreservedurls.md)|Lista as URLs reservadas para todos os aplicativos no servidor de relatório.|  
-|[Método ListSSLCertificateBindings &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-listsslcertificatebindings.md)|Lista as associações de certificado SSL que existem no HTTP.SYS e as que são esperadas do rsreportserver.config.|  
-|[Método ListSSLCertificates &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-listsslcertificates.md)|Lista certificados SSL instalados no computador.|  
+|[Método ListReservedURLs &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listreservedurls.md)|Lista as URLs reservadas para todos os aplicativos no servidor de relatório.|  
+|[Método ListSSLCertificateBindings &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificatebindings.md)|Lista as associações de certificado SSL que existem no HTTP.SYS e as que são esperadas do rsreportserver.config.|  
+|[Método ListSSLCertificates &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificates.md)|Lista certificados SSL instalados no computador.|  
 |[ReencryptSecureInformation](configurationsetting-method-reencryptsecureinformation.md)|Gera uma nova chave de criptografia e criptografa novamente todas as informações seguras no banco de dados do servidor de relatório que usa essa nova chave.|  
-|[Método RemoveSSLCertificateBindings &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-removesslcertificatebinding.md)|Remove uma associação do Certificado SSL.|  
+|[Método RemoveSSLCertificateBindings &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removesslcertificatebinding.md)|Remove uma associação do Certificado SSL.|  
 |[RemoveUnattendedExecutionAccount](configurationsetting-method-removeunattendedexecutionaccount.md)|Exclui a entrada da conta da execução autônoma da configuração do servidor de relatório.|  
-|[Método RemoveURL &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-removeurl.md)|Remove uma URL reservada para o servidor de relatório.|  
-|[Método ReserveURL &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-reserveurl.md)|Adiciona uma reserva de URL para um determinado aplicativo.|  
+|[Método RemoveURL &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removeurl.md)|Remove uma URL reservada para o servidor de relatório.|  
+|[Método ReserveURL &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-reserveurl.md)|Adiciona uma reserva de URL para um determinado aplicativo.|  
 |[RestoreEncryptionKey](configurationsetting-method-restoreencryptionkey.md)|Reaplica a chave de criptografia especificada para o banco de dados do servidor de relatório.|  
 |[SetDatabaseConnection](configurationsetting-method-setdatabaseconnection.md)|Define a conexão do banco de dados do servidor de relatório para um banco de dados do servidor de relatório específico.|  
 |[SetDatabaseLogonTimeout](configurationsetting-method-setdatabaselogontimeout.md)|Especifica o valor de tempo limite padrão para as tentativas de logon do banco de dados do servidor de relatório.|  
@@ -93,10 +93,10 @@ ms.locfileid: "48180616"
 |[SetSecureConnectionLevel](configurationsetting-method-setsecureconnectionlevel.md)|Define o nível de conexão segura do servidor de relatório.|  
 |[SetServiceState](configurationsetting-method-setservicestate.md)|Ativa e desativa o Servidor de Relatório do Windows e os serviços Web.|  
 |[SetUnattendedExecutionAccount](configurationsetting-method-setunattendedexecutionaccount.md)|Especifica a conta usada para executar relatórios autônomos.|  
-|[Método SetVirtualDirectory &#40;Msreportserver_configurationsetting&#41&#41;](configurationsetting-method-setvirtualdirectory.md)|Define o diretório virtual para um aplicativo.|  
+|[Método SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md)|Define o diretório virtual para um aplicativo.|  
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Faz com que o serviço Servidor de Relatório do Windows seja executado como o usuário do Windows especificado e concede a esta conta permissões no sistema de arquivos suficientes para o funcionamento do servidor de relatório.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
   
   

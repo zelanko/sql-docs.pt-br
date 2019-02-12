@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: de33b2cdbc082e609e392d36aa53b8c5bbd2ce4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ac8b0b7a36cc3ecff37ba0d74167b99458eb5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160486"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027188"
 ---
 # <a name="reporting-services-soapexception-class"></a>Classe SoapException do Reporting Services
   Você deve tratar de erros específicos do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que sabe que podem acontecer. Por exemplo, em um aplicativo onde você solicita que o usuário crie uma pasta, pode ser possível que ele tente criar uma pasta que já exista. Como desenvolvedor, você não tem controle sobre o que o usuário digita no nome da pasta e nos campos de caminho do seu aplicativo, mas tem controle sobre o que o usuário experimenta quando alguém incidentalmente tenta criar um item já existente.  
@@ -29,7 +29,7 @@ ms.locfileid: "48160486"
   
  A tabela a seguir lista as propriedades públicas da classe **SoapException**.  
   
-|Propriedade pública|Description|  
+|Propriedade pública|Descrição|  
 |---------------------|-----------------|  
 |**Actor**|O código que causou a exceção. O valor é a URL para o método do serviço Web.|  
 |**Detail**|Informações de erro específicas do aplicativo. O valor é definido pelo servidor de relatório e está em formato XML. Para obter mais informações, consulte [Propriedade Detail](detail-property.md) e [Usando a propriedade Detail para tratar erros específicos](../best-practices/using-the-detail-property-to-handle-specific-errors.md).|  

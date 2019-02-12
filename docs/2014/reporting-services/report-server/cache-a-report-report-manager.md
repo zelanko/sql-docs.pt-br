@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4064188dee8f8902712962c93715e6ebce839b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4269c5219dc52df82f46f1d495d895321fc6f276
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173176"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023587"
 ---
 # <a name="cache-a-report-report-manager"></a>Armazenar um relatório em cache (Gerenciador de Relatórios)
   Um modo de melhorar o desempenho é configurar propriedades de cache para um relatório. Quando um relatório é armazenado em cache, uma cópia do relatório renderizado é salva por um curto período de tempo. O primeiro usuário que solicita o relatório deve aguardar a conclusão do processamento antes de exibir o relatório. Usuários subsequentes que solicitam o relatório dentro do período de cache podem exibi-lo imediatamente porque o processamento já ocorreu.  
@@ -50,7 +50,7 @@ ms.locfileid: "48173176"
 7.  Clique em **Aplicar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
+ [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   
