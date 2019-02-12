@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5dbeeb92c4924b867eebdf070ef1daf1df15103
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 522ff2df33067792979e785b60417c9783d5e46a
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326347"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421173"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ALTER USER userName
 ```
 
 > [!IMPORTANT]
-> Os logons do Azure AD para a Instância Gerenciada do Banco de Dados SQL estão em **versão prévia pública**. Há suporte apenas para as seguintes opções na Instância Gerenciada do Banco de Dados SQL do Azure ao aplicar aos usuários com logons do Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` e `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+> Os logons do Azure AD para a instância gerenciada do Banco de Dados SQL estão em **versão prévia pública**. Há suporte apenas para as seguintes opções na instância gerenciada do Banco de Dados SQL do Azure ao aplicar aos usuários com logons do Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` e `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 
 ```
 -- Syntax for Azure SQL Database  

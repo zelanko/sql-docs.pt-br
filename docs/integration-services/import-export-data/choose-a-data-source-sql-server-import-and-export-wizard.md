@@ -1,7 +1,7 @@
 ---
 title: Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805999"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290416"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
-  Após a página de boas-vindas, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Escolher uma fonte de dados**. Nessa página, você fornece informações sobre a fonte de dados e sobre como se conectar a ela.
+  Após a página de boas-vindas, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibe **Escolher uma Fonte de Dados**. Nessa página, você fornece informações sobre a fonte de dados e sobre como se conectar a ela.
   
 Para obter informações sobre as fontes de dados que você pode usar, consulte [Quais fontes de dados e destinos posso usar?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
+> [!NOTE]
+> O Assistente de Importação e Exportação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza o SQL Server Integration Services (SSIS). Portanto, as mesmas limitações que se aplicam ao SSIS também se aplicam ao assistente.  Por exemplo, as colunas ErrorCode e ErrorColumn, que são adicionadas por padrão, conforme descrito em [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Captura de tela da página Escolher uma Fonte de Dados 
-A captura de tela a seguir mostra a primeira parte da página **Escolher uma Fonte de Dados** do assistente. O restante da página tem um número variável de opções que dependem da fonte de dados que você escolhe aqui.
+A imagem a seguir mostra a primeira parte da página **Escolher uma Fonte de Dados** do assistente. O restante da página tem um número variável de opções que dependem da fonte de dados que você escolhe aqui.
 
 ![Escolher fonte](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ Para se conectar a uma fonte de dados usada com frequência, consulte uma das p�
 
 Para obter informações sobre como se conectar a uma fonte de dados que não está listada aqui, consulte [A referência de cadeias de conexão](https://www.connectionstrings.com/). Esse site de terceiros contém cadeias de conexão de exemplo e mais informações sobre provedores de dados e as informações de conexão exigidas por elas.
 
-## <a name="whats-next"></a>O que vem a seguir?  
+## <a name="whats-next"></a>O que vem a seguir?
  Depois de fornecer informações sobre a fonte de dados e sobre como se conectar a ela, a próxima página será **Escolher um Destino**. Nessa página, você fornece informações sobre o destino dos dados e sobre como se conectar a ele. Para obter mais informações, consulte [Escolher um destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
- 
+
 ## <a name="see-also"></a>Confira também
 [Começar com esse exemplo simples de Assistente de Importação e Exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

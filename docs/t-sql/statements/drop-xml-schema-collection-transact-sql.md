@@ -20,22 +20,22 @@ helpviewer_keywords:
 - dropping XML schema collections
 - DROP XML SCHEMA COLLECTION statement
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dccd502689a91cd006c5f20961923ec2c740fc9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804484"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041077"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Exclui uma coleção de esquema XML inteira e todos os seus componentes.  
+Exclui uma coleção de esquema XML inteira e todos os seus componentes.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,22 +45,22 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *relational_schema*  
- Identifica o nome de esquema relacional. Se não for especificado, o esquema relacional padrão será usado.  
+*relational_schema*  
+Identifica o nome de esquema relacional. Se não for especificado, o esquema relacional padrão será usado.  
   
- *sql_identifier*  
- É o nome da coleção de esquema XML a ser descartada.  
+*sql_identifier*  
+Nome da coleção de esquema XML a ser descartada.  
   
 ## <a name="remarks"></a>Remarks  
- O descarte de uma coleção de esquema XML é uma operação transacional. Isso significa que, ao descartar uma coleção de esquema XML em uma transação e reverter a transação posteriormente, a coleção não será descartada.  
+O descarte de uma coleção de esquema XML é uma operação transacional. Ao descartar uma coleção de esquema XML em uma transação e reverter a transação posteriormente, a coleção não será descartada.  
   
- Não é possível descartar uma coleção de esquema XML que está em uso. Desse modo, a coleção que está sendo descartada não pode ser:  
+Não é possível descartar uma coleção de esquema XML que está em uso. Portanto, a coleção que está sendo descartada não pode estar em nenhuma das seguintes condições:  
   
 -   Associada a nenhum parâmetro ou coluna do tipo **XML**.  
   
 -   Especificada em nenhuma restrição de tabela.  
   
--   Mencionada em uma função associada ao esquema ou procedimento armazenado. Por exemplo, a função a seguir bloqueará a coleção de esquema XML `MyCollection` porque a função especifica `WITH SCHEMABINDING`. Se essa especificação for removida, não haverá nenhum bloqueio em XML SCHEMA COLLECTION.  
+-   Mencionada em uma função associada ao esquema ou procedimento armazenado. Por exemplo, a função a seguir bloqueia a coleção de esquema XML `MyCollection` porque a função especifica `WITH SCHEMABINDING`. Se essa especificação for removida, não haverá nenhum bloqueio em XML SCHEMA COLLECTION.  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  
@@ -75,10 +75,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>Permissões  
- O descarte de XML SCHEMA COLLECTION requer uma permissão DROP na coleção.  
+O descarte de XML SCHEMA COLLECTION requer uma permissão DROP na coleção.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra a remoção de uma coleção de esquema XML.  
+O exemplo a seguir mostra a remoção de uma coleção de esquema XML.  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

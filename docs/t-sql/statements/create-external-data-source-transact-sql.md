@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980002"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421193"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -167,7 +167,7 @@ Para o Azure Data Lake Store, o local especifica o URI para conectar-se ao Azure
 
 
 **SHARD_MAP_MANAGER**   
- Para SHARD_MAP_MANAGER, especifica o nome do servidor lógico que hospeda o gerenciador de mapa de fragmentos no Banco de Dados SQL do Azure ou em um banco de dados do SQL Server em uma máquina virtual do Azure.
+ Para SHARD_MAP_MANAGER, especifica o nome do servidor do Banco de Dados SQL que hospeda o gerenciador de mapa de fragmentos no Banco de Dados SQL do Azure ou em um banco de dados do SQL Server em uma máquina virtual do Azure.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Para obter um tutorial passo a passo, confira [Introdução a consultas elásticas para fragmentação (particionamento horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **RDBMS**   
-Para o RDBMS, especifica o nome do servidor lógico do banco de dados remoto no Banco de Dados SQL do Azure.  
+Para o RDBMS, especifica o nome do servidor do Banco de Dados SQL do banco de dados remoto no Banco de Dados SQL do Azure.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -404,7 +404,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-azure-sql-database"></a>Exemplos: Banco de dados SQL do Azure
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Criar uma fonte de dados externa do gerenciador de mapa de fragmentos
-Para criar uma fonte de dados externa para referenciar um SHARD_MAP_MANAGER, especifique o nome do servidor lógico que hospeda o gerenciador de mapa de fragmentos no Banco de Dados SQL do Azure ou em banco de dados do SQL Server em uma máquina virtual do Azure.
+Para criar uma fonte de dados externa para referenciar um SHARD_MAP_MANAGER, especifique o nome do servidor do Banco de Dados SQL que hospeda o gerenciador de mapa de fragmentos no Banco de Dados SQL do Azure ou em banco de dados do SQL Server em uma máquina virtual do Azure.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -424,7 +424,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. Criar uma fonte de dados externa do RDBMS
-Para criar uma fonte de dados externa para referenciar um RDBMS, especifica o nome do servidor lógico do banco de dados remoto no Banco de Dados SQL do Azure.
+Para criar uma fonte de dados externa para referenciar um RDBMS, especifica o nome do servidor do Banco de Dados SQL do banco de dados remoto no Banco de Dados SQL do Azure.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

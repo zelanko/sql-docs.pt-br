@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxe de criação de banco de dados para SQL Server, Banco de Dados SQL do Azure, SQL Data Warehouse do Azure e Parallel Data Warehouse
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327877"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570839"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\*SQL Server\*_** | [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current) | [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\*SQL Server\*_** | [Banco de dados individual/pool elástico<br />do Banco de Dados SQL ](create-database-transact-sql.md?view=azuresqldb-current) | [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* Banco de Dados SQL<br />servidor lógico \*_**  | [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**  | [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Banco de dados individual/pool elástico do Banco de Dados SQL do Azure
 
 ## <a name="overview"></a>Visão geral
 
-No servidor lógico do Banco de Dados SQL, essa instrução pode ser usada com um servidor Azure SQL para criar um banco de dados único ou um banco de dados em um pool elástico. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço e, se aplicável, o pool elástico para o novo banco de dados. Também pode ser usado para criar o banco de dados em um pool elástico. Além disso, ele pode ser usado para criar uma cópia do banco de dados em outro servidor lógico.
+No banco de dados individual/pool elástico do Banco de Dados SQL, essa instrução pode ser usada com um servidor Azure SQL para criar um banco de dados único ou um banco de dados em um pool elástico. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço e, se aplicável, o pool elástico para o novo banco de dados. Também pode ser usado para criar o banco de dados em um pool elástico. Além disso, ele pode ser usado para criar uma cópia do banco de dados em outro servidor de Banco de Dados SQL.
 
 ## <a name="syntax"></a>Sintaxe 
 
@@ -973,7 +973,7 @@ EDITION
  
 Especifica a camada de serviço do banco de dados. 
 
-Bancos de dados únicos e em pool em um servidor lógico. Os valores disponíveis são: "basic", "standard", "premium", "GeneralPurpose" e "BusinessCritical" e "Hyperscale". 
+Bancos de dados únicos e agrupados em um banco de dados individual/pool elástico. Os valores disponíveis são: "basic", "standard", "premium", "GeneralPurpose" e "BusinessCritical" e "Hyperscale". 
   
 Quando EDITION for especificado, mas MAXSIZE não for especificado, MAXSIZE será definido como o tamanho mais restritivo com suporte na edição.  
   
@@ -984,7 +984,7 @@ Especifica o tamanho máximo do banco de dados. MAXSIZE deve ser válido para a 
 > [!NOTE]
 > O argumento **MAXSIZE** não é aplicável a bancos de dados individuais na camada de serviço em hiperescala. Os bancos de dados da camada em hiperescala crescem conforme necessário até 100 TB. O serviço de Banco de Dados SQL adiciona armazenamento automaticamente – não é necessário definir um tamanho máximo.
 
-**Modelo baseado em DTU para bancos de dados únicos e em pool em um servidor lógico**
+**Modelo baseado em DTU para bancos de dados individuais e em pool em um servidor de Banco de Dados SQL**
 
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ Especifica o tamanho máximo do banco de dados. MAXSIZE deve ser válido para a 
 
 O valor MAXSIZE do modelo baseado em DTU, se especificado, deve ser um valor válido exibido na tabela acima para a camada de serviço especificada.
  
-**Modelo baseado em vCore para bancos de dados únicos e em pool em um servidor lógico**
+**Modelo baseado em vCore para bancos de dados únicos e em pool em um servidor de Banco de Dados SQL**
 
 **Camada de serviço de Uso Geral – plataforma de computação de Geração 4**
 
@@ -1063,10 +1063,10 @@ As regras a seguir se aplicam aos argumentos MAXSIZE e EDITION:
 
 SERVICE_OBJECTIVE
 
-- **Para bancos de dados únicos e em pool em um servidor lógico**
+- **Para bancos de dados individuais e em pool**
 
   - Especifica o nível de desempenho. Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`. 
- - **Para bancos de dados individuais em um servidor lógico na camada de serviço em hiperescala** Especifica o nível de desempenho. Os valores disponíveis para o objetivo de serviço são: `HS_GEN4_1`, `HS_GEN4_2`, `HS_GEN4_4`, `HS_GEN4_8`, `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`. 
+ - **Para bancos de dados individuais na camada de serviço em hiperescala** Especifica o nível de desempenho. Os valores disponíveis para o objetivo de serviço são: `HS_GEN4_1`, `HS_GEN4_2`, `HS_GEN4_4`, `HS_GEN4_8`, `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`. 
  
 - **Para bancos de dados em uma instância gerenciada**
 
@@ -1232,15 +1232,15 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de dados individual/pool elástico<br />do Banco de Dados SQL ](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Instância gerenciada<br />do Banco de Dados SQL \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
 
 ## <a name="overview"></a>Visão geral
 
-Na Instância Gerenciada de Banco de Dados do SQL, essa instrução é usada para criar um banco de dados. Ao criar um banco de dados em uma Instância Gerenciada, você deve especificar o nome do banco de dados e a ordenação. 
+Na instância gerenciada de Banco de Dados do SQL, essa instrução é usada para criar um banco de dados. Ao criar um banco de dados em uma instância gerenciada, você deve especificar o nome do banco de dados e a ordenação. 
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -1305,7 +1305,7 @@ Confira [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current)| [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de dados individual/pool elástico<br />do Banco de Dados SQL ](create-database-transact-sql.md?view=azuresqldb-current)| [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ Confira [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 
 ## <a name="overview"></a>Visão geral
 
-No Azure SQL Data Warehouse, essa instrução pode ser usada com um servidor lógico do Azure SQL para criar um banco de dados do SQL Data Warehouse. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço.
+No Azure SQL Data Warehouse, essa instrução pode ser usada com um servidor do Banco de Dados SQL do Azure para criar um banco de dados do SQL Data Warehouse. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current)| [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Banco de dados individual/pool elástico<br />do Banco de Dados SQL ](create-database-transact-sql.md?view=azuresqldb-current)| [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 

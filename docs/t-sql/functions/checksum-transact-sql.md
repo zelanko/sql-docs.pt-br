@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6febad4b4bbb9de2dcec7d0c7fc93adb0403947e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795574"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513906"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ A função `CHECKSUM` retorna o valor de soma de verificação computado em uma 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -60,13 +60,13 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de q
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM calcula um valor de hash, chamado de soma de verificação, em sua lista de argumentos. Use esse valor de hash para criar índices de hash. Um índice de hash ocorrerá se a função `CHECKSUM` tiver argumentos de coluna e um índice for criado com base no valor de CHECKSUM calculado. Isso pode ser usado para pesquisas de igualdade em colunas.
+`CHECKSUM` calcula um valor de hash, chamado de soma de verificação, em sua lista de argumentos. Use esse valor de hash para criar índices de hash. Um índice de hash ocorrerá se a função `CHECKSUM` tiver argumentos de coluna e um índice for criado com base no valor de `CHECKSUM` calculado. Isso pode ser usado para pesquisas de igualdade em colunas.
   
-A função `CHECKSUM` atende às propriedades da função de hash: `CHECKSUM` aplicado a duas listas de expressões retornarão o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo de dados e se esses elementos correspondentes tiverem igualdade quando comparados com o operador de igualdade (=). Valores nulos de um tipo especificado são definidos para serem comparados como iguais para fins da função `CHECKSUM`. Se pelo menos um dos valores na lista de expressões for alterado, a soma de verificação de lista provavelmente será alterada. No entanto, isso não é garantido. Portanto, para detectar se os valores foram alterados, recomendamos o uso de `CHECKSUM` somente se o aplicativo puder tolerar uma alteração ausente ocasional. Caso contrário, considere a possibilidade de usar o [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md). Com um algoritmo de hash MD5 especificado, a probabilidade de que HashBytes retornará o mesmo resultado para duas entradas diferentes é muito menor em comparação com CHECKSUM.
+A função `CHECKSUM` atende às propriedades da função de hash: `CHECKSUM` aplicado a duas listas de expressões retornarão o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo de dados e se esses elementos correspondentes tiverem igualdade quando comparados com o operador de igualdade (=). Valores nulos de um tipo especificado são definidos para serem comparados como iguais para fins da função `CHECKSUM`. Se pelo menos um dos valores na lista de expressões for alterado, a soma de verificação de lista provavelmente será alterada. No entanto, isso não é garantido. Portanto, para detectar se os valores foram alterados, recomendamos o uso de `CHECKSUM` somente se o aplicativo puder tolerar uma alteração ausente ocasional. Caso contrário, considere a possibilidade de usar o `HASHBYTES`. Com um algoritmo de hash MD5 especificado, a probabilidade de que `HASHBYTES` retornará o mesmo resultado para duas entradas diferentes é muito menor em comparação com `CHECKSUM`.
   
-A ordem de expressão afeta o valor `CHECKSUM` computado. A ordem das colunas usada para CHECKSUM(\*) é a mesma especificada na definição de tabela ou exibição. Isso inclui as colunas computadas.
+A ordem de expressão afeta o valor `CHECKSUM` computado. A ordem das colunas usada para `CHECKSUM(*)` é a mesma especificada na definição de tabela ou exibição. Isso inclui as colunas computadas.
   
-O valor de CHECKSUM depende do agrupamento. O mesmo valor armazenado com um agrupamento diferente retornará um valor de CHECKSUM diferente.
+O valor de `CHECKSUM` depende da ordenação. O mesmo valor armazenado com uma ordenação diferente retornará um valor de `CHECKSUM` diferente.
   
 ## <a name="examples"></a>Exemplos  
 Estes exemplos mostram o uso de `CHECKSUM` para criar índices de hash.
@@ -75,6 +75,7 @@ Para criar o índice de hash, o primeiro exemplo adiciona uma coluna de soma de 
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -91,6 +92,7 @@ Este exemplo mostra o uso de um índice de soma de verificação como um índice
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  

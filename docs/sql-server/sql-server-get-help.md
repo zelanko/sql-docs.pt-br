@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: fca6676b5cb7532faf7bf88cf04159c28b0fa36b
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087665"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570689"
 ---
 # <a name="sql-server-help-and-feedback"></a>Ajuda e comentários do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,21 @@ Estamos interessados em suas ideias para melhorar nossos produtos e documentaç�
 A equipe de engenharia do SQL Server se mantém atenta à [Voz do Usuário](https://feedback.azure.com/forums/908035-sql-server) do SQL Server. Se você quiser relatar um problema com o SQL Server, como falhas, desempenho lento, comportamento inesperado e assim por diante, a Voz do Usuário será o melhor lugar para fazer isso. 
 
 A [Voz do Usuário](https://feedback.azure.com/forums/908035-sql-server) também é um ótimo lugar para dizer à equipe de engenharia como ela poderia melhorar! Se você tiver recomendações ou sugestões de recursos, relate-as aqui também. 
+
+## <a name="i-want-to-give-feedback-about-sql-server-documentation"></a>Quero fazer comentários sobre a documentação do SQL Server
+A melhor maneira de entrar em contato com a equipe de conteúdo do SQL Server é por meio dos Problemas do Git. Você encontrará uma opção para enviar um Problema do Git na parte inferior da maioria de nossas páginas: 
+
+![Comentários sobre o conteúdo do Problema do Git](media/sql-server-get-help/git-issues.png)
+
+Se você tiver algo mais para compartilhar, uma ideia, uma sugestão, um comentário, qualquer coisa! Você pode fazer isso preenchendo um Problema do Git geral em [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+
+Basta selecionar o botão "Novo problema" para começar. 
+
+![Novo Problema do Git](media/sql-server-get-help/new-git-issue.png)
+
+
+A equipe de conteúdo do SQL Server também costuma solicitar comentários de pesquisa. Se você tiver algum tempo livre, compartilhe suas experiências conosco em [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey).
+
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>Eu quero fazer sugestões sobre o SQL Server Management Studio
 A equipe do SSMS (SQL Server Management Studio) também monitora de perto a [Voz do Usuário](https://feedback.azure.com/forums/908035-sql-server) do SQL Server, portanto, se você tiver problemas para relatar ou sugestões para dar, a Voz do Usuário será o melhor lugar para fazer isso. 
@@ -94,7 +109,5 @@ Você encontrou algo de errado com nossa documentação? Ou você tem uma contri
 
 Todas as contribuições públicas são revisadas pela equipe de conteúdo do SQL para exatidão técnica e consistência. 
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Desejo fornecer comentários sobre o conteúdo de Documentos SQL
-Se você tiver algum tempo sobrando e quiser compartilhar algumas ideias sobre sua experiência com Documentos SQL, responda à nossa pesquisa! Ela pode ser encontrada em [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) e deverá levar cerca de 10 a 15 minutos. 
 
-Se você tiver algo para compartilhar com a equipe de conteúdo do SQL, uma ideia, uma sugestão, um comentário, qualquer coisa! Você pode fazer isso no [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+

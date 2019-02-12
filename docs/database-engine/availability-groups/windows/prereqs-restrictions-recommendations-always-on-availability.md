@@ -2,7 +2,7 @@
 title: Pré-requisitos, restrições e recomendações para grupos de disponibilidade
 description: Uma descrição de pré-requisitos, restrições e recomendações para implantação de um grupo de disponibilidade Always On.
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202985"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570799"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202985"
     -   Uma instância do SQL Server usa até 100 threads de restauração paralela para réplicas secundárias. Cada banco de dados usa até metade do número total de núcleos de CPU, mas não mais de 16 threads por banco de dados. Se o número total de threads necessários para uma única instância exceder 100, o SQL Server usará um único thread de restauração para cada banco de dados restante. Os threads de restauração serial são liberados após aproximadamente 15 segundos de inatividade. 
     
     > [!NOTE]
-    > Os bancos de dados são escolhidos para seguir em thread único com base na ID de banco de dados em ordem crescente. Como tal, a ordem de criação do banco de dados deve ser considerada para instâncias do SQL Server que hospedam mais bancos de dados de grupo de disponibilidade do que threads de trabalho disponíveis. Por exemplo, em um sistema com 32 ou mais núcleos de CPU, todos os bancos de dados começando com o 7º banco de dados que ingressaram no grupo de disponibilidade estarão em modo de restauração serial, independentemente da carga de trabalho real de restauração de cada banco de dados. Os bancos de dados que exigem a restauração paralela devem ser adicionados primeiro ao grupo de disponibilidade.    
+    > Os bancos de dados são escolhidos para seguir em thread único com base na ID de banco de dados em ordem crescente. Como tal, a ordem de criação do banco de dados deve ser considerada para instâncias do SQL Server que hospedam mais bancos de dados de grupo de disponibilidade do que threads de trabalho disponíveis. Por exemplo, em um sistema com 32 ou mais núcleos de CPU, os seis primeiros bancos de dados (ordenados por ID de banco de dados) em um grupo ou grupos de disponibilidade usarão o modo de restauração paralela e todos os bancos de dados subsequentes usarão o modo de restauração individual.
   
 -   Além disso, os grupos de disponibilidade usam threads não compartilhados, da seguinte maneira:  
   

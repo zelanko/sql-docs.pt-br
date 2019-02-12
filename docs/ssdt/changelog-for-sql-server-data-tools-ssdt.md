@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087885"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428673"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ Data de lançamento: 28 de janeiro de 2019
 
 ### <a name="whats-new"></a>Novidades
 **SSIS:**
-1. Adicione Power Query Source (Versão Prévia) para SSIS 2017.
-2. Adicione suporte para SSIS 2012 de volta.
-3. Adicione a origem e o destino Oracle para SSIS 2019.
+1. Adicione Power Query Source (Versão Prévia) para SSIS no ADF 2017.
+2. Adicione suporte para o SQL Server 2012.
+3. Adicione a origem e o destino Oracle para o SQL Server 2019.
 4. Conserte um problema de que Tarefa de Script/Componente não pode ser carregado ao migrar de versões anteriores do SSIS.
 5. Conserte o problema de que os dados visualizador não funcionam no Windows 7 SP1 e no Windows 8.1.
 6. Conserte um problema em que, em alguns casos, salvar o pacote faz o Visual Studio falhar. 
-7. Conserte um problema em que, em alguns casos, o pacote não pode ser executado quando o nível de proteção é EncryptSensitiveWithPassword e a versão do servidor de destino é anterior ao SQL 2017.
+7. Conserte um problema em que, em alguns casos, o pacote não pode ser executado quando o nível de proteção é EncryptSensitiveWithPassword e a versão do servidor de destino é anterior ao SQL Server 2017.
 8. Conserte o problema em que anotações com fonte padrão não são exibidas no SSDT.
 9. ISDeploymentWizard dá suporte à autenticação do SQL, à autenticação integrada do Azure Active Directory e à autenticação de senha do Azure Active Directory no modo de linha de comando.
 

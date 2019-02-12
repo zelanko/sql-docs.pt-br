@@ -17,12 +17,12 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89bbf3581f8a62750338d1d7ea360fc46ea36479
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b861d170316dbc9d66c7f8e7954910438031f1b
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682020"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513796"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ O tipo de uma instância de **geometry** é nulo. Retornará 0 se a instância n
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo do CLR: **SqlBoolean**  
+ Tipo CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- O `IsNull` pode ser usado para testar se uma instância de **geometry** é nula. O resultado pode ser um pouco confuso, retornando 0 se a instância não for nula, mas null se a instância for nula.  
+ O `IsNull` pode ser usado para testar se uma instância de **geometry** é nula. `IsNull` retorna 0 se a instância não for nula, mas null se a instância for nula.  
   
- Esse método é usado basicamente pela infraestrutura do SQL Server; é recomendável o uso de `IsNull` para testar se uma instância é nula.  
+ Esse método é usado basicamente pela infraestrutura do SQL Server; não é recomendável o uso de `IsNull` para testar se uma instância é nula.  
   
 
 ## <a name="see-also"></a>Consulte Também  

@@ -23,19 +23,19 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599434"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652515"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Habilita um disparador DML, DDL ou de logon.  
+Habilita um disparador DML, DDL ou de logon.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,41 +45,41 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name*  
- É o nome do esquema ao qual o gatilho pertence. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
+*schema_name*  
+É o nome do esquema ao qual o gatilho pertence. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
   
- *trigger_name*  
- É o nome do disparador a ser habilitado.  
+*trigger_name*  
+É o nome do disparador a ser habilitado.  
   
- ALL  
- Indica que todos os disparadores definidos no escopo da cláusula ON estão habilitados.  
+ALL  
+Indica que todos os disparadores definidos no escopo da cláusula ON estão habilitados.  
   
- *object_name*  
- É o nome da tabela ou da exibição na qual o gatilho DML *trigger_name* foi criado para ser executado.  
+*object_name*  
+É o nome da tabela ou da exibição na qual o gatilho DML *trigger_name* foi criado para ser executado.  
   
- DATABASE  
- Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do banco de dados.  
+DATABASE  
+Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do banco de dados.  
   
- ALL SERVER  
- **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ALL SERVER  
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do servidor. ALL SERVER também é aplicado a gatilhos de logon.  
+Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do servidor. ALL SERVER também é aplicado a gatilhos de logon.  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
 ## <a name="remarks"></a>Remarks  
- A habilitação de um disparador não recria o mesmo. Um disparador desabilitado ainda existe como um objeto no banco de dados atual, mas não é acionado. A habilitação de um disparador faz com que ele seja acionado quando forem executadas quaisquer instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais ele foi originalmente programado. Os gatilhos são desabilitados usando [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Os gatilhos DML definidos em tabelas também podem ser desabilitados ou habilitados usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+A habilitação de um disparador não recria o mesmo. Um disparador desabilitado ainda existe como um objeto no banco de dados atual, mas não é acionado. A habilitação de um disparador faz com que ele seja acionado quando forem executadas quaisquer instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais ele foi originalmente programado. Os gatilhos são desabilitados usando [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Os gatilhos DML definidos em tabelas também podem ser desabilitados ou habilitados usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
- Para habilitar um disparador DML, no mínimo, um usuário deve ter a permissão ALTER na tabela ou exibição na qual o disparador foi criado.  
+Para habilitar um disparador DML, no mínimo, um usuário precisa ter a permissão ALTER na tabela ou exibição na qual o disparador foi criado.  
   
- Para habilitar um disparador DDL definido com escopo no servidor (ON ALL SERVER) ou um disparador de logon, um usuário deve ter permissão CONTROL SERVER no servidor. Para habilitar um disparador DDL definido com escopo no banco de dados (ON DATABASE), no mínimo, um usuário deve ter a permissão ALTER ANY DATABASE DDL TRIGGER no banco de dados atual.  
+Para habilitar um disparador DDL definido com escopo no servidor (ON ALL SERVER) ou um disparador de logon, um usuário precisa ter permissão CONTROL SERVER no servidor. Para habilitar um disparador DDL definido com escopo no banco de dados (ON DATABASE), no mínimo, um usuário precisa ter a permissão ALTER ANY DATABASE DDL TRIGGER no banco de dados atual.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Habilitando um gatilho DML em uma tabela  
- O exemplo a seguir desabilita o gatilho `uAddress` que foi criado na tabela `Address` no banco de dados AdventureWorks e, em seguida, habilita-o.  
+O exemplo a seguir desabilita o gatilho `uAddress` que foi criado na tabela `Address` no banco de dados AdventureWorks e, em seguida, habilita-o.  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -88,8 +88,8 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>B. Habilitando um gatilho DDL  
- O exemplo a seguir cria um gatilho DDL `safety` com escopo definido no banco de dados e depois o desabilita e habilita.  
+### <a name="b-enabling-a-ddl-trigger"></a>b. Habilitando um gatilho DDL  
+O exemplo a seguir cria um gatilho DDL `safety` com escopo definido no banco de dados e depois o desabilita e habilita.  
   
 ```  
 CREATE TRIGGER safety   
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. Habilitando todos os gatilhos que foram definidos com o mesmo escopo  
- O exemplo a seguir habilita todos os disparadores DDL que foram criados no escopo do servidor.  
+O exemplo a seguir habilita todos os disparadores DDL que foram criados no escopo do servidor.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -2,8 +2,7 @@
 title: CREATE TABLE (SQL Data Warehouse do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 372ebf82b2903c8e3f6b235978d39bb578508acd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025501"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +288,7 @@ Para saber os limites mínimo e máximo, confira [Limites de capacidade do SQL D
 ### <a name="determining-the-number-of-table-partitions"></a>Determinar o número de partições da tabela
 Cada tabela definida pelo usuário é dividida em várias tabelas menores que são armazenadas em locais separados chamados distribuições. O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usa 60 distribuições. No [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], o número de distribuições depende do número de nós de computação.
  
-Cada distribuição contém todas as partições da tabela. Por exemplo, se houver 60 distribuições e quatro partições de tabela, haverá 320 partições. Se a tabela for um índice columnstore clusterizado, haverá um índice columnstore por partição, ou seja, haverá 320 índices columnstore.
+Cada distribuição contém todas as partições da tabela. Por exemplo, se houver 60 distribuições e quatro partições de tabela mais uma partição vazia, haverá 300 partições (5 x 60 = 300). Se a tabela for um índice columnstore clusterizado, haverá um índice columnstore por partição, ou seja, haverá 300 índices columnstore.
 
 É recomendável usar menos partições de tabela para garantir que cada índice columnstore tenha linhas suficientes para aproveitar os benefícios dos índices columnstore. Para obter mais diretrizes, confira [Particionando tabelas no SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) e [Indexando tabelas no SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 

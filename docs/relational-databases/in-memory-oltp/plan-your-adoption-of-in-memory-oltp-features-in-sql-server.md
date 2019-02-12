@@ -1,7 +1,7 @@
 ---
 title: Planejar a adoção de recursos de OLTP in-memory no SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519558"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421183"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Uma tabela com otimização de memória que contém 200 GB de dados requer mais 
 
 Para um banco de dados hospedado no serviço de nuvem do Banco de Dados SQL do Azure, a camada de serviço escolhida afeta a quantidade de memória ativa que o banco de dados pode consumir. Você deve se planejar para monitorar o uso de memória do banco de dados usando um alerta. Para obter detalhes, confira:
 
-- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
 - [Monitorar o armazenamento no OLTP in-memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
@@ -118,7 +118,7 @@ Para obter diretrizes sobre se os recursos de OLTP in-memory podem melhorar o de
 
 
 
-## <a name="b-unsupported-features"></a>B. Recursos sem suporte
+## <a name="b-unsupported-features"></a>b. Recursos sem suporte
 
 Os recursos não compatíveis com certos cenários de OLTP in-memory são descritos em:
 
@@ -284,7 +284,7 @@ Quando o plano de consulta para um processo nativo requer uma fase de agregaçã
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Design de aplicativos: transações e lógica de repetição
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Design de aplicativo: transações e lógica de repetição
 
 Uma transação que envolve uma tabela com otimização de memória pode se tornar dependente de outra transação que envolve a mesma tabela. Se a contagem de transações dependentes ultrapassar o máximo permitido, todas as transações dependentes falharão.
 

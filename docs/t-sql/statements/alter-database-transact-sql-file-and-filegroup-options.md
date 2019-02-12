@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 3ed1de27dacbd8104a9125fe105b50689a4fd9c9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53329006"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421243"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) 
 
@@ -65,7 +65,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |**_\*SQL Server\*_**<br />&nbsp;|[Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+> |**_\*SQL Server\*_**<br />&nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -428,7 +428,7 @@ ADD FILE
 GO  
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Adicionando um grupo de arquivos com dois arquivos a um banco de dados  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Adicionando um grupo de arquivos com dois arquivos a um banco de dados  
 O exemplo a seguir cria o grupo de arquivos `Test1FG1` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e adiciona dois arquivos de 5 MB ao grupo de arquivos.  
   
 ```sql  
@@ -709,13 +709,13 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* Banco de Dados SQL<br />Instância Gerenciada \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**<br />&nbsp;|
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
 
-Use esta instrução com um banco de dados na Instância Gerenciada do Azure SQL.
+Use esta instrução com um banco de dados na instância gerenciada do Banco de Dados SQL do Azure.
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>Sintaxe para bancos de dados em uma instância gerenciada
 
@@ -925,7 +925,7 @@ GO
   
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Adicionando um grupo de arquivos com dois arquivos a um banco de dados  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Adicionando um grupo de arquivos com dois arquivos a um banco de dados  
 O exemplo a seguir cria o grupo de arquivos `Test1FG1` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e adiciona dois arquivos de 5 MB ao grupo de arquivos.  
   
 ```sql  

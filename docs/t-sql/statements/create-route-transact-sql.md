@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595684"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421143"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -68,7 +68,7 @@ WITH
  Introduz as cláusulas que definem a rota que é criada.  
   
  SERVICE_NAME = **'**_service\_name_**'**  
- Especifica o nome do serviço remoto ao qual essa rota aponta. O *service_name* precisa corresponder exatamente ao nome que o serviço remoto usa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder ao *service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não considera o agrupamento atual. Se o SERVICE_NAME for omitido, essa rota corresponderá a qualquer nome de serviço, mas terá uma prioridade menor para correspondência que uma rota que especifique um SERVICE_NAME. Uma rota com o nome de serviço **'SQL/ServiceBroker/BrokerConfiguration'** é uma rota para um serviço Broker Configuration Notice. Uma rota para esse serviço pode não especificar uma instância do agente.  
+ Especifica o nome do serviço remoto ao qual essa rota aponta. O *service_name* precisa corresponder exatamente ao nome que o serviço remoto usa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder ao *service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não considera a ordenação atual. Se o SERVICE_NAME for omitido, essa rota corresponderá a qualquer nome de serviço, mas terá uma prioridade menor para correspondência que uma rota que especifique um SERVICE_NAME. Uma rota com o nome de serviço **'SQL/ServiceBroker/BrokerConfiguration'** é uma rota para um serviço Broker Configuration Notice. Uma rota para esse serviço pode não especificar uma instância do agente.  
   
  BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
  Especifica o banco de dados que hospeda o serviço de destino. O parâmetro *broker_instance_identifier* deve ser o identificador de instância do agente para o banco de dados remoto, que pode ser obtido com a execução ad seguinte consulta no banco de dados selecionado:  
@@ -85,7 +85,7 @@ WHERE database_id = DB_ID()
  Especifica a hora, em segundos, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retém a rota na tabela de roteamento. No fim do tempo de vida, a rota expira e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não a considera mais ao escolher uma rota para uma nova conversa. Se essa cláusula for omitida, a *route_lifetime* será NULL e a rota nunca expirará.  
   
  ADDRESS **='**_next\_hop\_address_**'**  
-Para a Instância Gerenciada do Banco de Dados SQL, `ADDRESS` deve ser local. 
+Para a instância gerenciada do Banco de Dados SQL, `ADDRESS` deve ser local. 
 
 Especifica o endereço de rede para essa rota. O *next_hop_address* especifica um endereço TCP/IP no seguinte formato:  
   
@@ -153,7 +153,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Criando uma rota TCP/IP com o uso de um nome NetBIOS  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>b. Criando uma rota TCP/IP com o uso de um nome NetBIOS  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/Expenses`. A rota especifica que as mensagens para esse serviço passam pelo TCP na porta `1234` do host identificado com o nome NetBIOS `SERVER02`. Na chegada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino entrega a mensagem à instância de banco de dados identificada pelo identificador exclusivo `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  

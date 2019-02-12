@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327897"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421403"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\*SQL Server\*_**|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\*SQL Server\*_**|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* Banco de Dados SQL<br />servidor lógico \*_**|[Banco de Dados SQL<br />Instância Gerenciada](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Banco de dados individual/pool elástico do Banco de Dados SQL do Azure
   
 ## <a name="syntax"></a>Sintaxe 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argumentos  
 *login_name*  
-Especifica o nome do logon criado. O servidor lógico do Banco de Dados SQL do Azure é compatível apenas com logons do SQL. 
+Especifica o nome do logon criado. O banco de dados individual/pool elástico do Banco de Dados SQL do Azure oferece suporte apenas a logins do SQL. 
 
 PASSWORD **='** password**'*  
 Especifica a senha do logon do SQL que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]armazenadas, informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal. 
@@ -320,7 +320,7 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 
 ## <a name="logins"></a>Logons
 - Devem ter a permissão **ALTER ANY LOGIN** no servidor ou associação na função de servidor fixa **securityadmin**. Somente uma conta do Azure AD (Azure Active Directory) com a permissão **ALTER ANY LOGIN** no servidor ou associação na permissão securityadmin pode executar esse comando
-- Devem ser um membro do Azure AD dentro do mesmo diretório usado para o servidor lógico do Azure SQL
+- Devem ser um membro do Azure AD dentro do mesmo diretório usado para o servidor do Banco de Dados SQL do Azure
   
 ## <a name="after-creating-a-login"></a>Após criar um logon  
 Depois de criar um logon, ele poderá se conectar ao Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir. 
@@ -378,16 +378,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Banco de Dados SQL<br />Instância Gerenciada \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
 
 ## <a name="syntax"></a>Sintaxe 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -398,7 +398,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 ```  
 
 > [!IMPORTANT]
-> Os logons do Azure AD para a Instância Gerenciada do Banco de Dados SQL estão em **versão prévia pública**. Isso é apresentado com a sintaxe **FROM EXTERNAL PROVIDER**.
+> Os logons do Azure AD para a instância gerenciada do Banco de Dados SQL estão em **versão prévia pública**. Isso é apresentado com a sintaxe **FROM EXTERNAL PROVIDER**.
 
 ## <a name="arguments"></a>Argumentos
 *login_name*  
@@ -423,7 +423,7 @@ Usado para recriar um logon. Aplica-se apenas a logons de autenticação do SQL 
     - O login_name deve representar uma conta existente do Azure AD (usuário, grupo ou aplicativo) acessível no Azure AD pela atual instância gerenciada do SQL.
     - A opção **PASSWORD** não pode ser usada.
     - Atualmente, o primeiro logon do Azure AD deve ser criado pela conta do SQL Server (não Azure AD) padrão que é um `sysadmin` usando a sintaxe acima.
-        - Ao criar um logon do Azure AD usando um administrador do Azure AD para a Instância Gerenciada do Banco de Dados SQL, ocorre o seguinte erro:</br>
+        - Ao criar um logon do Azure AD usando um administrador do Azure AD para a instância gerenciada do Banco de Dados SQL, ocorre o seguinte erro:</br>
         `Msg 15247, Level 16, State 1, Line 1
         User does not have permission to perform this action.`
         - Essa é uma limitação conhecida para a **versão prévia pública** e será corrigida posteriormente.
@@ -440,14 +440,14 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 Por padrão, a permissão padrão concedida para um logon do Azure AD recém-criado no mestre é:
 - **CONNECT SQL** e **VIEW ANY DATABASE**.
 
-### <a name="sql-database-managed-instance-logins"></a>Logons de Instância Gerenciada do Banco de Dados SQL
+### <a name="sql-database-managed-instance-logins"></a>Logons de instância gerenciada do Banco de Dados SQL
 
 - Devem ter a permissão **ALTER ANY LOGIN** no servidor ou associação naquela das funções de servidor fixadas `securityadmin` ou `sysadmin`. Somente uma conta do Azure AD (Azure Active Directory) com a permissão **ALTER ANY LOGIN** no servidor ou associação em uma dessas funções pode executar o comando create.
 - Se o logon for uma Entidade de Segurança SQL, somente os logons que fizerem parte da função `sysadmin` poderão usar o comando create para criar logons para uma conta do Azure AD.
-- Devem ser um membro do Azure AD dentro do mesmo diretório usado para a Instância Gerenciada do SQL do Azure.
+- Devem ser um membro do Azure AD dentro do mesmo diretório usado para a instância gerenciada do SQL do Azure.
 
 ## <a name="after-creating-a-login"></a>Após criar um logon  
-Depois de criar um logon, ele poderá se conectar a uma Instância Gerenciada do Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir. 
+Depois de criar um logon, ele poderá se conectar a uma instância gerenciada do Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir. 
   
 - Para criar um usuário do Azure AD de um logon do Azure AD, confira [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
 - Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, confira e instruções de [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles e [GRANT](grant-transact-sql.md).
@@ -553,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -665,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

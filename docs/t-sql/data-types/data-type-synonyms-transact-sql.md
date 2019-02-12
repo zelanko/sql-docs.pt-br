@@ -1,7 +1,7 @@
 ---
 title: Sinônimos de tipo de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 07/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 482177b87fb4d62cbebb64361e0b26ed9a681c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74fe3be365919d61a7b32587f910f083cc5e846d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816554"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034207"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Sinônimos de tipo de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,23 +35,27 @@ Os sinônimos de tipos de dados são incluídos no [!INCLUDE[ssNoVersion](../../
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** *n* **)**|**char(n)**|  
-|**character varying(** *n* **)**|**varchar(n)**|  
+|**character(**_n_**)**|**char(n)**|  
+|**character varying(**_n_**)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Precisão dupla**|**float**|  
-|**float**[**(***n***)**] para *n* = 1-7|**real**|  
-|**float**[**(***n***)**] para *n* = 8-15|**float**|  
+|**float**[**(**_n_**)**] para _n_ = 1-7|**real**|  
+|**float**[**(**_n_**)**] para _n_ = 8-15|**float**|  
 |**inteiro**|**int**|  
-|**national character(** *n* **)**|**nchar(n)**|  
-|**national char(** *n* **)**|**nchar(n)**|  
-|**national character varying(** *n* **)**|**nvarchar(n)**|  
-|**national char varying(** *n* **)**|**nvarchar(n)**|  
+|**national character(**_n_**)**|**nchar(n)**|  
+|**national char(**_n_**)**|**nchar(n)**|  
+|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Os sinônimos de tipo de dados podem ser usados no lugar do nome do tipo de dados base correspondente em instruções DDL (linguagem de definição de dados), como CREATE TABLE, CREATE PROCEDURE ou DECLARE *@variable*. Entretanto, depois que o objeto é criado, os sinônimos não têm nenhuma visibilidade. Quando o objeto é criado, é atribuído a ele o tipo de dados base associado ao sinônimo. Não há nenhum registro de que o sinônimo foi especificado na instrução que criou o objeto.
+Os sinônimos de tipo de dados podem ser usados no lugar do nome do tipo de dados base correspondente em instruções DDL (linguagem de definição de dados). Essas instruções incluem CREATE TABLE, CREATE PROCEDURE e DECLARE *@variable*. Entretanto, depois que o objeto é criado, os sinônimos não têm nenhuma visibilidade. Quando o objeto é criado, é atribuído a ele o tipo de dados base associado ao sinônimo. Não há nenhum registro de que o sinônimo foi especificado na instrução que criou o objeto.
   
-O tipo de dados base é atribuído a todos os objetos derivados do objeto original, como expressões ou colunas de conjuntos de resultados. Todas as funções de metadados subsequentes executadas no objeto original e em objetos derivados informarão o tipo de dados base, não o sinônimo. Esse comportamento ocorre com operações de metadados, como **sp_help** e outros procedimentos armazenados de sistema, as exibições de esquema de informações ou as várias operações de metadados da API de acesso a dados que informam os tipos de dados de tabela ou colunas de conjuntos de resultados.
+O tipo de dados base é atribuído aos objetos derivados do objeto original, como expressões ou colunas de conjuntos de resultados. Todas as funções de metadados que usam o objeto original ou qualquer objeto derivado relatarão o tipo de dados base, não o sinônimo, incluindo:
+
+* operações de metadados, como **sp_help** e outros procedimentos armazenados do sistema,
+* exibições do esquema de informações e
+* operações de metadados da API de acesso a dados que relatam os tipos de dados das colunas da tabela ou do conjunto de resultados.
   
 Por exemplo, você pode criar uma tabela especificando `national character varying`:
   
@@ -59,7 +63,7 @@ Por exemplo, você pode criar uma tabela especificando `national character varyi
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol` é, na realidade, atribuído a um tipo de dados **nvarchar(10)**, e todas as funções de metadados subsequentes relatarão a coluna como **nvarchar(10)**. As funções de metadados nunca serão informadas como uma coluna **national character varying(10)**.
+`VarCharCol` é atribuído a um tipo de dados **nvarchar(10)**, e todas as funções de metadados seguintes relatarão a coluna como **nvarchar(10)**. As funções de metadados nunca serão informadas como uma coluna **national character varying(10)**.
   
 ## <a name="see-also"></a>Confira também
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

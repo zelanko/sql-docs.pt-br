@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805772"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421493"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[Banco de Dados SQL<br />Instância Gerenciada](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -940,13 +940,13 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Banco de Dados SQL<br />Instância Gerenciada \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
 
-Faz backup de um Banco de Dados SQL colocado/hospedado em uma instância gerenciada do Banco de Dados SQL do Azure. A [Instância Gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) do Banco de Dados SQL tem backups automáticos e permite aos usuários criar backups `COPY_ONLY` de bancos de dados completos. Não há suporte para backups de instantâneo de arquivo, log e diferencial.  
+Faz backup de um Banco de Dados SQL colocado/hospedado em uma instância gerenciada do Banco de Dados SQL do Azure. A [instância gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) do Banco de Dados SQL tem backups automáticos e permite aos usuários criar backups `COPY_ONLY` de bancos de dados completos. Não há suporte para backups de instantâneo de arquivo, log e diferencial.  
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -988,9 +988,9 @@ DATABASE
 Especifica um backup completo do banco de dados. Durante um backup de banco de dados, a instância gerenciada faz backup suficiente do log de transações para produzir um banco de dados consistente quando o backup é restaurado.  
 
 > [!IMPORTANT]
-> Um backup de banco de dados criado em uma instância gerenciada só pode ser restaurado em outra Instância Gerenciada. Ele não pode ser restaurado para uma instância local do SQL Server (semelhante ao modo como um backup de um banco de dados do SQL Server 2016 não pode ser restaurado para uma instância do SQL Server 2012).
+> Um backup de banco de dados criado em uma instância gerenciada só pode ser restaurado em outra instância gerenciada. Ele não pode ser restaurado para uma instância local do SQL Server (semelhante ao modo como um backup de um banco de dados do SQL Server 2016 não pode ser restaurado para uma instância do SQL Server 2012).
   
-Ao restaurar um backup criado por BACKUP DATABASE (um *backup de dados*), o backup inteiro é restaurado. Para restaurar por meio de backups automáticos da Instância Gerenciada do Banco de Dados SQL do Azure, consulte [Restauração do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
+Ao restaurar um backup criado por BACKUP DATABASE (um *backup de dados*), o backup inteiro é restaurado. Para restaurar por meio de backups automáticos da instância gerenciada do Banco de Dados SQL do Azure, confira [Restauração do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
 { *database_name* | **@**_database\_name\_var_ }   
 É o banco de dados do qual é feito o backup do banco de dados completo. Se for fornecido como uma variável (**@**_database\_name\_var_), esse nome poderá ser especificado como uma constante de cadeia de caracteres (**@**_database\_name\_var_**=**_database name_) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
@@ -1118,7 +1118,7 @@ Exibe uma mensagem sempre que outro *percentual* for concluída e é usado para 
   
 A opção STATS informa a porcentagem concluída de acordo com o limite de relatório do próximo intervalo. Esse limite é aproximadamente a porcentagem especificada. Por exemplo, com STATS=10, se a quantidade concluída for 40%, a opção poderá exibir 43%. Para conjuntos de backup grandes, isso não é um problema, porque a porcentagem concluída muda muito lentamente entre chamadas de E/S concluídas.  
   
-## <a name="limitations-for-sql-database-managed-instance"></a>Limitações para a Instância Gerenciada do Banco de Dados SQL
+## <a name="limitations-for-sql-database-managed-instance"></a>Limitações para a instância gerenciada do Banco de Dados SQL
 O tamanho máximo da faixa de backup é 195 GB (tamanho máximo do blob). Aumente o número de faixas no comando de backup para reduzir o tamanho da faixa individual e permaneça dentro desse limite.
 
 ## <a name="security"></a>Segurança  
@@ -1148,7 +1148,7 @@ WITH STATS = 5, COPY_ONLY;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Banco de Dados SQL<br />Instância Gerenciada](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 

@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517714"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484845"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  Especifica um nome para o formato de arquivo externo.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Especifica o formato dos dados externos.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Especifica o formato dos dados externos.
   
    -   PARQUET Especifica um formato Parquet.
   
@@ -122,7 +122,7 @@ WITH (
    -   DELIMITEDTEXT Especifica um formato de texto com delimitadores de coluna, também chamado de terminadores de campo.
   
  FIELD_TERMINATOR = *field_terminator*  
-Aplica-se somente a arquivos de texto delimitado. O terminador de campo especifica um ou mais caracteres que marcam o final de cada campo (coluna) no arquivo de texto delimitado. O padrão é o caractere barra vertical |. Para garantir o suporte, é recomendável usar um ou mais caracteres ASCII.
+Aplica-se somente a arquivos de texto delimitado. O terminador de campo especifica um ou mais caracteres que marcam o final de cada campo (coluna) no arquivo de texto delimitado. O padrão é o caractere barra vertical ꞌ|ꞌ. Para garantir o suporte, é recomendável usar um ou mais caracteres ASCII.
   
   
  Exemplos:  
@@ -131,7 +131,7 @@ Aplica-se somente a arquivos de texto delimitado. O terminador de campo especifi
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR = \t  
+-   FIELD_TERMINATOR = ꞌ\tꞌ  
   
 -   FIELD_TERMINATOR = '~|~'  
   
@@ -147,7 +147,7 @@ Especifica o terminador de campo dos dados da cadeia de caracteres de tipo no ar
   
 -   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = ,  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E' – dois tils (por exemplo, ~~)
  
@@ -171,7 +171,7 @@ O PolyBase só usa o formato de data personalizado para importar os dados. Ele n
   
 -   DateTimeOffset: 'aaaa-MM-dd HH:mm:ss'  
   
--   Hora: 'HH:mm:ss'  
+-   Time: 'HH:mm:ss'  
   
 **Há exemplos de formatos de data** na tabela a seguir:
   
@@ -282,7 +282,7 @@ Observações sobre a tabela:
   
  Quando os dados são armazenados em um dos formatos compactados, o PolyBase primeiro descompacta os dados antes de retornar os registros de dados.
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições
   
  O delimitador de linha nos arquivos de texto delimitados precisa ser compatível com o LineRecordReader do Hadoop. Ou seja, ele precisa ser '\r', '\n' ou '\r\n'. Esses delimitadores não podem ser configurados pelo usuário.
   
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>B. Criar um formato de arquivo externo RCFile  
+### <a name="b-create-an-rcfile-external-file-format"></a>b. Criar um formato de arquivo externo RCFile  
  Este exemplo cria um formato de arquivo externo para um RCFile que usa o método de serialização/desserialização org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Ela também especifica o uso do Codec padrão para o método de compactação de dados. Se DATA_COMPRESSION não for especificado, o padrão será sem compactação.
   
 ```  

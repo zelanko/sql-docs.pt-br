@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3f0b40e022db23cfcd650c5f2da4a5a14082d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327577"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421213"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54327577"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -127,7 +127,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+-- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -141,7 +141,7 @@ CREATE USER user_name
 ```
 
 > [!IMPORTANT]
-> Os logons do Azure AD para a Instância Gerenciada do Banco de Dados SQL estão em **versão prévia pública**.
+> Os logons do Azure AD para a instância gerenciada do Banco de Dados SQL estão em **versão prévia pública**.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -269,11 +269,11 @@ GO
   
  As informações sobre usuários de banco de dados estão visíveis na exibição do catálogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).
 
-Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER**, está disponível para a criação de logons do Azure AD no nível de servidor na Instância Gerenciada do Banco de Dados SQL. Os logons do Azure AD permitem o mapeamento de entidades de segurança do Azure AD no nível de banco de dados para logons do Azure AD no nível de servidor. Para criar um usuário do Azure AD com base em um logon do Azure AD, use a seguinte sintaxe:
+Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER**, está disponível para a criação de logons do Azure AD no nível de servidor na instância gerenciada do Banco de Dados SQL. Os logons do Azure AD permitem o mapeamento de entidades de segurança do Azure AD no nível de banco de dados para logons do Azure AD no nível de servidor. Para criar um usuário do Azure AD com base em um logon do Azure AD, use a seguinte sintaxe:
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-Ao criar o usuário no banco de dados da Instância Gerenciada do Banco de Dados SQL, o login_name precisa corresponder a um logon existente do Azure AD; caso contrário, o uso da cláusula **FROM EXTERNAL PROVIDER** somente criará um usuário do Azure AD sem um logon no banco de dados mestre. Por exemplo, este comando criará um usuário independente:
+Ao criar o usuário no banco de dados da instância gerenciada do Banco de Dados SQL, o login_name precisa corresponder a um logon existente do Azure AD; caso contrário, o uso da cláusula **FROM EXTERNAL PROVIDER** somente criará um usuário do Azure AD sem um logon no banco de dados mestre. Por exemplo, este comando criará um usuário independente:
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -464,11 +464,11 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. Criar um usuário do Azure AD com base em um logon do Azure AD na Instância Gerenciada do Banco de Dados SQL
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. Criar um usuário do Azure AD com base em um logon do Azure AD na instância gerenciada do Banco de Dados SQL
 
  Para criar um usuário do Azure AD com base em um logon do Azure AD, use a sintaxe a seguir.
 
- Entre na Instância Gerenciada com um logon do Azure AD concedido com a função `sysadmin`. O exemplo a seguir cria um usuário do Azure AD, bob@contoso.com, com base no logon bob@contoso.com. Esse logon foi criado no exemplo [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+ Entre na instância gerenciada com um logon do Azure AD concedido com a função `sysadmin`. O exemplo a seguir cria um usuário do Azure AD, bob@contoso.com, com base no logon bob@contoso.com. Esse logon foi criado no exemplo [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -494,7 +494,7 @@ GO
 
 ### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. Criar um usuário do Azure AD sem um logon do AAD para o banco de dados
 
-A seguinte sintaxe é usada para criar um usuário do Azure AD, bob@contoso.com, no banco de dados da Instância Gerenciada do Banco de Dados SQL (usuário independente):
+A seguinte sintaxe é usada para criar um usuário do Azure AD, bob@contoso.com, no banco de dados da instância gerenciada do Banco de Dados SQL (usuário independente):
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

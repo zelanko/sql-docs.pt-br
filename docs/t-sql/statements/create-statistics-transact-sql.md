@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12ca90e681e82e56485fa0feb33326aba49fac97
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: edaaf496dc8f58c2db8b3e01938b43d2437b39f8
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133736"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428623"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -247,7 +247,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>Os exemplos usam o banco de dados AdventureWorks.  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Usando CREATE STATISTICS com SAMPLE número PERCENT  
- O exemplo a seguir cria a estatística `ContactMail1` utilizando uma amostra aleatória de 5% das colunas `BusinessEntityID` e `EmailPromotion` da tabela `Contact` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ O exemplo a seguir cria a estatística `ContactMail1` utilizando uma amostra aleatória de 5% das colunas `BusinessEntityID` e `EmailPromotion` da tabela `Person` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -256,7 +256,7 @@ CREATE STATISTICS ContactMail1
 ```  
   
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>b. Usando CREATE STATISTICS com FULLSCAN e NORECOMPUTE  
- O exemplo a seguir cria a estatística `ContactMail2` de todas as linhas das colunas `BusinessEntityID` e `EmailPromotion` da tabela `Contact` e desabilita o recálculo de estatísticas.  
+ O exemplo a seguir cria a estatística `NamePurchase` de todas as linhas das colunas `BusinessEntityID` e `EmailPromotion` da tabela `Person` e desabilita o recálculo de estatísticas.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -289,7 +289,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Usando CREATE STATISTICS com FULLSCAN e PERSIST_SAMPLE_PERCENT  
- O exemplo a seguir cria estatísticas `ContactMail2` para todas as linhas nas colunas `BusinessEntityID` e `EmailPromotion` da tabela `Contact` e define um percentual de amostragem de 100 por cento de todas as atualizações subsequentes que não especificam explicitamente um percentual de amostragem.  
+ O exemplo a seguir cria estatísticas `NamePurchase` para todas as linhas nas colunas `BusinessEntityID` e `EmailPromotion` da tabela `Person` e define um percentual de amostragem de 100 por cento de todas as atualizações subsequentes que não especificam explicitamente um percentual de amostragem.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

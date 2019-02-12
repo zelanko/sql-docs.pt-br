@@ -26,22 +26,22 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a7790e54a3418a7771f2355a071db9b8aab7a1d9
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637863"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570769"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Altera uma função de partição dividindo ou mesclando seus valores de limite. Ao executar ALTER PARTITION FUNCTION, uma partição de qualquer tabela ou índice que usa a função de partição pode ser dividida em duas partições, ou duas partições podem ser mescladas em uma única partição.  
+Altera uma função de partição dividindo ou mesclando seus valores de limite. Executar uma instrução ALTER PARTITION FUNCTION pode dividir uma partição de tabela ou índice que usa a função de partição em duas partições. A instrução também pode mesclar duas partições em uma partição a menos.  
   
 > [!CAUTION]  
 >  Mais de uma tabela ou índice podem usar a mesma função de partição. ALTER PARTITION FUNCTION afeta todos em uma única transação.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,34 +55,36 @@ ALTER PARTITION FUNCTION partition_function_name()
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *partition_function_name*  
- É o nome da função de partição a ser modificada.  
+*partition_function_name*  
+É o nome da função de partição a ser modificada.  
   
- SPLIT RANGE ( *boundary_value* )  
- Adiciona uma partição à função de partição. *boundary_value* determina o intervalo da nova partição e deve ser diferente dos intervalos de limite existentes da função de partição. Com base em *boundary_value*, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] divide um dos intervalos existentes em dois. Desses dois, aquele em que o novo *boundary_value* reside é considerado a nova partição.  
+SPLIT RANGE ( *boundary_value* )  
+Adiciona uma partição à função de partição. *boundary_value* determina o intervalo da nova partição e deve ser diferente dos intervalos de limite existentes da função de partição. Com base em *boundary_value*, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] divide um dos intervalos existentes em dois. Desses dois intervalos, aquele com o novo *boundary_value* é a nova partição.  
   
- Um grupo de arquivos deve existir online e ser marcado pelo esquema de partição que usa a função de partição como NEXT USED para reter a nova partição. Os grupos de arquivos são alocados em partições em uma instrução CREATE PARTITION SCHEME. Se uma instrução CREATE PARTITION SCHEME alocar mais grupos de arquivos que o necessário (são criadas menos partições na instrução CREATE PARTITION FUNCTION do que grupos de arquivos para retê-las), haverá grupos de arquivos não atribuídos e um deles será marcado como NEXT USED pelo esquema de partição. Esse grupo de arquivos irá reter a nova partição. Se não houver nenhum grupo de arquivos marcado como NEXT USED pelo esquema de partição, será necessário usar ALTER PARTITION SCHEME para adicionar um grupo de arquivos, ou designar um existente, para reter a nova partição. Um grupo de arquivos que já retém partições pode ser designado para reter partições adicionais. Como uma função de partição pode participar de mais de um esquema de partição, todos os esquemas de partição que usarem a função de partição à qual você está adicionando as partições deverão ter um grupo de arquivos NEXT USED. Caso contrário, ALTER PARTITION FUNCTION falhará com um erro que exibe o esquema ou os esquemas de partição que não possuem um grupo de arquivos NEXT USED.  
+Um grupo de arquivos deve existir online. E, o esquema de partição que usa a função de partição como NEXT USED para manter a nova partição deve marcar o grupo de arquivos. Uma instrução CREATE PARTITION SCHEME atribui grupos de arquivos a partições. A instrução CREATE PARTITION FUNCTION cria menos partições do que grupos de arquivos para armazená-las. Uma instrução CREATE PARTITION SCHEME pode separar mais grupos de arquivos do que o necessário. Se isso acontecer, você acabará com grupos de arquivos não atribuídos. Além disso, o esquema de partição marca um dos grupos de arquivos como NEXT USED. Esse grupo de arquivos contém a nova partição. Se não houver grupos de arquivos, o esquema de partições é marcado como NEXT USED, você deve usar uma instrução ALTER PARTITION SCHEME. 
+
+A instrução ALTER PARTITION SCHEME pode incluir um grupo de arquivos ou selecionar um existente, para manter a nova partição. Você pode atribuir um grupo de arquivos que já possui partições para armazenar partições adicionais. Uma função de partição pode participar de mais de um esquema de partição. Por esse motivo, todos os esquemas de partição que usam a função de partição na qual você está adicionando partições devem ter um grupo de arquivos NEXT USED. Caso contrário, a instrução ALTER PARTITION FUNCTION falhará com um erro que exibe o esquema ou esquemas de partição que não possuem um grupo de arquivos NEXT USED.  
   
- Se você criar todas as partições no mesmo grupo de arquivos, esse grupo de arquivos será inicialmente designado a ser o grupo de arquivos NEXT USED automaticamente. Entretanto, após a execução de uma operação de divisão, não existe mais um grupo de arquivos NEXT USED designado. É necessário atribuir explicitamente o NEXT USED como grupo de arquivos usando ALTER PARITION SCHEME; caso contrário, uma operação de divisão subsequente falhará.  
+Se você criar todas as partições no mesmo grupo de arquivos, esse grupo de arquivos será inicialmente designado a ser o grupo de arquivos NEXT USED automaticamente. No entanto, depois que uma operação de divisão é executada, não há mais um grupo de arquivos NEXT USED selecionado. Atribua explicitamente o grupo de arquivos como o grupo de arquivos NEXT USED usando ALTER PARTITION SCHEME ou uma operação de divisão subsequente irá falhar.  
   
 > [!NOTE]  
->  Limitações com índice columnstore: somente partições vazias podem ser divididas quando existe um índice columnstore na tabela. Você precisará remover ou desabilitar o índice columnstore antes de executar esta operação  
+>  Limitações com índice columnstore: somente partições vazias podem ser divididas quando existe um índice columnstore na tabela. Você precisará remover ou desabilitar o índice columnstore antes de executar esta operação.  
   
- MERGE [ RANGE ( *boundary_value*) ]  
- Descarta uma partição e mescla os valores que existirem na partição em uma das partições restantes. RANGE (*boundary_value*) deve ser um valor de limite existente no qual são mesclados os valores da partição descartada. O grupo de arquivos que originalmente continha o *boundary_value* é removido do esquema de partição, a menos que seja usado por uma partição restante ou marcado com a propriedade NEXT USED. A partição mesclada reside no grupo de arquivos que originalmente não continha *boundary_value*. *boundary_value* é uma expressão constante que pode fazer referência a variáveis (incluindo variáveis de tipo definido pelo usuário) ou funções (incluindo funções definidas pelo usuário). Ela não pode referenciar uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corresponder ou poder ser implicitamente convertido no tipo de dados de suas colunas de particionamento correspondentes e não pode ser truncado durante conversão implícita de modo que o tamanho e a escala do valor não sejam equivalentes a seu *input_parameter_type* correspondente.  
+MERGE [ RANGE ( *boundary_value*) ]  
+Descarta uma partição e mescla os valores que existirem na partição em uma partição restante. RANGE (*boundary_value*) deve ser um valor de limite existente no qual são mesclados os valores da partição descartada. Esse argumento remove o grupo de arquivos que originalmente continha *boundary_value* do esquema de partição, a menos que uma partição restante o utilize ou marque com a propriedade NEXT USED. A partição mesclada existe no grupo de arquivos que originalmente não continha *boundary_value*. *boundary_value* é uma expressão constante que pode fazer referência a variáveis (incluindo variáveis de tipo definido pelo usuário) ou funções (incluindo funções definidas pelo usuário). Ela não pode referenciar uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corresponder ou ser implicitamente conversível para o tipo de dados de sua coluna de particionamento correspondente. Você também não pode truncar *boundary_value* durante a conversão implícita de forma que o tamanho e a escala do valor não correspondam aos valores correspondentes ao *input_parameter_type*.  
   
 > [!NOTE]  
 >  Limitações com índice columnstore: duas partições não vazias contendo um índice columnstore não podem ser mescladas. Você precisará remover ou desabilitar o índice columnstore antes de executar esta operação  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
- Sempre mantenha partições vazias em ambas as extremidades do intervalo de partição para garantir que a divisão de partição (antes de carregar novos dados) e a mesclagem de partição (depois de descarregar dados antigos) não incorram em nenhum movimento de dados. Evite dividir ou mesclar partições populadas. Isso pode ser extremamente ineficiente, pois pode causar até quatro vezes mais geração de log e também pode causar bloqueio severo.  
+Sempre mantenha as partições vazias em ambas as extremidades do intervalo de partição. Mantenha as partições em ambas as extremidades para garantir que a divisão da partição e a mesclagem da partição não gerem nenhuma movimentação de dados. A divisão da partição ocorre no início e a mesclagem da partição ocorre no final. Evite dividir ou mesclar partições populadas. A divisão ou mesclagem de partições preenchidas pode ser ineficiente. Elas podem ser ineficientes porque a divisão ou mesclagem pode causar até quatro vezes mais geração de logs, e também pode causar bloqueio grave.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- ALTER PARTITION FUNCTION reparticiona quaisquer tabelas e índices que usam a função em uma única operação atômica. Entretanto, essa operação acontece offline e, dependendo da extensão de reparticionamento, pode utilizar muitos recursos.  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
+ALTER PARTITION FUNCTION reparticiona quaisquer tabelas e índices que usam a função em uma única operação atômica. Entretanto, essa operação acontece offline e, dependendo da extensão de reparticionamento, pode utilizar muitos recursos.  
   
- ALTER PARTITION FUNCTION só pode ser usada para dividir uma partição em duas ou mesclar duas partições em uma. Para alterar a forma como uma tabela é particionada (por exemplo, de 10 partições em 5), execute qualquer uma das opções a seguir. Dependendo da configuração do sistema, essas opções podem variar em consumo de recursos:  
+Use ALTER PARTITION FUNCTION somente para dividir uma partição em duas ou mesclar duas partições em uma. Para alterar a forma como uma tabela é particionada (por exemplo, de 10 partições em cinco), execute qualquer uma das opções a seguir. Dependendo da configuração do sistema, essas opções podem variar em consumo de recursos:  
   
--   Crie uma nova tabela particionada com a função de partição desejada e insira os dados da tabela antiga na nova tabela, usando uma instrução INSERT INTO...SELECT FROM.  
+-   Crie uma nova tabela particionada com a função de partição necessária. Em seguida, insira os dados da tabela antiga na nova tabela usando uma instrução INSERT INTO...SELECT FROM.  
   
 -   Crie um índice clusterizado particionado em um heap.  
   
@@ -93,14 +95,14 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   Execute uma sequência de instruções ALTER PARTITION FUNCTION.  
   
- Todos os grupos de arquivos afetados por ALTER PARTITION FUNCTION devem estar online.  
+Todos os grupos de arquivos afetados por ALTER PARTITION FUNCTION devem estar online.  
   
- ALTER PARTITION FUNCTION falha quando há um índice clusterizado desabilitado em qualquer tabela que usa a função de partição.  
+ALTER PARTITION FUNCTION falha quando há um índice clusterizado desativado em qualquer tabela que usa a função de partição.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece suporte de replicação para modificar uma função de partição. As alterações em uma função de partição no banco de dados de publicação devem ser aplicadas manualmente no banco de dados de assinatura.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece suporte de replicação para modificar uma função de partição. As alterações em uma função de partição no banco de dados de publicação devem ser aplicadas manualmente no banco de dados de assinatura.  
   
 ## <a name="permissions"></a>Permissões  
- Qualquer uma das permissões a seguir pode ser usada para executar ALTER PARTITION FUNCTION:  
+Qualquer uma das permissões a seguir pode ser usada para executar ALTER PARTITION FUNCTION:  
   
 -   Permissão ALTER ANY DATASPACE. Essa permissão tem como padrão os membros da função de servidor fixa **sysadmin** e das funções de banco de dados fixas **db_owner** e **db_ddladmin** .  
   
@@ -111,7 +113,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. Dividindo uma partição de uma tabela ou índice particionado em duas partições  
- O exemplo a seguir cria uma função de partição para dividir uma tabela ou índice em quatro partições. `ALTER PARTITION FUNCTION` divide uma das partições em dois para criar um total de cinco partições.  
+O exemplo a seguir cria uma função de partição para dividir uma tabela ou índice em quatro partições. `ALTER PARTITION FUNCTION` divide uma das partições em dois para criar um total de cinco partições.  
   
 ```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
@@ -128,8 +130,8 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 SPLIT RANGE (500);  
 ```  
   
-### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. Mesclando duas partições de uma tabela particionada em uma partição  
- O exemplo a seguir cria a mesma função de partição anterior e mescla duas partições em uma, para um total de três partições.  
+### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>b. Mesclando duas partições de uma tabela particionada em uma partição  
+O exemplo a seguir cria a mesma função de partição anterior e mescla duas partições em uma, para um total de três partições.  
   
 ```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
@@ -147,21 +149,20 @@ MERGE RANGE (100);
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
+[Tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
+[CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
+[DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+[CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
+[ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+[DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+[sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+[sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md) [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+[sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+[sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+[sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   

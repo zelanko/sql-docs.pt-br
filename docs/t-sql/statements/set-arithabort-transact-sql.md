@@ -28,19 +28,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c00302049a1831a7126484e953fc2ce384724bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffe255903a397fd3bc1f36dd57cf38f17eac00ba
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841484"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652545"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Encerra uma consulta quando ocorre estouro ou erro de divisão por zero durante a execução da consulta.  
+Encerra uma consulta quando ocorre estouro ou erro de divisão por zero durante a execução da consulta.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,33 +57,33 @@ SET ARITHABORT ON
 ```
   
 ## <a name="remarks"></a>Remarks  
- Você sempre deve definir ARITHABORT como ON nas sessões de logon. A definição de ARITHABORT como OFF pode afetar negativamente a otimização de consulta, levando a problemas de desempenho.  
+Sempre defina ARITHABORT como ON nas sessões de logon. A definição de ARITHABORT como OFF pode afetar negativamente a otimização de consulta, levando a problemas de desempenho.  
   
 > [!WARNING]  
 >  A configuração padrão ARITHABORT de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é ON. Os aplicativos cliente que definem ARITHABORT como OFF podem receber planos de consulta diferentes, dificultando a solução de problemas de consultas executadas insatisfatoriamente. Ou seja, a mesma consulta pode ser executada rapidamente no Management Studio, mas lentamente no aplicativo. Ao solucionar problemas de consultas com [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], sempre faça a correspondência com a configuração ARITHABORT do cliente.  
   
- Se SET ARITHABORT for ON e SET ANSI WARNINGS for ON, essas condições de erro provocam o encerramento da consulta.  
+Quando as opções SET ARITHABORT e SET ANSI WARNINGS são definidas como ON, essas condições de erro provocam o encerramento da consulta.  
   
- Se SET ARITHABORT for ON e SET ANSI WARNINGS for OFF, essas condições de erro provocam o encerramento do lote. Se ocorrer erro em uma transação, a transação será revertida. Se SET ARITHABORT for OFF e ocorrer um desses erros, será exibida uma mensagem de aviso e NULL será atribuído ao resultado da operação aritmética.  
+Quando as opções SET ARITHABORT e SET ANSI WARNINGS são definidas como OFF, essas condições de erro provocam o encerramento do lote. Se ocorrer erro em uma transação, a transação será revertida. Quando a opção SET ARITHABORT é definida como OFF e um desses erros ocorre, uma mensagem de aviso aparece e o resultado da operação aritmética é NULL.  
   
- Se SET ARITHABORT for OFF e SET ANSI WARNINGS for OFF, e um desses erros ocorrer, será exibida uma mensagem de aviso, e NULL será atribuído ao resultado da operação aritmética.  
+Se as opções SET ARITHABORT e SET ANSI WARNINGS estão definidas como OFF e um desses erros ocorre, uma mensagem de aviso é exibida e o resultado da operação aritmética é NULL.  
   
 > [!NOTE]  
->  Se nem a propriedade SET ARITHABORT e nem SET ARITHIGNORE forem definidas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará NULL e uma mensagem de aviso após a execução da consulta.  
+>  Se nem SET ARITHABORT e nem SET ARITHIGNORE estão definidas como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna NULL e uma mensagem de aviso é exibida após a execução da consulta.  
   
- A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados estiver definido como 90 ou mais. Se o nível de compatibilidade do banco de dados for definido como 80 ou menos, a opção ARITHABORT deverá ser definida explicitamente como ON.  
+A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados estiver definido como 90 ou mais. Se o nível de compatibilidade do banco de dados for definido como 80 ou menos, a opção ARITHABORT deverá ser definida explicitamente como ON.  
   
- Durante a avaliação da expressão, se SET ARITHABORT for OFF e se uma instrução INSERT, DELETE ou UPDATE encontrar um erro aritmético, de estouro, de divisão por zero ou de domínio, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserirá ou atualizará um valor NULL. Se a coluna de destino não for anulável, a ação de inserção ou atualização falhará e o usuário receberá uma mensagem de erro.  
+Na avaliação da expressão, se SET ARITHABORT é OFF e se uma instrução INSERT, UPDATE ou DELETE encontra um erro aritmético, de estouro, de divisão por zero ou de domínio, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insere ou atualiza um valor NULL. Se a coluna de destino não for anulável, a ação de inserção ou atualização falhará e o usuário receberá uma mensagem de erro.  
   
- Se SET ARITHABORT ou SET ARITHIGNORE estiver definida como OFF e SET ANSI_WARNINGS como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda retornará uma mensagem de erro quando encontrar erros de divisão por zero ou de estouro.  
+Quando SET ARITHABORT ou SET ARITHIGNORE estiver definida como OFF e SET ANSI_WARNINGS como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda retornará uma mensagem de erro quando encontrar erros de divisão por zero ou de estouro.  
   
- Se SET ARITHABORT for definido como OFF e ocorrer um erro de anulação durante a avaliação da condição booliana de uma instrução IF, o branch FALSE será executado.
+Quando a opção SET ARITHABORT for definida como OFF e ocorrer um erro de anulação durante a avaliação da condição booliana de uma instrução IF, o branch FALSE será executado.
   
- SET ARITHABORT deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou modos de exibição indexados. Se SET ARITHABORT for OFF, toda instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou modos de exibição indexados falhará.
+SET ARITHABORT deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou modos de exibição indexados. Se SET ARITHABORT for OFF, toda instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou modos de exibição indexados falhará.
   
- A configuração de SET ARITHABORT é definida no momento da execução e não no momento da análise.  
+A configuração de SET ARITHABORT é definida no momento da execução e não no momento da análise.  
   
- Para exibir a configuração atual dessa configuração, execute a seguinte consulta:
+Para exibir a configuração atual de SET ARITHABORT, execute a seguinte consulta:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -93,10 +93,10 @@ SELECT @ARITHABORT AS ARITHABORT;
 ```  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** .  
+Requer associação à função **pública** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo seguinte demonstra erros de divisão por zero e de estouro com as duas configurações de `SET ARITHABORT`.  
+O exemplo seguinte demonstra erros de divisão por zero e de estouro com as configurações de `SET ARITHABORT`.  
   
 ```  
 -- SET ARITHABORT  

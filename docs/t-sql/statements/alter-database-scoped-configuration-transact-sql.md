@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838113"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421313"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -216,8 +216,8 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Permite configurar a funcionalidade de soltar automaticamente para [tabelas temporárias globais](create-table-transact-sql.md). O padrão é ON, o que significa que as tabelas temporárias globais são descartadas automaticamente quando não estão em uso por qualquer sessão. Quando definido como OFF, as tabelas temporárias globais precisarão ser descartadas explicitamente usando uma instrução DROP TABLE, ou serão removidas automaticamente na reinicialização do servidor.
 
-- No servidor lógico do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa opção pode ser definida nos bancos de dados de usuário individual do servidor lógico.
-- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e na Instância Gerenciada [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa opção é definida em `TempDB` e a configuração dos bancos de dados de usuário individuais não tem nenhum efeito.
+- Com bancos de dados únicos e pools elásticos do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa opção pode ser definida nos bancos de dados de usuários individuais do servidor do Banco de Dados SQL.
+- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e na instância gerenciada [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa opção é definida em `TempDB` e a configuração dos bancos de dados de usuário individuais não tem nenhum efeito.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 

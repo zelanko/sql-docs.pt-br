@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 23f7329c6964f59cb0b7cb9f0d2db6d3b4b825ad
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960760"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420943"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só pode aceitar pá
 -   Ao restaurar ou anexar um banco de dados, a ordenação padrão do banco de dados e a ordenação de qualquer coluna ou parâmetro **char**, **varchar** e **text** no banco de dados devem ser compatíveis com o sistema operacional.  
   
 > [!NOTE]
-> A ordenação do servidor da Instância Gerenciada do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é **SQL_Latin1_General_CP1_CI_AS** e não pode ser alterada.
+> A ordenação do servidor da instância gerenciada do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é **SQL_Latin1_General_CP1_CI_AS** e não pode ser alterada.
 
 > [!NOTE]
 > Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. A perda de dados durante traduções de página de código não é informada.  
@@ -153,7 +153,7 @@ Colima
 Chiapas
 ```  
   
-### <a name="b-additional-examples"></a>B. Exemplos adicionais  
+### <a name="b-additional-examples"></a>b. Exemplos adicionais  
  Para obter mais exemplos que usam **COLLATE**, confira [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples), exemplo **G. Criando um banco de dados e especificando um nome de ordenação e opções** e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column), exemplo **V. Alterando uma ordenação de coluna**.  
   
 ## <a name="see-also"></a>Consulte Também  
