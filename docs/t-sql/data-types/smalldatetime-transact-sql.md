@@ -1,7 +1,7 @@
 ---
 title: smalldatetime (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5c1b54c33a7d50b695c4cf6f1318e435909e7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737804"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030991"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,9 +53,9 @@ Define uma data que é combinada com uma hora do dia. A hora se baseia em um dia
 |Precisão|Um minuto|  
 |Valor padrão|1900-01-01 00:00:00|  
 |Calendário|Gregoriano<br /><br /> (Não inclui o intervalo completo de anos.)|  
-|Precisão de segundo fracionário definida pelo usuário|não|  
-|Preservação e reconhecimento de deslocamento de fuso horário|não|  
-|Reconhecimento de horário de verão|não|  
+|Precisão de segundo fracionário definida pelo usuário|Não|  
+|Preservação e reconhecimento de deslocamento de fuso horário|Não|  
+|Reconhecimento de horário de verão|Não|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformidade com ANSI e ISO 8601  
 **smalldatetime** não está em conformidade com o ANSI ou ISO 8601.
@@ -164,7 +164,7 @@ SELECT
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  
 |2007-05-08 12:59:59.998|2007-05-08 13:00:00|  
   
-### <a name="b-comparing-date-and-time-data-types"></a>B. Comparando tipos de dados de data e hora  
+### <a name="b-comparing-date-and-time-data-types"></a>b. Comparando tipos de dados de data e hora  
 O exemplo a seguir compara os resultados da conversão de uma cadeia de caracteres para cada tipo de dados de data e hora.
   
 ```sql
