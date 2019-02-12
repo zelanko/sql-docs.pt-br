@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 74154a3cf39f3ba06346acea3c00d5e2ad8f563c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 7aa0f6e28dae59d7559dbb009ce4441dd4a2119d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013137"
 ---
 # <a name="xml-device-information-settings"></a>Configurações de informações do dispositivo XML
   A tabela a seguir lista as configurações de informações de dispositivo para renderização no formato XML.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037807"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Criar relatórios com o Designer de Relatórios (SSRS)
   Use o Designer de Relatórios para criar relatórios e soluções completas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O Designer de Relatórios fornece uma interface gráfica na qual você pode definir fontes de dados, conjuntos de dados e consultas, posições do layout do relatório para regiões de dados e campos e recursos interativos, como parâmetros e conjuntos de relatórios que funcionam em conjunto.  
@@ -34,7 +34,7 @@ ms.locfileid: "48145886"
   
 -   Preservar um conjunto de cópias mestres para relatórios e itens relacionados. Depois da implantação, os relatórios publicados podem ser modificados acidentalmente.  
   
- Use as informações deste tópico para criar relatórios e itens relacionados para um único projeto de relatório em uma solução do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Para obter mais informações sobre soluções e vários projetos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Reporting Services no SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
+ Use as informações deste tópico para criar relatórios e itens relacionados para um único projeto de relatório em uma solução do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Para obter mais informações sobre soluções e vários projetos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_SharedDataSources"></a> Fontes de dados compartilhadas  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar fontes de dados compartilhadas para uma solução de relatório. As fontes de dados compartilhadas podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDataSources** e **TargetDataSourceFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "48145886"
   
     -   Pressione F5.  
   
-     Se você usar uma configuração de projeto que cria o relatório, mas não implantá-lo, o que é especificado no relatório de `StartItem` propriedade da configuração atual é aberto em uma janela de visualização separada.  
+     Se você usar a configuração de projeto que cria um relatório mas não o implanta, o relatório especificado na propriedade `StartItem` da configuração atual será aberto em outra janela de visualização.  
   
     > [!NOTE]  
     >  Para usar o modo de Depuração, defina um item inicial. No Gerenciador de soluções, clique com botão direito no projeto de relatório, clique em **propriedades**e, em `StartItem`, selecione o nome do relatório a ser exibido.  
@@ -175,7 +175,7 @@ ms.locfileid: "48145886"
   
  A tabela a seguir lista os níveis de erro.  
   
-|Nível de erro|Description|  
+|Nível de erro|Descrição|  
 |-----------------|-----------------|  
 |0|Problemas de compilação mais severos e inevitáveis que impedem a visualização e a implantação de relatórios.|  
 |1|Problemas de compilação severos que alteram o layout de relatório drasticamente.|  
@@ -183,7 +183,7 @@ ms.locfileid: "48145886"
 |3|Problemas de compilação secundários que alteram o layout de relatório de maneira quase imperceptível.|  
 |4|Somente usado para publicar avisos.|  
   
- Quando você tenta visualizar ou implantar um relatório que contém itens de relatório novos em [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], como mapas e barras de dados, esses itens de relatório podem ser removidos do relatório. Por padrão, a propriedade ErrorLevel da configuração é definida como 2, o que causa a falha de build do relatório quando o mapa é removido. Porém, se você alterar o valor da propriedade ErrorLevel para 0 ou 1, o mapa será removido, um aviso será emitido e o processo de build continuará.  
+ Quando você tenta visualizar ou implantar um relatório que contém novos itens de relatório no [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], como mapas e barras de dados, esses itens de relatório podem ser removidos do relatório. Por padrão, a propriedade ErrorLevel da configuração é definida como 2, o que causa a falha de build do relatório quando o mapa é removido. Porém, se você alterar o valor da propriedade ErrorLevel para 0 ou 1, o mapa será removido, um aviso será emitido e o processo de build continuará.  
   
   
 ## <a name="see-also"></a>Consulte também  

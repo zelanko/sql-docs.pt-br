@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: eb106ea00037c6c9c8fc236186c9d0882decdd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e4a12c97b476a0231e230dda16eaa667fcf0a642
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122796"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020737"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Usando assemblies de nome forte personalizados
   Um nome forte identifica um assembly e inclui seu nome de texto, o número de versão de quatro partes, informações de cultura (se fornecidas), uma chave pública e uma assinatura digital armazenada no manifesto do assembly. Um nome forte identifica exclusivamente um assembly para o CLR (common language runtime) e garante a integridade binária.  

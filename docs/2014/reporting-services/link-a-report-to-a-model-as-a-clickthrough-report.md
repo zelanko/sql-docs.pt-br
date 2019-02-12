@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7d0ec49168e4a23a019eb91fc708e286bf0e1ac4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095883"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037037"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Vincular um relatório a um modelo como um relatório de clickthrough
-  Em vez de usar os modelos de relatório de clickthrough padrão, você pode criar um relatório Construtor de Relatórios e vinculá-lo a uma entidade específica no modelo de relatório. Quando a pessoa que está exibindo o relatório clica nos dados interativos do relatório principal, esse relatório é exibido como relatório de clickthrough. Para vincular um relatório a uma entidade, use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gerenciador de relatórios.  
+  Em vez de usar os modelos de relatório de clickthrough padrão, você pode criar um relatório Construtor de Relatórios e vinculá-lo a uma entidade específica no modelo de relatório. Quando a pessoa que está exibindo o relatório clica nos dados interativos do relatório principal, esse relatório é exibido como relatório de clickthrough. Para vincular um relatório a uma entidade, use o Gerenciador de Relatórios [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  A entidade principal, ou básica, usada no relatório deve ser igual à entidade a qual o relatório está vinculado.  
   
 ### <a name="to-start-report-manager-from-a-browser"></a>Para iniciar o Gerenciador de Relatórios em um navegador  
   
-1.  Abra [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 ou posterior.  
+1.  Abra o [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 ou posterior.  
   
 2.  Na barra de endereço do navegador da Web, digite a URL do Gerenciador de Relatórios. Por padrão, a URL é http://\<*ComputerName*> / reports.  
   

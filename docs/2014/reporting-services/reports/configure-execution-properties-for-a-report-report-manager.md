@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3c908bfa457c9bc692c56a1625a64116365958db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9d4052b6e330bab1c32650b7cdeae7ecb5c7b21f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144636"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031077"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Configurar propriedades de execução de um relatório (Gerenciador de Relatórios)
   Você pode definir opções de processamento de relatório para especificar quando os dados são recuperados para um relatório. É útil agendar o processamento de dados de um relatório se a fonte de dados externa for atualizada em horários específicos (por exemplo, um data warehouse que é atualizado diária ou semanalmente) e você desejar evitar a sobrecarga da recuperação dos mesmos dados sempre que um relatório for solicitado. O agendamento do processamento de dados também é útil se você desejar controlar a carga de processamento no servidor de banco de dados externo ou quando você quiser fornecer resultados consistentes para vários usuários que devem trabalhar com conjuntos de dados idênticos. Com dados voláteis, um relatório sob demanda pode produzir resultados diferentes de um minuto para o outro. Por outro lado, um instantâneo de relatório permite fazer comparações válidas com outros relatórios ou ferramentas analíticas que contêm dados do mesmo momento.  
@@ -48,10 +48,10 @@ ms.locfileid: "48144636"
 3.  Clique em **Aplicar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatórios](../report-server/set-report-processing-properties.md)   
- [Abrir e fechar um relatório &#40;Gerenciador de relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../contents-page-report-manager.md)   
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Definir as propriedades do processamento de relatórios](../report-server/set-report-processing-properties.md)   
+ [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Página de propriedades Opções de Processamento &#40;Gerenciador de Relatórios&#41;](../processing-options-properties-page-report-manager.md)  
   
   

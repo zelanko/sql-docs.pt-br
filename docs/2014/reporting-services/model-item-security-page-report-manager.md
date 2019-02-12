@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08742a78d0992467a8fb596ecc4f267576f00701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195066"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025787"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página segurança de item de modelo (Gerenciador de Relatórios)
   Use essa página para proteger partes de um modelo concedendo ou revogando permissões somente leitura em itens específicos. A segurança de item de modelo afeta a exploração de dados ad hoc em tempo de execução e a capacidade de usar partes de um modelo publicado ao criar relatórios no Construtor de Relatórios. Para usar esse recurso, você deve ter permissões de Gerenciador de Conteúdo.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d9da0718a6eee5fda00d6418a5b6a624f8380c7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109430"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033477"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Criar uma fonte de dados inserida ou compartilhada (SSRS)
   Uma fonte de dados de relatório especifica um nome e informações de conexão. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a dois tipos de fontes de dados: inserida e compartilhada. Um fonte de dados inserida é definida em uma definição de relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida como um item separado e pode ser usada por vários relatórios. Para obter mais informações, consulte [fontes de dados e conexões de dados compartilhado ou inserido &#40;construtor de relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "48109430"
   
 ## <a name="see-also"></a>Consulte também  
  [Armazenar as credenciais em uma fonte de dados do Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Converter uma fonte de dados inserida em compartilhada &#40;relatórios e SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [Associar um relatório ou modelo a uma fonte de dados compartilhada &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Configurar as propriedades de fonte de dados de um relatório &#40;Gerenciador de Relatórios&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   

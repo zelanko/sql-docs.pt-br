@@ -2,8 +2,7 @@
 title: sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fd24c36801d4b17217ebe688d51913618697d6a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 889c6d1b1a4e61286a96c2b57acd1a1148a069a4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830229"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043377"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  É o número de código do tipo de dados especificado. Para obter uma lista de todos os tipos de dados, omita este parâmetro. *data_type* está **int**, com um padrão de 0.  
   
  [ **@ODBCVer=** ] *odbc_version*  
@@ -48,7 +47,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|Tipo de dados dependente do DBMS.|  
 |DATA_TYPE|**smallint**|Código do tipo ODBC para o qual são mapeadas todas as colunas deste tipo.|  
@@ -57,7 +56,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |LITERAL_SUFFIX|**varchar(** 32 **)**|Caractere ou caracteres usados para terminar uma constante. Por exemplo, uma marca de aspas simples (**'**) para tipos de caractere e nenhuma aspa para binário.|  
 |CREATE_PARAMS|**varchar(** 32 **)**|Descrição dos parâmetros de criação para este tipo de dados. Por exemplo, **decimais** é "precision, scale" **float** for NULL, e **varchar** é "max_length".|  
 |NULLABLE|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = Permite valores nulos.<br /><br /> 0 = Não permite valores nulos.|  
-|CASE_SENSITIVE|**smallint**|Especifica diferenciação de maiúsculas e minúsculas.<br /><br /> 1 = Todas as colunas deste tipo fazem diferenciação de maiúsculas e minúsculas (para agrupamentos).<br /><br /> 0 = Todas as colunas deste tipo não fazem distinção entre maiúsculas e minúsculas.|  
+|CASE_SENSITIVE|**smallint**|Especifica diferenciação de maiúsculas e minúsculas.<br /><br /> 1 = Todas as colunas deste tipo fazem diferenciação de maiúsculas e minúsculas (para ordenações).<br /><br /> 0 = Todas as colunas deste tipo não fazem distinção entre maiúsculas e minúsculas.|  
 |SEARCHABLE|**smallint**|Especifica o recurso de pesquisa do tipo de coluna:<br /><br /> 1 = Não pode ser pesquisado.<br /><br /> 2 = Pesquisável com LIKE.<br /><br /> 3 = Pesquisável com WHERE.<br /><br /> 4 = Pesquisável com WHERE ou LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Especifica o sinal do tipo de dados.<br /><br /> 1 = Tipo de dados não assinado.<br /><br /> 0 = Tipo de dados assinado.|  
 |MONEY|**smallint**|Especifica o **dinheiro** tipo de dados.<br /><br /> 1 = **dinheiro** tipo de dados.<br /><br /> 0 = não é um **dinheiro** tipo de dados.|  

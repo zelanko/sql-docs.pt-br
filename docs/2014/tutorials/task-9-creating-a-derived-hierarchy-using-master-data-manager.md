@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076876"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039327"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tarefa 9: Criando uma hierarquia derivada usando o Master Data Manager
   Nesta tarefa, você criará uma hierarquia derivada usando o Master Data Manager. Essa hierarquia é derivada de relações de atributo baseado em domínio entre o **Supplier** e **estado** entidades.  
@@ -41,11 +38,11 @@ ms.locfileid: "48076876"
   
      ![Salvar derivada botão de hierarquia](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "salvar derivada botão de hierarquia")  
   
-7.  Arraste **Supplier** partir **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**.  
+7.  Arraste **Supplier** de **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**.  
   
      ![Entidades e hierarquias para o nível atual disponíveis](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "entidades e hierarquias para o nível atual disponíveis")  
   
-8.  Arraste **estado** partir **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**. A tela deve ter **níveis atuais** conforme mostrado na imagem a seguir.  
+8.  Arraste **estado** de **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**. A tela deve ter **níveis atuais** conforme mostrado na imagem a seguir.  
   
      ![Visualização da hierarquia derivada e níveis atuais](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "níveis atuais e visualização de hierarquia derivada")  
   
@@ -64,6 +61,6 @@ ms.locfileid: "48076876"
      ![Hierarquia no Gerenciador de derivada](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "derivado da hierarquia no Gerenciador")  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Lição 5: Automatizando a limpeza e a correspondência usando o SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [Lição 5: Automatizando a limpeza e correspondência usando o SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

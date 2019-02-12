@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081676"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017908"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
   O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece assinaturas controladas por dados de forma que você pode personalizar a distribuição de um relatório baseado em dados de assinante dinâmicos. As assinaturas controladas por dados foram desenvolvidas para os seguintes tipos de cenário:  
@@ -34,13 +34,13 @@ ms.locfileid: "48081676"
   
  Este tutorial divide-se em três lições:  
   
- [Lição 1: Criar um banco de dados do assinante de exemplo](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lição 1: Criando um banco de dados de assinante de exemplo](lesson-1-creating-a-sample-subscriber-database.md)  
  Nesta lição, você aprenderá a criar um banco de dados local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contém informações de assinante.  
   
  [Lição 2: Modificar as propriedades de fonte de dados de relatório](lesson-2-modifying-the-report-data-source-properties.md)  
  Nesta lição, você aprenderá a modificar propriedades da fonte de dados de relatório de forma que o relatório possa ser executado de forma autônoma. O processamento autônomo exige credenciais armazenadas. Você também modificará o conjunto de dados de relatório para incluir um parâmetro que é fornecido pelos dados do assinante.  
   
- [Lição 3: Definir uma assinatura controlada por dados](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lição 3: Definindo uma assinatura controlada por dados](lesson-3-defining-a-data-driven-subscription.md)  
  Nesta lição, você aprenderá a definir uma assinatura controlada por dados. Esta lição o guia por cada página do Assistente de Assinatura Controlada por Dados.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -56,18 +56,18 @@ ms.locfileid: "48081676"
   
 -   O serviço do SQL Server Agent deve estar em execução.  
   
--   Um relatório que inclui parâmetros. Este tutorial presume que o relatório de exemplo `Sales Orders` você cria usando o tutorial [criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Um relatório que inclui parâmetros. Este tutorial presume o uso do relatório de exemplo, `Sales Orders` , criado por meio do tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   O banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], que fornece dados ao relatório de amostra.  
   
--   Uma atribuição de função que inclua a tarefa Gerenciar todas as assinaturas no relatório de amostra. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Uma atribuição de função que inclua a tarefa Gerenciar todas as assinaturas no relatório de amostra. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   
- **Tempo estimado para concluir o tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
+ **Tempo estimado para conclusão do tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assinaturas controladas por dados](subscriptions/data-driven-subscriptions.md)   
- [Criar um relatório de tabela básica &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

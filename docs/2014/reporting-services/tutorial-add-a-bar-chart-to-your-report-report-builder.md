@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um gráfico de barras ao relatório (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106796"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041417"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (construtor de relatórios)
   Um gráfico de barras exibe os dados de categoria horizontalmente. Ele pode ajudar a:  
   
 -   Melhorar a legibilidade de nomes de categorias longos.  
@@ -55,7 +55,7 @@ ms.locfileid: "48106796"
 10. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, criar um conjunto de dados e escolher uma fonte de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, criar um conjunto de dados e escolha uma fonte de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48106796"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Selecione as palavras **título do gráfico** na parte superior do gráfico e, em seguida, digite o seguinte texto: **vendas para 2008 e 2009**.  
+2.  Selecione as palavras **título do gráfico** na parte superior do gráfico e, em seguida, digite o seguinte texto: **Vendas para 2008 e 2009**.  
   
 3.  Clique em qualquer ponto fora do texto.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "48106796"
   
 5.  Clique em **Adicionar**. Um novo filtro em branco é exibido.  
   
-6.  Na **expressão**, digite **[Sum(SalesYear2009)]**. Isso cria a expressão subjacente `=Sum(Fields!SalesYear2009.Value)`, que você pode ver se você clicar em de **fx** botão.  
+6.  Na **expressão**, digite **[Sum(SalesYear2009)]**. Esse procedimento cria a expressão subjacente `=Sum(Fields!SalesYear2009.Value)`, que poderá ser vista se você clicar no botão **fx** .  
   
 7.  Verifique se o tipo de dados é **Text**.  
   

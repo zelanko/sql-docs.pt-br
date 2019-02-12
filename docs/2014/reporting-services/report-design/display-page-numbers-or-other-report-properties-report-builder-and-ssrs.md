@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bfb730a7c19e4aa2481ed50ec69b5356c955584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148807"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037818"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS)
   É fácil adicionar números de página, um título de relatório, nome de arquivo e outras propriedades de relatório aos cabeçalhos ou rodapés de seu relatório. Essas propriedades são armazenadas como campos na pasta Campos Internos no painel de dados do relatório:  
@@ -63,7 +63,7 @@ ms.locfileid: "48148807"
   
 1.  Clique com o botão direito do mouse na caixa de texto que contém [&PageNumber] e clique em **Expressões**.  
   
-     A caixa de texto **Definir Expressão para: Valor** contém a expressão =Globals!PageNumber.  
+     O **definir expressão para: Valor** caixa de texto contém a expressão = Globals! PageNumber.  
   
 2.  Coloque o cursor depois do sinal de = e digite `"Page " &`.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48148807"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatar texto em uma caixa de texto &#40;relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180606"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012018"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Recursos de relatórios do Access com suporte (SSRS)
   Quando você importa um relatório no Designer de Relatórios, o processo de importação converte o relatório do [!INCLUDE[msCoName](../includes/msconame-md.md)] Access em um arquivo de Linguagem RDL do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a vários recursos do Access. No entanto, devido às diferenças entre o Access e o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alguns itens são ligeiramente modificados ou não têm suporte. Este tópico descreve como os recursos de relatórios do Access são convertidos em RDL.  
@@ -57,7 +57,7 @@ ms.locfileid: "48180606"
   
 |||||  
 |-|-|-|-|  
-|image|Rótulo|Linha|Retângulo|  
+|Image|Rotular|Linha|Retângulo|  
 |SubForm|SubReport<br /><br /> **Observação** enquanto um controle SubReport seja convertido dentro do relatório principal, o sub-relatório em si é convertido separadamente.|TextBox||  
   
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não dá suporte aos seguintes controles:  
@@ -85,7 +85,7 @@ ms.locfileid: "48180606"
 |IsHyperlink|IsVisible|KeepTogether (grupo)|Left (à esquerda)|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
-|Páginas|Imagem|PictureTiling (relatório)|ReadingOrder|  
+|Pages (Páginas)|Imagem|PictureTiling (relatório)|ReadingOrder|  
 |RepeatSection|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|Largura|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48180606"
 |||||  
 |-|-|-|-|  
 |CanGrow (seção)|CanShrink (seção)|DecimalPlaces|FastLaserPrinting|  
-|Filtrar|FilterOn|Formato|FormatConditions|  
+|Filtrar|FilterOn|Formatar|FormatConditions|  
 |GrpKeepTogether|KeepTogether (seção)|NumeralShapes|Orientação|  
 |PaintPalette|PaletteSource|PictureAlignment|PicturePages|  
 |PictureSizeMode|PictureTiling (imagem)|ScrollBars|SpecialEffect|  
@@ -124,7 +124,7 @@ ms.locfileid: "48180606"
 |Asc|CBool|CByte|CCur|  
 |CDate|CDbl|CDec|Chr|  
 |Chr$|CInt|CLng|CSng|  
-|CStr|CVar|CVDate|Formato|  
+|CStr|CVar|CVDate|Formatar|  
 |FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|  
 |Hex|Hex$|Nz|Oct|  
 |Oct$|Str|Str$|StrConv|  
@@ -256,15 +256,15 @@ ms.locfileid: "48180606"
   
 |||||  
 |-|-|-|-|  
-|Choose|IIf|Opção||  
+|Choose|IIf|Alternar||  
   
 #### <a name="sql-aggregate-functions"></a>Funções de agregação SQL  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte às funções de agregação SQL a seguir.  
   
 |||||  
 |-|-|-|-|  
-|Avg|Count|Max|Mín|  
-|StDev|StDevP|SUM|Var|  
+|Avg|Contagem|Max|Mín|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Funções de texto  
@@ -272,7 +272,7 @@ ms.locfileid: "48180606"
   
 |||||  
 |-|-|-|-|  
-|Formato|Format$|InStr|InStrRev|  
+|Formatar|Format$|InStr|InStrRev|  
 |LCase|LCase$|Left (à esquerda)|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|Substituir|Right (à direita)|Right$|  

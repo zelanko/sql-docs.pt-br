@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d72c7991f1ebcf36a3408af344225967c1dc498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144696"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010958"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Criar, modificar e excluir instantâneos no histórico de relatório
   O histórico de relatórios é uma coleção de instantâneos de relatório. Você pode manter o histórico de relatórios adicionando e excluindo instantâneos ou modificando propriedades que afetam o armazenamento do histórico de relatórios. O histórico de relatórios pode ser criado manualmente ou em uma agenda.  
@@ -61,10 +61,10 @@ ms.locfileid: "48144696"
  O histórico de relatórios também é excluído quando você exclui um relatório. Por exemplo, se você excluir um relatório de vendas mensais porque está substituindo esse relatório por uma versão mais recente, todo o histórico associado ao relatório também será excluído. No entanto, se você mover um relatório, todo o histórico de relatórios também será movido.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar histórico de relatórios &#40;modo integrado do Reporting Services no SharePoint&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
- [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de relatórios&#41;](add-a-snapshot-to-report-history-report-manager.md)   
- [Limitar o histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../reports/limit-report-history-report-manager.md)  
+ [Criar histórico de relatório &#40;Reporting Services no modo integrado do SharePoint &#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [Limitar o histórico de relatório &#40;Gerenciador de Relatórios&#41;](../reports/limit-report-history-report-manager.md)  
   
   

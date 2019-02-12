@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401701"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040027"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de previsão (tutorial de mineração de dados intermediário)
   Agora que você criou o modelo de mineração de previsão, você pode explorar os resultados usando o **Visualizador do modelo de mineração** guia do Designer de mineração de dados. O [!INCLUDE[msCoName](../includes/msconame-md.md)] visualizador Time Series contém duas guias: **Gráficos** e **modelo**.  
@@ -27,7 +26,7 @@ ms.locfileid: "52401701"
   
 -   [Guia modelo](#bkmk_Model)  
   
--   [Visualizador de conteúdo genérica da Microsoft](#bkmk_Content)  
+-   [Microsoft Generic Content Viewer](#bkmk_Content)  
   
 ##  <a name="bkmk_Charts"></a> Guia gráficos  
  O **gráficos** guia o [!INCLUDE[msCoName](../includes/msconame-md.md)] visualizador Time Series mostra graficamente cada uma das séries, incluindo dados históricos e previsões. Cada linha do gráfico de série temporal representa uma combinação única de produto, região e atributo previsível.  

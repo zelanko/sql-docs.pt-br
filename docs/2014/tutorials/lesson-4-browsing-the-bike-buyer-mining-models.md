@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147341"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011525"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lição 4: Explorando modelos de mineração Comprador de Bicicleta
-  Nesta lição, você aprenderá a usar o [SELECT (DMX)](/sql/dmx/select-dmx) instrução para explorar o conteúdo na árvore de decisão e mineração de clustering de modelos que você criou no [lição 2: adicionando modelos de mineração à estrutura de mineração preditiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lição 4: Procurar os modelos de mineração de comprador de bicicleta
+  Nesta lição, você aprenderá a usar o [SELECT (DMX)](/sql/dmx/select-dmx) instrução para explorar o conteúdo na árvore de decisão e mineração de clustering de modelos que você criou no [lição 2: Adicionando modelos de mineração à estrutura de mineração preditiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  As colunas contidas em um modelo de mineração não são as colunas definidas pela estrutura de mineração. Ao contrário, constituem um conjunto específico de colunas que descrevem as tendências e os padrões encontrados pelo algoritmo. Essas colunas do modelo de mineração são descritas na [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) linhas de esquema. Por exemplo, a coluna de MODEL_NAME no conjunto de linhas de esquema de conteúdo traz o nome do modelo de mineração. Para um modelo de mineração de clustering, a coluna de NODE_CAPTION contém o nome de cada cluster e a coluna NODE_DESCRIPTION contém a descrição das características de cada cluster. Você pode procurar essas colunas usando SELECT FROM \<modelo >. Instrução CONTENT em DMX. Também pode usar essa instrução para explorar os dados usados para criar o modelo de mineração. O uso dessa instrução requer que as análises sejam habilitadas na estrutura de mineração. Para obter mais informações sobre a instrução, consulte [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
@@ -258,6 +257,6 @@ SELECT DISTINCT [<column>]
  Na próxima lição, você poderá prever se os clientes potenciais serão os compradores de bicicleta usando o modelo de mineração da árvore de decisão.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 5: Executando previsão de consultas](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lição 5: Executar consultas de previsão](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
   
   

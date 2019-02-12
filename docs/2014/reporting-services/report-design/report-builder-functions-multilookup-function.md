@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147447"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021569"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Função Multilookup (Construtor de Relatórios e SSRS)
   Retorna o conjunto de primeiros valores correspondentes para o conjunto de nomes especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -33,7 +33,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parâmetros  
  *source_expression*  
- (`VariantArray`) Uma expressão que é avaliada no escopo atual e que especifica o conjunto de nomes ou chaves para pesquisar. Por exemplo, para um parâmetro de vários valores, `=Parameters!IDs.value`.  
+ (`VariantArray`) Uma expressão que é avaliada no escopo atual e que especifica o conjunto de nomes ou chaves para procurar. Por exemplo, para um parâmetro de vários valores, `=Parameters!IDs.value`.  
   
  *destination_expression*  
  (`Variant`) Uma expressão que é avaliada para cada linha em um conjunto de dados e que especifica o nome ou a chave para correspondência. Por exemplo, `=Fields!ID.Value`.  
@@ -45,10 +45,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Uma constante que especifica o nome do conjunto de dados no relatório. Por exemplo, "Cores".  
   
 ## <a name="return"></a>Retorno  
- Retorna um `VariantArray`, ou `Nothing` se não houver nenhuma correspondência.  
+ Retorna `VariantArray` ou `Nothing` se não houver correspondência.  
   
 ## <a name="remarks"></a>Comentários  
- Use `Multilookup` para recuperar um conjunto de valores de um conjunto de dados para os pares nome-valor em que cada par tem uma relação de 1 para 1. `MultiLookup` é o equivalente a chamar `Lookup` para um conjunto de nomes ou chaves. Por exemplo, um parâmetro baseado em identificadores de chave primária, você pode usar `Multilookup` em uma expressão em uma caixa de texto em uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
+ Use `Multilookup` para recuperar um conjunto de valores de um conjunto de dados para os pares nome/valor em que cada par tem uma relação de 1 para 1. `MultiLookup` é o equivalente a chamar `Lookup` para um conjunto de nomes ou chaves. Por exemplo, para um parâmetro de vários valores que é baseado em identificadores de chave primária, você pode usar `Multilookup` em uma expressão em uma caixa de texto de uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
   
  `Multilookup` faz o seguinte:  
   
@@ -111,7 +111,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>Exemplo  
  Suponha que um conjunto de dados ProductColors contenha um campo identificador de cor ColorID e um campo de valor de cor Color, como mostra a tabela a seguir.  
   
-|ColorID|Color|  
+|ColorID|Cor|  
 |-------------|-----------|  
 |1|Vermelho|  
 |2|Azul|  
@@ -124,9 +124,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

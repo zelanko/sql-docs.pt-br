@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461972"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041447"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket 
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket
   Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração da cesta de mercado que você criou na [lição 1: Criando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estes modelos de mineração permitirão criar previsões.  
   
  Para prever os tipos de produtos que os clientes tendem a comprar ao mesmo tempo, você criará dois modelos de mineração usando o [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e dois valores diferentes para o *MINIMUM_PROBABILTY* parâmetro.  
@@ -286,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  Nesta próxima lição você processará a estrutura de mineração da cesta básica junto com seus modelos de mineração associados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Processando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lição 3: Processando a estrutura de mineração da cesta de compras](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

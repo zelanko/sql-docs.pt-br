@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147300"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039897"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lição 4: Explorando os modelos de mala direta (Tutorial de mineração de dados básico)
   Depois que os modelos do seu projeto tiverem sido processados, você poderá explorá-los para procurar por tendências que sejam interessantes. Como padrões podem ser complexos e difíceis se analisarmos somente os números, a Mineração de Dados do SQL Server oferece algumas ferramentas visuais que o ajudam a investigar os dados e a compreender as regras e as relações que os algoritmos encontraram nos dados. Você também pode usar uma variedade de testes de precisão para validar seu conjunto de dados ou para descobrir qual o melhor modelo antes de implantá-lo.  
@@ -52,10 +51,10 @@ ms.locfileid: "48147300"
  [Lição 3: Adicionando e processando modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 5: Testando modelos &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Lição 5: Teste de modelos &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas do Visualizador do modelo e instruções de mineração](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Visualizadores do modelo de Mineração de dados](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c27e97fa054e878ed26c28382b8e7bd875134fa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2904623aa84a6bc6b50cf1a01458bbc52649feaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152090"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042357"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Erro do Reporting Services
   O erro do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **rsAccessedDenied** ocorre quando um usuário não tem permissão para realizar uma ação. Por exemplo, o usuário não tem uma atribuição de função que o permita abrir um relatório ou ele não abriu seu navegador com as permissões necessárias.  
@@ -46,7 +46,7 @@ ms.locfileid: "48152090"
 ## <a name="user-action"></a>Ação do usuário  
  A permissão para acessar as operações e o conteúdo do servidor de relatório é concedida através de atribuições de função. Em uma nova instalação, somente administradores locais têm acesso a um servidor de relatório. Para conceder acesso a outros usuários, é necessário que um administrador local crie uma atribuição de função que especifique um usuário de domínio ou uma conta de grupo, uma ou mais funções que definem as tarefas que o usuário pode executar e um escopo (geralmente, a pasta Base ou o nó raiz da hierarquia de pastas do servidor de relatório). É possível usar o Gerenciador de Relatórios para criar as atribuições de função. Para obter mais informações, consulte "Atribuições de função" nos Manuais Online do SQL Server.  
   
- Esse erro também é causado pela administração local do servidor de relatório. Para obter instruções, veja [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Esse erro também é causado pela administração local do servidor de relatório. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atribuições de função](../security/role-assignments.md)   

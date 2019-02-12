@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d5c0e2a09926c87669f537710cc44df76b30c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200738"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032397"
 ---
 # <a name="publish-reports"></a>Publicar Relatórios
-  De[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode publicar uma todos os relatórios e fontes de dados compartilhadas em um projeto do servidor de relatório para um servidor de relatório Implantando um projeto, ou você pode publicar um único relatório. Antes de publicar um relatório, você deve especificar a URL do servidor de relatório de destino. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
+  No[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], é possível publicar todos os relatórios e fontes de dados compartilhadas em um projeto do Servidor de Relatório implantando um projeto ou publicar um único relatório. Antes de publicar um relatório, você deve especificar a URL do servidor de relatório de destino. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
   
- Você pode usar o [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] verzi [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para abrir, modificar, visualizar, salvar e publicar os dois [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] e [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] relatórios. Para obter mais informações, veja [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Você pode usar a versão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para abrir, modificar, visualizar, salvar e publicar relatórios do [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] e do [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] . Para obter mais informações, veja [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Para publicar todos os relatórios em um projeto  
   

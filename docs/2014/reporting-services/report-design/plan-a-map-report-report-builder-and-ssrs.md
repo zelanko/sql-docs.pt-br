@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bbc1b3eaabe4760cd8f0778f1c2e2659e4c6db74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040727"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
   Bons relatórios apresentam informações que levam a ações ou ideias. Para apresentar dados analíticos como totais de vendas ou dados demográficos em relação a um plano de fundo geográfico, você pode adicionar um mapa a seu relatório. Um mapa pode conter várias camadas, onde cada uma exibe elementos de mapas que são definidos por um tipo específico de dados espaciais: pontos que representam locais, linhas que representam rotas ou polígonos que representam áreas. Você pode associar seus dados analíticos a elementos de mapas em cada camada.  
@@ -59,11 +59,11 @@ ms.locfileid: "48095706"
   
 -   Arquivos de forma ESRI, inclusive os arquivos de forma publicamente disponíveis que podem ser pesquisados na Internet.  
   
--   Dados espaciais de fontes de dados espaciais do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Dados espaciais de fontes de dados espaciais do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Mapas de relatórios na Galeria de Mapas.  
   
--   Sites de terceiros que oferecem dados espaciais como Shapefiles ESRI ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados espaciais.  
+-   Sites de terceiros que oferecem dados espaciais como shapefiles ESRI ou dados espaciais do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Peças de mapa do Bing que fornecem um plano de fundo para a exibição do mapa. Para exibir peças em um mapa, o servidor de relatório deve ser configurado para dar suporte aos Serviços Web Bing Maps.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48095706"
 |-----------------|-----------------|----------------|-----------------------------|  
 |![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa Básico|Polygon|Um mapa que exibe apenas áreas, por exemplo, territórios de vendas.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor. Uma paleta é um conjunto predefinido de cores. Quando todas as cores em uma paleta tiverem sido atribuídas, tons de cores serão atribuídos.|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mapa Analítico de Cores|Polygon|Um mapa que exibe dados analíticos por cor variável, por exemplo, dados de vendas por área.|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de Bolha|Polígono|Um mapa que exibe dados analíticos por tamanho de bolha variável centralizado nas áreas, por exemplo, dados de vendas por área.<br /><br /> Opções: varie as cores da área com base em um segundo campo analítico e especifique regras de cores.|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de Bolha|Polygon|Um mapa que exibe dados analíticos por tamanho de bolha variável centralizado nas áreas, por exemplo, dados de vendas por área.<br /><br /> Opções: Opções: varie as cores da área com base em um segundo campo analítico e especifique regras de cores.|  
 |![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de Linha Básico|Linha|Um mapa que exibe apenas linhas, por exemplo, rotas de entrega.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor.|  
 |![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de Linha Analítico|Linha|Um mapa que varia a cor e a largura da linha, por exemplo, número de pacotes entregues e métrica pontual por rota.<br /><br /> Opções: varie a largura da linha por um campo analítico, varie a cor da linha por um segundo campo analítico e especifique regras de cores.|  
 |![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de Marcador Básico|Ponto|Um mapa que exibe um marcador em cada local, por exemplo, cidades.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor e altere o estilo do marcador.|  
@@ -123,7 +123,7 @@ ms.locfileid: "48095706"
   
  Depois que você adicionar um mapa com o assistente de Mapa, poderá criar camadas adicionais ou alterar as opções para uma camada usando o assistente de Camada. Para obter mais informações sobre os assistentes, consulte [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- Você pode personalizar a exibição ou as opções de dados para cada camada independentemente. Para obter mais informações sobre como personalizar um mapa após executar um assistente, consulte [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Você pode personalizar a exibição ou as opções de dados para cada camada independentemente. Para obter mais informações sobre como personalizar um mapa após executar um assistente, consulte [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48095706"
   
 ## <a name="see-also"></a>Consulte também  
  [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Relatório de mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md)   
+ [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41;](../tutorial-map-report-report-builder.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

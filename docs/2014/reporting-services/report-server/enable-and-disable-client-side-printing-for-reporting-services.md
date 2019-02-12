@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c454dece75264c08d4f4bdc9f9549a1ef0f9b932
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: b5353afae9a07be7dcf5b5df3f1a2ec5442378a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418875"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041277"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar e desabilitar a impressão do lado do cliente para Reporting Services
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] controle de ActiveX **RSClientPrint**, fornece impressão do lado do cliente para relatórios exibidos em um navegador. O controle exibe uma caixa de diálogo de impressão personalizada que oferece suporte aos recursos comuns com outras caixas de diálogo de impressão. Os recursos incluem a visualização de impressão, as seleções de página para determinar páginas e intervalos específicos, as margens da página e a orientação. Embora a impressão do lado do cliente esteja habilitada por padrão, você pode desabilitar o recurso para impedi-lo de ser usado.  

@@ -11,14 +11,14 @@ f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bb8ac0237fc9175f29471a66b7e3916122b55707
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 207aa0b0657670d93dbdfc92b80a0c3d3285de7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082274"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030197"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Parâmetros (Construtor de Relatórios)
   Selecione **parâmetros** sobre o **propriedades do conjunto de dados** caixa de diálogo para adicionar, alterar e excluir parâmetros de consulta.  
@@ -80,7 +80,7 @@ ms.locfileid: "48082274"
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Caixa de diálogo de propriedades do conjunto de dados, consulta &#40;construtor de relatórios&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;construtor de relatórios&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Designers de Consultas &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

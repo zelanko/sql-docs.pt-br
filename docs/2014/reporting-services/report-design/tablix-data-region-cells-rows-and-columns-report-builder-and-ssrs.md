@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6e3e43a8b2f39d4396945d47ee7e943e64fd1195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072426"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043227"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
   Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório, você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [tabelas &#40;construtor de relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md), [matrizes &#40;construtor de relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [lista &#40;construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "48072426"
 ### <a name="row-and-column-handles"></a>Identificadores de linha e de coluna  
  Quando você seleciona uma região de dados tablix, gráficos indicadores de linha e de coluna apontam o propósito de cada uma delas. Os identificadores mostram as linhas e as colunas que estão dentro ou fora de um grupo. A tabela a seguir mostra várias exibições de identificadores.  
   
-|Ícone|Description|  
+|Ícone|Descrição|  
 |----------|-----------------|  
 |![Identificador de linha com três linhas paralelas para a linha de detalhes](../media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
 |![Identificador de linha com linha de detalhes e um grupo externo](../media/rs-icontablix-groupwithdetails.gif "Identificador de linha com linha de detalhes e um grupo externo")|Um grupo externo e o grupo detalhado filho|  
@@ -121,6 +121,6 @@ ms.locfileid: "48072426"
  É possível dividir uma célula mesclada previamente. Você pode dividir as células horizontalmente em colunas ou verticalmente em linhas. Para dividir uma célula em um bloco de células, divida primeiro a célula horizontalmente e divida verticalmente quantas vezes forem necessárias.  
   
 ## <a name="see-also"></a>Consulte também  
- [Região de dados Tablix &#40;relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

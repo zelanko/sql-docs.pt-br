@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c9ec3622318de6d2d70b8b49294dd282487d80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114026"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029307"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>função Count (Construtor de Relatórios e SSRS)
   Retorna uma contagem de valores não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  
@@ -33,10 +33,10 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parâmetros  
  *Expressão*  
- (`Variant` ou `Binary`) a expressão na qual executar a agregação, por exemplo, `=Fields!FieldName.Value`.  
+ (`Variant` ou `Binary`) A expressão na qual executar a agregação, por exemplo, `=Fields!FieldName.Value`.  
   
  *escopo*  
- (`String`) O nome de um conjunto de dados, grupo ou região de dados que contém o relatório de itens ao qual deseja aplicar a função de agregação. Se *scope* não estiver especificado, será usado o escopo atual.  
+ (`String`) O nome de um conjunto de dados, grupo ou região de dados que contém os itens do relatório aos quais a função de agregação deve ser aplicada. Se *scope* não estiver especificado, será usado o escopo atual.  
   
  *recursivos*  
  (**Enumerated Type**) Opcional. `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
@@ -63,7 +63,7 @@ Count(expression, scope, recursive)
   
  Exemplo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O seguinte exemplo de código mostra uma expressão que calcula o número de valores não nulos de `Size` para o escopo padrão e para um escopo de grupo pai. A expressão é adicionada a uma célula em uma linha que pertence ao `GroupbySubcategory`do grupo filho. O grupo pai é `GroupbyCategory`. A expressão exibe os resultados de `GroupbySubcategory` (o escopo padrão) e de `GroupbyCategory` (o escopo do grupo pai).  
   
 > [!NOTE]  
@@ -77,9 +77,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

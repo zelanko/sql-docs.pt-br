@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criando um projeto do servidor de relatório (Reporting Services) | Microsoft Docs'
+title: 'Lição 1: Criando um projeto de servidor de relatório (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3a57bbc055c226fdfa9d4454ba22f2160dee06c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220966"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032357"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criando um projeto do servidor de relatórios (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criando um projeto do servidor de relatório (Reporting Services)
   Para criar um relatório no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], primeiro crie um projeto de servidor de relatório em que o arquivo de definição de relatório (.rdl) e qualquer outro arquivo de recursos que seja necessário sejam salvos para o relatório. Em seguida, você criará o arquivo de definição do relatório real, definirá uma fonte de dados para o relatório, um conjunto de dados e o layout do relatório. Quando você executar o relatório, os dados reais serão recuperados e combinados com o layout e renderizados na tela, de onde ele poderá ser exportado, impresso ou salvo.  
   
  Nesta lição, você obterá informações sobre como criar um projeto de servidor de relatório no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Um projeto de servidor de relatório é usado para criar relatórios que são executados em um servidor de relatório.  
@@ -52,14 +52,14 @@ ms.locfileid: "48220966"
   
      O Designer de Relatórios abre e exibe o novo arquivo .rdl na exibição Design.  
   
- O Designer de Relatórios é um componente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que é executado no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Ele tem duas exibições: **Design** e **Visualização**. Clique em cada guia para alterar exibições.  
+ O Designer de Relatórios é um componente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que é executado no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Ele tem dois modos de exibição: **Design** e **visualização**. Clique em cada guia para alterar exibições.  
   
  Você define os dados no painel **Dados do Relatório** . Você define o layout do relatório no modo **Design** . É possível executar o relatório e ver sua aparência na exibição **Visualização** .  
   
 ## <a name="next-task"></a>Próxima tarefa  
- Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo de definição de relatório (.rdl) ao projeto de relatório com êxito. Em seguida, você especificará uma fonte de dados para usar para o relatório. Consulte [Lição 2: Especificando informações de conexão &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
+ Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo de definição de relatório (.rdl) ao projeto de relatório com êxito. Em seguida, você especificará uma fonte de dados para usar para o relatório. Consulte [lição 2: Especificar informações de Conexão &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar um relatório de tabela básica &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

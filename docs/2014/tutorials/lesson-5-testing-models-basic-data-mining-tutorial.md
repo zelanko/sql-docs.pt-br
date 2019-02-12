@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9a7ddcf-2b01-485f-bbb5-62638b303bc6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f942b40959d5f3af1ede0ddb8dbc11161f796eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392929"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025617"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lição 5: Testando modelos (Tutorial de mineração de dados básico)
   Agora que você processou o modelo usando o conjunto de treinamentos de cenário de mala direta, verificará os seus modelos usando um conjunto de testes. A validação é uma etapa importante do processo de mineração de dados. É importante saber como é o desempenho dos seus modelos de mineração de mala direta usando dados reais antes de implantá-los em um ambiente de produção.  

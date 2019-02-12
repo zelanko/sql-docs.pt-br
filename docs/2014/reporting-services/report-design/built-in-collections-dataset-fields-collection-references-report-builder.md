@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093297"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037148"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referências de coleções de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  
@@ -89,7 +89,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>Usando propriedades de campo estendidas  
  As propriedades de campo estendidas são propriedades adicionais definidas em um campo pela extensão de processamento de dados, que é determinada pelo tipo de fonte de dados do conjunto de dados. As propriedades de campo estendidas são predefinidas ou específicas para um tipo de fonte de dados. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- Se você especificar uma propriedade que não há suporte para esse campo, a expressão é avaliada como `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Se um provedor de dados não dá suporte a propriedades de campo estendidas, ou se o campo não for encontrado quando a consulta é executada, o valor da propriedade é `null` (`Nothing` na [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para propriedades do tipo `String` e `Object`, e zero (0) para propriedades do tipo `Integer`. Uma extensão de processamento de dados pode fazer bom uso das propriedades predefinidas ao otimizar consultas que incluem essa sintaxe.  
+ Se você especificar uma propriedade que não é suportada pelo campo, a avaliação da expressão será `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Se um provedor de dados não oferecer suporte a propriedades de campo estendidas, ou se o campo não for encontrado quando a consulta for executada, o valor da propriedade será \`null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para propriedades do tipo `String` e `Object` e zero (0) para propriedades do tipo `Integer`. Uma extensão de processamento de dados pode fazer bom uso das propriedades predefinidas ao otimizar consultas que incluem essa sintaxe.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

@@ -12,14 +12,14 @@ f1_keywords:
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f82b38efac61ca6cdddb10c13e584c0c8f79a346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018098"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Caixa de diálogo Mapear Propriedades de Paralelo, Rótulos
   Use o **MapParallel propriedades** caixa de diálogo para alterar as opções de rótulo para a grade horizontal no visor do mapa. Um paralelo representa o valor seguinte, de acordo com o sistema de coordenadas especificado para o visor:  
@@ -37,7 +37,7 @@ ms.locfileid: "48097286"
  **Mostrar rótulos**  
  Selecione esta opção para exibir rótulos para os paralelos.  
   
- **posicionamento**  
+ **Placement**  
  Selecione um local para exibir os rótulos em relação à parte superior, central e inferior do visor. O posicionamento padrão é **Próximo**.  
   
 -   **Próximo** Exibe rótulos na parte superior.  
@@ -52,6 +52,6 @@ ms.locfileid: "48097286"
   
 ## <a name="see-also"></a>Consulte também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

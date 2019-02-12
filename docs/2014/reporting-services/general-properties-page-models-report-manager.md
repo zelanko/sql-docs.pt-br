@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f3756fb68ba46b1ac7b34237753dbd57d0b6775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018238"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propriedades Gerais, Modelos (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os modelos de relatório renomeiem, movam ou substituam o arquivo de definição do modelo (.smdl). Os detalhes sobre quem criou ou modificou o modelo e quando as alterações ocorreram são indicados na parte superior da página.  
@@ -38,13 +38,13 @@ ms.locfileid: "48146246"
  **Nome**  
  Especifica o nome do modelo. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Descrição**  
  Digite uma descrição do modelo. Essa descrição é exibida na página Conteúdo para usuários com permissão de acessar o modelo.  
   
  **Oculto na exibição de lista**  
- Marque esta caixa de seleção para ocultar o item quando a pasta for definida na exibição de lista. Exibição de lista é um modo de exibição do conteúdo da pasta que tem o suporte do Gerenciador de Relatórios. Você pode definir essa opção [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir como esse item é exibido no Gerenciador de relatórios. Para obter mais informações sobre modos de exibição no Gerenciador de relatórios, consulte [página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Marque esta caixa de seleção para ocultar o item quando a pasta for definida na exibição de lista. Exibição de lista é um modo de exibição do conteúdo da pasta que tem o suporte do Gerenciador de Relatórios. Você pode definir essa opção no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir como esse item é exibido no Gerenciador de Relatórios. Para obter mais informações sobre modos de exibição no Gerenciador de relatórios, consulte [página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Aplicar**  
  Clique para salvar as alterações.  
@@ -60,7 +60,7 @@ ms.locfileid: "48146246"
   
  A cópia que você abre é idêntica à definição do modelo original inicialmente publicada no servidor de relatório. Quaisquer propriedades definidas no modelo após sua publicação (como propriedades de fonte de dados) não serão refletidas no arquivo que você abrir.  
   
- Você pode modificar a definição do modelo e salvá-lo em um novo arquivo em uma pasta compartilhada e carregar a definição do modelo para o servidor de relatório como um novo item.  As modificações feitas na definição do modelo enquanto ele está aberto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou outro aplicativo) não são salvas diretamente no servidor de relatório. Você deve carregar o arquivo para publicar o modelo modificado no servidor de relatório.  
+ Você pode modificar a definição do modelo e salvá-lo em um novo arquivo em uma pasta compartilhada e carregar a definição do modelo para o servidor de relatório como um novo item. Modificações feitas na definição do modelo enquanto ele está aberto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou outro aplicativo) não são salvas diretamente no servidor de relatório. Você deve carregar o arquivo para publicar o modelo modificado no servidor de relatório.  
   
  Observe que, se você quiser abrir o modelo de relatório no Designer de Modelo, deverá salvar o modelo como um arquivo .smdl e, em seguida, adicionar esse arquivo a um projeto no Designer de Modelo.  
   

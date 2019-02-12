@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e021f38487c744124cc06a62ce2627d7097aedb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 688e72a1493a39217d786c312269a36778187306
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040587"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Acessar o provedor WMI do Reporting Services
   O provedor WMI do Reporting Services expõe duas classes WMI para administração de instâncias de servidor de relatório do modo nativo através de scripts:  
@@ -35,8 +35,8 @@ ms.locfileid: "53367678"
   
 |Classe|Namespace|Descrição|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >* \v11|Fornece as informações básicas exigidas para um cliente se conectar a um servidor de relatório instalado.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >* \v11\Admin|Representa os parâmetros de instalação e de tempo de execução de uma instância do servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.<br /><br /> **\*\* Importante \*\*** Esta classe é acessível apenas com privilégios administrativos.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v11|Fornece as informações básicas exigidas para um cliente se conectar a um servidor de relatório instalado.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v11\Admin|Representa os parâmetros de instalação e de tempo de execução de uma instância do servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.<br /><br /> **\*\* Importante \*\*** Esta classe é acessível apenas com privilégios administrativos.|  
   
  Uma instância de cada uma das classes anteriores é criada para cada instância de servidor de relatório. Você pode usar qualquer ferramenta Microsoft ou de terceiros para acessar os objetos WMI expostos pelo servidor de relatório, inclusive interfaces de programação de WMI expostas pelo próprio .NET Framework. Este tópico descreve como acessar e usar as instâncias de classe WMI com o comando do PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   

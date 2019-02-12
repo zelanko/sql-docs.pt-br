@@ -1,24 +1,21 @@
 ---
-title: 'Tarefa 3: Verificar os dados no Master Data Manager | Microsoft Docs'
+title: 'Tarefa 3: Verificando os dados no Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09dfc672e446e1265ee29625a8bf3a2d1e16f77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 230c8bbeb2736a3f9810a65dd445013d22e41f03
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108846"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022916"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>Tarefa 3: Verificando os dados no Master Data Manager
   Nesta tarefa, você verifica se a entidade **Fornecedor** será criada no **MDS** usando o **Aplicativo Master Data Manager Web**.  
@@ -32,6 +29,6 @@ ms.locfileid: "48108846"
 3.  Analise os dados armazenados no MDS. Se os dados não estiverem exibidos, verifique se você selecionou **Fornecedores** em **Modelo** na página inicial antes de iniciar **Gerenciador**. Você pode fazer adições ou exclusões na lista de fornecedores usando os botões **Adicionar Membro** e **Excluir Membro** na barra de ferramentas.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 4 &#40;opcional&#41;: combinando, correspondendo e publicando o novo conjunto de dados](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
+ [Tarefa 4 &#40;opcional&#41;: Combinando, correspondendo e publicando o novo conjunto de dados](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
   
   

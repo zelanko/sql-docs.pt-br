@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d75fed63f44e0371b81fbd7309a0a3f826543b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 24457cb6a471b91666f4eb0792e1c8fa186eaf42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401049"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011827"
 ---
 # <a name="custom-report-item-architecture"></a>Arquitetura de item de relatório personalizado
   Um item de relatório personalizado é uma extensão da linguagem RDL que permite que desenvolvedores adicionem funcionalidade que não tem suporte nativo na RDL ou estendam a funcionalidade de controles existentes. Existem dois componentes principais para um item de relatório personalizado: o componente de tempo de execução e o componente tempo de design. Esses componentes são implementados como assemblies [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e podem ser escritos em qualquer linguagem em conformidade com CLS.  
@@ -37,6 +37,6 @@ ms.locfileid: "52401049"
 ## <a name="see-also"></a>Consulte também  
  [Criando um componente de item de relatório personalizado em tempo de execução](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Criando um componente de item de relatório personalizado em tempo de design](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Como: Implantar um Item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Como: implantar um Item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

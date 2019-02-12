@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d5c6ca9ae7bca2b9c6dc55f65cbbb95917fd96db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158906"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027247"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar a exibição de polígono, linha e ponto por regras e dados analíticos (Construtor de Relatórios e SSRS)
   As opções de exibição para polígonos, linhas e pontos em uma camada do mapa são controladas pela definição de opções para a camada, estabelecendo regras para os elementos do mapa na camada ou substituindo opções para elementos de mapas inseridos específicos em uma camada.  
@@ -109,7 +109,7 @@ ms.locfileid: "48158906"
   
 -   **Ideal.** Crie intervalos que ajustem automaticamente a distribuição para criar subintervalos equilibrados. O número de subintervalos é determinado pelo algoritmo.  
   
--   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados do exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados de exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
   
  Os valores de distribuição são usados pelas regras para variar os valores de exibição do elemento do mapa.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48158906"
   
  As tabelas a seguir mostram exemplos de formatos diferentes que você pode usar.  
   
-|Palavra-chave e formato|Description|Exemplo do que é exibido como texto na legenda|  
+|Palavra-chave e formato|Descrição|Exemplo do que é exibido como texto na legenda|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Exibe a moeda do valor total sem casas decimais|$ 400|  
 |`#FROMVALUE {C2}`|Exibe a moeda do valor total com até duas casas decimais.|$ 400,55|  
@@ -130,7 +130,7 @@ ms.locfileid: "48158906"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Exibe os valores numéricos reais do início e do fim do intervalo.|10 - 790|  
   
 ## <a name="see-also"></a>Consulte também  
- [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

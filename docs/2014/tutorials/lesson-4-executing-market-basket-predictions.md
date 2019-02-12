@@ -1,25 +1,24 @@
 ---
-title: 'Lição 4: Executando previsões de Market Basket | Microsoft Docs'
+title: 'Lição 4: Execução de previsões de Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177486"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041427"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>Lição 4: Executando previsões de Market Basket
-  Nesta lição, você aprenderá a usar o DMX `SELECT` instrução para criar previsões com base na associação de modelos criada na [lição 2: adicionando modelos de mineração à estrutura de mineração da cesta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Uma consulta de previsão é criada usando a instrução `SELECT` do DMX e adicionando uma cláusula `PREDICTION JOIN`. Para obter mais informações sobre a sintaxe de uma junção de previsão, consulte [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+# <a name="lesson-4-executing-market-basket-predictions"></a>Lição 4: Execução de previsões de Market Basket
+  Nesta lição, você aprenderá a usar o DMX `SELECT` instrução para criar previsões com base na associação de modelos criada na [lição 2: Adicionando modelos de mineração à estrutura de mineração de Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Uma consulta de previsão é criada usando a instrução `SELECT` do DMX e adicionando uma cláusula `PREDICTION JOIN`. Para obter mais informações sobre a sintaxe de uma junção de previsão, consulte [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  O **SELECT FROM \<modelo > PREDICTION JOIN** forma do `SELECT` instrução contém três partes:  
   
@@ -147,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Na barra de ferramentas, clique o **Execute** botão.  
   
-     A consulta retorna uma tabela que contém três produtos: HL Mountain Tire, Fender Set - Mountain e ML Mountain Tire. A tabela lista esses produtos retornados em ordem de probabilidade. O produto retornado que provavelmente será incluído no mesmo carrinho de compras juntamente com os três produtos especificados na consulta aparece no topo da tabela. Os dois produtos que seguem são provavelmente o próximo item que será incluído no carrinho de compra. A tabela também contém estatísticas que descrevem a exatidão da previsão.  
+     A consulta retorna uma tabela que contém três produtos: HL Mountain Tire, conjunto de lama - Mountain e ML Mountain Tire. A tabela lista esses produtos retornados em ordem de probabilidade. O produto retornado que provavelmente será incluído no mesmo carrinho de compras juntamente com os três produtos especificados na consulta aparece no topo da tabela. Os dois produtos que seguem são provavelmente o próximo item que será incluído no carrinho de compra. A tabela também contém estatísticas que descrevem a exatidão da previsão.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>Criar uma previsão usando um modelo com uma MINIMUM_PROBABILITY de 0,01  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Na barra de ferramentas, clique o **Execute** botão.  
   
-     A consulta retorna uma tabela que contém três produtos: tubo de pneu para mountain bike, garrafa de água e kit para montanhismo. A tabela lista esses produtos em ordem de probabilidade. O produto que aparece no topo da tabela é o produto que provavelmente será incluído no mesmo carrinho de compras juntamente com os três produtos especificados na consulta. Os produtos restantes são provavelmente os próximos que serão incluídos no carrinho de compras. A tabela também contém estatísticas que descrevem a precisão da previsão.  
+     A consulta retorna uma tabela que contém três produtos: Conjunto de lama - Mountain, Water Bottle e HL Mountain Tire. A tabela lista esses produtos em ordem de probabilidade. O produto que aparece no topo da tabela é o produto que provavelmente será incluído no mesmo carrinho de compras juntamente com os três produtos especificados na consulta. Os produtos restantes são provavelmente os próximos que serão incluídos no carrinho de compras. A tabela também contém estatísticas que descrevem a precisão da previsão.  
   
      Você pode ver os resultados dessa consulta que o valor da *MINIMUM_PROBABILITY* parâmetro afeta os resultados retornados pela consulta.  
   
@@ -228,7 +227,7 @@ SELECT <select list> FROM [<mining model>]
  Para saber como usar DMX em outro cenário de previsão, consulte [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta de modelo de associação](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [Exemplos de consulta de um modelo de associação](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [Interfaces de Consulta de Mineração de Dados](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

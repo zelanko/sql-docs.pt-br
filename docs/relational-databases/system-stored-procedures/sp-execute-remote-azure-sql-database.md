@@ -2,10 +2,8 @@
 title: sp_execute_remote (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837084"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035897"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,10 +44,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ \@data_source_name =] *datasourcename*  
- Identifica a fonte de dados externa em que a instrução é executada. Ver [criar fonte de dados externa &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Fonte de dados externa pode ser do tipo "RDBMS" ou "SHARD_MAP_MANAGER".  
+ [ \@data_source_name = ] *datasourcename*  
+ Identifica a fonte de dados externa em que a instrução é executada. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Fonte de dados externa pode ser do tipo "RDBMS" ou "SHARD_MAP_MANAGER".  
   
- [ \@stmt =] *instrução*  
+ [ \@stmt= ] *statement*  
  É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. \@stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** for válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -57,10 +55,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Cada parâmetro incluído em \@stmt deve ter uma entrada correspondente em ambos os \@lista de valores de lista de definições de parâmetro params e o parâmetro.  
   
- [ \@params =] N'\@*parameter_name * * data_type* [,... *n* ] '  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos em \@stmt. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado em \@stmtmust ser definido em \@params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na \@stmt não contiverem parâmetros, \@params não é necessária. O valor padrão para este parâmetro é NULL.  
   
- [ \@param1 =] '*value1*'  
+ [ \@param1= ] '*value1*'  
  É um valor para o primeiro parâmetro definido na cadeia de caracteres de parâmetro. O valor pode ser uma constante Unicode ou uma variável Unicode. Deve haver um valor de parâmetro fornecido para cada parâmetro incluído em \@stmt. Os valores não são necessários quando o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote em \@stmt não tem nenhum parâmetro.  
   
  *n*  

@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043387"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS)
   Quando há um cálculo complexo usado mais de uma vez em expressões em um relatório, convém criar uma variável. É possível criar uma variável do relatório ou uma variável do grupo. Os nomes de variável devem ser exclusivos em um relatório.  
@@ -53,7 +53,7 @@ ms.locfileid: "48139599"
     > [!NOTE]  
     >  Não é possível controlar quando o processador do relatório inicializa uma variável ou avalia uma expressão que atualiza uma variável. A ordem de execução da inicialização da variável não é definida.  
   
- Para obter mais informações sobre as sessões, consulte [Visualizando relatórios no construtor de relatórios](../report-builder/previewing-reports-in-report-builder.md).  
+ Para obter mais informações, consulte [Visualizar relatórios no Construtor de Relatórios](../report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="group-variables"></a>Variáveis do grupo  
  Use uma variável do grupo para calcular uma expressão complexa uma vez no escopo de um grupo. Uma variável do grupo é válida apenas no escopo do grupo e de seus grupos filho.  
@@ -74,7 +74,7 @@ ms.locfileid: "48139599"
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Coleções internas em expressões &#40;relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

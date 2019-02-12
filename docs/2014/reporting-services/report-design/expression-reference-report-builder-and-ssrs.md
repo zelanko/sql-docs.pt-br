@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: aba89b5d98ba7caa81f98e6a80346b4e3d6bd0bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166756"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022227"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Referência de expressões (Construtor de Relatórios e SSRS)
   As expressões de relatório dão suporte a uma variedade de referências a funções e coleções internas. A sintaxe [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] das expressões deve ser válida para que um relatório possa ser publicado ou processado.  
@@ -29,25 +29,25 @@ ms.locfileid: "48166756"
  Use os tópicos nesta seção para ajudar a escrever expressões simples em um relatório.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tipos de dados em expressões &#40;relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
+ [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
- [Constantes em expressões &#40;relatórios e SSRS&#41;](constants-in-expressions-report-builder-and-ssrs.md)  
+ [Constantes em expressões &#40;Construtor de Relatórios e SSRS&#41;](constants-in-expressions-report-builder-and-ssrs.md)  
   
- [Operadores em expressões de &#40;relatórios e SSRS&#41;](operators-in-expressions-report-builder-and-ssrs.md)  
+ [Operadores em expressões &#40;Construtor de Relatórios e SSRS&#41;](operators-in-expressions-report-builder-and-ssrs.md)  
   
- [Coleções internas em expressões &#40;relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
+ [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   
- [Referências globais internas e referências de usuários &#40;relatórios e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [Referências globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [Referências de coleção de parâmetros &#40;relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Referências de coleções de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
- [Referências de coleção de campos do conjunto de dados &#40;relatórios e SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [Referências de coleções de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [Referências de coleção de conjuntos de dados e fontes de dados &#40;relatórios e SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [Referências de coleções DataSources e DataSets &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [Referências de coleções de variáveis de grupo e de relatório &#40;relatórios e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Referências de coleções ReportItems &#40;relatórios e SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
+ [Referências de coleções ReportItems &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)  

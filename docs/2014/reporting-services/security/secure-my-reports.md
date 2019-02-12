@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166306"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035167"
 ---
 # <a name="secure-my-reports"></a>Proteger Meus Relatórios
-  O recurso Meus Relatórios fornece uma área de trabalho gerenciada pelo usuário para trabalhar com relatórios. Para funcionar conforme pretendido, a pasta Meus Relatórios requer permissões menos restritivas do que as outras pastas que estão disponíveis para uso geral. Os usuários que têm permissões apenas para exibir e executar relatórios em outras pastas podem precisar de um conjunto maior de permissões para gerenciar suas pastas Meus Relatórios e seu próprio conteúdo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma atribuição de função especializada e uma definição de função para essa finalidade.  
+  O recurso Meus Relatórios fornece um workspace gerenciado pelo usuário para trabalhar com relatórios. Para funcionar conforme pretendido, a pasta Meus Relatórios requer permissões menos restritivas do que as outras pastas que estão disponíveis para uso geral. Os usuários que têm permissões apenas para exibir e executar relatórios em outras pastas podem precisar de um conjunto maior de permissões para gerenciar suas pastas Meus Relatórios e seu próprio conteúdo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma atribuição de função especializada e uma definição de função para essa finalidade.  
   
 > [!NOTE]  
 >  O recurso Meus Relatórios só está disponível no Gerenciador de Relatórios. Não está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48166306"
 ## <a name="denying-access-to-my-reports"></a>Negando o acesso a Meus Relatórios  
  Para impedir que os usuários acessem Meus Relatórios:  
   
--   Desabilite Meus Relatórios na página Configurações de Site. Para obter mais informações, consulte [habilitar e desabilitar meus relatórios](../report-server/enable-and-disable-my-reports.md).  
+-   Desabilite Meus Relatórios na página Configurações de Site. Para obter mais informações, consulte [Habilitar e desabilitar Meus Relatórios](../report-server/enable-and-disable-my-reports.md).  
   
 -   Remova todas as tarefas da função **Meus Relatórios** .  
   

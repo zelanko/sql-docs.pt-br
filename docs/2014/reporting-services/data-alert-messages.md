@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b987446144cf63651e056cf49a5791bacce705b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085697"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035627"
 ---
 # <a name="data-alert-messages"></a>Mensagens de alertas de dados
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alertas de dados entregam dois tipos de mensagens de alerta de dados por email: mensagens com resultados de alertas de dados e mensagens com descrições de erro. As mensagens com resultados mantêm todos os destinatários informados sobre alterações nos dados de relatório que são de interesse comum e importantes para decisões comerciais. Se, por alguma razão, ocorrer um erro e os resultados não estiverem disponíveis, a mensagem de erro será enviada.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alertas de dados entregam dois tipos de dados de mensagens de alerta por email: Mensagens com resultados de alertas de dados e mensagens com descrições de erro. As mensagens com resultados mantêm todos os destinatários informados sobre alterações nos dados de relatório que são de interesse comum e importantes para decisões comerciais. Se, por alguma razão, ocorrer um erro e os resultados não estiverem disponíveis, a mensagem de erro será enviada.  
   
  O proprietário da definição de alerta de dados também pode exibir informações sobre a instância de alerta de dados no Gerenciador de Alertas de Dados. Para obter mais informações, consulte [Gerenciador de alertas de dados para os usuários do SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md).  
   
@@ -57,14 +57,14 @@ ms.locfileid: "48085697"
 ##  <a name="HowTo"></a> Tarefas relacionadas  
  Esta seção lista os procedimentos que mostram como criar e editar as definições de alertas de dados que fornecem grande parte das informações exibidas em mensagens de alertas de dados.  
   
--   [Criar um alerta de dados no Designer de alertas de dados](create-a-data-alert-in-data-alert-designer.md)  
+-   [Criar um alerta de dados no Designer de Alertas de Dados](create-a-data-alert-in-data-alert-designer.md)  
   
 -   [Editar um alerta de dados no Designer de alertas](edit-a-data-alert-in-alert-designer.md)  
   
 
   
 ## <a name="see-also"></a>Consulte também  
- [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md)   
- [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
+ [Designer de Alertas de Dados](../../2014/reporting-services/data-alert-designer.md)   
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

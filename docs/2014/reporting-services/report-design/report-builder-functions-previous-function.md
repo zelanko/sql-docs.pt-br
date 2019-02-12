@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3e856bf37328c5abaf4edd5bf296c1d557a2be7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118206"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010677"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Função Previous (Construtor de Relatórios e SSRS)
   Retorna o valor ou o valor de agregação especificado para a instância anterior de um item do escopo especificado.  
@@ -33,13 +33,13 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>Parâmetros  
  *Expressão*  
- (`Variant` ou `Binary`) a expressão a ser usada para identificar os dados e para o qual recuperar o valor anterior, por exemplo, `Fields!Fieldname.Value` ou `Sum(Fields!Fieldname.Value)`.  
+ (`Variant` ou `Binary`) A expressão a ser usada para identificar os dados para os quais o valor anterior deve ser recuperado, por exemplo, `Fields!Fieldname.Value` ou `Sum(Fields!Fieldname.Value)`.  
   
  *escopo*  
  (`String`) Opcional. O nome de um grupo ou região de dados ou nulo (`Nothing` na [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica o escopo do qual recuperar o valor anterior especificado pela *expressão*.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Retorna um `Variant` ou `Binary`.  
+ Retorna uma `Variant` ou um `Binary`.  
   
 ## <a name="remarks"></a>Comentários  
  A função `Previous` retorna o valor anterior para a expressão avaliada no escopo especificado depois que toda a classificação e filtragem tiverem sido aplicadas.  
@@ -61,7 +61,7 @@ Previous(expression, scope)
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  O exemplo de código a seguir, quando colocado na linha de dados padrão de uma região de dados, fornece o valor do campo `LineTotal` na linha anterior.  
   
 ### <a name="code"></a>Código  
@@ -70,7 +70,7 @@ Previous(expression, scope)
 =Previous(Fields!LineTotal.Value)  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  O exemplo a seguir mostra uma expressão que calcula a soma das vendas em um dia específico do mês e o valor anterior para esse dia do mês em um ano anterior. A expressão é adicionada a uma célula em uma linha que pertence ao `GroupbyDay`do grupo filho. Seu grupo pai é `GroupbyMonth`, que tem um grupo pai `GroupbyYear`. A expressão exibe os resultados de GroupbyDay (o escopo padrão) e de `GroupbyYear` (o pai do grupo pai `GroupbyMonth`).  
   
  Por exemplo, para uma região de dados com um grupo pai chamado `Year`, seu grupo filho chamado `Month`e seu grupo filho chamado `Day` (3 níveis aninhados). A expressão `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` em uma linha associada ao grupo `Day` retorna o valor das vendas para o mesmo dia e mês do ano anterior.  
@@ -82,9 +82,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

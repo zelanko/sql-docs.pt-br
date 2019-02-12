@@ -1,7 +1,7 @@
 ---
 title: Configuração da instância | Microsoft Docs
 ms.custom: ''
-ms.date: 2016-05-04
+ms.date: 05/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791289"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039877"
 ---
 # <a name="instance-configuration"></a>Configuração da instância
   Use a página **Configuração de Instância** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar se uma instância padrão ou uma instância nomeada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser criada. Se uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é ainda não estiver instalada, uma instância padrão será criada, a menos que você especifique uma instância nomeada.  

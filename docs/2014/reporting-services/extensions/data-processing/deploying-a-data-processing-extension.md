@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0751e3e72e7a6b9df1d2cdb8d414cfa263d38426
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5164cdfd418ad8f813b47813f7caee4799e41d90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021397"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Implantando uma extensão de processamento de dados
   Depois de gravar e compilar a extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] em uma biblioteca do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você precisa torná-la detectável pelo servidor de relatório e pelo Designer de Relatórios. Isso é tão fácil quanto copiar a extensão para os diretórios adequados e adicionar entradas aos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adequados.  
@@ -31,20 +31,20 @@ ms.locfileid: "48109586"
   
  A tabela a seguir descreve os atributos do elemento **Extension** das extensões de processamento de dados.  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
 |`Name`|Um nome exclusivo para a extensão, por exemplo, o "SQL" para a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou "OLEDB" para a extensão de processamento de dados OLE DB. O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração.|  
 |`Type`|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  
-|`Visible`|Um valor `false` indica que a extensão de processamento de dados não deve ser visível nas interfaces do usuário. Se o atributo não for incluído, o valor padrão é `true`.|  
+|`Visible`|Um valor `false` indica que a extensão de processamento de dados não deve ser visível nas interfaces do usuário. Se o atributo não for incluído, o valor padrão será `true`.|  
   
  Para obter mais informações sobre os arquivos RSReportServer.config ou RSReportDesigner.config, consulte [Arquivos de configuração do Reporting Services](../../report-server/reporting-services-configuration-files.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Como implantar uma extensão de processamento de dados para um Servidor de Relatório](deploying-a-data-processing-extension-to-a-report-server.md)|Descreve como implantar sua extensão de processamento de dados em um servidor de relatório.|  
-|[Como implantar uma extensão de processamento de dados para o Designer de Relatórios](deploying-a-data-processing-extension-to-report-designer.md)|Descreve como implantar sua extensão de processamento de dados em um Designer de Relatórios.|  
+|[Como: Implantar uma extensão de processamento de dados para um servidor de relatório](deploying-a-data-processing-extension-to-a-report-server.md)|Descreve como implantar sua extensão de processamento de dados em um servidor de relatório.|  
+|[Como: Implantar uma extensão de processamento de dados no Designer de relatórios](deploying-a-data-processing-extension-to-report-designer.md)|Descreve como implantar sua extensão de processamento de dados em um Designer de Relatórios.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões do Reporting Services](../reporting-services-extensions.md)   

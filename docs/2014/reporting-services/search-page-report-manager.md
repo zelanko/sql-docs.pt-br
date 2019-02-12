@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206126"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037349"
 ---
 # <a name="search-page-report-manager"></a>Página Pesquisa (Gerenciador de Relatórios)
   Use a página Resultados da Pesquisa para exibir os resultados de uma operação de pesquisa especificada para um relatório, relatório vinculado, modelo de relatório, fonte de dados compartilhada, pasta ou recurso. Os resultados da pesquisa são listados em ordem alfabética. Você pode classificar por tipo, nome ou descrição.  
@@ -65,7 +65,7 @@ ms.locfileid: "48206126"
  Focalize um item e clique na seta do menu suspenso para abri-lo e acessar e configurar as propriedades do item selecionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

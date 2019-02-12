@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: abf8cdd0eb4ffceb21061ea0101a42e4b84f3773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 181670ab62d31fbb7b6815518129dd5b4e8a1b1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040497"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Função RowNumber (Construtor de Relatórios e SSRS)
   Retorna uma contagem contínua do número de linhas para o escopo especificado.  
@@ -33,7 +33,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>Parâmetros  
  *escopo*  
- (`String`) O nome de um conjunto de dados, região de dados ou grupo ou nulo (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica o contexto no qual avaliar o número de linhas. `Nothing` Especifica o contexto mais externo, geralmente o conjunto de dados do relatório.  
+ (`String`) O nome de um conjunto de dados, região de dados ou grupo ou nulo (`Nothing` no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica o contexto no qual avaliar o número de linhas. `Nothing` especifica o contexto mais externo, geralmente o conjunto de dados do relatório.  
   
 ## <a name="remarks"></a>Comentários  
  `RowNumber` Retorna um valor em uso da contagem de linhas dentro do escopo especificado, assim como [RunningValue](report-builder-functions-runningvalue-function.md) retorna o valor em execução de uma função de agregação. Ao especificar um escopo, você especifica quando redefinir a contagem de linhas como 1.  
@@ -48,16 +48,16 @@ RowNumber(scope)
  Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) e [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="code-example"></a>Exemplo de código  
- A seguir é uma expressão que você pode usar para o `BackgroundColor` propriedade de uma linha de detalhe de região de dados Tablix para alternar a cor das linhas de detalhes para cada grupo, sempre começando com branco.  
+ A expressão a seguir pode ser usada para a propriedade `BackgroundColor` de uma linha de detalhes da região de dados Tablix para alternar a cor das linhas de detalhes de cada grupo, sempre começando com Branco.  
   
 ```  
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

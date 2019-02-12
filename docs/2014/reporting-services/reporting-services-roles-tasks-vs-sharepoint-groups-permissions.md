@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f331902d6bf92c1accb7db8600ff33d96252cb4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357483"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036637"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  
@@ -44,15 +44,15 @@ ms.locfileid: "53357483"
 ##  <a name="bkmk_compare_tools_terms"></a> Comparar ferramentas de permissão e terminologia  
  **Modo Nativo:** Os objetos de permissão do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (funções e tarefas) são criados no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e configurados para usuários individuais no Gerenciador de Relatórios.  
   
- **Modo SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint utiliza os recursos de permissão do SharePoint. Os grupos e as permissões do SharePoint são gerenciados da página **Configurações de Site** a seguir.  
+ **Modo SharePoint:** O modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utiliza os recursos de permissão do SharePoint. Os grupos e as permissões do SharePoint são gerenciados da página **Configurações de Site** a seguir.  
   
  A tabela a seguir compara objetos e conceitos relacionados à permissão entre o modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e o SharePoint.  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo nativo|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Função:** Por exemplo "Gerenciador de conteúdo".|**Grupo:** Por exemplo o grupo "Visualizadores" padrão.|  
-|---|**Grupo de nível de permissão:** Por exemplo "Exibir apenas" para o grupo "Visualizadores".|  
-|**Tarefas:** por exemplo "Gerenciar Relatórios".|**Permissões:** Por exemplo, em "Exibir apenas" grupo há permissões relacionadas de exibir itens, exibir versões e exibir páginas de aplicativo de lista.|  
+|**Função:** Por exemplo, "Gerenciador de Conteúdo".|**Grupo:** Por exemplo, o grupo padrão "Visualizadores".|  
+|---|**Grupo no nível de permissão:** Por exemplo, "Somente Exibição" para o grupo "Visualizadores".|  
+|**Tarefas:** por exemplo "Gerenciar Relatórios".|**Permissões:** Por exemplo, no grupo "Somente Exibição", há permissões relacionadas à lista para exibir itens, exibir versões e exibir páginas de aplicativo.|  
   
  Para obter mais informações sobre as permissões do SharePoint, consulte [Níveis de permissão e permissões](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinar níveis de permissão e grupos no SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "53357483"
 |**Meus Relatórios**|Não há nenhum grupo equivalente. **Meus Relatórios** não tem suporte em um servidor de relatório executado no modo do SharePoint. Você pode usar o recurso Meu Site no [!INCLUDE[winSPServ](../includes/winspserv-md.md)] se desejar usar uma funcionalidade equivalente.|  
 |**Publicador**<br /><br /> Adicionar, atualizar, exibir e excluir relatórios, modelos de relatórios, fontes de dados compartilhadas e recursos.|Use o grupo **Membros** para conceder permissões para adicionar itens, editar itens e atualizar referências aos itens dependentes em um site do SharePoint. O grupo **Membros** tem permissões de nível Colaborar, que permitem aos membros do grupo exibir páginas, adicionar e atualizar itens e enviar alterações para aprovação.|  
 |**Construtor de Relatórios**<br /><br /> Exibir relatórios, gerenciar assinaturas individuais automaticamente e abrir relatórios no Construtor de Relatórios.|Não há nenhum nível de permissão pronto predefinido ou grupo do SharePoint que seja equivalente à definição de relatório do Construtor de Relatórios. Por padrão, os usuários que pertencem ao grupo **Membros** ou ao grupo **Proprietários** têm permissão para usar o Construtor de Relatórios. Se desejar disponibilizar o Construtor de Relatórios para mais usuários, crie configurações de segurança personalizadas para fornecer um nível de permissão similar ao fornecido pela função do Construtor de Relatórios. Para obter mais informações, consulte [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
-|-|Use o grupo **Visualizadores** para conceder permissões para exibir relatórios renderizados. O grupo **Visualizadores** não pode baixar ou exibir o conteúdo de itens de relatório.<br /><br /> **Observação:** A partir do SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o **visualizadores** grupo não tem permissões para criar assinaturas.|  
+|-|Use o grupo **Visualizadores** para conceder permissões para exibir relatórios renderizados. O grupo **Visualizadores** não pode baixar ou exibir o conteúdo de itens de relatório.<br /><br /> **Observação:** No SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em diante, o grupo **Visualizadores** não tem permissões para criar assinaturas.|  
 |**Usuário do Sistema** e **Administrador do Sistema**|Estas funções não são necessárias para um servidor de relatório executado no modo do SharePoint. **Usuário do Sistema** e **Administrador do Sistema** correspondem às permissões no nível do farm do SharePoint ou do aplicativo Web. O servidor de relatório não fornece nenhuma funcionalidade que requer autorização nesse nível.|  
   
 ##  <a name="bkmk_compare_tasks_permissions"></a> Comparando tarefas do modo nativo e permissões do SharePoint  

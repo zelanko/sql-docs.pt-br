@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e3c88894ee271e9b96e98e25dc14e62bfc0361ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018897"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Criando um projeto do Analysis Services (Tutorial de mineração de dados básico)
-  Cada [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto define os objetos em um único [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. Um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode conter muitos tipos diferentes de objetos  
+  Cada projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] define os objetos em um único banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode conter muitos tipos diferentes de objetos  
   
 -   Modelos multidimensionais (cubos)  
   
@@ -29,11 +28,11 @@ ms.locfileid: "48048326"
   
  Observe que você **não** requer um cubo para executar a mineração de dados. Se você precisar executar a mineração de dados em um cubo existente, deverá adicionar os modelos de mineração de dados ao mesmo projeto usado para criar o cubo. No entanto, para a maioria dos propósitos, você poderá criar seus modelos em fontes de dados relacionais, como um data warehouse, e obter o melhor desempenho se um cubo não estiver envolvido.  
   
- Neste tutorial, você usará um data warehouse relacional, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], como a fonte de dados. Você implantará todos os seus objetos de mineração de dados em um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados denominado `BasicDataMining`, usado apenas para mineração de dados.  
+ Neste tutorial você usará um data warehouse relacional, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], como a fonte de dados. Você implantará todos os seus objetos de mineração de dados em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] chamado `BasicDataMining`, usado apenas para mineração de dados.  
   
- Por padrão, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa o **localhost** instância para novos projetos. Se você estiver usando uma instância nomeada ou um servidor diferente, primeiro crie e abra o projeto e depois altere o nome da instância.  
+ Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa a instância **localhost** para novos projetos. Se você estiver usando uma instância nomeada ou um servidor diferente, primeiro crie e abra o projeto e depois altere o nome da instância.  
   
- Para obter mais informações sobre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projetos, consulte [criando um projeto do Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Para obter mais informações sobre projetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consulte [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Para criar um Projeto de Analysis Services  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48048326"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>Para alterar a instância em que os objetos de mineração de dados estão armazenados  
   
-1.  Na [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]diante a **Project** menu, selecione **propriedades**.  
+1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no menu **Projeto** , selecione **Propriedades**.  
   
 2.  No lado esquerdo do painel **Páginas de Propriedades** , sob **Propriedades de Configuração**, clique em **Implantação**.  
   

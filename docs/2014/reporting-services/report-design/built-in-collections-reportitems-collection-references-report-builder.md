@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042827"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Referências de coleções ReportItems (Construtor de Relatórios e SSRS)
-  A coleção interna de `ReportItems` é o conjunto de caixas de texto de itens de relatório, como linhas de uma região de dados ou caixas de texto na superfície de design de relatório. O `ReportItems` coleção inclui caixas de texto que estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo do relatório. Essa coleção é determinada em tempo de execução pelo processador de relatório e pelo renderizador de relatório. O escopo atual é alterado conforme o processador de relatório combina dados de relatório e os elementos de layout do item de relatório sucessivamente conforme o usuário exibe páginas de um relatório. Você pode usar o `ReportItems` coleção interna para produzir cabeçalhos de página do estilo de dicionário que mostram o primeiro e último item em cada página.  
+  A coleção interna de `ReportItems` é o conjunto de caixas de texto de itens de relatório, como linhas de uma região de dados ou caixas de texto na superfície de design de relatório. A coleção de `ReportItems` inclui caixas de texto que estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo de relatório. Essa coleção é determinada em tempo de execução pelo processador de relatório e pelo renderizador de relatório. O escopo atual é alterado conforme o processador de relatório combina dados de relatório e os elementos de layout do item de relatório sucessivamente conforme o usuário exibe páginas de um relatório. É possível usar a coleção interna de `ReportItems` para produzir cabeçalhos de páginas em estilo de dicionário que mostram o primeiro e o último item em cada página.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Usando a propriedade Value de ReportItems  
- Itens dentro de `ReportItems` coleção tem apenas uma propriedade: valor. O valor para um item de `ReportItems` pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
+ Itens dentro de `ReportItems` coleção tem apenas uma propriedade: Valor. O valor para um item de `ReportItems` pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
   
  Por exemplo:  
   
@@ -47,14 +47,14 @@ ms.locfileid: "48053886"
  Em uma seção do cabeçalho ou rodapé de página, apenas as caixas de texto na página atual estão disponíveis como um membro da coleção `ReportItems`. Por exemplo, se o `ReportItems!textboxLastName.Value` se referir a uma caixa de texto exibida apenas na primeira página de uma região de dados de várias páginas, você verá um valor para a primeira página, mas todas as outras páginas exibirão o **#Erro** para mostrar que não foi possível avaliar a expressão como foi gravada.  
   
 ## <a name="scope-for-the-reportitems-collection"></a>Escopo para a coleção ReportItems  
- Conforme o relatório é processado, cada caixa de texto no corpo do relatório ou em uma região de dados é avaliada no contexto de seu conjunto de dados, região de dados e associações de grupos. O escopo de uma referência para o `ReportItems` coleção é o escopo atual ou qualquer ponto superior ao escopo atual.  
+ Conforme o relatório é processado, cada caixa de texto no corpo do relatório ou em uma região de dados é avaliada no contexto de seu conjunto de dados, região de dados e associações de grupos. O escopo para um referência à coleção `ReportItems` é o escopo atual ou qualquer ponto superior ao escopo atual.  
   
  Por exemplo, uma caixa de texto em uma linha que está em um grupo pai não deve conter uma expressão que faça referência ao nome de uma caixa de texto em uma linha do grupo filho. Essa expressão não é resolvida como um valor no relatório porque a caixa de texto da linha filho está fora do escopo. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleções internas em expressões &#40;relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

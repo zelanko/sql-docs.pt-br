@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um gráfico de colunas ao relatório (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104126"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026758"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (construtor de relatórios)
   Um gráfico de coluna exibe uma série como um conjunto de barras verticais agrupadas por categoria. Um gráfico de coluna pode ser útil para:  
   
 -   Mostrar alterações de dados em um período de tempo.  
@@ -53,7 +53,7 @@ ms.locfileid: "48104126"
 9. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolha uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48104126"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Selecione as palavras **título do gráfico** na parte superior do gráfico e, em seguida, digite o seguinte texto: **total de pedidos de vendas Store**.  
+2.  Selecione as palavras **título do gráfico** na parte superior do gráfico e, em seguida, digite o seguinte texto: **Store totais de ordem de venda**.  
   
 3.  Clique em **Executar** para visualizar o relatório.  
   

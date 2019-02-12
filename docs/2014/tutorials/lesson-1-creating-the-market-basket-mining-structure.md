@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be8768c5d638904240cc1499a594b0d2c8a97aa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128876"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033627"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lição 1: Criando a estrutura de mineração do Market Basket 
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lição 1: Criando a estrutura de mineração da cesta de compras
   Nesta lição, você criará uma estrutura de mineração que permite prever quais produtos [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] um cliente tende a adquirir ao mesmo tempo. Se você estiver familiarizado com estruturas de mineração e seus papéis na mineração de dados, consulte [estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  A estrutura de mineração de associação que você criará nesta lição oferece suporte à adição de modelos de mineração com base nas [algoritmo associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Em lições posteriores, você usará os modelos de mineração para prever o tipo de produtos que um cliente tente a comprar ao mesmo tempo, que é chamado de análise de cesta básica. Por exemplo, você pode achar que os clientes tendem a comprar mountain bikes, pneus de bicicleta e capacetes ao mesmo tempo.  
@@ -97,7 +96,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Para criar uma nova consulta DMX no SQL Server Management Studio  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  No **conectar ao servidor** caixa de diálogo, para **tipo de servidor**, selecione **Analysis Services**. Na **nome do servidor**, digite `LocalHost`, ou o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
   
@@ -188,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  Na próxima lição, você adicionará dois modelos de mineração à estrutura de mineração Cesta Básica recém-criada.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lição 2: Adicionando modelos de mineração à estrutura de mineração de Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

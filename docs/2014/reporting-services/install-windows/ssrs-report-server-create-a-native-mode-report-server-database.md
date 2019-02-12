@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090256"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017037"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório no modo nativo (Gerenciador de configurações do SSRS)
   O Modo Nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. O banco de dados é necessário e é usado para armazenar relatórios publicados, modelos, fontes de dados compartilhadas, dados de sessão, recursos e metadados do servidor.  
@@ -116,12 +116,12 @@ ms.locfileid: "48090256"
   
 7.  Revise as informações na página Resumo para verificar se as configurações estão corretas e clique em **Avançar**.  
   
-8.  Verifique a conexão clicando em uma URL na página URL do Servidor de Relatório ou na página URL do Gerenciador de Relatórios. As URLs devem estar definidas para que esse teste funcione. Se a conexão do banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório ou o Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações, consulte [Verify a Reporting Services Installation](verify-a-reporting-services-installation.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+8.  Verifique a conexão clicando em uma URL na página URL do Servidor de Relatório ou na página URL do Gerenciador de Relatórios. As URLs devem estar definidas para que esse teste funcione. Se a conexão do banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório ou o Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](verify-a-reporting-services-installation.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Banco de dados &#40;modo nativo do SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Gerenciar um servidor de relatório do Reporting Services modo nativo](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Gerenciar um servidor de relatório de modo nativo do Reporting Services](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

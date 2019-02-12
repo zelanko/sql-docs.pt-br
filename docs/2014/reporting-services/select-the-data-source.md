@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166956"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011817"
 ---
 # <a name="select-the-data-source"></a>Selecionar a fonte de dados
   Use esta página do Assistente de Relatório para definir uma fonte de dados para o relatório.  
@@ -34,7 +34,7 @@ ms.locfileid: "48166956"
  Digite um nome para a conexão à fonte de dados. O nome da fonte de dados deve ser exclusivo no relatório.  
   
  **Tipo**  
- Selecione o tipo de fonte de dados que você está usando (por exemplo, se você estiver usando um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], escolha [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
+ Selecione o tipo de fonte de dados que você está usando (por exemplo, se você estiver usando um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escolha [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
   
  **Cadeia de conexão**  
  Digite uma cadeia de conexão para a fonte de dados. Para obter mais informações sobre cadeias de caracteres de conexão, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48166956"
  Selecione esta opção para armazenar a fonte de dados no projeto como uma fonte de dados compartilhada, em vez de armazenar no relatório. Dessa maneira, você pode usá-la como a fonte de dados para outros relatórios no projeto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Servidor de Relatório do Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)   
  [Arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   

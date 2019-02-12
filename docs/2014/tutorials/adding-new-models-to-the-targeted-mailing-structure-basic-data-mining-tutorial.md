@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 512c6888-60f1-46e4-9639-bc448395b8d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790809a04e4a322901a5f7398a02226cf984e2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206966"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015443"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Adicionando novos modelos à estrutura de mala direta (Tutorial de mineração de dados básico)
   Nesta tarefa, você definirá dois modelos adicionais usando o **modelos de mineração** guia do Designer de mineração de dados. Você usará os algoritmos Microsoft Naive Bayes e Microsoft Clustering para criar os modelos. Esses dois algoritmos foram selecionados por causa de sua capacidade de prever um valor discreto (por exemplo, compra de bicicletas). Para obter mais informações sobre esses algoritmos, consulte [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) e [algoritmo do Microsoft Naive Bayes](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
@@ -56,7 +55,7 @@ ms.locfileid: "48206966"
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar modelos de mineração a uma estrutura &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)   
- [Designer de mineração de dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Designer de Mineração de Dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Movendo objetos de Mineração de dados](../../2014/analysis-services/data-mining/moving-data-mining-objects.md)  
   
   

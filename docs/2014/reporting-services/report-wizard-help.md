@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19f07d48421ab00c0399b4fec299e975931c4838
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5e08d75c67bf1f335279dd1dcf3885017342e4ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161316"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041327"
 ---
 # <a name="report-wizard-help"></a>Ajuda do Assistente de Relatório
   Esta seção fornece Ajuda por meio da tecla F1 para o Assistente de Relatório. O Assistente de Relatório automatiza o processo de criação de relatórios tabulares e de matriz. A tabela a seguir descreve os tópicos dessa seção.  

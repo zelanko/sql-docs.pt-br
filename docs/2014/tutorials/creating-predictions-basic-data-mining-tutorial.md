@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515457"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035257"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Criando previsões (Tutorial de mineração de dados básico)
   Depois de testar a precisão dos modelos de mineração e decidir que está satisfeito com os resultados, você pode, em seguida, gerar previsões usando o construtor de consultas de previsão sobre a **previsão do modelo de mineração** guia na mineração de dados Designer.  
@@ -133,7 +132,7 @@ ms.locfileid: "52515457"
   
      insere um parênteses de abertura (à esquerda) no início da linha selecionada, ou insere um parêntese de fechamento (à direita) no final da linha atual.  
   
--   **E/OU**  
+-   **AND/OR**  
   
      insere o operador `AND` ou o operador `OR` logo após a função ou coluna atual.  
   

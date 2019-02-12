@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173596"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021407"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Adicionar um relatório novo ou existente a um projeto de relatório (SSRS)
-  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode adicionar um novo relatório usando o Assistente de relatório ou adicionando um novo relatório em branco ao seu projeto. Também é possível adicionar um relatório existente. Depois de adicionar um relatório, você poderá ver o nome do relatório listado na pasta **Relatórios** do seu projeto.  
+  Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode adicionar um relatório novo usando o Assistente de Relatório ou acrescentando um novo relatório em branco ao projeto. Também é possível adicionar um relatório existente. Depois de adicionar um relatório, você poderá ver o nome do relatório listado na pasta **Relatórios** do seu projeto.  
   
 > [!NOTE]  
 >  Para visualizar um relatório com fontes de dados existentes, é preciso ter as permissões para a fonte de dados do cliente que está criando o relatório. Para obter mais informações, consulte [criar uma fonte de dados compartilhada ou um inserido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48173596"
   
     -   **Escolher um tipo de relatório.** A próxima etapa é selecionar o tipo de relatório desejado. Você pode optar por um relatório tabular ou de matriz. Um relatório tabular tem um número fixo de colunas. Uma relatório de matriz ou de tabulação cruzada apresenta um número variável de colunas com base nos resultados da consulta. Um relatório de mapa exibe dados analíticos em relação a um plano de fundo geográfico.  
   
-    -   **Escolha um estilo.** A próxima etapa é aplicar um estilo ao relatório que usa um modelo de estilo. Selecione um modelo para aplicar estilos como fonte, cor e estilo de borda ao relatório. O Designer de Relatórios fornece seis modelos de estilo: Ardósia, Floresta, Corporativo, Negrito, Azul-marinho e Genérico. Você também pode adicionar modelos de estilo adicionais.  
+    -   **Escolha um estilo.** A próxima etapa é aplicar um estilo ao relatório que usa um modelo de estilo. Selecione um modelo para aplicar estilos como fonte, cor e estilo de borda ao relatório. Designer de relatórios fornece seis modelos de estilo: Ardósia, floresta, corporativa, negrito, azul-marinho e genérico. Você também pode adicionar modelos de estilo adicionais.  
   
         > [!NOTE]  
         >  Você pode alterar modelos existentes ou adicionar novos, editando o arquivo Styletemplates XML no \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>pasta, onde \<lang > é o idioma que você está usando (por exemplo, se você estiver usando a versão do idioma inglês [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], o nome da pasta será "EN"). Esta pasta está localizada no computador em que o Designer de Relatórios está instalado. Há duas cópias do arquivo ModelosDeEstilo.xml. Para modificar os estilos aplicados por meio do Assistente de Relatório, edite o arquivo na pasta criada para o idioma que está em uso.  

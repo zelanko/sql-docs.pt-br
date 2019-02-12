@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5712b4a6d9d363f547bf47be519af8c402ee829d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72b8eda95def001cbb97bc6a91401a7765a6b8cb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144596"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010599"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Exibir cabeçalhos e rodapés com um grupo (Construtor de Relatórios e SSRS)
   Você pode ajudar a controlar se uma linha estática, como um cabeçalho ou rodapé de grupo, será renderizada com linhas dinâmicas associadas a um grupo de uma região de dados tablix.  

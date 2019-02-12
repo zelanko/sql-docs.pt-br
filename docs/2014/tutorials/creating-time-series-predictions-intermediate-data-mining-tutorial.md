@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119866"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027987"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Criando previsões de série temporal (Tutorial de mineração de dados intermediário)
   Nas tarefas anteriores desta lição, você criou um modelo de série temporal e explorou os resultados. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sempre cria um conjunto de cinco (5) previsões para um modelo de série temporal e a exibe os valores previstos como parte do gráfico de previsão. No entanto, também é possível criar previsões criando-se consultas de previsão DMX.  
@@ -91,7 +90,7 @@ ms.locfileid: "48119866"
 |7/25/2008|99978.00|  
 |8/25/2008|145575.07|  
 |9/25/2008|116835.19|  
-|25/10/2008|116537.38|  
+|10/25/2008|116537.38|  
 |11/25/2008|107760.55|  
   
  **M200 Europa PredictQuantity**  
@@ -101,7 +100,7 @@ ms.locfileid: "48119866"
 |7/25/2008|52|  
 |8/25/2008|67|  
 |9/25/2008|58|  
-|25/10/2008|57|  
+|10/25/2008|57|  
 |11/25/2008|54|  
   
  **M200 América do Norte - PredictAmount**  
@@ -111,7 +110,7 @@ ms.locfileid: "48119866"
 |7/25/2008|348533.93|  
 |8/25/2008|340097.98|  
 |9/25/2008|257986.19|  
-|25/10/2008|374658.24|  
+|10/25/2008|374658.24|  
 |11/25/2008|379241.44|  
   
  **M200 América do Norte - PredictQuantity**  
@@ -121,7 +120,7 @@ ms.locfileid: "48119866"
 |7/25/2008|272|  
 |8/25/2008|152|  
 |9/25/2008|250|  
-|25/10/2008|181|  
+|10/25/2008|181|  
 |11/25/2008|290|  
   
 > [!WARNING]  

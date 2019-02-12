@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138217"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028817"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lição 5: Estendendo o modelo de série temporal
+# <a name="lesson-5-extending-the-time-series-model"></a>Lição 5: Estendendo a série temporal de modelo
   No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, é possível adicionar novos dados a um modelo de série temporal e incorporar automaticamente os novos dados no módulo. Você adiciona novos dados a um modelo de mineração de série temporal de um de dois modos:  
   
 -   Use PREDICTION JOIN para unir dados em uma fonte externa para os dados de treinamento.  
@@ -168,7 +167,7 @@ PREDICTION JOIN <source query>
 |M200 Europa|11/25/2008 12:00:00 AM|56|68|  
 |M200 Europa|12/25/2008 12:00:00 AM|74|89|  
   
- **Produto e região: M200 Pacífico**  
+ **Produto e região: M200 Pacific**  
   
 |||||  
 |-|-|-|-|  
@@ -231,7 +230,7 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europa|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>Fazendo previsões com REPLACE_MODEL_CASES  
- Substituir os casos de modelo é útil quando você desejar treinar um modelo em um conjunto de casos e, então, aplicar o modelo a uma série de dados diferente. Uma passo a passo detalhado desse cenário é apresentada na [lição 2: Criando um cenário de previsão de &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Substituir os casos de modelo é útil quando você desejar treinar um modelo em um conjunto de casos e, então, aplicar o modelo a uma série de dados diferente. Uma passo a passo detalhado desse cenário é apresentada na [lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de consulta de modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

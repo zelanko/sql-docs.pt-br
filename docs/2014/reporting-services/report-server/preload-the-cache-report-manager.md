@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209496"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035077"
 ---
 # <a name="preload-the-cache-report-manager"></a>Pré-carregar o cache (Gerenciador de Relatórios)
   Você pode pré-carregar o cache para um conjunto de dados compartilhado criando um plano de atualização do cache para o conjunto de dados compartilhado.  
@@ -121,10 +121,10 @@ ms.locfileid: "48209496"
 18. Clique em **Aplicar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assinaturas controladas por dados](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Desempenho, instantâneos, cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
+ [Desempenho, instantâneos, caching &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
+ [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c71fd13052c02b36c7b725e4058fd827076d6a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097a118a23bcec722710bc404e9e6452d6504b69
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058346"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032457"
 ---
 # <a name="high-availability-reporting-services"></a>Alta disponibilidade (Reporting Services)
-  Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é um servidor sem monitoração de estado que armazena dados de aplicativo, conteúdo, propriedades e informações de sessão em dois bancos de dados relacionais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Como tal, a melhor maneira de garantir a disponibilidade de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] funcionalidade é fazer o seguinte:  
+  Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é um servidor sem monitoração de estado que armazena dados de aplicativo, conteúdo, propriedades e informações de sessão em dois bancos de dados relacionais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Como tal, o melhor modo para assegurar a disponibilidade da funcionalidade do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é fazer o seguinte:  
   
--   Use os recursos de alta disponibilidade a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] para maximizar o tempo de atividade dos bancos de dados de servidor de relatório. Se você configurar um [!INCLUDE[ssDE](../includes/ssde-md.md)] da instância para ser executado em um cluster de failover, você pode selecionar que instância quando você cria um banco de dados do servidor de relatório.  
+-   Use os recursos de alta disponibilidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] para maximizar o tempo de funcionamento dos bancos de dados do servidor de relatório. Se uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] for configurada para ser executada em um cluster de failover, selecione essa instância ao criar um banco de dados do servidor de relatório.  
   
 -   Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)] com os bancos de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e para fontes de dados, como for possível. Para obter mais informações, confira [Reporting Services com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md).  
   
@@ -39,6 +39,6 @@ ms.locfileid: "48058346"
   
 ## <a name="see-also"></a>Consulte também  
  [Soluções de alta disponibilidade &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Configurar uma implantação de expansão do servidor de relatório do modo nativo &#40;Configuration Manager do SSRS&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

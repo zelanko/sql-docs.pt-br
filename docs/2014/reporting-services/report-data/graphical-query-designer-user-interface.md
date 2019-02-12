@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 27b487c787a82f67fc861153939eb5838373fca1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 83a9233d9d5016be3307b797bb9a5a84ead276be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039287"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface de usuário do Designer de consultas gráficas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas e um designer de consultas baseadas em texto; com eles, é possível criar consultas e recuperar dados de um banco de dados relacional relativos a um conjunto de dados de relatório no Designer de Relatórios. Use o designer de consultas gráficas para criar uma consulta interativamente e ver os resultados de tipos de fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Use o designer de consultas baseadas em texto para especificar várias instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consulta complexa ou sintaxe de comando e consultas baseadas em expressões. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md). Para obter mais informações sobre como trabalhar com tipos de fonte de dados específicos, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41;](report-datasets-ssrs.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "48107996"
  para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 ## <a name="graphical-query-designer"></a>Designer de Consultas Gráficas  
- Este designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Text**, **StoredProcedure**ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](../dataset-properties-dialog-box-query.md) .  
+ Esse designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Texto**, **StoredProcedure**, ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](../dataset-properties-dialog-box-query.md) .  
   
  As seguintes opções estão disponíveis para o tipo de consulta:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48107996"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>Barra de ferramentas do Designer de Consultas Gráficas  
  A barra de ferramentas do designer de consultas gráficas contém botões que ajudam você a criar consultas [!INCLUDE[tsql](../../../includes/tsql-md.md)] usando a interface gráfica.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
@@ -114,7 +114,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>Botões da barra de ferramentas relacionados ao tipo de comando TableDirect  
  A barra de ferramentas do designer de consultas gráficas fornece uma lista suspensa das tabelas existentes na fonte de dados. A tabela a seguir lista cada botão e a função correspondente.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
@@ -132,7 +132,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>Botões da barra de ferramentas relacionados ao tipo de comando StoredProcedure  
  A barra de ferramentas do designer de consultas gráficas fornece uma lista suspensa dos procedimentos armazenados existentes na fonte de dados. A tabela a seguir lista cada botão e a função correspondente.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

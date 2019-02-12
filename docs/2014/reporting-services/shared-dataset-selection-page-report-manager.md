@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d34dafd60f2165f2ae90661feca2bafac462dab7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4a02db047e17c7bacf7183a10a0db93d8ac905e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101046"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031377"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Página Seleção de Conjunto de Dados Compartilhado (Gerenciador de Relatórios)
   Use a página Seleção de Conjunto de Dados Compartilhado para revisar e modificar os conjuntos de dados compartilhados que estão associados a um relatório.  
@@ -50,11 +50,11 @@ ms.locfileid: "48101046"
  Salve as alterações.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
- [Partes de relatório e conjuntos de dados no construtor de relatórios](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Partes de relatório e conjuntos de dados no Construtor de Relatórios](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

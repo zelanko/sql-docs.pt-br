@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2dc831119ae6356761b525f76fe11b37236724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037427"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatando texto e espaços reservados (Construtor de Relatórios e SSRS)
   Uma caixa de texto pode ser um item de relatório ou uma célula individual dentro de uma região de dados que contém texto, um campo calculado, um ponteiro para um campo em um banco de dados ou uma combinação dos três itens. Você pode misturar fontes e cores, adicionar estilos em negrito e itálico e usar estilos de parágrafo, como alinhamento e recuos deslocados. Você pode formatar uma caixa de texto inteira ou formatar texto, números, expressões ou campos específicos dentro da caixa de texto.  
@@ -34,7 +34,7 @@ ms.locfileid: "48111737"
   
  Nessa ilustração, a própria caixa de texto tem uma borda e todo o texto está na mesma caixa de texto, mas o texto tem várias formatações.  
   
- Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
+ Para começar rapidamente, confira [Tutorial: formatar o texto &#40Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ ms.locfileid: "48111737"
   
 -   Arraste um campo do painel **Dados do Relatório** e solte-o dentro da caixa de texto. Se você arrastar a expressão em qualquer outro lugar no corpo de relatório, uma nova caixa de texto será criada contendo o espaço reservado. O valor desse espaço reservado será a expressão de campo correspondente ao campo que foi solto.  
   
--   Clique com o botão direito do mouse em qualquer lugar na caixa de texto e selecione **Inserir Espaço Reservado**. Na caixa de diálogo **Propriedades do Espaço Reservado** , é possível especificar uma expressão como o valor do espaço reservado. Para obter mais informações, consulte [caixa de diálogo de propriedades do espaço reservado, geral &#40;construtor de relatórios e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
+-   Clique com o botão direito do mouse em qualquer lugar na caixa de texto e selecione **Inserir Espaço Reservado**. Na caixa de diálogo **Propriedades do Espaço Reservado** , é possível especificar uma expressão como o valor do espaço reservado. Para obter mais informações, consulte [Caixa de diálogo Propriedades do Espaço Reservado, Geral &#40;Construtor de Relatórios e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 -   Digite qualquer expressão simples ou complexa na caixa de texto. Por exemplo, se você digitar **Name: [Name]** na caixa de texto, o texto **[Name]** será exibido como um espaço reservado que representa a expressão `=Fields!Name.Value`.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48111737"
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Caixa de diálogo Propriedades do Espaço Reservado, Geral &#40;Construtor de Relatórios e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Caixas de texto &#40;relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

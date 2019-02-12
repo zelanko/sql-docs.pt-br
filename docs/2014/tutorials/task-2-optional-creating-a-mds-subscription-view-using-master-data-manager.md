@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09c2402b9168ac99a201afa8e0ebda971614ee4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015277"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarefa 2 (opcional): Criando uma exibição de assinatura do MDS usando o Master Data Manager
   Nesta tarefa, você criará uma exibição de assinatura para expor a **Supplier** entidade na **fornecedores** modelo para outros aplicativos. Você não utiliza essa exibição na versão atual do tutorial.  
@@ -48,6 +45,6 @@ ms.locfileid: "48097586"
 10. Clique em **salvar** na barra de ferramentas para salvar a exibição de assinatura. Essa ação cria um modo de exibição no SQL Server denominada **fornecedores**. Você pode verificar isso usando o SQL Server Management Studio (SSMS).  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 3 &#40;opcional&#41;: examinando exibições de assinatura](task-3-optional-reviewing-the-subscription-views.md)  
+ [Tarefa 3 &#40;opcional&#41;: Examinando exibições de assinatura](task-3-optional-reviewing-the-subscription-views.md)  
   
   

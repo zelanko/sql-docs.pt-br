@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082826"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043267"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
   Quando você cria relatórios, é importante compreender o comportamento dos renderizadores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para garantir que o relatório renderizado tenha a aparência desejada, incluindo o layout de página e as quebras de páginas. Provavelmente, você também deseja ter certeza de que o relatório renderizado se ajusta ao tamanho do papel geralmente usado na sua organização.  
@@ -56,7 +56,7 @@ ms.locfileid: "48082826"
   
 -   **Renderizadores de quebra de página flexível** Os renderizadores de quebra de página flexível mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para exibição e entrega com base na tela, como em uma página da Web. Os renderizadores de quebra de página flexível disponíveis são: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, o arquivo da Web (MHTML) e HTML.  
   
--   **Renderizadores de quebra de página não flexíveis** Os renderizadores de quebra de página não flexíveis mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para uma experiência consistente de impressão, ou para exibir o relatório online em formato de um livro. Os renderizadores de quebra de página não flexíveis disponíveis têm suporte: TIFF e PDF.  
+-   **Renderizadores de quebra de página impressa** Os renderizadores de quebra de página impressa mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para uma experiência consistente de impressão, ou para exibir o relatório online em formato de um livro. Os renderizadores de quebra de página impressa disponíveis são suportados: TIFF e PDF.  
   
  Quando você visualiza um relatório no Construtor de Relatórios ou no Designer de Relatórios, ou executa um relatório no Gerenciador de Relatórios, ele é sempre renderizado primeiro em HTML. Depois que executar o relatório, é possível exportá-lo para diversos formatos de arquivo. Para obter mais informações, consulte [exportando relatórios &#40;construtor de relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
@@ -95,33 +95,33 @@ ms.locfileid: "48082826"
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista procedimentos que mostram a você, passo a passo, como trabalhar com a paginação em relatórios.  
   
--   [Adicionar uma quebra de página &#40;relatórios e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Adicionar uma quebra de página &#40;Construtor de Relatórios e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Exibir cabeçalhos de linhas e colunas em várias páginas &#40;relatórios e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Exibir cabeçalhos de linhas e colunas em várias páginas &#40;Construtor de Relatórios e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Adicionar ou remover um cabeçalho ou rodapé de &#40;relatórios e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Adicionar ou remover um cabeçalho ou rodapé de página &#40;Construtor de Relatórios e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Exibir números de página ou outras propriedades de relatório &#40;relatórios e SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Exibir números de página ou outras propriedades do relatório &#40;Construtor de Relatórios e SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Ocultar um cabeçalho ou rodapé na primeira ou na última página &#40;relatórios e SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Ocultar um cabeçalho ou rodapé de página na primeira ou na última página &#40;Construtor de Relatórios e SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> Nesta seção  
  Os tópicos a seguir fornecem informações adicionais sobre layout e renderização de página.  
   
- [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Fornece informações sobre como usar cabeçalhos e rodapés em relatórios e como controlar a paginação usando esses recursos.  
   
- [Controlando quebras de páginas, títulos, colunas e linhas &#40;relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Fornece informações sobre como usar quebras de página.  
   
   
   
 ## <a name="see-also"></a>Consulte também  
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportando relatórios &#40;relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

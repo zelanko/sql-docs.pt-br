@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c91f05ef42f3840186ee758e733f73631c0d976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3e26f43f0a146466e32b51ab43a2935f898e1a0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125046"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036377"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Adicionar e remover chaves de criptografia para implantação em expansão (Gerenciador de configurações do SSRS)
   É possível executar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um modelo de implantação de expansão com a configuração de vários servidores de relatório para usarem um banco de dados do servidor de relatório compartilhado. A associação em uma implantação de expansão tem como base o fato de o servidor de relatório armazenar uma chave de criptografia no banco de dados do servidor de relatório. Você pode controlar a associação de implantação de expansão pela adição ou remoção de chaves de criptografia para instâncias específicas do servidor de relatório. Se estiver removendo nós da implantação, você poderá os removê-los em qualquer ordem. Se estiver adicionando nós a uma implantação, você deverá unir quaisquer novas instâncias de um servidor de relatório que já faça parte da implantação.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Usando a ferramenta Configuração do Reporting Services para configurar a implantação de expansão  
- O modo mais fácil para configurar uma implantação de expansão é usar a ferramenta Configuração do Reporting Services. Para obter mais informações e instruções passo a passo, consulte [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](configure-a-native-mode-report-server-scale-out-deployment.md).  
+ O modo mais fácil para configurar uma implantação de expansão é usar a ferramenta Configuração do Reporting Services. Para obter mais informações e instruções passo a passo, consulte [Configurar uma implantação em expansão do servidor de relatório em modo nativo &#40;SSRS Configuration Manager&#41;](configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Usando Rskeymgmt para configurar a implantação de expansão  
  Use o utilitário **rskeymgmt** para inicializar uma instância do servidor de relatório a fim de usar um banco de dados de servidor de relatório compartilhado. A adição de um servidor de relatório para uma implantação de expansão exige que você inicialize o servidor de relatório. A inicialização exige permissões de administrador. Você deve ter credenciais de administrador para o computador remoto que hospeda o servidor de relatório que está sendo associado à implantação.  
@@ -63,7 +63,7 @@ ms.locfileid: "48125046"
  Essas etapas removem o servidor de relatório de uma implantação em expansão, mas não desinstalam a instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no servidor de relatório. Depois de remover o servidor de relatório da implantação em expansão, você pode desinstalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do servidor de relatório se não precisar mais do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nesse servidor. Para obter informações, consulte [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) nos Manuais online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inicializar um servidor de relatório &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

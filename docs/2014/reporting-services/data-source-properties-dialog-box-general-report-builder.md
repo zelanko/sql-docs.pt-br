@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138716"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031847"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Caixa de diálogo Propriedades da Fonte de Dados, Geral (Construtor de Relatórios)
   Selecione **Geral** na caixa de diálogo **Propriedades da Fonte de Dados** para selecionar uma fonte de dados compartilhada em um servidor de relatório ou para criar ou modificar as informações de conexão de uma fonte de dados inserida no relatório.  
@@ -67,7 +67,7 @@ ms.locfileid: "48138716"
 ## <a name="see-also"></a>Consulte também  
  [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Caixa de diálogo de propriedades, as credenciais da fonte de dados &#40;construtor de relatórios&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   

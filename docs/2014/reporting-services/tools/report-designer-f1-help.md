@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9bde9b551f3a2b8308dc8d87bb9a97cc59c1c2de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d815caf1e67b1dd5b4b40838e8a0ef2dd7eb6d05
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189836"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036547"
 ---
 # <a name="report-designer-f1-help"></a>Ajuda F1 do Designer de Relatórios
   Esta seção fornece Ajuda F1 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] assistentes, exibições e caixas de diálogo do Designer de relatórios. Como alternativa, você pode abrir a Ajuda F1 ao trabalhar na caixa de diálogo, com o pressionamento de F1 ou com um clique no botão Ajuda exibido na caixa de diálogo.  

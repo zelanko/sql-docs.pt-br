@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 871f16c520d6682de0afb384577c17c096cdf18a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 40828dd4e7767688a329b641610a65dc0f3493c1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150416"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018198"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Caixa de diálogo Converter CRI (Construtor de Relatórios)
   Este relatório contém CRIs (itens de relatório personalizados) com recursos sem suporte. CRIs são extensões para a linguagem RDL (Report Definition Language) que oferecem suporte a objetos personalizados que exibem dados em um relatório. Os CRIs incluem componentes em tempo de design e em tempo de execução oferecidos por fornecedores de software de terceiros.  
@@ -31,7 +31,7 @@ ms.locfileid: "48150416"
   
  Alguns CRIs podem ser convertidos em itens de relatório no novo formato de definição do relatório. Quando você abre o relatório, precisa confirmar se deseja atualizar. Use as seguintes informações para decidir se você deve converter os CRIs nesse relatório:  
   
--   **Sim** Escolha **Sim** para converter todos os CRIs do relatório, quando possível. Recursos para os quais não há suporte nos CRIs não podem ser atualizados, sendo removidos do arquivo de definição do relatório. Para obter a lista de recursos sem suporte, consulte [atualizar relatórios](../install-windows/upgrade-reports.md). Ao exibir o relatório, você pode ver as diferenças na forma como o CRI é exibido no relatório.  
+-   **Sim** Escolha **Sim** para converter todos os CRIs do relatório, quando possível. Recursos para os quais não há suporte nos CRIs não podem ser atualizados, sendo removidos do arquivo de definição do relatório. Para obter a lista dos recursos sem suporte, consulte [Atualizar relatórios](../install-windows/upgrade-reports.md). Ao exibir o relatório, você pode ver as diferenças na forma como o CRI é exibido no relatório.  
   
 -   **Não** Escolha **Não** quando não quiser converter os CRIs do relatório. Esses CRIs não podem ser exibidos pelo processador de relatório na versão atual. Caso o administrador do sistema pretenda instalar uma nova versão da CRI do fornecedor de software de terceiros compatível com o novo formato de definição do relatório, escolha **Não**. Até que as novas versões estejam disponíveis, os CRIs são exibidos no relatório como uma caixa de texto vazia com um X vermelho.  
   

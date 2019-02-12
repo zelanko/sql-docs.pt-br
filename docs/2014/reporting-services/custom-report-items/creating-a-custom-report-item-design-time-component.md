@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358818"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025857"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Criando um componente de tempo de design de item de relatório personalizado
   Um componente em tempo de design de item de relatório personalizado é um controle que pode ser usado no ambiente do Designer de Relatórios do Visual Studio. O componente em tempo de design de item de relatório personalizado oferece uma superfície de design ativada que pode aceitar operações de arrastar e soltar, a integração ao pesquisador de propriedade [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e a capacidade de oferecer editores de propriedade personalizados.  
@@ -194,12 +194,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Componentes do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Passo a passo: Criando um controle de formulários do Windows que tira proveito dos recursos de tempo de Design do Visual Studio  
+-   Passo a passo: criando um controle do Windows Forms que aproveita recursos em tempo de design do Visual Studio  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquitetura de item de relatório personalizado](custom-report-item-architecture.md)   
  [Criando um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)   
  [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)   
- [Como: Implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Como implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
   
   

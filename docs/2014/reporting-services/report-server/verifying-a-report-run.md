@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8bddd67dca8a97d0279b002784c74e9666e5a15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a61ae676a0fb863d289532a4ce3e28c9751c8fa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076512"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041357"
 ---
 # <a name="verifying-a-report-run"></a>Verificando uma execução de relatório
   Para visualizar informações sobre o status de processamento do relatório, você pode usar os arquivos de log ou consultar as informações sobre status exibidas com o relatório no Gerenciador de Relatórios.  
@@ -47,7 +47,7 @@ ms.locfileid: "48076512"
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
+ [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   
   

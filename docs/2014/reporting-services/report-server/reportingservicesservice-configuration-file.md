@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082532"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014567"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>arquivo de configuração ReportingServicesService
   O arquivo ReportingServicesService.exe.config inclui configurações de rastreamento.  
@@ -29,7 +29,7 @@ ms.locfileid: "48082532"
  Este arquivo está localizado na pasta \Reporting Services\Report Server\Bin.  
   
 ## <a name="editing-guidelines"></a>Editando diretrizes  
- Você pode modificar este arquivo para renomear o arquivo de log ou aumentar ou diminuir níveis de rastreamento. Não modifique nenhuma outra configuração. Para obter instruções, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para obter mais informações sobre logs de rastreamento, consulte [Report Server Service Trace Log](report-server-service-trace-log.md).  
+ Você pode modificar este arquivo para renomear o arquivo de log ou aumentar ou diminuir níveis de rastreamento. Não modifique nenhuma outra configuração. Para obter instruções, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Configuração de exemplo  
  O exemplo a seguir mostra as configurações e os valores padrão localizados no arquivo ReportingServicesService.exe.config.  
@@ -72,7 +72,7 @@ ms.locfileid: "48082532"
 ## <a name="configuration-settings"></a>Definições de configuração  
  A tabela a seguir fornece informações sobre configurações específicas. As configurações são apresentadas na ordem em que aparecem no arquivo de configuração.  
   
-|Configuração|Description|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |**RStrace**|Especifica os namespaces usados para erros e rastreamento.|  
 |**DefaultTraceSwitch**|Especifica o nível de informações que é relatado no log de rastreamento ReportServerService. Cada nível inclui as informações relatadas por todos os níveis de baixa numeração. A desabilitação do rastreamento não é recomendada. Os valores válidos incluem:<br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado|  

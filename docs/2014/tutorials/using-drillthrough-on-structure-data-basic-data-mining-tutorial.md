@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053032"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012757"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Usando o detalhamento em dados de estrutura (Tutorial de mineração de dados básico)
-  Como parte da sua campanha de propaganda, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] está enviando uma mala direta aos clientes potenciais em 34 a 40 anos demográficas. O departamento de marketing decidiu que eles também gostariam de enviar a mala direta aos clientes que compraram Bicicletas da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] há mais de cinco anos. Nesta lição, você identificará clientes com bicicletas mais antigas e irá recuperar suas informações de contato. Essas informações não estão incluídas no modelo, mas na estrutura. Para recuperar as informações de contato, primeiro você terá de garantir que o detalhamento esteja habilitado para a estrutura para depois usá-lo para revelar os nomes e os endereços dos clientes-alvo.  
+  Como parte da sua campanha de propaganda, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] está enviando uma mala direta aos clientes potenciais em 34 a 40 anos demográficas. O departamento de marketing decidiu que também gostaria de enviar a mala direta aos clientes que compraram bicicletas da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] há mais de cinco anos. Nesta lição, você identificará clientes com bicicletas mais antigas e irá recuperar suas informações de contato. Essas informações não estão incluídas no modelo, mas na estrutura. Para recuperar as informações de contato, primeiro você terá de garantir que o detalhamento esteja habilitado para a estrutura para depois usá-lo para revelar os nomes e os endereços dos clientes-alvo.  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>Como habilitar o detalhamento em um modelo de mineração  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48053032"
  Parabéns, você concluiu o tutorial de mineração de dados básico. Agora que você já está se sentindo confortável em usar as ferramentas de mineração de dados, recomendamos que conclua também o Tutorial de mineração de dados intermediário, que demonstra como criar modelos para previsão, análise de cesta básica e clustering de sequências.  
   
 ## <a name="previous-task-in-lesson"></a>Tarefa anterior da lição  
- [Criando previsões &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Criando previsões &#40;Tutorial básico de Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma consulta de previsão usando o Construtor de Consultas de previsão](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

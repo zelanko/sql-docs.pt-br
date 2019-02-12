@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a752a226a550e867fed5b0ca59143a72df6c7dcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 651f8f2fa263918a59a4756a53f1e86f4679c60e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025688"
 ---
 # <a name="reporting-services-configuration-files"></a>Arquivos de configuração do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena informações de componente no registro e em arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Os arquivos de configuração contêm uma combinação de valores somente para uso interno e de valores definidos pelo usuário. Os valores definidos pelo usuário são especificados na instalação, com as ferramentas de configuração, os utilitários de linha de comando e a edição manual de arquivos de configuração.  
@@ -44,9 +44,9 @@ ms.locfileid: "48183286"
 C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER  
 ```  
   
-|Armazenado em:|Description|Local|  
+|Armazenado em:|Descrição|Local padrão|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Armazena configurações para áreas de recurso do serviço Servidor de Relatório: o Gerenciador de Relatórios, o serviço Web do servidor de relatório e o processamento em segundo plano. Para obter mais informações sobre cada configuração, consulte [arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|Armazena as definições de configuração de áreas de recurso do serviço servidor de relatório: O Gerenciador de relatórios, o serviço Web servidor de relatórios e processamento em segundo plano. Para obter mais informações sobre cada configuração, consulte [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|Armazena as políticas de segurança de acesso a códigos para as extensões de servidor. Para obter mais informações sobre esse arquivo, consulte [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportServer|  
 |RSMgrPolicy.config|Armazena as políticas de segurança de acesso a códigos para o Gerenciador de Relatórios. Para obter mais informações sobre esse arquivo, consulte [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportManager|  
 |Web.config para o serviço Web do servidor de relatório|Inclui somente as configurações obrigatórias para ASP.NET.|\<Installation directory> \Reporting Services \ReportServer|  
@@ -65,9 +65,9 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|Armazenado em:|Description|Local|  
+|Armazenado em:|Descrição|Local padrão|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Armazena configurações para áreas de recurso do serviço Servidor de Relatório: o Gerenciador de Relatórios, o serviço Web do servidor de relatório e o processamento em segundo plano. Para obter mais informações sobre cada configuração, consulte [arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|Armazena as definições de configuração de áreas de recurso do serviço servidor de relatório: O Gerenciador de relatórios, o serviço Web servidor de relatórios e processamento em segundo plano. Para obter mais informações sobre cada configuração, consulte [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|Armazena as políticas de segurança de acesso a códigos para as extensões de servidor. Para obter mais informações sobre esse arquivo, consulte [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportServer|  
 |Web.config para o serviço Web do servidor de relatório|Inclui somente as configurações obrigatórias para ASP.NET.|\<Installation directory> \Reporting Services \ReportServer|  
 |Configurações de registro|Armazena o estado de configuração e outras configurações usadas para desinstalar o Reporting Services. Além disso, armazena informações sobre cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Não modifique essas configurações diretamente, pois isso pode invalidar sua instalação.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> ID da instância de exemplo: MSSQL12.MSSQLSERVER<br /><br /> **- E -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  

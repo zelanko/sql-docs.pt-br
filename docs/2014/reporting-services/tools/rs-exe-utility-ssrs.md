@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505638"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023117"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  
@@ -71,7 +71,7 @@ ms.locfileid: "52505638"
  `-s` *serverURL*  
  (Obrigatório) Especifica o nome do servidor Web e nome do diretório virtual do servidor de relatório no qual executar o arquivo. Um exemplo de uma URL de servidor de relatório é `http://examplewebserver/reportserver`. O prefixo http:// ou https:// no início do nome do servidor é opcional. Se você omitir o prefixo, o host de script do servidor de relatório tentará usar https primeiro e depois usará http se https não funcionar.  
   
- `-u` [*domínio*\\]*nome de usuário*  
+ `-u` [*domain*\\]*username*  
  (Opcional) Especifica uma conta do usuário usada para conexão com o servidor de relatório. Se `-u` e `-p` forem omitidos, a conta do usuário do Windows atual será usada.  
   
  `-p` *senha*  

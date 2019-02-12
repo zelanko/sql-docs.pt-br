@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 159bd5e43a9079fe431d921f8275da7a721b5392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4bc1620e5f3bd625eb0b68e51183ce869673747f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181686"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021759"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>Método SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica a conta usada para executar relatórios autônomos.  
@@ -63,6 +63,6 @@ public void SetUnattendedExecutionAccount (string UserName,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

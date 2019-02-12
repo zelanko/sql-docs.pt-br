@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16a92441dd7e3088b6be0f8235f6719b6bc7cdb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192526"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012067"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
   
--   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [especificar credenciais e informações de Conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md) nos Manuais Online do SQL Server.  
+-   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para Fontes de Dados de Relatório](../../integration-services/connection-manager/data-sources.md) nos Manuais Online do SQL Server.  
   
 -   Recuperar arquivos de imagem externos usados no relatório. Se desejar usar um arquivo de imagem e ele não puder ser acessado com acesso Anônimo, você poderá configurar a conta de processamento autônomo de relatórios e conceder à conta a permissão para acessar o arquivo.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "48192526"
   
 1.  Crie ou selecione uma conta de domínio que tenha acesso a computadores e servidores que forneçam dados ou serviços a um servidor de relatório. Você deve usar uma conta que tenha permissões reduzidas (por exemplo, permissões somente leitura).  
   
-2.  Abra um prompt de comando: No menu **Iniciar** , clique em **Executar**, digite **cmd**e clique em **OK**.  
+2.  Abra um prompt de comando: Sobre o **iniciar** menu, clique em **execute**, tipo **cmd**e, em seguida, clique em **Okey**.  
   
 3.  Digite o seguinte comando para configurar a conta em uma instância local do servidor de relatório:  
   
      **rsconfig -e -u\<domain/username> -p\<password>**  
   
- **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e como exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
+ **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Como as informações de conta são armazenadas  
  Quando você define a conta, as seguintes configurações são especificadas como valores criptografados no arquivo RSreportserver.config na instância local ou remota do servidor de relatório.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159516"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039677"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parâmetros no Designer de Consulta MDX do Analysis Services (Construtor de Relatórios e SSRS)
   Para parametrizar uma consulta MDX referente a uma fonte de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , é necessário adicionar um parâmetro de consulta à consulta. No designer de consulta MDX, você pode adicionar um parâmetro de consulta nos modos de Design e de Consulta especificando um filtro. Depois de definir a consulta com um parâmetro de consulta, o Reporting Services cria automaticamente um parâmetro de relatório e um conjunto de dados para fornecer a lista de valores válidos. Dessa forma, o usuário pode especificar um valor que é passado diretamente para a consulta.  
@@ -32,7 +32,7 @@ ms.locfileid: "48159516"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Para definir um parâmetro de consulta em MDX no modo de Design  
   
-1.  No painel de dados do relatório, clique com botão direito em um conjunto de dados criado a partir de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de fonte de dados e, em seguida, clique em **consulta**. O designer de consulta MDX abre no modo de Design.  
+1.  No painel de dados do relatório, clique com o botão direito do mouse em um conjunto de dados criado com base em um tipo de fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e clique em **Consulta**. O designer de consulta MDX abre no modo de Design.  
   
 2.  Arraste uma dimensão até a área de filtro e solte-a na primeira célula da coluna **Dimensão** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48159516"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Para definir um parâmetro de consulta em MDX no modo de Consulta  
   
-1.  No painel de dados do relatório, clique com botão direito em um conjunto de dados criado a partir de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de fonte de dados e, em seguida, clique em **consulta**. O designer de consulta MDX abre no modo de Design.  
+1.  No painel de dados do relatório, clique com o botão direito do mouse em um conjunto de dados criado com base em um tipo de fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e clique em **Consulta**. O designer de consulta MDX abre no modo de Design.  
   
 2.  Na barra de ferramentas, clique em **Design** para alternar para o modo de Consulta.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48159516"
      Para exibir o conjunto de dados que fornece os valores disponíveis para o parâmetro de relatório, clique com o botão direito do mouse em qualquer área em branco do painel de dados do relatório e clique em **Mostrar Conjuntos de Dados Ocultos**. O painel de dados do relatório exibe todos os conjuntos de dados do relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Do tipo de Conexão Analysis Services para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Tipo de conexão Analysis Services para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Interface do usuário do Designer de Consulta MDX do Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

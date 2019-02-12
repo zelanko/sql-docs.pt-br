@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015528"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lição 3: Definindo uma assinatura controlada por dados
   Nesta lição, você vai usar as páginas da assinatura controlada por dados para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
   
 > [!NOTE]  
 >  Antes de começar, verifique se o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent está em execução. Se não estiver, não será possível salvar a assinatura.  
   
- Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, consulte [Lição 2: modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, veja [Lição 2: Modificar as propriedades de fonte de dados de relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
  Neste tópico:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48058726"
   
 1.  Em **Nome de arquivo**, selecione **Obtenha o valor no banco de dados**. Selecione o campo **Pedido**.  
   
-2.  Para **Caminho**, selecione **Especifique um valor estático**. Em definindo valor, digite o nome de um compartilhamento de arquivos públicos para os quais você tem permissões de gravação (por exemplo, `\\mycomputer\public\myreports`).  
+2.  Para **Caminho**, selecione **Especifique um valor estático**. Em Definindo Valor, digite o nome de um compartilhamento de arquivos públicos para os quais você tem permissões de gravação (por exemplo, `\\mycomputer\public\myreports`).  
   
 3.  Em **Formato de Renderização**, selecione **Obtenha o valor no banco de dados**. Selecione **Formato**.  
   
@@ -140,9 +140,9 @@ ms.locfileid: "48058726"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Assinaturas controladas por dados](subscriptions/data-driven-subscriptions.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Criar, modificar e excluir uma assinatura controlada por dados](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Usar uma fonte de dados externa para dados de assinante &#40;assinatura controlada por dados&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

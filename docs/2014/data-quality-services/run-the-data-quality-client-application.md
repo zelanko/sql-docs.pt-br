@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.browseforservers.f1
 - sql12.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ea19b5b56902e3c8fb4fa664b4449c29af2ee41
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b40e0243b8ab330a4c865514d6bc047f7b0b2d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032943"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035697"
 ---
 # <a name="run-the-data-quality-client-application"></a>Executar o aplicativo do cliente do Data Quality
   É possível usar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) executando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e fazendo logon em um [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  

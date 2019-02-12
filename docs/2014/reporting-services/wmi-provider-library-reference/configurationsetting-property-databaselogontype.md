@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 98dc45752779a6610d735040e16bc5783447396d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107046"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020577"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
   Especifica se o servidor de relatório usa uma conta de serviço do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, uma conta do usuário do Windows ou um logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para acessar o banco de dados do servidor de relatório. Somente leitura.  
@@ -54,9 +54,9 @@ public int DatabaseLogonType;
   
 -   2 para fazer logon como um serviço  
   
- Se você especificar 0 (Windows), você deve definir o valor [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) propriedade para uma conta de usuário válida do Windows correspondente.  
+ Se você especificar 0 (Windows), deverá definir o valor na propriedade [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) com uma conta de usuário válida e correspondente do Windows.  
   
- Se você especificar 1 (SQL Server), verifique se o valor da [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) corresponde à válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.  
+ Se especificar 1 (SQL Server), certifique-se de que o valor de [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) corresponda a um logon válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Se você especificar 2 (serviço Windows), o servidor de relatório usará uma conta [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e a conta de serviço do Windows para acessar o banco de dados do servidor de relatório. A propriedade DatabaseLogonAccount é ignorada.  
   
@@ -64,6 +64,6 @@ public int DatabaseLogonType;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

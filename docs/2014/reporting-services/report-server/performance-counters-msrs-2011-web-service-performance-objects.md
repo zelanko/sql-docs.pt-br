@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1fd420af1a50623f6f248e4dc99426907e987c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: f643f6a3ec09b95163ddbeab7177dc8903a11734
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365685"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036777"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Contadores de desempenho para o objeto de desempenho do serviço Windows MSRS 2014 e o Serviço Web MSRS 2014 (modo nativo)
   Este tópico descreve os contadores de desempenho dos objetos de desempenho `MSRS 2014 Web Service` e `MSRS 2014 Windows Service`  

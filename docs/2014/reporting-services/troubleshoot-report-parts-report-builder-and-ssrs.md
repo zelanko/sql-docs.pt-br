@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8d76eb115628cc4b63d9eb37494e3fa45e2f7fc2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360248"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013777"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)
   Estas dicas podem ajudar a trabalhar com partes de relatório.  

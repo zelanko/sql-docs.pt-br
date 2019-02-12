@@ -1,5 +1,5 @@
 ---
-title: Como implantar uma extensão de processamento de dados no Designer de Relatórios | Microsoft Docs
+title: 'Como: Implantar uma extensão de processamento de dados no Designer de relatórios | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 242071ac3ee49932f1767d6736cba5c17993ff40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ded3d366450ab3d5ea3375bb02929b4b52337d0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088476"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011558"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Como implantar uma extensão de processamento de dados para o Designer de Relatórios
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Como: Implantar uma extensão de processamento de dados no Designer de relatórios
   O Designer de Relatórios usa extensões de processamento de dados para recuperar e processar dados enquanto você estiver criando relatórios. Você deve implantar o seu assembly de extensão de processamento de dados para o Designer de Relatórios como um assembly privado. Precisa também criar uma uma entrada no arquivo de configuração do Designer de Relatórios, RSReportDesigner.config.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Para implantar um assembly de extensão de processamento de dados  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b8e309592588a38a57d2e5160845ad171346e758
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370018"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011588"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tarefa 10: Configurando o domínio composto para usar o serviço de dados de referência
   Nesta tarefa, você configura a **Address Validation** domínio composto para usar o **Melissa Data – Address Check** service. Em tempo de execução, durante a atividade de limpeza, o DQS passa os valores de domínios existentes no domínio Address Validation para o serviço de limpeza. Ver [mapa de domínio/domínio composto para dados de referência](https://msdn.microsoft.com/library/hh213030.aspx) para obter mais detalhes.  

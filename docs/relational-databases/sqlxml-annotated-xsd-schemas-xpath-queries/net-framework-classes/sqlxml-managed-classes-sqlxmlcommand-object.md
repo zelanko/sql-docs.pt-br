@@ -28,16 +28,16 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502558"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041497"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classes gerenciadas SQLXML – Objeto SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,18 +59,18 @@ public SqlXmlCommand(string cnString)
  void ExecuteNonQuery)  
  Executa o comando, mas não retorna nada. Este método será útil se você quiser executar um comando nonquery (ou seja, um comando que não retorna nada). Um exemplo é a execução de um diagrama de atualização ou um DiffGram que atualiza registros mas não retorna nada.  
   
- Stream executestream)  
+ Stream ExecuteStream()  
  Retorna um novo objeto Stream. Este método será útil quando você quiser os resultados de consulta retornados em um novo fluxo. Para obter um exemplo funcional, consulte [executar consultas de SQL &#40;Classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  ExecuteToStream public void (Stream outputStream)  
  Escreve os resultados da consulta para um fluxo existente. Esse método é útil quando você tiver um fluxo ao qual você precisa anexar (por exemplo, para que os resultados da consulta escritos para o System.Web.HttpResponse.OutputStream) os resultados. Para obter um exemplo funcional, consulte [executar consultas de SQL &#40;Classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
- XmlReader ExecuteXmlReader)  
+ XmlReader ExecuteXmlReader()  
  Retorna um objeto de XmlReader. Você pode usar esse método para manipular diretamente os dados no objeto XmlReader ou plug-in a arquitetura encadeável de System. XML. Para obter mais informações, consulte a documentação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Para obter um exemplo funcional, consulte [executar consultas de SQL usando o método ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  Objeto TheSqlXmlCommand também dá suporte a esses métodos adicionais:  
   
- SqlXmlParameter CreateParameter)  
+ SqlXmlParameter CreateParameter()  
  Cria um objeto SqlXmlParameter. Você pode definir valores para o *nome* e *valor* parâmetros deste objeto. Este método será útil se você quiser passar parâmetros para um comando. Para obter um exemplo funcional, consulte [executar consultas de SQL &#40;Classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  void clearparameters)  

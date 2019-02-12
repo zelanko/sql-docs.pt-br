@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040153"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
   Este tutorial foi desenvolvido para ajudá-lo a aprender sobre os recursos de mapa que você pode usar para exibir dados de relatório em comparação com um plano de fundo geográfico.  
@@ -359,7 +359,7 @@ ms.locfileid: "53359858"
   
  Cada município que contém uma loja tem uma cor baseada na paleta de cores para o estilo escolhido no assistente.  
   
-###  <a name="ColorRules"></a> 6B. Especificar as regras de cores para polígonos  
+###  <a name="ColorRules"></a> 6b. Especificar as regras de cores para polígonos  
  Para criar uma regra que varia a cor de cada município baseada em vendas da loja, você deve especificar os valores de intervalo, o número de divisões dentro daquele intervalo que você deseja exibir, e as cores a serem usadas.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Para especificar regras de cores para todos os polígonos com dados associados  
@@ -396,7 +396,7 @@ ms.locfileid: "53359858"
   
  A escala de cores exibe cinco cores: vermelho, laranja, amarelo, verde-amarelado e verde. Cada cor representa um intervalo de vendas que é calculado automaticamente com base nas vendas por município.  
   
-###  <a name="ColorScale"></a> 6 de c. Formatar os dados na escala de cores como moeda  
+###  <a name="ColorScale"></a> 6c. Formatar os dados na escala de cores como moeda  
  Por padrão, os dados têm um formato geral. Você pode aplicar formatos personalizados.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>Para definir o formato da escala de cores  

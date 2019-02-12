@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210936"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021377"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Áreas da região de dados Tablix (Construtor de Relatórios e SSRS)
   Uma região de dados tablix tem quatro áreas que contêm células tablix: o canto, a área de grupo de linhas, a área de grupo de colunas e o corpo. As células de cada área têm uma função distinta. Você adiciona células à área de corpo de Tablix para exibir detalhes e dados agrupados. O Construtor de Relatórios e o Designer de Relatórios adicionam células à área do grupo de linhas ou grupo de colunas quando você cria um grupo para exibir valores de instância de grupo. O Construtor de Relatórios e o Designer de Relatórios criam células de canto de tablix quando existem grupos de linhas e de colunas.  
@@ -26,7 +26,7 @@ ms.locfileid: "48210936"
   
  Na superfície de design, linhas pontilhadas denotam as quatro áreas de uma região de dados Tablix selecionada. A figura a seguir mostra as áreas de uma região de Tablix com grupos de linhas aninhados com base na categoria e na subcategoria, grupos de colunas aninhados com base na geografia e em país/região e um grupo de colunas adjacente com base no ano.  
   
- ![Áreas da região de dados Tablix](../media/rs-tablixareas.gif "áreas da região de dados Tablix")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  A lista seguinte descreve cada área:  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48210936"
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Região de dados Tablix &#40;relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

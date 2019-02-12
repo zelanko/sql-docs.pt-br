@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139526"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030587"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Modificando a estrutura de previsão (Tutorial de mineração de dados intermediário)
   A estrutura de mineração criada na tarefa anterior contém um modelo de previsão único. Antes de processar e explorar o modelo, você deve alterar sua estrutura ligeiramente e modificar uma de suas propriedades.  
   
 ## <a name="modifying-the-mining-structure"></a>Modificando a estrutura de mineração  
- Você pode alterar a estrutura de mineração usando o **estrutura de mineração** guia do Designer de mineração de dados. Ao criar o modelo com o Assistente de Mineração de Dados, você usou três colunas: ReportingDate, ModelRegion e Quantidade. No entanto, o **Forecasting** tabela também contém uma coluna de valor, que pode ser usado para prever o volume de vendas. Usando o **estrutura de mineração** guia, você pode adicionar essa coluna da exibição da fonte de dados para a estrutura de mineração.  
+ Você pode alterar a estrutura de mineração usando o **estrutura de mineração** guia do Designer de mineração de dados. Quando você criou o modelo com o Assistente de mineração de dados, você usou três colunas: ReportingDate, ModelRegion e quantidade. No entanto, o **Forecasting** tabela também contém uma coluna de valor, que pode ser usado para prever o volume de vendas. Usando o **estrutura de mineração** guia, você pode adicionar essa coluna da exibição da fonte de dados para a estrutura de mineração.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Para adicionar a coluna Valor à estrutura de mineração de previsão  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139526"
  [Personalizando e processando o modelo de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelos de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

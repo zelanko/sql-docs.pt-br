@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02c3cd85e38a9bc2394c9c4cf40c34b9660b78ee
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 46f2cd765667a64062c3a47ac91973eed8c94664
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031100"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023637"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar um domínio para um arquivo .dqs
   Este tópico descreve como exportar um domínio para um arquivo .dqs no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você pode exportar um domínio ou uma base de dados de conhecimento inteira para um arquivo de dados. Para obter informações sobre como exportar uma base de dados de conhecimento, consulte [Exportar uma base de dados de conhecimento para um arquivo .dqs](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "51031100"
   
 6.  Na caixa de diálogo **Exportar Domínio** , verifique se a linha de status indica que a exportação foi concluída. Clique em **OK**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após exportar um domínio para um arquivo .dqs  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de exportar um domínio para um arquivo. DQS  
  Depois que você exportar um domínio para um arquivo .dqs, poderá importar o domínio para outra base de dados de conhecimento.  
   
   

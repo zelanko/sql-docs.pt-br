@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189606"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024467"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página Propriedades de Segurança, Itens (Gerenciador de Relatórios)
   Use a página Propriedades de Segurança para exibir ou modificar as definições de segurança que determinam acesso a pastas, relatórios, modelos, recursos e fontes de dados compartilhadas. Essa página está disponível para itens que você tem permissão para proteger.  
@@ -64,7 +64,7 @@ ms.locfileid: "48189606"
   
 ## <a name="see-also"></a>Consulte também  
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
- [Funções predefinidas](security/role-definitions-predefined-roles.md)   
+ [funções predefinidas](security/role-definitions-predefined-roles.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Atribuições de função](security/role-assignments.md)   
  [Definições de função](security/role-definitions.md)  

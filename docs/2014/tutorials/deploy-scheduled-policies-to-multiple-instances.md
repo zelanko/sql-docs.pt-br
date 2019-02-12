@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518618"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016717"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implantar diretivas agendadas em várias instâncias
   Usando Servidores Registrados, você poderá implantar políticas agendadas em servidores gerenciados a partir de um local central. Você poderá implantar diretivas agendadas a partir de um grupo de servidores local ou de um Servidor Central de Gerenciamento.  

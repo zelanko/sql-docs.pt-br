@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 4d2afca6-ab7a-4695-b9c9-bc2bdaa4060e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f3a2d208ffac04eef6200fa3147fe112e18ef29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 23f2ba56ca8800de3bf0707977c4aaa96f388a43
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014777"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>Ajuda F1 de imagem, caixa de texto, retângulo, linha
   O tópicos desta seção fornecem informações sobre as opções que você pode definir em imagens, caixas de texto, retângulos e linhas de caixas de diálogo no Designer de Relatórios.  

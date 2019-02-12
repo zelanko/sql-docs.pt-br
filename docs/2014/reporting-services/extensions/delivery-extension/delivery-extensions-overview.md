@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b84a8f226cf786db7c2971242f95d61ed027e3ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 328a73a39fde24ec0d3b11b21016cffc60dca081
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206172"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040017"
 ---
 # <a name="delivery-extensions-overview"></a>Visão geral de extensões de entrega
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite que os usuários criem e publiquem relatórios que, uma vez criados e publicados, podem ser entregues em vários locais. Além disso, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega e uma API de entrega que permite que os desenvolvedores criem extensões de entrega adicionais para estender ainda mais a funcionalidade de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  A tabela a seguir lista as extensões de entrega incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extensão da entrega|Description|  
+|Extensão da entrega|Descrição|  
 |------------------------|-----------------|  
 |Email do servidor de relatório|Usa um servidor SMTP para enviar relatórios de email a usuários individuais ou a grupos.|  
 |Compartilhamento de arquivos do servidor de relatórios|Usado para distribuir relatórios em sua organização para o compartilhamentos de arquivos de rede. Oferece a capacidade de copiar um relatório automaticamente para um compartilhamento de arquivo em uma agenda designada.|  

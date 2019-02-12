@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222197"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019337"
 ---
 # <a name="server-properties-general-page"></a>Propriedades do Servidor (página Geral)
   Use essa página para exibir ou modificar o título usado no Gerenciador de Relatórios, habilitar ou desabilitar Meus Relatórios, selecionar uma definição de função para a segurança de Meus Relatórios e habilitar e desabilitar o controle de impressão do cliente.  
@@ -50,7 +50,7 @@ ms.locfileid: "48222197"
  Especifique uma definição de função a ser usada na segurança de Meus Relatórios. A definição de função identifica o conjunto de tarefas que tem suporte em cada pasta Meus Relatórios.  
   
  **Habilitar download para o controle de impressão do cliente ActiveX**  
- Conjuntos de `EnableClientPrinting` propriedade de sistema do servidor de relatório. Se você habilitar impressão de cliente, os usuários com permissões de administrador local têm a opção de baixar um controle ActiveX assinado para imprimir relatórios HTML. Para obter mais informações, consulte [habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Define a propriedade do sistema  `EnableClientPrinting` de servidor de relatórios. Se você habilitar impressão de cliente, os usuários com permissões de administrador local têm a opção de baixar um controle ActiveX assinado para imprimir relatórios HTML. Para obter mais informações, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

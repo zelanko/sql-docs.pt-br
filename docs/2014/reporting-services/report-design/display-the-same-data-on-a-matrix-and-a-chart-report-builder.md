@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5ef8b1997685aa776eb93c17d144b6f640ea9d3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c446593803d54a3829c024f590eaf95250d7cfe6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209736"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043307"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios)
   Quando quiser mostrar os mesmos dados em uma matriz e em um gráfico, defina propriedades em ambas as regiões de dados para especificar o mesmo conjunto de dados, além das mesmas expressões para filtros, grupos, classificações e dados.  
   
- Como as regiões de dados terão o mesmo ancestral de dados (o conjunto de dados de relatório), você pode adicionar um botão de classificação interativo à matriz que, quando clicado, altera a ordem de classificação tanto da matriz quanto do gráfico. Para obter mais informações, consulte [adicionar classificação interativa a uma tabela ou matriz &#40;construtor de relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Como as regiões de dados terão o mesmo ancestral de dados (o conjunto de dados de relatório), você pode adicionar um botão de classificação interativo à matriz que, quando clicado, altera a ordem de classificação tanto da matriz quanto do gráfico. Para obter mais informações, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Para usar os valores do grupo de colunas da matriz como legenda do gráfico, você deve especificar as cores dos dados da série no gráfico e usar as mesmas cores como cores de preenchimento no plano de fundo das caixas de texto da célula da matriz que exibe os valores do grupo. Para obter mais informações, consulte [Especificar cores consistentes em gráficos com várias formas &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
- Em tempo de execução, o relatório pode ficar desorganizado caso haja muitos valores para as definições de grupo. Você talvez precise filtrar valores, combinar grupos ou ajustar o limite do gráfico combinar grupos. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ Em tempo de execução, o relatório pode ficar desorganizado caso haja muitos valores para as definições de grupo. Você talvez precise filtrar valores, combinar grupos ou ajustar o limite do gráfico combinar grupos. Para obter mais informações, consulte [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -100,6 +100,6 @@ ms.locfileid: "48209736"
  [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos de &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

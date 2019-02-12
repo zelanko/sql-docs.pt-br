@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89b1476adadf6b409d68dbf524a9352d6b7cb6ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 61f1decb93244bfd2b52718dd448ac3eb016499f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129331"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016608"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
@@ -36,7 +36,7 @@ ms.locfileid: "48129331"
   
      A página **Nova Pasta** será aberta.  
   
-3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : \@ & = +, $ / * \< > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
+3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : \@ & = + , $ / * \< > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
   
 4.  Como opção, digite uma descrição.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48129331"
 7.  Clique em **Aplicar** para salvar as alterações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Página nova pasta &#40;Gerenciador de relatórios&#41;](../new-folder-page-report-manager.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../contents-page-report-manager.md)   
+ [Página Nova Pasta &#40;Gerenciador de Relatórios&#41;](../new-folder-page-report-manager.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

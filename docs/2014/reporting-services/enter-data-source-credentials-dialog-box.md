@@ -12,14 +12,14 @@ f1_keywords:
 - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 663fd298e9e6d3a43312047b5f0af86e5735cbd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 1ef28edadb405cfdeed464d66792513997a9a9c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162436"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041647"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Caixa de diálogo Inserir Credenciais da Fonte de Dados
   Use a caixa de diálogo **Inserir Credenciais da Fonte de Dados** para fornecer suas credenciais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para que você possa recuperar dados da fonte de dados.  

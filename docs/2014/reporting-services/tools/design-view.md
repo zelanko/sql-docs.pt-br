@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137386"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010408"
 ---
 # <a name="design-view"></a>Modo Design
   Use o modo Design para organizar itens no relatório. O modo Design também é chamado de superfície de design ou modo de layout.  
@@ -52,7 +52,7 @@ ms.locfileid: "48137386"
  Use o painel Propriedades para exibir as propriedades do item de relatório selecionado na superfície de design ou do grupo selecionado no painel Agrupamento. Se preferir, clique com o botão direito do mouse em um item de relatório ou grupo selecionado e clique em **Propriedades** para abrir a caixa de diálogo **Propriedades** do item de relatório ou do grupo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Dicas de design de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

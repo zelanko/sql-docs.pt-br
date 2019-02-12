@@ -12,14 +12,14 @@ f1_keywords:
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b39bed7faeba38ff8275d61ae5bf3350a43bff28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c87901e77de5ed975db5f9e05834f569f3923cc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040527"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Caixa de Texto, Alinhamento (Construtor de Relatórios e SSRS)
   Selecione **Alinhamento** na caixa de diálogo **Propriedades da Caixa de Texto** para posicionar os valores dentro de uma célula ou região de dados selecionada.  
@@ -31,7 +31,7 @@ ms.locfileid: "48144653"
  **Vertical**  
  Especifique o local onde o valor deve ser posicionado verticalmente dentro de uma célula ou região de dados selecionada. Por padrão, a opção **Padrão** está selecionada. O valor Padrão é **Superior**. Clique no botão **Expressão** (*fx*) para editar a expressão.  
   
- **À esquerda**  
+ **Left**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda esquerda de uma célula e o valor exibido dentro dela. O padrão é 2 pontos. Clique no botão **Expressão** (*fx*) para editar a expressão.  
   
  **Certo**  

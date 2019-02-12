@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e0c9e553ebff35c865adabfeea164a56b5cffce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 859d4ae6557300582b866d6dcd6d0cd3ed124d2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075966"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014977"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Adicionar um instantâneo ao histórico de relatório (Gerenciador de Relatórios)
   O histórico de relatórios é uma coleção de instantâneos de relatórios que você cria. Um instantâneo de relatório é um relatório que contém informações sobre layout e resultados de consulta que foram recuperados em um momento determinado. Diferente dos relatórios sob demanda, que obtêm resultados de consulta atualizados quando o relatório é selecionado, os instantâneos de relatório são processados em uma agenda e salvos em um servidor de relatório. Quando você seleciona um instantâneo de relatório para exibição, o servidor de relatório recupera o relatório armazenado do banco de dados do servidor e mostra os dados e o layout correspondentes ao momento em que o instantâneo foi criado.  
@@ -38,7 +38,7 @@ ms.locfileid: "48075966"
 3.  Clique em **Novo Instantâneo**. Um novo instantâneo é criado na coluna **Quando Executado** .  
   
     > [!NOTE]  
-    >  Para fazer isso, o histórico de relatório deve ser configurado pelo administrador como **Permitir que o histórico seja criado manualmente**. Para obter mais informações, consulte [limitar o histórico de relatório &#40;Gerenciador de relatórios&#41;](../reports/limit-report-history-report-manager.md).  
+    >  Para fazer isso, o histórico de relatório deve ser configurado pelo administrador como **Permitir que o histórico seja criado manualmente**. Para obter mais informações, consulte [Limitar o histórico de relatório &#40;Gerenciador de Relatórios&#41;](../reports/limit-report-history-report-manager.md).  
   
 4.  Clique em **Aplicar**.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "48075966"
 5.  Clique em **Aplicar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de execução de um relatório &#40;Gerenciador de relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Abrir e fechar um relatório &#40;Gerenciador de relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Limitar o histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../reports/limit-report-history-report-manager.md)   
+ [Configurar propriedades de execução de um relatório &#40;Gerenciador de Relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Limitar o histórico de relatório &#40;Gerenciador de Relatórios&#41;](../reports/limit-report-history-report-manager.md)   
  [Agendas](../subscriptions/schedules.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   

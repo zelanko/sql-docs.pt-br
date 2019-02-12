@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 892349a6a4ce2bbdd51670a92231c626129ae53b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161466"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014557"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concedendo permissões em um servidor de relatório no modo nativo
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa autorização com base em funções e um subsistema de autenticação para determinar quem pode executar operações e acessar itens em um servidor de relatório. A autorização com base em funções é categorizada nas funções do conjunto de ações que um usuário ou grupo pode executar. A autenticação se baseia na Autenticação interna do Windows ou em um módulo de autenticação personalizado fornecido por você. É possível utilizar funções predefinidas ou personalizadas com qualquer tipo de autenticação.  
@@ -69,14 +69,14 @@ ms.locfileid: "48161466"
 |Ferramenta|Tarefas|  
 |----------|-----------|  
 |Management Studio – Usado para exibir, modificar, criar e excluir definições de funções.|[Criar, excluir ou modificar uma função &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
-|Gerenciador de Relatórios - Usado para atribuir usuários e grupos a funções.|[Acesso do usuário de conceder a um servidor de relatório &#40;Gerenciador de relatórios&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](role-assignments-modify-or-delete.md)|  
+|Gerenciador de Relatórios - Usado para atribuir usuários e grupos a funções.|[Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções predefinidas](role-definitions-predefined-roles.md)   
- [Concedendo permissões em itens do servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [funções predefinidas](role-definitions-predefined-roles.md)   
+ [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticação com o servidor de relatório](authentication-with-the-report-server.md)   
- (criar-e-gerenciar-função-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Segurança e proteção do Reporting Services](reporting-services-security-and-protection.md)   
- [Gerenciamento de conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

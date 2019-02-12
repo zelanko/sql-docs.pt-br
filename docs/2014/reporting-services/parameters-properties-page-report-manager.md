@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b41d68eea7ced40f88fa505db1f8342c8c9faeb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020740"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Página Propriedades de Parâmetro (Gerenciador de Relatórios)
   Use página Propriedades de Parâmetro para exibir ou modificar configurações de parâmetro para um relatório com parâmetros.  

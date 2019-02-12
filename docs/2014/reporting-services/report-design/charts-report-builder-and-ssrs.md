@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9e58bcac859d4774803d3cec639a3b7582ee0065
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528687"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025717"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
   Para resumir dados em um formato visual, use a região de dados do gráfico. Os gráficos permitem apresentar grandes volumes de informações agregadas em um relance. É importante preparar e entender cuidadosamente os dados antes de criar um gráfico, pois isso ajuda a projetar os gráficos de maneira rápida e eficiente. Para obter mais informações, consulte [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para começar a usar logo um gráfico, consulte a barra, coluna, Minigráfico e tutoriais de gráfico de pizza [tutoriais &#40;construtor de relatórios&#41; ](../report-builder-tutorials.md) ou a barra e os tutoriais de gráfico de pizza na [tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

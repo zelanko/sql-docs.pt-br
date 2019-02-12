@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: abded209f6367308c23e548962e1d4a5362791f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127626"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020437"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarefa 4: Exportando os resultados da atividade de correspondência para um arquivo do Excel
   Nesta tarefa, você exportará os resultados da atividade de correspondência para um arquivo do Excel.  
@@ -33,11 +30,11 @@ ms.locfileid: "48127626"
   
 5.  Confirme **registro dinâmico** está selecionado para o **regra de sobrevivência**. Quando você selecionar essa opção, o registro dinâmico de cada cluster será escolhido como a saída de um cluster. As outras opções para a Regra de Sobrevivência são:  
   
-    1.  **Registro mais completo:** o registro sobrevivente é aquele com o maior número de campos populados.  
+    1.  **Registro mais completo:** O registro sobrevivente é aquele com o maior número de campos populados.  
   
-    2.  **Registro mais longo:** o registro sobrevivente é aquele com o maior número de termos nos campos de origem.  
+    2.  **Registro mais longo:** O registro sobrevivente é aquele com o maior número de termos nos campos de origem.  
   
-    3.  **Registro mais completo e mais longo:** o registro sobrevivente é aquele com o maior número de campos populados e com o maior número de termos em cada campo.  
+    3.  **Registro mais completo e mais longo:** O registro sobrevivente é aquele com o maior número de campos populados e que tem o maior número de termos em cada campo.  
   
      ![Exportar resultados da página correspondente](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "exportar resultados da página correspondente")  
   

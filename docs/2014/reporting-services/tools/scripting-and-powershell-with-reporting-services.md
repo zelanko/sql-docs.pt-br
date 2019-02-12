@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a3f07bbc8f7aafaf60989c0b0fa193e3a802b5b2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7ea45b2b785666253405c579930d1f89417d4c58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376318"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024517"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Script e PowerShell com o Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dá suporte a uma ampla variedade de cenários de desenvolvimento e gerenciamento por meio de script, incluindo o utilitário de linha de comando rs.exe, os cmdlets do PowerShell para servidores de relatório no modo SharePoint e aproveitando o modelo de objeto [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] do PowerShell para os modos nativo e SharePoint.  

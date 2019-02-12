@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5550a321e812b84c2d3e2dc8c64efd298e8eb95f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29f1c46cd926fec0a4908788da64cbb86bad8469
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206331"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022037"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
   O acesso à URL do servidor de relatório do SQL Server Reporting Services (SSRS) permite enviar comandos a um servidor de relatório por meio de uma solicitação de URL. Por exemplo, você pode personalizar a renderização de um relatório em um servidor de relatório em modo nativo ou em uma biblioteca do SharePoint. Você pode exibir o relatório usando um conjunto específico de valores de parâmetros de relatório ou exibir uma página específica de interesse do relatório. Você pode encapsular essas informações na URL usando parâmetros de acesso à URL predefinidos. Você pode personalizar ainda mais como o servidor de relatório processa o relatório inserindo parâmetros de renderização de formatos ou de aparência do visualizador de relatórios. Você pode colar essa URL diretamente em um email ou página da Web para permitir que outros acessem seu relatório da mesma maneira no navegador.  
@@ -40,7 +40,7 @@ ms.locfileid: "48206331"
   
 -   Gerenciar sessões de relatório  
   
- Para obter uma lista de comandos e configurações disponíveis por meio do acesso à URL, consulte [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Para conferir a lista completa de comandos e configurações disponíveis por acesso à URL, consulte [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md).  
   
 ## <a name="url-access-concepts"></a>Conceitos do acesso à URL  
  As solicitações de URL ao servidor de relatório contêm parâmetros processados pelo servidor de relatório. A forma como o servidor de relatório manipula as solicitações de URL dependerá dos parâmetros, dos prefixos de parâmetro e dos tipos de item incluídos na URL. As URLs dos servidores de relatório aderem às diretrizes de formatação de URL propostas pelo padrão de rascunho do consórcio W3C/IETF. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é compatível com a maioria dos navegadores de Internet ou dos aplicativos que dão suporte ao endereçamento de URL padrão.  
@@ -105,23 +105,23 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  O texto da URL correspondente ao valor do parâmetro usado.  
   
- **Observação:** para obter uma lista de parâmetros de acesso a URL disponíveis, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para obter exemplos sobre como transmitir parâmetros de relatório na URL, consulte [passar um parâmetro de relatório dentro de uma URL](pass-a-report-parameter-within-a-url.md).  
+ **Observação:** Para obter uma lista de parâmetros de acesso a URL disponíveis, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para obter exemplos de como transmitir parâmetros de relatório na URL, consulte [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descrições das tarefas|Links|  
 |-----------------------|-----------|  
-|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens de servidor de relatório com acesso à URL](access-report-server-items-using-url-access.md)|  
-|Transmitir parâmetros de relatório a um relatório.|[Passar um parâmetro de relatório em uma URL](pass-a-report-parameter-within-a-url.md)|  
-|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma para parâmetros de relatório em uma URL](set-the-language-for-report-parameters-in-a-url.md)|  
-|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações de dispositivo em uma URL](specify-device-information-settings-in-a-url.md)|  
+|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens do Servidor de Relatório usando o acesso à URL](access-report-server-items-using-url-access.md)|  
+|Transmitir parâmetros de relatório a um relatório.|[Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)|  
+|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma dos parâmetros do relatório em uma URL](set-the-language-for-report-parameters-in-a-url.md)|  
+|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações do dispositivo em uma URL](specify-device-information-settings-in-a-url.md)|  
 |Exportar um relatório diretamente para um formato de arquivo sem exibi-lo no navegador.|[Exportar um relatório com acesso à URL](export-a-report-using-url-access.md)|  
 |Abrir um relatório e navegar diretamente ao local de uma cadeia de caracteres.|[Pesquisar um relatório com acesso à URL](search-a-report-using-url-access.md)|  
-|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar um instantâneo de histórico de relatório com acesso à URL](render-a-report-history-snapshot-using-url-access.md)|  
+|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar instantâneo de histórico de relatório com o acesso à URL](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Passar um parâmetro de relatório em uma URL](pass-a-report-parameter-within-a-url.md)   
- [Referência de parâmetro de acesso à URL](url-access-parameter-reference.md)   
+ [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   
+ [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)   
  [Integrando o Reporting Services usando o acesso à URL](application-integration/integrating-reporting-services-using-url-access.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

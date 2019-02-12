@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b346d265c0aafc2eae9e379d813ef2f46dcd4112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef807249672d02ca06d1ac1e41392eef6ebbd912
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059406"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012667"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domínios do aplicativo para aplicativos do Servidor de Relatório
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o servidor de relatório é implementado como um único serviço que contém um serviço Web Servidor de Relatórios, Gerenciador de Relatórios e um aplicativo executado em segundo plano. Cada aplicativo é executado em seu próprio domínio de aplicativo dentro do único processo de servidor de relatório. Para a maior parte, os domínios de aplicativo são criados, configurados e gerenciados internamente. Entretanto, saber como as operações de reciclagem ocorrem para os domínios de aplicativo para servidores de relatório poderá ser útil se você estiver investigando o desempenho ou problemas de memória ou solucionando problemas de interrupção de serviço.  
@@ -41,7 +41,7 @@ ms.locfileid: "48059406"
   
 |Evento|Descrição do evento|Aplica-se a|Configurável|Descrição de operação de reciclagem|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|Operações de reciclagem programadas que ocorrem em intervalos predefinidos|Por padrão, os domínios de aplicativo são reciclados a cada 12 horas.<br /><br /> As operações de reciclagem programadas são práticas comuns para aplicativos do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] que promovem a integridade do processo geral.|Serviço Web Servidor de Relatórios<br /><br /> Gerenciador de Relatórios<br /><br /> Aplicativo de processamento em segundo plano|Sim. `RecycleTime` definição de configuração no arquivo rsreportserver. config determina o intervalo de reciclagem.<br /><br /> `MaxAppDomainUnloadTime` Define o tempo de espera durante o qual plano de fundo processamento pode ser concluído.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gerencia a operação de reciclagem para o serviço Web e o Gerenciador de Relatórios.<br /><br /> Para o aplicativo de processamento em segundo plano, o servidor de relatório cria um novo domínio de aplicativo para novos trabalhos iniciados pelas agendas. Os trabalhos já em progresso podem ser concluídos no domínio de aplicativo atual até que o tempo de espera expire.|  
+|Operações de reciclagem programadas que ocorrem em intervalos predefinidos|Por padrão, os domínios de aplicativo são reciclados a cada 12 horas.<br /><br /> As operações de reciclagem programadas são práticas comuns para aplicativos do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] que promovem a integridade do processo geral.|Serviço Web Servidor de Relatórios<br /><br /> Gerenciador de Relatórios<br /><br /> Aplicativo de processamento em segundo plano|Sim. A definição de configuração de `RecycleTime` no arquivo RSReportServer.config determina o intervalo de reciclagem.<br /><br /> `MaxAppDomainUnloadTime` define o tempo de espera durante o qual o processamento em segundo plano pode ser concluído.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gerencia a operação de reciclagem para o serviço Web e o Gerenciador de Relatórios.<br /><br /> Para o aplicativo de processamento em segundo plano, o servidor de relatório cria um novo domínio de aplicativo para novos trabalhos iniciados pelas agendas. Os trabalhos já em progresso podem ser concluídos no domínio de aplicativo atual até que o tempo de espera expire.|  
 |Alterações de configuração no servidor de relatório.|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reciclará domínios de aplicativo em resposta a alterações no arquivo RSReportServer.config.|Serviço Web Servidor de Relatórios<br /><br /> Gerenciador de Relatórios<br /><br /> Aplicativo de processamento em segundo plano|Nenhum.|Você não pode impedir que as operações de reciclagem aconteçam. Entretanto, as operações de reciclagem que ocorrem em resposta a alterações de configuração são tratadas da mesma maneira que operações de reciclagem programadas. Novos domínios de aplicativo são criados para novas solicitações enquanto solicitações atuais e trabalhos são concluídos no domínio de aplicativo atual.|  
 |[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] alterações de configuração|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará domínios de aplicativo se houver alterações em arquivos que ele monitore (por exemplo, arquivos machine.config e Web.config e arquivos de programa do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ).|Serviço Web Servidor de Relatórios<br /><br /> Gerenciador de Relatórios|Nenhum.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gerencia a operação.<br /><br /> As operações de reciclagem iniciadas por [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] não afetam o domínio de aplicativo de processamento em segundo plano.|  
 |Pressão de memória e falhas de alocação de memória|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A CLR reciclará imediatamente domínios de aplicativo no caso de uma falha de alocação de memória ou quando o servidor estiver sob condições de alta pressão de memória.|Serviço Web Servidor de Relatórios<br /><br /> Gerenciador de Relatórios<br /><br /> Aplicativo de processamento em segundo plano|Nenhum.|Sob alta pressão de memória, o servidor de relatório não aceitará novas solicitações no domínio de aplicativo atual. Durante o período no qual o servidor nega novas solicitações, ocorrem erros HTTP 503. Não serão criados novos domínios de aplicativo até que o antigo domínio de aplicativo seja descarregado. Isso significa que, se você alterar o arquivo de configuração enquanto o servidor estiver sob alta pressão de memória, solicitações e trabalhos em progresso poderão não ser iniciados ou concluídos.<br /><br /> No caso de falha de alocação de memória, todos os domínios de aplicativo serão reinicializados imediatamente. Trabalhos e solicitações que estejam em progresso serão descartados. Você deve reinicializar esses trabalhos e solicitações manualmente.|  
@@ -59,12 +59,12 @@ ms.locfileid: "48059406"
   
  Os domínios de aplicativo para o serviço Web Servidor de Relatórios, Gerenciador de Relatórios e o aplicativo de processamento de segundo plano podem ser reciclados juntos ou individualmente, dependendo das circunstâncias que provocam a reciclagem.  
   
--   As operações de reciclagem iniciadas pelo [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] afetam apenas os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] : Serviço Web Servidor de Relatórios e Gerenciador de Relatórios. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará domínios do aplicativo com base em alterações nos arquivos que monitora. As operações de reciclagem iniciadas por [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] são tipicamente independentes das operações de reciclagem do aplicativo de processamento em segundo plano.  
+-   As operações iniciadas por de reciclagem [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] afetam apenas o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicativos: Serviço Web servidor de relatório e Gerenciador de relatórios. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará domínios do aplicativo com base em alterações nos arquivos que monitora. As operações de reciclagem iniciadas por [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] são tipicamente independentes das operações de reciclagem do aplicativo de processamento em segundo plano.  
   
 -   As operações de reciclagem iniciadas pelo servidor de relatório geralmente afetam o serviço Web Servidor de Relatórios, o Gerenciador de Relatórios e o aplicativo processado em segundo plano. As operações de reciclagem ocorrem em resposta a alterações nas definições de configuração e o serviço é reinicializado.  
   
 ## <a name="rsreportserver-configuration-settings-for-application-domains"></a>Definições de configuração RSReportServer para domínios de aplicativo  
- Definições de configuração são especificadas nas na [arquivo rsreportserver. config](rsreportserver-config-configuration-file.md). O exemplo a seguir mostra as definições de configuração padrão para o comportamento de reciclagem de domínio de aplicativo.  
+ As definições de configuração são especificadas no [arquivo RSReportServer.config](rsreportserver-config-configuration-file.md). O exemplo a seguir mostra as definições de configuração padrão para o comportamento de reciclagem de domínio de aplicativo.  
   
  `<RecycleTime>720</RecycleTime>`  
   
@@ -83,6 +83,6 @@ ms.locfileid: "48059406"
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md)   
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configurar a memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md)  
+ [Configurar memória disponível para aplicativos do Servidor de Relatórios](../report-server/configure-available-memory-for-report-server-applications.md)  
   
   

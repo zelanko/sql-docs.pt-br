@@ -2,10 +2,8 @@
 title: DM database_copies (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - dm_database_copies_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d11f152d4d3d929baeab04cbf44e3a4b2848f456
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b5a0a656693d66e701642c9c2202c2862136a54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640464"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031647"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.locfileid: "47640464"
 Para retornar informações sobre links de replicação geográfica, use o [geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) ou [DM geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) exibições (disponíveis no V12 do banco de dados SQL).
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|A ID do banco de dados atual na exibição de `sys.databases`.|  
 |**start_date**|**datetimeoffset**|A hora UTC em um datacenter regional do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] quando a cópia do banco de dados foi iniciada.|  

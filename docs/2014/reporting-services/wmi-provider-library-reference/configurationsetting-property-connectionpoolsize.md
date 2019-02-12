@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f4f555db5b87e2233229215da5b800c0eedea61c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 589069aebe2275fd06e58385fd85cffaaa3c1222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172076"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016127"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>Propriedade ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
   O tamanho do pool de conexão usado pelo servidor de relatório para se comunicar com a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório. Somente leitura.  
@@ -49,6 +49,6 @@ public UInt32 ConnectionPoolSize;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

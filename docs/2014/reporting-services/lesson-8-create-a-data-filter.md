@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189916"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037058"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lição 8: Criar um filtro de dados
   Após adicionar uma ação de detalhamento no relatório pai, a próxima etapa é criar um filtro de dados para a tabela de dados definida para o relatório filho.  
@@ -44,7 +44,7 @@ ms.locfileid: "48189916"
   
 5.  Clique em de igual (**=**) operador no **operador** lista suspensa.  
   
-6.  Clique no botão de expressão ao lado a **valor** , clique em **parâmetros** no **categoria** área e, em seguida, clique duas vezes `productid` no  **Valores** área. O campo **Definir expressão para: Valor** agora deve conter uma expressão semelhante a **=Parameters!productid.Value**.  
+6.  Clique no botão de expressão ao lado a **valor** , clique em **parâmetros** no **categoria** área e, em seguida, clique duas vezes `productid` no  **Valores** área. O **definir expressão para: Valor** campo agora deve conter uma expressão semelhante a **= parâmetros! productid. Valor**.  
   
 7.  Clique em **Okey,** e **Okey** novamente na **propriedades do Tablix** caixa de diálogo.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "48189916"
   
 2.  Crie uma nova função que aceita um parâmetro `productid`, do tipo inteiro e retorna um `datatable` de objeto e faz o seguinte.  
   
-    1.  Cria uma instância do conjunto de dados, `DataSet2`, que foi criado na etapa 2 do [lição 4: definir uma Conexão de dados e uma tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Cria uma instância do conjunto de dados, `DataSet2`, que foi criado na etapa 2 do [lição 4: Definir uma Conexão de dados e uma tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Crie uma conexão com o banco de dados SQL Server para executar a consulta definida na **Lição 4: Definir uma conexão de dados e uma DataTable para o relatório filho**.  
+    2.  Criar uma conexão para o banco de dados do SQL Server para executar a consulta definida no **lição 4: Definir dados de um Conexão e uma DataTable para o relatório filho**.  
   
     3.  A consulta deve retornará dados não filtrados.  
   
@@ -166,9 +166,9 @@ ms.locfileid: "48189916"
   
 2.  Crie uma nova função que aceite um parâmetro, `productid`, do tipo inteiro e retorne um objeto `datatable`, e faça o seguinte.  
   
-    1.  Cria uma instância do conjunto de dados, `DataSet2`, que foi criado na etapa 2 do [lição 4: definir uma Conexão de dados e uma tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Cria uma instância do conjunto de dados, `DataSet2`, que foi criado na etapa 2 do [lição 4: Definir uma Conexão de dados e uma tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Crie uma conexão com o banco de dados SQL Server para executar a consulta definida na **Lição 4: Definir uma conexão de dados e uma DataTable para o relatório filho**.  
+    2.  Criar uma conexão para o banco de dados do SQL Server para executar a consulta definida **lição 4: Definir dados de um Conexão e uma DataTable para o relatório filho**.  
   
     3.  A consulta incluirá um parâmetro, `productid`, assegurar que os dados retornados serão filtrados com base na `ProductID` selecionada no relatório pai.  
   

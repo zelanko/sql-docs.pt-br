@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12f37232f9f108a2764123d1bce567e9048a8b6d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098798"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035007"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger itens de conjuntos de dados compartilhados
   Em um servidor de relatório, itens de conjuntos de dados compartilhados podem ser usados por vários relatórios. Você pode proteger conjuntos de dados compartilhados para controlar o grau de acesso concedido aos usuários. Por padrão, apenas usuários que são membros do grupo interno **Administradores** podem exibir conjuntos de dados compartilhados, modificar propriedades, habilitar o cache, criar planos de atualização do cache e excluir os itens. Todos os outros usuários devem ter atribuições de função criadas para eles que permitam acesso a um conjunto de dados compartilhado.  
@@ -47,7 +47,7 @@ ms.locfileid: "48098798"
 |Relatórios de consumo|Exibir a definição do conjunto de dados compartilhado.|Gerenciador de Conteúdo<br /><br /> Construtor de Relatórios|  
 |Definir segurança em itens|Criar e modificar atribuições de função que controlam o acesso ao conjunto de dados compartilhado. Essa tarefa deve ser usada com as tarefas "Exibir relatórios" ou "Gerenciar relatórios". Se não for, não terá nenhum efeito porque o usuário não pode selecionar o item.|Gerenciador de Conteúdo|  
   
- Para obter mais informações, consulte [tarefas de nível de Item](tasks-and-permissions-item-level-tasks.md) e [funções predefinidas](role-definitions-predefined-roles.md).  
+ Para obter mais informações, consulte [Tarefas em nível de item](tasks-and-permissions-item-level-tasks.md) e [Funções predefinidas](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar conjuntos de dados compartilhados](../report-data/manage-shared-datasets.md)   

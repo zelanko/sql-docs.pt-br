@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166807"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016007"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatando as cores da série em um gráfico (Construtor de Relatórios e SSRS)
   O Reporting Services fornece várias paletas internas para gráficos. Além disso, você pode definir uma paleta personalizada. Por padrão, os gráficos usam internos **BrightPastel** paleta de cores para preencher cada série. Essas cores também aparecem na legenda. Se forem adicionadas várias séries ao gráfico, ele atribuirá um cor à série na ordem em que as cores foram definidas na paleta.  
@@ -46,18 +46,18 @@ ms.locfileid: "48166807"
 ## <a name="using-a-color-fill-on-each-series"></a>Usando uma cor preenchimento em cada série  
  Você também pode definir suas próprias cores no gráfico especificando uma cor para cada série no gráfico. Para isso, abra a caixa de diálogo **Propriedades da Série** e defina a propriedade **Cor** para **Preenchimento**. Essa abordagem anulará todas as paletas definidas. Geralmente, é melhor usar uma paleta personalizada para definir suas próprias cores porque o número de séries no conjunto de dados pode ser desconhecido até o processamento do relatório.  
   
- Essa abordagem é a mais adequada se você desejar definir a cor das séries condicionalmente com base em uma expressão.  Para obter mais informações, consulte [formatando pontos de dados em um gráfico de &#40;construtor de relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Essa abordagem é a mais adequada se você desejar definir a cor das séries condicionalmente com base em uma expressão.  Para obter mais informações, consulte [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Especificar cores consistentes em gráficos com várias formas &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md))  
   
- [Realçar dados do gráfico adicionando faixas &#40;relatórios e SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [Realçar dados do gráfico adicionando faixas &#40;Construtor de Relatórios e SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Adicionar estilos de bisel, alto-relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [Adicionar estilos de bisel, relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)  
   

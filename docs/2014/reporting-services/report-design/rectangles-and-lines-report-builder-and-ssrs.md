@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181166"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043102"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Retângulos e linhas (Construtor de Relatórios e SSRS)
   Os retângulos e as linhas podem criar efeitos visuais em um relatório. É possível definir propriedades de exibição nesses itens de relatório na seção Borda da guia Página inicial e definir outras propriedades usando o painel Propriedades. É possível adicionar recursos como uma cor ou imagem de plano de fundo, uma dica de ferramenta ou um indicador a um retângulo.  
@@ -47,13 +47,13 @@ ms.locfileid: "48181166"
 
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Adicionar uma borda a um relatório &#40;relatórios e SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [Adicionar uma borda a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [Adicionar um retângulo ou um contêiner &#40;relatórios e SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Adicionar um retângulo ou um contêiner &#40;Construtor de Relatórios e SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [Adicionar e modificar uma linha &#40;relatórios e SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [Adicionar e modificar uma linha &#40;Construtor de Relatórios e SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar um retângulo ou um contêiner &#40;relatórios e SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Adicionar um retângulo ou um contêiner &#40;Construtor de Relatórios e SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

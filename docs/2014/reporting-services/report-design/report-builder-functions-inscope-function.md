@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e37a25432e6e701ffd97bf95799b1a567748e1df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ecb91bd2a4b570a1e625a013270e59a121e6430a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183777"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025467"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>Função InScope (Construtor de Relatórios e SSRS)
   Indica se a instância atual de um item está no escopo especificado.  
@@ -42,7 +42,7 @@ InScope(scope)
   
  O*Scope* não pode ser uma expressão.  
   
- Um uso típico para o `InScope` função é em regiões de dados que têm dinâmico de escopo. Por exemplo, `InScope` pode ser usado em um link de detalhamento em células de uma região de dados para fornecer um relatório diferente nome e diferentes conjuntos de parâmetros dependendo de qual célula é clicada. Um exemplo disso é o seguinte:  
+ Um uso típico da função `InScope` é em regiões de dados que possuem escopo dinâmico. Por exemplo, `InScope` pode ser usada em um link de detalhamento em células de uma região de dados para fornecer um nome de relatório diferente e conjuntos de parâmetros diferentes, dependendo da célula clicada. Um exemplo disso é o seguinte:  
   
 -   A expressão a seguir, usada como o nome do relatório em um link de drillthrough, abrirá o relatório `ProductDetail` , se a célula clicada estiver no grupo `Month` , e o relatório `ProductSummary` se não estiver.  
   
@@ -50,7 +50,7 @@ InScope(scope)
     =Iif(InScope("Month"), "ProductDetail", "ProductSummary")  
     ```  
   
--   A expressão a seguir, usada na `Omit` propriedade de um parâmetro de relatório de detalhamento, passará o parâmetro para o relatório de destino somente se a célula clicada estiver no `Product` grupo.  
+-   A expressão a seguir, usada na propriedade `Omit` de um parâmetro de relatório detalhado, passará o parâmetro para o relatório de destino somente se a célula clicada estiver no grupo `Product`.  
   
     ```  
     =Not(InScope("Product"))  
@@ -66,9 +66,9 @@ InScope(scope)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

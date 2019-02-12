@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512551"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023748"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios)
   Este tutorial ensina como criar dois tipos de relatório: um relatório detalhado e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. A ilustração a seguir mostra os relatórios que você criará.  
@@ -144,7 +144,7 @@ ms.locfileid: "52512551"
   
 14. Clique em **Avançar**.  
   
-##  <a name="DMDXQuery"></a> 1B. Criar uma consulta MDX  
+##  <a name="DMDXQuery"></a> 1b. Criar uma consulta MDX  
  Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
@@ -213,7 +213,7 @@ ms.locfileid: "52512551"
   
 7.  Clique em **Avançar**.  
   
-##  <a name="DLayout"></a> 1C. Organizar dados em grupos  
+##  <a name="DLayout"></a> 1c. Organizar dados em grupos  
  Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -239,7 +239,7 @@ ms.locfileid: "52512551"
   
 6.  Clique em **Avançar**.  
   
-##  <a name="DTotals"></a> 1-d. Adicionar subtotais e totais  
+##  <a name="DTotals"></a> 1d. Adicionar subtotais e totais  
  Depois de criar grupos, é possível adicionar e formatar linhas onde os valores de agregação dos campos serão exibidos. Também é possível escolher mostrar todos os dados ou permitir que um usuário expanda e recolha dados agrupados de forma interativa.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
@@ -250,7 +250,7 @@ ms.locfileid: "52512551"
   
 2.  Clique em **Avançar**.  
   
-##  <a name="DStyle"></a> 1E. Escolha um estilo  
+##  <a name="DStyle"></a> 1e. Escolha um estilo  
  Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda.  
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  
@@ -438,7 +438,7 @@ ms.locfileid: "52512551"
   
 14. Clique em **Avançar**.  
   
-##  <a name="MMDXQuery"></a> 1B. Criar uma consulta MDX  
+##  <a name="MMDXQuery"></a> 1b. Criar uma consulta MDX  
  Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o designer de consulta para criar filtros, parâmetros e membros calculados como também o próprio conjunto de dados.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
@@ -536,7 +536,7 @@ ms.locfileid: "52512551"
   
 6.  Clique em **Avançar**.  
   
-##  <a name="MLayout"></a> 1C. Organizar dados em grupos  
+##  <a name="MLayout"></a> 1c. Organizar dados em grupos  
  Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -555,7 +555,7 @@ ms.locfileid: "52512551"
   
      As etapas 3 e 4 especificam os dados a serem exibidos na matriz.  
   
-##  <a name="MTotals"></a> 1-d. Adicionar subtotais e totais  
+##  <a name="MTotals"></a> 1d. Adicionar subtotais e totais  
  Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relatório principal são exibidos como um indicador; você removerá o total geral depois de concluir o assistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Para adicionar subtotais e totais gerais  
@@ -566,7 +566,7 @@ ms.locfileid: "52512551"
   
 2.  Clique em **Avançar**.  
   
-##  <a name="MStyle"></a> 1E. Escolha um estilo  
+##  <a name="MStyle"></a> 1e. Escolha um estilo  
  Aplique o estilo Ardósia ao relatório. Esse é o mesmo estilo usado pelo relatório detalhado.  
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  

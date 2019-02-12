@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a03753602b0a44cac213cf001406bd537ede695b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68875a9d3f93fc952d0f1d384e526a65e1f20fab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022027"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Propriedade IsWebServiceEnabled (WMI MSReportServer_ConfigurationSetting)
   Indica se o serviço Web Servidor de Relatórios está habilitado. Somente leitura.  
@@ -40,7 +40,7 @@ public boolean IsWebServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>Valores da propriedade  
- Somente leitura `Boolean` valor. Um valor de `true` indica que o serviço Web servidor de relatório está habilitado.  
+ Um valor `Boolean` somente leitura. Um valor de `true` indica que o serviço Web Servidor de Relatórios está habilitado.  
   
 ## <a name="example-code"></a>Código de exemplo  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
@@ -49,6 +49,6 @@ public boolean IsWebServiceEnabled;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206116"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022956"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Classificação interativa (Construtor de Relatórios e SSRS)
   É possível adicionar botões de classificação interativos para permitir que um usuário alterne entres as ordens crescente e decrescente para linhas de uma tabela ou para linhas e colunas de uma matriz. O uso mais comum da classificação interativa é adicionar um botão de classificação a todos os cabeçalhos de coluna. Assim, o usuário pode escolher a coluna pela qual classificar.  
@@ -28,17 +28,17 @@ ms.locfileid: "48206116"
   
  Ao adicionar uma classificação interativa, você deve especificar os itens seguintes:  
   
--   **O que classificar:** linhas ou colunas?  
+-   **O que classificar:** Linhas ou colunas?  
   
--   **Classificar pelo quê:** um campo exibido em uma coluna de tabela? Um campo que não é exibido?  
+-   **Classificar pelo quê:** Um campo que é exibido em uma coluna de tabela? Um campo que não é exibido?  
   
--   **Em que contexto classificar:** por exemplo, é possível classificar linhas associadas a grupos; colunas associadas a grupos de colunas; linhas detalhadas; grupos filho em um grupo pai ou grupos pai e filho juntos.  
+-   **Que contexto classificar:** Por exemplo, você pode classificar linhas associadas a grupos de linhas; colunas associadas a grupos de colunas; linhas de detalhes; grupos filho em um grupo pai ou grupos pai e filho juntos.  
   
--   **A qual caixa de texto adicionar o botão de classificação:** ao cabeçalho de coluna ou ao cabeçalho da linha do grupo?  
+-   **Qual caixa de texto para adicionar o botão de classificação:** No cabeçalho da coluna ou no cabeçalho da linha de grupo?  
   
--   **Sincronizar ou não a classificação em várias regiões de dados:** é possível criar um relatório para quando o usuário alternar a ordem de classificação; as demais regiões de dados com o mesmo ancestral também são classificadas.  
+-   **Se deseja sincronizar a classificação em várias regiões de dados:** Você pode criar um relatório de modo que quando o usuário alternar a ordem de classificação, outras regiões de dados com o mesmo ancestral também são classificadas.  
   
- Para obter instruções passo a passo, consulte [adicionar classificação interativa a uma tabela ou matriz &#40;construtor de relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Para obter instruções passo a passo, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  A seguinte tabela resume os efeitos obtidos usando botões de classificação interativos.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48206116"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>Adicionando classificação interativa a vários grupos  
  Em uma tabela com grupos de linhas aninhados com base em um único campo de conjunto de dados, é possível adicionar um botão de classificação interativo que classifica valores de grupo pai, de grupo filho ou linhas detalhadas. No entanto, talvez você queira fornecer ao usuário a possibilidade de classificar a tabela por valores dos grupos pai e filho sem que seja necessário clicar várias vezes.  
   
- Para isso, você deve refazer a tabela para agrupar uma expressão que combina vários campos. Por exemplo, em um conjunto de dados com contagens de inventário, caso a tabela original seja agrupada por tamanho e por cor, você pode especificar um único grupo com uma expressão formada por tamanho e cor. Para obter mais informações, consulte [adicionar classificação interativa a uma tabela ou matriz &#40;construtor de relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Para isso, você deve refazer a tabela para agrupar uma expressão que combina vários campos. Por exemplo, em um conjunto de dados com contagens de inventário, caso a tabela original seja agrupada por tamanho e por cor, você pode especificar um único grupo com uma expressão formada por tamanho e cor. Para obter mais informações, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Adicionar classificação interativa a uma tabela ou matriz &#40;relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

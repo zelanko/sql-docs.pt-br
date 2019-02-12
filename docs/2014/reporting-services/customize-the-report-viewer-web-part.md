@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1cfb1dcfb635bbd7c70babcbd5a157c919c36892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017958"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a Web Part do Visualizador de Relatórios
   Você pode usar a Web Part do Visualizador de Relatórios para exibir relatórios executados em um servidor de relatório configurado para integração do SharePoint. Os relatórios que você pode exibir incluem arquivos de definição de relatório (.rdl) e relatórios do Construtor de Relatórios. Os relatórios são abertos na Web Part do Visualizador de Relatórios em uma nova página automaticamente, mas você também pode adicionar uma Web Part do Visualizador de Relatórios a uma página ou site existente se quiser que um determinado relatório sempre esteja visível nessa página.  
@@ -59,10 +59,10 @@ ms.locfileid: "48110036"
   
  As propriedades personalizadas da Web Part do Visualizador de Relatórios são listadas a seguir.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |Relatório|Um caminho totalmente qualificado para um relatório que esteja no site do SharePoint atual ou em um site no mesmo aplicativo Web ou farm. Para obter os melhores resultados ao definir propriedades adicionais, clique em Aplicar depois de especificar a URL do relatório.|  
-|Destino do Hiperlink|HTML padrão que especifica o quadro de destino para exibir conteúdo vinculado no documento atual. Para relatórios que incluem hiperlinks para sites externos, você pode especificar se um documento de destino substitui o relatório existente dentro da janela atual ou se ele é aberto em uma nova janela do navegador. Os valores válidos incluem `_Top`, `_Blank`, e `_Self`. `_Top` usa a janela atual, `_Blank` carrega o documento em uma nova janela do navegador e `_Self` abre o documento dentro do quadro atual. Embora `_Parent` seja um valor válido para o atributo Target em HTML, ele não deve ser usado para uma Web Part do Visualizador de Relatórios inserida em uma página.|  
+|Destino do Hiperlink|HTML padrão que especifica o quadro de destino para exibir conteúdo vinculado no documento atual. Para relatórios que incluem hiperlinks para sites externos, você pode especificar se um documento de destino substitui o relatório existente dentro da janela atual ou se ele é aberto em uma nova janela do navegador. Os valores válidos incluem `_Top`, `_Blank` e `_Self`. `_Top` usa a janela atual, `_Blank` carrega o documento em uma nova janela do navegador e `_Self` abre o documento dentro do quadro atual. Embora `_Parent` seja um valor válido para o atributo Target em HTML, ele não deve ser usado para uma Web Part do Visualizador de Relatórios inserida em uma página.|  
 |Gerar automaticamente o título da Web Part|Um título gerado que inclui o nome da Web Part do Visualizador de Relatórios e o nome do relatório, separados por um traço. Se o relatório não tiver um título, será usado o nome do arquivo do relatório. O título fica visível quando você adiciona uma Web Part a uma página. Se essa caixa de seleção estiver marcada, o título será gerado sempre que a página for atualizada.|  
 |Gerar automaticamente o link de detalhes da Web Part|Um hiperlink gerado que é exibido acima da Web Part. Você pode clicar no link para abrir o relatório em uma nova página, em modo de página inteira.|  
 |Mostrar item de menu do construtor de relatórios|Mostra ou oculta a opção de menu **Ações** para abrir o Construtor de Relatórios.|  
@@ -76,9 +76,9 @@ ms.locfileid: "48110036"
 |Mostrar controle de zoom|Mostra ou oculta o controle de zoom na barra de ferramentas.|  
 |Mostrar botão feed ATOM|Mostra ou oculta o botão feed ATOM na barra de ferramentas.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Localização da Barra de Ferramentas|Determina o local da barra de ferramentas dentro do visualizador de relatórios. Os valores válidos incluem `Top` e `Bottom`.|  
-|Área de prompt|Os valores válidos incluem `Displayed`, `Collapsed`, e `Hidden`. `Displayed` Exibe a área de parâmetros para os relatórios que incluem valores parametrizados e que exigem entrada do usuário antes do relatório será executado. Use `Hidden` se todos os parâmetros do relatório estiverem especificados e você não deseja que a área de parâmetros fique visível para os usuários.|  
+|Área de prompt|Os valores válidos incluem `Displayed`, `Collapsed` e `Hidden`. `Displayed` é exibido na área Parâmetros para os relatórios que incluem valores com parâmetros e que exigem a entrada do usuário antes de o relatório ser executado. Use `Hidden` se todos os parâmetros do relatório estiverem especificados e você não quiser que a área de parâmetros fique visível para os usuários.|  
 |Largura da Área de Parâmetros|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
-|Mapa do documento|Um controle de navegação definido em um relatório e usado para fornecer acesso com um único clique a seções específicas do relatório. Ele está disponível em relatórios HTML. O mapa do documento é exibido em uma área recolhível ao lado da área de exibição do relatório. Os valores válidos incluem `Displayed`, `Collapsed`, e `Hidden`. Se um mapa do documento estiver definido para um relatório, a área será expandida por padrão a menos que seja marcada como oculta ou recolhida nas propriedades da Web Part. Se o mapa do documento estiver recolhido, você poderá clicar na seta para expandi-lo.|  
+|Mapa do documento|Um controle de navegação definido em um relatório e usado para fornecer acesso com um único clique a seções específicas do relatório. Ele está disponível em relatórios HTML. O mapa do documento é exibido em uma área recolhível ao lado da área de exibição do relatório. Os valores válidos incluem `Displayed`, `Collapsed` e `Hidden`. Se um mapa do documento estiver definido para um relatório, a área será expandida por padrão a menos que seja marcada como oculta ou recolhida nas propriedades da Web Part. Se o mapa do documento estiver recolhido, você poderá clicar na seta para expandi-lo.|  
 |Largura da Área de Mapa do Documento|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
 |Carregar Parâmetros|Recupera as propriedades dos parâmetros do relatório. Nem todos os relatórios têm parâmetros. Se o relatório não tiver parâmetros, nenhum valor será retornado. Se você estiver definindo propriedades de um relatório recém-carregado, poderá receber um erro indicando que a conexão da fonte de dados foi excluída. Se isso acontecer, redefina a conexão e termine de definir as propriedades dos parâmetros depois que a conexão for especificada. Para obter mais informações sobre como definir a conexão, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).<br /><br /> Para obter os melhores resultados, clique em **Aplicar** antes de clicar em Carregar Parâmetros.<br /><br /> Depois de carregar as propriedades dos parâmetros, você poderá defini-las da mesma maneira como faria nas páginas de propriedades de parâmetros do relatório. Para obter mais informações sobre como definir parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48110036"
  A área Parâmetros fornece campos para digitar valores antes de executar o relatório. Ela só é usada quando a definição de um relatório inclui parâmetros. Quando as áreas Parâmetros ou Credenciais são exibidas, a exibição do relatório é ajustada para usar a largura restante da Web Part. Você pode definir propriedades na Web Part para personalizar a largura da área Parâmetros. Também pode definir os rótulos exibidos ao lado dos parâmetros individuais na página. Para obter mais informações sobre como modificar rótulos de parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Web Part de Visualizador de relatórios em um Site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Adicionar a Web Part do Visualizador de relatórios a uma página da Web &#40;modo integrado do Reporting Services no SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Web Part do Visualizador de Relatórios em um site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Adicionar a Web Part do Visualizador de Relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

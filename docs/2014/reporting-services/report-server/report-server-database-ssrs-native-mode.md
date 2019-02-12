@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b1ee55e0ec602ee2723b9e31b5dc80c611071b8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0a2d0a723629ae1e9b7e7277ff646c63a86aec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073876"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043257"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Banco de dados do servidor relatório (modo nativo do SSRS)
   Um servidor de relatório é um servidor sem estado que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para armazenar definições de objeto e metadados. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo usa dois bancos de dados para separar os requisitos de armazenamento de dados persistente do armazenamento de dados temporário. Os bancos de dados são criados juntamente e associados por nome. Por padrão, os nomes do banco de dados são **reportserver** e **reportservertempdb**, respectivamente.  
@@ -32,7 +32,7 @@ ms.locfileid: "48073876"
   
  Os bancos de dados podem ser executados em uma instância local ou remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . A instância local será útil se você tiver recursos de sistema suficientes ou se desejar manter as licenças de software, mas a execução dos bancos de dados em um computador remoto pode melhorar o desempenho.  
   
- Você pode optar por uma porta ou reutilizar um banco de dados do servidor de relatórios existente da instalação anterior ou uma instância diferente com outra instância do servidor de relatórios. O esquema do banco de dados do servidor de relatórios deve ser compatível com a instância do servidor de relatórios. Se o banco de dados estiver em um formato anterior, será solicitada a atualização para o formato atual. Não é possível executar o downgrade das versões mais novas para uma versão mais antiga. Se você tiver um banco de dados do servidor de relatórios, não poderá usá-lo com uma versão anterior de instâncias do servidor de relatórios. Para obter mais informações sobre como os bancos de dados de servidor de relatório serão atualizados para formatos mais recentes, consulte [atualizar um banco de dados do servidor de relatório](../install-windows/upgrade-a-report-server-database.md).  
+ Você pode optar por uma porta ou reutilizar um banco de dados do servidor de relatórios existente da instalação anterior ou uma instância diferente com outra instância do servidor de relatórios. O esquema do banco de dados do servidor de relatórios deve ser compatível com a instância do servidor de relatórios. Se o banco de dados estiver em um formato anterior, será solicitada a atualização para o formato atual. Não é possível executar o downgrade das versões mais novas para uma versão mais antiga. Se você tiver um banco de dados do servidor de relatórios, não poderá usá-lo com uma versão anterior de instâncias do servidor de relatórios. Para obter mais informações sobre os bancos de dados do servidor de relatório são atualizados para formatos mais novos, consulte [Atualizar um banco de dados do servidor de relatório](../install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
 >  A estrutura de tabelas dos bancos de dados é otimizada para operações de servidor e não deve ser modificada ou ajustada. [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode alterar a estrutura da tabela de uma versão para a próxima. Se você modificar ou estender o banco de dados, poderá limitar ou impedir a capacidade de desenvolvimento de futuras atualizações ou aplicar service packs. Você também corre o risco de fazer alterações que prejudiquem as operações do servidor de relatórios. Por exemplo, se você ativar o READ_COMMITTED_SNAPSHOT no banco de dados do ReportServer, quebrará o recurso de classificação interativo.  
@@ -66,11 +66,11 @@ ms.locfileid: "48073876"
  Se você fizer backup do banco de dados temporário e, em seguida, restaurá-lo, será preciso excluir o conteúdo. Geralmente, a exclusão do conteúdo do banco de dados temporário é segura e pode ser feita a qualquer momento. Entretanto, é preciso reiniciar o serviço Servidor de Relatórios do Windows após a exclusão do conteúdo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Hospedar um banco de dados do servidor de relatório em um Cluster de Failover do SQL Server](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [Hospedar um banco de dados do servidor de relatório em um cluster de failover do SQL Server](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Servidor de Relatório do Reporting Services](../reporting-services-report-server.md)   
- [Administrar um banco de dados do Servidor de Relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
- [Criar um banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Administrar um banco de dados de servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
+ [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Operações de backup e restauração para o Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

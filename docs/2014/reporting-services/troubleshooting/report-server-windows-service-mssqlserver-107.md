@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf34475a4b2b79251284db6d36018b0c6d243d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5351b052a26b2a4f5b9bc9d91f93aa2e4cdc5357
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106056"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020278"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Serviço Servidor de Relatório do Windows (MSSQLServer) 107
     
@@ -51,8 +51,8 @@ ms.locfileid: "48106056"
 ## <a name="internal-only"></a>Somente interno  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar a conta de serviço do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Iniciar e parar o serviço Servidor de Relatório](../report-server/start-and-stop-the-report-server-service.md)  
   
   

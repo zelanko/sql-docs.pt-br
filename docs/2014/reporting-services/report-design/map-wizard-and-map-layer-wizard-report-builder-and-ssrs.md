@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011847"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
   O Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
@@ -79,11 +79,11 @@ ms.locfileid: "53362908"
   
     -   [Qual é a diferença entre um Mapa Básico, um Mapa de Bolha e um Mapa Analítico?](#MapType)  
   
-    -   **Escolha visualização de mapa: Polígonos**  
+    -   **Escolha visualização de mapa: Polygons**  
   
     -   **Escolha visualização de mapa: Linhas**  
   
-    -   **Escolha visualização de mapa: Pontos**  
+    -   **Escolha visualização de mapa: Points**  
   
 4.  **Escolha uma conexão com uma fonte de dados**. Escolha uma conexão de fonte de dados ou crie uma com uma fonte de dados externa que contenha dados analíticos a serem exibidos no mapa.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "53362908"
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

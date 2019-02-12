@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 304c1048c206f179d5e29d3b5aa097d21a124512
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9ca7b2b7ed4cc66a3c47b2f2ad8044775d69c6ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014997"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativo em um conjunto de arquivos de configuração. A instalação cria os arquivos de configuração para cada instância instalada do servidor de relatório. Em cada arquivo, os valores são definidos durante a instalação ou quando você usa ferramentas e aplicativos para configurar um servidor para operação. Em alguns casos, é necessário modificar um arquivo diretamente para adicionar ou definir configurações avançadas. As configurações são especificadas como elementos ou atributos XML. Se você entender de XML e arquivos de configuração, use um editor de texto ou de código para modificar configurações definidas pelo usuário.  
@@ -98,7 +98,7 @@ ms.locfileid: "48065326"
  [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Implantando uma extensão de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Implantando uma extensão de renderização](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Como implantar um item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Como: Implantar um Item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Arquivos de configuração do Reporting Services](reporting-services-configuration-files.md)  
   
   

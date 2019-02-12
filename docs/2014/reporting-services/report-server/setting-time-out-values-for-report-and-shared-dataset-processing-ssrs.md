@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 790e512beed24295e7ca31dd471905ab814a7d1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166256"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028551"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS)
   Você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema. O servidor de relatório dá suporte a dois valores de tempo limite:  
@@ -35,14 +35,14 @@ ms.locfileid: "48166256"
  A maior parte dos erros de tempo limite ocorre durante o processamento de consultas. Caso você esteja encontrando erros de tempo limite, experimente aumentar o valor de tempo limite de consulta. Não deixe de ajustar o valor de tempo limite de execução de relatório de modo que ele seja superior ao tempo limite de consulta. O período deve ser suficiente para a conclusão do processamento da consulta e do relatório.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Definindo um tempo limite de consulta para um conjunto de dados inserido em um relatório  
- Os valores de tempo limite de consulta são especificados durante a criação do relatório quando você define um conjunto de dados inserido. O valor de tempo limite é armazenado com o relatório, no `Timeout` elemento da definição de relatório. Por padrão, este valor é definido como 30 segundos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Os valores de tempo limite de consulta são especificados durante a criação do relatório quando você define um conjunto de dados inserido. O valor de tempo limite é armazenado com o relatório, no elemento `Timeout` da definição do relatório. Por padrão, este valor é definido como 30 segundos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Os usuários com permissão para modificar as propriedades de um relatório publicado podem redefinir esse valor, editando o arquivo de definição do relatório.  
   
  Você também pode especificar um valor de tempo limite de consulta para assinaturas controladas por dados. O valor de tempo limite de consulta é especificado nas páginas de Assinatura Controlada por Dados. O valor especificado determina quanto tempo o servidor de relatório aguarda pela conclusão do processamento da consulta ao recuperar dados da fonte de dados do assinante.  
   
 ## <a name="setting-a-query-time-out-for-a-shared-dataset"></a>Definindo um tempo limite de consulta para um conjunto de dados compartilhado  
- Os valores de tempo limite de consulta são especificados em segundos no servidor de relatório quando você cria ou gerencia um conjunto de dados compartilhado. Por padrão, esse valor é definido como 0 segundo, que é o equivalente ao valor de nenhum tempo limite. Para obter mais informações, consulte [gerenciar conjuntos de dados compartilhados](../report-data/manage-shared-datasets.md).  
+ Os valores de tempo limite de consulta são especificados em segundos no servidor de relatório quando você cria ou gerencia um conjunto de dados compartilhado. Por padrão, esse valor é definido como 0 segundo, que é o equivalente ao valor de nenhum tempo limite. Para obter mais informações, consulte [Gerenciar conjuntos de dados compartilhados](../report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Definindo um tempo limite de execução de relatórios  
  Você pode definir o valor do tempo limite de execução de relatórios para limitar a quantidade de tempo que um servidor de relatório usa para processar um relatório. Os valores de tempo limite de execução de relatório podem ser especificados no Gerenciador de Relatórios. Você pode definir um valor padrão para todos os relatórios na página Configurações de Site e anular esse valor na página de propriedades de Execução para um relatório específico. Por padrão, o valor é definido como 1.800 segundos. Para obter mais informações, consulte [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md).  
@@ -56,9 +56,9 @@ ms.locfileid: "48166256"
 >  Você pode definir `RunningRequestsDbCycle` no arquivo RSReportServer.config para alterar a frequência de avaliação dos trabalhos em execução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir opções de processamento &#40;modo integrado do Reporting Services no SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](reporting-services-report-server-native-mode.md)   
- [Gerenciar um processo em execução](../subscriptions/manage-a-running-process.md)   
+ [Manage a Running Process](../subscriptions/manage-a-running-process.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 663fb563f5fa8b80945f70f7086262a56b059dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206916"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013147"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Avaliando práticas recomendadas usando o Gerenciamento Baseado em Políticas
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Avaliando práticas recomendadas usando o gerenciamento baseado em políticas
   Bem-vindo ao tutorial Avaliando práticas recomendadas usando o Gerenciamento Baseado em Políticas. O tutorial é destinado a usuários familiarizados com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas que não conhecem o Gerenciamento Baseado em Políticas. O gerenciamento baseado em políticas é um sistema que define as políticas que podem ser usadas para impor padrões de administração de sites. O gerenciamento baseado em políticas inclui um conjunto de práticas recomendadas que você pode usar para analisar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e determinar se a instância atende às diretrizes de práticas recomendadas e recomendações.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
@@ -34,10 +34,10 @@ ms.locfileid: "48206916"
   
  Este tutorial é dividido em duas lições:  
   
- [Lição 1: Avalie práticas recomendadas sob demanda](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Lição 1: Avalie práticas recomendadas em uma base por demanda](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  Nesta lição, você realizará uma avaliação sob demanda das políticas de práticas recomendadas em relação a uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Lição 2: Avalie as políticas de práticas recomendadas de forma agendada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lição 2: Avaliar as políticas de práticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  Nesta lição, você configura políticas de práticas recomendadas para serem executadas de forma agendada. A lição mostra como configurar políticas agendadas em uma única instância, e como implantar políticas agendadas de um local central para várias instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements"></a>Requisitos  
@@ -46,7 +46,7 @@ ms.locfileid: "48206916"
  Para usar este tutorial, o servidor deve ter o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] instalado.  
   
 ## <a name="start-the-tutorial"></a>Inicie o tutorial  
- [Lição 1: Avalie práticas recomendadas sob demanda](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Lição 1: Avalie práticas recomendadas em uma base por demanda](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

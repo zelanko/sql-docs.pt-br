@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 35b3e47ea475da9e135368ca65f94dfff1943883
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f117c8ba2bc933747c725662100cf438dcd67a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155076"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027888"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Adicionar código a um relatório (SSRS)
   Em qualquer expressão, você pode chamar seu próprio código personalizado. Você pode fornecer código das duas maneiras a seguir:  
@@ -59,8 +59,8 @@ ms.locfileid: "48155076"
      Se você adicionar essa expressão a uma célula de tabela que exibe valores de categoria, sempre que a palavra "Bike" estiver no campo de conjunto de dados daquela linha, o valor da célula de tabela exibirá a palavra "Bicicleta".  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo de propriedades do relatório, código](../report-properties-dialog-box-code.md)   
+ [Caixa de diálogo Propriedades do Relatório, Código](../report-properties-dialog-box-code.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Referências de coleção de parâmetros &#40;relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Referências de coleções de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

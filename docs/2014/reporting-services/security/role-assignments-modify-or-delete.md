@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215526"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026887"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modificar ou excluir uma atribuição de função (Gerenciador de Relatórios)
   Uma atribuição de função mapeia uma conta de grupo ou usuário para uma definição de função predefinida que inclui as tarefas que podem ser executadas. Ela determina os tipos de operações que um usuário pode executar com relação a uma pasta, relatório, modelo ou outro tipo de conteúdo. Para criar, modificar ou excluir atribuições de função, use o Gerenciador de Relatórios. Após criar uma atribuição de função para um determinado usuário ou grupo, você pode modificá-la posteriormente selecionando uma função diferente. Para revogar permissões em um servidor de relatório, exclua uma atribuição de função desse servidor.  
@@ -64,9 +64,9 @@ ms.locfileid: "48215526"
 6.  Para excluir uma atribuição de função, marque a caixa de seleção próximo ao nome de usuário ou grupo e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- (criar-e-gerenciar-função-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Atribuições de função](role-assignments.md)   
  [Página Configurações do Site &#40;Gerenciador de Relatórios&#41;](../site-settings-page-report-manager.md)   
- [Atribuições de nova função do sistema: página Editar Atribuições de Função do Sistema &#40;Gerenciador de Relatórios&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Novas atribuições de função do sistema: Editar página de atribuições de função do sistema &#40;Gerenciador de relatórios&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

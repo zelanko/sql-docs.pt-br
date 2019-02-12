@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182176"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034077"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicando fontes de dados e relatórios
   Antes de publicar o relatório, é preciso visualizá-lo para ver qual será sua aparência quando ele for executado. Você pode continuar refinando o projeto até ficar satisfeito com os resultados.  
@@ -30,13 +30,13 @@ ms.locfileid: "48182176"
  Se você usou uma fonte de dados compartilhada para criar o relatório, será preciso publicá-lo no mesmo local do relatório. Assim como os relatórios, as fontes de dados compartilhadas podem ser gerenciadas separadamente no servidor de relatórios.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visualizar relatórios](previewing-reports.md)  
+ [Visualizando relatórios](previewing-reports.md)  
  Descreve como visualizar um relatório antes de publicá-lo.  
   
- [Publicar relatórios em um servidor de relatórios](publishing-reports-to-a-report-server.md)  
+ [Publicando relatórios em um servidor de relatórios](publishing-reports-to-a-report-server.md)  
  Descreve como publicar um relatório em um servidor de relatórios.  
   
- [Exemplos de URL para itens de relatório publicados em um servidor de relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Descreve como publicar um relatório em um site do SharePoint.  
   
 ## <a name="see-also"></a>Consulte também  

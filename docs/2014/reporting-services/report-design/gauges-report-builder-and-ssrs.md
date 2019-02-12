@@ -158,13 +158,13 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5c643df1d6f8849cc610d9d94a12cfeecde2836d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154166"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016083"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
   A região de dados do medidor é uma região de dados unidimensional que exibe um único valor em seu conjunto de dados. Um medidor individual é sempre posicionado dentro de um painel de medidores, onde é possível adicionar medidores filho ou adjacentes. Você pode usar o painel de medidores para criar em um mesmo painel de medidores vários medidores que compartilham funções comuns, como filtragem, agrupamento ou classificação.  
@@ -181,7 +181,7 @@ ms.locfileid: "48154166"
   
  ![Diagrama de elementos de medidor](../media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")  
   
- Para obter mais informações sobre como usar medidores como KPIs, consulte [Tutorial: Adicionando um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para obter mais informações sobre como usar medidores como KPIs, consulte [Tutorial: Adicionando um KPI ao relatório &#40;construtor de relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar medidores separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -190,7 +190,7 @@ ms.locfileid: "48154166"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="GaugeTypes"></a> Tipos de medidores  
- O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fornece dois tipos de medidores: radial e linear. O medidor radial geralmente é usado quando você deseja expressar os dados como uma velocidade. O medidor linear é usado para expressar os dados como uma temperatura ou um valor escalar.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fornece dois tipos de medidores: radial e linear. O medidor radial geralmente é usado quando você deseja expressar os dados como uma velocidade. O medidor linear é usado para expressar os dados como uma temperatura ou um valor escalar.  
   
  As principais diferenças entre os dois tipos são a forma geral do medidor e os ponteiros de medidor disponíveis. Os medidores radiais são circulares, ou graus de um círculo, e lembram velocímetros. Os ponteiros do medidor frequentemente são agulhas, mas podem ser marcadores ou barras.  
   
@@ -204,13 +204,13 @@ ms.locfileid: "48154166"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Opções de medidor radial: Radial, Radial com Minimedidor, Duas Escalas, 90 Graus Nordeste, 90 Graus Noroeste, 90 Graus Sudoeste, 90 Graus Sudeste, 180 Graus Norte, 180 Graus Sul, 180 Graus Oeste, 180 Graus Leste e Medidor.  
+ Opções de medidor radial: Radial, Radial com Mini-indicador, duas escalas, 90 graus nordeste, 90 graus Noroeste, 90 graus Sudoeste, 90 graus Sudeste, 180 graus Norte, 180 graus Sul, 180 graus West180 graus Leste e medidor.  
   
  **Medidor linear**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opções de medidor linear: Horizontal, Vertical, Vários Ponteiros de Barra, Duas Escalas, Intervalo de Três Cores, Logarítmico, Termômetro, Termômetro Fahrenheit/Celsius e Gráfico de Marcador.  
+ Opções de medidor linear: Horizontal, Vertical, barra de vários ponteiros, duas escalas, intervalo de três cores, logarítmico, termômetro, termômetro Fahrenheit/Celsius e gráfico de marcador.  
   
   
 ##  <a name="AddingData"></a> Adicionando dados a um medidor  
@@ -244,14 +244,14 @@ ms.locfileid: "48154166"
 -   Clique com o botão direito do mouse no ponteiro do medidor e selecione **Propriedades do Ponteiro**. Para `Value`, selecione um campo na lista suspensa ou defina uma expressão de campo clicando o **expressão** (*fx*) botão.  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>Agregando campos em um único valor  
- Quando um campo é adicionado a um medidor, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcula uma agregação para o campo por padrão. Tipos de dados numéricos são agregados com a função SUM. Tipos de dados não numéricos são agregados com a função COUNT que conta o número de instâncias de um valor ou campo específico dentro do conjunto de dados ou grupo. Se o tipo de dados do campo de valor for String, o medidor não poderá exibir um valor numérico, mesmo que haja numerais nos campos. Em vez disso, o medidor agrega campos de cadeia de caracteres usando a função COUNT. Para evitar esse comportamento, verifique se os campos usados têm tipos de dados numéricos, em vez de cadeias de caracteres que contêm números formatados. É possível usar uma expressão do Visual Basic para converter valores de cadeia de caracteres em um tipo de dados numérico usando a constante CDbl ou CInt. Por exemplo, a expressão a seguir converte um campo de cadeia de caracteres chamado MyField em valores numéricos.  
+ Quando um campo é adicionado a um medidor, por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcula uma agregação para o campo. Tipos de dados numéricos são agregados com a função SUM. Tipos de dados não numéricos são agregados com a função COUNT que conta o número de instâncias de um valor ou campo específico dentro do conjunto de dados ou grupo. Se o tipo de dados do campo de valor for String, o medidor não poderá exibir um valor numérico, mesmo que haja numerais nos campos. Em vez disso, o medidor agrega campos de cadeia de caracteres usando a função COUNT. Para evitar esse comportamento, verifique se os campos usados têm tipos de dados numéricos, em vez de cadeias de caracteres que contêm números formatados. É possível usar uma expressão do Visual Basic para converter valores de cadeia de caracteres em um tipo de dados numérico usando a constante CDbl ou CInt. Por exemplo, a expressão a seguir converte um campo de cadeia de caracteres chamado MyField em valores numéricos.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
  Para obter mais informações sobre expressões de agregação, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="defining-a-group-on-a-gauge"></a>Definindo um grupo em um medidor  
- Depois de adicionar um campo ao medidor, é possível adicionar um grupo de dados. O Medidor difere de todas as outras regiões de dados no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que podem exibir vários grupos em uma região de dados. A adição de um grupo com a definição de uma expressão de grupo no medidor é o mesmo que adicionar um grupo de linhas na região de dados Tablix. Porém, quando o grupo é adicionado, só o valor do último grupo é exibido como o valor do ponteiro no medidor. Por exemplo, se você adicionar uma expressão de agrupamento no Ano, o ponteiro apontará para o valor que representa o valor de vendas de agregação para o último ano no conjunto de dados. Para obter mais informações sobre grupos, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
+ Depois de adicionar um campo ao medidor, é possível adicionar um grupo de dados. O Medidor difere de todas as outras regiões de dados no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]que podem exibir vários grupos em uma região de dados. A adição de um grupo com a definição de uma expressão de grupo no medidor é o mesmo que adicionar um grupo de linhas na região de dados Tablix. Porém, quando o grupo é adicionado, só o valor do último grupo é exibido como o valor do ponteiro no medidor. Por exemplo, se você adicionar uma expressão de agrupamento no Ano, o ponteiro apontará para o valor que representa o valor de vendas de agregação para o último ano no conjunto de dados. Para obter mais informações sobre grupos, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
   
  Você pode desejar adicionar um grupo no medidor se, por exemplo, estiver exibindo vários medidores em uma tabela ou lista e desejar exibir dados agregados por grupo. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -287,9 +287,9 @@ ms.locfileid: "48154166"
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista os procedimentos que mostram, passo a passo, como trabalhar com medidores nos relatórios; como obter dados para exibição efetivamente em medidores e como adicionar e configurar medidores e seus elementos.  
   
--   [Adicionar um medidor a um relatório &#40;relatórios e SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [Adicionar um medidor a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [Definir mínimo ou máximo em um medidor &#40;relatórios e SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Definir mínimo ou máximo em um medidor &#40;Construtor de Relatórios e SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [Definir um intervalo de ajuste em um medidor &#40;relatórios e SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
@@ -302,9 +302,9 @@ ms.locfileid: "48154166"
 |||  
 |-|-|  
 |Termo|Definição|  
-|[Formatando escalas em um medidor &#40;relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre escalas de formatação em medidores e informações detalhadas sobre as opções de formatação para escalas em medidores radiais e lineares.|  
-|[Formatando ponteiros em um medidor &#40;relatórios e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre ponteiros de formatação em medidores e informações detalhadas sobre as opções de formatação para estilos de ponteiros disponíveis para medidores radiais e lineares.|  
-|[Formatando intervalos de um medidor &#40;relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações sobre intervalos de formatação em medidores para indicar uma subseção importante de valores no medidor ou indicar visualmente quando o valor do ponteiro entrar em uma certa faixa de valores.|  
+|[Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre escalas de formatação em medidores e informações detalhadas sobre as opções de formatação para escalas em medidores radiais e lineares.|  
+|[Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre ponteiros de formatação em medidores e informações detalhadas sobre as opções de formatação para estilos de ponteiros disponíveis para medidores radiais e lineares.|  
+|[Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações sobre intervalos de formatação em medidores para indicar uma subseção importante de valores no medidor ou indicar visualmente quando o valor do ponteiro entrar em uma certa faixa de valores.|  
   
   
 ## <a name="see-also"></a>Consulte também  

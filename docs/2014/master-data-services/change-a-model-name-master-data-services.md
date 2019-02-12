@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 752f31eee490cca61523e3a0bba512e687c0108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf8c70a3d1f97ce3be25833c8f0af93d693654d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102956"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021708"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Alterar um nome de modelo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de um modelo.  
@@ -28,7 +28,7 @@ ms.locfileid: "48102956"
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-a-model-name"></a>Para alterar um nome de modelo  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48102956"
 6.  Clique em **Salvar modelo**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar um modelo de &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
+ [Criar um modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [Excluir um modelo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [Modelos &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea6a5ef9a9ced2399ba5539f8117cc40e5c13db0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a4ae0bcfaeda7b494ae07bee53980dfdbff7a12e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020057"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fornece uma ampla gama de ferramentas prontas para usar e serviços para ajudá-lo a criar, implantar e gerenciar relatórios para sua organização. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui recursos de programação que permitem estender e personalizar a sua funcionalidade de relatório.  

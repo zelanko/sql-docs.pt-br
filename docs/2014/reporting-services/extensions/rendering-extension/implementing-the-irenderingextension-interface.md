@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040037"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementando a interface IRenderingExtension
   A extensão de renderização obtém os resultados de uma definição de relatório combinada com os dados reais e renderiza os dados resultantes para um formato que seja utilizável. A transformação dos dados combinados e a formatação são feitas usando uma classe CLR (Common Language Runtime) que implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Isto transforma o modelo de objeto em um formato de saída que é consumível por um visualizador, impressora ou outro destino de saída.  
@@ -51,7 +51,7 @@ ms.locfileid: "48227266"
 -   *createAndRegisterStream* é uma função de delegado a ser chamada para a obtenção de um fluxo no qual será feita a renderização.  
   
 ### <a name="deviceinfo-parameter"></a>Parâmetro deviceInfo  
- O parâmetro *deviceInfo* contém parâmetros de renderização e não parâmetros de relatório. Esses parâmetros de renderização são passados para a extensão de renderização. Os valores *deviceInfo* são convertidos em um objeto <xref:System.Collections.Specialized.NameValueCollection> pelo servidor de relatório. Os itens do parâmetro *deviceInfo* são tratados como valores que não diferenciam maiúsculas de minúsculas. Se a solicitação de renderização aconteceu como resultado de acesso à URL, os parâmetros da URL no formato `rc:key=value` são convertidos em pares de chave/valor no objeto de dicionário *deviceInfo*. O código de detecção do navegador também fornece os seguintes itens no dicionário *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type e AcceptLanguage. Qualquer par de nome/valor no parâmetro *deviceInfo* que não é compreendido pela extensão de renderização é ignorado. O exemplo de código a seguir mostra um método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de exemplo que recupera ícones:  
+ O parâmetro *deviceInfo* contém parâmetros de renderização e não parâmetros de relatório. Esses parâmetros de renderização são passados para a extensão de renderização. Os valores *deviceInfo* são convertidos em um objeto <xref:System.Collections.Specialized.NameValueCollection> pelo servidor de relatório. Os itens do parâmetro *deviceInfo* são tratados como valores que não diferenciam maiúsculas de minúsculas. Se a solicitação de renderização aconteceu como resultado de acesso à URL, os parâmetros da URL no formato `rc:key=value` são convertidos em pares de chave/valor no objeto de dicionário *deviceInfo*. O código de detecção do navegador também fornece os seguintes itens na *clientCapabilities* dicionário: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, tipo e AcceptLanguage. Qualquer par de nome/valor no parâmetro *deviceInfo* que não é compreendido pela extensão de renderização é ignorado. O exemplo de código a seguir mostra um método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de exemplo que recupera ícones:  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

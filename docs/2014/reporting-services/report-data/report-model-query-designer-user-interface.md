@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110588"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037027"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do modelo de relatório
   O Designer de Relatórios fornece dois designers de consulta para ajudá-lo a especificar quais dados de uma fonte de dados do Modelo do Servidor de Relatórios você deseja usar em um relatório. Use o designer de consultas gráficas para explorar e escolher entidades de modelo e campos de entidade. Use o designer de consulta baseado em texto para trabalhar diretamente com uma especificação de linguagem SMDL em formato XML.  
@@ -53,7 +53,7 @@ ms.locfileid: "48110588"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  Também é possível usar os botões da barra de ferramentas ao criar a consulta. A tabela a seguir lista os botões na barra de ferramentas e descreve suas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. A consulta para uma fonte de dados do Modelo do Servidor de Relatórios usa uma especificação SMQL (linguagem de consulta de modelo semântico) em XML.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
@@ -81,7 +81,7 @@ ms.locfileid: "48110588"
 ### <a name="text-based-query-designer-toolbar"></a>Barra de ferramentas do Designer de Consulta baseado em texto  
  Também é possível usar os botões da barra de ferramentas ao criar a consulta. A tabela a seguir lista os botões na barra de ferramentas e descreve suas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta de um relatório existente.|  

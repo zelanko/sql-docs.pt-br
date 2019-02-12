@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a64c28884b5c656e75e172f36b2bb008a1bbfdcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2a05787e4e06c7cf178c2618e2fbfbac4de596cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077376"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035057"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório
   Este tópico fornece uma referência das permissões no SharePoint que podem ser usadas para conceder acesso a operações do servidor de relatório para um servidor de relatório executado em modo integrado do SharePoint. Se você estiver criando níveis de permissão personalizados, este tópico poderá ajudá-lo a escolher as permissões a serem usadas.  
@@ -45,7 +45,7 @@ ms.locfileid: "48077376"
 ## <a name="list-permissions"></a>Permissões de lista  
  As permissões que você define na biblioteca que contém os itens de servidor de relatório determinam como os usuários acessam esses itens.  
   
-|Permissão|Description|F|C|V|Operação do servidor de relatório|  
+|Permissão|Descrição|F|C|V|Operação do servidor de relatório|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gerenciar Listas|Criar e excluir listas, adicionar ou remover colunas em uma lista e adicionar ou remover exibições públicas de uma lista.|X|||Criar uma pasta em uma biblioteca do SharePoint durante uma operação de publicação usando uma ferramenta de criação. Esta permissão também é exigida para o gerenciamento de históricos de relatórios.|  
 |Adicionar Itens|Adicionar itens a listas e documentos a bibliotecas de documentos, além de adicionar comentários a discussões na Web.|X|X||Adicionar relatórios, modelos de relatórios, fontes de dados compartilhados e recursos (arquivos de imagem externos) às bibliotecas do SharePoint. Crie fontes de dados compartilhados. Gerar modelos de relatórios utilizando fontes de dados compartilhados. Iniciar o Construtor de Relatórios e criar um novo relatório ou carregar um modelo no Construtor de Relatórios.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48077376"
 ## <a name="site-permissions"></a>Permissões de site  
  As permissões de site determinam o acesso a operações de servidor de relatório não diretamente relacionadas a itens armazenados em uma biblioteca específica. Os exemplos incluem a criação e o gerenciamento de agendas compartilhadas, que podem ser usadas por itens em várias bibliotecas, e a configuração da Web Part do Visualizador de Relatórios, que pode ser usada em todo um site.  
   
-|Permissão|Description|F|C|V|Operação do servidor de relatório|  
+|Permissão|Descrição|F|C|V|Operação do servidor de relatório|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gerenciar Permissões|Criar e gerenciar níveis de permissão no site e atribuir permissões a usuários e grupos.|X|||Você pode alterar permissões para todos os itens e operações do servidor de relatório. Você pode definir a segurança de itens de modelo.|  
 |Gerenciar Site|Executar todas as tarefas de administração do site, bem como gerenciar conteúdos.|X|||Criar, alterar e excluir agendas compartilhadas.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48077376"
 |Abrir|Abrir um site, uma lista ou pasta para acessar itens nesse contêiner.|X|X|X|Ler propriedades de agendas e de itens.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Comparar funções e tarefas no Reporting Services com permissões e grupos do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Conceder permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

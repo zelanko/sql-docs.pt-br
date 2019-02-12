@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d7ab908fa5f9696c5db4c49f3d99338c9f01a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166186"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017187"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Adicionar um sub-relatório e parâmetros (Construtor de Relatórios e SSRS)
   Adicione sub-relatórios a um relatório quando quiser criar um relatório principal que seja um contêiner para vários relatórios relacionados. Um sub-relatório é uma referência a outro relatório. Para relacionar os relatórios por valores de dados (por exemplo, para que diversos relatórios exibam dados para o mesmo cliente), é preciso criar um relatório com parâmetros (por exemplo, um relatório que exiba os detalhes de um cliente específico) como o sub-relatório. Ao adicionar um sub-relatório ao relatório principal, você também pode especificar os parâmetros que serão passados para o sub-relatório.  
   
  Também é possível adicionar sub-relatórios a linhas ou colunas dinâmicas em uma tabela ou matriz. Quando o relatório principal é processado, o sub-relatório é processado para cada linha. Nesse caso, analise se você pode obter o efeito desejado usando regiões de dados ou regiões de dados aninhados.  
   
- Para adicionar um sub-relatório a um relatório, crie primeiro o relatório que atuará como sub-relatório. Para obter mais informações sobre a criação de sub-relatórios, consulte [sub-relatórios &#40;construtor de relatórios e SSRS&#41;](subreports-report-builder-and-ssrs.md).  
+ Para adicionar um sub-relatório a um relatório, crie primeiro o relatório que atuará como sub-relatório. Para obter mais informações sobre como criar o sub-relatório, consulte [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -73,7 +73,7 @@ ms.locfileid: "48166186"
      A alteração da ordem de um parâmetro de sub-relatório não afeta o processamento do sub-relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Subrelatórios &#40;relatórios e SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+ [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

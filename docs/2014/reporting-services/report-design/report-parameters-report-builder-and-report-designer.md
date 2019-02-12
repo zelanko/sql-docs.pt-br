@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bb45eb7274763446358a0336a9b2a415bc4543b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023497"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
   Este tópico descreve os usos comuns dos parâmetros de relatório SSRS, as propriedades que você pode definir e muito mais sobre os parâmetros. Parâmetros de relatório o habilitam a controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório.  
@@ -227,7 +227,7 @@ ms.locfileid: "53366258"
 ##  <a name="bkmk_Related_Topics"></a> Conteúdo relacionado  
  [Configurando parâmetros de relatório SSRS (teste)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;construtor de relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Estourando os mistérios de InvalidReportParameterException no serviço de relatório](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

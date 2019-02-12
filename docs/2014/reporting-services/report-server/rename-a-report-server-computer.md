@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c040f3afade749772ae1560e9f99af8cd4ac0a85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e145eb63a357c628d46ce4c57218cbac1dfc149
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029138"
 ---
 # <a name="rename-a-report-server-computer"></a>Renomear um computador de servidor de relatório
   A renomeação de um computador provoca uma alteração de nome correspondente para o servidor Web e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (se estiver no mesmo computador). Em alguns casos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] talvez não possa ser acessado após uma alteração de nome do computador. Use as etapas fornecidas neste tópico para reconfigurar um servidor de relatório depois de uma alteração de nome do computador.  
@@ -39,18 +39,18 @@ ms.locfileid: "48114286"
 ## <a name="renaming-a-report-server-computer"></a>Renomeando um computador de servidor de relatório  
  Se você renomear um computador que executa um servidor de relatório, faça o seguinte:  
   
-1.  Abra **rsreportserver. config** em um editor de texto e modifique o `UrlRoot` configuração para refletir o novo nome do servidor. A configuração `UrlRoot` é usada pelas extensões de entrega para compor o URL usado para acessar itens armazenados no servidor de relatório. Alterar o endereço de URL do servidor de relatório requer que você atualize o `UrlRoot` configuração de forma que as assinaturas continuem a entregar os relatórios conforme o esperado.  
+1.  Abra **rsreportserver. config** em um editor de texto e modifique o `UrlRoot` configuração para refletir o novo nome do servidor. A configuração `UrlRoot` é usada pelas extensões de entrega para compor o URL usado para acessar itens armazenados no servidor de relatório. A alteração do endereço URL do servidor de relatório requer a atualização da configuração `UrlRoot` para que as assinaturas continuem a entregar os relatórios conforme o esperado.  
   
-2.  No mesmo arquivo, se ela estiver definida, modifique o `ReportServerUrl` configuração para refletir o novo nome do servidor. Esta configuração não é usada em todas as instalações. Se estiver vazio, não faça nada.  
+2.  No mesmo arquivo, se estiver definida, modifique a configuração `ReportServerUrl` para refletir o novo nome do servidor. Esta configuração não é usada em todas as instalações. Se estiver vazio, não faça nada.  
   
     > [!NOTE]  
     >  Se estiver usando o WINS (Windows Internet Naming Service) na rede corporativa, o servidor de relatório e o Gerenciador de Relatórios podem continuar disponíveis com o nome anterior por um período de tempo. O WINS mapeia um endereço IP para cada computador ao qual oferece suporte. Quando o WINS atualiza o endereço IP do computador renomeado, o nome antigo do computador não pode ser mais usado para acessar um servidor de relatório ou Gerenciador de Relatórios.  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md)   
- [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](reporting-services-report-server-native-mode.md)   
- [Iniciar e parar o serviço do servidor de relatório](start-and-stop-the-report-server-service.md)   
+ [Iniciar e parar o serviço Servidor de Relatório](start-and-stop-the-report-server-service.md)   
  [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
   
   

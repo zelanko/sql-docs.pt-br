@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5eee6e985a62071172a287cda2c526c9f2a0a87d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039667"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
   Relatórios grandes apresentam certos desafios de processamento e requerem certas configurações para que sejam executados corretamente. Relatórios grandes não devem ser executados sob demanda, salvo se estiverem configurados para oferecer suporte à paginação.  

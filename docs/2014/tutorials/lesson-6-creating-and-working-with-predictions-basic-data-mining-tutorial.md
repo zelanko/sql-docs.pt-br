@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b213cb58-2c40-4c89-b08b-d3c36a4afad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ff8c21dd55154d28096fdd98e680bd404be4e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171596"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041387"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lição 6: Criando e trabalhando com previsões (Tutorial de mineração de dados básico)
   Você testou e explorou os modelos de mineração de dados criados e fez treinamentos sobre eles. Agora você está pronto para usar os modelos para identificar as pessoas com maior probabilidade de responder à nova campanha de mala direta.  
@@ -27,7 +26,7 @@ ms.locfileid: "48171596"
   
  Eis os tópicos desta lição:  
   
- [Criando previsões &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Criando previsões &#40;Tutorial básico de Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [Usando o detalhamento em dados da estrutura &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -35,10 +34,10 @@ ms.locfileid: "48171596"
  [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
 ## <a name="previous-lesson"></a>Lição anterior  
- [Lição 5: Testando modelos &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Lição 5: Teste de modelos &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Criando previsões &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Criando previsões &#40;Tutorial básico de Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Mining Model Content para modelos de árvore de decisão &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

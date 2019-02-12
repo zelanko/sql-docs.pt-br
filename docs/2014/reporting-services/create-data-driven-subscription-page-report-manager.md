@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116830"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027037"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Criar Assinatura Controlada por Dados (Gerenciador de Relatórios)
   Use a página Criar Assinatura Controlada por Dados para criar ou modificar uma assinatura que consulta um banco de dados de assinante para informações de assinatura cada vez que a assinatura é executada. Assinaturas controladas por dados usam resultados de consulta para determinar os destinatários da assinatura, as configurações de entrega e os valores de parâmetro do relatório. Em tempo de execução, o servidor de relatórioss executa uma consulta para obter valores usados nas configurações da assinatura. Você pode usar a página Criar Assinatura Controlada por Dados para definir a consulta e atribuir valores de consulta às configurações de assinatura. Os valores e as opções especificadas para uma assinatura controlada por dados são divididos entre várias páginas, semelhantes a um assistente. Há sete páginas ao todo.  
@@ -53,7 +53,7 @@ ms.locfileid: "48116830"
   
 -   Selecione **Compartilhamento de Arquivo do Servidor de Relatório** para entregar os relatórios a um compartilhamento de arquivos. O relatório será entregue como um arquivo estático, desconectado do servidor de relatório. Para obter mais informações, consulte [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Selecione **Email do Servidor de Relatório** para entregar relatórios a uma caixa de entrada de emails. Para obter mais informações, consulte [Entrega de email no Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Selecione **Email do Servidor de Relatório** para entregar relatórios a uma caixa de entrada de emails. Para obter mais informações, consulte [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Selecione **Provedor de Entrega Nulo** para entregar relatórios ao banco de dados do servidor de relatório. Essa opção cria instantâneos de relatório. Escolha essa opção quando quiser carregar antecipadamente o servidor de relatório com instantâneos de relatório com parâmetros ou específico de usuário em um agendamento específico. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48116830"
  Defina uma agenda que executa de hora em hora.  
   
  **Diário**  
- Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar dias das seguintes maneiras: cada  *\<dia >*, cada dia da semana e cada  *\<número >* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
+ Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar dias das seguintes maneiras: Cada  *\<dia >*, cada dia da semana e cada  *\<número >* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
  **Semanal**  
  Define uma agenda que executa em intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser em semanas completas (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
@@ -170,11 +170,11 @@ ms.locfileid: "48116830"
  O botão **Concluir** é habilitado quando há informações suficientes para a assinatura. Clique em **Concluir** para concluir a assinatura.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Assinaturas controladas por dados](subscriptions/data-driven-subscriptions.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

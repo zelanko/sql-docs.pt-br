@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183476"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025367"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado (Modo Nativo do SSRS)
   Você pode instalar e executar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) e o IIS (Serviços de Informações da Internet) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183476"
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
   
-|Versão do IIS|Problemas|Description|  
+|Versão do IIS|Problemas|Descrição|  
 |-----------------|------------|-----------------|  
 |IIS 6.0, 7.0, 8.0, 8.5|As solicitações dirigidas a um aplicativo são aceitas por um aplicativo diferente.<br /><br /> O HTTP.SYS impõe as regras de precedência a reservas de URL. As solicitações enviadas a aplicativos com o mesmo nome de diretório virtual e que, ao mesmo tempo, monitoram a porta 80 podem não alcançar o destino pretendido se a reserva de URL for fraca, em relação à reserva de URL de outro aplicativo.|Em determinadas condições, um ponto de extremidade registrado que substitui outro ponto de extremidade de URL no esquema de reserva de URL pode receber solicitações HTTP destinadas a outro aplicativo.<br /><br /> Se você usar nomes do diretório virtual exclusivos para o serviço Web Servidor de Relatórios e o Gerenciador de Relatórios, esse conflito será evitado.<br /><br /> Informações detalhadas sobre esse cenário são fornecidas neste tópico.|  
   
@@ -50,12 +50,12 @@ ms.locfileid: "48183476"
 |http://+:80|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Atribuídos**.|  
 |http://*:80|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Não Atribuídos**.|  
   
- Uma indicação de um conflito de porta é que você verá a seguinte mensagem de erro: 'System.IO.FileLoadException: O processo não pode acessar o arquivo porque está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).'  
+ Uma indicação de um conflito de porta é que você verá a seguinte mensagem de erro: 'System.IO.FileLoadException: O processo não pode acessar o arquivo porque ele está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).'  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Reservas de URL para o IIS 6.0, 7.0, 8.0, 8.5 com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Dadas as regras de precedência na seção anterior, você pode começar a compreender como as reservas de URL definidas para o Reporting Services e o ISS promovem a interoperabilidade. O Reporting Services recebe solicitações que especificam explicitamente os nomes de diretório virtuais para seus aplicativos; o IIS recebe todas as solicitações restantes, que podem ser direcionadas a aplicativos executados no modelo de processo do IIS.  
   
-|Aplicativo|Reserva de URL|Description|Recebimento de solicitação|  
+|Aplicativo|Reserva de URL|Descrição|Recebimento de solicitação|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Servidor de relatório|http://+:80/ReportServer|Curinga forte na porta 80, com diretório virtual de servidor de relatório.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de servidor de relatório. O serviço Web Servidor de Relatórios recebe todas as solicitações para http://\<computername>/reportserver.|  
 |Gerenciador de Relatórios|http://+:80/Reports|Curinga forte na porta 80, com o diretório virtual Reports.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de relatórios. O Gerenciador de relatórios recebe todas as solicitações para http://\<computername > / reports.|  
@@ -74,13 +74,13 @@ ms.locfileid: "48183476"
   
  Para garantir que todos os aplicativos recebam solicitações, siga estas diretrizes:  
   
--   Para instalações do Reporting Services, use nomes de diretório virtual ainda não utilizados por um site do IIS na mesma porta que o Reporting Services. Se houver conflito, instale o Reporting Services no modo “somente arquivos” (usando a instalação, mas não configurando a opção do servidor no Assistente de Instalação), para que você possa configurar os diretórios virtuais depois que a instalação for concluída. Uma indicação de que a sua configuração possui um conflito de porta é que você verá a seguinte mensagem de erro: System.IO.FileLoadException: O processo não pode acessar o arquivo porque está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).  
+-   Para instalações do Reporting Services, use nomes de diretório virtual ainda não utilizados por um site do IIS na mesma porta que o Reporting Services. Se houver conflito, instale o Reporting Services no modo “somente arquivos” (usando a instalação, mas não configurando a opção do servidor no Assistente de Instalação), para que você possa configurar os diretórios virtuais depois que a instalação for concluída. Uma indicação de que sua configuração tem um conflito é que você verá a mensagem de erro: System.IO.FileLoadException: O processo não pode acessar o arquivo porque ele está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).  
   
 -   Para instalações configuradas manualmente, adote as convenções de nomenclatura padrão nas URLs configuradas. Se você instalar o [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] como uma instância nomeada, inclua o nome da instância ao criar um diretório virtual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar as URLs de servidor de relatório &#40;Configuration Manager do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar uma URL &#40;Configuration Manager do SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Instalar o servidor de relatório de modo nativo do Reporting Services](install-reporting-services-native-mode-report-server.md)  
+ [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Instalar o servidor de relatórios de modo nativo do Reporting Services](install-reporting-services-native-mode-report-server.md)  
   
   

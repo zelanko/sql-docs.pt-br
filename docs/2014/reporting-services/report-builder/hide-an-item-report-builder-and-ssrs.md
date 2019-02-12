@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196396"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025487"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar um item (Construtor de Relatórios e SSRS)
   Defina a visibilidade de um item de relatório quando quiser ocultar condicionalmente um item com base em um parâmetro de relatório ou alguma outra expressão que você especificar.  
@@ -71,7 +71,7 @@ ms.locfileid: "48196396"
 3.  Na caixa de diálogo **Visibilidade da Coluna** , siga as etapas 3 e 4 do primeiro procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ação de busca detalhada &#40;relatórios e SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

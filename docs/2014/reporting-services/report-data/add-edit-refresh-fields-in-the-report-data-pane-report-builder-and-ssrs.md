@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ffceeae13889bc616be63fbc23838dd75029c4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87ee0ab32e605214674c2ee2a933f63cc4b66268
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102968"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032377"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Adicionar, editar e atualizar campos no painel de dados do relatório (Construtor de Relatórios e SSRS)
   Campos do conjunto de dados são a coleção interna de nomes de campos que representam os dados retornados quando uma consulta de conjunto de dados é executado em uma fonte de dados externa.  
@@ -94,7 +94,7 @@ ms.locfileid: "48102968"
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Designers de Consultas do Reporting Services](../reporting-services-query-designers.md)   
+ [Designers de Consulta do Reporting Services](../reporting-services-query-designers.md)   
  [Designers de Consultas &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)  
   
   

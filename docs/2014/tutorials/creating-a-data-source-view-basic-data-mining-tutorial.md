@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051336"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042757"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Criando uma exibição da fonte de dados (Tutorial de mineração de dados básico)
   Uma exibição de fonte de dados é criada em uma fonte de dados e define um subconjunto dos dados, que você pode então usar em suas estruturas de mineração. Você também pode usar a exibição da fonte de dados para adicionar colunas, criar colunas calculadas e agregações, e adicionar exibições nomeadas. Usando as exibições de fonte de dados, você pode selecionar os dados que se relacionam ao seu projeto, estabelecer relações entre as tabelas e modificar a estrutura dos dados sem modificar a fonte de dados original. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -48,9 +47,9 @@ ms.locfileid: "48051336"
  [Criando uma fonte de dados &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Criando uma estrutura de mala direta &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lição 2: Criar uma estrutura de mala direta &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Definindo dados de um exibição da fonte &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [Como definir uma exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb73ae268b088d27a96f7b24fbe8d0c7971b0c23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210362"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036607"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Encaixar o painel de dados do relatório no Designer de Relatórios (SSRS)
-  No Report Designer no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o painel de dados do relatório exibe uma exibição hierárquica dos objetos de dados que você pode usar em um relatório, incluindo fontes de dados, conjuntos de dados, campos, parâmetros e imagens. As fontes de dados dessa exibição podem ser inseridas em fontes de dados compartilhadas exibidas no Gerenciador de Soluções ou referenciadas por elas.  
+  No Designer de Relatórios, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o painel de dados do relatório apresenta uma exibição hierárquica de objetos de dados que você pode usar em um relatório, incluindo fontes de dados, conjuntos de dados, campos, parâmetros e imagens. As fontes de dados dessa exibição podem ser inseridas em fontes de dados compartilhadas exibidas no Gerenciador de Soluções ou referenciadas por elas.  
   
 ### <a name="to-display-the-report-data-pane"></a>Para exibir o painel de dados do relatório  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48210362"
      Para alternar entre os dois últimos estados de exibição, clique duas vezes na barra de título do painel de dados do relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Painel dados do relatório](../report-data/report-data-pane.md)   
+ [Painel de Dados do Relatório](../report-data/report-data-pane.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

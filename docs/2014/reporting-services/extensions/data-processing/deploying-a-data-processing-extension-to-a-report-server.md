@@ -1,5 +1,5 @@
 ---
-title: Como implantar uma extensão de processamento de dados para um Servidor de Relatório | Microsoft Docs
+title: 'Como: Implantar uma extensão de processamento de dados para um servidor de relatório | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160724"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017968"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Como implantar uma extensão de processamento de dados para um Servidor de Relatórios
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Como: Implantar uma extensão de processamento de dados para um servidor de relatório
   Servidores de relatórios usam extensões de processamento de dados por recuperar e processar dados em relatórios renderizados. Você deve implantar o seu assembly de extensão de processamento de dados para um servidor de relatório como um assembly privado. Também será preciso criar uma entrada no arquivo de configuração do servidor de relatório, RSReportServer.config.  
   
 ## <a name="procedures"></a>Procedimentos  
@@ -36,7 +36,7 @@ ms.locfileid: "48160724"
   
 2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo RSReportServer.config está localizado no diretório ReportServer. Você precisa criar uma entrada no arquivo de configuração para o seu arquivo de assembly de extensão de processamento de dados. Abra o arquivo de configuração com o Visual Studio ou com um editor de texto simples, como o Bloco de notas.  
   
-3.  Localize o `Data` elemento no arquivo rsreportserver. config. Uma entrada para a extensão de processamento de dados recém-criada deve ser adicionada no seguinte local:  
+3.  Localize o elemento `Data` no arquivo RSReportServer.config. Uma entrada para a extensão de processamento de dados recém-criada deve ser adicionada no seguinte local:  
   
     ```  
     <Extensions>  

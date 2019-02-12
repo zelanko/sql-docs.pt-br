@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395369"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025111"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparando previsões para modelos de previsão (Tutorial de mineração de dados intermediário)
   Nas etapas anteriores deste tutorial, você criou vários modelos de série temporal:  

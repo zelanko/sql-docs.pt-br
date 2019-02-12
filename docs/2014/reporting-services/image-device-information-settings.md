@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6737a32eb7597f8115a7ee6797bcf1aedbd006b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be32765c6d996bcc67580949176c2265a0741eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220776"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039007"
 ---
 # <a name="image-device-information-settings"></a>Configurações das informações do dispositivo do Image
   A tabela a seguir lista as configurações de informações de dispositivo para renderização no formato do IMAGE.  
@@ -31,20 +31,20 @@ ms.locfileid: "48220776"
 |`DpiX`|A resolução horizontal da imagem de saída. O valor padrão é **96**. Aplica-se ao `BMP`, `GIF`, `PNG`, e `TIFF` formatos de saída.|  
 |`DpiY`|A resolução vertical da imagem de saída. O valor padrão é **96**. Aplica-se ao `BMP`, `GIF`, `PNG`, e `TIFF` formatos de saída.|  
 |**EndPage**|A última página do relatório a ser renderizado. O valor padrão é o valor de `StartPage`.|  
-|**MarginBottom**|O valor da margem inferior, em polegadas, a ser definido para o relatório. Você deve incluir um valor inteiro ou decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
-|**MarginLeft**|O valor da margem esquerda, em polegadas, a ser definido para o relatório. Você deve incluir um valor inteiro ou decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
-|**MarginRight**|O valor da margem direita, em polegadas, a ser definido para o relatório. Você deve incluir um valor inteiro ou decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
-|**MarginTop**|O valor da margem superior, em polegadas, a ser definido para o relatório. Você deve incluir um valor inteiro ou decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
-|**OutputFormat**|Um dos [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) com suporte a formatos de saída: `BMP`, `EMF`, `GIF`, `JPEG`, `PNG`, ou `TIFF`.|  
-|**PageHeight**|A altura da página, em polegadas, a ser definida para o relatório. Você deve incluir um valor inteiro ou decimal seguido de "in" (por exemplo, `11in`). Esse valor substitui as configurações originais do relatório.|  
-|**PageWidth**|A largura da página, em polegadas, a ser definida para o relatório. Você deve incluir um valor inteiro ou decimal seguido de "in" (por exemplo, `8.5in`). Esse valor substitui as configurações originais do relatório.|  
+|**MarginBottom**|O valor da margem inferior, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
+|**MarginLeft**|O valor da margem esquerda, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
+|**MarginRight**|O valor da margem direita, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
+|**MarginTop**|O valor da margem superior, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, `1in`). Esse valor substitui as configurações originais do relatório.|  
+|**OutputFormat**|Um dos formatos de saída com suporte do [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]): `BMP`, `EMF`, `GIF`, `JPEG`, `PNG` ou `TIFF`.|  
+|**PageHeight**|A altura da página, em polegadas, a ser definida para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, `11in`). Esse valor substitui as configurações originais do relatório.|  
+|**PageWidth**|A largura da página, em polegadas, a ser definida para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, `8.5in`). Esse valor substitui as configurações originais do relatório.|  
 |**PrintDpiX**|A resolução horizontal da imagem de saída. O valor padrão é `300`. Aplica-se a metarquivo avançado (`EMF`) formato de saída.|  
 |**PrintDpiY**|A resolução vertical da imagem de saída. O valor padrão é `300`. Aplica-se a metarquivo avançado (`EMF`) formato de saída.|  
 |`StartPage`|A primeira página do relatório a ser renderizada. O valor `0` indica que todas as páginas serão renderizadas. O valor padrão é `1`.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Passando configurações de informações do dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   
