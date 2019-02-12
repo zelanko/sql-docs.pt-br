@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5ec066e467ba83c33b95d46b4ed3cc593ecc551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7534c317f2e690e0766299961f4f21d35a674702
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220306"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020637"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos termos para descrever um relatório em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  
+  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos termos para descrever um relatório em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,7 +64,7 @@ ms.locfileid: "48220306"
  Assine um relatório, que é distribuído a uma caixa de entrada de emails ou a um compartilhamento de arquivos em um formato de saída especificado por você. O formato de renderização padrão de um relatório é HTML 4.0. Além do HTML, os relatórios podem ser renderizados em diversos formatos de saída, incluindo Excel, Word, XML, PDF, TIFF e CSV. Assim como os relatórios publicados, os relatórios renderizados não podem ser editados nem salvos em um servidor de relatório. Para obter mais informações, consulte [exportando relatórios &#40;construtor de relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos de criação de relatório &#40;relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Construtor de relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Instalar, desinstalar e oferecer suporte ao construtor de relatórios](../install-uninstall-and-report-builder-support.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

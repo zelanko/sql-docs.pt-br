@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6c1d4289f9785d6975c6bba85e8215f208a3c537
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018248"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Caixa de diálogo Regra de Cor do Mapa, Geral
   Selecione **Geral** na caixa de diálogo **Propriedades de Regras de Cor** para definir as opções de cor dos elementos de mapa nessa camada. Os elementos de mapa incluem polígonos, linhas e pontos. As regras de cor podem ser aplicadas quando você tiver criado uma relação entre os elementos do mapa com base em dados espaciais e dados analíticos de um campo de conjunto de dados ou de um campo de fonte de dados espacial.  
@@ -61,6 +61,6 @@ ms.locfileid: "48179286"
   
 ## <a name="see-also"></a>Consulte também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

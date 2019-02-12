@@ -12,14 +12,14 @@ helpviewer_keywords:
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 24cf490734933eaa367eacf3881bacec92e877fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b1e453bf06f0035a2ceca17f9f5c0af2d2fc9a0c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112176"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023837"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Configurar as propriedades gerais de um relatório (Gerenciador de Relatórios)
     
@@ -56,7 +56,7 @@ ms.locfileid: "48112176"
   
 ## <a name="see-also"></a>Consulte também  
  [Mover ou excluir um Item &#40;Gerenciador de relatórios&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Página de propriedades gerais, relatórios &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 989b9dceb0755f6b155443614a745cf2e7f89df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 491a461dab0cf89d4e314f24e91da5b3aa7a6026
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162836"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022367"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>Manipulando avisos e casos que não causam exceções
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não lança exceções para avisos e para certos erros. Por exemplo, quando você usa o método <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> para publicar um novo relatório em um servidor de relatório, qualquer aviso que ocorrer será retornado como uma matriz de objetos de <xref:ReportService2010.Warning>. Esses avisos devem ser manipulados e exibidos para que a ação apropriada seja tomada.  

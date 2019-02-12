@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 07cb22de2483722af05324aa3c3524c2ee7a01c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2d162a498550ae563c1ac8af1a2e9a574b93386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053447"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021457"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparando para implementar uma extensão de processamento de dados
   Antes de implementar a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você deve definir as interfaces a serem implementadas. Talvez você deseje fornecer implementações específicas à extensão de todo o conjunto de interfaces ou simplesmente pode desejar concentrar a implementação em um subconjunto, como as interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>, nas quais os clientes poderão interagir principalmente com um conjunto de resultados como um objeto **DataReader** e usarão a extensão de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] como uma ponte entre o conjunto de resultados e a fonte de dados.  
@@ -66,7 +66,7 @@ ms.locfileid: "48053447"
 ## <a name="available-extension-interfaces"></a>Interfaces de extensão disponíveis  
  A tabela a seguir descreve as interfaces disponíveis e se implementação é obrigatória ou opcional.  
   
-|Interface|Description|Implementação|  
+|Interface|Descrição|Implementação|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Representa uma sessão exclusiva com uma fonte de dados. No caso de um sistema de banco de dados cliente/servidor, a sessão pode ser equivalente a uma conexão de rede com o servidor.|Obrigatório|  
 |IDbConnectionExtension|Representa propriedades de conexão adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] relativas a segurança e a autenticação.|Opcional|  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462042"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025217"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de Comprador de Bicicleta
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de comprador de bicicleta
   Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração de comprador de bicicleta que você criou [lição 1: Criando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Esses modelos de mineração lhe permitirão explorar os dados usando um modelo e criar previsões usando outro.  
   
  Para explorar como os clientes potenciais podem ser categorizados por suas características, você criará um modelo de mineração com base nas [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). Em uma lição posterior, você explorará como esse algoritmo localiza clusters de clientes que compartilham características semelhantes. Por exemplo, você pode identificar que alguns clientes tendem a viver perto de outros, andar de bicicleta e ter formação acadêmica similar. É possível usar esses clusters para entender melhor como clientes diferentes estão relacionados e usar as informações para criar uma estratégia de marketing cujo alvo são clientes específicos.  
@@ -275,6 +274,6 @@ ADD MINING MODEL [<mining model name>]
  Na próxima lição, você processará os modelos e a estrutura de mineração.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Processando a estrutura de mineração Comprador de Bicicleta](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Lição 3: Processando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 67884329476d76619399cfedabb6f84d97881bcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a788984a75a950ae822180c070200ce7cc88694d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018887"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gerenciador de Alertas de dados para administradores de alertas
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece o Gerenciador de Alertas de Dados para os administradores de alerta do SharePoint gerenciarem alertas de dados. Os administradores de alerta podem exibir informações sobre todos os alertas salvos no site e excluir alertas. A imagem a seguir mostra os recursos disponíveis para os gerenciadores de alerta do SharePoint no Gerenciador de Alertas de Dados.  
@@ -51,15 +51,15 @@ ms.locfileid: "48136266"
 |InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<error message>O arquivo de log contém informações detalhadas sobre o erro. Consulte a entrada de log com o identificador: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Alertas criados.|  
   
- Para obter mais informações, consulte [gerenciar todos os alertas de dados em um Site do SharePoint no Gerenciador de alertas de dados](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Para obter mais informações, consulte [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  É possível exibir todos os alertas criados pelos usuários do site. Você escolhe um usuário e, em seguida, escolhe se deseja exibir todos os alertas do usuário ou apenas alertas para um relatório específico.  
   
   
 ##  <a name="DeleteAlerts"></a> Excluir alertas de dados  
- Você exclui definições de alertas no Gerenciador de Alertas de Dados. Toda definição de alerta de dados tem um proprietário, o usuário do SharePoint que a criou. Os proprietários podem excluir apenas as definições de alertas que criaram. Para obter mais informações, consulte [gerenciar meus alertas de dados no Gerenciador de alertas de dados](manage-my-data-alerts-in-data-alert-manager.md).  
+ Você exclui definições de alertas no Gerenciador de Alertas de Dados. Toda definição de alerta de dados tem um proprietário, o usuário do SharePoint que a criou. Os proprietários podem excluir apenas as definições de alertas que criaram. Para obter mais informações, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](manage-my-data-alerts-in-data-alert-manager.md).  
   
- A. Os administradores de alerta do SharePoint podem listar e, em seguida, excluir definições de alertas criadas por todos os usuários do site. Para obter mais informações, consulte [gerenciar todos os alertas de dados em um Site do SharePoint no Gerenciador de alertas de dados](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+ A. Os administradores de alerta do SharePoint podem listar e, em seguida, excluir definições de alertas criadas por todos os usuários do site. Para obter mais informações, consulte [Gerenciar todos os alertas de dados em um site do SharePoint Site no Gerenciador de Alertas de Dados](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
  Depois que você excluir a definição de alerta, nenhum alerta adicional será enviado. No entanto, se você consultar o banco de dados de alertas, talvez descubra que a definição de alerta ainda existe. O serviço de alerta executa a limpeza de acordo com uma agenda e a definição de alerta será excluída permanentemente na próxima limpeza. O intervalo de limpeza padrão é de 20 minutos. Esse e outros intervalos de limpeza são configuráveis. Para obter mais informações, consulte [Reporting Services Data Alerts](../ssms/agent/alerts.md)[Alertas de dados do Reporting Services].  
   
@@ -71,6 +71,6 @@ ms.locfileid: "48136266"
   
   
 ## <a name="see-also"></a>Consulte também  
- [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

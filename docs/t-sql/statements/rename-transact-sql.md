@@ -2,8 +2,7 @@
 title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
@@ -11,12 +10,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 616bf8096b8632eb357e65816bda21eabe0d6e4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8930c37da669565a6ea5d7e03444a3d173d2622c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821964"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019077"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -84,7 +83,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 -   Permissão **ALTER** na tabela  
    
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
   
 ### <a name="cannot-rename-an-external-table-indexes-or-views"></a>Não é possível renomear uma tabela externa, índices ou exibições
 Não é possível renomear uma tabela externa, índices ou exibições. Em vez de renomeá-la, você pode remover a tabela externa, o índice ou a exibição e, em seguida, recriá-la com o novo nome.
@@ -115,7 +114,7 @@ RENAME DATABASE AdWorks to AdWorks2;
   
  Ao renomear uma tabela, todas as propriedades e todos os objetos associados à tabela são atualizados para referenciar o novo nome da tabela. Por exemplo, definições de tabela, índices, restrições e permissões são atualizados. Exibições não são atualizadas.  
   
-### <a name="b-rename-a-table"></a>B. Renomear uma tabela  
+### <a name="b-rename-a-table"></a>b. Renomear uma tabela  
  **APLICA-SE A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Este exemplo renomeia a tabela Customer como Customer1.  

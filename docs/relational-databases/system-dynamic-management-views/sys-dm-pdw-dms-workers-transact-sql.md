@@ -2,8 +2,8 @@
 title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ddc8e7ee7f160d6673e9a698075e923740041b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 756943d49a794781d9422071dd5e233ce4e37806
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663015"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027357"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todos os trabalhadores concluindo as etapas do DMS.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Consulta que este trabalhador DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para esta exibição.|Consulte request_id na [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Etapa que este trabalhador DMS faz parte de consulta.<br /><br /> request_id, step_index e dms_step_index formam a chave para esta exibição.|Consulte step_index na [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
@@ -37,7 +37,7 @@ ms.locfileid: "51663015"
 |bytes_per_sec|**bigint**|Taxa de transferência de leitura ou gravação no último segundo.|Maior que ou igual a 0. NULL se a consulta foi cancelada ou falha antes de executar o trabalho.|  
 |bytes_processed|**bigint**|Total de bytes processados por este trabalhador.|Maior que ou igual a 0. NULL se a consulta foi cancelada ou falha antes de executar o trabalho.|  
 |rows_processed|**bigint**|Número de linhas lidas ou gravadas para este trabalhador.|Maior que ou igual a 0. NULL se a consulta foi cancelada ou falha antes de executar o trabalho.|  
-|start_time|**datetime**|Hora de início a execução deste trabalhador.|Maior que ou igual à hora de início da etapa de consulta esse trabalho pertence. Ver [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Hora de início a execução deste trabalhador.|Maior que ou igual à hora de início da etapa de consulta esse trabalho pertence. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Hora em que a execução foi encerrado, falhou ou foi cancelada.|NULL para os trabalhos em andamento ou em fila. Caso contrário, maior que start_time.|  
 |total_elapsed_time|**int**|Tempo total gasto na execução, em milissegundos.|Maior que ou igual a 0.<br /><br /> Tempo total decorrido desde que o sistema iniciar ou reiniciar. Se total_elapsed_time exceder o valor máximo para um inteiro (24,8 dias em milissegundos), ela causará falha de materialização devido a estouro.<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
 |cpu_time|**bigint**|Tempo de CPU consumido por este trabalhador, em milissegundos.|Maior que ou igual a 0.|  

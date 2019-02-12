@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020578"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nova Pasta (Gerenciador de Relatórios)
   Use a página Nova Pasta para criar uma pasta nova na hierarquia de pasta do servidor de relatório. A pasta que você cria é uma pasta virtual que é armazenada em um banco de dados do servidor de relatórios. A pasta não é criada no sistema de arquivos do seu computador.  
@@ -44,8 +44,8 @@ ms.locfileid: "48053586"
 ## <a name="see-also"></a>Consulte também  
  [Criar, excluir ou modificar uma pasta &#40;Gerenciador de relatórios&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [Página Propriedades gerais, pastas &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Página Propriedades gerais, pastas &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   

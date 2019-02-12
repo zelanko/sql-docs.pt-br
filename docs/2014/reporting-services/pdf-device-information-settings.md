@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 185b7c9119dbd5a6105152aadcf1241abc6b82ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148296"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025037"
 ---
 # <a name="pdf-device-information-settings"></a>Configurações de informações do dispositivo PDF
   A tabela a seguir lista as configurações de informações de dispositivo para a renderização de relatórios no formato PDF.  
@@ -41,8 +41,8 @@ ms.locfileid: "48148296"
 |`StartPage`|A primeira página do relatório a ser renderizada. O valor `0` indica que todas as páginas serão renderizadas. O valor padrão é `1`.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Passando configurações de informações do dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

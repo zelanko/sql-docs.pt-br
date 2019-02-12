@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018258"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lição 3: Processando a estrutura de mineração do Market Basket
-  Nesta lição, você aprenderá a usar o [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrução e vAssocSeqLineItems e vAssocSeqOrders do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelos de banco de dados de exemplo para processar as estruturas de mineração e mineração que você criado em [lição 1: Criando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lição 2: adicionando modelos de mineração à estrutura de mineração da cesta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lição 3: Processando a estrutura de mineração da cesta básica
+  Nesta lição, você aprenderá a usar o [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrução e vAssocSeqLineItems e vAssocSeqOrders do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelos de banco de dados de exemplo para processar as estruturas de mineração e mineração que você criado em [lição 1: Criando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lição 2: Adicionando modelos de mineração à estrutura de mineração de Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  Ao processar uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lê os dados de origem e compila as estruturas que dão suporte a modelos de mineração. Quando você processa um modelo de mineração, os dados definidos pela estrutura de mineração são passados por meio do algoritmo de mineração de dados que você escolheu. O algoritmo procura tendências e padrões e, depois, armazena as informações no modelo de mineração. Portanto, o modelo de mineração na verdade não contém os dados de origem, e sim as informações que foram descobertas pelo algoritmo. Para obter mais informações sobre como processar modelos de mineração, consulte [considerações e requisitos de processamento de &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -193,6 +192,6 @@ RELATE [<case key>] TO [<foreign key>]
  Na próxima lição, você criará várias previsões com base nos modelos de mineração que adicionou à estrutura da cesta básica.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: Executando previsões de Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lição 4: Execução de previsões de Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

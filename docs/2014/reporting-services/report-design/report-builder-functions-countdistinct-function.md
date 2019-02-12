@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bd681b0616aa175c68104da48577ad5dc19f1897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191214"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021527"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>Função CountDistinct (Construtor de Relatórios e SSRS)
   Retorna uma contagem de todos os valores não nulos distintos especificados pela expressão, avaliados no contexto do escopo fornecido.  
@@ -33,7 +33,7 @@ CountDistinct(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parâmetros  
  *Expressão*  
- (`Variant`) A expressão na qual executar a agregação.  
+ (`Variant`) A expressão na qual a agregação será executada.  
   
  *escopo*  
  (`String`) Opcional. O nome de um conjunto de dados, um grupo ou uma região de dados que contém os itens de relatório aos quais a função de agregação deve ser aplicada. Se *scope* não estiver especificado, será usado o escopo atual.  
@@ -73,9 +73,9 @@ CountDistinct(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

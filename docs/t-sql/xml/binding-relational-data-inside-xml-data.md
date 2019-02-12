@@ -3,7 +3,6 @@ title: Associando dados relacionais dentro de dados XML | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35fb6b6485578defa05c2e54d4797d9994af4225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44eba48983d2dd9e3610b5534997ca6a4a3849b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713104"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019067"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Associando dados relacionais dentro de dados XML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47713104"
   
  Além disso, essa associação destina-se apenas a finalidades somente leitura. Isto é, você não pode gravar dados em colunas que usam essas funções. Por exemplo, sql:variable ("\@x") = "*alguma expressão"* não é permitido.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemplo: Consulta entre domínios que usam sql:variable ()  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemplo: Consulta entre domínios que usam sql:variable()  
  Este exemplo mostra como **sql:variable()** pode permitir que um aplicativo parametrize uma consulta. O ISBN é passado usando uma variável SQL @isbn. Substituindo a constante por **sql:variable()**, a consulta pode ser usada para pesquisar qualquer ISBN e não apenas aquele cujo ISBN é 0-7356-1588-2.  
   
 ```  
