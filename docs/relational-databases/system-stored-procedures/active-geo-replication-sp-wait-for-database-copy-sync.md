@@ -2,10 +2,8 @@
 title: sp_wait_for_database_copy_sync (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: database-engine, sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
@@ -19,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78a77ce45d4ff148e42ab375341ee521eba982da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662854"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034538"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replicação geográfica ativa - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @target_server =] 'server_name'  
+ [ @target_server = ] 'server_name'  
  O nome do servidor do Banco de Dados SQL que hospeda o banco de dados secundário ativo. server_name é sysname, sem padrão.  
   
- [ @target_database =] 'database_name'  
+ [ @target_database = ] 'database_name'  
  O nome do banco de dados secundário ativo. database_name é sysname, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

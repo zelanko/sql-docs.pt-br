@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 97dce14bed313a8044486f4e7609557e2ad13057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0d9610544543e88fd8e50e9d3ccc2fc64ecb84a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112676"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016107"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Imagem, Tamanho (Construtor de Relatórios e SSRS)
   Selecione **Tamanho** na caixa de diálogo **Propriedades da Imagem** para formatar tamanho das imagens exibidas em um campo ou na área de design, ou para alterar a quantidade de espaço extra entre a borda de uma célula ou a caixa de texto e a imagem ou o valor contido dentro da célula ou caixa de texto.  
@@ -37,7 +37,7 @@ ms.locfileid: "48112676"
  **Clip**  
  Escolha esta opção para exibir uma imagem do canto superior esquerdo da imagem até a altura ou largura da célula ou caixa de texto. As bordas da imagem podem ser reduzidas ou ampliadas para ajustar a imagem. Se a imagem for maior do que a célula ou caixa de texto, apenas uma parte da imagem será exibida.  
   
- **À esquerda**  
+ **Left**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda esquerda de uma célula ou caixa de texto e o valor exibido dentro dela.  
   
  **Certo**  
@@ -52,7 +52,7 @@ ms.locfileid: "48112676"
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo de propriedades geral da imagem &#40;relatórios e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Imagens &#40;relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

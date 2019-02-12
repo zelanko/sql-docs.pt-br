@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c9bce266836e1181c1d619d89985d9d461729e83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44d0318882b619f4f6206f59ba47656f35c38636
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043357"
 ---
 # <a name="new-system-role-management-studio"></a>Nova Função do Sistema (Management Studio)
   Use essa página para criar uma definição de função de nível de sistema. Uma definição de função de sistema especifica um conjunto de tarefas de nível de sistema que se aplica a um servidor de relatório como um todo.  
@@ -30,7 +30,7 @@ ms.locfileid: "48182996"
  **Nome**  
  Digite o nome da definição da função. O nome de definição de função deve ser exclusivo no namespace do servidor de relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = +, $ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

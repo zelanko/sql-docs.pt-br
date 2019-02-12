@@ -2,8 +2,8 @@
 title: sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1eb00d935eccd8f6af4d4ffef1c01fe42824f355
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856404"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012377"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Retorna os índices para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID do objeto ao qual este índice pertence.||  
 |nome|**sysname**|Nome do índice. Nome é exclusivo somente dentro do objeto. NULL = Heap||  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139966"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038407"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Lição 5: Executando previsão de consultas
+# <a name="lesson-5-executing-prediction-queries"></a>Lição 5: Executar consultas de previsão
   Nesta lição, você aprenderá a usar o [SELECT FROM \<modelo > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) formulário da instrução SELECT para criar dois tipos diferentes de previsões com base na árvore de decisão do modelo criado por você na [ Lição 2: Adicionando modelos de mineração à estrutura de mineração de associação](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Esses tipos de prognóstico estão definidos abaixo.  
   
  Consulta singleton  

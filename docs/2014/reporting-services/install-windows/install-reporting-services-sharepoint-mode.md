@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: c46be33ef74736a7dda0e080c1a4928c090f656d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395150"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043187"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Instalação do modo do SharePoint do Reporting Services (SharePoint 2010 e SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no SharePoint modo é uma coleção de componentes de servidor que fornecem geração de relatórios e entrega, com base em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] produtos do SharePoint.  

@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 29331f12c0eeb713f36999df239069e4e56c359e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf85b6fbc2bccab8061ef227b5d0fb10de825477
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082456"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015462"
 ---
 # <a name="server-properties-logging-page"></a>Propriedades do Servidor (página Log)
   Use essa página para definir limites nos dados de execução de relatório que são coletados por um servidor de relatório. Dados de execução são armazenados internamente no banco de dados do servidor de relatório. Você pode controlar atividade de relatório para servidor de relatório que executa em modo nativo ou em modo integrado de SharePoint. Se o servidor de relatório for parte de uma implantação em expansão, o log de execução do relatório manterá um registro de todas as atividades do relatório para toda a implantação, em um único arquivo de log.  
   
- Para abrir essa página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se conectar a um servidor de relatório, o nome do servidor de relatório com o botão direito e selecione **propriedades**. Clique em **Log** para abrir esta página.  
+ Para abrir essa página, inicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a um servidor de relatório, clique com o botão direito do mouse no nome do servidor de relatório e selecione **Propriedades**. Clique em **Log** para abrir esta página.  
   
 ## <a name="options"></a>Opções  
  **Habilitar log de execução de relatório**  

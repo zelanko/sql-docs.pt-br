@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 742cfa14b1e93632910fca00312379432021246f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042927"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controlando quebras de páginas, títulos, colunas e linhas (Construtor de Relatórios e SSRS)
   Uma quebra de página divide um relatório em páginas separadas para exibição e impressão. As quebras de página determinam como o conteúdo é colocado em uma página de relatório para visualização ideal quando você visualiza um relatório ou exporta-o para outro formato de arquivo.  
@@ -34,6 +34,6 @@ ms.locfileid: "48184326"
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Controlando a exibição da região de dados Tablix em uma página de relatório &#40;Construtor de Relatórios e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [Painel Agrupamento &#40;Construtor de Relatórios&#41;](grouping-pane-report-builder.md)   
- [Exibir cabeçalhos e rodapés com um grupo de &#40;relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Exibir cabeçalhos e rodapés com um grupo &#40;Construtor de Relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

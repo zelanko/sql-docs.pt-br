@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374318"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035097"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
   As URLs para aplicativos do Reporting Services são definidas como reservas de URL em HTTP.SYS. Uma reserva de URL define a sintaxe de um ponto de extremidade de URL para um aplicativo Web. As reservas de URL são definidas para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios quando você configura os aplicativos no servidor de relatório. As reservas de URL são criadas automaticamente quando você configura URLs através da instalação ou da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -63,7 +63,7 @@ ms.locfileid: "53374318"
   
 |Reserva de URL em HTTP.SYS|URL|Explicação|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<computername > / reportserver<br /><br /> http://\<IPAddress > / reportserver<br /><br /> http://localhost/reportserver|A reserva de URL especifica um curinga (+) na porta 80. Esse procedimento coloca na fila do servidor de relatório qualquer solicitação de entrada que especifique um host que seja resolvido para o computador do servidor de relatório na porta 80. Observe que, com essa reserva de URL, pode ser usado qualquer número de URLs para acessar o servidor de relatório.<br /><br /> Essa é a reserva de URL padrão para um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na maioria dos sistemas operacionais.|  
+|http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|A reserva de URL especifica um curinga (+) na porta 80. Esse procedimento coloca na fila do servidor de relatório qualquer solicitação de entrada que especifique um host que seja resolvido para o computador do servidor de relatório na porta 80. Observe que, com essa reserva de URL, pode ser usado qualquer número de URLs para acessar o servidor de relatório.<br /><br /> Essa é a reserva de URL padrão para um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na maioria dos sistemas operacionais.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Essa reserva de URL especifica um endereço IP e é bem mais restritiva do que a reserva de URL curinga. Somente URLs que incluem o endereço IP podem ser usadas para conexão com o servidor de relatório. Devido a essa reserva de URL, uma solicitação para um servidor de relatório em http://\<computername > / reportserver ou http://localhost/reportserver falharia.|  
   
 ##  <a name="DefaultURLs"></a> URLs padrão  
@@ -86,12 +86,12 @@ ms.locfileid: "53374318"
   
 |Tipo de instância|Aplicativo|URL padrão|Reserva de URL real em HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Instância padrão|serviço Web Servidor de Relatórios|http://\<servername > / reportserver|http://\<servername >: 80/reportserver|  
-|Instância padrão|Gerenciador de Relatórios|http://\<servername > / reportserver|http://\<servername >: 80/reportserver|  
-|Instância nomeada|serviço Web Servidor de Relatórios|http://\<servername > / ReportServer _\<instancename >|http://\<servername >: 80/ReportServer _\<instancename >|  
-|Instância nomeada|Gerenciador de Relatórios|http://\<servername > / Reports _\<instancename >|http://\<servername >: 80/Reports _\<instancename >|  
-|SQL Server Express|serviço Web Servidor de Relatórios|http://\<servername > / reportserver_SQLExpress|http://\<servername >: 80/reportserver_SQLExpress|  
-|SQL Server Express|Gerenciador de Relatórios|http://\<servername > / reports_SQLExpress|http://\<servername >: 80/reports_SQLExpress|  
+|Instância padrão|serviço Web Servidor de Relatórios|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|Instância padrão|Gerenciador de Relatórios|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|Instância nomeada|serviço Web Servidor de Relatórios|http://\<servername>/reportserver_\<instancename>|http://\<servername>:80/reportserver_\<instancename>|  
+|Instância nomeada|Gerenciador de Relatórios|http://\<servername>/reports_\<instancename>|http://\<servername>:80/reports_\<instancename>|  
+|SQL Server Express|serviço Web Servidor de Relatórios|http://\<servername>/reportserver_SQLExpress|http://\<servername>:80/reportserver_SQLExpress|  
+|SQL Server Express|Gerenciador de Relatórios|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticação e identidade de serviço para URLs do Reporting Services  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] especificam a conta de serviço do Servidor de Relatório. A conta com a qual o serviço é executado é usada para todas as URLs criadas para os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] executados na mesma instância. A identidade de serviço da instância do servidor de relatório é armazenada no arquivo RSReportServer.config.  

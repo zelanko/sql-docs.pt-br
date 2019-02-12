@@ -2,8 +2,8 @@
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ed96138b4808448fef815fad90342e671f37ed5f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: edbed9f5f0e8672c4f779431f810099b50470a9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409583"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016787"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52409583"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|A chave para este modo de exibição. Id numérico exclusivo associado com a solicitação.|Exclusivo entre todas as solicitações no sistema.|  
 |session_id|**nvarchar(32)**|Id numérico exclusivo associado à sessão em que essa consulta foi executada. Ver [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|status|**nvarchar(32)**|Status atual da solicitação.|'Running', 'Suspenso', 'Concluído', 'Cancelado', 'Falha'.|  
+|status|**nvarchar(32)**|Status atual da solicitação.|'Running', 'Suspended', 'Completed', 'Cancelled', 'Failed'.|  
 |submit_time|**datetime**|Hora em que a solicitação foi enviada para execução.|Válido **datetime** menor ou igual à hora atual e start_time.|  
 |start_time|**datetime**|Hora em que a execução da solicitação foi iniciada.|NULL para solicitações em fila; Caso contrário, válido **datetime** menor ou igual à hora atual.|  
 |end_compile_time|**datetime**|Hora em que o mecanismo concluiu a solicitação de compilação.|NULL para solicitações que não foram compilados ainda; Caso contrário, válido **datetime** menor do que start_time e menor ou igual à hora atual.|

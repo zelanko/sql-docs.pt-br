@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbca550f6ecb985248975b6dce332fb9ca05fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218303"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040397"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Página Propriedades Gerais, fontes de dados compartilhadas (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para exibir ou modificar propriedades de um item de fonte de dados compartilhada. Quaisquer alterações feitas nas propriedades serão efetivadas em todos os relatórios que referenciarem o item quando você clicar em **Aplicar**.  
@@ -48,10 +48,10 @@ ms.locfileid: "48218303"
  **Tipo de fonte de dados**  
  Especifica a extensão do processamento de dados usada para processar dados da fonte de dados. O servidor de relatório inclui extensões de processamento de dados para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC e OLE DB. Extensões de processamento de dados adicionais podem estar disponíveis em fornecedores de terceiros.  
   
- Observe que, se estiver usando o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition com Advanced Services, você só poderá escolher fontes de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Observe que, se estiver usando o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition com Advanced Services, você só poderá escolher fontes de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Cadeia de conexão**  
- Especifique a cadeia de conexão que o servidor de relatório utiliza para conectar-se à fonte de dados. O tipo de conexão determina a sintaxe que você deve usar. Por exemplo, uma cadeia de caracteres de conexão da extensão do processamento de dados XML é uma URL para um documento XML. Na maioria dos casos, uma cadeia de caracteres de conexão típica especifica o servidor de banco de dados e um arquivo de dados. O exemplo a seguir ilustra uma cadeia de caracteres de conexão usada para conexão com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] banco de dados:  
+ Especifique a cadeia de conexão que o servidor de relatório utiliza para conectar-se à fonte de dados. O tipo de conexão determina a sintaxe que você deve usar. Por exemplo, uma cadeia de caracteres de conexão da extensão do processamento de dados XML é uma URL para um documento XML. Na maioria dos casos, uma cadeia de caracteres de conexão típica especifica o servidor de banco de dados e um arquivo de dados. O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] :  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -71,9 +71,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credenciais armazenadas com segurança no servidor de relatório**  
  Armazene um nome de usuário criptografado e a senha no banco de dados do servidor de relatórios. Selecione essa opção para executar um relatório autônomo (por exemplo, relatórios iniciados por agendas ou eventos em vez de pela ação do usuário). Se você estiver usando segurança padrão, o nome de usuário deve ser uma conta de domínio do Windows. Especifique a conta neste formato: \<domínio >\\< nome de usuário\>. A conta especificada deve ter permissões locais de logon no computador que hospeda a fonte de dados usada pelo relatório.  
   
- Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais forem credenciais de Autenticação do Windows. Não selecione essa caixa de seleção se você estiver usando a autenticação de banco de dados (por exemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticação).  
+ Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados** se as credenciais forem credenciais de Autenticação do Windows. Não marque esta caixa de seleção se você estiver usando autenticação de banco de dados (por exemplo, Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Se você estiver usando autenticação de banco de dados, selecione **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados (Conectar usando)** para permitir delegação de credenciais de banco de dados, mas somente se um servidor de banco de dados oferecer suporte a representação. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados, essa opção define a função SETUSER.  
+ Se você estiver usando autenticação de banco de dados, selecione **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados (Conectar usando)** para permitir delegação de credenciais de banco de dados, mas somente se um servidor de banco de dados oferecer suporte a representação. No caso de bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , essa opção define a função SETUSER.  
   
  **Segurança integrada do Windows**  
  Use as credenciais do Windows do usuário atual para acessar a fonte de dados. Selecione essa opção quando as credenciais usadas para acessar a fonte de dados forem as mesmas que as usadas para fazer logon no domínio de rede. Esta opção funciona melhor quando a autenticação Kerberos está habilitada para o seu domínio ou quando a fonte de dados está no mesmo computador que o servidor de relatórios. Se Kerberos não estiver habilitado, as credenciais do Windows poderão ser passadas para outro computador. Se forem necessárias conexões de computador adicionais, ocorrerá um erro em vez da exibição dos dados esperados.  
@@ -100,7 +100,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  Clique para criar um modelo novo com base na fonte de dados compartilhada.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Página Nova Fonte de Dados &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

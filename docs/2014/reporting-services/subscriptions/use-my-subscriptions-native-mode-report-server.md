@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 63154af6d155dd05e1f07d38185830fefc30068a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ddbb228cf4f5d71df60dd1de73ab0d1484925f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371358"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040787"
 ---
 # <a name="use-my-subscriptions"></a>Usar Minhas Assinaturas
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Gerenciador de relatórios inclui um **Minhas assinaturas** página que organiza todas as suas assinaturas em um só lugar. É possível usar Minhas Assinaturas para exibir, modificar e excluir assinaturas existentes. Entretanto, você não pode usar Minhas Assinaturas para criar assinaturas.  

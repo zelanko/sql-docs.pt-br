@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209536"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030477"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Construtor de Relatórios no SQL Server 2014
   O Construtor de Relatórios é um ambiente de criação de relatório para usuários comerciais que preferem trabalhar no ambiente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório. Você pode visualizar os relatórios no Construtor de Relatórios ou publicá-los em um servidor de relatório ou em um servidor de relatório no modo integrado do SharePoint, onde outras pessoas poderão executá-lo.  
@@ -38,7 +38,7 @@ ms.locfileid: "48209536"
   
 -   **Inicie com o assistente de Tabela, Matriz ou Gráfico**. Escolha uma conexão de fonte de dados, arraste e solte campos para criar uma consulta de conjunto de dados, selecione um layout e um estilo e personalize seu relatório.  
   
--   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Os dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.). Você também pode adicionar um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] plano de fundo de bloco de mapa do Bing.  
+-   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Os dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.). Também é possível adicionar um plano de fundo de peça de mapa do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
   
 
   
@@ -82,19 +82,19 @@ ms.locfileid: "48209536"
  [Tutorial: Criando um relatório de gráfico rápido Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Apresenta o Construtor de Relatórios e os assistentes disponíveis para ajudá-lo a criar relatórios. O tutorial fornece um conjunto de dados com o qual trabalhar, de modo que você não precise se conectar a uma fonte de dados para começar.  
   
- [Planejando um relatório &#40;construtor de relatórios&#41;](../report-design/planning-a-report-report-builder.md)  
+ [Planejando um relatório &#40;Construtor de Relatórios&#41;](../report-design/planning-a-report-report-builder.md)  
  Fornece informações sobre o que você deve considerar antes de começar a criar seu relatório.  
   
- [Conceitos de criação de relatório &#40;relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Define os conceitos-chave usados em toda a documentação do Construtor de Relatórios.  
   
- [Exibição de Design de relatório &#40;construtor de relatórios&#41;](report-design-view-report-builder.md)  
+ [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](report-design-view-report-builder.md)  
  Explica os diferentes painéis e regiões da exibição de design de relatório.  
   
- [Exibição de Design de conjunto de dados compartilhada &#40;construtor de relatórios&#41;](shared-dataset-design-view-report-builder.md)  
+ [Modo de exibição de Design de conjunto de dados compartilhados &#40;Construtor de Relatórios&#41;](shared-dataset-design-view-report-builder.md)  
  Explica os diferentes painéis e regiões da exibição de design do conjunto de dados compartilhados.  
   
- [Atalhos de teclado &#40;construtor de relatórios&#41;](keyboard-shortcuts-report-builder.md)  
+ [Atalhos de teclado &#40;Construtor de Relatórios&#41;](keyboard-shortcuts-report-builder.md)  
  Descreve as teclas de atalho disponíveis para navegar e criar relatórios no Construtor de Relatórios.  
   
  [Iniciar o construtor de relatórios &#40;construtor de relatórios&#41;](start-report-builder.md)  

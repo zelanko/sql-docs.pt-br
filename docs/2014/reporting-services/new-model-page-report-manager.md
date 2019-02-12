@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138786"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010787"
 ---
 # <a name="new-model-page-report-manager"></a>Página Novo Modelo (Gerenciador de Relatórios)
   Use essa página para gerar um modelo de relatório padrão de uma fonte de dados compartilhada. Você só pode gerar modelos de relatório de fontes de dados multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , Oracle e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -42,7 +42,7 @@ ms.locfileid: "48138786"
  **Nome**  
  Especifica o nome do modelo. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Descrição**  
  Mostra uma descrição do modelo. Os usuários que exibirem esse item no Gerenciador de Relatórios poderão ver esta descrição ao navegar na hierarquia das pastas.  

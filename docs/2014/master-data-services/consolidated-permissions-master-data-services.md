@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], consolidated members
 - members [Master Data Services], consolidated member permissions
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 82e7d14acc5117da28b608e742ad34afa5b652a5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042897"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Permissões consolidadas (Serviços de Dados Mestre)
   Permissões consolidadas se aplicam aos valores de atributos para todos os membros consolidados de uma entidade.  

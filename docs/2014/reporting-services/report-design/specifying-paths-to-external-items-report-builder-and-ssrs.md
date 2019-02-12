@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7b41acb95312ac9675d711c0c02817e58dfe2106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042847"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificando caminhos para itens externos (Construtor de Relatórios e SSRS)
   Você especifica caminhos nas propriedades de item de relatório para referenciar itens, como relatórios detalhados, sub-relatórios e arquivos de imagem, que são externos ao arquivo de definição de relatório e armazenados em um servidor de relatório.  
@@ -40,12 +40,12 @@ ms.locfileid: "48221706"
   
 -   **Um caminho completo para o item.**  
   
-    -   **Em um servidor de relatório:** o caminho começa com **/**, a pasta Base. Por exemplo, ../Reports/AllSubreports/Subreport1.  
+    -   **Em um servidor de relatório:** O caminho começa com **/**, a pasta base. Por exemplo, ../Reports/AllSubreports/Subreport1.  
   
-    -   **Em um site do SharePoint:** você deve especificar o nome do relatório em uma expressão, com a URL completa do item e a extensão de arquivo .rdl. Por exemplo, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **Em um site do SharePoint:** Você deve especificar o nome do relatório em uma expressão, com a URL completa do item e a extensão de arquivo. RDL. Por exemplo, `="http://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar uma imagem externa &#40;relatórios e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Adicionar uma imagem externa &#40;Construtor de Relatórios e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [Adicionar um sub-relatório e parâmetros &#40;Construtor de Relatórios e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Adicionar uma ação de detalhamento a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197576"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030066"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página Itens Dependentes (Gerenciador de Relatórios)
   Use a página Itens Dependentes para exibir uma lista de relatórios e modelos que referenciam uma fonte de dados compartilhada. O ícone para cada tipo de item indica se é um relatório ou um modelo. Essa página pode ser exibida em exibição de lista ou exibição de detalhes. Use exibição de detalhes para mostrar mais informações sobre cada item. Opções adicionais de página estão disponíveis na exibição de detalhes. Para ajudar a gerenciar a fonte de dados compartilhada, essa página fornece links para relatórios e modelos que usam a fonte de dados, métricas de quando o relatório ou modelo foi executado ou modificado pela última vez e botões Excluir e Mover para que você possa facilmente remover relatórios e modelos que não são mais usados ou movê-los para um local diferente enquanto determina se eles ainda serão necessários.  
@@ -64,8 +64,8 @@ ms.locfileid: "48197576"
   
 ## <a name="see-also"></a>Consulte também  
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

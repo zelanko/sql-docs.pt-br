@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackages system table
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-author: douglasl
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7a1ab35e121683fd1c8d25dc21a2128aa3232c70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 942adf588cce7b4a0b46a1f0534a99354236cba5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755074"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028837"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "47755074"
   Contém uma linha para cada pacote que é salvo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa tabela é armazenada na **msdb** banco de dados.  
   
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O identificador exclusivo do pacote.|  
 |**id**|**uniqueidentifier**|O GUID do pacote.|  
-|**Descrição**|**nvarchar**|A descrição opcional do pacote.|  
+|**description**|**nvarchar**|A descrição opcional do pacote.|  
 |**createdate**|**datetime**|A data em que o pacote foi criado.|  
 |**folderid**|**uniqueidentifier**|O GUID da pasta lógica na qual o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lista o pacote.|  
 |**ownersid**|**varbinary**|O identificador de segurança exclusivo do usuário que criou o pacote.|  

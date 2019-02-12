@@ -11,14 +11,14 @@ helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 216623bca9dbbc086a600578c174a60d1797a2f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58cd6e3180de71aff25a4ed07e3ab53c91bd5ba8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377508"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034237"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatórios usada para criar, atualizar e compartilhar relatórios, partes de relatório e conjuntos de dados compartilhados. O Construtor de Relatórios está disponível em duas versões: autônoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. A versão autônoma é instalada no computador por você ou por um administrador. A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é instalada automaticamente com o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e baixada no computador a partir do Gerenciador de Relatórios ou de um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f8f2b9f8926a81c808e82f57cad13934336902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133256"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011157"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (Construtor de Relatórios e SSRS)
   É possível criar um conjunto de dados inserido para uso em um único relatório, ou criar um conjunto de dados compartilhado para ser salvo em um servidor de relatório e ser utilizado por vários relatórios. Para criar um conjunto de dados, é necessária uma fonte de dados inserida ou compartilhada.  
@@ -117,7 +117,7 @@ ms.locfileid: "48133256"
  [Designers de Consultas &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

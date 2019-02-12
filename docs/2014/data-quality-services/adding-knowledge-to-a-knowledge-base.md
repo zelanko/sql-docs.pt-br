@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8b845336b032d377b113508f6d53b9602675435b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ff423ce9c274e8244b931e3e5816c6acefd1ba5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372378"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038747"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Adicionando conhecimento a uma base de dados de conhecimento
   Este tópico descreve as maneiras pelas quais você pode adicionar um conhecimento a uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Antes de executar operações de qualidade de dados, você tem que ter conhecimento sobre os dados. Para adquirir esse conhecimento, crie e mantenha uma base de dados de conhecimento de qualidade de dados e adicione a ela conhecimentos relacionados a um tipo específico de fonte de dados. A base de dados de conhecimento é um repositório de conhecimento sobre seus dados que permitem que você entenda seus dados e mantenha sua integridade.  

@@ -3,6 +3,7 @@ title: Alterando senhas programaticamente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d296eb992dc9683faee721e2b825105c82f362e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c42f8bf47d90bde4f6ffdaa3bb7e22b88c238bb7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675035"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010624"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "51675035"
   
 |Código de erro do SQL Server|Mensagem de erro|  
 |---------------------------|-------------------|  
-|15113|Falha no logon do usuário '%.*ls'. Motivo: falha na validação da senha. A conta está bloqueada.|  
-|18463|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não pode ser usada neste momento.|  
-|18464|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito curta.|  
-|18465|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito longa.|  
-|18466|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
-|18467|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
-|18468|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. Ocorreu um erro inesperado durante a validação da senha.|  
-|18487|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta expirou.|  
-|18488|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta deve ser alterada.|  
+|15113|Falha no logon do usuário ' %. *. motivo ls': Falha na validação de senha. A conta está bloqueada.|  
+|18463|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não pode ser usada neste momento.|  
+|18464|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito curta.|  
+|18465|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito longa.|  
+|18466|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
+|18467|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
+|18468|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. Ocorreu um erro inesperado durante a validação da senha.|  
+|18487|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta expirou.|  
+|18488|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta deve ser alterada.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte à expiração de senha mesmo uma interface do usuário e programaticamente.  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541847"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038257"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -79,14 +79,14 @@ ms.locfileid: "52541847"
  **-r**  *installationID*  
  Remove as informações de chave simétrica de uma instância de servidor de relatório específica, removendo assim o servidor do relatório de uma implantação em expansão. O *ID_instalação* é um valor GUID que pode ser localizado no arquivo RSReportserver.config.  
   
- `-f`  *Arquivo*  
+ `-f`  *file*  
  Especifica um caminho totalmente qualificado ao arquivo que armazena uma cópia de backup das chaves simétricas.  
   
  Para **rskeymgmt -e**, a chave simétrica é gravada no arquivo especificado.  
   
  Para **rskeymgmt -a**, o valor da chave simétrica armazenado no arquivo é aplicado à instância do servidor de relatório.  
   
- `-p`  *senha*  
+ `-p`  *password*  
  (Necessário para `-f`) Especifica a senha usada para fazer backup ou para aplicar uma chave simétrica. Esse valor não pode ficar em branco.  
   
  `-i`  
@@ -98,10 +98,10 @@ ms.locfileid: "52541847"
  `-n`  
  Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento será opcional se você instalou o servidor de relatório na instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o valor padrão para `-n` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-n` será necessário.  
   
- `-u`  *conta do usuário*  
+ `-u`  *useraccount*  
  Especifica a conta de administrador no computador remoto que você está unindo à implantação em expansão. Se uma conta não for especificada, as credenciais do usuário atual serão usadas.  
   
- `-v`  *senha*  
+ `-v`  *password*  
  (Necessário para `-u`) Especifica a senha de uma conta de administrador no computador remoto que você quer unir à implantação em expansão.  
   
  **-t**  *trace*  

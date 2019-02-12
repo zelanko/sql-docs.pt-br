@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010170"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Adicionar, mover ou excluir uma caixa de texto (Construtor de Relatórios e SSRS)
   As caixas de texto constituem o item de relatório mais utilizado em relatórios. Você pode adicionar uma caixa de texto ao corpo do relatório para exibir informações como títulos, opções de parâmetro, campos internos e datas.  
@@ -74,8 +74,8 @@ ms.locfileid: "48122996"
     >  Se você clicar na caixa de texto e estiver no modo de edição, pressione ESC para selecionar a caixa de texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixas de texto &#40;relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Atalhos de teclado &#40;construtor de relatórios&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
+ [Atalhos de teclado &#40;Construtor de Relatórios&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   
   

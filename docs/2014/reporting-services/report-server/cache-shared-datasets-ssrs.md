@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0e1d1e31588945a12eed2d82ddf05ad2a7977e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e7f3faff05a318c302f12ded3a6ec4c864b7054
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183122"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012367"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Conjuntos de dados compartilhado em cache (SSRS)
   Os resultados de consultas de um conjunto de dados compartilhado podem ser copiados para um cache para fornecer dados consistentes para vários relatórios e melhorar o tempo de resposta da consulta do conjunto de dados. Como relatórios, você pode configurar um conjunto de dados compartilhado para ser armazenado em cache no primeiro uso ou especificando uma agenda.  
@@ -57,7 +57,7 @@ ms.locfileid: "48183122"
  Você pode especificar por quanto tempo os dados devem ser mantidos no cache antes de expirarem. Para obter mais informações, consulte [Página cache, conjuntos de dados compartilhados &#40;Gerenciador de relatórios&#41;](../caching-page-shared-datasets-report-manager.md).  
   
 ## <a name="preloading-the-cache"></a>Pré-carregando o cache  
- Você pode pré-carregar o cache criando um plano de atualização de cache. Com um plano de atualização, você pode especificar com que frequência atualizar o cache usando uma agenda específica de item ou uma agenda compartilhada. Para evitar várias entradas no cache para o mesmo item, a agenda especificada deve permitir tempo de processamento suficiente para o processamento da consulta na fonte de dados externa. Por exemplo, se a consulta levar 20 minutos para ser executada, a agenda de atualização deverá ser maior que 20 minutos. Para obter mais informações, consulte [agendas](../subscriptions/schedules.md).  
+ Você pode pré-carregar o cache criando um plano de atualização de cache. Com um plano de atualização, você pode especificar com que frequência atualizar o cache usando uma agenda específica de item ou uma agenda compartilhada. Para evitar várias entradas no cache para o mesmo item, a agenda especificada deve permitir tempo de processamento suficiente para o processamento da consulta na fonte de dados externa. Por exemplo, se a consulta levar 20 minutos para ser executada, a agenda de atualização deverá ser maior que 20 minutos. Para obter mais informações, consulte [Schedules](../subscriptions/schedules.md).  
   
  Para criar um plano de atualização de cache para um conjunto de dados compartilhado, as seguintes condições são aplicadas.  
   

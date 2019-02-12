@@ -11,19 +11,19 @@ ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8eeb349c91dd87175f8baaabad75acccc8a622d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b35b22e4eb80ba4b391cbac6c854248db3f9553c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094986"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009568"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Acessando o provedor WMI programaticamente
   Este tópico está em construção.  
   
 ## <a name="wmi-provider-overview"></a>Visão geral do provedor WMI  
- O namespace usado para obter informações sobre o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nos exemplos de código mostrados neste tópico é o namespace **System.Management**, encontrado no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. O namespace **System.Management** oferece um conjunto de classes de código gerenciado pelas quais os aplicativos do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] podem acessar e manipular informações de gerenciamento. Para obter mais informações sobre o uso de classes WMI do Reporting Services usando o namespace **System.Management**, consulte “Acessando informações de gerenciamento com System.Managment” no SDK do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
+ O namespace usado para obter informações sobre o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nos exemplos de código mostrados neste tópico é **System.Management** , encontrado no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. O namespace **System.Management** oferece um conjunto de classes de código gerenciado pelas quais os aplicativos do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] podem acessar e manipular informações de gerenciamento. Para obter mais informações sobre o uso de classes WMI do Reporting Services usando o namespace **System.Management** , consulte "Acessando informações de gerenciamento com System.Managment" no SDK do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
 ## <a name="finding-a-report-server-instance"></a>Localizando uma instância do Servidor de Relatório  
  O modo preferido de localizar informações sobre as suas instalações de servidor de relatório é enumerar pela coleção de instâncias WMI. O exemplo a seguir mostra como localizar propriedades em todas as instâncias do servidor de relatório criando uma coleção e fazendo um loop pela coleção para exibir as propriedades.  

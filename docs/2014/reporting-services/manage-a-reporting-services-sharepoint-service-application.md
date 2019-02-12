@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135128"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016257"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Aplicativos de serviço são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.  
   
  Este tópico aborda as seguintes informações:  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48135128"
 -   [Provisionar Assinaturas e Alertas](#bkmk_provisionsubscriptions)  
   
 ## <a name="to-open-service-application-properties-page"></a>Para abrir a página de propriedades de gerenciamento de aplicativos de serviço  
- Para abrir a página de propriedades de um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], siga as etapas abaixo:  
+ Para abrir a página de propriedades de um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , siga as etapas abaixo:  
   
 1.  Na Administração Central, no grupo Gerenciamento de Aplicativos, clique em **Gerenciar aplicativos de serviço**.  
   
 2.  Clique próximo ao nome do aplicativo de serviço ou na coluna **tipo** ; essa ação selecionará toda a linha. Em seguida, clique em **Propriedades** na faixa de opções do SharePoint.  
   
- Para obter mais informações sobre as propriedade do aplicativo de serviço, consulte [Etapa 3: Criar um aplicativo de serviço do Reporting Services](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+ Para obter mais informações sobre propriedades do serviço de aplicativo, consulte [etapa 3: Criar um aplicativo de serviço do Reporting Services](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> Para abrir páginas de gerenciamento de aplicativos de serviço  
  Para abrir as páginas de gerenciamento de um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , siga as etapas abaixo:  
@@ -94,7 +94,7 @@ ms.locfileid: "48135128"
 |Habilitar Log de Execução|O padrão é TRUE.<br /><br /> Especifique se o servidor de relatórios gerará logs de rastreamento e por quantos dias os logs serão mantidos. para obter informações sobre a ferramenta de configuração e recursos adicionais. Os logs são armazenados no computador do servidor de relatório, na pasta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Um novo arquivo de log é iniciado cada vez que o serviço é reiniciado. Para obter mais informações sobre arquivos de log, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
 |Dias em Que o Log de Execução Será Mantido|O padrão é 60 dias.|  
   
- O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece suporte para o log ULS do SharePoint.  Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece suporte para o log ULS do SharePoint.  Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> Configurações de segurança  
   
@@ -126,9 +126,9 @@ ms.locfileid: "48135128"
 > [!IMPORTANT]  
 >  Alterar periodicamente a chave de criptografia do Reporting Services é uma prática recomendada de segurança. Um momento indicado para alterar a chave é imediatamente após uma atualização de versão principal do Reporting Services. Alterar a chave depois de uma atualização minimiza a interrupção de serviço adicional causada pela alteração da chave de criptografia do Reporting Services fora do ciclo de atualização.  
   
-|Página|Description|  
+|Página|Descrição|  
 |----------|-----------------|  
-|Chave de Criptografia de Backup|1) Digite uma senha nas caixas **Senha:** e **Confirmar Senha:** , e clique em **Exportar**. Você verá um aviso se a senha digitada não atender aos requisitos de complexidade da política de domínio.<br /><br /> 2) Será solicitado que você informe um local em que o arquivo da chave será salvo. Você deve pensar em armazenar o arquivo de chave em um computador separado daquele que está sendo executado [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O nome de arquivo padrão é o mesmo do aplicativo de serviço.|  
+|Chave de Criptografia de Backup|1) Digite uma senha nas caixas **Senha:** e **Confirmar Senha:** , e clique em **Exportar**. Você verá um aviso se a senha digitada não atender aos requisitos de complexidade da política de domínio.<br /><br /> 2) Será solicitado que você informe um local em que o arquivo da chave será salvo. É recomendável armazenar o arquivo da chave em um computador que não seja o que está executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O nome de arquivo padrão é o mesmo do aplicativo de serviço.|  
 |Restaurar chave de criptografia|1) Digite ou navegue até o arquivo da chave na caixa **Local do Arquivo**<br /><br /> 2) Na caixa **Senha** , digite a senha que foi usada para fazer backup do arquivo de criptografia.<br /><br /> 3) Clique em **OK**|  
 |Alterar Chave de Criptografia|Esta operação criará uma nova chave e criptografará novamente seu conteúdo criptografado. Se você tiver muito conteúdo, esta operação poderá levar várias horas.<br /><br /> Quando a operação de alteração de chave de criptografia for concluída, é recomendado que você faça um backup de sua nova chave.|  
 |Conteúdo Criptografado Excluído|O conteúdo excluído não pode ser recuperado.<br /><br /> **\*\* Importante \*\*** A ação de excluir e recriar a chave simétrica não pode ser invertida ou desfeita. Excluir ou recriar a chave simétrica pode ter ramificações importantes em sua instalação atual. Se você excluir a chave, quaisquer dados existentes criptografados pela chave simétrica também serão excluídos. Os dados excluídos incluem cadeias de caracteres de conexão a fontes de dados de relatório externas, cadeias de caracteres de conexões armazenadas e algumas informações de assinatura.|  
@@ -154,7 +154,7 @@ ms.locfileid: "48135128"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- Para obter mais informações, consulte [cmdlets do PowerShell para o Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+ Para obter mais informações, consulte [Cmdlets do PowerShell para o modo SharePoint do Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ### <a name="options"></a>Opções  
  **Especificar uma conta de execução**  
@@ -192,7 +192,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  Na página Associações de Aplicativos de Serviço, altere a exibição para **Aplicativos de Serviço**.  
   
-3.  Localize e clique no nome do seu novo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço. Você também pode clicar no nome do grupos de proxies de aplicativos **padrão** para adicionar o proxy ao grupo padrão em vez de concluir as etapas a seguir.  
+3.  Localize e clique no nome do novo aplicativo de serviço [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Você também pode clicar no nome do grupos de proxies de aplicativos **padrão** para adicionar o proxy ao grupo padrão em vez de concluir as etapas a seguir.  
   
 4.  Selecione **Personalizado** na caixa de seleção **Editar o seguinte grupo de conexões**.  
   

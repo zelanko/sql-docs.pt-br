@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a6ef09783b69f6920d5421a52fbe8dbd13ed0e4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409993"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011468"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar um domínio de um arquivo .dqs
   Este tópico descreve como importar um domínio de um arquivo .dqs para uma base de dados de conhecimento existente no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um arquivo de dados .dqs é criado por meio da exportação de um domínio ou de uma base de dados de conhecimento do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Um arquivo de dados .dqs é criptografado e, portanto, não pode ser exibido.  
@@ -51,7 +51,7 @@ ms.locfileid: "52409993"
   
 6.  Verifique se o domínio que você importou é exibido na lista **Domínio** . Se você importou um domínio composto, verifique se o domínio composto e os domínios únicos contidos nele estão na lista **Domínio** .  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de importar um domínio de um arquivo. DQS  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de importar um domínio de um arquivo. DQS  
  Depois que você importar um domínio de um arquivo .dqs, poderá adicionar conhecimento ao domínio ou usar o domínio em um projeto de limpeza ou de correspondência, dependendo do conteúdo do domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md), [Gerenciando um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md), [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md), [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md) ou [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  
   
   

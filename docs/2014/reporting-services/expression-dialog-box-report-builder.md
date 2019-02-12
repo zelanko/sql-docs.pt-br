@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 856faf8f35e30343ef322e726e3d0dffc30ebb4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590610"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040137"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Caixa de diálogo Expressão (Construtor de Relatórios)
   Use a caixa de diálogo **Expressão** para escrever expressões do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para propriedades de itens de relatório. É possível usar expressões para definir muitas propriedades, incluindo cor, fonte e bordas. Em tempo de execução, o processador de relatório avalia as expressões e substitui o resultado do valor da propriedade.  
@@ -30,7 +30,7 @@ ms.locfileid: "53590610"
 ## <a name="expression-constructs"></a>Construções de expressões  
  As expressões começam com um sinal de igual (=) e podem incluir constantes, literais, operadores e referências a campos internos, coleções internas, funções internas, funções da biblioteca em tempo de execução do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], classes do common language runtime do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funções personalizadas. A lista a seguir descreve as categorias e os valores que podem ser adicionados a uma expressão.  
   
- **Definir expressão para:**  _\<PropertyName >_  
+ **Definir expressão para:**  _\<PropertyName>_  
  O nome da propriedade para a qual você está definindo uma expressão. Também é possível definir essa propriedade por nome, no painel Propriedades.  
   
  **Constantes**  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117846"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043047"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controlando a exibição da região de dados Tablix em uma página do relatório (Construtor de Relatórios e SSRS)
   Este tópico descreve as propriedades de uma região de dados Tablix que pode ser modificada para alterar a forma como uma região de dados Tablix é exibida quando visualizada em um relatório.  
@@ -56,7 +56,7 @@ ms.locfileid: "48117846"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controlando como os grupos de linhas e de colunas Tablix são processados  
  A renderização dos grupos de regiões de dados Tablix depende da estrutura de grupo. Uma região de dados Tablix pode ter quatro áreas, como mostra a figura a seguir:  
   
- ![Áreas da região de dados Tablix](../media/rs-tablixareas.gif "áreas da região de dados Tablix")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  A área do grupo de linhas e a área do grupo de colunas contêm cabeçalhos de grupo. Quando uma região de dados Tablix tem cabeçalhos de grupo, você pode controlar a repetição de linhas e colunas definindo as propriedades na página **Geral** da caixa de diálogo **Propriedades do Tablix** .  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117846"
 ## <a name="see-also"></a>Consulte também  
  [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Controlando quebras de páginas, títulos, colunas e linhas &#40;relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

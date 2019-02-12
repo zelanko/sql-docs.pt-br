@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 277ee4ff416ad9710eecf501651b5a5143b0fa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210198"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010887"
 ---
 # <a name="create-a-linked-report"></a>Criar um relatório vinculado
   Um relatório vinculado é um item de servidor de relatório que fornece um ponto de acesso a um relatório existente. Conceitualmente, é semelhante a um atalho de programa usado para executar um programa ou abrir um arquivo.  
@@ -35,7 +35,7 @@ ms.locfileid: "48210198"
   
 2.  Digite um nome para o novo relatório vinculado. Como opção, digite uma descrição.  
   
-3.  Para selecionar uma pasta diferente para o relatório, clique em **Alterar Local**. Clique na pasta que deseja usar ou digite o nome de pasta na caixa **Local** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se você não selecionar uma pasta diferente, o relatório vinculado é criado na pasta atual (em que o relatório se baseia está armazenado).  
+3.  Para selecionar uma pasta diferente para o relatório, clique em **Alterar Local**. Clique na pasta que deseja usar ou digite o nome de pasta na caixa **Local** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se você não selecionar uma pasta diferente, o relatório vinculado será criado na pasta atual (em que o relatório no qual ele se baseia está armazenado).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] O relatório vinculado é aberto.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48210198"
      ![Ícone Relatório vinculado](../media/hlp-16linked.gif "Ícone Relatório vinculado")  
   
 ## <a name="see-also"></a>Consulte também  
- [Abrir e fechar um relatório &#40;Gerenciador de relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Página Novo Relatório Vinculado &#40;Gerenciador de Relatórios&#41;](../new-linked-report-page-report-manager.md)   
  [Página Escolher Local do Item &#40;Gerenciador de Relatórios&#41;](../choose-item-location-page-report-manager.md)   
  [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](../general-properties-page-reports-report-manager.md)   

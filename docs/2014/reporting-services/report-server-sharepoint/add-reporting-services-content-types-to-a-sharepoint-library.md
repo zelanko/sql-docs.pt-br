@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105882"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030687"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar a Web Part do Visualizador de Relatórios a uma página da Web (Reporting Services no modo integrado do SharePoint)
   É possível usar a Web Part do Visualizador de Relatórios para exibir relatórios executados no servidor de relatório configurado para execução no modo integrado do SharePoint. Você pode usar a Web Part para exibir arquivos de definição de relatório (.rdl) criados no Construtor de Relatórios ou Designer de Relatórios e carregados em uma biblioteca.  
@@ -57,9 +57,9 @@ ms.locfileid: "48105882"
 9. Clique em **Aplicar** na parte inferior do painel de ferramentas e clique em **OK** para fechar esse painel.  
   
 ## <a name="see-also"></a>Consulte também  
- [Web Part de Visualizador de relatórios em um Site do SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
- [Personalizar a Web Part do Visualizador de relatórios](../customize-the-report-viewer-web-part.md)   
- [Concedendo permissões em itens do servidor de relatório em um Site do SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Web Part do Visualizador de Relatórios em um site do SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Personalizar a Web Part do Visualizador de Relatórios](../customize-the-report-viewer-web-part.md)   
+ [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

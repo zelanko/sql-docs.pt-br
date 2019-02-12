@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1003de5a101720c0ad5dc86869f17f2f8508a059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1b926b148874573c8c1106be2982dd0e929c50d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032198"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>Propriedade WindowsServiceIdentityActual (WMI MSReportServer_ConfigurationSetting)
   A identidade sob a qual o serviço do Windows do servidor de relatório está sendo executado. Somente leitura.  
@@ -40,7 +40,7 @@ public string WindowsServiceIdentityActual;
 ```  
   
 ## <a name="property-values"></a>Valores da propriedade  
- Um `String` objeto que contém a identidade que o serviço Windows do servidor de relatório está sendo executado.  
+ Um objeto `String` que contém a identidade sob a qual o serviço do Windows do servidor de relatório está sendo executado.  
   
 ## <a name="example-code"></a>Código de exemplo  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
@@ -49,6 +49,6 @@ public string WindowsServiceIdentityActual;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

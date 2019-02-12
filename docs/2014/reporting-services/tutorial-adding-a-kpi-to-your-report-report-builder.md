@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Adicionando um KPI ao relatório (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionando um KPI ao relatório (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056517"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037657"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Adicionando um KPI ao relatório (construtor de relatórios)
   O KPI (indicador chave de desempenho) é um valor mensurável que tem importância comercial. Este tutorial ensina a incluir um KPI em um relatório. Nesse cenário, o resumo das vendas por subcategorias de produto é o KPI. O estado atual do KPI é mostrado usando-se cores e indicadores.  
   
  A ilustração a seguir mostra o relatório que você criará.  
@@ -45,7 +45,7 @@ ms.locfileid: "48056517"
 7.  [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48056517"
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48056517"
   
 12. Clique em **Concluir**.  
   
-     A tabela é adicionada à superfície de design. A tabela tem cinco colunas e cinco linhas. O painel Grupos de Linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+     A tabela é adicionada à superfície de design. A tabela tem cinco colunas e cinco linhas. O painel de grupos de linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 13. Clique em **Executar** para visualizar o relatório.  
   

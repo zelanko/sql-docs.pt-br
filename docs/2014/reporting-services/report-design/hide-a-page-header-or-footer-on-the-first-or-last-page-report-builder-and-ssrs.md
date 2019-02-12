@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 05ea4e197a727db6afffeedc3c26be676e358f73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101056"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040777"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ocultar um cabeçalho ou rodapé de página na primeira ou na última página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé de página nas partes superior e inferior de cada página, respectivamente. Depois de adicionar um cabeçalho ou rodapé, você pode ocultá-lo, de maneira seletiva, na primeira e última páginas de um relatório.  
@@ -49,8 +49,8 @@ ms.locfileid: "48101056"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Adicionar ou remover um cabeçalho ou rodapé de &#40;relatórios e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [Adicionar ou remover um cabeçalho ou rodapé de página &#40;Construtor de Relatórios e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

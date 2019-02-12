@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081546"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011498"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opções de Atualização do Cache (Gerenciador de Relatórios)
   Use a página Opções de Atualização do Cache para criar agendas para pré-carregamento do cache com cópias temporárias de dados para um relatório ou para um conjunto de dados compartilhado. Um plano de atualização inclui uma agenda e a opção para especificar ou substituir valores de parâmetros. Para um conjunto de dados compartilhado, você não pode substituir valores de parâmetros que estão marcados como somente leitura. Você pode criar e usar mais de um plano de atualização como parte da página de opções de atualização.  
@@ -66,14 +66,14 @@ ms.locfileid: "48081546"
  **Configurar**  
  Clique para abrir a página Agenda que é usada para especificar informações de frequência.  
   
- Para obter mais informações, consulte [nova agenda: Editar página de agenda &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Para obter mais informações, consulte [nova agenda: Editar agenda a página &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
  **Agenda compartilhada**  
  Selecione essa opção para selecionar uma agenda existente.  
   
- Para obter mais informações, consulte [criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md).  
+ Para obter mais informações, consulte [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
- **@\<** *Parâmetro* **>**  
+ **@\<** *Parameter* **>**  
  Especifique uma combinação de valores de parâmetros. Essa seção aparece apenas se o conjunto de dados atual ou o relatório tiver parâmetros.  
   
  Consulte [Especificando Parâmetros](#Parameters) na próxima seção.  
@@ -103,7 +103,7 @@ ms.locfileid: "48081546"
   
  Se a definição do conjunto de dados compartilhado especificar a opção **Omitir da consulta** para um parâmetro, você não precisará fornecer um valor padrão. Esse sinalizador indica que o parâmetro do conjunto de dados não é usado na consulta. Por exemplo, o parâmetro aparece na definição do conjunto de dados compartilhado porque é um parâmetro de relatório que é usado apenas no filtro do conjunto de dados.  
   
- Para exibir ou alterar opções de parâmetros do conjunto de dados, você deve editar a definição do conjunto de dados compartilhado. Para obter mais informações, consulte [gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md).  
+ Para exibir ou alterar opções de parâmetros do conjunto de dados, você deve editar a definição do conjunto de dados compartilhado. Para obter mais informações, consulte [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md).  
   
 ### <a name="report-parameters"></a>Parâmetros de relatório  
  Para um relatório, cada valor de parâmetro deve ser válido para que você possa criar um plano de atualização do cache com êxito. Você deve digitar ou selecionar um valor padrão para cada parâmetro de relatório. O valor que você define substitui o valor padrão definido para o parâmetro de relatório no servidor de relatório.  
@@ -130,7 +130,7 @@ ms.locfileid: "48081546"
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas em nível de item](security/tasks-and-permissions-item-level-tasks.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md)  

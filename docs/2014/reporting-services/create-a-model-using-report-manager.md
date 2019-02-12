@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064846"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010423"
 ---
 # <a name="create-a-model-using-report-manager"></a>Criar um modelo com o Gerenciador de Relatórios
   Você pode gerar modelos de um cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou um banco de dados Oracle usando o Gerenciador de Relatórios. Os modelos de relatório são gerados a partir de fontes de dados compartilhadas que são publicadas no servidor de relatório. Se você ainda não tiver uma fonte de dados compartilhada, é preciso criar uma.  
@@ -41,13 +41,13 @@ ms.locfileid: "48064846"
   
 5.  Verifique se a caixa de seleção **Habilitar esta fonte de dados** está selecionada.  
   
-6.  Na lista **Tipo de conexão** , selecione o tipo de fonte de dados para o qual você deseja se conectar. O tipo de conexão deve ser um dos seguintes: **Oracle**, **Microsoft SQL Server** ou **Microsoft SQL Server Analysis Services**.  
+6.  Na lista **Tipo de conexão** , selecione o tipo de fonte de dados para o qual você deseja se conectar. O tipo de conexão deve ser um destes procedimentos: **Oracle**, **Microsoft SQL Server** ou **Microsoft SQL Server Analysis Services**.  
   
 7.  Na caixa **Cadeia de conexão** , digite a cadeia de conexão que aponta para o banco de dados.  
   
 8.  Selecione o método de conexão que os usuários do Construtor de Relatórios necessitarão usar para se conectar ao banco de dados.  
   
-    -   Autenticação do Windows: Selecione esta opção quando desejar que o sistema operacional autentique os usuários [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Esta opção permite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar os recursos de segurança do Windows como a criptografia de senha para autenticar os usuários. É altamente recomendado que você selecione essa opção.  
+    -   Autenticação do Windows: Selecione esta opção quando desejar que o sistema operacional autentique [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usuários. Esta opção permite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar os recursos de segurança do Windows como a criptografia de senha para autenticar os usuários. É altamente recomendado que você selecione essa opção.  
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Autenticação: Selecione esta opção quando desejar que os usuários usem um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conta de logon que você criou. Os usuários devem fornecer um nome de logon e senha válidos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f9364b2c15adc07e7d265434678eca573537567
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ab60b588b276fd95e253d3ccf3fdeaf8ac71d409
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116837"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010968"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Funções e permissões (Reporting Services)
   O Reporting Services fornece um subsistema de autenticação e modelo de autorização com base na função. Os modelos de autenticação e autorização variam, dependendo se o servidor de relatório é executado no modo nativo ou no modo do SharePoint. Se o servidor de relatório fizer parte de uma implantação do SharePoint, as permissões do SharePoint determinarão quem tem acesso ao servidor de relatório.  
@@ -38,10 +38,10 @@ ms.locfileid: "48116837"
  No modo integrado do SharePoint, a autenticação e a autorização são manipuladas no site do SharePoint, antes da chegada das solicitações ao servidor de relatório. De acordo com o modo como você configura a autenticação, as solicitações de um site do SharePoint contêm um token de segurança ou um nome de usuário confiável. As permissões que você define para usuários e grupos do SharePoint autorizam o acesso aos itens do servidor de relatório colocados nas bibliotecas do SharePoint.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Conceder permissões em um servidor de relatório no Modo Nativo](granting-permissions-on-a-native-mode-report-server.md)  
+ [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)  
  Descreve o modelo de autorização com base em funções que fornece acesso a conteúdo e operações.  
   
- [Conceder permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  Explica como grupos, níveis de permissão e permissões do SharePoint são usados para controlar o acesso a um servidor de relatório.  
   
 ## <a name="see-also"></a>Consulte também  

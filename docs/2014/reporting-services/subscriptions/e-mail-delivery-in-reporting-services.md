@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 173696f4f75d14cbb0ea1b78104b69db50af7a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065556"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029547"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
-  O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email que fornece um modo de enviar um relatório por email a usuários individuais ou a grupos. A extensão de entrega de email é configurada pela ferramenta Gerenciador de Configurações do Reporting Services e pela edição dos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email que fornece um modo de enviar um relatório por email a usuários individuais ou a grupos. A extensão de entrega de email é configurada pela ferramenta Gerenciador de Configurações do Reporting Services e pela edição dos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Para distribuir ou receber um relatório por email, defina uma assinatura padrão ou uma assinatura controlada por dados. Você pode assinar ou distribuir apenas um relatório por vez. Você não pode criar uma assinatura que entregue vários relatórios em uma única mensagem de email. Para obter mais informações sobre assinaturas, consulte [criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
@@ -78,11 +78,11 @@ ms.locfileid: "48065556"
   
  Para obter informações sobre como configurar um servidor de relatório do modo do SharePoint, consulte o seguinte:  
   
--   [Configurar o email para um relatório dos serviços de aplicativo de serviço &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](data-driven-subscriptions.md)   
  [Atribuições de função](../security/role-assignments.md)  
   

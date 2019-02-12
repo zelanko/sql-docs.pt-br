@@ -24,14 +24,14 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031379"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Exibir ou excluir histórico de relatório (Gerenciador de Relatórios)
   O histórico de relatórios é mantido com o relatório no qual é baseado. Qualquer usuário com permissão para exibir um relatório pode exibir seu histórico.  
@@ -55,10 +55,10 @@ ms.locfileid: "48117886"
 3.  Marque a caixa de seleção ao lado do instantâneo de histórico que você deseja excluir e, em seguida, clique em **excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Página de histórico de relatório &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
- [Definir propriedades de processamento de relatórios](report-server/set-report-processing-properties.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Definir as propriedades do processamento de relatórios](report-server/set-report-processing-properties.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir instantâneos no histórico de relatórios](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

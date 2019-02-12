@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d5dba03f5e64d06d7c1d8dddd4df36b3f9326e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358118"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010667"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
   O log de rastreamento do servidor de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é um arquivo de texto ASCII que contém informações detalhadas sobre as operações do serviço Servidor de Relatórios, incluindo as operações executadas pelo serviço Web Servidor de Relatórios, pelo Gerenciador de Relatório e pelo processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução.  

@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015008"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Caixa de diálogo Mapear Propriedades de Meridiano, Rótulos
   Use o **MapMeridian propriedades** caixa de diálogo para alterar as opções de rótulo para a grade vertical no visor do mapa. Um meridiano representa o valor seguinte, de acordo com o sistema de coordenadas especificado para o visor:  
@@ -37,7 +37,7 @@ ms.locfileid: "48115747"
  **Mostrar rótulos**  
  Selecione esta opção para exibir rótulos para os meridianos.  
   
- **posicionamento**  
+ **Placement**  
  Selecione um local para exibir os rótulos em relação à parte superior, central e inferior do visor. O posicionamento padrão é **Próximo**.  
   
 -   **Próximo** Exibe rótulos na borda esquerda.  
