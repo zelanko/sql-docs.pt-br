@@ -13,17 +13,17 @@ helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: af04c7697d685fe36c34b09060302756f6f51214
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 34248f660d31d6993ce21a0bcced0e0857b685cb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127406"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029127"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interface do usuário do Designer de Consulta do SAP NetWeaver BI (Construtor de Relatórios)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um designer de consultas gráficas para criar consultas MDX para uma fonte de dados do SAP NetWeaver® Business Intelligence. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um InfoCube, MultiProvider ou consulta habilitada para Web definida na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um designer de consultas gráficas para criar consultas MDX para uma fonte de dados do SAP NetWeaver® Business Intelligence. O designer de consultas gráficas MDX tem dois modos: Modo de design e modo de consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um InfoCube, MultiProvider ou consulta habilitada para Web definida na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -49,15 +49,15 @@ ms.locfileid: "48127406"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Barra de ferramentas do Designer de Consultas Gráficas na barra de ferramentas do modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir descreve os botões e as respectivas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Não disponível para esse tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos.|  
 |![Atualizar campos de conjunto de dados](media/rsqdicon-refreshfields.gif "Atualizar campos de conjunto de dados")|Atualiza metadados na fonte de dados.|  
-|![Adicionar membro calculado](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Adicionar membro calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
 |![Alternar para mostrar células vazias](../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](../analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
-|![Exclua](../analysis-services/media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
+|![Excluir](../analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
 |![Ícone da caixa de diálogo Parâmetros de Consulta](../analysis-services/media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Variáveis** . Esse botão é habilitado somente quando o cubo selecionado é um cubo de Consulta (porque somente os cubos de consulta oferecem suporte a variáveis). Quando você atribui um valor padrão a uma variável, um parâmetro de relatório correspondente é criado.|  
 |![Executar a consulta](../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
 |![Cancelar a consulta](../analysis-services/media/rsqdicon-cancel.gif "Cancelar a consulta")|Cancela a consulta.|  
@@ -91,13 +91,13 @@ ms.locfileid: "48127406"
   
 -   **Editar como Texto**  
   
--   **Adicionar membro calculado** (![Adicionar membro calculado](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Adicionar membro calculado"))  
+-   **Adicionar Membro Calculado** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   
 -   **Executar automaticamente** (![Executar a consulta automaticamente](../analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente"))  
   
--   **Exclua** (![exclua](../analysis-services/media/rsqdicon-delete.gif "excluir"))  
+-   **Excluir** (![Excluir](../analysis-services/media/rsqdicon-delete.gif "Excluir"))  
   
 ## <a name="see-also"></a>Consulte também  
  [Designers de Consultas &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

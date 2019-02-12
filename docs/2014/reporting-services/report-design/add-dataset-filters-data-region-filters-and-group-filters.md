@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154216"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026166"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo (Construtor de Relatórios e SSRS)
   Em um relatório, um filtro faz parte de um conjunto de dados, uma região de dados ou um grupo de regiões de dados criado por você para limitar os dados usados no relatório. Os filtros são uma forma de ajudar você a controlar os dados do relatório, caso você não possa alterar a consulta do conjunto de dados; por exemplo, se estiver usando um conjunto de dados compartilhado.  
@@ -84,7 +84,7 @@ ms.locfileid: "48154216"
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara a expressão a um valor.|  
 |**TopN, BottomN**|Compara a expressão a um valor `Integer`.|  
-|**TopPercent, BottomPercent**|Compara a expressão com um `Integer` ou `Float` valor.|  
+|**TopPercent, BottomPercent**|Compara a expressão a um valor `Integer` ou `Float`.|  
 |**Entre**|Testa se a expressão está entre dois valores, inclusive.|  
 |**Entrada**|Testa se a expressão está contida em um conjunto de valores.|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48154216"
  Esse valor também pode incluir uma referência de parâmetro para permitir que um usuário selecione um valor interativamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

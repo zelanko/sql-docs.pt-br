@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf9f11b8b56333dba7c0d2a5066712017ea194cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 056cc6b6385b2f57c52dbaaceedf75d342254c89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215256"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036127"
 ---
 # <a name="column-visibility-dialog-box"></a>Caixa de diálogo Visibilidade da Coluna
   Use a caixa de diálogo **Visibilidade da Coluna** para mostrar ou ocultar a coluna selecionada quando o relatório for executado pela primeira vez ou para usar outro item de relatório para alternar a visibilidade da coluna.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215256"
  **Mostrar ou ocultar com base em uma expressão**  
  Escolha esta opção para variar a visibilidade inicial usando uma expressão.  
   
- Digite uma expressão que é avaliada como uma `Boolean` valor de `True` para ocultar o item e `False` para mostrar o item. Clique no botão Expressão (*fx*) para editar a expressão.  
+ Digite uma expressão que seja avaliada como um valor `Boolean` `True` para ocultar o item e `False` para mostrar o item. Clique no botão Expressão (*fx*) para editar a expressão.  
   
  **Exibição pode ser alternada por este item de relatório**  
  Escolha esta opção para exibir uma imagem de alternância que permite que o usuário mostre ou oculte este item de relatório em um visualizador de relatórios HTML.  
@@ -47,7 +47,7 @@ ms.locfileid: "48215256"
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Imagens &#40;relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Ajuda F1 do Designer de Relatórios](tools/report-designer-f1-help.md)  
   
   

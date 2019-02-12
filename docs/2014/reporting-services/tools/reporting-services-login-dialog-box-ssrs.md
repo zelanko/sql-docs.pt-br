@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6bc56775aa932f26caeaa1eab9e67a0845f19b27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f451128cbcd218a75ae269f43de922f04f3e7db9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077866"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033167"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Caixa de diálogo Logon do Reporting Services (SSRS)
   Use a caixa de diálogo **Logon do Reporting Services** para fornecer credenciais para publicar relatórios no servidor de relatório.  

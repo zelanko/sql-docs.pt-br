@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6634e0b09d2a2ea83eb84e252867a4e93c4098f3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 73e8662d7cca01979616af0a5f9221f501d1c3a2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363028"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034007"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexão do SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é um banco de dados relacional hospedado baseado em nuvem, baseado nas tecnologias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para incluir dados de um cubo do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Esse tipo de fonte de dados interna é baseado na extensão de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Use esse tipo de fonte de dados para se conectar a e recuperar dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

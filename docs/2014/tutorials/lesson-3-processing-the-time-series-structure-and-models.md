@@ -1,24 +1,23 @@
 ---
-title: 'Lição 3: Processando estrutura e modelos de série temporal | Microsoft Docs'
+title: 'Lição 3: A série de tempo de processamento estrutura e modelos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061656"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026267"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lição 3: Processando a estrutura e os modelos de série temporal
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lição 3: A série de tempo de processamento estrutura e modelos
   Nesta lição, você aprenderá a usar o [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrução para processar a série temporal, estruturas de mineração e modelos de mineração que você criou.  
   
  Ao processar uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lê os dados de origem e compila as estruturas que dão suporte a modelos de mineração. Sempre será necessário processar um modelo e uma estrutura de mineração em sua criação. Se você especificar a estrutura de mineração ao usar INSERT INTO, a instrução processará a estrutura de mineração e todos os seus modelos de mineração associados.  
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     A consulta de fonte faz referência a [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] fonte de dados definida no projeto de exemplo IntermediateTutorial. Ela usa esta fonte de dados para acessar a exibição vTimeSeries. Essa exibição contém os dados de origem que serão usados para treinar o modelo de mineração. Se você não estiver familiarizado com esse projeto ou essas exibições, consulte[lição 2: Criando um cenário de previsão de &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     A consulta de fonte faz referência a [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] fonte de dados definida no projeto de exemplo IntermediateTutorial. Ela usa esta fonte de dados para acessar a exibição vTimeSeries. Essa exibição contém os dados de origem que serão usados para treinar o modelo de mineração. Se você não estiver familiarizado com esse projeto ou essas exibições, consulte[lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      A instrução completa agora deve ser:  
   
@@ -152,6 +151,6 @@ OPENQUERY (<source data definition>)
 ## <a name="see-also"></a>Consulte também  
  [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;consulta de fonte de dados&#62;](/sql/dmx/source-data-query)   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
+ [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  
   
   

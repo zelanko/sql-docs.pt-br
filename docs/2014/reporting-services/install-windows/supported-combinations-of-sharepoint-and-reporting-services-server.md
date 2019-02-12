@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b2335e06f5821bedefad8aeb558a3528632ad1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4e1a516f10c15b8e84d80ff91de1aa9d66d8e1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102716"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034097"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinações do SharePoint e do servidor e suplemento do Reporting Services com suporte (SQL Server 2014)
   Servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados no modo do SharePoint e integrados com uma implantação do SharePoint. Nem todos os recursos são compatíveis em todas as combinações de servidor de relatório, suplemento Reporting Services para SharePoint e produtos do SharePoint. Este tópico resume as combinações com suporte. No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a integração é um resultado da combinação de:  
@@ -44,7 +44,7 @@ ms.locfileid: "48102716"
 |1|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2013|Sim|  
 |2|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sim|  
 |3|[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2013|Sim|  
-|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sim<br /><br /> Exceção: a integração do Power View não tem suporte.|  
+|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sim<br /><br /> Exceção: Não há suporte para a integração do Power view.|  
 |5|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|SharePoint 2010|Sim|  
 |6|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sim|  
 |7|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2010|Sim|  
@@ -63,7 +63,7 @@ ms.locfileid: "48102716"
   
 -   O suplemento SQL Server 2008 R2 não é compatível com os servidores de relatório do SQL Server 2012 (ou posterior). O instalador de pré-requisito do SharePoint 2010 instala automaticamente o suplemento SQL Server 2008 R2. Ele deve ser desinstalado antes de instalar versões mais recentes do suplemento. A atualização no local do suplemento não tem suporte.  
   
--   **Atualização:** o SharePoint 2010 com o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado não pode ser atualizado no local para o SharePoint 2013. O SharePoint 2013 exige o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior do suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o servidor de relatório. Para obter mais informações sobre atualização, consulte [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
+-   **Atualização:** SharePoint 2010 com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento instalado, não pode ser atualizado in-loco para o SharePoint 2013. O SharePoint 2013 exige o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior do suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o servidor de relatório. Para obter mais informações, consulte [Atualizar e migrar o Reporting Services](upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   

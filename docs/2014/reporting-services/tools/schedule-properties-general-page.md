@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 629b4f350ed001edbe36efaa990a716935d493ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fe262291ace3828989939dd31149393808859f8b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366128"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017757"
 ---
 # <a name="schedule-properties-general-page"></a>Propriedades da Agenda (página Geral)
   Use essa página para exibir ou modificar uma agenda compartilhada. As agendas compartilhadas podem ser usadas no lugar de agendas específicas de relatório ou de assinaturas. Alterações à agenda são aplicadas depois que você salva a agenda. A edição de uma agenda não tem nenhum efeito em trabalhos atualmente em andamento. Se você editar uma agenda enquanto ela estiver sendo usada, todos os relatórios e assinaturas atualmente em processamento disparados daquela agenda terão permissão para serem concluídos.  

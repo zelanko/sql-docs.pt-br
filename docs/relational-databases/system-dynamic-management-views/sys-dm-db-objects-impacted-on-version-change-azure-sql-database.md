@@ -2,10 +2,8 @@
 title: sys.dm_db_objects_impacted_on_version_change (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_objects_impacted_on_version_change_TSQL
@@ -22,24 +20,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 11445fefd94925f32e40173491f27b8ea0837218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645354"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012928"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Esta exibição do sistema com escopo no banco de dados é criada para fornecer um sistema de alerta rápido para determinar os objetos que serão afetados por uma atualização de versão principal no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Você pode usar a exibição antes ou depois da atualização para obter uma descrição completa dos objetos afetados. Você precisará consultar essa exibição em cada banco de dados para obter uma contabilidade completa no servidor inteiro.  
   
-|Nome da coluna|Tipo de Dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |class|**int** NOT NULL|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = índices e heaps|  
 |class_desc|**nvarchar(60)** NOT NULL|Descrição da classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NOT NULL|ID de objeto da restrição ou ID de objeto da tabela que contém índice ou heap.|  
-|minor_id|**int** nulo|**NULO** para restrições<br /><br /> Index_id para índices e heaps|  
+|minor_id|**int** NULL|**NULO** para restrições<br /><br /> Index_id para índices e heaps|  
 |dependência|**nvarchar(60)** NOT NULL|Descrição da dependência que está causando efeito na restrição ou índice. O mesmo valor é usado também para os avisos gerados durante a atualização.<br /><br /> Exemplos:<br /><br /> **espaço** (para intrínseco)<br /><br /> **geometria** (para sistema UDT)<br /><br /> **geography:: Parse** (para o método de sistema UDT)|  
   
 ## <a name="permissions"></a>Permissões  

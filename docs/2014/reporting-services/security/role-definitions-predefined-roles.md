@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167212"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035127"
 ---
 # <a name="predefined-roles"></a>Funções predefinidas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
@@ -31,7 +31,7 @@ ms.locfileid: "48167212"
   
 2.  Identifique quais usuários e grupos requerem acesso ao servidor de relatório, e em que nível. A maioria dos usuários deve ser atribuída à função **Navegador** ou à função **Construtor de Relatórios** . Um número menor de usuários deve ser atribuído à função **Publicador** . Pouquíssimos usuários devem receber a função **Gerenciador de Conteúdo**.  
   
-3.  Quando você estiver pronto para atribuir contas de usuário e grupo a funções específicas, use o Gerenciador de Relatórios. Para obter mais informações, consulte [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+3.  Quando você estiver pronto para atribuir contas de usuário e grupo a funções específicas, use o Gerenciador de Relatórios. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md).  
   
 ##  <a name="bkmk_rolelist"></a> Definições de funções predefinidas  
  As funções predefinidas são determinadas pelas tarefas às quais oferecem suporte. Você pode modificar essas funções ou substituí-las por funções personalizadas.  
@@ -40,13 +40,13 @@ ms.locfileid: "48167212"
   
  A tabela a seguir descreve as funções predefinidas, o escopo e como esses itens são usados.  
   
-|Função predefinida|Escopo|Description|  
+|Função predefinida|Escopo|Descrição|  
 |---------------------|-----------|-----------------|  
 |[Função Gerenciador de Conteúdo](#bkmk_content)|Item|Inclui todas as tarefas de nível de item. Os usuários atribuídos a essa função têm permissão total para gerenciar o conteúdo do servidor de relatório, podendo inclusive conceder permissões para outros usuários e definir a estrutura de pastas para armazenar relatórios e outros itens.|  
 |[Função Publicador](#bkmk_publisher)|Item|Os usuários atribuídos a essa função podem adicionar itens a um servidor de relatório, podendo inclusive criar e gerenciar pastas que contêm esses itens.|  
 |[Função Navegador](#bkmk_browser)|Item|Os usuários atribuídos a essa função podem executar e assinar relatórios e navegar pela estrutura de pastas.|  
 |[Função Construtor de Relatórios](#bkmk_reportbuilder)|Item|Os usuários atribuídos a essa função podem criar e editar relatórios no Construtor de Relatórios.|  
-|[Função Meus Relatórios](#bkmk_myreports)|Item|Os usuários atribuídos a essa função podem gerenciar um espaço de trabalho pessoal para armazenar e utilizar relatórios e outros itens.|  
+|[Função Meus Relatórios](#bkmk_myreports)|Item|Os usuários atribuídos a essa função podem gerenciar um workspace pessoal para armazenar e utilizar relatórios e outros itens.|  
 |[Função Administrador do Sistema](#bkmk_systemadministrator)|Sistema|Os usuários atribuídos a essa função podem habilitar recursos e definir padrões, definir a segurança do site, criar definições de função no Management Studio e gerenciar trabalhos.|  
 |[Função Usuário do Sistema](#bkmk_systemuser)|Sistema|Os usuários atribuídos a essa função podem exibir informações básicas sobre o servidor de relatório, como as informações de agendamento em uma agenda compartilhada.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48167212"
 ### <a name="content-manager-tasks"></a>Tarefas do Gerenciador de Conteúdo  
  A tabela a seguir relaciona as tarefas incluídas na função **Gerenciador de Conteúdo** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Criar relatórios vinculados|Criar relatórios vinculados com base em um relatório não vinculado.|  
@@ -70,7 +70,7 @@ ms.locfileid: "48167212"
 |Gerenciar histórico de relatório|Criar, exibir e excluir histórico de relatório, exibir propriedades do histórico de relatório, e exibir e modificar configurações que determinam limites para o número de instantâneos e o funcionamento do cache.|  
 |Gerenciar relatórios|Adicionar e excluir relatórios, modificar parâmetros de relatório, exibir e modificar propriedades de relatório, exibir e modificar fontes de dados que fornecem o conteúdo para o relatório, exibir e modificar definições de relatório e definir diretrizes de segurança no nível do relatório.|  
 |Gerenciar recursos|Criar, modificar e excluir recursos, e exibir e modificar propriedades de recurso.|  
-|Definir políticas de segurança para itens|Definir políticas de segurança para relatórios, relatórios vinculados, pastas, recursos e fontes de dados. Para obter mais informações, consulte [itens protegíveis](securable-items.md).|  
+|Definir políticas de segurança para itens|Definir políticas de segurança para relatórios, relatórios vinculados, pastas, recursos e fontes de dados. Para obter mais informações, consulte [Itens protegíveis](securable-items.md).|  
 |Exibir fontes de dados|Exibir itens de fontes de dados compartilhadas na hierarquia de pastas.|  
 |Exibir relatórios|Executar relatórios e exibir propriedades de relatório.|  
 |Exibir modelos|Exibir modelos na hierarquia de pastas, usar modelos como fontes de dados para um relatório e executar consultas no modelo para recuperar dados.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48167212"
 ### <a name="publisher-tasks"></a>Tarefas da função Publisher  
  A tabela a seguir lista as tarefas que são incluídas na função **Publicador** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados e publicá-los em uma pasta do servidor de relatório.|  
 |Gerenciar fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
@@ -117,7 +117,7 @@ ms.locfileid: "48167212"
 ### <a name="browser-tasks"></a>Tarefas de Navegador  
  A tabela a seguir descreve as tarefas incluídas na definição de função **Navegador** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
 |Exibir recursos|Exibir recursos e propriedades de recurso.|  
@@ -136,7 +136,7 @@ ms.locfileid: "48167212"
 ### <a name="report-builder-tasks"></a>Tarefas do Construtor de Relatórios  
  A tabela a seguir descreve as tarefas que estão incluídas na definição da função **Construtor de Relatórios** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
@@ -158,7 +158,7 @@ ms.locfileid: "48167212"
 ### <a name="my-reports-tasks"></a>Tarefas de Meus Relatórios  
  A tabela a seguir lista as tarefas que são incluídas na função **Meus Relatórios** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados que são baseados em relatórios armazenados na pasta Meus Relatórios do usuário.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
@@ -186,10 +186,10 @@ ms.locfileid: "48167212"
 ### <a name="system-administrator-tasks"></a>Tarefas de Administrador do Sistema  
  A tabela a seguir lista as tarefas que são incluídas na função **Administrador do Sistema** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Iniciar a execução da definição de relatório sem publicá-la em um servidor de relatório.|  
-|Gerenciar trabalhos|Exibir e cancelar trabalhos que estão em execução. Para obter mais informações, consulte [gerenciar um processo em execução](../subscriptions/manage-a-running-process.md).|  
+|Gerenciar trabalhos|Exibir e cancelar trabalhos que estão em execução. Para obter mais informações, consulte [Gerenciar um processo em execução](../subscriptions/manage-a-running-process.md).|  
 |Gerenciar propriedades de servidor de relatório|Exibir e modificar propriedades que se aplicam ao servidor de relatório e a itens gerenciados pelo servidor de relatório.<br /><br /> Esta tarefa oferece suporte para a renomeação do Gerenciador de Relatórios, a habilitação de Meus Relatórios e a configuração de padrões de históricos de relatórios.|  
 |Gerenciar funções|Criar, exibir, modificar e excluir definições de função.<br /><br /> Os membros da função **Administrador do Sistema** podem usar a página Configurações de Site para gerenciar funções.|  
 |Gerenciar agendas compartilhadas|Criar, exibir, modificar e excluir agendas compartilhadas que são usadas para executar ou atualizar relatórios.|  
@@ -202,7 +202,7 @@ ms.locfileid: "48167212"
   
 ### <a name="system-user-tasks"></a>Tarefas Usuário do Sistema  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Execute um relatório sem publicá-lo em um servidor de relatório.|  
 |Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a opção Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título para Gerenciador de Relatórios é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  
@@ -214,7 +214,7 @@ ms.locfileid: "48167212"
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md)   
  [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](role-assignments-modify-or-delete.md)   
- [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](tasks-and-permissions.md)  
   
   

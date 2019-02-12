@@ -1,22 +1,21 @@
 ---
-title: 'Lição 1: Preparar a análise de serviços de banco de dados (Tutorial de mineração de dados básico) | Microsoft Docs'
+title: 'Lição 1: Preparando-se a análise de serviços de banco de dados (Tutorial de mineração de dados básico) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0f7e417f786da7344ad43ebaab826a8d0e28f8e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173426"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036847"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lição 1: Preparando o banco de dados do Analysis Services (Tutorial de mineração de dados básico)
   Você é um novo funcionário da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] que recebeu a tarefa de criar um aplicativo de business intelligence em [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] espera utilizar sua [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] experiência em mineração de dados para descobrir informações interessantes e acionáveis sobre pessoas que compraram Bicicletas. Eles desejam que você preveja quais clientes potenciais têm mais probabilidade de comprar uma bicicleta no futuro.  
@@ -35,10 +34,10 @@ ms.locfileid: "48173426"
  [Criando uma análise dos serviços de projeto &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Criando uma estrutura de mala direta &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lição 2: Criar uma estrutura de mala direta &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições da fonte de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Criar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Criando um projeto do Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  

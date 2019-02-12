@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dd75468674f4013c3587f98ef32d112c8442438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188656"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027097"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados
   Os usuários do SharePoint podem exibir uma lista dos alertas de dados que criaram e informações sobre os alertas. Os usuários também podem excluir seus alertas, abrir definições de alerta para edição no Designer de Alertas de Dados e executar seus alertas. A imagem a seguir mostra os recursos disponíveis para os usuários no Gerenciador de Alertas de Dados.  
@@ -47,7 +47,7 @@ ms.locfileid: "48188656"
   
 -   Clique com o botão direito do mouse no alerta de dados para o qual você deseja editar a definição de alerta e clique em **Editar**.  
   
-     A definição de alerta é aberta no Designer de Alertas de Dados. Para obter mais informações, consulte [editar um alerta de dados no Designer de alertas](edit-a-data-alert-in-alert-designer.md) e [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md).  
+     A definição de alerta é aberta no Designer de Alertas de Dados. Para obter mais informações, consulte [Editar um Alerta de Dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md) e [Designer de Alertas de Dados](../../2014/reporting-services/data-alert-designer.md).  
   
     > [!NOTE]  
     >  Apenas o usuário que criou a definição de alerta de dados pode editá-la.  
@@ -68,7 +68,7 @@ ms.locfileid: "48188656"
      A instância do alerta é criada e a mensagem de alerta de dados é enviada imediatamente, independentemente das opções de agenda especificadas no Designer de Alerta de Dados. Por exemplo, um alerta configurado para ser enviado semanalmente e, depois, somente se a alteração de resultados for enviada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de alertas de dados para administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
+ [Gerenciador de Alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

@@ -2,8 +2,8 @@
 title: sys.pdw_index_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf9eae70cdc1e7b611ecba83fa177b2983dcea2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e331dbea1232febefc8b0b4848dfd51a085ec692
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709354"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035647"
 ---
 # <a name="syspdwindexmappings-transact-sql"></a>sys.pdw_index_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Mapeia a lógica de índices para o nome físico usado em nós de computação, como refletido por uma combinação exclusiva de **object_id** da tabela que contém o índice e o **index_id** de um determinado índice em que tabela.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|A ID de objeto para a tabela lógica na qual existe este índice. Ver [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formam a chave para esta exibição.||  
 |index_id|**nvarchar(32)**|A ID do índice. Ver [sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  

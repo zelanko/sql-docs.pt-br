@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086906"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025827"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Um servidor de relatório configurado para o modo nativo como um servidor de aplicativo que fornece todos os recursos de processamento e gerenciamento exclusivamente através de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48086906"
   
 -   Equilibrar as demandas de processamento de relatórios feitas pelo servidor agendando o processamento do relatório e especificando quais podem ser executados sob demanda e quais serão carregados a partir do cache.  
   
- A permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre essas funções predefinidas, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
+ Permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do sistema** e **Gerenciador de conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre essas funções predefinidas, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
  Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2be57ccf54709f95a371d0d8c4a96e88928e627e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0dbcb90248761961deb5c932af952a53e3dcbbcf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358788"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029487"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>Função StDev (Construtor de Relatórios e SSRS)
   Retorna o desvio padrão de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

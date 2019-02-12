@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 450ecc2a61951e0a6b0fa587002ed99a5fb59c4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041367"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar-se a um servidor de relatório no Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece o Pesquisador de Objetos, que permite a conexão a qualquer servidor da família do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a navegação gráfica por seu conteúdo. Para o Reporting Services, você pode usar o Pesquisador de Objetos para fazer o seguinte:  
@@ -38,7 +38,7 @@ ms.locfileid: "48099036"
   
  Observe que você não pode usar o Pesquisador de Objetos para exibir ou gerenciar o conteúdo do servidor de relatório. O gerenciamento do conteúdo é feito pelo Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por um site do SharePoint se o servidor de relatório estiver sendo executado no modo integrado do SharePoint.  
   
- O Pesquisador de Objetos permite que você abra conexões com diversas instâncias do servidor no mesmo espaço de trabalho desde que os servidores estejam registrados no mesmo grupo de servidores. Antes de você poder se conectar a uma instância do servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o servidor deve ser registrado. Se o servidor de relatório já tiver sido registrado, esta etapa poderá ser ignorada. As instruções para registrar servidores de relatório são fornecidas no final deste tópico.  
+ O Pesquisador de Objetos permite que você abra conexões com diversas instâncias do servidor no mesmo workspace desde que os servidores estejam registrados no mesmo grupo de servidores. Antes de você poder se conectar a uma instância do servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o servidor deve ser registrado. Se o servidor de relatório já tiver sido registrado, esta etapa poderá ser ignorada. As instruções para registrar servidores de relatório são fornecidas no final deste tópico.  
   
 ### <a name="to-connect-to-a-native-mode-report-server"></a>Para conectar-se a um servidor de relatório no modo nativo  
   
@@ -104,12 +104,12 @@ ms.locfileid: "48099036"
 |Conectar-se a|Tarefas|Permissões|  
 |----------------|-----------|-----------------|  
 |Servidor de relatório de modo nativo, conectado como o padrão ou instância nomeada:<br /><br /> \<server name>\<_instance><br /><br /> A conexão com o servidor de relatório é feita pelo provedor WMI do servidor de relatório.|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas.<br /><br /> Criar, modificar ou excluir definições de funções.|Atribuído à função Administrador do Sistema.|  
-|O servidor de relatório em modo nativo conectado como instância padrão ou nomeada por meio do ponto de extremidade ao serviço Web Servidor de Relatórios:<br /><br /> http://\<servername > / reportserver<br /><br /> Especificando uma URL para que o servidor de relatório forneça um caminho alternativo de conexão com o servidor de relatório.|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas.<br /><br /> Criar, modificar ou excluir definições de funções.|Atribuído à função Administrador do Sistema.|  
-|Servidor de relatório no modo integrado do SharePoint, conectado por meio do site do SharePoint:<br /><br /> http://\<webserver > /\<SharePointSite >|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas definidas para o site com o qual você está conectado.<br /><br /> Exibir os níveis de permissão definidos para o site ao qual você está conectado.|Nível de permissão de controle total no site do SharePoint ao qual você está conectado.|  
+|O servidor de relatório em modo nativo conectado como instância padrão ou nomeada por meio do ponto de extremidade ao serviço Web Servidor de Relatórios:<br /><br /> http://\<servername>/reportserver<br /><br /> Especificando uma URL para que o servidor de relatório forneça um caminho alternativo de conexão com o servidor de relatório.|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas.<br /><br /> Criar, modificar ou excluir definições de funções.|Atribuído à função Administrador do Sistema.|  
+|Servidor de relatório no modo integrado do SharePoint, conectado por meio do site do SharePoint:<br /><br /> http://\<webserver>/\<SharePointSite>|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas definidas para o site com o qual você está conectado.<br /><br /> Exibir os níveis de permissão definidos para o site ao qual você está conectado.|Nível de permissão de controle total no site do SharePoint ao qual você está conectado.|  
 |O servidor de relatório de modo integrado do SharePoint conectado pelo nome da instância do servidor de relatório:<br /><br /> \<server name>\<_instance>|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.|Nível de permissão de controle total no site do SharePoint integrado ao servidor de relatório.<br /><br /> Observe que, quando você se conecta ao servidor de relatório ao invés do site do SharePoint, o número de tarefas que pode executar é reduzido significativamente. Isso se deve ao fato de o servidor de relatório poder apenas retornar dados de aplicativo armazenados ou gerenciados no banco de dados do servidor de relatório e não na configuração do SharePoint e bancos de dados de conteúdo.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services no SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

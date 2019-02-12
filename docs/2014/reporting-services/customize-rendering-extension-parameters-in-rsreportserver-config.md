@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83f12c0641768722156322e6e5a655b9e5e5a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a412f39db5b86deca61297a97d49bea6aa89f720
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220926"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035787"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar parâmetros de extensão de renderização em RSReportServer.config
   Você pode especificar parâmetros de extensão de renderização no arquivo de configuração RSReportServer para substituir o comportamento de renderização de relatório padrão para os relatórios executados em um servidor de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Os parâmetros de extensão de renderização podem ser modificados com os seguintes objetivos:  
@@ -41,16 +41,16 @@ ms.locfileid: "48220926"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>Localizando e modificando RSReportServer.config  
  As configurações de formatos de saída de relatório são especificadas como parâmetros de extensão de renderização no arquivo RSReportServer.config. Para especificar parâmetros de extensão de renderização nos arquivos de configuração, você deve saber como definir estruturas XML que definem parâmetros de renderização. Há duas estruturas XML que podem ser modificadas:  
   
--   O `OverrideNames` elemento define o nome de exibição e o idioma da extensão de renderização.  
+-   O elemento `OverrideNames` define o nome para exibição e a linguagem da extensão de renderização.  
   
--   O `DeviceInfo` estrutura XML define as configurações de informações do dispositivo que são usadas por uma extensão de renderização. A maioria dos parâmetros de extensão de renderização é especificada como configurações de informações de dispositivo.  
+-   A estrutura XML `DeviceInfo` define as configurações de informações de dispositivo que são usadas por uma extensão de renderização. A maioria dos parâmetros de extensão de renderização é especificada como configurações de informações de dispositivo.  
   
  Você pode usar um editor de texto para modificar o arquivo. O arquivo RSReportServer.config pode ser localizado na pasta \Reporting Services\Report Server\Bin. Para obter mais informações sobre como modificar arquivos de configuração, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Alterando o nome para exibição  
- O nome para exibição de uma extensão de renderização aparece na lista Exportar da barra de ferramentas de relatório. Exemplos de nomes para exibição padrão incluem arquivos da Web, TIFF e Acrobat (PDF). Você pode substituir o nome de exibição padrão com um valor personalizado especificando o `OverrideNames` elemento nos arquivos de configuração. Além disso, se duas instâncias de uma única extensão de renderização forem definidas, use o elemento `OverrideNames` para diferenciar cada instância na lista Exportar.  
+ O nome para exibição de uma extensão de renderização aparece na lista Exportar da barra de ferramentas de relatório. Exemplos de nomes para exibição padrão incluem arquivos da Web, TIFF e Acrobat (PDF). Você pode substituir o nome para exibição padrão por um valor personalizado especificando o elemento `OverrideNames` nos arquivos de configuração. Além disso, se duas instâncias de uma única extensão de renderização forem definidas, use o elemento `OverrideNames` para diferenciar cada instância na lista Exportar.  
   
- Como os nomes de exibição são localizados, você deve definir o `Language` se você estiver substituindo o nome de exibição padrão com um valor personalizado do atributo. Caso contrário, qualquer nome especificado será ignorado. O valor de idioma definido deve ser válido para o computador do servidor de relatórios. Por exemplo, se o servidor de relatórios for executado em um sistema operacional francês, especifique "fr-FR" como o valor do atributo.  
+ Como os nomes para exibição são localizados, defina o atributo `Language` se estiver substituindo o nome padrão por um valor personalizado. Caso contrário, qualquer nome especificado será ignorado. O valor de idioma definido deve ser válido para o computador do servidor de relatórios. Por exemplo, se o servidor de relatórios for executado em um sistema operacional francês, especifique "fr-FR" como o valor do atributo.  
   
  O exemplo a seguir ilustra como fornecer um nome personalizado em um servidor de relatórios em inglês:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48220926"
 ```  
   
 ## <a name="changing-device-information-settings"></a>Alterando as configurações de informações de dispositivo  
- Para modificar as configurações padrão de informações de dispositivo que são usadas por uma extensão de renderização que já está implantada no servidor de relatórios, digite a estrutura XML `DeviceInfo` nos arquivos de configuração. Todas as extensões de renderização oferecem suporte para configurações de informações de dispositivo que são exclusivas na extensão em questão. Para exibir a lista completa de configurações de informações do dispositivo, consulte [passando configurações de informações de dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Para modificar as configurações padrão de informações de dispositivo que são usadas por uma extensão de renderização que já está implantada no servidor de relatórios, digite a estrutura XML `DeviceInfo` nos arquivos de configuração. Todas as extensões de renderização oferecem suporte para configurações de informações de dispositivo que são exclusivas na extensão em questão. Para exibir a lista completa de informações do dispositivo, consulte [Como passar configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  O exemplo a seguir ilustra a estrutura XML e a sintaxe que modificam as configurações padrão da extensão de renderização Imagem:  
   
@@ -90,13 +90,13 @@ ms.locfileid: "48220926"
   
 -   Especifique um nome exclusivo para a extensão.  
   
-     Cada instância deve ter um valor exclusivo para o `Name` atributo. O exemplo a seguir usa os nomes "IMAGE (EMF Landscape)" e "IMAGE (EMF Portrait)" para diferenciar as duas instâncias.  
+     Cada instância deve ter um valor exclusivo para o atributo `Name`. O exemplo a seguir usa os nomes "IMAGE (EMF Landscape)" e "IMAGE (EMF Portrait)" para diferenciar as duas instâncias.  
   
      Tenha cuidado ao alterar o nome de uma extensão de renderização que já está implantada. Os desenvolvedores que especificam extensões de renderização programaticamente usam o nome da extensão para identificar a instância que deve ser usada em uma operação de renderização específica. Se estiver executando aplicativos personalizados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no servidor de relatórios, verifique se o desenvolvedor sabe se está modificando o nome de uma extensão existente ou adicionando uma nova extensão.  
   
 -   Especifique um nome para exibição exclusivo de forma que usuários possam entender as diferenças de cada formato de saída.  
   
-     Se você estiver configurando várias versões da mesma extensão, você pode dar a cada versão um nome exclusivo fornecendo um valor para `OverrideNames`. Caso contrário, todas as versões da extensão parecerão ter o mesmo nome na lista opções Exportar na barra de ferramentas de relatório.  
+     Se estiver configurando várias versões da mesma extensão, dê a cada versão um nome exclusivo fornecendo um valor para `OverrideNames`. Caso contrário, todas as versões da extensão parecerão ter o mesmo nome na lista opções Exportar na barra de ferramentas de relatório.  
   
  O exemplo a seguir ilustra como usar a extensão de renderização Imagem padrão (que produz a saída TIFF) para gerar EMF no modo Retrato, junto com uma segunda instância que gera relatórios em EMF no modo Paisagem. Observe que cada nome de extensão é exclusivo. Ao testar esse exemplo, escolha relatórios que não contenham recursos interativos como opções de mostrar/ocultar, matrizes ou links de detalhamentos (os recursos interativos não funcionam na extensão de renderização Imagem):  
   
@@ -132,12 +132,12 @@ ms.locfileid: "48220926"
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   
- [Configurações de informações de dispositivo CSV](csv-device-information-settings.md)   
+ [Configurações das informações do dispositivo CSV](csv-device-information-settings.md)   
  [Configurações de informações de dispositivo Excel](excel-device-information-settings.md)   
  [Configurações de informações de dispositivo HTML](html-device-information-settings.md)   
  [Configurações de informações de dispositivo de imagem](image-device-information-settings.md)   
  [Configurações de informações de dispositivo MHTML](mhtml-device-information-settings.md)   
- [Configurações de informações de dispositivo PDF](pdf-device-information-settings.md)   
+ [Configurações de informações do dispositivo PDF](pdf-device-information-settings.md)   
  [Configurações de informações do dispositivo XML](xml-device-information-settings.md)  
   
   

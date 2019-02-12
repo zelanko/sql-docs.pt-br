@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6af3783ca583dfa328b32ee6cfb4eaf8cd73b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100616"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019409"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Localizar texto, números ou datas em um relatório (Reporting Services no modo integrado do SharePoint)
   Você pode procurar conteúdo em um relatório digitando a palavra ou expressão que deseja localizar (o tamanho máximo de um termo de pesquisa é de 256 caracteres). A pesquisa é uma técnica de navegação na Internet que localiza um valor correspondente no relatório e destaca essa parte do relatório que contém o valor.  
@@ -44,6 +44,6 @@ ms.locfileid: "48100616"
 4.  Para procurar ocorrências subsequentes do mesmo valor, clique em **Próximo**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar a Web Part do Visualizador de relatórios a uma página da Web &#40;modo integrado do Reporting Services no SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Adicionar a Web Part do Visualizador de Relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

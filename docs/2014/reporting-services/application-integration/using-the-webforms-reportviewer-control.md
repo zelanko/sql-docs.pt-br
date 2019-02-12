@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 10901f11e2466e2fff41f1898ca57d08321653b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2431e7a654b885c762f9801bafc55b842278234f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137116"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018048"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usando o controle WebForms ReportViewer
   Para exibir relatórios implantados para um servidor de relatório ou relatórios que existem no sistema de arquivos local, você poderá usar o controle ReportViewer do WebForms para renderizá-los em um aplicativo Web.  

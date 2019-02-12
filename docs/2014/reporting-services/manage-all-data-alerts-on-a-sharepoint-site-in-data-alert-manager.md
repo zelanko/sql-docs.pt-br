@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cdd9d9bc6ba4e6a71c0fa3a25424230e88b0b3c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f393fb4a17e129cfbf9af42c0173fe2c7bb7f176
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109616"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015728"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados
   Os administradores de alerta do SharePoint podem exibir uma lista dos alertas de dados criados por qualquer usuário do site e informações sobre os alertas. Os administradores de alerta também podem excluir alertas. A imagem a seguir mostra os recursos disponíveis para os administradores de alerta no Gerenciador de Alerta de Dados.  
@@ -50,7 +50,7 @@ ms.locfileid: "48109616"
     >  Depois que você excluir o alerta, nenhuma mensagem de alerta adicional será enviada. No entanto, se você consultar o banco de dados de alertas, talvez descubra que a definição de alerta ainda existe. O serviço de alerta executa a limpeza de acordo com uma agenda e a definição de alerta será excluída permanentemente na próxima limpeza. O intervalo de limpeza padrão é de 20 minutos. Esse e outros intervalos de limpeza são configuráveis. Para obter mais informações, consulte [Reporting Services Data Alerts](../ssms/agent/alerts.md)[Alertas de dados do Reporting Services].  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de alertas de dados para administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
+ [Gerenciador de Alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

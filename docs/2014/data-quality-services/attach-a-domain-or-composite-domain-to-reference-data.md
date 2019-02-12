@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f3990965c78bec153ef87011f152ca0f13881055
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 254e1209a8198a6021222edc0b9b8abc72210884
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519198"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024257"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio de composição a dados de referência
   Este tópico descreve como anexar domínios/domínios compostos em uma base de dados de conhecimento de qualidade de dados para um serviço de dados de referência, no Windows Azure Marketplace, a fim de compilar o conhecimento com base nos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
@@ -81,7 +81,7 @@ ms.locfileid: "52519198"
   
  Você pode usar essa base de dados de conhecimento agora na atividade de limpeza de um projeto de qualidade de dados para padronizar e limpar os endereços americanos na fonte de dados com base no conhecimento fornecido por Melissa Data através do Windows Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Acompanhar: Após mapear um domínio para os dados de referência  
+##  <a name="FollowUp"></a> Acompanhamento: Após mapear um domínio para os dados de referência  
  Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Consulte também  

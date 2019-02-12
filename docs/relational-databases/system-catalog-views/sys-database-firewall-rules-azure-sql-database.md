@@ -2,10 +2,8 @@
 title: sys. database_firewall_rules (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.prod: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
@@ -22,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e224bec27ba3151fb531f5ad0ce9676a4e3a8d2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59c59150136910e2d0818fe93ff4811ed3262d8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789504"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012317"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,12 +34,12 @@ ms.locfileid: "47789504"
   
  A exibição `sys.database_firewall_rules` contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |id|**INTEGER**|O identificador da configuração de firewall de nível de banco de dados.|  
-|nome|**NVARCHAR (128)**|O nome escolhido para descrever e distinguir a configuração de firewall de nível de banco de dados.|  
-|start_ip_address|**VARCHAR (50)**|O endereço IP mais baixo no intervalo da configuração do firewall em nível de banco de dados. Os endereços IP iguais a ou maiores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`.|  
-|end_ip_address|**VARCHAR (50)**|O endereço IP mais alto no intervalo da configuração do firewall. Os endereços IP iguais a ou menores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: Tentativas de conexão do Azure do Windows são permitidas quando esse campo e o **start_ip_address** campo equals `0.0.0.0`.|  
+|nome|**NVARCHAR(128)**|O nome escolhido para descrever e distinguir a configuração de firewall de nível de banco de dados.|  
+|start_ip_address|**VARCHAR(50)**|O endereço IP mais baixo no intervalo da configuração do firewall em nível de banco de dados. Os endereços IP iguais a ou maiores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`.|  
+|end_ip_address|**VARCHAR(50)**|O endereço IP mais alto no intervalo da configuração do firewall. Os endereços IP iguais a ou menores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: Tentativas de conexão do Windows Azure são permitidas quando esse campo e o **start_ip_address** campo equals `0.0.0.0`.|  
 |create_date|**DATETIME**|A data e a hora UTC em que a configuração de firewall de nível de banco de dados foi criada.|  
 |modify_date|**DATETIME**|A data e a hora UTC em que a configuração de firewall de nível de banco de dados foi modificada por último.|  
   

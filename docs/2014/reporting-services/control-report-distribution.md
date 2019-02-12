@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0fefdbe7100f9d8c22b6ed0026748b095ca63253
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018038"
 ---
 # <a name="control-report-distribution"></a>Controlar a distribuição de relatórios
   Você pode configurar um servidor de relatório para reduzir os riscos de segurança associados à distribuição de emails e de compartilhamentos de arquivos.  
@@ -49,7 +49,7 @@ ms.locfileid: "48108136"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

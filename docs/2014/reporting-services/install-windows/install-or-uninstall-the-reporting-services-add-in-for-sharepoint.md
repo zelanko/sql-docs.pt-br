@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7ae99e33bb51b38afd92ad815662947f645bf8dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: c7369ac2da7dd8b7f93ec02ef240d78e76967d92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392089"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032997"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Instalar ou desinstalar o suplemento Reporting Services para SharePoint (SharePoint 2010 e SharePoint 2013)
   Execute o pacote de instalação do Suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint (rsSharePoint.msi) em servidores do SharePoint para habilitar recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma implantação do SharePoint. Os recursos incluem o Power View, uma Web Part do Visualizador de Relatórios, um ponto de extremidade de proxy de URL, tipos de conteúdo e páginas de aplicativos para que você possa criar, exibir e gerenciar relatórios, modelos de relatórios, fontes de dados e outro conteúdo do servidor de relatório em um site do SharePoint. O Suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint é um componente necessário para um servidor de relatório executado no modo do SharePoint. O suplemento pode ser instalado do assistente de configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou baixando o rsSharePoint.msi no pacote de recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obter uma lista das versões do suplemento e páginas de download, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "52392089"
   
 -   **O Assistente de instalação:** ![Observação](../../../2014/reporting-services/media/rs-fyinote.png "Observação")New with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o suplemento pode ser instalado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação. Escolha **suplemento Reporting Services para produtos do SharePoint** na página **Seleção de recursos** do assistente.  
   
--   **rssharepoint. msi:** O suplemento pode ser instalado diretamente da mídia de instalação ou baixado e instalado. O rsSharepoint.msi dá suporte à interface gráfica do usuário e à instalação pela linha de comando. Para executar o .msi com privilégios de administrador, abra primeiro um prompt de comando com permissões elevadas e execute o rsSharepoint.msi na linha de comando. Para obter mais informações sobre como baixar o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **rsSharepoint.msi:** O suplemento pode ser instalado diretamente da mídia de instalação ou baixado e instalado. O rsSharepoint.msi dá suporte à interface gráfica do usuário e à instalação pela linha de comando. Para executar o .msi com privilégios de administrador, abra primeiro um prompt de comando com permissões elevadas e execute o rsSharepoint.msi na linha de comando. Para obter mais informações sobre como baixar o suplemento, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
     > [!NOTE]  
     >  Se você usar a opção **/q** para uma instalação de linha de comando silenciosa, o contrato de licença de usuário final não será exibido. Independentemente do método de instalação, o uso deste software é controlado por um contrato de licença e você é responsável por respeitar o contrato de licença.  

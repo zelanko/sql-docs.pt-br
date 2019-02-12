@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217496"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026037"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Função Lookup (Construtor de Relatórios e SSRS)
   Retorna o primeiro valor correspondente para o nome especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -45,16 +45,16 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  Uma constante que especifica o nome do conjunto de dados no relatório. Por exemplo, "Produtos".  
   
 ## <a name="return"></a>Retorno  
- Retorna um `Variant`, ou `Nothing` se não houver nenhuma correspondência.  
+ Retorna `Variant` ou `Nothing` se não houver correspondência.  
   
 ## <a name="remarks"></a>Comentários  
- Use `Lookup` para recuperar o valor do conjunto de dados especificado para um par nome/valor onde há uma relação de 1 para 1. Por exemplo, para um campo de ID em uma tabela, você pode usar `Lookup` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
+ Use `Lookup` para recuperar o valor do conjunto de dados especificado para um par de nome/valor onde há uma relação de 1 para 1. Por exemplo, para um campo de ID em uma tabela, você pode usar `Lookup` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
  `Lookup` faz o seguinte:  
   
 -   Avalia a expressão de origem no escopo atual.  
   
--   Avalia a expressão de destino para cada linha do conjunto de dados especificado depois que foram aplicados filtros, com base no agrupamento do conjunto de dados especificado.  
+-   Avalia a expressão de destino para cada linha do conjunto de dados especificado depois que foram aplicados filtros, com base na ordenação do conjunto de dados especificado.  
   
 -   Na primeira correspondência da expressão de origem e destino, avalia a expressão resultante para aquela linha no conjunto de dados.  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

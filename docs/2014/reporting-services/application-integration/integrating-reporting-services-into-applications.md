@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 993e6abe1df84f712f107f994b5a824e04d89467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33b628894376a909de5ee39b9de5a6e979a679f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153566"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036067"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrando o Reporting Services em aplicativos
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é uma plataforma de relatório aberta e extensível criada para fornecer aos desenvolvedores um conjunto abrangente de APIs para soluções de desenvolvimento.  
@@ -50,7 +50,7 @@ ms.locfileid: "48153566"
  Descreve como integrar navegação de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos comerciais existentes usando o acesso à URL.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Escolhendo entre o acesso à URL e SOAP](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [Referência técnica &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Serviço Web do Servidor de Relatório](../report-server-web-service/report-server-web-service.md)  

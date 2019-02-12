@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ebe7f44d4e2ddc9d6da69daae7787c1b40d5b6e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367518"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029467"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   A partir do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , você pode transferir de forma programática a propriedade de uma assinatura do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de um usuário para outro. Este tópico fornece vários scripts do Windows PowerShell que você pode usar para mudar ou simplesmente listar a propriedade das assinaturas. Cada amostra inclui a sintaxe de amostra do modo Nativo e do modo SharePoint. Após mudar o proprietário da assinatura, está será executada no contexto de segurança do novo proprietário, e o campo User!UserID no relatório exibirá o valor do novo proprietário. Para obter mais informações sobre o modelo de objeto que as amostras do PowerShell chamam, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  

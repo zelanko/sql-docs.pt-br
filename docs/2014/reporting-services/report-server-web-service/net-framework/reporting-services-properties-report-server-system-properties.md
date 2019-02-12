@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c0cd5fd82a77d85b59de9fb4ebedebfd560c759f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be59ff45f9bf2457c81fc67568b1d578430ba893
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211336"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024127"
 ---
 # <a name="report-server-system-properties"></a>Propriedades do sistema do servidor de relatório
   Os seguintes nomes da propriedade do sistema estão reservados. Você não pode criar propriedades definidas pelo usuário com o mesmo nome. Você poderá ler ou modificar muitas dessas propriedades usando os métodos de serviço Web.  
   
 ## <a name="properties"></a>Propriedades  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |SiteName|O nome do site do servidor de relatório exibido na interface do usuário. O valor padrão é `Microsoft Report Server`. Essa propriedade pode ser uma cadeia de caracteres vazia. O tamanho máximo é de 8.000 caracteres.|  
-|SystemSnapshotLimit|O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1`, não há nenhum limite de instantâneo.|  
-|SystemReportTimeout|O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.|  
+|SystemSnapshotLimit|O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, não haverá limite de instantâneo.|  
+|SystemReportTimeout|O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.|  
 |UseSessionCookies|Indica se o servidor de relatório dever usar cookies de sessão ao se comunicar com navegadores clientes. O valor padrão é `true`.|  
 |SessionTimeout|A quantidade de tempo, em segundos, que uma sessão permanece ativa. O valor padrão é `600`.|  
-|EnableMyReports|Indica se o recurso Meus Relatórios está habilitado. Um valor de `true` indica que o recurso está habilitado.|  
+|EnableMyReports|Indica se o recurso Meus Relatórios está habilitado. Um valor `true` indica que o recurso está habilitado.|  
 |MyReportsRole|O nome da função usado ao criar políticas de segurança nas pastas de usuário Meus Relatórios. O valor padrão é `My Reports Role`.|  
 |EnableExecutionLogging|Indica se o log de execução de relatório está habilitado. O valor padrão é `true`.|  
-|ExecutionLogDaysKept|O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem `0` por meio `2`,`147`,`483`,`647`. Se o valor for `0` as entradas não serão excluídas da tabela de log de execução. O valor padrão é `60`.|  
+|ExecutionLogDaysKept|O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem `0` até `2`,`147`,`483`,`647`. Se o valor for `0` as entradas não serão excluídas da tabela de log de execução. O valor padrão é `60`.|  
 |SnapshotCompression|Define como os instantâneos são compactados. O valor padrão é `SQL`. Os valores válidos são os seguintes:<br /><br /> `SQL` = Instantâneos são compactados quando armazenados no banco de dados do servidor de relatório. Esse é o comportamento atual.<br /><br /> **None** = Instantâneos não são compactados.<br /><br /> `All` = Instantâneos são compactados para todas as opções de armazenamento que incluem o banco de dados do servidor de relatório ou o sistema de arquivos.|  
 |EnableClientPrinting|Determina se o controle ActiveX de RSClientPrint está disponível para download no servidor de relatório. Os valores válidos são `true` e `false`. O valor padrão é `true`. Para obter mais informações sobre configurações adicionais necessárias para esse controle, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
 |EnableIntegratedSecurity|Determina se a segurança integrada tem suporte para conexões de fonte de dados de relatório. O padrão é `True`. Os valores válidos são os seguintes:<br /><br /> `True` = a segurança integrada está habilitada.<br /><br /> `False` = a segurança integrada não está habilitada. As fontes de dados de relatório que são configuradas para usar segurança integrada não serão executadas.|  

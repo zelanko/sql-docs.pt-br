@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084536"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013239"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
   A extensão de renderização HTML renderiza um relatório no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.  
   
  A extensão de renderização HTML é a extensão de renderização padrão para relatórios que são exibidos em um navegador, incluindo quando executados no Gerenciador de Relatórios.  
   
- A extensão de renderização HTML é a extensão de renderização padrão para relatórios que são exibidos em um navegador, incluindo quando executados no Gerenciador de Relatórios. A extensão de renderização HTML pode renderizar HTML como um fragmento ou como um documento HTML completo. Se o HTML é um fragmento, o `HEAD`, `HTML`, e `BODY` marcas do documento HTML serão removidas. Apenas o conteúdo da marca `BODY` é processado. Isso é útil para inserir o HTML no HTML produzido por outro aplicativo.  
+ A extensão de renderização HTML é a extensão de renderização padrão para relatórios que são exibidos em um navegador, incluindo quando executados no Gerenciador de Relatórios. A extensão de renderização HTML pode renderizar HTML como um fragmento ou como um documento HTML completo. Se o MHTML for um fragmento, as marcas `HEAD`, `HTML` e `BODY` do documento HTML serão removidas. Apenas o conteúdo da marca `BODY` é processado. Isso é útil para inserir o HTML no HTML produzido por outro aplicativo.  
   
  Em alguns cenários, parâmetros de relatório podem ser usados para iniciar ataques de injeção de script durante a renderização de relatórios em HTML. Para obter mais informações sobre como proteger relatórios, consulte [Protegendo Relatórios e Recursos](../security/secure-reports-and-resources.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48084536"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

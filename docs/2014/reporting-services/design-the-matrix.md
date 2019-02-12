@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 43d8c841799f740d602d7c2fc48ab229ec30d0fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0319a8eefd4b77cf60fb445868dbb6cc67a72ac8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030117"
 ---
 # <a name="design-the-matrix"></a>Projetar a matriz
   Use esta página do Assistente de Relatório para selecionar campos para o relatório.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bba223000110229c6df9098c263afaea30d711a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117336"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019397"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Inserir ou excluir uma coluna (Construtor de Relatórios e SSRS)
   É possível adicionar ou excluir colunas em uma região de dados tablix. Essa região pode ser uma tabela, uma matriz ou uma lista. Os procedimentos a seguir não se aplicam às regiões de dados de gráficos e medidores.  
@@ -59,7 +59,7 @@ ms.locfileid: "48117336"
 -   Clique com o botão direito do mouse em uma célula do grupo de colunas, na área do grupo de colunas de uma região de dados tablix na qual você deseja excluir uma coluna, e clique em **Excluir Colunas**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre grupos &#40;relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
+ [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

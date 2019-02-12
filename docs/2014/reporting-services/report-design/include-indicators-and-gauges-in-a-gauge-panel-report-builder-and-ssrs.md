@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d4f5fd487ddea09ea3fc4c8c94fba32c4e713dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 848eb1bc39b45d76e1e1ffd97fbd05d557a740a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166486"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021697"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Incluir indicadores e medidores em um painel de medidores (Construtor de Relatórios e SSRS)
   O painel de medidores é o contêiner de nível superior que mantém um ou mais medidores e indicadores. Os indicadores podem ser inseridos em medidores ou colocados ao lado deles no painel de medidores.  

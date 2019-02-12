@@ -2,8 +2,8 @@
 title: sys.dm_pdw_lock_waits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e60f30972eb98e0b02ce38a142d018c37a56768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a376ac534182f5ebdae8a3af5e32f9c4a536f8aa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630544"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014117"
 ---
 # <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre as solicitações que estão aguardando bloqueios.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posição da solicitação na lista de espera.|ordinal com base em 0. Ele não é exclusivo em todas as entradas de espera.|  
 |session_id|**nvarchar(32)**|ID da sessão na qual ocorreu o estado de espera.|Consulte session_id [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  

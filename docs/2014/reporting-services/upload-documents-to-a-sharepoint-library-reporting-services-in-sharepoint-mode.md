@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cfb22d29120f7ee27e378329045c79f57252d61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017147"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Carregar documentos em uma biblioteca do SharePoint (Reporting Services no modo do SharePoint)
   Você pode carregar definições de relatório e modelos de relatório em uma biblioteca do SharePoint. Ao carregar um item de servidor de relatório, selecione uma biblioteca ou uma pasta em uma biblioteca. Não é possível carregar um item de servidor de relatório em uma lista ou página.  
@@ -51,6 +51,6 @@ ms.locfileid: "48194286"
 ## <a name="see-also"></a>Consulte também  
  [Publicar um relatório em uma biblioteca do SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Conceder permissões para itens do servidor de relatório em um site do SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

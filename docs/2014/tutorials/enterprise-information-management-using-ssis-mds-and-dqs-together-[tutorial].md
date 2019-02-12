@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b66cc1cb72e92670b345f0160727d306326208b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368558"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035397"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gerenciamento de informações da empresa usando o SSIS, o MDS e o DQS em conjunto [Tutorial]
   O gerenciamento de informações em uma empresa normalmente envolve a integração dos dados na empresa e fora dela, a limpeza dos dados, a correspondência dos dados para remover qualquer duplicata, a padronização dos dados, o enriquecimento dos dados, a adequação dos dados com os requisitos legais e de conformidade e o armazenamento do dados em um local centralizado com todas as configurações de segurança necessárias.  

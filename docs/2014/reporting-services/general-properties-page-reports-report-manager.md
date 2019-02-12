@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206156"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030267"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página Propriedades Gerais, Relatórios (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os relatórios renomeiem, excluam, movam ou substituam a definição do relatório. Você também pode usar essa página para criar um relatório vinculado. Detalhes sobre quem criou ou modificou o relatório e quando as alterações ocorreram são indicados na parte superior da página.  
@@ -34,7 +34,7 @@ ms.locfileid: "48206156"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique um nome para o relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = +, $ * \< >  
+ Especifique um nome para o relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = + , $ * \< >  
   
  " ou / ao especificar um nome.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48206156"
   
  A cópia que você abre é idêntica à definição do relatório original inicialmente publicado no servidor de relatórios. Quaisquer propriedades definidas no relatório após sua publicação (como parâmetros e fonte de dados) não se refletem no arquivo que você abre.  
   
- Você pode modificar a definição do relatório e salvá-lo em um novo arquivo em uma pasta compartilhada e carregar a definição do relatório para o servidor de relatório como um novo item. As modificações feitas à definição de relatório enquanto ele está aberto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou outro aplicativo) não são salvas diretamente no servidor de relatório. Você deve carregar o arquivo para publicar o relatório modificado no servidor de relatório.  
+ Você pode modificar a definição do relatório e salvá-lo em um novo arquivo em uma pasta compartilhada e carregar a definição do relatório para o servidor de relatório como um novo item. Modificações feitas na definição do relatório enquanto ele está aberto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou outro aplicativo) não são salvas diretamente no servidor de relatório. Você deve carregar o arquivo para publicar o relatório modificado no servidor de relatório.  
   
  **Substituir**  
  Clique para substituir a definição do relatório usada no relatório atual por uma diferente de um arquivo .rdl localizado no sistema de arquivos. Se você atualizar uma definição do relatório, deve reajustar as configurações de fonte de dados quando a atualização for concluída.  
@@ -70,7 +70,7 @@ ms.locfileid: "48206156"
  Clique para selecionar uma definição de relatório diferente para o relatório vinculado. Essa opção será exibida se o relatório for um relatório vinculado. Se o relatório for vinculado, você poderá definir essa propriedade para substituir a definição do relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

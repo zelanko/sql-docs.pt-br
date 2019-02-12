@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 76975f2eba0423c6fd36a764663b9df8d6ae921c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe263ce5008c98fa620aa54baad10490529aed0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082542"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018078"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Usando acesso à URL em um aplicativo do Windows
   Embora o acesso à URL a um servidor de relatório seja otimizado para um ambiente da Web, você também pode usá-lo para inserir relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. No entanto, o acesso à URL que envolve o Windows Forms ainda exige que você use tecnologia de navegador da Web. Você pode usar os seguintes cenários de integração com o acesso à URL e o Windows Forms:  

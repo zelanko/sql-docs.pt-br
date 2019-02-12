@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c9c5c491fe14027bdc85a5771e88125944676070
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a0b2a24a0db089262512094b5cb33c2eda695094
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377606"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042790"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
   Se você estiver configurando uma expansão do servidor de relatório a ser executada em um cluster NLB (Balanceamento de Carga de Rede), deverá fazer o seguinte:  

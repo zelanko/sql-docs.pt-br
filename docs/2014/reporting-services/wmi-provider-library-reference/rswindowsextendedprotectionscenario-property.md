@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 122ecf44095611d25065401972b8ccfefdae5fb8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 4e614c2f6cadf6633a5129a61e22cead353a5153
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394712"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013217"
 ---
 # <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserverconfigurationsetting"></a>Propriedade RSWindowsExtendedProtectionScenario (WMI MSReportServer_ConfigurationSetting)
   Retorna um valor de cadeia de caracteres que indica o cenário de proteção estendida que o servidor de relatório está configurado para permitir.  

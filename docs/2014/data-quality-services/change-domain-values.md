@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12d6db8e8f9add797d640f043de8470fa7a5ed15
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392509"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017227"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
   Este tópico descreve como alterar e aumentar os metadados em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Depois que você gerar conhecimento através de descoberta de conhecimento, importar conhecimento para a base de dados de conhecimento ou domínios, ou utilizar outra base de dados de conhecimento como base para a base de dados de conhecimento, poderá alterar os valores de dados interativamente. A geração de base de dados de conhecimento não só aproveita processos assistidos por computador, mas lhe fornece os meios para usar seu próprio conhecimento para verificar valores de dados e alterá-los da seguinte forma:  
@@ -100,7 +100,7 @@ ms.locfileid: "52392509"
   
 12. Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de alterar valores de domínio  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de alterar valores de domínio  
  Após alterar valores de domínio, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Meaning"></a> O significado dos valores corretos, com erro e inválidos  

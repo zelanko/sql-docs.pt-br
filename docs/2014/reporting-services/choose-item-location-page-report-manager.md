@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4140fe03cb091a119942c563afe7f41ae69c5103
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121488"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038527"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Página Escolher local do item (Gerenciador de Relatórios)
   Use a página Escolher local do Item para selecionar uma pasta para um novo relatório ou um novo modelo vinculado. Se você estiver criando um relatório ou um modelo vinculado para um grupo específico de usuários, coloque o item em uma pasta que contenha outros relatórios e modelos usados por eles. Você deve escolher uma pasta que já exista e para a qual você tenha permissão para adicionar conteúdo.  

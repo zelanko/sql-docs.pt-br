@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 39fa21f9bb7af15885abdf1d8c78d2651e2fbdab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079156"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017137"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamentos de renderização (Construtor de Relatórios e SSRS)
   Dependendo do renderizador selecionado, algumas regras são aplicadas ao corpo do relatório e ao seu conteúdo quando um relatório é renderizado. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  
@@ -129,8 +129,8 @@ ms.locfileid: "48079156"
 -   As quebras de página lógicas definidas em itens em células de tabela ou matriz não são mantidas. Isso não se aplica a itens em listas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Layout de página e renderização &#40;relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

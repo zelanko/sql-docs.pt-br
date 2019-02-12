@@ -2,10 +2,8 @@
 title: SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,12 +12,12 @@ aauthor: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c3e7a329ac77d3d630f380a836bd05f5bea75aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fb5a56491dd45fafd05418fe5ee814ae0f686fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821664"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022577"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

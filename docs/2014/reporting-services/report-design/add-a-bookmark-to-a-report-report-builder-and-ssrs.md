@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 78ebab378601e63f0b50c18ed0693efb97a59254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33252d10da04299c4b4f4e6177745567335a5256
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024813"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Adicionar um indicador a um relatório (Construtor de Relatórios e SSRS)
   Adicione indicadores e links de indicadores a um relatório quando quiser fornecer um sumário personalizado ou links de navegação internos personalizados no relatório. Geralmente, os indicadores são adicionados aos relatórios para conduzir os usuários aos locais para os quais deseja direcioná-los, como tabelas, gráficos ou os valores de grupo exclusivos exibidos em uma tabela ou matriz. Você pode criar suas próprias cadeias de caracteres para usar como indicadores, ou, em grupos, pode definir o indicador para uma expressão de grupo.  
@@ -58,6 +58,6 @@ ms.locfileid: "48154136"
 ## <a name="see-also"></a>Consulte também  
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

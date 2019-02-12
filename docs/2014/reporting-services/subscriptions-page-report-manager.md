@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109914"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031537"
 ---
 # <a name="subscriptions-page-report-manager"></a>Página Assinaturas (Gerenciador de Relatórios)
   Use a página Assinaturas para listar todas as assinaturas para o relatório atual ou fonte de dados compartilhada. Se você tiver permissão adequada (como a contida na tarefa "Gerenciar todas as assinaturas"), você poderá exibir as assinaturas de todos os usuários. Caso contrário, essa página só mostrará as assinaturas que você possui.  
@@ -80,7 +80,7 @@ ms.locfileid: "48109914"
  Uma assinatura não poderá ser processada se tiver sido desativada. Para atualizar a assinatura e torná-la operacional, abra e depois salve a assinatura.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4114dc58ec310c990566d76dc090766f2a353622
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21bf1d94f179f9c48fb3b00f06d98cec105c9f27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209046"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017207"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Adicionar um retângulo ou um contêiner (Construtor de Relatórios e SSRS)
   Adicione um retângulo a seu relatório quando quiser que um elemento gráfico separe áreas do relatório, enfatize áreas de um relatório ou forneça um plano de fundo para um ou mais itens de relatório. Os retângulos também são usados como contêineres para ajudar a controlar a maneira como as regiões de dados são renderizadas em um relatório. Você pode personalizar a aparência de um retângulo editando suas propriedades, como plano de fundo e cores da borda. Para obter mais informações sobre como usar um retângulo como um contêiner, consulte [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) e [Exibir os mesmos dados em uma matriz e um gráfico &#40;Construtor de Relatórios&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "48209046"
     >  Se você definir o estilo de linha como **duplas** e a largura da linha é 1 1/2 pt ou mais estreita, a linha talvez não pareça dupla quando você executa o relatório no construtor de relatórios, Designer de relatórios ou Gerenciador de relatórios. Ela parecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.  
   
 ## <a name="see-also"></a>Consulte também  
- [Retângulos e linhas &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

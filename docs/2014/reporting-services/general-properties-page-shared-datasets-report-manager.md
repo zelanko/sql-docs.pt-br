@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032747"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página Propriedades Gerais, conjuntos de dados compartilhados (Gerenciador de Relatórios)
   Use a página Conjunto de dados Compartilhado para exibir e gerenciar propriedades para um item de conjunto de dados compartilhado.  
@@ -65,8 +65,8 @@ ms.locfileid: "48202726"
  Substitua a definição do conjunto de dados compartilhado por outra de um arquivo .rsd localizado no sistema de arquivos.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Opções de atualização de cache &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Página cache, conjuntos de dados de compartilhados &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   

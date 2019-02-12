@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03bade736ae1a52942d42a7b1b675077a3ba6e7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b0415d5344999b61b026ef69879b607220a72031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014917"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Introduzindo a manipulação de exceção no Reporting Services
   Se o seu aplicativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enviar uma solicitação ao serviço Web Servidor de Relatórios que o serviço não for capaz de processar, ele retornará uma exceção SOAP ao cliente. A manipulação de exceções lançada pelo serviço Web Servidor de Relatórios é uma parte importante dos aplicativos desenvolvidos por você, já que é possível retornar informações úteis para os usuários quando erros ocorrerem.  
@@ -32,7 +32,7 @@ ms.locfileid: "48219996"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Tratamento de exceções no Reporting Services](handling-exceptions-in-reporting-services.md)|Oferece uma visão geral sobre exceções no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e sobre a função de SOAP no retorno de erros de um serviço Web.|  
 |[Práticas recomendadas para tratamento de exceções do Reporting Services](best-practices/best-practices-for-reporting-services-exception-handling.md)|Oferece recomendações sobre como manipular exceções no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  

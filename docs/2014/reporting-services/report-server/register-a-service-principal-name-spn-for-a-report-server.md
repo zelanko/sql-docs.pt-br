@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a3b5e15b229f36f24da2aa9b49c6316cf379939f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ea63ef515b1caa524ebc72a87996d1d1d610d63a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350511"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023447"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar um SPN (Nome da Entidade de Serviço) para um servidor de relatório
   Se estiver implantando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma rede que use o protocolo Kerberos para autenticação mútua, você deverá criar um SPN (Nome da Entidade de Serviço) para o serviço Servidor de Relatório se configurá-lo para execução como uma conta de usuário do domínio.  

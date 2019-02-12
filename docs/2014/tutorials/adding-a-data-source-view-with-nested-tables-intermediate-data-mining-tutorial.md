@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016747"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados com tabelas aninhadas (Tutorial de mineração de dados intermediário)
   Para criar um modelo de cesta de compras, você deve usar uma exibição da fonte de dados que dá suporte a dados associativos. Essa fonte de dados também será usada para o cenário de clustering de sequências.  
@@ -82,7 +81,7 @@ ms.locfileid: "48068036"
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelos de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

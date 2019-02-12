@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0379e0105522caf643d2295070da395df51a41a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0bebad59894c150a77dd7b8fc3036fe50029e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112846"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023647"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitorando o desempenho do servidor de relatório
   Use as ferramentas de monitoramento de desempenho para monitorar o desempenho do servidor de relatório e avaliar a atividade do servidor, observar as tendências, diagnosticar gargalos do sistema e reunir dados que podem ajudar a determinar se a configuração atual do sistema é suficiente. Para ajustar o desempenho do servidor, você pode especificar com que frequência o domínio de aplicativo de servidor de relatório deve ser reciclado. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48112846"
   
  O Gerenciador de Tarefas fornece informações sobre programas e processos em execução no computador. Você pode usar o Gerenciador de Tarefas para monitorar os principais indicadores de desempenho do servidor de relatório. Você também pode avaliar a atividade dos processos de execução e exibir gráficos e dados sobre a CPU e o uso de memória. Para obter informações sobre como usar o Gerenciador de Tarefas, consulte a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Você pode usar o Console de Desempenho e o Visualizador de Eventos para criar logs e alertas sobre processamento de relatórios e consumo de recursos. Para obter informações sobre eventos do Windows que são gerados pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Log de aplicativo do Windows](windows-application-log.md). Para obter informações sobre o Console de Desempenho, consulte “Contadores de Desempenho do Windows”, mais adiante neste tópico.  
+ Você pode usar o Console de Desempenho e o Visualizador de Eventos para criar logs e alertas sobre processamento de relatórios e consumo de recursos. Para obter informações sobre eventos do Windows que são gerados pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Log de Aplicativos do Windows](windows-application-log.md). Para obter informações sobre o Console de Desempenho, consulte “Contadores de Desempenho do Windows”, mais adiante neste tópico.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também fornecem informações sobre o banco de dados de servidor de relatório e bancos de dados temporários usados para cache e gerenciamento de sessão.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48112846"
   
 -   `MSRS 2011 Windows Service` e `MSRS 2011 Windows Service SharePoint Mode` para monitorar as operações agendadas e a entrega do relatório. Esses objetos de desempenho incluem uma coleção de contadores usados para controlar o processamento de relatórios que é iniciado por meio de operações agendadas. As operações agendadas incluem assinatura e entrega, instantâneos de execução de relatório e histórico de relatório.  
   
--   `ReportServer:Service` e `ReportServerSharePoint:Service` para monitorar eventos relacionados ao HTTP e gerenciamento de memória. Esses contadores são específicos ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e controlam eventos relacionados ao HTTP para o servidor de relatório, como solicitações, conexões e tentativas de logon. Esse objeto de desempenho também inclui contadores relacionados a gerenciamento de memória.  
+-   `ReportServer:Service` e `ReportServerSharePoint:Service` para monitorar eventos relacionados a HTTP e gerenciamento da memória. Esses contadores são específicos ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e controlam eventos relacionados ao HTTP para o servidor de relatório, como solicitações, conexões e tentativas de logon. Esse objeto de desempenho também inclui contadores relacionados a gerenciamento de memória.  
   
  Se você tiver várias instâncias de servidor de relatório em um único computador, poderá monitorar as instâncias juntas ou separadamente. Escolha quais instâncias devem ser incluídas ao adicionar um contador. Para obter mais informações sobre como usar o Console de Desempenho (perfmon.msc) e adicionar contadores, consulte a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361086"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030397"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
   A extensão de renderização do Word renderiza relatórios para o formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. O formato é o Office Open XML.  
@@ -79,7 +79,7 @@ ms.locfileid: "53361086"
   
 -   **Expressão complexa:**  A expressão é `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expressão com sequências de texto:** Texto, **média de vendas**e a expressão, `=Avg(Fields!YTDPurchase.Value, "Sales)`e o texto, **número de página**e expressão `=Globals!PageNumber`  
+-   **Expressão com Execuções de Texto:** Texto, **Média de Vendas** e a expressão, `=Avg(Fields!YTDPurchase.Value, "Sales)`, e o texto, **Número da Página** e a expressão `=Globals!PageNumber`  
   
  Para evitar esse problema, use várias sequências de texto em vez de uma expressão complexa quando usar expressões em rodapés e cabeçalhos. As duas expressões a seguir são equivalentes. A primeira é uma expressão complexa, e a segunda usa sequências de texto. O renderizador de Word analisa somente a segunda expressão com êxito.  
   

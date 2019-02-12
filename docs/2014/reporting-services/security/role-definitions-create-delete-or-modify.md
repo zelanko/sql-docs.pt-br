@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19844f7fccb9e2578169f383b59bb34099de78a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e56037bbabff784ed59f8b579f3b3402d63ccfdb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032857"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Criar, excluir ou modificar uma função (Management Studio)
   O Reporting Services fornece funções predefinidas que definem um nível de acesso a um servidor de relatório. Cada usuário ou grupo que requer acesso ao servidor de relatório faz isso através de uma função que descreve as tarefas que podem ser executadas. As funções são definidas para o servidor de relatório como um todo. Não é possível variar uma definição de função para partes específicas do servidor de relatório nem especificar que uma função seja usada de modo diferente dependendo das circunstâncias.  
   
  Para criar, modificar ou excluir funções, use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você só pode excluir funções que não são usadas.  
   
- Para atribuir usuários e grupos às funções criadas, use o Gerenciador de Relatórios. Para obter mais informações, consulte [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Para atribuir usuários e grupos às funções criadas, use o Gerenciador de Relatórios. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md).  
   
 > [!NOTE]  
 >  Se o servidor de relatório estiver configurado para o modo integrado do SharePoint e você estiver conectado ao site do SharePoint no qual o servidor de relatório está integrado, poderá exibir e modificar os níveis de permissão que controlam o acesso ao conteúdo e às operações do servidor de relatório.  
@@ -78,7 +78,7 @@ ms.locfileid: "48166326"
   
 ## <a name="see-also"></a>Consulte também  
  [Conectar-se a um servidor de relatório no Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
- (criar-e-gerenciar-função-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Reporting Services no SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

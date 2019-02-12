@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ec3d958d709b1b0307b4df9be8a3d05165d0a92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a22c255712aa3e5e6c93cd04a37f5c66d25ac140
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150196"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018108"
 ---
 # <a name="item-level-tasks"></a>Tarefas em nível de item
-  Uma tarefa em nível de item é uma coleção de permissões relacionadas a um relatório, pasta, modelo de relatório, recurso ou fonte de dados compartilhada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também inclui tarefas em nível do sistema que se aplicam ao site do servidor de relatório como um todo. Para obter mais informações, consulte [Tarefas de nível de sistema](tasks-and-permissions-system-level-tasks.md). Para obter mais informações sobre as tarefas e permissões em geral, consulte [tarefas e permissões](tasks-and-permissions.md).  
+  Uma tarefa em nível de item é uma coleção de permissões relacionadas a um relatório, pasta, modelo de relatório, recurso ou fonte de dados compartilhada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também inclui tarefas em nível do sistema que se aplicam ao site do servidor de relatório como um todo. Para obter mais informações, consulte [Tarefas de nível de sistema](tasks-and-permissions-system-level-tasks.md). Para obter mais informações sobre tarefas e permissões em geral, consulte [Tasks and Permissions](tasks-and-permissions.md).  
   
 > [!NOTE]  
 >  Se você estiver trabalhando programaticamente com essas tarefas, deve usar métodos ofereçam suporte a tarefas de nível de item. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListTasks%2A> e <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  

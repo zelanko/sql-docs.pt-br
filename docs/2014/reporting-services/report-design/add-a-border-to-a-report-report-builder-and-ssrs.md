@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5688cd5beccc582ef5c3413b19938104f659680a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bb9deac03a2ba3683922a8c7e361cb908c787c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130656"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034707"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Adicionar uma borda a um relatório (Construtor de Relatórios e SSRS)
   É possível adicionar uma borda a um relatório adicionando bordas aos próprios cabeçalhos, rodapés e corpo do relatório, sem adicionar linhas ou retângulos.  
@@ -38,6 +38,6 @@ ms.locfileid: "48130656"
 3.  Clique com o botão direito do mouse no rodapé fora de qualquer item no rodapé e clique em **Propriedades do Rodapé**. Na guia **Borda** , adicione uma borda esquerda, inferior e direita com o estilo que você deseja.  
   
 ## <a name="see-also"></a>Consulte também  
- [Retângulos e linhas &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: leolimsft
-ms.author: douglasl
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6751dcfca820fcd7bdcdf73ff6979e572c7159fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f20eef9609bbede00c6503f681620763216d3a15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020087"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Adicionar, Atualizar e Excluir Dados (Master Data Services)
   Você pode adicionar dados e fazer alterações de dados a um modelo em [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], em massa.  

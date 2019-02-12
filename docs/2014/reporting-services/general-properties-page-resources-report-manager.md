@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181646"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032417"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Página Propriedades Gerais, Recursos (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os recursos renomeiem, excluam, movam ou substituam um recurso. Informações sobre quem adicionou o recurso ou modificou as propriedades aparecem na parte superior da página.  
@@ -60,7 +60,7 @@ ms.locfileid: "48181646"
  Clique para abrir a página Importar Recurso, usada para selecionar um arquivo de recurso de um compartilhamento de arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Página Exibir, recursos &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  

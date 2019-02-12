@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80b5c2e77c5e10a543c7847bd2bd2e60d9d50920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221746"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027567"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Adicionar uma ação de detalhamento a um relatório (Construtor de Relatórios e SSRS)
   O relatório aberto quando você clica no link no relatório principal é conhecido como um *relatório detalhado*. Este link de detalhamento habilita uma ação de detalhamento.  
@@ -61,8 +61,8 @@ ms.locfileid: "48221746"
 7.  Para testar o link, execute o relatório e clique no item de relatório definido com o link.  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo de propriedades de ação &#40;relatórios e SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
- [Formatando pontos de dados em um gráfico &#40;relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Caixa de diálogo Propriedades de Ação &#40;Construtor de Relatórios e SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Mostrar dicas de ferramenta em uma série &#40;Construtor de Relatórios e SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

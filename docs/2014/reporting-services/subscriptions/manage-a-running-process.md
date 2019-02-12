@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013587"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166266"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>Como cancelar assinaturas ou o processamento de relatórios  
   
-1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conecte-se ao servidor de relatório. Para obter instruções, consulte [conectar-se a um servidor de relatório no Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
+1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conecte-se ao servidor de relatório. Para obter instruções, consulte [Conectar-se a um Servidor de Relatório no Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Abra a pasta **Trabalhos** .  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48166266"
   
 1.  Abra o arquivo RSReportServer.config em um editor de texto.  
   
-2.  Localizar `IsNotificationService`.  
+2.  Localize `IsNotificationService`.  
   
 3.  Defina-o como `False`.  
   
@@ -94,12 +94,12 @@ ms.locfileid: "48166266"
   
 5.  No Gerenciador de Relatórios, exclua a assinatura controlada por dados da guia Assinaturas do relatório ou em **Minhas Assinaturas**.  
   
-6.  Depois de excluir a assinatura, no arquivo rsreportserver. config, localize `IsNotificationService` e defina-o como `True`.  
+6.  Depois que você excluir a assinatura, no arquivo RSReportServer.config, localize `IsNotificationService` e defina-o como `True`.  
   
 7.  Salve o arquivo.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Definindo configurações de frequência para recuperar o status do trabalho  
- Um trabalho em execução é armazenado no banco de dados temporário do servidor de relatório. Você pode modificar as configurações do arquivo RSReportServer.config para controlar a frequência em que o servidor de relatório examina trabalhos em andamento e o intervalo após o qual o status de um trabalho em execução muda de “novo” para “em execução”. O `RunningRequestsDbCycle` configuração especifica a frequência com que o servidor de relatório examina processos em execução. Por padrão, as informações de status são registradas a cada 60 segundos. O `RunningRequestsAge` configuração especifica o intervalo no qual um trabalho passa de novo para em execução.  
+ Um trabalho em execução é armazenado no banco de dados temporário do servidor de relatório. Você pode modificar as configurações do arquivo RSReportServer.config para controlar a frequência em que o servidor de relatório examina trabalhos em andamento e o intervalo após o qual o status de um trabalho em execução muda de “novo” para “em execução”. A configuração `RunningRequestsDbCycle` especifica com que frequência o servidor de relatório examina processos em execução. Por padrão, as informações de status são registradas a cada 60 segundos. A configuração `RunningRequestsAge` especifica o intervalo em que um trabalho passa de “novo” para “em execução”.  
   
 ##  <a name="bkmk_sharepoint"></a> Exibir e cancelar trabalhos (modo do SharePoint)  
  O gerenciamento de trabalhos em uma implantação no modo do SharePoint é realizado por meio da Administração Central do SharePoint, para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -120,11 +120,11 @@ ms.locfileid: "48166266"
  Você pode gerenciar trabalhos programaticamente ou usando um script. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cancelar trabalhos do servidor de relatório &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
- [Propriedades do trabalho &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
+ [Cancelar Trabalhos do Servidor de Relatório &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [Propriedades do Trabalho &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Monitorar o desempenho do servidor de relatório](../report-server/monitoring-report-server-performance.md)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Monitorando o desempenho do servidor de relatório](../report-server/monitoring-report-server-performance.md)  
   
   

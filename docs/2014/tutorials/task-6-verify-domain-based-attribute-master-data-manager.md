@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207106"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037727"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tarefa 6: Verificar se o atributo baseado em domínio foi criado usando o Master Data Manager
   Nesta tarefa, verifique se a entidade **State** foi criada no **MDS** e o atributo **State** da entidade **Supplier** é um atributo baseado em domínio que depende da entidade **State** usando o **Master Data Manager**.  
@@ -29,7 +26,7 @@ ms.locfileid: "48207106"
   
 3.  Verifique se o modelo **Fornecedores** está selecionado e clique em **Gerenciador**. Você poderia atualizar a página se o **Gerenciador** já estivesse aberto.  
   
-4.  Passe o mouse sobre **Entidades** na barra de menus e observe que agora há duas entidades: **Supplier** e **State**.  
+4.  Passe o mouse sobre **entidades** na barra de menus e observe que agora há duas entidades: **Supplier** e **estado**.  
   
      ![Menu entidades com estado e fornecedor](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menu entidades com estado e fornecedor")  
   

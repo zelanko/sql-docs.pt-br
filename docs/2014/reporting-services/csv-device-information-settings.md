@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2dfb27e467dc762c6591c8b820cb71302eac99fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1273eed3bc53b5f23bd51430f1fd2fbe2b712d5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116906"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018992"
 ---
 # <a name="csv-device-information-settings"></a>Configurações das informações do dispositivo CSV
   As configurações de informações de dispositivo para a extensão de renderização de CSV permitem que os delimitadores e os qualificadores sejam alterados e o tratamento de quebra de linha seja especificado. A extensão do arquivo também pode ser enviada, como também a codificação e inclusão de linhas de cabeçalho na saída. Como é provável que os delimitadores sejam caracteres especiais, você deverá codificá-los em uma seção CDATA, se as configurações forem gravadas como XML.  
@@ -35,13 +35,13 @@ ms.locfileid: "48116906"
 |**NoHeader**|Indica se a linha do cabeçalho será excluída da saída. O valor padrão é `false`.|  
 |`Qualifier`|A cadeia de caracteres do qualificador para colocar ao redor de resultados que contêm o delimitador de campo ou delimitador de registro. Se os resultados contiverem o qualificador, ele será repetido. A configuração `Qualifier` deve ser diferente das configurações`FieldDelimiter` e `RecordDelimiter`. O valor padrão é uma aspa (").|  
 |`RecordDelimiter`|O delimitador de registro a ser colocado no término de cada registro. O valor padrão é \<cr>\<lf>.|  
-|**SuppressLineBreaks**|Indica se as quebras de linha serão removidas dos dados incluídos na saída. O valor padrão é `false`. Se o valor for `true`, o `FieldDelimiter`, `RecordDelimiter`, e `Qualifier` configurações não podem ser um caractere de espaço.|  
-|`UseFormattedValues`|Indica se as cadeias de caracteres formatadas são colocadas na saída do CSV. O valor padrão é `true` quando `ExcelMode` é `true`; caso contrário, será `false`.|  
+|**SuppressLineBreaks**|Indica se as quebras de linha serão removidas dos dados incluídos na saída. O valor padrão é `false`. Se o valor for `true`, as configurações `FieldDelimiter`, `RecordDelimiter`e `Qualifier` não poderão ser um caractere de espaço.|  
+|`UseFormattedValues`|Indica se as cadeias de caracteres formatadas são colocadas na saída do CSV. O valor padrão é `true` quando `ExcelMode` for `true`; caso contrário, ele será `false`.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passando configurações de informações do dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

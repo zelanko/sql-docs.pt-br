@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166396"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029537"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Função LookupSet (Construtor de Relatórios e SSRS)
   Retorna o conjunto de valores correspondentes para o nome especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -45,16 +45,16 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  Uma constante que especifica o nome do conjunto de dados no relatório. Por exemplo, "ContactInformation".  
   
 ## <a name="return"></a>Retorno  
- Retorna um `VariantArray`, ou `Nothing` se não houver nenhuma correspondência.  
+ Retorna `VariantArray` ou `Nothing` se não houver correspondência.  
   
 ## <a name="remarks"></a>Comentários  
- Use `LookupSet` para recuperar um conjunto de valores do conjunto de dados especificado para um par nome/valor onde há uma relação de 1-para-muitos. Por exemplo, para um identificador de cliente em uma tabela, você pode usar `LookupSet` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados para o.  
+ Use `LookupSet` para recuperar um conjunto de valores do conjunto de dados especificado para um par de nome/valor onde há uma relação de 1 para muitos. Por exemplo, para um identificador de cliente em uma tabela, você pode usar `LookupSet` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
  `LookupSet` faz o seguinte:  
   
 -   Avalia a expressão de origem no escopo atual.  
   
--   Avalia a expressão de destino para cada linha do conjunto de dados especificado depois que foram aplicados filtros, com base no agrupamento do conjunto de dados especificado.  
+-   Avalia a expressão de destino para cada linha do conjunto de dados especificado depois que foram aplicados filtros, com base na ordenação do conjunto de dados especificado.  
   
 -   Para cada correspondência da expressão de origem e destino, avalia a expressão resultante para aquela linha no conjunto de dados.  
   
@@ -98,9 +98,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>Exemplo  
- Porque `LookupSet` retorna uma coleção de objetos, você não pode exibir a expressão de resultado diretamente em uma caixa de texto. Você pode concatenar o valor de cada objeto na coleção como uma cadeia de caracteres.  
+ Como `LookupSet` retorna uma coleção de objetos, você não pode exibir a expressão de resultado diretamente em uma caixa de texto. Você pode concatenar o valor de cada objeto na coleção como uma cadeia de caracteres.  
   
- Use o [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] função `Join` criar uma cadeia de caracteres delimitada de um conjunto de objetos. Use vírgula como separador combinar os objetos em uma única linha. Em alguns renderizadores, você pode usar uma alimentação de linha ( [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ) do`vbCrLF`como um separador para listar cada valor em uma nova linha.  
+ Use a função `Join` do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e crie uma cadeia delimitada a partir de um conjunto de objetos. Use vírgula como separador combinar os objetos em uma única linha. Em alguns renderizadores, você pode usar uma alimentação de linha ( [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ) do`vbCrLF`como um separador para listar cada valor em uma nova linha.  
   
  A expressão a seguir, quando ele é usado como a propriedade Value para uma caixa de texto, usa `Join` para criar uma lista.  
   
@@ -148,9 +148,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

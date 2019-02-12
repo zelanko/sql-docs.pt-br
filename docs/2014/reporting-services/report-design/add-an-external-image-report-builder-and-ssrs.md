@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bbe37d01a3e503d5ffb9aa9dc326d19bb9360d63
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: a66fe9816a94281e6153162ec573d95b6629496e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506932"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010637"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Adicionar uma imagem externa (Construtor de Relatórios e SSRS)
   Imagens externas podem estar em um servidor de relatório em modo nativo ou em modo Integrado do SharePoint, ou em qualquer outro site. Quando você incluir imagens externas em seu relatório, verifique se a imagem existe e se o leitor do relatório tem permissões para acessar a imagem. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md).  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136236"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040477"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Página Propriedades Gerais, Partes do Relatório (Gerenciador de Relatórios)
   Use a página Propriedades para exibir e gerenciar as propriedades gerais de uma parte de relatório.  
@@ -79,9 +79,9 @@ ms.locfileid: "48136236"
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciando partes de relatório](report-design/managing-report-parts.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Partes de relatório &#40;relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](report-data/report-parts-and-datasets-in-report-builder.md)  
   

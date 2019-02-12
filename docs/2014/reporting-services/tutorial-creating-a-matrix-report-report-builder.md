@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353390"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033117"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criando um relatório de matriz (construtor de relatórios)
   Este tutorial ensina a criar um relatório de matriz básico com base em dados de vendas de exemplo. A matriz tem grupos de linhas e de colunas aninhados e um grupo de colunas adjacente. Você também aprenderá a formatar colunas e a girar texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  

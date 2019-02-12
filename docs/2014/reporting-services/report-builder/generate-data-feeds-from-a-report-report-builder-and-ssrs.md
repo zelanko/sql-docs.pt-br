@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 876fba07af1e7f82c38d4142914c1aded10117e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017027"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Gerar feeds de dados de um relatório (Construtor de Relatórios e SSRS)
-  Você pode gerar feeds de dados compatíveis com Atom a partir de relatórios e, em seguida, usar os feeds de dados em aplicativos, como o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cliente, que pode consumir feeds de dados.  
+  Você pode gerar feeds de dados compatíveis com o Atom a partir de relatórios e, depois, usar os feeds de dados em aplicativos, como o cliente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , que pode consumir feeds de dados.  
   
  A extensão de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis a partir de um relatório. O documento lista pelo menos um feed de dados para cada região no relatório. Dependendo do tipo de região de dados e dos dados que a região de dados exibe, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode gerar vários feeds de dados de uma região de dados.  
   

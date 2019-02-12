@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1275524eabe77abb326d02b197d8e0aaebd50aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ba7a57ed74370689b5f3a8c907f34774f9c0a846
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074106"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029237"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>Adicionar uma expressão (Construtor de Relatórios e SSRS)
   As expressões são usadas em um relatório inteiro para definir as propriedades de itens de relatório, os filtros, os grupos, a ordem de classificação, as cadeias de conexão e os valores de parâmetro. As expressões começam com o sinal de igual (=) e são gravadas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Elas são avaliadas durante a execução pelo processador de relatório, que combina o resultado da avaliação com os elementos de layout do relatório.  
@@ -37,13 +37,13 @@ ms.locfileid: "48074106"
          A expressão aparece na superfície de design como `<<Expr>>`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Caixas de texto &#40;relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](../expression-dialog-box-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Adicionar um código a um relatório &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)  
+ [Adicionar código a um relatório &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)  
   
   

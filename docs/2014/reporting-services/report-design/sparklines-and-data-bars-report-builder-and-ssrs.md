@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b729d5fb711a855c0edbdac14101e1e04c3bc83f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c127f225efe1976c6607fbdc62ef90707a205584
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038047"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos e barras de dados (Construtor de Relatórios e SSRS)
   Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente embutidas com o texto. Em geral, os minigráficos e as barras de dados são usados em tabelas e matrizes. Seu impacto resulta da possibilidade de exibir vários deles juntos e compará-los uns sobre os outros, em vez de exibi-los individualmente. Eles facilitam a visualização das exceções, as linhas cujo desempenho se distingue das outras. Embora sejam pequenos, cada minigráfico costuma representar vários pontos de dados, geralmente durante um período de tempo. As barras de dados podem representar vários pontos de dados, mas normalmente ilustram apenas um. Cada minigráfico geralmente apresenta uma única série. Você não pode adicionar um minigráfico a um grupo de detalhes em uma tabela. Como os minigráficos exibem dados agregados, eles devem entrar em uma célula associada a um grupo. Minigráficos e barras de dados têm os mesmos elementos de gráficos básicos de categorias, séries e valores, mas não possuem legenda, linhas de eixo, rótulos nem marcas de escala.  

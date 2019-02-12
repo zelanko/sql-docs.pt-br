@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376798"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012537"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de classes de itens de relatório personalizados
   Os itens de relatórios personalizados usam classes do namespace `Microsoft.ReportDesigner`. As classes usadas para implementar um item de relatório personalizado podem ser agrupadas em duas categorias principais: classes exclusivas destinadas a dar suporte à infraestrutura do item de relatório personalizado, e classes de wrapper gerenciado que encapsula a funcionalidade de elementos relevantes em linguagem RDL. Para obter um exemplo de código sobre como usar essas classes, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  

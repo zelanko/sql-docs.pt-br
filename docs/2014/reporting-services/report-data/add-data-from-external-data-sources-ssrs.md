@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 527c089b1fd1dc49330ea3ee3c9b3576f7c969ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ab37310aee6e00959645789773d7494b064799ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369658"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030612"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
   Para recuperar dados de uma fonte de dados externa, use uma conexão de dados. As informações da conexão de dados normalmente são fornecidas pelo proprietário da fonte de dados externa que é responsável por conceder permissões e especificar os tipos de credenciais a serem usados. As informações de conexão de dados são salvas como uma fonte de dados de relatório. O tipo de fonte de dados especifica a extensão de processamento de dados a ser usada para recuperar a fonte de dados.  

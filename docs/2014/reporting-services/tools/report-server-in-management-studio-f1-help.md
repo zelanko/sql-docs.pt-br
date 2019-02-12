@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4109625d2f596d095a8b691bc11b164b67506f72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6f9143c2a93bc5a5c6ffbc116745511de58755d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179216"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023997"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de Relatório na ajuda F1 do Management Studio 
   Esta seção inclui tópicos sobre as caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que podem ser usadas para gerenciar servidores de relatório.  
@@ -29,7 +29,7 @@ ms.locfileid: "48179216"
   
 -   [Excluir itens do catálogo](delete-catalog-items-management-studio.md)  
   
--   [Página Propriedades do trabalho](job-properties-management-studio.md)  
+-   [Página Propriedades do Trabalho](job-properties-management-studio.md)  
   
 -   [Nova Agenda Compartilhada](new-shared-schedule-management-studio.md)  
   

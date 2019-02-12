@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 396542d6c29a463eae83442e3b3398b68cd01b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa4be367b9f04fb8d96bb228b7d040aae0e120d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180348"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041257"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Ferramentas de design de consulta nas Ferramentas de Dados do SQL Server do Designer de Relatórios (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece várias ferramentas de design de consulta que podem ser usadas para criar consultas de conjunto de dados no Designer de Relatórios. O tipo de fonte de dados com a qual você está trabalhando determina a disponibilidade de um designer de consulta específico. Além disso, alguns designers de consulta fornecem modos alternativos para que você possa escolher se deseja trabalhar no modo visual ou diretamente na linguagem da consulta. Este tópico apresenta cada ferramenta e descreve o tipo de fonte de dados que cada uma suporta. As seguintes ferramentas são descritas neste tópico:  
@@ -55,7 +55,7 @@ ms.locfileid: "48180348"
  O designer de consulta com base no texto é recomendado para criar consultas complexas, com o uso de procedimentos armazenados, consultando dados XML, e para escrever consultas dinâmicas. Dependendo da fonte de dados, talvez você possa alternar o botão **Editar como Texto** na barra de ferramentas para alternar entre o designer de consultas gráficas e o designer de consulta com base no texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md).  
   
 ##  <a name="Graphical"></a> Designer de Consultas Gráficas  
- O designer de consultas gráficas é usado criar ou modificar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um banco de dados relacional. Essa ferramenta de design de consulta é usada em vários produtos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e em outros componentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dependendo do tipo de fonte de dados, ele dá suporte aos modos de Texto, StoredProcedure e TableDirect. A imagem a seguir fornece uma ilustração do designer de consultas gráficas.  
+ O designer de consultas gráficas é usado criar ou modificar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um banco de dados relacional. Essa ferramenta de design de consulta é usada em vários produtos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e em outros componentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dependendo do tipo de fonte de dados, ele dá suporte aos modos de Texto, StoredProcedure e TableDirect. A imagem a seguir fornece uma ilustração do designer de consultas gráficas.  
   
  ![Designer de consultas gráficas para consulta sql](../media/rsqd-dsaw-sql.gif "Designer de consultas gráficas para consulta sql")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48180348"
  Para usar o designer de consulta DMX, você deve definir uma fonte de dados que tenha um modelo de mineração de dados válido disponível. Quando você define um conjunto de dados para a fonte de dados, pode abrir a consulta no designer de consulta DMX. Se necessário, use os botões MDX e DMX na barra de ferramentas para alternar entre os modos MDX e DMX. Após selecionar o modelo, você pode criar consultas de previsão de mineração de dados que fornecem dados a um relatório. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas DMX do Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
   
 ##  <a name="SAPBW"></a> Designer de consulta BI Sap NetWeaver  
- O designer de consulta do [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] é usado para recuperar dados de um banco de dados do [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Para usar esse designer de consulta, você deve ter um [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] fonte de dados que tem pelo menos um InfoCube, MultiProvider ou consulta habilitada para Web definida. A imagem a seguir fornece uma ilustração do designer de consulta [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
+ O designer de consulta do [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] é usado para recuperar dados de um banco de dados do [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Para usar esse designer de consulta, você deve ter uma fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] que tenha pelo menos uma consulta InfoCube, MultiProvider, ou habilitada para Web definida. A imagem a seguir fornece uma ilustração do designer de consulta [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
   
  ![Designer de Consultas usando MDX no modo de Design](../media/rsqd-dssapbw-mdx-designmode.gif "Designer de Consultas usando MDX no modo de Design")  
   

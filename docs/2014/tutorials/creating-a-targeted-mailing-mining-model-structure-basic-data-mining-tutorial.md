@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9c67f29-0c47-4a5a-862b-db0f5213c2c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 112b45f2d5797d6797903661de0376bd4d316c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030797"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Criando uma estrutura de modelo de mineração de mala direta (Tutorial de mineração de dados básico)
   A primeira etapa para criar um cenário de correspondência destinada é usar o Assistente de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma nova estrutura de mineração e um modelo de mineração de árvore de decisão.  
@@ -93,9 +92,9 @@ ms.locfileid: "48087706"
   
 13. Na coluna mais à esquerda da página, marque as caixas de seleção nas linhas a seguir.  
   
-    -   **Linha de endereço1**  
+    -   **AddressLine1**  
   
-    -   **Linha de endereço2**  
+    -   **AddressLine2**  
   
     -   **DateFirstPurchase**  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48087706"
   
 ## <a name="see-also"></a>Consulte também  
  [Especificar tipos de tabela &#40;Assistente de mineração de dados&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Designer de mineração de dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Designer de Mineração de Dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo Árvores de Decisão da Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

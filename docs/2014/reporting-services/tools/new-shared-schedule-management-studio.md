@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d94043e338ddcaeffbfc87a1cfad74e6fd854be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61a3e4f7632c5251eb0404a2e4c8a4c0820c1f0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355561"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017247"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nova Agenda Compartilhada (Management Studio)
   Use essa página para criar uma agenda compartilhada para executar relatórios publicados e assinaturas. As agendas compartilhadas podem ser usadas no lugar de agendas específicas de relatório ou de assinaturas. Informações de agenda centralizadas e a capacidade de pausar e retomar operações de agendamento são dois recursos básicos que distinguem as agendas compartilhadas de agendas específicas de item.  
@@ -36,7 +36,7 @@ ms.locfileid: "53355561"
  **Nome**  
  Digite um nome para a agenda compartilhada. Esse nome aparece em listas suspensas quando os usuários selecionam uma agenda compartilhada para relatórios e assinaturas. Certifique-se de fornecer um nome descritivo que caiba facilmente dentro de uma lista e que diferencie com facilidade uma agenda compartilhada de outra. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = +, $ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

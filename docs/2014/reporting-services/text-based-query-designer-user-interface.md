@@ -15,14 +15,14 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 36805b803d52652d0b072f6124eb2f90cf9617c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 61c57d661a9865c9ced6912af921dd45b9e1db74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085736"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012387"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta baseado em texto
   Use o designer de consulta baseado em texto para especificar uma consulta usando o idioma de consulta suportado pela fonte de dados, execute a consulta e exiba os resultados no tempo de design. Você pode especificar várias instruções do [!INCLUDE[tsql](../includes/tsql-md.md)] , consulta ou sintaxe de comando para as extensões de processamento de dados e consultas que são especificadas como expressões. Como o designer de consulta baseado em texto não processa previamente a consulta e pode acomodar qualquer tipo de sintaxe de consulta, esta é a ferramenta de designer de consulta padrão para muitos tipos de fontes de dados.  
@@ -36,7 +36,7 @@ ms.locfileid: "48085736"
 ## <a name="text-based-query-designer-toolbar"></a>Barra de ferramentas do Designer de Consulta baseado em texto  
  O designer de consulta baseado em texto fornece uma única barra de ferramentas para todos os tipos de comando. A tabela a seguir lista cada botão da barra de ferramentas e suas respectivas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d6f4508dda8496d9065655f5a8e298feaa4e9ad3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f600e646e4690ed735b908861bd61516337cfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134026"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042857"
 ---
 # <a name="limit-report-history-report-manager"></a>Limitar o histórico de relatório (Gerenciador de Relatórios)
   O histórico de relatórios é uma coleção de instantâneos de relatórios que você cria. Você pode criar um histórico de relatórios sob demanda ou agendar com que frequência um instantâneo é criado e adicionado ao histórico de relatórios.  
@@ -48,7 +48,7 @@ ms.locfileid: "48134026"
 4.  Selecione as opções para seu relatório e clique em **Aplicar**. Para obter detalhes sobre cada opção, consulte [Página de propriedades Opções de Instantâneo &#40;Gerenciador de Relatórios&#41;](../snapshot-options-properties-page-report-manager.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de relatórios&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   
   

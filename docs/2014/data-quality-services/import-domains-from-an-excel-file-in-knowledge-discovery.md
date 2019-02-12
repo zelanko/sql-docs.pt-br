@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dcd1529858502ca186b99152f754014999239e90
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4f2e680829f51664fc13116953298a281aae7679
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032363"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035387"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importar domínios de um arquivo do Excel na descoberta da base de dados de conhecimento
   Este tópico descreve como importar um ou mais domínios de um arquivo do Excel na atividade de descoberta da base de dados de conhecimento do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de importação simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que as pessoas que têm dados em um arquivo do Excel ou arquivo de texto criem uma base de dados de conhecimento com esses dados. (Consulte [Importar valores de um arquivo do Excel para um domínio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md) para obter mais informações sobre como importar valores para um domínio de uma base de dados de conhecimento existente.) Não há suporte para a exportação para um arquivo do Excel.  

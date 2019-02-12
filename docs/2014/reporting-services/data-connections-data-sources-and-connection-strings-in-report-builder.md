@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183486"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011008"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios
   Para incluir dados em um relatório, crie conexões de dados e conjuntos de dados. Uma conexão de dados inclui informações sobre como acessar uma fonte de dados externa. Um conjunto de dados inclui um comando de consulta que especifica os dados a serem incluídos usando a conexão de dados.  
@@ -49,21 +49,21 @@ ms.locfileid: "48183486"
   
 |**Fonte de dados**|**Exemplo**|**Descrição**|  
 |---------------------|-----------------|---------------------|  
-|Banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no servidor local|`data source="(local)";initial catalog=AdventureWorks2012`|Defina o tipo de fonte de dados `SQL Server`.|  
-|Banco de dados de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Defina o tipo de fonte de dados `SQL Server`.|  
-|Banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Defina o tipo de fonte de dados `SQL Server`.|  
-|Banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no servidor local|`data source=localhost;initial catalog=Adventure Works DW 2012`|Defina o tipo de fonte de dados `SQL Server Analysis Services`.|  
-|Lista do SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Defina o tipo de fonte de dados `SharePoint List`.|  
+|Banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no servidor local|`data source="(local)";initial catalog=AdventureWorks2012`|Defina o tipo da fonte de dados como `SQL Server`.|  
+|Banco de dados de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Defina o tipo da fonte de dados como `SQL Server`.|  
+|Banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Defina o tipo da fonte de dados como `SQL Server`.|  
+|Banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no servidor local|`data source=localhost;initial catalog=Adventure Works DW 2012`|Defina o tipo da fonte de dados como `SQL Server Analysis Services`.|  
+|Lista do SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Defina o tipo da fonte de dados como `SharePoint List`.|  
 ||||  
 |Modelos de relatório|Não aplicável.|Você não precisa de uma cadeia de conexão para um modelo de relatório. No Construtor de Relatórios, vá para o servidor de relatório e selecione o arquivo .smdl que é o modelo de relatório.|  
-|Servidor do Oracle|`data source=myserver`|Defina o tipo de fonte de dados `Oracle`. As ferramentas do cliente Oracle devem estar instaladas no computador do Construtor de Relatórios e no servidor de relatório.|  
-|Fonte de dados do SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados `SAP NetWeaver BI`.|  
-|Fonte de dados do Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados `Hyperion Essbase`.|  
-|Fonte de dados do Teradata|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Defina o tipo de fonte de dados `Teradata`. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos.|  
+|Servidor do Oracle|`data source=myserver`|Defina o tipo da fonte de dados como `Oracle`. As ferramentas do cliente Oracle devem estar instaladas no computador do Construtor de Relatórios e no servidor de relatório.|  
+|Fonte de dados do SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo da fonte de dados como `SAP NetWeaver BI`.|  
+|Fonte de dados do Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo da fonte de dados como `Hyperion Essbase`.|  
+|Fonte de dados do Teradata|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|Defina o tipo da fonte de dados como `Teradata`. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos.|  
 |Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como `Teradata`, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
-|Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados `XML`. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL.|  
-|Fonte de dados XML, documento XML|`http://localhost/XML/Customers.xml`|Defina o tipo de fonte de dados `XML`. A cadeia de conexão é uma URL para o documento XML.|  
-|Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo de fonte de dados `XML`. Os dados XML são inseridos na definição do relatório.|  
+|Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Defina o tipo da fonte de dados como `XML`. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL.|  
+|Fonte de dados XML, documento XML|`http://localhost/XML/Customers.xml`|Defina o tipo da fonte de dados como `XML`. A cadeia de conexão é uma URL para o documento XML.|  
+|Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo da fonte de dados como `XML`. Os dados XML são inseridos na definição do relatório.|  
   
  Para obter mais informações sobre cada tipo de conexão, consulte [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) e [dados de fontes com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -81,6 +81,6 @@ ms.locfileid: "48183486"
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Partes de relatório &#40;relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

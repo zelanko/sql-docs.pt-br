@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c43dccbe5ee989a747110b9ffd0f6376532679df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 06a5ec6ec02544354307f426534d583b0cfe8150
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211146"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016237"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Definindo a propriedade Url do serviço Web
   A qualquer momento em seus aplicativos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você pode modificar a URL base do serviço Web Servidor de Relatórios para a qual o aplicativo foi direcionado no momento. Para fazer isso, basta definir a propriedade **Url** do objeto de serviço. Por exemplo:  

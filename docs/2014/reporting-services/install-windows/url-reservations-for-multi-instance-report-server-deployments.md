@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c1b5dbe65105de7d5f775c6d98ba17b2d646d87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 775e7a1bced0e35d191d3e3f613b86836b9b1ddb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138718"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034777"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Reservas de URL para implantações do Servidor de Relatório com várias instâncias (Gerenciador de configurações do SSRS)
   Se você instalar várias instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo computador, será preciso considerar como definirá as reservas de URL para cada instância. Em cada instância, o serviço Web Servidor de Relatórios e o Gerenciador de Relatórios devem ter pelo menos uma reserva de URL cada. O conjunto inteiro de reservas deve ser exclusivo em HTTP.SYS.  
@@ -49,7 +49,7 @@ ms.locfileid: "48138718"
  As tecnologias subjacentes usadas pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impõem requisitos aos nomes exclusivos. HTTP.SYS exige que todas as URLs do repositório sejam exclusivas. Você pode variar a porta, o nome de host ou o nome de diretório virtual para criar uma URL exclusiva. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] exige que as identidades de aplicativo sejam exclusivas no mesmo processo. Esse requisito afeta os nomes do diretório virtual. Ele especifica que não é possível duplicar um nome de diretório virtual na mesma instância do servidor de relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar as URLs de servidor de relatório &#40;Configuration Manager do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar uma URL &#40;Configuration Manager do SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
+ [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

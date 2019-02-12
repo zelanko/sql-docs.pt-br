@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224467"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031677"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personalizando e processando o modelo de previsão (Tutorial de mineração de dados intermediário)
   O algoritmo MTS da [!INCLUDE[msCoName](../includes/msconame-md.md)] oferece vários parâmetros que afetam o modo como um modelo é criado e como os dados de tempo são analisados. Alterar essas propriedades pode afetar significativamente a forma como o modelo de mineração faz previsões.  
@@ -25,7 +24,7 @@ ms.locfileid: "48224467"
   
 1.  Você deseja personalizar a forma como seu modelo trata os períodos de tempo adicionando um novo valor para o *PERIODICITY_HINT* parâmetro.  
   
-2.  Você aprenderá dois outros parâmetros importantes para o algoritmo MTS: FORECAST_METHOD, que permite controlar o método usado na previsão, e PREDICTION_SMOOTHING, que permite personalizar a combinação de previsões de longo prazo e de curto prazo.  
+2.  Você aprenderá dois outros parâmetros importantes para o algoritmo Microsoft Time Series: FORECAST_METHOD, que lhe permite controlar o método usado para previsão, e PREDICTION_SMOOTHING, que lhe permite personalizar a mescla de previsões de curto e longo prazo.  
   
 3.  Opcionalmente, você dirá ao algoritmo como deseja inserir os valores ausentes.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224467"
 ## <a name="handling-missing-data-optional"></a>Manipulando dados ausentes (opcional)  
  Na maioria dos casos, seus dados de venda poderão ter lacunas preenchidas por nulos, ou uma loja pode não ter conseguido cumprir o prazo da emissão de relatórios, deixando uma célula vazia no final da série. Nesses cenários, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gera o erro a seguir e não processa o modelo.  
   
- "Erro (mineração de dados): carimbos não sincronizados, começando com a série \<nome da série >, do modelo de mineração, \<nome do modelo >. Todas as séries temporais devem terminar na mesma marca de tempo e não podem ter pontos de dados ausentes arbitrariamente. A definição do parâmetro MISSING_VALUE_SUBSTITUTION como Previous ou como uma constante numérica corrigirá automaticamente pontos de dados ausentes, onde possível."  
+ "Erro (mineração de dados): Carimbos não sincronizados, começando com a série \<nome da série >, do modelo de mineração, \<nome do modelo >. Todas as séries temporais devem terminar na mesma marca de tempo e não podem ter pontos de dados ausentes arbitrariamente. A definição do parâmetro MISSING_VALUE_SUBSTITUTION como Previous ou como uma constante numérica corrigirá automaticamente pontos de dados ausentes, onde possível."  
   
  Para impedir esse erro, você pode especificar que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] forneça automaticamente novos valores para preencher as lacunas usando qualquer um dos métodos a seguir:  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48224467"
   
 #### <a name="to-process-the-forecasting-model"></a>Para processar o modelo de previsão  
   
-1.  Sobre o **modelo de mineração** menu da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], selecione **processar estrutura de mineração e todos os modelos**.  
+1.  No menu **Modelo de Mineração** do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], selecione **Estrutura de Mineração do Processo e Todos os Modelos**.  
   
 2.  No aviso que pergunta se você deseja construir e implantar o projeto, clique em **Sim**.  
   
@@ -105,8 +104,8 @@ ms.locfileid: "48224467"
  [Explorando o modelo de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica do algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Referência técnica do algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

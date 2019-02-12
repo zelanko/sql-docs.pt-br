@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5dce14880b54d33eee438bf6a7e9e6a2c88f108c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399329"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022287"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentação de expressões
   As expressões o ajudam a criar relatórios avançados e flexíveis. Este tutorial ensina a criar e implementar expressões que utilizam funções e operadores comuns. Você usará o **expressão** caixa de diálogo para escrever expressões que concatenam valores de nome, pesquisará valores em um conjunto de dados separado, exibir diferentes imagens com base em valores de campo e assim por diante.  
@@ -543,7 +543,7 @@ ms.locfileid: "52399329"
   
 7.  Clique em **Adicionar**.  
   
-8.  No **rótulo** , digite: **Amarelo**  
+8.  No **rótulo** , digite: **Yellow**  
   
 9. Na caixa **Valor** , digite **Amarelo**  
   

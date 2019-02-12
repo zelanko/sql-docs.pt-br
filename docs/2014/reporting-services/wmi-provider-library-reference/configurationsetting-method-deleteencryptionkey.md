@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b8ec93ab4320e0fb522206b70634c50ac538bbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e53cf44a235bedf777aaf64c97f2f2886bccc8eb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078046"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032887"
 ---
 # <a name="deleteencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Exclui as chaves de criptografia do banco de dados do servidor de relatório.  
@@ -61,6 +61,6 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

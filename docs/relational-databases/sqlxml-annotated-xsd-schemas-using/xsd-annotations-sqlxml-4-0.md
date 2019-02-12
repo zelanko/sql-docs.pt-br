@@ -11,22 +11,22 @@ helpviewer_keywords:
 - annotated XSD schemas, annotations listed
 - XSD schemas [SQLXML], annotations
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-author: douglaslMS
+author: MightyPen
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3eed78c380baf5799f62a1516617f989af9caa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d2e5b48d3e3be630029ab508d59470fad0f8547
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841864"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015127"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Anotações XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A tabela a seguir lista as anotações XSD introduzidas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e as compara com as anotações XDR introduzidas no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
-|Anotação XSD|Description|Link do tópico|Anotação XDR|  
+|Anotação XSD|Descrição|Link do tópico|Anotação XDR|  
 |--------------------|-----------------|----------------|--------------------|  
 |**sql:encode**|Quando um elemento ou atributo XML é mapeado para uma coluna BLOB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], permite solicitar um URI de referência. Esse URI pode ser usado posteriormente para retornar dados BLOB.|[Solicitando referências URL a dados BLOB usando sql: codificar &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)|**url-encode**|  
 |**sql:guid**|Permite especificar se será usado um valor de GUID gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o valor fornecido pelo updategram daquela coluna.|[Usando as anotações sql:identity e sql:guid](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)|Sem suporte|  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0d0682e33e72686abd41e03e7936c557db740b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 649fdfce5968af63ada22f6e9a2715bdca9866ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173106"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024777"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Mostrar conjuntos de dados ocultos para obter valores de parâmetros para dados multidimensionais (Construtor de Relatórios e SSRS)
   Seu relatório pode incluir conjuntos de dados gerados automaticamente (também conhecidos como conjuntos de dados ocultos) que não aparecem por padrão no painel de dados do relatório. Esses conjuntos de dados são criados das seguintes formas:  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019317"
 ---
 # <a name="report-manager-f1-help"></a>Ajuda F1 do Gerenciador de Relatórios
   Os tópicos a seguir oferecem ajuda no nível de página para o Gerenciador de Relatórios do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Há um tópico para cada página no aplicativo. Nem todas as páginas podem estar disponíveis. As configurações de segurança determinam as páginas que você pode acessar. Para acessar esses tópicos do Gerenciador de Relatórios, clique em **Ajuda** na barra de ferramentas principal.  
@@ -104,9 +104,9 @@ ms.locfileid: "48133286"
  Para obter mais informações sobre o Gerenciador de Relatórios e o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Referência de recurso (Reporting Services)](feature-reference-reporting-services.md)   
- [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Gerenciador de relatórios](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visão geral do componente Reporting Services](tools/reporting-services-tools.md)  
   

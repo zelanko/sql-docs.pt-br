@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081687"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014947"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de forma (Construtor de Relatórios e SSRS)
   Um gráfico de forma exibe os dados de valor como porcentagens do todo. São usados gráficos de forma normalmente para mostrar comparações proporcionais entre valores diferentes em um conjunto. Categorias são representadas por segmentos individuais da forma. O tamanho do segmento é determinado pelo valor. Os gráficos de forma tem uso semelhante aos gráficos de pizza, exceto que eles classificam as categorias do maior para o menor.  
   
- Um gráfico de funil exibe valores como proporções que diminuem progressivamente. O tamanho da área é determinado pelo valor da série como porcentagem do total de todos os valores. Por exemplo, você pode usar um gráfico de funil para exibir tendências de visita do site. É provável que o gráfico de funil exibirá um ampla área na parte superior, indicando o número de vez que uma página é visitada e as outras áreas serão proporcionalmente menores. Para obter mais informações sobre como adicionar dados a um gráfico de funil, consulte [gráficos &#40;construtor de relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Um gráfico de funil exibe valores como proporções que diminuem progressivamente. O tamanho da área é determinado pelo valor da série como porcentagem do total de todos os valores. Por exemplo, você pode usar um gráfico de funil para exibir tendências de visita do site. É provável que o gráfico de funil exibirá um ampla área na parte superior, indicando o número de vez que uma página é visitada e as outras áreas serão proporcionalmente menores. Para obter mais informações sobre como adicionar dados a um gráfico de funil, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  A ilustração a seguir mostra um exemplo de gráfico de funil.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "48081687"
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Gráficos de pizza &#40;relatórios e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

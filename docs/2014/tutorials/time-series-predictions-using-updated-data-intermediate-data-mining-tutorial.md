@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185486"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041797"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Previsões de série temporal usando dados atualizados (Tutorial de mineração de dados intermediário)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185486"
   
     4.  Arraste o campo Quantidade do **modelo de mineração** painel para o **critérios/argumento** coluna.  
   
-    5.  No **critérios/argumento** coluna, após o nome do campo, digite o seguinte texto: **5,extend_model_cases**  
+    5.  No **critérios/argumento** coluna, após o nome do campo, digite o seguinte texto:  **5,EXTEND_MODEL_CASES**  
   
          O texto completo do **critérios/argumento** caixa de texto deve ser da seguinte maneira: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48185486"
  [Usando dados de substituição de previsões de série temporal &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica do algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Mining Model Content para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Referência técnica do algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

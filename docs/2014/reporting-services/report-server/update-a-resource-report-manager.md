@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5482a935a5357d4557a6ffd202feac6be07900e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71ccf123b9c8f5dba751affaae0374c90b5a8d99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020218"
 ---
 # <a name="update-a-resource-report-manager"></a>Atualizar um recurso (Gerenciador de Relatórios)
   É possível atualizar um recurso substituindo-o por uma versão mais recente. Recursos são itens armazenados em um servidor de relatório com conteúdo de um arquivo carregado pelo usuário. Você pode substituir um recurso existente importando conteúdo de arquivo novo ou diferente no recurso existente. A atualização de um recurso fornece um modo de atualizar conteúdo e ao mesmo tempo preservar as propriedades e configurações de segurança já existentes no recurso.  
@@ -45,7 +45,7 @@ ms.locfileid: "48130334"
  Se o recurso que você está atualizando possuir uma imagem usada em um relatório, será necessário atualizar o relatório para visualizar a imagem atualizada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../contents-page-report-manager.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
  [Página Carregar Arquivo &#40;Gerenciador de Relatórios&#41;](../upload-file-page-report-manager.md)   
  [Carregar arquivos em uma pasta](upload-files-to-a-folder.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../report-manager-f1-help.md)  

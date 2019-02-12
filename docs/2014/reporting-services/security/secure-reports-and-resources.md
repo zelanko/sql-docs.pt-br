@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aded4422e6036ae2840d9e55278034a13f03665d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a12d538f034f4a3d96726ced32b74f02ec6e73c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129486"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023517"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
   É possível definir a segurança de relatórios e recursos individuais para controlar o nível de acesso que os usuários têm a esses itens. Por padrão, somente os usuários que são membros do grupo interno de **Administradores** podem executar relatórios, exibir recursos, modificar propriedades e excluir os itens. Todos os outros usuários devem ter atribuições de função que permitam o acesso a um relatório ou recurso.  
@@ -62,7 +62,7 @@ ms.locfileid: "48129486"
  Para atenuar o risco de incluir links em um relatório que executam inadvertidamente scripts mal-intencionados, associe hiperlinks a dados apenas de fontes confiáveis. Verifique se os dados dos resultados da consulta e as expressões que associam dados a hiperlinks não criam links que possam ser explorados. Por exemplo, não baseie um hiperlink em uma expressão que concatene dados de vários campos de conjuntos de dados. Se necessário, navegue até o relatório e use "Exibir origem" para verificar scripts e URLs suspeitos.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Diminuindo ataques de injeção SQL em um relatório parametrizado  
- Em qualquer relatório que inclui um parâmetro de tipo `String`, certifique-se de usar uma lista de valores disponíveis (também conhecida como uma lista de valores válidos) e certifique-se de que qualquer usuário que executa o relatório tem apenas as permissões necessárias para exibir os dados no relatório. Quando você define um parâmetro de tipo `String`, o usuário é apresentado com uma caixa de texto que pode ter qualquer valor. Uma lista de valores disponíveis limita os valores que podem ser inseridos. Se o parâmetro do relatório estiver associado a um parâmetro de consulta e uma lista de valores disponíveis não for usada, um usuário do relatório poderá digitar sintaxe SQL na caixa de texto, abrindo potencialmente o relatório e o servidor a um ataque de injeção SQL. Se o usuário tiver permissões suficientes para executar a nova instrução SQL, resultados indesejados podem ser produzidos no servidor.  
+ Em qualquer relatório que inclua um parâmetro do tipo `String`, use uma lista de valores disponíveis (também conhecida como uma lista de valores válidos) e verifique se todos os usuários que executam o relatório têm somente as permissões necessárias para exibir os dados do relatório. Quando você define um parâmetro do tipo `String`, é exibida para o usuário uma caixa de texto que pode ter qualquer valor. Uma lista de valores disponíveis limita os valores que podem ser inseridos. Se o parâmetro do relatório estiver associado a um parâmetro de consulta e uma lista de valores disponíveis não for usada, um usuário do relatório poderá digitar sintaxe SQL na caixa de texto, abrindo potencialmente o relatório e o servidor a um ataque de injeção SQL. Se o usuário tiver permissões suficientes para executar a nova instrução SQL, resultados indesejados podem ser produzidos no servidor.  
   
  Se um parâmetro de relatório não estiver associado a um parâmetro de consulta e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão ou uma URL no valor de parâmetro e processar o relatório em Excel ou HTML. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48129486"
  Os relatórios que contêm informações confidenciais devem ser protegidos no nível de acesso aos dados, solicitando que os usuários forneçam credenciais para acessar dados confidenciais. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). Você também pode proteger uma pasta deixá-la inacessível para usuários não autorizados. Para obter mais informações, consulte [Proteger pastas](secure-folders.md).  
   
 ## <a name="see-also"></a>Consulte também  
- (criar-e-gerenciar-função-assignments.md)   
- [Configurar o acesso do construtor de relatórios](../report-server/configure-report-builder-access.md)   
+ (create-and-manage-role-assignments.md)   
+ [Configurar o acesso ao Construtor de Relatórios](../report-server/configure-report-builder-access.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Proteger itens de fontes de dados compartilhadas](secure-shared-data-source-items.md)   
  [Armazenar credenciais em uma fonte de dados do Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

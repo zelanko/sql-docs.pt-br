@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dc7e6ee268694844f88f957f0aaf6d1addecd8f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6ec398e41dd1851bc425749f1e71997706356e5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217416"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032497"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>Instalação de prompt de comando de modo do SharePoint do Reporting Services e modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte a uma instalação de linha de comando do programa de instalação do SQL Server. Este tópico contém vários exemplos de instalações de linha de comando que são específicas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter uma descrição completa das opções de linha de comando disponíveis para todos os componentes do SQL Server, consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Este tópico não descreve opções de linha de comando para o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos SharePoint. Para obter informações sobre a instalação de comando do suplemento, consulte [Instalar o suplemento usando o arquivo de instalação rsSharePoint.msi](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).  

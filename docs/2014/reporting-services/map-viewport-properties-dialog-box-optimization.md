@@ -12,14 +12,14 @@ f1_keywords:
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0e1fd77ed97e42eaadd76f7b9c50f74d6b5007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 411dd5fdcd58b9f009ffe8fbdefa39e39c273435
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162736"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012877"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Caixa de diálogo Propriedades do Visor do Mapa, Otimização
   Selecione **Otimização** para a caixa de diálogo **Propriedades do Visor do Mapa** para ajudar a controlar a resolução de exibição de um mapa em um relatório.  

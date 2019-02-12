@@ -15,14 +15,14 @@ helpviewer_keywords:
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2cc1725bc1cad98033fbc4c47c1611e7c8b35f32
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 89560cb29adfe83435d9b02a4b10e568a79ad352
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360228"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013397"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Exibir relatórios do Reporting Services em dispositivos Microsoft Surface e Apple iOS
   Este artigo descreve os recursos e fluxos de trabalho do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com suporte par dispositivos Microsoft Surface e dispositivos com Apple iOS 6 e Apple Safari, tal como o iPad.  

@@ -12,14 +12,14 @@ f1_keywords:
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082237"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022777"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Legenda, Geral (Construtor de Relatórios e SSRS)
   Use a caixa de diálogo **Legenda** para definir a aparência e o layout da legenda no gráfico. Para obter mais informações, consulte [formatando a legenda em um gráfico de &#40;construtor de relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
@@ -50,11 +50,11 @@ ms.locfileid: "48082237"
 ## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formatando a legenda em um gráfico &#40;relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Plotar dados em um eixo secundário &#40;relatórios e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Formatando a legenda em um gráfico &#40;relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Adicionar uma média móvel a um gráfico &#40;relatórios e SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Adicionar uma média móvel a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8144e84f386255c8d04cccee94913a7c184b6a9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2e83bf191eb16fa2e96782f4781bbd142bc04ee7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158986"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033727"
 ---
 # <a name="instanceid-property-wmi-msreportserverinstance"></a>Propriedade InstanceID (WMI MSReportServer_Instance)
   Esse objeto dá suporte à infraestrutura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e não destina-se a ser usado diretamente em seu código.  
@@ -43,6 +43,6 @@ public string InstanceID;
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_Instance](msreportserver-instance-members.md)  
+ [Membros MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

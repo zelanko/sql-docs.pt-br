@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99ae4e35be51a96e449acbf099e7c04397457d16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 601b3e1252f9221fe2760fe0dae19d2d750c61f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205846"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017047"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Exemplos de equações de filtro (Construtor de Relatórios e SSRS)
   Para criar um filtro, é necessário especificar uma ou mais equações de filtro. As equações de filtro incluem uma expressão, um tipo de dados, um operador e um valor. Este tópico traz exemplos de filtros que são utilizados com frequência.  
@@ -29,7 +29,7 @@ ms.locfileid: "48205846"
 ## <a name="filter-examples"></a>Exemplos de filtro  
  A tabela a seguir mostra exemplo de equações de filtro que usam diferentes tipos de dados e operadores. O escopo da comparação é determinado pelo item de relatório para o qual é definido um filtro. Por exemplo, no caso de um filtro definido em um conjunto de dados, **TOP % 10** representa os principais 10% de valores do conjunto de dados; no caso de um filtro definido em um grupo, **TOP % 10** são os principais 10% de valores do grupo.  
   
-|Expressão simples|Tipo de Dados|Operador|Valor|Description|  
+|Expressão simples|Tipo de Dados|Operador|Valor|Descrição|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Inclui valores de dados maiores que 7.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Inclui os 10 principais valores de dados.|  
@@ -45,7 +45,7 @@ ms.locfileid: "48205846"
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

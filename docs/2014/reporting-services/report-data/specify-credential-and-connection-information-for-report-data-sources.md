@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082236"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039257"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar informações de credenciais e de conexão para fontes de dados de relatório
   Um servidor de relatório usa credenciais para se conectar a fontes de dados externas que fornecem conteúdo a relatórios ou informações de destinatário para assinaturas controladas por dados. Você pode especificar credenciais que usam a Autenticação do Windows, autenticação de banco de dados, nenhuma autenticação ou autenticação personalizada. Ao enviar uma solicitação de conexão pela rede, o servidor de relatório representará uma conta de usuário ou uma conta de execução autônoma. Para obter mais informações sobre o contexto de segurança sob o qual uma conexão é feita, consulte [Configuração de fontes de dados e conexões de rede](#DataSourceConfigurationConnections) mais adiante neste tópico.  
@@ -111,7 +111,7 @@ ms.locfileid: "48082236"
     2.  Se a conta estiver listada, selecione-a e clique em **Remover**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Usando a representação em credenciais armazenadas  
- Você também pode usar credenciais para representar a identidade de outro usuário. Para bancos de dados do SQL Server, usar a opções de representação define a [SETUSER](/sql/t-sql/statements/setuser-transact-sql) função.  
+ Você também pode usar credenciais para representar a identidade de outro usuário. Para bancos de dados do SQL Server, usar os conjuntos de opções de representação define a função [SETUSER](/sql/t-sql/statements/setuser-transact-sql) .  
   
 > [!IMPORTANT]  
 >  Não use a representação para relatórios com suporte a assinaturas ou que usam agendas para gerar o histórico de relatório ou atualizar um instantâneo de relatório.  
@@ -138,14 +138,14 @@ ms.locfileid: "48082236"
 |None|Representar a conta de execução autônoma.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Use as credenciais definidas na cadeia de caracteres de conexão. A conexão com o servidor de relatório falhará se a conta de execução autônoma estiver indefinida.<br /><br /> Para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão sempre falhará se nenhuma credencial for especificada, mesmo se a conta de execução autônoma for definida.<br /><br /> Para XML:<br /><br /> Conecte-se como Usuário Anônimo se a conta de execução autônoma estiver definida; caso contrário, a conexão falhará.|  
   
 ## <a name="setting-credentials-programmatically"></a>Definindo credenciais programaticamente  
- Você pode definir credenciais em seu código para controlar o acesso a relatórios e ao servidor de relatório. Para obter mais informações, consulte [fontes de dados e métodos de Conexão](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
+ Você pode definir credenciais em seu código para controlar o acesso a relatórios e ao servidor de relatório. Para obter mais informações, consulte [Fontes de Dados e Métodos de Conexão](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Gerenciar fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md)   
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de relatórios&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

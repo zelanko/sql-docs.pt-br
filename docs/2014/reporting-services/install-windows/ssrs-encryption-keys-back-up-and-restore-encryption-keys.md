@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530374"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036587"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Fazer backup e restaurar as chave de criptografia do Reporting Services
   Um parte importante da configuração do servidor de relatório é a criação de uma cópia de backup da chave simétrica usada para criptografar informações confidenciais. Uma cópia de backup da chave é necessária para várias operações rotineiras, possibilitando que você reutilize um banco de dados de servidor de relatório existente em uma nova instalação.  

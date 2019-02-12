@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190296"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018877"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
   Adicione um parâmetro ao relatório para permitir que os usuários filtrem dados do relatório na fonte de dados ou no relatório. Os parâmetros de relatório são criados automaticamente para cada parâmetro de consulta incluído em uma consulta de conjunto de dados. O tipo de dados do parâmetro determina como ele aparece na barra de ferramentas de exibição de relatório.  
@@ -55,7 +55,7 @@ ms.locfileid: "48190296"
 10. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolha uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 25 minutos.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48190296"
   
      Esta consulta não contém parâmetros de consulta. Você adicionará parâmetros de consulta posteriormente neste tutorial.  
   
-11. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). O conjunto de resultados exibe 11 linhas de dados que mostram a quantidade de itens vendidos para cada subcategoria de quatro repositórios e inclui as seguintes colunas: StoreID, Subcategory, Quantity.  
+11. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). O conjunto de resultados exibe 11 linhas de dados que mostram a quantidade de itens vendidos para cada subcategoria de quatro lojas e inclui as seguintes colunas: StoreID, Subcategory, Quantity.  
   
 12. Clique em **Avançar**.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "48190296"
   
      O painel Dados do Relatório exibe os campos StoreID e StoreName no nó de conjunto de dados **Lojas** .  
   
-##  <a name="AvailableValues"></a> 4B. Especificar os valores disponíveis para criar uma lista suspensa de valores  
+##  <a name="AvailableValues"></a> 4b. Especificar os valores disponíveis para criar uma lista suspensa de valores  
  Depois de criar um conjunto de dados para fornecer valores disponíveis, altere as propriedades do relatório para especificar o conjunto de dados e o campo a serem usados para preencher a lista suspensa de valores válidos na barra de ferramentas do visualizador de relatórios.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para fornecer valores disponíveis para um parâmetro a partir de um conjunto de dados  
@@ -269,7 +269,7 @@ ms.locfileid: "48190296"
   
  O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
   
-##  <a name="DefaultValues"></a> 4 núcleos. Especificar os valores padrão para que o relatório seja executado automaticamente  
+##  <a name="DefaultValues"></a> 4c. Especificar os valores padrão para que o relatório seja executado automaticamente  
  Você pode especificar um valor padrão para cada parâmetro, de forma que o relatório seja executado automaticamente.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>Para especificar um valor padrão a partir de um conjunto de dados  
@@ -327,7 +327,7 @@ ms.locfileid: "48190296"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     O cabeçalho de coluna de repositórios contém o texto exibido para uma expressão complexa:  **< \<Expr >>**.  
+     O cabeçalho de coluna de repositórios contém o texto exibido para uma expressão complexa: **<\<Expr>>**.  
   
 8.  Visualize o relatório.  
   

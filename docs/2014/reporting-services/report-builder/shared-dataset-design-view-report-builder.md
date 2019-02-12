@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 897f44349c04f02a6b41823590998b09221e3a03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354191"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014437"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Exibição do design de conjunto de dados compartilhados (Construtor de Relatórios)
   A janela Design do Conjunto de Dados Compartilhado ajuda a criar uma consulta de conjunto de dados que você pode compartilhar com os outros. A janela permite selecionar uma fonte de dados compartilhada, especificar propriedades para o conjunto de dados compartilhado e criar uma consulta no designer de consulta.  

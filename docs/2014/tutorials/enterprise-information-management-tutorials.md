@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373988"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015107"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Tutoriais de Gerenciamento de Informações da Empresa
   Esta seção contém tutoriais para gerenciar as informações em uma empresa usando as tecnologias de EIM (Gerenciamento de Informações da Empresa) incluídas no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. O EIM (Gerenciamento de Informações da Empresa) fornece um portfólio de soluções que permitem que as organizações confiem na credibilidade e na consistência de seus dados para que possam tomar decisões comerciais críticas. O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] tem as tecnologias a seguir que o ajudam a implementar soluções de EIM na sua empresa.  

@@ -1,11 +1,10 @@
 ---
-title: 'Lição 5: Criando a rede Neural e modelos de regressão logística (Tutorial de mineração de dados intermediário) | Microsoft Docs'
+title: 'Lição 5: Criação de rede Neural e modelos de regressão logística (Tutorial de mineração de dados intermediário) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -16,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1bbfd2344b46e015e26d2dba393aea689329949c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108816"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035807"
 ---
-# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lição 5: Criando modelos de rede neural e de regressão logística (Tutorial de mineração de dados intermediário)
+# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lição 5: Criação de rede Neural e modelos de regressão logística (Tutorial de mineração de dados intermediário)
   
   
- O departamento de operações de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] está envolvido em um projeto para melhorar a satisfação do cliente com seu call center. Eles contrataram um fornecedor para gerenciar o call center e relatar a métrica da efetividade do call center e pediram a você para analisar alguns dados preliminares apresentados pelo fornecedor. Eles querem saber se é há alguma descoberta interessante. Em particular, eles gostariam de saber se os dados sugerem algum problema com a equipe ou maneiras de melhorar a satisfação do cliente.  
+ O departamento de Operações da [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] está envolvido em um projeto para melhorar satisfação do cliente com seu call center. Eles contrataram um fornecedor para gerenciar o call center e relatar a métrica da efetividade do call center e pediram a você para analisar alguns dados preliminares apresentados pelo fornecedor. Eles querem saber se é há alguma descoberta interessante. Em particular, eles gostariam de saber se os dados sugerem algum problema com a equipe ou maneiras de melhorar a satisfação do cliente.  
   
  O conjunto de dados é pequeno e abrange apenas um período de 30 dias na operação do call center. Os dados mostram o número de operadores novos e experientes em cada turno, o número de chamadas recebidas, o número de pedidos e os problemas que devem ser resolvidos e o tempo médio que o cliente aguarda para alguém responder à chamada. Os dados também incluem uma métrica de qualidade de serviço baseada na *taxa de abandono*, que é um indicador de frustração do cliente.  
   
@@ -66,10 +65,10 @@ ms.locfileid: "48108816"
   
  [Lição 4: Criando um cenário de Clustering de sequências &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- Lição 5: Cenário de rede neural e de regressão logística (tutorial de mineração de dados intermediário)  
+ Lição 5: Rede neural e cenário de regressão logística (Tutorial de mineração de dados intermediário)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

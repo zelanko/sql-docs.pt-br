@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034388"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir e fechar um relatório (Gerenciador de Relatórios)
   Você pode usar o Gerenciador de Relatórios para exibir relatórios publicados em um servidor de relatório. Por padrão, todos os relatórios são abertos em HTML. Depois de abrir um relatório, é possível exportá-lo para exibi-lo em outros formatos de aplicativo. Se o relatório possuir recursos interativos ou se for um relatório do Construtor de Relatórios que contiver dados interativos, clique nos links para exibir relatórios ou dados adicionais.  
@@ -42,8 +42,8 @@ ms.locfileid: "48065726"
      O fechamento de um relatório não o remove do cache de navegador. Para isso, é necessário fechar o navegador para desconectar o relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Procurando relatórios e outros itens de &#40;relatórios e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../contents-page-report-manager.md)   
+ [Pesquisando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gerenciamento de conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

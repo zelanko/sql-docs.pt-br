@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: daca0d1d73663ef43d5645fe8be6c239de704e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9a73e75c61fe3911919ed5112a1a6afff406adcd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219962"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016727"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Definir uma mensagem Nenhum Dado para uma região de dados (Construtor de Relatórios e SSRS)
   Quando quiser especificar o texto que será exibido no relatório renderizado em vez de uma região de dados sem dados, defina a propriedade NoRowsMessage para uma tabela, matriz ou região de dados de lista, NoDataMessage para uma região de dados do gráfico e NoDataText para a escala de cores de um mapa. No tempo de execução, o processador do relatório executa a consulta para cada conjunto de dados em um relatório e a consulta do conjunto de dados pode não produzir nenhum conjunto de resultados. Em uma região de dados associada a um conjunto de dados vazio, você pode especificar o texto que deseja exibir em vez de exibir uma região de dados vazia. Também é possível definir a propriedade NoRowsMessage para um sub-relatório quando nenhum conjunto de dados no sub-relatório tiver dados no tempo de execução.  
@@ -59,10 +59,10 @@ ms.locfileid: "48219962"
      Como alternativa, na lista suspensa, clique em **Expressão** para abrir a caixa de diálogo **Expressão** e criar uma expressão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Subrelatórios &#40;relatórios e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
+ [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)   
- [Subrelatórios &#40;relatórios e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
+ [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
   
   

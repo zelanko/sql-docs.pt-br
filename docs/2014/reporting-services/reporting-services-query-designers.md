@@ -11,21 +11,21 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1e8a2fabc77b4b2ca5d8a27b83c29c233148032e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219486"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010807"
 ---
 # <a name="reporting-services-query-designers"></a>Designers de Consulta do Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fornece designers de consulta baseado em texto e gráficos para ajudá-lo a criar consultas para cada tipo de fonte de dados em seu relatório.  
   
  Alguns designers gráficos de suporte a fontes de dados ajudam a criar uma consulta de maneira interativa. Outras fontes de dados usam um designer de consulta baseado em texto. Com um designer de consultas gráficas, é possível arrastar os itens de metadados que representam os dados subjacentes em uma fonte de dados para a superfície de design de consulta. Com um designer de consulta com base em texto, o texto do comando pode ser digitado em um painel de consulta. Você pode alterar de um designer de consultas gráficas para um designer de consulta baseado em texto com um clique no ícone do designer de consulta baseado em texto na barra de ferramentas.  
   
- Os tipos de fonte de dados que estão disponíveis em seu relatório são determinados pelas extensões de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instaladas em seu cliente ou servidor de relatório. Para obter mais informações, consulte [arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md) e [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
+ Os tipos de fonte de dados que estão disponíveis em seu relatório são determinados pelas extensões de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instaladas em seu cliente ou servidor de relatório. Para obter mais informações, consulte [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md) e [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
  Uma extensão de processamento de dados e seu designer de consulta associado podem diferir em termos de suporte para fontes de dados das seguintes maneiras:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48219486"
   
 -   **Por suporte para parte do esquema de um nome de objeto do banco de dados.** Quando uma fonte de dados usa esquemas como parte do identificador de objeto do banco de dados, o nome do esquema deve ser fornecido como parte da consulta para todos os nomes que não usam o esquema padrão. Por exemplo, `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
--   **Por suporte para parâmetros de consulta.** Em termos de suporte, os provedores de dados diferem dos parâmetros. Alguns provedores de dados oferecem suporte a parâmetros nomeados; por exemplo, `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Outros provedores de dados oferecem suporte a parâmetros não nomeados; por exemplo, `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. O identificador de parâmetro pode ser diferentes por provedor de dados; Por exemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a "arroba" (@) símbolo, Oracle usa os dois-pontos (:). Em alguns provedores de dados, não há suporte para parâmetros.  
+-   **Por suporte para parâmetros de consulta.** Em termos de suporte, os provedores de dados diferem dos parâmetros. Alguns provedores de dados oferecem suporte a parâmetros nomeados; por exemplo, `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Outros provedores de dados oferecem suporte a parâmetros não nomeados; por exemplo, `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. O identificador de parâmetro pode ser diferente com relação a provedores de dados; por exemplo, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa o símbolo "arroba" (@), o Oracle usa dois-pontos (:). Em alguns provedores de dados, não há suporte para parâmetros.  
   
 -   **Por capacidade de importar consultas.** Por exemplo, para uma fonte de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , você pode importar uma consulta de um arquivo de definição de relatório (.rdl) ou de um arquivo .sql.  
   

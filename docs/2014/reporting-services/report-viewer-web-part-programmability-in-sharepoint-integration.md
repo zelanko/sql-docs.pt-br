@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c42e12dc43febf4927ea2f559631b63c5ba4e143
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+manager: kfile
+ms.openlocfilehash: 35d0d2835b9d733a5f22b1abf1c81dbedd00f318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100167"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023697"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programabilidade do Web Part do Visualizador de Relatórios na Integração do SharePoint
   A Web Part do Visualizador de Relatórios é um controle de servidor de `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` que contém um conjunto de APIs (interfaces de programação de aplicativos) públicas, permitindo que os desenvolvedores criem aplicativos de SharePoint personalizados. Você pode criar Web Parts personalizadas que fornecem o caminho do relatório e parâmetros para a Web Part do Visualizador de Relatórios que usa conexões de Web Part. Você também pode inserir a Web Part em uma página personalizada de Web Parts do SharePoint e personalizá-la usando a API pública.  

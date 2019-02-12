@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dfcef8a18d1d3fae45d8ebabe85da1bf5d3fbbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3fb36315de4a9d2f83e4a6c11f129f5603147e25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165166"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024657"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>Classe MSReportServer_ConfigurationSetting
   Representa os parâmetros de instalação e de tempo de execução de uma instância de servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.  
   
- Para obter uma lista de todos os membros desse tipo, consulte [membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
+ Para obter uma lista de todos os membros desse tipo, consulte [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ public class MSReportServer_ConfigurationSetting
  Qualquer membro público estático (**Compartilhado** no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) desse tipo é seguro para operações com vários threads. Não há garantia de que qualquer membro da instância seja seguro para threads.  
   
 ## <a name="example"></a>Exemplo  
- Para executar o código a seguir, adicione o nome do servidor no lugar de cada \<*servername*>. Atualize o caminho para que indique o local da instalação, caso não seja o padrão. O exemplo de código a seguir itera por meio de cada propriedade na [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) classe, imprimindo o nome de cada propriedade e seu valor no console.  
+ Para executar o código a seguir, adicione o nome do servidor no lugar de cada \<*servername*>. Atualize o caminho para que indique o local da instalação, caso não seja o padrão. O exemplo de código a seguir se repete através de cada propriedade na classe [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) , imprimindo o nome de cada propriedade e seu valor no console.  
   
 ```vb  
 Imports System  
@@ -176,6 +176,6 @@ class Class1
  **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

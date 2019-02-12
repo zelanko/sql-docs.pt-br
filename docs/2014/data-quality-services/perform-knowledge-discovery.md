@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505584"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019667"
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
   Este tópico descreve como criar uma base de dados de conhecimento através da descoberta da base de dados de conhecimento. No processo de descoberta, o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analisa os dados em uma fonte de dados de exemplo através de um processo assistido por computador e adiciona o conhecimento obtido na base de dados de conhecimento. Esse conhecimento pode ser modificado e aprimorado na etapa **Gerenciar Valores de Domínio** da atividade de descoberta da base de dados de conhecimento ou na atividade de gerenciamento de domínio.  
@@ -200,7 +200,7 @@ ms.locfileid: "52505584"
   
     -   Clique em **Voltar** para retornar à página **Descobrir** . Depois de clicar em **fechar**, para executar a atividade de gerenciamento de domínio, você precisaria clicar **descoberta de Conhecimento** do **abrir base de dados de Conhecimento** tela, vá para o **Gerenciamento da Base de dados de Conhecimento: Gerenciar termos do domínio** tela, clique em **término**e, em seguida, clique em **Sim** para publicar a base de dados de conhecimento ou **não** para salvar o trabalho na base de conhecimento e Saia.  
   
-##  <a name="FollowUp"></a> Acompanhar: Após executar a descoberta de Conhecimento  
+##  <a name="FollowUp"></a> Acompanhamento: Após executar a descoberta de Conhecimento  
  Após adicionar conhecimento ao caso de conhecimento no processo de descoberta de conhecimento assistido por computador, você poderá usar a base de dados de conhecimento para um projeto de limpeza imediatamente ou poderá executar o gerenciamento de domínio antes da limpeza. Para obter mais informações sobre a limpeza de dados ou o gerenciamento de domínio, consulte [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md) ou [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Meaning"></a> O significado dos valores corretos, com erro e inválidos  

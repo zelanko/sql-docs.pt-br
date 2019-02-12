@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 871c6acc823606a249f0886864a84300be7f9899
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396639"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016767"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
   Este tópico descreve como criar relações baseadas em termos para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, você pode configurar uma relação baseada em termos que altere o termo "Inc." para "Incorporated". O termo "Inc." será alterado toda vez que ocorrer no domínio. As instâncias de "Contoso, Inc." serão alteradas para "Contoso, Incorporated" e os dois valores serão considerados sinônimos exatos.  
@@ -99,7 +99,7 @@ ms.locfileid: "52396639"
   
 7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de criar relações baseadas em termos  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de criar relações baseadas em termos  
  Depois de criar relações baseadas em termos, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

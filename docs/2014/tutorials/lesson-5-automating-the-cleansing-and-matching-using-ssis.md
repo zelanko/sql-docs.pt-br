@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d7406f0f39afb0323ff6564b4b0ea427515f0f69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 92261bc69590bcc338bf18aa9d406964bfe42fcd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375808"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026627"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lição 5: Automatizando a limpeza e a correspondência usando o SSIS
   Na lição 1, você criou a base de dados de Conhecimento de fornecedores e usou para limpar dados na lição 2 e correspondência de dados na lição 3 usando a ferramenta **cliente DQS**. Em um cenário do mundo real, talvez você precise extrair dados de uma fonte que não oferece suporte a DQS ou você deseja automatizar a limpeza e o processo de correspondência sem precisar usar o **cliente DQS** ferramenta. SQL Server Integration Services (SSIS) tem componentes que você pode usar para integrar dados de várias fontes heterogêneas e uma **[transformação de limpeza DQS](https://msdn.microsoft.com/library/ee677619.aspx)** componente para invocar a limpeza funcionalidade exposta pelo DQS. Atualmente, o DQS não expõe a funcionalidade de correspondência para uso do SSIS, mas você pode usar o **[transformação agrupamento difuso](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** para identificar duplicatas nos dados.  

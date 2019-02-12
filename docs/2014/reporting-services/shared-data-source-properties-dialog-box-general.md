@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c92df0a13d3257535316e65d8da0cff74192c38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e743eac09bc3a39899c6cc6a86674b428f369717
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070146"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041227"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Caixa de diálogo Propriedades da Fonte de Dados Compartilhada, Geral
   Selecione a caixa de diálogo **Propriedades da Fonte de Dados Compartilhada** para exibir e modificar as informações de conexão para a fonte de dados compartilhada no relatório.  

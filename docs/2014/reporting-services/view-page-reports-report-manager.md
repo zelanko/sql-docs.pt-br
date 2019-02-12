@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102796"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031627"
 ---
 # <a name="view-page-reports-report-manager"></a>Página Exibir, Relatórios (Gerenciador de Relatórios)
   Use a página Exibir de relatórios para exibir um relatório. Quando você abre um relatório pela primeira vez no Gerenciador de Relatórios, ele é formatado em HTML. Relatórios HTML incluem uma barra de ferramentas de relatórios que aparece no topo do relatório para que você possa navegar pelas páginas do relatório, pesquisar no relatório ou exportá-lo para um formato diferente. O diagrama a seguir mostra a barra de ferramentas do relatório.  
@@ -39,7 +39,7 @@ Barra de ferramentas do relatório
 >  Instantâneos de execução de relatório e alguns formatos de exportação não estarão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

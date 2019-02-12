@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5244d423e8e4369be7ce942fde8dbdaaf2f2e391
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376438"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017237"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS)
   Os parâmetros em cascata fornecem um modo de gerenciar grandes volumes de dados de relatório. É possível definir um conjunto de parâmetros relacionados de forma que a lista de valores de um parâmetro dependa do valor escolhido em outro parâmetro. Por exemplo, o primeiro parâmetro é independente e pode apresentar uma lista de categorias de produtos. Quando o usuário seleciona uma categoria, o segundo parâmetro é dependente do valor do primeiro parâmetro. Seus valores são atualizados com uma lista de subcategorias dentro da categoria escolhida. Quando o usuário exibe o relatório, os valores dos dois parâmetros de categoria e subcategoria são usados para filtrar dados do relatório.  

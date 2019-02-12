@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157926"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026527"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Exemplos de URL para itens de relatório publicados em um servidor de relatório em modo de SharePoint (SSRS)
   Para publicar relatórios e itens relacionados em uma biblioteca do SharePoint, você pode publicar o conteúdo por meio das ferramentas de criação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como o Designer de Relatórios ou carregar o conteúdo por meio das ações do site do SharePoint.  
@@ -32,7 +32,7 @@ ms.locfileid: "48157926"
   
  Podem ser usados os seguintes elementos da hierarquia da Web para acessar e proteger o conteúdo do servidor de relatório. Outros objetos, como listas e páginas, não são usados para acessar o conteúdo do servidor de relatório e, portanto, não estão descritos na tabela seguinte.  
   
-|Object|Description|  
+|Object|Descrição|  
 |------------|-----------------|  
 |Aplicativo Web do SharePoint|Um aplicativo da Web do SharePoint pode ser instalado como um servidor autônomo ou em um farm que tenha uma coleção de servidores virtuais. Um aplicativo Web tem uma URL (por exemplo, http:*//servername*) e pode ter diversos sites.|  
 |Site|Um site é um site pai de um aplicativo da Web ou um subsite.|  
@@ -52,7 +52,7 @@ ms.locfileid: "48157926"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL para um site ou subsite de servidor do SharePoint  
  Ao implantar uma fonte de dados de relatório, você deve usar uma URL para um site e subsite do SharePoint, caso haja um. Na URL, o nome de site aparece imediatamente depois do nome do servidor, por exemplo, http://*servername/site* ou http://*servername/site/subsite*.  
   
- Em um aplicativo Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , o site e o subsite com frequência correspondem às guias no site principal. Para localizar o nome do site ou do subsite, clique em **Página Inicial**e, em seguida, **Todo Conteúdo do Site**. Role para a parte inferior e procure por **Sites e Espaços de trabalho**. A lista dos sites aparece nesta seção.  
+ Em um aplicativo Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , o site e o subsite com frequência correspondem às guias no site principal. Para localizar o nome do site ou do subsite, clique em **Página Inicial**e, em seguida, **Todo Conteúdo do Site**. Role para a parte inferior e procure por **Sites e Workspaces**. A lista dos sites aparece nesta seção.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL para uma biblioteca do SharePoint  
  Ao implantar um relatório ou um item relacionado à biblioteca do SharePoint, você deve usar uma URL para biblioteca do SharePoint. A URL usada para uma biblioteca difere dependendo da versão do SharePoint que você está usando.  
@@ -76,7 +76,7 @@ ms.locfileid: "48157926"
  Uma definição de relatório pode incluir um arquivo de imagem armazenado como um arquivo externo. Você pode mencionar aquele arquivo na definição de relatório, definindo uma URL totalmente qualificada para um arquivo de imagem. Pode ser armazenado em um site do SharePoint ou em um computador remoto.  
   
 > [!IMPORTANT]  
->  Se a URL externa for referente a uma imagem contida em um site do SharePoint, o ícone de imagem quebrada aparecerá quando você visualizar o relatório no Construtor de Relatórios. Quando você carregar o relatório para o site do SharePoint e renderiza o relatório no modo conectado, o ícone de imagem quebrada aparecerá se você tiver apenas `View Items` permissões.  
+>  Se a URL externa for referente a uma imagem contida em um site do SharePoint, o ícone de imagem quebrada aparecerá quando você visualizar o relatório no Construtor de Relatórios. Quando você carregar o relatório no site do SharePoint e o renderizar no modo conectado, o ícone de imagem quebrada aparecerá se você tiver apenas as permissões `View Items`.  
   
  Independentemente do modo do servidor de relatório, as referências a um arquivo de imagem externa em um relatório devem se uma URL totalmente qualificada. Também, a referência a um arquivo de imagem externa, geralmente, exige que você configure a conta de processamento de relatório autônomo.  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 27a94ac8af2a770d1e76c8e7c46966809c011f85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e6f77a2ecf9ed5a985efa4a36f18b9f495c7091f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224666"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033927"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
   As expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmica. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Defina uma expressão para qualquer propriedade em uma caixa de diálogo que exibe o botão de expressão (**fx**) ou em uma lista suspensa que exibe **\<Expression...>**.  
@@ -77,10 +77,10 @@ ms.locfileid: "48224666"
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Ocultar um item &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

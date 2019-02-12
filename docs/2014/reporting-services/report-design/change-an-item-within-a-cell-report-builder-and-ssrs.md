@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2f666a5732a49050418917084554d630faabe679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46724389392221aa1f759ee68675e9436dee752f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156956"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018937"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>Alterar um item de uma célula (Construtor de Relatórios e SSRS)
   Somente um item não contêiner, como uma caixa de texto, linha ou imagem, pode ser substituído por um novo item de relatório. Por exemplo, é possível arrastar uma tabela para uma caixa de texto a fim de substituí-la pela tabela.  
@@ -36,7 +36,7 @@ ms.locfileid: "48156956"
 >  A caixa de diálogo **Propriedades da Imagem** é aberta quando você arrasta um item de relatório de imagem para uma célula, na qual é possível definir propriedades, como a origem da imagem, antes de adicionar a imagem à célula.  
   
 ## <a name="see-also"></a>Consulte também  
- [Imagens, caixas de texto, retângulos e linhas de &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

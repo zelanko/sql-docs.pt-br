@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354037"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033257"
 ---
 # <a name="preview-view"></a>Modo Visualizar
   Use o modo **Visualizar** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.  

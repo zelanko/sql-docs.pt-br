@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522847"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014137"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importar as políticas para uma única instância
   Nesta tarefa, você importará as políticas de práticas recomendadas que deseja agendar no Gerenciamento Baseado em Políticas em uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

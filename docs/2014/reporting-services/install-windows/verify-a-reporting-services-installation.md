@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08840dee8164ae1dd460d1a5d5905ecda937dba6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: afcfd87c3c262c4013b697e5ac52f9fd218b8d23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351111"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037127"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados em um de dois modos: Nativo ou SharePoint. As etapas que você deve seguir para verificar a instalação dependem do modo do servidor de relatório.  

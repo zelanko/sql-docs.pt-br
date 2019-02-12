@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 702e5778825ed5b521db4357508e45427af6b56e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bf2f253405e3e64764f3b7edf61112a3bb05d601
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349951"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025077"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginação no Reporting Services (Construtor de Relatórios e SSRS)
   A paginação se refere ao número de páginas dentro de um relatório e ao modo como os itens de relatório são organizados nessas páginas. A paginação no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varia, dependendo da extensão de renderização que você usa para exibir e entregar o relatório. Ao executar um relatório no servidor de relatórios, o relatório usa o processador HTML. O HTML segue um conjunto específico de regras de paginação. Por exemplo, se exportar o mesmo relatório para o PDF, o processador do PDF será utilizado e um conjunto de regras diferente será aplicado, portanto, o relatório será paginado de modo diferente. Para desenvolver com êxito um relatório que seja facilmente lido pelos seus usuários bem como que seja otimizado para o processador que pretende usar na entrega do relatório, você deve entender as regras utilizadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

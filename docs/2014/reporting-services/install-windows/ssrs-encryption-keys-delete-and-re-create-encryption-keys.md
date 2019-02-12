@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111006"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012458"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Excluir e recriar chaves de criptografia (Gerenciador de configurações do SSRS)
   A exclusão e a recriação de chaves de criptografia são atividades que estão fora da manutenção rotineira da chave de criptografia. Você executa essas tarefas em resposta a uma ameaça específica ao seu servidor de relatórios ou como um último recurso quando não mais puder acessar um banco de dados de servidor de relatórios.  
@@ -37,11 +37,11 @@ ms.locfileid: "48111006"
   
  Você poderá recriar a chave simétrica somente quando o servidor de relatórios se encontrar em um estado de funcionamento. Recriar as chaves de criptografia e criptografar novamente o conteúdo interrompe as operações do servidor. Você deve colocar o servidor offline enquanto a nova criptografia estiver em andamento. Não deve haver nenhuma solicitação feita ao servidor de relatórios durante a nova criptografia.  
   
- Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Como recriar chaves de criptografia (ferramenta Configuração do Reporting Services)  
   
-1.  Desabilitar o serviço Web do servidor de relatório e o acesso HTTP modificando a `IsWebServiceEnabled` propriedade no arquivo rsreportserver. config. Esta etapa interrompe temporariamente o envio das solicitações de autenticação ao servidor de relatórios sem desligar o servidor completamente. Você deve ter o mínimo de serviço de forma que possa recriar as chaves.  
+1.  Desabilite o serviço Web Servidor de Relatórios e o acesso ao HTTP modificando a propriedade `IsWebServiceEnabled` no arquivo rsreportserver.config. Esta etapa interrompe temporariamente o envio das solicitações de autenticação ao servidor de relatórios sem desligar o servidor completamente. Você deve ter o mínimo de serviço de forma que possa recriar as chaves.  
   
      Se você estiver recriando chaves de criptografia para uma implantação de expansão do servidor de relatórios, desabilite essa propriedade em todas as instâncias na implantação.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111006"
   
     2.  Abra o arquivo rsreportserver.config.  
   
-    3.  Para o `IsWebServiceEnabled` propriedade, especifique `False`e, em seguida, salve as alterações.  
+    3.  Na propriedade `IsWebServiceEnabled`, especifique `False` e salve suas alterações.  
   
 2.  Inicie a ferramenta Configuração do Reporting Services e conecte-se à instância do servidor de relatório que deseja configurar.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111006"
   
 4.  Reinicie o serviço do Windows Servidor de Relatórios. Se estiver recriando chaves de criptografia para uma implantação de expansão, reinicie o serviço em todas as instâncias.  
   
-5.  Habilitar novamente o serviço Web e o acesso HTTP modificando a `IsWebServiceEnabled` propriedade no arquivo rsreportserver. config. Faça isso para todas as instâncias se você estiver trabalhando com uma implantação de expansão.  
+5.  Habilite novamente o serviço Web e o acesso HTTP modificando a propriedade `IsWebServiceEnabled` no arquivo rsreportserver.config. Faça isso para todas as instâncias se você estiver trabalhando com uma implantação de expansão.  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Como recriar chaves de criptografia (rskeymgmt)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "48111006"
   
 1.  Para cada fonte de dados compartilhada, você deve digitar novamente a cadeia de caracteres de conexão.  
   
-2.  Para cada relatório e fonte de dados compartilhada que use credenciais armazenadas, você deve digitar novamente o nome do usuário e a senha e depois salvar. Para obter mais informações, consulte [especificar credenciais e informações de Conexão para fontes de dados do relatório](../../integration-services/connection-manager/data-sources.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+2.  Para cada relatório e fonte de dados compartilhada que use credenciais armazenadas, você deve digitar novamente o nome do usuário e a senha e depois salvar. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 3.  Para cada assinatura controlada por dados, abra cada assinatura e digite novamente as credenciais do banco de dados de assinatura.  
   
 4.  Para assinaturas que usam dados criptografados (isso inclui a extensão de entrega Compartilhamento de Arquivos e qualquer extensão de entrega de terceiros que use criptografia), abra cada assinatura e digite novamente as credenciais. As assinaturas que usam a entrega de email do Servidor de Relatórios não usam dados criptografados e não são afetadas pela alteração da chave.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Dados do servidor de relatório criptografado de Store &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

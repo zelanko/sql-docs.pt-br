@@ -10,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: 32d1988d-07e7-41c2-b636-e65ecfae4677
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8dcdfaf16f4e279ed39c46dab7d486f517854b52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 69d059807b7d48fe71cffb120c73fa9aa004a8bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088406"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017998"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>Ativar o recurso de sincronização de relatório do Servidor de Relatório na Administração Central do SharePoint
   O recurso Sincronização de arquivos do Servidor de Relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utiliza manipuladores de eventos do SharePoint para sincronizar o catálogo do servidor de relatório com itens em bibliotecas de documentos. Esse recurso é benéfico quando os usuários carregam com frequência itens de relatórios publicados diretamente nas bibliotecas de documentos do SharePoint. Se o recurso de Sincronização de arquivo não estiver ativado, o conteúdo ainda será sincronizado, mas não tão frequentemente.  
   
- O recurso de sincronização de arquivos pode ser ativado na administração de Site do SharePoint depois de instalar o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] suplemento para produtos do SharePoint.  
+ O recurso Sincronização de Arquivos pode ser ativado na Administração de Site do SharePoint depois que você instala o Suplemento [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para produtos do SharePoint.  
   
  Esse recurso pode ser ativado e desativado manualmente por site, mas não no nível de conjunto de sites.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  O Suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para o SharePoint deve ser instalado. Se o suplemento não estiver instalado, o recurso de sincronização de arquivos não estará visível na lista de recursos do site.  
   
- Para verificar a instalação, exiba a lista de aplicativos instalados em [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows **painel de controle**. Se o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in estiver instalado, siga as instruções neste tópico para ativar o recurso de sincronização de arquivos de servidor de relatório.  
+ Para verificar a instalação, exiba a lista de aplicativos instalados no [!INCLUDE[msCoName](../includes/msconame-md.md)] Painel de Controle **do**Windows. Se o Suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] estiver instalado, siga as instruções deste tópico para ativar o recurso Sincronização de arquivos do servidor de relatório.  
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>Para ativar ou desativar o recurso Sincronização de arquivos do Reporting Services em um site  
   

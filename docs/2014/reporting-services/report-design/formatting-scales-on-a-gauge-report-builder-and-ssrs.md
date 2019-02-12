@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3995d85af81e6417e3117c25c1ec06052d60f269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 36074fe67459cb47f6becfe914fe868baf5d4940
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021646"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
   A escala de um medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrados em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  
@@ -86,7 +86,7 @@ ms.locfileid: "48068996"
 -   1% do valor menor da altura ou da largura do medidor em um medidor linear.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando intervalos de um medidor &#40;relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

@@ -2,8 +2,8 @@
 title: sys.pdw_nodes_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5413d6900b133cb7a5baf1e80fe4fa5be09b285
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99693b4261df24a666144f93dc07b8aaa68bc3d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031277"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém uma linha para cada objeto de tabela que possui uma entidade ou no qual a entidade de segurança recebeu alguma permissão.  
   
-|Nome da coluna|Tipo de dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<herdado colunas >||Para obter uma lista de colunas que essa exibição herda valores, consulte [sys. Objects](https://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
 |lob_data_space_id|**int**||Sempre 0.|  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 069307827be2b364daaed7c08255773f156d6e4d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4337babc43983523939f6c6aaa8329964fd49b23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033489"
 ---
 # <a name="odbc-connection-type-ssrs"></a>Tipo de conexão ODBC (SSRS)
   Para incluir dados de um provedor de dados ODBC, você deve ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo ODBC. Esse tipo de fonte de dados interno é baseado na extensão de processamento de dados ODBC do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

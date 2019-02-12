@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511669"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029227"
 ---
 # <a name="error-page-report-manager"></a>Página Erro (Gerenciador de Relatórios)
   Use a página Erro para exibir detalhes sobre uma condição de erro. Erros com base em sessão ou servidor são exibidos nesta página. Erros de validação relacionados a uma página específica controlam exibições embutidas próximas ao controle.  
@@ -27,7 +27,7 @@ ms.locfileid: "52511669"
   
 -   Se você vir mensagens de erro semelhantes às seguintes, consulte [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md).  
   
-     Não foi possível encontrar o computador. “O servidor RPC não está disponível. (Exceção de HRESULT: 0x800706BA) ".  
+     Não foi possível encontrar o computador. “O servidor RPC não está disponível. (Exceção de HRESULT: 0x800706BA)".  
   
 -   É possível configurar propriedades do servidor de relatório em um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para retornar informações adicionais sobre as condições de erro que ocorrem em servidores remotos. Se uma mensagem de erro contiver o texto "Para obter mais informações sobre esse erro, navegue até o servidor de relatório na máquina do servidor local ou habilite erros remotos", consulte [habilitar erros remotos &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md).  
   

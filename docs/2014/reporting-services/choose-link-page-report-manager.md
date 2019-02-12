@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bf61e09dbb1e1a98b1af609cb092cf072821a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106037"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036117"
 ---
 # <a name="choose-link-page-report-manager"></a>Página Escolher Link (Gerenciador de Relatórios)
   Use a página Escolher Link para escolher um relatório diferente no qual basear o relatório vinculado atualmente selecionado. Relatórios vinculados são baseados em outros relatórios já publicados em um servidor de relatórios. Um relatório vinculado usa o layout e os dados de um relatório base, mas tem páginas de propriedades separadas para que você possa personalizar propriedades de parâmetros, configurações de segurança, nome, descrição e local.  

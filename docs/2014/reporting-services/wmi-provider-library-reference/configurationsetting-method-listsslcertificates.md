@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a83096e8b1fe3eed9e0df513931b812125955f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 138d1925b6bfe845623e56d70e6678e520a142c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221716"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016047"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>Método ListSSLCertificates (WMI MSReportServer_ConfigurationSetting)
   Retorna uma lista de certificados no computador do servidor de relatório.  
@@ -62,6 +62,6 @@ public void ListSSLCertificates(out string[] CertificateHash,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

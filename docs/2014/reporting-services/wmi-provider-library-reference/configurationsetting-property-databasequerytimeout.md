@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b5d3115fd6d87152b09a12c3b5806c440d5c423e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf21ba6211a016676ea7d1f2547bf4d96b1e6fb4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224186"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023758"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
   Especifica o número de segundos que devem decorrer antes de o servidor de relatório assumir que o comando falhou ou demorou demais para executar. O servidor de relatório está cronometrando a consulta no catálogo de SQL, não uma fonte de dados para o relatório. Leitura/gravação.  
@@ -40,7 +40,7 @@ public UInt32 DatabaseQueryTimeout;
 ```  
   
 ## <a name="property-values"></a>Valores da propriedade  
- 32 bits sem sinal `integer` objeto que representa o número de segundos que a consulta pode ser executado.  
+ Um objeto `integer` sem-sinal de 32 bits que representa o número de segundos que a consulta tem permissão para executar.  
   
 ## <a name="example-code"></a>Código de exemplo  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
@@ -49,6 +49,6 @@ public UInt32 DatabaseQueryTimeout;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

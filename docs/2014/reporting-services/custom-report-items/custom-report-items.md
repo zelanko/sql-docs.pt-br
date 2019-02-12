@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b5699ed160d55c099ccc4361b6f5253ddac705cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 162ec67283142da27f3afb1aa4f591a232177ac3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362418"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017938"
 ---
 # <a name="custom-report-items"></a>Itens de Relatório Personalizados
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece um conjunto de ferramentas avançadas para a criação e publicação de relatórios corporativos, o gerenciamento de segurança e de assinaturas, e a extensão da funcionalidade de relatório por meio de uma API abrangente. Os relatórios são definidos por meio de uma linguagem baseada em XML chamada linguagem RDL. A RDL oferece um conjunto de instruções que descrevem o layout, as informações de consulta e os tipos de itens para um relatório. É possível estender a RDL escrevendo um item de relatório personalizado. O item de relatório personalizado consiste em um componente de tempo de execução, chamado pelo processador de relatório em tempo de execução, e em um componente de tempo de design, que permite que o item de relatório personalizado esteja disponível no Designer de Relatórios.  
@@ -46,7 +46,7 @@ ms.locfileid: "53362418"
  [Criar um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)  
  Descreve como criar um componente de tempo de design de item de relatório personalizado.  
   
- [Como: Implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Como: implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
  Descreve como implantar um item de relatório personalizado.  
   
  [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e531467e69271eacd535fbfd59e127d73513cf2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44bf77f23724f51ddc75f708e5663b43e607df0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115077"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023907"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   Esta seção contém tópicos sobre processamento, omissão e controle de assinaturas. O gerenciamento de assinaturas varia para assinaturas padrão e assinaturas controladas por dados. As assinaturas padrão normalmente são de propriedade e gerenciadas pelo usuário. Por outro lado, as assinaturas controladas por dados normalmente são criadas e mantidas por um administrador de servidor de relatório.  

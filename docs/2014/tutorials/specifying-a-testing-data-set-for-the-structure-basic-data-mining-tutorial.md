@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180916"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028887"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Especificando um conjunto de dados de teste para a estrutura (Tutorial de mineração de dados básico)
   Nas últimas telas do Assistente de Mineração de Dados, você dividirá seus dados entre um conjunto de teste e um conjunto de treinamento. Em seguida, dará um nome à sua estrutura e habilitará o detalhamento do modelo.  
@@ -35,7 +34,7 @@ ms.locfileid: "48180916"
 ## <a name="specifying-drillthrough"></a>Especificando o detalhamento  
  O detalhamento pode ser habilitado em modelos e em estruturas. A caixa de seleção nesta caixa de diálogo permite o detalhamento no modelo nomeado. Depois que o modelo tiver sido processado, você poderá recuperar as informações detalhadas dos dados de treinamento que foram usados para criar o modelo.  
   
- Se a estrutura de mineração subjacente também estiver configurada para permitir o detalhamento, você poderá recuperar informações detalhadas dos casos de modelo e da estrutura de mineração, inclusive colunas que não foram incluídas no modelo de mineração. Para obter mais informações, consulte [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Se a estrutura de mineração subjacente também estiver configurada para permitir o detalhamento, você poderá recuperar informações detalhadas dos casos de modelo e da estrutura de mineração, inclusive colunas que não foram incluídas no modelo de mineração. Para obter mais informações, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-name-the-model-and-structure-and-specify-drillthrough"></a>Para nomear o modelo e a estrutura e especificar o detalhamento  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48180916"
   
 ## <a name="see-also"></a>Consulte também  
  [Habilitar o detalhamento para um modelo de mineração](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [Consultas de detalhamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Consultas de detalhamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [Especificar os dados de treinamento &#40;Assistente de mineração de dados&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

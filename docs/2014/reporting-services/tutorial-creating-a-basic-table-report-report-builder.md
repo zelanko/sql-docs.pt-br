@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criação de um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criando um relatório de tabela básico (construtor de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189106"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020427"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criando um relatório de tabela básico (construtor de relatórios)
   Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -108,7 +108,7 @@ ms.locfileid: "48189106"
   
 10. Clique em **Avançar**.  
   
-##  <a name="Query"></a> 1B. Criar uma Consulta no Assistente de Tabela  
+##  <a name="Query"></a> 1b. Criar uma Consulta no Assistente de Tabela  
  Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ ms.locfileid: "48189106"
   
 4.  Clique em **Avançar**.  
   
-##  <a name="Groups"></a> 1C. Organizar Dados em Grupos no Assistente de Tabela  
+##  <a name="Groups"></a> 1c. Organizar Dados em Grupos no Assistente de Tabela  
  Quando você seleciona campos nos quais fazer agrupamentos, cria uma tabela com linhas e colunas que exibem dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -191,7 +191,7 @@ ms.locfileid: "48189106"
   
 6.  Clique em **Avançar**.  
   
-##  <a name="Subtotals"></a> 1-d. Adicionar Linhas de Subtotal e de Total no Assistente de Tabela  
+##  <a name="Subtotals"></a> 1d. Adicionar Linhas de Subtotal e de Total no Assistente de Tabela  
  Depois de criar grupos, é possível adicionar e formatar linhas nas quais exibir valores de agregação dos campos. Você pode optar por exibir todos os dados ou deixar um usuário expandir e recolher dados agrupados de forma interativa.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
@@ -216,7 +216,7 @@ ms.locfileid: "48189106"
   
 4.  Clique em **Avançar**.  
   
-##  <a name="Style"></a> 1E. Escolher um Estilo no Assistente de Tabela  
+##  <a name="Style"></a> 1e. Escolher um Estilo no Assistente de Tabela  
  Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda.  
   
 #### <a name="to-specify-a-table-style"></a>Para especificar um estilo de tabela  
@@ -229,7 +229,7 @@ ms.locfileid: "48189106"
   
 3.  Clique em **Concluir**.  
   
- A tabela é adicionada à superfície de design. A tabela tem 5 colunas e 5 linhas. O painel Grupos de Linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+ A tabela é adicionada à superfície de design. A tabela tem 5 colunas e 5 linhas. O painel de grupos de linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
 ##  <a name="FormatCurrency"></a> 2. Formatar dados como moeda  
  Por padrão, os dados resumidos do campo Sales exibe um número geral. Formate-o para exibir o número como moeda. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  

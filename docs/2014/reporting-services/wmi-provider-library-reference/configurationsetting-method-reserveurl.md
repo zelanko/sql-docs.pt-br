@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d670170a594af7346f44f236e96a724813278743
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2b771042ca00c9a9a80d7ffa035b100e2c4a6dc0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162756"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020507"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Método ReserveURL (WMI MSReportServer_ConfigurationSetting)
   Adiciona uma reserva de URL para um determinado aplicativo.  
@@ -56,7 +56,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método foi bem-sucedida; um código de erro indica que a chamada não foi bem-sucedida.  
   
 ## <a name="remarks"></a>Comentários  
- *UrlString* não inclui o nome do diretório virtual. O [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) método é fornecido para essa finalidade.  
+ *UrlString* não inclui o nome do diretório virtual. O método [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) é disponibilizado para essa finalidade.  
   
  As reservas de URL são criadas para a conta atual de serviço do Windows. Para alterar a conta de serviço do Windows, é necessário atualizar todas as reservas de URL manualmente.  
   
@@ -66,6 +66,6 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

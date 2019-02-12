@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 707a18ee54776bee46c58fc9db843c06d14a2ff4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544593"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031727"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
   Você pode usar os parâmetros a seguir como parte de uma URL para configurar a aparência de seus relatórios. Os parâmetros mais comuns estão listados nesta seção. Os parâmetros não diferenciam maiúsculas de minúsculas e começam com o prefixo de parâmetro *rs:* quando direcionados ao servidor de relatório e com *rc:* quando direcionados a um Visualizador de HTML. Você também pode especificar parâmetros que são específicos de dispositivos ou extensões de renderização. Para obter mais informações sobre parâmetros específicos do dispositivo, consulte [Especificar as configurações de informações sobre o dispositivo em uma URL](specify-device-information-settings-in-a-url.md).  

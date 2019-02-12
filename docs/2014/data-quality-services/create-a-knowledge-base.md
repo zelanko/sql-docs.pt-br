@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.selectkb.f1
 - sql12.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41e4f8b200a113dc7f4c3bc6ba4edd94d341c523
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2edab11fc05f7fec3af8d2fcbff48f4f44a2e8e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032993"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036007"
 ---
 # <a name="create-a-knowledge-base"></a>Criar uma base de dados de conhecimento
   Este tópico descreve como criar uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepará-la para o gerenciamento de domínio, a descoberta de conhecimento ou a adição de uma política de correspondência.  
@@ -59,7 +59,7 @@ ms.locfileid: "51032993"
   
 6.  Clique em **Criar**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após criar uma base de dados de conhecimento  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de criar uma Base de Conhecimento  
  Depois que você criar uma base de dados de conhecimento, verá um assistente para executar a descoberta da base de dados de conhecimento, um assistente para criar uma política de correspondência ou páginas para fazer o gerenciamento do domínio. Para obter mais informações sobre a descoberta de conhecimento, o gerenciamento de domínio ou a política de conciliação, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

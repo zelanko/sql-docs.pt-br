@@ -17,30 +17,30 @@ helpviewer_keywords:
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9da8e25466da90ad4d76ae787695eec66b2f4f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b84ac73991124ea9f90c5fe60c11e2b93154dc2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136648"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034677"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta DMX do Analysis Services
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece designers de consultas gráficas que permitem criar consultas DMX (extensões DMX) e MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Este tópico descreve o designer de consulta DMX. Para obter mais informações sobre o designer de consulta MDX, consulte [Interface de usuário do Designer de consulta do Analysis Services MDX](analysis-services-mdx-query-designer-user-interface.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece designers de consultas gráficas que permitem criar consultas DMX (extensões DMX) e MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Este tópico descreve o designer de consulta DMX. Para obter mais informações, consulte [Interface do usuário do Designer de Consulta MDX do Analysis Services](analysis-services-mdx-query-designer-user-interface.md).  
   
- O designer de consultas gráficas DMX tem três modos: Design, Consulta e Resultado. Para alternar entre os modos, clique com o botão direito do mouse no painel Design da Consulta e selecione o modo desejado. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta DMX que recupere dados de um conjunto de dados quando o relatório for processado.  
+ O designer de consultas gráficas DMX tem três modos: Design, consulta e resultado. Para alternar entre os modos, clique com o botão direito do mouse no painel Design da Consulta e selecione o modo desejado. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta DMX que recupere dados de um conjunto de dados quando o relatório for processado.  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas DMX gráficas  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas DMX por meio da interface gráfica. A tabela a seguir descreve os botões e as respectivas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Desabilitado para este tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Alterar para a exibição de consulta MDX](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Alterar para a exibição de consulta MDX")|Alterne para o modo do designer de consulta MDX.|  
 |![Alterar para a exibição de linguagem de consulta DMX](../media/rsqdicon-commandtypedmx.gif "Alterar para a exibição de linguagem de consulta DMX")|Alterne para o modo do designer de consulta DMX.|  
 |![Atualizar dados de resultados](../../analysis-services/media/rsqdicon-refresh.gif "Atualizar dados de resultados")|Atualiza metadados na fonte de dados.|  
-|![Exclua](../../analysis-services/media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
+|![Excluir](../../analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
 |![Ícone da caixa de diálogo Parâmetros de Consulta](../../analysis-services/media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Parâmetros de Consulta** . Quando você atribui um valor padrão a uma variável, um parâmetro de relatório correspondente é criado no momento em que você alterna para o modo de Layout do Designer de Relatórios.|  
 |![Executar a consulta](../../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Prepara a consulta.|  
 |![Alternar para o modo de Design](../../analysis-services/media/rsqdicon-designmode.gif "Alternar para o modo de Design")|Alterna entre o modo Design e o modo Consulta. Para mudar para a exibição de resultado, clique com o botão direito do mouse no painel Design e escolha **Resultado**.|  
@@ -85,12 +85,12 @@ ms.locfileid: "48136648"
  Para voltar aos modos de Design ou de Consulta, clique com o botão direito do mouse no painel Resultado e selecione **Design** ou **Consulta**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir parâmetros no Designer de consulta MDX do Analysis Services &#40;relatórios e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Definir parâmetros no Designer de Consulta MDX do Analysis Services &#40;Construtor de Relatórios e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Do tipo de Conexão Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
- [Recuperar dados de um modelo de mineração de dados &#40;DMX&#41; &#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
+ [Tipo de conexão Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Recuperar dados de um modelo de Data Mining &#40;DMX&#41; &#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   
- [Do tipo de Conexão Analysis Services para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Do tipo de Conexão Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de conexão Analysis Services para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Tipo de conexão Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

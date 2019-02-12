@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374118"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035637"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  

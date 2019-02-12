@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349382"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014037"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Atualizando Relatórios por Meio de Classes Geradas a Partir do Esquema RDL (Tutorial SSRS)
   Este tutorial mostra como usar a definição de ferramenta de esquema XML (Xsd.exe) para gerar classes que permitem a você serializar e desserializar os arquivos de definição de relatório (. RDL e. rdlc) com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> classe.  
@@ -59,7 +58,7 @@ ms.locfileid: "53349382"
 > [!NOTE]  
 >  Os exemplos não são instalados automaticamente durante a instalação, mas podem ser instalados a qualquer momento. Para obter informações sobre exemplos, consulte [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Tempo estimado para concluir o tutorial:** 30 minutos  
+ **Tempo estimado para a conclusão do tutorial:** 30 minutos  
   
 ## <a name="tasks"></a>Tarefas  
  [Lição 1: Criar o projeto do Visual Studio de esquema RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  

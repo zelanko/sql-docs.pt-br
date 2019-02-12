@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057637"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020368"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Renderizando regiões de dados (Construtor de Relatórios e SSRS)
   Além dos comportamentos de renderização gerais que se aplicam a todos os itens de relatório, as regiões de dados têm comportamentos de paginação e renderização adicionais que elas adotam. As regras de renderização específicas por região de dados incluem como uma região de dados cresce, como as células especiais como as células de canto ou células de cabeçalho são renderizadas e como uma região de dados para leitura da direita para a esquerda é renderizada. Esse tópico aborda como as várias partes de uma região de dados são renderizadas.  
@@ -42,7 +42,7 @@ ms.locfileid: "48057637"
  O canto superior esquerdo é chamado canto tablix. O canto Tablix pode conter outros itens de relatórios nele, mas, se as quebras de página lógicas forem inseridas no canto, elas serão ignoradas quando a região de dados Tablix for renderizada.  
   
 ### <a name="tablix-body"></a>Corpo Tablix  
- O corpo Tablix é composto por células Tablix. O corpo Tablix é renderizado com base nos comportamentos de regras de paginação e renderização dos itens de relatório. Para obter mais informações, consulte [renderizando itens de relatório &#40;construtor de relatórios e SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
+ O corpo Tablix é composto por células Tablix. O corpo Tablix é renderizado com base nos comportamentos de regras de paginação e renderização dos itens de relatório. Para obter mais informações, consulte [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>Regiões de Dados Mapa, Medidor e Gráfico  
  As regiões de dados Gráfico, Medidor e Mapa se comportam como imagens quando elas são renderizadas e exibidas no corpo do relatório. Os valores na região de dados podem ter ações associadas, como link para outro relatório ou ir para um marcador; e essas ações podem ser renderizadas também, se o renderizador oferecer suporte a elas.  
@@ -50,7 +50,7 @@ ms.locfileid: "48057637"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   

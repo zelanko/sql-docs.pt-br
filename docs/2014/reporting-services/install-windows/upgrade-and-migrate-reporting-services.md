@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363008"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017177"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   Este tópico é uma visão geral das opções de atualização e migração para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Há duas abordagens gerais para se atualizar uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -113,7 +113,7 @@ ms.locfileid: "53363008"
   
 -   Faça backup de quaisquer personalizações feitas em diretórios virtuais existentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no IIS.  
   
--   Remova certificados SSL inválidos.  Inclusive certificados expirados que você não planeja atualizar antes de atualizar o Reporting Services.  Certificados inválidos provocarão Falha na atualização e uma mensagem de erro semelhante à seguinte será gravada para o arquivo de Log do Reporting Services: **Wmiproviderexception: Um certificado Secure Sockets Layer (SSL) não está configurado no site da Web.** .  
+-   Remova certificados SSL inválidos.  Inclusive certificados expirados que você não planeja atualizar antes de atualizar o Reporting Services.  Certificados inválidos provocarão Falha na atualização e uma mensagem de erro semelhante à seguinte será gravada para o arquivo de Log do Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Um certificado Secure Sockets Layer (SSL) não está configurado no site da Web.** .  
   
  Antes de atualizar um ambiente de produção, execute sempre uma atualização de teste em um ambiente de pré-produção que tenha a mesma configuração do ambiente de produção.  
   

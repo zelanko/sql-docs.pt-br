@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d0efbb500a3c433f4670c3ec2ad2e35d88b8b59
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+manager: kfile
+ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039147"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvar relatórios em um servidor de relatório (Construtor de Relatórios)
   No Construtor de Relatórios, é possível salvar uma definição de relatório em um servidor de relatório (processo também conhecido como publicação de relatório). Quando o relatório for salvo em um servidor de relatório, outros usuários poderão exibi-lo. Cada vez que você executa o relatório publicado, recupera os dados mais atuais. Para salvar uma cópia estática de um relatório renderizado, exporte o relatório para um formato de arquivo diferente e salve-o ou use o recurso de histórico de relatório para salvar versões dos relatórios renderizados.  

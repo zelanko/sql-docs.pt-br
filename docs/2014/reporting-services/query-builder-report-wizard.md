@@ -14,19 +14,19 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6bf7bfb94237b34056502d08f5cec8e4d5b80bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f6a7e4e8e6d4a70ecb3695819f3648c86034b4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056296"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013157"
 ---
 # <a name="query-builder-report-wizard"></a>Construtor de Consultas (Assistente de Relatório)
   Use o Construtor de Consultas para especificar uma consulta que recupera um conjunto de resultados para usar em um relatório. Você pode escolher entre dois construtores de consulta:  
   
--   O construtor de consultas baseado em texto (padrão) fornece um espaço de trabalho simples para especificar uma consulta e exibir os resultados. Você pode especificar várias instruções do [!INCLUDE[tsql](../includes/tsql-md.md)] , consulta ou sintaxe de comando para as extensões de processamento de dados e consultas que são especificadas como expressões. Como o construtor de consulta genérico não processa previamente a consulta e pode acomodar qualquer tipo de sintaxe de consulta, esta é a ferramenta de construção de consulta padrão para o Designer de Relatórios.  
+-   O construtor de consultas baseado em texto (padrão) fornece um workspace simples para especificar uma consulta e exibir os resultados. Você pode especificar várias instruções do [!INCLUDE[tsql](../includes/tsql-md.md)] , consulta ou sintaxe de comando para as extensões de processamento de dados e consultas que são especificadas como expressões. Como o construtor de consulta genérico não processa previamente a consulta e pode acomodar qualquer tipo de sintaxe de consulta, esta é a ferramenta de construção de consulta padrão para o Designer de Relatórios.  
   
 -   O construtor de consultas gráfico fornece uma experiência visual mais rica. É usado no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] e em outras partes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você poderá usar o construtor de consultas gráfico se não estiver criando expressões ou instruções SQL de várias partes.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48056296"
  **Importar**  
  Abre a caixa de diálogo **Importar Consulta** e exibe arquivos .rdl e .sql de qualquer relatório disponível. Você pode usar a consulta importada como ela está ou pode modificá-la no construtor de consultas.  
   
- **! (Executar)**  
+ **! (Run)**  
  Executa a consulta e retorna um conjunto de resultados se a consulta for válida. Observe que você não poderá executar a consulta se ela for uma expressão. Para verificar uma consulta baseada em expressão, você deve visualizar o relatório.  
   
  **Tipo de comando**  

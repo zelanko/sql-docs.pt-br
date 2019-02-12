@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: kfile
+ms.openlocfilehash: 50ff2626108c26ca5cee3845da437b27dbfcade0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030847"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar tipos de conteúdo do servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece tipos de conteúdo predefinidos do SharePoint usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatórios (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.  
@@ -66,7 +66,7 @@ ms.locfileid: "52617136"
   
 5.  Atualize o navegador e clique em **Ativar** para o **Recurso de Integração do Servidor de Relatório**.  
   
-    ![Desativar](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Deactivate](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2013)  
   

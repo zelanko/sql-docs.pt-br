@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182666"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015972"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML que é usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  
   
 > [!NOTE]  
->  Embora não seja possível modificar a barra de ferramentas de relatório, você pode configurar os parâmetros em uma URL de relatório para ocultá-la em um relatório. Para obter mais informações sobre como ocultar a barra de ferramentas de relatório, consulte [URL Access Parameter Reference](url-access-parameter-reference.md).  
+>  Embora não seja possível modificar a barra de ferramentas de relatório, você pode configurar os parâmetros em uma URL de relatório para ocultá-la em um relatório. Para obter mais informações sobre como ocultar barra de ferramentas de relatório, consulte [Referência de parâmetro de acesso à URL](url-access-parameter-reference.md).  
   
 ## <a name="report-toolbar"></a>Barra de ferramentas de relatório  
  A barra de ferramentas de relatório fornece as funcionalidades de navegação na página, zoom, atualização, pesquisa, exportação, impressão e feed de dados para relatórios renderizados na extensão de renderização HTML.  
@@ -34,18 +34,18 @@ ms.locfileid: "48182666"
   
  A barra de ferramentas de relatório é semelhante à ilustração a seguir. A barra de ferramentas de relatório exibida pode ser diferente da ilustração com base nos recursos do relatório ou nas opções de renderização disponíveis.  
   
- ![Barra de ferramentas do relatório](media/htmlviewer-toolbar.gif "Barra de ferramentas do relatório")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
   
  A tabela a seguir descreve recursos geralmente usados da barra de ferramentas de relatório. Cada recurso é identificado pelo controle que você usa para acessá-lo.  
   
 |Use este ícone ou controle||Para|  
 |------------------------------|-|--------|  
-|![Controles de navegação de página](media/htmlviewer-pagenav.gif "controles de navegação de página")|**Controles de navegação de página**|Abrir a primeira ou a última página de um relatório, percorrer o relatório página por página e abrir uma página específica no relatório. Para exibir uma página específica, digite o número da página e pressione ENTER.|  
-|![Controles de exibição de página](media/htmlviewer-pagesize.gif "controles de exibição de página")|**Controles de exibição de página**|Aumentar ou reduzir o tamanho da página do relatório. Além das alterações com base em percentual, você pode selecionar **Largura da Página** para ajustar o comprimento horizontal de uma página de relatório na janela do navegador ou **Página Inteira** para ajustar o comprimento vertical de um relatório na janela do navegador. Uma opção **Zoom** tem suporte no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 e versões posteriores.|  
-|![Campo de pesquisa](media/htmlviewer-search.gif "campo de pesquisa")|**Campo de pesquisa**|Procure o conteúdo no relatório digitando uma palavra ou frase que deseja localizar (o comprimento máximo do valor é 256 caracteres). A pesquisa diferencia maiúsculas e minúsculas e começa na página ou seção selecionada no momento. Somente conteúdo visível é incluído em uma operação de pesquisa. Para procurar ocorrências subsequentes do mesmo valor, clique em **Próximo**.|  
-|![Formatos de exportação](media/htmlviewer-export.GIF "formatos de exportação")|**Formatos de exportação**|Abra uma nova janela de navegador e renderize o relatório no formato selecionado. Os formatos disponíveis são determinados pelas extensões de renderização instaladas no servidor de relatório. TIFF é recomendado para imprimir. Clique em **Exportar** para exibir o relatório no formato selecionado.|  
-|![Ícone do mapa do documento](media/htmlviewer-docmap.GIF "ícone do mapa do documento")|**Ícone do mapa do documento**|Mostrar ou ocultar o painel de mapa do documento em um relatório que inclui um mapa do documento. Um mapa do documento é um controle de navegação de relatório semelhante ao painel de navegação em um site da Web. Você pode clicar em itens no mapa do documento navegar até um grupo específico, uma página ou um sub-relatório.|  
-|![Ícone de impressora](media/printer-icon.gif "ícone da impressora")|**Ícone de impressora**|Abrir uma caixa de diálogo de impressão para que você possa especificar opções de impressão e imprimir um relatório. No primeiro uso, ao clicar nesse ícone você deverá baixar o controle de impressão.|  
+|![Controles de navegação de página](media/htmlviewer-pagenav.gif "Controles de navegação de página")|**Controles de navegação de página**|Abrir a primeira ou a última página de um relatório, percorrer o relatório página por página e abrir uma página específica no relatório. Para exibir uma página específica, digite o número da página e pressione ENTER.|  
+|![Controles de exibição de página](media/htmlviewer-pagesize.gif "Controles de exibição de página")|**Controles de exibição de página**|Aumentar ou reduzir o tamanho da página do relatório. Além das alterações com base em percentual, você pode selecionar **Largura da Página** para ajustar o comprimento horizontal de uma página de relatório na janela do navegador ou **Página Inteira** para ajustar o comprimento vertical de um relatório na janela do navegador. Uma opção **Zoom** tem suporte no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 e versões posteriores.|  
+|![Campo de pesquisa](media/htmlviewer-search.gif "Campo de pesquisa")|**Campo de pesquisa**|Procure o conteúdo no relatório digitando uma palavra ou frase que deseja localizar (o comprimento máximo do valor é 256 caracteres). A pesquisa diferencia maiúsculas e minúsculas e começa na página ou seção selecionada no momento. Somente conteúdo visível é incluído em uma operação de pesquisa. Para procurar ocorrências subsequentes do mesmo valor, clique em **Próximo**.|  
+|![Formatos de exportação](media/htmlviewer-export.GIF "Formatos de exportação")|**Formatos de exportação**|Abra uma nova janela de navegador e renderize o relatório no formato selecionado. Os formatos disponíveis são determinados pelas extensões de renderização instaladas no servidor de relatório. TIFF é recomendado para imprimir. Clique em **Exportar** para exibir o relatório no formato selecionado.|  
+|![Ícone do mapa do documento](media/htmlviewer-docmap.GIF "Ícone do mapa do documento")|**Ícone do mapa do documento**|Mostrar ou ocultar o painel de mapa do documento em um relatório que inclui um mapa do documento. Um mapa do documento é um controle de navegação de relatório semelhante ao painel de navegação em um site da Web. Você pode clicar em itens no mapa do documento navegar até um grupo específico, uma página ou um sub-relatório.|  
+|![Ícone de impressora](media/printer-icon.gif "Ícone de impressora")|**Ícone de impressora**|Abrir uma caixa de diálogo de impressão para que você possa especificar opções de impressão e imprimir um relatório. No primeiro uso, ao clicar nesse ícone você deverá baixar o controle de impressão.|  
 ||**Mostrar e ocultar ícones**|Mostrar ou ocultar campos de valor de parâmetro e o botão **Exibir Relatório** em um relatório que inclui parâmetros.|  
 |![Botão Atualizar do navegador na barra de ferramentas de relatório](media/htmlviewer-refresh.GIF "Botão Atualizar do navegador na barra de ferramentas de relatório")|**Ícone de atualização de relatório**|Atualizar o relatório. Os dados de relatórios dinâmicos serão atualizados. Os relatórios armazenados em cache serão recarregados de onde estão armazenados.|  
 |![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Ícone de feed de dados**|Feeds de dados gerados de relatórios.|  
@@ -55,7 +55,7 @@ ms.locfileid: "48182666"
   
  Os formatos de exportação a seguir são incluídos em uma instalação de servidor de relatório padrão. A lista de formatos de exportação disponíveis pode conter itens diferentes dos listados aqui.  
   
-|Formato de exportação|Description|  
+|Formato de exportação|Descrição|  
 |-------------------|-----------------|  
 |XML|Exiba um relatório em sintaxe XML. Relatórios exibidos em XML são abertos em uma nova janela do navegador.|  
 |CSV|Exiba um relatório em um formato delimitado por vírgula. O relatório é aberto em um aplicativo associado ao tipo de arquivo CSV.|  

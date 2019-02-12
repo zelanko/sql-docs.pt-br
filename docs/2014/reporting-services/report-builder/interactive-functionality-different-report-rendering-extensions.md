@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174006"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022597"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funcionalidade interativa para extensões de renderização de relatório diferentes (Construtor de Relatórios e SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos de relatórios interativos que permitem que você trabalhe com um relatório em tempo de execução. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Você pode usar a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos interativos para relatórios que permitem trabalhar em tempo de execução com um relatório. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Você pode usar a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -114,6 +114,6 @@ ms.locfileid: "48174006"
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Gráficos de &#40;relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ba16d9d50faaaef740f3aa4c4eaff5122fdff438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015767"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Alterar o texto de um item de legenda (Construtor de Relatórios e SSRS)
   Quando um campo é colocado na área Valores do gráfico, um item de legenda é gerado automaticamente contendo o nome desse campo. Cada item de legenda está conectado a uma série individual no gráfico, exceto para gráficos de forma, nos quais a legenda está conectada a pontos de dados individuais em vez de séries individuais.  
   
- Em gráficos de forma, você pode alterar o texto de um item de legenda para mostrar mais informações sobre os pontos de dados individuais. Por exemplo, se você quiser mostrar os valores dos pontos de dados como porcentagens na legenda, você pode usar uma palavra-chave como `#PERCENT`. É possível adicionar códigos de formato do .NET Framework em conjunto com palavras-chave para aplicar formatos numéricos e de data. Para obter mais informações sobre palavras-chave, consulte [Formatação de pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Em gráficos de forma, você pode alterar o texto de um item de legenda para mostrar mais informações sobre os pontos de dados individuais. Por exemplo, para mostrar os valores dos pontos de dados como porcentagens na legenda, você pode usar uma palavra-chave, como `#PERCENT`. É possível adicionar códigos de formato do .NET Framework em conjunto com palavras-chave para aplicar formatos numéricos e de data. Para obter mais informações sobre palavras-chave, consulte [Formatação de pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  ![Gráfico de forma](../media/sharpchart.png "Gráfico de forma")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48081036"
   
  A tabela a seguir fornece exemplos de palavras-chave específicas de gráfico para usar para a propriedade **Texto da Legenda Personalizada** . Para obter mais informações sobre palavras-chave, consulte [Formatação de pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-|Palavra-chave|Description|Exemplo do que é exibido como texto na legenda|  
+|Palavra-chave|Descrição|Exemplo do que é exibido como texto na legenda|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|Exibe a porcentagem do valor total para uma casa decimal.|85.0%|  
 |`#VALY`|Exibe o valor numérico real do campo de dados.|17000|  
@@ -55,7 +55,7 @@ ms.locfileid: "48081036"
 2.  Clique em **Legenda** e, na caixa **Texto da legenda personalizada** , digite um rótulo para a legenda. A série é atualizada com o texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando a legenda em um gráfico &#40;relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Ocultar itens de legenda no gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   

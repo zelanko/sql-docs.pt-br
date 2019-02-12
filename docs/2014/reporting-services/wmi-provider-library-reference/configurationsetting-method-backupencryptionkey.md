@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 395e3dbb8eb2a48991e897129a91f7b4808fd110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 268d57207280689bb1c9b2df25013d6eca435f4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200616"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016117"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Efetua backup da chave de criptografia da instância do servidor de relatório especificada. A chave de criptografia é armazenada criptografada com uma senha.  
@@ -66,6 +66,6 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

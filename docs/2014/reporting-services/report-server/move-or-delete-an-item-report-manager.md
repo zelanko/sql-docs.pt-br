@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d049c93c74ebc60b708ab9c5f1b5da37b5a6d924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03107ceb9c09cd3a48a0d547882b02b951d4d3c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056256"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020147"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover ou excluir um item (Gerenciador de Relatórios)
   Relatórios e itens de relatório que você publica em um servidor de relatório são armazenados em pastas. Você pode mover itens para uma pasta diferente e as referências a esses itens são mantidas automaticamente pelo servidor de relatório. Antes de excluir um item, verifique se outros itens dependem dele.  
@@ -38,7 +38,7 @@ ms.locfileid: "48056256"
 |![Ícone Fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
- Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  
+ Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. Permissão para mover um item é concedida quando as tarefas a seguir são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciam pastas" e "Gerenciar fontes de dados".  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Para mover um item de dentro da página Conteúdo  
   

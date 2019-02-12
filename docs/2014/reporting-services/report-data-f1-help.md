@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 61b91ccf-7b4c-4f3d-8992-2c8eb105ccf4
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d63205e28cade48855e767dd3ae3e350be527709
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a0e7c37db9e9c5f16992ed1cd03948188bdfcdfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018948"
 ---
 # <a name="report-data-f1-help"></a>Ajuda F1 de dados de relatório
   Os tópicos desta seção fornecem informações sobre as opções que podem ser definidas em fontes de dados, fontes de dados compartilhadas e conjuntos de dados, bem como informações sobre os designers de consulta que estão disponíveis no Designer de Relatórios.  

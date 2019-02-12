@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d888ef0f3019e38e043ebe00c68e03f82e924f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6b159467fc511292ecb1ae3832a04c73dabdd251
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067236"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009638"
 ---
 # <a name="secure-shared-data-source-items"></a>Proteger itens de fontes de dados compartilhadas
   Você pode definir a segurança em um item fonte de dados compartilhada para habilitar ou desabilitar o acesso a ele.  
@@ -45,6 +45,6 @@ ms.locfileid: "48067236"
  [Proteger pastas](secure-folders.md)   
  [Proteger relatórios e recursos](secure-reports-and-resources.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
- [Armazenar credenciais em uma fonte de dados do Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

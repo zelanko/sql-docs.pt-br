@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9b2efda76c0e1005a298e67b139233a96796522b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413766"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034087"
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
   Este tópico descreve como criar um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em um ou mais domínios únicos que se aplicam a um campo de dados único. Para obter mais informações sobre domínios de composição, consulte [Gerenciando um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "52413766"
   
 6.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de criar um domínio composto  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de criar um domínio composto  
  Depois que você criar um domínio composto, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

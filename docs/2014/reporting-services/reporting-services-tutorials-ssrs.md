@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1742c706d4a89999c28c5cb29d260eed2c0d0334
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 048f9ca3d17a2fdc716786afb6fe2c48d3f83fa6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362398"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023027"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriais de Reporting Services (SSRS)
   Esta seção contém tutoriais para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "53362398"
 ## <a name="see-also"></a>Consulte também  
  [Adventure Works para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=245471)   
  [Exemplos do Reporting Services no CodePlex (https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
- [WIKI do TechNet: SQL Server 2012 Samples (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [TechNet WIKI: SQL Server 2012 Samples (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Piquenique (de conjunto de dados (dados de exemplo)https://go.microsoft.com/fwlink/?linkID=219108)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

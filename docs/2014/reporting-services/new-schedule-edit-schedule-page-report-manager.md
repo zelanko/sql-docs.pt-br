@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139456"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034537"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nova agenda: Editar página de agenda (Gerenciador de relatórios)
   Use a página Nova Agenda / Editar Agenda para criar uma agenda para um relatório. As agendas são usadas com assinaturas para atualizar relatórios armazenados em cache e criar instantâneos como itens autônomos ou em histórico de relatório.  
@@ -79,7 +79,7 @@ ms.locfileid: "48139456"
   
 -   **Hora** define uma agenda que é executada a intervalos de hora em hora. Use a seção **Datas de início e término** para especificar o dia em que o agendamento deve ser executado.  
   
--   **Dia** define uma agenda que é executada nos dias que você seleciona, em uma hora e minuto específicos. Você pode especificar dias das seguintes maneiras: cada \< *dia*>, cada dia da semana e cada \< *número*> dias. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
+-   **Dia** define uma agenda que é executada nos dias que você seleciona, em uma hora e minuto específicos. Você pode especificar dias das seguintes maneiras: Cada \< *dia*>, cada dia da semana e cada \< *número*> dias. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
 -   **Semana** define uma agenda que é executada a intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser uma semana completa (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48139456"
  Os agendamentos expiram sem notificação. Depois da data de término, eles não são mais executados. Agendamentos expirados não são excluídos. Eles só podem ser excluídos manualmente. Assim, se você escolher continuar o agendamento, poderá estender a data de término.  
   
 ## <a name="see-also"></a>Consulte também  
- [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

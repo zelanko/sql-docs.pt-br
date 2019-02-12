@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 278cbff64973a76afd82ae7f01e8c81d12f20e5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3c1e16950a2092feb69159cdcad18c4b7d6f69fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373388"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012687"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
   Um conjunto de dados especifica os dados que você pode usar a partir de uma conexão de dados. Um conjunto de dados é baseado em uma conexão de dados que foi salva no relatório como uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada em um servidor de relatório. O conjunto de dados inclui uma consulta que especifica um conjunto de campos. Ao arrastar esses campos para a superfície de design, você cria expressões que avaliam os dados reais quando o relatório é executado.  

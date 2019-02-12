@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4f59433b8f49ba21f6f23be42eea8716baf417
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1746649fb0cecea4a6861d1e28e4e12b49e2f92f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132127"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022067"
 ---
 # <a name="pathname-property-wmi-msreportserverconfigurationsetting"></a>Propriedade PathName (WMI MSReportServer_ConfigurationSetting)
   Especifica o caminho de instalação de uma instância do servidor de relatório. Somente leitura.  
@@ -49,6 +49,6 @@ public string PathName;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

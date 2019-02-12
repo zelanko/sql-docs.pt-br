@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6df7b90915fd7ba91a2b577abc710e708b792ec1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: kfile
+ms.openlocfilehash: 4dbe708d18cf7b8c3fa02ebd3da174d76a9683ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124286"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031117"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint
   Para publicar uma fonte de dados compartilhada em um servidor de relatório executado no modo integrado SharePoint, defina as propriedades do projeto de relatório no Designer de Relatórios. Nas propriedades do projeto, todas as referências a servidores, relatórios e fontes de dados compartilhadas devem ser URLs totalmente qualificadas.  

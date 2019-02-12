@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395509"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020378"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Limpeza de dados é o processo de analisar a qualidade de dados em uma fonte de dados, aprovando/rejeitando as sugestões manualmente pelo sistema e fazer alterações assim aos dados. A limpeza de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) inclui um processo auxiliado por computador que analisa a conformidade dos dados em relação ao conhecimento de uma base de dados de conhecimento, e um processo interativo que permite que o administrador de dados examine e modifique resultados de processo auxiliado por computador para garantir que a limpeza de dados seja executada exatamente como desejado.  

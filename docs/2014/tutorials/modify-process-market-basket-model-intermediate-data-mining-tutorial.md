@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c99945ad1e1d8c5027f7dfc63dcb725b0f0dac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204376"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035407"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Modificando e processando o modelo de cesta de compras (Tutorial de mineração de dados intermediário)
-  Antes de processar o modelo de mineração de associação que você criou, você deve alterar os valores padrão de dois dos parâmetros: *suporte* e *probabilidade*.  
+  Antes de processar o modelo de mineração de associação que você criou, você deve alterar os valores padrão de dois dos parâmetros: *O suporte* e *probabilidade*.  
   
 -   *Suporte* define a porcentagem de casos em que uma regra deve existir antes de ser considerado válido. Você especificará que uma regra deve ser encontrada em pelo menos 1 por cento dos casos.  
   
@@ -63,6 +62,6 @@ ms.locfileid: "48204376"
  [Explorando os modelos de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

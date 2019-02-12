@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7373663f6ed41d5803d51341fc0dde2574417d9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f1bc1b1bc8ca4c2f07aa7f4924ed738d705df7f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027206"
 ---
 # <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>Método SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
   Especifica o valor de tempo limite padrão para consultas no banco de dados do servidor de relatório.  
@@ -55,6 +55,6 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

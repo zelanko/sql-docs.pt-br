@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 85a131bb3090405df1c525a55b6863547e804d2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b1541073379aa27c932fcadf7558de7d34c57e8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064879"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037857"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Inserir uma imagem em um relatório (Construtor de Relatórios e SSRS)
   Um relatório pode conter uma imagem inserida. Inserir uma imagem garante que ela estará sempre disponível para um relatório, mas também afeta o tamanho da definição de relatório, o arquivo que define o relatório. As imagens inseridas em um relatório estão listadas no painel de dados do relatório.  
@@ -64,7 +64,7 @@ ms.locfileid: "48064879"
 3.  Clique na caixa de texto próxima à propriedade **MIMEType** e selecione um novo tipo MIME na lista suspensa.  
   
 ## <a name="see-also"></a>Consulte também  
- [Imagens &#40;relatórios e SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md)   
  [Adicionar uma imagem vinculada a dados &#40;Construtor de Relatórios e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
  [Caixa de diálogo Propriedades da Imagem, Geral &#40;Construtor de Relatórios e SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

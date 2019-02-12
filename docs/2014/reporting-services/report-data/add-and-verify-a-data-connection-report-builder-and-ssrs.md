@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082006"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030557"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Adicionar e verificar uma conexão de dados ou uma fonte de dados (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, você pode adicionar uma fonte de dados compartilhada do servidor de relatório ou criar uma fonte de dados inserida no relatório. No Designer de Relatórios, você pode criar uma fonte de dados compartilhada ou uma fonte de dados inserida e implantá-la em um servidor de relatório.  
@@ -59,7 +59,7 @@ ms.locfileid: "48082006"
   
     2.  Especifique uma cadeia de conexão usando uma das alternativas a seguir:  
   
-    -   Digite a cadeia de conexão diretamente na caixa de texto **Cadeia de conexão** . Para obter uma lista de exemplos de cadeias de conexão, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+    -   Digite a cadeia de conexão diretamente na caixa de texto **Cadeia de conexão** . Para obter uma lista de exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
     -   Clique no botão de expressão (**fx)** para criar uma expressão que seja avaliada como uma cadeia de conexão. Na caixa de diálogo **Expressão** , digite a expressão no painel Expressão. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48082006"
   
 2.  Clique em **Testar Conexão**.  
   
-3.  Se a conexão for bem-sucedida, a seguinte mensagem aparecerá: Conexão criada com êxito". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Se a conexão for bem-sucedida, a seguinte mensagem será exibida: "Conexão criada com êxito". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Se a conexão não for bem-sucedida, a seguinte mensagem aparecerá: "Não é possível conectar à fonte de dados".  
+4.  Se a conexão não for bem-sucedida, a seguinte mensagem será exibida: "Não é possível conectar-se à fonte de dados."  
   
 5.  Clique em **Detalhes**e use as informações para corrigir o problema.  
   

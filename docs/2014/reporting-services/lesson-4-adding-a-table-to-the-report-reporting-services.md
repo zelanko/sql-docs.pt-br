@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d990d18498547434a6f7774dfcee076d2986ee40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220806"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033227"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lição 4: Adicionando uma tabela ao relatório (Reporting Services)
   Depois de definir o conjunto de dados, você pode começar a criar o relatório. Um layout de relatório é criado arrastando e soltando regiões de dados, caixas de texto, imagens e outros itens que você deseja incluir no relatório na superfície de design.  
@@ -47,7 +47,7 @@ ms.locfileid: "48220806"
     > [!NOTE]  
     >  O cabeçalho de coluna é Total de Linha. O Designer de Relatórios cria automaticamente um nome amigável para a coluna dividindo LineTotal em duas palavras.  
   
-     O diagrama a seguir mostra uma região de dados de tabela que foi populada com estes campos: Data, Ordem, Produto, Quantidade e Total da Linha.  
+     O diagrama a seguir mostra uma região de dados de tabela que foi populada com estes campos: Data, ordem, produto, quantidade e Total da linha.  
   
      ![Design, tabela com linha de cabeçalho e de linha de detalhe](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, tabela com linha de cabeçalho e de linha de detalhes")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48220806"
 >  No menu **Arquivo** , clique em **Salvar Tudo** para salvar o relatório.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Consulte [Lição 5: Formatando um relatório &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+ Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Consulte [lição 5: Formatando um relatório &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
