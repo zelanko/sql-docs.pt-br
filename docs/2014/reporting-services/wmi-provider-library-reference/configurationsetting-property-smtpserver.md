@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 71f83aecd44de087c83a97c5d458479033dcd6a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1e2309050495316946693adc84a97315f0b597a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207026"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034787"
 ---
 # <a name="smtpserver-property-wmi-msreportserverconfigurationsetting"></a>Propriedade SMTPServer (WMI MSReportServer_ConfigurationSetting)
   Obtém a propriedade do servidor SMTP do arquivo de configuração do servidor de relatório. Somente leitura.  
@@ -49,6 +49,6 @@ public string SMTPServer;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   
