@@ -24,7 +24,7 @@ ms.locfileid: "56012997"
 ## <a name="sqlpackage-181"></a>sqlpackage 18.1
 
 Data de lançamento: 1 de fevereiro de 2019  
-Compilação 15.0.4316.1 
+Compilação 
 
 A versão inclui os seguintes recursos e correções:
 
@@ -47,7 +47,7 @@ Esta versão inclui as compilações de visualização de plataforma cruzada do 
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
 Data de lançamento: 24 de outubro de 2018  
-Compilação 15.0.4200.1 
+Compilação: 15.0.4200.1 
 
 A versão inclui os seguintes recursos e correções:
 
@@ -64,8 +64,8 @@ A versão inclui os seguintes recursos e correções:
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
-Data de lançamento: 22 de junho de 2018  
-Compilação 14.0.4079.2  
+Data do lançamento: 22 de junho de 2018  
+Build: 14.0.4079.2  
 
 A versão inclui as seguintes correções:
 
@@ -77,7 +77,7 @@ A versão inclui as seguintes correções:
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
 Data de lançamento: 25 de janeiro de 2018  
-Compilação 14.0.3917.1
+Build: 14.0.3917.1
 
 A versão inclui as seguintes correções:
 
@@ -90,7 +90,7 @@ A versão inclui as seguintes correções:
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
 Data de lançamento: 12 de dezembro de 2017  
-Compilação 14.0.3881.1
+Build: 14.0.3881.1
 
 A versão inclui as seguintes correções:
 
