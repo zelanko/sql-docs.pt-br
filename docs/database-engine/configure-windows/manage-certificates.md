@@ -46,7 +46,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.  
   
-2. Clique com o botão direito do mouse em **Protocolos para***&lt;nome da Instância&gt;* e selecione **Propriedades**.  
+2. Clique com o botão direito do mouse em **Protocolos para** *&lt;nome da Instância&gt;* e selecione **Propriedades**.  
   
 3. Escolha a guia **Certificado** e, em seguida, selecione **Importar**.  
   
@@ -59,7 +59,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   
-2. Clique com o botão direito do mouse em **Protocolos para***&lt;nome da Instância&gt;* e escolha **Propriedades**. 
+2. Clique com o botão direito do mouse em **Protocolos para** *&lt;nome da Instância&gt;* e escolha **Propriedades**. 
 
 3. Escolha a guia **Certificado** e, em seguida, selecione **Importar**.
 
@@ -82,7 +82,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   
-2. Clique com o botão direito do mouse em **Protocolos para***&lt;nome da Instância&gt;* e selecione **Propriedades**.  
+2. Clique com o botão direito do mouse em **Protocolos para** *&lt;nome da Instância&gt;* e selecione **Propriedades**.  
   
 3. Escolha a guia **Certificado** e, em seguida, selecione **Importar**.  
   
