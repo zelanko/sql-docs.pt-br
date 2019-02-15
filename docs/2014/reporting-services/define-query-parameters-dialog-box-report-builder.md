@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10026"
 ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c70902ba9ee7bb45f135613a2401b48e8d96d0ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e31320957e2d458a4a4693319951c42144b2b4df
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015527"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285654"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Caixa de diálogo Definir Parâmetros de Consulta (Construtor de Relatórios)
   Use a caixa de diálogo **Definir Parâmetros de Consulta** para especificar valores de parâmetros quando uma consulta é executada em um designer de consulta em tempo de design para visualizar dados de exemplo. Parâmetros de consulta filtram dados na fonte de dados e ajudam a limitar a quantidade de dados processada por um relatório. Esses valores não são salvos na definição do relatório.  

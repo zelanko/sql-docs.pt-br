@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0d6f6fb32544cdd38d819dac35d0cf2ee35a372f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011857"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294684"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar e classificar dados (Construtor de Relatórios e SSRS)
   Em um relatório, as expressões são usadas para ajudar a controlar, organizar e classificar dados de relatório. Por padrão, quando você cria conjuntos de dados e cria o layout de relatório, as propriedades de itens de relatório são definidas automaticamente como expressões baseadas nos campos de conjuntos de dados, parâmetros e outros itens que aparecem no painel de dados do relatório. Também é possível adicionar um botão de classificação interativo a uma tabela ou célula de matriz para permitir que um usuário altere a ordem de classificação de linha interativamente para grupos ou linhas em grupos.  

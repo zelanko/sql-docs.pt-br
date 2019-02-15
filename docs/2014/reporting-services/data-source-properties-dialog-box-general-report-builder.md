@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031847"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285714"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Caixa de diálogo Propriedades da Fonte de Dados, Geral (Construtor de Relatórios)
   Selecione **Geral** na caixa de diálogo **Propriedades da Fonte de Dados** para selecionar uma fonte de dados compartilhada em um servidor de relatório ou para criar ou modificar as informações de conexão de uma fonte de dados inserida no relatório.  

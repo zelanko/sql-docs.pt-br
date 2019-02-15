@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2fcaaf1e12e685ef029d758216eb10f9b21526bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041727"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284994"
 ---
 # <a name="report-f1-help"></a>Ajuda F1 de relatório
   Os tópicos desta seção fornecem informações sobre as opções que você pode definir no relatório na caixa de diálogo **Propriedades do Relatório** . Para abrir a caixa de diálogo **Propriedades do Relatório** , clique com o botão direito do mouse no plano de fundo do Designer de Relatórios e clique em **Propriedades do Relatório**.  
