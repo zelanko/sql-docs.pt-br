@@ -1,7 +1,7 @@
 ---
 title: Notas de versão para o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/29/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,54 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e7225da803185074e50f3c33d734ec50ccdc29b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.openlocfilehash: 4b7f863c7534421fa6e091e793297b4be3f73542
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514572"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737057"
 ---
-# <a name="release-notes-for-the-jdbc-driver"></a>Notas de versão do JDBC Driver
+# <a name="release-notes-for-the-jdbc-driver"></a>Notas sobre a versão do JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>Atualizações do Microsoft JDBC Driver 7.2 para SQL Server
+
+Microsoft JDBC Driver 7.2 para o SQL Server é totalmente compatível com a especificação de API do JDBC 4.2. Os jars no pacote 7.2 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo de mssql-jdbc-7.2.0.jre11.jar do pacote 7.2 deve ser usado com o Java 11.
+
+### <a name="support-for-jdk-11"></a>Suporte para JDK 11
+
+Microsoft JDBC Driver 7.2 para o SQL Server agora é compatível com o Java Development Kit (JDK) versão 11.0, além de JDK 1.8.
+
+### <a name="support-for-active-directory-managed-service-identity-msi-authentication"></a>Suporte para autenticação do Active Directory MSI Managed Service Identity)
+
+Microsoft JDBC Driver 7.2 para o SQL Server agora dá suporte ao modo de autenticação do Active Directory MSI Managed Service Identity (). Esse modo de autenticação é aplicável em recursos do Azure com suporte para o recurso de "Identidade" habilitado. Ambos os tipos de identidades de sistema gerenciado (MSI) têm suporte pelo driver para adquirir **accessToken** para estabelecer a conexão segura.
+
+Mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação podem ser encontradas aqui: [Conectar-se usando a Autenticação do Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+
+### <a name="osgi-support"></a>Suporte de OSGi
+
+Microsoft JDBC Driver 7.2 para o SQL Server apresenta suporte de OSGi para o driver adicionando abaixo implementações para `org.osgi.service.jdbc.DataSourceFactory` e `org.osgi.framework.BundleActivator` :
+
+- `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory`
+- `com.microsoft.sqlserver.jdbc.osgi.Activator`
+
+### <a name="sqlservererror-apis"></a>APIs de SQLServerError
+
+Microsoft JDBC Driver 7.2 para o SQL Server apresenta `SQLServerException.getSQLServerError()` e `SQLServerError` getter APIs para recuperar os detalhes adicionais sobre o erro gerado a partir do servidor. Para obter mais informações, confira [Tratando erros](../../connect/jdbc/handling-errors.md).
+
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>A versão da "ADAL4J (Biblioteca de Autenticação do Microsoft Azure Active Directory para Java)" foi atualizada: 1.6.3
+
+Microsoft JDBC Driver 7.2 para o SQL Server tiver atualizado sua dependência do Maven em "Microsoft Azure Active Directory Authentication Library (ADAL4J) para Java" para a versão 1.6.3, que também introduz o "Tempo de execução do cliente ao Java para AutoRest" como uma dependência do Maven (versão: 1.6.5). Para obter mais informações sobre dependências, consulte [dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Versão atualizada do "Microsoft Azure Key Vault SDK for Java": 1.2.0
+
+Microsoft JDBC Driver 7.2 para o SQL Server tiver atualizado sua dependência do Maven em "Microsoft Azure chave cofre SDK for Java" para a versão 1.2.0, que também introduz o "Microsoft Azure SDK para Key Vault WebKey" como uma dependência do Maven (versão: 1.2.0). Para obter mais informações sobre dependências, consulte [dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+Com o Microsoft JDBC Driver versão 7.2 para o SQL Server, existe um problema conhecido com determinadas consultas parametrizadas. Uma atualização da versão 7.2 (v7.2.1), será lançado em breve para resolver esse problema.
+
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Atualizações no Microsoft JDBC Driver 7.0 for SQL Server
 
@@ -38,7 +76,7 @@ Microsoft JDBC Driver 7.0 para SQL Server agora oferece suporte para SQL Server 
 
 Microsoft JDBC Driver 7.0 para SQL Server agora implementa `beginRequest()` e `endRequest()` APIs do `java.sql.Connection` classe. Essas APIs foram introduzidas com JDBC 4.3 especificações e JDK 9. Para obter mais informações sobre a implementação do driver dessas APIs, consulte [conformidade do JDBC 4.3 para o Driver JDBC](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
-### <a name="support-for-sql-data-discovery-and-classification"></a>Suporte para "descoberta e classificação de dados SQL"
+### <a name="support-for-sql-data-discovery-and-classification"></a>Suporte para classificação e descoberta de dados SQL
 
 Microsoft JDBC Driver 7.0 para o SQL Server oferece suporte para descoberta de dados SQL e classificação com qualquer banco de dados de destino que dá suporte a esse recurso. O driver agora expõe `SQLServerResultSet.getSensitivityClassification()` APIs para extrair essas informações o buscadas `ResultSet`.
 
@@ -75,9 +113,9 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-adal4j-version-160"></a>Versão atualizada do ADAL4J: 1.6.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>A versão da "ADAL4J (Biblioteca de Autenticação do Microsoft Azure Active Directory para Java)" foi atualizada: 1.6.0
 
-Microsoft JDBC Driver 7.0 para o SQL Server foi atualizada a dependência do Maven no azure-activedirectory-library-for-java (ADAL4J) para a versão 1.6.0. Para obter mais informações sobre dependências, consulte [dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Microsoft JDBC Driver 7.0 para o SQL Server tiver atualizado sua dependência do Maven em "Microsoft Azure Active Directory Authentication Library (ADAL4J) para Java" para a versão 1.6.0. Para obter mais informações sobre dependências, consulte [dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Atualizações no Microsoft JDBC Driver 6.4 for SQL Server
 
@@ -89,7 +127,7 @@ O driver dá suporte à versão 9.0, além de JDK 8.0 e 7.0 do JDK.
 
 ### <a name="jdbc-43-compliance"></a>Conformidade do JDBC 4.3
 
-Suporte para a especificação da API do Java Database Connectivity 4.3, além de 4.1 e 4.2. Os métodos da API do JDBC 4.3 são adicionados, mas ainda não implementados. Para obter detalhes, veja [Conformidade do JDBC 4.3 com o JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+O driver é compatível com a especificação da API Java Database Connectivity 4.3, além da 4.1 e da 4.2. Os métodos da API do JDBC 4.3 são adicionados, mas ainda não implementados. Para obter detalhes, confira [Conformidade do JDBC 4.3 com o JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### <a name="added-connection-property-sslprotocol"></a>Adicionada a propriedade de conexão: sslProtocol
 
@@ -111,7 +149,7 @@ O driver agora dá suporte os tipos de dados `datetime` e `smallDatetime` quando
 
 O Driver JDBC agora dá suporte a `sql_variant` tipos de dados a ser usado com o SQL Server. O `sql_variant` também há suporte para o tipo de dados com recursos como TVPs e cópia em massa com as seguintes limitações:
 
-* 3.a) PARA VALORES DE DATA 
+* **Para valores de data**: 
 
   Quando você estiver usando um TVP para popular uma tabela que contém `datetime`, `smalldatetime`, ou `date` valores armazenados em um `sql_variant` coluna, a chamada a `getDateTime()`, `getSmallDateTime()`, ou `getDate()` método no conjunto de resultados não funciona e gera a seguinte exceção:
 
@@ -119,7 +157,7 @@ O Driver JDBC agora dá suporte a `sql_variant` tipos de dados a ser usado com o
     
   Como alternativa, use o `getString()` ou `getObject()` método em vez disso.
 
-* Uso de TVP com SQL Variant para valores nulos
+* **Usando um TVP com sql_variant para valores nulos**:
   
   Se você estiver usando um TVP para popular uma tabela e enviar um valor nulo para o `sql_variant` tipo de coluna, você encontrará uma exceção. Inserindo um valor NULL com o tipo de coluna `sql_variant` em um TVP não é suportado atualmente.
 
@@ -129,11 +167,11 @@ O Driver JDBC implementou o cache de metadados de instrução preparada para mel
 
 ### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>Adicionado suporte para autenticação integrada do AD do Azure no Linux/Mac
 
-O JDBC Driver agora também é compatível com a Autenticação Integrada do Azure Active Directory em todos os sistemas operacionais compatíveis (Linux/Windows/Mac) com Kerberos. Como alternativa, em sistemas de operacionais do Windows, os usuários possam autenticar com sqljdbc_auth.
+O JDBC Driver agora é compatível com a Autenticação Integrada do Azure AD (Azure Active Directory) em todos os sistemas operacionais compatíveis (Windows, Linux e Mac) com Kerberos. Como alternativa, em sistemas de operacionais do Windows, os usuários possam autenticar com sqljdbc_auth.
 
-### <a name="updated-adal4j-version-140"></a>Versão atualizada do ADAL4J: 1.4.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>A versão da "ADAL4J (Biblioteca de Autenticação do Microsoft Azure Active Directory para Java)" foi atualizada: 1.4.0
 
-O Driver JDBC atualizou sua dependência do Maven no azure-activedirectory-library-for-java (ADAL4J) para a versão 1.4.0. Para obter mais informações sobre dependências, consulte [dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+O Driver JDBC atualizou sua dependência do Maven em "Microsoft Azure Active Directory Authentication Library (ADAL4J) para Java" para a versão 1.4.0. Para obter mais informações sobre dependências, consulte [dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Atualizações no Microsoft JDBC Driver 6.2 for SQL Server
 
@@ -177,7 +215,7 @@ Microsoft JDBC Driver 6.1 para SQL Server é totalmente compatível com as espec
 
 Microsoft JDBC Driver 6.0 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote 6.0 são nomeados de acordo com sua conformidade com a versão de API do JDBC. Por exemplo, o arquivo sqljdbc42.jar do pacote 6.0 é compatível com JDBC API 4.2. Da mesma forma, o arquivo de sqljdbc41.jar está em conformidade com a API do JDBC 4.1.
 
-Para garantir que você tenha o arquivo de sqljdbc41.jar ou sqljdbc42.jar correto, execute as seguintes linhas de código. Se a saída é "versão do Driver: 6.0.7507.100", você tem o pacote do JDBC Driver 6.0.
+Para garantir que você tenha o arquivo de sqljdbc41.jar ou sqljdbc42.jar correto, execute as seguintes linhas de código. Se a saída é "versão do Driver: 6.0.7507.100 ", você tem o pacote do JDBC Driver 6.0.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -186,35 +224,35 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="always-encrypted"></a>Always Encrypted
 
-O driver dá suporte ao recurso Always Encrypted no SQL Server 2016. Esse recurso garante que os dados confidenciais nunca sejam vistos em texto sem formatação em uma instância do SQL Server. O Always Encrypted funciona por criptografia transparente de dados no aplicativo, de forma que o SQL Server apenas manipulará os dados criptografados e os valores do texto não criptografado. Mesmo se a instância do SQL ou o computador host estiverem comprometidos, tudo que um invasor poderá obter será texto cifrado de dados confidenciais. Para obter detalhes, veja [Uso de Always Encrypted com o driver JDBC em Linux](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).
+O driver dá suporte ao recurso Always Encrypted no SQL Server 2016. Esse recurso garante que os dados confidenciais nunca sejam vistos em texto sem formatação em uma instância do SQL Server. O Always Encrypted funciona pela criptografia transparente de dados no aplicativo, de forma que o SQL Server apenas manipulará os dados criptografados e os valores de texto não criptografado. Mesmo se a instância do SQL Server ou o computador host estiverem comprometidos, o invasor apenas poderá obter um texto cifrado de dados confidenciais. Para obter detalhes, veja [Uso de Always Encrypted com o driver JDBC em Linux](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).
 
-### <a name="internationalized-domain-names"></a>IDN (nome de domínio internacionalizado)
+### <a name="internationalized-domain-names"></a>Nomes de domínio internacionalizados
 
 O driver dá suporte a nomes de domínio internacionalizados (IDNs) para nomes de servidor. Para obter detalhes, consulte "Usando nomes de domínio internacionais" a [recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md) artigo.
 
-### <a name="parameterized-queries"></a>consultas parametrizadas
+### <a name="parameterized-queries"></a>Consultas parametrizadas
 
-Agora dá suporte para recuperar metadados de parâmetro com instruções preparadas para consultas complexas, como subconsultas e/ou junções. Observe que essa melhoria estará disponível somente ao usar o SQL Server 2012 e versões mais recentes.
+O driver agora é compatível com a recuperação de metadados de parâmetro com instruções preparadas para consultas complexas, como subconsultas e/ou junções. Observe que essa melhoria está disponível apenas no SQL Server 2012 e nas versões mais recentes.
 
-### <a name="azure-active-directory"></a>Active Directory do Azure
+### <a name="azure-active-directory"></a>Azure Active Directory
 
-Autenticação do Azure AD é um mecanismo para se conectar ao banco de dados SQL v12 usando identidades no Azure AD. Use a autenticação do AAD para gerenciar centralmente as identidades de usuários do banco de dados e como uma alternativa à autenticação do SQL Server. 
+Autenticação do Azure AD é um mecanismo para se conectar ao banco de dados SQL v12 usando identidades no Azure AD. Use a autenticação do Azure AD para gerenciar de forma centralizada as identidades de usuários do banco de dados e como uma alternativa à autenticação do SQL Server. 
 
 Você pode usar o JDBC Driver 6.0 para especificar suas credenciais do AD do Azure na cadeia de caracteres de conexão JDBC para se conectar ao banco de dados SQL. Para obter detalhes, consulte a propriedade de autenticação na [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md) artigo.
 
 ### <a name="table-valued-parameters"></a>Parâmetros com valor de tabela
 
-Os parâmetros com valor de tabela fornecem uma maneira fácil de realizar marshaling em várias linhas de dados de um aplicativo cliente do SQL Server sem exigir várias viagens de ida e volta ou uma lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros com valor de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável de tabela, em seguida, você pode operar em usando o Transact-SQL. Para obter detalhes, consulte [usando parâmetros com valor de tabela](../../connect/jdbc/using-table-valued-parameters.md).
+Os TVPs fornecem uma maneira fácil de realizar marshaling em várias linhas de dados de um aplicativo cliente do SQL Server sem exigir várias viagens de ida e volta ou uma lógica especial do lado do servidor para processar os dados. Você pode usar os TVPs para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável de tabela, em seguida, você pode operar em usando o Transact-SQL. Para obter detalhes, consulte [usando parâmetros com valor de tabela](../../connect/jdbc/using-table-valued-parameters.md).
 
 ### <a name="always-on-availability-groups"></a>Grupos de Disponibilidade AlwaysOn
 
-O driver agora dá suporte a conexões transparentes para grupos de disponibilidade AlwaysOn. O driver descobre rapidamente a topologia AlwaysOn atual de sua infraestrutura de servidor e se conecta ao servidor ativo atual de maneira transparente.
+O driver agora dá suporte a conexões transparentes para grupos de disponibilidade AlwaysOn. O driver descobre rapidamente a topologia Always On atual da infraestrutura de servidor e conecta-se ao servidor ativo atual de maneira transparente.
 
 ## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>Atualizações do Microsoft JDBC Driver 4.2 e posterior para SQL Server
 
 Microsoft JDBC Driver 4.2 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote 4.2 são nomeados de acordo com sua conformidade com a versão de API do JDBC. Por exemplo, o arquivo sqljdbc42.jar do pacote 4.2 é compatível com JDBC API 4.2. Da mesma forma, o arquivo de sqljdbc41.jar está em conformidade com a API do JDBC 4.1.
 
-Para garantir que você tem o direito sqljdbc42.jar ou arquivo sqljdbc41.jar, execute as seguintes linhas de código. Se a saída é "versão do Driver: 4.2.6420.100", você tem o pacote do JDBC Driver 4.2.
+Para garantir que você tem o direito sqljdbc42.jar ou arquivo sqljdbc41.jar, execute as seguintes linhas de código. Se a saída é "versão do Driver: 4.2.6420.100 ", você tem o pacote do JDBC Driver 4.2.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -227,19 +265,19 @@ O driver dá suporte ao JDK versão 8.0, além de JDK 7.0, 6.0 e 5.0.
 
 ### <a name="jdbc-41-and-42-compliance"></a>Conformidade do JDBC 4.1 e 4.2
 
-Suporte para especificações de API do Java Database Connectivity 4.1 e 4.2, além do 4.0. Para obter detalhes, consulte [conformidade JDBC 4.1 para o Driver JDBC](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) e [conformidade JDBC 4.2 para o JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
+O driver é compatível com as especificações da API Java Database Connectivity 4.1 e 4.2, além da 4.0. Para obter detalhes, consulte [conformidade JDBC 4.1 para o Driver JDBC](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) e [conformidade JDBC 4.2 para o JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
 
 ### <a name="bulk-copy"></a>Cópia em massa
 
-O recurso de cópia em massa é usado para copiar rapidamente grandes quantidades de dados em tabelas ou exibições em bancos de dados do SQL Server. Para obter detalhes, veja [Como usar a cópia em massa com o JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+Você pode usar o recurso de cópia em massa para copiar rapidamente grandes quantidades de dados em tabelas ou em exibições nos bancos de dados do SQL Server. Para obter detalhes, confira [Usando uma cópia em massa com o JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
 
 ### <a name="xa-transaction-rollback-option"></a>Opção de reversão de transação XA
 
-Novas opções de tempo limite adicionadas para reversão automática existente de transações não preparadas. Para obter detalhes, consulte [transações XA Noções básicas sobre](../../connect/jdbc/understanding-xa-transactions.md).
+O driver tem novas opções de tempo limite para reversão automática existente de transações não preparadas. Para obter detalhes, consulte [transações XA Noções básicas sobre](../../connect/jdbc/understanding-xa-transactions.md).
 
 ### <a name="new-kerberos-principal-connection-property"></a>Nova propriedade de conexão principal Kerberos
 
-Uma nova propriedade de conexão foi adicionada para facilitar a flexibilidade com conexões de Kerberos. Para obter detalhes, veja [Como usar a autenticação integrada do Kerberos para se conectar ao SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
+O driver usa uma nova propriedade de conexão para facilitar a flexibilidade com conexões Kerberos. Para obter detalhes, confira [Usando a autenticação integrada Kerberos para conectar-se ao SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-41-for-sql-server-and-later"></a>Atualizações do Microsoft JDBC Driver 4.1 e posterior para SQL Server
 
@@ -247,7 +285,7 @@ Uma nova propriedade de conexão foi adicionada para facilitar a flexibilidade c
 
 O driver dá suporte ao JDK versão 7.0, além de JDK 6.0 e 5.0.
 
-## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>Aplicativos JDBC Driver 6.4, 6.0, 4.2 e 4.1 não são compatíveis com Itanium
+## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>O Itanium não é compatível com aplicativos do JDBC Driver 6.4, 6.0, 4.2 e 4.1
 
 Não há suporte para execução de aplicativos Microsoft JDBC Drivers 6.4, 6.0, 4.2 e 4.1 for SQL Server em um computador Itanium.
 

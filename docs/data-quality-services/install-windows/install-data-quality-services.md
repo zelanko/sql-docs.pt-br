@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617936"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024717"
 ---
 # <a name="install-data-quality-services"></a>Instalar o Data Quality Services
 
@@ -38,11 +38,11 @@ ms.locfileid: "52617936"
   
  A instalação do DQS é um processo de três partes:  
   
--   [Tarefas pré-instalação](#PreInstallationTasks): verificar os requisitos do sistema antes da instalação do DQS.  
+-   [Tarefas pré-instalação](#PreInstallationTasks): verifique os requisitos do sistema antes da instalação do DQS.  
   
--   [Tarefas de instalação do Data Quality Services](#DQSInstallation): instale o DQS na Instalação do SQL Server.  
+-   [Tarefas de instalação do Data Quality Services](#DQSInstallation): instale o DQS usando a instalação do SQL Server.  
   
--   [Tarefas de pós-instalação](#PostInstallationTasks): execute essas tarefas depois de concluir a Instalação do SQL Server para concluir a instalação do DQS.  
+-   [Tarefas pós-instalação](#PostInstallationTasks): execute essas tarefas depois de concluir a instalação do SQL Server para concluir a instalação do DQS.  
   
 > [!NOTE]  
 >  Este tópico não inclui instruções para a execução da Instalação pela linha de comando. Para obter informações sobre opções de linha de comando para instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] e o cliente, consulte [Parâmetros de recursos](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) em [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "52617936"
   
 |Componente DQS|Requisitos mínimos do sistema|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memória (RAM): mínima: 2 GB/recomendada: 4 GB ou mais<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] . Para obter mais informações, consulte [Instalar o Mecanismo de Banco de Dados do SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memória (RAM): Mínimo: 2 GB/recomendado: 4 GB ou mais<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] . Para obter mais informações, consulte [Instalar o Mecanismo de Banco de Dados do SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (instalado durante a instalação do [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , se ainda não estiver instalado)<br /><br /> Internet Explorer 6.0 SP1 ou posterior|  
   
 > [!IMPORTANT]  

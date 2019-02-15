@@ -20,19 +20,19 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 773d575a65edaca18d76ba3e2109fe81bb20f88f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819474"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079372"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Essa função criptografa dados com uma chave assimétrica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,15 +78,15 @@ tipo de dados.
 **varbinary**, com um tamanho máximo de 8.000 bytes.  
   
 ## <a name="remarks"></a>Remarks  
-Operações de criptografia e descriptografia que usam chaves assimétricas consomem recursos significativos e, portanto, tornam-se muito caras quando comparadas à descriptografia e criptografia de chave simétrica. Sugerimos que os desenvolvedores evitem operações de criptografia e de descriptografia de chave assimétrica ao trabalharem com grandes conjuntos de dados, por exemplo, conjuntos de dados do usuário armazenados em tabelas de banco de dados. Em vez disso, sugerimos que os desenvolvedores primeiro criptografem dados com uma chave simétrica forte e, em seguida, criptografem a chave simétrica com uma chave assimétrica.  
+Operações de criptografia e descriptografia que usam chaves assimétricas consomem recursos significativos e, portanto, tornam-se caras quando comparadas à descriptografia e criptografia de chave simétrica. Sugerimos que os desenvolvedores evitem operações de criptografia e de descriptografia de chave assimétrica ao trabalharem com grandes conjuntos de dados, por exemplo, conjuntos de dados do usuário armazenados em tabelas de banco de dados. Em vez disso, sugerimos que os desenvolvedores primeiro criptografem dados com uma chave simétrica forte e, em seguida, criptografem a chave simétrica com uma chave assimétrica.  
   
 Dependendo do algoritmo, `ENCRYPTBYASYMKEY` retorna **NULL** se a entrada excede um certo número de bytes. Os limites específicos:
 
 + uma chave RSA de 512 bits pode criptografar até 53 bytes
-+ uma chave RSA de 1.024 bits pode criptografar até 117 bytes
-+ uma chave RSA de 2.048 bits pode criptografar até 245 bytes
++ uma chave RSA de 1024 bits pode criptografar até 117 bytes
++ uma chave RSA de 2048 bits pode criptografar até 245 bytes
 
-Observe que no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto certificados quanto chaves assimétricas servem como wrappers sobre chaves RSA.  
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto certificados quanto chaves assimétricas servem como wrappers sobre chaves RSA.  
   
 ## <a name="examples"></a>Exemplos  
 Este exemplo criptografa o texto armazenado em `@cleartext` com a chave assimétrica `JanainaAsymKey02`. A instrução insere os dados criptografados na tabela `ProtectedData04`.  
@@ -102,5 +102,4 @@ GO
  [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

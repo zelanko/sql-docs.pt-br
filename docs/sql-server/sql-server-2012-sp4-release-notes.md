@@ -3,7 +3,7 @@ title: Notas de versão do SQL Server 2012 Service Pack | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 2/26/2018
+ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503269"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017057"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste se
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services e PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>A ferramenta de configuração do PowerPivot não cria a Galeria do PowerPivot  
-**Problema:** a Ferramenta de Configuração do PowerPivot provisiona um Site de Equipe e, portanto, a Galeria PowerPivot não é criada.  
+**Problema:** A ferramenta de configuração do PowerPivot provisiona um Site de Equipe e, portanto, a galeria PowerPivot não é criada.  
   
-**Solução alternativa:** crie um novo aplicativo (biblioteca).  
+**Solução alternativa:** Crie um novo aplicativo (biblioteca).  
   
 1.  Verifique se o recurso de coleção de sites **Integração de recursos do PowerPivot para coleções de sites** está ativo.  
   
@@ -147,14 +147,14 @@ Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste se
 3.  Clique em **Galeria PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Para usar o PowerPivot para Excel com o Excel 2013, você precisa usar o suplemento que é instalado com o Excel  
-**Problema:** com o Office 2010, o PowerPivot para Excel é um suplemento independente baixado em [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Ele também pode ser baixado no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Observe que há duas versões do suplemento PowerPivot disponíveis como download: uma é fornecida com o SQL Server 2008 R2 e outra, com o SQL Server 2012. No entanto, para o Office 2013, o PowerPivot para Excel é fornecido com o Office e é instalado quando você instala o Excel. Embora as versões do SQL Server 2008 R2 e SQL Server 2012 do PowerPivot para Excel 2010 não sejam compatíveis com o Excel 2013, você ainda pode instalar o PowerPivot para Excel 2010 no computador cliente se quiser executar o Excel 2010 lado a lado com o Excel 2013. Em outras palavras, as duas versões do Excel podem coexistir, além dos suplementos correspondentes do PowerPivot.  
+**Problema:** com o Office 2010, o PowerPivot para Excel é um suplemento independente baixado em [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Ele também pode ser baixado no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Observe que há duas versões do suplemento PowerPivot disponíveis para download: Uma que acompanha o SQL Server 2008 R2 e outra que acompanha o SQL Server 2012. No entanto, para o Office 2013, o PowerPivot para Excel é fornecido com o Office e é instalado quando você instala o Excel. Embora as versões do SQL Server 2008 R2 e SQL Server 2012 do PowerPivot para Excel 2010 não sejam compatíveis com o Excel 2013, você ainda pode instalar o PowerPivot para Excel 2010 no computador cliente se quiser executar o Excel 2010 lado a lado com o Excel 2013. Em outras palavras, as duas versões do Excel podem coexistir, além dos suplementos correspondentes do PowerPivot.  
   
-**Solução alternativa:** para usar o PowerPivot para Excel 2013, você deverá habilitar o suplemento do COM. No Excel 2013, selecione **Arquivo** | **Opções** | **Suplementos**. Na caixa suspensa **Gerenciar** , selecione **Suplementos do COM** e clique em **Ir**. Em **Suplementos do COM**, selecione **Microsoft Office PowerPivot para Excel 2013** e clique em **OK**.  
+**Solução alternativa:** para usar o PowerPivot para Excel 2013, você deve habilitar o suplemento do COM. No Excel 2013, selecione **Arquivo** | **Opções** | **Suplementos**. Na caixa suspensa **Gerenciar** , selecione **Suplementos do COM** e clique em **Ir**. Em **Suplementos do COM**, selecione **Microsoft Office PowerPivot para Excel 2013** e clique em **OK**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Instalar e configurar o SharePoint Server 2013 antes de instalar o Reporting Services  
-**Problema:** complete os seguintes requisitos **antes** de instalar o SQL Server Reporting Services (SSRS).  
+**Problema:** complete os seguintes requisitos **antes** de instalar o SSRS (SQL Server Reporting Services).  
   
 1.  Execute a ferramenta de preparação dos produtos do SharePoint 2013.  
   
@@ -162,12 +162,12 @@ Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste se
   
 3.  Execute o Assistente de configuração de produto do SharePoint 2013 ou complete um conjunto equivalente de etapas de configuração para configurar o farm do SharePoint.  
   
-**Solução alternativa:**  se você instalou o modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] antes de o farm do SharePoint ter sido configurado, a solução alternativa necessária dependerá de quais outros componentes estão instalados.  
+**Solução alternativa:**  se você instalou o modo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint antes do farm do SharePoint ter sido configurado, a solução alternativa necessária dependerá de quais outros componentes estão instalados.  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>O Power View no SharePoint Server 2013 exige o Microsoft.AnalysisServices.SPClient.dll  
 **Problema:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não instala um componente obrigatório, **Microsoft.AnalysisServices.SPClient.dll**. Se você instalar a Visualização do SharePoint Server 2013 e o [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, mas não baixar e instalar o pacote do instalador do PowerPivot para SharePoint 2013, **spPowerPivot.msi** , o Power View não funcionará e exibirá os seguintes sintomas.  
   
-**Sintomas:** quando você tenta criar um relatório do Power View, vê uma mensagem de erro semelhante à seguinte:  
+**Sintomas:** Quando você tenta criar um relatório do Power View, vê uma mensagem de erro semelhante à seguinte:  
   
 -   "...Não é possível criar uma conexão com a fonte de dados...''  
   
@@ -178,14 +178,14 @@ Os detalhes de erro internos conterão uma mensagem semelhante à seguinte:
 **Solução alternativa:** instalar o pacote do instalador do PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) no SharePoint Server 2013. O pacote do instalador está disponível como parte do feature pack do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . O feature pack pode ser baixado do centro de download [!INCLUDE[msCoName](../includes/msconame-md.md)] em [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>As planilhas do Power View em uma pasta de trabalho do PowerPivot são excluídas depois de uma atualização de dados agendada  
-**Problema**: no suplemento PowerPivot para SharePoint, o uso da **Atualização de Dados Agendada** em uma pasta de trabalho com o Power View irá excluir as planilhas do Power View.  
+**Problema:** no suplemento PowerPivot para SharePoint, o uso da **Atualização de Dados Agendada** em uma pasta de trabalho com o Power View excluirá as planilhas do Power View.  
   
-**Solução alternativa**: para usar a **Scheduled Data Refresh** com as pastas de trabalho do Power View, crie uma pasta de trabalho PowerPivot que seja apenas o modelo de dados. Crie uma pasta de trabalho separada com planilhas do Excel e do Power View que se vinculem à pasta de trabalho PowerPivot com o modelo de dados. Apenas a pasta de trabalho PowerPivot com o modelo de dados deve ser agendada para atualização.  
+**Solução alternativa**: para usar a **Atualização de Dados Agendada** com as pastas de trabalho do Power View, crie uma pasta de trabalho do PowerPivot que seja apenas o modelo de dados. Crie uma pasta de trabalho separada com planilhas do Excel e do Power View que se vinculem à pasta de trabalho PowerPivot com o modelo de dados. Apenas a pasta de trabalho PowerPivot com o modelo de dados deve ser agendada para atualização.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponível na edição incorreta do SQL Server 2012  
-**Problema:** na versão RTM do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , o recurso DQS (Data Quality Services) está disponível nas edições do SQL Server além das edições Enterprise, Business Intelligence e Developer. Depois de instalar o SQL Server 2012 SP1, o DQS não estará disponível em todas as edições exceto as edições Enterprise, Business Intelligence e Developer.  
+**Problema:** na versão RTM do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o recurso DQS (Data Quality Services) está disponível nas edições do SQL Server exceto as edições Enterprise, Business Intelligence e Developer. Depois de instalar o SQL Server 2012 SP1, o DQS não estará disponível em todas as edições exceto as edições Enterprise, Business Intelligence e Developer.  
   
 **Solução alternativa**: se você estiver usando o DQS em uma edição sem suporte, atualize para uma edição com suporte ou remova a dependência desse recurso de seus aplicativos.  
   
@@ -197,9 +197,9 @@ A versão do SQL Server 2012 Express Service Pack 1 (SP1) inclui a versão compl
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Serviço Change Data Capture e Designer para Oracle da Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>Atualizando o serviço CDC e Designer  
-**Problema:** se o Change Data Capture Designer para Oracle e o Serviço Change Data Capture para Oracle da Attunity estiverem instalados no computador no momento em que você instalar o SQL Server 2012 SP1, esses componentes não serão atualizados instalando o SP1.  
+**Problema:** Se o Change Data Capture Designer para Oracle e o Change Data Capture Service para Oracle da Attunity estiverem instalados no computador no momento em que você instalar o SQL Server 2012 SP1, esses componentes não serão atualizados instalando o SP1.  
   
-**Solução alternativa:** atualizar os componentes CDC para a versão mais recente:  
+**Solução alternativa:** Para atualizar os componentes CDC para a versão mais recente:  
   
 1.  Baixar os arquivos .msi para o Serviço Change Data Capture para Oracle da Attunity na [página de download dos feature packs do SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266).  
   

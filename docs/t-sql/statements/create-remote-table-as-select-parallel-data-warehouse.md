@@ -2,8 +2,8 @@
 title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: ''
-ms.prod_service: pdw
+ms.prod: sql
+ms.service: data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f8e3992c7097167c82caf6350f571787fd71373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc410f1a3c232eaed8f5f64603c95581361476c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795584"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024677"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -54,7 +54,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *table_name*  
  O nome da nova tabela. Para obter detalhes sobre nomes de tabela permitidos, consulte "Regras de nomenclatura de objeto" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- A tabela remota é criada como um heap. Não tem restrições de verificação nem gatilhos. O agrupamento das colunas de tabela remota é o mesmo agrupamento das colunas de tabela de origem. Isso se aplica a colunas do tipo **char**, **nchar**, **varchar** e **nvarchar**.  
+ A tabela remota é criada como um heap. Não tem restrições de verificação nem gatilhos. A ordenação das colunas de tabela remota é a mesma ordenação das colunas de tabela de origem. Isso se aplica a colunas do tipo **char**, **nchar**, **varchar** e **nvarchar**.  
   
  *connection_string*  
  Uma cadeia de caracteres que especifica os parâmetros `Data Source`, `User ID` e `Password` para conexão com o banco de dados e servidor remoto.  
@@ -99,7 +99,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 ## <a name="error-handling"></a>Tratamento de erros  
  Se a cópia de dados para o banco de dados remoto falhar, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] anulará a operação, registrará um erro em log e tentará excluir a tabela remota. O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] não assegura uma limpeza bem-sucedida da nova tabela.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  **Servidor de destino remoto**:  
   
 -   TCP é o padrão e é o único protocolo compatível com a conexão a um servidor remoto.  
@@ -144,7 +144,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Consultando a DMV sys.dm_pdw_dms_workers para obter o status da cópia de tabela remota  
+### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>b. Consultando a DMV sys.dm_pdw_dms_workers para obter o status da cópia de tabela remota  
  Esta consulta mostra como exibir o status da cópia de uma cópia de tabela remota.  
   
 ```  

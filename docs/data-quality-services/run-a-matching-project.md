@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617946"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015427"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
 
@@ -45,7 +45,7 @@ ms.locfileid: "52617946"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para executar um projeto de correspondência.  
   
-##  <a name="StartingaMatchingProject"></a> Primeira etapa: iniciando uma projeto de correspondência  
+##  <a name="StartingaMatchingProject"></a> Primeira etapa: Iniciando um projeto de correspondência  
  Você executa a atividade de correspondência em um projeto de qualidade de dados criado no aplicativo cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -111,7 +111,7 @@ ms.locfileid: "52617946"
   
  A sobrevivência é opcional. Você pode exportar os resultados sem executar a sobrevivência; nesse caso, o DQS usaria o registro dinâmico que foi designado na análise correspondente. Se dois ou mais registros em um cluster obedecerem a regra de sobrevivência, o processo de sobrevivência selecionará a menor ID de registro entre os registros conflitantes para ser a sobrevivente. Você pode exportar os sobreviventes para arquivos ou tabelas diferentes usando regras de sobrevivência diferentes.  
   
-1.  Na página **Exportar** , selecione o destino para onde você deseja exportar os dados correspondentes em **Tipo de Destino**: **SQL Server**, **Arquivo CSV**ou **Arquivo do Excel**.  
+1.  Na página **Exportar**, selecione o destino para onde você deseja exportar os dados correspondentes em **Tipo de Destino**: **SQL Server**, **Arquivo CSV** ou **Arquivo do Excel**.  
   
     > [!IMPORTANT]  
     >  Se você estiver usando uma versão de 64 bits do Excel, não poderá exportar os dados compatíveis para um arquivo do Excel; você só poderá exportar para um banco de dados do SQL Server ou para um arquivo .csv.  
@@ -168,7 +168,7 @@ ms.locfileid: "52617946"
     > [!NOTE]  
     >  Se você concluiu um projeto de correspondência e o utilizou novamente, ele usará a base de dados de conhecimento existente quando ele foi publicado. Ele não usará as alterações feitas na base de dados de conhecimento desde a conclusão do projeto. Para usar essas alterações, ou para usar uma nova base de dados de conhecimento, você terá que criar um novo projeto de correspondência. Por outro lado, se ele já foi criado, mas não concluído, um projeto de correspondência, quaisquer alterações publicadas na política de correspondência serão usados se você executar a correspondência no projeto.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após executar um projeto de correspondência  
+##  <a name="FollowUp"></a> Acompanhamento: Após executar um projeto de correspondência  
  Depois executar uma projeto de correspondência, você pode alterar a política de correspondência na base de dados de conhecimento, e criar e executar outro projeto de correspondência com base na política de correspondência atualizada. Para obter mais informações, consulte [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Guias Criador de Perfil e Resultados  
@@ -179,27 +179,27 @@ ms.locfileid: "52617946"
   
  As estatísticas do banco de dados de origem incluem o seguinte:  
   
--   **Registros**: o número total de registros no banco de dados  
+-   **Registros**: O número total de registros no banco de dados  
   
--   **Valores Totais**: o número total de valores nos campos  
+-   **Total de valores**: o número total de valores nos campos  
   
--   **Novos Valores**: o número total de valores novos desde a execução anterior e seu percentual em relação ao todo  
+-   **Novos valores**: o número total de valores novos desde a execução anterior e seu percentual em relação ao todo  
   
--   **Valores Exclusivos**: o número total de valores exclusivos nos campos e seu percentual em relação ao todo  
+-   **Valores exclusivos**: o número total de valores exclusivos nos campos e seu percentual em relação ao todo  
   
--   **Novos Valores Exclusivos**: o número total de valores exclusivos novos nos campos e seu percentual em relação ao todo  
+-   **Novos valores exclusivos**: o número total de valores exclusivos e novos nos campos e seu percentual em relação ao todo  
   
  As estatísticas de campo incluem o seguinte:  
   
 -   **Campo**: nome do campo que foi incluído nos mapeamentos.  
   
--   **Domínio**: o nome do domínio que foi mapeado para o campo.  
+-   **Domínio**: nome do domínio que foi mapeado para o campo.  
   
--   **Novo**: o número de novas correspondências localizadas e sua porcentagem do total  
+-   **Novo**: o número de novas correspondências localizadas e seu percentual do total  
   
 -   **Exclusivo**: o número de registros exclusivos no campo e seu percentual do total  
   
--   **Integridade**: a porcentagem de conclusão da execução da regra.  
+-   **Integridade**: o percentual de conclusão da execução da regra.  
   
 ### <a name="matching-policy-notifications"></a>Notificações de Política de Correspondência  
  Para a atividade de política de correspondência, as seguintes condições resultam em notificações:  

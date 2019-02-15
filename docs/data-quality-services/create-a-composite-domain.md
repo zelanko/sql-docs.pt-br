@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616856"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026207"
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
 
@@ -83,17 +83,17 @@ ms.locfileid: "52616856"
   
 4.  Selecione uma das seguintes opções como o **Método de Análise**:  
   
-    -   **Dados de Referência**: analise os valores do campo de acordo com o modo como os dados são formatados pelo RDS (Serviços de Dados de Referência). O Data Quality Services enviará os valores no domínio composto ao RDS e o RDS retornará os dados corrigidos e analisados de acordo com o domínio no domínio composto.  
+    -   **Dados de referência**: analise os valores do campo de acordo com o modo como os dados são formatados pelo RDS (Serviços de Dados de Referência). O Data Quality Services enviará os valores no domínio composto ao RDS e o RDS retornará os dados corrigidos e analisados de acordo com o domínio no domínio composto.  
   
     -   **Em Ordem**: analise os valores do campo de acordo com a ordem dos domínios no domínio composto. O primeiro valor será incluído no primeiro domínio, o segundo valor no segundo domínio etc.  
   
-    -   **Delimitadores**: analise os valores de campo com base no delimitador selecionado dentre os botões de opção exibidos quando os Delimitadores estão selecionados. Esses podem ser: **Guia**, **Ponto-e-vírgula**, **Vírgula**, **Espaço**ou **Outro**. Se **Outro**, insira o valor que atuará como o delimitador.  
+    -   **Delimitadores**: analise os valores do campo com base no delimitador selecionado dentre os botões de opção exibidos quando os Delimitadores são selecionados. Esses podem ser: **Guia**, **Ponto-e-vírgula**, **Vírgula**, **Espaço**ou **Outro**. Se **Outro**, insira o valor que atuará como o delimitador.  
   
 5.  Se você selecionou **Delimitadores** como o método de análise, também poderá selecionar **Usar Análise da Base de Dados de Conhecimento**. Para obter mais informações, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Acompanhamento: após a criação de um domínio composto  
+##  <a name="FollowUp"></a> Acompanhamento: após criar um domínio composto  
  Depois que você criar um domínio composto, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

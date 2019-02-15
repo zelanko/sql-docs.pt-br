@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 937e7258777e1ce4f3a147e099252d95de23997d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617786"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027167"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir uma base de dados de conhecimento
 
@@ -81,20 +81,20 @@ ms.locfileid: "52617786"
 ##  <a name="State"></a> Estado de uma base de dados de conhecimento  
  O campo Estado indica em qual estágio de uma atividade a base de dados de conhecimento está. Se você abrir a base de dados de conhecimento, ela será aberta nesse estágio.  
   
--   **\<Empty>**: o campo Estado estará vazio em uma base de dados de conhecimento se ela tiver sido publicada com um clique em **Publicar** na atividade Gerenciamento de Domínio e com um clique em **Sim – Publicar a base de dados de conhecimento e sair**.  
+-   **\<Vazio>**: o campo Estado estará vazio para uma base de dados de conhecimento se ela tiver sido publicada com um clique em **Publicar** na atividade Gerenciamento de Domínio e com um clique em **Sim – Publique a base de dados de conhecimento e saia**.  
   
 -   **Em Serviço**: o trabalho na base de dados de conhecimento foi salvo com um clique em **Publicar** na atividade Gerenciamento de Domínio e com um clique em **Não – Salve o trabalho na base de dados de conhecimento e saia**.  
   
--   **Gerenciamento de Domínio**: Os dados foram inseridos em um domínio na base de conhecimento, mas a base de conhecimento não foi publicada e o trabalho permanece na atividade Gerenciamento de Domínio. A atividade Descoberta da Base de Dados de Conhecimento não está disponível. Isso ocorre quando você clica em **Fechar** na tela **Gerenciamento de Domínio** .  
+-   **Gerenciamento de Domínio**: os dados foram inseridos em um domínio na base de dados de conhecimento, mas ela não foi publicada e o trabalho permanece na atividade Gerenciamento de Domínio. A atividade Descoberta da Base de Dados de Conhecimento não está disponível. Isso ocorre quando você clica em **Fechar** na tela **Gerenciamento de Domínio** .  
   
--   **Descoberta - Mapeamento**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: Mapeamento** . A base de dados de conhecimento está bloqueada e as atividades Gerenciamento de Domínio e Correspondência não estão disponíveis.  
+-   **Descoberta – Mapeamento**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: mapeamento**. A base de dados de conhecimento está bloqueada e as atividades Gerenciamento de Domínio e Correspondência não estão disponíveis.  
   
--   **Descoberta - Descobrir**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: Analisar** . A base de dados de conhecimento está bloqueada e a atividade Gerenciamento de Domínio não está disponível.  
+-   **Descoberta – Descobrir**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: analisar**. A base de dados de conhecimento está bloqueada e a atividade Gerenciamento de Domínio não está disponível.  
   
--   **Descoberta – Gerenciamento de Valor**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: Gerenciar Termos do Domínio**. A base de dados de conhecimento está bloqueada e a atividade Gerenciamento de Domínio não está disponível.  
+-   **Descoberta – Gerenciamento de valor**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: gerenciar termos de domínio**. A base de dados de conhecimento está bloqueada e a atividade Gerenciamento de Domínio não está disponível.  
   
 -   **Política de Correspondência – Política de Correspondência**: a base de dados de conhecimento foi fechada na página **Política de Correspondência – Política de Correspondência**. A base de dados de conhecimento está bloqueada e as atividades Descoberta da Base de Dados de Conhecimento e Gerenciamento de Domínio e Correspondência não estão disponíveis.  
   
--   **Política de Correspondência – Resultados Correspondentes**: a base de dados de conhecimento foi fechada na página **Política de Correspondência – Resultados de Correspondência**. A base de dados de conhecimento está bloqueada e as atividades Descoberta da Base de Dados de Conhecimento e Gerenciamento de Domínio e Correspondência não estão disponíveis.  
+-   **Política de Correspondência – Resultados de Correspondência**: a base de dados de conhecimento foi fechada na página **Política de Correspondência – Resultados de Correspondência**. A base de dados de conhecimento está bloqueada e as atividades Descoberta da Base de Dados de Conhecimento e Gerenciamento de Domínio e Correspondência não estão disponíveis.  
   
   

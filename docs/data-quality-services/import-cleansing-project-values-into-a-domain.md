@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5f87200afad4a7026f763cdf5eecf34160082ce
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5ee0818babb7fb973aed7e61c5efc4b42600af5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617366"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031717"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
 
@@ -75,7 +75,7 @@ ms.locfileid: "52617366"
     > [!NOTE]  
     >  Para obter mais informações sobre como trabalhar com valores na página **Valores de Domínio** , consulte [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: após a importação dos valores do projeto para um domínio  
+##  <a name="FollowUp"></a> Acompanhamento: após importar os valores do projeto para um domínio  
  Depois que você importar o conhecimento de qualidade de dados reunido durante o processo de limpeza para um domínio, você pode executar outras tarefas de gerenciamento de domínio no domínio e seus valores. Para obter mais informações, consulte [Gerenciando um domínio](../data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Values"></a> Valores que serão importados  

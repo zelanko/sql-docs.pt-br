@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 84e084b6db8576f4bd1f7c7d020ac9fe908a0eec
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617526"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020398"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorar atividade do DQS
 
@@ -31,7 +31,7 @@ ms.locfileid: "52617526"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Somente os usuários com a função dqs_administrator no banco de dados DQS_Main podem encerrar uma atividade ou interromper um processo em uma atividade.  
   
 ###  <a name="Security"></a> Segurança  
@@ -52,19 +52,19 @@ ms.locfileid: "52617526"
   
 3.  A tela de monitoramento de atividades exibe informações sobre cada atividade executada em uma grade de atividade. A grade de atividade exibe as seguintes informações sobre cada atividade do DQS:  
   
-     **ID**: um valor inteiro. Número de atividade exclusivo gerado pelo sistema para o monitoramento de atividades.  
+     **ID**:  Um valor inteiro. Número de atividade exclusivo gerado pelo sistema para o monitoramento de atividades.  
   
-     **Name**: o nome da base de dados de conhecimento ou do projeto de qualidade de dados usado para esta atividade.  
+     **Nome**: O nome da base de dados de conhecimento ou do projeto de qualidade de dados usado para esta atividade.  
   
-     **Is Active**: indica se a atividade está ativa no momento ou não. Pode ter um dos valores a seguir:  
+     **Está ativo**: Indica se a atividade está ativa no momento ou não. Pode ter um dos valores a seguir:  
   
     -   **Ativa**: a atividade está em execução no momento.  
   
-    -   **Finalizada**: a atividade está concluída.  
+    -   **Finalizada**: a atividade foi concluída.  
   
-    -   **Encerrado**: a atividade foi encerrada usando a tela de monitoramento de atividade pelo administrador de DQS ou a atividade foi cancelada pelo usuário durante sua execução na respectiva área de recurso no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
+    -   **Encerrada**: a atividade foi encerrada usando a tela de monitoramento de atividade pelo administrador de DQS ou a atividade foi cancelada pelo usuário durante sua execução na respectiva área de recurso no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-     **Tipo**: indica o tipo da atividade. **Subtipo** indica o fluxo de trabalho específico executado para um tipo de atividade. Os seguintes tipos de atividades são monitorados:  
+     **Digitar**: Indica o tipo da atividade. **Subtipo** indica o fluxo de trabalho específico executado para um tipo de atividade. Os seguintes tipos de atividades são monitorados:  
   
     -   Subtipos de**Gerenciamento de Conhecimento** :  
   
@@ -84,36 +84,36 @@ ms.locfileid: "52617526"
   
         -   **Limpeza**  
   
-     **Status Atual**: indica o status atual de uma atividade. O status da atividade é determinado pelo último processo computacional. Observe que pode haver vários processos computacionais em uma atividade, como executar o processo de descoberta várias vezes (dentro da atividade de descoberta da base de dados de conhecimento). Portanto, o status pode ser alterado várias vezes durante o tempo de vida da atividade.  
+     **Status atual**: Indica o status atual de uma atividade. O status da atividade é determinado pelo último processo computacional. Observe que pode haver vários processos computacionais em uma atividade, como executar o processo de descoberta várias vezes (dentro da atividade de descoberta da base de dados de conhecimento). Portanto, o status pode ser alterado várias vezes durante o tempo de vida da atividade.  
   
      **Status Atual** pode ter um dos seguintes valores:  
   
-    -   **Executando**: O processo computacional está em execução.  
+    -   **Em execução**: o processo computacional está em execução.  
   
-    -   **Êxito**: esse status é definido antes que um processo computacional seja executado e novamente após um processo computacional terminar com êxito.  
+    -   **Bem-sucedido**: esse status será definido antes que um processo computacional tenha sido executado e novamente após um processo computacional ser encerrado com êxito.  
   
-    -   **Falhou**: Houve falha no processo computacional.  
+    -   **Falhou**: houve falha no processo computacional.  
   
-    -   **Parado**: O processo computacional foi interrompido.  
+    -   **Interrompido**: o processo computacional foi interrompido.  
   
-     **DQKB**: o nome da base de dados de conhecimento usada para a atividade.  
+     **DQKB**: O nome da base de dados de conhecimento usada para a atividade.  
   
-     **Usuário**: o nome do usuário que iniciou a atividade ou o último usuário que trabalhou na atividade (caso não sejam os mesmos).  
+     **Usuário**: O nome do usuário que iniciou a atividade ou o último usuário que trabalhou na atividade (caso não sejam os mesmos).  
   
-     **Hora de Início da Atividade**: a data e a hora em que a atividade foi iniciada.  
+     **Hora de Início da Atividade**: A data e a hora em que a atividade foi iniciada.  
   
-     **Tempo Decorrido**: o tempo decorrido desde que a atividade foi iniciada. Exibido na notação HH:MM:SS.  
+     **Tempo decorrido**: O tempo decorrido desde que a atividade foi iniciada. Exibido na notação HH:MM:SS.  
   
-     **Hora de término da Atividade**: a data e a hora em que a atividade foi finalizada.  
+     **Hora de Término da Atividade**: A data e a hora em que a atividade foi finalizada.  
   
 ##  <a name="Filter"></a> Filtrar informações da atividade do DQS  
  Você pode usar o painel de filtragem (**Filtrar por**, **Valor**, **Data Inicial**, e **Data Final**) na tela de monitoramento de atividades para filtrar e exibir as atividades necessárias com base em um critério de filtro específico. Para filtrar registros de atividade:  
   
 1.  Decida o critério de filtragem: se você deseja filtrar os registros de atividade com base no valor de uma das colunas na grade de atividade (baseada em valor), com base em um intervalo de datas ou ambos.  
   
-    1.  **Filtragem baseada em valor**: selecione um critério de filtro na lista **Filtrar por** e selecione o valor apropriado que servirá como base para a filtragem na lista **Valor** . Ao selecionar uma opção na lista **Filtrar por** , a lista **Valor** será atualizada com os valores possíveis. Você pode realizar a filtragem com base nos seguintes campos dos registros de atividade: **Está Ativo**, **Tipo**, **Subtipo**, **Status Atual**, **DQKB**e **Usuário**.  
+    1.  **Filtragem baseada em valor**: selecione um critério de filtro na lista **Filtrar por** e selecione o valor apropriado que servirá como base para a filtragem na lista **Valor**. Ao selecionar uma opção na lista **Filtrar por** , a lista **Valor** será atualizada com os valores possíveis. É possível filtrar pelos seguintes campos nos registros de atividades: **Está ativo**, **Tipo**, **Subtipo**, **Status atual**, **DQKB** e **Usuário**.  
   
-    2.  **Filtragem baseada em intervalo de datas**: seleção das datas apropriadas nos controles de data **Data Inicial** e **Data Final** . Por padrão, a data exibida em **Data Inicial** é dois dias antes da data atual, e a data exibida em **Data Final** é a data atual. A filtragem não é feita com base nas datas *inicial* e *final* , mas no intervalo. Isso significa que cada atividade que estava sendo executada durante o intervalo de datas selecionado será exibida.  
+    2.  **Filtragem baseada em intervalo de datas**: seleção das datas apropriadas nos controles de data **Data Inicial** e **Data Final**. Por padrão, a data exibida em **Data Inicial** é dois dias antes da data atual, e a data exibida em **Data Final** é a data atual. A filtragem não é feita com base nas datas *inicial* e *final* , mas no intervalo. Isso significa que cada atividade que estava sendo executada durante o intervalo de datas selecionado será exibida.  
   
 2.  Clique no ícone **Atualizar a lista de atividades** para aplicar a filtragem e exibir apenas as atividades de DQS filtradas.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "52617526"
   
 2.  O painel inferior exibe os detalhes de atividade selecionada nas duas guias a seguir:  
   
-    -   **Etapas da Atividade**: exibe uma grade dos processos computacionais (etapas da atividade) associados à atividade selecionada. Pode haver várias etapas exibidas para uma atividade nesta guia. Isso pode acontecer caso a mesma etapa da atividade tenha sido executada várias vezes pelo usuário. Por exemplo, a etapa de atividade foi interrompida e iniciada novamente. A grade desta guia exibe as seguintes informações sobre cada etapa associada à atividade: **Tipo**, **Status Atual**, **Hora de Início**, **Tempo Decorrido**e **Hora de Término**.  
+    -   **Etapas da Atividade**: exibe uma grade dos processos computacionais (etapas da atividade) associados à atividade selecionada. Pode haver várias etapas exibidas para uma atividade nesta guia. Isso pode acontecer caso a mesma etapa da atividade tenha sido executada várias vezes pelo usuário. Por exemplo, a etapa de atividade foi interrompida e iniciada novamente. A grade desta guia exibe as seguintes informações sobre cada etapa associada à atividade: **Tipo**, **Status Atual**, **Hora de Início**, **Tempo Decorrido** e **Hora de Término**.  
   
-    -   **Criador de Perfil**: exibe as informações de perfil das atividades atuais e históricas. Para atividades atuais, contém informações parciais, mas consistentes. As informações de perfil de uma atividade são exportadas para um arquivo do Excel quando você exporta os detalhes de atividade correspondentes para um arquivo do Excel. As informações estão disponíveis nas planilhas **Criador de Perfil – Origem** e **Criador de Perfil – Campos** no arquivo do Excel exportado.  
+    -   **Criador de Perfil**: exibe as informações de criação de perfil para atividades atuais e históricas. Para atividades atuais, contém informações parciais, mas consistentes. As informações de perfil de uma atividade são exportadas para um arquivo do Excel quando você exporta os detalhes de atividade correspondentes para um arquivo do Excel. As informações estão disponíveis nas planilhas **Criador de Perfil – Origem** e **Criador de Perfil – Campos** no arquivo do Excel exportado.  
   
 ##  <a name="Export"></a> Exportar detalhes da atividade do DQS  
  Você pode exportar as propriedades da atividade, os processos da atividade e as informações de perfil de uma atividade na tela de monitoramento para um arquivo do Excel. Para fazer isso:  
@@ -141,8 +141,8 @@ ms.locfileid: "52617526"
     |----------------|-----------------|  
     |Atividade|Contém informações (colunas) sobre a atividade como na grade de atividade.|  
     |Processos|Contém informações (colunas) sobre os processos da atividade como na guia **Etapas da Atividade** .|  
-    |Criador de Perfil - Origem|Para o subtipo **Limpeza** , contém as seguintes informações sobre a atividade: Registros, Registros Corretos, Registros Corrigidos e Registros Inválidos.<br /><br /> Para os subtipos **Descoberta da Base de Dados de Conhecimento**, **Gerenciamento de Domínio**, **Política de Correspondência**e **Correspondência** , contém as seguintes informações sobre a atividade: Registros, Valores Totais, Novo Valores, Valores Exclusivos e Novos Valores Exclusivos.|  
-    |Criador de Perfil - Campos|Para os subtipos **Limpeza** e **Limpeza do SSIS** , contém as seguintes informações sobre a atividade: Campo, Domínio, Valores Corrigidos, Valores Sugeridos, Integridade e Precisão.<br /><br /> Para os subtipos **Descoberta da Base de Dados de Conhecimento**, **Gerenciamento de Domínio**, **Política de Correspondência**e **Correspondência** , contém as seguintes informações sobre a atividade: Campo, Domínio, Novo, Exclusivo, Válido no Domínio e Integridade.|  
+    |Criador de Perfil - Origem|Para o subtipo **Limpeza**, estão contidas as seguintes informações sobre a atividade:   Registros, Registros corretos, Registros corrigidos e Registros inválidos.<br /><br /> Para os subtipos **Descoberta da Base de Dados de Conhecimento**, **Gerenciamento de Domínio**, **Política de Correspondência** e **Correspondência**, estão contidas as seguintes informações sobre a atividade:   Registros, Valores totais, Novos valores, Valores exclusivos e Novos valores exclusivos.|  
+    |Criador de Perfil - Campos|Para os subtipos **Limpeza** e **Limpeza do SSIS**, estão contidas as seguintes informações sobre a atividade:   Campo, Domínio, Valores corrigidos, Valores sugeridos, Integridade e Precisão.<br /><br /> Para os subtipos **Descoberta da Base de Dados de Conhecimento**, **Gerenciamento de Domínio**, **Política de Correspondência** e **Correspondência**, estão contidas as seguintes informações sobre a atividade:   Campo, Domínio, Novo, Exclusivo, Válido no domínio e Integridade.|  
   
 ##  <a name="Terminate"></a> Encerrar uma atividade do DQS  
  Os administradores de DQS (função dqs_administrator) podem encerrar uma atividade (ativa) em execução que não é do tipo **Limpeza do SSIS**. O encerramento de uma atividade interromperá todos os processos em execução na atividade e removerá tudo que estiver relacionado à atividade. Essa operação não pode ser desfeita. Encerrar uma atividade na tela de monitoramento de atividades é equivalente a cancelar a respectiva atividade clicando em **Cancelar** durante sua execução na área de recurso no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Para encerrar uma atividade:  

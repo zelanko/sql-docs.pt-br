@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c2d852accb33b1667e5f2d0981d6f351543ee72a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616687"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029989"
 ---
 # <a name="use-the-dqs-speller"></a>Usar o verificador ortográfico DQS
 
@@ -68,7 +68,7 @@ ms.locfileid: "52616687"
   
 6.  Se você desejar adicionar o valor ao dicionário, clique em **Adicionar ao Dicionário**. O sublinhado vermelho desaparecerá do valor.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após usar o verificador ortográfico  
+##  <a name="FollowUp"></a> Acompanhamento: Após usar o verificador ortográfico  
  Após executar o verificador ortográfico, conclua a atividade do domínio para usar as correções sugeridas pelo verificador ortográfico. Se estiver na atividade de descoberta da base de dados de conhecimento, gerenciamento de domínio ou política de correspondência, publique a base de dados de conhecimento para disponibilizar os resultados da análise do verificador ortográfico para uso na base de dados de conhecimento. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Como o verificador ortográfico funciona  

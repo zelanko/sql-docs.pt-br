@@ -3,7 +3,6 @@ title: Diretrizes de uso dos métodos de tipo de dados xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5639083c4e1491adeaa78ec090c660e2faaa6c39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e1471792a30cfccfe0e19f878929dc74bc8775
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643884"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022867"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Diretrizes para usar métodos de tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 ## <a name="singleton-checks"></a>Verificações de singleton  
  As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma combinação **node()**-**value()** para extrair valores de atributo pode não exigir a especificação ordinal. Isso é demonstrado no próximo exemplo.  
   
-### <a name="example-known-singleton"></a>Exemplo: Singleton conhecido  
+### <a name="example-known-singleton"></a>Exemplo: singleton conhecido  
  Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento <`book`>. O método **value()** que é avaliado em um nó <`book`> extrai o valor de \@genre e, sendo um atributo, é um singleton.  
   
 ```  
@@ -80,7 +79,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
   
  É importante ficar atento à diferença entre //nome[1] e (//nome)[1] para a verificação de tipo. O primeiro retorna uma sequência de nós \<first-name>, em que cada nó é o nó \<first-name> na extremidade mais à esquerda entre seus irmãos. O segundo retorna o primeiro nó singleton \<first-name> em ordem de documento na instância de XML.  
   
-### <a name="example-using-value"></a>Exemplo: Usando value()  
+### <a name="example-using-value"></a>Exemplo: usando value()  
  A seguinte consulta em uma coluna XML não tipada resulta em um erro estático e de compilação. Isso ocorre porque **value()** espera um nó singleton como o primeiro argumento e o compilador não pode determinar se apenas um nó de \<last-name> ocorrerá em tempo de execução:  
   
 ```  

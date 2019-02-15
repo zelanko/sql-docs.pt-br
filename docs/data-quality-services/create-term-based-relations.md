@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024667"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
 
@@ -94,14 +94,14 @@ ms.locfileid: "52617266"
   
     6.  Localize um valor na tabela Relações inserindo um ou mais dígitos na caixa de texto **Localizar** . Correspondências para a cadeia de caracteres serão realçadas. Use as setas para cima e para baixo para se mover para instâncias diferentes da cadeia de caracteres na tabela.  
   
-    7.  **Verificador Ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
+    7.  **Verificador ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Relações Baseadas em Termos** para habilitá-lo nessa página.  
   
 6.  Clique em **Aplicar Alterações** para aplicar as relações baseadas em termos no domínio.  
   
-7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após criar relações baseadas em termos  
  Depois de criar relações baseadas em termos, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  

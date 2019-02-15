@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 9/12/2017
+ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785884"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013497"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ O tipo de dados **sql_variant** pertence ao topo da lista de hierarquia de tipo 
 As seguintes regras se aplicam a comparações **sql_variant**:
 -   Quando valores de **sql_variant** de diferentes tipos de dados base são comparados e os tipos de dados base estão em diferentes famílias de tipos de dados, o valor cuja família de tipo de dados aparece no topo do gráfico da hierarquia é considerado o mais alto dos dois valores.  
 -   Quando valores de **sql_variant** de diferentes tipos de dados base são comparados e os tipos de dados base estão na mesma família de tipos de dados, o valor cujo tipo de dados base está na parte mais inferior do gráfico da hierarquia é convertido implicitamente no outro tipo de dados e a comparação é feita.  
--   Quando valores **sql_variant** de **char**, **varchar**, **nchar**, ou **nvarchar** são de tipos de dados em comparação, seus agrupamentos são primeiro comparados com base nos seguintes critérios: LCID, versão do LCID, sinalizadores de comparação e ID de classificação. Todos esses critérios são comparados como valores de inteiro na ordem listada. Se todos esses critérios forem iguais, os valores reais da cadeia de caracteres serão comparados de acordo com o agrupamento.  
+-   Quando valores **sql_variant** de **char**, **varchar**, **nchar** ou **nvarchar** são de tipos de dados em comparação, suas ordenações são primeiro comparadas com base nos seguintes critérios: LCID, versão do LCID, sinalizadores de comparação e ID de classificação. Todos esses critérios são comparados como valores de inteiro na ordem listada. Se todos esses critérios forem iguais, os valores reais da cadeia de caracteres serão comparados de acordo com a ordenação.  
   
 ## <a name="converting-sqlvariant-data"></a>Convertendo dados sql_variant  
 Ao lidar com o tipo de dados **sql_variant**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é compatível com conversões implícitas de objetos com outros tipos de dados para o tipo **sql_variant**. Entretanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte para conversões implícitas de dados **sql_variant** para um objeto com outro tipo de dados.
@@ -136,7 +136,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Usando uma sql_variant como uma variável   
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>b. Usando uma sql_variant como uma variável   
  O exemplo a seguir, cria uma variável usando o tipo de dados sql_variant e, em seguida, recupera informações `SQL_VARIANT_PROPERTY` sobre uma variável chamada @v1.  
   
 ```sql    

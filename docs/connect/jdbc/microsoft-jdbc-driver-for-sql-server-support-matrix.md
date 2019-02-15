@@ -1,7 +1,7 @@
 ---
 title: Matriz de suporte do Microsoft JDBC Driver para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 955fc16232857d9c9f04b56d62985116ac3e6338
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.openlocfilehash: 9b086ca3912e8b8a308840a229c448edeb92b60f
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605796"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736917"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de suporte do Microsoft JDBC Driver para SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,10 @@ ms.locfileid: "51605796"
   
 |Nome do driver|Versão do pacote de driver|JAR(s) aplicável|Fim do suporte base|
 |-|-|-|-|  
+|Microsoft JDBC Driver 7.2 para SQL Server|7.2|mssql-jdbc-7.2.0.jre11.jar<br> mssql-jdbc-7.2.0.jre8.jar|31 de janeiro de 2024|
 |Microsoft JDBC Driver 7.0 para SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 de julho de 2023|  
 |Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 de fevereiro de 2023|    
-|Microsoft JDBC Driver 6.2 para SQL Server|6.2|MSSQL-jdbc-6.2.2.jre8.jar<br> MSSQL-jdbc-6.2.2.jre7.jar|30 de junho de 2022|    
+|Microsoft JDBC Driver 6.2 para SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 de junho de 2022|    
 |Microsoft JDBC Driver 6.0 para SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 de julho de 2021|    
 |Microsoft JDBC Driver 4.2 para SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 de agosto de 2020|  
 |Microsoft JDBC Driver 4.1 para SQL Server|4.1|sqljdbc41.jar|12 de dezembro de 2019|  
@@ -55,6 +56,7 @@ ms.locfileid: "51605796"
   
 |Versão do driver|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Banco de dados SQL do Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|(Extended visualização privada) de instância gerenciada SQL do Azure|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.2|N|S|S|S|S|S|S|S|S|  
 |7.0|N|S|S|S|S|S|S|S|S|  
 |6.4|N|S|S|S|S|S|S|S|S|  
 |6.2|S|S|S|S|S|S|S|S|N|
@@ -84,7 +86,8 @@ ms.locfileid: "51605796"
   
 |Versão do driver JDBC|Versões do JRE|Versão da API do JDBC| 
 |-|-|-|  
-|7.0|1.8, 10|4.2, 4.3 (parcialmente)|  
+|7.2|1.8, 11|4.2, 4.3 (parcialmente)|
+|7.0|1.8, 10|4.2, 4.3 (parcialmente)|
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (parcialmente)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  

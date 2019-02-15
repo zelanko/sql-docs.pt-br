@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617077"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010717"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio composto para dados de referência
 
@@ -55,7 +55,7 @@ ms.locfileid: "52617077"
   
 3.  Na tela **Nova base de dados de conhecimento** , digite um nome para a nova base de dados de conhecimento, clique na atividade **Gerenciamento de Domínio** e clique em **Criar**.  
   
-4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro domínios a seguir: **Linha de Endereço**, **Cidade**, **Estado**e **CEP**.  
+4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro arquivos a seguir: **Linha de endereço**, **Cidade**, **Estado** e **CEP**.  
   
 5.  Clique no ícone **Criar um domínio composto** para criar um domínio composto. Na caixa de diálogo **Criar um domínio composto** , digite **Verificação de Endereço** na caixa **Nome de Domínio Composto** e inclua todos os domínios criados na etapa 3 no domínio composto. Clique em **OK**.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "52617077"
   
 9. Você retornará à guia **Dados de Referência** . Na área **Configurações de Provedor**, altere os valores das seguintes caixas, se necessário:  
   
-    -   **Limite de Correção Automática**: as correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
+    -   **Limite de Correção Automática**: As correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
   
-    -   **Candidatos Sugeridos**: número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
+    -   **Candidatos Sugeridos**: O número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
   
-    -   **Confiança Mínima**: as sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
+    -   **Confiança Mínima**: As sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
   
 10. Clique em **Concluir** para publicar a base de dados de conhecimento. Uma mensagem de confirmação aparece depois que a base de dados de conhecimento é publicada com êxito.  
   

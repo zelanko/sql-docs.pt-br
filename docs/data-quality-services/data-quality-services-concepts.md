@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617106"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033430"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
 
@@ -54,7 +54,7 @@ ms.locfileid: "52617106"
   
 -   **Limpeza auxiliada por computador**: o DQS usa o conhecimento na base de dados de conhecimento selecionada para o projeto de limpeza para propor correções/sugestões aos valores em uma fonte de dados.  
   
--   **Limpeza interativa**: o administrador de dados pode executar o processo de limpeza interativo para alterar ou aumentar correções de dados que foram propostas pelo processo de limpeza de dados assistida por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
+-   **Limpeza interativa**: O administrador de dados pode executar o processo de limpeza interativa para alterar ou aumentar correções de dados que foram propostas pelo processo de limpeza de dados assistida por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
   
  Depois de limpar dados, o administrador de dados pode exportar os dados processados para um banco de dados do SQL Server, .csv ou um arquivo do Excel. Para obter mais informações, consulte [Data Cleansing](../data-quality-services/data-cleansing.md).  
   

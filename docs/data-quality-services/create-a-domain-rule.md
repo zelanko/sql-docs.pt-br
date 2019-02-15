@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 865c5a9430f7c17f120e96b015ffe2818a68801f
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b7ff9b57b8b83b8850aac4a854a3fd7b04a76804
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617636"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030657"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
 
@@ -101,7 +101,7 @@ ms.locfileid: "52617636"
   
 3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após criar uma regra de domínio  
+##  <a name="FollowUp"></a> Acompanhamento: após criar uma regra de domínio  
  Depois que você criar uma regra de domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Conditions"></a> Condições de regras de domínio  
@@ -109,7 +109,7 @@ ms.locfileid: "52617636"
   
  Quando uma regra de domínio é aplicada e um valor de domínio não obedece à regra, o valor é designado como Inválido. Um valor designado como Inválido será alterado para Correto se a regra que está fazendo com que ele seja inválido for excluída, for desativada ou se a regra tive sido alterada de modo que o valor não desobedeça mais à regra. Se você tiver designado manualmente um valor como Inválido (na guia Valores de Domínio da atividade de Gerenciamento de Domínio), e uma regra que dite a falha do valor tiver sido excluída, desativada ou alterada, o valor ainda será designado como Inválido, conforme a designação manual.  
   
- Uma regra de domínio com uma condição definitiva aplicará a lógica de regras a sinônimos do valor em uma ou mais condições, bem como os próprios valores. As condições definitivas são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponhamos que você tenha a seguinte regra de domínio: "Para ‘Cidade’, Valor é igual a ‘Los Angeles’". Se 'Los Angeles' e 'LA' forem sinônimos, ambos estarão corretos. Por outro lado, se a regra não contivesse uma condição definitiva, por exemplo, "Para Cidade, Valor termina com "s", então "Los Angeles" estaria correto, mas seu sinônimo "LA" seria um erro.  
+ Uma regra de domínio com uma condição definitiva aplicará a lógica de regras a sinônimos do valor em uma ou mais condições, bem como os próprios valores. As condições definitivas são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponha que você tenha a seguinte regra de domínio: "Para 'Cidade', o valor é igual a ‘Los Angeles'". Se 'Los Angeles' e 'LA' forem sinônimos, ambos estarão corretos. Por outro lado, se a regra não contivesse uma condição definitiva, por exemplo, "Para Cidade, Valor termina com "s", então "Los Angeles" estaria correto, mas seu sinônimo "LA" seria um erro.  
   
  Você tem alternativas para escolher ao criar uma regra de domínio. Por exemplo, para validar se os valores começarão com a letra A, B ou C, você pode criar uma regra simples com uma condição complexa (como uma expressão regular com caracteres de pipe) ou criar uma regra complexa que contém várias condições simples. Um exemplo da primeira regra é "Valor contém a expressão regular (^A|^B|^C)". Um exemplo da segunda regra é "'Valor começa com A' OU 'Valor começa com B' OU 'Valor começa com C'".  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52617636"
 |Valor não contém|Somente os valores que não estão contidos no operando serão válidos.|Operando de exemplo: A1<br /><br /> Valores válidos: 1A, AA<br /><br /> Valores inválidos: A1, AA1|  
 |Valor começa com|Somente os valores que começam com os caracteres do operando serão válidos.|Operando de exemplo: AA<br /><br /> Valores válidos: AA1<br /><br /> Valores inválidos: 1AAB|  
 |Valor termina com|Somente os valores que terminam com os caracteres do operando serão válidos.|Operando de exemplo: AA<br /><br /> Valores válidos: 1AA<br /><br /> Valores inválidos: 1AAB|  
-|Valor é numérico|Somente os valores que têm um tipo de dados numérico do SQL Server serão válidos. Isso inclui int, decimal, float etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1, 25, 345,1234<br /><br /> Valores inválidos: 2b, bcdef|  
+|Valor é numérico|Somente os valores que têm um tipo de dados numérico do SQL Server serão válidos. Isso inclui int, decimal, float etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1, 25, 345.1234<br /><br /> Valores inválidos: 2b, bcdef|  
 |Valor é data/hora|Somente os valores que têm um tipo de dados de data/hora do SQL Server serão válidos. Isso inclui datetime, time, date etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valores inválidos: March 213, 2006|  
 |Valor está em|Somente os valores que estão no conjunto do operando serão válidos.<br /><br /> Para inserir os valores no conjunto, clique na caixa de texto do operando, insira o primeiro valor, pressione Enter, insira o segundo valor, repita o procedimento para tantos valores quanto você deseja inserir no conjunto e clique novamente na caixa de texto do operando. O DQS adicionará uma vírgula entre os valores do conjunto. Se você inserir uma cadeia de caracteres com vírgulas e nenhum retorno de carro (por exemplo, "A1, B1"), o DQS considerará essa cadeia de caracteres um único valor no conjunto.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: A1, B1<br /><br /> Valores inválidos: AA, 11|  
 |Valor não está em|Somente os valores que não estão no conjunto do operando serão válidos.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: AA, 11<br /><br /> Valores inválidos: A1, B1|  

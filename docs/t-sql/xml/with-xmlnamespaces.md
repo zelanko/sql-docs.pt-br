@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256171"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026597"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   O prefixo de namespace XML `xml` não pode ser substituído por um namespace diferente do URI de namespaces `'http://www.w3.org/XML/1998/namespace'`, e este URI não pode receber um prefixo diferente.  
   
 -   O prefixo de namespace XML `xsi` não pode ser redeclarado quando a diretiva ELEMENTS XSINIL está sendo usada na consulta.  
-  
+
+-   Não é necessário declarar o 'http://www.w3.org/2001/XMLSchema-instance' para usar o namespace padrão xsi. Ele será implicitamente adicionado pelo processador de XML/XPATH se não for especificado e as expressões xpath poderão usar o prefixo, desde que o esquema 'http://www.w3.org/2001/XMLSchema-instance' seja corretamente declarado no documento xml.
+
 -   Os valores de cadeia de caracteres URI são codificados de acordo com a página de código de ordenação de banco de dados atual e são convertidos internamente em Unicode.  
   
 -   O URI de namespace de XML terá o espaço em branco reduzido segundo as regras de redução de espaço em branco XSD usadas para **xs:anyURI**. Além disso, observe que são executados definições de entidade ou cancelamentos de definição em valores URI de namespaces XML.  
-  
+
 -   Será verificado no URI de namespace XML se há caracteres XML 1.0 que não sejam válidos, e será gerado um erro se algum for encontrado (por exemplo, U+0007).  
   
 -   O URI de namespace XML (após todo o espaço em branco ser reduzido) não pode ser uma cadeia de caracteres de comprimento ou ocorrerá um erro relacionado a URI de namespace vazio inválido.  

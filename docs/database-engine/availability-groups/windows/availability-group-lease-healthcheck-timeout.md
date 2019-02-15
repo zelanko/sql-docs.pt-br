@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405796"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742096"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mecânica e diretrizes para os tempos limite de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn 
 
@@ -153,6 +153,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | Configuração de tempo limite | Finalidade | Entre | Usos | IsAlive e LooksAlive | Causas | Resultado 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | Tempo limite de concessão </br> **Padrão: 20000** | Evitar splitbrain | Primária para o Cluster </br> (HADR) | [Objetos de evento do Windows](/windows/desktop/Sync/event-objects)| Usado em ambos | Travamento do sistema operacional, memória virtual insuficiente, geração de despejo de memória, CPU vinculada, cluster WSFC inoperante (perda de quorum) | Recurso do grupo de disponibilidade offline-online, failover |  
+ | Tempo limite da sessão </br> **Padrão: 10000** | Informar sobre o problema de comunicação entre a primária e a secundária | Secundária para primária </br> (HADR) | [Soquetes TCP (mensagens enviadas por meio do ponto de extremidade DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Usado em nenhum dos dois | Comunicação de rede, </br> Problemas na secundária – inoperante, travamento do sistema operacional, contenção de recursos | Secundária – desconectada | 
+ |Tempo limite de HealthCheck  </br> **Padrão: 30000** | Indique o tempo limite ao tentar determinar a integridade da réplica primária | Cluster para primária </br> (FCI e HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Usado em ambos | Condições de falha atendidas, travamento do sistema operacional, memória virtual insuficiente, corte do conjunto de trabalho, geração de despejo, WSFC (perda de quorum), problemas no agendador (agendadores com deadlock)| Recursos do grupo de disponibilidade Offline-online ou Failover, reinicialização/failover de FCI |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte Também    
 

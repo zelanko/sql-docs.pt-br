@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00246af5bd0b577d7f1c7aebf4711d58a9828865
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617146"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028437"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder funções DQS a usuários
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617146"
   
 5.  Depois que o usuário for validado, clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-6.  No painel direito, marque a caixa de seleção sob a coluna **Mapa** do banco de dados **DQS_MAIN** e marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN** , dependendo do nível de acesso necessário ao usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../../data-quality-services/dqs-security.md).  
+6.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_MAIN** e, depois, marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor** ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN**, dependendo do nível de acesso necessário para o usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../../data-quality-services/dqs-security.md).  
   
 7.  Na caixa de diálogo **Logon – Novo**, clique em **OK** para aplicar as alterações.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 320f57a1e80a39ae3048c8a08fd991cb643e2dcf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bcbdcae1dd42b0c97df9a3f61696811f3ca19ca3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617896"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015297"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Usar relações de valor em um domínio composto
 
@@ -53,7 +53,7 @@ ms.locfileid: "52617896"
   
 6.  Você não pode alterar os valores na tabela. Se você executou outras operações, clique em **Concluir** para concluir a atividade de gerenciamento de domínio. Caso contrário, clique em **Cancelar**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após exibir relações de valor  
+##  <a name="FollowUp"></a> Acompanhamento: Após exibir relações de valor  
  Depois de exibir relações de valor, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   

@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 07db48d0c1dbac3d071dc1574295c9c471cfabb4
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 82713725dc8b4bf0d2214e2ba79121c2b330b697
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617826"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038317"
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
 
@@ -41,7 +41,7 @@ ms.locfileid: "52617826"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma base de dados de conhecimento.  
   
-##  <a name="FirstStep"></a> Primeiro etapa: Iniciar descoberta da base de dados de conhecimento  
+##  <a name="FirstStep"></a> Primeira etapa: Iniciar descoberta da base de dados de conhecimento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52617826"
   
     -   Clique em **Cancelar** para encerrar a atividade de Descoberta da Base de Dados de Conhecimento, o que resultará na perda do trabalho, e retornar à home page do DQS.  
   
-    -   Clique em **Fechar** para retornar à home page do DQS enquanto salva o trabalho. A base de dados de conhecimento ficará bloqueada para você, e o estado da base de dados de conhecimento da tabela de bases de dados de conhecimento na tela **Abrir Base de Dados de Conhecimento** será **Descoberta - Mapeamento**. Depois de clicar em **Fechar**para executar a atividade de Gerenciamento de Domínio, você precisará clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento** , prosseguir para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar Termos do Domínio** , clicar em **Concluir**e, em seguida, clicar em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e sair.  
+    -   Clique em **Fechar** para retornar à home page do DQS enquanto salva o trabalho. A base de dados de conhecimento ficará bloqueada para você, e o estado da base de dados de conhecimento da tabela de bases de dados de conhecimento na tela **Abrir Base de Dados de Conhecimento** será **Descoberta - Mapeamento**. Após clicar em **Fechar**, para executar a atividade Gerenciamento de Domínio, será necessário clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento**, vá para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar termos de domínio**, clique em **Concluir** e, em seguida, clique em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e saia.  
   
 ##  <a name="Discover"></a> Estágio de descoberta  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52617826"
     > [!NOTE]  
     >  A descoberta é executada nas colunas inseridas na tabela **Mapeamentos** da página **Mapa** . O domínio mapeado para cada coluna será populado com o conhecimento extraído da descoberta. Se o domínio for um domínio composto, o conhecimento será adicionado aos domínios individuais que compõem o domínio composto.  
   
-2.  Enquanto o processo de descoberta está em execução, verifique o status de conclusão exibido para cada etapa da descoberta: **Pré-processando Registros**, **Executando Regras de Domínio**e **Executando Descoberta**. As porcentagens de conclusão e o status da conclusão serão mostrado para cada um desses estágios.  
+2.  Enquanto o processo de descoberta está em execução, verifique o status de conclusão exibido para cada etapa da descoberta: **Pré-processando registros**, **Executando regras de domínio** e **Executando descoberta**. As porcentagens de conclusão e o status da conclusão serão mostrado para cada um desses estágios.  
   
 3.  Quando a análise for concluída, verifique se a linha de status abaixo das estatísticas de conclusão indica que ela foi concluída com êxito.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52617826"
   
     -   Clique em **Cancelar** para encerrar a atividade de Descoberta da Base de Dados de Conhecimento, o que resultará na perda do trabalho, e retornar à home page do DQS.  
   
-    -   Clique em **Fechar** para retornar à home page do DQS enquanto salva o trabalho. A base de dados de conhecimento será bloqueada para você, e o estado da base de dados de conhecimento na tabela de bases de dados de conhecimento na tela **Abrir Base de Dados de Conhecimento** será **Descoberta - Descobrir**. Depois de clicar em **Fechar**para executar a atividade de Gerenciamento de Domínio, você precisará clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento** , prosseguir para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar Termos do Domínio** , clicar em **Concluir**e, em seguida, clicar em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e sair.  
+    -   Clique em **Fechar** para retornar à home page do DQS enquanto salva o trabalho. A base de dados de conhecimento será bloqueada para você, e o estado da base de dados de conhecimento na tabela de bases de dados de conhecimento na tela **Abrir Base de Dados de Conhecimento** será **Descoberta - Descobrir**. Após clicar em **Fechar**, para executar a atividade Gerenciamento de Domínio, será necessário clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento**, vá para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar termos de domínio**, clique em **Concluir** e, em seguida, clique em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e saia.  
   
     -   Clique para retornar à página **Descobrir** .  
   
@@ -156,13 +156,13 @@ ms.locfileid: "52617826"
   
 4.  Para alterar o estado de um valor, faça o seguinte:  
   
-    1.  **Definir valores de domínio selecionados como corrigidos**: para alterar o estado de um valor de Erro ou Inválido para Correto, selecione o valor e clique em **Definir valores de domínio selecionados como corrigidos** (marca de verificação) na seta para baixo da barra de ícones ou na lista suspensa de Tipo. Se o valor com erro ou inválido for agrupado com um valor correto, exclua esse valor após a operação.  
+    1.  **Definir valores de domínio selecionados como corrigidos**: Para alterar o estado de um valor de Erro ou Inválido para Correto, selecione o valor e clique em **Definir valores de domínio selecionados como corrigidos** (marca de verificação) na seta para baixo da barra de ícones ou na lista suspensa Tipo. Se o valor com erro ou inválido for agrupado com um valor correto, exclua esse valor após a operação.  
   
-    2.  **Definir valores de domínio selecionados como erros**: para alterar o estado de um valor de Correto ou Inválido para Erro, selecione o valor e clique no ícone **Definir valores de domínio selecionados como erros** (cruz) na seta para baixo da barra de ícones ou na lista suspensa de Tipo. Insira uma correção na coluna **Corrigir para** ou deixe em branco.  
+    2.  **Definir valores de domínio selecionados como erros**: Para alterar o estado de um valor de Correto ou Inválido para Erro, selecione o valor e clique no ícone **Definir valores de domínio selecionados como erros** (cruz) na seta para baixo da barra de ícones ou na lista suspensa Tipo. Insira uma correção na coluna **Corrigir para** ou deixe em branco.  
   
-    3.  **Definir valores de domínio selecionados como inválidos**: para alterar o estado de um valor de Correto ou Erro para Inválido, selecione o valor e clique no ícone **Definir valores de domínio selecionados como inválidos** (triângulo) na seta para baixo da barra de ícones ou na lista suspensa de Tipo. Insira uma correção na coluna **Corrigir para** ou deixe em branco.  
+    3.  **Definir valores de domínio selecionado como inválidos**: Para alterar o estado de um valor de Correto ou Erro para Inválido, selecione o valor e clique no ícone **Definir valores de domínio selecionados como inválidos** (triângulo) na seta para baixo da barra de ícones ou na lista suspensa Tipo. Insira uma correção na coluna **Corrigir para** ou deixe em branco.  
   
-    4.  **Corrigir para:** Após definir um valor como erro ou inválido, insira um novo valor na coluna **Corrigir para** . O DQS adicionará uma nova linha para o valor substituto, o designará como correto e agrupará os dois valores. O novo valor será mostrado como o valor principal, com o valor principal em negrito e o valor com erro ou inválido recuado.  
+    4.  **Corrigir para**: Após definir um valor como erro ou inválido, insira um novo valor na coluna **Corrigir para**. O DQS adicionará uma nova linha para o valor substituto, o designará como correto e agrupará os dois valores. O novo valor será mostrado como o valor principal, com o valor principal em negrito e o valor com erro ou inválido recuado.  
   
 5.  Para designar valores como um grupo de sinônimos, selecione diversos valores corretos e continue da seguinte maneira:  
   
@@ -173,9 +173,9 @@ ms.locfileid: "52617826"
   
     -   **Quebrar relação entre os sinônimos selecionados**: clique para desfazer a designação de sinônimo.  
   
-    -   **Definir valores de domínio selecionados como um valor principal de seu grupo**: altere o valor principal do grupo selecionando um valor no grupo que não esteja designado como valor principal e clicando no botão **Definir valores de domínio selecionados como um valor principal de seu grupo** .  
+    -   **Definir valores de domínio selecionados como um valor principal de seu grupo**: Altere o valor principal do grupo selecionando um valor no grupo que não esteja designado como valor principal e clicando no botão **Definir valores de domínio selecionados como um valor principal de seu grupo**.  
   
-6.  **Verificador Ortográfico**: se você tiver habilitado o Verificador Ortográfico na página Propriedades de Domínio, localize qualquer valor que tenha um sublinhado vermelho ondulado, a indicação de que o Verificador Ortográfico está sugerindo uma correção. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+6.  **Verificador ortográfico**: se você tiver habilitado o Verificador Ortográfico na página Propriedades de Domínio, localize qualquer valor que tenha um sublinhado vermelho ondulado, a indicação de que o Verificador Ortográfico está sugerindo uma correção. Clique com o botão direito do mouse no valor com sublinhado e selecione uma correção, caso ela se aplique. O tipo de valor se torna (ou permanece como) um erro, e a correção será adicionada à coluna **Corrigir para** . Clique na seta para baixo para ver outras correções propostas. Insira uma correção manualmente para adicioná-la ao dicionário do Verificador Ortográfico para que você possa selecioná-la como uma correção. Para obter mais informações, consulte [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Gerenciar Resultados de Descoberta de Dados** para habilitá-lo nessa página.  
@@ -186,15 +186,15 @@ ms.locfileid: "52617826"
   
 9. **Importar valores de projeto**: adicione novos valores de um projeto de qualidade de dados clicando na seta para baixo do ícone **Importar Valores** e selecionando **Importar valores de projeto**. Insira o nome de arquivo, selecione **Usar primeira linha como cabeçalho** , se apropriado, e clique em **OK**. Selecione o projeto a partir do qual você importará valores e clique em **OK**. Os valores importados serão exibidos. Clique em **Concluir**. Para obter mais informações, consulte Importar valores de projeto para um domínio.  
   
-10. **Excluir valores de domínio selecionados**: remova um ou mais valores existentes do domínio selecionando os valores e clicando no botão **Excluir valores de domínio selecionados** . A entrada DQS_NULL não pode ser excluída; portanto, se você escolher diversos valores para serem excluídos, e a entrada DQS_NULL for um deles, a operação falhará.  
+10. **Excluir valores de domínio selecionados**: remova um ou mais valores existentes do domínio selecionando os valores e clicando no botão **Excluir valores de domínio selecionados**. A entrada DQS_NULL não pode ser excluída; portanto, se você escolher diversos valores para serem excluídos, e a entrada DQS_NULL for um deles, a operação falhará.  
   
 11. Clique em **Concluir** para concluir a atividade de descoberta da base de dados de conhecimento. Uma janela pop-up será exibida se você não tiver revisado cada domínio. Clique em **Sim** para continuar revisando ou em **Não** para continuar. Se você clicar em Não, outra janela pop-up será exibida permitindo que você faça o seguinte:  
   
-    1.  **Publicar**: a base de dados de conhecimento será publicada para o usuário atual ou para outros usuários. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page. Para concluir o processo, clique em **Sim** na janela pop-up.  
+    1.  **Publicar**: a base de dados de conhecimento será publicada para o usuário atual ou para outros usuários utilizarem. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page. Para concluir o processo, clique em **Sim** na janela pop-up.  
   
     2.  **Não**: seu trabalho será salvo, a base de dados de conhecimento permanecerá bloqueada e o estado da base de dados de conhecimento será definido como Em serviço. As atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page.  
   
-    3.  **Cancelar**: a janela pop-up será fechada e você permanecerá na página **Gerenciar Valor de Domínio** .  
+    3.  **Cancelar**: a janela pop-up será fechada e você permanecerá na página **Gerenciar Valor de Domínio**.  
   
 12. Também é possível clicar no seguinte:  
   
@@ -202,9 +202,9 @@ ms.locfileid: "52617826"
   
     -   **Fechar** para retornar à home page do DQS enquanto salva o trabalho. A base de dados de conhecimento será bloqueada para você e o estado da base de dados de conhecimento na tabela de bases de dados de conhecimento na tela **Abrir Base de Dados de Conhecimento** será **Descoberta – Gerenciamento de Valor**.  
   
-    -   Clique em **Voltar** para retornar à página **Descobrir** . Depois de clicar em **Fechar**para executar a atividade de Gerenciamento de Domínio, você precisará clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento** , prosseguir para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar Termos do Domínio** , clicar em **Concluir**e, em seguida, clicar em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e sair.  
+    -   Clique em **Voltar** para retornar à página **Descobrir** . Após clicar em **Fechar**, para executar a atividade Gerenciamento de Domínio, será necessário clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento**, vá para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar termos de domínio**, clique em **Concluir** e, em seguida, clique em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e saia.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após executar a descoberta de dados de conhecimento  
+##  <a name="FollowUp"></a> Acompanhamento: após executar a descoberta de conhecimento  
  Após adicionar conhecimento ao caso de conhecimento no processo de descoberta de conhecimento assistido por computador, você poderá usar a base de dados de conhecimento para um projeto de limpeza imediatamente ou poderá executar o gerenciamento de domínio antes da limpeza. Para obter mais informações sobre a limpeza de dados ou o gerenciamento de domínio, consulte [Limpeza de dados](../data-quality-services/data-cleansing.md) ou [Gerenciando um domínio](../data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Meaning"></a> O significado dos valores corretos, com erro e inválidos  
@@ -214,7 +214,7 @@ ms.locfileid: "52617826"
   
 -   **Erro:** este é um valor que pertence ao domínio, mas é um valor incorreto. Por exemplo, "Shicago" em vez de "Chicago" em um domínio Cidade é um erro. O DQS designa um valor como erro; ele detecta um erro de sintaxe e uma correção associada no processo de descoberta. Os erros de sintaxe incluem erros de ortografia.  
   
--   **Inválido:** este é um valor que não pertence ao domínio e não tem correção. Por exemplo, o valor "12345" em um domínio Cidade é inválido. O DQS designa um valor como inválido quando desobedece a uma regra de domínio.  
+-   **Inválido:** este é um valor que não pertence ao domínio e não tem uma correção. Por exemplo, o valor "12345" em um domínio Cidade é inválido. O DQS designa um valor como inválido quando desobedece a uma regra de domínio.  
   
  Você pode alterar o tipo de um valor manualmente para qualquer um dos outros dois valores. O DQS não impõe validade e semânticas de erro em operações manuais. Você pode inserir uma correção para obter um valor inválido sem alterar seu status. Você pode designar um valor como inválido até mesmo se ele não desobedecesse a uma regra de domínio. Você pode designar um valor como erro até mesmo se o processo de descoberta não indicasse que ele tem um erro de sintaxe. Você também pode remover uma correção para um valor Erro, que é marcado como Correto, sem alterar seu status.  
   
@@ -242,21 +242,21 @@ ms.locfileid: "52617826"
   
 -   **Registros**: quantos registros no exemplo de dados foram descobertos  
   
--   **Valores Totais**: quantos valores totais foram localizados para cada campo e no total  
+-   **Total de valores**: quantos valores totais foram localizados para cada campo e no total  
   
--   **Novos Valores**: Quanto dos valores totais de cada campo e de todos os campos mapeados eram novos desde o último processo de descoberta, e seu percentual em relação aos valores totais  
+-   **Novos valores**: quantos dos valores totais de cada campo e de todos os campos mapeados eram novos desde o último processo de descoberta e seu percentual em relação aos valores totais  
   
--   **Valores Exclusivos**: Quanto dos valores totais de cada campo e de todos os campos mapeados eram exclusivos, e seu percentual em relação aos valores totais  
+-   **Valores exclusivos**: quanto dos valores totais de cada campo e de todos os campos mapeados eram exclusivos e seu percentual em relação aos valores totais  
   
--   **Novos Valores Exclusivos**: Quanto dos valores exclusivos de cada campo e de todos os campos mapeados eram novos desde o último processo de descoberta, e seu percentual em relação aos valores totais  
+-   **Novos valores exclusivos**: quantos dos valores exclusivos de cada campo e de todos os campos mapeados eram novos desde o último processo de descoberta e seu percentual em relação aos valores totais  
   
--   **Válido em Valores de Domínio**: Quanto dos valores totais de cada campo e de todos os campos mapeados eram válidos, e seu percentual em relação aos valores totais  
+-   **Válido em valores de domínio**: quanto dos valores totais de cada campo e de todos os campos mapeados eram válidos e seu percentual em relação aos valores totais  
   
  As estatísticas de campo incluem o seguinte:  
   
 -   **Campo**: o nome do campo no banco de dados de origem  
   
--   **Domínio**: o nome do domínio que é mapeado para o campo  
+-   **Domínio**: nome do domínio que mapeia para o campo  
   
 -   **Novo**: o número de novos valores e o percentual de novos valores em comparação com os valores existentes no campo  
   

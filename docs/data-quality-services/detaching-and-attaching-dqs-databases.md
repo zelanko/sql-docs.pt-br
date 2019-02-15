@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 639c21a124a9d8bcdecd6d240616ac10f6c87e93
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e10cc69f3fe32656418a8714c852d86e631fe281
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617406"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024387"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Desanexando e anexando bancos de dados do DQS
 
@@ -26,7 +26,7 @@ ms.locfileid: "52617406"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Limitations"></a> Limitações e restrições  
+###  <a name="Limitations"></a> Limitações e Restrições  
  Para obter uma lista de limitações e restrições, veja [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
@@ -46,7 +46,7 @@ ms.locfileid: "52617406"
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
 ##  <a name="Detach"></a> Desanexar bancos de dados DQS  
- Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados do DQS geralmente estão disponíveis no seguinte local no computador do Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>* \MSSQL\DATA.  
+ Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados DQS geralmente estão disponíveis no seguinte local no computador com Data Quality Services: C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.*<Nome_da_instância>* \MSSQL\DATA.  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   

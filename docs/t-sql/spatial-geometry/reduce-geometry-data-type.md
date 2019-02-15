@@ -18,17 +18,17 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3706237fdd673e4bcf42fbcc5e611e094fd1ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3177340b6944da812c93075f6b2fd5561192f33
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805614"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807416"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna uma aproximação de determinada instância de **geometry** produzida pela execução de uma extensão do algoritmo Douglas-Peucker na instância com a tolerância especificada.
+Retorna uma aproximação da instância de **geometria** fornecida. A aproximação é produzida pela execução de uma extensão do algoritmo Douglas-Peucker na instância com a tolerância especificada.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,20 +44,20 @@ Retorna uma aproximação de determinada instância de **geometry** produzida pe
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno do CLR: **SqlGeometry**  
+ Tipo de retorno CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Para os tipos de coleção, esse algoritmo opera de forma independente em cada **geometria** contida na instância.  
   
  Esse algoritmo não modifica as instâncias de **Point**.  
   
- Nas instâncias de **LineString**, **CircularString** e **CompoundCurve**, o algoritmo de aproximação retém os pontos originais de início e de extremidade da instância e adiciona novamente de forma iterativa o ponto da instância original que mais se desvia do resultado, até que nenhum ponto desvie mais do que a tolerância especificada.  
+ Nas instâncias **LineString**, **CircularString** e **CompoundCurve**, o algoritmo de aproximação mantém os pontos originais de início e de término da instância. Em seguida, o algoritmo iterativamente adiciona de volta o ponto da instância original que mais desvia do resultado. Esse processo continua até que nenhum ponto desvie mais do que a tolerância especificada.  
   
  `Reduce()` retorna uma instância de **LineString**, **CircularString** ou **CompoundCurve** para instâncias de **CircularString**.  `Reduce()` retorna um uma instância de **CompoundCurve** ou **LineString** para instâncias de **CompoundCurve**.  
   
  Em instâncias de **polígono**, o algoritmo de aproximação é aplicado de forma independente a cada anel. O método produzirá uma `FormatException` se a instância de **polígono** retornada não for válida. Por exemplo, uma instância inválida de **MultiPolygon** será criada se `Reduce()` for aplicado para simplificar cada anel na instância e se os anéis resultantes se sobrepuserem.  Nas instâncias de **CurvePolygon** com um anel exterior e sem nenhum anel interior, `Reduce()` retorna uma instância de **CurvePolygon**, **LineString** ou **Point**.  Se **CurvePolygon** tiver anéis interiores, uma instância de **CurvePolygon** ou **MultiPoint** será retornada.  
   
- Quando um segmento de arco circular é encontrado, o algoritmo de aproximação verifica se o arco pode ser aproximado por sua corda dentro de metade da tolerância dada.  Se a corda conhecer estes critérios, o arco circular será substituído nos cálculos pela corda. Caso contrário, o arco circular será retido e o algoritmo de aproximação será aplicado aos segmentos restantes.  
+ Quando um segmento de arco circular é encontrado, o algoritmo de aproximação verifica se o arco pode ser aproximado por sua corda dentro de metade da tolerância dada. As cordas que satisfazem esses critérios, o arco circular é substituído nos cálculos pela corda. Se uma corda não satisfaz esses critérios, o arco circular é mantido e o algoritmo de aproximação é aplicado aos segmentos restantes.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -70,7 +70,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0, 2 1, 3 0, 4 1)', 0)
 SELECT @g.Reduce(.75).ToString();  
 ```  
   
-### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. Usando Reduce() com níveis de tolerância variados em um CircularString  
+### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>b. Usando Reduce() com níveis de tolerância variados em um CircularString  
  O exemplo a seguir usa `Reduce()` com três níveis de tolerância em uma instância de **CircularString**:  
   
 ```
@@ -102,7 +102,7 @@ SELECT @g.Reduce(.75).ToString();
  Neste exemplo, observe que a segunda instrução **SELECT** retorna a instância de **LineString**: `LineString(0 0, 16 0)`.  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>Mostrando um exemplo onde os pontos originais de início e de término são perdidos  
- O exemplo a seguir mostra como os pontos originais de início e de término talvez não sejam retidos pela instância resultante. Isso ocorre porque a retenção dos pontos originais de início e de extremidade resultaria em uma instância de **LineString** inválida.  
+ O exemplo a seguir mostra como os pontos originais de início e de término talvez não sejam retidos pela instância resultante. Esse comportamento ocorre porque manter os pontos originais de início e de extremidade resultaria em uma instância de **LineString** inválida.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  
@@ -114,5 +114,3 @@ SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;
 ## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
-  
-

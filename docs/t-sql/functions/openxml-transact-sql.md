@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9aa7006233437922fc15ac4fe811cbde75dff59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618584"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011778"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@@mp:xmltex**.|  
   
  _SchemaDeclaration_  
- É a definição de esquema no formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ É a definição do esquema do formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  É o nome de coluna no conjunto de linhas.  
@@ -155,7 +155,7 @@ NULL       NULL
 NULL       NULL  
 ```  
   
-### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. Especificando ColPattern para mapeamento entre colunas e atributos XML  
+### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Especificando ColPattern para mapeamento entre colunas e atributos XML  
  A consulta a seguir retorna ID de cliente, data do pedido, ID de produto e atributos de quantidade do documento XML. O *rowpattern* identifica os elementos `<OrderDetails>`. `ProductID` e `Quantity` são os atributos do elemento `<OrderDetails>`. Entretanto, `OrderID`, `CustomerID`e `OrderDate` são os atributos do elemento de pai (`<Orders>`).  
   
  O *ColPattern* opcional é especificado. Isso indica o seguinte:  
@@ -246,6 +246,6 @@ EXEC sp_xml_removedocument @idoc;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplos: usando OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
+ [Exemplos: Usando OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   

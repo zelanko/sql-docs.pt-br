@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 89b1a55d77ea5730d885fcb0c5969e94e4c96199
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 04cc1acdc8e3cdec83545671736a452a2c176d3d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617416"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038757"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Exportar uma base de dados de conhecimento para um arquivo .dqs
 
@@ -50,7 +50,7 @@ ms.locfileid: "52617416"
   
 5.  Na caixa de diálogo **Exportar Base de Dados de Conhecimento** , verifica se a linha de status indica que a exportação foi concluída. Clique em **OK**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após exportar um domínio para um arquivo .dqs  
+##  <a name="FollowUp"></a> Acompanhamento: Após exportar um domínio para um arquivo .dqs  
  Após exportar uma base de dados de conhecimento para um arquivo .dqs, você poderá importar a base de dados de conhecimento para o mesmo [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (com um novo nome) ou para outro [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
   

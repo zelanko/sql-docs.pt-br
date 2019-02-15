@@ -18,19 +18,19 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 933212da81784d7d186fc6ef7c0cdfaa4edab24b
-ms.sourcegitcommit: 7ead3a042d369315fc83a9ccc3d74f62e7b05bc0
+ms.openlocfilehash: 41cdf947d16cc5dc2366ae27c9008fe4d53c158f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012312"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079322"
 ---
 # <a name="operator-precedence-transact-sql"></a>Precedência dos operadores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Quando uma expressão complexa tiver vários operadores, A precedência de operador determina a sequência na qual as operações são executadas. A ordem de execução pode afetar o valor resultante significativamente.  
+  Quando uma expressão complexa tiver vários operadores, a precedência de operador determinará a sequência de operações. A ordem de execução pode afetar o valor resultante significativamente.  
   
- Os níveis de precedência dos operadores são mostrados na tabela a seguir. Um operador em níveis superiores é avaliado antes de um operador em um nível mais baixo (na tabela a seguir, 1 é o nível mais alto e 8 é o nível mais baixo).
+ Os níveis de precedência dos operadores são mostrados na tabela a seguir. Um operador em níveis superiores é avaliado antes de um operador em um nível inferior. Na tabela a seguir, 1 é o nível mais alto e 8 é o nível mais baixo.
   
 |Nível|Operadores|  
 |-----------|---------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "54012312"
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
 |8|= (Atribuição)|  
   
- Quando dois operadores em uma expressão tiverem o mesmo nível de precedência de operador, eles serão avaliados da esquerda para a direita em sua posição na expressão. Por exemplo, na expressão usada na seguinte instrução `SET`, o operador de subtração é avaliado antes do operador de adição.  
+ Quando dois operadores em uma expressão tiverem o mesmo nível de precedência, eles serão avaliados da esquerda para a direita em sua posição na expressão. Por exemplo, na expressão usada na seguinte instrução `SET`, o operador de subtração é avaliado antes do operador de adição.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -52,9 +52,9 @@ SET @MyNumber = 4 - 2 + 27;
 SELECT @MyNumber;  
 ```  
   
- Use parênteses para substituir a precedência definida dos operadores em uma expressão. Tudo que estiver entre parênteses é avaliado primeiro para gerar um único valor antes daquele que poderá ser usado por qualquer operador fora dos parênteses.  
+ Use parênteses para substituir a precedência definida dos operadores em uma expressão. Tudo dentro dos parênteses é avaliado para produzir um único valor. Esse valor pode ser usado por qualquer operador fora desses parênteses.  
   
- Por exemplo, na expressão usada na seguinte instrução `SET`, o operador de multiplicação tem uma precedência maior que o operador de adição. Portanto, ele é avaliado primeiro; o resultado da expressão é `13`.  
+ Por exemplo, na expressão usada na seguinte instrução `SET`, o operador de multiplicação tem uma precedência maior que o operador de adição. A operação de multiplicação é avaliada primeiro; o resultado da expressão é `13`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -63,7 +63,7 @@ SET @MyNumber = 2 * 4 + 5;
 SELECT @MyNumber;  
 ```  
   
- Na expressão usada na seguinte instrução `SET`, os parênteses fazem com que a adição seja executada primeiro. O resultado da expressão é `18`.  
+ Na expressão usada na seguinte instrução `SET`, os parênteses fazem a adição ser avaliada primeiro. O resultado da expressão é `18`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -72,7 +72,7 @@ SET @MyNumber = 2 * (4 + 5);
 SELECT @MyNumber;  
 ```  
   
- Se uma expressão tiver parênteses aninhados, a expressão mais aninhada será avaliada primeiro. O exemplo a seguir contém parênteses aninhados, com a expressão `5 - 3` no conjunto de parênteses mais aninhado. Essa expressão gera um valor de `2`. Em seguida, o operador de adição (`+`) adiciona esse resultado a `4`. Isso gera um valor de `6`. Finalmente, os `6` são multiplicados por `2` para gerar um resultado de expressão de `12`.  
+ Se uma expressão tiver parênteses aninhados, a expressão mais aninhada será avaliada primeiro. O exemplo a seguir contém parênteses aninhados, com a expressão `5 - 3` no conjunto de parênteses mais aninhado. Essa expressão gera um valor de `2`. Em seguida, o operador de adição (`+`) adiciona esse resultado a `4`, que produz um valor de `6`. Finalmente, os `6` são multiplicados por `2` para gerar um resultado de expressão de `12`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -86,5 +86,4 @@ SELECT @MyNumber;
  [Operadores lógicos &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
   

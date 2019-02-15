@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73ef1d5301310656cfcb02aef7d488541968d8a9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 87ef5477bcff01caec7027bb5aac713fbc0ccc8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617686"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023729"
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
 
@@ -45,13 +45,13 @@ ms.locfileid: "52617686"
   
  Os fatores que você insere em uma regra de correspondência incluem os seguintes:  
   
--   Peso: para cada domínio na regra, insira um peso numérico que determine como a análise de correspondência para o domínio será comparada à de cada domínio na regra. O peso indica a contribuição da pontuação do campo para a pontuação de correspondência geral entre dois registros. As pontuações calculadas atribuídas a cada campo de origem são somadas para se obter uma pontuação de correspondência composta para os dois registros. Para cada campo que não é um pré-requisito (com uma similaridade de exato ou similar), defina o peso entre 10 e 100. A soma dos pesos dos domínios que não são pré-requisitos deve ser igual a 100. Se o valor for um pré-requisito, o peso será definido como 0 e não poderá ser alterado.  
+-   Peso: para cada domínio na regra, insira um peso numérico que determina como a análise de correspondência para o domínio será comparada à de cada domínio na regra. O peso indica a contribuição da pontuação do campo para a pontuação de correspondência geral entre dois registros. As pontuações calculadas atribuídas a cada campo de origem são somadas para se obter uma pontuação de correspondência composta para os dois registros. Para cada campo que não é um pré-requisito (com uma similaridade de exato ou similar), defina o peso entre 10 e 100. A soma dos pesos dos domínios que não são pré-requisitos deve ser igual a 100. Se o valor for um pré-requisito, o peso será definido como 0 e não poderá ser alterado.  
   
 -   Similaridade de exato: selecione **Exato** se os valores no mesmo campo de dois registros diferentes tiverem que ser idênticos para os valores a serem considerados para uma correspondência. Se idênticos, a pontuação de correspondência para esse domínio será definida como "100" e o DQS usará essa pontuação e as pontuações dos outros domínios na regra para determinar a pontuação de correspondência de agregação. Se não forem idênticos, a pontuação de correspondência para esse domínio será definida como "0" e o processamento da regra prosseguirá para a próxima condição. Se você configurar uma regra de correspondência para um domínio numérico e selecionar **Similar**, poderá inserir uma tolerância como um percentual ou um número inteiro. Para um domínio do tipo data, você pode inserir uma tolerância como dia, mês ou ano (inteiro) se selecionar **Similar**; não há nenhuma tolerância percentual para um domínio de data. Se você selecionar **Exato**, não terá essa opção.  
   
--   Similaridade de similar: selecione **Similar** se dois valores no mesmo campo de dois registros diferentes puderem ser considerados uma correspondência, mesmo que os valores não sejam idênticos. Quando o DQS executa a regra, ele calculará uma pontuação de correspondência para esse domínio e utilizará essa pontuação e as pontuações dos outros domínios na regra para determinar a pontuação de correspondência de agregação. A similaridade mínima entre os valores de um campo é 60%. Se a pontuação de correspondência calculada para um campo de dois registros for inferior a 60, a pontuação de similaridade será definida automaticamente como 0. Se você estiver configurando uma regra de correspondência para um campo numérico e selecionar **Similar**, poderá inserir uma tolerância como um percentual ou um número inteiro. Se você estiver configurando uma regra de correspondência para um campo de data e selecionar **Similar**, poderá inserir uma tolerância numérica.  
+-   Similaridade de semelhante: selecione **Similar** se dois valores no mesmo campo de dois registros diferentes puderem ser considerados uma correspondência, mesmo se os valores não forem idênticos. Quando o DQS executa a regra, ele calculará uma pontuação de correspondência para esse domínio e utilizará essa pontuação e as pontuações dos outros domínios na regra para determinar a pontuação de correspondência de agregação. A similaridade mínima entre os valores de um campo é 60%. Se a pontuação de correspondência calculada para um campo de dois registros for inferior a 60, a pontuação de similaridade será definida automaticamente como 0. Se você estiver configurando uma regra de correspondência para um campo numérico e selecionar **Similar**, poderá inserir uma tolerância como um percentual ou um número inteiro. Se você estiver configurando uma regra de correspondência para um campo de data e selecionar **Similar**, poderá inserir uma tolerância numérica.  
   
--   Pré-requisito: selecione **Pré-requisito** para especificar que os valores no mesmo campo em dois registros diferentes devem retornar uma correspondência de 100% ou os registros não serão considerados uma correspondência e as outras cláusulas na regra serão desconsideradas. Quando a opção **Pré-requisito** está selecionada, o campo de peso do domínio é removido de forma que você não pode definir um peso para o domínio. Você deve reiniciar um ou mais pesos de domínio para que a soma dos pesos seja igual a 100. Os domínios de pré-requisitados não contribuem para a pontuação de correspondência de registro. A pontuação de correspondência de registro é determinada pela comparação dos valores nos campos para os quais a Similaridade está definida como Similar ou Exata. Quando você cria um campo e um pré-requisito, a Similaridade para esse domínio é definida automaticamente como Exata.  
+-   Pré-requisito: selecione **Pré-requisito** para especificar que os valores no mesmo campo em dois registros diferentes devem retornar uma correspondência de 100% ou que os registros não serão considerados uma correspondência e as outras cláusulas na regra serão desconsideradas. Quando a opção **Pré-requisito** está selecionada, o campo de peso do domínio é removido de forma que você não pode definir um peso para o domínio. Você deve reiniciar um ou mais pesos de domínio para que a soma dos pesos seja igual a 100. Os domínios de pré-requisitados não contribuem para a pontuação de correspondência de registro. A pontuação de correspondência de registro é determinada pela comparação dos valores nos campos para os quais a Similaridade está definida como Similar ou Exata. Quando você cria um campo e um pré-requisito, a Similaridade para esse domínio é definida automaticamente como Exata.  
   
  A pontuação de correspondência mínima é o limite no qual ou acima do qual dois registros são considerados uma correspondência (e o status dos registros é definido como "Correspondente"). Insira um valor inteiro em incrementos de "1" ou clique na seta para cima ou para baixo para aumentar ou diminuir o valor em incrementos de "10". O valor mínimo é 80. Se a pontuação de correspondência estiver abaixo de 80, os dois registros não serão considerados uma correspondência. Você não pode alterar o intervalo da pontuação de correspondência mínima nessa página. A pontuação de correspondência mínima é 80. Você pode, no entanto, alterar a pontuação de correspondência mínima mais baixa na página Administração (se for um administrador do DQS).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52617686"
   
  A criação de perfil fornece ideias sobre a integridade e a exclusividade. Considere a integridade e a exclusividade em tandem. Use os dados de integridade e exclusividade para determinar qual peso atribuir a um campo no processo de correspondência. Se houver um nível alto de exclusividade em um campo, o uso de um campo em uma política de correspondência poderá diminuir os resultados de correspondência, de modo que talvez você queira definir o peso desse campo para um valor relativamente pequeno. Se houver um nível baixo de exclusividade para uma coluna, porém baixa integridade, talvez você não queira incluir um domínio para essa coluna. Com um nível baixo de exclusividade, porém um nível alto de integridade, talvez você queira incluir o domínio. Algumas colunas, como gênero, podem ter um nível de exclusividade baixo naturalmente. Para obter mais informações, consulte [Guias Criador de Perfil e Resultados](#Tabs).  
   
-##  <a name="Starting"></a> Primeira etapa: iniciando uma política de correspondência  
+##  <a name="Starting"></a> Primeira etapa: Iniciando uma política de correspondência  
  Execute a atividade de política de correspondência na área de gerenciamento da base de dados de conhecimento do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -177,13 +177,13 @@ ms.locfileid: "52617686"
   
 7.  Se você estiver satisfeito com os resultados de todas as regras, clique em **Concluir** para concluir o processo de política de correspondência e clique em um dos seguintes:  
   
-    -   **Sim – Publique a base de dados de conhecimento e saia**: a base de dados de conhecimento será publicada para uso do usuário atual ou de outros usuários. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à tela Abrir Base de Dados de Conhecimento.  
+    -   **Sim – Publicar a base de dados de conhecimento e sair**: a base de dados de conhecimento será publicada para o usuário atual ou para outros usuários utilizarem. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à tela Abrir Base de Dados de Conhecimento.  
   
-    -   **Não – Salve o trabalho na base de dados de conhecimento e saia**: seu trabalho será salvo, a base de dados de conhecimento permanecerá bloqueada e o estado da base de dados de conhecimento será definido como **Em serviço**. As atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page.  
+    -   **Não – Salvar o trabalho na base de dados de conhecimento e sair**: seu trabalho será salvo, a base de dados de conhecimento permanecerá bloqueada e o estado da base de dados de conhecimento será definido como **Em serviço**. As atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page.  
   
-    -   **Cancelar – Mantenha-se na tela atual**: o pop-up será fechado e você será retornado para a tela Gerenciamento de Domínio.  
+    -   **Cancelar – Manter-se na tela atual**: o pop-up será fechado e você será retornado para a tela Gerenciamento de Domínio.  
   
-8.  Clique em **Fechar** para salvar seu trabalho e retornar para a página inicial do DQS. O estado da base de dados de conhecimento mostrará a cadeia de caracteres "Política de Correspondência – " e o estado atual. Se você clicou em **Fechar** quando estava na tela **Resultado de Correspondência** , o estado mostrará: "Política de Correspondência - Resultados". Se você clicou em Fechar quando estava na tela **Política de Correspondência**, o estado mostrará: "Política de Correspondência – Política de Correspondência". Depois de clicar em **Fechar**, para executar a atividade **Descoberta da Base de Dados de Conhecimento** , você terá que retornar à atividade **Política de correspondência** , clicar em **Concluir**e em **Sim** para publicar a base de dados de conhecimento ou **Não** para salvar o trabalho na base de dados de conhecimento e sair.  
+8.  Clique em **Fechar** para salvar seu trabalho e retornar para a página inicial do DQS. O estado da base de dados de conhecimento mostrará a cadeia de caracteres "Política de Correspondência – " e o estado atual. Se você clicou em **Fechar** quando estava na tela **Resultado de Correspondência**, o estado mostrará: "Política de Correspondência – Resultados". Se você clicou em fechar enquanto estava na tela **Política de Correspondência**, o estado mostrará: "Política de Correspondência – Política de Correspondência". Depois de clicar em **Fechar**, para executar a atividade **Descoberta da Base de Dados de Conhecimento** , você terá que retornar à atividade **Política de correspondência** , clicar em **Concluir**e em **Sim** para publicar a base de dados de conhecimento ou **Não** para salvar o trabalho na base de dados de conhecimento e sair.  
   
     > [!NOTE]  
     >  Se você clicar em **Fechar** quando um processo de correspondência estiver em execução, o processo de correspondência não terminará quando clicar em **Fechar**. Você pode reabrir a base de dados de conhecimento e verificar se o processo ainda está em execução ou, caso tenha sido concluído, se os resultados foram exibidos. Se o processo não foi concluído, a tela exibirá o progresso.  
@@ -205,13 +205,13 @@ ms.locfileid: "52617686"
   
 -   **Registros**: o número total de registros no banco de dados de origem  
   
--   **Valores Totais**: o número total de valores nos campos da fonte de dados  
+-   **Total de valores**: o número total de valores nos campos da fonte de dados  
   
--   **Novos Valores**: o número total de valores novos desde a execução anterior e seu percentual em relação ao todo  
+-   **Novos valores**: o número total de valores novos desde a execução anterior e seu percentual em relação ao todo  
   
--   **Valores Exclusivos**: o número total de valores exclusivos nos campos e seu percentual em relação ao todo  
+-   **Valores exclusivos**: o número total de valores exclusivos nos campos e seu percentual em relação ao todo  
   
--   **Novos Valores Exclusivos**: o número total de valores exclusivos novos nos campos e seu percentual em relação ao todo  
+-   **Novos valores exclusivos**: o número total de valores exclusivos e novos nos campos e seu percentual em relação ao todo  
   
  As estatísticas de campo incluem o seguinte:  
   

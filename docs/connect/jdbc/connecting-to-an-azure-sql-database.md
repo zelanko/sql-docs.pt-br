@@ -1,7 +1,7 @@
 ---
 title: Conectar-se a um banco de dados SQL do Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602206"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736977"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectando-se a um banco de dados SQL do Azure
 
@@ -47,9 +47,9 @@ Para evitar a remoção de conexões ociosas por um componente de rede, as confi
   
 |Configuração do Registro|Valor recomendado|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ parâmetros \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ parâmetros \ KeepAliveInterval|1.000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ parâmetros \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1.000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Reinicie o computador para que as configurações do Registro tenham efeito.  
 
@@ -78,15 +78,15 @@ shutdown /r /t 1
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>Anexando o nome do servidor à ID de usuário na cadeia de conexão  
 
 Antes da versão 4.0 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], era necessário acrescentar o nome do servidor à ID de usuário na cadeia de conexão. Por exemplo, user@servername. A partir da versão 4.0 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], não é mais necessário acrescentar @servername à ID de usuário na cadeia de conexão.  
-  
+
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Uso de criptografia requer a configuração de hostNameInCertificate
 
-Ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se você especificar **criptografar = true**. (Se for o nome do servidor na cadeia de conexão *shortName*. *domainName*, defina a **hostNameInCertificate** propriedade \*. *domainName*.)  
-  
-Por exemplo:  
+Antes da versão 7.2 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se você especificar **criptografar = true** (se o nome do servidor em que a conexão cadeia de caracteres é *shortName*. *domainName*, defina a **hostNameInCertificate** propriedade \*. *domainName*.). Essa propriedade é opcional a partir da versão 7.2 do driver.
+
+Por exemplo:
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
 ## <a name="see-also"></a>Consulte Também

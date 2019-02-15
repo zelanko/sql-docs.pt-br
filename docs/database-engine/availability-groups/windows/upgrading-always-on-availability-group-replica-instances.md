@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411513"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771342"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,15 +28,15 @@ Ao atualizar uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 ## <a name="prerequisites"></a>Prerequisites  
 Antes de começar, examine as seguintes informações importantes:  
   
-- [Versão com suporte e atualizações da edição](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verifique se você pode atualizar para o SQL Server 2016 de sua versão do sistema operacional Windows e da versão do SQL Server. Por exemplo, não é possível atualizar diretamente de uma instância do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+- [Atualizações compatíveis de versão e edição](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verifique se você pode atualizar para o SQL Server 2016 de sua versão do sistema operacional Windows e da versão do SQL Server. Por exemplo, não é possível atualizar diretamente de uma instância do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-- [Escolha um método de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): para atualizar na ordem correta, selecione o método e as etapas de atualização apropriados com base em sua análise de atualizações de versão e de edição com suporte e também com base em outros componentes instalados em seu ambiente.  
+- [Escolher um método de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Para atualizar na ordem correta, selecione o método e as etapas de atualização apropriados com base em sua análise de atualizações de versão e de edição compatíveis e também com base em outros componentes instalados em seu ambiente.  
   
-- [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): examine as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização e desenvolva e teste o plano de atualização.  
+- [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Analise as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização, e desenvolva e teste o plano de atualização.  
   
-- [Requisitos de hardware e software para a instalação do SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
+- [Requisitos de hardware e software para a instalação do SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Analise os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
 
-- [Verifique se a replicação ou captura de dados de alteração é usada em algum banco de dados AG](#special-steps-for-change-data-capture-or-replication): se qualquer banco de dados no AG estiver habilitado para CDC (captura de dados de alteração), conclua estas [instruções](#special-steps-for-change-data-capture-or-replication).
+- [Verifique se a replicação ou captura de dados de alterações é usada para qualquer banco de dados do grupo de disponibilidade](#special-steps-for-change-data-capture-or-replication): Se qualquer banco de dados de disponibilidade estiver habilitado para CDA (captura de dados de alterações), conclua estas [instruções](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >Não há suporte para a combinação de versões das instâncias do SQL Server no mesmo AG fora de uma atualização sem interrupção, que atualiza as réplicas adequadamente. Uma versão posterior de uma instância do SQL Server não pode ser adicionada como uma nova réplica a um AG existente. Por exemplo, uma réplica do SQL Server 2017 não pode ser adicionada a um AG existente do SQL Server 2016. Para migrar para uma nova versão da instância do SQL Server usando AGs, o único método com suporte é um AG distribuído, que está no SQL Server 2016 Enterprise Edition ou posterior.
@@ -67,6 +67,11 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
 -   Não atualize a instância da réplica primária antes de atualizar qualquer outra instância da réplica secundária. Uma réplica primária atualizada não pode mais enviar logs para nenhuma réplica secundária cuja instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ainda não tenha sido atualizada para a mesma versão. Quando a movimentação dos dados para uma réplica secundária for suspensa, nenhum failover automático poderá ocorrer nessa réplica, e os bancos de dados de disponibilidade ficarão vulneráveis à perda de dados.  
   
 -   Antes de fazer failover em um GA, verifique se o estado da sincronização do destino do failover é SINCRONIZADO.  
+
+  > [!WARNING]
+  > Instalar uma nova instância ou nova versão do SQL Server para um servidor que tem uma versão mais antiga do SQL Server instalado pode inadvertidamente **causar uma interrupção de qualquer grupo de disponibilidade que esteja hospedado pela versão mais antiga do SQL Server.** Isso ocorre porque durante a instalação da instância ou versão do SQL Server, o módulo de alta disponibilidade do SQL Server (RHS.EXE) é atualizado. Isso resulta em uma interrupção temporária de seus grupos de disponibilidade existentes na função primária no servidor. Portanto, é altamente recomendável que você execute uma das opções a seguir ao instalar uma versão mais recente do SQL Server para um sistema que já está hospedando uma versão mais antiga do SQL Server com um grupo de disponibilidade:
+  > - Instalar a nova versão do SQL Server durante uma janela de manutenção. 
+  > - Fazer failover do grupo de disponibilidade na réplica secundária, de modo que não seja a primária durante a instalação da nova instância do SQL Server. 
   
 ## <a name="rolling-upgrade-process"></a>Processo de atualização sem interrupção  
  Na prática, o processo exato depende de fatores como a topologia da implantação dos AGs e o modo de confirmação de cada réplica. Mas, no cenário mais simples, a atualização sem interrupção é um processo de vários estágios que, na sua forma mais simples, envolve as seguintes etapas:  
@@ -191,7 +196,7 @@ Para executar uma atualização sem interrupção de um grupo de disponibilidade
 
 >[!IMPORTANT]
 >- Verifique a sincronização entre cada etapa. Antes de passar para a próxima etapa, confirme que suas réplicas de confirmação síncrona estão sincronizadas dentro do grupo de disponibilidade e que seu primário global está sincronizado com o encaminhador no grupo de disponibilidade distribuído. 
->- **Recomendação**: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Depois de tudo for sincronizado, salve uma captura de tela dos estados de cada réplica. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas se algo der errado. 
+>- **Recomendação**: Sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Depois de tudo for sincronizado, salve uma captura de tela dos estados de cada réplica. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas se algo der errado. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Diagrama de exemplo de uma atualização sem interrupção de um grupo de disponibilidade distribuído
@@ -223,7 +228,7 @@ Se uma terceira réplica existisse em cada grupo de disponibilidade, ela seria a
 
 >[!IMPORTANT]
 >- Verifique a sincronização entre cada etapa. Antes de passar para a próxima etapa, confirme que suas réplicas de confirmação síncrona estão sincronizadas dentro do grupo de disponibilidade e que seu primário global está sincronizado com o encaminhador no grupo de disponibilidade distribuído. 
->- Recomendação: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Após tudo ser sincronizado, tire uma captura de tela e salve-a. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas se algo der errado. 
+>- Recomendação: Sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Após tudo ser sincronizado, tire uma captura de tela e salve-a. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas se algo der errado. 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Etapas especiais para replicação ou captura de dados de alteração

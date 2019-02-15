@@ -1,7 +1,7 @@
 ---
 title: Alterar o nível de compatibilidade do banco de dados e usar o Repositório de Consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2017
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405221"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807404"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Alterar o nível de compatibilidade do banco de dados e usar o Repositório de Consultas
 
@@ -47,10 +47,12 @@ O processo de atualização para habilitar a nova funcionalidade do processador 
 O fluxo de trabalho recomendado para atualizar o processador de consulta para a versão mais recente do código está documentado em [Manter a estabilidade do desempenho durante a atualização para a seção do SQL Server mais recente de Cenários de uso do repositório de consultas](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), conforme mostrado abaixo.  
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+
+Do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 em diante, os usuários podem ser guiados por meio do fluxo de trabalho recomendado usar o Assistente de Ajuste de Consulta. Para obter mais informações, veja [Atualizando bancos de dados usando o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  
 ## <a name="see-also"></a>Consulte Também  
 [Exibir ou alterar o nível de compatibilidade de um banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
 [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md)     
-[ALTER DATABASE &#40;Transact-SQL&#41; Nível de Compatibilidade](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-    
+[Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)     
+[Atualizando bancos de dados usando o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)        
   

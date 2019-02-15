@@ -1,7 +1,7 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762584"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079452"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47762584"
 |Sintaxe|**time** [ (*escala de segundos fracionários*) ]|  
 |Uso|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*escala de segundos fracionários*|Especifica o número de dígitos para a parte fracionária dos segundos.<br /><br /> Pode ser um inteiro de 0 a 7. Para o Informatica, isso pode ser um inteiro de 0 a 3.<br /><br /> A escala fracionária padrão é de 7 (100ns).|  
-|Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|hh:mm:ss[.nnnnnnn] para o Informatica)<br /><br /> Para obter mais informações, consulte a seção "Compatibilidade com versões anteriores de clientes de nível inferior" a seguir.|  
+|Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|hh:mm:ss[.nnnnnnn] para o Informatica)<br /><br /> Para saber mais, confira a seção [Compatibilidade com versões anteriores para clientes de nível inferior](#BackwardCompatibilityforDownlevelClients).|  
 |Intervalo|00:00:00.0000000 a 23:59:59.9999999 (00:00:00.000 a 23:59:59.999 para o Informatica)|  
 |Intervalos de elementos|hh são dois dígitos, variando de 0 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 0 a 59, que representam o segundo.<br /><br /> n\* é de zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. Para o Informatica, n\* é de zero a três dígitos, variando de 0 a 999.|  
 |Comprimento de caracteres|Mínimo de 8 posições (hh:mm:ss) até um máximo de 16 (hh:mm:ss.nnnnnnn). Para o Informatica, o máximo é de 12 (hh:mm:ss.nnn).|  
@@ -54,8 +54,8 @@ ms.locfileid: "47762584"
 |Precisão|100 nanossegundos (1 milissegundo no Informatica)|  
 |Valor padrão|00:00:00<br /><br /> Esse valor é usado para a parte de hora acrescentada para conversão implícita de **date** em **datetime2** ou **datetimeoffset**.|  
 |Precisão de segundo fracionário definida pelo usuário|Sim|  
-|Preservação e reconhecimento de deslocamento de fuso horário|não|  
-|Reconhecimento de horário de verão|não|  
+|Preservação e reconhecimento de deslocamento de fuso horário|Não|  
+|Reconhecimento de horário de verão|Não|  
   
 |Escala especificada|Resultado (precisão, escala)|Comprimento de coluna (bytes)|Fracionário<br /><br /> segundos<br /><br /> precisão|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- Se a conversão for em  
-                    **date**, a conversão falhará e a mensagem de erro 206 será gerada: "Conflito no tipo de operando: a data é incompatível com a hora".  
+ Se a conversão for para **data**, a conversão falhará e a mensagem de erro 206 será gerada: "Conflito no tipo de operando: a data é incompatível com a hora".  
   
  Quando a conversão é feita em **datetime**, os valores de hora, minuto e segundo são copiados e o componente de data é definido como '1900-01-01'. Quando a precisão de segundos fracionários do valor de **time(n)** for maior que três dígitos, o resultado de **datetime** será truncado. O código a seguir mostra os resultados da conversão de um valor `time(4)` em um valor `datetime`.  
   

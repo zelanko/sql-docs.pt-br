@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732023"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889977"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ Ao executar uma sessão de eventos estendidos que usa o evento *query_thread_pro
 
 O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 inclui uma versão revisada da criação de perfil leve com sobrecarga mínima. A criação de perfil leve também pode ser habilitada globalmente usando o [sinalizador de rastreamento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para as versões mencionadas acima em *Aplica-se a*. Um novo DMF [DM exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) é introduzido para retornar o plano de execução de consulta para as solicitações em trânsito.
 
-Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se a criação de perfil leve não estiver habilitada globalmente, o novo argumento de [dica de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **QUERY_PLAN_PROFILE** poderá ser usado para habilitar a criação de perfil leve no nível da consulta, para qualquer sessão. Quando uma consulta que contém essas nova dica termina, um novo evento estendido ***query_plan_profile*** também é a saída que fornece um plano de execução real XML semelhante ao evento estendido *query_post_execution_showplan*. Uma sessão de exemplo usando este evento estendido pode ser configurada como no exemplo abaixo:
+Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se a criação de perfil leve não estiver habilitada globalmente, o novo argumento de [dica de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **QUERY_PLAN_PROFILE** poderá ser usado para habilitar a criação de perfil leve no nível da consulta, para qualquer sessão. Quando uma consulta que contém essas nova dica termina, um novo evento estendido ***query_plan_profile*** também é a saída que fornece um plano de execução real XML semelhante ao evento estendido *query_post_execution_showplan*. 
+
+> [!NOTE]
+> O evento estendido *query_plan_profile* também se beneficia da criação de perfil leve, mesmo se a dica de consulta não é usada. 
+
+Uma sessão de exemplo usando o evento estendido *query_plan_profile* pode ser configurado como o exemplo a seguir:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

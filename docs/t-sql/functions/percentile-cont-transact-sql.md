@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f7e82e8577269a206e0172f170a66e1b1250c5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60a53ba6c75c962e6dba1418b846521689143776
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674855"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807496"
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ PERCENTILE_CONT ( numeric_literal )
  O percentil a ser computado. O valor deve variar entre 0,0 e 1,0.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
- Especifica uma lista de valores numéricos sobre os quais classificar e computar o percentil. Apenas uma *order_by_expression* é permitida. A expressão deve ser avaliada como um tipo numérico exato (**int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, **money**) ou um tipo numérico aproximado ( **float**, **real**). Outros tipos de dados não são permitidos. A ordem de classificação padrão é crescente.  
+ Especifica uma lista de valores numéricos sobre os quais classificar e computar o percentil. Apenas uma *order_by_expression* é permitida. A expressão precisa avaliar a um tipo numérico exato ou aproximado, nenhum outro tipo de dados sendo permitido. Os tipos numéricos exatos são: **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** e **money**. Os tipos numéricos aproximados são **float** e **real**. A ordem de classificação padrão é crescente.  
   
  OVER **(** \<partition_by_clause> **)**  
  Divide o conjunto de resultados produzido pela cláusula FROM nas partições às quais a função de percentil é aplicada. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). A \<cláusula ORDER BY> e a \<cláusula rows ou range> da sintaxe OVER não podem ser especificadas em uma função PERCENTILE_CONT.  
@@ -66,7 +66,7 @@ PERCENTILE_CONT ( numeric_literal )
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-basic-syntax-example"></a>A. Exemplo de sintaxe básica  
- O exemplo a seguir usa PERCENTILE_CONT e PERCENTILE_DISC para localizar o salário médio dos funcionários de cada departamento. Observe que essas funções podem não retornar o mesmo valor. Isso é porque PERCENTILE_CONT interpola o valor apropriado, quer ele exista ou não no conjunto de dados, enquanto PERCENTILE_DISC sempre retorna um valor real do conjunto.  
+ O exemplo a seguir usa PERCENTILE_CONT e PERCENTILE_DISC para localizar o salário médio dos funcionários de cada departamento. Essas funções podem não retornar o mesmo valor. PERCENTILE_CONT interpola o valor apropriado, quer ele exista ou não no conjunto de dados, enquanto PERCENTILE_DISC sempre retorna um valor real do conjunto.  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,8 +97,8 @@ Human Resources        17.427850    16.5865
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-basic-syntax-example"></a>B. Exemplo de sintaxe básica  
- O exemplo a seguir usa PERCENTILE_CONT e PERCENTILE_DISC para localizar o salário médio dos funcionários de cada departamento. Observe que essas funções podem não retornar o mesmo valor. Isso é porque PERCENTILE_CONT interpola o valor apropriado, quer ele exista ou não no conjunto de dados, enquanto PERCENTILE_DISC sempre retorna um valor real do conjunto.  
+### <a name="b-basic-syntax-example"></a>b. Exemplo de sintaxe básica  
+ O exemplo a seguir usa PERCENTILE_CONT e PERCENTILE_DISC para localizar o salário médio dos funcionários de cada departamento. Essas funções podem não retornar o mesmo valor. PERCENTILE_CONT interpola o valor apropriado, quer ele exista ou não no conjunto de dados, enquanto PERCENTILE_DISC sempre retorna um valor real do conjunto.  
   
 ```  
 -- Uses AdventureWorks  
@@ -126,6 +126,4 @@ Shipping and Receiving 9.250000      9.0000
 ## <a name="see-also"></a>Consulte Também  
  [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
-  
-
-
+ 

@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072230"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807446"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Converte um *inputdate* para o valor de *datetimeoffset* correspondente no fuso horário de destino. Se *inputdate* for fornecido sem as informação de diferença, a função aplicará a diferença do fuso horário considerando que o valor *inputdate* esteja no fuso horário de destino. Se *inputdate* for fornecido como um valor de *datetimeoffset*, a cláusula **AT TIME ZONE** o converterá no fuso horário de destino usando regras de conversão de fuso horário.  
+  Converte um *inputdate* para o valor de *datetimeoffset* correspondente no fuso horário de destino. Quando *inputdate* é fornecido sem as informação de diferença, a função aplica a diferença do fuso horário considerando que *inputdate* está no fuso horário de destino. Se *inputdate* for fornecido como um valor de *datetimeoffset*, a cláusula **AT TIME ZONE** o converterá no fuso horário de destino usando regras de conversão de fuso horário.  
   
  A implementação de **AT TIME ZONE** depende de um mecanismo do Windows para converter os valores de **datetime** entre fusos horários.  
   
@@ -43,18 +43,18 @@ inputdate AT TIME ZONE timezone
  É uma expressão que pode ser resolvida para um valor de **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**.  
   
  *timezone*  
- Nome do fuso horário de destino. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] baseia-se nos fusos horários armazenados no Registro do Windows. Todos os fusos horários instalados no computador são armazenados no hive do Registro a seguir: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Uma lista dos fusos horários instalados também é exposta por meio da exibição [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
+ Nome do fuso horário de destino. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] baseia-se nos fusos horários armazenados no Registro do Windows. Os fusos horários instalados no computador são armazenados no hive do Registro a seguir: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Uma lista dos fusos horários instalados também é exposta por meio da exibição [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna o tipo de dados de **datetimeoffset**  
+ Retorna o tipo de dados de **datetimeoffset**.  
   
 ## <a name="return-value"></a>Valor retornado  
  O valor de **datetimeoffset** no fuso horário de destino.  
   
 ## <a name="remarks"></a>Remarks  
- **AT TIME ZONE** aplica regras específicas para converter os valores de entrada nos tipos de dados **smalldatetime**, **datetime** e **datetime2**, que caem em um intervalo afetado pela alteração de horário de verão:  
+ **AT TIME ZONE** aplica regras específicas para converter os valores de entrada nos tipos de dados **smalldatetime**, **datetime** e **datetime2**, que caem em um intervalo afetado por uma alteração de horário de verão:  
   
--   Quando o relógio está adiantado, há uma diferença na hora local cuja duração depende da duração do ajuste do relógio (geralmente é de 1 hora, mas pode ser de 30 ou 45 minutos, dependendo do fuso horário). Nesse caso, os pontos no tempo que pertencem a essa diferença são convertidos com a diferença *depois* da alteração do horário de verão.  
+-   Quando o relógio está adiantado, há uma lacuna na hora local igual à duração do ajuste do relógio. Esta duração é geralmente de 1 hora, mas pode ser de 30 ou 45 minutos, dependendo do fuso horário. Os pontos no tempo que pertencem a essa diferença são convertidos com a diferença *depois* da alteração do horário de verão.  
   
     ```  
     /*  
@@ -133,7 +133,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. Converter valores entre fusos horários diferentes  
+### <a name="b-convert-values-between-different-time-zones"></a>b. Converter valores entre fusos horários diferentes  
  O exemplo a seguir converte os valores entre fusos horários diferentes:  
   
 ```  
@@ -169,5 +169,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a>Consulte Também  
  [Tipos de data e hora](../../t-sql/data-types/date-and-time-types.md)   
  [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

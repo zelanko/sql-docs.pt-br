@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54445a926dbb6f7d1e03720f31ee0bd9a1601cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1831c0f3420ad89b5a3dd850e0692ddf7b56b555
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560333"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807486"
 ---
 # <a name="file-states"></a>Estados de arquivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51560333"
 |Estado|Definição|  
 |-----------|----------------|  
 |ONLINE|O arquivo está disponível para todas as operações. Os arquivos no grupo de arquivos primário sempre estão on-line se o próprio banco de dados estiver on-line. Se um arquivo no grupo de arquivos primário não estiver on-line, o banco de dados não estará on-line e os estados dos arquivos secundários serão indefinidos.|  
-|OFFLINE|O arquivo não está disponível para acesso e talvez não esteja presente no disco. Os arquivos se tornam off-line por ação explícita do usuário e permanecem off-line até que uma ação adicional do usuário seja executada.<br /><br /> **\*\* Cuidado \*\*** Um arquivo somente deve ser definido como offline quando está corrompido, mas pode ser restaurado. Um arquivo definido como off-line pode somente ser definido como on-line pela restauração do arquivo do backup. Para obter mais informações sobre como restaurar um único arquivo, veja [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
+|OFFLINE|O arquivo não está disponível para acesso e talvez não esteja presente no disco. Os arquivos se tornam off-line por ação explícita do usuário e permanecem off-line até que uma ação adicional do usuário seja executada.<br /><br /> **\*\* Cuidado \*\*** Um estado de arquivo pode ser definido como offline quando está corrompido, mas pode ser restaurado. Um arquivo definido como off-line pode somente ser definido como on-line pela restauração do arquivo do backup. Para obter mais informações sobre como restaurar um único arquivo, veja [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md). <br /><br /> Um arquivo de banco de dados também é definido como OFFLINE quando um banco de dados está em recuperação registrada em massa ou completa e um arquivo é removido. A entrada em sys.master_files persiste até que um log de transações seja truncado após o valor de drop_lsn. Para obter mais informações, veja [Truncamento do log de transações](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation). |  
 |RESTORING|O arquivo está sendo restaurado. Os arquivos entram no estado de restauração devido a um comando de restauração que afeta todo o arquivo, não apenas uma restauração de página e permanece nesse estado até que a restauração esteja completa e o arquivo recuperado.|  
 |RECOVERY_PENDING|A recuperação do arquivo foi adiada. Um arquivo entra nesse estado automaticamente devido a um processo de restauração em etapas no qual o arquivo não é restaurado e recuperado. Uma ação adicional é exigida do usuário para resolver o erro e permitir que o processo de recuperação seja concluído. Para obter mais informações, veja [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).|  
 |SUSPECT|A recuperação do arquivo falhou durante um processo de restauração on-line. Se o arquivo estiver no grupo de arquivos primário, o banco de dados também será marcado como suspeito. Caso contrário, o arquivo será suspeito e o banco de dados ainda estará on-line.<br /><br /> O arquivo permanecerá no estado suspeito até que seja tornado disponível por um dos seguintes métodos:<br /><br /> Restauração e recuperação<br /><br /> DBCC CHECKDB com REPAIR_ALLOW_DATA_LOSS|  
@@ -65,5 +65,3 @@ ms.locfileid: "51560333"
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
  [Arquivos e grupos de arquivos do banco de dados](../../relational-databases/databases/database-files-and-filegroups.md)  
-  
-  

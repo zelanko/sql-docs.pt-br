@@ -2,7 +2,7 @@
 title: Configurar transações distribuídas para um grupo de disponibilidade
 description: 'Descreve como configurar transações distribuídas para bancos de dados dentro de um grupo de disponibilidade Always On. '
 ms.custom: seodec18
-ms.date: 05/22/2018
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f5b8e4848f42cbca03bb47c6cac2400068e54765
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215665"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832108"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurar transações distribuídas para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->No [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], não é possível alterar um grupo de disponibilidade para transações distribuídas. Para alterar a remoção de configuração e recriar o grupo de disponibilidade com a configuração `DTC_SUPPORT = PER_DB`. 
+>Do [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 em diante, é possível alterar um grupo de disponibilidade para transações distribuídas. Para versões do [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] anteriores ao Service Pack 2, você precisa remover e recriar o grupo de disponibilidade com a configuração `DTC_SUPPORT = PER_DB`. 
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transações distribuídas – conceitos técnicos
 

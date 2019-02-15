@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 90189e37b486d712f0a1a93fccc42b101f90bdbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617606"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027477"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -67,13 +67,13 @@ ms.locfileid: "52617606"
 ##  <a name="Interactive"></a> Limpeza interativa  
  Com base no processo de limpeza auxiliada por computador, o DQS fornece ao administrador de dados as informações necessárias para que ele tome uma decisão sobre a alteração dos dados. O DQS categoriza os dados sob estas cinco guias:  
   
--   **Sugerido**: valores de domínio para os quais o DQS encontrou sugestões com um nível de confiança superior ao valor de *limite de sugestão automática* , mas inferior ao valor do *limite de correção automática* . Você deve revisar esses valores e aprovar ou rejeitar conforme apropriado.  
+-   **Sugerido**: valores para os quais o DQS encontrou sugestões com um nível de confiança superior ao valor de *limite de sugestão automática*, mas inferior ao valor do *limite de correção automática*. Você deve revisar esses valores e aprovar ou rejeitar conforme apropriado.  
   
 -   **Novo**: valores válidos para os quais o DQS não tem informações suficientes (sugestão) e, portanto, não podem ser mapeados para nenhuma outra guia. Posteriormente, essa guia também conterá valores que tenham um nível de confiança inferior ao valor de *limite de sugestão automática* , porém alto o suficiente para ser marcado como válido.  
   
 -   **Inválido**: valores que foram marcados como inválidos no domínio na base de dados de conhecimento ou os valores que falharam em uma regra de domínio ou em dados de referência. Esta guia também conterá valores rejeitados pelo usuário em quaisquer das outras quatro guias durante o processo de limpeza interativo.  
   
--   **Corrigido**: valores corrigidos pelo DQS durante o processo de limpeza automatizado uma vez que o DQS localizou uma correção para o valor com um nível de confiança acima do valor do *limite de correção automática* . Esta guia também conterá valores para os quais o usuário especificou um valor correto na coluna **Corrigir para** durante a limpeza interativa e então aprovou clicando no botão de opção na coluna **Aprovar** em quaisquer das outras quatro guias.  
+-   **Corrigido**: valores corrigidos pelo DQS durante o processo de limpeza automatizada uma vez que o DQS localizou uma correção para o valor com um nível de confiança acima do valor do *limite de correção automática*. Esta guia também conterá valores para os quais o usuário especificou um valor correto na coluna **Corrigir para** durante a limpeza interativa e então aprovou clicando no botão de opção na coluna **Aprovar** em quaisquer das outras quatro guias.  
   
 -   **Correto**: valores avaliados como corretos. Por exemplo, o valor correspondeu a um valor de domínio. Se preciso for, você poderá anular a limpeza do DQS ao rejeitar valores desta guia ou especificando uma palavra alternativa na coluna **Corrigir para** e depois clicando no botão de opção da coluna **Aceitar** . Essa guia também contém os valores que foram aprovados pelo usuário durante a limpeza interativa clicando no botão de opção na coluna **Aprovar** nas guias **Novo** ou **Inválido** .  
   

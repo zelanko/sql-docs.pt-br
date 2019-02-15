@@ -1,7 +1,7 @@
 ---
 title: Usando tipos de dados avançados | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510498"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736817"
 ---
 # <a name="using-advanced-data-types"></a>Usando tipos de dados avançados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa os tipos de dados avançados JDBC para converter os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um formato que possa ser compreendido pela linguagem de programação Java.  
+O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa os tipos de dados avançados do JDBC para converter os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um formato que possa ser compreendido pela linguagem de programação Java.  
   
 ## <a name="remarks"></a>Remarks
 
@@ -32,10 +32,13 @@ A tabela a seguir lista os mapeamentos padrão entre o [!INCLUDE[ssNoVersion](..
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(default), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (default), Clob, InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[], Blob, SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (padrão), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (padrão), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (default), byte[], InputStream|  
-  
+|sqlvariant|SQLVARIANT|Object|  
+|geometria<br /><br /> geografia|VARBINARY|byte[]|  
+
+
 <sup>1</sup> O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte ao envio e à recuperação de UDTs CLR como dados binários, mas não à manipulação dos metadados CLR.  
   
 As seguintes seções fornecem exemplos de como é possível usar o driver JDBC e os tipos de dados avançados.  
@@ -49,13 +52,13 @@ O JDBC Driver implementa todos os métodos das interfaces java.sql.Blob, java.sq
 
 ## <a name="large-value-data-types"></a>Tipos de dados de valor grande
 
-Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], trabalhar com tipos de dados de valor grande exigia procedimentos especiais. Tipos de dados de valor grande são aqueles que excedem o tamanho de linha máximo de 8 KB. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduziu um especificador max para os tipos de dados **varchar**, **nvarchar** e **varbinary** a fim de permitir o armazenamento de valores de até 2^31 bytes. As colunas de tabela e as variáveis do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem especificar os tipos de dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**.  
+Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o trabalho com tipos de dados de valor grande exigia procedimentos especiais. Tipos de dados de valor grande são aqueles que excedem o tamanho de linha máximo de 8 KB. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduziu um especificador max para os tipos de dados **varchar**, **nvarchar** e **varbinary** a fim de permitir o armazenamento de valores de até 2^31 bytes. As colunas de tabela e as variáveis do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem especificar os tipos de dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**.  
 
 Os cenários primários para trabalhar com tipos de valor grande envolvem recuperá-los de um banco de dados ou adicioná-los a um banco de dados. As seções a seguir descrevem abordagens diferentes para realizar estas tarefas.  
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>Recuperando tipos de valor grande de um banco de dados
 
-Quando você recupera um tipo de dados de valor grande não binário – como o tipo de dados **varchar(max)** – de um banco de dados, uma abordagem é ler esses dados como um fluxo de caracteres. No exemplo a seguir, o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) da classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) é usado para recuperar dados do banco de dados e retorná-los como um conjunto de resultados. Em seguida, o método [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) é usado para ler os dados de valor grande do conjunto de resultados.  
+Quando você recupera um tipo de dados de valor grande não binário, como o tipo de dados **varchar(max)**, de um banco de dados, uma abordagem é ler esses dados como um fluxo de caracteres. No exemplo a seguir, o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) da classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) é usado para recuperar dados do banco de dados e retorná-los como um conjunto de resultados. Em seguida, o método [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) é usado para ler os dados de valor grande do conjunto de resultados.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -66,7 +69,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > Essa mesma abordagem também pode ser usada para o **texto**, **ntext**, e **nvarchar (max)** tipos de dados.  
 
-Quando você recupera um tipo de dados de valor grande e binário – como o tipo de dados **varbinary(max)** – de um banco de dados, existem diversas abordagens que você pode adotar. A abordagem mais eficiente é ler os dados como um fluxo binário, da seguinte maneira:  
+Quando você recupera um tipo de dados de valor grande binário, como o tipo de dados **varbinary(max)**, de um banco de dados, há diversas abordagens que você pode adotar. A abordagem mais eficiente é ler os dados como um fluxo binário, da seguinte maneira:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -156,18 +159,26 @@ A implementação do tipo de dados **xml** no driver JDBC fornece suporte para o
   
 - Acesso ao XML como uma matriz de byte com um BOM principal quando for codificado em UTF-16 para intercâmbio com outros processadores de XML e arquivos em disco  
   
-O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um BOM principal para XML codificado como UTF-16. O aplicativo deve fornecer isso quando os valores de parâmetro XML são fornecidos como matrizes de bytes. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre gera valores de saída XML como cadeias UTF-16 com nenhuma BOM ou declaração de codificação incorporada. Quando os valores XML são recuperados como byte[], BinaryStream ou Blob, um BOM UTF-16 é pré-demarcado no valor.  
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um BOM principal para XML codificado como UTF-16. O aplicativo deve fornecer isso quando os valores de parâmetro XML são fornecidos como matrizes de bytes. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre gera valores de saída XML como cadeias UTF-16 sem nenhum BOM nem uma declaração de codificação incorporada. Quando os valores XML são recuperados como byte[], BinaryStream ou Blob, um BOM UTF-16 é pré-demarcado no valor.  
   
 Para obter mais informações sobre os tipos de dados **xml**, confira "Tipo de dados xml" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="user-defined-data-type"></a>Tipo de dados definido pelo usuário  
 
-A introdução de tipos definidos pelo usuário (UDTs) no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] estende o sistema de tipos de SQL, permitindo armazenar objetos e estruturas de dados personalizadas em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os UDTs podem conter vários tipos de dados e ter comportamentos, o que os diferencia dos tipos de dados de alias tradicionais, que consistem em um único tipo de dado do sistema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As UDTs são definidas por usarem qualquer uma das linguagens para as quais o CLR do Microsoft .NET Framework oferece suporte e que produzem código verificável. Isto inclui Microsoft Visual C# e Visual Basic .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura baseada no .NET Framework, e os comportamentos são definidos pelos métodos da classe ou estrutura.  
+A introdução de UDTs (tipos definidos pelo usuário) no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] estende o sistema de tipos SQL, permitindo que você armazene objetos e estruturas de dados personalizadas em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os UDTs podem conter vários tipos de dados e ter comportamentos, o que os diferencia dos tipos de dados de alias tradicionais, que consistem em um único tipo de dado do sistema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As UDTs são definidas por usarem qualquer uma das linguagens para as quais o CLR do Microsoft .NET Framework oferece suporte e que produzem código verificável. Isto inclui Microsoft Visual C# e Visual Basic .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura baseada no .NET Framework, e os comportamentos são definidos pelos métodos da classe ou estrutura.  
   
-No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um UDT pode ser usado como definição da coluna de uma tabela, como uma variável em um lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou como um argumento de uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] ou procedimento armazenado.  
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um UDT pode ser usado como a definição da coluna de uma tabela, como uma variável em um lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou como um argumento de uma função ou procedimento armazenado do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 Para obter mais informações sobre tipos de dados definidos pelo usuário, confira "Usando e modificando instâncias de tipos definidos pelo usuário" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
+## <a name="sqlvariant-data-type"></a>Tipo de dados Sql_variant
+
+Para obter informações sobre o tipo de dados sql_variant, consulte [usando o tipo de dados Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+
+## <a name="spatial-data-types"></a>Tipos de dados espaciais
+
+Para obter informações sobre tipos de dados espaciais, consulte [usando tipos de dados espaciais](../../connect/jdbc/use-spatial-datatypes.md).  
+
 ## <a name="see-also"></a>Consulte Também
 
 [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bec1e9c00c0c97bda29dd1deceac6ca152b6c085
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617186"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036017"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Limpar dados usando o conhecimento (externo) dos dados de referência
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617186"
     > [!NOTE]  
     >  Os valores de limite especificados durante o mapeamento de um domínio para um serviço de dados de referência são aplicados durante a limpeza dos dados através do conhecimento no serviço de dados de referência, e não os especificados na guia **Configurações Gerais** da seção **Configuração** . Para obter informações sobre como especificar valores de limite para a limpeza de dados de referência, consulte a etapa 9 em [Anexar um domínio ou um domínio de composição aos dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
--   Os valores de domínio são categorizados da seguinte maneira: **Sugerido**, **Novo**, **Inválido**, **Corrigido**e **Correto**.  
+-   Os valores de domínio são categorizados da seguinte forma: **Sugerido**, **Novo**, **Inválido**, **Corrigido** ou **Correto**.  
   
 -   Os dados adicionais são acrescentados à origem, e as informações estão disponíveis junto com os dados limpos para exportação.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52617186"
   
 1.  Crie um projeto de qualidade de dados e selecione a atividade **Limpeza** . Consulte [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
-2.  Na página **Mapa** , mapeie os quatro domínios a seguir com as colunas apropriadas da fonte de dados: **Linha de Endereço**, **Cidade**, **Estado**e **CEP**. Clique em **Avançar**.  
+2.  Na página **Mapa**, mapeie os quatro domínios a seguir com as colunas apropriadas nos dados de origem: **Linha de endereço**, **Cidade**, **Estado** e **CEP**. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Como você mapeou os quatro domínios do domínio composto **Verificação de Endereço** , a limpeza de dados será feita no nível do domínio composto, e não no nível do domínio individual.  
@@ -71,7 +71,7 @@ ms.locfileid: "52617186"
     > [!NOTE]  
     >  Na página **Limpar** , o DQS exibirá informações sobre os domínios anexados ao serviço de dados de referência de duas maneiras:  
     >   
-    >  -   Uma mensagem é exibida abaixo do botão **Iniciar**: "Os domínios \<Domain1>, \<Domain2>,... \<DomainN> são limpos com o uso do provedor de serviços de dados de referência". Neste exemplo, a seguinte mensagem será exibida: "A verificação de domínio de endereço é limpa com o provedor de serviços de dados de referência".  
+    >  -   Uma mensagem é exibida embaixo do botão **Iniciar**: "Os domínios \<Domain1>, \<Domain2>,... \<DomainN> são limpos com o uso do provedor de serviços de dados de referência". Neste exemplo, a seguinte mensagem será exibida: "A verificação do endereço de domínio foi limpa usando o provedor de serviço de dados de referência."  
     > -   Um ícone, ![O domínio está anexado ao RDS](../data-quality-services/media/dqs-rdsindicator.JPG "Domain is attached to RDS"), é exibido na área **Criador de Perfil** nos domínios anexados ao provedor de serviços de dados de referência. Neste exemplo, o ícone será exibido no domínio composto **Verificação de Endereço** .  
   
 4.  Na página **Gerenciar e exibir resultados** , revise seus valores de domínio. O serviço de dados de referência pode exibir mais de uma sugestão, se disponível, para um valor, dependendo do número máximo de sugestões especificado na caixa **Candidatos Sugeridos** durante o mapeamento do domínio para o serviço de dados de referência. Por exemplo, são exibidas duas sugestões para os seguintes endereços americanos:  

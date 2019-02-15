@@ -27,17 +27,17 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4f4707f6f021d7395596bd1c1ab4af8230ac50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5884c549160834cec6412e4524667a460344d66f
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595722"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807476"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Bloqueia a execução de um lote, procedimento armazenado ou transação até que uma hora ou intervalo de tempo especificado seja alcançado ou que uma instrução especificada modifique ou retorne pelo menos uma linha.  
+  Bloqueia a execução de um lote, procedimento armazenado ou transação até que uma hora ou intervalo de tempo especificado transcorra ou que uma instrução especificada modifique ou retorne pelo menos uma linha.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ WAITFOR
  É o período de tempo especificado que deve decorrer, até no máximo 24 horas, antes que a execução de um lote, procedimento armazenado ou transação prossiga.  
   
  '*time_to_pass*'  
- É o período de tempo a ser aguardado. *time_to_pass* pode ser especificado em um dos formatos aceitáveis para dados de **datetime** ou pode ser especificado como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida. Isso é formatado como hh:mm[[:ss].mss].
+ É o período de tempo a ser aguardado. *time_to_pass* pode ser especificado em um formato de dados **datetime** ou como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida. *time_to_pass* é formatado como hh:mm[[:ss].mss].
   
  TIME  
  É a hora especificada em que o lote, o procedimento armazenado ou a transação é executada.  
   
  '*time_to_execute*'  
- É a hora na qual a instrução WAITFOR é concluída. *time_to_execute* pode ser especificado em um dos formatos aceitáveis para dados de **datetime** ou pode ser especificado como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida. Isso é formatado como hh:mm[[:ss].mss] e, opcionalmente, pode incluir a data de 1900-01-01.
+ É a hora na qual a instrução WAITFOR é concluída. *time_to_execute* pode ser especificado em um formato de dados **datetime** ou pode ser especificado como uma variável local. Não é possível especificar datas, portanto, a parte de data do valor de **datetime** não é permitida. *time_to_execute* é formatado como hh:mm[[:ss].mss] e, opcionalmente, pode incluir a data de 1900-01-01.
   
  *receive_statement*  
  É uma instrução RECEIVE válida.  
@@ -88,7 +88,7 @@ WAITFOR
 ## <a name="remarks"></a>Remarks  
  Ao executar a instrução WAITFOR, a transação está em execução e nenhuma outra solicitação pode executar sob a mesma transação.  
   
- O atraso de tempo real pode variar entre o horário especificado em *time_to_pass*, *time_to_execute* ou *tempo limite* e depende do nível de atividade do servidor. A contador de tempo inicia quando o thread associado à instrução WAITFOR estiver agendado. Se o servidor estiver ocupado, o thread pode não ser agendado imediatamente; portanto, o atraso de tempo pode ser maior que o tempo especificado.  
+ O atraso de tempo real pode variar entre o horário especificado em *time_to_pass*, *time_to_execute* ou *timeout* e depende do nível de atividade do servidor. O contador de tempo inicia quando o thread da instrução WAITFOR é agendado. Se o servidor estiver ocupado, o thread pode não ser agendado imediatamente, portanto, o atraso de tempo pode ser maior que o tempo especificado.  
   
  WAITFOR não altera as semânticas de uma consulta. Se uma consulta não puder retornar nenhuma linha, WAITFOR esperará para sempre ou até que TIMEOUT seja alcançado, se for especificado.  
   
@@ -98,9 +98,9 @@ WAITFOR
   
  Quando a consulta exceder a opção query wait, o argumento da instrução WAITFOR poderá ser concluído sem executar. Para obter mais informações sobre a opção de configuração, confira [Configurar a opção de configuração de servidor query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Para consultar os processos ativos e em espera, use [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md).  
   
- Cada instrução WAITFOR tem um thread associado a ela. Se forem especificadas muitas instruções WAITFOR no mesmo servidor, muitos threads poderão ser parados aguardando pela execução dessas instruções. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitora o número de threads associados às instruções WAITFOR e seleciona aleatoriamente alguns desses threads para sair se o servidor começar a sofrer privação de thread.  
+ Cada instrução WAITFOR tem um thread associado a ela. Se forem especificadas muitas instruções WAITFOR no mesmo servidor, muitos threads poderão ser parados aguardando pela execução dessas instruções. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitora o número de threads das instruções WAITFOR e seleciona aleatoriamente alguns desses threads para sair se o servidor começar a sofrer privação de thread.  
   
- Você poderá criar um deadlock executando uma consulta com WAITFOR em uma transação que também contenha bloqueios impedindo alterações no conjunto de linhas que a instrução WAITFOR está tentando acessar. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica esses cenários e retorna um conjunto de resultados vazio, no caso de esse deadlock existir.  
+ Você poderá criar um deadlock executando uma consulta com WAITFOR em uma transação que também contenha bloqueios impedindo alterações no conjunto de linhas acessado pela instrução WAITFOR. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica esses cenários e retorna um conjunto de resultados vazio, no caso de esse deadlock existir.  
   
 > [!CAUTION]  
 >  A inclusão de WAITFOR tornará mais lenta a conclusão do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e pode resultar em uma mensagem de tempo limite no aplicativo. Se necessário, ajuste a configuração de tempo limite para a conexão em nível de aplicativo.  
@@ -120,7 +120,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-waitfor-delay"></a>B. Usando WAITFOR DELAY  
+### <a name="b-using-waitfor-delay"></a>b. Usando WAITFOR DELAY  
  O exemplo a seguir executa o procedimento armazenado depois de um atraso de duas horas.  
   
 ```  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. Usando WAITFOR DELAY com uma variável local  
- O exemplo a seguir mostra como uma variável local pode ser usada com a opção `WAITFOR DELAY`. Um procedimento armazenado é criado para aguardar por um período de tempo variável e retorna informações ao usuário sobre o número de horas, minutos e segundos decorridos.  
+ O exemplo a seguir mostra como uma variável local pode ser usada com a opção `WAITFOR DELAY`. Esse procedimento armazenado aguarda por um período de tempo variável e retorna informações ao usuário, tais como o número de horas, minutos e segundos decorridos.  
   
 ```  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
@@ -173,5 +173,4 @@ GO
  [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
   

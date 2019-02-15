@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617696"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027127"
 ---
 # <a name="reference-data-services-in-dqs"></a>Serviços de Dados de Referência no DQS
 
@@ -57,7 +57,7 @@ ms.locfileid: "52617696"
 ##  <a name="HowToCleanse"></a> Como limpar dados usando dados de referência  
  Limpar seus dados no DQS usando dados de referência inclui as três seguintes etapas:  
   
-1.  **Configurar os detalhes do provedor de dados de referência no DQS**: antes de usar dados de referência no DQS, você deve configurar detalhes do serviço de dados de referência no DQS.  
+1.  **Configurar os detalhes do provedor de dados de referência no DQS**: antes de usar dados de referência no DQS, é necessário configurar detalhes do serviço de dados de referência no DQS.  
   
     1.  Se você estiver usando o Marketplace, forneça uma chave de conta do Marketplace válida, vá para a categoria de dados [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) no Marketplace e assine os provedores necessários.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52617696"
   
      Configurar os detalhes do provedor de dados de referência no DQS é uma atividade única para um provedor de dados específico. Somente administradores do DQS podem definir configurações de dados de referência no DQS.  
   
-2.  **Mapear um domínio/domínio composto em uma base de dados de conhecimento para o serviço de dados de referência**: mapeie um domínio/domínio composto para o serviço de dados de referência apropriados assinados/adicionados na etapa 1.  
+2.  **Mapear um domínio/domínio composto em uma base de dados de conhecimento para o serviço de dados de referência**: Mapear um domínio/domínio composto para o serviço de dados de referência adequado assinado/adicionado na etapa 1.  
   
-3.  **Usar os domínios mapeados para a atividade de limpeza em um projeto de qualidade de dados**: ao criar um projeto de qualidade de dados para a atividade **Limpeza** , selecione a base de dados de conhecimento que contém domínios/domínios compostos mapeados com serviços de dados de referência na etapa 2 e execute a atividade de limpeza.  
+3.  **Usar os domínios mapeados para a atividade de limpeza em um projeto de qualidade de dados**: ao criar um projeto de qualidade de dados para a atividade de **Limpeza**, selecione a base de dados de conhecimento que contém domínios/domínios compostos mapeados com serviços de dados de referência na etapa 2 e execute a atividade de limpeza.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

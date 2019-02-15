@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.selectkb.f1
 - sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c4acd731faa13c10a0c32e8e99d2c557748b3d6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d247179577812aafbac84fd886f0a1ac0c9a1b67
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616336"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020108"
 ---
 # <a name="create-a-knowledge-base"></a>Criar uma base de dados de conhecimento
 
@@ -63,7 +63,7 @@ ms.locfileid: "52616336"
   
 6.  Clique em **Criar**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após criar uma base de dados de conhecimento  
+##  <a name="FollowUp"></a> Acompanhamento: após criar uma base de dados de conhecimento  
  Depois que você criar uma base de dados de conhecimento, verá um assistente para executar a descoberta da base de dados de conhecimento, um assistente para criar uma política de correspondência ou páginas para fazer o gerenciamento do domínio. Para obter mais informações sobre a descoberta de conhecimento, o gerenciamento de domínio ou a política de conciliação, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   

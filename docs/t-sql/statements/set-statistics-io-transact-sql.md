@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20099478d1d2dd047b1f17fe963c8fc45b1418fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670257"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760119"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ SET STATISTICS IO { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Quando STATISTICS IO está ON, as informações de estatística são exibidas. Quando está OFF, as informações não são exibidas.  
+ Quando STATISTICS IO está definida como ON, as informações estatísticas são exibidas. Quando está definida como OFF, as informações não são exibidas.   
   
- Depois que essa opção é definida como ON, todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes retornam a informações de estatística até que a opção seja definida como OFF.  
+ Depois que essa opção é definida como ON, todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] retornam a informações de estatística até que a opção seja definida como OFF.  
   
  A tabela a seguir lista e descreve os itens de saída.  
   
 |Item de saída|Significado|  
 |-----------------|-------------|  
 |**Table**|Nome da tabela.|  
-|**Contagem de verificações**|Número de buscas/exames iniciados depois de alcançar o nível folha em qualquer direção para recuperar todos os valores para construir o conjunto de dados final para a saída.<br /><br /> A contagem de exame será 0 se o índice usado for um índice exclusivo ou índice clusterizado em uma chave primária e se você estiver buscando somente um valor. Por exemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> A contagem da verificação será 1 quando você estiver pesquisando um valor usando um índice clusterizado não exclusivo que é definido em uma coluna de chave não primária. Isto é feito para verificar se há valores duplicados para o valor de chave para o qual você está pesquisando. Por exemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> A contagem de exame será N quando N for o número de busca/exame diferente iniciado para a esquerda ou para a direita no nível folha depois de localizar um valor de chave usando a chave de índice.|  
+|**Contagem de verificações**|Número de buscas ou exames iniciados depois de alcançar o nível folha em qualquer direção para recuperar todos os valores para construir o conjunto de dados final para a saída.<br /><br /> A contagem de exame será 0 se o índice usado for um índice exclusivo ou índice clusterizado em uma chave primária e se você estiver buscando somente um valor. Por exemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> A contagem da verificação será 1 quando você estiver pesquisando um valor usando um índice clusterizado não exclusivo definido em uma coluna de chave não primária. Esse processo é feito para verificar se há valores duplicados para o valor de chave para o qual você está pesquisando. Por exemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> A contagem de exame será N quando N for o número de buscas ou exames diferente iniciado para a esquerda ou para a direita no nível folha depois de localizar um valor de chave usando a chave de índice.|  
 |**leituras lógicas**|Número de páginas lidas do cache de dados.|  
 |**physical reads**|Número de páginas lidas do disco.|  
 |**leituras antecipadas**|Número de páginas colocadas no cache para a consulta.|  
 |**leituras lógicas lob**|Número de páginas **text**, **ntext**, **image** ou de tipo de valor grande (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) lidas do cache de dados.|  
 |**leituras físicas lob**|Número de páginas de tipo **text**, **ntext**, **image** ou de valor grande lidas do disco.|  
-|**leituras antecipadas lob**|Número de páginas **text**, **ntext**, **image** ou de tipo de valor grande colocadas no cache para a consulta.|  
+|**leituras antecipadas lob**|Número de páginas de tipo **text**, **ntext**, **image** ou de valor grande colocadas no cache para a consulta.|  
   
  A configuração de SET STATISTICS IO é definida no momento da execução e não no momento da análise.  
   

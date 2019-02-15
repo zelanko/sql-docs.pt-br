@@ -1,7 +1,7 @@
 ---
 title: Perguntas frequentes (FAQ) para o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc5b7200dba7ed17da0b6c48f64c83c48a38064f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MTE75
+ms.openlocfilehash: cb77bd5ac3ccc2e12dd7fbf9aff956981b25bce3
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398259"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737047"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Perguntas frequentes (FAQ) para o JDBC Driver
 
@@ -35,7 +35,14 @@ Confira mais detalhes na página [Matriz de suporte do Microsoft JDBC Driver par
 **O que é a diferença entre os pacotes de driver JDBC disponíveis na Microsoft Download Center e o driver JDBC disponível no GitHub?**  
 Os JDBC driver arquivos disponíveis no repositório do GitHub para o Microsoft JDBC driver são o núcleo do driver JDBC e estão sob a licença de software livre listada no repositório. Os pacotes de driver no Microsoft Download Center incluem bibliotecas adicionais para a autenticação integrada do Windows e habilitar transações XA com o driver JDBC. Essas bibliotecas adicionais estão sob a licença incluída com o pacote que pode ser baixado.
 
-**O que devo saber ao atualizar meu driver?**  
+**O que devo saber ao atualizar meu driver?**
+O 7.2 do Microsoft JDBC Driver dá suporte a JDBC 4.2 e 4.3 especificações (parcialmente) e inclui duas bibliotecas de classes JAR no pacote de instalação da seguinte maneira:
+
+| JAR                        | Especificação do JDBC            | Versão do JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.2.0.jre11.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+
  O Microsoft JDBC Driver 7.0 oferece suporte a JDBC 4.2 e 4.3 especificações (parcialmente) e inclui duas bibliotecas de classes JAR no pacote de instalação da seguinte maneira:
 
 | JAR                        | Especificação do JDBC            | Versão do JDK |
@@ -55,8 +62,8 @@ O Microsoft JDBC Driver 6.2 dá suporte às especificações do JDBC 4.0, 4.1 e 
 
 | JAR                       | Especificação do JDBC     | Versão do JDK |
 | ------------------------- | ---------------------- | ----------- |
-| MSSQL-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 e 4.0 | JDK 8.0     |
-| MSSQL-jdbc-6.2.2.jre7.jar | JDBC 4.1 e 4.0       | JDK 7.0     |
+| mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 e 4.0 | JDK 8.0     |
+| mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 e 4.0       | JDK 7.0     |
 
 O Microsoft JDBC Drivers 6.0 e 4.2 para SQL Server dá suporte às especificações JDBC 4.0, 4.1 e 4.2 e inclui duas bibliotecas de classes JAR no pacote de instalação da seguinte maneira:
 
@@ -105,7 +112,7 @@ A tabela a seguir lista as opções de autenticação disponíveis. Uma autentic
 Sim. O driver oferece suporte ao uso de endereços IPv6. Use a coleção de propriedades de conexão e a propriedade de cadeia de caracteres de conexão serverName. Confira mais informações em [Como construir a URL de conexão](../../connect/jdbc/building-the-connection-url.md).
 
 **O que é o buffer adaptável?**  
-O buffer adaptável é introduzido a partir do Microsoft SQL Server 2005 JDBC Driver versão 1.2. Ele é criado para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. O recurso de buffer adaptável do Microsoft SQL Server JDBC Driver oferece uma propriedade de cadeia de caracteres de conexão, responseBuffering, que pode ser definida como "adaptive" ou "full". Na versão 1.2, o modo de buffer é "cheio" por padrão e o aplicativo deve configurar o modo de buffer adaptável explicitamente. A partir do driver JDBC versão 2.0, o comportamento padrão do driver é "adaptive". Além disso, o aplicativo não precisa solicitar o comportamento adaptável explicitamente para obter o comportamento de buffer adaptável. Confira mais informações em [Como usar um buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md) e no post de blog [O que é buffer de resposta adaptativa e por que devo usá-lo?](https://go.microsoft.com/fwlink/?LinkId=111575).
+O buffer adaptável é introduzido a partir do Microsoft SQL Server 2005 JDBC Driver versão 1.2. Ele é criado para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. O recurso de buffer adaptável do Microsoft SQL Server JDBC Driver oferece uma propriedade de cadeia de caracteres de conexão, responseBuffering, que pode ser definida como "adaptive" ou "full". Na versão 1.2, o modo de buffer é "cheio" por padrão e o aplicativo deve configurar o modo de buffer adaptável explicitamente. A partir do driver JDBC versão 2.0, o comportamento padrão do driver é "adaptive". Além disso, o aplicativo não precisa solicitar o comportamento adaptável explicitamente para obter o comportamento de buffer adaptável. Para obter mais informações, confira [Usando um buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md) e o blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (O que é o buffer de resposta adaptável e por que devo usá-lo?).
 
 **O driver dá suporte ao pool de conexões?**  
 O driver dá suporte ao pool de conexões da Plataforma Java, Edição Enterprise 5 (Java EE 5). O driver JDBC implementa as interfaces do JDBC 3.0 necessárias para permitir que o driver participe de qualquer implementação de pool de conexões disponibilizada pelos fornecedores de servidores de aplicativos em middleware. O driver participa das conexões em pool nesses ambientes. Para obter mais informações, consulte [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). O driver não fornece sua própria implementação do pool. Em vez disso, ele utiliza servidores de aplicativos Java de terceiros.

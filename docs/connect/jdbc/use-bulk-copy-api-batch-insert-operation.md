@@ -1,7 +1,7 @@
 ---
 title: Usando a API de cópia em massa para a operação de inserção em lotes para o Driver JDBC MSSQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696555"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737097"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Usando a API de cópia em massa para a operação de inserção em lote
 
@@ -65,7 +65,7 @@ Atualmente, há essas limitações que se aplicam a esse recurso.
 * Inserir consultas que contêm expressões de INSERT-SELECT (por exemplo, `INSERT INTO TABLE SELECT * FROM TABLE2`), não têm suporte.
 * Inserir consultas que contêm várias expressões de valor (por exemplo, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), não têm suporte.
 * Consultas INSERT que são seguidas a cláusula OPTION, unidas com várias tabelas ou seguidas de outra consulta, não têm suporte.
-* Devido a limitações de API de cópia em massa, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, e `GEOGRAPHY` tipos de dados, não há suporte para esse recurso.
+* Devido a limitações de API de cópia em massa, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, e `GEOGRAPHY` tipos de dados, no momento, não há suporte para isso recurso.
 
 Se a consulta falhar devido a não erros relacionados ao "SQL server", o driver registrará em log a mensagem de erro e o fallback para a lógica original para inserção em lotes.
 
