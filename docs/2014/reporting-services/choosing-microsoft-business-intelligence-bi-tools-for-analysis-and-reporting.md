@@ -1,5 +1,5 @@
 ---
-title: Análise e relatórios com ferramentas do Microsoft business intelligence (BI)
+title: Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 519aa33d615c244289fdf53d6cea6684a8a04dce
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 73dd4f2163169930d7766d3a287b8a5c38de0ee1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553138"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289184"
 ---
-# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análise e relatórios com ferramentas do Microsoft business intelligence (BI)
+# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
 
   A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão de relatórios para as ferramentas BI da Microsoft mais adequadas para cargas de trabalho.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "53553138"
 |Execute análise de previsão de autoatendimento||||||[Data Mining Add-Ins para Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Visualize e explore dados||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |Faça perguntas usando a consulta de linguagem natural|||||[P & R](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização < arquivos de 10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (dá suporte à visualização < 250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Aplicativo móvel do Power BI em dispositivos iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Aplicativo móvel do Power BI em dispositivos Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Aplicativo móvel do Power BI para Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização de arquivos <10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (dá suporte à visualização de <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Aplicativo móvel do Power BI em dispositivos iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Aplicativo móvel do Power BI em dispositivos Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Aplicativo móvel do Power BI para Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |Colabore e compartilhe|||[Sites do SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites da equipe do SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites do Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**BI corporativo**|Profissional de TI||||||  
 |Crie modelos corporativos multidimensionais e tabulares||||||[Analysis Services](../analysis-services/analysis-services.md)|  

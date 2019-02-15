@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc62428aafdb3d3ec252c0b10cbe5a7c2db515cd
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037997"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292295"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  

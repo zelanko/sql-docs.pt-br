@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c57ce5992349aa9fe195620b8ac1c1d2b2ba4744
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 13ff0172847968439143edfd322ec895f8b0929c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034197"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298454"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Caixa de diálogo Propriedades da Fonte de Dados, Credenciais (Construtor de Relatórios)
   Selecione **Credenciais** na caixa de diálogo **Propriedades da Fonte de Dados** para exibir e modificar as credenciais a fim de estabelecer conexão com uma fonte de dados inserida do relatório. As credenciais fornecidas são usadas para acessar a fonte de dados para externas para a visualização de relatórios. Para obter mais informações sobre credenciais, consulte [Especificar as credenciais no Construtor de Relatórios](../../2014/reporting-services/specify-credentials-in-report-builder.md).  

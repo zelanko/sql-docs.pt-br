@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6f6a7e4e8e6d4a70ecb3695819f3648c86034b4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 358a82555a2f0b3df8a7635cb3ff39a7b09f2e50
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013157"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290394"
 ---
 # <a name="query-builder-report-wizard"></a>Construtor de Consultas (Assistente de Relatório)
   Use o Construtor de Consultas para especificar uma consulta que recupera um conjunto de resultados para usar em um relatório. Você pode escolher entre dois construtores de consulta:  

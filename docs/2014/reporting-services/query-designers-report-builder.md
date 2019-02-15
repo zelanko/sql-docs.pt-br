@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5d8ce7b33fe281b32b1fc7758d1f7340884e492f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf13d793f9cfc4aa0e1bdf5fa3ae7862bf8d1719
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020611"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296554"
 ---
 # <a name="query-designers-report-builder"></a>Designers de Consulta (Construtor de Relatórios)
   O Construtor de Relatórios fornece designers de consulta baseados em texto e gráficos para ajudá-lo a criar consultas para seu relatório. Cada tipo de fonte de dados tem um designer de consulta associado. Alguns designers gráficos de suporte a fontes de dados ajudam a criar uma consulta de maneira interativa. Outras fontes de dados usam um designer de consulta baseado em texto. Uma fonte de dados do SQL Server oferece suporte a designers de consulta baseado em texto e gráficos.  

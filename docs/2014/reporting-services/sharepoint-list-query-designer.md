@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 835580a8c08712035776eb37432d10730363d417
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017707"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288914"
 ---
 # <a name="sharepoint-list-query-designer"></a>Designer de Consulta de Lista do SharePoint
   O Designer de Relatórios fornece um designer de consultas gráficas e um designer de consulta baseado em texto para ajudá-lo a criar uma consulta que especifica os dados a serem recuperados do site do SharePoint para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados de lista do SharePoint, criar uma consulta interativamente e exibir os resultados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas, modificar uma consulta ou digitar os comandos da consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  

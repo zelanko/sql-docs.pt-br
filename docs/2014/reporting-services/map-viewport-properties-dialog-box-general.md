@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 33849743e47ad910fad44938e7537d7b4be8624a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0a610ef918bc0a4ef76a6be2fa0b9ae132621ddb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018178"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292174"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Caixa de diálogo Propriedades do Visor do Mapa, Geral
   Selecione **Geral** na caixa de diálogo **Propriedades do Visor do Mapa** para alterar o sistema de coordenadas, a projeção e as opções de limite.  

@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016083"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297384"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
   A região de dados do medidor é uma região de dados unidimensional que exibe um único valor em seu conjunto de dados. Um medidor individual é sempre posicionado dentro de um painel de medidores, onde é possível adicionar medidores filho ou adjacentes. Você pode usar o painel de medidores para criar em um mesmo painel de medidores vários medidores que compartilham funções comuns, como filtragem, agrupamento ou classificação.  

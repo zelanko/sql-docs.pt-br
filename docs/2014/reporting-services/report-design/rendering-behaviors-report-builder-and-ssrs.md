@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 068a1338f03e44a8e98759d6e3651904f0d3d643
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017137"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298364"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamentos de renderização (Construtor de Relatórios e SSRS)
   Dependendo do renderizador selecionado, algumas regras são aplicadas ao corpo do relatório e ao seu conteúdo quando um relatório é renderizado. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  

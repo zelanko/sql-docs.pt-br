@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036567"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289005"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Gerenciador de Relatórios (modo nativo do SSRS)
   O Gerenciador de Relatórios é uma ferramenta de gerenciamento e acesso a relatório com base na Web que é usada para administrar uma única instância de servidor de relatório a partir de um local remoto em uma conexão HTTP. Você também pode usar o Gerenciador de Relatórios para seu visualizador de relatório e recursos de navegação. Neste tópico:  

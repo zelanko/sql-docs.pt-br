@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 43f27ea78bec3f7b81f49d44a6bd56274367f2b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f237710588f9cd2a8b53d98871ae2ed85b54b132
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021674"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290094"
 ---
 # <a name="expression-dialog-box"></a>Caixa de diálogo Expressão
   Use a caixa de diálogo **Expressão** para escrever expressões do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para propriedades de itens de relatório. É possível usar expressões para definir muitas propriedades, incluindo cor, fonte e bordas. Em tempo de execução, o processador de relatório avalia as expressões e substitui o resultado do valor da propriedade.  

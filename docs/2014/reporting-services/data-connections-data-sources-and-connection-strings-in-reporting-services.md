@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d54894d703b2919d9128dccc698ee8fad51e5af2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028607"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291765"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir dados em um relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  

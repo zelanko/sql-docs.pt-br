@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bdc452717be52dc857465e202771678f782d61f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043227"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296434"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
   Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório, você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [tabelas &#40;construtor de relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md), [matrizes &#40;construtor de relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [lista &#40;construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

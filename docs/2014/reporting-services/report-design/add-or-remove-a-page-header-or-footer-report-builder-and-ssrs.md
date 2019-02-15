@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 409f9443e0ead1899bbd1769c77b3356c5f6c8f2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011887"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292226"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Adicionar ou remover um cabeçalho ou rodapé de página (Construtor de Relatórios e SSRS)
   É possível adicionar texto, imagens, linhas, retângulos e bordas estáticas aos cabeçalhos ou rodapés das páginas. Você poderá colocar expressões e imagens associadas a dados em uma caixa de texto, se desejar a variável ou os dados computados em um cabeçalho ou rodapé.  

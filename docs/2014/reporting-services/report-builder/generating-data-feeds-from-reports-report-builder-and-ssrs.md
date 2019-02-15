@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7a2a6d21b49d22a5017eecb0b559be19a2844a8a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020677"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292253"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS)
   A extensão de renderização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis em um relatório e os feeds de dados das regiões de dados em um relatório. Use essa extensão para gerar feeds de dados compatíveis com Atom legíveis e intercambiáveis com aplicativos que podem consumir feeds de dados gerados de relatórios. Por exemplo, você pode usar a extensão de renderização Atom para feeds de dados gerados a serem usados no cliente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  

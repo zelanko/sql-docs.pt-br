@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: adf3365f43e9898e6282a571901913e0400acd9e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020368"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293704"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Renderizando regiões de dados (Construtor de Relatórios e SSRS)
   Além dos comportamentos de renderização gerais que se aplicam a todos os itens de relatório, as regiões de dados têm comportamentos de paginação e renderização adicionais que elas adotam. As regras de renderização específicas por região de dados incluem como uma região de dados cresce, como as células especiais como as células de canto ou células de cabeçalho são renderizadas e como uma região de dados para leitura da direita para a esquerda é renderizada. Esse tópico aborda como as várias partes de uma região de dados são renderizadas.  

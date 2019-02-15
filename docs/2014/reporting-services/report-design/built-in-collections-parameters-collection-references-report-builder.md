@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 178060835cf90032013a11e2b674462cb6e26ea7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037147"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287964"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Referências de coleções de parâmetros (Construtor de Relatórios e SSRS)
   Os parâmetros de relatório são umas das coleções internas que você pode fazer referência a partir de uma expressão. Incluindo parâmetros em uma expressão, é possível personalizar os dados e a aparência do relatório com base nas opções feitas por um usuário. As expressões podem ser usadas para qualquer propriedade de item de relatório ou propriedade de caixa de texto que fornece a opção (*Fx*) ou \<**Expression**>. As expressões também são usadas para controlar o conteúdo e a aparência do relatório de outras maneiras. Para obter mais informações, consulte [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  

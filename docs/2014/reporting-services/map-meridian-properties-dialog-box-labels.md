@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ecaf5c0ad58dcb3fbc60d9c6417ac969f85ca40
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015008"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296104"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Caixa de diálogo Mapear Propriedades de Meridiano, Rótulos
   Use o **MapMeridian propriedades** caixa de diálogo para alterar as opções de rótulo para a grade vertical no visor do mapa. Um meridiano representa o valor seguinte, de acordo com o sistema de coordenadas especificado para o visor:  

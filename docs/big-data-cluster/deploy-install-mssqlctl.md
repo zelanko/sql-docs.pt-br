@@ -5,16 +5,16 @@ description: Saiba como instalar a ferramenta mssqlctl para instalar e gerenciar
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/15/2018
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 54fef15869eb86c3694adfb793ed028e22aadf4d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087605"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287114"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Instalar mssqlctl para gerenciar clusters do SQL Server 2019 big data
 
@@ -23,7 +23,7 @@ Este artigo descreve como instalar o **mssqlctl** ferramenta no Windows ou Linux
 **mssqlctl** é um utilitário de linha de comando escrito em Python que permite que os administradores para inicializar e gerenciar o cluster de big data por meio de APIs REST de cluster. A versão do Python mínima necessária é v 3.5. Você também deve ter `pip` que é usado para baixar e instalar **mssqlctl** ferramenta. As instruções a seguir fornecem exemplos para Windows e Ubuntu. Para instalar o Python em outras plataformas, consulte a [documentação do Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
-> Se você instalou uma versão anterior do **mssqlctl**, você deve excluir o cluster *antes* Atualizando **mssqlctl** e instalar a nova versão. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
+> Se você estiver instalando uma versão mais recente dos clusters de big data, você deve fazer backup dos dados e excluir o cluster antigo *antes de* Atualizando **mssqlctl** e instalar a nova versão. Para obter mais informações, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
 
 ## <a id="windows"></a> Instalação do Windows mssqlctl
 

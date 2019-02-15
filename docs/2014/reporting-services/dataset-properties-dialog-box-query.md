@@ -11,15 +11,15 @@ f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f83cde4947e9734aa11a6758d19d056ce7e6a82c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 588927f94d2c50d5d34485cae030e9cea6a6b5ec
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011797"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292383"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Consulta
   Selecione **Consulta** na caixa de diálogo **Propriedades do Conjunto de Dados** para escolher uma fonte de dados e criar uma consulta.  

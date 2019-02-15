@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4ce60e8326149ac0d8e7f54a84dd344f5088ee3d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4aaea45ff2059564bf2215aa4728dee80e4539b3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032614"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298394"
 ---
 # <a name="design-the-query"></a>Projetar a consulta
   Use esta página do Assistente de Relatório para criar uma consulta, digitando a consulta manualmente, usando o Construtor de Consultas para criar uma consulta interativamente ou importando uma consulta de outro relatório.  

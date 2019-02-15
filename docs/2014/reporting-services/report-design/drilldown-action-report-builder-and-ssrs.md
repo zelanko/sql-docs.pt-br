@@ -38,15 +38,15 @@ f1_keywords:
 - "10062"
 - "10053"
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5f04eaab455f27c0450d9d6c3d9f4b9f1c39ec0f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029707"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297304"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Ação de análise detalhada (Construtor de Relatórios e SSRS)
   Ao fornecer ícones de sinal de adição ou de subtração em uma caixa de texto, você permitirá que os usuários ocultem ou exibam itens interativamente. Isso se chama *busca detalhada* . Para uma tabela ou matriz, você pode mostrar ou ocultar linhas e colunas estáticas ou linhas e colunas que estão associadas a grupos.  

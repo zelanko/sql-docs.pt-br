@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4f6402d68a1d6b2b62b5e4c2879f26c9ee917f2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043047"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295195"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controlando a exibição da região de dados Tablix em uma página do relatório (Construtor de Relatórios e SSRS)
   Este tópico descreve as propriedades de uma região de dados Tablix que pode ser modificada para alterar a forma como uma região de dados Tablix é exibida quando visualizada em um relatório.  

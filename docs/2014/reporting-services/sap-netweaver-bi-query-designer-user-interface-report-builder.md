@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 34248f660d31d6993ce21a0bcced0e0857b685cb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 383c68bd5d152e421233a5ff91639956f3d39dbb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029127"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289274"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interface do usuário do Designer de Consulta do SAP NetWeaver BI (Construtor de Relatórios)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um designer de consultas gráficas para criar consultas MDX para uma fonte de dados do SAP NetWeaver® Business Intelligence. O designer de consultas gráficas MDX tem dois modos: Modo de design e modo de consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um InfoCube, MultiProvider ou consulta habilitada para Web definida na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  

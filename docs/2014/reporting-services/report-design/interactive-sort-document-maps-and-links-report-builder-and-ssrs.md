@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: da4310a181df219422c29a7efa5538356ca41b90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017727"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287224"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Classificação interativa, mapas de documentos e links (Construtor de Relatórios e SSRS)
   Em ambientes baseados na Web, você pode adicionar alguns recursos que permitem aos usuários interagir com relatórios. Seus usuários podem alterar a ordem de classificação de valores no relatório, mostrar ou ocultar itens no relatório ou clicar em links que vão para outros relatórios ou páginas da Web. Você também pode adicionar um índice ou um mapa do documento. Seus usuários de relatório podem clicar em itens do sumário ou do mapa do documento e ir diretamente para áreas de um relatório.  

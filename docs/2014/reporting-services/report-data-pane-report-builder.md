@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b73080811e001b67ea52e3cbc9572eb014162e68
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 369540d7d3c75a781c338cf5d172fa82b16df7c7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010347"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290054"
 ---
 # <a name="report-data-pane-report-builder"></a>Painel de Dados do Relatório (Construtor de Relatórios)
   Use o painel **Dados do Relatório** para exibir os parâmetros, as fontes de dados, os conjuntos de dados, as coleções de campos e as imagens definidos atualmente no relatório. O Painel Relatório mostra uma exibição hierárquica dos itens que representam dados no relatório. Os nós de nível superior representam campos, parâmetros, imagens e referências de fontes de dados internos. Expanda cada nó para exibir os itens de dados. Por exemplo, ao expandir um nó da fonte de dados, os conjuntos de dados definidos para essa fonte de dados são exibidos. Quando você expande um conjunto de dados, a coleção de campos correspondente é exibida. Arraste itens para a superfície de design do relatório ou para o painel Agrupamento a fim de vincular dados aos itens de relatório selecionados na página de relatório. Para obter mais informações, consulte [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](report-builder/report-design-view-report-builder.md).  

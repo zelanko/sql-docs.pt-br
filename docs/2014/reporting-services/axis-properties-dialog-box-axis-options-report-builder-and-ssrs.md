@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb65c421d1e79a6bdd625ad627aca841dbc410bc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030638"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286495"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Eixo, Opções do Eixo (Construtor de Relatórios e SSRS)
   Selecione **opções de eixo** sobre o **Horizontal** ou **propriedades VerticalAxis** caixa de diálogo para definir a aparência do eixo do gráfico especificado. Em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o gráfico exibia todos os rótulos no eixo x por padrão. No entanto, no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, o gráfico descarta os rótulos para produzir uma imagem mais limpa no gráfico e evitar colisões de rótulos. Para obter mais informações, consulte [Formatação de rótulos de eixos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

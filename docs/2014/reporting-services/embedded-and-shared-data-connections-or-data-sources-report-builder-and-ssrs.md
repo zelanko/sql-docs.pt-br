@@ -12,15 +12,15 @@ helpviewer_keywords:
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e507d9fa5b57fe63c1540f4490a7b04d878199f0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031947"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288934"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Conexões de dados ou fontes de dados compartilhadas e inseridas (Construtor de Relatórios e SSRS)
   Os relatórios usam conexões de dados para recuperar dados de um relatório quando uma consulta é executada ou o relatório é processado. Você escolhe em uma lista de tipos de conexões de dados internos a serem conectados a um banco de dados relacional, a um banco de dados multidimensional, a um serviço Web ou a alguma outra fonte de dados. Os termos a seguir são usados para descrever conexões de dados.  

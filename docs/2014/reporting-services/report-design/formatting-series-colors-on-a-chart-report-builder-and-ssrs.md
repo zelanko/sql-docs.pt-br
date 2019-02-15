@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.borders.f1
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3f3622ea10c5dbd0b38e7562ec8039fb1f28571b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016007"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298164"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatando as cores da série em um gráfico (Construtor de Relatórios e SSRS)
   O Reporting Services fornece várias paletas internas para gráficos. Além disso, você pode definir uma paleta personalizada. Por padrão, os gráficos usam internos **BrightPastel** paleta de cores para preencher cada série. Essas cores também aparecem na legenda. Se forem adicionadas várias séries ao gráfico, ele atribuirá um cor à série na ordem em que as cores foram definidas na paleta.  

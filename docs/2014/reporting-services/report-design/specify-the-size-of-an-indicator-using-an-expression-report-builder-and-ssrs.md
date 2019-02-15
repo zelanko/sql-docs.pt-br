@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a77a96d57a1ea9489697a415e96fb52165b8270f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9a8f3262f4e897ac8a531eb13ec933ab01f6d94d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014807"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290644"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Especificar o tamanho de um indicador usando uma expressão (Construtor de Relatórios e SSRS)
   Além de cor, direção e forma, você pode usar tamanho para maximizar o impacto visual de indicadores.  

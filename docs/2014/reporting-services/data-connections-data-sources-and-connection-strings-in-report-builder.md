@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 13edc28a739af6a40ab47766c1909be3a8105ee5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011008"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288864"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios
   Para incluir dados em um relatório, crie conexões de dados e conjuntos de dados. Uma conexão de dados inclui informações sobre como acessar uma fonte de dados externa. Um conjunto de dados inclui um comando de consulta que especifica os dados a serem incluídos usando a conexão de dados.  

@@ -11,15 +11,15 @@ f1_keywords:
 - "10146"
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 070b47688067e493321ce25d05f09eec6e44197e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d8146f2a138e1afac7bfaaac242dc47501ad1fdb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038847"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296608"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Título do Eixo, Geral (Construtor de Relatórios e SSRS)
   Selecione **Geral** na caixa de diálogo **Propriedades do Título do Eixo** para definir o título do eixo. O título do eixo é exibido sob o eixo x ou próximo ao eixo y.  

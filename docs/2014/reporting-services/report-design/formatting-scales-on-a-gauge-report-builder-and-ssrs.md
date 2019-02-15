@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 36074fe67459cb47f6becfe914fe868baf5d4940
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48c26787d53f6ecb1ce1082a9d570c565d02e66d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021646"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290664"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
   A escala de um medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrados em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  

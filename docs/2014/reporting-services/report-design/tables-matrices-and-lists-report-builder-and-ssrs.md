@@ -33,15 +33,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6625e159d7992a8bb8a3f6b28c9f4e5dd0ac567b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017798"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287124"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)
   Tabelas, matrizes e listas são regiões de dados que exibem dados de relatório em células organizadas em linhas e colunas. As células geralmente contêm dados de texto como texto, datas e números, mas também podem conter medidores, gráficos ou itens de relatório como imagens. Coletivamente, tabelas, matrizes e listas são geralmente chamadas de regiões de dados do tablix.  

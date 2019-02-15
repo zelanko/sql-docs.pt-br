@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 14a1c72d63381a3f93bf312cbdadde9874968d16
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037467"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291804"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Adicionar e modificar uma linha (Construtor de Relatórios e SSRS)
   Você poderá adicionar uma linha ao relatório quando desejar que um elemento gráfico separe seções do relatório. Além disso, você pode personalizar a aparência da linha editando as propriedades da linha, como cor ou estilo. Por exemplo, talvez você deseje incorporar as cores da empresa no relatório.  

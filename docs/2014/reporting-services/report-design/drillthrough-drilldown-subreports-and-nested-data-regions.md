@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25730e3b53b6da97dee0e734853c3ab9b259aa33
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022799"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291564"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas (Construtor de Relatórios e SSRS)
   É possível organizar dados de várias formas para mostrar a relação entre o geral e o detalhado.  É possível colocar todos os dados no relatório, mas defini-lo como oculto até que um usuário clique para revelar detalhes; trata-se de uma ação de *busca detalhada* . É possível exibir os dados em uma região de dados, como uma tabela ou um gráfico, *aninhado* em outra região de dados, como uma tabela ou matriz. É possível exibir os dados em um *sub-relatório* totalmente contido em um relatório principal. Se preferir, você pode colocar os dados detalhados em relatórios de *detalhamento* , relatórios à parte que são exibidos quando um usuário clica em um link.  

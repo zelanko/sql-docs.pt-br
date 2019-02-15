@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.fill.f1
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 08451c74c9227fa76eb78c695908d96066015361
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 083915c4a915faebb19027932a19930a6f836f5e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018218"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296034"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Preenchimento (Construtor de Relatórios e SSRS)
   Na guia **Preenchimento**, você pode especificar as opções de cor da tela de fundo de uma única ou de várias células dentro de uma região de dados ou de uma caixa de texto.  

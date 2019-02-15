@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: faed31664fda3f83abc57caf5c30a8c71f699bd5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019409"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294814"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Localizar texto, números ou datas em um relatório (Reporting Services no modo integrado do SharePoint)
   Você pode procurar conteúdo em um relatório digitando a palavra ou expressão que deseja localizar (o tamanho máximo de um termo de pesquisa é de 256 caracteres). A pesquisa é uma técnica de navegação na Internet que localiza um valor correspondente no relatório e destaca essa parte do relatório que contém o valor.  

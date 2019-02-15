@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c64c4c000f3634e720ddfd9b20a1256a826677e8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013597"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298494"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   Os relatórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são definições de relatório baseadas em XML que incluem elementos de dados e layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que um relatório é publicado, ele se torna um item de relatório armazenada no servidor de relatório ou no site do SharePoint. Relatórios são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

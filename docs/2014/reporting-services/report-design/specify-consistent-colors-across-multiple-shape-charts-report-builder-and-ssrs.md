@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8595050b478743b7092787acf880425b24c5b1e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f88222768c3194543ec2abd5821b53c67f3b04fe
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011288"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292970"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Especificar cores consistentes em gráficos com várias formas (Construtor de Relatórios e SSRS)
   Em gráficos não forma, uma cor nova é selecionada na paleta com base no índice da série no gráfico. Por exemplo, a primeira série do gráfico é mapeada para a primeira cor da paleta. No entanto, esse comportamento é diferente em gráficos com forma. Em gráficos com forma, todas as cores da paleta são mapeadas para um ponto de dados no conjunto de dados. Por exemplo, o ponto de dados 1 é mapeado para a primeira cor da paleta, o ponto de dados 2 é mapeado para a segunda paleta de cores e assim por diante.  

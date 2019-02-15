@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: df5de06ef60cf22a023589efb9d67f0f521f1c40
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 26902cf236512fd93466a27fa8226773bfe6b6eb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032687"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297724"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Adicionar uma imagem de plano de fundo (Construtor de Relatórios e SSRS)
   Você pode adicionar uma imagem de plano de fundo a um item de relatório tais como um retângulo, uma caixa de texto, uma lista, uma matriz, uma tabela, algumas partes de um gráfico, ou uma seção de relatório como cabeçalho de página, rodapé de página ou corpo de relatório. Você pode definir uma imagem de tela de fundo para qualquer item selecionado na superfície de design do relatório que exiba **BackgroundImage** no painel Propriedades. Assim como outras imagens, a imagem de plano de fundo pode ser uma URL para uma imagem no servidor de relatório, uma imagem de um campo de conjunto de dados ou uma imagem inserida na definição de relatório. Para usar uma imagem inserida no relatório, primeiro adicione a imagem à definição de relatório antes de adicioná-la à superfície de design.  

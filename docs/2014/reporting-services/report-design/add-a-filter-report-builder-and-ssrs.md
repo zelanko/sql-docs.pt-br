@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca43df4b6dc42e15257ce7e3c31b2b91ec0a7b73
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4fc0b605469edfdeb79db312a191372bb017b61
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011967"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291526"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Adicionar um filtro (Construtor de Relatórios e SSRS)
   Adicione um filtro a um conjunto de dados, região de dados ou grupo quando quiser incluir ou excluir valores específicos para cálculos ou exibição. Os filtros são aplicados em tempo de execução, primeiro, no conjunto de dados, depois, na região de dados e, em seguida, no grupo, de cima para baixo nas hierarquias de grupo. Em uma tabela, matriz ou lista, os filtros para grupos de linha, grupos de coluna e grupos adjacentes são aplicados de forma independente. Em um gráfico, os filtros para grupos de categoria e grupos de série são aplicados de forma independente.  

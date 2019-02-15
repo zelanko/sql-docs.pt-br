@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9e230a20e369cf8354d3740f966d01a0930916f7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 706abc555b65f028244991b85e465636a0ccbf2d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035047"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296174"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Caixa de diálogo Propriedades da Fonte de Dados Compartilhada, Credenciais
   Selecione **Credenciais** na caixa de diálogo **Propriedades da Fonte de Dados Compartilhada** para exibir e modificar as credenciais a fim de estabelecer uma conexão com a fonte de dados compartilhada no relatório. As credenciais que você fornecer serão usadas para acessar a fonte de dados e para colocar em cache uma cópia dos dados para a visualização dos relatórios. Para obter mais informações sobre como os dados de visualização são armazenados em cache, consulte [Visualizando relatórios](reports/previewing-reports.md). Para obter mais informações sobre credenciais, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

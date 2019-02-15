@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029677"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290384"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listas (Construtor de Relatórios e SSRS)
   Uma região de dados de lista se repete a cada grupo ou linha no conjunto de dados de relatório. Uma lista pode ser usada para criar relatórios ou formulários de forma livre, como faturas, ou em conjunto com outras regiões de dados. É possível definir listas que contenham qualquer número de itens de relatório. Uma lista pode ser aninhada em outra lista para fornecer vários grupos de dados.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 128f101a1bc43ac27c30a24b2b220ff09f59d2e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf4ff717d5f772b8ef3d78c3cd307b9d923fea79
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015417"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291504"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Caixa de diálogo Visibilidade da Linha (Construtor de Relatórios)
   Use a caixa de diálogo **Visibilidade da Linha** para mostrar ou ocultar a linha selecionada quando o relatório for executado pela primeira vez ou para usar outro item de relatório para alternar a visibilidade da linha.  
