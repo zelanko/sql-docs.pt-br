@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a2e658020afaa9910c0bd988efc6f0c528e499e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce425476f44e8e806a26e0fbe0201e088f7d12bf
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697874"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760009"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Funções de banco de dados fixas do SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,39 +51,39 @@ As permissões de função de banco de dados do [!INCLUDE[ssNoVersion](../../inc
 **SQLAgentUserRole** é a menos privilegiada das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ela só tem permissões em operadores, trabalhos locais e agendas de trabalho. Membros de **SQLAgentUserRole** só têm permissões em trabalhos locais e agendas de trabalho que eles possuem. Não podem usar trabalhos multisservidor (trabalhos de servidor mestre e de destino), nem alterar a propriedade do trabalho para ganhar acesso a trabalhos que ainda não possuem. Membros de**SQLAgentUserRole** podem exibir uma lista de proxies disponíveis apenas na caixa de diálogo **Propriedades da Etapa de Trabalho** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Somente o nó **Trabalhos** no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é visível a membros de **SQLAgentUserRole**.  
   
 > [!IMPORTANT]  
-> Considere as implicações de segurança antes de conceder acesso de proxy a membros das **funções**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agentdatabase**. Membros de **SQLAgentReaderRole** e **SQLAgentOperatorRole** tornam-se, automaticamente, membros de **SQLAgentUserRole**. Isso significa que membros de **SQLAgentReaderRole** e **SQLAgentOperatorRole** têm acesso a todos os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent concedidos à função **SQLAgentUserRole** e podem utilizá-los.  
+> Considere as implicações de segurança antes de conceder acesso de proxy a membros **de** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Membros de **SQLAgentReaderRole** e **SQLAgentOperatorRole** tornam-se, automaticamente, membros de **SQLAgentUserRole**. Isso significa que membros de **SQLAgentReaderRole** e **SQLAgentOperatorRole** têm acesso a todos os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent concedidos à função **SQLAgentUserRole** e podem utilizá-los.  
   
 A tabela a seguir resume as permissões de **SQLAgentUserRole** em objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 |Ação|Operadores|Trabalhos locais<br /><br />(apenas trabalhos possuídos)|Agendas de trabalho<br /><br />(apenas agendas possuídas)|Proxies|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
-|Criar/modificar/excluir|não|Sim<br /><br />Não pode alterar a propriedade do trabalho.|Sim|não|  
+|Criar/modificar/excluir|Não|Sim<br /><br />Não pode alterar a propriedade do trabalho.|Sim|Não|  
 |Exibir lista (enumerar)|Sim<br /><br />Pode obter lista de operadores disponíveis para uso em **sp_notify_operator** e na caixa de diálogo **Propriedades do trabalho** do Management Studio.|Sim|Sim|Sim<br /><br />Lista de proxies disponível apenas na caixa de diálogo **Propriedades da Etapa de Trabalho** do Management Studio.|  
-|Habilitar/desabilitar|não|Sim|Sim|Não aplicável|  
-|Exibir propriedades|não|Sim|Sim|não|  
+|Habilitar/desabilitar|Não|Sim|Sim|Não aplicável|  
+|Exibir propriedades|Não|Sim|Sim|Não|  
 |Executar/interromper/iniciar|Não aplicável|Sim|Não aplicável|Não aplicável|  
 |Exibir histórico de trabalho|Não aplicável|Sim|Não aplicável|Não aplicável|  
-|Excluir histórico de trabalho|Não aplicável|não<br /><br />Membros de **SQLAgentUserRole** devem ter permissão EXECUTE em **sp_purge_jobhistory** concedida explicitamente para poderem excluir históricos de trabalhos que possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.|Não aplicável|Não aplicável|  
+|Excluir histórico de trabalho|Não aplicável|Não<br /><br />Membros de **SQLAgentUserRole** devem ter permissão EXECUTE em **sp_purge_jobhistory** concedida explicitamente para poderem excluir históricos de trabalhos que possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.|Não aplicável|Não aplicável|  
 |Anexar/desanexar|Não aplicável|Não aplicável|Sim|Não aplicável|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>Permissões de SQLAgentReaderRole  
 A função**SQLAgentReaderRole** inclui todas as permissões de **SQLAgentUserRole** , mais permissões para exibir a lista de trabalhos multisservidor disponíveis, suas propriedades e seu histórico. Os membros desta função também podem exibir a lista de todos os trabalhos e agendas de trabalho disponíveis, bem como suas propriedades, e não apenas aqueles que possuem. Membros de**SQLAgentReaderRole** não podem alterar a propriedade do trabalho para ganhar acesso a trabalhos que ainda não possuem. Somente o nó **Trabalhos** no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é visível a membros de **SQLAgentReaderRole**.  
   
 > [!IMPORTANT]  
-> Considere as implicações de segurança antes de conceder acesso de proxy a membros das **funções**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agentdatabase**. Membros de **SQLAgentReaderRole** tornam-se, automaticamente, membros de **SQLAgentUserRole**. Isso significa que membros de **SQLAgentReaderRole** têm acesso a todos os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent concedidos à função **SQLAgentUserRole** e podem utilizá-los.  
+> Considere as implicações de segurança antes de conceder acesso de proxy a membros **de** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Membros de **SQLAgentReaderRole** tornam-se, automaticamente, membros de **SQLAgentUserRole**. Isso significa que membros de **SQLAgentReaderRole** têm acesso a todos os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent concedidos à função **SQLAgentUserRole** e podem utilizá-los.  
   
 A tabela a seguir resume as permissões de **SQLAgentReaderRole** em objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 |Ação|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Criar/modificar/excluir|não|Sim (apenas trabalhos possuídos)<br /><br />Não pode alterar a propriedade do trabalho.|não|Sim (somente agendas possuídas)|não|  
+|Criar/modificar/excluir|Não|Sim (apenas trabalhos possuídos)<br /><br />Não pode alterar a propriedade do trabalho.|Não|Sim (somente agendas possuídas)|Não|  
 |Exibir lista (enumerar)|Sim<br /><br />Pode obter lista de operadores disponíveis para uso em **sp_notify_operator** e na caixa de diálogo **Propriedades do trabalho** do Management Studio.|Sim|Sim|Sim|Sim<br /><br />Lista de proxies disponível apenas na caixa de diálogo **Propriedades da Etapa de Trabalho** do Management Studio.|  
-|Habilitar/desabilitar|não|Sim (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|Não aplicável|  
-|Exibir propriedades|não|Sim|Sim|Sim|não|  
-|Editar propriedades|não|Sim (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|não|  
-|Executar/interromper/iniciar|Não aplicável|Sim (apenas trabalhos possuídos)|não|Não aplicável|Não aplicável|  
+|Habilitar/desabilitar|Não|Sim (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não aplicável|  
+|Exibir propriedades|Não|Sim|Sim|Sim|Não|  
+|Editar propriedades|Não|Sim (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
+|Executar/interromper/iniciar|Não aplicável|Sim (apenas trabalhos possuídos)|Não|Não aplicável|Não aplicável|  
 |Exibir histórico de trabalho|Não aplicável|Sim|Sim|Não aplicável|Não aplicável|  
-|Excluir histórico de trabalho|Não aplicável|não<br /><br />Membros de **SQLAgentReaderRole** devem ter permissão EXECUTE em **sp_purge_jobhistory** concedida explicitamente para poderem excluir históricos de trabalhos que possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.|não|Não aplicável|Não aplicável|  
+|Excluir histórico de trabalho|Não aplicável|Não<br /><br />Membros de **SQLAgentReaderRole** devem ter permissão EXECUTE em **sp_purge_jobhistory** concedida explicitamente para poderem excluir históricos de trabalhos que possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.|Não|Não aplicável|Não aplicável|  
 |Anexar/desanexar|Não aplicável|Não aplicável|Não aplicável|Sim (somente agendas possuídas)|Não aplicável|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>Permissões de SQLAgentOperatorRole  
@@ -94,20 +94,20 @@ Membros de**SQLAgentOperatorRole** têm permissões adicionais em trabalhos loca
 Os nós **Trabalhos**, **Alertas**, **Operadores**e **Proxies** no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são visíveis a membros de **SQLAgentOperatorRole**. Somente o nó **Logs de Erros** não é visível a membros desta função.  
   
 > [!IMPORTANT]  
-> Considere as implicações de segurança antes de conceder acesso de proxy a membros das **funções**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agentdatabase**. Membros de **SQLAgentOperatorRole** tornam-se, automaticamente, membros de **SQLAgentUserRole** e **SQLAgentReaderRole**. Isso significa que membros de **SQLAgentOperatorRole** têm acesso a todos os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent concedidos às funções **SQLAgentUserRole** ou **SQLAgentReaderRole** e podem utilizá-los.  
+> Considere as implicações de segurança antes de conceder acesso de proxy a membros **de** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Membros de **SQLAgentOperatorRole** tornam-se, automaticamente, membros de **SQLAgentUserRole** e **SQLAgentReaderRole**. Isso significa que membros de **SQLAgentOperatorRole** têm acesso a todos os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent concedidos às funções **SQLAgentUserRole** ou **SQLAgentReaderRole** e podem utilizá-los.  
   
 A tabela a seguir resume as permissões de **SQLAgentOperatorRole** em objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 |Ação|Alertas|Operadores|Trabalhos locais|Trabalhos multisservidor|Agendas de trabalho|Proxies|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Criar/modificar/excluir|não|não|Sim (apenas trabalhos possuídos)<br /><br />Não pode alterar a propriedade do trabalho.|não|Sim (somente agendas possuídas)|não|  
+|Criar/modificar/excluir|Não|Não|Sim (apenas trabalhos possuídos)<br /><br />Não pode alterar a propriedade do trabalho.|Não|Sim (somente agendas possuídas)|Não|  
 |Exibir lista (enumerar)|Sim|Sim<br /><br />Pode obter lista de operadores disponíveis para uso em **sp_notify_operator** e na caixa de diálogo **Propriedades do trabalho** do Management Studio.|Sim|Sim|Sim|Sim|  
-|Habilitar/desabilitar|não|não|Sim<br /><br />**SQLAgentOperatorRole** podem habilitar ou desabilitar trabalhos locais que não possuem, por meio do procedimento armazenado **sp_update_job** e especificando valores para os parâmetros **@enabled** e **@job_id** (ou **@job_name**). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|não|Sim<br /><br />**SQLAgentOperatorRole** podem habilitar ou desabilitar agendas que não possuem, por meio do procedimento armazenado **sp_update_schedule** e especificando valores para os parâmetros **@enabled** e **@schedule_id** (ou **@name**). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|Não aplicável|  
+|Habilitar/desabilitar|Não|Não|Sim<br /><br />**SQLAgentOperatorRole** podem habilitar ou desabilitar trabalhos locais que não possuem, por meio do procedimento armazenado **sp_update_job** e especificando valores para os parâmetros **@enabled** e **@job_id** (ou **@job_name**). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|Não|Sim<br /><br />**SQLAgentOperatorRole** podem habilitar ou desabilitar agendas que não possuem, por meio do procedimento armazenado **sp_update_schedule** e especificando valores para os parâmetros **@enabled** e **@schedule_id** (ou **@name**). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|Não aplicável|  
 |Exibir propriedades|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Editar propriedades|não|não|Sim (apenas trabalhos possuídos)|não|Sim (somente agendas possuídas)|não|  
-|Executar/interromper/iniciar|Não aplicável|Não aplicável|Sim|não|Não aplicável|Não aplicável|  
+|Editar propriedades|Não|Não|Sim (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
+|Executar/interromper/iniciar|Não aplicável|Não aplicável|Sim|Não|Não aplicável|Não aplicável|  
 |Exibir histórico de trabalho|Não aplicável|Não aplicável|Sim|Sim|Não aplicável|Não aplicável|  
-|Excluir histórico de trabalho|Não aplicável|Não aplicável|Sim|não|Não aplicável|Não aplicável|  
+|Excluir histórico de trabalho|Não aplicável|Não aplicável|Sim|Não|Não aplicável|Não aplicável|  
 |Anexar/desanexar|Não aplicável|Não aplicável|Não aplicável|Não aplicável|Sim (somente agendas possuídas)|Não aplicável|  
   
 ## <a name="assigning-users-multiple-roles"></a>Atribuindo várias funções aos usuários  
