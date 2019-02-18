@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087905"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319377"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -557,7 +557,7 @@ Script:
     
 SMO:
 
-- Foi corrigido um problema em que Table.Alter() falhará se for adicionada uma coluna com uma restrição padrão e a tabela já tiver dados. Veja detalhes em [SMO do SQL Server gerando restrição padrão embutida ao adicionar uma coluna a uma tabela contendo dados](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
+- Foi corrigido um problema em que Table.Alter() falhará se for adicionada uma coluna com uma restrição padrão e a tabela já tiver dados. Para obter detalhes, confira [smo do sql server gerando restrição padrão embutida ao adicionar uma coluna a uma tabela contendo dados](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
     
 Always Encrypted:
 
@@ -607,7 +607,7 @@ SQL Data Warehouse do Azure:
 **SSMS geral** 
 
 Plano de manutenção:   
-- Corrigido um problema em que a tentativa de alterar o agendamento de um plano de manutenção existente lançava uma exceção. Veja detalhes em [Falha do SSMS 17.6 ao clicar em um agendamento em um plano de manutenção](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
+- Corrigido um problema em que a tentativa de alterar o agendamento de um plano de manutenção existente lançava uma exceção. Para obter detalhes, veja [Falha do SSMS 17.6 ao clicar em um agendamento em um plano de manutenção](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
 
 Always On: 
 - Corrigido um problema em que o painel de latência Always On não estava funcionando com o SQL Server 2012.
@@ -623,7 +623,7 @@ Banco de Dados SQL do Azure:
 - Corrigido um problema em que o usuário não conseguia definir nem alterar o nível de compatibilidade (na lista suspensa de vazio). Observação: para definir o nível de compatibilidade como 150, o usuário ainda precisa usar o botão *Script* e editar manualmente o script. 
  
 SMO: 
-- A configuração de tamanho do log de erros foi exposta no SMO. Veja detalhes em [Definir o tamanho máximo dos logs de erros do SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
+- A configuração de tamanho do log de erros foi exposta no SMO. Para obter detalhes, veja [Definir o tamanho máximo dos logs de erros do SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
 - Corrija o script de avanço de linha no SMO no Linux.
 - Melhoria do desempenho de diversos ao recuperar propriedades usadas raramente.  
 
@@ -834,7 +834,7 @@ XE Profiler:
 - Ações de nome de host \_nome e cliente\_ do banco de dados adicionadas a eventos apropriados nas sessões do XEvent Profiler. Para que a alteração entre em vigor, talvez seja necessário excluir instâncias existentes da sessão do QuickSessionStandard ou QuickSessionTSQL nos servidores – [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 Linha de comando:
-- Adicionada uma nova opção de linha de comando ("-G") que pode ser usada para fazer com que o SSMS se conecte automaticamente a um servidor/banco de dados usando a Autenticação do Active Directory ("Integrado" ou "Senha"). Para obter detalhes, confira o [utilitário do SSMS](ssms-utility.md).
+- Adicionada uma nova opção de linha de comando ("-G") que pode ser usada para fazer com que o SSMS se conecte automaticamente a um servidor/banco de dados usando a Autenticação do Active Directory ("Integrado" ou "Senha"). Para obter detalhes, consulte [Utilitário de Ssms](ssms-utility.md).
 
 Assistente Importar Arquivo Simples:
 - Adicionada uma maneira de escolher um nome de esquema diferente do padrão ("dbo") ao criar a tabela.
@@ -893,8 +893,8 @@ Disponível ao público geral | Número de build: 14.0.17199.0
 
 ### <a name="enhancements"></a>Aprimoramentos
 
-- Adição do novo assistente "Importar arquivo simples" para simplificar a experiência de importação de arquivos CSV com uma estrutura inteligente, exigindo a mínima intervenção do usuário ou o mínimo conhecimento especializado do domínio. Para obter detalhes, confira [Assistente para Importar Arquivo Simples para SQL](../relational-databases/import-export/import-flat-file-wizard.md).
-- Adição do nó "XEvent Profiler" ao Pesquisador de Objetos. Para obter detalhes, confira [Usar o SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+- Adição do novo assistente "Importar arquivo simples" para simplificar a experiência de importação de arquivos CSV com uma estrutura inteligente, exigindo a mínima intervenção do usuário ou o mínimo conhecimento especializado do domínio. Para obter detalhes, consulte [Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md) (Assistente para Importar arquivo simples no SQL).
+- Adição do nó "XEvent Profiler" ao Pesquisador de Objetos. Para obter detalhes, consulte [Use the SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md) (Usar o SSMS XEvent Profiler).
 - Atualização da filtragem e da categorização de esperas no relatório histórico de esperas do Painel de desempenho.
 - Adição da verificação de sintaxe da função “Prever”.
 - Adição da verificação de sintaxe das consultas de Gerenciamento de biblioteca externa.
