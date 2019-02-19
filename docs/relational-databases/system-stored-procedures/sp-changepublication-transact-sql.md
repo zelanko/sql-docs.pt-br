@@ -130,7 +130,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
   - **0** Especifica que as alterações no artigo fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   - **1** Especifica que as alterações no artigo fazem com que a assinatura existente seja reiniciada e dá permissão para que ocorra a reinicialização da assinatura.  
   
-[ **@publisher** =] **'**_publisher_**'**  
+[ **@publisher**  =] **'**_publisher_**'**  
  Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
   > [!NOTE]  
