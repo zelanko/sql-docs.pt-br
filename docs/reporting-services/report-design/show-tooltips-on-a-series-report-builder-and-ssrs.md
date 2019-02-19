@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fee414cbb0e3ec81dba36b6d70262b5821a75696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 90dd863f1c948d39be6e26402bb09a992e0afd3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663224"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285164"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Mostrar dicas de ferramenta em uma série (Construtor de Relatórios e SSRS)
   É possível adicionar uma dica de ferramenta a cada ponto de dados na série de um gráfico para exibir as informações relacionadas ao ponto de dados, por exemplo, o nome do grupo, o valor do ponto de dados ou o percentual do ponto de dados em relação ao total de série. Quando os usuários focalizam o ponto de dados em um relatório paginado renderizado, eles verão essas informações.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664054"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288384"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imagens, caixas de texto, retângulos e linhas (Construtor de Relatórios e SSRS)
   Além das regiões de dados, como tabelas, matrizes e gráficos, os relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usam outros itens de relatório, como imagens, caixas de texto e retângulos, para adicionar interesse visual, realçar informações importantes ou fornecer informações relacionadas. É possível alterar a formatação de um item de relatório. Por exemplo, você pode adicionar uma borda ou um preenchimento, alterar a visibilidade inicial ou a direção ou especificar um tamanho e local exatos para o item.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8ffbc6d38d8d63ea783c5b24534b4d1a34a16a5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 410529d8691474e3b10d8e1907282d91bbe6a68b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761004"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285544"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Legenda de gráfico – alterar item de texto (Construtor de Relatórios)
   Quando um campo é colocado na área Valores do gráfico, um item de legenda é gerado automaticamente contendo o nome desse campo. Cada item de legenda está conectado a uma série individual no gráfico, exceto para gráficos de forma, nos quais a legenda está conectada a pontos de dados individuais em vez de séries individuais.  

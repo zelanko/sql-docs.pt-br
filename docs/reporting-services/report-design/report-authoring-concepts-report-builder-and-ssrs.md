@@ -9,14 +9,14 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7357530ed6990c10ece43748c6ef7dd3a00c6454
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710987"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288724"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceitos de criação de relatórios (Construtor de Relatórios e SSRS)
   Esta seção define brevemente alguns dos principais conceitos usados para descrever relatórios paginados na documentação do Construtor de Relatórios e do Designer de Relatórios. Para obter definições de palavras ou de termos específicos, consulte o [Glossário &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

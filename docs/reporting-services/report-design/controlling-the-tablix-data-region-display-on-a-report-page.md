@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7733d3d68e0c4888d865f34ecae243e803636526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 255332399739b84a3f52446d97e6cf553c5c198b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612824"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286074"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controlando a exibição da região de dados Tablix em uma página do relatório
 Leia sobre as propriedades que você poderá definir em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para uma região de dados de tabela, matriz ou lista a fim de alterar sua aparência quando você vir o relatório.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 20ef203c4fbb377c62eede7186cecf811aa942ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da900964e69bc36828726e8874222e5e1e3f0541
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845720"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291614"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas
   É possível organizar dados de várias formas para mostrar a relação entre o geral e o detalhado.  É possível colocar todos os dados no relatório, mas defini-lo como oculto até que um usuário clique para revelar detalhes; trata-se de uma ação de *busca detalhada* . É possível exibir os dados em uma região de dados, como uma tabela ou um gráfico, *aninhado* em outra região de dados, como uma tabela ou matriz. É possível exibir os dados em um *sub-relatório* totalmente contido em um relatório principal. Se preferir, você pode colocar os dados detalhados em relatórios de *detalhamento* , relatórios à parte que são exibidos quando um usuário clica em um link.  
@@ -22,7 +22,7 @@ ms.locfileid: "47845720"
   
  A. Relatório detalhado  
   
- B. sub-relatório  
+ b. sub-relatório  
   
  C. Regiões de dados aninhadas  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47845720"
 |Recupera dados|Dados recuperados ao mesmo tempo que o relatório principal|Dados recuperaram um relatório detalhado por vez|Dados recuperados todos ao mesmo tempo que o relatório principal|  
 |São processados e renderizados|Com o relatório principal|Quando o link é clicado|Com o relatório principal.|  
 |É executado|Mais lenta (mas recupera todos os dados com o relatório principal)|Mais rápida (mas não recupera todos os dados com o relatório principal)|Mais rápida (e recupera todos os dados com o relatório principal)|  
-|Usa parâmetros|Sim|Sim|não|  
+|Usa parâmetros|Sim|Sim|Não|  
 |Podem ser reutilizados.|Como relatório, sub-relatório ou relatório detalhado em outros relatórios|Como relatório, sub-relatório ou relatório detalhado em outros relatórios|Não podem ser reutilizados.|  
 |São localizados|Externos ao relatório principal, mesmo servidor de relatório ou diferente|Externos ao relatório principal, mesmo servidor de relatório|Internos ao relatório principal|  
 |São exibidos|No relatório principal|Em um relatório diferente|No relatório principal|  

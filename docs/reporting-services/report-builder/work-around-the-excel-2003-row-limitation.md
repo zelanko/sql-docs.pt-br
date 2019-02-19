@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3fbf159b8d230d43b6c80b2a0d3839c0057aa4e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ba814e194af423d18ecdd5ab9e94bf0fa6d3c2c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757004"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287034"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   Este tópico explica como resolver a limitação de linhas do Excel 2003 quando você exporta relatórios paginados para o Excel. A solução alternativa é para um relatório que contém apenas uma tabela.  

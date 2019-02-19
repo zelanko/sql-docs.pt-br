@@ -1,7 +1,7 @@
 ---
 title: Notas de versão para o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b7f863c7534421fa6e091e793297b4be3f73542
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: b720f2b146273fb694ad0a55b013d20bd65a6a6a
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737057"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154853"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas sobre a versão do JDBC Driver
 
@@ -24,7 +24,13 @@ ms.locfileid: "55737057"
 
 ## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>Atualizações do Microsoft JDBC Driver 7.2 para SQL Server
 
-Microsoft JDBC Driver 7.2 para o SQL Server é totalmente compatível com a especificação de API do JDBC 4.2. Os jars no pacote 7.2 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo de mssql-jdbc-7.2.0.jre11.jar do pacote 7.2 deve ser usado com o Java 11.
+Microsoft JDBC Driver 7.2 para o SQL Server é totalmente compatível com a especificação de API do JDBC 4.2. Os jars no pacote 7.2 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo de mssql-jdbc-7.2.1.jre11.jar do pacote 7.2 deve ser usado com o Java 11.
+
+> [!NOTE]  
+> Um problema com a análise de instruções SQL foi encontrado no driver JDBC 7.2 RTW, lançado em 31 de janeiro de 2019. A alteração foi revertida e jars novo (versão 7.2.1) foram lançadas em 11 de fevereiro de 2019. 
+>
+> Baixe as atualizações mais recentes para o JDBC Driver 7.2 do [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1), e [Central do Maven](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Atualize seus projetos para usar o 7.2.1 jars de versão. Para obter mais informações, veja as notas de versão para [7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1).
+
 
 ### <a name="support-for-jdk-11"></a>Suporte para JDK 11
 
@@ -34,7 +40,7 @@ Microsoft JDBC Driver 7.2 para o SQL Server agora é compatível com o Java Deve
 
 Microsoft JDBC Driver 7.2 para o SQL Server agora dá suporte ao modo de autenticação do Active Directory MSI Managed Service Identity (). Esse modo de autenticação é aplicável em recursos do Azure com suporte para o recurso de "Identidade" habilitado. Ambos os tipos de identidades de sistema gerenciado (MSI) têm suporte pelo driver para adquirir **accessToken** para estabelecer a conexão segura.
 
-Mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação podem ser encontradas aqui: [Conectar-se usando a Autenticação do Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+Mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação podem ser encontradas aqui: [conectando-se usando a autenticação do Active Directory do Azure](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
 
 ### <a name="osgi-support"></a>Suporte de OSGi
 
@@ -215,7 +221,7 @@ Microsoft JDBC Driver 6.1 para SQL Server é totalmente compatível com as espec
 
 Microsoft JDBC Driver 6.0 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote 6.0 são nomeados de acordo com sua conformidade com a versão de API do JDBC. Por exemplo, o arquivo sqljdbc42.jar do pacote 6.0 é compatível com JDBC API 4.2. Da mesma forma, o arquivo de sqljdbc41.jar está em conformidade com a API do JDBC 4.1.
 
-Para garantir que você tenha o arquivo de sqljdbc41.jar ou sqljdbc42.jar correto, execute as seguintes linhas de código. Se a saída é "versão do Driver: 6.0.7507.100 ", você tem o pacote do JDBC Driver 6.0.
+Para garantir que você tenha o arquivo de sqljdbc41.jar ou sqljdbc42.jar correto, execute as seguintes linhas de código. Se a saída é "versão do Driver: 6.0.7507.100", você tem o pacote do JDBC Driver 6.0.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -252,7 +258,7 @@ O driver agora dá suporte a conexões transparentes para grupos de disponibilid
 
 Microsoft JDBC Driver 4.2 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote 4.2 são nomeados de acordo com sua conformidade com a versão de API do JDBC. Por exemplo, o arquivo sqljdbc42.jar do pacote 4.2 é compatível com JDBC API 4.2. Da mesma forma, o arquivo de sqljdbc41.jar está em conformidade com a API do JDBC 4.1.
 
-Para garantir que você tem o direito sqljdbc42.jar ou arquivo sqljdbc41.jar, execute as seguintes linhas de código. Se a saída é "versão do Driver: 4.2.6420.100 ", você tem o pacote do JDBC Driver 4.2.
+Para garantir que você tem o direito sqljdbc42.jar ou arquivo sqljdbc41.jar, execute as seguintes linhas de código. Se a saída é "versão do Driver: 4.2.6420.100", você tem o pacote do JDBC Driver 4.2.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");

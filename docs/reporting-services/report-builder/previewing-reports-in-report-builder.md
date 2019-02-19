@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: cef9239250bccd043d530917a284913db3e0d6e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6fe16659ce288a664d684eced0de22ce4382f3a7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795174"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288284"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Visualizando relatórios no Construtor de Relatórios
   Durante a criação de um relatório paginado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é útil visualizar o relatório frequentemente para verificar se o relatório exibe o que você deseja. Para visualizar o relatório, clique em **Executar**. O relatório é renderizado no modo de visualização.  

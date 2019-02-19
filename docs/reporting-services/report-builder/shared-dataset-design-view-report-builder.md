@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1be128dd301e5f545d1e008c8710c6e738063595
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b00e626bf9823d45d7437bfa3219fb2b0afa8cc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020461"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287937"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Exibição do design de conjunto de dados compartilhados (Construtor de Relatórios)
   Em um relatório, um conjunto de dados representa dados de relatório retornados em virtude da execução de um consulta em uma fonte de dados externa. Conjuntos de dados compartilhados são publicados em um servidor de relatório e podem ser usados por vários relatórios. Você pode criar conjuntos de dados para compartilhar com outras pessoas. Na janela Design de Conjunto de Dados Compartilhado, você pode selecionar uma fonte de dados compartilhada, especificar as propriedades do conjunto de dados compartilhado e criar uma consulta no designer de consultas.  
@@ -23,7 +23,7 @@ ms.locfileid: "50020461"
  Para obter mais informações sobre como trabalhar com dados em um relatório, consulte [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> A Faixa de Opções  
- A Faixa de Opções o ajuda a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados nos seguintes grupos lógicos: Conexão, Conjunto de Dados e Designer de Consulta.  
+ A Faixa de Opções o ajuda a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados nos seguintes grupos lógicos: Conexão, Conjunto de dados e Designer de consultas.  
   
 ### <a name="connection"></a>Conexão  
  Use o botão **Selecionar** no grupo Conexão para selecionar uma fonte de dados compartilhada no relatório ou navegar até uma fonte de dados compartilhada no servidor de relatório.  

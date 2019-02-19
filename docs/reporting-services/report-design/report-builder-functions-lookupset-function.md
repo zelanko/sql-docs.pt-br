@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c4ceb9cd36d27a5c9fe29e0d446a56baf6698489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eef80b349ed067d589759afbdfa98a7c1221726e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689534"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285925"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funções do Construtor de Relatórios – Função LookupSet
   Retorna o conjunto de valores correspondentes para o nome especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -51,7 +51,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Avalia a expressão de origem no escopo atual.  
   
--   Avalia a expressão de destino para cada linha do conjunto de dados especificado depois que foram aplicados filtros, com base no agrupamento do conjunto de dados especificado.  
+-   Avalia a expressão de destino para cada linha do conjunto de dados especificado depois que foram aplicados filtros, com base na ordenação do conjunto de dados especificado.  
   
 -   Para cada correspondência da expressão de origem e destino, avalia a expressão resultante para aquela linha no conjunto de dados.  
   

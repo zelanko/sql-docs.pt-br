@@ -16,14 +16,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 177889602a291e4eb2d6596a0b1e91926deb1f1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3279ace83e7ed2e3dc2f9997c68331fd0ddbb645
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801567"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286395"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   As opções de exibição para polígonos, linhas e pontos em uma camada do mapa são controladas pela definição de opções para a camada, estabelecendo regras para os elementos do mapa na camada ou substituindo opções para elementos de mapas inseridos específicos em uma camada.  
@@ -106,7 +106,7 @@ ms.locfileid: "47801567"
   
 -   **Ideal.** Crie intervalos que ajustem automaticamente a distribuição para criar subintervalos equilibrados. O número de subintervalos é determinado pelo algoritmo.  
   
--   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados do exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados de exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
   
  Os valores de distribuição são usados pelas regras para variar os valores de exibição do elemento do mapa.  
   

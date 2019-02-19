@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 717f817e7d318e4eae40e071f925264c42878a16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 384619d6b5e688ff5f1823872140ad5b1df7d283
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675844"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289294"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Renderizando itens de relatório (Construtor de Relatórios e SSRS)
   O número, o tamanho e o local de itens de relatório afetam a maneira como os renderizadores paginam o corpo de relatório. A seguir uma descrição de como vários itens de relatório são renderizados.  

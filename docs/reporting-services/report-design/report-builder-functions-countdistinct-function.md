@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9b1cbc3721c90beae1203cb1f9391b7d86b071b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fdf0446082a3cfde45f3093e2d6cd0b5077e3b8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816194"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287864"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Funções do Construtor de Relatórios – Função CountDistinct
   Retorna uma contagem de todos os valores não nulos distintos especificados pela expressão, avaliados no contexto do escopo fornecido.  

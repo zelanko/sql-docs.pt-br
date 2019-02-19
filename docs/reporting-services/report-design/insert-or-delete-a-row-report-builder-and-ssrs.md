@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8f60cd93baed4f1f3bd6aec837c6c9304729d061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9e1698d581d920379b085290d646bca12ab5ff6a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612894"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289134"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Inserir ou excluir uma linha (Construtor de Relatórios e SSRS)
 Você pode adicionar ou excluir linhas em uma região de dados tablix em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Essa região pode ser uma tabela, uma matriz ou uma lista. Os procedimentos a seguir não se aplicam às regiões de dados de gráficos e medidores.  
@@ -27,7 +27,7 @@ Você pode adicionar ou excluir linhas em uma região de dados tablix em um rela
   
 -   No modo Design, clique no canto superior esquerdo da região de dados Tablix para que os indicadores de linha e coluna sejam exibidos acima ou próximo dele.  
   
-     Para obter mais informações sobre áreas de regiões de dados, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Para obter mais informações sobre áreas de regiões de dados, consulte [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>Para inserir uma linha em uma região de dados selecionada  
   

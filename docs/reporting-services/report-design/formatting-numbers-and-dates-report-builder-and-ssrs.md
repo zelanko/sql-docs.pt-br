@@ -15,14 +15,14 @@ f1_keywords:
 - "10285"
 - sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6fa925a95f14191c87fedeca1abe2f39e68f9cca
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029205"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284524"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatando números e datas (Construtor de Relatórios e SSRS)
   Você pode formatar números e datas em regiões de dados selecionando um formato na página **Número** da caixa de diálogo **Propriedades** da região de dados correspondentes.  

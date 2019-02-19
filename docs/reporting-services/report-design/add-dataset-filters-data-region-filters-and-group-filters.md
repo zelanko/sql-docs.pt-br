@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9435b891652c00391cd934cf739ba76ff20f4a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d6d397d3c2f841bb98d49cfdf42d525f0d9b4fc2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779406"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286044"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo
   Em um relatório, um filtro faz parte de um conjunto de dados, uma região de dados ou um grupo de regiões de dados criado por você para limitar os dados usados no relatório. Os filtros são uma forma de ajudar você a controlar os dados do relatório, caso você não possa alterar a consulta do conjunto de dados; por exemplo, se estiver usando um conjunto de dados compartilhado.  

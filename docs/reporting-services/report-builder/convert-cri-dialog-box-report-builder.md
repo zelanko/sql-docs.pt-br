@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc06ca21a1fa953db107b1c166bc9d05cebd67f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0e1b099d3bd92d5dad8d96f4911585c28f54caa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832294"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294344"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Caixa de diálogo Converter CRI (Construtor de Relatórios)
+
   Este relatório contém CRIs (itens de relatório personalizados) com recursos sem suporte. CRIs são extensões para a linguagem RDL (Report Definition Language) que oferecem suporte a objetos personalizados que exibem dados em um relatório. Os CRIs incluem componentes em tempo de design e em tempo de execução oferecidos por fornecedores de software de terceiros.  
   
 > [!NOTE]  
