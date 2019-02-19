@@ -9,14 +9,14 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 80544535b3a45fa11be346b1b35714148f2bd434
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 76801b634d9f8de77e8ee4d7817c4f1ccc595e2e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624484"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298577"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Definir parâmetros em um relatório publicado – modo integrado do SharePoint
   Um relatório parametrizado aceita valores de entrada usados para filtrar dados quando você executa o relatório. Os parâmetros são definidos quando o relatório é criado. Dependendo de como um parâmetro de relatório é configurado na definição do relatório, ele pode aceitar um único valor, vários valores ou valores dinâmicos, que se alteram em resposta a uma seleção anterior (por exemplo, quando você seleciona uma categoria de produto, a próxima seleção pode ser um produto específico dessa categoria). Um parâmetro pode ter um valor padrão, que pode ser usado para executar automaticamente uma versão filtrada do relatório ou pode ser substituído por um valor diferente.  

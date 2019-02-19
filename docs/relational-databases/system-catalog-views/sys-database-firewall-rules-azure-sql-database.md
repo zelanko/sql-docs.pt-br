@@ -2,7 +2,7 @@
 title: sys. database_firewall_rules (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-database
+ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 59c59150136910e2d0818fe93ff4811ed3262d8d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c044294b7bb9beb8de502b3a1148c55dd026ab02
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012317"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407596"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

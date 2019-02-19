@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4be086fc974ccb6338f75eed0cf10ccb0087edc0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 50a51ce650bf4c9b7fa7ff4b8cd19f940d54d04b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031665"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298484"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Renderizando dados (Construtor de Relatórios e SSRS)
   Quando você usa os renderizadores de layout, como HTML, MHTML, Word, Excel, PDF ou Image, os dados e suas organizações permanecem inalterados. Ao exportar usando um formato de renderizador de dados, como CSV (Comma-Separated Value) ou XML, nenhum elemento de layout visual é renderizado. O CSV e o XML aplicam determinadas regras ao relatório e seu conteúdo ao renderizar o relatório. Essas regras determinam como os dados são renderizados nesses formatos.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a6ae1e843a2f4c829f5dd21f7795681bb962e025
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bdfb2cfca82df57d76c321957bbcb565fb2b058
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031575"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298434"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Referências de globais internas e referências de usuários (Construtor de Relatórios)
   A coleção de campos internos que inclui as coleções **Globals** e **User** representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de **Globals** fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de **User** fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  

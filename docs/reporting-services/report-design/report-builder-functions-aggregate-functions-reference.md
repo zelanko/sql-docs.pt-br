@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b707897d5be5d85dc3a7442a777decbd43801a52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f51a83fca42e1f736a0e0295d2443193b17df5d3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790314"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296932"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
   Para incluir valores agregados no relatório, é possível usar funções de agregação internas em expressões. A função de agregação padrão para campos numéricos é SUM. É possível editar a expressão e usar uma função de agregação interna diferente ou especificar outro escopo. O escopo identifica qual conjunto de dados deve ser usado no cálculo.  
@@ -72,18 +72,18 @@ ms.locfileid: "47790314"
 |Local no relatório|Campos|Parâmetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variáveis|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Cabeçalho de página<br /><br /> Rodapé de página|Sim|Sim|No máximo um<br /><br /> Observação 1|Sim|Sim|Sim|Sim|  
-|Corpo|Sim<br /><br /> Observação 2|Sim|Apenas itens no escopo atual ou em um escopo contentor<br /><br /> Observação 3|não|Sim|Sim|Sim|  
-|Parâmetro de relatório|não|Apenas parâmetros anteriores da lista<br /><br /> Observação 4|não|não|não|não|não|  
-|Campo|Sim|Sim|não|não|não|não|não|  
-|Parâmetro de consulta|não|Sim|não|não|não|não|não|  
-|Expressão de grupo|Sim|Sim|não|não|Sim|não|não|  
-|Expressão de classificação|Sim|Sim|não|não|Sim|Sim<br /><br /> Observação 5|não|  
-|Expressão de filtro|Sim|Sim|não|não|Sim|Sim<br /><br /> Observação 6|não|  
-|Código|não|Sim<br /><br /> Observação 7|não|não|não|não|não|  
-|Report.Language|não|Sim|não|não|não|não|não|  
-|Variáveis|Sim|Sim|não|não|Sim|Escopo atual ou contentor|não|  
-|Agregações|Sim|Sim|Apenas cabeçalho da página/rodapé da página|Apenas em agregações de item de relatório|Sim|não|não|  
-|Funções de Lookup|Sim|Sim|Sim|não|Sim|não|não|  
+|Corpo|Sim<br /><br /> Observação 2|Sim|Apenas itens no escopo atual ou em um escopo contentor<br /><br /> Observação 3|Não|Sim|Sim|Sim|  
+|Parâmetro de relatório|Não|Apenas parâmetros anteriores da lista<br /><br /> Observação 4|Não|Não|Não|Não|Não|  
+|Campo|Sim|Sim|Não|Não|Não|Não|Não|  
+|Parâmetro de consulta|Não|Sim|Não|Não|Não|Não|Não|  
+|Expressão de grupo|Sim|Sim|Não|Não|Sim|Não|Não|  
+|Expressão de classificação|Sim|Sim|Não|Não|Sim|Sim<br /><br /> Observação 5|Não|  
+|Expressão de filtro|Sim|Sim|Não|Não|Sim|Sim<br /><br /> Observação 6|Não|  
+|Código|Não|Sim<br /><br /> Observação 7|Não|Não|Não|Não|Não|  
+|Report.Language|Não|Sim|Não|Não|Não|Não|Não|  
+|Variáveis|Sim|Sim|Não|Não|Sim|Escopo atual ou contentor|Não|  
+|Agregações|Sim|Sim|Apenas cabeçalho da página/rodapé da página|Apenas em agregações de item de relatório|Sim|Não|Não|  
+|Funções de Lookup|Sim|Sim|Sim|Não|Sim|Não|Não|  
   
 -   **Observação 1.** ReportItems deve existir na página de relatório renderizada ou o seu valor será Nulo. Se a visibilidade de um item de relatório depender de uma expressão que é avaliada como False, o item de relatório não existirá na página.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "47790314"
   
 |Contexto|RunningValue|RowNumber|First<br /><br /> Last|Previous|Sum e outras funções de classificação prévia|Agregações de ReportItem|Funções de Lookup|Função de agregação|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valor em uso|não|não|não|não|Sim|não|Sim|não|  
-|Primeiro<br /><br /> Last|não|não|não|não|Sim|não|não|não|  
-|Previous|Sim|Sim|Sim|não|Sim|não|Sim|não|  
-|Sum e outras funções de classificação prévia|não|não|não|não|Sim|não|Sim|não|  
-|Agregações de ReportItem|não|não|não|não|não|não|não|não|  
-|Funções de Lookup|Sim|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|não|não|  
-|Função de agregação|não|não|não|não|não|não|não|não|  
+|Valor em uso|Não|Não|Não|Não|Sim|Não|Sim|Não|  
+|First<br /><br /> Last|Não|Não|Não|Não|Sim|Não|Não|Não|  
+|Previous|Sim|Sim|Sim|Não|Sim|Não|Sim|Não|  
+|Sum e outras funções de classificação prévia|Não|Não|Não|Não|Sim|Não|Sim|Não|  
+|Agregações de ReportItem|Não|Não|Não|Não|Não|Não|Não|Não|  
+|Funções de Lookup|Sim|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Não|Não|  
+|Função de agregação|Não|Não|Não|Não|Não|Não|Não|Não|  
   
 -   **Observação 1.** As funções de agregação só serão permitidas na expressão *Source* de uma função Lookup se a função Lookup não estiver contida em uma agregação. As funções de agregação não são permitidas nas expressões *Destination* ou *Result* de uma função Lookup.  
   

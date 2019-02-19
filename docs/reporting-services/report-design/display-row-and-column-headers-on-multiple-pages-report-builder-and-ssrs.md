@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 24b47c23fa34fe1a575268cf63ea8e50dd18139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad0da97b8b9837213a0abff73204a2287b02e011
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395929"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291983"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)
   Você pode controlar se os cabeçalhos de linha e de coluna serão repetidos em cada página de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] em uma região de dados tablix (uma tabela, matriz ou lista) que abrange várias páginas.

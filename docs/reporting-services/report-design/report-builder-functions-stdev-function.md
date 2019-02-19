@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 98f2445d65f4071b17cd9fac1fd3485418eaaa7f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40cde95453f8e0107dcbf697057e5bd4e7f8c3fd
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028175"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287404"
 ---
 # <a name="report-builder-functions---stdev-function"></a>Funções do Construtor de Relatórios – Função StDev
   Retorna o desvio padrão de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
-ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860079"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295973"
 ---
 # <a name="set-default-options-for-report-builder"></a>Definir opções padrão para o Construtor de Relatórios
   No Construtor de Relatórios, você pode definir um número de padrões úteis para tornar a criação de relatórios mais rápida e fácil.  Por exemplo, se você puder definir ou alterar o servidor de relatório padrão, o Construtor de Relatórios salva seus relatórios no mesmo servidor de relatório automaticamente, a menos que você especifique o contrário.  

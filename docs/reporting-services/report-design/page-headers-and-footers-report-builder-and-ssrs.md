@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6ff5c2e66580eabb29908dcec99b3eaa429d1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03f701a40c97d5958e5e8b2146844f335d64724
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759785"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298634"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  
@@ -55,9 +55,9 @@ ms.locfileid: "47759785"
   
 |Suportado na expressão|Agregações de ReportItems|Agregações de conjunto de dados (o escopo deve ser o nome do conjunto de dados)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Caixas de texto no corpo do relatório|Sim|não|  
-|&PageNumber|Sim|não|  
-|&TotalPages|Sim|não|  
+|Caixas de texto no corpo do relatório|Sim|Não|  
+|&PageNumber|Sim|Não|  
+|&TotalPages|Sim|Não|  
 |Função de agregação|Sim. Por exemplo,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sim. Por exemplo,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Coleção de campos para itens da página|Indiretamente. Por exemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sim. Por exemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Imagem vinculada a dados|Indiretamente. Por exemplo, `=ReportItems!TXT_Photo.Value`|Sim. Por exemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

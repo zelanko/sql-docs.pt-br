@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f57f685532ee11f960fe71243944b819ef0dbd5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400020"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295154"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   A extensão da renderização do Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gera um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xslx). Com a extensão de renderização do Excel, a largura de colunas em Excel reflete com maior precisão a largura de colunas em relatórios.  

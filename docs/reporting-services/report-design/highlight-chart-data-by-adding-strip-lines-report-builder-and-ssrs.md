@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 94dba56cee823d5e8df68244b4d8d44fee5c98a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e45240643a54464c4821250208d54d5f302ea52a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529775"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294063"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Realçar dados do gráfico adicionando faixas (Construtor de Relatórios e SSRS)
   As faixas são intervalos horizontais ou verticais que sombreiam o plano de fundo do gráfico em intervalos regulares ou personalizados. É possível usar faixas para:  

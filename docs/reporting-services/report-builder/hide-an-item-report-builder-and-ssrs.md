@@ -9,14 +9,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fa904bc1df8cb53935bc674e79bae387e33e9244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 202f74b4e01780d7fa738b0c9905b8a29436bb52
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843334"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285224"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar um item (Construtor de Relatórios e SSRS)
   Defina a visibilidade de um item de relatório quando quiser ocultar condicionalmente um item com base em um parâmetro de relatório ou alguma outra expressão que você especificar.  

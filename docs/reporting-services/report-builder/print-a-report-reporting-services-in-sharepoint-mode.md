@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4a5339c18b724531609fe27f237157f1ae86116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 319e00685255e77c7afe17fc932467268e020873
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617124"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294354"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir um relatório (Reporting Services no modo do SharePoint)
   Para um servidor de relatório que é executado no modo do SharePoint, há três maneiras de imprimir um relatório em um aplicativo Web do SharePoint:  

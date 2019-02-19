@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 90a9a377391e04a97adf3d542c8493b31649141e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8a751d0c7d6438eece89d66805bcb0c7fb2c96be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590810"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298260"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvar relatórios em um servidor de relatório (Construtor de Relatórios)
   No Construtor de Relatórios, é possível salvar uma definição de relatório em um servidor de relatório (processo também conhecido como publicação de relatório). Quando o relatório for salvo em um servidor de relatório, outros usuários poderão exibi-lo. Cada vez que você executa o relatório publicado, recupera os dados mais atuais. Para salvar uma cópia estática de um relatório renderizado, exporte o relatório para um formato de arquivo diferente e salve-o ou use o recurso de histórico de relatório para salvar versões dos relatórios renderizados.  

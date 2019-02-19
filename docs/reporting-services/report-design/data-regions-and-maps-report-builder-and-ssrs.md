@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e0eb7f32dc0a377b8f0ddf9eda7dd43ee04fe4df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6065e26f36561b446257825f7f953c5eeccc3b25
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759554"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290894"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Regiões de dados e mapas (Construtor de Relatórios e SSRS)
   Uma região de dados é um relatório que exibe dados de um conjunto de dados do relatório. Os dados do relatório podem ser exibidos como números e texto em uma tabela, matriz ou lista; graficamente em um gráfico ou medidor; e sobre um plano de fundo geográfico em um mapa. Tabelas, matrizes e listas se baseiam na região de dados *tablix* , que se expande conforme o necessário para exibir todos os dados do conjunto de dados. Uma região de dados tablix oferece suporte a vários grupos de linhas e colunas e a linhas, bem como colunas estáticas e dinâmicas. Um gráfico exibe vários grupos de categorias e séries em diversos formatos de gráfico. Um medidor exibe um único valor ou um valor agregado para um conjunto de dados. Um mapa exibe dados espaciais como elementos do mapa cuja aparência pode variar com base nos dados agregados de um conjunto de dados.  

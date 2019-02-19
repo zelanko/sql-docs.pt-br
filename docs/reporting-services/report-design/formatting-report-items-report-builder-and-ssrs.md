@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 76d019a5171b64c06e346b02d1c92d610b0fe13c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 16f4adc3b2aefa00ad02f8e39f8cd17f3366e9ee
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835634"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298194"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatando itens de relatório (Construtor de Relatórios e SSRS)
   A formatação dos itens do relatório torna-o mais atraente e legível. Você pode formatar as caixas de texto e itens específicos das caixas de texto, as imagens, as expressões e os dados no modo de design de relatório.  
@@ -24,13 +24,13 @@ ms.locfileid: "47835634"
   
  A. Caixa de texto com borda de linha dupla e uma grande variedade de estilos de formatação, inclusive um link.  
   
- B. Caixa de texto com borda tracejada, HTML bruto e HTML renderizado.  
+ b. Caixa de texto com borda tracejada, HTML bruto e HTML renderizado.  
   
  C. Caixa de texto com um rótulo de texto e um espaço reservado.  
   
  É possível alterar as opções de formatação selecionando o item a ser formatado e abrindo a caixa de diálogo Propriedades do item. Por exemplo, se você quiser formatar o conteúdo de uma caixa de texto inteira ou uma palavra selecionada nela, clique com o botão direito do mouse no item e selecione **Propriedades da Caixa de Texto**. Em seguida, aplique os estilos de formatação desejados.  
   
- Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para começar rapidamente, confira [Tutorial: formatar o texto &#40Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

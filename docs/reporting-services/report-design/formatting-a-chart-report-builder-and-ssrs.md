@@ -47,14 +47,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 22328fb1900ba12e347b3c280d758c6dce1ef834
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ebca36e31b832d0aeb4aef588564b64c618c45b7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727134"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291524"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formatando um gráfico (Construtor de Relatórios e SSRS)
   Quando você tiver definido os dados do gráfico e estiver satisfeito com a sua aparência, poderá adicionar a formatação para melhorá-lo em geral e realçar os principais pontos de dados. As opções de formatação mais comuns podem ser modificadas na caixa de diálogo Propriedades que são encontradas quando você clica com o botão direito do mouse em um elemento do gráfico para exibir o menu de atalho correspondente. Cada elemento do gráfico possui sua própria caixa de diálogo. Para obter mais informações sobre elementos de gráfico, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

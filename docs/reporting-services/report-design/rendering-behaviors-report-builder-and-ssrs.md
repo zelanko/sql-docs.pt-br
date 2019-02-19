@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1bf8670aea01d074856188d1d0ab9836e83e3421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 575849e92c223731314109bfbfb5c6b64af7d09d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729004"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291866"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamentos de renderização (Construtor de Relatórios e SSRS)
   Dependendo do renderizador selecionado, algumas regras são aplicadas ao corpo do relatório e ao seu conteúdo quando um relatório é renderizado. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  

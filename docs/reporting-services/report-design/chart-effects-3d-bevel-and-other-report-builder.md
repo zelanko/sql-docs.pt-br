@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d40b8179e008312752e6b1a90f83627fdcf88eea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8b1c5bc212be33c352110694b4bc9c12f715b33c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826974"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297414"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Efeitos de gráfico – 3D, bisel e outros (Construtor de Relatórios)
   É possível usar efeitos 3D (tridimensionais) para fornecer profundidade e adicionar impacto visual aos gráficos em seus relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo, para enfatizar uma fatia específica de um gráfico de pizza destacada, você pode girar e alterar a perspectiva do gráfico de modo que as pessoas observem essa fatia primeiro. Quando efeitos 3D são aplicados ao gráfico, todas as cores de gradiente e estilos de hachurado são desabilitados.  

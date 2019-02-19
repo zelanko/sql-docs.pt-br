@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 697934ebe182f82e4f9c668439afb6ecf2bc5631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f7f0033a5ed81cb21d7c77038cf95ec8123c3d64
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702594"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297595"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
   A extensão de renderização CSV (Comma-Separated Value) renderiza relatórios paginados como uma representação mesclada dos dados de um relatório padronizado, em formato de texto simples que pode ser facilmente lido e que também permite a troca com vários aplicativos.  

@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030600"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407576"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Criar uma extensão do estúdio de dados do Azure
 
@@ -37,16 +37,15 @@ O estúdio de dados do Azure baseia-se na mesma estrutura como o Visual Studio C
 
 - [Node. js](https://nodejs.org) instalado e disponível no seu `$PATH`. Inclui o Node. js [npm](https://www.npmjs.com/), o Gerenciador de pacotes do Node. js, que é usado para instalar o gerador de extensão.
 - [Visual Studio Code](https://code.visualstudio.com) para depurar a extensão.
-- O estúdio de dados do Azure [extensão de depuração](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Certifique-se de `sqlops` está em seu caminho. Para Windows, verifique se você escolher o `Add to Path` opção no setup.exe. Para Mac ou Linux, execute as *instalar o comando 'sqlops' no caminho* opção.
-- SQL Operations Studio depurar extensão (opcional). Isso lhe permite testar sua extensão sem a necessidade de empacotar e instalá-lo no estúdio de dados do Azure.
+- O estúdio de dados do Azure [extensão de depuração](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (opcional). Isso lhe permite testar sua extensão sem a necessidade de empacotar e instalá-lo no estúdio de dados do Azure.
+- Certifique-se de `azuredatastudio` está em seu caminho. Para Windows, verifique se você escolher o `Add to Path` opção no setup.exe. Para Mac ou Linux, execute as *instalar o comando 'azuredatastudio' no caminho* opção.
 
 
 ## <a name="install-the-extension-generator"></a>Instalar o gerador de extensão
 
 Para simplificar o processo de criação de extensões, nós criamos uma [gerador de extensão](https://code.visualstudio.com/docs/extensions/yocode) usando o Yeoman. Para instalá-lo, execute o seguinte no prompt de comando:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>Criar sua extensão
 
@@ -54,13 +53,13 @@ Para criar uma extensão:
 
 1. Inicie o gerador de extensão com o seguinte comando:
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. Escolher **novo mapa de teclas** na lista de tipos de extensão:
 
    ![Gerador de extensão](./media/tutorial-create-extension/extension-generator.png)
 
-3. Siga as etapas para preencher o nome da extensão (para este tutorial, use **ssmskeymap**) e adicione uma descrição.
+3. Siga as etapas para preencher o nome da extensão (para este tutorial, use **ssmskeymap2**) e adicione uma descrição.
 
 Concluir as etapas anteriores cria uma nova pasta. Abra a pasta no Visual Studio Code e você está pronto para criar sua própria extensão de associação de chave!
 

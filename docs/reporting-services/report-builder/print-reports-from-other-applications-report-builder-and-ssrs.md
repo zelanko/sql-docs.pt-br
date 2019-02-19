@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 113735877c1618f65d9d1a87ce8cb6cc05c02daa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aa3ef63a6b281147f051e0e0255b8a61c641fed3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031692"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298574"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>Imprimir relatórios de outros aplicativos (Construtor de Relatórios e SSRS)
   O Construtor de Relatórios apresenta uma opção de exportação que permite exibir facilmente um relatório em outros aplicativos. O comando **Export** está disponível na barra de ferramentas do relatório exibida na parte superior de um relatório quando você o abre em um navegador ou aplicativo baseado na Web. Exportar um relatório o exibe em um aplicativo diferente (por exemplo, exportar um relatório para o Excel o abre no [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]). Para fins de impressão, a exportação de um relatório só é recomendada caso o aplicativo tenha recursos de impressão específicos que você queira usar.  

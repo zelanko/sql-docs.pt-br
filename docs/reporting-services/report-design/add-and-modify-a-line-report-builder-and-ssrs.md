@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fa58344c4543c04bd6c16647fd524252539937c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb679941710f145d5a35aeaecc60996eaf69c607
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785294"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296884"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Adicionar e modificar uma linha (Construtor de Relatórios e SSRS)
   Você poderá adicionar uma linha ao relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando desejar que um elemento gráfico separe seções do relatório. Além disso, você pode personalizar a aparência da linha editando as propriedades da linha, como cor ou estilo. Por exemplo, talvez você deseje incorporar as cores da empresa no relatório.    
