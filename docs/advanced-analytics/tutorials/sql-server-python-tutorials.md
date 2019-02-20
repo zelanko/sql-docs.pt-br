@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046456"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425781"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>Tutoriais do Python do SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Este artigo descreve os tutoriais do Python para análise no banco de dados em [
 
 | Link | Descrição |
 |------|-------------|
-| [Guia de início rápido: Script de Python de "Hello world" no SQL Server](quickstart-r-run-using-tsql.md) | Conheça os fundamentos de como chamar o Python no T-SQL. |
+| [Guia de início rápido: Script de Python de "Hello world" no SQL Server](quickstart-python-run-using-t-sql.md) | Conheça os fundamentos de como chamar o Python no T-SQL. |
 | [Guia de início rápido: Criar, treinar e usar um modelo de Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-in-tsql.md) | Explica a mecânica de incorporar código Python em um procedimento armazenado, fornecendo entradas e a execução do procedimento armazenado. |
 | [Tutorial: Criar um modelo usando revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstra como executar código em um terminal de Python remoto, usando o contexto de computação do SQL Server. Você deve ser um pouco familiarizado com os ambientes e ferramentas do Python. Código de exemplo é fornecido que cria um modelo usando **rxLinMod**, da nova **revoscalepy** biblioteca. |
 | [Tutorial: Aprenda a análise de Python no banco de dados para desenvolvedores do SQL](sqldev-in-database-python-for-sql-developers.md) | Este passo a passo de ponta a ponta demonstra o processo de criação de uma solução completa do Python usando procedimentos armazenados T-SQL. Todo o código Python é incluído.|
