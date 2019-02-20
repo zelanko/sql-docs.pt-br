@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420221"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265393"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Edições e recursos com suporte do SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Administrador de Recursos|Sim|Não|Não|Não|Não|  
 |Paralelismo de tabela particionada|Sim|Não|Não|Não|Não|
 |Contêineres de vários fluxos de arquivos|Sim|Sim <sup>2</sup>|Sim <sup>2</sup>|Sim <sup>2</sup>|Sim <sup>2</sup>|
-|Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|Não|Não|Não|Não|
+|Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|Não <sup>4</sup>|Não|Não|Não|
 |Buffer Pool Extension|Sim|Sim|Não|Não|Não|
 |Administração do recurso de E/S|Sim|Não|Não|Não|Não|  
 |Durabilidade atrasada|Sim|Sim|Sim|Sim|Sim|
@@ -188,6 +188,8 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 <sup>2</sup> Aplica-se a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> Esse recurso não está incluído na opção de instalação LocalDB.
+
+<sup>4</sup> O licenciamento baseado em Standard Edition e SQL Server + CAL pode restringir a quantidade de processadores que o SQL Server Standard pode usar, embora o SQL Server Standard seja habilitado para NUMA. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Recurso|Enterprise|Standard|Web|Express|Express with Advanced Services|  
