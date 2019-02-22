@@ -13,15 +13,15 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ffa7e044b5771bcf1181ee3aa0e22dfbdd8e555
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a4a3b450427aa8369b1e76c91265a8c663df0243
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020609"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590353"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Contém uma linha para cada banco de dados físico em um nó de computação. Agregar informações de banco de dados físico para obter informações detalhadas sobre bancos de dados. Para combinar informações, Junte-se a `sys.pdw_nodes_pdw_physical_databases` para o `sys.pdw_database_mappings` e `sys.databases` tabelas.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "56020609"
 |physical_name|**sysname**|O nome físico do banco de dados em nós de computação/Shell. Esse valor é o mesmo que um valor na coluna physical_name a [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) exibição.|  
 |pdw_node_id|**int**|Id numérico exclusivo associado ao nó.|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-returning"></a>A. Retornando  
  A consulta a seguir retorna o nome e ID de cada banco de dados no mestre e o nome do banco de dados correspondente em cada nó de computação.  

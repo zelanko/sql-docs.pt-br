@@ -2,7 +2,7 @@
 title: Avaliar uma empresa e consolidar relatórios de avaliação (SQL Server) | Microsoft Docs
 description: Saiba como usar o DMA para avaliar uma empresa e consolidar relatórios de avaliação antes de atualizar o SQL Server ou migrando para o banco de dados SQL.
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464772"
+ms.locfileid: "56590341"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o DMA
 
@@ -186,7 +186,7 @@ Você pode usar indicadores para alternar o contexto de geração de relatórios
 - Avaliações de nuvem do Azure SQL MI
 - Avaliações de local
 
-  ![Indicadores de exibições de relatório de DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![Indicadores de exibições de relatório de DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 Para ocultar a folha de filtros, CTRL + clique no botão Voltar:
 
