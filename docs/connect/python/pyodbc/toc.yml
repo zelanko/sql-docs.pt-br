@@ -1,8 +1,0 @@
-- name: Driver SQL Python – pyodbc
-  href: python-sql-driver-pyodbc.md
-- name: 'Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Python pyodbc'
-  href: step-1-configure-development-environment-for-pyodbc-python-development.md
-- name: 'Etapa 2: Criar um banco de dados SQL para o desenvolvimento Python pyodbc'
-  href: step-2-create-a-sql-database-for-pyodbc-python-development.md
-- name: 'Etapa 3: Prova de conceito da conexão ao SQL usando pyodbc'
-  href: step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md

@@ -1,8 +1,0 @@
-- name: Executando procedimentos armazenados
-  href: running-stored-procedures.md
-- name: Processando em lote as chamadas de procedimento armazenado
-  href: batching-stored-procedure-calls.md
-- name: Chamando um procedimento armazenado
-  href: calling-a-stored-procedure.md
-- name: Processando resultados do procedimento armazenado
-  href: processing-stored-procedure-results.md

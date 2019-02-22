@@ -1,8 +1,0 @@
-- name: Extensões de personalização do Analysis Services
-  href: analysis-services-personalization-extensions.md
-- name: Estender procedimentos armazenados do OLAP +
-  href: ../../../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-- name: Estendendo a funcionalidade OLAP
-  href: extending-olap-functionality.md
-- name: Estendendo OLAP por meio de personalizações
-  href: extending-olap-through-personalizations.md

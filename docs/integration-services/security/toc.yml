@@ -1,8 +1,0 @@
-- name: Visão geral
-  href: security-overview-integration-services.md
-- name: Controle de acesso de dados confidenciais em pacotes
-  href: access-control-for-sensitive-data-in-packages.md
-- name: Identificar a origem dos pacotes com assinaturas digitais
-  href: identify-the-source-of-packages-with-digital-signatures.md
-- name: Funções do Integration Services (Serviço do SSIS)
-  href: integration-services-roles-ssis-service.md
