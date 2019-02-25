@@ -11,17 +11,14 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 99119431d65cc8780cba24fbd891a1688844a769
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300303"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802492"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
-
-> [!div class="nextstepaction"]
-> [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-se à instância do SQL Server e executar alguns comandos T-SQL (Transact-SQL) básicos. O artigo demonstra como fazer o seguinte:
 
@@ -40,7 +37,7 @@ Para concluir este tutorial, você precisa de acesso ao SQL Server Management St
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
-- **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Windows**: [Baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
