@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510822"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828416"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Como configurar a memória persistente (PMEM) para SQL Server no Linux
 
@@ -80,7 +80,7 @@ ndctl list
 
   Depois que o dispositivo foi configurado com ndctl, formatado e montado, você pode colocar arquivos de banco de dados nele. Você também pode criar um novo banco de dados 
 
-1. Habilite iluminismo de arquivo de banco de dados do SQL Server usando o sinalizador de rastreamento 3979. Este sinalizador de rastreamento é um sinalizador de rastreamento de inicialização e como tal, precisa ser habilitado usando o utilitário mssql-conf.
+1. Como os dispositivos PMEM são O_DIRECT seguro, habilite o sinalizador de rastreamento 3979 para desabilitar o mecanismo de liberação forçado. Este sinalizador de rastreamento é um sinalizador de rastreamento de inicialização e como tal, precisa ser habilitado usando o utilitário mssql-conf. Observe que essa é uma alteração de configuração do servidor, e você não deve usar este sinalizador de rastreamento se você tiver quaisquer dispositivos sem conformidade O_DIRECT que precisam o mecanismo de liberação forçado para garantir a integridade dos dados. Para obter mais informações, consulte https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Reinicie o SQL Server.
 
