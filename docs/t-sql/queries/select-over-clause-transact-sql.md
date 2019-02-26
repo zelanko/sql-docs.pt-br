@@ -26,18 +26,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299423"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803321"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT – Cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Determina o particionamento e a ordenação de um conjunto de linhas antes da aplicação da função de janela associada. Isto é, a cláusula OVER defines uma janela ou conjunto de linhas especificado pelo usuário em um conjunto de resultados de consulta. Uma função de janela computa um valor para cada linha na janela. Você pode usar a cláusula OVER com funções para computar valores agregados como médias móveis, agregações cumulativas, somas acumuladas ou os primeiros N resultados por grupo.  
   

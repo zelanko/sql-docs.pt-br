@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300094"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802372"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Compartilhe seus comentários sobre o SQL Docs sumário!](https://aka.ms/sqldocsurvey)
 
 > Para SQL Server 2014 e inferior, consulte [utilitário sqlcmd](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > ).
@@ -66,7 +63,7 @@ As ferramentas de linha de comando são a disponibilidade geral (GA), no entanto
 
 Número da versão: 15.0 <br>
 Número de build: 15.0.1000.34<br>
-Data de liberação 18 de outubro de 2018
+Data de lançamento: 18 de outubro de 2018
 
 A nova versão do SQLCMD dá suporte à autenticação do Azure AD, incluindo suporte a autenticação multifator (MFA) para recursos de banco de dados SQL, o SQL Data Warehouse e o Always Encrypted.
 O BCP novo dá suporte à autenticação do Azure AD, incluindo suporte a autenticação multifator (MFA) para o banco de dados SQL e SQL Data Warehouse.
@@ -80,7 +77,7 @@ Para verificar a versão SQLCMD executar `sqlcmd -?` de comando e confirme que 1
 > [!NOTE]
 > Você precisa versão 13.1 ou superior para dar suporte a Always Encrypted (`-g`) e autenticação do Active Directory do Azure (`-G`). (Você poderá ter várias versões do sqlcmd.exe instaladas no computador. Verifique se você está usando a versão correta. Para determinar a versão, execute `sqlcmd -?`.)
 
-Assim que é previamente instalado por padrão, você pode tentar o utilitário sqlcmd do Azure Cloud Shell: [![Iniciar Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "iniciar Cloud Shell")](https://shell.azure.com)
+Você pode tentar o utilitário sqlcmd do Azure Cloud Shell, pois ele já está instalado por padrão: [ ![iniciar Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "iniciar Cloud Shell")](https://shell.azure.com)
 
   Para executar instruções sqlcmd no SSMS, selecione o Modo SQLCMD na lista suspensa Menu de Consulta do painel de navegação superior.  
   
@@ -215,7 +212,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
 
    Para habilitar a autenticação interativa, forneça a opção -G com o nome de usuário (-U) somente, sem uma senha.
 
-   O exemplo a seguir exporta dados usando o modo interativo do Azure AD, que indica o nome de usuário em que o usuário representa uma conta do AAD. Isso é o mesmo exemplo usado na seção anterior: *Nome de usuário do Azure Active Directory e senha:*  
+   O exemplo a seguir exporta dados usando o modo interativo do Azure AD, que indica o nome de usuário em que o usuário representa uma conta do AAD. Esse é o mesmo exemplo usado na seção anterior: *Azure Active Directory Username e Password*.  
 
    Modo interativo exige uma senha para ser inseridos manualmente, ou para contas com a autenticação multifator habilitada, conclua seu método de autenticação de MFA configurado.
 
@@ -248,10 +245,10 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
 **-j** Imprime mensagens de erro bruto na tela.
   
  **-K** _application_intent_  
- Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, o utilitário sqlcmd não dará suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, confira [Secundárias ativas: Réplicas secundárias legíveis (Grupos de Disponibilidade Always On)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, o utilitário sqlcmd não dará suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Secundárias ativas: Réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
- Sempre especifique **-M** ao conectar-se ao ouvinte de um grupo de disponibilidade do SQL Server ou a uma instância de cluster de failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não estiver especificado, **-M** está desativado. Para saber mais, confira [Ouvintes, Conectividade do Cliente e Failover do Aplicativo](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Criação e Configuração de Grupos de Disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e Grupos de Disponibilidade Always On (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) e [Secundárias Ativas: Réplicas Secundárias Legíveis (Grupos de Disponibilidade Always On)](https://msdn.microsoft.com/library/ff878253.aspx). 
+ Sempre especifique **-M** ao conectar-se ao ouvinte de um grupo de disponibilidade do SQL Server ou a uma instância de cluster de failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não estiver especificado, **-M** está desativado. Para saber mais, veja [Ouvintes, Conectividade do Cliente e Failover do Aplicativo](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Criação e Configuração de Grupos de Disponibilidade &#40;SQL Server&#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e Grupos de Disponibilidade AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) e [Secundárias Ativas: Réplicas Secundárias Legíveis (Grupos de Disponibilidade AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx). 
   
  **-N**  
  Essa opção é usada pelo cliente para solicitar uma conexão criptografada.  
@@ -840,7 +837,7 @@ No sqlcmd prompt, digite:
 
 `GO`
 
-Quando você pressiona ENTER, a seguinte mensagem informativa é impresso: Contexto de banco de dados alterado para 'AdventureWorks2012'.  
+Ao pressionar ENTER, será impressa a seguinte mensagem informativa: "Contexto de banco de dados alterado para 'AdventureWorks2012'."  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Formato de saída do Transact-SQL Queries  
  O**sqlcmd** imprime, em primeiro lugar, um cabeçalho de coluna com os nomes de coluna especificados na lista de seleção. Os nomes de coluna são separados usando-se o caractere SQLCMDCOLSEP. Por padrão, esse é um espaço. Se o nome de coluna for mais curto do que a largura de coluna, a saída será preenchida com espaços até a coluna seguinte.  

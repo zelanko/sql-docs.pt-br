@@ -1,7 +1,7 @@
 ---
 title: Tipos de cursor (Driver SQLSRV) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d5d9fcb2664fa17e1138ebad57fd4330bea34af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769416"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676134"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -190,7 +190,7 @@ echo "Employee ID = $EmployeeID \n";
 ?>  
 ```  
   
-O exemplo a seguir mostra um cursor do lado do cliente usando [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+O exemplo a seguir mostra um cursor do lado do cliente usando [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) e um tamanho de buffer de cliente diferentes.
   
 ```  
 <?php  
@@ -204,7 +204,7 @@ if ( $conn === false ) {
 }  
   
 $tsql = "select * from HumanResources.Employee";  
-$stmt = sqlsrv_prepare( $conn, $tsql, array(), array("Scrollable"=>SQLSRV_CURSOR_CLIENT_BUFFERED));  
+$stmt = sqlsrv_prepare( $conn, $tsql, array(), array("Scrollable" => SQLSRV_CURSOR_CLIENT_BUFFERED, "ClientBufferMaxKBSize" => 51200));
   
 if (! $stmt ) {  
    echo "Statement could not be prepared.\n";  

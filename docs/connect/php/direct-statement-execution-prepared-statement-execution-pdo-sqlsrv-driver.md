@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658744"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676104"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ Depois de chamar [PDO:: Prepare](../../connect/php/pdo-prepare.md), o valor de P
   
 Se uma consulta exigir o contexto que foi definido em uma consulta anterior, em seguida, execute suas consultas com PDO:: sqlsrv_attr_direct_query definido como True. Por exemplo, se você usar tabelas temporárias em suas consultas, PDO:: sqlsrv_attr_direct_query deve ser definido como True.  
   
-O exemplo a seguir mostra que, quando é necessário o contexto de uma instrução anterior, você precisa definir PDO:: sqlsrv_attr_direct_query como True.  Este exemplo usa as tabelas temporárias, que só estão disponíveis para instruções subsequentes no seu programa quando as consultas são executadas diretamente.  
+O exemplo a seguir mostra que, quando é necessário o contexto de uma instrução anterior, você precisa definir PDO:: sqlsrv_attr_direct_query como True. Este exemplo usa as tabelas temporárias, que só estão disponíveis para instruções subsequentes no seu programa quando as consultas são executadas diretamente.  
   
+> [!NOTE]
+> Se a consulta é invocar um procedimento armazenado e tabelas temporárias são usadas neste procedimento armazenado, use [PDO:: EXEC](../../connect/php/pdo-exec.md) em vez disso.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  
