@@ -45,7 +45,7 @@ Drivers ODBC podem ser classificados da seguinte maneira:
   
     -   Exporta as funções apenas que estão no ODBC 3.0 menos funções preteridas.  
   
-    -   É capaz de que apresentam o ODBC 2. *x* comportamento ou o comportamento de ODBC 3.0 com relação às alterações comportamentais, com base no atributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
+    -   É capaz de que apresentam o ODBC 2.*x* comportamento ou o comportamento de ODBC 3.0 com relação às alterações comportamentais, com base no atributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
   
 -   **Driver ODBC 3.5 (ou posterior) ANSI** driver de 32 bits que:  
   
