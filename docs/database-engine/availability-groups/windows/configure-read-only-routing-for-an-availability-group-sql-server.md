@@ -2,7 +2,7 @@
 title: Configurar o roteamento somente leitura para um grupo de disponibilidade
 description: Roteie automaticamente todo o tráfego somente leitura para uma réplica secundária usando o roteamento somente leitura para o grupo de disponibilidade Always On – usando o T-SQL (Transact-SQL) ou o PowerShell.
 ms.custom: seodec18
-ms.date: 08/14/2017
+ms.date: 02/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 937fb97a9ed59793b532a8dcae0903fab5580678
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126136"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56827996"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurar o roteamento somente leitura para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ O roteamento somente leitura está disponível no [!INCLUDE[sssql15](../../../in
   
 -   Para cada réplica secundária legível que deve dar suporte a roteamento somente leitura, você precisa especificar uma *URL de roteamento somente leitura*. Esta URL só entra em vigor quando a réplica local estiver sendo executada sob a função secundária. A URL do roteamento somente leitura deve ser especificada réplica por réplica, quando necessário. Cada URL de roteamento somente leitura é usada para solicitações de conexão de intenção de leitura para uma réplica secundária legível específica. Normalmente, toda réplica secundária legível é atribuída uma URL de roteamento somente leitura.  
   
-     Para obter informações sobre como calcular a URL de roteamento somente leitura de uma réplica de disponibilidade, veja [Calculando read_only_routing_url de AlwaysOn](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     Para obter informações sobre como calcular a URL de roteamento somente leitura de uma réplica de disponibilidade, veja [Calculando read_only_routing_url de AlwaysOn](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   Para cada réplica de disponibilidade que você quer dar suporte a roteamento somente leitura quando é a réplica primária, você precisará especificar uma *lista de roteamento somente leitura*. Uma determinada lista de roteamento somente leitura só entra em vigor quando a réplica local estiver sendo executada em uma função primária. Essa lista deve ser especificada réplica por réplica, quando necessário. Normalmente, cada lista de roteamento somente leitura deveria conter todas as URLs de roteamento somente leitura, com a URL da réplica local no final da lista.  
   
