@@ -29,18 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 6d96aabb002cafa5ea8d6b3043b39d89a0a86a15
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317826"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801540"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 > Para usar o bcp no Linux, confira [instalar o sqlcmd e bcp no Linux](../linux/sql-server-linux-setup-tools.md).
 > 
@@ -255,7 +252,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Para habilitar a autenticação interativa, forneça a opção -G com o nome de usuário (-U) somente, sem uma senha.   
 
-   O exemplo a seguir exporta dados usando o modo interativo do Azure AD, que indica o nome de usuário em que o usuário representa uma conta do AAD. Isso é o mesmo exemplo usado na seção anterior: *Nome de usuário do Azure Active Directory e senha:*  
+   O exemplo a seguir exporta dados usando o modo interativo do Azure AD, que indica o nome de usuário em que o usuário representa uma conta do AAD. Esse é o mesmo exemplo usado na seção anterior: *Azure Active Directory Username e Password*.  
 
    Modo interativo exige uma senha para ser inseridos manualmente, ou para contas com a autenticação multifator habilitada, conclua seu método de autenticação de MFA configurado. 
 
@@ -316,7 +313,7 @@ Se *input_file* começar com um hífen (-) ou uma barra (/), não inclua um espa
 Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas. Para obter mais informações, veja [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
 **-K** _**application\_intent**_<a name="K"></a>   
-Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não dará suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, confira [Secundárias ativas: Réplicas Secundárias Legíveis &#40;Grupos de Disponibilidade Always On&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não dará suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 **-L** _**last\_row**_<a name="L"></a>  
 Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados. Esse parâmetro exige um valor maior do que (>) 0, mas menor do que (<) ou igual ao (=) número da última linha. Na ausência desse parâmetro, o padrão é a última linha do arquivo.  

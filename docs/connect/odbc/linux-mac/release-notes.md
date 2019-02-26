@@ -10,15 +10,25 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 12f45cd1014a312eec7854685d8c7fe2e64b9714
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600296"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662750"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de versão para o Microsoft ODBC Driver for SQL Server em Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Novidades do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Linux e no macOS
+
+**Novo distribuições suportadas**: 15 SuSE, Ubuntu 18.10, macOS 10.14
+
+**Recursos adicionados**:
+
+- Azure Active Directory Managed Service Identity (sistema e atribuída pelo usuário) modo de autenticação
+- Parâmetro de entrada AE streaming
+- XA DTC
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Novidades do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Linux e no macOS
 
