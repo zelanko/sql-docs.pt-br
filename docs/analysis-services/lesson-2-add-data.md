@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401631"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852931"
 ---
 # <a name="lesson-2-add-data"></a>Lição 2: Adicionar dados
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nesta lição, você usará o Assistente de importação de tabela no SSDT para se conectar ao banco de dados de exemplo SQL AdventureWorksDW, selecionar dados, visualizar e filtrar os dados e, em seguida, importar os dados para seu espaço de trabalho do modelo.  
   
-Usando o Assistente de importação de tabela, você pode importar dados de uma variedade de fontes relacionais: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e muito mais. As etapas de importação de dados de cada uma dessas fontes relacionais são bem parecidas com as descritas a seguir. Dados também podem ser selecionados usando um procedimento armazenado. Para saber mais sobre como importar dados e os diferentes tipos de fontes de dados, você pode importar, consulte [fontes de dados](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+Usando o Assistente de importação de tabela, você pode importar dados de uma variedade de fontes relacionais: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e muito mais. As etapas de importação de dados de cada uma dessas fontes relacionais são bem parecidas com as descritas a seguir. Dados também podem ser selecionados usando um procedimento armazenado. Para saber mais sobre como importar dados e os diferentes tipos de fontes de dados, você pode importar, consulte [fontes de dados](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 Tempo estimado para concluir esta lição: **20 minutos**  
   
@@ -36,7 +36,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
     Isso inicia o Assistente de importação de tabela, que orienta você pela configuração de uma conexão a uma fonte de dados. Se você não vir o Gerenciador de modelos tabulares, clique duas vezes **Model. BIM** na **Gerenciador de soluções** para abrir o modelo no designer. 
     
-    ![como-tabela-lição 2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
+    ![as-tabular-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
     Observação: Se você estiver criando seu modelo no nível de compatibilidade 1400, você verá a nova experiência obter dados, em vez do Assistente de importação de tabela. As caixas de diálogo aparecerá um pouco diferentes do que as etapas a seguir, mas você ainda poderá acompanhá-los. 
   
@@ -48,7 +48,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 5.  No **nome do banco de dados** campo, selecione **AdventureWorksDW**e, em seguida, clique em **próxima**.  
   
-    ![como tabular-lição 2-tiw-nome](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+    ![as-tabular-lesson2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
 6.  Na página **Informações sobre Representação** , é necessário especificar as credenciais que o Analysis Services usará para se conectar à fonte de dados ao importar e processar dados. Verifique se a opção **Nome de usuário e senha específicos do Windows** está selecionada e, em **Nome de Usuário** e **Senha**, insira suas credenciais de logon do Windows e clique em **Avançar**.  
   
@@ -70,7 +70,7 @@ A tabela DimCustomer que você está importando do banco de dados de exemplo con
   
 2.  Desmarque a caixa de seleção na parte superior das seguintes colunas: **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**. 
 
-    ![como-tabela-lição 2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![as-tabular-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
     Como os valores destas colunas não são pertinentes à análise de vendas da Internet, não há necessidade de importar essas colunas. Eliminação das colunas desnecessárias tornará seu modelo menor e mais eficiente.  
   
@@ -147,7 +147,7 @@ Agora que você visualizou e filtrou os dados desnecessários, você pode import
   
     Durante a importação dos dados, o assistente exibirá quantas linhas foram buscadas. Quando todos os dados tiverem sido importados, será exibida uma mensagem indicando êxito.  
     
-    ![como-tabela-lição 2-êxito](../analysis-services/media/as-tabular-lesson2-success.png) 
+    ![as-tabular-lesson2-success](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
     > Para ver as relações que foram criadas automaticamente entre as tabelas importadas, na linha **Preparação de dados** , clique em **Detalhes**. 

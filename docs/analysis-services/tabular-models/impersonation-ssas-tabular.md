@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7736d62feeba99a4af0efc08c55364e1f043a651
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419781"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852901"
 ---
 # <a name="impersonation"></a>Representação 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -85,7 +85,6 @@ Quando dados são importados ou processados, credenciais de representação usad
   
 ## <a name="see-also"></a>Confira também  
  [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Fontes de dados](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [Implantação de solução de modelo tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

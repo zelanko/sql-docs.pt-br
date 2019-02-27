@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439498"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852921"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidade e escalabilidade no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Este artigo descreve as técnicas mais usadas para fazer com que os bancos de dados do Analysis Services sejam de alta disponibilidade e escalonáveis. Embora cada objetivo possa ser atingido separadamente, na realidade, eles muitas vezes ocorrem simultaneamente: uma implantação escalável para grandes cargas de trabalho de processamento ou consulta normalmente é acompanhada por expectativas de alta disponibilidade.  
+  Este artigo descreve as técnicas mais comumente usadas para fazer os bancos de dados do Analysis Services altamente disponível e escalonável. Embora cada objetivo possa ser atingido separadamente, na realidade, eles muitas vezes ocorrem simultaneamente: uma implantação escalável para grandes cargas de trabalho de processamento ou consulta normalmente é acompanhada por expectativas de alta disponibilidade.  
   
  No entanto, o inverso nem sempre é verdadeiro. A alta disponibilidade, sem escala, pode ser o único objetivo em casos de contratos de nível de serviço rigorosos para cargas de trabalho de consulta de missão crítica, mas moderadas.  
   
