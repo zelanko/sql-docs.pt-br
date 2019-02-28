@@ -31,7 +31,7 @@ Drivers ODBC podem ser classificados da seguinte maneira:
   
     -   Exporta somente ODBC 2 *. x* funções.  
   
-    -   Exibe o ODBC 2. *x* comportamento para alterações de comportamento.  
+    -   Exibe o ODBC 2.*x* comportamento para alterações de comportamento.  
   
 -   **ISO e o Driver compatível com o grupo aberto** driver de 32 bits que:  
   
