@@ -1,5 +1,5 @@
 ---
-title: . DM exec_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe063150263b5611c9920ee1a4fb3a3bd8c85b2f
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671192"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956007"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o plano de execução em formato XML para o lote especificado pelo identificador de plano. O plano especificado pelo identificador do plano pode estar em cache ou estar sendo executado.  
   
@@ -46,7 +46,7 @@ sys.dm_exec_query_plan ( plan_handle )
  *plan_handle*  
  Identifica exclusivamente um plano de consulta para um lote em cache ou sendo executado atualmente.  
   
- *plan_handle* está **varbinary(64)**. *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
+ *plan_handle* is **varbinary(64)**. *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
  [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -56,12 +56,12 @@ sys.dm_exec_query_plan ( plan_handle )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|A ID do banco de dados de contexto em vigor quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente a esse plano foi compilada. Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.<br /><br /> A coluna é anulável.|  
 |**objectid**|**int**|A identificação do objeto (por exemplo, procedimento armazenado ou função definida pelo usuário) para este plano de consulta. Para lotes ad hoc e preparadas, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
 |**number**|**smallint**|Inteiro de procedimento armazenado numerado. Por exemplo, um grupo de procedimentos para o **pedidos** aplicativo pode ser nomeado **orderproc; 1**, **orderproc; 2**e assim por diante. Para lotes ad hoc e preparadas, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
-|**Criptografado**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
+|**encrypted**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
 |**query_plan**|**xml**|Contém a representação de plano de execução de tempo de compilação do plano de execução de consulta que é especificado com *plan_handle*. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -121,7 +121,7 @@ SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);
 GO  
 ```  
   
-### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B. Recuperar todo o plano de consulta do cache de plano  
+### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>b. Recuperar todo o plano de consulta do cache de plano  
  Para recuperar um instantâneo de todos os planos de consulta residindo no cache de plano, recupere os identificadores de plano de todas as consultas no cachê, consultando a exibição de gerenciamento dinâmico `sys.dm_exec_cached_plans`. Os identificadores de plano são armazenados na coluna `plan_handle` de `sys.dm_exec_cached_plans`. Em seguida, use o operador CROSS APPLY para transmitir o identificador de plano a `sys.dm_exec_query_plan`, como se segue. A saída de plano de execução XML de cada plano atualmente no cache de plano está na coluna `query_plan` da tabela retornada.  
   
 ```  
