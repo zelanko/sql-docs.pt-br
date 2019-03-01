@@ -4,17 +4,17 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c2172b9dda1f6f15b90e0f9a65f0abc179256918
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 1a7c7691ec20f459f39a39270e9a78fc9d8ad96f
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425761"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017542"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>Use o curl para carregar dados no HDFS em clusters do SQL Server 2019 big data
 
@@ -22,20 +22,20 @@ Este artigo explica como usar **curl** para carregar dados no HDFS em clusters d
 
 ## <a name="obtain-the-service-external-ip"></a>Obter o IP externo do serviço
 
-WebHDFS é iniciado quando a implantação for concluída, e seu acesso passa pelo Knox. O ponto de extremidade do Knox é exposto por meio de um serviço Kubernetes chamado (por enquanto) **serviço de segurança de lb**.  Para criar a URL de WebHDFS que você precisará usar o CURL para carregar/baixar arquivos, será necessário o **serviço de segurança de lb** endereço IP externo e o nome do seu cluster do serviço. Você pode obter o endereço IP externo do serviço do serviço de segurança de lb executando este comando:
+WebHDFS é iniciado quando a implantação for concluída, e seu acesso passa pelo Knox. O ponto de extremidade do Knox é exposto por meio de um serviço de Kubernetes chamado **segurança de ponto de extremidade**.  Para criar a URL de WebHDFS necessário para carregar/baixar arquivos, é necessário o **segurança de ponto de extremidade** endereço IP externo e o nome do seu cluster do serviço. Você pode obter o **segurança de ponto de extremidade** endereço IP externo do serviço, executando o seguinte comando:
 
 ```bash
-kubectl get service service-security-lb -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> O `<cluster name>` aqui é o nome do cluster que você forneceu quando você executou mssqlctl criar cluster `<cluster name>`.
+> O `<cluster name>` aqui é o nome do cluster que você forneceu quando você executou `mssqlctl cluster create --name <cluster name>`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Construir a URL para acessar o WebHDFS
 
 Agora, você pode construir a URL para acessar o WebHDFS da seguinte maneira:
 
-`https://<service-security-lb service external IP address>:30443/gateway/default/webhdfs/v1/`
+`https://<endpoint-security service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 Por exemplo:
 
@@ -43,26 +43,26 @@ Por exemplo:
 
 ## <a name="list-a-file"></a>Lista de um arquivo
 
-Arquivo de lista sob **hdfs: / / / airlinedata** use o seguinte comando curl:
+Arquivo de lista sob **hdfs: / / / airlinedata**, use o seguinte comando curl:
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<service-security-lb IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>Colocar um arquivo local no HDFS
 
-Para colocar um novo arquivo **CSV** do diretório local ao diretório airlinedata (**Content-Type** parâmetro é necessário) use o seguinte comando curl:
+Para colocar um novo arquivo **CSV** no diretório local ao diretório airlinedata, use o seguinte comando curl (o **Content-Type** parâmetro é obrigatório):
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<service-security-lb IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>Crie um diretório
 
-Para criar um diretório **testar** sob `hdfs:///` use o seguinte comando:
+Para criar um diretório **testar** sob `hdfs:///`, use o seguinte comando:
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<service-security-lb IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

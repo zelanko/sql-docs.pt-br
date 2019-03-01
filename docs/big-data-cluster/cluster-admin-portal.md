@@ -5,17 +5,17 @@ description: Saiba como usar o portal de administração de cluster para monitor
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b8f50b74f733647e8a24b58b04147937be58ba98
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241567"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017852"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Como usar o portal de administração de cluster para monitorar um cluster de big data do SQL Server
 
@@ -32,10 +32,10 @@ O portal de administração de cluster permite que você:
 
 Siga as [guia de início rápido para implantar o cluster de big data](quickstart-big-data-cluster-deploy.md) até chegar à **portal de administração de cluster** seção. Depois que o cluster de big data em execução com mssqlctl, siga estas instruções:
 
-Quando o pod de controlador estiver em execução, você pode usar o portal de administração de cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `service-proxy-lb` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
+Quando o pod de controlador estiver em execução, você pode usar o portal de administração de cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `endpoint-service-proxy` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
 
 > [!NOTE]
-> Para CTP 2.2, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
+> Para o CTP 2.3, há um aviso de segurança ao acessar a página da web, pois ele está usando certificados gerados automaticamente SSL.
 
 ## <a name="overview"></a>Visão geral
 

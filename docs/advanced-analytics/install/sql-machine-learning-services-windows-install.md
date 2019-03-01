@@ -3,17 +3,17 @@ title: Instale o SQL Server Machine Learning Services (no banco de dados) no Win
 description: R no SQL Server ou Python em etapas de instalação do SQL Server para serviços de aprendizado de máquina SQL Server 2017 no Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.openlocfilehash: 00cc9989730825136ac1ce98f1250063c37144fb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147004"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017972"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalar serviços no Windows de aprendizado de máquina do SQL Server
 
@@ -251,6 +251,7 @@ No nível de instância, configurações adicionais podem incluir:
 * [Configuração do firewall para serviços do SQL Server Machine Learning](../../advanced-analytics/security/firewall-configuration.md)
 * [Habilite os protocolos de rede adicionais](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Habilitar conexões remotas](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [Crie um logon para SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
@@ -258,7 +259,6 @@ No nível de instância, configurações adicionais podem incluir:
 Banco de dados, talvez você precise as atualizações de configuração a seguir:
 
 * [Conceder aos usuários permissão para serviços do SQL Server Machine Learning](../../advanced-analytics/security/user-permission.md)
-* [Adicionar SQLRUserGroup como um usuário de banco de dados](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > Se a configuração adicional é necessária depende de seu esquema de segurança, onde você instalou o SQL Server e como você espera que os usuários para se conectar ao banco de dados e executar scripts externos.

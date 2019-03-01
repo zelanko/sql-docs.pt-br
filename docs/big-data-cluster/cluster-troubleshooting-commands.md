@@ -5,17 +5,17 @@ description: Este artigo fornece comandos kubectl útil para monitoramento e sol
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241997"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017902"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Comandos Kubectl para monitoramento e solução de problemas de clusters de grandes dados do SQL Server
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>Mostrar o status de todos os pods no cluster de big data do SQL Server
 
-Use o `-n` parâmetro para especificar um namespace específico. Observe que os pods de cluster de big data são criados em um novo namespace criado no tempo de inicialização do cluster do SQL Server com base no nome do cluster especificado no `mssqlctl create cluster <cluster_name>` comando.
+Use o `-n` parâmetro para especificar um namespace específico. Observe que os pods de cluster de big data são criados em um novo namespace criado no tempo de inicialização do cluster do SQL Server com base no nome do cluster especificado no `mssqlctl cluster create --name <cluster_name>` comando.
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>Obter o status de serviços
 
-Execute o seguinte comando para obter detalhes sobre os serviços de cluster de big data. Esses detalhes incluem o tipo e os IPs associados a portas e os respectivos serviços. Observe que os serviços de cluster de big data do SQL Server são criados em um novo namespace criado no tempo de inicialização de cluster com base no nome do cluster especificado no `mssqlctl create cluster <cluster_name>` comando.
+Execute o seguinte comando para obter detalhes sobre os serviços de cluster de big data. Esses detalhes incluem o tipo e os IPs associados a portas e os respectivos serviços. Observe que os serviços de cluster de big data do SQL Server são criados em um novo namespace criado no tempo de inicialização de cluster com base no nome do cluster especificado no `mssqlctl cluster create --name <cluster_name>` comando.
 
 ```bash
 kubectl get svc -n <namespace_name>

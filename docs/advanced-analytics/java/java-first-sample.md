@@ -3,18 +3,18 @@ title: Exemplo de Java e um tutorial para SQL Server 2019 - serviços do SQL Ser
 description: Execute o código de exemplo do Java no SQL Server de 2019 para saber as etapas para usar a extensão da linguagem Java com dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069047"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018032"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Instruções passo a passo de exemplo do Java do SQL Server
 
@@ -26,7 +26,7 @@ Este exemplo demonstra uma classe Java que recebe duas colunas (ID e texto) do S
 
 + SQL Server Management Studio ou outra ferramenta para a execução de T-SQL.
 
-+ Java SE Development Kit (JDK) 1.10 no Windows ou JDK 1.8 no Linux.
++ Java SE Development Kit (JDK) 8 no Windows ou Linux.
 
 Compilação de linha de comando usando **javac** é suficiente para este tutorial. 
 
@@ -47,7 +47,7 @@ INSERT INTO reviews(id, "text") VALUES (3, 'MMM NNN OOO PPP QQQ RRR')
 GO
 ```
 
-## <a name="2---class-ngramjava"></a>2 - classe Ngram.java
+## <a name="2---class-ngramjava"></a>2 - Class Ngram.java
 
 Comece criando a classe principal. Este é o primeiro de três classes.
 
@@ -209,7 +209,7 @@ Se você planeja empacotar suas classes e as dependências em arquivos. jar, for
 
 Execução do script é bem-sucedido somente se as identidades de processo tem acesso ao seu código. 
 
-### <a name="on-linux"></a>No Linux
+### <a name="on-linux"></a>On Linux
 
 Conceder permissões de leitura/execução no classpath para o **mssql_satellite** usuário.
 
@@ -240,7 +240,7 @@ Este exemplo passa o parâmetro de caminho de classe para fornecer o caminho par
 
 + No Linux, execute o seguinte código no SQL Server Management Studio ou outra ferramenta usada para a execução de Transact-SQL. 
 
-+ No Windows, altere **@myClassPath** para N'C:\myJavaCode\' (supondo que é a pasta pai de \pkg) antes de executar a consulta no SQL Server Management Studio ou outra ferramenta.
++ No Windows, altere @myClassPath para N'C:\myJavaCode\' (supondo que é a pasta pai de \pkg) antes de executar a consulta no SQL Server Management Studio ou outra ferramenta.
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

@@ -5,17 +5,17 @@ description: Aprenda a implantar clusters de big data de 2019 do SQL Server (ver
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087855"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018002"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -84,10 +84,10 @@ A configuração do cluster pode ser personalizada usando um conjunto de variáv
 
 | Variável de ambiente | Obrigatório | Valor padrão | Descrição |
 |---|---|---|---|
-| **ACCEPT_EULA** | Sim | N/D | Aceite o contrato de licença do SQL Server (por exemplo, ' Y').  |
+| **ACCEPT_EULA** | Sim | N/D | Aceite o contrato de licença do SQL Server (por exemplo, 'Yes').  |
 | **CLUSTER_NAME** | Sim | N/D | O nome do namespace para implantar o SQLServer cluster de big data em Kubernetes. |
 | **CLUSTER_PLATFORM** | Sim | N/D | A plataforma em que o cluster Kubernetes é implantado. Pode ser `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Não | 1 | O número de réplicas de pool de computação para criar. No CTP 2.2 somente com o valor permitido é 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | Não | 1 | O número de réplicas de pool de computação para criar. No CTP 2.3 apenas com o valor permitido é 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Não | 2 | O número de dados do pool réplicas para criar. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | Não | 2 | O número de réplicas de pool de armazenamento para criar. |
 | **DOCKER_REGISTRY** | Sim | TBD | O registro privado onde as imagens usadas para implantar o cluster são armazenadas. |
@@ -189,7 +189,7 @@ Se você estiver implantando com kubeadm em seu próprio máquinas físicas ou v
 A API de criação do cluster é usada para inicializar o namespace do Kubernetes e implantar os pods de aplicativo para o namespace. Para implantar o cluster de big data do SQL Server no cluster do Kubernetes, execute o seguinte comando:
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 Durante a inicialização do cluster, a janela de comando do cliente produzirá o status da implantação. Durante o processo de implantação, você deverá ver uma série de mensagens em que ele está aguardando o pod do controlador:
@@ -202,7 +202,7 @@ Depois de 10 a 20 minutos, você deve ser notificado se o pod de controlador est
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ Quando a implantação for concluída, a saída notifica você de sucesso:
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Obter a instância mestre do SQL Server e os endereços IP do cluster de big data do SQL Server
+## <a id="masterip"></a> Obter pontos de extremidade de cluster de big data
 
-Depois que o script de implantação foi concluída com êxito, você pode obter o endereço IP da instância mestre do SQL Server usando as etapas descritas abaixo. Você usará esse endereço IP e porta número 31433 para se conectar a instância mestre do SQL Server (por exemplo:  **\<endereço ip\>, 31433**). Da mesma forma, para o IP de cluster de big data do SQL Server. Todos os pontos de extremidade do cluster são descritos no guia pontos de extremidade de serviço no Portal de administração do Cluster. Você pode usar o Portal de administração de Cluster para monitorar a implantação. Você pode acessar o portal usando o IP endereço e porta número externa para o `service-proxy-lb` (por exemplo: **https://\<endereço ip\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima.
+Depois que o script de implantação foi concluída com êxito, você pode obter o endereço IP da instância mestre do SQL Server usando as etapas descritas abaixo. Você usará esse endereço IP e porta número 31433 para se conectar a instância mestre do SQL Server (por exemplo:  **\<ip-address-of-endpoint-master-pool\>, 31433**). Da mesma forma, você pode se conectar ao SQL Server IP de cluster (Gateway HDFS/Spark) grande de dados associado a **segurança de ponto de extremidade** service.
 
-### <a name="aks"></a>AKS
-
-Se você estiver usando o AKS, o Azure fornece o serviço de Balanceador de carga do Azure. Execute o seguinte comando:
+Os seguintes comandos kubectl recuperam pontos de extremidade comuns para o cluster de big data:
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-Procure os **External-IP** valor atribuído ao serviço. Em seguida, conecte-se à instância mestre do SQL Server usando o endereço IP na porta 31433 (Ex:  **\<endereço ip\>, 31433**) e para o SQL Server grandes dados cluster ponto de extremidade usando o external-IP para `service-security-lb` service. 
+Procure os **External-IP** valor que é atribuído a cada serviço.
+
+Todos os pontos de extremidade do cluster também são descritos os **pontos de extremidade de serviço** guia no Portal de administração de Cluster. Você pode acessar o portal usando o IP endereço e porta número externa para o `endpoint-service-proxy` (por exemplo: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/portal**). As credenciais para acessar o portal de administração é os valores de `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variáveis de ambiente fornecidas acima. Você também pode usar o Portal de administração de Cluster para monitorar a implantação.
+
+Para obter mais informações sobre como se conectar, consulte [conectar-se a um SQL Server cluster de big data com o Azure Data Studio](connect-to-big-data-cluster.md).
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ Atualmente, a única maneira de atualizar um cluster de big data para uma nova v
 1. Excluir o cluster antigo com o `mssqlctl delete cluster` comando.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > Use a versão do **mssqlctl** que corresponde ao seu cluster. Não exclua um cluster mais antigo com a versão mais recente do **mssqlctl**.
 
 1. Desinstale as versões antigas do **mssqlctl**.
 
@@ -270,13 +275,13 @@ Atualmente, a única maneira de atualizar um cluster de big data para uma nova v
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ Para monitorar ou solucionar problemas de uma implantação, use **kubectl** par
    | Serviço | Descrição |
    |---|---|
    | **endpoint-master-pool** | Fornece acesso para a instância mestre.<br/>(**EXTERNAL-IP, 31433** e o **SA** usuário) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Fornece acesso para o [Portal de administração de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
+   | **endpoint-controller** | Dá suporte a ferramentas e clientes que gerenciam o cluster. |
+   | **endpoint-service-proxy** | Fornece acesso para o [Portal de administração de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **endpoint-security** | Fornece acesso para o gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e o **raiz** usuário) |
 
-   > [!NOTE]
-   > Os nomes de serviço podem variar dependendo do seu ambiente de Kubernetes. Ao implantar no serviço de Kubernetes do Azure (AKS), os nomes de serviço terminam com **-lb**. Para implantações minikube e kubeadm, os nomes de serviço terminam com **nodeport -**.
-
-1. Use o [Portal de administração de Cluster](cluster-admin-portal.md) para monitorar a implantação na **implantação** guia. Você precisa esperar para o **serviço de proxy de lb** início antes de acessar esse portal, portanto, ele não estará disponível no início de uma implantação do serviço.
+1. Use o [Portal de administração de Cluster](cluster-admin-portal.md) para monitorar a implantação na **implantação** guia. Você precisa esperar para o **ponto de extremidade de serviço de proxy** início antes de acessar esse portal, portanto, ele não estará disponível no início de uma implantação do serviço.
 
 > [!TIP]
 > Para obter mais informações sobre como solucionar problemas do cluster, consulte [comandos Kubectl para monitoramento e solução de problemas de clusters de grandes dados do SQL Server](cluster-troubleshooting-commands.md).

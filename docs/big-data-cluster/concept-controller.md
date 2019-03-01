@@ -5,17 +5,17 @@ description: Este artigo descreve o controlador de um cluster de big data do SQL
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241277"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017862"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>O que é o controlador em um cluster de big data do SQL Server 2019?
 
@@ -29,15 +29,15 @@ O serviço do controlador fornece as seguintes funcionalidades principais:
 - Expor as ferramentas de monitoramento para observar o estado do cluster
 - Ferramentas de solução de problemas para detectar e reparar problemas inesperados de expor
 - Gerenciar a segurança de cluster: Certifique-se de pontos de extremidade do cluster seguro, gerenciar usuários e funções, configurar as credenciais para a comunicação dentro do cluster
-- Gerenciar o fluxo de trabalho de atualizações para que eles são implementados com segurança (não disponível no CTP 2.2)
-- Gerenciar a alta disponibilidade e recuperação de desastres para serviços com estado no cluster (não disponível no CTP 2.2)
+- Gerenciar o fluxo de trabalho de atualizações para que eles são implementados com segurança (não disponível no CTP 2.3)
+- Gerenciar a alta disponibilidade e recuperação de desastres para serviços com estado no cluster (não disponível no CTP 2.3)
 
 ## <a name="deploying-the-controller-service"></a>Implantando o serviço do controlador
 
 O controlador é implantado e hospedado no mesmo namespace do Kubernetes em que o cliente deseja criar um cluster de big data. Esse serviço é instalado por um administrador do Kubernetes durante a inicialização do cluster, usando o utilitário de linha de comando mssqlctl:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 O fluxo de trabalho buildout definirá o layout na parte superior do Kubernetes um cluster de big data totalmente funcional do SQL Server que inclui todos os componentes descritos os [visão geral](big-data-cluster-overview.md) artigo. O fluxo de trabalho de inicialização primeiro cria o serviço do controlador, e quando isso for implantado, o serviço do controlador coordena a instalação e configuração do rest da parte dos serviços de pools de armazenamento, computação, dados e mestre.

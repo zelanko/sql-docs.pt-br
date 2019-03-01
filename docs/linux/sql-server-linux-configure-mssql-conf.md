@@ -4,18 +4,18 @@ description: Este artigo descreve como usar a ferramenta mssql-conf para definir
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401891"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018072"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql-conf
 
@@ -74,6 +74,7 @@ ms.locfileid: "52401891"
 | [Limite de memória](#memorylimit) | Defina o limite de memória do SQL Server. |
 | [Coordenador de transações distribuídas da Microsoft](#msdtc) | Configurar e solucionar problemas de MSDTC no Linux. |
 | [MLServices EULAs](#mlservices-eula) | Aceite o R e Python EULAs para mlservices pacotes. Aplica-se ao SQL Server de 2019 apenas.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |Habilitar o acesso de rede de saída para [mlservices](sql-server-linux-setup-machine-learning.md) extensões de R, Python e Java.|
 | [Porta TCP](#tcpport) | Altere a porta em que o SQL Server escuta para conexões. |
 | [TLS](#tls) | Configure a segurança em nível de transporte. |
 | [Sinalizadores de rastreamento](#traceflags) | Defina os sinalizadores de rastreamento que o serviço usará. |
@@ -512,7 +513,7 @@ Há várias outras configurações para o mssql-conf que você pode usar para mo
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurar chamadas rpc apenas seguro para transações distribuídas |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Configurar chamadas rpc apenas de segurança para distribuído |transações
-| distributedtransaction.MAXLOGSIZE | Tamanho do arquivo DTC transações log em MB. O padrão é 64MB |
+| distributedtransaction.maxlogsize | Tamanho do arquivo DTC transações log em MB. O padrão é 64MB |
 | distributedtransaction.memorybuffersize | Tamanho do buffer circular na qual os rastreamentos são armazenados. Esse tamanho estará em MB e o padrão é 10MB |
 | distributedtransaction.servertcpport | Porta do servidor de rpc MSDTC |
 | distributedtransaction.trace_cm | Rastreamentos no Gerenciador de conexão |
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ Você também pode adicionar aceitação do EULA diretamente para o [mssql.conf 
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> Habilitar o acesso de rede de saída
+
+Acesso de rede de saída para as extensões de R, Python e Java na [serviços do SQL Server Machine Learning](sql-server-linux-setup-machine-learning.md) recurso está desabilitado por padrão. Para permitir solicitações de saída, defina "outboundnetworkaccess" propriedade booleana usando mssql-conf.
+
+Depois de definir a propriedade, reinicie o serviço Launchpad do SQL Server para ler os valores atualizados no arquivo INI. Lembra você de uma mensagem de reinicialização sempre que uma configuração de extensibilidade é modificada.
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+Você também pode adicionar "outboundnetworkaccess" diretamente para o [mssql.conf arquivo](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> Alterar a porta TCP
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Observe que quaisquer configurações não mostradas nesse arquivo usando seus valores padrão. A próxima seção fornece uma amostra **mssql.conf** arquivo.
 
 
-## <a id="mssql-conf-format"></a> formato de MSSQL.conf
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 O seguinte **/var/opt/mssql/mssql.conf** arquivo fornece um exemplo para cada configuração. Você pode usar esse formato manualmente fazer alterações para o **mssql.conf** arquivo conforme necessário. Se você alterar manualmente o arquivo, você deve reiniciar o SQL Server antes que as alterações sejam aplicadas. Para usar o **mssql.conf** arquivo com o Docker, você deve ter o Docker [persistir seus dados](sql-server-linux-configure-docker.md). Primeiro, adicione uma completa **mssql.conf** arquivo ao seu diretório do host e, em seguida, execute o contêiner. Há um exemplo na [comentários dos clientes](sql-server-linux-customer-feedback.md).
 

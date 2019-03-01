@@ -5,17 +5,17 @@ description: Este tutorial demonstra como ingestão de dados para o pool de dado
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: aa245d074958837245fc921e52a56550f8c82e98
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 086db0838eb02b0e83ffbb2f00b92d39e1e4d202
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241457"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017664"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL
 
@@ -34,7 +34,7 @@ Neste tutorial, você aprenderá como:
 ## <a id="prereqs"></a> Pré-requisitos
 
 - [Ferramentas de big data](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
 - [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
@@ -69,7 +69,7 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
       );
    ```
   
-1. No CTP 2.2, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
+1. No CTP 2.3, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
 
 ## <a name="load-data"></a>Carregar dados
 
