@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018002"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227198"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de grandes dados do SQL Server no Kubernetes
 
@@ -94,20 +94,22 @@ A configuração do cluster pode ser personalizada usando um conjunto de variáv
 | **DOCKER_REPOSITORY** | Sim | TBD | O repositório privado dentro do registro acima, onde as imagens são armazenadas.  É necessário durante a versão prévia pública controlada. |
 | **DOCKER_USERNAME** | Sim | N/D | O nome de usuário para acessar as imagens de contêiner, caso eles são armazenados em um repositório privado. É necessário durante a versão prévia pública controlada. |
 | **DOCKER_PASSWORD** | Sim | N/D | A senha para acessar o repositório privado acima. É necessário durante a versão prévia pública controlada.|
-| **DOCKER_EMAIL** | Sim | N/D | O email associado com o repositório privado acima. É necessário para a duração da visualização privada restrita. |
 | **DOCKER_IMAGE_TAG** | Não | mais recente | O rótulo usado para marcar as imagens. |
 | **DOCKER_IMAGE_POLICY** | Não | Always | Sempre force um pull das imagens.  |
-| **DOCKER_PRIVATE_REGISTRY** | Sim | 1 | Para o período de tempo da visualização pública restringido, esse valor deve ser definido como 1. |
+| **DOCKER_PRIVATE_REGISTRY** | Sim | N/D | Para o período de tempo da visualização pública restrito, você deve definir esse valor como "1". |
 | **CONTROLLER_USERNAME** | Sim | N/D | O nome de usuário para o administrador de cluster. |
 | **CONTROLLER_PASSWORD** | Sim | N/D | A senha para o administrador de cluster. |
 | **KNOX_PASSWORD** | Sim | N/D | A senha do usuário do Knox. |
 | **MSSQL_SA_PASSWORD** | Sim | N/D | A senha do usuário de SA para a instância mestre do SQL. |
 | **USE_PERSISTENT_VOLUME** | Não | true | `true` Para usar declarações de Volume persistente Kubernetes para o armazenamento de pod.  `false` Para usar o armazenamento efêmero host para o armazenamento de pod. Consulte a [persistência de dados](concept-data-persistence.md) artigo para obter mais detalhes. Se você implantar o cluster de big data no minikube do SQL Server e USE_PERSISTENT_VOLUME = true, você deve definir o valor para `STORAGE_CLASS_NAME=standard`. |
 | **STORAGE_CLASS_NAME** | Não | padrão | Se `USE_PERSISTENT_VOLUME` é `true` isso indica o nome de classe de armazenamento Kubernetes para usar. Consulte a [persistência de dados](concept-data-persistence.md) artigo para obter mais detalhes. Se você implantar o cluster de big data no minikube do SQL Server, o nome de classe de armazenamento padrão é diferente e você deve substituí-la definindo `STORAGE_CLASS_NAME=standard`. |
+| **CONTROLLER_PORT** | Não | 30080 | A porta de TCP/IP que o serviço do controlador escuta na rede pública. |
 | **MASTER_SQL_PORT** | Não | 31433 | A porta de TCP/IP que a instância mestre do SQL escuta na rede pública. |
 | **KNOX_PORT** | Não | 30443 | A porta de TCP/IP Knox Apache ouve na rede pública. |
+| **PROXY_PORT** | Não | 30777 | A porta TCP/IP que escuta do serviço de proxy na rede pública. Essa é a porta usada para computar o portal de URL. |
 | **GRAFANA_PORT** | Não | 30888 | A porta de TCP/IP que o aplicativo de monitoramento de Grafana escuta na rede pública. |
 | **KIBANA_PORT** | Não | 30999 | A porta de TCP/IP que o aplicativo de pesquisa de log do Kibana escuta na rede pública. |
+
 
 > [!IMPORTANT]
 >1. Durante o período da visualização privada limitada, as credenciais para o registro privado do Docker serão fornecidas para você após a separação sua [registro EAP](https://aka.ms/eapsignup).
@@ -125,7 +127,7 @@ Inicializar as variáveis de ambiente a seguir, eles são necessários para impl
 Usando uma janela CMD (não PowerShell), configure as seguintes variáveis de ambiente. Não use aspas ao redor dos valores.
 
 ```cmd
-SET ACCEPT_EULA=Y
+SET ACCEPT_EULA=yes
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
@@ -137,7 +139,6 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -146,7 +147,7 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Inicialize as variáveis de ambiente a seguir. No bash, você pode usar aspas em torno de cada valor.
 
 ```bash
-export ACCEPT_EULA=Y
+export ACCEPT_EULA=yes
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
@@ -158,7 +159,6 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -271,17 +271,17 @@ Atualmente, a única maneira de atualizar um cluster de big data para uma nova v
    > Você não deve instalar a nova versão do **mssqlctl** sem desinstalar as versões mais antigas primeiro.
 
 1. Instale a versão mais recente do **mssqlctl**. 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux:**
-   
+
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

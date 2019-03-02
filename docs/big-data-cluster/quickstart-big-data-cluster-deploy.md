@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017872"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227109"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início Rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -85,7 +85,7 @@ Use as etapas a seguir para executar o script de implantação. Esse script cria
    | **Usuário do controlador** | Nome de usuário para o usuário controlador (padrão: **admin**). |
 
    > [!IMPORTANT]
-   > O padrão **Standard_L4s** tamanho da máquina pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de máquina diferente, certifique-se de que o número total de discos que podem ser anexados em todos os nós do cluster é maior que ou igual a 21. Cada declaração de volume persistente no cluster exige um disco anexado. Atualmente, o cluster de big data requer declarações de volume persistente 21. Por exemplo, o [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamanho da máquina dá suporte a 16 discos conectados, portanto, três nós significa que os discos de 48 podem ser anexados.
+   > O padrão **Standard_L4s** tamanho da máquina pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de máquina diferente, certifique-se de que o número total de discos que podem ser anexados em todos os nós do cluster é maior que ou igual a 24. Cada declaração de volume persistente no cluster exige um disco anexado. Atualmente, o cluster de big data requer declarações de volume persistente 24. Por exemplo, o [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamanho da máquina dá suporte a 16 discos conectados, portanto, três nós significa que os discos de 48 podem ser anexados.
 
    > [!NOTE]
    > O `sa` conta é um administrador do sistema na instância mestre do SQL Server que é criada durante a instalação. Depois de criar a implantação, o `MSSQL_SA_PASSWORD` variável de ambiente é detectável executando `echo $MSSQL_SA_PASSWORD` no contêiner de instância principal. Para fins de segurança, altere sua `sa` senha na instância mestre após a implantação. Para obter mais informações, consulte [alterar a senha SA](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> No CTP 2.3, você verá um aviso de segurança ao acessar a página da web, porque os clusters de big data está usando certificados gerados automaticamente SSL. Além disso, no CTP 2.3, ele não mostra o status da instância mestre do SQL Server.
+> No CTP 2.3, você verá um aviso de segurança ao acessar a página da web, porque os clusters de big data está usando certificados gerados automaticamente SSL.
 
 ## <a name="connect-to-the-cluster"></a>Conectar-se ao cluster
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 87e4d1ed1bdb1ce78e2f45fcb49019175fcdfefd
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 25e762b48edb777d701a1482315150623c8c0484
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269689"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227338"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar configurações do SQL Server com variáveis de ambiente no Linux
 
@@ -45,7 +45,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar a vis
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Variável de ambiente | Description |
+| Variável de ambiente | Descrição |
 |-----|-----|
 | **ACCEPT_EULA** | Aceite o contrato de licença do SQL Server quando definido como qualquer valor (por exemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configure a senha de usuário de SA. |
@@ -69,7 +69,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar a vis
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Variável de ambiente | Description |
+| Variável de ambiente | Descrição |
 |-----|-----|
 | **ACCEPT_EULA** | Aceite o contrato de licença do SQL Server quando definido como qualquer valor (por exemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configure a senha de usuário de SA. |
@@ -97,7 +97,7 @@ Este exemplo executa `mssql-conf setup` com configurado variáveis de ambiente. 
 
 - **ACCEPT_EULA** aceita o contrato de licença de usuário final.
 - **MSSSQL_PID** Especifica a licenciadas gratuitamente Developer Edition do SQL Server para uso de não produção.
-- **MSSQL_SA_PASSWORD** define uma senha forte.
+- **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** define a porta TCP que o SQL Server escuta para 1234.
 
 ```bash
@@ -110,7 +110,7 @@ Este exemplo de comando do docker usa as seguintes variáveis de ambiente para c
 
 - **ACCEPT_EULA** aceita o contrato de licença de usuário final.
 - **MSSSQL_PID** Especifica a licenciadas gratuitamente Developer Edition do SQL Server para uso de não produção.
-- **MSSQL_SA_PASSWORD** define uma senha forte.
+- **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** define a porta TCP que o SQL Server escuta para 1234. Isso significa que, em vez de mapeamento a porta 1433 (padrão) para uma porta de host, a porta TCP personalizada deve ser mapeada com o `-p 1234:1234` comando neste exemplo.
 
 <!--SQL Server 2017 on Linux -->
@@ -138,13 +138,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Se você estiver executando o Docker no Linux/macOS, use a seguinte sintaxe com aspas simples:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 Se você estiver executando o Docker no Windows, use a seguinte sintaxe com aspas duplas:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end

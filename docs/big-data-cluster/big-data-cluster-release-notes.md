@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017942"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227208"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notas de versão do SQL Server 2019 clusters de big data
 
@@ -41,6 +41,7 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 - [Extensão do VS Code para implantar aplicativos em clusters de grandes dados do SQL Server](app-deployment-extension.md).
 - Novo parâmetro de ordenação para o **mssqlctl** ferramenta.
 - [Usar Sparklyr no cluster de dados do SQL Server de 2019 Big](sparklyr-from-RStudio.md).
+- Montar o armazenamento externo de compatível com HDFS no cluster de big data com [HDFS camadas](hdfs-tiering.md).
 - Nova experiência unificada de conexão para o [instância mestre do SQL Server e o Gateway HDFS/Spark](connect-to-big-data-cluster.md).
 - Excluir um cluster com **mssqlctl cluster delete** agora exclui somente os objetos no namespace que faziam parte do cluster de big data, mas deixa o namespace. Esse comando excluídos anteriormente, todo o namespace.
 - Nomes de ponto de extremidade foram alterados e consolidados nesta versão:
@@ -74,14 +75,6 @@ As seções a seguir fornecem os problemas conhecidos para clusters de grandes d
 
 - Se uma implantação de cluster de big data falhar, o namespace associado não é removido. Isso pode resultar em um namespace órfão no cluster. Uma solução alternativa é excluir o namespace manualmente antes de implantar um cluster com o mesmo nome.
 
-#### <a name="cluster-administration-portal"></a>Portal de administração de cluster
-
-O portal de administração de cluster não exibe o ponto de extremidade para a instância mestre do SQL Server. Para localizar o endereço IP e porta para a instância mestre, use o seguinte **kubectl** comando:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>Tabelas externas
 
 - É possível criar uma tabela externa do pool de dados para uma tabela que tem sem suporte a tipos de coluna. Se você consultar a tabela externa, você receberá uma mensagem semelhante à seguinte:
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - Se você consultar uma tabela externa do pool de armazenamento, você poderá receber um erro se o arquivo subjacente está sendo copiado no HDFS ao mesmo tempo.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Se você estiver criando uma tabela externa para o Oracle que usam tipos de dados de caractere, o Assistente de virtualização do Azure Data Studio interpreta essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema do Oracle para usar o tipo de NVARCHAR2, ou criar instruções de tabela externa manualmente e especificar NVARCHAR em vez de usar o assistente.
 
 #### <a name="spark-and-notebooks"></a>Spark e notebooks
 
