@@ -32,18 +32,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: 1f35aa25453bc0b5cc1efca66af04964c0be1229
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331546"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802890"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
   Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=. Se qualquer um dos argumentos não for do tipo de dados de cadeia de caracteres, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o converterá no tipo de dados de cadeia de caracteres, se for possível.  
   

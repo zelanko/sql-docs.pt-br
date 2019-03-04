@@ -27,19 +27,16 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 34ab5673d0e74de637f0de22153b9f90cd6a407d
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407646"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802880"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Importa um arquivo de dados para uma tabela ou exibição de banco de dados em um formato especificado pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 

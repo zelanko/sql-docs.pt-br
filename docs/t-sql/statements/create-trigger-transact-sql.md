@@ -29,18 +29,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2c96519627b5fff5ba7e892561392d4fdb2e7c6
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154801"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802392"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Cria um gatilho DML, DDL ou de logon. Um gatilho é um tipo especial de procedimento armazenado executado automaticamente quando um evento ocorre no servidor de banco de dados. Os gatilhos DML são executados quando um usuário tenta modificar dados por meio de um evento DML (linguagem de manipulação de dados). Os eventos DML são instruções INSERT, UPDATE ou DELETE em uma tabela ou exibição. Esses gatilhos são disparados quando qualquer evento válido é acionado, sejam as linhas da tabela afetadas ou não. Para obter mais informações, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   

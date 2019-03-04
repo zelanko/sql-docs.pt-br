@@ -25,18 +25,16 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a7643cbefbaf9e7efcf78071ed097abd1a9b4496
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 85db3bb859a84ed9821f81186b311baf591583e0
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154891"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802670"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
 Executa operações de inserção, atualização ou exclusão em uma tabela de destino usando os resultados de uma união com uma tabela de origem. Por exemplo, sincronize duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela.  
   
