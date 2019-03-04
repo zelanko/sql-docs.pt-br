@@ -2,7 +2,7 @@
 title: Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207300"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319257"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Este artigo apresenta estes recursos de processamento de consulta adaptável que você pode usar para melhorar o desempenho da consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
 - Comentários de concessão de memória de modo de lote
+- Comentários sobre a concessão de memória do modo de linha (versão prévia pública no nível de compatibilidade do banco de dados 150)
 - Junção adaptável de modo de lote
 - Execução intercalada
 
@@ -36,8 +37,6 @@ Em um nível geral, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 Para obter mais informações sobre processamento de consultas e modos de execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira o [Guia da Arquitetura de Processamento de Consultas](../../relational-databases/query-processing-architecture-guide.md).
 
 Às vezes, o plano escolhido pelo Otimizador de Consulta não é o ideal por vários motivos. Por exemplo, o número estimado de linhas que passam pelo plano de consulta pode estar incorreto. Os custos estimados ajudam a determinar qual plano é selecionado para ser usado na execução. Se as estimativas de cardinalidade estiverem incorretas, o plano original ainda será usado, apesar das suposições originais erradas.
-
-![Recursos de processamento de consulta adaptável](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Como habilitar o processamento de consulta adaptável
 Você pode deixar as cargas de trabalho automaticamente qualificadas para o processamento de consulta adaptável, habilitando o nível de compatibilidade 140 para o banco de dados.  Você pode definir isso usando o Transact-SQL. Por exemplo:  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
 
 ## <a name="see-also"></a>Consulte Também
+[Processamento inteligente de consultas em bancos de dados SQL](../../relational-databases/performance/intelligent-query-processing.md)   
 [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)    
 [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

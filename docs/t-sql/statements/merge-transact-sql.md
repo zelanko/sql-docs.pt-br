@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 332776e10ac95fc7df54fcb2e140bf69c487d6ec
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: a7643cbefbaf9e7efcf78071ed097abd1a9b4496
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299599"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154891"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "54299599"
 > [!div class="nextstepaction"]
 > [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
-Realiza operações de inserção, atualização ou exclusão em uma tabela de destino com base nos resultados da junção com a tabela de origem. Por exemplo, você pode sincronizar duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela.  
+Executa operações de inserção, atualização ou exclusão em uma tabela de destino usando os resultados de uma união com uma tabela de origem. Por exemplo, sincronize duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela.  
   
- **Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir, ou atualizando a linha se ela corresponder. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, desempenho e escalabilidade aprimorados podem ser obtidos com as instruções INSERT, UPDATE e DELETE básicas. Por exemplo:  
+**Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir ou atualizando uma linha se ela tiver correspondência. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, melhore o desempenho e a escalabilidade com as instruções básicas INSERT, UPDATE e DELETE. Por exemplo:  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -49,7 +49,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -180,142 +180,142 @@ SET
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- WITH \<common_table_expression>  
- Especifica a exibição ou o conjunto de resultados nomeado temporário, também conhecido como expressão de tabela comum, definido no escopo da instrução MERGE. O conjunto de resultados é derivado de uma consulta simples e referenciado pela instrução MERGE. Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+WITH \<common_table_expression>  
+Especifica a exibição ou o conjunto de resultados nomeado temporário, também conhecido como expressão de tabela comum, que é definida no escopo da instrução MERGE. O conjunto de resultados deriva de uma consulta simples e é referenciado pela instrução MERGE. Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP ( *expression* ) [ PERCENT ]  
- Especifica o número ou a porcentagem de linhas afetadas. *expression* pode ser um número ou um percentual das linhas. As linhas referenciadas na expressão TOP não são organizadas em nenhuma ordem. Para obter mais informações, confira [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
+TOP ( *expression* ) [ PERCENT ]  
+Especifica o número ou a porcentagem de linhas afetadas. *expression* pode ser um número ou um percentual das linhas. As linhas referenciadas na expressão TOP não são organizadas em nenhuma ordem. Para obter mais informações, confira [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
- A cláusula TOP é aplicada depois que toda a tabela de origem e toda a tabela de destino são unidas e as linhas unidas que não se qualificam para uma ação de inserção, atualização ou exclusão são removidas. A cláusula TOP ainda reduz o número de linhas unidas para o valor especificado e as ações de inserção, atualização ou exclusão são aplicadas às linhas unidas restantes de uma forma não ordenada. Ou seja, não há nenhuma ordem na qual as linhas são distribuídas entre as ações definidas nas cláusulas WHEN. Por exemplo, especificar TOP (10) afeta dez linhas. Dessas linhas, sete podem ser atualizadas e três inseridas, ou uma pode ser excluída, cinco atualizadas e quatro inseridas etc.  
+A cláusula TOP aplica-se depois que toda a tabela de origem e toda a tabela de destino são unidas e as linhas unidas que não se qualificam para uma ação de inserção, atualização ou exclusão são removidas. A cláusula TOP ainda reduz o número de linhas unidas para o valor especificado. As ações de inserção, atualização ou exclusão aplicam-se às linhas unidas restantes de maneira não ordenada. Ou seja, não há ordem na qual as linhas são distribuídas entre as ações definidas nas cláusulas WHEN. Por exemplo, a especificação de TOP (10) afeta 10 linhas. Dessas linhas, 7 podem ser atualizadas e 3 inseridas, ou 1 pode ser excluída, 5 atualizadas e 4 inseridas, e assim por diante.  
   
- Como a instrução MERGE executa um exame completo das tabelas de origem e de destino, o desempenho de E/S pode ser afetado ao usar a cláusula TOP para modificar uma tabela grande criando vários lotes. Neste cenário, é importante garantir que todos os lotes sucessivos se destinem a novas linhas.  
+Como a instrução MERGE executa uma verificação de tabela completa das tabelas de origem e de destino, o desempenho de E/S às vezes é afetado quando se usa a cláusula TOP para modificar uma tabela grande criando vários lotes. Nesse cenário, é importante garantir que todos os lotes sucessivos se destinem a novas linhas.  
   
- *database_name*  
- É o nome do banco de dados no qual *target_table* está localizado.  
+*database_name*  
+O nome do banco de dados no qual *target_table* está localizado.  
   
- *schema_name*  
- É o nome do esquema ao qual a *target_table* pertence.  
+*schema_name*  
+O nome do esquema ao qual *target_table* pertence.  
   
- *target_table*  
- É a tabela ou exibição com relação à qual as linhas de dados de \<table_source> são correspondidas com base na \<clause_search_condition>. *target_table* é o destino de qualquer operação de inserção, atualização ou exclusão especificada pelas cláusulas WHEN da instrução MERGE.  
+*target_table*  
+A tabela ou exibição em relação à qual as linhas de dados de \<table_source> são correspondidas com base na \<clause_search_condition>. *target_table* é o destino de qualquer operação de inserção, atualização ou exclusão especificada pelas cláusulas WHEN da instrução MERGE.  
   
- Se *target_table* for uma exibição, qualquer ação com ela deverá atender às condições para atualizar exibições. Para obter mais informações, confira [Modificar dados por meio de uma exibição](../../relational-databases/views/modify-data-through-a-view.md).  
+Se *target_table* for uma exibição, qualquer ação com ela deverá atender às condições para atualizar exibições. Para obter mais informações, confira [Modificar dados por meio de uma exibição](../../relational-databases/views/modify-data-through-a-view.md).  
   
- *target_table* não pode ser uma tabela remota. *target_table* não pode ter nenhuma regra definida.  
+*target_table* não pode ser uma tabela remota. *target_table* não pode ter regras definidas nela.  
   
- [ AS ] *table_alias*  
- É um nome alternativo usado para fazer referência a uma tabela.  
+[ AS ] *table_alias*  
+Um nome alternativo para fazer referência a uma tabela.  
   
- USING \<table_source>  
- Especifica a fonte de dados que é combinada com as linhas de dados em *target_table* com base em \<merge_search condition>. O resultado dessa correspondência dita as ações a serem tomadas pelas cláusulas WHEN da instrução MERGE. \<table_source> pode ser uma tabela remota ou uma tabela derivada que acessa tabelas remotas. 
+USING \<table_source>  
+Especifica a fonte de dados que é compatível com as linhas de dados em *target_table* com base em \<merge_search condition>. O resultado dessa correspondência dita as ações a serem tomadas pelas cláusulas WHEN da instrução MERGE. \<table_source> pode ser uma tabela remota ou uma tabela derivada que acessa tabelas remotas. 
   
- \<table_source> pode ser uma tabela derivada que usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] [construtor de valor de tabela](../../t-sql/queries/table-value-constructor-transact-sql.md) para construir uma tabela especificando várias linhas.  
+\<table_source> pode ser uma tabela derivada que usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] [construtor de valor de tabela](../../t-sql/queries/table-value-constructor-transact-sql.md) para construir uma tabela especificando várias linhas.  
   
- Para obter mais informações sobre a sintaxe e os argumentos dessa cláusula, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+Para obter mais informações sobre a sintaxe e os argumentos dessa cláusula, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
- ON \<merge_search_condition>  
- Especifica as condições nas quais \<table_source> é unido a *target_table* para determinar em que pontos há correspondências. 
+ON \<merge_search_condition>  
+Especifica as condições nas quais \<table_source> se une a *target_table* para determinar em que pontos há correspondências. 
   
 > [!CAUTION]  
->  É importante especificar apenas as colunas da tabela de destino que são usadas para fins de correspondência. Ou seja, especifique as colunas da tabela de destino que são comparadas à coluna correspondente da tabela de origem. Não tente melhorar o desempenho de uma consulta filtrando linhas na tabela de destino na cláusula ON, por exemplo, especificando `AND NOT target_table.column_x = value`. Isso pode retornar resultados inesperados e incorretos.  
+>  É importante especificar apenas as colunas da tabela de destino a serem usadas para fins de correspondência. Ou seja, especifique as colunas da tabela de destino que são comparadas à coluna correspondente da tabela de origem. Não tente melhorar o desempenho de consulta descartando linhas da tabela de destino na cláusula ON; por exemplo, especificando `AND NOT target_table.column_x = value`. Isso pode retornar resultados inesperados e incorretos.  
   
- WHEN MATCHED THEN \<merge_matched>  
- Especifica que todas as linhas da *target_table* que correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer critério de pesquisa adicional são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
+WHEN MATCHED THEN \<merge_matched>  
+Especifica que todas as linhas de *target_table, que correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer condição de pesquisa adicional, são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
   
- A instrução MERGE pode ter no máximo duas cláusulas WHEN MATCHED. Se duas cláusulas forem especificadas, a primeira deverá ser acompanhada por uma cláusula AND \<search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN MATCHED será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN MATCHED, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Se UPDATE for especificada na cláusula \<merge_matched> e mais de uma linha de \<table_source> corresponder a uma linha em *target_table* com base em \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. A instrução MERGE não pode atualizar a mesma linha mais de uma vez, nem atualizar e excluir a mesma linha.  
+A instrução MERGE pode ter, no máximo, duas cláusulas WHEN MATCHED. Se duas cláusulas forem especificadas, a primeira deverá ser acompanhada de uma cláusula AND \<search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN MATCHED será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN MATCHED, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Quando UPDATE for especificada na cláusula \<merge_matched> e mais de uma linha de \<table_source> corresponder a uma linha em *target_table* com base em \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. A instrução MERGE não pode atualizar a mesma linha mais de uma vez, nem atualizar e excluir a mesma linha.  
   
- WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
- Especifica que uma linha é inserida em *target_table* para cada linha retornada por \<table_source> ON \<merge_search_condition> que não corresponde a uma linha em *target_table*, mas atende a um critério de pesquisa adicional, se houver. Os valores a serem inseridos são especificados pela cláusula \<merge_not_matched>. A instrução MERGE pode ter apenas uma cláusula WHEN NOT MATCHED.  
+WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
+Especifica que uma linha é inserida em *target_table* para cada linha retornada por \<table_source> ON \<merge_search_condition> que não corresponde a uma linha em *target_table*, mas atende a um condição de pesquisa adicional, se houver. Os valores a serem inseridos são especificados pela cláusula \<merge_not_matched>. A instrução MERGE pode ter apenas uma cláusula WHEN NOT MATCHED.  
   
- WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
- Especifica que todas as linhas de *target_table* que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer critério de pesquisa adicional são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
+WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
+Especifica que todas as linhas de *target_table que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer condição de pesquisa adicional são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
   
- A instrução MERGE pode ter, no máximo, duas cláusulas WHEN NOT MATCHED BY SOURCE. Se forem especificadas duas cláusulas, a primeira deverá ser acompanhada por uma cláusula AND \<clause_search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN NOT MATCHED BY SOURCE será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN NOT MATCHED BY SOURCE, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Somente as colunas da tabela de destino podem ser referenciadas na \<clause_search_condition>.  
+A instrução MERGE pode ter, no máximo, duas cláusulas WHEN NOT MATCHED BY SOURCE. Se forem especificadas duas cláusulas, a primeira deverá ser acompanhada por uma cláusula AND \<clause_search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN NOT MATCHED BY SOURCE será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN NOT MATCHED BY SOURCE, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Somente as colunas da tabela de destino podem ser referenciadas na \<clause_search_condition>.  
   
- Quando nenhuma linha é retornada por \<table_source>, não é possível acessar as colunas na tabela de origem. Se a ação de atualização ou exclusão especificada na cláusula \<merge_matched> referenciar colunas na tabela de origem, o erro 207 (Nome de coluna inválido) será retornado. Por exemplo, a cláusula `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` pode fazer a instrução falhar porque não é possível acessar `Col1` na tabela de origem.  
+Quando nenhuma linha é retornada por \<table_source>, não é possível acessar as colunas na tabela de origem. Se a ação de atualização ou exclusão especificada na cláusula \<merge_matched> referenciar colunas na tabela de origem, o erro 207 (Nome de coluna inválido) será retornado. Por exemplo, a cláusula `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` pode fazer a instrução falhar porque não é possível acessar `Col1` na tabela de origem.  
   
- AND \<clause_search_condition>  
- Especifica qualquer critério de pesquisa válido. Para obter mais informações, consulte [Condição de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+AND \<clause_search_condition>  
+Especifica qualquer critério de pesquisa válido. Para obter mais informações, consulte [Condição de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
- \<table_hint_limited>  
- Especifica uma ou mais dicas de tabela que são aplicadas à tabela de destino para cada uma das ações de inserção, atualização ou exclusão executadas pela instrução MERGE. A palavra-chave WITH e parênteses são necessários.  
+\<table_hint_limited>  
+Especifica uma ou mais dicas de tabela a serem aplicadas à tabela de destino para cada uma das ações de inserção, atualização ou exclusão executadas pela instrução MERGE. A palavra-chave WITH e parênteses são necessários.  
   
- NOLOCK e READUNCOMMITTED não são permitidos. Para obter mais informações sobre dicas de tabela, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+NOLOCK e READUNCOMMITTED não são permitidas. Para obter mais informações sobre dicas de tabela, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- Especificar a dica TABLOCK em uma tabela que é o destino de uma instrução INSERT tem o mesmo efeito de especificar a dica TABLOCKX. Um bloqueio exclusivo é obtido na tabela. Quando FORCESEEK é especificada, ela é aplicada a uma instância implícita da tabela de destino unida à tabela de origem.  
+Especificar a dica TABLOCK em uma tabela que é o destino de uma instrução INSERT tem o mesmo efeito de especificar a dica TABLOCKX. Um bloqueio exclusivo é obtido na tabela. Quando FORCESEEK é especificada, ela se aplica a uma instância implícita da tabela de destino unida à tabela de origem.  
   
 > [!CAUTION]  
 >  Especificar READPAST com WHEN NOT MATCHED [ BY TARGET ] THEN INSERT pode resultar em operações INSERT que violam restrições UNIQUE.  
   
- INDEX ( index_val [ ,...n ] )  
- Especifica o nome ou a identificação de um ou mais índices em uma tabela de destino para a execução de uma junção implícita com a tabela de origem. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+INDEX ( index_val [ ,...n ] )  
+Especifica o nome ou a ID de um ou mais índices na tabela de destino para a execução de uma união implícita à tabela de origem. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- \<output_clause>  
- Retorna uma linha para cada linha de *target_table* que é atualizada, inserida ou excluída, sem nenhuma ordem específica. **$action** pode ser especificada na cláusula output. **$action** é uma coluna do tipo **nvarchar(10)** que retorna um dos três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi executada na linha. Para obter mais informações sobre os argumentos dessa cláusula, veja [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+\<output_clause>  
+Retorna uma linha para cada linha de *target_table* que é atualizada, inserida ou excluída, sem nenhuma ordem específica. **$action** pode ser especificada na cláusula output. **$action** é uma coluna do tipo **nvarchar(10)** que retorna um dos três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação executada na linha. Para obter mais informações sobre os argumentos dessa cláusula, veja [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- OPTION ( \<query_hint> [ ,...n ] )  
- Especifica que dicas do otimizador são usadas para personalizar o modo como o Mecanismo de Banco de Dados processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+OPTION ( \<query_hint> [ ,...n ] )  
+Especifica que dicas do otimizador são usadas para personalizar o modo como o Mecanismo de Banco de Dados processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
- \<merge_matched>  
- Especifica a ação de atualização ou exclusão que é aplicada a todas as linhas de *target_table* que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer critério de pesquisa adicional.  
+\<merge_matched>  
+Especifica a ação de atualização ou exclusão que é aplicada a todas as linhas de *target_table* que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer condição de pesquisa adicional.  
   
- UPDATE SET \<set_clause>  
- Especifica a lista de nomes de colunas ou de variáveis que devem ser atualizados na tabela de destino e os valores que devem ser usados na atualização.  
+UPDATE SET \<set_clause>  
+Especifica a lista de nomes de colunas ou de variáveis a serem atualizados na tabela de destino e os valores com os quais eles devem ser atualizados.  
   
- Para obter mais informações sobre os argumentos dessa cláusula, veja [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md). Não é permitido definir o mesmo valor de uma coluna para uma variável.  
+Para obter mais informações sobre os argumentos dessa cláusula, veja [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md). Não é permitido definir uma variável com o mesmo valor de uma coluna.  
   
- Delete (excluir)  
- Especifica que as linhas que correspondem a linhas em *target_table* são excluídas.  
+Delete (excluir)  
+Especifica que as linhas que correspondem a linhas em *target_table* são excluídas.  
   
- \<merge_not_matched>  
- Especifica os valores a serem inseridos na tabela de destino.  
+\<merge_not_matched>  
+Especifica os valores a serem inseridos na tabela de destino.  
   
- (*column_list*)  
- É uma lista de uma ou mais colunas da tabela de destino na qual os dados devem ser inseridos. As colunas devem ser especificadas como um nome de parte única. Caso contrário, haverá falha na instrução MERGE. *column_list* deve ser colocada entre parênteses e separada por vírgulas.  
+(*column_list*)  
+Uma lista de uma ou mais colunas da tabela de destino na qual inserir dados. As colunas devem ser especificadas como um nome de parte única. Caso contrário, haverá falha na instrução MERGE. *column_list* deve ser colocada entre parênteses e separada por vírgulas.  
   
- VALUES ( *values_list*)  
- É uma lista de constantes, variáveis ou expressões separadas por vírgulas que retorna valores a serem inseridos na tabela de destino. As expressões não podem conter uma instrução EXECUTE.  
+VALUES ( *values_list*)  
+Uma lista de constantes, variáveis ou expressões separadas por vírgulas que retorna valores a serem inseridos na tabela de destino. As expressões não podem conter uma instrução EXECUTE.  
   
- DEFAULT VALUES  
- Força a linha inserida a conter os valores padrão definidos para cada coluna.  
+DEFAULT VALUES  
+Força a linha inserida a conter os valores padrão definidos para cada coluna.  
   
- Para obter mais informações sobre essa cláusula, veja [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Para obter mais informações sobre essa cláusula, veja [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
- \<search condition>  
- Especifica os critérios de pesquisa usados para especificar \<merge_search_condition> ou \<clause_search_condition>. Para obter mais informações sobre os argumentos para essa cláusula, veja [Condição de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search condition>  
+Especifica os critérios de pesquisa para especificar \<merge_search_condition> ou \<clause_search_condition>. Para obter mais informações sobre os argumentos para essa cláusula, veja [Condição de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
 
- \<graph search pattern>  
- Especifica o padrão de correspondência do grafo. Para obter mais informações sobre os argumentos dessa cláusula, consulte [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+\<graph search pattern>  
+Especifica o padrão de correspondência do grafo. Para obter mais informações sobre os argumentos dessa cláusula, consulte [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## <a name="remarks"></a>Remarks  
- Pelo menos uma das três cláusulas MATCHED devem ser especificadas, mas elas podem ser especificadas em qualquer ordem. Uma variável não pode ser atualizada mais de uma vez na mesma cláusula MATCHED.  
+Pelo menos uma das três cláusulas MATCHED devem ser especificadas, mas elas podem ser especificadas em qualquer ordem. Uma variável não pode ser atualizada mais de uma vez na mesma cláusula MATCHED.  
   
- Qualquer ação de inserção, atualização ou exclusão especificada na tabela de destino pela instrução MERGE é limitada pelas restrições definidas nela, incluindo qualquer restrição de integridade referencial em cascata. Se IGNORE_DUP_KEY for definida como ON em qualquer índice exclusivo na tabela de destino, MERGE ignorará esta configuração.  
+Qualquer ação de inserção, atualização ou exclusão especificada na tabela de destino pela instrução MERGE é limitada pelas restrições definidas nela, incluindo qualquer restrição de integridade referencial em cascata. Se IGNORE_DUP_KEY for ON em qualquer índice exclusivo na tabela de destino, MERGE vai ignorar essa configuração.  
   
- A instrução MERGE exige um ponto-e-vírgula (;) como terminador de instrução. O erro 10713 ocorre quando uma instrução MERGE é executada sem o terminador.  
+A instrução MERGE exige um ponto-e-vírgula (;) como terminador de instrução. O erro 10713 ocorre quando uma instrução MERGE é executada sem o terminador.  
   
- Quando usada depois de MERGE, [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md) retorna o número total de linhas inseridas, atualizadas e excluídas para o cliente.  
+Quando usada depois de MERGE, [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md) retorna o número total de linhas inseridas, atualizadas e excluídas para o cliente.  
   
- MERGE é uma palavra-chave totalmente reservada quando o nível de compatibilidade do banco de dados é definido como 100 ou superior. A instrução MERGE está disponível abaixo dos níveis de compatibilidade do banco de dados 90 e 100. No entanto, a palavra-chave não é totalmente reservada quando o nível de compatibilidade do banco de dados está definido como 90.  
+MERGE é uma palavra-chave totalmente reservada quando o nível de compatibilidade do banco de dados é definido como 100 ou superior. A instrução MERGE está disponível abaixo dos níveis de compatibilidade do banco de dados 90 e 100. No entanto, a palavra-chave não é totalmente reservada quando o nível de compatibilidade do banco de dados está definido como 90.  
   
- A instrução **MERGE** não deve ser usada quando a replicação de atualização enfileirada é utilizada. A instrução **MERGE** e o gatilho de atualização enfileirada não são compatíveis. Substitua a instrução **MERGE** por uma instrução de inserção ou de atualização.  
+Não use a instrução **MERGE** com a replicação de atualização enfileirada. A instrução **MERGE** e o gatilho de atualização enfileirada não são compatíveis. Substitua a instrução **MERGE** por uma instrução de inserção ou de atualização.  
   
 ## <a name="trigger-implementation"></a>Implementação de gatilho  
- Para cada ação de inserção, atualização ou exclusão especificada na instrução MERGE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispara qualquer gatilho AFTER correspondente definido na tabela de destino, mas não garante em qual ação os gatilhos serão disparados primeiro ou por último. Os gatilhos definidos para a mesma ação respeitam a ordem que você especifica. Para obter mais informações sobre a configuração da ordem de acionamento do gatilho, veja [Especificar o primeiro e o último gatilho](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
+Para cada ação de inserção, atualização ou exclusão especificada na instrução MERGE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispara qualquer gatilho AFTER correspondente definido na tabela de destino, mas não garante em qual ação os gatilhos serão disparados primeiro ou por último. Os gatilhos definidos para a mesma ação respeitam a ordem que você especifica. Para obter mais informações sobre a configuração da ordem de acionamento do gatilho, veja [Especificar o primeiro e o último gatilho](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
- Se a tabela de destino tiver um gatilho INSTEAD OF habilitado definido para uma ação de inserção, atualização ou exclusão executada por uma instrução MERGE, ela deverá ter um gatilho INSTEAD OF habilitado para todas as ações especificadas na instrução MERGE.  
+Se a tabela de destino tiver um gatilho INSTEAD OF habilitado definido para uma ação de inserção, atualização ou exclusão realizada por uma instrução MERGE, ela deverá ter um gatilho INSTEAD OF habilitado para todas as ações especificadas na instrução MERGE.  
   
- Se houver qualquer gatilho INSTEAD OF UPDATE ou INSTEAD OF DELETE definido na *target_table*, as operações de atualização ou de exclusão não serão executadas. Em vez disso, os gatilhos são disparados e as tabelas **inserted** e **deleted** serão preenchidas adequadamente.  
+Se algum gatilho INSTEAD OF UPDATE ou INSTEAD OF DELETE for definido em *target_table*, as operações de atualização ou de exclusão não serão executadas. Em vez disso, os gatilhos serão disparados e as tabelas **inserted** e **deleted** serão populadas adequadamente.  
   
- Se houver qualquer gatilho INSTEAD OF INSERT definido em *target_table*, a operação de inserção não será executada. Em vez disso, os gatilhos são disparados e a tabela **inserted** será preenchida de maneira correspondente.  
+Se algum gatilho INSTEAD OF INSERT for definido em *target_table*, a operação de inserção não será executada. Em vez disso, a tabela será populada adequadamente.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão SELECT na tabela de origem e as permissões INSERT, UPDATE ou DELETE na tabela de destino. Para obter informações adicionais, veja a seção Permissões nos tópicos [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) e [DELETE](../../t-sql/statements/delete-transact-sql.md).  
+Requer a permissão SELECT na tabela de origem e as permissões INSERT, UPDATE ou DELETE na tabela de destino. Para saber mais, confira a seção Permissões nos artigos [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) e [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Usando MERGE para executar operações INSERT e UPDATE em uma tabela em uma única instrução  
- Um cenário comum é atualizar uma ou mais colunas em uma tabela, se uma linha correspondente existir, ou inserir os dados como uma nova linha, se uma linha correspondente não existir. Isto normalmente é feito transmitindo parâmetros para um procedimento armazenado que contém as instruções UPDATE e INSERT apropriadas. Com a instrução MERGE, você pode executar as duas tarefas em uma única instrução. O exemplo a seguir mostra um procedimento armazenado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que contém as instruções INSERT e UPDATE. Em seguida, o procedimento é modificado para executar as operações equivalentes usando uma única instrução MERGE.  
+### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Usar MERGE para executar operações INSERT e UPDATE em uma tabela em uma única instrução  
+Um cenário comum é atualizar uma ou mais colunas em uma tabela se existir uma linha correspondente. Ou inserir os dados como uma nova linha se uma linha correspondente não existir. Normalmente, seja qual for o cenário, você transmite parâmetros para um procedimento armazenado que contém as instruções UPDATE e INSERT apropriadas. Com a instrução MERGE, você pode executar as duas tarefas em uma única instrução. O exemplo a seguir mostra um procedimento armazenado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que contém as instruções INSERT e UPDATE. O procedimento é então modificado para executar as operações equivalentes usando uma única instrução MERGE.  
   
 ```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
@@ -386,8 +386,8 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Usando MERGE para executar as operações UPDATE e DELETE em uma tabela em uma única instrução  
- O exemplo a seguir usa MERGE para atualizar diariamente a tabela `ProductInventory` no banco de dados de exemplo da [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em pedidos processados na tabela `SalesOrderDetail`. A coluna `Quantity` da tabela `ProductInventory` foi atualizada subtraindo o número de pedidos colocados a cada dia para cada produto na tabela `SalesOrderDetail`. Se o número de pedidos de um produto reduzir o nível de estoque de um produto para 0 ou menos, a linha desse produto será excluída da tabela `ProductInventory`.  
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Usar MERGE para executar as operações UPDATE e DELETE em uma tabela em uma única instrução  
+O exemplo a seguir usa MERGE para atualizar diariamente a tabela `ProductInventory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em pedidos processados na tabela `SalesOrderDetail`. A coluna `Quantity` da tabela `ProductInventory` foi atualizada subtraindo o número de pedidos colocados a cada dia para cada produto na tabela `SalesOrderDetail`. Se o número de pedidos de um produto reduzir o nível de estoque de um produto para 0 ou menos, a linha desse produto será excluída da tabela `ProductInventory`.  
   
 ```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
@@ -413,8 +413,8 @@ GO
 EXECUTE Production.usp_UpdateInventory '20030501'  
 ```  
   
-### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Usando MERGE para executar as operações UPDATE e INSERT em uma tabela de destino usando uma tabela de origem derivada  
- O exemplo a seguir usa MERGE para modificar a tabela `SalesReason` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] atualizando ou inserindo linhas. Quando o valor de `NewName` na tabela de origem corresponde a um valor na coluna `Name` da tabela de destino (`SalesReason`), a coluna `ReasonType` é atualizada na tabela de destino. Quando o valor de `NewName` não corresponde, a linha de origem é inserida na tabela de destino. A tabela de origem é uma tabela derivada que usa o construtor de valor de tabela do [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar várias linhas para a tabela de origem. Para obter mais informações sobre como usar o construtor de valor de tabela em uma tabela derivada, veja [Construtor de valor de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). O exemplo também mostra como armazenar os resultados da cláusula OUTPUT em uma variável de tabela e resumir os resultados da instrução MERGE executando uma operação de seleção simples que retorna a contagem de linhas inseridas e atualizadas.  
+### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Usar MERGE para executar as operações UPDATE e INSERT em uma tabela de destino usando uma tabela de origem derivada  
+O exemplo a seguir usa MERGE para modificar a tabela `SalesReason` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] atualizando ou inserindo linhas. Quando o valor de `NewName` na tabela de origem corresponde a um valor na coluna `Name` da tabela de destino (`SalesReason`), a coluna `ReasonType` é atualizada na tabela de destino. Quando o valor de `NewName` não corresponde, a linha de origem é inserida na tabela de destino. A tabela de origem é uma tabela derivada que usa o construtor de valor de tabela do [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar várias linhas para a tabela de origem. Para obter mais informações sobre como usar o construtor de valor de tabela em uma tabela derivada, veja [Construtor de valor de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). O exemplo também mostra como armazenar os resultados da cláusula OUTPUT em uma variável de tabela. E, em seguida, você resume os resultados da instrução MERGE executando uma operação de seleção simples que retorna a contagem de linhas inseridas e atualizadas.  
   
 ```sql  
 -- Create a temporary table variable to hold the output actions.  
@@ -438,7 +438,7 @@ GROUP BY Change;
 ```  
   
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Inserindo os resultados da instrução MERGE em outra tabela  
- O exemplo a seguir captura dados retornados da cláusula OUTPUT de uma instrução MERGE e insere esses dados em outra tabela. A instrução MERGE atualiza diariamente a coluna `Quantity` da tabela `ProductInventory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em pedidos processados na tabela `SalesOrderDetail`. O exemplo captura as linhas atualizadas e as insere em outra tabela que é usada para rastrear as alterações do estoque.  
+O exemplo a seguir captura dados retornados da cláusula OUTPUT de uma instrução MERGE e insere esses dados em outra tabela. A instrução MERGE atualiza diariamente a coluna `Quantity` da tabela `ProductInventory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em pedidos processados na tabela `SalesOrderDetail`. O exemplo captura as linhas atualizadas e as insere em outra tabela que é usada para rastrear as alterações do estoque.  
   
 ```sql  
 CREATE TABLE Production.UpdatedInventory  
@@ -467,8 +467,8 @@ FROM
 GO  
 ```  
 
-### <a name="e-using-merge-to-perform-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Usando MERGE para executar INSERT ou UPDATE em uma tabela de borda de destino em um banco de dados do grafo
-Neste exemplo, criamos tabelas de nó `Person` e `City` e uma tabela de borda `livesIn`. Usaremos a instrução MERGE na borda `livesIn` para inserir uma nova linha se a borda ainda não existir entre um `Person` e `City`. Se a borda já existir, apenas atualizaremos o atributo StreetAddress na borda `livesIn`.
+### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Usar MERGE para executar INSERT ou UPDATE em uma tabela de borda de destino em um banco de dados de grafo
+Neste exemplo, você cria tabelas de nó `Person` e `City` e uma tabela de borda `livesIn`. Você usa a instrução MERGE na borda `livesIn` para inserir uma nova linha se a borda ainda não existir entre um `Person` e `City`. Se a borda já existir, você apenas atualizará o atributo StreetAddress na borda `livesIn`.
 
 ```sql
 -- CREATE node and edge tables
@@ -544,14 +544,14 @@ GO
 ```
   
 ## <a name="see-also"></a>Consulte Também  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
- [MERGE em pacotes do Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
- [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [Construtor de valor de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
+[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
+[Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
+[MERGE em pacotes do Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
+[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
+[Construtor de valor de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
   
   
 

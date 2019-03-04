@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d3e35d889db2cbfa8eaead8f1f0e9a2015e007b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710697"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295194"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Criar um relatório móvel do Reporting Services
 Com o Publicador de Relatórios Móveis do SQL Server, você pode criar relatórios móveis do SQL Server Reporting Services com rapidez que se ajustam a qualquer tamanho de tela, em uma superfície de design com colunas e linhas de grade ajustáveis e elementos flexíveis de relatório móvel.  

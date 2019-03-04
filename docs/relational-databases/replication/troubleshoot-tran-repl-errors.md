@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675895"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154881"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solução de problemas: localizar erros com replicação transacional do SQL Server 
 Solucionar problemas de erros de replicação pode ser frustrante sem uma compreensão básica de como a replicação transacional funciona. A primeira etapa para se criar uma publicação é fazer com que o Agente de Instantâneo crie o instantâneo e salvá-lo na pasta de instantâneos. Em seguida, o Agente de Distribuição aplica o instantâneo ao assinante. 
@@ -45,7 +45,7 @@ Erros podem ocorrer em qualquer etapa desse processo. Localizar os erros pode se
 1. Use o Replication Monitor para identificar o ponto em que a replicação está encontrando o erro (qual agente?):
    - Se os erros estão ocorrendo na seção do **Publicador para o Distribuidor**, o problema é com o Agente de Leitor de Log. 
    - Se os erros estão ocorrendo na seção do **Distribuidor para o Assinante**, o problema é com o Agente de Distribuição.  
-2. Examine o histórico de trabalhos do agente no Monitor de Atividade do Trabalho para identificar os detalhes do erro. Se o histórico de trabalhos não está mostrando detalhes suficientes, você pode [habilitar o log detalhado](#enable-verbose-logging) nesse agente específico.
+2. Examine o histórico de trabalhos do agente no Monitor de Atividade do Trabalho para identificar os detalhes do erro. Se o histórico de trabalhos não está mostrando detalhes suficientes, você pode [habilitar o log detalhado](#enable-verbose-logging-on-any-agent) nesse agente específico.
 3. Tente determinar uma solução para o erro.
 
 
@@ -86,7 +86,7 @@ O Agente de Leitor de Log se conecta ao banco de dados publicador e verifica o l
 
     ![Comando "Iniciar o Monitor de replicação" no menu de atalho](media/troubleshooting-tran-repl-errors/launch-repl-monitor.png)
   
-    O Replication Monitor se abre: ![Replication Monitor](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
+    O Monitor de replicação abrirá: ![Replication Monitor](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
    
 2. O X vermelho é uma indicação de que a publicação não está sendo sincronizada. Expanda **Meus Publicadores** no lado esquerdo e, em seguida, expanda o servidor do publicador relevante.  
   

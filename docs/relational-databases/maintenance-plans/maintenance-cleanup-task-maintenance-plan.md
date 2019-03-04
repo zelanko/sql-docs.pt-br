@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532108"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154741"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarefa de limpeza de manutenção (plano de manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52532108"
  Caminho e nome da pasta que contém os arquivos a serem excluídos.  
   
  **Extensão de arquivo**  
- Forneça a extensão de arquivo dos arquivos a serem excluídos.  
+ Forneça a extensão dos arquivos a ser excluídos. Não inclua nenhum outro caractere antes ou depois da extensão (por exemplo, não inclua BAK ou TRN). 
   
  **Incluir subpastas de primeiro nível**  
  Exclua arquivos com a extensão especificada para **Extensão de arquivo** de subpastas de primeiro-nível em **Pasta**.  

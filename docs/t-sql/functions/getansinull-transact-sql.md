@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753384"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287824"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna a nulidade padrão para o banco de dados nessa sessão.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone do link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone do link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>Argumentos  
  '*database*'  
- O nome do banco de dados para o qual as informações de nulidade devem ser retornadas. *database* é **char** ou **nchar**. Se for **char**, *database* será convertido implicitamente em **nchar**.  
+ O nome do banco de dados para o qual as informações de nulidade devem ser retornadas. *bancodedados é **char** ou **nchar**. Se for **char**, *database* será convertido implicitamente em **nchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- Quando a nulidade do banco de dados especificado permite valores nulos e a nulidade de coluna ou de tipo de dados não é explicitamente definida, GETANSINULL retorna 1. Esse é o padrão ANSI NULL.  
+GETANSINULL retornará 1 se a nulidade do banco de dados permitir valores nulos. Esse valor de retorno também requer que a nulidade do tipo de dados ou coluna não esteja definida explicitamente. O padrão ANSI NULL é 1. 
   
  Para habilitar o comportamento padrão ANSI NULL, uma destas condições deve ser definida:  
   

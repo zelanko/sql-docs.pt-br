@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814099"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295544"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -44,7 +44,7 @@ Por exemplo, na imagem do mapa de árvore de exemplo a seguir, a região Sudoest
     * **Grupos de Categorias** (na seguinte ordem):
         1. CategoryName
         2. SubcategoryName
-    * **Grupos de Séries**: TerritoryName  
+    * **Grupos de séries**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -90,7 +90,7 @@ Em um gráfico de explosão solar, a hierarquia é representada por uma série d
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **Grupos de Séries**: TerritoryName  
+    * **Grupos de séries**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -114,7 +114,7 @@ Em um gráfico de explosão solar, a hierarquia é representada por uma série d
   
 1.  **Obter os dados**.  
   
-     A consulta desta seção se baseia no banco de dados AdventureWorks, disponível para download no GitHub: [Backup completo de banco de dados do AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
+     A consulta desta seção se baseia no banco de dados AdventureWorks, disponível para download no GitHub: [Backup completo do banco de dados do AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
   
   
 2.  **Criar uma fonte de dados**.  

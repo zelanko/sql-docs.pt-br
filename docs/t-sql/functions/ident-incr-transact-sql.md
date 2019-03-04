@@ -20,19 +20,19 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac2a77f861330686d618fdd13764d11f27d12e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770914"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290984"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o valor de incremento (retornado como **numeric** (**@@** MAXPRECISION,0)) especificado durante a criação de uma coluna de identidade em uma tabela ou exibição que tem uma coluna de identidade.  
+  Retorna o valor de incremento (como **numérico** (**@@** MAXPRECISION, 0)) especificado durante a criação de uma tabela ou coluna de identidade de exibição.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone do link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone do link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ IDENT_INCR ( 'table_or_view' )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *table_or_view* **'**  
- É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que especifica a tabela ou exibição em que um valor de incremento de identidade válido é verificado. *table_or_view* pode ser uma constante de cadeia de caracteres incluída entre aspas, uma variável, uma função ou um nome de coluna. *table_or_view* é **char**, **nchar**, **varchar** ou **nvarchar**.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que especifica a tabela ou exibição em que um valor de incremento de identidade válido é verificado. *table_or_view* pode ser uma constante de cadeia de caracteres incluída entre aspas. Também pode ser uma variável, uma função ou um nome de coluna. *table_or_view* é **char**, **nchar**, **varchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **numeric**  
@@ -51,7 +51,7 @@ IDENT_INCR ( 'table_or_view' )
 ## <a name="exceptions"></a>Exceções  
  Retornará NULL em caso de erro ou se um chamador não tiver permissão para exibir o objeto.  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas emissoras de metadados, como IDENT_INCR, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de protegíveis que possuir ou para os quais tiver permissões. Sem uma função interna, permissão de objeto de usuário, emissão de metadados, como IDENT_INCR, pode retornar nulo. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -65,7 +65,7 @@ SELECT IDENT_INCR('Person.Address') AS Identity_Increment;
 GO  
 ```  
   
-### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. Retornando o valor de incremento de várias tabelas  
+### <a name="b-returning-the-increment-value-from-multiple-tables"></a>b. Retornando o valor de incremento de várias tabelas  
  O exemplo a seguir retorna as tabelas no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que incluem uma coluna de identidade com um valor de incremento.  
   
 ```  

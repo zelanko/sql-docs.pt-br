@@ -9,14 +9,14 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c9d7125e0575a5df51baa0594aee39e366b015ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cbce55f34f123c2e615b5ace6c1a1b77b3a494e0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608304"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287474"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Compreendendo grupos (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um grupo é um conjunto nomeado de dados do conjunto de dados de relatório associado a uma região de dados. Basicamente, um grupo organiza uma exibição de um conjunto de dados de relatório. Todos os grupos de uma região de dados especificam exibições diferentes do mesmo conjunto de dados de relatório.  
@@ -34,7 +34,7 @@ ms.locfileid: "47608304"
  Um grupo apresenta um nome e um conjunto de expressões de grupo especificados por você. O conjunto de expressões de grupo pode ser uma referência de campo de conjunto de dados única ou uma combinação entre várias expressões. Em tempo de execução, as expressões de grupo são combinadas, se o grupo tiver várias expressões, e for aplicado a dados em um grupo. Por exemplo, você tem um grupo que usa um campo de data para organizar os dados na região de dados. Em tempo de execução, os dados são organizados por data e exibem com os totais outros valores do conjunto de dados para cada data.  
   
 ## <a name="when-do-i-create-groups"></a>Quando crio grupos?  
- Na maior parte dos casos, o Construtor de Relatórios e o Designer de Relatórios criam automaticamente um grupo quando você cria uma região de dados. Para uma tabela, matriz ou lista, são criados grupos quando você descarta campos no painel Agrupamento. Para um gráfico, são criados grupos quando você descarta campos nas áreas para arrastar e soltar do gráfico. Para um medidor, você deve usar a caixa de diálogo de propriedades do medidor. Para uma tabela, matriz ou lista, também é possível criar manualmente um grupo. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Para obter um exemplo de como adicionar grupos ao criar um relatório, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) ou [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ Na maior parte dos casos, o Construtor de Relatórios e o Designer de Relatórios criam automaticamente um grupo quando você cria uma região de dados. Para uma tabela, matriz ou lista, são criados grupos quando você descarta campos no painel Agrupamento. Para um gráfico, são criados grupos quando você descarta campos nas áreas para arrastar e soltar do gráfico. Para um medidor, você deve usar a caixa de diálogo de propriedades do medidor. Para uma tabela, matriz ou lista, também é possível criar manualmente um grupo. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Confira um exemplo de como adicionar grupos durante a criação de um relatório no [Tutorial: Criar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) ou [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Como posso modificar um grupo?  
  Após a criação de um grupo, é possível definir propriedades específicas da região de dados como, por exemplo, expressões de filtro e de classificação, quebras de página e variáveis do grupo para manter dados específicos do escopo. Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "47608304"
 > [!NOTE]  
 >  Embora os grupos tenham nomes diferentes em regiões de dados diferentes, os princípios por trás de como você cria e usa grupos são os mesmos. Ao criar um grupo para uma região de dados, você especifica uma forma de organizar os dados detalhados do conjunto vinculado à região. Cada região de dados oferece suporte a uma estrutura de grupo em que os dados agrupados são exibidos.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos em uma região de dados tablix: grupos de detalhes, de linhas e de colunas  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos em uma Região de Dados Tablix: Grupos de Detalhes, Linhas e Colunas  
  Como mostrado anteriormente neste tópico, uma região de dados tablix permite organizar os dados em grupos por linhas ou colunas. No entanto, os grupos de linhas e de colunas não são os únicos disponíveis em uma região de dados tablix. Essa região de dados pode ter os seguintes tipos de grupo:  
   
 -   **Grupo Detalhes** O grupo Detalhes consiste em todos os dados de um conjunto de dados de relatório depois que o Construtor de Relatórios ou o Designer de Relatórios aplica filtros de conjunto de dados e de região de dados. Dessa forma, o grupo Detalhes é o único que não tem nenhuma expressão de grupo.  

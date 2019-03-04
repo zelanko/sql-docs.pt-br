@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541802"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296464"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
   
@@ -166,7 +166,7 @@ ms.locfileid: "52541802"
 |mapa de calor|Um tipo de representação de mapa na qual a intensidade da cor de cada polígono corresponde aos dados analíticos relacionados. Por exemplo, valores baixos em um intervalo aparecem em azul (frio) e valores altos em vermelho (quente).|  
 |hierarquia|Uma estrutura de árvore lógica que organiza os membros de uma dimensão, de forma que cada membro tenha um membro pai e zero ou mais membros filho.|  
 |alta disponibilidade|Status de um recurso que permanece operacional e utilizável por clientes a maior parte do tempo com uma porcentagem muito baixa de falhas que interrompem o serviço.|  
-|HTML|Consulte outro termo: Linguagem HTML|  
+|HTML|Confira outro termo: Linguagem HTML|  
 |Visualizador de HTML|Uma interface do usuário que consiste em uma barra de ferramentas de relatório e em outros elementos de navegação para trabalhar com um relatório.|  
 |Linguagem HTML|Uma linguagem de marcação de texto usada para criar documentos para a Web. HTML define a estrutura e o layout de um documento Web usando uma variedade de marcas e atributos|  
 |identificador|O nome de um objeto em um banco de dados.|  
@@ -177,7 +177,7 @@ ms.locfileid: "52541802"
 |instância|1. Uma cópia do SQL Server em execução em um computador. 2. Uma cópia específica de um item de relatório, como uma parte de relatório, um sub-relatório, um membro dinâmico ou um grupo.|  
 |inteiro|Uma categoria de tipo de dados numérico que inclui os tipos de dados bigint, int, smallint e tinyint.|  
 |Protocolo IPSec|Regras que os computadores seguem para fornecer comunicação particular e segura pelas redes IP por meio do uso de serviços de segurança criptográfica.|  
-|IPsec|Consulte outro termo: protocolo IPSec|  
+|IPsec|Confira outro termo: Protocolo IPSec|  
 |ISO|Uma de duas agências de padrões internacionais responsáveis por desenvolver padrões de comunicação de dados internacionais. A ISO (International Organization for Standardization) trabalha intimamente com a IEC (International Electrotechnical Commission) para definir padrões de computação. Em conjunto, elas publicaram o padrão ISO/IEC SQL-92 para SQL.|  
 |atribuição de função em nível de item|Uma política de segurança que se aplica a um item na pasta do servidor de relatório.|  
 |definição de função em nível de item|um modelo de segurança que define uma função usada para controlar o acesso ou a interação com um item no namespace da pasta do servidor de relatório.|  
@@ -210,7 +210,7 @@ ms.locfileid: "52541802"
 |arquivo mestre|O arquivo instalado com versões anteriores do SQL Server usado para armazenar os bancos de dados do sistema mestre, modelo e tempdb, logs de transações, o banco de dados de exemplo de publicações e o log de transações.|  
 |campos de correspondência|Um conjunto de campos usados para criar um relacionamento entre dados analíticos e dados espaciais.|  
 |região de dados de matriz|Uma região de dados em um layout de relatório que oferece funcionalidade semelhante à de referências cruzadas e relatórios de Tabela Dinâmica. Em tempo de execução, conforme os dados e as regiões de dados do relatório são combinados, uma matriz cresce horizontalmente e verticalmente na página. Os valores das células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence.|  
-|MDX|Consulte outro termo: linguagem MDX|  
+|MDX|Confira outro termo: Linguagem MDX|  
 |projeção Mercador|Em um item de relatório de mapa, uma projeção de mapa cilíndrica criada por Gerardus Mercator em 1569.|  
 |metadados|Informações sobre as propriedades de dados, como o tipo de dados em uma coluna (numeric, text etc.) ou o comprimento de uma coluna; informações sobre um arquivo, como seu título, descrição, data de criação e data da última modificação; ou informações sobre a estrutura de dados ou informações que especificam o design de objetos, como cubos ou dimensões.|  
 |método|Uma função que executa uma ação por meio de um objeto COM, como no SQL-DMO, no OLE DB e no ActiveX Data Objects (ADO).|  
@@ -261,7 +261,7 @@ ms.locfileid: "52541802"
 |protocolo|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
 |provedor|1. Um provedor OLE DB. 2. Uma DLL (biblioteca de vínculo dinâmico) em processo que fornece acesso a um banco de dados.|  
 |parâmetros de consulta|Parâmetros que são especificados em uma consulta de conjunto de dados, como uma consulta Transact-SQL.|  
-|RDL|Consulte outro termo: Linguagem de Definição de Relatório|  
+|RDL|Confira outro termo: Linguagem RDL|  
 |registro|Um grupo de campos relacionados (colunas) de informações tratadas como uma unidade. Um registro é mais comumente chamado de uma linha em um banco de dados relacional.|  
 |retângulo|Um item de relatório que pode ser usado como um contêiner para vários itens de relatório ou como um elemento gráfico em um relatório.|  
 |hierarquia recursiva|1. Uma hierarquia de dados de um único conjunto de dados de relatório que inclui vários níveis hierárquicos em uma estrutura hierárquica, como a estrutura de subordinação para relações gerente-funcionário em uma hierarquia organizacional. 2. No Master Data Services, uma hierarquia derivada que inclui uma relação recursiva. Uma relação recursiva existe quando uma entidade tem um atributo baseado em domínio baseado na própria entidade.|  
@@ -329,12 +329,12 @@ ms.locfileid: "52541802"
 |SKU|Um modo de identificar edições diferentes de um produto. Também é um acrônimo de Stock Keeping Unit (unidade de manutenção de estoque) (terminologia comercial padrão).|  
 |fatia|Um subconjunto dos dados em um cubo, especificado por meio da limitação de uma ou mais dimensões por membros da dimensão.|  
 |marca inteligente|Uma marca inteligente expõe configurações-chave diretamente na superfície de design para aumentar a produtividade global em tempo de design no Visual Studio 2005.|  
-|SMDL|Consulte outro termo: linguagem SMDL|  
+|SMDL|Confira outro termo: linguagem SMDL|  
 |instantâneo|Consulte outro termo: instantâneo de relatório|  
 |ordem de classificação|O conjunto de regras em uma ordenação que definem como os caracteres são avaliados em operações de comparação e a sequência na qual eles são classificados.|  
 |dados espaciais|Dados que especificam localizações de objetos em uma superfície plana ou curva. Os dados espaciais podem ser pontos, linhas ou polígonos.|  
 |tipos de dados espaciais|Especifica dados que representam informações geométricas (planares) ou geográficas (geodésicas).|  
-|SQL|Consulte outro termo: linguagem SQL|  
+|SQL|Confira outro termo: SQL (Structured Query Language)|  
 |consulta SQL|Uma instrução SQL, como SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
 |Autenticação do SQL Server|O mecanismo para validar uma tentativa de conectar-se a uma instância do SQL Server especificando uma ID de logon e uma senha do SQL Server.|  
 |logon do SQL Server|Uma conta armazenada no SQL Server que permite que os usuários se conectem ao SQL Server.|  
@@ -363,7 +363,7 @@ ms.locfileid: "52541802"
 |Instrumentação de Gerenciamento do Windows|Uma interface que fornece informações sobre objetos em um ambiente gerenciado.|  
 |WKB|Representação de dados WKB (Well Known Binary) conforme o especificado pelo OGC (Open Geospatial Consortium).|  
 |WKT|Representação de dados WKT (Well Known Text) conforme o especificado pelo OGC (Open Geospatial Consortium).|  
-|WMI|Consulte outro termo: Instrumentação de Gerenciamento do Windows|  
+|WMI|Confira outro termo: Instrumentação de Gerenciamento do Windows|  
 |eixo x|Consulte outro termo: eixo de categoria (x)|  
 |eixo y|Consulte outro termo: eixo de valor (y)|  
   

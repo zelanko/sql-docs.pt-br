@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418807"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319107"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consultando dados em uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 As duas primeiras subcláusulas retornam versões de linha que sobrepõem um período específico (isto é, aquelas que começaram antes de determinado período e foram encerradas depois dele), enquanto CONTAINED IN retorna apenas aquelas que existiram dentro de limites de período específicos.  
   
 > [!IMPORTANT]  
->  Se você pesquisar somente versões de linha não atuais, é recomendável usar **CONTAINED IN** , pois ela funciona somente com a tabela de histórico e vai gerar o melhor desempenho de consulta. Use **ALL** quando precisar consultar dados do histórico e atuais sem nenhuma restrição.  
+>  Se você pesquisar somente versões de linha não atuais, é recomendável consultar a tabela de histórico diretamente e isso vai gerar o melhor desempenho de consulta. Use **ALL** quando precisar consultar dados do histórico e atuais sem nenhuma restrição.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

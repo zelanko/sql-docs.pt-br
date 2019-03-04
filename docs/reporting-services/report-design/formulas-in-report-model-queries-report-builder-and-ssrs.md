@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e078205cf705c9ea96a8cccc3811e8162a643f6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607688"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298544"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Fórmulas em consultas de modelo de relatório (Construtor de Relatórios e SSRS)
   Fórmulas são cálculos executados em valores em um relatório que usam um modelo de relatório como uma fonte de dados. Você define fórmulas na **Caixa de Diálogo Definir Forma** no Designer de Consultas de Modelo de Relatório quando define uma consulta para uma fonte de dados de modelo de relatório. Uma fórmula pode conter funções, operadores, constantes e referências a campos ou entidades. As fórmulas permitem combinar, agregar, filtrar e avaliar dados numéricos e de texto. É possível criar fórmulas e salvá-las como novos campos ou modificar as fórmulas de campos existentes.  
@@ -48,7 +48,7 @@ ms.locfileid: "47607688"
  **Operador de Concatenação de Texto.** Use o E comercial (&) para unir ou concatenar uma ou mais cadeias de caracteres de texto para produzir um só texto.  
   
 ##  <a name="Constants"></a> Constantes  
- Uma constante é um valor que não é calculado e, assim, não se altera. O Construtor de Relatórios usa as seguintes constantes: **True**, **False**e **Empty**. Essas constantes são usadas para avaliar campos Boolianos. Por exemplo, suponha que exista um campo chamado IsDiscontinued. Os únicos valores válidos para esse campo são True, False ou Empty (" ").  
+ Uma constante é um valor que não é calculado e, assim, não se altera. O Construtor de Relatórios usa as seguintes constantes: **Verdadeiro**, **Falso** e **Vazio**. Essas constantes são usadas para avaliar campos Boolianos. Por exemplo, suponha que exista um campo chamado IsDiscontinued. Os únicos valores válidos para esse campo são True, False ou Empty (" ").  
   
 ##  <a name="Functions"></a> Funções  
  Funções são fórmulas predefinidas que realizam cálculos usando valores específicos, chamados de *argumentos*, especificados em um pedido específico. Os argumentos podem ser valores literais ou campos, ou combinações de ambos. Quando são usados campos em fórmulas, o nome do campo representa cada instância do campo. Se o argumento for um valor literal, é provável que seja necessário indicar que o argumento é um valor literal usando caracteres específicos.  

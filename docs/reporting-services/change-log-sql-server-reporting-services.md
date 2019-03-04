@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: casualoak
-ms.author: edugonz
+ms.author: RhysSchmidtke
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0eec59b0d2618686f866e6b7799922d9c255b238
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030116"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230903"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Log de alterações do SQL Server Reporting Services (SSRS) 2017 e posteriores
 
@@ -23,15 +23,32 @@ Este artigo descreve as alterações do [!INCLUDE[ssRSnoversion](../includes/ssr
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
 
-### <a name="version-140600906-released-september-12-2018"></a>Versão 14.0.600.906, lançada em: 12 de setembro de 2018
+### <a name="version-1406001109-released-february-12-2019"></a>Versão 14.0.600.1109, Lançamento: 12 de fevereiro de 2019
 
-Esse bug foi corrigido:
+Os seguintes problemas foram corrigidos:
+
+ - O instantâneo de cache programa alterações para a "agenda específica do relatório" depois de modificar a assinatura.
+ - rc:Toolbar=false não funciona na edição Express.
+ - Determinados caracteres tailandeses renderizados incorretamente ao exportar relatórios paginados para PDF.
+ - Deadlock durante a notificação de conclusão de assinaturas controladas por dados
+ - Imagens incorporadas não são exibidas em determinadas circunstâncias quando se usa o parâmetro rc:ToolBar=False.
+ - Não é possível criar assinaturas controladas por dados para relatórios que usam parâmetros em cascata
+ - Não é possível editar assinaturas configuradas com um intervalo inválido.
+ - Atualizações de segurança
+ - Interface do usuário vinculada a relatórios não está em exibição.
+ - Determinados relatórios paginados com controles de tablix aninhados está com fontes incorretas.
+ - Espaço em branco adicionado incorretamente a determinados relatórios paginados com regiões de dados tablix.
+ - Linhas de cabeçalhos desaparecem ao expandir as grades de dados simples de relatório móvel.
+
+### <a name="version-140600906-released-september-12-2018"></a>Versão 14.0.600.906, Lançamento: 12 de setembro de 2018
+
+Os seguintes problemas foram corrigidos:
 
 - A autenticação personalizada não está retornando informações de cookie corretas
 
-### <a name="version-140600892-released-august-31-2018"></a>Versão 14.0.600.892, lançada em: 31 de agosto de 2018
+### <a name="version-140600892-released-august-31-2018"></a>Versão 14.0.600.892, Lançamento: 31 de agosto de 2018
 
-Esses bugs foram corrigidos:
+Os seguintes problemas foram corrigidos:
 
 - Caixa de texto dentro do retângulo faz com que o retângulo não cresça na vertical quando rc:Toolbar=False e ele tem o texto longo 
 - O tamanho do texto não está ajustando se pageHeight for inferior a 0,5 polegada 
@@ -44,18 +61,18 @@ Esses bugs foram corrigidos:
 - Ausência da barra de rolagem vertical na área de prompt de parâmetro 
 - Tempo de execução do relatório de dispositivo móvel atualizado 
 
-### <a name="version-140600744-released-april-25-2018"></a>Versão 14.0.600.744, lançada em: 25 de abril de 2018 
+### <a name="version-140600744-released-april-25-2018"></a>Versão 14.0.600.744, Lançamento: 25 de abril de 2018 
 
-Esses bugs foram corrigidos:
+Os seguintes problemas foram corrigidos:
 
 - A página de assinatura controlada por dados não mostra a opção de entrega quando ela é criada
 - O upgrade do SSRS 2012 para o SSRS 2017 no RSManagement rseulta na geração de uma exceção em intervalos de poucos segundos
 - Não é possível alterar os valores padrão para parâmetros de vários valores no IE11
 - As agendas ficam vazias sempre que a agenda compartilhada é executada
 
-### <a name="version-140600689-released-february-28-2018"></a>Versão 14.0.600.689, lançada em: 28 de fevereiro de 2018
+### <a name="version-140600689-released-february-28-2018"></a>Versão 14.0.600.689, Lançamento: 28 de fevereiro de 2018
 
-Esses bugs foram corrigidos:
+Os seguintes problemas foram corrigidos:
 
 - A visibilidade do Parâmetro de Relatório em um relatório vinculado é revertida após a edição das respectivas propriedades
 - O Parâmetro de URL rc:Toolbar=false não funciona na Express Edition
@@ -64,17 +81,17 @@ Esses bugs foram corrigidos:
 - O portal da Web com autenticação de formulários personalizados está ignorando os cookies de sliding expiration
 - Exportar para o Word cria linhas com alturas diferentes, quando o conteúdo de uma linha está vazio
 
-### <a name="version-140600594-released-january-9-2018"></a>Versão 14.0.600.594, lançada em: 9 de janeiro de 2018
+### <a name="version-140600594-released-january-9-2018"></a>Versão 14.0.600.594, Lançamento: 9 de janeiro de 2018
 
 Atualizações de segurança
 
-### <a name="version-140600490-released-november-1-2017"></a>Versão 14.0.600.490, lançada em: 1º de novembro de 2017
+### <a name="version-140600490-released-november-1-2017"></a>Versão 14.0.600.490, Lançamento: 1º de novembro de 2017
 
-Esse bug foi corrigido:
+Os seguintes problemas foram corrigidos:
 
 - Problemas resolvidos com a atualização do SKU
 
-### <a name="version-140600451-released-september-30-2017"></a>Versão 14.0.600.451, lançada em: 30 de setembro de 2017 
+### <a name="version-140600451-released-september-30-2017"></a>Versão 14.0.600.451, Lançamento: 30 de setembro de 2017 
 
 Versão inicial
 

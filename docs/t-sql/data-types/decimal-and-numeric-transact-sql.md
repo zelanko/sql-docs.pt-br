@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 029e026134f29f2aba56fd37566f384b8d35ccf5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5238c7dba330074f9802fa30b631edba09d3b552
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015492"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231043"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,13 +44,13 @@ Tipos de dados numéricos que têm precisão e escala fixos. Decimal e numeric s
 Números de precisão e escala fixos. Quando a precisão máxima for usada, os valores válidos serão de - 10^38 +1 a 10^38 - 1. Os sinônimos ISO para **decimal** são **dez** e **dec(**_p_, _s_**)**. **numeric** é funcionalmente equivalente a **decimal**.
   
 p (precisão)  
-O número máximo total de dígitos decimais que poderão ser armazenados, à esquerda e à direita do ponto decimal. A precisão deve ser um valor de 1 até a precisão máxima de 38. A precisão padrão é 18.
+O número total máximo de dígitos decimais a ser armazenados. Esse número inclui o que está à direita e à esquerda do ponto decimal. A precisão deve ser um valor de 1 até a precisão máxima de 38. A precisão padrão é 18.
   
 > [!NOTE]  
 >  Informatica é compatível apenas com 16 dígitos significativos, independentemente da precisão e da escala especificadas.  
   
 *s* (escala)  
-O número máximo de dígitos decimais que poderão ser armazenados à direita do ponto decimal. Esse número é subtraído de *p* para determinar o número máximo de dígitos à esquerda do separador decimal. A escala deve ser um valor de 0 a *p*. A escala somente poderá ser especificada se precisão também o for. A escala padrão é 0; portanto, 0 <= *s* \<= *p*. Os tamanhos máximos de armazenamento variam, com base na precisão.
+O número máximo de dígitos decimais que são armazenados à direita do ponto decimal. Esse número é subtraído de *p* para determinar o número máximo de dígitos à esquerda do separador decimal. A escala deve ser um valor de 0 a *p*, e só poderá ser especificada se a precisão for definida. A escala padrão é 0; portanto, 0 <= *s* \<= *p*. Os tamanhos máximos de armazenamento variam, com base na precisão.
   
 |Precisão|Bytes de armazenamento|  
 |---|---|
@@ -63,18 +63,18 @@ O número máximo de dígitos decimais que poderão ser armazenados à direita d
 >  Informatica (conectado por meio do conector do SQL Server PDW Informatica) é compatível apenas com 16 dígitos significativos, independentemente da precisão e da escala especificadas.  
   
 ## <a name="converting-decimal-and-numeric-data"></a>Convertendo dados decimais e numéricos
-Para os tipos de dados **decimal** e **numeric**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera cada combinação específica de precisão e escala como um tipo de dados diferente. Por exemplo, **decimal(5,5)** e **decimal(5,0)** são considerados tipos de dados diferentes.
+Para os tipos de dados **decimal** e **numeric**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera cada combinação de precisão e escala como um tipo de dados diferente. Por exemplo, **decimal(5,5)** e **decimal(5,0)** são considerados tipos de dados diferentes.
   
 Nas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], uma constante com um ponto decimal é convertida automaticamente em um valor de dados **numeric**, usando a escala e a precisão mínimas necessárias. Por exemplo, a constante 12,345 é convertida em um valor **numeric** com uma precisão 5 e uma escala 3.
   
 Converter de **decimal** ou **numeric** para **float** ou **real** pode causar perda de precisão. Converter de **int**, **smallint**, **tinyint**, **float**, **real**, **money** ou **smallmoney** para **decimal** ou **numeric** pode causar estouro.
   
-Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa arredondamento ao converter um número em um valor **decimal** ou **numeric** com precisão e escala inferiores. Porém, se a opção SET ARITHABORT for ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá gerar um erro quando acontecer o estouro. Apenas a perda de precisão e escala não é suficiente para gerar um erro.
+Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa arredondamento ao converter um número em um valor **decimal** ou **numeric** com precisão e escala inferiores. Por outro lado, se a opção SET ARITHABORT for ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá gerar um erro quando acontecer o estouro. Apenas a perda de precisão e escala não é suficiente para gerar um erro.
   
 Ao converter valores reais ou flutuantes em valores decimais ou numéricos, o valor decimal nunca terá mais de 17 decimais. Qualquer valor flutuante < 5E-18 será sempre convertido em 0.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir cria uma tabela usando os tipos de dados **decimal** e **numérico**.  Os valores são inseridos em cada coluna e os resultados são retornados usando uma instrução SELECT.
+O exemplo a seguir cria uma tabela usando os tipos de dados **decimal** e **numérico**.  Os valores são inseridos em cada coluna. Os resultados são retornados usando uma instrução SELECT.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -110,5 +110,4 @@ MyDecimalColumn                         MyNumericColumn
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
-  
   

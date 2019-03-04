@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810985"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294774"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas nos relatórios móveis do Reporting Services
 Os mapas são uma ótima maneira de visualizar dados geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] fornece três tipos diferentes de visualização do mapa e mapas internos para continentes e uma série de países individuais. Você também pode [carregar e usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -32,7 +32,7 @@ Os relatórios móveis do SQL Server oferecem três tipos diferentes de mapas, o
   
 ## <a name="select-the-map-type-and-region"></a>Selecione o tipo de mapa e região  
   
-1. Na guia **Layout**, selecione um tipo de mapa, arraste-o para a superfície de design e ajuste-o para o tamanho desejado.  
+1. Na guia **Layout** , selecione um tipo de mapa, arraste-o para a superfície de design e ajuste-o para o tamanho desejado.  
   
 2. Na exibição de **Layout** > painel **Propriedades Visuais** > **Mapa**, selecione a região específica do mapa que você precisa.  
   

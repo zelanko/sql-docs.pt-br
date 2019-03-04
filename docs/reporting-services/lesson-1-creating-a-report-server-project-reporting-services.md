@@ -1,21 +1,21 @@
 ---
-title: 'Lição 1: Criando um projeto do servidor de relatório (Reporting Services) | Microsoft Docs'
+title: 'Lição 1: Criar um projeto do servidor de relatório (Reporting Services) | Microsoft Docs'
 ms.date: 11/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383651"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292344"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criando um projeto do servidor de relatórios (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criar um projeto do servidor de relatórios (Reporting Services)
 
 Nesta lição, você criará um *projeto do servidor de relatórios* e um *arquivo de definição de relatório (.rdl)* [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] no Visual Studio. 
 
@@ -55,7 +55,7 @@ Nas próximas lições, você define uma fonte de dados para o relatório, defin
   
 1.  No painel **Gerenciador de Soluções** , clique com o botão direito do mouse em **Relatórios** > **Adicionar** > **Novo Item**. 
 
-    >**Dica**: se você não vir o painel **Gerenciador de Soluções** , no menu **Exibir** , clique em **Gerenciador de Soluções**. 
+    >**Dica**: se você não vir o painel **Gerenciador de Soluções** , no menu **Exibir**, clique em **Gerenciador de Soluções**. 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -67,12 +67,12 @@ Nas próximas lições, você define uma fonte de dados para o relatório, defin
     
     ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
   
-     O Designer de Relatórios é um componente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que é executado no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Ele tem duas exibições: **Design** e **Visualização**. Clique em cada guia para alterar exibições.  
+     O Designer de Relatórios é um componente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que é executado no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Ele tem dois modos de exibição: **Design** e **Visualização**. Clique em cada guia para alterar exibições.  
   
     Você define os dados no painel **Dados do Relatório** . Você define o layout do relatório no modo **Design** . É possível executar o relatório e ver sua aparência na exibição **Visualização** .  
   
 ## <a name="next-lesson"></a>Próxima lição  
-Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo de definição de relatório (.rdl) ao projeto de relatório com êxito. Em seguida, você especificará uma fonte de dados para usar para o relatório. Consulte [Lição 2: Especificando informações de conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo de definição de relatório (.rdl) ao projeto de relatório com êxito. Em seguida, você especificará uma fonte de dados para usar para o relatório. Veja a [Lição 2: Especificar informações sobre conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

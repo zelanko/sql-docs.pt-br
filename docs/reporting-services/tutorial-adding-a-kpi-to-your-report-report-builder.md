@@ -1,22 +1,22 @@
 ---
-title: 'Tutorial: Adicionando um KPI ao relatório (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Adicionar um KPI ao relatório (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a19d1fee2e7e9fc1fd5efd8fe2c0007548bcaf2d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712637"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290714"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Adicionar um KPI ao relatório (Construtor de Relatórios)
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Os KPIs são valores mensuráveis com importância comercial. Nesse cenário, o resumo das vendas por subcategorias de produto é o KPI. O estado atual do KPI é mostrado com cores, medidores e indicadores.
   
@@ -25,7 +25,7 @@ A ilustração a seguir é semelhante ao relatório que você criará.
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, confira o primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -51,7 +51,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para saber mais, confira [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -184,7 +184,7 @@ As cores do plano de fundo podem ser definidas como uma expressão avaliada quan
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  Em **Preencher** , clique no botão **fx** ao lado da opção **Cor de preenchimento** e insira a seguinte expressão no campo **Definir expressão para: BackgroundColor** :  
+2.  Na guia **Preenchimento**, clique no botão **fx** ao lado de **Cor de preenchimento** e insira a seguinte expressão no campo **Definir expressão para: BackgroundColor**:  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -291,7 +291,7 @@ Indicadores são medidores pequenos e simples que comunicam valores de dados em 
 ## <a name="Title"></a>6. Adicionar um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Nesta seção, você usa a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
-Você pode aprimorar o texto ainda mais com a aplicação de estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+Você pode aprimorar o texto ainda mais com a aplicação de estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   

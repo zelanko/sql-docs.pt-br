@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23bee332835d0beb812d7737c254d6eccabee6d1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711597"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288596"
 ---
 # <a name="report-builder-tutorials"></a>Tutoriais do Construtor de Relatórios
 
@@ -29,13 +29,13 @@ Para obter ajuda para esses pré-requisitos, entre em contato com o administrado
 [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)  
 A maioria destes tutoriais usa fontes de dados inseridas. Se você tiver acesso a fontes de dados compartilhadas, será possível usá-las em seu lugar. Este tópico fornece as etapas para usar fontes de dados compartilhadas.  
   
-[Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
+[Tutorial: Criar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
 Siga as etapas deste tutorial para aprender a criar seu primeiro relatório. Este tutorial mostra como trabalhar com o Construtor de Relatórios para criar uma conexão de fonte de dados, definir uma consulta simples, criar um layout para conter os dados, formatar o relatório e adicionar agrupamentos e totais.  
   
-[Tutorial: Criando um relatório de matriz &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
+[Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
 Siga as etapas deste tutorial para aprender a adicionar e configurar uma matriz. Você irá usar o Assistente de Tabela ou Matriz para criar a fonte de dados de relatório, o conjunto de dados e o layout e, em seguida, aprimorar a matriz dentro da exibição **Design** do Construtor de Relatórios.  
   
-[Tutorial: Criando um relatório de forma livre &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
+[Tutorial: Criar um relatório de forma livre &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 Siga as etapas deste tutorial para aprender a criar um relatório de formato livre do zero. Esse relatório é semelhante a um boletim informativo.  
   
 [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-format-text-report-builder.md)  
@@ -53,16 +53,16 @@ Siga as etapas deste tutorial para aprender a adicionar um gráfico de barras a 
 [Tutorial: Adicionar um minigráfico ao relatório &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
 Siga as etapas deste tutorial para aprender a criar uma matriz e, em seguida, adicionar um conjunto de minigráficos a ela.  
   
-[Tutorial: Adicionando um KPI ao relatório &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+[Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
 Siga as etapas deste tutorial para aprender a adicionar um indicador chave de desempenho (KPI) a um relatório.  
   
-[Tutorial: Relatório de mapa &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
+[Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
 Siga as etapas deste tutorial para aprender a adicionar um mapa a um relatório.  
   
 [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
 Siga as etapas deste tutorial para aprender a personalizar a aparência e o conteúdo de um relatório usando parâmetros.  
   
-[Tutorial: Criando relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+[Tutorial: Criar relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
 Siga as etapas deste tutorial para aprender como criar relatórios para um cenário de detalhamento baseado em um cubo do Analysis Services. Você criará o relatório principal e o habilitará para detalhamento e o relatório que o destino da ação de detalhamento.  
   
 [Tutorial: Apresentando expressões](../reporting-services/tutorial-introducing-expressions.md)  

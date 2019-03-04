@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504109"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331506"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
 
@@ -69,7 +69,7 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
   
      Dependendo do tipo dos dados da coluna selecionada, diferentes operadores de comparação serão listados. Se a coluna tiver um tipo de dados de data, um ícone de calendário será exibido ao lado do valor de limite da regra. É possível inserir dados com um clique em uma data no calendário ou por meio de digitação da data.  
   
-     O Designer de Alertas de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
+     O Designer de Alerta de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
   
 9. Para adicionar uma cláusula OR, clique na seta para baixo e clique em **Modo de Entrada de Valor**.  
   

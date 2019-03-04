@@ -18,29 +18,33 @@ ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22fa94df7bf1ed0b408e4a5b2ac388697f5939d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6d1c5da2988123c21a6f21d507bdea7fb94b69
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748684"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265304"
 ---
 # <a name="string-operators-transact-sql"></a>Operadores de cadeia de caracteres (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os seguintes operadores de cadeia de caracteres. Os operadores de concatenação de cadeias de caracteres combinam duas ou mais cadeias de caracteres ou binárias, colunas ou uma combinação de cadeias de caracteres e nomes de colunas em uma expressão. Operadores de cadeia de caracteres curinga podem corresponder um ou mais caracteres em uma operação de comparação de cadeia de caracteres, como LIKE ou PATINDEX.  
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os seguintes operadores de cadeia de caracteres. Os operadores de concatenação de cadeias de caracteres podem combinar dois ou mais dos seguintes tipos de dados em uma expressão: 
+* caractere ou cadeias de caracteres binárias
+* colunas 
+* combinação de cadeias de caracteres e nomes de colunas 
+
+Os operadores de cadeia de caracteres curinga podem corresponder a um ou mais caracteres em uma operação de comparação de cadeia de caracteres. LIKE e PATINDEX são exemplos de duas dessas operações.  
   
 ## <a name="section-heading"></a>Cabeçalho da seção  
- [+ (Concatenação de cadeias de caracteres)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+[+ (Concatenação de cadeias de caracteres)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+= (Concatenação de cadeia de caracteres)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+[+= (Concatenação de cadeia de caracteres)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
- [% (Curinga – Caracteres para corresponder)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+[% (Curinga – Caracteres para corresponder)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; &#93; (curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+[&#91; &#93; (curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91;^&#93; (Curinga – caracteres para não correspondência)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+[&#91;^&#93; (Curinga – caracteres para não correspondência)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
- [_ (Curinga – Corresponder um caractere)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
-  
+[_ (Curinga – Corresponder um caractere)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

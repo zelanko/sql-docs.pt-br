@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526177"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286924"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios)
 Este tutorial ensina como criar dois tipos de relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : um relatório de detalhamento e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. 
 
 A ilustração a seguir mostra os relatórios que serão criados e mostra como o valor de campo, Games and Toys, no relatório principal é exibido no título do relatório de detalhamento. Os dados no relatório de detalhamento pertencem à categoria de produto Games and Toys.  
@@ -120,7 +120,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online**, em **Revendedor**e em **OK**.  
   
-    A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
+    A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** (abaixo de **Nome do Canal**).  
   
@@ -411,7 +411,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online** , em **Revendedor**e em **OK**.  
   
-    A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
+    A consulta agora inclui um filtro para incluir apenas esses canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** , abaixo de **Nome do Canal**.  
   
@@ -511,7 +511,7 @@ Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relató
   
 1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
-    O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Quando você executar o relatório, cada linha será exibida da seguinte maneira: a primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados da categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
+    O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Ao executar o relatório, cada linha será exibida da seguinte forma: A primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados de categorias de produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
   
 2.  Clique em **Avançar**.  
   
@@ -627,7 +627,7 @@ Adicione um título ao relatório principal.
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de Categorias de Produtos de 2009: Categoria Online e Revendedor:**.  
+2.  Digite **Vendas de 2009 na Categoria de Produto: Categoria Online e Revendedor:**.  
   
 3.  Selecione o texto que você digitou.  
   

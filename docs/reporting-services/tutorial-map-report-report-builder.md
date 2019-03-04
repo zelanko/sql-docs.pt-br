@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712707"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298644"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -27,7 +27,7 @@ Para variar a aparência de elementos de mapas, especifique um campo com valores
 Neste tutorial, você cria um relatório de mapa que exibe a localização de lojas em condados estatais de Nova York.  
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, confira o primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -171,10 +171,10 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
     O conjunto de resultados contém sete colunas que representam um conjunto de lojas no estado de Nova York que vendem bens de consumo. Aqui está uma lista, com explicações para aquelas que podem não ser óbvias: 
     *   **StoreKey**: um identificador de repositório.  
     *   **StoreName**.
-    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1.125 pés quadrados.
+    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1125 pés quadrados.
     *   **City**.
     *   **County**.
-    *   **Sales**: Total de vendas. 
+    *   **Sales**: total de vendas. 
     *   **SpatialLocation**: local em longitude e latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 

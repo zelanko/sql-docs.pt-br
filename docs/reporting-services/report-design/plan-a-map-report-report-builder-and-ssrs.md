@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c16950d0848e2999e3dee3991904eddeee8a0eee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7a744233ace7e6c31bb2d00c5bdd888a4be371f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808724"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288044"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
 Bons relatórios apresentam informações que levam a ações ou ideias. Para apresentar dados analíticos como totais de vendas ou dados demográficos em relação a uma tela de fundo geográfica, você pode adicionar um mapa a seu relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Um mapa pode conter várias camadas, onde cada uma exibe elementos de mapas que são definidos por um tipo específico de dados espaciais: pontos que representam locais, linhas que representam rotas ou polígonos que representam áreas. Você pode associar seus dados analíticos a elementos de mapas em cada camada.  
@@ -107,7 +107,7 @@ Bons relatórios apresentam informações que levam a ações ou ideias. Para ap
 |-----------------|-----------------|----------------|-----------------------------|  
 |![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa Básico|Polygon|Um mapa que exibe apenas áreas, por exemplo, territórios de vendas.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor. Uma paleta é um conjunto predefinido de cores. Quando todas as cores em uma paleta tiverem sido atribuídas, tons de cores serão atribuídos.|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mapa Analítico de Cores|Polygon|Um mapa que exibe dados analíticos por cor variável, por exemplo, dados de vendas por área.|  
-|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de Bolha|Polígono|Um mapa que exibe dados analíticos por tamanho de bolha variável centralizado nas áreas, por exemplo, dados de vendas por área.<br /><br /> Opções: varie as cores da área com base em um segundo campo analítico e especifique regras de cores.|  
+|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de Bolha|Polygon|Um mapa que exibe dados analíticos por tamanho de bolha variável centralizado nas áreas, por exemplo, dados de vendas por área.<br /><br /> Opções: Opções: varie as cores da área com base em um segundo campo analítico e especifique regras de cores.|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de Linha Básico|Linha|Um mapa que exibe apenas linhas, por exemplo, rotas de entrega.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de Linha Analítico|Linha|Um mapa que varia a cor e a largura da linha, por exemplo, número de pacotes entregues e métrica pontual por rota.<br /><br /> Opções: varie a largura da linha por um campo analítico, varie a cor da linha por um segundo campo analítico e especifique regras de cores.|  
 |![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de Marcador Básico|Ponto|Um mapa que exibe um marcador em cada local, por exemplo, cidades.<br /><br /> Opções: varie a cor pela paleta ou use uma única cor e altere o estilo do marcador.|  
@@ -150,8 +150,8 @@ Bons relatórios apresentam informações que levam a ações ou ideias. Para ap
   
 ## <a name="see-also"></a>Consulte Também  
  [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Relatório de mapa &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

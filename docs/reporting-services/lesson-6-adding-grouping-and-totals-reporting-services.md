@@ -1,21 +1,21 @@
 ---
-title: 'Lição 6: Adicionando agrupamentos e totais (Reporting Services) | Microsoft Docs'
+title: 'Lição 6: Adicionar agrupamentos e totais (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813669"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290074"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lição 6: Adicionando agrupamentos e totais (Reporting Services)
 Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
   
   
@@ -70,7 +70,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 6.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Cinza Claro**e clique em **OK**.  
   
-    ![Modo de exibição de Design: tabela básica com total do pedido](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: tabela básica com total do pedido")  
+    ![Modo de exibição de Design: Tabela básica com total do pedido](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: Tabela básica com total do pedido")  
   
 ## <a name="bkmk_adddailytotal"></a>Para adicionar um total diário a um relatório  
   
@@ -98,13 +98,13 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 4.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Azul Claro**e clique em **OK**.  
   
-    ![Modo de exibição de Design: total geral em tabela básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: total geral em tabela básica")  
+    ![Modo de exibição de Design: Total geral em tabela básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: Total geral em tabela básica")  
   
 5.  Clique em **Visualizar**.  
   
     A última página deve ser semelhante à imagem a seguir. Na barra de ferramentas, clique em Última Página ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Visualização: tabela básica com total geral](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Visualização: tabela básica com total geral")  
+    ![Visualização: Tabela básica com total geral](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Visualização: Tabela básica com total geral")  
   
 ## <a name="bkmk_publishreport"></a>Para publicar o relatório no Servidor de Relatório (opcional)  
   
@@ -125,15 +125,15 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
     Se você vir uma mensagem semelhante à seguinte na janela de saída, ela indicará uma implantação com êxito.  
   
-    > ------ Compilação iniciada: Projeto: tutorial, Configuração: Debug ------  
+    > ------ Compilação iniciada: Projeto: tutorial, Configuração: Depuração ------  
     > Ignorando 'Sales Orders.rdl'. O item está atualizado.  
     > Compilação concluída – 0 erros, 0 avisos  
-    > ------ Implantação iniciada: Projeto: tutorial, Configuração: Debug ------  
+    > ------ Implantação iniciada: Projeto: tutorial, Configuração: Depuração ------  
     > Implantando em https://[nome do servidor]/reportserver  
     > Implantando relatório '/tutorial/Sales Orders'.  
     > Implantação concluída -- 0 erros, 0 avisos  
     > ========== Compilação: 1 com êxito ou atualizados, 0 com falha, 0 ignorados ==========  
-    > ========== Implantação: 1 com êxito, 0 com falha, 0 ignorados ==========  
+    > ========== Implantação: 1 bem-sucedido, 0 falha, 0 ignorado ==========  
   
     Se você vir uma mensagem de erro semelhante à seguinte, verifique se você tem permissões no servidor de relatório e se iniciou o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] com privilégios de administrador.  
   
@@ -142,7 +142,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
 7.  Vá para o portal da Web com privilégios de administrador, por exemplo, clique com o botão direito do mouse no ícone do Internet Explorer e clique em **Executar como administrador**.  
   
     Navegue até a URL do portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
-    **Observação:** a URL do *portal* é "Reports", não a URL do *Servidor* de Relatório "Reportserver".  Por exemplo:   
+    **Observação:** a URL do *portal* é "Reports", não a URL do *Servidor* de Relatório de "Reportserver".  Por exemplo:   
     `https://<server name>/reports`.  
     `https://localhost/reports` funcionará se você estiver criando o relatório no servidor de relatório.  
   
@@ -151,7 +151,7 @@ Clique no nome do relatório **Pedidos de Venda** para exibir o relatório rende
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-Você concluiu com êxito o tutorial Criando um relatório de tabela básico.  
+Você concluiu com êxito o tutorial Criar um relatório de tabela básico.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74b2396d7e32e5f8b596e4dcb5abc84645e8fc84
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712157"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286034"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios paginados de que você precisa. A superfície de design está no centro da janela, com a faixa de opções e os painéis em torno dela. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. Este artigo explica os painéis usados para adicionar, selecionar e organizar os recursos de relatório e alterar as propriedades de item de relatório.  
@@ -137,13 +137,13 @@ ms.locfileid: "52712157"
  Dependendo da propriedade, você pode definir um valor de propriedade usando uma lista suspensa, digitando o valor ou clicando em `<Expression>` para criar uma expressão.  
   
 ### <a name="changing-the-properties-pane-view"></a>Alterando a exibição do painel Propriedades  
- Por padrão, as propriedades exibidas no painel Propriedades são organizadas em grandes categorias, como Ação, Borda, Preenchimento, Fonte e Geral. Cada categoria tem um conjunto de propriedades padrão associado a ela. Por exemplo, as seguintes propriedades são listadas na categoria Font: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se preferir, você poderá ordenar todas as propriedades por nome no painel. Isso removerá as categorias e listará todas as propriedades em ordem alfabética, independentemente da categoria.  
+ Por padrão, as propriedades exibidas no painel Propriedades são organizadas em grandes categorias, como Ação, Borda, Preenchimento, Fonte e Geral. Cada categoria tem um conjunto de propriedades padrão associado a ela. Por exemplo, as propriedades a seguir são listadas na categoria Fonte: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se preferir, você poderá ordenar todas as propriedades por nome no painel. Isso removerá as categorias e listará todas as propriedades em ordem alfabética, independentemente da categoria.  
   
- Existem três botões na parte superior do painel Propriedades: Categoria, Ordem Alfabética e Páginas de Propriedades. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
+ O painel Propriedades tem três botões na parte superior: Categoria, Classificar em ordem alfabética e Páginas de propriedades. Clique nos botões Categoria e Ordem Alfabética para alternar entre as exibições do painel Propriedades. Clique no botão **Páginas de Propriedades** para abrir a caixa de diálogo de propriedades do item de relatório selecionado.  
   
   
 ##  <a name="GroupPane"></a> O painel Agrupamento (Construtor de Relatórios)  
- Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel Agrupamento possui dois painéis: Grupos de Linhas e Grupos de Colunas. Quando você selecionar uma região de dados, o painel Agrupamento exibirá todos os grupos dessa região de dados no formato de uma lista hierárquica: grupos filho aparecem recuados abaixo dos grupos pai.  
+ Os grupos são usados para organizar seus dados de relatório em uma hierarquia visual e para calcular totais. Você pode exibir grupos de linhas e colunas de uma região de dados na superfície de design e no painel Agrupamento. O painel de Agrupamento tem dois painéis: Grupos de linhas e grupos de colunas. Quando você seleciona uma região de dados, o painel Agrupamento exibe todos os grupos dentro dessa região como uma lista hierárquica: os grupos filho aparecem recuados abaixo dos grupos pai.  
   
  ![Grupos de linhas do Construtor de Relatórios](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Grupos de linhas do Construtor de Relatórios")  
   

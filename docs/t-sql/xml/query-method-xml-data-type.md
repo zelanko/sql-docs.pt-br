@@ -15,17 +15,17 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b2028b4cd7e59e207f0045e00ef8f3e9a346b24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026607"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154761"
 ---
 # <a name="query-method-xml-data-type"></a>Método consulta() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Especifica uma consulta XQuery em instância do tipo de dados **xml**. O resultado é do tipo **xml**. O método retorna uma instância de XML sem-tipo.  
+Especifica uma consulta XQuery em instância do tipo de dados **xml**. O resultado é do tipo **xml**. O método retorna uma instância de XML sem-tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,16 +35,16 @@ query ('XQuery')
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- XQuery  
- É uma cadeia de caracteres, uma expressão XQuery, que consulta nós XML, como elementos e atributos, em uma instância XML.  
+XQuery  
+É uma cadeia de caracteres, uma expressão XQuery, que consulta nós XML, como elementos e atributos, em uma instância XML.  
   
 ## <a name="examples"></a>Exemplos  
- Esta seção fornece exemplos de uso do método query() do tipo de dados **xml**.  
+Esta seção fornece exemplos de uso do método query() do tipo de dados **xml**.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Usando o método query() em relação a uma variável de tipo xml  
- O exemplo a seguir declara uma variável **@myDoc** do tipo **xml** e atribui uma instância XML a ela. O método **query()** é, em seguida, usado para especificar uma consulta XQuery no documento.  
+O exemplo a seguir declara uma variável **@myDoc** do tipo **xml** e atribui uma instância XML a ela. O método **query()** é, em seguida, usado para especificar uma consulta XQuery no documento.  
   
- A consulta recupera o elemento filho <`Features`> do elemento <`ProductDescription`>:  
+A consulta recupera o elemento filho <`Features`> do elemento <`ProductDescription`>:  
   
 ```  
 declare @myDoc xml  
@@ -59,7 +59,7 @@ set @myDoc = '<Root>
 SELECT @myDoc.query('/Root/ProductDescription/Features')  
 ```  
   
- Este é o resultado:  
+A saída a seguir mostra o resultado:  
   
 ```  
 <Features>  
@@ -69,7 +69,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>b. Usando o método query() em relação a uma coluna do tipo XML  
- No seguinte exemplo, o método **query()** é usado para especificar uma consulta XQuery na coluna **CatalogDescription** do tipo **xml** no banco de dados **AdventureWorks**:  
+No seguinte exemplo, o método **query()** é usado para especificar uma consulta XQuery na coluna **CatalogDescription** do tipo **xml** no banco de dados **AdventureWorks**:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -83,15 +83,15 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
- Observe o seguinte na consulta anterior:  
+Observe os seguintes itens na consulta anterior:  
   
--   A coluna CatalogDescription é uma coluna **xml** tipada. Isso significa que ela possui uma coleção de esquema associada. No [Prólogo do XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), a palavra-chave **namespace** é usada para definir o prefixo que é usado posteriormente no corpo da consulta.  
+-   A coluna CatalogDescription é uma coluna **xml** digitada, o que significa que tem uma coleção de esquemas associada a ela. No [Prólogo do XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), a palavra-chave **namespace** define o prefixo que é usado posteriormente no corpo da consulta.  
   
 -   O método **query()** constrói o XML, um elemento <`Product`> que tem um atributo **ProductModelID**, no qual o valor do atributo **ProductModelID** é recuperado do banco de dados. Para obter mais informações sobre a construção de XML, consulte [Construção de XML &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md).  
   
--   O [método exist() (tipo de dados XML)](../../t-sql/xml/exist-method-xml-data-type.md) na cláusula WHERE é usado para localizar somente as linhas que contêm o elemento <`Warranty`> no XML. Novamente, a palavra-chave **namespace** é usada para definir dois prefixos de namespace.  
+-   O [método exist() (tipo de dados XML)](../../t-sql/xml/exist-method-xml-data-type.md) na cláusula WHERE localiza somente as linhas que contêm o elemento <`Warranty`> no XML. Novamente, a palavra-chave **namespace** define dois prefixos de namespace.  
   
- Este é o resultado parcial:  
+A saída a seguir mostra o resultado parcial:  
   
 ```  
 <Product ProductModelID="19"/>   
@@ -99,7 +99,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
 ...  
 ```  
   
- Observe que os métodos query() e exist() devem declarar o prefixo PD. Nesses casos, você pode usar WITH XMLNAMESPACES para definir primeiro os prefixos e usá-los na consulta.  
+Observe que os métodos query() e exist() declaram o prefixo PD. Nesses casos, você pode usar WITH XMLNAMESPACES para definir primeiro os prefixos e usá-los na consulta.  
   
 ```  
 WITH XMLNAMESPACES 

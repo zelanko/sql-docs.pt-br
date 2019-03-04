@@ -1,7 +1,7 @@
 ---
 title: Atualizando bancos de dados usando o Assistente de Ajuste de Consulta | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317796"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295654"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Atualizando bancos de dados usando o Assistente de Ajuste de Consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Essa funcionalidade associada fornecida pelo nível de compatibilidade do banco 
 
 Esse controle sobre as atualizações foi ainda mais aprimorado no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], no qual o [Ajuste Automático](../../relational-databases/automatic-tuning/automatic-tuning.md) foi introduzido permitindo automatizar a última etapa no fluxo de trabalho recomendado acima.
 
-Começando com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, o novo recurso **QTA (Assistente de Ajuste de Consulta)** orientará os usuários pelo fluxo de trabalho recomendado para manter a estabilidade do desempenho durante as atualizações para as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais recentes, conforme documentado na seção *Manter a estabilidade do desempenho durante a atualização para o SQL Server mais recente* dos [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
+Começando com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, o novo recurso **QTA (Assistente de Ajuste de Consulta)** orientará os usuários pelo fluxo de trabalho recomendado para manter a estabilidade do desempenho durante as atualizações para as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais recentes, conforme documentado na seção *Manter a estabilidade do desempenho durante a atualização para o SQL Server mais recente* dos [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). No entanto, o QTA não é revertido para um plano em bom estado anteriormente conhecido, como visto na última etapa do fluxo de trabalho recomendado. Em vez disso, o QTA vai rastrear todas as regressões encontradas na exibição [**Consultas Regredidas** do Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) e iterar por meio de possíveis permutações das variações do modelo do otimizador aplicável para que um plano novo e melhor possa ser gerado.
 
 > [!IMPORTANT]
 > O QTA não gera a carga de trabalho do usuário. Ao executar o QTA em um ambiente que não seja usado pelos seus aplicativos, verifique se ainda é possível executar uma carga de trabalho de teste representativa no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de destino por outros meios. 
@@ -54,7 +54,7 @@ O ponto de partida do QTA supõe que um banco de dados de uma versão anterior d
 
 Para obter mais informações sobre como anexar um banco de dados, confira [Anexar e desanexar bancos de dados](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb).
 
-Veja abaixo como o QTA basicamente apenas muda as últimas etapas do fluxo de trabalho recomendado para atualizar o nível de compatibilidade usando o Repositório de Consultas mostrado acima. Em vez de oferecer a opção de escolher entre o plano de execução ineficiente no momento e o último plano de execução eficiente conhecido, o QTA apresenta opções de ajuste específicas para as consultas regredidas selecionadas, para criar um estado aprimorado com planos de execução ajustados.
+Veja abaixo como o QTA basicamente apenas muda as últimas etapas do fluxo de trabalho recomendado para atualizar o nível de compatibilidade usando o Repositório de Consultas mostrado acima. Em vez de oferecer a opção de escolher entre o plano de execução ineficiente no momento e o último plano de execução eficiente conhecido, o QTA apresenta opções de ajuste específicas das consultas regredidas selecionadas para a criação de um novo estado aprimorado com planos de execução ajustados.
 
 ![Fluxo de trabalho de atualização do banco de dados recomendado usando o QTA](../../relational-databases/performance/media/qta-usage.png "Fluxo de trabalho de atualização do banco de dados recomendado usando o QTA")
 
@@ -120,9 +120,9 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
     
     A lista contém as seguintes informações:
     -  **ID da Sessão**
-    -  **Nome da Sessão**: nome gerado pelo sistema composto do nome de banco de dados, da data e da hora de criação da sessão.
+    -  **Nome da Sessão**: nome gerado pelo sistema composto pelo nome do banco de dados e pela data e hora da criação da sessão.
     -  **Status**: status da sessão (Ativa ou Fechada).
-    -  **Descrição**: gerada pelo sistema composta pelo nível de compatibilidade do banco de dados de destino selecionado pelo usuário e o número de dias da carga de trabalho do ciclo comercial.
+    -  **Descrição**: gerada pelo sistema composta pelo nível de compatibilidade do banco de dados de destino selecionado pelo usuário e número de dias da carga de trabalho do ciclo comercial.
     -  **Hora de início**: a data e a hora em que a sessão foi criada.
 
     ![Página de gerenciamento da sessão do QTA](../../relational-databases/performance/media/qta-session-management.png "Página de gerenciamento da sessão do QTA")
@@ -155,7 +155,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
 
         ![Subetapa 2 da Etapa 2 do QTA](../../relational-databases/performance/media/qta-step2-substep2.png "Subetapa 2 da Etapa 2 do QTA")
 
-    3.  A **Coleta de dados observada** solicita que o usuário execute novamente o ciclo de carga de trabalho representativo, para que esse Repositório de Consultas possa coletar uma linha de base de comparação que será usada para pesquisar oportunidades de otimização. Conforme a carga de trabalho é executada, use o botão **Atualizar** para continuar atualizando a lista de consultas regredidas, caso alguma seja encontrada. Altere o valor de **Consultas a serem mostradas** para limitar o número de consultas exibidas. A ordem da lista é afetada pela **Métrica** (Duração ou CpuTime) e pela **Agregação** (Média é o padrão). Também selecione quantas **Consultas a serem mostradas**. Quando essa carga de trabalho for concluída, marque **Execução de carga de trabalho concluída** e clique em **Avançar**.
+    3.  A **Coleta de Dados Observados** solicita que o usuário execute o ciclo de carga de trabalho representativo mais uma vez para que o Repositório de Consultas possa coletar uma linha de base de comparação que será usada para pesquisar oportunidades de otimização. Conforme a carga de trabalho é executada, use o botão **Atualizar** para continuar atualizando a lista de consultas regredidas, caso alguma seja encontrada. Altere o valor de **Consultas a serem mostradas** para limitar o número de consultas exibidas. A ordem da lista é afetada pela **Métrica** (Duração ou CpuTime) e pela **Agregação** (Média é o padrão). Também selecione quantas **Consultas a serem mostradas**. Quando essa carga de trabalho for concluída, marque **Execução de carga de trabalho concluída** e clique em **Avançar**.
 
         ![Subetapa 3 da Etapa 2 do QTA](../../relational-databases/performance/media/qta-step2-substep3.png "Subetapa 3 da Etapa 2 do QTA")
 
@@ -197,7 +197,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
 
     ![Etapa 5 do QTA](../../relational-databases/performance/media/qta-step5.png "Etapa 5 do QTA")
 
-    Se mais tarde for necessário reverter para uma otimização proposta, selecione a consulta relevante e clique em **Reverter**. Esse guia de plano de consulta será removido e a lista será atualizada para remover a consulta revertida. Observe na imagem abaixo que a consulta 8 foi removida.
+    Se em um momento posterior houver a necessidade de reverter para uma otimização proposta, selecione a consulta relevante e clique em **Reverter**. Esse guia de plano de consulta será removido e a lista será atualizada para remover a consulta revertida. Observe na imagem abaixo que a consulta 8 foi removida.
 
     ![Etapa 5 do QTA – Reversão](../../relational-databases/performance/media/qta-step5-rollback.png "Etapa 5 do QTA – Reversão") 
 

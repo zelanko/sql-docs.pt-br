@@ -22,22 +22,22 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27af02d973c048ca5be4dd5c28010b3bcde65314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815184"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154701"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cria um objeto chamado padrão. Quando associado a uma coluna ou um tipo de dados de alias, um padrão especifica um valor a ser inserido na coluna á qual o objeto está associado (ou em todas as colunas, no caso de um tipo de dados de alias), quando nenhum valor é fornecido explicitamente durante uma inserção.  
+Cria um objeto chamado padrão. Quando associado a uma coluna ou a um tipo de dados de alias, um padrão especifica um valor a ser inserido na coluna à qual o objeto está associado (ou em todas as colunas, no caso de um tipo de dados de alias), quando nenhum valor é fornecido explicitamente durante uma inserção.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez dela, use definições padrão criadas usando a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,25 +48,25 @@ AS constant_expression [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name*  
- É o nome do esquema ao qual o padrão pertence.  
+*schema_name*  
+ O nome do esquema ao qual o padrão pertence.  
   
- *default_name*  
- É o nome do padrão. Os nomes padrão devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do proprietário do padrão é opcional.  
+*default_name*  
+ O nome do padrão. Os nomes padrão devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do proprietário do padrão é opcional.  
   
- *constant_expression*  
- É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Podem ser usadas qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. Funções definidas pelo usuário não podem ser usadas. Coloque constantes de caractere e de data entre aspas simples (**'**); constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
+*constant_expression*  
+Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Você pode usar qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. As funções definidas pelo usuário não podem ser usadas. Coloque as constantes de caractere e de data entre aspas simples (**'**); as constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
   
 ## <a name="remarks"></a>Remarks  
- Um nome padrão pode ser criado somente no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando um padrão for criado, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
+ Só é possível criar um nome padrão no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando você criar um padrão, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
   
- Se o padrão não for compatível com a coluna à qual está associado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará uma mensagem de erro ao tentar inserir o valor padrão. Por exemplo, N/A não pode ser usado como padrão para uma coluna **numeric**.  
+ Se o padrão não for compatível com a coluna à qual está associado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará uma mensagem de erro ao tentar inserir o valor padrão. Por exemplo, N/D não pode ser usado como padrão para uma coluna **numeric**.  
   
  Se o valor padrão for muito longo para a coluna à qual está associado, ele será truncado.  
   
- Instruções CREATE DEFAULT não podem ser combinadas com outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um único lote.  
+ As instruções CREATE DEFAULT não podem ser combinadas com outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um único lote.  
   
- Um padrão deve ser removido antes da criação de um novo com o mesmo nome, mas primeiro sua associação deve ser desfeita com a execução de **sp_unbindefault**.  
+ Um padrão deve ser descartado para que um novo com o mesmo nome seja criado. E o padrão deve ser desassociado executando **sp_unbindefault** antes de ser descartado.  
   
  Se uma coluna tiver um padrão e uma regra associado a ele, o valor do padrão não deve violar a regra. Um padrão que entra em conflito com uma regra nunca é inserido, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera uma mensagem de erro sempre que tenta inseri-lo.  
   
@@ -76,7 +76,7 @@ AS constant_expression [ ; ]
   
 -   As palavras-DEFAULT VALUES ou DEFAULT são usadas com INSERT para inserir valores padrão.  
   
- Se NOT NULL for especificado ao criar uma coluna e um padrão não for criado para ela, uma mensagem de erro será gerada quando um usuário não fizer uma entrada nessa coluna. A tabela a seguir ilustra o relacionamento entre a existência de um padrão e a definição de uma coluna como NULL ou NOT NULL. As entradas na tabela mostram o resultado.  
+ Se você especificar NOT NULL ao criar uma coluna e não criar um padrão para ela, uma mensagem de erro será gerada quando um usuário não fizer uma entrada nessa coluna. A tabela a seguir ilustra o relacionamento entre a existência de um padrão e a definição de uma coluna como NULL ou NOT NULL. As entradas na tabela mostram o resultado.  
   
 |Definição da coluna|Nenhuma entrada, nenhum padrão|Nenhuma entrada, padrão|Insere NULL, nenhum padrão|Insere NULL, padrão|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
@@ -86,7 +86,7 @@ AS constant_expression [ ; ]
  Para renomear um padrão, use **sp_rename**. Para obter um relatório sobre um padrão, use **sp_help**.  
   
 ## <a name="permissions"></a>Permissões  
- Para executar CREATE DEFAULT, no mínimo, um usuário deve ter a permissão CREATE DEFAULT no banco de dados atual e a permissão ALTER no esquema no qual o padrão está sendo criado.  
+ Para usar CREATE DEFAULT, no mínimo, um usuário deve ter a permissão CREATE DEFAULT no banco de dados atual e a permissão ALTER no esquema no qual o padrão está sendo criado.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -99,8 +99,11 @@ GO
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
   
-### <a name="b-binding-a-default"></a>B. Associando um padrão  
- O exemplo a seguir associa o padrão criado no exemplo A. O padrão entra em vigor somente se nenhuma entrada for especificada para a coluna `Phone` da tabela `Contact`. Observe que omitir qualquer entrada é diferente de declarar NULL explicitamente em uma instrução INSERT.  
+### <a name="b-binding-a-default"></a>b. Associando um padrão  
+ O exemplo a seguir associa o padrão criado no exemplo A. O padrão entra em vigor somente se nenhuma entrada for especificada para a coluna `Phone` da tabela `Contact`. 
+ 
+ > [!Note] 
+ >  Omitir qualquer entrada é diferente de declarar NULL explicitamente em uma instrução INSERT.  
   
  Como não existe um padrão chamado `phonedflt`, a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir gera uma falha. Este exemplo é apenas uma ilustração.  
   

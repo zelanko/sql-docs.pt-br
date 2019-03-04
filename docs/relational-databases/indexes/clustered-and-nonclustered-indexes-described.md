@@ -1,7 +1,7 @@
 ---
 title: Índices clusterizados e não clusterizados descritos | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299263"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265213"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices clusterizados e não clusterizados descritos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299263"
  Veja [Índices](../../relational-databases/indexes/indexes.md) para obter mais tipos de índices de uso geral.  
   
 ## <a name="indexes-and-constraints"></a>Índices e restrições  
- Os índices são criados automaticamente quando as restrições PRIMARY KEY e UNIQUE são definidas em colunas de tabelas. Por exemplo, ao criar uma tabela e identificar determinada coluna como a chave primária, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria automaticamente uma restrição PRIMARY KEY e o índice nessa coluna. Para obter mais informações, veja [Criar chaves primárias](../../relational-databases/tables/create-primary-keys.md) e [Criar restrições exclusivas](../../relational-databases/tables/create-unique-constraints.md).  
+
+Os índices são criados automaticamente quando as restrições PRIMARY KEY e UNIQUE são definidas em colunas de tabelas. Por exemplo, quando você criar uma tabela com uma restrição UNIQUE, [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará automaticamente um índice não clusterizado. Se você configurar uma PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará automaticamente um índice clusterizado, a menos que já exista um. Quando você tentar impor uma restrição PRIMARY KEY em uma tabela existente e já houver um índice clusterizado nessa tabela, o SQL Server irá impor a chave primária usando um índice não clusterizado.
+
+Para obter mais informações, veja [Criar chaves primárias](../../relational-databases/tables/create-primary-keys.md) e [Criar restrições exclusivas](../../relational-databases/tables/create-unique-constraints.md).  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Como os índices são usados pelo Otimizador de Consulta  
  Índices bem projetados podem reduzir as operações de E/S de disco e consumir menos recursos de sistema, aprimorando o desempenho das consultas. Os índices podem ser úteis para uma série de consultas que contêm instruções SELECT, UPDATE, DELETE ou MERGE. Considere a consulta `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Quando essa consulta é executada, o otimizador de consulta avalia cada método disponível para recuperar os dados e seleciona o mais eficaz. O método pode ser uma verificação de tabela ou verificação de um ou mais índices, se houver.  

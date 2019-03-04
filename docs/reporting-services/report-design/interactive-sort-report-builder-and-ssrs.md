@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e469cd06123f0efc939760fd00d5377e9ac737a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4124b909cf35ea071aef5f57672ff8a3701a44ca
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738684"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286364"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Classificação interativa (Construtor de Relatórios e SSRS)
   É possível adicionar botões de classificação interativos para permitir que um usuário alterne entres as ordens crescente e decrescente para linhas de uma tabela ou para linhas e colunas de uma matriz. O uso mais comum da classificação interativa é adicionar um botão de classificação a todos os cabeçalhos de coluna. Assim, o usuário pode escolher a coluna pela qual classificar.  
@@ -27,13 +27,13 @@ ms.locfileid: "47738684"
   
 -   **O que classificar:** linhas ou colunas?  
   
--   **Classificar pelo quê:** um campo exibido em uma coluna de tabela? Um campo que não é exibido?  
+-   **Pelo que classificar:** um campo que é exibido em uma coluna de tabela? Um campo que não é exibido?  
   
--   **Em que contexto classificar:** por exemplo, é possível classificar linhas associadas a grupos; colunas associadas a grupos de colunas; linhas detalhadas; grupos filho em um grupo pai ou grupos pai e filho juntos.  
+-   **Em que contexto classificar:** por exemplo, é possível classificar linhas associadas a grupos de linhas; colunas associadas a grupos de colunas; linhas detalhadas; grupos filho em um grupo pai ou grupos pai e filho juntos.  
   
--   **A qual caixa de texto adicionar o botão de classificação:** ao cabeçalho de coluna ou ao cabeçalho da linha do grupo?  
+-   **A qual caixa de texto adicionar o botão de classificação:** no cabeçalho da coluna ou no cabeçalho da linha de grupo?  
   
--   **Sincronizar ou não a classificação em várias regiões de dados:** é possível criar um relatório para quando o usuário alternar a ordem de classificação; as demais regiões de dados com o mesmo ancestral também são classificadas.  
+-   **Sincronizar ou não a classificação de várias regiões de dados:** é possível criar um relatório para quando o usuário alternar a ordem de classificação; as demais regiões de dados com o mesmo ancestral também são classificadas.  
   
  Para obter instruções passo a passo, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   

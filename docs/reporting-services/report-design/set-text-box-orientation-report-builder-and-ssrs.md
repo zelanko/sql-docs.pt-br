@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e7ea1335515189f081b010162aa0fe71028d14b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 34331a7ac53f7a36694c397964b1be20ae2c1f9c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751124"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298614"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Definir a orientação da caixa de texto (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você pode girar uma caixa de texto em direções diferentes:   
@@ -42,6 +42,6 @@ Como a caixa de texto é girada, e não o texto, a rotação se aplica a todo o 
   
 ## <a name="see-also"></a>Consulte Também  
  [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [Tutorial: Formatar texto &#40Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

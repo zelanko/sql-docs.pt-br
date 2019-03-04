@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Apresentação de expressões | Microsoft Docs'
+title: 'Tutorial: Introdução às expressões | Microsoft Docs'
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410703"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292214"
 ---
-# <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
+# <a name="tutorial-introducing-expressions"></a>Tutorial: Introdução às expressões
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você usa expressões com funções e operadores comuns para criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avançados e flexíveis. 
 
 Você escreverá expressões que concatenam valores de nome, pesquisará valores em um conjunto de dados separado, exibirá diferentes cores com base em valores de campo e assim por diante.  
@@ -89,7 +89,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
     ```  
 
   
-10. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). O conjunto de resultados exibe 23 linhas de dados e nas seguintes colunas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
+10. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). O conjunto de resultados exibe 23 linhas de dados com as seguintes colunas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -357,7 +357,7 @@ Nesta seção, você cria o conjunto de dados CountryRegion e usa a função **L
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Para pesquisar valores no conjunto de dados CountryRegion  
   
-1.  Clique no cabeçalho da coluna **Country Region ID** e exclua o texto: **ID**, de modo que ele se torna **Country Region**.  
+1.  Clique no cabeçalho da coluna **Identificação de país ou região** e exclua o texto: **ID**, para ler **Região do País**.  
   
 2.  Clique com o botão direito do mouse na célula de dados da coluna **Country Region** e clique em **Expressão**.  
   

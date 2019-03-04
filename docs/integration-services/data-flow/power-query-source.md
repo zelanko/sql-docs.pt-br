@@ -1,12 +1,15 @@
 ---
 title: Fonte do Power Query | Microsoft Docs
 description: Saiba como configurar a Fonte do Power Query no fluxo de dados do SQL Server Integration Services
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
+- sql13.ssis.designer.powerqueryconnmgr.f1
+- sql13.ssis.designer.powerquerysource.queries.f1
+- sql13.ssis.designer.powerquerysource.connmgrs.f1
 - sql14.ssis.designer.powerqueryconnmgr.f1
 - sql14.ssis.designer.powerquerysource.queries.f1
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
@@ -14,12 +17,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00b24bdc5da2c717f43ca30e9159aa845faf171b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570699"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319307"
 ---
 # <a name="power-query-source-preview"></a>Fonte do Power Query (versão prévia)
 
@@ -68,9 +71,6 @@ No **Editor do Gerenciador de Conexões do Power Query**, você precisa especifi
 
 Algumas dessas fontes (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) requerem instalações adicionais de drivers do ADO.NET que podem ser obtidas no artigo [Pré-requisitos do Power Query](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a). Você pode usar a interface de configuração personalizada para instalá-los em seu Azure-SSIS IR, confira o artigo [Personalizar o Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
-> [!NOTE]
-> Para a fonte de dados **Oracle**, o driver da Oracle ADO.NET não pode atualmente ser instalado no Azure-SSIS IR, portanto instale o driver ODBC da Oracle e use a fonte de dados **ODBC** para conectar-se à Oracle. Agora, confira o exemplo **ORACLE STANDARD ODBC** no artigo [Personalizar o Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
-
 Para **Caminho da Fonte de Dados** , você pode inserir propriedades específicas da fonte de dados formando uma cadeia de conexão sem as informações de autenticação. Por exemplo, o caminho para a fonte de dados **SQL** é formado como `<Server>;<Database>`. Você pode selecionar o botão **Editar** para atribuir valores a propriedades específicas da fonte de dados que formam o caminho.
 
 ![Caminho do Editor do Gerenciador de Conexões da Fonte do PQ](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -78,6 +78,12 @@ Para **Caminho da Fonte de Dados** , você pode inserir propriedades específica
 Finalmente, para **Tipo de Autenticação**, você pode selecionar **Anônimo**/**Autenticação do Windows**/**Nome de usuário/senha**/**chave** no menu suspenso, insira as credenciais de acesso apropriadas e selecione o botão **Conexão de Teste** para garantir que a Fonte do Power foi configurada corretamente.
 
 ![Autenticação do Editor do Gerenciador de Conexões da Fonte do PQ](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### <a name="current-limitations"></a>Limitações atuais
+
+-   No momento, a fonte de dados **Oracle** não pode ser usada porque o driver da Oracle ADO.NET não pode ser instalado no Azure-SSIS IR; portanto, instale o driver ODBC da Oracle e use a fonte de dados **ODBC** para conectar-se à Oracle. Agora, confira o exemplo **ORACLE STANDARD ODBC** no artigo [Personalizar o Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+
+-   No momento, a fonte de dados **Web** não pode ser usada no Azure-SSIS IR com a configuração personalizada, então, use-a no Azure-SSIS IR sem a configuração personalizada por enquanto.
 
 ## <a name="next-steps"></a>Próximas etapas
 Saiba como executar pacotes SSIS no Azure-SSIS IR como atividades de primeira classe em pipelines do ADF. Confira o artigo [Executar o tempo de execução da atividade do pacote SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).

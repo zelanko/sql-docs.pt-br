@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299983"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331546"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "54299983"
   > [!div class="nextstepaction"]
   > [Compartilhe seus comentários sobre o Sumário do SQL Docs!](https://aka.ms/sqldocsurvey)
 
-  Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=. Se qualquer um dos argumentos não for do tipo de dados de cadeia de caracteres, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o converterá no tipo de dados de cadeia de caracteres, se possível.  
+  Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=. Se qualquer um dos argumentos não for do tipo de dados de cadeia de caracteres, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o converterá no tipo de dados de cadeia de caracteres, se for possível.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ match_expression [ NOT ] LIKE pattern
 |[^]|Qualquer caractere único que não esteja no intervalo (^[a-f]) ou conjunto ([^abcdef]) especificado.|WHERE au_lname LIKE 'de[^l]%' localiza todos os sobrenomes de autor que comecem com de e a letra seguinte não seja l.|  
   
  *escape_character*  
- É um caractere colocado na frente de um caractere curinga para indicar que o curinga deve ser interpretado como um caractere comum, e não como um curinga. *escape_character* é uma expressão de caractere que não tem nenhum padrão e deve ser avaliada somente para um caractere.  
+ É um caractere colocado na frente de um caractere curinga para indicar que o curinga é interpretado como um caractere normal, e não como um curinga. *escape_character* é uma expressão de caractere que não tem nenhum padrão e deve ser avaliada somente para um caractere.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
@@ -87,9 +87,9 @@ match_expression [ NOT ] LIKE pattern
  LIKE retorna TRUE se a *match_expression* corresponde ao *pattern* especificado.  
   
 ## <a name="remarks"></a>Remarks  
- Ao executar comparações de cadeias de caracteres usando LIKE, todos os caracteres na cadeia padrão são significativos. Isso inclui espaços à esquerda ou à direita. Se uma comparação em uma consulta deve retornar todas as linhas com uma cadeia de caracteres LIKE 'abc ' (abc seguido de um único espaço), não será retornada nenhuma linha na qual o valor daquela coluna seja abc (abc sem espaço). Entretanto, os espaços em branco à direita da expressão cujo padrão é correspondido são ignorados. Se uma comparação em uma consulta deve retornar todas as linhas com a cadeia de caracteres LIKE 'abc' (abc sem espaço), serão retornadas todas as linhas que comecem com abc e que tenham zero ou mais espaços em branco à direita.  
+ Ao realizar comparações de cadeias de caracteres usando LIKE, todos os caracteres na cadeia padrão são significativos. Caracteres significativos incluem espaços à esquerda ou à direita. Se uma comparação em uma consulta deve retornar todas as linhas com uma cadeia de caracteres LIKE 'abc ' (abc seguido de um único espaço), não será retornada uma linha na qual o valor da coluna seja abc (abc sem espaço). Entretanto, os espaços em branco à direita da expressão cujo padrão é correspondido são ignorados. Se uma comparação em uma consulta deve retornar todas as linhas com a cadeia de caracteres LIKE 'abc' (abc sem espaço), serão retornadas todas as linhas que comecem com abc e que tenham zero ou mais espaços em branco à direita.  
   
- Uma comparação de cadeia de caracteres que usa um padrão que contém dados **char** e **varchar** pode não passar uma comparação LIKE devido à maneira como os dados são armazenados. Você deve entender o armazenamento de cada tipo de dados e onde uma comparação LIKE pode falhar. O exemplo a seguir passa uma variável **char** local para um procedimento armazenado e usa a correspondência de padrões para localizar todos os funcionários cujos sobrenomes começam com um conjunto de caracteres especificado.  
+ Uma comparação de cadeia de caracteres que usa um padrão que contém dados **char** e **varchar** pode não aprovar uma comparação LIKE devido à maneira como os dados são armazenados para cada tipo de dados. O exemplo a seguir aprova uma variável **char** local para um procedimento armazenado e usa a correspondência de padrões para localizar todos os funcionários cujos sobrenomes começam com um conjunto de caracteres especificado.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
@@ -179,7 +179,7 @@ GO
   
  Para consultar todos os objetos que não sejam exibições de gerenciamento dinâmico, use `NOT LIKE 'dm%'`. Se tiver um total de 32 objetos e LIKE localizar 13 nomes que correspondam ao padrão, NOT LIKE localizará os 19 objetos que não correspondem ao padrão LIKE.  
   
- Talvez você nem sempre localize os mesmos nomes com um padrão do tipo `LIKE '[^d][^m]%'`. Em vez de 19 nomes, poderá localizar somente 14, com todos os nomes que começam com `d` ou têm `m` como a segunda letra eliminada dos resultados, e os nomes de exibição de gerenciamento dinâmico. Isto ocorre porque as cadeias de correspondência com caracteres curinga negativos são avaliadas em etapas, um curinga de cada vez. Se a correspondência falhar em qualquer ponto da avaliação, ela será eliminada.  
+ Talvez você nem sempre localize os mesmos nomes com um padrão do tipo `LIKE '[^d][^m]%'`. Em vez de 19 nomes, poderá localizar somente 14, com todos os nomes que começam com `d` ou têm `m` como a segunda letra eliminada dos resultados, e os nomes de exibição de gerenciamento dinâmico. Esse comportamento se deve à avaliação em etapas das cadeias de correspondência com caracteres curinga negativos, um curinga de cada vez. Se a correspondência falhar em qualquer ponto da avaliação, ela será eliminada.  
   
 ## <a name="using-wildcard-characters-as-literals"></a>Usando caracteres curinga como literais  
  Você pode usar os caracteres curinga de correspondência de padrão como caracteres literais. Para usar um caractere curinga como um caractere literal, inclua o caractere curinga entre colchetes. A tabela a seguir mostra vários exemplos de uso da palavra-chave LIKE e dos caracteres curinga [ ].  
@@ -198,7 +198,7 @@ GO
 ## <a name="pattern-matching-with-the-escape-clause"></a>Correspondência de padrão com a cláusula ESCAPE  
  Você pode procurar cadeias de caracteres que incluam um ou mais dos caracteres curinga especiais. Por exemplo, a tabela discounts em um banco de dados customers pode armazenar valores de desconto que incluem um sinal de por cento (%). Para procurar o sinal de por cento como um caractere em vez de como um caractere curinga, a palavra-chave ESCAPE e o caractere de escape devem ser fornecidos. Por exemplo, um banco de dados de exemplo contém uma coluna denominada comment que contém o texto 30%. Para procurar quaisquer linhas que contenham a cadeia de caracteres 30% em qualquer lugar da coluna comment, especifique uma cláusula WHERE, como `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Se ESCAPE e o caractere de escape não forem especificados, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará quaisquer linhas com a cadeia 30.  
   
- Se não houver caractere depois de um caractere de escape no padrão de LIKE, o padrão não será válido e LIKE retornará FALSE. Se o caractere após um caractere de escape não for um caractere curinga, o caractere de escape será descartado e o caractere após ele será tratado como um caractere normal no padrão. Isso inclui os caracteres curinga de sinal de por cento (%), sublinhado (_) e colchete esquerdo ([) quando eles estiverem incluídos entre colchetes duplos ([ ]). Além disso, dentro dos caracteres de colchete duplo ([ ]), os caracteres de escape podem ser usados e o acento circunflexo (^), o hífen (-) e o colchete direito (]) podem seguir o caractere de escape.  
+ Se não houver caractere depois de um caractere de escape no padrão de LIKE, o padrão não será válido e LIKE retornará FALSE. Se o caractere após um caractere de escape não for um caractere curinga, o caractere de escape será descartado e o caractere seguinte será tratado como um caractere normal no padrão. Esses caracteres curinga incluem o sinal de percentual (%), sublinhado (_) e colchete esquerdo ([) quando estão entre colchetes duplos ([ ]). Os caracteres de escape podem ser usados em caracteres de colchete duplo ([ ]), inclusive para escape de acento circunflexo (^), hífen (-) ou colchete direito (]).  
   
  0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em LIKE.  
   
@@ -345,7 +345,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Usando LIKE com o caractere curinga _  
- O exemplo a seguir localiza todos os números de telefone que têm um código de área que começa com `6` e termina em `2` na tabela `DimEmployee`. Observe que o caractere curinga % também é incluído no final do padrão de pesquisa, já que o código de área é a primeira parte do número de telefone e há caracteres adicionais após o valor de coluna.  
+ O exemplo a seguir localiza todos os números de telefone que têm um código de área que começa com `6` e termina em `2` na tabela `DimEmployee`. O caractere curinga % é incluído no final do padrão de pesquisa para corresponder a todos os caracteres a seguir no valor de coluna do telefone.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -362,4 +362,3 @@ ORDER by LastName;
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
- 

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712357"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286944"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
 Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que os leitores do relatório possam filtrar um ou mais valores nos dados do relatório. 
@@ -23,7 +23,7 @@ Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLU
 Os parâmetros de relatório são criados automaticamente para cada parâmetro de consulta incluído em uma consulta de conjunto de dados. O tipo de dados do parâmetro determina como ele aparece na barra de ferramentas de exibição de relatório. 
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como escolher uma fonte de dados e como criar um conjunto de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 25 minutos.  
   
@@ -82,7 +82,7 @@ Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.
   
 11. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**) para ver os dados.   
   
-    O conjunto de resultados consiste em onze linhas de dados que mostram a quantidade de itens vendidos em cada subcategoria das quatro lojas, nas seguintes colunas: StoreID, Subcategory e Quantity. O nome da loja não faz parte do conjunto de resultados. Posteriormente neste tutorial, você irá pesquisar o nome do repositório que corresponde ao identificador de repositório de um conjunto de dados separado.  
+    O conjunto de resultados consiste em 11 linhas de dados que mostram a quantidade de itens vendidos para cada subcategoria de quatro repositórios nas seguintes colunas: StoreID, Subcategory, Quantity. O nome do repositório não faz parte do conjunto de resultados. Posteriormente neste tutorial, você irá pesquisar o nome do repositório que corresponde ao identificador de repositório de um conjunto de dados separado.  
   
     Esta consulta não contém parâmetros de consulta. Você adicionará parâmetros de consulta posteriormente neste tutorial.   
   
@@ -308,7 +308,7 @@ Um conjunto de dados pode conter o identificador e o campo de nome correspondent
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    O cabeçalho de coluna da loja contém o texto de exibição de uma expressão complexa: **Expr**.  
+    O cabeçalho da coluna de repositórios contém o texto de exibição de uma expressão complexa: **Expr**.  
   
 8.  Visualize o relatório.  
   

@@ -18,21 +18,21 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2f53f6efd0e4c1dbcbbeaccc78fd25fdad0c093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b81d00f3cb8e208cd2fa34792a2d61943ff1bca
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685364"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154931"
 ---
-# <a name="envelopecenter-geography-data-type-"></a>EnvelopeCenter (Tipo de dados de geografia)
+# <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna um ponto que pode ser usado como o centro de um círculo delimitador para a instância de **geography**.  
+Retorna um ponto que você pode usar como o centro de um círculo delimitador para a instância de **geography**.  
   
- Para determinar o círculo delimitador, cada ponto na instância é descrito como um vetor do centro da Terra a um ponto na superfície da Terra. O ponto central do círculo delimitador é calculado com média de todos os vetores. No caso de loops próximos, em uma instância de **polygon** ou em uma instância de **linestring**, o primeiro e o último ponto são usados apenas uma vez.  
+Cada ponto na instância é descrito como um vetor. Para descobrir o círculo delimitador, o vetor se estende do centro da Terra ao ponto na superfície da Terra. O ponto central do círculo delimitador é calculado com média de todos os vetores. No caso de loops próximos, em uma instância de **Polygon** ou em uma instância de **LineString**, o primeiro e o último ponto são usados apenas uma vez.  
   
- Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
+Esse método de tipo de dados de **geography** é compatível com instâncias **FullGlobe** ou instâncias espaciais maiores que um hemisfério.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,19 +42,19 @@ EnvelopeCenter( )
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
+Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método retorna um **point**. Quando usado com `EnvelopeAngle()`, `EnvelopeCenter()` retorna um círculo delimitador de uma instância **geography**.  
+Esse método retorna um **point**. Quando usado com `EnvelopeAngle()`, `EnvelopeCenter()` retorna um círculo delimitador de uma instância **geography**.  
   
 > [!NOTE]  
 >  `EnvelopeCenter()` retorna um círculo delimitador para uma instância de **geography**, mas os resultados não têm a garantia de produzir o círculo delimitador mínimo. Em contrapartida, o método `STEnvelope()` de tipo de dados **geometry** retorna certamente uma caixa delimitadora mínima quando aplicado a uma instância de **geometry**.  
   
- No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versões posteriores, ele retorna o centro do círculo que representa o envelope dessa instância como um **point**. Para todos os objetos grandes conforme definidos por `EnvelopeAngle()` = 180, `EnvelopeCenter()` retornará (90,0).  
+No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versões posteriores, ele retorna o centro do círculo que representa o envelope dessa instância como um **point**. Para todos os objetos grandes conforme definidos por `EnvelopeAngle()` = 180, `EnvelopeCenter()` retornará (90,0).  
   
- Esse método não é preciso.  
+Esse método não oferece precisão.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -64,7 +64,7 @@ SELECT @g.EnvelopeCenter().ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeAngle &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
+[Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+[EnvelopeAngle &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   
   

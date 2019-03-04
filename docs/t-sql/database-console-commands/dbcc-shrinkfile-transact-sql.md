@@ -30,19 +30,19 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ef14c1ab455776da142993dd4103cc5a42921848
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c63b735a5067f8ca1cd6b65f4f986c94e3614e21
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600816"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286474"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Reduz o tamanho dos dados especificados ou do arquivo de log do banco de dados atual ou esvazia um arquivo movendo os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos, o que permite que o arquivo seja removido do banco de dados. Você pode reduzir um arquivo a um tamanho menor que o tamanho especificado no momento de sua criação. Isso redefine o tamanho mínimo de arquivo para o valor novo.
+Reduz o tamanho do arquivo de log ou dos dados especificados do banco de dados atual. Você pode usá-lo para mover os dados de um arquivo para outros no mesmo grupo de arquivos, o que esvazia o arquivo e permite a remoção do banco de dados dele. Você pode reduzir um arquivo a menos da metade do tamanho de criação dele, definindo um novo valor para o tamanho mínimo do arquivo.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone do link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone do link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,30 +60,30 @@ DBCC SHRINKFILE
   
 ## <a name="arguments"></a>Argumentos  
 *file_name*  
-É o nome lógico do arquivo que será reduzido.
+O nome lógico do arquivo que será reduzido.
   
 *file_id*  
-É o número de identificação (ID) do arquivo que será reduzido. Para obter uma ID de arquivo, use a função do sistema [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) ou consulte a exibição do catálogo [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) do banco de dados atual.
+O número de identificação (ID) do arquivo que será reduzido. Para obter uma ID de arquivo, use a função do sistema [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) ou confira a exibição do catálogo [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) do banco de dados atual.
   
 *target_size*  
-É o tamanho do arquivo em megabytes, expresso como um número inteiro. Se não for especificado, DBCC SHRINKFILE reduzirá o tamanho do arquivo ao tamanho padrão. O tamanho padrão é o tamanho especificado quando o arquivo foi criado.
+Um inteiro – o novo tamanho em megabytes do arquivo. Se não for especificado, DBCC SHRINKFILE será reduzido ao tamanho de criação do arquivo.
   
 > [!NOTE]  
 >  Você pode reduzir o tamanho padrão de um arquivo vazio usando DBCC SHRINKFILE *target_size*. Por exemplo, se você cria um arquivo com 5 MB e depois o reduz para 3 MB enquanto o arquivo ainda está vazio, o tamanho do arquivo padrão é definido como 3 MB. Isso só se aplica a arquivos vazios que nunca contiveram dados.  
   
 Essa opção não tem suporte em contêineres de grupo de arquivos FILESTREAM.  
-Se *target_size* for especificado, DBCC SHRINKFILE tentará reduzir o arquivo até o tamanho especificado. Páginas usadas na parte do arquivo a ser liberada serão realocadas para o espaço livre disponível na parte do arquivo retida. Por exemplo, se houver um arquivo de dados de 10 MB, uma operação DBCC SHRINKFILE com um *target_size* igual a 8 fará com que todas as páginas usadas nos últimos 2 MB do arquivo sejam realocadas em qualquer página não alocada nos primeiros 8 MB do arquivo. DBCC SHRINKFILE não reduz um arquivo além do tamanho necessário para armazenar os dados no arquivo. Por exemplo, se 7 MB de um arquivo de dados de 10 MB forem usados, uma instrução DBCC SHRINKFILE com *target_size* igual a 6 reduzirá o arquivo somente para 7 MB, não para 6 MB.
+Se for especificado, DBCC SHRINKFILE tentará reduzir o arquivo até *target_size*. As páginas usadas na área do arquivo a ser liberadas serão movidas para espaço livres nas áreas do arquivo que serão mantidas. Por exemplo, com um arquivo de dados de 10 MB, uma operação DBCC SHRINKFILE com 8 *target_size* move todas as páginas usadas nos últimos 2 MB do arquivo para qualquer página não alocada nos primeiros 8 MB do arquivo. A DBCC SHRINKFILE não reduzirá um arquivo além do tamanho necessário dos dados armazenados. Por exemplo, se 7 MB de um arquivo de dados de 10 MB forem usados, uma instrução DBCC SHRINKFILE com *target_size* igual a 6 reduzirá o arquivo somente para 7 MB, não para 6 MB.
   
 EMPTYFILE  
-Migra todos os dados do arquivo especificado para outros arquivos no **mesmo grupo de arquivos**. Em outras palavras, EmptyFile migrará os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos. Emptyfile garante que nenhum dado novo seja adicionado ao arquivo, apesar de esse arquivo não estar marcado como somente leitura. O arquivo pode ser removido usando a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Se o tamanho do arquivo for alterado usando a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), o sinalizador somente leitura será redefinido e dados poderão ser adicionados.
+Migra todos os dados do arquivo especificado para outros arquivos no **mesmo grupo de arquivos**. Em outras palavras, EMPTYFILE migrará os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos. ENPTYFILE garante que nenhum dado novo seja adicionado ao arquivo, apesar de ele não ser somente leitura. Você pode usar a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para remover um arquivo. Se você usar a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para alterar o tamanho do arquivo, o sinalizador somente leitura será redefinido e dados poderão ser adicionados.
 
-Em contêineres de grupo de arquivos FILESTREAM, o arquivo não pode ser removido usando ALTER DATABASE até que o coletor de lixo FILESTREAM tenha sido executado e tenha excluído todos os arquivos do contêiner de grupo de arquivos desnecessários que EMPTYFILE copiou em outro contêiner. Para obter mais informações, consulte [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
+Em contêineres de grupo de arquivos FILESTREAM, não é possível usar ALTER DATABASE para remover um arquivo até que o coletor de lixo FILESTREAM tenha sido executado e tenha excluído todos os arquivos do contêiner de grupo de arquivos desnecessários que EMPTYFILE copiou em outro contêiner. Para obter mais informações, consulte [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
 >  Para obter informações sobre como remover um contêiner FILESTREAM, consulte a seção correspondente em [Opções de arquivo e grupos de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 NOTRUNCATE  
-Move páginas alocadas do final de um arquivo de dados para páginas não alocadas no início de um arquivo com ou sem a especificação de *target_percent*. O espaço livre no final do arquivo não é retornado ao sistema operacional, e o tamanho físico do arquivo não é alterado. Portanto, se NOTRUNCATE for especificado, o arquivo não parecerá reduzido.
+Move páginas alocadas do final de um arquivo de dados para páginas não alocadas no início de um arquivo com ou sem a especificação de *target_percent*. O espaço livre no final do arquivo não é retornado ao sistema operacional, e o tamanho físico do arquivo não é alterado. Portanto, se NOTRUNCATE for especificado, o arquivo parecerá não reduzir.
 NOTRUNCATE aplica-se apenas a arquivos de dados. Os arquivos de log não são afetados.   Essa opção não tem suporte em contêineres de grupo de arquivos FILESTREAM.
   
 TRUNCATEONLY  
@@ -102,36 +102,43 @@ A tabela a seguir descreve as colunas do conjunto de resultados.
 |**DbId**|Número de identificação do banco de dados do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
 |**FileId**|O número de identificação do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
 |**CurrentSize**|Número de páginas de 8 KB que o arquivo ocupa atualmente.|  
-|**MinimumSize**|Número de páginas de 8 KB que o arquivo poderia ocupar, no mínimo. Corresponde ao tamanho mínimo ou tamanho de criação inicial de um arquivo.|  
+|**MinimumSize**|Número de páginas de 8 KB que o arquivo poderia ocupar, no mínimo. Esse número corresponde ao tamanho mínimo ou tamanho de criação inicial de um arquivo.|  
 |**UsedPages**|Número de páginas de 8 KB usado atualmente pelo arquivo.|  
 |**EstimatedPages**|Número de páginas de 8 KB a que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula que o arquivo poderia ser reduzido.|  
   
 ## <a name="remarks"></a>Remarks  
 DBCC SHRINKFILE aplica-se aos arquivos do banco de dados atual. Para obter mais informações sobre como alterar o banco de dados atual, consulte [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
-Operações DBCC SHRINKFILE podem ser interrompidas a qualquer momento do processo e todo o trabalho concluído será mantido. Se o parâmetro EMPTYFILE for usado em um arquivo e a operação for cancelada, o arquivo não será marcado, para impedir a adição de dados adicionais.
+Você pode interromper as operações DBCC SHRINKFILE a qualquer momento e todo o trabalho concluído será preservado. Se você usar o parâmetro EMPTYFILE e cancelar a operação, o arquivo não será marcado para impedir que dados adicionais sejam adicionados.
   
 Quando ocorre uma falha na operação DBCC SHRINKFILE, um erro é gerado.
   
- O banco de dados que está sendo reduzido não precisa estar em modo de usuário único; outros usuários podem estar trabalhando no banco de dados quando o arquivo for reduzido. Não é necessário executar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único para reduzir os bancos de dados de sistema.  
+ Outros usuários poderão trabalhar no banco de dados durante a redução do arquivo – o banco de dados não precisa estar no modo de usuário único. Não é necessário executar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único para reduzir os bancos de dados de sistema.  
   
-## <a name="shrinking-a-log-file"></a>Para reduzir um arquivo de log  
-Para arquivos de log, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa *target_size* para calcular o tamanho de destino do log inteiro, portanto, *target_size* é a quantidade de espaço livre no log após a operação de redução. O tamanho de destino do log inteiro é então convertido para o tamanho designado para cada arquivo de log. DBCC SHRINKFILE tenta reduzir cada arquivo de log físico imediatamente para seu tamanho de destino. No entanto, se parte do log lógico residente nos logs virtuais for maior que o tamanho designado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] liberará o espaço disponível possível e emitirá uma mensagem informativa. A mensagem descreve as ações necessárias para mover o log lógico dos logs virtuais no final do arquivo. Depois que as ações forem executadas, DBCC SHRINKFILE poderá ser usado para liberar o espaço restante.
+## <a name="shrinking-a-log-file"></a>Redução de um arquivo de log  
+
+Para arquivos de log, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa *target_size* para calcular o tamanho de destino do log inteiro. Portanto, *target_size* é o espaço livre do log após a operação de redução. O tamanho de destino do log inteiro é então convertido para o tamanho designado para cada arquivo de log. DBCC SHRINKFILE tenta reduzir cada arquivo de log físico imediatamente para seu tamanho de destino. No entanto, se parte do log lógico residente nos logs virtuais for maior que o tamanho designado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] liberará o espaço disponível possível e emitirá uma mensagem informativa. A mensagem descreve as ações necessárias para mover o log lógico dos logs virtuais no final do arquivo. Depois que as ações forem executadas, DBCC SHRINKFILE poderá ser usado para liberar o espaço restante.
   
-Como um arquivo de log poderá ser reduzido somente a um limite de arquivo de log virtual, talvez não seja possível reduzir um arquivo de log para um tamanho menor que o tamanho de um arquivo de log virtual, mesmo que o arquivo não esteja sendo usado. O tamanho do arquivo de log virtual é definido dinamicamente pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando os arquivos de log são criados ou estendidos.
+Como um arquivo de log poderá ser reduzido somente a um limite de arquivo de log virtual, talvez não seja possível reduzir um arquivo de log para um tamanho menor que o tamanho de um arquivo de log virtual, mesmo que o arquivo não esteja sendo usado. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] escolhe dinamicamente o tamanho do arquivo de log virtual quando os arquivos de log são criados ou estendidos.
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas recomendadas 
+ 
 Considere as seguintes informações ao planejar a redução de arquivos:
--   Uma operação de redução é mais eficiente depois de uma operação que cria muito espaço não utilizado, como operações que truncam ou excluem uma tabela.  
--   A maioria dos bancos de dados exige algum espaço livre disponível para operações comuns rotineiras. Se você reduzir um banco de dados repetidamente e perceber que ele aumentou novamente, isso indica que o espaço reduzido é necessário para as operações rotineiras. Nesse caso, reduzir repetidamente um banco de dados é uma operação inútil.  
--   Uma operação de redução não preserva o estado de fragmentação de índices do banco de dados e, geralmente, aumenta o nível de fragmentação. Essa é outra razão para não reduzir o banco de dados repetidamente.  
--   Reduza vários arquivos no mesmo banco de dados sequencialmente, e não simultaneamente. A contenção em tabelas do sistema pode causar atrasos devido ao bloqueio.  
+-   Uma operação de redução é mais eficiente depois de uma operação que cria uma grande quantidade de espaço não utilizado, como operações que truncam ou excluem uma tabela.  
+
+-   A maioria dos bancos de dados exige algum espaço livre disponível para operações regulares rotineiras. Se você reduzir um banco de dados repetidamente e o tamanho dele aumentar novamente, é provável que as operações regulares exijam o espaço reduzido. Nesse caso, reduzir repetidamente um banco de dados é uma operação inútil.  
+
+-   Uma operação de redução não preserva o estado de fragmentação de índices do banco de dados e, em geral, aumenta o nível de fragmentação. Essa fragmentação é outra razão para não reduzir o banco de dados repetidamente.  
+
+-   Reduza vários arquivos no mesmo banco de dados sequencialmente, e não simultaneamente. A contenção em tabelas do sistema pode causar o bloqueio e gerar atrasos.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
 Esta seção descreve como diagnosticar e corrigir problemas que podem ocorrer ao executar o comando DBCC SHRINKFILE.
   
-### <a name="the-file-does-not-shrink"></a>O arquivo não foi reduzido  
-Se a operação de redução ocorrer sem erro, mas parecer que o tamanho do arquivo não foi alterado, verifique se o arquivo tem espaço livre adequado para remoção, executando uma das seguintes operações:
+### <a name="the-file-doesnt-shrink"></a>O arquivo não é reduzido
+  
+Se o tamanho do arquivo não sofrer alterações após uma operação de redução sem erros, tente o seguinte para verificar se o arquivo tem espaço livre o suficiente:
+
 - Execute a seguinte consulta.  
   
 ```sql
@@ -140,12 +147,14 @@ FROM sys.database_files;
 ```
 
 -   Execute o comando [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) para retornar o espaço usado no log de transações.  
-Se não houver espaço livre suficiente disponível, a operação de redução não poderá reduzir mais o tamanho de arquivo.
+
+A operação de redução não poderá reduzir mais o tamanho do arquivo se não houver espaço livre suficiente disponível.
   
-Normalmente, o arquivo de log é que parece não ser reduzido. Em geral, isso é resultado de um arquivo de log que não foi truncado. Você pode truncar o log definindo o modelo de recuperação de banco de dados como SIMPLE ou fazendo backup do log e executando novamente a operação DBCC SHRINKFILE.
+Normalmente, o arquivo de log é que parece não ser reduzido. Em geral, a não redução é resultado de um arquivo de log que não foi truncado. Para truncar o log, você pode definir o modelo de recuperação de banco de dados como SIMPLE ou fazer backup do log e executar novamente a operação DBCC SHRINKFILE.
   
-### <a name="the-shrink-operation-is-blocked"></a>Operação de redução bloqueada  
-É possível que as operações de redução sejam bloqueadas por uma transação que está esteja executada em um [nível de isolamento baseado em controle de versão de linha](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Por exemplo, se uma grande operação de exclusão estiver sendo executada em um nível de isolamento de controle de versão de linha quando uma operação DBCC SHRINK DATABASE for executada, a operação de redução aguardará a operação de exclusão ser concluída antes de reduzir os arquivos. Quando isso ocorre, as operações DBCC SHRINKFILE e DBCC SHRINKDATABASE emitem uma mensagem informativa (5202 para SHRINKDATABASE e 5203 para SHRINKFILE) para o log de erros do SQL Server a cada cinco minutos na primeira hora e depois a cada hora. Por exemplo, se o log de erros contiver a mensagem de erro a seguir, ocorrerá o seguinte erro:
+### <a name="the-shrink-operation-is-blocked"></a>A operação de redução está bloqueada  
+
+Uma transação em execução em um [nível de isolamento baseado em controle de versão de linha](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) pode bloquear as operações de redução. Por exemplo, se uma grande operação de exclusão estiver sendo executada em um nível de isolamento de controle de versão de linha quando uma operação DBCC SHRINK DATABASE for executada, a operação de redução aguardará a exclusão ser concluída para continuar. Quando esse bloqueio ocorre, as operações DBCC SHRINKFILE e DBCC SHRINKDATABASE emitem uma mensagem informativa (5202 para SHRINKDATABASE e 5203 para SHRINKFILE) para o log de erros do SQL Server. Essa mensagem é registrada a cada cinco minutos na primeira hora e, em seguida, a cada hora. Por exemplo, se o log de erros contiver a mensagem de erro a seguir, ocorrerá o seguinte erro:
   
 ```sql
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
@@ -153,11 +162,11 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-Isso significa que a operação de redução foi bloqueada por transações de instantâneo que têm carimbos de data/hora anteriores a 109, que é a última transação concluída pela operação de redução. Também indica que as colunas **transaction_sequence_num** ou **first_snapshot_sequence_num** na exibição de gerenciamento dinâmico [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) contêm um valor igual a 15. Se as colunas **transaction_sequence_num** ou **first_snapshot_sequence_num** da exibição contiverem um número menor que o da última transação concluída por uma operação de redução (109), a operação de redução esperará o término dessas transações.
+Essa mensagem significa que transações de instantâneo com carimbos de data/hora anteriores a 109, que é a última transação concluída pela operação de redução, estão bloqueando a operação de redução. Também indica que as colunas **transaction_sequence_num** ou **first_snapshot_sequence_num** na exibição de gerenciamento dinâmico [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) contêm um valor igual a 15. Se as colunas de exibição **transaction_sequence_num** ou **first_snapshot_sequence_num** contiverem um número menor que o da última transação concluída por uma operação de redução (109), a operação de redução esperará o término dessas transações.
   
 Para solucionar o problema, você pode executar uma destas tarefas:
 -   Encerrar a transação que está bloqueando a operação de redução.
--   Encerrar a operação de redução. Nesse caso, todo trabalho concluído será preservado.  
+-   Encerrar a operação de redução. Todo trabalho concluído será preservado se a operação for encerrada.  
 -   Não interferir e permitir que a operação de redução aguarde até que a transação de bloqueio seja concluída.  
   
 ## <a name="permissions"></a>Permissões  
@@ -165,7 +174,7 @@ Exige associação à função de servidor fixa **sysadmin** ou à função de b
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-shrinking-a-data-file-to-a-specified-target-size"></a>A. Reduzindo um arquivo de dados para um tamanho de destino especificado  
+### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>Reduzindo um arquivo de dados para um tamanho de destino especificado  
 O exemplo a seguir reduz o tamanho de um arquivo de dados chamado `DataFile1` do banco de dados de usuário `UserDB` para 7 MB.
   
 ```sql  
@@ -175,7 +184,7 @@ DBCC SHRINKFILE (DataFile1, 7);
 GO  
 ```  
   
-### <a name="b-shrinking-a-log-file-to-a-specified-target-size"></a>B. Reduzindo um arquivo de log para um tamanho de destino especificado  
+### <a name="shrinking-a-log-file-to-a-specified-target-size"></a>Reduzindo um arquivo de log para um tamanho de destino especificado  
 O exemplo a seguir reduz o arquivo de log do banco de dados `AdventureWorks` para 1 MB. Para permitir que o comando DBCC SHRINKFILE reduza o arquivo, primeiro ele será truncado, pela configuração do modelo de recuperação de banco de dados como SIMPLE.
   
 ```sql  
@@ -207,7 +216,7 @@ DBCC SHRINKFILE (1, TRUNCATEONLY);
 ```  
   
 ### <a name="d-emptying-a-file"></a>D. Esvaziando um arquivo  
-O exemplo a seguir demonstra o procedimento para esvaziar um arquivo de forma que ele possa ser removido do banco de dados. Neste exemplo, primeiro é criado um arquivo de dados, presumindo-se que ele contenha dados.
+O exemplo a seguir demonstra como esvaziar um arquivo de forma que ele possa ser removido do banco de dados. Para os fins deste exemplo, é preciso, primeiro, criar um arquivo de dados que contenha dados.
   
 ```sql  
 USE AdventureWorks2012;  

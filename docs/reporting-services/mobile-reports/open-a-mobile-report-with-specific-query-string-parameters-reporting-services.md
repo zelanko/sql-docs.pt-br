@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ca74d2d606dfddf394b0c7a32e8fe7d50f210934
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393639"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296015"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Abrir um relatório móvel com parâmetros de cadeia de consulta específicos | Reporting Services
 Se você tiver um relatório móvel [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com parâmetros e uma fonte de dados [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)], poderá incluir parâmetros de cadeia de consulta na URL do relatório para que abra automaticamente com os valores especificados. 
@@ -27,7 +27,7 @@ Se você tiver um relatório móvel [!INCLUDE[ssRSnoversion_md](../../includes/s
     
 2.  A sintaxe da URL depende de sua fonte de dados. 
 
-     **Para uma fonte de dados do SQL Server Analysis Services**: compile uma URL com um parâmetro de cadeia de caracteres de consulta neste formato:
+     **Para uma fonte de dados do SQL Server Analysis Services**: Crie uma URL com um parâmetro de cadeia de consulta neste formato:
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 

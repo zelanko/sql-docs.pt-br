@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 05e0650c71c7f2ed8f9dc51bf01bbb33e325add5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdcd36d1e8de8c6765de0f07a9ecaf6263fd2366
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030175"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296584"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar um intervalo do eixo (Construtor de Relatórios e SSRS)
 Saiba como alterar o número de rótulos e marcas no eixo das categorias (x) em um gráfico, definindo o intervalo do eixo um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -22,7 +22,7 @@ No eixo de valor (normalmente, o eixo y), os intervalos do eixo fornecem uma med
 
 Mas no eixo de categoria (normalmente, o eixo x), às vezes, um intervalo de eixo automático resulta em categorias sem rótulos de eixo. Você pode especificar o número de intervalos que deseja na propriedade Intervalo do eixo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula o número de intervalos no tempo de execução, com base nos dados do conjunto de resultados. Para obter mais informações sobre como os intervalos de eixo são calculados, consulte [Formatação de rótulos de eixo de um gráfico](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-Para tentar definir o intervalo do eixo com os dados de exemplo, consulte [Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+Para tentar definir o intervalo do eixo com dados de exemplo, confira o [Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
   
 > [!NOTE]  
 >  O eixo de categoria geralmente é o eixo horizontal ou o eixo x. No entanto, para os gráficos de barras, o eixo de categoria é o vertical ou eixo y.  

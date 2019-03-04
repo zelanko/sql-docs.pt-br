@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1de57ab14dc4dcfc07f838494ca48f8b12da6660
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 058f392079c466d34505fac57653d34d37401cc3
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143556"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265293"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lição 2-3: Modificar o gerenciador de conexões de Arquivo Simples
 
@@ -27,20 +27,22 @@ Ao modificar o gerenciador de conexão para usar o valor da variável definida p
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configurar o gerenciador de conexões do Arquivo Simples para usar uma variável  
   
 1.  No painel **Gerenciadores de Conexões** , clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo**e selecione **Propriedades**.  
+
+2.  Na janela **Propriedades**, verifique se **PackagePath** começa com **\Package.Connections**. Se não, no painel **Gerenciadores de Conexões**, clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo**e selecione **Converter em Conexão do Pacote**.
   
-2.  Na janela **Propriedades**, para **Expressões**, selecione a célula vazia e selecione o botão de reticências **(…)**.  
+3.  Na janela **Propriedades**, para **Expressões**, selecione a célula vazia e selecione o botão de reticências **(…)**.  
   
-3.  Na caixa de diálogo **Editor de Expressões de Propriedades**, na coluna **Propriedade**, selecione ou selecione **ConnectionString**.  
+4.  Na caixa de diálogo **Editor de Expressões de Propriedades**, na coluna **Propriedade**, selecione ou selecione **ConnectionString**.  
   
-4.  Na coluna **Expressão**, selecione o botão de reticências **(…)** para abrir a caixa de diálogo **Construtor de Expressões**.  
+5.  Na coluna **Expressão**, selecione o botão de reticências **(…)** para abrir a caixa de diálogo **Construtor de Expressões**.  
   
-5.  Na caixa de diálogo **Construtor de Expressões**, expanda o nó **Variáveis**.  
+6.  Na caixa de diálogo **Construtor de Expressões**, expanda o nó **Variáveis**.  
   
-6.  Arraste a variável, **User::varFileName** para a caixa **Expressão**.  
+7.  Arraste a variável, **User::varFileName** para a caixa **Expressão**.  
   
-7.  Selecione **OK** para fechar a caixa de diálogo **Construtor de Expressões**.  
+8.  Selecione **OK** para fechar a caixa de diálogo **Construtor de Expressões**.  
   
-8.  Selecione **OK** novamente para fechar a caixa de diálogo **Editor de Expressões de Propriedades**.  
+9.  Selecione **OK** novamente para fechar a caixa de diálogo **Editor de Expressões de Propriedades**.  
   
 ## <a name="go-to-next-task"></a>Ir para a próxima tarefa  
 [Etapa 4: Testar o pacote de tutorial da Lição 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

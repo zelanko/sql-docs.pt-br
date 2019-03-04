@@ -1,21 +1,21 @@
 ---
-title: 'Lição 4: Adicionando uma tabela ao relatório (Reporting Services) | Microsoft Docs'
+title: 'Lição 4: como adicionar uma tabela ao relatório (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772625"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287234"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lição 4: Adicionando uma tabela ao relatório (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lição 4: como adicionar uma tabela ao relatório (Reporting Services)
 Depois de definir o conjunto de dados, você pode começar a criar o relatório. Um layout de relatório é criado arrastando e soltando regiões de dados, caixas de texto, imagens e outros itens que você deseja incluir no relatório na superfície de design.  
   
 Itens que contêm linhas de dados repetidas de conjuntos de dados subjacentes são chamados de *regiões de dados*. Um relatório básico terá apenas uma região de dados, mas é possível adicionar mais, por exemplo, se você desejar adicionar um gráfico ao relatório tabular. Depois de adicionar uma região de dados, você pode adicionar campos à região de dados.  
@@ -43,7 +43,7 @@ Itens que contêm linhas de dados repetidas de conjuntos de dados subjacentes s�
 7.  Adicione o campo LineTotal da mesma maneira criando uma quinta coluna. O cabeçalho de coluna é Total de Linha. O Designer de Relatórios cria automaticamente um nome amigável para a coluna dividindo LineTotal em duas palavras.  
   
   
-O diagrama a seguir mostra uma região de dados de tabela que foi populada com estes campos: Data, Ordem, Produto, Quantidade e Total da Linha.  
+O diagrama a seguir mostra uma região de dados de tabela que foi preenchida com estes campos: Data, Ordem, Produto, Quantidade e Total da linha.  
 ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
   
 ## <a name="preview-your-report"></a>Visualize o relatório  
@@ -64,7 +64,7 @@ A visualização de um relatório permite exibir o relatório renderizado sem qu
 > No menu **Arquivo** , clique em **Salvar Tudo** para salvar o relatório.  
   
 ## <a name="next-steps"></a>Next Steps  
-Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Consulte [Lição 5: Formatando um relatório &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Confira a [Lição 5: como formatar um relatório &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 139b76fc90ba66ed34720be68e8c016263ea947b
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: fac8c998e48854aed1bae8f640d44c6d44d44348
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300473"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154941"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "54300473"
 > [!div class="nextstepaction"]
 > [Compartilhe seus comentários sobre o Índice do SQL Docs!](https://aka.ms/sqldocsurvey)
 
-Modifica uma definição de tabela alterando, adicionando ou removendo colunas e restrições, reatribuindo e recriando partições, ou desabilitando ou habilitando restrições e gatilhos.
+Modifica uma definição de tabela alterando, adicionando ou descartando colunas e restrições. ALTER TABLE também reatribui e recompila partições ou desabilita e habilita restrições e gatilhos.
 
 Para obter mais informações sobre as convenções de sintaxe, consulte [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -425,19 +425,19 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 
    
 ## <a name="arguments"></a>Argumentos  
- *database_name*  
- É o nome do banco de dados no qual a tabela foi criada.  
+*database_name*  
+O nome do banco de dados em que a tabela foi criada.  
   
- *schema_name*  
- É o nome do esquema ao qual a tabela pertence.  
+*schema_name*  
+O nome do esquema ao qual a tabela pertence.  
   
- *table_name*  
- É o nome da tabela a ser alterada. Se a tabela não está no banco de dados atual ou não consta no esquema pertencente ao usuário atual, o banco de dados e o esquema devem ser especificados explicitamente.  
+*table_name*  
+O nome da tabela a ser alterada. Se a tabela não estiver no banco de dados atual ou não constar no esquema pertencente ao usuário atual, especifique explicitamente o banco de dados e o esquema.  
   
- ALTER COLUMN  
- Especifica que a coluna nomeada será alterada ou modificada.  
+ALTER COLUMN  
+Especifica que a coluna nomeada será alterada ou modificada.  
   
- A coluna modificada não pode ser uma das seguintes:  
+A coluna modificada não pode ser:  
   
 -   Uma coluna com um tipo de dados **timestamp**.  
   
@@ -445,16 +445,16 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   Uma coluna computada ou usada em uma coluna computada.  
   
--   Usada em estatísticas geradas pela instrução CREATE STATISTICS, a menos que a coluna seja um tipo de dados **varchar**, **nvarchar**, ou **varbinary**, o tipo de dados não seja modificado e o novo tamanho seja igual ou maior que o tamanho anterior ou a coluna seja modificada de não nula para nula. Primeiro, remova as estatísticas que usam a instrução DROP STATISTICS.
+-   Usada em estatísticas geradas pela instrução CREATE STATISTICS. A menos que a coluna seja um tipo de dados **varchar**, **nvarchar** ou **varbinary**, o tipo de dados não será alterado. E que o novo tamanho seja igual ou maior que o tamanho anterior. Ou que a coluna seja modificada de não nula para nula. Primeiro, remova as estatísticas que usam a instrução DROP STATISTICS.
 
     > [!NOTE]
     > As estatísticas que são geradas automaticamente pelo otimizador de consulta são descartadas automaticamente por ALTER COLUMN.  
   
 -   Usada em uma restrição PRIMARY KEY ou [FOREIGN KEY] REFERENCES.  
   
--   Usada em uma restrição CHECK ou UNIQUE. Entretanto, a alteração do comprimento de uma coluna de comprimento variável usada em uma restrição CHECK ou UNIQUE é permitida.  
+-   Usada em uma restrição CHECK ou UNIQUE. Porém, a alteração do comprimento de uma coluna de comprimento variável usada em uma restrição CHECK ou UNIQUE é permitida.  
   
--   Associada com uma definição padrão. Entretanto, o comprimento, a precisão e a escala de uma coluna podem ser alterados se o tipo de dados não for modificado.  
+-   Associada com uma definição padrão. Entretanto, o comprimento, a precisão e a escala de uma coluna poderão ser alterados se o tipo de dados não for modificado.  
   
 O tipo de dados das colunas **text**, **ntext** e **image** pode ser alterado somente das seguintes maneiras:  
   
@@ -473,21 +473,21 @@ Algumas alterações de tipo de dados podem causar uma alteração nos dados. Po
 >  
 > Uma coluna incluída em uma restrição de chave primária não pode ser alterada de **NOT NULL** para **NULL**.  
   
-Ao usar o Always Encrypted (sem enclaves seguros), se a coluna que está sendo modificada estiver criptografada usando 'ENCRYPTED WITH', você poderá alterar o tipo de dados para um tipo de dados compatível (como INT para BIGINT), mas não poderá alterar as configurações de criptografia.  
+Ao usar o Always Encrypted (sem enclaves seguros), se a coluna que está sendo modificada estiver criptografada com “ENCRYPTED WITH”, você poderá alterar o tipo de dados para um tipo de dados compatível (como INT para BIGINT), mas não poderá alterar as configurações de criptografia.  
 
-Ao usar o Always Encrypted com enclaves seguros, você pode alterar qualquer configuração de criptografia, desde que a chave de criptografia de coluna que protege a coluna (e a nova chave de criptografia de coluna, se estiver alterando a chave) seja compatível com cálculos de enclave (criptografada com chaves mestras de coluna habilitadas para enclave). Para conhecer detalhes, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
+Ao usar o Always Encrypted com enclaves seguros, você poderá alterar qualquer configuração de criptografia, se a chave de criptografia de coluna que protege a coluna (e a nova chave de criptografia de coluna, se estiver alterando a chave) for compatível com cálculos de enclave (criptografada com chaves mestras de coluna habilitadas para enclave). Para conhecer detalhes, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
- *column_name*  
- É o nome da coluna a ser alterada, adicionada ou removida. *column_name* pode ter, no máximo, 128 caracteres. Para novas colunas, *column_name* pode ser omitido para colunas criadas com um tipo de dados **timestamp**. O nome **timestamp** é usado se nenhum *column_name* for especificado para uma coluna de tipo de dados **timestamp**.  
+*column_name*  
+O nome da coluna a ser alterada, adicionada ou removida. O máximo para *nome_da_coluna* é 128 caracteres. Para novas colunas, é possível omitir *nome_da_coluna* para colunas criadas com um tipo de dados **timestamp**. O nome **timestamp** será usado se nenhum *nome_da_coluna* for especificado para uma coluna de tipo de dados **timestamp**.  
   
- [ _type\_schema\_name_**.** ] _type\_name_  
- É o novo tipo de dados da coluna alterada ou o tipo de dados da coluna adicionada. *type_name* não pode ser especificado para colunas de tabelas particionadas existentes. *type_name* pode ser qualquer um dos seguintes:  
+[ _type\_schema\_name_**.** ] _type\_name_  
+O novo tipo de dados da coluna alterada ou o tipo de dados da coluna adicionada. Não é possível especificar *type_name* para colunas de tabelas particionadas existentes. *type_name* pode ser qualquer um dos seguintes tipos:  
   
 -   Um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Um tipo de dados do alias com base em um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os tipos de dados do alias são criados com a instrução CREATE TYPE antes que possam ser usados em uma definição de tabela.  
+-   Um tipo de dados do alias com base em um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Crie tipos de dados do alias com a instrução CREATE TYPE antes que possam ser usados em uma definição de tabela.  
   
--   Um tipo definido pelo usuário [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o esquema ao qual ele pertence. Tipos definidos pelo usuário [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] são criados com a instrução CREATE TYPE antes de poderem ser usados em uma definição de tabela.  
+-   Um tipo definido pelo usuário [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o esquema ao qual ele pertence. Crie tipos de dados definidos pelo usuário com a instrução CREATE TYPE antes que possam ser usados em uma definição de tabela.  
   
 Os seguintes são critérios para *type_name* de uma coluna alterada:  
   
@@ -501,23 +501,23 @@ Os seguintes são critérios para *type_name* de uma coluna alterada:
 > [!NOTE]  
 > Se a cláusula COLLATE não for especificada, a alteração do tipo de dados de uma coluna fará com que uma ordenação seja modificada para a ordenação padrão do banco de dados.  
   
- *precisão*  
- É a precisão do tipo de dados especificado. Para obter mais informações sobre valores de precisão válidos, veja [Precisão, escala e tamanho &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+*precisão*  
+A precisão do tipo de dados especificado. Para obter mais informações sobre valores de precisão válidos, veja [Precisão, escala e tamanho &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- *scale*  
- É a escala do tipo de dados especificado. Para obter mais informações sobre valores de escala válidos, veja [Precisão, escala e tamanho &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+*scale*  
+A escala do tipo de dados especificado. Para obter mais informações sobre valores de escala válidos, veja [Precisão, escala e tamanho &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- **max**  
- Aplica-se apenas aos tipos de dados **varchar**, **nvarchar** e **varbinary** para armazenar 2^31-1 bytes de caractere, dados binários e dados Unicode.  
+**max**  
+Aplica-se apenas aos tipos de dados **varchar**, **nvarchar** e **varbinary** para armazenar 2^31-1 bytes de caractere, dados binários e dados Unicode.  
   
- *xml_schema_collection*  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+*xml_schema_collection*  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Aplica-se apenas ao tipo de dados **xml** para associar um esquema XML ao tipo. Antes de digitar uma coluna **xml** em uma coleção de esquema, a coleção de esquema deve ser criada primeiramente no banco de dados, usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
+Aplica-se apenas ao tipo de dados **xml** para associar um esquema XML ao tipo. Antes de digitar uma coluna **xml** em uma coleção de esquema, crie primeiro a coleção de esquema no banco de dados usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
 COLLATE \<*collation_name* &gt; especifica a nova ordenação para a coluna alterada. Se não for especificado, à coluna será atribuída a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Para obter uma lista e mais informações, veja [Nome da ordenação do Windows &#40;Transact-SQL &#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL Server &#40;Transact-SQL &#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- A cláusula COLLATE pode ser usada para alterar as ordenações somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**. Para alterar a ordenação de uma coluna de tipo de dados de alias definido pelo usuário, você deve executar instruções ALTER TABLE separadas para alterar a coluna para um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alterar sua ordenação. Depois, deve alterar novamente a coluna para um tipo de dados de alias.  
+A cláusula COLLATE altera as ordenações somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**. Para alterar a ordenação de uma coluna de tipo de dados de alias definido pelo usuário, use instruções ALTER TABLE separadas para alterar a coluna para um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois, altere novamente a coluna e a ordenação para um tipo de dados de alias.  
   
 ALTER COLUMN não poderá ter uma alteração de ordenação se ocorrer uma ou mais das condições a seguir:  
   
@@ -528,43 +528,43 @@ ALTER COLUMN não poderá ter uma alteração de ordenação se ocorrer uma ou m
 Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 NULL | NOT NULL  
- Especifica se a coluna pode aceitar valores nulos. As colunas que não permitem valores nulos podem ser adicionadas com ALTER TABLE apenas se tiverem um padrão especificado ou se a tabela estiver vazia. NOT NULL poderá ser especificado para colunas computadas somente se PERSISTED também for especificado. Se a nova coluna permitir valores nulos e nenhum padrão for especificado, ela conterá um valor nulo para cada linha da tabela. Se a nova coluna permitir valores nulos e uma definição padrão for adicionada com a nova coluna, WITH VALUES poderá ser usada para armazenar o valor padrão na nova coluna para cada linha existente na tabela.  
+Especifica se a coluna pode aceitar valores nulos. As colunas que não permitem valores nulos podem ser adicionadas com ALTER TABLE apenas se tiverem um padrão especificado ou se a tabela estiver vazia. Será possível especificar NOT NULL para colunas computadas somente se PERSISTED também for especificado. Se a nova coluna permitir valores nulos e você não especificar um padrão, a nova coluna conterá um valor nulo para cada linha da tabela. Se a nova coluna permitir valores nulos e uma definição padrão for adicionada com a nova coluna, você poderá usar WITH VALUES para armazenar o valor padrão na nova coluna para cada linha existente na tabela.  
   
- Se a nova coluna não permitir valores nulos e a tabela não estiver vazia, uma definição DEFAULT deve ser adicionada com a nova coluna e a nova coluna será carregada automaticamente com o valor padrão nas novas colunas em cada linha existente.  
+Se a nova coluna não permite valores nulos e a tabela não estiver vazia, será preciso adicionar uma definição DEFAULT com a nova coluna. E a nova coluna será carregada automaticamente com o valor padrão nas novas colunas em cada linha existente.  
   
- NULL pode ser especificado em ALTER COLUMN para forçar uma coluna NOT NULL a permitir valores nulos, exceto no caso de colunas nas restrições PRIMARY KEY. NOT NULL poderá ser especificado em ALTER COLUMN apenas se a coluna não contiver nenhum valor nulo. Os valores nulos devem ser atualizados para algum valor antes que ALTER COLUMN NOT NULL seja permitido. Por exemplo:  
+É possível especificar NULL em ALTER COLUMN para forçar uma coluna NOT NULL a permitir valores nulos, exceto no caso de colunas nas restrições PRIMARY KEY. NOT NULL poderá ser especificado em ALTER COLUMN apenas se a coluna não contiver nenhum valor nulo. Os valores nulos devem ser atualizados para algum valor antes que ALTER COLUMN NOT NULL seja permitido. Por exemplo:  
   
 ```sql  
 UPDATE MyTable SET NullCol = N'some_value' WHERE NullCol IS NULL;  
 ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;  
 ```  
   
- Quando você cria ou altera uma tabela com a instrução CREATE TABLE ou ALTER TABLE, as configurações de banco de dados e de sessão influenciam e, possivelmente, substituem a nulidade do tipo de dados que é usado em uma definição de coluna. É recomendável sempre definir explicitamente uma coluna como NULL ou NOT NULL para colunas não computadas.  
+Quando você cria ou altera uma tabela com a instrução CREATE TABLE ou ALTER TABLE, as configurações de banco de dados e de sessão influenciam e, possivelmente, substituem a nulidade do tipo de dados que é usado em uma definição de coluna. Certifique-se de sempre definir explicitamente uma coluna como NULL ou NOT NULL para colunas não computadas.  
   
- Se você adicionar uma coluna com um tipo de dados definido pelo usuário, é recomendável definir a coluna com a mesma nulidade que o tipo de dados definido pelo usuário e especificar um valor padrão para a coluna. Para obter mais informações, consulte [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+Se você adicionar uma coluna com um tipo de dados definido pelo usuário, defina a coluna com a mesma nulidade que o tipo de dados definido pelo usuário. Além disso, especifique um valor padrão para a coluna. Para obter mais informações, consulte [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
 > [!NOTE]  
 > Se NULL ou NOT NULL for especificado com ALTER COLUMN *new_data_type* [(*precision* [, *scale* ])] também deverá ser especificado. Se o tipo de dados, a precisão e a escala não forem alterados, especifique os valores de coluna atuais.  
   
- [ {ADD | DROP} ROWGUIDCOL ]  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+[ {ADD | DROP} ROWGUIDCOL ]  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Especifica que a propriedade ROWGUIDCOL propriedade é adicionada ou descartada da coluna especificada. ROWGUIDCOL indica que a coluna é uma coluna GUID de linha. Apenas uma coluna **uniqueidentifier** por tabela pode ser designada como a coluna ROWGUIDCOL, e a propriedade ROWGUIDCOL pode ser atribuída apenas a uma coluna **uniqueidentifier**. ROWGUIDCOL não pode ser atribuída a uma coluna de um tipo de dados definido pelo usuário.  
+Especifica que a propriedade ROWGUIDCOL propriedade é adicionada ou descartada da coluna especificada. ROWGUIDCOL indica que a coluna é uma coluna GUID de linha. Só é possível definir uma coluna **uniqueidentifier** por tabela como a coluna ROWGUIDCOL. E você só pode atribuir a propriedade ROWGUIDCOL a uma coluna **uniqueidentifier**. Não é possível atribuir ROWGUIDCOL a uma coluna de um tipo de dados definido pelo usuário.  
   
- ROWGUIDCOL não impõe exclusividade para os valores que são armazenados na coluna e não gera, automaticamente, valores para novas linhas inseridas na tabela. Para gerar valores exclusivos para cada coluna, use a função NEWID ou NEWSEQUENTIALID em instruções INSERT ou especifique a função NEWID ou NEWSEQUENTIALID como o padrão para a coluna.  
+ROWGUIDCOL não impõe exclusividade para os valores armazenados na coluna e não gera valores automaticamente para novas linhas inseridas na tabela. Para gerar valores exclusivos para cada coluna, use a função NEWID ou NEWSEQUENTIALID em instruções INSERT. Ou especifique a função NEWID ou NEWSEQUENTIALID como o padrão para a coluna.  
   
- [ {ADD | DROP} PERSISTED ]  
- Especifica que a propriedade PERSISTED é adicionada ou descartada da coluna especificada. A coluna deve ser uma coluna computada que é definida com uma expressão determinista. No caso de colunas especificadas como PERSISTED, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazenará fisicamente os valores computados na tabela e os atualizará quando qualquer outra coluna, da qual depende a coluna computada, for atualizada. Ao marcar uma coluna computada como PERSISTED, é possível criar índices em colunas computadas definidas em expressões que são determinísticas, mas não precisas. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+[ {ADD | DROP} PERSISTED ]  
+Especifica que a propriedade PERSISTED é adicionada ou descartada da coluna especificada. A coluna deve ser uma coluna computada definida com uma expressão determinista. No caso de colunas especificadas como PERSISTED, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazenará fisicamente os valores computados na tabela e os atualizará quando qualquer outra coluna, da qual depende a coluna computada, for atualizada. Ao marcar uma coluna computada como PERSISTED, é possível criar índices em colunas computadas definidas em expressões que são determinísticas, mas não precisas. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
-Qualquer coluna computada que é usada como coluna de particionamento de uma tabela particionada deve ser explicitamente marcada como PERSISTED.  
+Qualquer coluna computada usada como coluna de particionamento de uma tabela particionada deve ser explicitamente marcada como PERSISTED.  
   
 DROP NOT FOR REPLICATION  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-Especifica que os valores são incrementados em colunas de identidade quando os agentes de replicação executam operações de inserção. Essa cláusula só poderá ser especificada se *column_name* for uma coluna de identidade.  
+Especifica que os valores são incrementados em colunas de identidade quando os agentes de replicação executam operações de inserção. Será possível especificar essa cláusula somente se *nome_da_coluna* for uma coluna de identidade.  
   
 SPARSE  
-Indica que a coluna é uma coluna esparsa. O armazenamento de colunas esparsas é otimizado para obter valores nulos. Colunas esparsas não podem ser designadas como NOT NULL. A conversão de uma coluna de esparsa para não esparsa, ou vice-versa, bloqueia a tabela durante a execução do comando. Talvez você precise usar a cláusula REBUILD para reclamar qualquer economia de espaço. Para obter restrições adicionais e mais informações sobre colunas esparsas, consulte [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).  
+Indica que a coluna é uma coluna esparsa. O armazenamento de colunas esparsas é otimizado para obter valores nulos. Não é possível definir as colunas esparsas como NOT NULL. A conversão de uma coluna de esparsa para não esparsa, ou vice-versa, bloqueia a tabela durante a execução do comando. Talvez você precise usar a cláusula REBUILD para reclamar qualquer economia de espaço. Para obter restrições adicionais e mais informações sobre colunas esparsas, consulte [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).  
   
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -581,49 +581,49 @@ Para remover uma máscara, use `DROP MASKED`. Para parâmetros de função, cons
 WITH ( ONLINE = ON | OFF) \<conforme se aplica a alterar uma coluna>  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-Permite que muitas ações de coluna sejam executadas enquanto a tabela permanece disponível. O padrão é OFF. A alteração da coluna pode ser executada online para as alterações de coluna relacionadas ao tipo de dados, comprimento da coluna ou precisão, nulidade, dispersão e ordenação.  
+Permite que muitas ações de alteração de coluna sejam executadas enquanto a tabela permanece disponível. O padrão é OFF. É possível executar a alteração da coluna online para as alterações de coluna relacionadas ao tipo de dados, comprimento da coluna ou precisão, nulidade, dispersão e ordenação.  
   
-A alteração online de coluna permite que as estatísticas automáticas e criadas pelo usuário usem como referência a coluna alterada durante a operação ALTER COLUMN. Isso permite executar consultas como de costume. No final da operação, as estatísticas automáticas que fazem referência à coluna são descartadas e as estatísticas criadas pelo usuário são invalidadas. O usuário deve atualizar manualmente as estatísticas geradas pelo usuário após a conclusão da operação. Se a coluna fizer parte de uma expressão de filtro para estatísticas ou índices, você não poderá executar uma operação de alteração de coluna.  
+A alteração online de coluna permite que as estatísticas automáticas e criadas pelo usuário usem como referência a coluna alterada durante a operação ALTER COLUMN, o que permite a execução normal de consultas. No final da operação, as estatísticas automáticas que fazem referência à coluna são descartadas e as estatísticas criadas pelo usuário são invalidadas. O usuário deve atualizar manualmente as estatísticas geradas pelo usuário após a conclusão da operação. Se a coluna fizer parte de uma expressão de filtro para estatísticas ou índices, você não poderá executar uma operação de alteração de coluna.  
   
--   Enquanto a operação de alteração online de coluna estiver em execução, todas as operações que dependem da coluna (índice, exibições, etc.) serão bloqueadas ou falharão com um erro apropriado. Isso garante que a alteração online de coluna não falhe devido a dependências introduzidas enquanto a operação estiver em execução.  
+-   Enquanto a operação de alteração online de coluna estiver em execução, todas as operações que dependem da coluna (índice, exibições e assim por diante) serão bloqueadas ou falharão com um erro apropriado. Esse comportamento garante que a alteração online de coluna não falhe devido a dependências introduzidas enquanto a operação estiver em execução.  
   
 -   A alteração de uma coluna de NOT NULL para NULL não tem suporte como uma operação online quando a coluna alterada é referenciada por índices não clusterizados.  
   
--   A alteração online não tem suporte quando a coluna for referenciada por uma restrição de verificação e a operação de alteração estiver restringindo a precisão da coluna (numérica ou de data e hora).  
+-   Não há suporte para alteração online quando a coluna é referenciada por uma restrição de verificação e a operação de alteração está restringindo a precisão da coluna (numérica ou de data e hora).  
   
--   A `WAIT_AT_LOW_PRIORITY` opção não pode ser usada com a alteração online de coluna.  
+-   A opção `WAIT_AT_LOW_PRIORITY` não pode ser usada com a alteração online de coluna.  
   
 -   `ALTER COLUMN ... ADD/DROP PERSISTED` não é compatível para a coluna de alteração online.  
   
 -   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` não é afetado pela coluna de alteração online.  
   
--   A alteração online de coluna não dá suporte à alteração de uma tabela onde o controle de alterações está habilitado ou é um publicador de replicação de mesclagem.  
+-   A alteração online de coluna não dá suporte à alteração de uma tabela em que o controle de alterações está habilitado ou é um publicador de replicação de mesclagem.  
   
 -   A alteração online de coluna não dá suporte à alteração de ou para tipos de dados CLR.  
   
 -   A alteração online de coluna não dá suporte à alteração para um tipo de dados XML que tem uma coleção de esquema diferente da coleção de esquema atual.  
   
--   A alteração online de coluna não reduz as restrições ou determina quando uma coluna pode ser alterada. Referências de índice/estatísticas, etc. podem causar falha na alteração.  
+-   A alteração online de coluna não reduz as restrições nem determina quando uma coluna pode ser alterada. Referências de índice/estatísticas e assim por diante podem causar falha na alteração.  
   
 -   A alteração online de coluna não dá para suporte a alteração de mais de uma coluna simultaneamente.  
   
--   Coluna de alteração online não tem nenhum efeito no caso da tabela temporal com versão do sistema. A coluna ALTER não é executada online, independentemente de qual valor tenha sido especificado para a opção ONLINE.  
+-   A alteração online de coluna não tem nenhum efeito no caso da tabela temporal com versão do sistema. A coluna ALTER não é executada online, independentemente de qual valor tenha sido especificado para a opção ONLINE.  
   
-A alteração online de coluna tem requisitos, restrições e funcionalidades similares à recompilação de índice online. Isso inclui:  
+A alteração online de coluna tem requisitos, restrições e funcionalidades similares à recompilação de índice online, o que inclui:  
   
--   A recompilação de índice online não tem suporte quando a tabela contém colunas LOB ou filestream herdadas ou quando a tabela tem um índice columnstore. As mesmas limitações se aplicam à alteração de coluna online.  
+-   A recompilação de índice online não é compatível quando a tabela contém colunas LOB ou filestream herdadas ou quando a tabela tem um índice columnstore. As mesmas limitações se aplicam à alteração de coluna online.  
   
 -   Uma coluna existente que está sendo alterada requer duas vezes a alocação de espaço; para a coluna original e para a coluna oculta recém-criada.  
   
 -   A estratégia de bloqueio durante uma operação de alteração online de coluna segue o mesmo padrão de bloqueio usado para criação de índice online.  
   
 WITH CHECK | WITH NOCHECK  
-Especifica se os dados na tabela são ou não validados com relação à restrição FOREIGN KEY ou CHECK recentemente adicionada ou reabilitada. Se não especificado, WITH CHECK é assumido para novas restrições e WITH NOCHECK é assumido para restrições reabilitadas.  
+Especifica se os dados na tabela são ou não validados com relação à restrição FOREIGN KEY ou CHECK recentemente adicionada ou reabilitada. Se não especificado, WITH CHECK é considerado para novas restrições e WITH NOCHECK é considerado para restrições reabilitadas.  
   
-Se você não quiser verificar novas restrições CHECK ou FOREIGN KEY com relação aos dados existentes, use WITH NOCHECK. Nós não recomendamos fazer isso, com raríssimas exceções. A nova restrição será avaliada em todas as atualizações de dados posteriores. Qualquer violação que seja suprimida por WITH NOCHECK ao adicionar a restrição pode gerar falha em atualizações futuras caso elas atualizem as linhas com dados que não estejam de acordo com a restrição.  
+Se você não quiser verificar novas restrições CHECK ou FOREIGN KEY com relação aos dados existentes, use WITH NOCHECK. Não recomendamos fazer isso, com raríssimas exceções. A nova restrição é avaliada em todas as atualizações de dados posteriores. Qualquer violação que seja suprimida por WITH NOCHECK ao adicionar a restrição pode gerar falha em atualizações futuras caso elas atualizem as linhas com dados que não sigam a restrição.  
   
 > [!NOTE]
-> O otimizador de consulta não considera restrições que são definidas WITH NOCHECK. Tais restrições são ignoradas até que sejam reabilitadas, usando `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL`.  
+> O otimizador de consulta não considera restrições definidas WITH NOCHECK. Tais restrições são ignoradas até que sejam reabilitadas, usando `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL`.  
 
 ALTER INDEX *index_name* Especifica que o número de buckets para *index_name* foi alterado ou modificado.
   
@@ -633,7 +633,7 @@ A sintaxe ALTER TABLE... ADD/DROP/ALTER INDEX só tem suporte para tabelas com o
 > Sem o uso de uma instrução ALTER TABLE, não há suporte para as instruções [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) e [PAD_INDEX](alter-table-index-option-transact-sql.md) para índices em tabelas com otimização de memória.
 
 ADD  
-Especifica que uma ou mais definições de coluna, definições de coluna computadas ou restrições de tabela são adicionadas, ou as colunas que o sistema usará para controle de versão do sistema. Para tabelas com otimização de memória, é possível adicionar um índice.
+Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são adicionadas. Ou as colunas que o sistema usa para controle de versão do sistema são adicionadas. Para tabelas com otimização de memória, é possível adicionar um índice.
 
 > [!IMPORTANT]
 > Sem o uso de uma instrução ALTER TABLE, não há suporte para as instruções [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) e [PAD_INDEX](alter-table-index-option-transact-sql.md) para índices em tabelas com otimização de memória.
@@ -641,19 +641,19 @@ Especifica que uma ou mais definições de coluna, definições de coluna comput
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-Especifica os nomes das colunas que o sistema usará para registrar o período para o qual um registro é válido. Você pode especificar colunas existentes ou criar novas colunas como parte do argumento ADD PERIOD FOR SYSTEM_TIME. As colunas devem ter o datatype de datetime2 e ser definidas como NOT NULL. Se uma coluna de período for definida como NULL, um erro será gerado. Você pode definir [column_constraint &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) e/ou [Especificar Valores Padrão para Colunas](../../relational-databases/tables/specify-default-values-for-columns.md) para as colunas system_start_time e system_end_time. Consulte o Exemplo A nos exemplos de [Controle de versão do sistema](#system_versioning) abaixo demonstrando o uso de um valor padrão para a coluna system_end_time.  
+Especifica os nomes das colunas que o sistema usará para registrar o período em que um registro é válido. Você pode especificar colunas existentes ou criar novas colunas como parte do argumento ADD PERIOD FOR SYSTEM_TIME. Configure as colunas o datatype de datetime2 e as defina como NOT NULL. Se você definir uma coluna de período como NULL, um erro será gerado. Você pode definir [column_constraint &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) e/ou [Especificar Valores Padrão para Colunas](../../relational-databases/tables/specify-default-values-for-columns.md) para as colunas system_start_time e system_end_time. Consulte o Exemplo A nos exemplos de [Controle de versão do sistema](#system_versioning) a seguir, que demonstram o uso de um valor padrão para a coluna system_end_time.  
   
-Use esse argumento junto com o argumento SET SYSTEM_VERSIONING para habilitar o controle de versão do sistema em uma tabela existente. Para obter mais informações, veja [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [Introdução às tabelas temporais no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
+Use esse argumento com o argumento SET SYSTEM_VERSIONING para habilitar o controle de versão do sistema em uma tabela existente. Para obter mais informações, veja [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [Introdução às tabelas temporais no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
-Do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] em diante, os usuários poderão marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM \<nome_da_tabela>** não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal.  
+Do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] em diante, os usuários poderão marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM \<nome_da_tabela>** não retorne um valor para as colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal.  
   
 DROP  
-Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são removidas, ou remover a especificação das colunas que o sistema usará para controle de versão do sistema.  
+Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são removidas ou remove a especificação das colunas que o sistema usa para controle de versão do sistema.  
   
 CONSTRAINT *nome_da_restrição*    
 Especifica que *constraint_name* é removida da tabela. Várias restrições podem ser listadas.  
   
-O nome definido pelo usuário ou fornecido pelo sistema das restrições pode ser determinado ao consultar as exibições do catálogo **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints** e **sys.foreign_keys**.  
+O nome definido pelo usuário ou fornecido pelo sistema das restrições pode ser determinado ao consultar as exibições do catálogo **restrição_sys.check**, **restrições_sys.default**, **restrições_sys.key** e **chaves_sys.foreign**.  
   
 Uma restrição PRIMARY KEY não poderá ser descartada se um índice XML existir na tabela.  
  
@@ -713,15 +713,15 @@ Para obter mais informações, consulte [Configurar operações de índice paral
 > As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [Edições e recursos com suporte para o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [Edições e recursos com suporte para o SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ONLINE **=** { ON | **OFF** } \<conforme se aplica a drop_clustered_constraint_option>  
-Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. REBUILD pode ser executado como uma operação ONLINE.  
+Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. É possível executar REBUILD como uma operação ONLINE.  
   
 ON  
-Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Durante a fase principal da operação de índice, apenas um bloqueio IS (Tentativa Compartilhada) é mantido na tabela de origem. Isso permite a continuação de consultas ou atualizações feitas na tabela e nos índices subjacentes. No início da operação, um bloqueio compartilhado (S) é mantido no objeto de origem por um período muito curto. Ao final da operação, por um curto período de tempo, um bloqueio compartilhado (S) será adquirido na origem se um índice não clusterizado estiver sendo criado; ou um bloqueio de SCH-M (modificação de esquema) será adquirido quando um índice clusterizado for criado ou descartado online e quando um índice clusterizado ou não clusterizado estiver sendo recriado. Não será possível definir ONLINE como ON quando um índice estiver sendo criado em uma tabela temporária local. Apenas a operação de reconstrução de heap de thread único é permitida.  
+Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Durante a fase principal da operação de índice, apenas um bloqueio IS (Tentativa Compartilhada) é mantido na tabela de origem. Esse comportamento permite a continuação de consultas ou atualizações feitas na tabela e nos índices subjacentes. No início da operação, um bloqueio compartilhado (S) é mantido no objeto de origem por um curto período. Ao término da operação, por um curto período, um bloqueio S (Compartilhado) será adquirido na origem se um índice não clusterizado estiver sendo criado. Ou um bloqueio SCH-M (Modificação de Esquema) será adquirido quando um índice clusterizado for criado ou descartado online e quando um índice clusterizado ou não clusterizado estiver sendo recriado. Não será possível definir ONLINE como ON quando um índice estiver sendo criado em uma tabela temporária local. Apenas a operação de reconstrução de heap de thread único é permitida.  
   
-Para executar a DDL de **SWITCH** ou a recompilação de índice online, todas as transações de bloqueio ativas em execução em uma tabela específica devem ser concluídas. Durante a execução, **SWITCH** ou a operação de recompilação impede que a nova transação seja iniciada, e pode afetar significativamente a taxa de transferência da carga de trabalho e atrasar temporariamente o acesso à tabela subjacente.  
+Para executar a DDL de **SWITCH** ou a recompilação de índice online, todas as transações de bloqueio ativas em execução em uma tabela específica devem ser concluídas. Durante a execução, **SWITCH** ou a operação de recompilação impede que a nova transação seja iniciada e pode afetar significativamente a taxa de transferência da carga de trabalho e atrasar temporariamente o acesso à tabela subjacente.  
   
 OFF  
-Os bloqueios de tabela são aplicados enquanto durar a operação de índice. Uma operação de índice offline que cria, recria ou cancela um índice clusterizado ou recria ou cancela um índice não clusterizado, adquire um bloqueio de esquema de modificação (Sch-M) na tabela. Isso evita o acesso de todos os usuários à tabela subjacente enquanto durar a operação. Uma operação de índice offline que cria um índice não clusterizado adquire um bloqueio Compartilhado (S) na tabela. Isso impede atualizações na tabela subjacente, mas permite operações de leitura, como instruções SELECT. Permite operações de reconstrução de heap multi-threaded.  
+Os bloqueios de tabela são aplicados enquanto durar a operação de índice. Uma operação de índice offline que cria, recria ou cancela um índice clusterizado ou recria ou cancela um índice não clusterizado, adquire um bloqueio de esquema de modificação (Sch-M) na tabela. Isso impede o acesso de todos os usuários à tabela subjacente enquanto durar a operação. Uma operação de índice offline que cria um índice não clusterizado adquire um bloqueio Compartilhado (S) na tabela. Isso impede atualizações na tabela subjacente, mas permite operações de leitura, como instruções SELECT. Permite operações de reconstrução de heap multi-threaded.  
   
 Para obter mais informações, consulte [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md).  
   
@@ -774,41 +774,41 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 -   Alterna uma partição de uma tabela particionada para outra.  
 -   Reatribui todos os dados em uma partição de uma tabela particionada para uma tabela não particionada existente.  
   
-Se *table* for uma tabela particionada, *source_partition_number_expression* deverá ser especificado. Se *target_table* for particionada, *target_partition_number_expression* deverá ser especificado. Se estiver reatribuindo os dados de uma tabela com uma partição para uma tabela particionada já existente ou alternando uma partição de uma tabela particionada para outra, a partição de destino deve existir e estar vazia.  
+Se *tabela* for uma tabela particionada, será preciso especificar *expressão_do_número_da_partição_de_origem*. Se *tabela_de_destino* for uma tabela particionada, será preciso especificar *expressão_do_número_da_partição_de_destino*. Na reatribuição dos dados de uma tabela com uma partição para uma tabela particionada já existente ou alternando uma partição de uma tabela particionada para outra, a partição de destino deve existir e estar vazia.  
   
-Se estiver reatribuindo os dados de uma partição para formar uma tabela única, a tabela de destino já deve ter sido criada e deve estar vazia. A tabela de origem ou a partição e a tabela de destino ou a partição devem residir no mesmo grupo de arquivos. Os índices correspondentes ou as partições de índice também devem residir no mesmo grupo de arquivos. Muitas restrições adicionais são aplicadas para alternância de partições. *table* e *target_table* não podem ser iguais. *target_table* pode ser um identificador de várias partes.  
+Na reatribuição dos dados de uma partição para formar uma tabela única, a tabela de destino já deve existir e estar vazia. A tabela de origem ou a partição e a tabela de destino ou a partição devem estar localizadas no mesmo grupo de arquivos. Os índices correspondentes ou as partições de índice também devem estar localizadas no mesmo grupo de arquivos. Muitas restrições adicionais são aplicadas para alternância de partições. *tabela* e *tabela_de_destino* não podem ser iguais. *target_table* pode ser um identificador de várias partes.  
   
  *source_partition_number_expression* e *target_partition_number_expression* são expressões de constante que podem fazer referência a variáveis e funções. Eles incluem variáveis de tipo definidas pelo usuário e funções definidas pelo usuário. Eles não podem referenciar expressões [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Uma tabela particionada com um índice clusterizado columnstore se comporta como um heap particionado:  
   
 -   A chave primária deve incluir a chave de partição.  
--   Um índice exclusivo deve incluir a chave de partição.  Observe que incluir a chave de partição a um índice exclusivo existente pode alterar a exclusividade.  
+-   Um índice exclusivo deve incluir a chave de partição. Incluir a chave de partição com um índice exclusivo existente pode alterar a exclusividade.  
 -   Para mudar as partições, todos os índices não clusterizados devem incluir a chave de partição.  
   
 Para a restrição **SWITCH** ao usar replicação, consulte [Replicar tabelas e índices particionados](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
-Índices columnstore não clusterizados criados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 e para o Banco de Dados SQL antes da versão V12 estavam em um formato somente leitura. Índices columnstore não clusterizado devem ser recriados para o formato atual (que é atualizável) antes de quaisquer operações de partição poderem ser executadas.  
+Índices columnstore não clusterizados criados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 e para o Banco de Dados SQL antes da versão V12 estavam em um formato somente leitura. É preciso recompilar índices columnstore não clusterizado para o formato atual (que é atualizável) antes de quaisquer operações de partição serem executadas.  
   
 SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILESTREAM`.  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte a `FILESTREAM`.  
   
 Especifica onde os dados FILESTREAM são armazenados.  
   
-ALTER TABLE com a cláusula SET FILESTREAM_ON só terá sucesso se a tabela não tiver nenhuma coluna FILESTREAM. As colunas FILESTREAM podem ser adicionadas usando uma segunda instrução ALTER TABLE.  
+ALTER TABLE com a cláusula SET FILESTREAM_ON só terá sucesso se a tabela não tiver nenhuma coluna FILESTREAM. É possível adicionar colunas FILESTREAM usando uma segunda instrução ALTER TABLE.  
   
-Se *partition_scheme_name* for especificado, as regras para [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) se aplicarão. A tabela já deve estar particionada para dados de linha e seu esquema de partição deve usar a mesma função de partição e colunas que o esquema de partição FILESTREAM.  
+Se você especificar *partition_scheme_name*, as regras para [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) se aplicarão. A tabela já deve estar particionada para dados de linha e seu esquema de partição usa a mesma função de partição e colunas que o esquema de partição FILESTREAM.  
   
 *filestream_filegroup_name* especifica o nome de um grupo de arquivos FILESTREAM. O grupo de arquivos deve ter um arquivo definido para o grupo de arquivos usando uma instrução [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Caso contrário, será gerado um erro.  
   
 **"** default **"** especifica o grupo de arquivos FILESTREAM com a propriedade DEFAULT definida. Se não houver um grupo de arquivos FILESTREAM, ocorrerá um erro.  
   
-**"** NULL **"** especifica que serão removidas todas as referências para grupos de arquivos FILESTREAM para a tabela. Todas as colunas FILESTREAM devem ser descartadas primeiro. Você deve usar SET FILESTREAM_ON **="** NULL **"** para excluir todos os dados FILESTREAM que estão associados a uma tabela.  
+**"** NULL **"** especifica que sejam removidas todas as referências para grupos de arquivos FILESTREAM para a tabela. Todas as colunas FILESTREAM devem ser descartadas primeiro. Use SET FILESTREAM_ON **="** NULL **"** para excluir todos os dados FILESTREAM associados a uma tabela.  
   
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name. history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-Desabilita o controle de versão do sistema de uma tabela ou habilita o controle de versão do sistema de uma tabela. Para habilitar o controle de versão do sistema de uma tabela, o sistema verifica se o tipo de dados, a restrição de nulidade e requisitos de restrição de chave primária para o controle de versão do sistema são atendidos. Se o argumento HISTORY_TABLE não for usado, o sistema gerará uma nova tabela de histórico correspondendo ao esquema da tabela atual, criando um link entre as duas tabelas e permitindo que o sistema registre o histórico de cada registro na tabela atual na tabela de histórico. O nome desta tabela de histórico será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Se o argumento HISTORY_TABLE for usado para criar um vínculo e usar a tabela de histórico existente, será criado o vínculo entre a tabela atual e a tabela especificada. Ao criar um link para uma tabela de histórico existente, você pode optar por executar uma verificação de consistência de dados. Essa verificação de consistência de dados garante que os registros existentes não se sobreponham. A execução da verificação de consistência dos dados é o padrão. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
+Desabilita ou habilita o controle de versão do sistema de uma tabela. Para habilitar o controle de versão do sistema de uma tabela, o sistema verifica se o tipo de dados, a restrição de nulidade e requisitos de restrição de chave primária para o controle de versão do sistema são atendidos. Se você não usar o argumento HISTORY_TABLE, o sistema gerará uma nova tabela de histórico correspondendo ao esquema da tabela atual, criando um link entre as duas tabelas e permitindo que o sistema registre o histórico de cada registro na tabela atual na tabela de histórico. O nome desta tabela de histórico será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Se o argumento HISTORY_TABLE for usado para criar um vínculo e usar a tabela de histórico existente, o sistema criará um vínculo entre a tabela atual e a tabela especificada. Ao criar um link para uma tabela de histórico existente, você pode optar por executar uma verificação de consistência de dados. Essa verificação de consistência de dados garante que os registros existentes não se sobreponham. A execução da verificação de consistência dos dados é o padrão. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
@@ -826,7 +826,7 @@ Especifica a retenção finita ou infinita para dados históricos em tabela temp
 -   Se a tabela não estiver particionada, o escalonamento de bloqueios será feito para a granularidade TABLE.  
   
 TABLE  
-O escalonamento de bloqueios será feito na granularidade em nível de tabela, independentemente de a tabela estar particionada ou não. TABLE é o valor padrão.  
+O escalonamento de bloqueios será feito na granularidade em nível de tabela, esteja a tabela particionada ou não. TABLE é o valor padrão.  
   
 DISABLE  
 Impede o escalonamento de bloqueios na maioria dos casos. Os bloqueios em nível de tabela não são totalmente desautorizados. Por exemplo, quando você está verificando uma tabela que não tem nenhum índice clusterizado no nível de isolamento serializável, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve usar um bloqueio de tabela para proteger a integridade dos dados.  
@@ -854,31 +854,31 @@ Todas as opções se aplicam a uma tabela com um índice clusterizado. Se a tabe
  Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:  
   
  Nenhuma  
- A tabela ou as partições especificadas não são compactadas. Não se aplica a tabelas columnstore.  
+ A tabela ou as partições especificadas não são compactadas. Essa opção não se aplica a tabelas columnstore.  
   
  ROW  
- A tabela ou as partições especificadas são compactadas usando a compactação de linha. Não se aplica a tabelas columnstore.  
+ A tabela ou as partições especificadas são compactadas usando a compactação de linha. Essa opção não se aplica a tabelas columnstore.  
   
  PAGE  
- A tabela ou as partições especificadas são compactadas usando a compactação de página. Não se aplica a tabelas columnstore.  
+ A tabela ou as partições especificadas são compactadas usando a compactação de página. Essa opção não se aplica a tabelas columnstore.  
   
  COLUMNSTORE  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Aplica-se somente a tabelas columnstore. COLUMNSTORE especifica a descompactação de uma partição compactada com a opção COLUMNSTORE_ARCHIVE. Quando os dados forem restaurados, eles continuarão sendo compactados através da compactação columnstore usada em todas as tabelas columnstore.  
+ Aplica-se somente a tabelas columnstore. COLUMNSTORE especifica a descompactação de uma partição compactada com a opção COLUMNSTORE_ARCHIVE. Quando os dados forem restaurados, eles continuarão sendo compactados por meio da compactação columnstore usada em todas as tabelas columnstore.  
   
  COLUMNSTORE_ARCHIVE  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Aplica-se a tabelas columnstore, que são armazenadas com um índice columnstore clusterizado. COLUMNSTORE_ARCHIVE compactará ainda mais a partição especificada para um tamanho menor. Isso pode ser usado para fins de arquivamento, ou em outras situações que exijam menos armazenamento e possam dispensar mais tempo para armazenamento e recuperação  
+ Aplica-se a tabelas columnstore, que são armazenadas com um índice columnstore clusterizado. COLUMNSTORE_ARCHIVE compactará ainda mais a partição especificada para um tamanho menor. Use essa opção para fins de arquivamento ou em outras situações que exijam menos armazenamento e possam dispensar mais tempo para armazenamento e recuperação.  
   
  Para recompilar várias partições ao mesmo tempo, veja [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md). Se a tabela não tiver um índice clusterizado, alterar a compactação de dados recriará o heap e os índices não clusterizados. Para obter mais informações sobre compactação, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
  ONLINE **=** { ON | **OFF** } \<conforme se aplica a single_partition_rebuild_option>  
- Especifica se uma única partição das tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. REBUILD pode ser executado como uma operação ONLINE.  
+ Especifica se uma única partição das tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. É possível executar REBUILD como uma operação ONLINE.  
   
  ON  
- Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Um bloqueio S na tabela é exigido no início da recompilação de índice e um bloqueio Sch-M na tabela no final da recompilação de índice online. Embora ambos os bloqueios sejam bloqueios de metadados curtos, especialmente o bloqueio Sch-M deve esperar que todas as transações de bloqueio sejam concluídas. Durante o tempo de espera, o bloqueio Sch-M bloqueia todas as transações restantes que esperam atrás desse bloqueio ao acessar a mesma tabela.  
+ Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Um bloqueio S na tabela é exigido no início da recompilação de índice e um bloqueio Sch-M na tabela no final da recompilação de índice online. Embora ambos os bloqueios sejam bloqueios de metadados curtos, o bloqueio Sch-M deve esperar que todas as transações de bloqueio sejam concluídas. Durante o tempo de espera, o bloqueio Sch-M bloqueia todas as transações restantes que esperam atrás desse bloqueio ao acessar a mesma tabela.  
   
 > [!NOTE]  
 >  A recompilação de índice online pode definir as opções *low_priority_lock_wait* descritas posteriormente nesta seção.  
@@ -889,7 +889,7 @@ Todas as opções se aplicam a uma tabela com um índice clusterizado. Se a tabe
  *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- É o nome do conjunto de colunas. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas não pode ser adicionado a uma tabela que contém colunas esparsas. Para obter mais informações sobre conjuntos de colunas, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).  
+ O nome do conjunto de colunas. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas não pode ser adicionado a uma tabela que contém colunas esparsas. Para obter mais informações sobre conjuntos de colunas, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
@@ -897,9 +897,9 @@ Todas as opções se aplicam a uma tabela com um índice clusterizado. Se a tabe
  Habilita ou desabilita as restrições definidas pelo sistema em uma FileTable. Pode ser usado apenas com uma FileTable.  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILETABLE`.  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte a `FILETABLE`.  
   
- Especifica o nome do diretório de FileTable compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação do SQL. Pode ser usado apenas com uma FileTable.  
+ Especifica o nome do diretório de FileTable compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, apesar das configurações de ordenação do SQL. Pode ser usado apenas com uma FileTable.  
 ```    
  SET (  
         REMOTE_DATA_ARCHIVE   
@@ -911,46 +911,46 @@ Todas as opções se aplicam a uma tabela com um índice clusterizado. Se a tabe
 ```    
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
- Habilita ou desabilita o Stretch Database para uma tabela. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ Habilita ou desabilita o Stretch Database para uma tabela. Saiba mais em [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  **Habilitar o Stretch Database para uma tabela**  
   
- Quando você habilita Stretch para uma tabela especificando `ON`, também precisa especificar `MIGRATION_STATE = OUTBOUND`, para começar a migração de dados imediatamente, ou `MIGRATION_STATE = PAUSED`, para adiar a migração de dados. O valor padrão é `MIGRATION_STATE = OUTBOUND`. Para obter mais informações sobre como habilitar o Stretch para uma tabela, consulte [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+ Quando você habilita Stretch para uma tabela especificando `ON`, também precisa especificar `MIGRATION_STATE = OUTBOUND`, para começar a migração de dados imediatamente, ou `MIGRATION_STATE = PAUSED`, para adiar a migração de dados. O valor padrão é `MIGRATION_STATE = OUTBOUND`. Saiba mais sobre como habilitar o Stretch para uma tabela em [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
- **Pré-requisitos**. Antes de habilitar o Stretch para uma tabela, você precisa habilitar o Stretch no servidor e no banco de dados. Para obter mais informações, consulte [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
+ **Pré-requisitos**. Antes de habilitar o Stretch para uma tabela, você precisa habilitar o Stretch no servidor e no banco de dados. Saiba mais em [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
  **Permissões**. Habilitar o Stretch para um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Stretch em uma tabela também requer permissões ALTER na tabela.  
   
  **Desabilitando o Stretch Database para uma tabela**  
   
- Quando você desabilitar o Stretch para uma tabela, tem duas opções para os dados remotos que já foram migrados para o Azure. Para obter mais informações, consulte [Desabilitar Stretch Database e trazer de volta dados remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).  
+ Quando você desabilitar o Stretch para uma tabela, tem duas opções para os dados remotos que já foram migrados para o Azure. Saiba mais em [Desabilitar Stretch Database e trazer de volta dados remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).  
   
 -   Para desabilitar o Stretch de uma tabela e copiar os dados remotos da tabela do Azure de volta para o SQL Server, execute o comando a seguir. Esse comando não pode ser cancelado.  
   
     ```sql  
-ALTER TABLE \<table name>
+    ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
   
-     Essa operação incorre em custos de transferência de dados, e não pode ser cancelada. Para saber mais, confira [Detalhes de preços de transferências de dados](https://azure.microsoft.com/pricing/details/data-transfers/).  
+Essa operação incorre em custos de transferência de dados, e não pode ser cancelada. Saiba mais em [Detalhes de preços de transferências de dados](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
-     Depois que todos os dados remotos forem copiados do Azure de volta para o SQL Server, o Stretch será desabilitado para a tabela.  
+Depois que todos os dados remotos forem copiados do Azure de volta para o SQL Server, o Stretch será desabilitado para a tabela.  
   
 -   Para desabilitar o Stretch de uma tabela e abandonar os dados remotos, execute o comando a seguir.  
   
     ```sql  
-ALTER TABLE \<table_name>
+    ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
   
  Depois de desabilitar o Stretch Database de uma tabela, a migração de dados é interrompida e os resultados da consulta não incluem mais resultados da tabela remota.  
   
- Desabilitar o Stretch não remove a tabela remota. Se você quiser excluir a tabela remota, descarte-a usando o Portal de Gerenciamento do Azure.  
+ Desabilitar o Stretch não remove a tabela remota. Se você quiser excluir o banco de dados remoto, descarte-o usando o portal do Azure.  
   
 [ FILTER_PREDICATE = { null | *predicate* } ]  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
- Opcionalmente, especifique um predicado de filtro para selecionar linhas para migrar de uma tabela que contém dados atuais e históricos. O predicado deve chamar uma função com valor de tabela embutido determinística. Para obter mais informações, veja [Habilitar Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) e [Selecionar linhas a serem migradas usando uma função de filtro &#40;Stretch Database&#41;](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).   
+ Opcionalmente, especifique um predicado de filtro para selecionar linhas para migrar de uma tabela que contém dados atuais e históricos. O predicado deve chamar uma função com valor de tabela embutido determinística. Saiba mais em [Habilitar Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) e [Selecionar linhas a serem migradas usando uma função de filtro &#40;Stretch Database&#41;](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).   
   
 > [!IMPORTANT]  
 >  Se você fornecer um predicado de filtro precário, a migração de dados também será precária. O Stretch Database aplica o predicado de filtro à tabela usando o operador CROSS APPLY.  
@@ -964,21 +964,21 @@ ALTER TABLE \<table_name>
   
 -   Especifique `OUTBOUND` para migrar dados do SQL Server para o Azure.  
   
--   Especifique `INBOUND` para copiar os dados remotos da tabela do Azure de volta para o SQL Server e para desabilitar o Stretch para a tabela. Para obter mais informações, consulte [Desabilitar Stretch Database e trazer de volta dados remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).  
+-   Especifique `INBOUND` para copiar os dados remotos da tabela do Azure de volta para o SQL Server e para desabilitar o Stretch para a tabela. Saiba mais em [Desabilitar Stretch Database e trazer de volta dados remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).  
   
      Essa operação incorre em custos de transferência de dados, e não pode ser cancelada.  
   
--   Especifique `PAUSED` para pausar ou adiar a migração de dados. Para obter mais informações, consulte [Pausar e retomar a migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+-   Especifique `PAUSED` para pausar ou adiar a migração de dados. Saiba mais em [Pausar e retomar a migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
 WAIT_AT_LOW_PRIORITY  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Uma recriação de índice online precisa aguardar as operações de bloqueio nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recompilação do índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. Omitir a opção **WAIT AT LOW PRIORITY** é equivalente a `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ Uma recriação de índice online precisa aguardar as operações de bloqueio nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recompilação do índice online aguarda bloqueios de baixa prioridade, permitindo que outras operações sejam realizadas enquanto a operação de compilação de índice online está aguardando. Omitir a opção **WAIT AT LOW PRIORITY** é o mesmo que `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
  MAX_DURATION = *time* [**MINUTES** ]  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- O tempo (um valor inteiro especificado em minutos) que a opção **SWITCH** ou os bloqueios de recompilação de índice online deverão aguardar com baixa prioridade ao executar o comando DDL. Se a operação for bloqueada por **MAX_DURATION**, uma das ações de **ABORT_AFTER_WAIT** será executada. O tempo **MAX_DURATION** está sempre em minutos e a palavra **MINUTES** pode ser omitida.  
+ O tempo de espera, que é um valor inteiro especificado em minutos, que a opção **SWITCH** ou os bloqueios de recompilação de índice online aguardam com baixa prioridade ao executar o comando DDL. Se a operação for bloqueada por **MAX_DURATION**, uma das ações de **ABORT_AFTER_WAIT** será executada. O tempo **MAX_DURATION** está sempre em minutos, e a palavra **MINUTES** pode ser omitida.  
   
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -1005,13 +1005,13 @@ Descartará condicionalmente a coluna ou restrição somente se ela já existir.
  Se houver qualquer plano de execução no cache de procedimento que referencie a tabela, ALTER TABLE o marcará para que seja recompilado na próxima execução.  
   
 ## <a name="changing-the-size-of-a-column"></a>Alterando o tamanho de uma coluna  
- É possível alterar o comprimento, a precisão ou a escala de uma coluna, especificando um novo tamanho para o tipo de dados da coluna na cláusula ALTER COLUMN. Se dados existirem na coluna, o novo tamanho não poderá ser menor do que o tamanho máximo dos dados. Além disso, a coluna não pode ser definida em um índice, a menos que a coluna seja um tipo de dados **varchar**, **nvarchar** ou **varbinary** e o índice não seja o resultado de uma restrição PRIMARY KEY. Consulte o exemplo P.  
+ É possível alterar o comprimento, a precisão ou a escala de uma coluna, especificando um novo tamanho para o tipo de dados da coluna. Use a cláusula ALTER COLUMN. Se dados existirem na coluna, o novo tamanho não poderá ser menor do que o tamanho máximo dos dados. Além disso, não é possível definir a coluna em um índice, a menos que a coluna seja um tipo de dados **varchar**, **nvarchar** ou **varbinary** e o índice não seja o resultado de uma restrição PRIMARY KEY. Consulte o exemplo P.  
   
 ## <a name="locks-and-alter-table"></a>Bloqueios e ALTER TABLE  
- As alterações especificadas em ALTER TABLE são implementadas imediatamente. Se as alterações requererem modificações das linhas na tabela, ALTER TABLE atualizará as linhas. ALTER TABLE adquire um bloqueio de modificação de esquema (SCH-M) na tabela para se certificar de que nenhuma outra conexão referencie nem mesmo os metadados da tabela durante a alteração, exceto as operações de índice online que exigem um bloqueio SCH-M muito curto no final. Em uma operação `ALTER TABLE...SWITCH`, o bloqueio é adquirido em tabelas de origem e de destino. As modificações feitas na tabela são registradas e completamente recuperáveis. As alterações que afetam todas as linhas em tabelas muito grandes, como descartar uma coluna ou, em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adicionar uma coluna NOT NULL com um valor padrão, podem demorar muito tempo para serem concluídas e gerar muitos registros de log. Essas instruções ALTER TABLE devem ser executadas com o mesmo cuidado de outras instruções INSERT, UPDATE ou DELETE que podem afetar várias linhas.  
+ As alterações especificadas em ALTER TABLE são implementadas imediatamente. Se as alterações requererem modificações das linhas na tabela, ALTER TABLE atualizará as linhas. ALTER TABLE adquire um bloqueio de modificação de esquema (SCH-M) na tabela para se certificar de que nenhuma outra conexão referencie nem mesmo os metadados da tabela durante a alteração, exceto as operações de índice online que exigem um bloqueio SCH-M curto no final. Em uma operação `ALTER TABLE...SWITCH`, o bloqueio é adquirido em tabelas de origem e de destino. As modificações feitas na tabela são registradas e completamente recuperáveis. As alterações que afetam todas as linhas em tabelas grandes, como descartar uma coluna ou, em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adicionar uma coluna NOT NULL com um valor padrão, podem demorar muito tempo para serem concluídas e gerar muitos registros de log. Execute essas instruções ALTER TABLE com o mesmo cuidado de outras instruções INSERT, UPDATE ou DELETE que podem afetar várias linhas.  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>Adicionando colunas NOT NULL como uma operação online  
- Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, a adição de uma coluna NOT NULL com um valor padrão é uma operação online quando o valor padrão é uma *constante de tempo de execução*. Isso significa que a operação é concluída quase instantaneamente, independentemente do número de linhas na tabela. Isso ocorre porque as linhas existentes na tabela não são atualizadas durante a operação; em vez disso, o valor padrão é armazenado somente nos metadados da tabela e o valor é pesquisado conforme necessário em consultas que acessam essas linhas. Esse comportamento é automático; nenhuma sintaxe adicional é necessária para implementar a operação online, além da sintaxe ADD COLUMN. Uma constante de tempo de execução é uma expressão que gera o mesmo valor no tempo de execução para cada linha na tabela, independentemente de seu determinismo. Por exemplo, a expressão constante "Meus dados temporários" ou a função do sistema GETUTCDATETIME() são constantes de tempo de execução. Por outro lado, as funções `NEWID()` ou `NEWSEQUENTIALID()` não são constantes de tempo de execução porque é gerado um valor exclusivo para cada linha da tabela. A adição de uma coluna NOT NULL com um valor padrão que não é uma constante de tempo de execução é sempre executada offline e um bloqueio exclusivo (SCH-M) é adquirido para a duração da operação.  
+ Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, a adição de uma coluna NOT NULL com um valor padrão é uma operação online quando o valor padrão é uma *constante de tempo de execução*. Isso significa que a operação é concluída quase instantaneamente, apesar do número de linhas na tabela. Isso porque as linhas existentes na tabela não são atualizadas durante a operação. Em vez disso, o valor padrão é armazenado somente nos metadados da tabela e o valor é pesquisado conforme necessário em consultas que acessam essas linhas. Esse comportamento é automático. Nenhuma sintaxe adicional é necessária para implementar a operação online, além da sintaxe ADD COLUMN. Uma constante de tempo de execução é uma expressão que gera o mesmo valor no tempo de execução para cada linha na tabela, independentemente de seu determinismo. Por exemplo, a expressão constante "Meus dados temporários" ou a função do sistema GETUTCDATETIME() são constantes de tempo de execução. Por outro lado, as funções `NEWID()` ou `NEWSEQUENTIALID()` não são constantes de tempo de execução porque é gerado um valor exclusivo para cada linha da tabela. A adição de uma coluna NOT NULL com um valor padrão que não é uma constante de tempo de execução é sempre executada offline e um bloqueio exclusivo (SCH-M) é adquirido para a duração da operação.  
   
  Enquanto as linhas existentes referenciam o valor armazenado nos metadados, o valor padrão é armazenado na linha para qualquer nova linha inserida e não especifica outro valor para a coluna. O valor padrão armazenado nos metadados é movido para uma linha existente quando a linha é atualizada (mesmo que a coluna real não seja especificada na instrução UPDATE) ou quando a tabela ou o índice clusterizado é recompilado.  
   
@@ -1021,7 +1021,7 @@ Descartará condicionalmente a coluna ou restrição somente se ela já existir.
  No [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e superior, o número de processadores empregados para executar uma instrução ALTER TABLE ADD (baseada em índice) CONSTRAINT ou DROP (índice clusterizado) CONSTRAINT é determinado pela opção de configuração **grau máximo de paralelismo** e pela atual carga de trabalho. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detectar que o sistema está ocupado, o grau de paralelismo da operação será automaticamente reduzido antes do início da execução da instrução. É possível configurar manualmente o número de processadores usados para executar a instrução, especificando a opção de índice MAXDOP. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 ## <a name="partitioned-tables"></a>Tabelas particionadas  
- Além de realizar operações SWITCH que envolvem tabelas particionadas, ALTER TABLE pode ser usado para alterar o estado de colunas, restrições e gatilhos de uma tabela particionada, exatamente da mesma forma que é usado em tabelas não particionadas. Porém, essa instrução não pode ser usada para alterar o modo que a própria tabela é particionada. Para reparticionar uma tabela particionada, use [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) e [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md). Além disso, você não pode alterar o tipo de dados de uma coluna em uma tabela particionada.  
+ Além de realizar operações SWITCH que envolvem tabelas particionadas, use ALTER TABLE para alterar o estado de colunas, restrições e gatilhos de uma tabela particionada, exatamente da mesma forma que é usado em tabelas não particionadas. Porém, essa instrução não pode ser usada para alterar o modo que a própria tabela é particionada. Para reparticionar uma tabela particionada, use [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) e [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md). Além disso, não é possível alterar o tipo de dados de uma coluna em uma tabela particionada.  
   
 ## <a name="restrictions-on-tables-with-schema-bound-views"></a>Restrições em tabelas com exibições associadas a esquema  
  As restrições que se aplicam a instruções ALTER TABLE em tabelas com exibições associadas a esquema são as mesmas atualmente aplicadas ao modificar tabelas com um índice simples. É permitido adicionar uma coluna. Porém, não é permitido remover ou alterar uma coluna que participa de qualquer exibição associada a esquema. Se a instrução ALTER TABLE requerer a alteração de uma coluna usada em uma exibição associada a esquema, ALTER TABLE irá falhar e o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gerará uma mensagem de erro. Para obter mais informações sobre associação de esquema e exibições indexadas, veja [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
@@ -1029,7 +1029,7 @@ Descartará condicionalmente a coluna ou restrição somente se ela já existir.
  A adição ou remoção de gatilhos em tabelas base não é afetada pela criação de uma exibição associada a esquema que referencia tabelas.  
   
 ## <a name="indexes-and-alter-table"></a>Índices e ALTER TABLE  
- Os índices criados como parte de uma restrição são descartados quando a restrição é descartada. Os índices criados com CREATE INDEX devem ser descartados com DROP INDEX. A instrução ALTER INDEX pode ser usada para recriar uma parte de índice de uma definição de restrição. A restrição não tem que ser descartada e adicionada novamente com ALTER INDEX.  
+ Os índices criados como parte de uma restrição são descartados quando a restrição é descartada. Os índices criados com CREATE INDEX devem ser descartados com DROP INDEX. Use a instrução ALTER INDEX para recriar uma parte de índice de uma definição de restrição. A restrição não tem que ser descartada e adicionada novamente com ALTER INDEX.  
   
  Todos os índices e as restrições com base em uma coluna devem ser removidos antes que a coluna possa ser removida.  
   
@@ -1039,7 +1039,7 @@ Descartará condicionalmente a coluna ou restrição somente se ela já existir.
 -   O esquema de partição ou grupo de arquivos já deve existir.  
 -   Se MOVE TO não for especificada, a tabela resultante estará localizada no mesmo esquema de partição ou grupo de arquivos definido para o índice clusterizado.  
   
-Quando você remove um índice clusterizado, você pode especificar a opção ONLINE **=** ON de modo que a transação DROP INDEX não bloqueie consultas e modificações nos dados subjacentes e índices não clusterizados associados.  
+Ao remover um índice clusterizado, especifique a opção ONLINE **=** ON de modo que a transação DROP INDEX não bloqueie consultas e modificações nos dados subjacentes e índices não clusterizados associados.  
   
 ONLINE **=** ON tem as seguintes restrições:  
  
@@ -1051,10 +1051,10 @@ ONLINE **=** ON tem as seguintes restrições:
 É necessário ter espaço temporário em disco igual ao tamanho do índice clusterizado existente para descartar um índice clusterizado. Esse espaço adicional será liberado assim que a operação for concluída.  
   
 > [!NOTE]  
-> As opções listadas em *\<drop_clustered_constraint_option>* aplicam-se a índices clusterizados em tabelas e não podem ser aplicadas a índices clusterizados em exibições ou a índices não clusterizados.  
+> As opções listadas em *\<opção_de_descarte_de_restrição_clusterizada>* aplicam-se a índices clusterizados em tabelas e não podem ser aplicadas a índices clusterizados em exibições ou a índices não clusterizados.  
   
 ## <a name="replicating-schema-changes"></a>Replicando alterações de esquema  
- Por padrão, quando você executa ALTER TABLE em uma tabela publicada no Publicador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa alteração é propagada para todos os Assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa funcionalidade tem algumas restrições e pode ser desabilitada. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
+ Quando você executa ALTER TABLE em uma tabela publicada no Publicador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, essa alteração é propagada para todos os assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa funcionalidade tem algumas restrições. É possível desabilitá-la. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
 ## <a name="data-compression"></a>Data Compression  
  Não é possível habilitar as tabelas do sistema para compactação. Se a tabela for um heap, a operação de reconstrução para o modo ONLINE será um thread único. Use o modo OFFLINE para uma operação de reconstrução de um heap multi-threaded. Para obter mais informações sobre compactação de dados, veja [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
@@ -1068,19 +1068,19 @@ ONLINE **=** ON tem as seguintes restrições:
 -   A sintaxe ALTER TABLE \<tabela> REBUILD WITH... recompila todas as partições.  
   
 ## <a name="dropping-ntext-columns"></a>Removendo colunas NTEXT  
- Ao remover colunas NTEXT, a limpeza dos dados excluídos ocorre como uma operação serializada em todas as linhas. Isso pode exigir um tempo substancial. Ao remover uma coluna NTEXT em uma tabela com um grande número de linhas, primeiro atualize a coluna NTEXT para o valor NULL e, em seguida, remova a coluna. Isso pode ser realizado com operações paralelas e pode ser muito mais rápido.  
+ Ao remover colunas NTEXT, a limpeza dos dados excluídos ocorre como uma operação serializada em todas as linhas. A limpeza pode exigir uma grande quantidade de tempo. Ao remover uma coluna NTEXT em uma tabela com muitas linhas, primeiro atualize a coluna NTEXT para o valor NULL e, em seguida, remova a coluna. Você pode executar essa opção com operações paralelas e torná-la muito mais rápida.  
   
 ## <a name="online-index-rebuild"></a>Recriação de índice online  
- Para executar a instrução DDL de uma recompilação de índice online, todas as transações de bloqueio ativas em execução em uma tabela específica devem ser concluídas. Quando a recompilação de índice online for executada, ela bloqueará todas as novas transações que estão prontas para iniciar a execução nessa tabela. Embora a duração do bloqueio da recompilação de índice online seja muito curta, é possível que a espera pela conclusão de todas as transações abertas em uma tabela específica e o bloqueio das novas transações a serem iniciadas afetem significativamente a taxa de transferência, diminuindo a velocidade da carga de trabalho ou ocasionando o tempo limite da mesma, e limite consideravelmente o acesso à tabela subjacente. A opção **WAIT_AT_LOW_PRIORITY** permite que os DBAs gerenciem o bloqueio S e os bloqueios Sch-M necessários para recompilações de índice online, e permite que selecionem uma das três opções. Nos três casos, se, durante o tempo de espera ( `(MAX_DURATION =n [minutes])` ), não houver nenhuma atividade de bloqueio, a recompilação de índice online será executada imediatamente sem aguardar e a instrução DDL será concluída.  
+ Para executar a instrução DDL de uma recompilação de índice online, todas as transações de bloqueio ativas em execução em uma tabela específica devem ser concluídas. Quando a recompilação de índice online for iniciada, ela bloqueará todas as novas transações que estão prontas para iniciar a execução nessa tabela. Embora a duração do bloqueio da recompilação de índice online seja curta, é possível que a espera pela conclusão de todas as transações abertas em uma tabela específica e o bloqueio das novas transações a serem iniciadas afetem significativamente a taxa de transferência. Isso pode diminuir a velocidade de uma carga de trabalho ou ocasionar o tempo limite dela, bem como limitar consideravelmente o acesso à tabela subjacente. A opção **WAIT_AT_LOW_PRIORITY** permite que os DBAs gerenciem o bloqueio S e os bloqueios Sch-M necessários para recompilações de índice online e permite que selecionem uma das três opções. Nos três casos, se, durante o tempo de espera ( `(MAX_DURATION =n [minutes])` ), não houver nenhuma atividade de bloqueio, a recompilação de índice online será executada imediatamente sem aguardar e a instrução DDL será concluída.  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
- A instrução ALTER TABLE permite apenas nomes de tabela de duas partes (schema.object). No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a especificação de uma tabela usando os formatos a seguir falhará em tempo de compilação com o erro 117.  
+ A instrução ALTER TABLE dá suporte apenas a nomes de tabela de duas partes (schema.object). No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a especificação de uma tabela usando os formatos a seguir falhará em tempo de compilação com o erro 117.  
   
 -   server.database.schema.table  
 -   .database.schema.table  
 -   ..schema.table  
   
-As versões anteriores que especificam que o formato server.database.schema.table retornaram o erro 4902. A especificação do formato .database.schema.table ou do formato ..schema.table foi bem-sucedida.  
+Em versões anteriores, especificar o formato server.database.schema.table retornou o erro 4902. A especificação do formato .database.schema.table ou do formato ..schema.table foi bem-sucedida.  
   
 Para resolver o problema, remova o uso de um prefixo de 4 partes.  
   
@@ -1090,7 +1090,7 @@ Para resolver o problema, remova o uso de um prefixo de 4 partes.
   
  As permissões ALTER TABLE se aplicam a ambas as tabelas envolvidas em uma instrução ALTER TABLE SWITCH. Qualquer dado que seja alternado herda a segurança da tabela de destino.  
   
- Se alguma coluna da instrução ALTER TABLE for definida como um tipo CLR definido pelo usuário ou tipo de dados de alias, a permissão REFERENCES será necessária naquele tipo.  
+ Se você tiver definido alguma coluna da instrução ALTER TABLE como um tipo CLR (Common Language Runtime) definido pelo usuário ou tipo de dados de alias, a permissão REFERENCES será necessária nesse tipo.  
   
  Adicionar uma coluna que atualize as linhas da tabela requer a permissão **UPDATE** na tabela. Por exemplo, a adição de uma coluna **NOT NULL** com um valor padrão ou a adição de uma coluna de identidade quando a tabela não está vazia.  
   
@@ -1460,7 +1460,7 @@ C4 int ) ;
 GO  
 ```  
   
- Em seguida, a ordenação da coluna `C2` é alterada para Latin1_General_BIN. Observe que o tipo de dados é obrigatório, mesmo que não tenha sido alterado.  
+ Em seguida, a ordenação da coluna `C2` é alterada para Latin1_General_BIN. O tipo de dados é obrigatório, mesmo que não tenha sido alterado.  
   
 ```sql  
 ALTER TABLE T3  
@@ -1481,8 +1481,8 @@ C4 int ) ;
 GO  
 ```  
   
- Em seguida, a coluna 'C2' é criptografada com uma chave de criptografia de coluna, chamada CEK1, e a criptografia aleatória. Observe que, para a instrução abaixo ser bem-sucedida:
-- A chave de criptografia de coluna deve ser habilitado para enclave, o que significa que ela deve ser criptografada com uma chave mestra de coluna que permita cálculos de enclave.
+ Em seguida, a coluna 'C2' é criptografada com uma chave de criptografia de coluna, chamada CEK1, e a criptografia aleatória. Para que a instrução a seguir seja bem-sucedida:
+- A chave de criptografia de coluna deve ser habilitada para enclave. Isso significa que ela deve ser criptografada com uma chave mestra de coluna que permita cálculos de enclave.
 - A instância do SQL Server de destino dá suporte a Always Encrypted com enclaves seguros.
 - A instrução deve ser emitida por uma conexão configurada para Always Encrypted com enclaves seguros e usando um driver de cliente com suporte.
 - O aplicativo de chamada deve ter acesso à chave mestra de coluna, protegendo CEK1.
@@ -1529,7 +1529,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
  Para obter exemplos de compactação de dados adicionais, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>b. Modificando uma tabela columnstore para alterar a compactação de arquivamento  
- O exemplo a seguir compacta ainda mais uma partição de tabela columnstore aplicando um algoritmo de compactação adicional. Isso reduz a tabela para um tamanho menor, mas também aumenta o tempo necessário para armazenamento e recuperação. Isso pode ser útil para fins de arquivamento, ou em outras situações que exijam menos espaço e possam dispensar mais tempo para armazenamento e recuperação.  
+ O exemplo a seguir compacta ainda mais uma partição de tabela columnstore aplicando um algoritmo de compactação adicional. Essa compactação reduz a tabela para um tamanho menor, mas também aumenta o tempo necessário para armazenamento e recuperação. Isso pode ser útil para fins de arquivamento, ou em outras situações que exijam menos espaço e possam dispensar mais tempo para armazenamento e recuperação.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -1539,7 +1539,7 @@ REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;
 GO  
 ```  
   
-O exemplo a seguir descompacta uma partição de tabela columnstore compactada com a opção COLUMNSTORE_ARCHIVE. Quando os dados forem restaurados, eles continuarão sendo compactados através da compactação columnstore usada em todas as tabelas columnstore.  
+O exemplo a seguir descompacta uma partição de tabela columnstore compactada com a opção COLUMNSTORE_ARCHIVE. Quando os dados forem restaurados, eles continuarão sendo compactados por meio da compactação columnstore usada em todas as tabelas columnstore.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -1714,7 +1714,7 @@ GO
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. Adicionar o controle de versão do sistema a tabelas existentes  
- O exemplo a seguir mostra como adicionar o controle de versão do sistema a uma tabela existente e criar uma tabela de histórico futura. Este exemplo presume que há uma tabela existente chamada `InsurancePolicy` com uma chave primária definida. Este exemplo preenche as colunas de período recém-criadas para controle de versão do sistema usando valores padrão para os horários de início e término, porque esses valores não podem ser nulos. Este exemplo usa a cláusula HIDDEN para garantir que não haja nenhum impacto aplicativos existentes que interagem com a tabela atual.  Ele também usa HISTORY_RETENTION_PERIOD que está disponível somente em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. 
+ O exemplo a seguir mostra como adicionar o controle de versão do sistema a uma tabela existente e criar uma tabela de histórico futura. Este exemplo presume que há uma tabela existente chamada `InsurancePolicy` com uma chave primária definida. Este exemplo preenche as colunas de período recém-criadas para controle de versão do sistema usando valores padrão para os horários de início e término, porque esses valores não podem ser nulos. Este exemplo usa a cláusula HIDDEN para garantir que não haja nenhum impacto aplicativos existentes que interagem com a tabela atual. Ele também usa HISTORY_RETENTION_PERIOD, que está disponível somente em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. 
   
 ```sql  
 --Alter non-temporal table to define periods for system versioning  
@@ -1731,7 +1731,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```  
   
 #### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>b. Migrar uma solução existente para usar o controle de versão do sistema  
- O exemplo a seguir mostra como migrar para o controle de versão do sistema de uma solução que usa gatilhos para imitar simular o suporte temporal. O exemplo supõe que há uma solução existente que usa uma tabela `ProjectTask` e uma tabela `ProjectTaskHistory` para a solução existente, que usa as colunas `Changed Date` e `Revised Date` para seus períodos, que essas colunas de período não usam o datatype `datetime2` e se que a tabela `ProjectTask` tem uma chave primária definida.  
+ O exemplo a seguir mostra como migrar para o controle de versão do sistema de uma solução que usa gatilhos para imitar simular o suporte temporal. O exemplo supõe que há uma solução existente que usa uma tabela `ProjectTask` e uma tabela `ProjectTaskHistory` para sua solução existente, que usa as colunas `Changed Date` e `Revised Date` para seus períodos, que essas colunas de período não usam o datatype `datetime2` e que a tabela `ProjectTask` tem uma chave primária definida.  
 
 ```sql  
 -- Drop existing trigger  
@@ -1754,7 +1754,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSIS
 ```  
   
 #### <a name="c-disabling-and-re-enabling-system-versioning-to-change-table-schema"></a>C. Desabilitando e reabilitando o controle de versão do sistema para alterar o esquema de tabela  
- Este exemplo mostra como desabilitar o controle de versão do sistema na tabela `Department`, adicionar uma coluna e reabilitar o controle de versão do sistema. Desabilitar o controle de versão do sistema é necessário para modificar o esquema da tabela. Execute estas etapas em uma transação para impedir atualizações a ambas as tabelas ao atualizar o esquema da tabela, o que permite ao DBA ignorar a verificação de consistência de dados ao habilitar novamente o controle de versão do sistema e obter um benefício de desempenho. Observe que tarefas como criação de estatísticas, alternância de partições ou aplicação de compactação de uma ou ambas as tabelas não exigem desabilitar o controle de versão do sistema.  
+ Este exemplo mostra como desabilitar o controle de versão do sistema na tabela `Department`, adicionar uma coluna e reabilitar o controle de versão do sistema. É necessário desabilitar o controle de versão do sistema para modificar o esquema da tabela. Realize essas etapas em uma transação para impedir atualizações a ambas as tabelas ao atualizar o esquema da tabela, o que permite ao DBA ignorar a verificação de consistência de dados ao habilitar novamente o controle de versão do sistema e obter um benefício de desempenho. Tarefas como criação de estatísticas, alternância de partições ou aplicação de compactação de uma ou ambas as tabelas não exigem a desabilitação do controle de versão do sistema.  
   
 ```sql  
 BEGIN TRAN  
@@ -1775,7 +1775,7 @@ COMMIT
 ```  
   
 #### <a name="d-removing-system-versioning"></a>D. Removendo o controle de versão do sistema  
- Este exemplo mostra como remover completamente o controle de versão do sistema da tabela Departamento e remover a tabela `DepartmentHistory`. Opcionalmente, você também pode querer remover as colunas de período usadas pelo sistema para registrar informações de controle de versão do sistema. Observe que você não pode remover as tabelas `Department` ou `DepartmentHistory` enquanto a versão do sistema está habilitada.  
+ Este exemplo mostra como remover completamente o controle de versão do sistema da tabela Departamento e remover a tabela `DepartmentHistory`. Opcionalmente, você também pode querer remover as colunas de período usadas pelo sistema para registrar informações de controle de versão do sistema. Não é possível remover as tabelas `Department` ou `DepartmentHistory` enquanto a versão do sistema está habilitada.  
   
 ```sql  
 ALTER TABLE Department  
@@ -1964,7 +1964,7 @@ WITH
     FOR VALUES ( '2004-01-01' )));  
 ```  
   
- Embora as colunas e os nomes de coluna devam ser iguais, os limites de partição não precisam ser iguais. Neste exemplo, a tabela `OrdersHistory` tem as duas partições a seguir, e ambas estão vazias:  
+ Embora as colunas e os nomes de coluna devam ser iguais, os limites de partição não precisam ser. Neste exemplo, a tabela `OrdersHistory` tem as duas partições a seguir, e ambas estão vazias:  
   
 -   Partição 1 (sem dados): OrderDate < '2004-01-01'  
 -   Partição 2 (vazia): '2004-01-01' <= OrderDate  
@@ -2005,7 +2005,7 @@ ALTER TABLE Orders MERGE RANGE ('2004-01-01');
 -   Partição 3 (tem dados): '2006-01-01'<= OrderDate < '2007-01-01'  
 -   Partição 4 (tem dados): '2007-01-01' <= OrderDate  
   
-Suponha que se passa outro ano e você esteja pronto para arquivar o ano de 2005. Você pode alocar uma partição vazia para o ano 2005 na tabela `OrdersHistory` dividindo a partição vazia da seguinte maneira:  
+Suponha que se passe outro ano e você esteja pronto para arquivar o ano de 2005. Você pode alocar uma partição vazia para o ano 2005 na tabela `OrdersHistory` dividindo a partição vazia da seguinte maneira:  
   
 ```sql  
 ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');  

@@ -18,17 +18,17 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 518272fb8e49825ed528700d5ee5e6d8f46a615e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34cb0cbe98bd0afd9eb1e3183839984799df7718
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832724"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154831"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma aproximação poligonal de uma instância de **geography** que contém segmentos de arco circulares.  
+Retorna uma aproximação poligonal de uma instância de **geography** que contém segmentos de arco circulares.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,63 +38,63 @@ ms.locfileid: "47832724"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tolerance*  
- É uma expressão **double** que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
+_tolerance_  
+É uma expressão **double** que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
   
- *relative*  
- É uma expressão**booliana** que indica se um máximo relativo para o desvio deverá ser usado. Quando o relativo é definido como falso (0), um máximo absoluto é definido para o desvio que um aproximado linear poderá ter.  Quando o relativo é definido como verdadeiro (1), a tolerância é calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
+_relative_  
+É uma expressão **bool** que indica se um máximo relativo para o desvio deve ser usado. Se o relativo for definido como falso (0), um máximo absoluto será definido para o desvio que um aproximado linear poderá ter. Quando o relativo for verdadeiro (1), a tolerância será calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
+Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
- A definição de tolerância <= 0 gera uma exceção **ArgumentOutOfRange**.  
+A definição de tolerância <= 0 gera uma exceção **ArgumentOutOfRange**.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método permite uma quantidade de tolerância de erro a ser especificada para a **LineString** resultante.  
+Esse método permite uma quantidade de tolerância de erro a ser especificada para a **LineString** resultante.  
   
- O método **CurveToLineWithTolerance** retornará uma instância de **LineString** para uma instância de **CircularString** ou de **CompoundCurve** e uma instância de  **Polígono** para uma instância de **CurvePolygon**.  
+O método **CurveToLineWithTolerance** retornará uma instância de **LineString** para uma instância de **CircularString** ou de **CompoundCurve** e uma instância de  **Polígono** para uma instância de **CurvePolygon**.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Usando valores de tolerância diferentes em uma instância de CircularString  
- O seguinte exemplo mostra como a definição da tolerância afeta a instância de `LineString` retornada de uma instância de `CircularString`:  
+O seguinte exemplo mostra como a definição da tolerância afeta a instância de `LineString` retornada de uma instância de `CircularString`:  
   
- ```
- DECLARE @g geography;  
- SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
- SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+```
+DECLARE @g geography;  
+SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
 ```  
   
-### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. Usando o método em uma instância de MultiLineString que contém uma LineString  
- O exemplo a seguir mostra o que é retornado de uma instância de `MultiLineString` que só contém uma instância de `LineString`:  
+### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>b. Usando o método em uma instância de MultiLineString que contém uma LineString  
+O exemplo a seguir mostra o que é retornado de uma instância de `MultiLineString` que só contém uma instância de `LineString`:  
   
- ```
- DECLARE @g geography;  
- SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');  
- SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
- ```  
+```
+DECLARE @g geography;  
+SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');  
+SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. Usando o método em uma instância de MultiLineString que contém várias LineStrings  
- O exemplo a seguir mostra o que é retornado de uma instância de `MultiLineString` que contém mais de uma instância `LineString`:  
+O exemplo a seguir mostra o que é retornado de uma instância de `MultiLineString` que contém mais de uma instância `LineString`:  
   
- ```
- DECLARE @g geography;  
- SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');  
- SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
- ```  
+```
+DECLARE @g geography;  
+SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');  
+SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Definindo o relativo como true para uma instância de CurvePolygon de invocação  
- O exemplo a seguir usa uma instância de `CurvePolygon` para chamar `CurveToLineWithTolerance()` com *relativo* definido como true:  
+O exemplo a seguir usa uma instância de `CurvePolygon` para chamar `CurveToLineWithTolerance()` com *relativo* definido como true:  
   
- ```
- DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
- SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
- ```  
+```
+DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
+SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+[Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

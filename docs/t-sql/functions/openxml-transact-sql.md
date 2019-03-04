@@ -20,19 +20,19 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011778"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331586"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OPENXML fornece uma exibição de conjunto de linhas em um documento XML. Como OPENXML é um provedor de conjunto de linhas, OPENROWSET pode ser usado em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais os provedores de conjunto de linhas, como uma tabela, exibição ou a função OPENROWSET, podem aparecer.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,16 +47,16 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  É o indentificador de documento da representação interna de um documento XML. A representação interna de um documento XML é criada chamando **sp_xml_preparedocument**.  
   
  *rowpattern*  
- É o padrão XPath usado para identificar os nós (no documento XML cujo identificador é passado no parâmetro *idoc*) a serem processados como linhas.  
+ O padrão XPath é usado para identificar os nós a ser processados como linhas. Os nós vêm do documento XML cujo identificador é transmitido no parâmetro *idoc*.
   
  *sinalizadores*  
- Indica o mapeamento que deve ser usado entre os dados XML e o conjunto de linhas relacional, e como a coluna de derramamento deve ser preenchida. *flags* é um parâmetro de entrada opcional e pode ser um dos valores a seguir.  
+ Indica o mapeamento usado entre os dados XML e o conjunto de linhas relacional, e como a coluna de derramamento é preenchida. *flags* é um parâmetro de entrada opcional e pode ser um dos valores a seguir.  
   
 |Valor do byte|Descrição|  
 |----------------|-----------------|  
 |**0**|O padrão será o mapeamento **centrado em atributo**.|  
-|**1**|Use o mapeamento **centrado em atributo**. Pode ser combinado com XML_ELEMENTS. Nesse caso, o mapeamento **centrado em atributo** é aplicado primeiro e, em seguida, o mapeamento **centrado em elemento** é aplicado a todas as colunas que ainda não foram tratadas.|  
-|**2**|Use o mapeamento **centrado em elemento**. Pode ser combinado com XML_ATTRIBUTES. Nesse caso, o mapeamento **centrado em atributo** é aplicado primeiro e, em seguida, o mapeamento **centrado em elemento** é aplicado a todas as colunas que ainda não foram tratadas.|  
+|**1**|Use o mapeamento **centrado em atributo**. Pode ser combinado com XML_ELEMENTS. Neste caso, o mapeamento **centrado em atributo** é aplicado primeiro. Em seguida, o mapeamento **centrado em elemento** é aplicado às colunas restantes.|  
+|**2**|Use o mapeamento **centrado em elemento**. Pode ser combinado com XML_ATTRIBUTES. Neste caso, o mapeamento **centrado em atributo** é aplicado primeiro. Em seguida, o mapeamento **centrado em elemento** é aplicado às colunas restantes.|  
 |**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@@mp:xmltex**.|  
   
  _SchemaDeclaration_  
@@ -71,12 +71,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *ColPattern*  
  É um padrão geral  XPath opcional que descreve como os nós XML devem ser mapeados para as colunas. Se *ColPattern* não for especificado, ocorrerá o mapeamento padrão (mapeamento **centrado em atributo** ou **centrado em elemento** de acordo com a especificação de *flags*).  
   
- O padrão XPath especificado como *ColPattern* é usado para especificar a natureza especial do mapeamento (no caso de mapeamento **centrado em atributo** e **centrado em elemento**) que substitui ou melhora o mapeamento padrão indicado por *flags*.  
+ O padrão XPath especificado como *ColPattern* é usado para especificar a natureza especial do mapeamento (para **centrado em atributo** e **centrado em elemento**) que substitui ou melhora o mapeamento padrão indicado por *flags*.  
   
  O padrão XPath geral especificado como *ColPattern* também é compatível com metapropriedades.  
   
  *MetaProperty*  
- É uma das metapropriedades fornecidas por OPENXML. Se *MetaProperty* for especificado, a coluna conterá as informações fornecidas pela metapropriedade. As metapropriedades permitem extrair informações (como a posição relativa e informações de namespace) sobre nós XML. Isso fornece mais informações que as visíveis na representação textual.  
+ É uma das metapropriedades fornecidas por OPENXML. Se *MetaProperty* for especificado, a coluna conterá as informações fornecidas pela metapropriedade. As metapropriedades permitem extrair informações (como a posição relativa e informações de namespace) sobre nós XML. Essas metapropriedades fornecem mais informações que as visíveis na representação textual.  
   
  *TableName*  
  É o nome da tabela que poderá ser fornecido (em vez de *SchemaDeclaration*) se já existir uma tabela com o esquema desejado e não for necessário nenhum padrão de coluna.  
@@ -103,7 +103,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Usando uma instrução SELECT simples com OPENXML  
  O exemplo a seguir cria uma representação interna da imagem XML usando `sp_xml_preparedocument`. Uma instrução `SELECT` que usa um provedor de conjunto de linhas `OPENXML` é executada na representação interna do documento XML.  
   
- O valor de *flag* é definido como `1`. Isso indica um mapeamento **centrado em atributo**. Portanto, os atributos XML mapeiam para as colunas no conjunto de linhas. O *rowpattern* especificado como `/ROOT/Customer` identifica os nós de `<Customers>` a serem processados.  
+ O valor de *flag* é definido como `1`. Esse valor indica um mapeamento **centrado em atributo**. Portanto, os atributos XML mapeiam para as colunas no conjunto de linhas. O *rowpattern* especificado como `/ROOT/Customer` identifica os nós de `<Customers>` a serem processados.  
   
  O parâmetro opcional *ColPattern* (padrão de coluna) não é especificado porque o nome da coluna corresponde aos nomes de atributo XML.  
   
@@ -156,9 +156,9 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Especificando ColPattern para mapeamento entre colunas e atributos XML  
- A consulta a seguir retorna ID de cliente, data do pedido, ID de produto e atributos de quantidade do documento XML. O *rowpattern* identifica os elementos `<OrderDetails>`. `ProductID` e `Quantity` são os atributos do elemento `<OrderDetails>`. Entretanto, `OrderID`, `CustomerID`e `OrderDate` são os atributos do elemento de pai (`<Orders>`).  
+ A consulta a seguir retorna a ID de cliente, a data do pedido, a ID de produto e atributos de quantidade do documento XML. O *rowpattern* identifica os elementos `<OrderDetails>`. `ProductID` e `Quantity` são os atributos do elemento `<OrderDetails>`. Entretanto, `OrderID`, `CustomerID`e `OrderDate` são os atributos do elemento de pai (`<Orders>`).  
   
- O *ColPattern* opcional é especificado. Isso indica o seguinte:  
+ O *ColPattern* opcional é especificado para os seguintes mapeamentos:  
   
 -   A `OrderID`, `CustomerID` e `OrderDate` no conjunto de linhas são mapeadas para os atributos do pai dos nós identificados por *rowpattern* no documento XML.  
   
@@ -247,5 +247,4 @@ EXEC sp_xml_removedocument @idoc;
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplos: Usando OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
-  
   
