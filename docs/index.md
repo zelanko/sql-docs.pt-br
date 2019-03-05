@@ -213,7 +213,7 @@ ms.date: 12/15/2018
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Gerenciar, monitorar e ajustar</h3>
-                                                          <p><b>Planos de manutenção, SQL Profiler, Ajuste automático, o OLTP in-memory, partições, estatísticas, índices, estimativa de cardinalidade </b>  </p>
+                                                          <p><b>Planos de manutenção, SQL Profiler, ajuste automático, OLTP in-memory, partições, estatísticas, índices, estimativa de cardinalidade </b>  </p>
                                                       </div>
                                                   </div>
                                               </div>
