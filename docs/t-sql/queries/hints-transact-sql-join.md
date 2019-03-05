@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MERGE join hint
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 270aaf41f6cb081f3c57156c10e3b448540a6731
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c1cf9d7174736325e7308ac8609c403581f53d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334453"
 ---
 # <a name="hints-transact-sql---join"></a>Dicas (Transact-SQL) – junção
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47621344"
   
  Se a tabela direita for local, a junção será executada localmente. Se ambas as tabelas forem remotas, mas de fontes de dados diferentes, REMOTE fará com que a junção seja executada no site da tabela direita. Se ambas as tabelas forem tabelas remotas da mesma fonte de dados, REMOTE não será requerido.  
   
- REMOTE não poderá ser usado quando um dos valores que são comparados no predicado de junção for lançado em um agrupamento diferente usando a cláusula COLLATE.  
+ REMOTE não poderá ser usado quando um dos valores que são comparados no predicado de junção for lançado em uma ordenação diferente usando a cláusula COLLATE.  
   
  REMOTE poderá ser usado somente para operações de INNER JOIN.  
   
@@ -85,7 +85,7 @@ ON p.ProductID = pr.ProductID
 ORDER BY ProductReviewID DESC;  
 ```  
   
-### <a name="b-using-loop"></a>B. Usando LOOP  
+### <a name="b-using-loop"></a>b. Usando LOOP  
  O exemplo a seguir especifica que a operação `JOIN` na consulta é executada por uma junção `LOOP`. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

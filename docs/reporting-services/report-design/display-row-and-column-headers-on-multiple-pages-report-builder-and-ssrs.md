@@ -1,21 +1,22 @@
 ---
 title: Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ad0da97b8b9837213a0abff73204a2287b02e011
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.date: 03/01/2017
+ms.openlocfilehash: 8bd2ab9ebfceeb8689dcaa5ce2afe912ecb4b1c6
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291983"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305314"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)
+
   Você pode controlar se os cabeçalhos de linha e de coluna serão repetidos em cada página de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] em uma região de dados tablix (uma tabela, matriz ou lista) que abrange várias páginas.
   
  O modo como você controla as linhas e as colunas dependerá se a região de dados de tablix tem cabeçalhos de grupo. Quando você clicar em uma região de dados de tablix que tem cabeçalhos de grupo, uma linha pontilhada mostrará as áreas de tablix, como mostrado na figura seguinte:  
@@ -28,37 +29,37 @@ ms.locfileid: "56291983"
   
 ## <a name="to-display-row-headers-on-multiple-pages"></a>Para exibir cabeçalhos de linha em várias páginas  
   
-1.  Clique com o botão direito do mouse na alça de canto, na linha ou na coluna de uma região de dados tablix e, em seguida, clique em **Propriedades do Tablix**.  
+1. Clique com o botão direito do mouse na alça de canto, na linha ou na coluna de uma região de dados tablix e, em seguida, clique em **Propriedades do Tablix**.  
   
-2.  Em **Cabeçalhos de Linha**, selecione **Repetir linhas de cabeçalho em cada página**.  
+2. Em **Cabeçalhos de Linha**, selecione **Repetir linhas de cabeçalho em cada página**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-column-headers-on-multiple-pages"></a>Para exibir cabeçalhos de coluna em várias páginas  
   
-1.  Clique com o botão direito do mouse na alça de canto, na linha ou na coluna de uma região de dados tablix e, em seguida, clique em **Propriedades do Tablix**.  
+1. Clique com o botão direito do mouse na alça de canto, na linha ou na coluna de uma região de dados tablix e, em seguida, clique em **Propriedades do Tablix**.  
   
-2.  Em **Cabeçalhos de Colunas**, selecione **Repetir colunas de cabeçalho em cada página**.  
+2. Em **Cabeçalhos de Colunas**, selecione **Repetir colunas de cabeçalho em cada página**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-a-static-row-or-column-on-multiple-pages"></a>Para exibir uma linha ou coluna estática em várias páginas  
   
-1.  Na superfície de design, clique no manipulador de linha ou coluna da região de dados de tablix para selecioná-la. O painel Agrupamento exibe os grupos de linhas e colunas.  
+1. Na superfície de design, clique no manipulador de linha ou coluna da região de dados de tablix para selecioná-la. O painel Agrupamento exibe os grupos de linhas e colunas.  
   
-2.  À direita lado do painel Agrupamento, clique na seta para baixo e, em seguida, clique em **Modo Avançado**. O painel Grupos de Linhas exibe os membros hierárquicos estáticos e dinâmicos para a hierarquia de grupos de linhas e o painel Grupos de colunas mostra uma exibição semelhante para a hierarquia de grupos de coluna.  
+2. À direita lado do painel Agrupamento, clique na seta para baixo e, em seguida, clique em **Modo Avançado**. O painel Grupos de Linhas exibe os membros hierárquicos estáticos e dinâmicos para a hierarquia de grupos de linhas e o painel Grupos de colunas mostra uma exibição semelhante para a hierarquia de grupos de coluna.  
   
-3.  Clique no membro estático que corresponde àquele (linha ou coluna) que deverá permanecer visível durante a rolagem. O painel Propriedades exibe as propriedades de **Membro de Tablix** .  
+3. Clique no membro estático que corresponde àquele (linha ou coluna) que deverá permanecer visível durante a rolagem. O painel Propriedades exibe as propriedades de **Membro de Tablix** .  
   
      Se você não vir o painel Propriedades, clique na guia **Exibir** na parte superior da janela do Construtor de Relatórios e clique em **Propriedades**.  
   
-4.  No painel Propriedades, defina **RepeatOnNewPage** como True.  
+4. No painel Propriedades, defina **RepeatOnNewPage** como True.  
   
-5.  Defina **KeepWithGroup** como After.  
+5. Defina **KeepWithGroup** como After.  
   
-6.  Repita essa etapa para todos os membros adjacentes desejados.  
+6. Repita essa etapa para todos os membros adjacentes desejados.  
   
-7.  Visualize o relatório.  
+7. Visualize o relatório.  
   
  À medida que você exibe cada página do relatório que a região de dados do tablix abrange, os membros de tablix se repetem em cada página.  
   

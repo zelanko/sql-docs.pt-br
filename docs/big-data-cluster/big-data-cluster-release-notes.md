@@ -5,17 +5,17 @@ description: Este artigo descreve as últimas atualizações e problemas conheci
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227208"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334743"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notas de versão do SQL Server 2019 clusters de big data
 
@@ -39,7 +39,7 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 - [Enviar trabalhos do Spark em Big Data Clusters do SQL Server no IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [CLI comuns para gerenciamento de cluster e de implantação do aplicativo](big-data-cluster-create-apps.md).
 - [Extensão do VS Code para implantar aplicativos em clusters de grandes dados do SQL Server](app-deployment-extension.md).
-- Novo parâmetro de ordenação para o **mssqlctl** ferramenta.
+- [Altera para o **mssqlctl** ferramenta de uso do comando](#mssqlctlctp23).
 - [Usar Sparklyr no cluster de dados do SQL Server de 2019 Big](sparklyr-from-RStudio.md).
 - Montar o armazenamento externo de compatível com HDFS no cluster de big data com [HDFS camadas](hdfs-tiering.md).
 - Nova experiência unificada de conexão para o [instância mestre do SQL Server e o Gateway HDFS/Spark](connect-to-big-data-cluster.md).
@@ -74,6 +74,18 @@ As seções a seguir fornecem os problemas conhecidos para clusters de grandes d
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - Se uma implantação de cluster de big data falhar, o namespace associado não é removido. Isso pode resultar em um namespace órfão no cluster. Uma solução alternativa é excluir o namespace manualmente antes de implantar um cluster com o mesmo nome.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- O **mssqlctl** ferramenta alterado de um comando de verbo-substantivo ordenação para uma ordem de verbo-substantivo. Por exemplo, `mssqlctl create cluster` agora é `mssqlctl cluster create`.
+
+- O `--name` parâmetro agora é necessário ao criar um cluster com `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- Para obter informações importantes sobre a atualização para a versão mais recente dos clusters de big data e **mssqlctl**, consulte [atualizar para uma nova versão](deployment-guidance.md#upgrade).
 
 #### <a name="external-tables"></a>Tabelas externas
 

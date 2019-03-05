@@ -1,5 +1,5 @@
 ---
-title: DM os_performance_counters (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dcfe7869767bc9178f9241c3ffa82d166685d7ac
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669675"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334703"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "51669675"
 > [!NOTE]  
 >  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_performance_counters**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|Categoria para a qual este contador pertence.|  
 |**counter_name**|**nchar(128)**|Nome do contador. Para obter mais informações sobre um contador, esse é o nome do tópico para selecionar na lista de contadores no [usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
 |**instance_name**|**nchar(128)**|Nome da instância específica do contador. Normalmente, contém o nome do banco de dados.|  
-|**cntr_value**|**bigint**|Valor atual do contador.<br /><br /> **Observação:** para contadores por segundo, esse valor é cumulativo. O valor de taxa deve ser calculado pela amostragem do valor a intervalos de tempo curtos. A diferença entre qualquer dois valores de amostra sucessivos é igual à taxa para o intervalo de tempo usado.|  
-|**cntr_type**|**int**|Tipo de contador conforme definido pela arquitetura de desempenho do Windows. Ver [tipos de contador de desempenho WMI](https://msdn2.microsoft.com/library/aa394569.aspx) no MSDN ou a documentação do Windows Server para obter mais informações sobre tipos de contador de desempenho.|  
+|**cntr_value**|**bigint**|Valor atual do contador.<br /><br /> **Observação:** Para contadores por segundo, esse valor é cumulativo. O valor de taxa deve ser calculado pela amostragem do valor a intervalos de tempo curtos. A diferença entre qualquer dois valores de amostra sucessivos é igual à taxa para o intervalo de tempo usado.|  
+|**cntr_type**|**int**|Tipo de contador conforme definido pela arquitetura de desempenho do Windows. Ver [tipos de contador de desempenho WMI](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) no Docs ou a documentação do Windows Server para obter mais informações sobre tipos de contador de desempenho.|  
 |**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="remarks"></a>Comentários  

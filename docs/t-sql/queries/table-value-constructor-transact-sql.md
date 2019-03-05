@@ -15,15 +15,15 @@ helpviewer_keywords:
 - row constructor [SQL Server]
 - table value constructor [SQL Server]
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dddd2ea5c0abb9cf2aaa1258bbbb5cff14e6ca99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 03ae3b2808fbca63c92ee689218c6e76cb0c0ffd
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519159"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334473"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Construtor de valor de tabela (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  *expressão*  
  É uma constante, uma variável ou uma expressão. A expressão não pode conter uma instrução EXECUTE.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Construtores de valor de tabela podem ser usados de uma das duas maneiras: diretamente na lista VALUES de uma instrução INSERT ... VALUES ou como uma tabela derivada em qualquer lugar em que tabelas derivadas sejam permitidas. O erro 10738 será retornado se o número de linhas exceder o máximo. Para inserir mais linhas do que o limite permite, use um dos seguintes métodos:  
   
 -   Crie várias instruções INSERT  
@@ -124,7 +124,7 @@ GO
   
 ```  
   
-### <a name="b-inserting-multiple-rows-with-default-and-null-values"></a>B. Inserindo várias linhas com valores DEFAULT e NULL  
+### <a name="b-inserting-multiple-rows-with-default-and-null-values"></a>b. Inserindo várias linhas com valores DEFAULT e NULL  
  O exemplo a seguir demonstra como especificar DEFAULT e NULL ao usar o construtor de valor de tabela para inserir linhas em uma tabela.  
   
 ```  

@@ -28,15 +28,15 @@ helpviewer_keywords:
 - computed sums
 - WHERE clause, SELECT statement
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 558092ec5c5cfe587b9a7644561cc94a6a5c1610
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 212a13b10fcc43eb8113da3b418bdf57c53ae19a
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906086"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334423"
 ---
 # <a name="select-examples-transact-sql"></a>Exemplos de SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "48906086"
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
-## <a name="b-using-select-with-column-headings-and-calculations"></a>B. Usando SELECT com títulos de coluna e cálculos  
+## <a name="b-using-select-with-column-headings-and-calculations"></a>b. Usando SELECT com títulos de coluna e cálculos  
  Os exemplos a seguir retornam todas as linhas da tabela `Product`. O primeiro exemplo retorna o total de vendas e os descontos para cada produto. No segundo exemplo, a receita total é calculada para cada produto.  
   
  [!code-sql[Select#SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305354"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o DMA
 
@@ -71,6 +71,9 @@ Esse inventário pode estar em uma das duas formas:
 - Tabela do SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Se usando um arquivo CSV
+> [!IMPORTANT]
+> Certifique-se de que o arquivo de inventário é salvo como arquivo separados por vírgulas (CSV).
+
 Ao usar um arquivo csv para importar os dados, verifique se há apenas duas colunas de dados - **nome da instância** e **nome do banco de dados**, e que as colunas não tem linhas de cabeçalho.
  
  ![conteúdo do arquivo CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ Você também pode usar o script LoadWarehouse para fornecer as instruções TSQ
 
 1. Abra o modelo de DMA relatórios Power BI no Power BI Desktop.
 2. Insira os detalhes do servidor que apontam para seus **DMAWarehouse** do banco de dados e, em seguida, selecione **carga**.
-
-    > [!IMPORTANT]
-    > Não pressione Enter para aceitar os valores.
-
+   
       ![Modelo do Power BI DMA relatórios carregados](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Depois que o relatório tiver atualizado os dados a partir de **DMAWarehouse** banco de dados, você verá um relatório semelhante ao seguinte.
