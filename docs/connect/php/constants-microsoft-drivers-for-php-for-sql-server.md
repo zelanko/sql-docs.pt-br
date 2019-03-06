@@ -1,7 +1,7 @@
 ---
 title: Constantes (Drivers da Microsoft para PHP para SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409523"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744446"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Drivers da Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,7 +55,7 @@ Os valores disponíveis para passar para PDO::SQLSRV_ATTR_ENCODING são
 |PDO::SQLSRV_ENCODING_BINARY|Os dados são um fluxo de bytes brutos do servidor sem realizar a codificação ou a conversão.<br /><br />Não é válido para PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Os dados são caracteres de 8 bits conforme especificado na página de código da localidade do Windows definida no sistema. Todos os caracteres multibyte ou caracteres não mapeados nessa página de código são substituídos por um caractere de ponto de interrogação (?) de byte único.|  
 |PDO::SQLSRV_ENCODING_UTF8|Os dados estão na codificação UTF-8. Essa é a codificação padrão.|  
-|PDO::SQLSRV_ENCODING_DEFAULT|Usa PDO::SQLSRV_ENCODING_SYSTEM se especificado durante a conexão.<br /><br />Use codificação da conexão se for especificado em uma instrução prepare.|  
+|PDO::SQLSRV_ENCODING_DEFAULT|Usa PDO::SQLSRV_ENCODING_SYSTEM se especificado durante a conexão.<br /><br />Use a codificação da conexão se for especificado em uma instrução prepare.|  
   
 ### <a name="query-timeout"></a>Tempo-limite da consulta  
 O atributo PDO::SQLSRV_ATTR_QUERY_TIMEOUT é qualquer inteiro não negativo que representa o período limite, em segundos. Zero (0) é o padrão e significa sem tempo limite.  
@@ -68,6 +68,11 @@ Você pode selecionar a execução de consulta direta ou execução de instruç�
 ### <a name="handling-numeric-fetches"></a>Tratamento de buscas numérico
 O atributo PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE pode ser usado para lidar com buscas numéricas de colunas com tipos numéricos do SQL (bit, inteiro, smallint, tinyint, float e real). Quando PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE é definida como true, os resultados de uma coluna de inteiro são representados como ints, enquanto o SQL flutua e reais são representados como floats. Esse atributo pode ser definido com [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
+Você pode modificar o comportamento de formatação decimal padrão com os atributos PDO::SQLSRV_ATTR_FORMAT_DECIMALS e PDO::SQLSRV_ATTR_DECIMAL_PLACES. O comportamento desses atributos é idêntico para as opções correspondentes no lado do SQLSRV (**FormatDecimals** e **DecimalPlaces**), exceto que não há suporte para parâmetros de saída para a formatação. Esses atributos podem ser definidos no nível de conexão ou instrução com [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) ou [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), mas substituirá qualquer atributo de instrução correspondente atributo de conexão. Para obter mais detalhes, consulte [formatação de cadeias de caracteres decimais e valores monetários (Driver PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+
+### <a name="handling-date-and-time-fetches"></a>Como processar buscas de data e hora
+
+O PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE Especifica se é necessário recuperar tipos de data e hora como [PHP DateTime](http://php.net/manual/en/class.datetime.php) objetos. Se for deixado false, o comportamento padrão é para retorná-los como cadeias de caracteres. Esse atributo pode ser definido no nível de conexão ou instrução com [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) ou [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), mas o atributo da instrução substituirá correspondente atributo de conexão. Para obter mais informações, consulte [como: recuperar data e hora tipos como objetos de data e hora de PHP usando o Driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 As seções a seguir listam as constantes usadas pelo driver SQLSRV.  
@@ -139,8 +144,8 @@ A tabela a seguir apresenta as constantes usadas para descrever tipos de dados d
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
-|SQLSRV_PHPTYPE_STREAM (codificação de $<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING (codificação de $<sup>1</sup>)|Cadeia de caracteres|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|Cadeia de caracteres|  
   
 1. **SQLSRV_PHPTYPE_STREAM** e **SQLSRV_PHPTYPE_STRING** aceitam um parâmetro que especifica a codificação do fluxo. A tabela a seguir contém as constantes SQLSRV que são parâmetros aceitáveis e uma descrição da codificação correspondente.  
   
@@ -177,7 +182,7 @@ A tabela a seguir apresenta as constantes usadas para descrever tipos de dados d
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|numérico<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  

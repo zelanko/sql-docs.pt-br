@@ -12,7 +12,7 @@ ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 12f45cd1014a312eec7854685d8c7fe2e64b9714
 ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/22/2019
 ms.locfileid: "56662750"

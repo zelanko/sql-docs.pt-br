@@ -1,17 +1,17 @@
 ---
-title: Notas sobre a versão (OLE DB Driver para SQL Server) | Microsoft Docs
-ms.date: 07/03/2018
+title: Notas de versão (OLE DB Driver para SQL Server) | Microsoft Docs
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: 01ea0242637f4dd5c813808b3b840d3a5a86df9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36dc1b7325265da6231b75e9f4db46854b0b219f
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789114"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744356"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -19,6 +19,13 @@ ms.locfileid: "47789114"
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 Esta página discute o que foi adicionado em cada versão do Driver da Microsoft OLE DB para SQL Server.
+
+## <a name="whats-new-in-version-1821"></a>Novidades da versão 18.2.1
+
+**Recursos adicionados:**
+
+* Suporte para codificação do servidor UTF-8. Para obter mais informações, consulte: [suporte a UTF-8 no Driver do OLE DB para SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md).
+* Suporte para autenticação do Azure Active Directory. Para saber mais, confira [Usar o Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="whats-new-in-version-1810"></a>Novidades da versão 18.1.0
 

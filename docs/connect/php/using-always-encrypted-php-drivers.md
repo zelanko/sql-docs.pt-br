@@ -155,7 +155,7 @@ $stmt->execute();
 Os exemplos a seguir demonstram a filtragem de dados com base em valores criptografados e recuperando dados de texto sem formatação de colunas criptografadas usando os drivers SQLSRV e PDO_SQLSRV. Observe os seguintes pontos:
  -   O valor usado na cláusula WHERE a ser filtrado na coluna SSN precisa ser passado como um parâmetro using bind para que o driver possa criptografá-lo de modo transparente antes de enviá-lo ao servidor.
  -   Ao executar uma consulta com parâmetros associados, os drivers PHP determina automaticamente o tipo SQL para o usuário, a menos que o usuário especifica explicitamente o tipo SQL usando o driver SQLSRV.
- -   Todos os valores impressos pelo programa estarão em texto não criptografado, já que o driver descriptografará de modo transparente os dados recuperados das colunas SSN e BirthDate.
+ -   Todos os valores impressos pelo programa estão em texto não criptografado, já que o driver descriptografa de modo transparente os dados recuperados das colunas SSN e BirthDate.
  
 Observação: As consultas podem executar comparações de igualdade em colunas criptografadas somente se a criptografia é determinística. Para obter mais informações, confira [Seleção de criptografia determinística ou aleatória](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
@@ -269,7 +269,7 @@ Para o Microsoft Driver 5.3.0 para PHP para SQL Server, somente o Windows Certif
 
 O Driver ODBC para SQL Server no Windows inclui um provedor de repositório de chaves mestras de coluna interna para a Store de certificado do Windows, chamado `MSSQL_CERTIFICATE_STORE`. (Esse provedor não está disponível no macOS ou Linux.) Com esse provedor, a CMK é armazenada localmente no computador cliente e nenhuma configuração adicional pelo aplicativo é necessária usá-lo com o driver. No entanto, o aplicativo deve ter acesso ao certificado e sua chave privada no repositório. Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
-### <a name="using-azure-key-vault"></a>EKM usando o Azure Key Vault
+### <a name="using-azure-key-vault"></a>Como usar o Azure Key Vault
 
 O Azure Key Vault oferece uma maneira de armazenar as chaves de criptografia, senhas e outros segredos usando o Azure e pode ser usado para armazenar as chaves para Always Encrypted. O Driver ODBC para SQL Server (versão 17 e superior) inclui um provedor de repositório de chave interna do mestre para o Azure Key Vault. As seguintes opções de conexão lidar com a configuração do Azure Key Vault: `KeyStoreAuthentication`, `KeyStorePrincipalId`, e `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` pode levar a um dos dois valores de cadeia de caracteres possíveis: `KeyVaultPassword` e `KeyVaultClientSecret`. Esses valores controlam quais tipos de credenciais de autenticação são usados com as outras duas palavras-chave.

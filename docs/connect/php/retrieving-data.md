@@ -11,12 +11,12 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6ac8e52e46108e88693a96d587e3af2b79e4ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833104"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676054"
 ---
 # <a name="retrieving-data"></a>Recuperando dados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,8 +74,11 @@ Você pode ver quantas linhas estão em um conjunto de resultados se especificar
 |---------|---------------|  
 |[Recuperando dados como um fluxo](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Fornece uma visão geral de como transmitir dados do servidor e fornece links para casos de uso específicos.|  
 |[Usando parâmetros direcionais](../../connect/php/using-directional-parameters.md)|Descreve como usar parâmetros direcionais ao chamar um procedimento armazenado.|  
-|[Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Demonstra como criar um conjunto de resultados com linhas que você pode acessar em qualquer ordem usando o driver SQLSRV.|  
-|[Como recuperar um tipo de data e hora como cadeias de caracteres usando o driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Descreve como recuperar tipos de data e hora como cadeias de caracteres.|  
+|[Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Demonstra como criar um conjunto de resultados com linhas que você pode acessar em qualquer ordem.|  
+|[Como recuperar tipos de data e hora como cadeias de caracteres usando o driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Descreve como recuperar tipos de data e hora como cadeias de caracteres usando o driver SQLSRV.|  
+|[Como recuperar tipos de data e hora como objetos Datetime PHP usando o driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Descreve como recuperar tipos de data e hora como objetos usando o driver PDO_SQLSRV.|  
+|[Formatação de cadeias de caracteres decimais com o Driver SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Demonstra como formatar valores decimais ou dinheiro usando o driver SQLSRV.|  
+|[Formatação de cadeias de caracteres decimais com o Driver PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Demonstra como formatar valores decimais ou dinheiro usando o driver PDO_SQLSRV.|  
   
 ## <a name="related-sections"></a>Seções relacionadas  
 [Como especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md)  

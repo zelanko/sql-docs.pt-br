@@ -1,8 +1,8 @@
 ---
-title: Usando os arquivos de biblioteca e de cabeçalho do OLE DB Driver for SQL Server | Microsoft Docs
+title: Como usar os arquivos de biblioteca e de cabeçalho do OLE DB Driver para SQL Server | Microsoft Docs
 description: Usando os arquivos de biblioteca e de cabeçalho do OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,14 +21,14 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9cd6a50bec611b7068b3f79f3867f9e2a6242a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816034"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744416"
 ---
-# <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usar os arquivos de biblioteca e de cabeçalho do OLE DB Driver for SQL Server
+# <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "47816034"
   
  O Driver OLE DB para arquivos de biblioteca e cabeçalho do SQL Server são instalados no seguinte local:  
   
- *% ARQUIVOS de programas %* \Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
+ *%ARQUIVOS DE PROGRAMAS%* \Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  O Driver OLE DB para o arquivo de cabeçalho do SQL Server (msoledbsql.h) pode ser usado para adicionar o Driver do OLE DB para a funcionalidade de acesso de dados do SQL Server para seus aplicativos personalizados. O arquivo de cabeçalho do OLE DB Driver for SQL Server contém todas as definições, atributos, propriedades e interfaces necessárias para aproveitar os novos recursos introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Além do Driver do OLE DB para o arquivo de cabeçalho do SQL Server, também há um arquivo de biblioteca msoledbsql.lib que é a biblioteca de exportação para [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) funcionalidade.  
+ Além do Driver do OLE DB para o arquivo de cabeçalho do SQL Server, também há um arquivo de biblioteca msoledbsql.lib, que é a biblioteca de exportação para [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) funcionalidade.  
   
  O arquivo de cabeçalho do OLE DB Driver for SQL Server tem compatibilidade com versões anteriores com o arquivo de cabeçalho sqloledb.h usado com o MDAC (Microsoft Data Access Components), mas não contém os CLSIDs para SQLOLEDB (o Provedor OLE DB para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornecido com o MDAC), nem símbolos para a funcionalidade de XML (para a qual não há suporte no OLE DB Driver for SQL Server).    
   
  Aplicativos OLE DB que usam o Driver do OLE DB para SQL Server só precisam fazer referência msoledbsql.h. Se um aplicativo usar o MDAC (SQLOLEDB) e o OLE DB Driver for SQL Server, ele poderá referenciar sqloledb.h e msoledbsql.h, mas a referência a sqloledb.h precisará vir primeiro.  
   
 ## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>Usando o Driver do OLE DB para o arquivo de cabeçalho do SQL Server  
- Para usar o Driver do OLE DB para o arquivo de cabeçalho do SQL Server, você deve usar um **incluem** instrução dentro do seu código de programação do C/C++. As seções a seguir descrevem como fazer essa aplicativos OLE DB.  
+ Para usar o Driver do OLE DB para o arquivo de cabeçalho do SQL Server, você deve usar um **incluem** instrução dentro do seu código de programação do C/C++. As seções a seguir descrevem como fazê-lo em aplicativos OLE DB.  
   
 > [!NOTE]  
 >  O Driver OLE DB para arquivos de biblioteca e cabeçalho do SQL Server só pode ser compilado usando o Visual Studio C++ 2012 ou posterior.  

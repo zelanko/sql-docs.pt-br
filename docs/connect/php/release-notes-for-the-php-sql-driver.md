@@ -1,7 +1,7 @@
 ---
 title: Notas sobre a versão para os Microsoft Drivers para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624054"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744346"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de versão dos Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Esta página discute o que foi adicionado em cada versão do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## <a name="whats-new-in-version-56"></a>Novidades da versão 5.6
+
+- Suporte para PHP 7.3
+- Suporte para o Microsoft ODBC Driver 17.3 em todas as plataformas
+- Suporte para macOS Mojave (requer o ODBC Driver 17.3 ou superior)
+- Suporte para 18.10 Ubuntu e Suse Linux 15 (ambos requerem que o ODBC Driver 17.3 ou superior)
+- Retirada do suporte ao PHP 7.0
+- Removido o suporte para Linux Ubuntu 17.10 e macOS El Capitan
+- Suporte para o Token de acesso do AD do Azure (no Linux e macOS, requer o Driver ODBC 17.2 + e unixODBC 2.3.6+)
+- Suporte para autenticação com o Azure AD usando a identidade gerenciado para recursos do Azure (exige o ODBC Driver 17.3 +)
+- Novas funcionalidades de busca:
+  - Novo sinalizador PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE para pdo_sqlsrv retornar a data e hora como objetos
+  - Adicionar opção ReturnDatesAsStrings para o nível de instrução para sqlsrv
+  - Novas opções nos níveis de conexão e instrução para ambos os drivers para a formatação de valores decimais nos resultados da buscados
+- Suporte para a compilação estática dos drivers, se os usuários optarem por Compile da origem
+- Melhorar o desempenho armazenando em cache os metadados em buscas e acelerando as conversões de cadeia de caracteres Unicode
 
 ## <a name="whats-new-in-version-53"></a>Novidades da versão 5.3
 

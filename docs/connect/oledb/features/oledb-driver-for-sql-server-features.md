@@ -2,7 +2,7 @@
 title: Driver do OLE DB para recursos do SQL Server | Microsoft Docs
 description: Recursos do OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840904"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744456"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Recursos do OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840904"
   
  [Executando operações assíncronas](../../oledb/features/performing-asynchronous-operations.md)  
  Aborda como o OLE DB Driver for SQL Server dá suporte a operações assíncronas, o que possibilita o retorno imediato sem bloqueio no thread de chamada.  
-  
+
+[Como usar o Azure Active Directory](using-azure-active-directory.md)  
+Discute os novos métodos de autenticação introduzidos no driver do OLE DB 18.2.1 que têm configurações padrão mais seguras e permitem a conexão com uma instância do banco de dados do SQL Azure usando uma identidade federada.
+
  [Usando MARS &#40;Multiple Active Result Sets&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  Discute como o Driver do OLE DB para SQL Server dá suporte a vários conjuntos de resultados ativos (MARS). Os MARS permitem executar e receber vários conjuntos de resultados por meio de uma única conexão de banco de dados.  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840904"
   
  [Suporte ao UTF-16 no Driver do OLE DB para SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Discute uma alteração no comportamento apresentada no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Se você fornecer um buffer de comprimento fixo ao associar um resultado de coluna ou um parâmetro de saída e se o caractere **wchar** gravado no buffer antes do caractere de terminação for um ponto de código alternativo alto de um par alternativo e se o próximo caractere **wchar** for um ponto de código alternativo baixo, o OLE DB Driver for SQL Server não adicionará o ponto de código alternativo alto ao buffer.  
+ 
+ [Suporte ao UTF-8 no OLE DB Driver for SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ Discute o suporte para produtos de precauções de codificação e a configuração de servidor UTF-8 os usuários devem tomar ao trabalhar com dados codificados em UTF-8.
   
  [Suporte ao Driver do OLE DB para SQL Server para alta disponibilidade e recuperação de desastre](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Aborda como seu aplicativo pode ser configurado para aproveitar os recursos de alta disponibilidade e de recuperação de desastre adicionados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
