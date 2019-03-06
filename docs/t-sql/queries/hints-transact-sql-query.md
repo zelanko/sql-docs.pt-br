@@ -1,8 +1,8 @@
 ---
 title: Dicas de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/04/2019
-ms.prod: sqll
+ms.date: 02/21/2019
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d5dc400cde1ded385d3050a6d6dc120cf430fbb
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 1f156c897d4205e87ce3ee8be3a339fbc2b5bf10
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265373"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662910"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,6 +289,12 @@ Os seguintes nomes de dica são compatíveis:
    Esse nome de dica é paralelo ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
    Instrui o otimizador de consulta a usar a distribuição média de dados durante a compilação de uma consulta com um ou mais parâmetros. Essa instrução cria o plano de consulta independentemente do valor de parâmetro que foi usado pela primeira vez quando a consulta foi compilada. Esse nome de dica é paralelo ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou à definição de PARAMETER_SNIFFING=OFF da [Configuração de Escopo do Banco de Dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  Desabilita os comentários de concessão de memória do modo de linha. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  Desabilita o embutimento de UDF escalar. Para saber mais, confira [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Embutimento de UDF escalar).
+* 'DISALLOW_BATCH_MODE'    
+  Desabilita a execução do modo de lote. Para obter mais informações, consulte [Modos de execução](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Habilita as estatísticas rápidas geradas automaticamente (aditamento de histograma) para qualquer coluna de índice inicial para a qual a estimativa de cardinalidade seja necessária. O histograma usado para estimar a cardinalidade será ajustado no tempo de compilação da consulta para considerar o valor máximo ou mínimo real dessa coluna. Esse nome de dica é paralelo ao [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     

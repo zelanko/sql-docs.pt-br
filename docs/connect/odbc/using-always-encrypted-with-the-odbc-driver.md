@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662850"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956057"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -538,7 +538,7 @@ Embora o driver ODBC permitirá o uso de [operações assíncronas](../../relati
 Não é possível recuperar caracteres criptografados e colunas binárias em partes com o SQLGetData, antes de implantar o ODBC Driver 17 for SQL Server. É possível fazer apenas uma chamada para o SQLGetData com um buffer de comprimento adequado para incluir os dados da coluna inteira.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Enviar dados em partes com SQLPutData
-Não é possível enviar dados de inserção ou comparação em partes com o SQLPutData. É possível fazer apenas uma chamada para o SQLPutData com um buffer contendo os dados completos. Para inserir dados longos em colunas criptografadas, use a API de Cópia em Massa, com um arquivo de dados de entrada, conforme descrito na seção a seguir.
+Antes de 17.3 do Driver ODBC para SQL Server, os dados de inserção ou comparação não serão enviados em partes com SQLPutData. É possível fazer apenas uma chamada para o SQLPutData com um buffer contendo os dados completos. Para inserir dados longos em colunas criptografadas, use a API de Cópia em Massa, com um arquivo de dados de entrada, conforme descrito na seção a seguir.
 
 ### <a name="encrypted-money-and-smallmoney"></a>Money e smallmoney criptografados
 Não é possível direcionar as colunas **money** criptografado ou **smallmoney** por parâmetros, porque não há tipos de dados ODBC específicos que mapeiem para esses tipos, gerando erros de Conflito de tipo de operando.

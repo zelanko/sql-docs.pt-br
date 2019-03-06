@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: c59313042ca91b1cf192ab140eb372ca7a0cf5c1
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154852"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800990"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "56154852"
   Verifica o valor de identidade atual da tabela especificada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e, se necessário, altera o valor da identidade. Você também pode usar DBCC CHECKIDENT para definir manualmente um novo valor de identidade atual para a coluna de identidade.  
    
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ DBCC CHECKIDENT
   
 ## <a name="arguments"></a>Argumentos  
  *table_name*  
- É o nome da tabela sobre a qual verificar o valor de identidade atual. A tabela especificada deve conter uma coluna de identidade. Os nomes de tabelas devem ser compatíveis com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
+ É o nome da tabela sobre a qual verificar o valor de identidade atual. A tabela especificada deve conter uma coluna de identidade. Os nomes de tabela precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
   
  NORESEED  
  Especifica que o valor de identidade atual não deve ser alterado.  
@@ -79,14 +79,14 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|Valor de identidade atual não é redefinido. DBCC CHECKIDENT retorna o valor de identidade atual e o valor máximo atual da coluna de identidade. Se os dois valores não coincidirem, redefina o valor de identidade para evitar erros em potencial ou intervalos na sequência de valores.|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> ou em<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Se o valor de identidade atual de uma tabela for menor que o valor de identidade máximo armazenado na coluna de identidade, ele será redefinido por meio do valor máximo na coluna de identidade. Consulte a seção de 'Exceções' a seguir.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|O valor atual da identidade é definido como o *new_reseed_value*. Se nenhuma linha for inserida na tabela desde sua criação, ou se todas as linhas forem removidas usando a instrução TRUNCATE TABLE, a primeira linha inserida após a execução de DBCC CHECKIDENT usará *new_reseed_value* como a identidade.<br /><br /> Se houver linhas na tabela, a próxima linha será inserida com o valor *new_reseed_value* + o valor [incremento atual](../../t-sql/functions/ident-incr-transact-sql.md). Na versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e anteriores, a próxima linha inserida usa *new_reseed_value* + o valor de [incremento atual](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Se a tabela não estiver vazia, definir o valor de identidade em um número menor que o valor máximo na coluna de identidade poderá resultar em uma das seguintes condições:<br /><br /> Caso exista uma restrição PRIMARY KEY ou UNIQUE na coluna de identidade, a mensagem de erro 2627 será gerada em operações de inserção posteriores na tabela, porque o valor de identidade gerado estará em conflito com os valores existentes.<br /><br /> –Caso não exista uma restrição PRIMARY KEY ou UNIQUE, operações de inserção posteriores resultarão em valores de identidade duplicados.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|O valor atual da identidade é definido como o *new_reseed_value*. Se nenhuma linha for inserida na tabela desde sua criação, ou se todas as linhas forem removidas usando a instrução TRUNCATE TABLE, a primeira linha inserida após a execução de DBCC CHECKIDENT usará *new_reseed_value* como a identidade.<br /><br /> Se houver linhas na tabela, a próxima linha será inserida com o valor *new_reseed_value* + o valor [incremento atual](../../t-sql/functions/ident-incr-transact-sql.md). Na versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e anteriores, a próxima linha inserida usa *new_reseed_value* + o valor de [incremento atual](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Se a tabela não estiver vazia, definir o valor de identidade em um número menor que o valor máximo na coluna de identidade poderá resultar em uma das seguintes condições:<br /><br /> Caso exista uma restrição PRIMARY KEY ou UNIQUE na coluna de identidade, a mensagem de erro 2627 será gerada em operações de inserção posteriores na tabela, porque o valor de identidade gerado estará em conflito com os valores existentes. Esse erro é porque o valor de identidade gerado estará em conflito com os valores existentes.<br /><br /> – Caso não exista uma restrição PRIMARY KEY ou UNIQUE, operações de inserção posteriores resultarão em valores de identidade duplicados.|  
   
 ## <a name="exceptions"></a>Exceções  
- A tabela a seguir lista condições quando DBCC CHECKIDENT não redefine o valor de identidade atual automaticamente, e oferece métodos para redefini-lo.  
+ A tabela a seguir lista condições quando DBCC CHECKIDENT não redefine o valor de identidade atual automaticamente e oferece métodos para redefini-lo.  
   
 |Condição|Métodos de redefinição|  
 |---------------|-------------------|  
-|O valor de identidade atual é maior do que o valor máximo na tabela.|Execute DBCC CHECKIDENT (*table_name*, NORESEED) para determinar o valor máximo atual na coluna e, em seguida, especifique esse valor como o *new_reseed_value* em um comando DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*).<br /><br /> -ou-<br /><br /> Execute DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) com *new_reseed_value* definido como um valor muito baixo e, em seguida, execute (*table_name*, RESEED) para corrigir o valor.|  
+|O valor de identidade atual é maior do que o valor máximo na tabela.|Execute DBCC CHECKIDENT (*table_name*, NORESEED) para determinar o valor máximo atual na coluna. Em seguida, especifique esse valor como o *new_reseed_value* em um comando DBCC CHECKIDENT (*table_name*, RESEED, *new_reseed_value*).<br /><br /> -ou-<br /><br /> Execute DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) com *new_reseed_value* definido como um valor muito baixo e, em seguida, execute (*table_name*, RESEED) para corrigir o valor.|  
 |Todas as linhas são excluídas da tabela.|Execute DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) com *new_reseed_value* definido como o valor inicial desejado.|  
   
 ## <a name="changing-the-seed-value"></a>Alterando o valor de semente  
@@ -98,10 +98,10 @@ DBCC CHECKIDENT
   
 -   Propagar novamente linhas existentes em uma tabela ou exibição.  
   
- Para alterar o valor de semente original e propagar novamente todas as linhas existentes, é necessário descartar a coluna de identidade e recriá-la especificando o novo valor de semente. Quando a tabela contém dados, os números de identidade são adicionados às linhas existentes com os valores de semente e de incremento especificados. A ordem em que as linhas são atualizadas não é garantida.  
+ Para alterar o valor de semente original e propagar novamente as linhas existentes, é necessário remover a coluna de identidade e recriá-la especificando o novo valor de semente. Quando a tabela contém dados, os números de identidade são adicionados às linhas existentes com os valores de semente e de incremento especificados. A ordem em que as linhas são atualizadas não é garantida.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quer uma das opções seja especificada ou não para uma tabela que contém uma coluna de identidade, DBCC CHECKIDENT retorna a mensagem a seguir para todas as operações, exceto durante a especificação de um novo valor de semente.  
+ Quer uma das opções seja especificada ou não para uma tabela que contém uma coluna de identidade, DBCC CHECKIDENT retorna a mensagem a seguir para todas as operações, exceto durante a especificação de um novo valor de semente. Essa operação está especificando um novo valor de semente.  
   
 `Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
@@ -114,7 +114,7 @@ DBCC CHECKIDENT
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-resetting-the-current-identity-value-if-it-is-needed"></a>A. Redefinindo o valor de identidade atual, se necessário  
+### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>A. Redefinindo o valor de identidade atual, se necessário  
  O exemplo a seguir redefine o valor de identidade atual, quando necessário, da tabela especificada no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
@@ -167,5 +167,4 @@ GO
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
-  
   
