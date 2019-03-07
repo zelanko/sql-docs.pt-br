@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 253f517c41c7d703c9d8fad3355cc93d682ed010
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a9ed1c397dbdd30535dd58f17ff3d12f3b84941d
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366238"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527149"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
 
@@ -101,7 +101,7 @@ ms.locfileid: "53366238"
 |---------------|-----------------|  
 |.NET Framework|O .NET 3.5 SP1 é um requisito para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando você seleciona [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)], replicação, ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], e ele não é mais instalado pela instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . <br />– Se você executar a instalação e você não tem o .NET 3.5 SP1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instalação exige que você baixe e instale o .NET 3.5 SP1 antes de continuar com a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação. (Instalar o .NET 3.5 SP1 [Microsoft .NET Framework 3.5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=22).) A mensagem de erro inclui um link para o centro de download ou você pode baixar o .NET 3.5 SP1 do Windows Update. Para evitar a interrupção durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode baixar e instalar o .NET 3.5 SP1 antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br />– Se você executar a instalação em um computador com [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8](../../includes/win8-md.md)], você deve habilitar o .NET Framework 3.5 SP1 antes de instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />-Se não houver nenhum acesso à internet, você deve baixar e instalar o .NET Framework 3.5 SP1 antes de executar a instalação para instalar qualquer um dos componentes mencionados acima. Para obter mais informações sobre recomendações e diretrizes sobre como adquirir e habilitar o .NET Framework 3.5 [!INCLUDE[win8](../../includes/win8-md.md)] e [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consulte [considerações de implantação do Microsoft .NET Framework 3.5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).<br /><br /> O .NET 4.0 é um requisito do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala o .NET 4.0 durante a etapa de instalação de recurso.<br />-Se você estiver instalando o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] edições, certifique-se de que uma conexão de Internet está disponível no computador. A Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] baixa e instala o .NET Framework 4 porque ele não está incluído na mídia do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Instala o .NET 4.0 no modo Server Core do [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Você deve instalar o .NET 4.0 antes de instalar o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] em uma instalação Server Core do [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell|O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não instala ou habilita o Windows PowerShell 2.0, entretanto, o Windows PowerShell 2.0 é um pré-requisito de instalação para componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se a Instalação relatar que o Windows PowerShell 2.0 não está presente, você poderá instalá-lo ou habilitá-lo seguindo as instruções na página do [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) .|  
-|Software de rede|Os sistemas operacionais com suporte para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] têm software de rede interno. As instâncias nomeadas e padrão de uma instalação autônoma dão suporte aos seguintes protocolos de rede: Memória compartilhada, Pipes nomeados, TCP/IP e VIA.<br /><br /> Observação: Por meio do protocolo não tem suporte nos clusters de failover. Os clientes ou aplicativos em execução no mesmo nó do cluster de failover que a instância do SQL Server podem usar o protocolo de Memória Compartilhada para se conectar ao SQL Server usando seu endereço de pipe local. No entanto, esse tipo de conexão não tem reconhecimento de cluster e falhará após um failover da instância. Portanto, ela não é recomendada e só deve ser usada em cenários muito específicos. O protocolo VIA foi preterido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> Para obter mais informações sobre protocolos de rede e bibliotecas de rede, consulte [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md).|  
+|Software de rede|Os sistemas operacionais com suporte para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] têm software de rede interno. As instâncias nomeadas e padrão de uma instalação autônoma dão suporte aos seguintes protocolos de rede: Memória compartilhada, Pipes nomeados, TCP/IP e VIA.<br /><br /> Observação: não há suporte para o protocolo VIA em clusters de failover. Os clientes ou aplicativos em execução no mesmo nó do cluster de failover que a instância do SQL Server podem usar o protocolo de Memória Compartilhada para se conectar ao SQL Server usando seu endereço de pipe local. No entanto, esse tipo de conexão não tem reconhecimento de cluster e falhará após um failover da instância. Portanto, ela não é recomendada e só deve ser usada em cenários muito específicos. O protocolo VIA foi preterido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> Para obter mais informações sobre protocolos de rede e bibliotecas de rede, consulte [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md).|  
 |Virtualização|O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tem suporte em ambientes de máquina virtual em execução na função Hyper-V em:<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 edições Standard, Enterprise e Datacenter<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard, Enterprise e Datacenter Edition.<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Edições Datacenter e Standard.<br /><br /> Além dos recursos exigidos pela partição pai, cada máquina virtual (partição filho) deve ter recursos de processador, memória e recursos de disco suficientes para sua instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Os requisitos são listados posteriormente neste tópico.\*<br /><br /> Na função de Hyper-V no [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 ou [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, no máximo quatro processadores virtuais podem ser alocados para máquinas virtuais que executam as edições do [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32 bits/64 bits ou [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 bits ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 bits.<br /><br /> Na função de Hyper-V no [!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />No máximo 8 (oito) processadores virtuais podem ser alocados para máquinas virtuais que estão executando o [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32 bits/64 bits.<br />No máximo 64 (sessenta e quatro) processadores virtuais podem ser alocados para máquinas virtuais que executam o [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 de 64 bits ou as edições de 64 bits do [!INCLUDE[win8srv](../../includes/win8srv-md.md)] .<br /><br /> Para obter mais informações sobre limites de capacidade de computação para edições diferentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e como elas podem diferir em ambientes físicos e virtualizados com processadores hyper-threaded, consulte [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). Para obter mais informações sobre a função Hyper-V, consulte o [site do Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=182820)<br /><br /> **\*\* Importante \* \***  clustering de failover convidado tem suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações sobre as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que têm suporte e sobre os sistemas operacionais para clustering de failover convidado, bem como sobre o suporte para virtualização, consulte [Política de suporte para produtos do Microsoft SQL Server que estiver executando em um ambiente de virtualização de hardware](https://go.microsoft.com/fwlink/?LinkId=151676).|  
 |Disco rígido|O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requer no mínimo 6 GB de espaço disponível no disco rígido.<br /><br /> Os requisitos de espaço em disco variam de acordo com os componentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalados. Para obter mais informações, consulte [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace) , posteriormente neste tópico. Para obter mais informações sobre tipos de armazenamento de arquivos de dados com suporte, consulte [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Unidade|É necessária uma unidade de DVD, conforme apropriado, para a instalação a partir de disco.|  
@@ -130,28 +130,25 @@ ms.locfileid: "53366238"
 -   Para instalações da edição de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em sistemas operacionais com suporte para 64 bits, as Ferramentas de Gerenciamento têm suporte no WOW64. Para obter mais informações sobre sistemas operacionais com suporte, selecione uma edição do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nas seções abaixo.  
   
  **Suporte do Server Core:**  
-  
- O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agora tem suporte em uma instalação do Server Core do [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], do [!INCLUDE[win8srv](../../includes/win8srv-md.md)] e do [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2. A instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tem suporte no modo Server Core das seguintes edições do Windows Server:  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 bits  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 bits  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 bits  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 bits  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 bits  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Enterprise 64 bits  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 bits  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 bits  
+
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  Agora há suporte para uma instalação Server Core do Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 e Windows Server 2019. 
+
+Instalando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no Server Core modo tem suporte com as seguintes edições do Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
+   | &nbsp; | &nbsp; |
   
  Para obter mais informações sobre como instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no Server Core, consulte [instalar o SQL Server 2014 no Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
-> **Observação:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições com suporte no [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 64 bits x64 Standard edition também têm suporte no [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64 bits x64.  
+   >[!NOTE]
+   > As edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte no [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 64 bits x64 Standard também têm suporte no [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64 bits x64.  
   
  **Suporte do sistema operacional:**  
   
