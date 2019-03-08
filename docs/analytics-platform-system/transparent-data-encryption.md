@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534086"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578486"
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
 Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, para um cenário em que a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode simplesmente restaurar ou anexar o banco de dados e procurar os dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
@@ -238,15 +238,15 @@ Se existir uma DMK no dispositivo em que o Upgrade ou substitua VM foi executada
   
 Exemplo de ação de atualização. Substitua `**********` com sua senha DMK.  
   
-`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'`  
   
 Exemplo da ação para substituir uma máquina virtual.  
   
-`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
 Durante a atualização, se um usuário de banco de dados é criptografado e a senha da DMK não for fornecida, a ação de atualização falhará. Durante a substituição, se a senha correta não for fornecida quando existe uma DMK, a operação irá ignorar a etapa de recuperação DMK. Todas as outras etapas serão concluídas no final da operação de substituição VM, no entanto, a ação reportará a falha no final para indicar que são necessárias etapas adicionais. Nos logs de instalação (localizado em **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < carimbo de hora >**), o seguinte aviso será exibido próximo ao final.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
+`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 Execute esses instrução manualmente no PDW e reiniciar o dispositivo depois disso para recuperar a DMK:  
   

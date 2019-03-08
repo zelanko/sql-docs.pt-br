@@ -16,15 +16,15 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48bfd8ddc0a7e68bc2747543f5e079f24041c20a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: e5a7e72b429789477a9ae1245be30b18965560ee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018161"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578526"
 ---
 # <a name="installation-for-sql-server-2014"></a>Instalação para SQL Server 2014
- ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Baixe o SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Baixe o SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Agradecemos aos [Scott Hanselman](http://www.hanselman.com/) para coletar todos os links do pacote do instalador em um único lugar!**
   
   O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recurso para instalar todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -49,7 +49,7 @@ ms.locfileid: "51018161"
  
  **Experimente:**  
   
--   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865).  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Independentemente de você usar o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o prompt de comando para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a Instalação envolve as seguintes etapas:  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77889113dd7987827426bae2357e89590754a545
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072333"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579517"
 ---
 # <a name="tabular-model-solution-deployment"></a>Implantação de solução de modelo de tabela 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -86,6 +86,6 @@ ms.locfileid: "53072333"
 |[Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Descreve como usar o Assistente para Sincronizar Bancos de Dados para sincronizar os metadados e os dados entre quaisquer dois bancos de dados de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conectar um banco de dados do modelo de tabela ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [Conectar-se a um modelo de banco de dados tabular](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

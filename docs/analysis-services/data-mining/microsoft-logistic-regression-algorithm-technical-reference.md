@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a07998d0b0e1fd5b9123c553f650f00e23e22223
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ae12ee7c40fe72e78bde2602177f741093a83c4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530176"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579566"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referência técnica do algoritmo Regressão Logística da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "52530176"
   
  **Valores contínuos**  
   
- Valor está presente:   `(X - μ)/σ ` (O X é o valor real que está sendo codificado)  
+ Valor está presente:   `(X - μ)/σ` (O X é o valor real que está sendo codificado)  
   
- Valor ausente:    `-   μ/σ `  (mu negativo dividido por sigma)  
+ Valor ausente:    `-   μ/σ`  (mu negativo dividido por sigma)  
   
  **Valores discretos**  
   

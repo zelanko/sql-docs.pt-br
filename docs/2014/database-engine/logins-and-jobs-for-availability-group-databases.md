@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361489"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579216"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade (SQL Server)
   Você deve manter o mesmo conjunto de logons de usuários e trabalhos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent rotineiramente em todo banco de dados primário de um grupo de disponibilidade AlwaysOn e nos bancos de dados secundários correspondentes. Os logons e trabalhos devem ser reproduzidos em toda instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que hospede uma réplica de disponibilidade para o grupo de disponibilidade.  
@@ -30,7 +30,7 @@ ms.locfileid: "53361489"
   
      As instâncias de servidor que hospedam as réplicas de disponibilidade de um grupo de disponibilidade podem ser configuradas de maneira diferente, com diferentes letras de unidade de fita ou algo assim. Os trabalhos de cada réplica de disponibilidade devem permitir essas diferenças.  
   
-     Observe que os trabalhos de backup podem usar a função [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) para identificar se a réplica local é a preferencial para backups, de acordo com as preferências de backup do grupo de disponibilidade. Os trabalhos de backup criados usando o [Assistente de Plano de Manutenção](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) nativamente usam essa função. Para outros trabalhos de backup, recomendamos o uso dessa função como condição em seus trabalhos de backup, de forma que eles sejam executados apenas na réplica preferencial. Para obter mais informações, consulte [ secundárias ativas: Backup em réplicas secundárias (grupos de disponibilidade AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Observe que os trabalhos de backup podem usar a função [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) para identificar se a réplica local é a preferencial para backups, de acordo com as preferências de backup do grupo de disponibilidade. Os trabalhos de backup criados usando o [Assistente de Plano de Manutenção](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) nativamente usam essa função. Para outros trabalhos de backup, recomendamos o uso dessa função como condição em seus trabalhos de backup, de forma que eles sejam executados apenas na réplica preferencial. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias (grupos de disponibilidade AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Logons**  
   

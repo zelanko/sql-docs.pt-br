@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Apresentação de expressões | Microsoft Docs'
+title: 'Tutorial: Introdução às expressões | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295114"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579596"
 ---
-# <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentação de expressões
+# <a name="tutorial-introducing-expressions"></a>Tutorial: Introdução às expressões
   As expressões o ajudam a criar relatórios avançados e flexíveis. Este tutorial ensina a criar e implementar expressões que utilizam funções e operadores comuns. Você usará o **expressão** caixa de diálogo para escrever expressões que concatenam valores de nome, pesquisará valores em um conjunto de dados separado, exibir diferentes imagens com base em valores de campo e assim por diante.  
   
  O relatório é um relatório de barras com cores de linhas alternadas em branco e uma cor. O relatório inclui um parâmetro para selecionar a cor das linhas que não são brancas.  
@@ -66,7 +66,7 @@ ms.locfileid: "56295114"
 >  Neste tutorial, a consulta contém os valores de dados para que não precise de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolha uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Confira instruções passo a passo sobre como navegar até um servidor de relatório, como escolher uma fonte de dados e como criar um conjunto de dados no primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Para criar um novo relatório de tabela  
   
@@ -698,7 +698,7 @@ ms.locfileid: "56295114"
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **área de trabalho`, `Meus documentos**, ou **meu computador**e, em seguida, navegue até a pasta onde você deseja salvar o relatório.  
+2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu Computador**e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por **Resumo de Comparação de Vendas**.  
   

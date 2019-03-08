@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134086"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579316"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Há suporte para a replicação, a CDC (captura de dados de alteração) e o CT (controle de alterações) no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece alta disponibilidade e recursos adicionais de recuperação de banco de dados.  
@@ -218,7 +218,7 @@ ms.locfileid: "54134086"
   
 ### <a name="considerations"></a>Considerações  
   
--   Não há suporte para o uso do banco de dados de distribuição com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou espelhamento de banco de dados. A configuração da replicação é acoplada à instância do SQL Server onde o Distribuidor é configurado. Portanto, o banco de dados de distribuição não pode ser espelhado ou replicado. Para fornecer alta disponibilidade para o Distribuidor, use um cluster de failover do SQL Server. Para obter mais informações, consulte [ instâncias de Cluster de Failover do AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Não há suporte para o uso do banco de dados de distribuição com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou espelhamento de banco de dados. A configuração da replicação é acoplada à instância do SQL Server onde o Distribuidor é configurado. Portanto, o banco de dados de distribuição não pode ser espelhado ou replicado. Para fornecer alta disponibilidade para o Distribuidor, use um cluster de failover do SQL Server. Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Embora haja suporte para o failover do assinante em um banco de dados secundário, esse é um procedimento manual relativamente complexo. O procedimento é essencialmente idêntico ao método usado para failover de um banco de dados de assinante espelhado. Os assinantes devem estar executando o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou posterior para participar de um grupo de disponibilidade.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "54134086"
   
 -   [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Perguntas frequentes sobre administração de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [Perguntas Frequentes sobre Administração de Replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134086"
  [Assinantes de replicação e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidade do AlwaysOn: Interoperabilidade (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ instâncias de Cluster de Failover do AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [Grupos de disponibilidade do AlwaysOn: Interoperabilidade (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [instâncias de Cluster de Failover do AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Sobre o controle de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replicação do SQL Server](../../../relational-databases/replication/sql-server-replication.md)   

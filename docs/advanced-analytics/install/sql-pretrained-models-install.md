@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fdfb322699045a46630b7aaed4b4811f20be945f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645435"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579076"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar previamente treinado modelos de machine learning no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ Os caminhos de instalação para os modelos de R e Python são da seguinte manei
 
 + Para r: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Para o Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
++ Para o Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
 Nomes de arquivo de modelo estão listados abaixo:
 
@@ -214,7 +214,7 @@ Para obter mais informações sobre os algoritmos usados nesses modelos de apren
 ## <a name="see-also"></a>Confira também
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
-+ [Serviços de aprendizado de máquina do SQL Server 2017](sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)
 + [Atualizar os componentes de R e Python em instâncias do SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 + [Pacote MicrosoftML para R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [pacote microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

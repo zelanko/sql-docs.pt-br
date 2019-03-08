@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241577"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578236"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabalhos do Spark em clusters de grandes dados do SQL Server no estúdio de dados do Azure
 
@@ -25,7 +25,7 @@ Um dos principais cenários para clusters de big data é a capacidade de enviar 
 - [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Extensão do SQL Server de 2019**
-   - **Kubectl**
+   - **kubectl**
 
 - [Conectar-se o Studio de dados do Azure para o gateway HDFS/Spark do seu cluster de big data](connect-to-big-data-cluster.md).
 
@@ -34,7 +34,7 @@ Há várias maneiras para abrir a caixa de diálogo de envio de trabalho Spark. 
 
 + Clique em **novo trabalho de Spark** no painel para abrir a caixa de diálogo de envio de trabalho do Spark.
 
-    ![Enviar menu clicando em Painel ](./media/submit-spark-job/new-spark-job.png)
+    ![Enviar menu clicando em Painel](./media/submit-spark-job/new-spark-job.png)
  
 + Clique com botão direito no cluster no Pesquisador de objetos e selecione **enviar trabalho do Spark** no menu de contexto. Caixa de diálogo de envio de trabalho Spark será aberta.  
  

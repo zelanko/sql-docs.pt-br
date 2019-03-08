@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eba8822f7fe21e089d9c02b8f6df6cf5ec0e5294
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: f7493c09964db2e0a8cbd17c6a2278dd554a2dcc
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072103"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579446"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Nível de compatibilidade 1200 e superior de programação do modelo tabular
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ Atualizar uma solução Tabular existente é recomendado, mas não obrigatório.
 ## <a name="see-also"></a>Consulte também  
  [Documentação do desenvolvedor do Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)   
  [Programação do modelo de tabela para compatibilidade níveis 1050 até 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Referência técnica ](../../analysis-services/powershell/technical-reference-ssas.md) [atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Referência técnica](../../analysis-services/powershell/technical-reference-ssas.md)[atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Níveis de compatibilidade dos bancos de dados e modelos de tabela](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

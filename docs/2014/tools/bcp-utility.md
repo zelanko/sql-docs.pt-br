@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133836"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579749"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
   O **bcp** copia dados entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
@@ -101,7 +101,7 @@ ms.locfileid: "54133836"
   
 -   **formato** cria um arquivo de formato com base na opção especificada (**- n**, `-c`, `-w`, ou **-N**) e nos delimitadores da tabela ou exibição. Quando você copia dados em massa, o comando **bcp** pode recorrer a um arquivo de formato, o que libera você da necessidade de inserir novamente as informações de formato de forma interativa. A opção **format** exige a opção **-f**; a criação de um arquivo de formato XML também exige a opção **-x**. Para obter mais informações, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). É necessário especificar **nul** como o valor (**format nul**).  
   
- *Proprietário*  
+ *owner*  
  Corresponde ao nome do proprietário da tabela ou exibição. O*owner* será opcional se o usuário que estiver executando a operação for o proprietário da tabela ou exibição especificada. Se *owner* não estiver especificado e o usuário que está executando a operação não for proprietário da tabela ou exibição especificada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retornará uma mensagem de erro e a operação será cancelada.  
   
  **"** _query_ **"**  
@@ -143,7 +143,7 @@ ms.locfileid: "54133836"
 |RAW|Não ocorre nenhuma conversão de uma página de código para outra. Essa é a opção mais rápida porque não acontece nenhuma conversão.|  
 |*code_page*|Um número de página de código específico, por exemplo, 850.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a página de código 65001 (codificação UTF-8).|  
   
- `-d` *Database_Name*  
+ `-d` *database_name*  
  Especifica o banco de dados que deve ser conectado. Por padrão, bcp.exe se conecta ao banco de dados padrão do usuário. Se `-d` *database_name* e um nome de três partes (*database_name.schema.table*passado como o primeiro parâmetro para bcp.exe) for especificado, ocorrerá um erro porque você não pode especificar o nome do banco de dados duas vezes. Se *database_name* começa com um hífen (-) ou uma barra (/), não adicione um espaço entre `-d` e o nome do banco de dados.  
   
  **-e** _err_file_  
@@ -218,7 +218,7 @@ ms.locfileid: "54133836"
  Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas. Para obter mais informações, veja [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** _application_intent_  
- Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não oferecerá suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [ secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não oferecerá suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, confira [Secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-L** _last_row_  
  Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados. Este parâmetro requer um valor maior que (>) 0, mas menor que (\<) ou igual a (=), o número da última linha. Na ausência desse parâmetro, o padrão é a última linha do arquivo.  

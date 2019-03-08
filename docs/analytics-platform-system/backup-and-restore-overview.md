@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044393"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579176"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 
@@ -132,7 +132,7 @@ Após a redistribuição, cada nó de computação conterá menos dados reais e 
   
 |Tarefa de restauração e backup|Descrição|  
 |---------------------------|---------------|  
-|Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup ](acquire-and-configure-backup-server.md)|  
+|Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md)|  
 |Fazer backup de um banco de dados.|[BANCO DE DADOS DE BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Restaure um banco de dados.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

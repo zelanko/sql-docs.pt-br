@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2bd9e43232b77bc77611b0c4cd5285b69c9a6261
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046737"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579686"
 ---
-# <a name="quickstart-verify-r-exists-in-sql-server"></a>Guia de início rápido: Verifique se que existe de R no SQL Server 
+# <a name="quickstart-verify-r-exists-in-sql-server"></a>Início Rápido: Verificar se o R existe no SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server inclui o suporte à linguagem de R para análises de ciência de dados em dados do SQL Server residentes. Seu script R pode consistir em funções de R de código-fonte aberto, bibliotecas de R de terceiros ou bibliotecas internas do Microsoft R, como [RevoScaleR](../r/revoscaler-overview.md) para análise preditiva em grande escala.
@@ -103,4 +103,4 @@ A Microsoft fornece um número de pacotes de R pré-instalados com serviços de 
 Agora que você confirmou a que sua instância estiver pronta para trabalhar com R, dar uma olhada mais próxima em uma interação básica do R.
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Script de R "Hello world" no SQL Server ](quickstart-r-run-using-tsql.md)
+> [Guia de início rápido: Script de R "Hello world" no SQL Server](quickstart-r-run-using-tsql.md)

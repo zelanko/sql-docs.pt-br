@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc4392b2c78fc2d2709a37a27b17d930af0681dd
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511319"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578407"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -71,10 +71,10 @@ ms.locfileid: "52511319"
 |Object|Caracteres inválidos|  
 |------------|------------------------|  
 |`Server`|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) .|  
-|`DataSource`|: / \ * &#124; ? "[()] {} <>|  
-|`Level` ou `Attribute`|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` ou `Hierarchy`|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  
-|Todos os outros objetos|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`DataSource`|`: / \ * | ? " () [] {} <>`|  
+|`Level` ou `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
+|`Dimension` ou `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
+|Todos os outros objetos|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
   
  **Exceções: Quando caracteres reservados são permitidos**  
   

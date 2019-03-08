@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10623ea2c0dcb413bad08e1d68dfd9d5c9a9984a
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 2a93a7ddb0af87ae15f8d793f21a008d9a4bc25c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852881"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579066"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>Gerenciamento de servidor do SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +47,12 @@ Para o Azure Analysis Services, consulte [gerenciar o Azure Analysis Services](h
  Como regra geral, a maioria das tarefas administrativas que você deve executar não variam por modo. Como administrador de sistema do Analysis Services, você pode usar os mesmos procedimentos e scripts para gerenciar qualquer instância do Analysis Services em sua rede independentemente de como tenha sido instalado.  
   
 > [!NOTE]  
->  A exceção é o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. A administração de servidor de uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sempre está dentro do contexto de um farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] difere de outros modos de servidor porque sempre é de instância única e sempre gerenciado por meio da Administração Central do SharePoint ou da Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Embora seja possível se conectar ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], isso não é desejável. Um farm do SharePoint inclui infraestrutura que sincroniza o estado de servidor e supervisiona a disponibilidade do servidor. Usar outras ferramentas pode interferir com estas operações. Para obter mais informações sobre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] administração de servidor, consulte [Power Pivot para SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  A exceção é o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. A administração de servidor de uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sempre está dentro do contexto de um farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] difere de outros modos de servidor porque sempre é de instância única e sempre gerenciado por meio da Administração Central do SharePoint ou da Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Embora seja possível se conectar ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], isso não é desejável. Um farm do SharePoint inclui infraestrutura que sincroniza o estado de servidor e supervisiona a disponibilidade do servidor. Usar outras ferramentas pode interferir com estas operações. Para obter mais informações sobre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] administração de servidor, consulte [Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
   
   
 ## <a name="see-also"></a>Confira também  
- [Comparando soluções tabulares e multidimensionais ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [Comparando soluções tabulares e multidimensionais](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 569b3d2fbd11cc978f1a810bab6b30ec1d33d2b5
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046526"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579551"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurar um cliente de ciência de dados para o desenvolvimento de Python em serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -296,7 +296,7 @@ No PyCharm, defina o interpretador de Python executável instalado pelo Machine 
 
 1. Em um novo projeto, em configurações, clique em **Adicionar Local**.
 
-2. Insira `C:\Program Files\Microsoft\PyForMLS\`.
+2. Enter `C:\Program Files\Microsoft\PyForMLS\`.
 
 Agora você pode importar **revoscalepy**, **microsoftml**, ou **azureml** módulos. Você também pode escolher **ferramentas** > **Console Python** para abrir uma janela interativa.
 
@@ -305,4 +305,4 @@ Agora você pode importar **revoscalepy**, **microsoftml**, ou **azureml** módu
 Agora que você tem uma conexão de trabalho para o SQL Server e ferramentas, amplie suas habilidades com a execução por meio de guias de início rápido do Python usando [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Guia de início rápido: Verifique se que existe do Python no SQL Server ](../tutorials/quickstart-python-verify.md)
+> [Guia de início rápido: Verifique se que existe do Python no SQL Server](../tutorials/quickstart-python-verify.md)

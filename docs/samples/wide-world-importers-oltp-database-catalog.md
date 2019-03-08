@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617617"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579576"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados de WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,7 +202,7 @@ Esses procedimentos são usados para configurar a amostra. Eles são usados para
 |Configuration_ApplyAuditing|Adiciona a auditoria. Auditoria de servidor é aplicado a bancos de dados standard edition; auditoria de banco de dados adicional é adicionado para o enterprise edition.|
 |Configuration_ApplyColumnstoreIndexing|Aplica-se para a indexação de columnstore `Sales.OrderLines` e `Sales.InvoiceLines` e reindexará adequadamente.|
 |Configuration_ApplyFullTextIndexing|Aplica-se a índices de texto completo para `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, e `Warehouse.StockItems`. Substitui `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` com procedimentos de substituição que usam a indexação de texto completo.|
-|Configuration_ApplyPartitioning|Aplica-se para o particionamento de tabela `Sales.CustomerTransactions and `'Purchasing.SupplierTransactions e reorganiza os índices de acordo com.|
+|Configuration_ApplyPartitioning|Aplica-se para o particionamento de tabela `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`e reorganiza os índices de acordo com a forma.|
 |Configuration_ApplyRowLevelSecurity|Aplica segurança em nível de linha para filtrar os clientes por sales territory relacionadas a funções.|
 |Configuration_ConfigureForEnterpriseEdition|Aplica-se a indexação de columnstore, texto completo, na memória, polybase e particionamento.|
 |Configuration_EnableInMemory|Adiciona um grupo de arquivos com otimização de memória (quando não estiver trabalhando no Azure), substitui `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` com equivalentes na memória e migra os dados, recria o `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` com tipos de tabela equivalentes de otimização de memória, descarta e recria os procedimentos `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, e `Website.RecordColdRoomTemperatures` que usa esses tipos de tabela.|

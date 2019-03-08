@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126066"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578316"
 ---
 # <a name="sql-server-replication"></a>Replicação do SQL Server
   A replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência. Usando replicação, é possível distribuir dados para diferentes locais e para usuários remotos e móveis através de redes locais e de longa distância, conexões discadas, conexões sem-fio e a Internet.  
@@ -29,10 +29,10 @@ ms.locfileid: "54126066"
   
 
 ## <a name="whats-new"></a>Novidades 
-- SQL Server 2017 não incorporou novos recursos significativos para replicação do SQL Server. 
-- SQL Server 2016 não incorporou novos recursos significativos para replicação do SQL Server. 
+- O SQL Server 2017 não incorporou novos recursos significativos para Replicação do SQL Server. 
+- O SQL Server 2016 não incorporou novos recursos significativos para Replicação do SQL Server. 
 
-Para informações de compatibilidade com versões anteriores, consulte [compatibilidade com versões anteriores de replicação](replication-backward-compatibility.md) 
+Para informações de compatibilidade com versões anteriores, confira [Compatibilidade de replicação com versões anteriores](replication-backward-compatibility.md) 
 
 
  ## <a name="replication-security"></a>Segurança de replicação
@@ -40,13 +40,13 @@ Para informações de compatibilidade com versões anteriores, consulte [compati
 -   [Exibir e modificar configurações de segurança de replicação](security/view-and-modify-replication-security-settings.md)  
 -   [Gerenciar logons na lista de acesso à publicação](security/manage-logins-in-the-publication-access-list.md)  
   
-## <a name="publishing-and-distribution"></a>Publicação e distribuição  
+## <a name="publishing-and-distribution"></a>Publicação e Distribuição  
   
 -   [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)   
 -   [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
 -   [Desabilitar a publicação e a distribuição](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>Publicações e artigos 
+## <a name="publications-and-articles"></a>Publicações e Artigos 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [Defina um Artigo](publish/define-an-article.md)   
@@ -63,10 +63,10 @@ Para informações de compatibilidade com versões anteriores, consulte [compati
   
 ### <a name="snapshot-options"></a>Opções de instantâneo  
   
--   [Configurar propriedades de instantâneo](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [Configurar Propriedades de Instantâneo](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
 -   [Entregar um instantâneo pelo FTP](publish/deliver-a-snapshot-through-ftp.md) 
   
-### <a name="filter-data"></a>Filtrar dados  
+### <a name="filter-data"></a>Filtrar Dados  
   
 -   [Definir e modificar um filtro de colunas](publish/define-and-modify-a-column-filter.md)    
 -   [Definir e modificar um filtro de linha estático](publish/define-and-modify-a-static-row-filter.md)    
@@ -82,7 +82,7 @@ Para informações de compatibilidade com versões anteriores, consulte [compati
 ### <a name="merge-replication-options"></a>Opções de replicação de mesclagem  
   
 -   [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Especifique as propriedades de replicação de mesclagem](publish/specify-merge-replication-properties.md)    
+-   [Especificar propriedades de Replicação de Mesclagem](publish/specify-merge-replication-properties.md)    
 -   [Especificar um resolvedor de artigo de mesclagem](publish/specify-a-merge-article-resolver.md)    
 
   
@@ -98,7 +98,7 @@ Para informações de compatibilidade com versões anteriores, consulte [compati
 -   [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [Criar uma assinatura para um assinante não SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
-## <a name="synchronize-subscriptions"></a>Sincronizar as assinaturas  
+## <a name="synchronize-subscriptions"></a>Sincronizar Assinaturas  
   
 -   [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md)   
 -   [Criar um instantâneo para uma publicação de mesclagem com filtros parametrizados](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
@@ -126,13 +126,13 @@ Para informações de compatibilidade com versões anteriores, consulte [compati
 -   [Administrar uma topologia ponto a ponto](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [Confirmar uma topologia de replicação](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Configurar o trabalho de conjunto de transações para um publicador Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Atualizar Scripts de replicação ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Atualizar Scripts de replicação](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>Monitor
   
 -   [Permitir que não administradores usem o Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Monitorar programaticamente a replicação](monitor/programmatically-monitor-replication.md)    
--   [Exibir comandos replicados e outras informações no banco de dados de distribuição ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Exibir informações de conflito para publicações de mesclagem ](view-conflict-information-for-merge-publications.md) 
+-   [Exibir comandos replicados e outras informações no banco de dados de distribuição](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Exibir informações de conflito para publicações de mesclagem](view-conflict-information-for-merge-publications.md) 
 -   [Medir a latência e validar as conexões para a replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

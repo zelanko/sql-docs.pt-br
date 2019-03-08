@@ -11,14 +11,14 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 794d241773addc5584869eaa2e05cfa316908ce1
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160474"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579236"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Guia de início rápido: Instalar o SQL Server e criar um banco de dados no Red Hat
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Red Hat
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -44,7 +44,7 @@ Você deve ter um RHEL 7.3 ou 7.4 máquina com **pelo menos 2 GB** de memória.
 
 Para instalar o Red Hat Enterprise Linux em seu próprio computador, vá para [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Você também pode criar máquinas virtuais RHEL no Azure. Ver [criar e gerenciar VMs do Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e use `--image RHEL` na chamada para `az vm create`.
 
-Se você já tiver instalado um CTP ou a versão RC do SQL Server 2017, remova primeiro o repositório antigo antes de seguir estas etapas. Para obter mais informações, consulte [repositórios de configurar o Linux para SQL Server 2017 e 2019 ](sql-server-linux-change-repo.md).
+Se você já tiver instalado um CTP ou a versão RC do SQL Server 2017, remova primeiro o repositório antigo antes de seguir estas etapas. Para obter mais informações, consulte [repositórios de configurar o Linux para SQL Server 2017 e 2019](sql-server-linux-change-repo.md).
 
 Para outros requisitos do sistema, consulte [requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
 

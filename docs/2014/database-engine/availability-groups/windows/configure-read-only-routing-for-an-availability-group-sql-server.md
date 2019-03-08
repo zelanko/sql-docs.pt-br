@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3af17b9ee12846fc89e406420fa6405cb59e0af3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a129386b5c88939d68f5d7f23a5fe2b4d8ce7cca
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367922"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579116"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server)
   Para configurar um grupo de disponibilidade AlwaysOn para oferecer suporte ao roteamento somente leitura no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], você pode usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. *Roteamento somente leitura* refere-se à capacidade de o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rotear solicitações de conexão somente leitura para uma [réplica secundária legível](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn disponível (ou seja, uma réplica que é configurada para permitir cargas de trabalho somente leitura ao ser executada sob a função secundária). Para dar suporte ao roteamento somente leitura, o grupo de disponibilidade deve ter um [ouvinte do grupo de disponibilidade](../../listeners-client-connectivity-application-failover.md). Clientes somente leitura devem direcionar suas solicitações de conexão para este ouvinte e as cadeias de conexão do cliente devem especificar a intenção do aplicativo como "somente leitura." Ou seja, elas devem ser *solicitações de conexão de intenção de leitura*.  
@@ -100,7 +100,7 @@ ms.locfileid: "53367922"
   
     -   Para configurar o roteamento somente leitura para a função primária, na cláusula ADD REPLICA ou MODIFY REPLICA WITH, especifique a opção PRIMARY_ROLE, da seguinte forma:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= ('*`server`*'** [ **,**... *n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('*`server`*'** [ **,**...*n* ] **))**  
   
          em que *server* identifica uma instância de servidor que hospeda uma réplica secundária somente leitura em um grupo de disponibilidade.  
   
@@ -187,7 +187,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhar: Depois de configurar o roteamento somente leitura  
+##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar o roteamento somente leitura  
  Quando a réplica primária atual e as réplicas secundárias legíveis são configuradas para oferecer suporte ao roteamento somente leitura em ambas as funções, as réplicas secundárias legíveis podem receber solicitações de conexão com intenção de leitura de clientes que se conectam pelo ouvinte de grupo de disponibilidade.  
   
 > [!TIP]  
@@ -215,7 +215,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
  Para obter mais informações sobre a intenção do aplicativo somente leitura e o roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>Se o roteamento somente leitura não estiver funcionando corretamente  
- Para obter informações sobre como solucionar problemas de uma configuração de roteamento somente leitura, consulte [ roteamento somente leitura não está funcionando corretamente](troubleshoot-always-on-availability-groups-configuration-sql-server.md).  
+ Para obter informações sobre como solucionar problemas de uma configuração de roteamento somente leitura, veja [O roteamento somente leitura não está funcionando corretamente](troubleshoot-always-on-availability-groups-configuration-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para exibir configurações do roteamento somente leitura**  

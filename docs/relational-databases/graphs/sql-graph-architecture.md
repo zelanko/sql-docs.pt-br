@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044542"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579346"
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura de grafo do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas
 
 |Tarefa   |Artigo relacionado  |Observações
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Agora é estendida para dar suporte à criação de uma tabela como nó ou borda como. Observe que uma tabela de borda pode ou não ter todos os atributos definidos pelo usuário.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` Agora é estendida para dar suporte à criação de uma tabela como nó ou borda como. Observe que uma tabela de borda pode ou não ter todos os atributos definidos pelo usuário.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Tabelas de nó e de borda podem ser alteradas da mesma forma que uma tabela relacional seja, usando o `ALTER TABLE`. Os usuários podem adicionar ou modificar colunas definidas pelo usuário, índices ou restrições. No entanto, a alteração de colunas de gráfico interna, como `$node_id` ou `$edge_id`, resultará em erro.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Os usuários podem criar índices em colunas pseudo e colunas definidas pelo usuário no nó e tabelas de borda. Todos os tipos de índice têm suporte, incluindo índices columnstore clusterizados e não clusterizados.  |
 |CRIAR RESTRIÇÕES DE BORDA    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Os usuários podem agora criar restrições de borda em tabelas de borda para impor a semântica específica e também manter a integridade dos dados  |

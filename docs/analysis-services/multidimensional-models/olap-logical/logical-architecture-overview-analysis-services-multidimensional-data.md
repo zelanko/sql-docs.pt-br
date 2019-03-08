@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0567ab525c4c8d1c2a9efdbfc3011a925f70401c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397746"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579436"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services – Dados Multidimensionais)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   O Analysis Services funciona em um modo de implantação de servidor que determina a arquitetura de memória e o ambiente de tempo de execução usados pelos diferentes tipos de modelos do Analysis Services. O modo de servidor é determinado durante a instalação. **Modo multidimensional e mineração de dados** dá suporte a OLAP tradicional e mineração de dados. **Modo de tabela** dá suporte a modelos de tabela. **Modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, usado para carregar e consultar o Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de dados dentro de uma pasta de trabalho.  
   
- Este tópico explica a arquitetura básica do Analysis Services no modo Multidimensional e de Mineração de Dados. Para obter mais informações sobre outros modos, consulte [modelagem Tabular ](../../../analysis-services/tabular-models/tabular-models-ssas.md) e [comparando tabulares e multidimensionais soluções ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ Este tópico explica a arquitetura básica do Analysis Services no modo Multidimensional e de Mineração de Dados. Para obter mais informações sobre outros modos, consulte [modelagem Tabular](../../../analysis-services/tabular-models/tabular-models-ssas.md) e [comparando tabulares e multidimensionais soluções](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Arquitetura básica  
  Uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode conter vários bancos de dados, e um banco de dados pode ter objetos OLAP e objetos de mineração de dados simultaneamente. Os aplicativos se conectam a uma instância específica do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a um banco de dados específico. Um computador servidor pode servir de host de várias instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] são nomeadas como "\<ServerName >\\< nome_da_instância\>". A ilustração a seguir mostra todas as relações mencionadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.  
@@ -121,6 +121,6 @@ ms.locfileid: "52397746"
  O exemplo mostrado aqui contém uma única tabela de fatos. Quando um cubo tem várias tabelas de fatos, as medidas de cada tabela de fatos são organizadas em grupos de medidas e um grupo de medidas está relacionado à um conjunto específico de dimensões por relações de dimensões definidas. Essas relações são definidas pela especificação das tabelas participantes na exibição de fonte de dados e granularidade da relação. **Tópico relacionado:**[relações de dimensão](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Bancos de dados de modelo multidimensional ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Bancos de dados de modelo multidimensional](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

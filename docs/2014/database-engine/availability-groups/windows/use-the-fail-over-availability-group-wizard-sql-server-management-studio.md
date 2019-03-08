@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38a5c58f7376fa44438dff5d6ef9e94f0c2809c0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519300"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579646"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
   Este tópico descreve como fazer um failover manual planejado ou um failover manual forçado (failover forçado) em um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Se você fizer failover em uma réplica secundária no estado SYNCHRONIZED, o assistente fará um failover manual planejado (sem perda de dados). Se você fizer failover em uma réplica secundária no estado UNSYNCHRONIZED ou NOT SYNCHRONIZING, o assistente executará um failover manual forçado, também conhecido como *failover forçado* (com possível perda de dados). As duas formas de failover manual fazem a transição da réplica secundária à qual você está conectado para a função primária. Um failover manual planejado faz a transição da réplica primária antiga para a função secundária. Após um failover forçado, quando a réplica primária antiga ficar online, ela fará a transição para a função secundária.  
@@ -50,7 +50,7 @@ ms.locfileid: "52519300"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Antes de seu primeiro failover manual planejado, consulte a seção "Antes de começar" em [Executar um failover manual planejado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Antes do primeiro failover forçado, consulte o "antes de começar" e "acompanhamento: Tarefas essenciais após um Failover forçado"seções nas [executar um Failover de Manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Antes do primeiro failover forçado, confira as seções "Antes de começar" e "Acompanhamento: tarefas essenciais após um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Limitações e Restrições  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52519300"
   
      Para obter mais informações, consulte [Página Resultados &#40;Assistentes do Grupo de Disponibilidade AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md).  
   
-11. Após um failover forçado, consulte o "acompanhamento: Após um Failover forçado"seção de [executar um Failover de Manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Após um failover forçado, confira a seção "Acompanhamento: após um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Ajuda para páginas que são exclusivas deste assistente  
  Esta seção descreve as páginas que são exclusivas do [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  
@@ -144,7 +144,7 @@ ms.locfileid: "52519300"
 |**Confirmação síncrona**|No modo de confirmação síncrona, antes de confirmar transações, uma réplica primária de confirmação síncrona espera que uma réplica secundária de confirmação síncrona confirme que concluiu a proteção do log. O modo de confirmação síncrona garante que, quando um determinado banco de dados secundário é sincronizado com o banco de dados primário, as transações confirmadas sejam totalmente protegidas.|  
 |**Confirmação assíncrona**|No modo de confirmação assíncrona, a réplica primária confirma as transações sem esperar a confirmação de que uma réplica secundária de confirmação assíncrona protegeu o log. O modo de confirmação assíncrona minimiza a latência de transações nos bancos de dados secundários, mas permite que elas atrasem os bancos de dados primários, possibilitando a perda de dados.|  
   
- Para obter mais informações, consulte [ modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Para obter mais informações, consulte [modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  **Modo de Failover**  
  Exibe o modo de failover da instância de servidor:  
@@ -201,7 +201,7 @@ ms.locfileid: "52519300"
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ Modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md)   
+ [Modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modos de Failover &#40;grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Executar um failover manual planejado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   

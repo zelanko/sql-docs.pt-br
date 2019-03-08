@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410764"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579426"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lição 1: Criar um novo projeto de modelo de tabela
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -59,15 +59,15 @@ Agora que você criou um novo projeto de modelo de tabela, vamos explorar o ambi
   
 Depois que o projeto é criado, ele é aberto no SSDT. No lado direito, na **Gerenciador de modelos tabulares**, você verá uma exibição de árvore dos objetos em seu modelo. Uma vez que você ainda não tiver importado dados, as pastas estará vazias. Clique com botão direito uma pasta de objeto para executar ações, semelhantes à barra de menus. Conforme você percorre este tutorial, você usará o Gerenciador de modelos tabulares para navegar por diferentes objetos no seu projeto de modelo.
 
-![como-tabela-lição 1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 Clique o **Gerenciador de soluções** guia. Aqui, você verá sua **Model. BIM** arquivo. Se você não vir a janela do designer para a esquerda (a janela vazia com a guia Model. BIM), em **Gerenciador de soluções**, em **projeto de vendas pela Internet AW**, clique duas vezes o **Model. BIM** arquivo. O arquivo Model. BIM contém todos os metadados para seu projeto de modelo. 
 
-![como-tabela-lição 1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 Vamos examinar as propriedades do modelo. Clique em **Model.bim**. No **propriedades** janela, você verá o [propriedades de modelo](../analysis-services/tabular-models/model-properties-ssas-tabular.md), mais importante do que é o **modo DirectQuery** propriedade. Essa propriedade especifica se o modelo será implantado ou não no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Neste tutorial, você criará e implantará o modelo no modo Em Memória.
 
-![como-tabela-lição 1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 Quando você cria um novo modelo, determinadas propriedades de modelo são definidas automaticamente acordo com as configurações de modelagem de dados que podem ser especificadas na **ferramentas** > **opções** caixa de diálogo. As propriedades de Backup de Dados, Retenção de Workspace e Servidor de Workspace especificam como e onde o banco de dados de workspace (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você poderá alterar essas configurações posteriormente se necessário, mas, por enquanto, deixe essas propriedades como estão.  
 
@@ -83,7 +83,7 @@ Explore algumas das caixas de diálogo e locais de vários recursos específicos
 
 
 ## <a name="additional-resources"></a>Recursos adicionais
-Para saber mais sobre os diferentes tipos de projetos de modelo tabular, consulte [projetos de modelo de tabela](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Para saber mais sobre o ambiente de criação de modelos tabulares, consulte [Designer de modelo de tabela ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Para saber mais sobre os diferentes tipos de projetos de modelo tabular, consulte [projetos de modelo de tabela](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Para saber mais sobre o ambiente de criação de modelos tabulares, consulte [Designer de modelo de tabela](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>O que vem a seguir?

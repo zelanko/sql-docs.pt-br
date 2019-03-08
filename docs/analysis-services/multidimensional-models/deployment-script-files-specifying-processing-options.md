@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537358"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572769"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>Arquivos de Script de implantação – especificar opções de processamento
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537358"
   
 -   **Método de Processamento** Essa configuração controla se os objetos implantados são processados após a implantação e o tipo de processamento executados. Há três opções de processamento:  
   
-    -   Processamento padrão  
+    -   Processamento padrão (padrão) detecta o estado de processamento de objetos de banco de dados e executa o processamento necessário para passar objetos não processados ou parcialmente processados para um estado completamente processado.
   
-    -   Processamento completo  
+    -   Processamento completo processa um objeto e todos os objetos que ele contém. Quando o comando Processar Completo é executado em um objeto que já foi processado, o Analysis Services descarta todos os dados do objeto e, em seguida, processa o objeto. 
   
-    -   None  
-  
+    -   Nenhum significa que nenhum processamento é executado.
+
+
 -   **Opções de Tabelas de Write-back** Se o write-back estiver habilitado no projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , essa configuração definirá como o write-back será manipulado. Há três opções de tabela de write-back:  
   
     -   Por padrão, a tabela de write-back existente será usada, se existir. Se uma tabela de write-back não existir, uma nova tabela será criada.  

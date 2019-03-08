@@ -14,12 +14,12 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 421aac2c58755b192eff51a85d668b03a2fc8a8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823870"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579296"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Atualizar um cluster de failover do SQL Server
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte à atualização do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] a partir de clusters de failover do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] separadamente em todos os nós de cluster de failover.  
@@ -40,7 +40,7 @@ ms.locfileid: "52823870"
   
     -   Você não pode fazer downgrade do nó de cluster de failover para uma instância autônoma.  
   
--   Para obter mais informações, consulte [ instâncias de Cluster de Failover do AlwaysOn (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
+-   Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Atualizando um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Você não pode atualizar diretamente uma não-várias sub-redes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover de várias sub-redes. Para obter mais informações, consulte [Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  

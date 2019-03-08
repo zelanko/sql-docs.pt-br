@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: c6327ae25e9e0b22310e810cd33f7176ecc1349d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760049"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579046"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Exemplo: Script de instalação autônoma do SQL Server para Ubuntu
 
@@ -176,7 +176,7 @@ Para executar o script
    ```
 
 ### <a name="understanding-the-script"></a>Noções básicas sobre o script
-A primeira coisa que o script de Bash faz é definir algumas variáveis. Eles podem ser variáveis de script, como o exemplo, ou variáveis de ambiente. A variável ``` MSSQL_SA_PASSWORD ``` está **necessária** pela instalação do SQL Server, os outros são variáveis personalizadas criadas para o script. O exemplo de script executa as seguintes etapas:
+A primeira coisa que o script de Bash faz é definir algumas variáveis. Eles podem ser variáveis de script, como o exemplo, ou variáveis de ambiente. A variável `MSSQL_SA_PASSWORD` está **necessária** pela instalação do SQL Server, os outros são variáveis personalizadas criadas para o script. O exemplo de script executa as seguintes etapas:
 
 1. Importe as chaves públicas do Microsoft GPG.
 
