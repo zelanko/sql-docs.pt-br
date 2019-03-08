@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072534"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579606"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View – configurar propriedades de comportamento de tabela para relatórios
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53072534"
   
 -   Remover subtotais indesejáveis de um relatório de matriz. O agrupamento padrão no nível do campo cria um subtotal para cada campo. Se você desejar somente um único subtotal que seja calculado no nível de linha, definir o Identificador de Linha gerará este resultado.  
   
- Você não pode definir um Identificador de Linha para tabelas marcadas como tabelas de data. Para tabelas de data, o identificador de linha é especificado quando você marca a tabela. Para obter mais informações, consulte [marcar como caixa de diálogo tabela de data ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ Você não pode definir um Identificador de Linha para tabelas marcadas como tabelas de data. Para tabelas de data, o identificador de linha é especificado quando você marca a tabela. Para obter mais informações, consulte [marcar como caixa de diálogo tabela de data](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Definindo a propriedade Manter Linhas Exclusivas  
  Esta propriedade permite especificar quais colunas transmitem informações de identidade (como um nome de funcionário ou um código de produto) de modo que possa distinguir uma linha da outra. Nos casos em que as linhas parecem idênticas (como dois clientes com o mesmo nome), as colunas que você especificar para esta propriedade serão repetidas na tabela de relatório.  
