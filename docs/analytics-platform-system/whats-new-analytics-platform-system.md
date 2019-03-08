@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652585"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579406"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
 Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
@@ -120,7 +120,7 @@ APS AU7 cria e atualiza as estatísticas automaticamente, por padrão. Para atua
 ### <a name="t-sql"></a>T-SQL
 Selecione @var agora tem suporte. Para obter mais informações, consulte [selecione a variável local](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Agora há suporte para dicas de consulta HASH e o grupo de ordem. Para obter mais informações, consulte [Hints(Transact-SQL) - consulta ](/sql/t-sql/queries/hints-transact-sql-query)
+Agora há suporte para dicas de consulta HASH e o grupo de ordem. Para obter mais informações, consulte [Hints(Transact-SQL) - consulta](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Comutador de recurso
 Apresenta o comutador de recurso no APS AU7 [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled e DmsProcessStopMessageTimeoutInSeconds agora são opções configuráveis que podem ser alteradas por administradores.
