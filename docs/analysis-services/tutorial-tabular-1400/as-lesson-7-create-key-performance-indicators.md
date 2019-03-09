@@ -1,6 +1,6 @@
 ---
-title: 'Lição de tutorial do Analysis Services 7: criar indicadores chave de desempenho | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lição do tutorial 7: Criar indicadores chave de desempenho | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087561"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685400"
 ---
 # <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho
 
@@ -26,7 +27,7 @@ Tempo estimado para concluir esta lição: **15 minutos**
   
 ## <a name="prerequisites"></a>Prerequisites  
 
-Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 6: criar medidas](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
+Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 6: Criar medidas](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho  
   

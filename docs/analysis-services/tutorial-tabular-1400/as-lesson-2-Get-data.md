@@ -1,6 +1,6 @@
 ---
-title: 'Lição 2 do tutorial de serviços de análise: obter dados | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lição do tutorial 2: Obter dados | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062207"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685313"
 ---
 # <a name="get-data"></a>Obter dados
 
@@ -31,7 +32,7 @@ Tempo estimado para concluir esta lição: **10 minutos**
   
 ## <a name="prerequisites"></a>Prerequisites  
 
-Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 1: criar um novo projeto de modelo de tabela](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 1: Criar um novo projeto de modelo de tabela](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Criar uma conexão  
   
@@ -56,9 +57,9 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
 5.  No navegador, selecione a **AdventureWorksDW** do banco de dados e, em seguida, clique em **Okey**. Isso cria a conexão ao banco de dados. 
   
-6.  No navegador, selecione a caixa de seleção para as tabelas a seguir: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**,  **DimProductCategory**, **DimProductSubcategory**, e **FactInternetSales**.  
+6.  No navegador, selecione a caixa de seleção para as tabelas a seguir: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, e **FactInternetSales**.  
 
-    ![como-lição 2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Depois de clicar em Okey, Editor de consultas é aberto. Na próxima seção, você deve selecionar apenas os dados que você deseja importar.
 

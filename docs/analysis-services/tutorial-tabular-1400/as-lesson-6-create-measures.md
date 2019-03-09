@@ -1,6 +1,6 @@
 ---
-title: 'Lição 6 do tutorial de serviços de análise: criar medidas | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lição 6 do tutorial: Criar medidas | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093959"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685643"
 ---
 # <a name="create-measures"></a>Criar medidas
 
@@ -32,7 +33,7 @@ Tempo estimado para concluir esta lição: **30 minutos**
   
 ## <a name="prerequisites"></a>Prerequisites  
 
-Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 5: criar colunas calculadas](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
+Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 5: Criar colunas calculadas](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Criar medidas  
   
@@ -50,7 +51,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
     Observe que a célula superior esquerda agora contém um nome de medida **DaysCurrentQuarterToDate**, seguido do resultado **92**. O resultado não é relevante neste ponto porque nenhum filtro de usuário foi aplicado.
     
-      ![novamedida como lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     Ao contrário de colunas calculadas, com fórmulas de medida, você pode digitar o nome da medida, seguido por dois-pontos, seguido pela expressão da fórmula.
 
@@ -88,14 +89,14 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
 
     |coluna|Nome da medida|AutoSoma (∑)|Fórmula|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
-    |Margem|InternetTotalMargin|SUM|=SUM([Margem])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([Frete])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|Contagem|=COUNTA([SalesOrderLineNumber])|  
+    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
+    |Margem|InternetTotalMargin|Sum|=SUM([Margem])|  
+    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Sum|=SUM([Frete])|  
   
 2.  Ao clicar em uma célula vazia na grade de medida e usando a barra de fórmulas, crie, as seguintes medidas personalizadas na ordem:  
   

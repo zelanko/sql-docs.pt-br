@@ -1,6 +1,6 @@
 ---
 title: Compatibilidade com versões anteriores do SQL Server 2017 Analysis Services | Microsoft Docs
-ms.date: 01/09/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185072"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685733"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilidade com versões anteriores do Analysis Services (2017 do SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,10 +33,10 @@ Os seguintes recursos foram preteridos nessa versão:
 |Multidimensional|Mineração de dados|
 |Multidimensional|Grupos de medidas vinculados remotos|
 |Tabular|Modelos no nível de compatibilidade 1100 e 1103|
-|Tabular|Propriedades do modelo de objeto tabulares: Column.IsDefaultImage Column.TableDetailPosition, Column.IsDefaultLabel,|
+|Tabular|Propriedades do modelo de objeto tabulares: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Ferramentas|Server Profiler para reprodução de rastreamento <br />Substituição. Não há nenhuma substituição.|  
-|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: XEvent<br />-Leitura de rastreamento: XEvent<br />-Reprodução de rastreamento: None|  
+|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: Microsoft.SqlServer.Management.XEvent<br />-Leitura de rastreamento: Microsoft.SqlServer.XEvent.Linq<br />-Reprodução de rastreamento: None|  
 
 
 ## <a name="discontinued-features"></a>Recursos descontinuados

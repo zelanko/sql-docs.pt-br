@@ -1,6 +1,6 @@
 ---
-title: 'A lição suplementar tutorial do Analysis Services: linhas de detalhes | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lição suplementar de tutorial: Linhas de detalhes | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28c5124508cedca026d262e34257bf48518580fb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078649"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685234"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Lição suplementar – Linhas de detalhes
 

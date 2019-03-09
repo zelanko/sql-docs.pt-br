@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services lição 10 do tutorial: Criar partições | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401139"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685693"
 ---
 # <a name="create-partitions"></a>Criar partições
 
@@ -46,7 +47,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
 
 6.  Na caixa de diálogo Filtrar linhas, no **Mostrar linhas nas quais: OrderDate**, deixe **é posterior ou igual a**e, em seguida, no campo Data, digite **1/1/2010**. Deixe o **e** operador selecionado, em seguida, selecione **está antes**, em seguida, no campo Data, digite **1/1/2011**e, em seguida, clique em **Okey**.
 
-    ![como-lesson10-filtrar-linhas](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Observe que no Editor de consulta, em etapas aplicadas, você vê outra etapa chamada linhas filtradas. Esse filtro é selecionar apenas as datas de pedido de 2010.
 
@@ -107,13 +108,13 @@ No Gerenciador de partições, observe os **último processamento** coluna para 
   
 4.  Marque a caixa de seleção na coluna **Processar** para cada uma das cinco partições criadas e clique em **OK**.  
 
-    ![como-lesson10-processo-partições](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Se você for solicitado para credenciais de representação, insira o nome de usuário do Windows e a senha que você especificou na lição 2.  
   
     A caixa de diálogo **Processamento de Dados** será exibida, mostrando os detalhes do processo de cada partição. Observe que um número diferente de linhas para cada partição é transferido. Cada partição inclui somente as linhas do ano especificado na cláusula WHERE na instrução SQL. Quando o processamento for concluído, vá em frente e feche a caixa de diálogo Processamento de Dados.  
   
-    ![como-lesson10-processo-concluído](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>O que vem a seguir?
 

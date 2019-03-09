@@ -1,6 +1,6 @@
 ---
-title: 'Lição 5 do tutorial de serviços de análise: criar colunas calculadas | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lição 5 do tutorial: Criar colunas calculadas | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063855"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685549"
 ---
 # <a name="create-calculated-columns"></a>Criar colunas calculadas
 
@@ -30,7 +31,7 @@ Tempo estimado para concluir esta lição: **15 minutos**
   
 ## <a name="prerequisites"></a>Prerequisites  
 
-Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 4: criar relações](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
+Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 4: Criar relações](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Criar colunas calculadas  
   
@@ -46,7 +47,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
     Uma nova coluna nomeada **Calculated Column 1** é inserida à esquerda da coluna **Calendar Quarter** .  
   
-4.  Na barra de fórmulas acima da tabela, digite a seguinte fórmula DAX: preenchimento automático ajuda você a digitar os nomes totalmente qualificados de colunas e tabelas e lista as funções que estão disponíveis.  
+4.  Na barra de fórmulas acima da tabela, digite a seguinte fórmula DAX: O recurso Preenchimento Automático ajuda a digitar os nomes totalmente qualificados de colunas e tabelas e lista as funções que estão disponíveis.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  

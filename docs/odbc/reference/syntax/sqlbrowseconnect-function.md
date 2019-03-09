@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211706"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683606"
 ---
 # <a name="sqlbrowseconnect-function"></a>Função SQLBrowseConnect
 **Conformidade com**  
@@ -48,7 +49,7 @@ SQLRETURN SQLBrowseConnect(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador da conexão*  
+ *ConnectionHandle*  
  [Entrada] Identificador de Conexão.  
   
  *InConnectionString*  
@@ -131,7 +132,7 @@ SQLRETURN SQLBrowseConnect(
  *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
  *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
- *lista de valores de atributo* :: = *cadeia de caracteres* [`:`*cadeia de caracteres localizadas*] &#124; *cadeia de caracteres* [`:` *cadeia de caracteres localizadas*] `,` *lista de valores de atributo*<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  em que *cadeia de caracteres* e *cadeia de caracteres localizadas* ter zero ou mais caracteres; *identificador* e *identificador localizadas* tem um ou mais caracteres; *palavra-chave de atributo* não diferencia maiusculas de minúsculas; e *valor de atributo* podem diferenciar maiusculas de minúsculas. Devido à conexão cadeia de caracteres de inicialização gramática, palavras-chave, localizados identificadores de arquivo e valores de atributo que contém os caracteres **[]{}(),? \*=! @** deve ser evitado. Devido a gramática nas informações do sistema, nomes de fonte de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 9dfb6706f27006ccb876615316533bc8e15b3101
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556228"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683626"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notas de versão do SQL Server 2019 clusters de big data
 
@@ -74,6 +74,32 @@ As seções a seguir fornecem os problemas conhecidos para clusters de grandes d
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - Se uma implantação de cluster de big data falhar, o namespace associado não é removido. Isso pode resultar em um namespace órfão no cluster. Uma solução alternativa é excluir o namespace manualmente antes de implantar um cluster com o mesmo nome.
+
+#### <a name="kubeadm-deployments"></a>implantações de kubeadm
+
+Se você usar kubeadm implantar Kubernetes em vários computadores, o portal de administração de cluster não exibe corretamente os pontos de extremidade necessários para se conectar ao cluster de big data. Se você estiver enfrentando esse problema, use a seguinte solução alternativa para descobrir os endereços IP do ponto de extremidade de serviço:
+
+- Se você estiver se conectando de dentro do cluster, consulte Kubernetes para o IP do serviço para o ponto de extremidade que você deseja se conectar. Por exemplo, a seguinte **kubectl** comando exibe o endereço IP de instância mestre do SQL Server:
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- Se você estiver se conectando de fora do cluster, use as seguintes etapas para conectar-se:
+
+   1. Obtenha o endereço IP do nó que executa a instância mestre do SQL Server: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
+
+   1. Conecte-se à instância mestre do SQL Server usando este endereço IP.
+
+   1. Consulta de **cluster_endpoint_table** no banco de dados mestre para outros pontos de extremidade externos.
+
+      Se isso falhar com um tempo limite de conexão, é possível que o respectivo nó passa pelo firewall. Nesse caso, você deve entre em contato com seu administrador de cluster do Kubernetes e peça para o IP do nó que é exposto externamente. Isso pode ser qualquer nó. Em seguida, você pode usar esse IP e a porta correspondente para se conectar a vários serviços em execução no cluster. Por exemplo, o administrador pode encontrar esse IP executando:
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
 
 #### <a id="mssqlctlctp23"></a> mssqlctl
 

@@ -1,6 +1,6 @@
 ---
-title: 'A lição suplementar tutorial do Analysis Services: hierarquias desbalanceadas | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lição suplementar de tutorial: Hierarquias desbalanceadas | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074826"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685393"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Lição suplementar – Hierarquias desbalanceadas
 
@@ -48,8 +49,8 @@ Se você tiver criado o projeto de vendas pela Internet AW como parte do tutoria
     | Tabela 1           | coluna       | Direção do filtro   | Tabela 2     | coluna      | Ativa |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
     | FactResellerSales | OrderDateKey | Padrão            | DimDate     | data        | Sim    |
-    | FactResellerSales | DueDate      | Padrão            | DimDate     | data        | não     |
-    | FactResellerSales | ShipDateKey  | Padrão            | DimDate     | data        | não     |
+    | FactResellerSales | DueDate      | Padrão            | DimDate     | data        | Não     |
+    | FactResellerSales | ShipDateKey  | Padrão            | DimDate     | data        | Não     |
     | FactResellerSales | ProductKey   | Padrão            | DimProduct  | ProductKey  | Sim    |
     | FactResellerSales | EmployeeKey  | Para ambas as tabelas | DimEmployee | EmployeeKey | Sim    |
 
@@ -65,7 +66,7 @@ Se você tiver criado o projeto de vendas pela Internet AW como parte do tutoria
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
 
-    **Nível 1** 
+    **Level1** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],1,1)) 
     ```
@@ -121,6 +122,6 @@ Se você tiver criado o projeto de vendas pela Internet AW como parte do tutoria
     Agora que se parece muito melhor!
 
 ## <a name="see-also"></a>Consulte também   
-[Lição 9: criar hierarquias](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
+[Lição 9: Criar hierarquias](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
 [Lição suplementar - segurança dinâmica](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Lição suplementar - linhas de detalhes](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  

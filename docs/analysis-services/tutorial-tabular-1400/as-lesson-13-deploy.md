@@ -1,6 +1,6 @@
 ---
-title: 'Lição 13 do tutorial de serviços de análise: implantar | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lição do tutorial 13: Implantar | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090428"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685303"
 ---
 # <a name="deploy"></a>Implantar
 
@@ -26,7 +27,7 @@ Tempo estimado para concluir esta lição: **5 minutos**
   
 ## <a name="prerequisites"></a>Prerequisites  
 
-Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 12: analisar no Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
+Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 12: Analisar no Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
 > [!IMPORTANT]  
 > Se implantar no Azure Analysis Services, você deve ter [permissões de administrador](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) sobre o serever.  
@@ -71,7 +72,7 @@ Esta lição descreve o método mais comum e mais fácil para implantar um model
 ## <a name="conclusion"></a>Conclusão  
 Parabéns! Você terminou a criar e implantar seu primeiro modelo de tabela do Analysis Services. Este tutorial ajudou você a concluir as tarefas mais comuns da criação de um modelo de tabela. Agora que o Modelo de Vendas pela Internet do Adventure Works está implantado, você pode usar o SQL Server Management Studio para gerenciar o modelo; crie scripts de processo e um plano de backup. Os usuários agora também podem se conectar ao modelo usando um aplicativo cliente de relatório, como o Microsoft Excel ou Power BI.  
 
-![ssms como lesson13](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   
