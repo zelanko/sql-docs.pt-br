@@ -1,7 +1,7 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
-ms.date: 02/28/2019
-ms.prod: sql-server-2018
+ms.date: 03/01/2019
+ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fdc1191b5f0ef7d475e23bbcb56081821d6882b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334813"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579766"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -189,7 +189,7 @@ O mascaramento de dados estáticos opera no nível de coluna. Selecione quais co
 
 #### <a name="static-data-masking-vs-dynamic-data-masking"></a>Mascaramento de dados estáticos versus mascaramento de dados dinâmicos
 
-O mascaramento de dados é o processo de aplicação de uma máscara a um banco de dados para ocultar informações confidenciais e substituí-la por dados novos ou dados limpos. A Microsoft oferece duas opções de mascaramento: o mascaramento de dados estáticos e o mascaramento de dados dinâmicos. A Máscara de Dados Dinâmicos foi introduzida no [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. A seguinte tabela compara essas duas soluções:
+O mascaramento de dados é o processo de aplicação de uma máscara a um banco de dados para ocultar informações confidenciais e substituí-la por dados novos ou dados limpos. A Microsoft oferece duas opções de mascaramento: o mascaramento de dados estáticos e o mascaramento de dados dinâmicos. A Máscara de Dados Dinâmicos foi introduzida no [!INCLUDE[ssSQL16](../includes/sssql16-md.md)]. A seguinte tabela compara essas duas soluções:
 
 |Mascaramento de dados estáticos |Mascaramento de dados dinâmicos|
 |:----|:----|
@@ -463,7 +463,7 @@ FROM sys.dm_exec_requests AS d
   - Dá suporte a cenários que usam um cluster de Big Data do SQL Server. (CTP 2.0)
   
   > [!TIP]
-  > Para os aprimoramentos mais recentes do Azure Data Studio, consulte as [notas sobre a versão do Azure Data Studio](../azure-data-studio/release-notes.md).
+  > Para os aprimoramentos mais recentes do Azure Data Studio, consulte as [notas sobre a versão do Azure Data Studio](../azure-data-studio/release-notes-azure-data-studio.md).
 
 - [**SSMS (SQL Server Management Studio) 18.0 (versão prévia)**](../ssms/sql-server-management-studio-ssms.md): Dá suporte a [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
